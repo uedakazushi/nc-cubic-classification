@@ -5,12 +5,12 @@
 \label{sec:moduli-artin}
 本節は、滑らかな可換三次三様体の近傍において、
 有限係数の17次元族と異なる\emph{完備形式局所モジュライ}を扱う。
-以前の中心三次対原稿の第12--13節から定理・証明の有効部分を
-再構成したものである。主張は生成空間に標識を入れた
-通常の集合値Artin変形関手に関するものであり、
+生成空間の座標標識を残す関手と、その射影座標変更を割った関手を
+区別する。構造代数層との比較に用いるのは後者であり、
+特殊ファイバーの同一視は保持する。主張は通常の集合値Artin変形関手に関するものであり、
 derived stackの同型でも非可換領域全体の大域分類でもない。
-外部の同次formality、Ore局所化およびAbel圏変形の
-適用条件について、原稿に記載した証明と今回の独立監査を区別する。
+同次formalityを外部入力とし、構造代数層への移行には
+Yekutieliの量子化定理の仮定と相対コホモロジー計算を明示する。
 
 以下$k=\C$、$V=k^5$、$S=\Sym V^*$、
 $F\in S_3$を滑らかな三次三様体
@@ -196,7 +196,7 @@ twisted chain identityにより
 となる。ここで中心の形成と非平坦基底変換の交換性は
 仮定せず、有限自由行列の可逆性によって逆向きを証明する。
 このformalityの恒等式は
-\href{https://arxiv.org/abs/math/0012228}{Cattaneo--Felder--Tomassini}
+Cattaneo--Felder--Tomassini\cite{CFT}
 のtwisted formulaを入力としている。
 補題\ref{lem:artin-normal-central}と
 命題\ref{prop:artin-pfaffian}により、
@@ -288,14 +288,120 @@ $I\otimes H^0(X,T_X)=0$なので持上げは両側同型。
 $H^0(X,\OO_X)=k$と小拡大帰納から$R^\times$となる。
 \end{proof}
 
-\begin{theorem}[斉次環の全Artin変形の二次cover：比較定理を入力]
+\subsection{構造代数層の変形関手と座標標識の商}
+\begin{lemma}[相対三次Poisson変形の形式局所環]
+\label{lem:artin-relative-poisson-sheaf}
+$\mathcal D_{\mathrm{Pois},X}(R)$を、$\OO_X$への還元同型を持つ
+平坦な可換$R$代数層と、還元が零である$R$線形Poisson括弧の
+gauge同値類の集合とする。するとこの関手は
+\begin{equation}\label{eq:artin-poisson-sheaf-ring}
+ \mathcal R_X=
+ \frac{k[[t_1,\ldots,t_{10},a_{01},\ldots,a_{34}]]}
+ {(q_0(a),\ldots,q_4(a))}
+\end{equation}
+で表される。ここでは特殊ファイバーの有限自己同型群$\Aut(X)$を割らない。
+\end{lemma}
+\begin{proof}
+まずPoisson括弧を忘れる。滑らかなアフィン開集合上の
+冪零な平坦可換変形とその貼合せにより、基礎の代数層は
+$X$の滑らかなArtin変形$X_R$の構造層となる。
+小拡大の核を$I$とすると、線束$\OO_X(1)$の持上げの障害は
+$I\otimes H^2(X,\OO_X)$に、持上げの差は
+$I\otimes H^1(X,\OO_X)$に属する。
+両者が零なので、$\OO_X(1)$は各$X_R$へ同型を除いて一意に持ち上がる。
+三次超曲面の標準完全列から
+\[
+ H^1(X,\OO_X(n))=H^2(X,\OO_X(n))=0\quad(n\in\mathbb Z)
+\]
+である。特に$n\ge0$では高次コホモロジーがすべて消えるので、
+小拡大帰納により持ち上げた線束の非負次数のsectionは自由で、
+任意のArtin基底変更と可換である。
+その一次sectionの基底を選ぶと$X_R$は$\PP^4_R$に埋め込まれる。
+実際、section環への写像は特殊ファイバーで全射なので
+各次数でNakayamaにより全射であり、三次核は階数一である。
+その生成元$F_R$の乗法は特殊ファイバーで単射だから分裂単射であり、
+同じHilbert関数とNakayamaにより全核は$(F_R)$となる。
+従って$X_R=V_+(F_R)$である。
+
+相対随伴公式により
+$\wedge^2T_{X_R/R}\simeq\Omega^1_{X_R/R}(2)$である。
+相対余法完全列と制限完全列
+\[
+\begin{split}
+0&\longrightarrow\OO_{X_R}(-1)
+ \longrightarrow\Omega^1_{\PP^4_R/R}(2)|_{X_R}
+ \longrightarrow\Omega^1_{X_R/R}(2)\longrightarrow0,\\
+0&\longrightarrow\Omega^1_{\PP^4_R/R}(-1)
+ \longrightarrow\Omega^1_{\PP^4_R/R}(2)
+ \longrightarrow\Omega^1_{\PP^4_R/R}(2)|_{X_R}\longrightarrow0
+\end{split}
+\]
+を用いる。左端二層の$H^0,H^1$は、超曲面完全列とEuler完全列から
+零である。さらにEuler完全列の次数二部分から
+\begin{equation}\label{eq:artin-relative-bivectors}
+ H^0(X_R,\wedge^2T_{X_R/R})
+ \simeq H^0(\PP^4_R,\Omega^1_{\PP^4_R/R}(2))
+ \simeq R\otimes_k\wedge^2V^*
+\end{equation}
+を得る。これらは有限自由加群間の分裂完全列による計算なので、
+非平坦なArtin基底変更とも可換である。
+$F_R$の尺度と体積形式を固定した上で、この対応は
+定数二形式$a$を$\iota_Ea$に送り、対応するbivectorは
+$\iota_{\Pi}\Omega=dF_R\wedge a$の射影制限である。
+これは偏微分$\partial_iF_R$が単元となる滑らかなchartで
+随伴公式の縮約を計算して確認できる。
+
+ここで$J=\frac12[\Pi,\Pi]$、$g=\sum_rq_r(a)\partial_rF_R$とする。
+命題\ref{prop:artin-pfaffian}の恒等式をEuler場で縮約すると
+\begin{equation}\label{eq:artin-intrinsic-jacobi}
+ \iota_E\iota_J\Omega
+   =2g\,dF_R-3F_R\,dg
+\end{equation}
+となる。$F_R=0$に制限しEuler方向を除くと、
+内在的Jacobi障害は随伴同型
+$\wedge^3T_{X_R/R}\simeq\OO_{X_R}(2)$の下で
+$2g$に対応する（全体の符号は縮約の規約による）。
+五つの二次式$\partial_rF_R$は$R\otimes S_2$内で
+階数五の直和因子を生成する。
+実際、特殊ファイバーでの定数係数の関係は
+滑らかな$F$の偏微分正則列のKoszul完全性により零であり、
+非零最大minorを$R$へ持ち上げればよい。
+また$H^0(X_R,\OO_{X_R}(2))=R\otimes S_2$である。
+従ってJacobi方程式の係数イデアルは、
+集合論的にだけでなく$(q_0,\ldots,q_4)$と一致する。
+
+座標を残すと、$[F_R]$の34係数と$a$の10係数に
+この五つのPl\"ucker方程式を課した関手を得る。
+滑らかな三次三様体は$H^0(X,T_X)=0$を満たすので、
+特殊ファイバーで恒等な射影座標変更の作用は自由であり、
+その24次元軌道を分離する形式sliceが存在する。
+この作用は分解可能二形式の錐を保つので、$F_R$をsliceへ移す
+一意の形式座標変更を$a$にも作用させれば、
+残る方程式は同じPl\"ucker方程式である。
+これが\eqref{eq:artin-poisson-sheaf-ring}を与える。
+特殊ファイバーを恒等に保つ自己同型は、最初の非零な
+$\mathfrak m$進差分が$H^0(X,T_X)$に属するため存在しない。
+従ってここで必要なのは集合値のprorepresenting環である。
+\end{proof}
+
+$\mathcal D_{\mathrm{cp},X}$を中心三次対の関手から、
+特殊ファイバーで恒等な射影座標変更を割ったものとする。
+次数スカラー倍は対に自明に作用するので、その自己同型をrigidifyする。
+従って定理\ref{thm:artin-central-pair}の\emph{第二の}環、
+すなわち\eqref{eq:artin-poisson-sheaf-ring}がこの関手を表す。
+生成空間の座標標識を残した41次元・接空間44次元の関手ではない。
+$\mathcal D_{\mathrm{Ass},X}$は$\OO_X$への還元同型を保つ
+平坦結合代数層のArtin変形のgauge同値類の関手とする。
+
+\begin{theorem}[斉次環の全Artin変形の二次cover]
 \label{thm:artin-quadratic-cover}
-上の中心三次対の形式関手と、
-$X$上の平坦結合代数層の標識付き古典的Artin変形関手の間の
-Ore局所化による自然変換$\Theta$を考える。
-YekutieliのArtin変形量子化の自然性と
-De~Deken--Lowenの$\mathbb Z$-生成列の変形比較を
-この設定に適用すると、$\Theta$は自然同型となる。
+定理\ref{thm:artin-central-pair}で固定した同次formalityの下で、
+Ore局所化による自然変換
+\[
+ \Theta:\mathcal D_{\mathrm{cp},X}
+       \longrightarrow\mathcal D_{\mathrm{Ass},X}
+\]
+は自然同型となる。
 従って任意の次数別平坦な斉次変形$A_R$は
 \[
  V_R=(A_R)_1,\quad
@@ -312,13 +418,27 @@ De~Deken--Lowenの$\mathbb Z$-生成列の変形比較を
 $A_R\simeq B_R^{\mathrm{quad}}/(L_R)$。
 この構成はArtin基底変換と可換である。
 \end{theorem}
-\begin{proof}[原研究稿の証明構造]
+\begin{proof}
 まず局所化による$\Theta$を上で実際に構成した。
-中心対の形式関手は
-定理\ref{thm:artin-central-pair}の完備局所環で表される。
-構造代数層のArtin変形関手も、
-\href{https://arxiv.org/abs/0905.0488}{Yekutieli, Cor.~11.2}
-の量子化と可換三次の変形sliceから同じ環で表される。
+射影座標変更が特殊ファイバーで恒等なら、誘導する局所化層の同型も
+還元同型を保つので、$\Theta$は上記の商を経由する。
+中心対側は\eqref{eq:artin-poisson-sheaf-ring}で表される。
+Yekutieli\cite[Corollary~11.2]{YekutieliTwisted}は、滑らかな$X$と
+$H^1(X,\OO_X)=H^2(X,\OO_X)=0$の下で、
+Poisson変形と結合代数層変形のgauge同値類の自然な全単射を与える。
+そのパラメータ代数は完備局所Noetherian代数であり、局所Artin代数を含む。
+本稿では$k=\C$であるから同定理の基礎体の条件も満たされ、
+係数環の準同型についての自然性が成立する。
+補題\ref{lem:artin-relative-poisson-sheaf}により、
+$\mathcal D_{\mathrm{Ass},X}$も同じ環$\mathcal R_X$で表される。
+
+一次変形のHochschild--Kostant--Rosenberg分解は
+\[
+ T\mathcal D_{\mathrm{Ass},X}
+ =H^1(X,T_X)\oplus H^0(X,\wedge^2T_X)
+\]
+である。$H^2(X,\OO_X)=0$なので第三の成分は現れない。
+これは上記量子化の第一Taylor写像による接空間の同定とも一致する。
 接写像$d\Theta$は、可換方向では
 $H^1(X,T_X)$上の恒等写像であり、
 反対称交換子方向では
@@ -326,11 +446,12 @@ $H^1(X,T_X)$上の恒等写像であり、
  \wedge^2V^*\longrightarrow H^0(X,\wedge^2T_X),
  \qquad a\longmapsto\iota_Ea
 \]
-という10次元空間の同型である。
+という\eqref{eq:artin-relative-bivectors}の10次元空間の同型である。
 よって接写像は可逆な三角行列となる。
-完備局所環の連続自己写像が余接空間で同型なら
-各$\mathfrak m^r/\mathfrak m^{r+1}$上でも同型であり、
-形式的Nakayama帰納から環自体が同型となる。
+両関手を$\mathcal R_X$で表すと、$\Theta$はその連続自己準同型となる。
+余接空間での同型から、対称冪で生成される各随伴次数成分への
+写像が全射となり、これらは同じ有限次元空間の自己写像なので同型である。
+完備性と分離性から環自体も同型となる。
 したがって$\Theta$は全Artin基底で自然同型。
 
 一方、上の命題で$\mathscr A_R$の局所化次数一は
@@ -345,16 +466,13 @@ $\OO_X(1)$の両側可逆な持上げ$\mathscr E_1$となり、
 既に存在する中心対に同型化した後でそれを導く。
 基底変換は有限自由の分裂核と局所化の普遍性で従う。
 
-ここで使用した一次資料は
-\href{https://arxiv.org/abs/1209.6243}{Yekutieli,
- \emph{Deformations of affine varieties and the Deligne crossed groupoid}}
-のOre局所化、
-\href{https://arxiv.org/abs/math/0511197}{Lowen,
- \emph{Algebroid prestacks and deformations of ringed spaces}}、
-\href{https://arxiv.org/abs/1001.4265}{De~Deken--Lowen,
- \emph{Abelian and derived deformations in the presence of
- $\mathbb Z$-generating geometric helices}}である。
-これらの定理の適用範囲の独立した一次資料監査は未完成である。
+Ore局所化の一般的な参照先はYekutieli\cite{YekutieliAffine}である。一方、
+De~Deken--Lowen\cite[Theorem~4.5]{DeDekenLowen}も、
+$\OO_X(n)$の$\mathbb Z$-生成性と上記の$\mathrm{Ext}^{1,2}$消滅により
+Abel圏変形と$\mathbb Z$-代数変形を比較する。
+しかし同定理から次数付き構造や1周期性を推論する必要はなく、
+本証明では実際に構成したOre局所化、相対Poisson計算、
+および両側偏極の一意性を用いた。
 \end{proof}
 
 \begin{remark}[明確に主張しない事柄]

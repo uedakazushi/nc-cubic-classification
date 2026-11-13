@@ -42,6 +42,7 @@
 \newcommand{\Spec}{\operatorname{Spec}}
 \newcommand{\Aut}{\operatorname{Aut}}
 \newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\End}{\operatorname{End}}
 \newcommand{\Ext}{\operatorname{Ext}}
 \newcommand{\Proj}{\operatorname{Proj}}
 \newcommand{\Frac}{\operatorname{Frac}}
@@ -55,12 +56,16 @@
 \newcommand{\AS}{\mathrm{AS}}
 \newcommand{\nc}{\mathrm{nc}}
 \newcommand{\Symm}{\operatorname{sym}}
-\title{非可換三次三様体の17次元モジュライ族\\中心三次対と変形幾何}
+\title{非可換三次三様体の内在的復元とモジュライ\\中心三次対・ambient成分と17次元族}
 \author{公表準備用研究原稿（著者情報未記入）}
-\date{2026年11月13日・nc cubic moduli研究草稿 v5}
+\date{2026年11月13日・nc cubic moduli研究草稿 v6}
 \begin{document}
 \maketitle
 \begin{abstract}
+豊富列を備えたAbel圏から非可換三次超曲面を定義し、
+そのHom空間の二次合成核からambientのAS正則$\mathbb Z$-代数を
+一意に復元する。相対的な局所自由性と基底変換を仮定する範囲では、
+この復元はモジュライ群oidの射を与える。
 相対Jacobian型の中心三次対の41次元既約代数族を構成し、
 18次元の放物型群作用に横断する17係数正規形を与える。
 31次整数行列の非零行列式によって横断性を証明し、
@@ -68,19 +73,44 @@
 次数付き同型類が17次元分だけ変動することを示す。
 さらに分離型の余次元15、可換cubicへの忘却核7次元の幾何学的分解、
 混合中心元と相対Picardの障害を扱う。
-また、正則正規$d$次超曲面を持つKoszul AS正則$\mathbb Z$-代数の
-最小周期が$\gcd(N,d)$を割ることを示し、5次元・三次の場合の1周期性を導く。
-この結論はambientの周期性であり、商イデアルを保つ1周期構造は主張しない。
-一般次元のambient復元とその証明はnc-cubicの論文Aにも収録する。
+\texttt{poisson-p4}の三次incidenceと照合し、
+$\mathrm{Rat}(1,1,3)$の全Poisson接空間の整数行列証明書により、
+その錐が一般点で滑らかな37次元既約成分であることを独立に証明する。
+Pymの局所量子化比較を通じ、規格化CY変形の対応成分と、
+そこを支配する一般$\PP^4$ファイバーの中心三次incidenceを得る。
+一般の有理商の次元は三次対で17、ambientで13である。
+また、明記した左右AS条件とuniformなGorenstein parameter $N$の下で、
+正則正規$d$次超曲面\emph{対}の最小周期が$\gcd(N,d)$を割ることを示す。
+正規族から作る有限頂点orbit代数の中心元をNakayama自己同型が固定するため、
+5次元・三次の場合には三次イデアルを保つ1周期化が得られる。
+この次数付き表示の中心性や、族全体での周期構造の降下は結論しない。
 滑らかな可換三次点の全Artin形式局所環とOre局所化による
 中心三次対・構造代数層・斉次環の比較を、独立の証明依存を明示して収録する。
 また低次数中心・偶数Veronese・構造対象付き導来復元と、
 具体的な剛体ambient上の四次元非同型族を条件を明記して扱う。
-構成した族が全nc cubic moduliの既約成分をなすことは未証明である。
+任意の無標識な非可換三次圏の定義、全AS正則$\mathbb Z$-代数の
+大域代数的モジュライ、およびその中の大域成分性は未証明である。
 \end{abstract}
 \tableofcontents
 
 \section{Introduction：主張と先行研究}\label{sec:intro}
+本稿の主問題は、非可換cubic threefoldをそのambientとは独立なデータから
+定義し、復元された非可換$\PP^4$へのモジュライ射の像とファイバーを調べることである。
+\emph{一つの三次からambientが一意に定まることは、
+同じambientに一つしか三次がないことを意味しない。}
+本稿の中心三次族では後者に四次元の自由度があり、
+$17\longrightarrow13$という次元の射が自然に現れる。
+
+一般の$\mathbb Z$-代数を対象にするため、基礎的なデータは
+$(\mathcal C,(E_i)_{i\in\mathbb Z})$という豊富列付きAbel圏とする。
+自己同値$s$と$E_i=s^{-i}E_0$を最初から指定する定義は、
+すでに1周期化を選んだ、より狭いモジュライ問題である。
+Polishchuk\cite[Theorem 2.4 and Remarks 2]{PolishchukProj}はこの区別を明示し、
+豊富列からの$\mathbb Z$-代数による圏の表示を与える。
+本稿の第\ref{sec:intrinsic-cubic}節では、この枠組みに二次包絡と正規三次核の
+条件を組み合わせる。これはambientの存在を独立の未知データとして指定する定義ではないが、
+豊富列そのものを忘れた任意のAbel圏・導来圏からの復元を意味しない。
+
 非可換射影空間を次数付き AS 正則代数の $\qgr$ として扱う立場は
 Artin--Schelter \cite{AS} と Artin--Zhang \cite{AZ} の枠組みに属する．
 可換な cubic threefold $X\subset\PP^4$ は５変数多項式環の三次正則元による
@@ -91,7 +121,7 @@ Artin--Schelter \cite{AS} と Artin--Zhang \cite{AZ} の枠組みに属する．
 \end{equation}
 ここで $B$ は連結次数付き，noetherian，Koszul，AS 正則次元５であり，
 $[G]$ は非零スカラー倍を同一視した中心正則元の直線である．
-本稿はこの型の\emph{一つの具体的な既約族の一般点}を扱い，
+有限次元の具体的モジュライを扱う部分ではこの型の\emph{一つの既約族の一般点}を扱い，
 $A$ から $B$ を内在的に復元する．任意の非可換三次三様体が
 \eqref{eq:data} の形に書けるとは仮定も主張もしない．
 
@@ -105,6 +135,14 @@ Pym \cite[Proposition~2.9, Theorem~2.10]{Pym} は，射影空間の
 Calabi--Yau 型の量子変形と二次 Poisson 構造の成分の関係を証明し，
 非可換 $\PP^3$ の場合に具体的な分類を与えた．本稿は
 「周囲の量子構造に中心三次方程式を指定する」という別の incidence を対象にする．
+\texttt{poisson-p4}の現行研究原稿\cite{PoissonP4Incidence}は、
+滑らかな三次三様体の全Poisson構造の一意延長と、
+射影化した$\mathrm{Rat}(1,1,3)$への四次元ファイバーを証明している。
+第\ref{sec:pair-generic-component}節はこの入力を自己完結した形で再掲し、
+全Poissonスキーム内の一般正則性を、新しい整数行列証明書で確認する。
+この議論は同リポジトリの全147成分分類の正しさを仮定しない。
+また、Pymの成分対応を用いる範囲は可換点の規格化CY変形の芽であり、
+全AS正則$\mathbb Z$-代数の大域的分類へ自動的に拡張しない。
 
 \paragraph{代数構成の入力.}
 三変数 Sklyanin 代数と楕円曲線の対応，次数３の中心元および
@@ -138,19 +176,29 @@ ambient の quadratic envelope が得られる．一方，構造対象だけを�
 
 \paragraph{一般のAS正則$\mathbb Z$-代数との関係.}
 正則正規な三次超曲面を持つ標準5次元Koszul AS正則$\mathbb Z$-代数は、
-AS双対性の5周期と正規族の3周期により1周期的である
+三次イデアルを保つ1周期同型を持つ
 （系\ref{cor:moduli-cubic-ambient-periodic}）。
-これは通常の次数付きambientを仮定しない場合の結論であるが、
-1周期同型が超曲面イデアルを保つことは別問題である。
-既知のKoszul--Frobenius双対性\cite{PBondalPolishchukHelices}と
-正規族\cite{PChanNymanNormalFamily}に基づき、初出の網羅的調査は未完了である。
+正規族\cite{PChanNymanNormalFamily}から有限頂点のorbit代数を作ると、
+その和は中心元となる。Reyes--Rogalski\cite[Theorem~5.15, Lemmas~5.9 and~4.5]{RRGeneralizedAS}
+の一般化AS正則性とNakayama双加群の結果を用い、
+この中心元を保つ5周期と正規族の3周期を合成する。
+従って通常の次数付き\emph{正規}三次商として表示できるが、
+中心性・周期構造の一意性・族への降下は別問題である。
+既知のKoszul--Frobenius双対性\cite{PBondalPolishchukHelices}による
+ambientの5周期の直接証明も保持する。上記組合せの初出の網羅的調査は未完了である。
 
 \paragraph{主定理.}
+第\ref{sec:intrinsic-cubic}節で内在的定義と相対復元、
 第\ref{sec:construction}節で中心三次対の41次元族、
 第\ref{sec:normal}節で17係数の横断形、
 第\ref{sec:split-codimension}節で分離型と忘却核、
 第\ref{sec:mixed-quantum-center}節で混合中心・相対Picardの障害、
 第\ref{sec:moduli-iso}節で同型類の判定を扱う。
+第\ref{sec:pair-generic-component}節はPoisson成分と規格化CY成分を結び、
+第\ref{sec:ambient-incidence}節で、中心条件の有限行列によるincidence、
+忘却射の微分とその障害、およびstackの次元規約を明示する。
+
+\input{papers/sections/intrinsic_cubic_reconstruction.tex}
 
 \section{相対 Jacobian 型の中心三次族}\label{sec:construction}
 本節では基礎体を $k=\C$ とする．$U=ku\oplus kv$ と
@@ -732,6 +780,7 @@ Poisson中心三次対の\emph{有理商}についての結論であり、
 
 \input{papers/sections/central_pair_explicit_centers.tex}
 \input{papers/sections/central_pair_generic_component.tex}
+\input{papers/sections/ambient_incidence_morphism.tex}
 \input{papers/sections/central_pair_diagonal_classification.tex}
 \input{papers/sections/mixed_center_picard}
 
@@ -777,16 +826,31 @@ Artin--Zhangのsection algebraの自然写像は
 \section{結論と検証の状態}\label{sec:status}
 本稿の41次元incidence、17係数正規形、分離型余次元15と
 忘却核7次元の主張には本文に証明がある。
+豊富列付き定義の下で二次包絡は関手的に一意であり、
+所定の相対平坦性と基底変換の条件下でambientへの射を与える。
+固定した次数付き表示での中心incidenceは有限行列の射影零点スキームであり、
+中心rankが一定の層では射影束となる。
 全nc cubicモジュライの既約成分性、有限非可換パラメータ全域の変形・障害理論、
 一般次元nc cubic moduliの完全分類は未解決。
-正規族を持つAS正則$\mathbb Z$-代数のambient周期性は第\ref{sec:moduli-ambient-periodicity}節で証明するが、
-その1周期同型が三次イデアルを保つことや、全nc cubicの超曲面表示は未証明。
-規格化された37次元CY周囲の被約芽の成分性と一般中心は第\ref{sec:pair-generic-component}節で扱う。全nc cubicの大域成分性とは区別する。
+正規族を持つAS正則$\mathbb Z$-代数の\emph{対}の周期性は
+第\ref{sec:moduli-ambient-periodicity}節で証明し、標準5次元・三次のとき
+三次イデアルを保つ1周期化を得る。族全体での周期構造の降下、中心化、
+より弱い圏論的条件からの超曲面認識は未解決である。
+規格化された37次元CY周囲の芽の成分性と一般被約性・一般中心は
+第\ref{sec:pair-generic-component}節で扱う。
+一般点における中心三次対の射はこの成分を支配し、ファイバーは四次元である。
+従ってこの明示された範囲では像の余次元は零である。
+全nc cubicの大域成分性、豊富列を忘れたモジュライの存在、
+全族でのtailsの滑らかさの開性とは区別する。
 一次文献の初出調査と既存証明の全面独立監査は未完了。
 31次行列式、中心の次数別計算、分離型の検算は
 \nolinkurl{computations/independent/verify_generic17_slice.py}、
 \nolinkurl{computations/independent/verify_generic17_center.py}、
 \nolinkurl{computations/verify_split_codimension.py}で再現する。
+全Poisson接空間の証明書は
+\nolinkurl{computations/verify_rat113_tangent.py}で再現する。
+これは整数上の恒等式と非零小行列式による特性零の有限線型代数証明であり、
+全量子変形複体の無条件な計算ではない。
 
 \appendix
 \section{17係数正規形の正確な行列証明書}\label{app:rank}
@@ -818,6 +882,54 @@ $35\times35$ 行列式も同じ非零値となる．
 
 \input{papers/sections/central_pair_finite_order_regularity}
 \begin{thebibliography}{99}
+\bibitem{RRGeneralizedAS}
+M.~L.~Reyes and D.~Rogalski,
+\emph{Graded twisted Calabi--Yau algebras are generalized Artin--Schelter regular},
+Nagoya Math. J. \textbf{245} (2022), 100--153.
+\href{https://doi.org/10.1017/nmj.2020.32}{doi:10.1017/nmj.2020.32};
+\url{https://arxiv.org/abs/1807.10249}.
+Theorem~5.15, Lemmas~5.9(1) and~4.5.
+
+\bibitem{YekutieliTwisted}
+A.~Yekutieli,
+\emph{Twisted deformation quantization of algebraic varieties},
+\url{https://arxiv.org/abs/0905.0488}, v5 (2014).
+Corollary~11.2.
+
+\bibitem{YekutieliAffine}
+A.~Yekutieli,
+\emph{Deformations of affine varieties and the Deligne crossed groupoid},
+\url{https://arxiv.org/abs/1209.6243} (2012).
+
+\bibitem{DeDekenLowen}
+O.~De~Deken and W.~Lowen,
+\emph{Abelian and derived deformations in the presence of
+$\mathbb Z$-generating geometric helices},
+\url{https://arxiv.org/abs/1001.4265}, v3 (2010).
+Theorem~4.5.
+
+\bibitem{CFT}
+A.~S.~Cattaneo, G.~Felder and L.~Tomassini,
+\emph{From local to global deformation quantization of Poisson manifolds},
+Duke Math. J. \textbf{115} (2002), 329--352.
+\url{https://arxiv.org/abs/math/0012228}.
+
+\bibitem{PolishchukProj}
+A.~Polishchuk,
+\emph{Noncommutative Proj and coherent algebras},
+Math. Res. Lett. \textbf{12} (2005), 63--74.
+Theorem~2.4 and the following Remarks~2;
+\url{https://arxiv.org/abs/math/0212182}, v4 (2004).
+
+\bibitem{PoissonP4Incidence}
+\texttt{uedakazushi/poisson-p4},
+\emph{Poisson部分多様体から見る射影四空間の成分分類},
+現行研究原稿、\nolinkurl{papers/poisson_subvariety_incidence_ja.tex},
+三次延長定理と三次incidenceのファイバー命題。
+参照commit \texttt{f118dfb} (2026-11-13確認)。
+\url{https://github.com/uedakazushi/poisson-p4/blob/f118dfbfc5bb9b7a394d1985b4800b6228eebaf6/papers/poisson_subvariety_incidence_ja.tex}.
+公刊済みの外部文献ではなく、関連プロジェクトの証明を持つ研究入力である。
+
 \bibitem{PairBW} S.~Barmeier and Z.~Wang,
 \emph{Deformations of path algebras of quivers with relations},
 \url{https://arxiv.org/abs/2002.10001}, v4 (2021), Theorem 10.3 and Lemma 10.9.

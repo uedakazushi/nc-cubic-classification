@@ -1,7 +1,19 @@
 # Codex実行指示
 
-本repoは公開研究プロジェクト。00_research_plan.md、notes/research_notes.md、現行原稿を読む。最優先は17次元族の既約成分性、moduli stackの定義・接空間・障害・generic reducedness。
+2026-11-13 / v6。最初に00_research_plan.md、次にnotes/research_notes.md、現行論文を読む。公開研究プロジェクトであり、研究継続用の自己完結した一式として維持する。
 
-証明・仮定・既知入力・新規性・有限検算・未証明事項を区別する。17次元同型類族を滑らかな全moduliや既約成分と混同しない。有限体での零を特性零の恒等式の証明にしない。必要証明・再現資産を削らず改善する。認証情報・第三者非公開資料・他研究の不要な内部資料を公開しない。
+## 研究の優先順位
 
-日本語LuaLaTeX・現行.latexmkrc・build/非追跡。最新mainから通常のfast-forward pushを行い遠隔HEAD/blobを確認。Actions・force push・旧ZIP・不要なPRなし。nc-cubic A/B、Pfaffian、Cayley–Sklyanin、nc-cubic2の他研究を変更しない。
+非可換cubic n-foldのintrinsicな定義、ambientへのモジュライ射と像を研究する。まずn=3。豊富列付きAbel圏、一般Z-algebra、周期同型付きZ-algebra、次数付き代数、中心三次対、滑らかなtailsを持つ対象を区別する。
+
+体上の三次イデアルを保つ1周期性は、有限頂点orbitとReyes–RogalskiのNakayama双加群により証明した。次は族での周期構造の降下・中心化、有限窓によるstackの代数性、17次元族のsmooth proper性の相対開性、全Zモジュライでのambient像の成分性を調べる。1周期構造の一意性やZhang twistによる追加同一視の不存在は主張しない。Poisson錐と規格化CY変形の可換点の芽の対応を大域量子化射と呼ばない。
+
+Rat113の37次元成分の一般正則性には独立な整数線型代数証明書がある。poisson-p4の全147分類を前提にしない。中心対41・ambient37、PGL商17・13、ambient忘却4、可換cubic忘却7を混同しない。GL商のGm安定化群を明示する。
+
+## 正確性と保存
+
+証明・追加仮定・既知入力・新規性・有限検算・未証明事項を区別する。一次資料の適用範囲を確認し、未確認を無条件入力へ昇格させない。有限体の非零minorは特性零の非零証明に使えるが、有限体の零は恒等式の証明にならない。修正時は依存する本文・要約・方針を整合させる。
+
+数学的重要性に応じて計画・論文構成を柔軟に改善し、有効な証明・反例・必要な再現資産を削らない。研究ノートは作業日誌にしない。認証情報・第三者非公開資料・他研究の不要な内部資料を公開しない。
+
+日本語LuaLaTeX、現行.latexmkrc、build/非追跡を使用する。最新mainから通常のfast-forward pushを行い遠隔HEADを確認する。継続保存は既に許可されている。GitHubを正本とし、Libraryは実際のpush失敗時のみ緊急退避に用いる。Actions・force push・旧ZIP・不要なPRなし。参照するnc-cubic A/B、nc-cubic2、poisson-p4、asz4の正本はこのタスクでは変更しない。
