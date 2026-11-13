@@ -10,7 +10,13 @@
 latexmk papers/nc_cubic_threefold_moduli.tex
 python3 scripts/verify.py
 python3 computations/independent/verify_generic17_slice.py
+python3 computations/independent/verify_generic17_center.py
+python3 computations/verify_split_codimension.py
 python3 computations/verify_central_pair_centers.py
+python3 computations/verify_central_pair_orbits.py
+python3 computations/verify_central_symmetry.py --output build/central_symmetry.json
 ```
 
 Python3とSymPy、日本語LuaLaTeX・LuaTeX-ja・HaranoAji・latexmkを使用。LaTeX Workshopはroot起点でbuild/へ出力する。PDF・SyncTeXは非追跡。Actions・force pushなし。主張記載・有限検算・全独立監査・新規性を区別する。
+
+今回の実行結果・ソース照合は [validation.json](validation.json)。全証明・一次文献・新規性の独立監査は未了。
