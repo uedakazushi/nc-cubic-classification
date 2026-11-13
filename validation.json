@@ -1,5 +1,5 @@
 {
-  "status": "destination independently reproduced; source cleanup pending",
+  "status": "COMPLETE: destination reproduced and source duplicates cleaned after verified push",
   "source_head": "46a657c277bb00c1c23482bfa8140bb2cf1106d8",
   "original_tex_sha256": {
     "papers/nc_cubic_threefold_moduli.tex": "312d12230a432fbadfc5ec58aa8e89fb84cda76d4b7366e8e798e9c5b8c11e8e",
@@ -81,5 +81,21 @@
     "undefined_references_or_citations": false,
     "warnings": "Font size substitutions, legacy font command and hyperref PDF bookmark math warnings remain."
   },
-  "tex_byte_identical_to_source": true
+  "tex_byte_identical_to_source": true,
+  "source_cleanup_commit": "beb7663590d4f6d0785ba289033ffeb678c99e06",
+  "source_cleanup": {
+    "dedicated_paths_removed": 15,
+    "remaining_manuscripts_build_checked": 10,
+    "shared_proofs_code_and_certificate_preserved": true,
+    "remaining_manuscripts_mathematical_text_unchanged": true,
+    "existing_citation_links_updated": 3
+  },
+  "computation_log_sha256": {
+    "verify_central_pair_centers.log": "744057780ee0a3f7e37ac143d16dfbb16e74cf7f2a30ea63a9ad5581067551dd",
+    "verify_central_pair_orbits.log": "9ec2d5d51db72370213a9f38a2592202d33a39406b99a9ec46c2e309e8d060e2",
+    "verify_central_symmetry.log": "557eb3256f9e30a04ccdc80a24b3a77b344327a9215e1ecaf8983728231985cd",
+    "verify_generic17_center.log": "2002618fe5bb1642230f8b580ebdab417453fec96285f200108434af24fa865f",
+    "verify_generic17_slice.log": "11a6d23133f8eab2eff8f15efc39291804146ac2c4fef11616b542cd24b4a046",
+    "verify_split_codimension.log": "644ccc63ecab352a98eb07730963aad1b02177d1cc809c09307a284a1da28373"
+  }
 }
