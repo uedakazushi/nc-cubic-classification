@@ -1,0 +1,23 @@
+{
+  "status": "initial public research sources saved before runtime validation",
+  "source_head": "46a657c277bb00c1c23482bfa8140bb2cf1106d8",
+  "original_tex_sha256": {
+    "papers/nc_cubic_threefold_moduli.tex": "312d12230a432fbadfc5ec58aa8e89fb84cda76d4b7366e8e798e9c5b8c11e8e",
+    "papers/sections/central_pair_explicit_centers.tex": "498a139797b4b60d53f9594e8986b7300346e6ba9e854ab7994fa60c7926ae37",
+    "papers/sections/central_pair_generic_component.tex": "5dd134522c08cc0497cfc9c4d0d7944b8ca9dcbb85f0a044877ab1f99e9eaa7d",
+    "papers/sections/ambient_periodicity.tex": "5076ea4cf1aa114eb1bd92ba1bb3ac46e9fe86bdc6545d96ac62528248521c32",
+    "papers/sections/central_pair_mixed_derived_rigid.tex": "e1cd37709e128d2268ec2f590cbfe92cb4a465922513487043fd968003ae9645",
+    "papers/sections/mixed_center_picard.tex": "7fed32a8e7d2f491a54bc4072ac3ad395eed5a9c13c094399f3435def53c1504",
+    "papers/sections/central_pair_finite_order_regularity.tex": "e04f4b25909da9be5fd5ffb3c9cf0129500881cad68bda61396f93eaea918bb8",
+    "papers/sections/central_pair_artin_formal_moduli.tex": "82d87468491ebbae6be5720f0527314751ecb0e4a726e35637830da76b25c196",
+    "papers/sections/central_pair_diagonal_classification.tex": "870d0829f303d97f0246cba13f225f1c59a0a26d8702591d496d704043ad2678"
+  },
+  "public_export_review": {
+    "destination_public": true,
+    "allowlisted_author_mathematical_sources_only": true,
+    "credential_pattern_scan_no_matches": true,
+    "no_third_party_private_files_or_unrelated_internal_documents": true,
+    "scope": "Own moduli manuscript and necessary proofs, authored computations, public bibliography citations; not whole private repository."
+  },
+  "full_mathematical_audit": false
+}
