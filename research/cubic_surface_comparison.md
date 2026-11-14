@@ -8,6 +8,14 @@
 
 GL4^4の各矢空間スカラーは射影potentialに自明に作用する。67次元parameter componentのraw stack次元は3、四つのGmをrigidifyした商は7。pointed圏、裸のAbel圏、graded代数、周期構造付きZ代数を区別する。
 
+## 三次元quadratic AS正則とdirected/rolled-up箙の比較（既知結果）
+
+この話題は本稿の四頂点・四次superpotentialの場合と同一視しない。非可換 P^2 のdirected Beilinson箙には三頂点・六矢があり、関係は rank 3 の R⊂V0⊗V1 (dim V0=dim V1=3)。三本の矢 V2:2→0 を加えたrolled-up箙の**三次の通常の巡回potential**は w∈V0⊗V1⊗V2。flattening w:V2*→V0⊗V1 が単射である開集合 U 上で、w↦im(w)=R は GL(V2) の主束である。よって族・自己同型込みで
+[U/(GL(V0)×GL(V1)×GL(V2))] ≃ [Gr(3,V0⊗V1)/(GL(V0)×GL(V1))]
+が成り立つ。逆は V2=R* として恒等テンソル w=Σ r_i⊗c_i。rolled-up potential W=Σ r_i c_i の ∂_(c_i)W=r_i、他の微分はRから一意に定まる。これはAOU *Compact moduli of noncommutative projective planes*, arXiv:1411.7770, (7.27)–(7.28) で**既に証明されている**。同Theorem 1.1(2) は半安定GIT商 M_quad≅M_rel≅P(6,9,12) も述べる。full-rankでないpotentialも含むraw affine quotient stack全体は同値でなく、上記は開埋込みである。projectivized potentialにGL(V2)で作用させる場合は残存G_m慣性を処理する。
+
+以前の「任意の3周期同型を固定した三頂点relationの表示はordinary potentialにならない」という反例は、**指定した周期との両立**を問題にしたものであり、directed箙のRだけを保持し新矢をR*として追加するこの同値の反例ではない。3次元AS正則幾何対象に制限するにはBP/VdBのgeometric quadruple条件（任意の非零縮約がrank≥2など）を対応する双方へ課す。単なるfull flattening rank 3からAS正則性を導かない。一般の長さ6,9等のpotentialまで自由に許すと、ここでの同値から外れる。
+
 ## 明示族と計算
 
 F=a(x³+y³+z³)+bxyz+t(x²+c2y²+c3z²)+t²(d1x+d2y+d3z)。w=Alt(txyz)-3(1-c+c²-c³)(t sym F)。全二階微分で[t,x]=[t,y]=[t,z]=0、[y,z]=sym F_x等を得る。t³はwに寄与しない。
