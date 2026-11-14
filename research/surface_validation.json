@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-14",
+  "version": "surface-v1",
+  "mathematical_scope": "Proofs examined in current surface note, no independent peer review; global AOU comparison remains open",
+  "computation": "verify_surface_incidence.py executed over QQ, all assertions passed",
+  "latexmk": "PASS after rerun; first 20s run was terminated before final PDF completion",
+  "pages": 6,
+  "visual_check": "All six pages rendered with pdftoppm; contact sheet inspected",
+  "warnings": "CJK italic fallback, minor math font size substitution, deprecated rm command; no unresolved references or overfull boxes",
+  "previous_102_page_manuscript_reaudited": false,
+  "sha256": {
+    "papers/cubic_surface_ambient_moduli.tex": "9e12681c6603b1f23a0ef77a8d670236247790243243f18a6a888297e77dfd82",
+    "computations/verify_surface_incidence.py": "805c29597cb37054c9bc9b5b7c4233555446417e0eca324c454354c925a3774d",
+    "computations/surface_incidence_certificate.json": "d7e5d4bc765c8f7afbbc3606638758a505265f47db8fc5e9a3c574ff0093ae1f"
+  },
+  "pdf_sha256": "ea3c152ce696bc50d1c3d420f8572177f42f259baa9dff764c846fa7a695553e"
+}

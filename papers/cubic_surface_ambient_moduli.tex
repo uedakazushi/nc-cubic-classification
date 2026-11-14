@@ -1,0 +1,331 @@
+\documentclass[11pt,a4paper]{ltjsarticle}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs}
+\usepackage[haranoaji]{luatexja-preset}
+\usepackage[unicode,hidelinks]{hyperref}
+\newtheorem{theorem}{定理}[section]
+\newtheorem{proposition}[theorem]{命題}
+\newtheorem{lemma}[theorem]{補題}
+\newtheorem{corollary}[theorem]{系}
+\theoremstyle{definition}\newtheorem{remark}[theorem]{注意}
+\renewcommand{\proofname}{証明}
+\newcommand{\PP}{\mathbb P}\newcommand{\kk}{\mathbb C}
+\newcommand{\Sym}{\operatorname{Sym}}\newcommand{\qgr}{\operatorname{qgr}}
+\newcommand{\Hom}{\operatorname{Hom}}\newcommand{\HH}{\operatorname{HH}}
+\newcommand{\Spec}{\operatorname{Spec}}\newcommand{\PGL}{\operatorname{PGL}}
+\newcommand{\OO}{\mathcal O}\newcommand{\rank}{\operatorname{rank}}
+\title{非可換三次曲面と非可換射影三空間のモジュライ\\\large 一意延長・反標準復元・三次中心ペンシル}
+\author{研究草稿（新規性の網羅的確認は未了）}
+\date{2026年11月14日 / surface-v1}
+\begin{document}\maketitle
+\begin{abstract}
+本稿の対象は次元2の三次曲面であり、三次三様体ではない。
+滑らかな三次曲面の任意のPoisson構造が射影三空間へ一意に延長し、その像が
+$R(1,3)$成分に稠密であることを証明する。Poissonのスカラーを残す一般有理商では
+次元は$8\to7$、一般ファイバーは三次ペンシルの開部分である。
+全Poisson接空間の有理数上の証明書により、対応する22次元錐の一般正則性を確認する。
+量子側では二次包絡の復元と、仮定を明記した中心三次の$\PP^1$および全indexed正規
+三次イデアルの形式ファイバーを証明する。Abdelgadir--Okawa--Uedaの8次元marked
+モジュライと本比較の関係を整理するが、そのコンパクト化全体からambientモジュライへの
+大域射、全てのheartの同一視、滑らかなtailsの全域支配性は主張しない。
+\end{abstract}
+
+\section{先行研究と対象の区別}
+非可換三次曲面には、反標準偏極による定義、非可換平面の6点blow-up、
+4次元AS正則代数の正規三次商、例外列からの箙関係という複数の表示がある。
+これらの全族・全境界での同値は、本稿の前提にはしない。
+Van den Bergh\cite[Chapter 12]{VdB}は、楕円的な非可換blow-upに付随する反標準型環を
+4次元AS正則環の正規三次商として構成した。ただし反標準モデルとblow-upそのものの
+区別に注意する（同章Remark 12.0.5）。
+
+Abdelgadir--Okawa--Ueda\cite{AOU}は9頂点18矢の箙と9個の二次関係を用い、
+marked非可換三次曲面のトーリックGITモジュライを構成した。その稠密トーラスは
+$(\mathbb G_m)^8$である（\S5.4）。同論文Theorem 1.1は楕円decupleによる
+双有理表示、Theorem 9.4は所定のblow-upとの導来同値を与える。
+本稿ではこれを「反標準環の族とそのambientへの射の全域での同定」と読み替えない。
+
+Pym\cite[\S3.4]{Pym}の$R(1,3)$成分は、三変数Sklyanin代数の中心一次拡大に対応する。
+中心拡大の代数構造はLe Bruyn--Smith--Van den Bergh\cite{LBS}、
+非斉次potentialの中心元と量子del Pezzo構成はEtingof--Ginzburg\cite{EG}に属する。
+以下の貢献候補は、これらの比較に必要な射・ファイバー・同値関係を分離し、
+具体的証明と有限証明書を与える点にある。個々の結果の初出は未確定である。
+
+\section{三次曲面のPoisson構造の一意延長}
+$S=\kk[x,y,z,t]$、$X=V_+(F)\subset\PP^3$を滑らかな三次曲面とし、
+$\Omega=dx\wedge dy\wedge dz\wedge dt$を固定する。
+随伴公式より$-K_X=\OO_X(1)$なので
+\[
+ H^0(X,\wedge^2T_X)=H^0(X,\OO_X(1))\simeq S_1.
+\]
+次元2では全双ベクトルがPoissonである。
+$F$の代表と$\Omega$を固定して、この同定の規格化を選ぶ。
+
+\begin{theorem}\label{thm:extension}
+任意の$h\in S_1$について
+\[
+ \iota_{\Pi_{F,h}}\Omega=dF\wedge dh
+\]
+で定まる斉次二次Poisson双ベクトルは$\PP^3$へ降り、$X$をPoisson部分多様体とし、
+$X$上の$h$に対応するPoisson構造を誘導する。
+$X$上の任意のPoisson構造の$\PP^3$への延長は一意である。
+\end{theorem}
+\begin{proof}
+$h\ne0$なら線型座標を変えて$h=t$とできる。このとき$t$はCasimirであり、
+\[
+ \{x,y\}=F_z,\quad\{y,z\}=F_x,\quad\{z,x\}=F_y.
+\]
+$t$を係数とする三変数Jacobian括弧なのでJacobi恒等式を満たし、$F$もCasimirである。
+斉次次数から次数零の有理式上の括弧が定まり、射影化できる。
+$t=1$上での随伴の局所式を使えば、誘導双ベクトルは反標準切断$t$に対応する。
+$h=0$の場合は零である。
+
+二つの延長の差は
+$H^0(\PP^3,\wedge^2T_{\PP^3}(-3))$に属する。一方
+\[
+ \wedge^2T_{\PP^3}(-3)\simeq\Omega^1_{\PP^3}(1),\qquad
+ H^0(\PP^3,\Omega^1_{\PP^3}(1))=0
+\]
+であり、最後の消滅はEuler完全列から従う。
+よって延長は一意である。
+\end{proof}
+
+\begin{theorem}\label{thm:poisson-fiber}
+非零Poisson構造を持つ滑らかな三次曲面のincidenceからambient Poisson構造への射は、
+$R(1,3)$の錐の稠密部分を覆う。
+一般の固定ambient上のファイバーは
+\[
+ X_c=V_+(F+c h^3),\qquad c\in\mathbb A^1
+\]
+のうち滑らかな曲面を与える開部分である。Poissonスカラーを残す一般有理商の次元は
+\[
+ 8\longrightarrow7,
+\]
+一般ファイバーの次元は1である。
+\end{theorem}
+\begin{proof}
+$h=t$として最高active次数部分$f=F(x,y,z,0)$が滑らかな範囲を取る。
+この括弧の一次Poisson中心は$\kk t$である。
+実際、$a x+b y+c z$が中心なら定数ベクトル$(a,b,c)$と$\nabla f$は常に平行となり、
+$f$が一つの線型形式の三乗となって滑らかさに矛盾する。
+従って同じ非零ambientを与える$h'$は$h$の定数倍である。
+$h$を揃えた後、$d(F'-F)\wedge dh=0$から
+$F'-F\in\kk[h]_3=\kk h^3$となる。
+逆にこの変換は括弧を変えない。ペンシルの残る端点$h^3$は三重平面である。
+滑らかさは開条件であり、最初の$F$が滑らかならこの開部分は非空。
+
+ambientのパラメータは中心一次直線$[h]\in\PP(S_1)$の3次元と、
+$F\bmod\kk h^3$の19次元で合計22次元である。
+基底変更の下で係数は捩れるが、局所chartでの次元計算には影響しない。
+像の既約閉包は$R(1,3)$の錐である\cite[\S3.4]{Pym}。
+曲面とPoisson構造のincidenceは$\PP(S_3)^{\rm sm}$上の階数4の束で23次元。
+一般の$\PGL_4$軌道は15次元であることを次節で厳密に確認する。
+従って一般有理商は$23-15=8$、$22-15=7$である。
+固定同型類のファイバーには有限自己同型群による商があり得る。
+\end{proof}
+
+\begin{remark}
+固定ambientは、有理第一積分$F/h^3$の値を忘れている。
+三次曲面はその一般葉の閉包であり、ペンシル全体で楕円曲線
+$V(F,h)$を共有する。これは幾何学的な1次元忘却の説明である。
+$\Pi$自体をスカラー射影化するとambientの次元は21になる。
+本稿の22と7はPoissonスカラーを残す規約である。
+\end{remark}
+
+\section{一般正則性と有限同一視の証明書}
+次の有理係数の点を取る。
+\begin{align*}
+ F_*={}&3(x^3+y^3+z^3)+5xyz+t(x^2+2y^2+3z^2)\\
+ &+t^2(x+2y+4z)+7t^3,\qquad h=t.
+\end{align*}
+勾配イデアルが零次元であることから$V_+(F_*)$は滑らかである。
+この確認は有理数上のGr\"obner計算で再現する。
+二次双ベクトルの係数空間は60次元。
+全Jacobi方程式80係数と発散零16係数の微分を$J$とし、
+$F$の20係数と$h$の4係数の変分を$M$、$\mathfrak{gl}_4$の軌道微分を$O$とする。
+付属コードは、整数上の$JM=0$と次の非零有理小行列式を検証する。
+\[
+\begin{array}{c|r|r|l}
+ &\text{行列の大きさ}&\rank&\text{選択した最大非零minor}\\\hline
+M&60\times24&22&41472\\
+O&60\times16&15&407413613894400\\
+J&96\times60&38&483917294055304538158847754240000\\
+H&60\times32&30&-12020528624208926290875/2
+\end{array}
+\]
+行・列の添字は\texttt{surface\_incidence\_certificate.json}に固定する。
+$H$については下記で説明する。
+
+\begin{proposition}\label{prop:reduced}
+$R(1,3)$の22次元錐は全unimodular二次Poissonスキームの既約成分であり、
+一般点で正則である。
+\end{proposition}
+\begin{proof}
+$\rank M=22$によりJacobian族の像の局所次元は22以上であり、
+定理\ref{thm:poisson-fiber}のパラメータ数から22以下である。
+$\rank J=38$なので全スキームの接空間次元も$60-38=22$。
+従ってこの点の局所環は正則であり、22次元の既約像の閉包はその成分となる。
+\end{proof}
+
+$\Pi=\Pi_{F,t}$に対する二次graph関係を
+\[
+ R_\Pi=\langle x_i\otimes x_j-x_j\otimes x_i-\operatorname{sym}\Pi_{ij}\rangle
+\]
+とする。$H$は$(g\otimes h)R_\Pi=R_\Pi$を恒等で線型化し、
+$(V\otimes V)/R_\Pi\simeq\Sym^2V$へ写した行列である。
+二つの独立な矢空間スカラーが核に入り、rank30によりこれが全核である。
+従って$(\PGL_4)^2$内の二因子stabilizerは、この点および一般点で有限である。
+この有限検査自体は、当該代数の全AS正則性を証明するものではない。
+Pymの中心拡大族の既知の良い範囲とこの非零minor開集合を交差させて使う。
+
+\section{量子側の復元と一次元ファイバー}
+まず$B=T(V)/(R_2)$は二次、$G\in B_3$は正則正規元、$A=B/(G)$とする。
+三次商は次数一・二を変えないので
+\begin{equation}\label{eq:envelope}
+ B=\frac{T(A_1)}{\langle\ker(A_1\otimes A_1\to A_2)\rangle},\qquad
+ \ker(B_3\to A_3)=\kk G.
+\end{equation}
+これは次数付き同型について関手的であり、相対的に成分が局所自由なら二次核の形成は
+任意の底変更と可換する。存在している二次ambientの一意性と、任意の圏からのambientの
+存在は別の主張である。
+
+\begin{proposition}[中心三次ペンシル]\label{prop:center}
+$B$は中心正則一次元$t$を持ち、active次数による濾過が
+$\operatorname{gr}B\simeq S_0\otimes\kk[t]$を満たすとする。
+ここで$S_0$は三変数AS正則整域で
+\[
+ Z(S_0)_1=Z(S_0)_2=0,\qquad Z(S_0)_3=\kk\omega.
+\]
+さらに$\omega$を最高active記号に持つ中心三次元$\Omega_B$が存在すると仮定する。
+このとき
+\[
+ Z(B)_1=\kk t,\qquad Z(B)_3=\kk\Omega_B\oplus\kk t^3.
+\]
+固定ambientへの同定を保持した中心三次商の空間は$\PP^1$であり、
+$[t^3]$を除くchartは$B/(\Omega_B+\lambda t^3)$である。
+有限な射影自己同型群で割っても一般ファイバー次元は1である。
+\end{proposition}
+\begin{proof}
+中心元の最高active記号も中心的である。三次元のactive次数が3なら
+$\Omega_B$の定数倍を引き、残るactive次数2と1の記号は仮定によって零となる。
+最後は$t^3$の定数倍だけが残る。一次の場合も同様。
+随伴次数付き代数が整域なので$B$は整域であり、非零中心元は正則である。
+式\eqref{eq:envelope}により商の次数付き同型はambientの自己同型へ持ち上がる。
+従って固定同型類のファイバーは自己同型群による商となる。
+\end{proof}
+
+この仮定を満たす中心拡大と中心元は\cite{LBS,EG,Pym}の構成に属する。
+ここでは無限個の次数すべてで中心が一定な一つの開集合は要求しない。
+次数3までの条件だけを使っている。
+一般の良いgraph族で、中心一次直線の3係数と三次potentialの19係数からambient22次元、
+中心三次ペンシルを加えて23次元となる。有限射影stabilizerの範囲で一般有理商は
+7次元と8次元である。これは指定した次数付き中心拡大族についての主張であり、
+AOUの全コンパクト化との双有理同定を前提としない。
+
+\begin{proposition}[固定ambientの全正規形式ファイバー]\label{prop:normal}
+命題\ref{prop:center}の$B$について、二因子stabilizer
+$H_R\subset\PGL(B_1)^2$が有限であるとする。
+中心三次元$G$における、固定した$\check B$上のindexed正規三次イデアルの形式変形は、
+中心三次直線の形式変形に一致する。従って厳密形式ファイバーは
+$\operatorname{Spf}\kk[[s]]$である。
+\end{proposition}
+\begin{proof}
+局所Artin底$R$上で、各三次核直線の生成元$G_i$を$G$へ還元するように選ぶ。
+正規性と正則性から$G_i x=\varphi_i(x)G_{i+1}$となる可逆線型写像を得る。
+二次関係へ適用し、右から$G_{i+2}$を消去すると
+$(\varphi_i\otimes\varphi_{i+1})(R_2)=R_2$である。
+特殊ファイバーでは射影的に恒等である。標数零の有限代数群$H_R$はエタールなので、
+Artin底で恒等を持ち上げる射影対は恒等だけである。
+従って各$\varphi_i$はスカラーであり、$G_i$のスカラーを添字ごとに再帰的に変更して
+$G_i x=xG_{i+1}$にできる。$x=t$と置けば$t$は中心正則なので$G_i=G_{i+1}$。
+よって一つの中心元を全添字で反復した族となる。
+逆に中心三次直線はそのような族を与える。
+固定ambientでは中心の形成は体からの平坦底変更と可換であり、中心空間はrank2。
+従って$\PP^1$の一点での完備化である。
+\end{proof}
+
+\section{反標準偏極による内在性と局所変形}
+三次曲面の場合、三次三様体と異なり$-K_X=\OO_X(1)$である。
+非可換側でも、smooth proper性とsaturationを持つ中心CY型三次商について
+Serre関手が$\mathsf S_A=(-1)[2]$なら
+\[
+ H=\mathsf S_A^{-1}[2]=(1),\qquad
+ A_n=\Hom(\OO_A,H^n\OO_A)
+\]
+と復元できる。従って$(D^b\qgr A,\OO_A)$から$A$と$B=Q(A)$を復元でき、
+偏極の平方根を選ぶ問題はない。上記Serre公式はAOU\cite[Lemma 9.2]{AOU}でも
+所定のblow-up表示について確認されている。
+任意の正規商では中山自己同型の捩れがあり得るため、上の公式を無条件には使わない。
+構造対象自体を忘れた導来圏からの復元もここでは主張しない。
+
+\begin{proposition}\label{prop:hh}
+滑らかな可換三次曲面$X$について
+\[
+ \HH^1(X)=0,\qquad \dim\HH^2(X)=4+4=8,\qquad \HH^3(X)=0.
+\]
+従ってHochschild複体で制御される通常のmarked形式変形は無障害で、
+そのminiversalな底は8次元形式円板である。
+\end{proposition}
+\begin{proof}
+HKRにより$\HH^2=H^1(T_X)\oplus H^0(-K_X)\oplus H^2(\OO_X)$。
+$H^2(\OO_X)=0$、$h^0(-K_X)=4$である。
+接束の正常完全列とEuler完全列から$H^0(T_X)=0$および
+$h^1(T_X)=h^0(\OO_X(3))-15=19-15=4$を得る。
+前者の消滅は、$F$の偏導関数が二次正則列であり、一次係数のsyzygyがないことにもよる。
+$H^2(T_X)=0$は正常完全列の高次コホモロジー、
+$H^1(-K_X)=0$は$X$の直線束の中間コホモロジー消滅から従う。
+$\wedge^3T_X=0$なので$\HH^3=0$。
+同様に$\HH^1=H^0(T_X)\oplus H^1(\OO_X)=0$。
+通常のHochschild変形理論では障害は$\HH^3$に入るため無障害性が従う。
+この計算は反標準環の全域AS性や量子化の代数化を証明するものではない。
+\end{proof}
+
+\section{二種類の箙と、未完の大域比較}
+AOUのmarked曲面模型では9頂点18矢の箙に9本の二次関係があり、
+3-CY completionは9頂点27矢の三次potentialを持つ。
+非可換$\PP^3$の標準4周期模型では4頂点16矢、四次superpotentialの二階微分を使う。
+前者は曲面の例外列・helixに付随し、後者は4次元AS正則ambientに付随する。
+CY次元も3と4で異なり、同じ箙の単純な部分potentialではない。
+曲面の反標準環自体はAS Gorenstein次元3・index1であり、
+9頂点のAS正則代数ともambientのAS正則代数とも区別する。
+
+比較の具体的手順は、AOUの有限代数$\Lambda$と指定頂点対象$P_0$から
+\[
+ A_m=\Hom_{D^b(\Lambda)}
+       (P_0,(\mathsf S_\Lambda^{-1}[2])^m P_0)
+\]
+を作り、低次数での積を計算して$Q(A)$を得ることである。
+これは構造対象とSerre関手が同定された良い範囲でのレシピである。
+全体で射にするには、相対Homの底変更、豊富性、二次包絡のAS性、正規三次核、
+heartとmarkingの同値関係を証明する必要がある。
+
+\paragraph{現在の結論と限界.}
+Poisson側の$8\to7$と像の成分性は定理\ref{thm:extension}--\ref{prop:reduced}で証明した。
+量子側の$\PP^1$と全正規形式ファイバーは明記した仮定下で証明した。
+既知の中心拡大型量子族における7次元ambient・8次元三次対はこの計算と整合する。
+しかしAOUコンパクト化全体から全非可換$\PP^3$モジュライへの正則射、
+その射の全境界での定義、全normal三次成分の分類、smooth proper部分の大域支配性は未証明である。
+8次元同士という一致だけで双有理同定を結論しない。
+本稿の主要証明を今回検討し、コードと組版を実行したが、外部査読・形式検証・新規性調査は未完了。
+
+\begin{thebibliography}{9}
+\bibitem{AOU} T. Abdelgadir, S. Okawa, K. Ueda,
+\emph{Compact moduli of marked noncommutative cubic surfaces},
+\href{https://arxiv.org/abs/2404.00175}{arXiv:2404.00175}, v1.
+参照: Introduction, \S5.4, Theorems 1.1, 9.4, Lemma 9.2.
+\bibitem{VdB} M. Van den Bergh,
+\emph{Blowing up of non-commutative smooth surfaces},
+Memoirs Amer. Math. Soc. 154 (2001), no. 734;
+\href{https://arxiv.org/abs/math/9809116}{arXiv:math/9809116}, Chapter 12.
+\bibitem{Pym} B. Pym, \emph{Quantum deformations of projective three-space},
+Adv. Math. 281 (2015), 1216--1241;
+\href{https://arxiv.org/abs/1403.6444}{arXiv:1403.6444}, \S2, \S3.4.
+\bibitem{LBS} L. Le Bruyn, S. P. Smith, M. Van den Bergh,
+\emph{Central extensions of three-dimensional Artin--Schelter regular algebras},
+Math. Z. 222 (1996), 171--212.
+\href{https://sites.math.washington.edu/~smith/Research/Central-extns.pdf}{著者公開PDF}.
+\bibitem{EG} P. Etingof, V. Ginzburg,
+\emph{Noncommutative del Pezzo surfaces and Calabi--Yau algebras},
+J. Eur. Math. Soc. 12 (2010), 1371--1416;
+\href{https://arxiv.org/abs/0709.3593}{arXiv:0709.3593v4}, Theorem 3.3.2, \S9.
+\end{thebibliography}
+\end{document}
