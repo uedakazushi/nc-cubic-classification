@@ -36,6 +36,13 @@
 
 P3のdirected Beilinson四頂点12矢は、二つのrank6二次関係R0,R1を持つ。K=(R0⊗V2)∩(V0⊗R1)がrank4で、Kの両縮約がrank6となる層上では、四次potential w=coev(K)を構成する。GL4^4で割った非射影化potentialの群oidとGL4^3で割ったdirected relationの群oidが同値。Koszul/AS条件は両側の共通代数に課し、全Gr(6,16)^2が適合するとはしない。P2のAOUの単純な「関係の双対を矢へ追加する」操作とは異なり、三次syzygyのrank層が必要。四次は二階微分であり、BSWの符号付きsuperpotentialとDWZの一階Jacobianを区別する。証明は threefold原稿の projective_three_space_potentials.tex、現在有効な記述と境界の課題は research/cubic_surface_comparison.md。GIT境界でKが跳ぶ場合のsyzygy incidence compactificationを次に調べる。
 
+## R(1,3)既約成分の一般モジュライの決定（2026-11-15 / r13-v1）
+
+証明の骨格・仮定・計算・残る境界問題は `research/r13_generic_moduli.md` に集約した。主結果は一般のSklyanin中心一次拡大型におけるpointed moduliの開部分
+`[U_19/Aff_3]` （determinant-twisted作用、19−12=7次元）と、Hessian群 `G_216` の七係数正規形の有理商である。中心一次正規族が一意であることを楕円point schemeのtranslation (3p\ne0) から証明し、一般のZhang追加同一視を排除した。したがって七係数写像の一般次数は216。さらに `Hilb^8(A^3)` の特殊なcomplete intersection上の非零integrable 1-formのモジュライと同定する。八つの臨界点・中心変形の線型条件・integrability rank8・216群の有限列挙は新しい独立QQ検算を実施。四頂点rank188と67次元成分性は既存の証明書を入力とし、この回には再実行していない。
+
+この結果は**一般開部分の分類**であり、既約成分の全境界のscheme構造、正規化、GIT半安定商、特異なSklyanin境界、3-torsionでのZhang同一視、有限群の不変関数体の最小生成元は未解決である。今後はこの境界と不変量計算を最優先にする。独立査読と新規性の総合確認も未了。
+
 ## IV. 次に着手する課題
 
 最優先はW(E6)商の大域化である。定理5.1を単に代数化しただけでは、別のmarkingや自己同値による追加同一視を排除できない。AOUの楕円decuple上でsimple reflectionの有理変換を構成し、P0、Serre orbit、heart、ample locusの保存を証明する。K0上同じmarkingを持つ例外列の一意性が核心。2024年OWRのaffine Weylに関する予想と、有限W(E6)へ制限するための条件を照合する。
