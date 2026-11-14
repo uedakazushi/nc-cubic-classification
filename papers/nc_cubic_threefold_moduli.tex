@@ -56,16 +56,19 @@
 \newcommand{\AS}{\mathrm{AS}}
 \newcommand{\nc}{\mathrm{nc}}
 \newcommand{\Symm}{\operatorname{sym}}
-\title{非可換三次三様体の内在的復元とモジュライ\\中心三次対・ambient成分と17次元族}
+\title{非可換三次三様体と射影四空間のモジュライ\\豊富列・二次包絡・周期構造の比較}
 \author{公表準備用研究原稿（著者情報未記入）}
-\date{2026年11月13日・nc cubic moduli研究草稿 v6}
+\date{2026年11月14日・nc cubic moduli研究草稿 v7}
 \begin{document}
 \maketitle
 \begin{abstract}
-豊富列を備えたAbel圏から非可換三次超曲面を定義し、
-そのHom空間の二次合成核からambientのAS正則$\mathbb Z$-代数を
-一意に復元する。相対的な局所自由性と基底変換を仮定する範囲では、
-この復元はモジュライ群oidの射を与える。
+非可換三次三様体と標準5次元AS正則$\mathbb Z$-代数の
+モジュライをfpqc stackとして定義し、二次包絡による比較射を構成する。
+固定ambientへの厳密なファイバーは正規三次直線束族のincidenceであり、
+有限窓の準射影schemeの逆極限として具体的に記述できる。
+豊富列付きAbel圏との比較では、対象の同定、自然同型、頂点スカラー、
+相対線束による捩れを明示する。必要なsaturationと相対復元を仮定した範囲で、
+二次包絡はこれらすべてと両立し、ambientを一意に復元する。
 相対Jacobian型の中心三次対の41次元既約代数族を構成し、
 18次元の放物型群作用に横断する17係数正規形を与える。
 31次整数行列の非零行列式によって横断性を証明し、
@@ -79,11 +82,19 @@ $\mathrm{Rat}(1,1,3)$の全Poisson接空間の整数行列証明書により、
 Pymの局所量子化比較を通じ、規格化CY変形の対応成分と、
 そこを支配する一般$\PP^4$ファイバーの中心三次incidenceを得る。
 一般の有理商の次元は三次対で17、ambientで13である。
+周期構造を忘れる射を捩れ共役の問題として記述し、
+二因子stabilizerの$150\times50$整数行列の階数48の証明書により、
+この一般族では$\mathbb Z$-同型による追加同一視が有限個であることを示す。
+さらに一般の中心三次点では、全$\mathbb Z$-正規incidenceの厳密なファイバーの
+形式近傍が中心incidenceに一致し、四次元形式円板となる。
 また、明記した左右AS条件とuniformなGorenstein parameter $N$の下で、
 正則正規$d$次超曲面\emph{対}の最小周期が$\gcd(N,d)$を割ることを示す。
 正規族から作る有限頂点orbit代数の中心元をNakayama自己同型が固定するため、
 5次元・三次の場合には三次イデアルを保つ1周期化が得られる。
 この次数付き表示の中心性や、族全体での周期構造の降下は結論しない。
+可換$\PP^4$点では有限Beilinson窓とminimal hullの比較により、
+実際の$\mathsf{Qmod}$写像が規格化CY表示と射影基底付きAbel変形関手を
+全Artin基底上で同定する。基底を忘れた関手には形式的$\PGL_5$作用を残す。
 滑らかな可換三次点の全Artin形式局所環とOre局所化による
 中心三次対・構造代数層・斉次環の比較を、独立の証明依存を明示して収録する。
 また低次数中心・偶数Veronese・構造対象付き導来復元と、
@@ -141,8 +152,39 @@ Calabi--Yau 型の量子変形と二次 Poisson 構造の成分の関係を証�
 第\ref{sec:pair-generic-component}節はこの入力を自己完結した形で再掲し、
 全Poissonスキーム内の一般正則性を、新しい整数行列証明書で確認する。
 この議論は同リポジトリの全147成分分類の正しさを仮定しない。
-また、Pymの成分対応を用いる範囲は可換点の規格化CY変形の芽であり、
-全AS正則$\mathbb Z$-代数の大域的分類へ自動的に拡張しない。
+Pymの成分対応を用いる範囲は可換点の規格化CY変形の芽である。
+第\ref{sec:formal-ambient-comparison}節ではこの芽を、実際の射影基底付き
+Abel／$\mathbb Z$-代数変形の形式模型と比較する。
+全AS正則$\mathbb Z$-代数の大域的分類へ自動的に拡張するものではない。
+
+\paragraph{モジュライの定義と同値関係.}
+Behrend--Noohi\cite[\S\S2.3,2.5]{BehrendNoohiModuli}は、
+次数付き代数の乗法空間と基底変更群、その有限切断を使ったモジュライを構成する。
+Abdelgadir--Okawa--Ueda\cite{AOUNCPlanes}は、quiver relationのモジュライと
+非可換射影平面のモジュライを比較する。
+本稿の第\ref{sec:algebraic-moduli-foundations}節は、同じ有限表示の方法で
+全$\mathbb Z$-代数の有限窓を構成し、二次包絡とnormal incidenceによって
+三次とambientのモジュライを結ぶ。
+その有限窓表示だけから全stackの有限型性を結論しない。
+第\ref{sec:categorical-moduli-comparison}節では、圏の対象列の同定を弱めると
+頂点スカラーと線束による捩れが現れることを証明する。
+さらにSierra\cite[Proposition~3.3, Corollary~4.4]{SierraGAlgebras}の
+周期構造とZhang twisting systemの対応を使い、
+第\ref{sec:period-forgetting}節で次数付き同型と$\mathbb Z$-同型を比較する。
+本稿の一般族では二因子stabilizerの新しい整数行列証明書により、
+この追加同一視が有限個であることまで確かめる。
+
+\paragraph{局所変形の比較.}
+De~Deken--Lowen\cite[Theorems~4.5,5.15]{DeDekenLowen}は、
+豊富列を持つAbel変形と$\mathbb Z$-代数の変形、さらに幾何的helixの有限窓の変形を比較する。
+Lowen\cite[Theorems~3.14,3.26]{LowenRinged}と
+Yekutieli\cite[Corollary~11.2]{YekutieliTwisted}を併せると、
+本稿の可換点では構造代数層の変形とPoisson変形の同値類も比較できる。
+これらの既知定理を組み合わせ、有限Beilinson窓の射影基底を固定した形式sliceを構成する。
+同じ関手のminimal hullの一意性を先に使い、実際の$\mathsf{Qmod}$写像の接空間を照合することで、
+規格化CY表示と一般$\mathbb Z$-表示の全Artin比較を得る。
+接空間の次元が等しいことだけを根拠に同定したものではない。
+この比較の組合せの新規性と先行研究での初出は未確認である。
 
 \paragraph{代数構成の入力.}
 三変数 Sklyanin 代数と楕円曲線の対応，次数３の中心元および
@@ -199,6 +241,8 @@ ambientの5周期の直接証明も保持する。上記組合せの初出の網
 忘却射の微分とその障害、およびstackの次元規約を明示する。
 
 \input{papers/sections/intrinsic_cubic_reconstruction.tex}
+\input{papers/sections/algebraic_moduli_foundations.tex}
+\input{papers/sections/categorical_moduli_comparison.tex}
 
 \section{相対 Jacobian 型の中心三次族}\label{sec:construction}
 本節では基礎体を $k=\C$ とする．$U=ku\oplus kv$ と
@@ -785,6 +829,7 @@ Poisson中心三次対の\emph{有理商}についての結論であり、
 \input{papers/sections/mixed_center_picard}
 
 \input{papers/sections/ambient_periodicity}
+\input{papers/sections/period_forgetting_moduli.tex}
 
 \section{二次包絡によるモジュライ同型類の判定}\label{sec:moduli-iso}
 \begin{theorem}[三次商からのambient復元]\label{thm:moduli-iso}
@@ -821,36 +866,51 @@ Artin--Zhangのsection algebraの自然写像は
 \end{proof}
 
 \input{papers/sections/central_pair_artin_formal_moduli.tex}
+\input{papers/sections/formal_ambient_comparison.tex}
 \input{papers/sections/central_pair_mixed_derived_rigid.tex}
 
 \section{結論と検証の状態}\label{sec:status}
-本稿の41次元incidence、17係数正規形、分離型余次元15と
-忘却核7次元の主張には本文に証明がある。
-豊富列付き定義の下で二次包絡は関手的に一意であり、
-所定の相対平坦性と基底変換の条件下でambientへの射を与える。
-固定した次数付き表示での中心incidenceは有限行列の射影零点スキームであり、
-中心rankが一定の層では射影束となる。
-全nc cubicモジュライの既約成分性、有限非可換パラメータ全域の変形・障害理論、
-一般次元nc cubic moduliの完全分類は未解決。
-正規族を持つAS正則$\mathbb Z$-代数の\emph{対}の周期性は
-第\ref{sec:moduli-ambient-periodicity}節で証明し、標準5次元・三次のとき
-三次イデアルを保つ1周期化を得る。族全体での周期構造の降下、中心化、
-より弱い圏論的条件からの超曲面認識は未解決である。
-規格化された37次元CY周囲の芽の成分性と一般被約性・一般中心は
-第\ref{sec:pair-generic-component}節で扱う。
-一般点における中心三次対の射はこの成分を支配し、ファイバーは四次元である。
-従ってこの明示された範囲では像の余次元は零である。
-全nc cubicの大域成分性、豊富列を忘れたモジュライの存在、
-全族でのtailsの滑らかさの開性とは区別する。
-一次文献の初出調査と既存証明の全面独立監査は未完了。
-31次行列式、中心の次数別計算、分離型の検算は
-\nolinkurl{computations/independent/verify_generic17_slice.py}、
-\nolinkurl{computations/independent/verify_generic17_center.py}、
-\nolinkurl{computations/verify_split_codimension.py}で再現する。
-全Poisson接空間の証明書は
-\nolinkurl{computations/verify_rat113_tangent.py}で再現する。
-これは整数上の恒等式と非零小行列式による特性零の有限線型代数証明であり、
-全量子変形複体の無条件な計算ではない。
+本稿では、非可換三次とambientの二つのモジュライをfpqc stackとして定義し、
+二次包絡による比較射とその厳密なnormal incidenceファイバーを構成した。
+豊富列付き圏との比較では、対象同定・自然同型・頂点スカラー・相対線束を明示し、
+saturationと相対復元を仮定した範囲で同じ比較射が得られることを証明した。
+有限窓の商stackとincidence schemeは具体的に構成できるが、
+全stackの有限型代数性や有限窓一つによる認識は未証明である。
+
+体上では、正則正規三次対の1周期化を得る。
+一般Jacobian族では二因子stabilizerの階数48の証明書により、
+周期を忘れた際の追加同一視は有限個となる。
+さらに、一般中心三次点の\emph{全indexed normal}厳密ファイバーの形式近傍は
+四次元形式円板である。
+相対Koszul--Frobenius条件を仮定したNakayama剛性と、
+任意の$\mathbb Z$-ambient族での相対周期化・その降下は区別する。
+
+可換$\PP^4$点では、有限Beilinson窓の射影基底付きslice、
+既知のAbel／Poisson変形比較、minimal hullの一意性を用い、
+実際の$\mathsf{Qmod}$写像が規格化CY芽と全Artin変形関手を同定することを示した。
+基底を忘れた関手には形式的$\PGL_5$作用が残る。
+この結果により、37次元成分と、全特殊fiberに沿って完備化した中心incidenceの
+余次元零の形式像を、実際の射影基底付きAbel／$\mathbb Z$-変形模型に移した。
+これは一つの指定cubic点の完備化の支配性や、全大域成分の同定を意味しない。
+一般の有理商は17次元から13次元への射となり、
+可換cubicへの忘却核7次元や、可換点の接写像の核10次元とは異なる。
+
+全大域モジュライの代数性と成分性、任意の非可換点への形式比較の拡張、
+smooth properな三次部分の開性と支配性、豊富列を忘れた内部的認識は残っている。
+独立に選んだformality座標の下でのactual mapの全高次式の一致も未確認である。
+本稿は公表準備用の研究草稿であり、新しい結果の初出調査と
+保持した既存証明の全面独立監査は未完了である。
+
+既存の17係数slice、分離型余次元15、混合中心、相対Picard、
+偶数Veronese、条件付き導来復元、固定剛体ambientと有限位数境界の結果は保持した。
+計算証明書は主に
+\nolinkurl{computations/verify_two_factor_stabilizer.py}、
+\nolinkurl{computations/verify_rat113_tangent.py}、
+\nolinkurl{computations/independent/verify_generic17_slice.py}
+で再現する。整数上の核・積零と非零小行列式により標数零の階数を証明しており、
+有限体での零を標数零の恒等式と見なしていない。
+参照検査、有限計算、証明の独立監査、組版、遠隔保存の実施範囲は
+\nolinkurl{validation.json}に区別して記載する。
 
 \appendix
 \section{17係数正規形の正確な行列証明書}\label{app:rank}
@@ -882,6 +942,53 @@ $35\times35$ 行列式も同じ非零値となる．
 
 \input{papers/sections/central_pair_finite_order_regularity}
 \begin{thebibliography}{99}
+\bibitem{BehrendNoohiModuli}
+K.~Behrend and B.~Noohi,
+\emph{Moduli of non-commutative polarized schemes},
+Math. Ann. \textbf{371} (2018), 1375--1408.
+\href{https://doi.org/10.1007/s00208-017-1624-1}{doi:10.1007/s00208-017-1624-1}.
+本稿では\S\S2.3,2.5の乗法空間・scalar gerbe・有限切断を参照する。
+
+\bibitem{AOUNCPlanes}
+T.~Abdelgadir, S.~Okawa and K.~Ueda,
+\emph{Compact moduli of noncommutative projective planes},
+\href{https://arxiv.org/abs/1411.7770}{arXiv:1411.7770} (2014).
+参照箇所：\S\S3--5, Theorem~7.3, Appendix~A, Corollaries~A.7 and~A.10.
+
+\bibitem{SierraGAlgebras}
+S.~J.~Sierra,
+\emph{$G$-algebras, twistings, and equivalences of graded categories},
+Algebr. Represent. Theory \textbf{14} (2011), 377--390.
+\href{https://doi.org/10.1007/s10468-009-9193-y}{doi:10.1007/s10468-009-9193-y};
+\href{https://arxiv.org/abs/math/0608791}{arXiv:math/0608791}.
+参照箇所：Proposition~3.3, Theorem~3.6, Corollary~4.4.
+
+\bibitem{RRZHomological}
+M.~Reyes, D.~Rogalski and J.~J.~Zhang,
+\emph{Skew Calabi--Yau algebras and homological identities},
+Adv. Math. \textbf{264} (2014), 308--354.
+\href{https://doi.org/10.1016/j.aim.2014.07.010}{doi:10.1016/j.aim.2014.07.010};
+\href{https://arxiv.org/abs/1302.0437}{arXiv:1302.0437}.
+参照箇所：Theorems~0.3,6.3と後者の証明。
+
+\bibitem{LowenRinged}
+W.~Lowen,
+\emph{Algebroid prestacks and deformations of ringed spaces},
+\href{https://arxiv.org/abs/math/0511197}{arXiv:math/0511197v2} (2005).
+参照箇所：Theorems~3.14,3.26。出版版の書誌は今回未照合。
+
+\bibitem{StacksFormal}
+The Stacks Project Authors,
+\emph{The Stacks Project}.
+\href{https://stacks.math.columbia.edu/tag/06T5}{Tag~06T5}
+（minimal versal formal objectの一意性）、
+\href{https://stacks.math.columbia.edu/tag/07QS}{Tag~07QS}
+（excellent rings）、
+\href{https://stacks.math.columbia.edu/tag/02KH}{Tag~02KH}
+（flat base change）、
+\href{https://stacks.math.columbia.edu/tag/02OC}{Tag~02OC}
+（formal functions）。2026年11月14日確認。
+
 \bibitem{RRGeneralizedAS}
 M.~L.~Reyes and D.~Rogalski,
 \emph{Graded twisted Calabi--Yau algebras are generalized Artin--Schelter regular},

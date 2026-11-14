@@ -1,46 +1,55 @@
 {
-  "date": "2026-11-13",
-  "version": "v6",
-  "scope": "Current mathematical sources, reproducible certificates, compilation and visual inspection. No historical migration receipt.",
-  "initial_repository_commit": "839af3d586af75f0a0d0a3e71eebf31ecf10023d",
+  "date": "2026-11-14",
+  "version": "v7",
+  "scope": "Current local mathematical sources, explicit review scopes, executed finite checks, compilation and visual inspection. Remote saving is verified separately after this file is committed.",
+  "initial_repository_commit": "6fcf365b9dc922c1c38c215b3d52c783d641aaea",
   "reference_commits": {
     "poisson-p4": "f118dfbfc5bb9b7a394d1985b4800b6228eebaf6",
     "nc-cubic": "aca196334df7d8acc32574e3cb166fc8e1ea6cba",
     "asz4": "91b45047739187fc5acb6f906b25e48f49a42c2d"
   },
+  "reference_review": "poisson-p4 main was rechecked at the recorded commit this turn; nc-cubic and asz4 commits are retained reference points.",
   "full_mathematical_audit": false,
   "mathematical_review": {
-    "intrinsic_reconstruction": "Proof checked with the stated ample-sequence, AS, Hilbert-function, regularity, local-freeness and relative Hom assumptions; arbitrary base change of the quadratic envelope proved.",
-    "pair_periodicity": "Full orbit-algebra proof reviewed independently: sector equivalence, AS transfer, uniform Nakayama shift, vertex sign +N, central-element preservation and unrolling. Applies under explicit (AS1)-(AS2); no family descent or centralization claimed.",
-    "poisson_component": "Exact integer MS=0 plus two nonzero modular minors certify tangent dimension 37. This is a proof at the specified rational point, and the 37-dimensional irreducible family gives a generically smooth component.",
-    "quantum_component": "Uses Pym Definition 2.8, Proposition 2.9 and Theorem 2.10 for the normalized CY germ at the polynomial point. Not a global classification of AS-regular Z-algebras.",
-    "artin_comparison": "Corrected the source to the PGL-congruence quotient with scalar rigidification (17/20, not framed 41/44). Relative Euler/conormal and intrinsic Jacobi-Pluecker calculation included. Homogeneous Kontsevich formality remains an explicitly stated external input; Yekutieli Corollary 11.2 applies over C.",
-    "inherited_results": "Existing finite checks rerun; PBW, all mixed-center proofs, reconstruction inputs and finite-order Bertini hypotheses have not received a new exhaustive independent audit.",
-    "novelty": "Priority and exhaustive novelty checks remain incomplete; verified literature inputs are distinguished from proofs and certificates supplied here."
+    "moduli_foundations": "Root proof and independent review of the fpqc stacks, finite-window quotient presentations, regular normal cubic incidence, strict 2-fibres, tangent space and commutative fibre over nonreduced bases. No finite-type claim for the full inverse limit.",
+    "categorical_comparison": "Independent review of strong arrows, compatible 2-arrows, vertex scalar crossed module, pointed rigidification and relative line-bundle descent. Saturation, relative Hom base change and categorical reconstruction remain explicit hypotheses.",
+    "period_forgetting": "Review of the period groupoid, finite-type two-factor stabilizer reduction, twisted conjugacy and finite additional Zhang identifications. The new integer certificate establishes finite generic two-factor stabilizer, not its order.",
+    "indexed_normal_rigidity": "Root and independent review of the full indexed normal incidence over graded Artin ambient deformations, including a possibly nonflat relative stabilizer. Centralization and the strict four-dimensional formal fibre follow. No periodization of arbitrary Z ambient families is inferred.",
+    "relative_nakayama": "Proof reviewed conditional on the stated relative finite-free Koszul-dual Frobenius structure and the relative Nakayama comparison. Their automatic existence is not claimed.",
+    "formal_ambient_comparison": "Root and independent checks of the finite Beilinson window, projective frame slice, minimal hull comparison and the actual Qmod natural transformation at the commutative P4 point. This is a set-valued isomorphism-class Artin comparison; no higher-groupoid equivalence is asserted.",
+    "formal_component_image": "Independent review of the 37-dimensional formal component and the codimension-zero formal image after completion along the whole commutative ambient fibre. Flat completion, proper base change and formal functions apply. This is not a claim at one fixed cubic or on the smooth-proper subfunctor.",
+    "cubic_artin_map": "The actual envelope morphism and its tangent formula are identified. The 17-dimensional cubic Artin model uses the manuscript's homogeneous formality input. Compatibility of independently chosen formality coordinates in all orders is unproved.",
+    "inherited_results": "Existing numerical certificates were rerun. Valid existing proofs are retained, but all older PBW, mixed-centre, reconstruction and finite-order Bertini arguments did not receive a new exhaustive independent audit.",
+    "novelty": "Literature inputs and supplied proofs are separated. Priority and exhaustive novelty verification remain incomplete."
   },
   "open_scope": [
-    "Algebraicity and finite type of the full Z-algebra moduli stack",
-    "Relative descent and uniqueness of the period structure",
-    "Centralization and additional identifications under Zhang twists",
-    "Dominance after restriction to smooth proper cubic categories",
-    "Component and codimension statements in the full global Z-algebra moduli"
+    "Algebraicity and finite type of the full Z-algebra moduli stack, and global component statements",
+    "Relative periodization and descent for arbitrary Z-algebra families and comparison at general noncommutative points",
+    "Finite stabilizer orders and degrees of period-forgetting",
+    "Dominance and relative openness after restricting to smooth proper cubic categories",
+    "Reconstruction after forgetting the ample sequence",
+    "All-order compatibility of independent formality coordinates for the cubic-to-ambient map"
   ],
   "static": {
-    "tex_inputs": 11,
-    "labels": 174,
-    "references": 133,
-    "citations": 57,
-    "bibliography": 33,
+    "tex_inputs": 15,
+    "labels": 242,
+    "references": 212,
+    "citations": 88,
+    "bibliography": 39,
     "sha256": {
-      "papers/nc_cubic_threefold_moduli.tex": "e439715a912fa87a5477e469e12f17ed45d4b975b493bf06e92ae1ad7a83d141",
+      "papers/nc_cubic_threefold_moduli.tex": "b44af9b8c78c4b6cc539e87ced74806364a118608aff83a2071625dbd20a9d0f",
       "papers/sections/intrinsic_cubic_reconstruction.tex": "b8f3fdf0a802d1bfabb45b79f614682c3080bf218242d8230be2a94c99b0f690",
+      "papers/sections/algebraic_moduli_foundations.tex": "7bed0be351ce4ff5835262c1db567e6fd3a0388d52af8626d6878af505540b36",
+      "papers/sections/categorical_moduli_comparison.tex": "e6dfefa6c918c30f7cdf24122708f256bb39616c7da7e2f4cf0952afc7713eb0",
       "papers/sections/central_pair_explicit_centers.tex": "498a139797b4b60d53f9594e8986b7300346e6ba9e854ab7994fa60c7926ae37",
       "papers/sections/central_pair_generic_component.tex": "591ece63128a290bd83abd0c52ab7ae435b837577c15ff1f1aab008de4e727ed",
       "papers/sections/ambient_incidence_morphism.tex": "fe02bbab7fa534c0f230cf0241caa814a49e39dd4485ef12a2904e748f726faf",
       "papers/sections/central_pair_diagonal_classification.tex": "870d0829f303d97f0246cba13f225f1c59a0a26d8702591d496d704043ad2678",
       "papers/sections/mixed_center_picard.tex": "7fed32a8e7d2f491a54bc4072ac3ad395eed5a9c13c094399f3435def53c1504",
       "papers/sections/ambient_periodicity.tex": "93f2ed60eed47a15784cdbd54229b3b981538c5ac3641ac41b6ac4fb65f69ae4",
+      "papers/sections/period_forgetting_moduli.tex": "16a83a55c86029c18b71c58971ad711c11a764464895ea546007980de8ce3152",
       "papers/sections/central_pair_artin_formal_moduli.tex": "77d8d2345386cbac16dae3f17326170e9c93add9e9c7c907e22f2848941fc247",
+      "papers/sections/formal_ambient_comparison.tex": "5ff160b93272622653c1a62dae10408a9ff6fcd33b871898ec31f8fddd4bdb95",
       "papers/sections/central_pair_mixed_derived_rigid.tex": "e1cd37709e128d2268ec2f590cbfe92cb4a465922513487043fd968003ae9645",
       "papers/sections/central_pair_finite_order_regularity.tex": "e04f4b25909da9be5fd5ffb3c9cf0129500881cad68bda61396f93eaea918bb8"
     },
@@ -48,76 +57,69 @@
   },
   "computations": [
     {
+      "command": "python3 computations/verify_two_factor_stabilizer.py",
+      "exit_code": 0,
+      "source_sha256": "536d36c762dd236c1e79d389ac5ea8f44416b3f470067e2f33442a05af8bc030",
+      "result": "rank_Q=48; two scalar kernel vectors and Q R=0 checked over Z; 48x48 determinant = 815096 mod 1000003."
+    },
+    {
       "command": "python3 computations/verify_rat113_tangent.py",
       "exit_code": 0,
       "source_sha256": "5daf959e2dabf77d6fc5c937e5d5556a5411b5d8603657fb053db43c191d4487",
-      "output_sha256": "d18acd187b386b53bc7f27e53ed421bffc4d2ef338a107006d55faaf0df67aad",
-      "result": "{\n  \"rank_Q\": 113,\n  \"tangent_dimension\": 37,\n  \"minor113_mod_1000003\": 844194,\n  \"minor37_mod_1000003\": 948131,\n  \"integer_product_zero\": true,\n  \"output\": \"build/rat113_tangent.json\"\n}"
+      "result": "rank_Q=113; Poisson tangent dimension=37; integer M S=0; minors 844194 and 948131 mod 1000003."
     },
     {
       "command": "python3 computations/independent/verify_generic17_slice.py",
       "exit_code": 0,
       "source_sha256": "75cfbe477af7892a493c532158d26969b8c8200bc0d2196ab161eb5461487668",
-      "output_sha256": "11a6d23133f8eab2eff8f15efc39291804146ac2c4fef11616b542cd24b4a046",
-      "result": "exact 31x31 determinant: -5538243375000\nPASS: generic slice is transverse and has 17 independent moduli directions."
+      "result": "Exact 31x31 determinant -5538243375000; 17-dimensional transverse slice."
     },
     {
       "command": "python3 computations/independent/verify_generic17_center.py",
       "exit_code": 0,
       "source_sha256": "444cff55c30fc86a9fd64de30d860594bce357429c95091cba940c8184ecaaf8",
-      "output_sha256": "2002618fe5bb1642230f8b580ebdab417453fec96285f200108434af24fa865f",
-      "result": "n=1: dim(S_n)=3, dim(S_{n+1})=6, commutator rank=3, dim Z(S)_n=0\nn=2: dim(S_n)=6, dim(S_{n+1})=10, commutator rank=6, dim Z(S)_n=0\nn=3: dim(S_n)=10, dim(S_{n+1})=15, commutator rank=9, dim Z(S)_n=1\nPASS: exact low-degree center witness"
+      "result": "Exact low-degree center dimensions 0,0,1 in degrees 1,2,3."
     },
     {
       "command": "python3 computations/verify_split_codimension.py",
       "exit_code": 0,
       "source_sha256": "f58f81d0b2c00a8419b116d2dadabc6ec1fc70957458b23d25cea144bc7ea14f",
-      "output_sha256": "644ccc63ecab352a98eb07730963aad1b02177d1cc809c09307a284a1da28373",
-      "result": "PASS (exact Q): coefficients=35, split tangent=20, parabolic orbit=18, total split span=20\nPASS: codim in 35-dim coefficient space=15; rational quotient dimensions split=2 vs total=17\nPASS (exact Q): cubic Jacobian tangent = 1 + 6 + 3 = 10; forgetful kernel = 7\nPASS: split quotient maps to 1-dim image; its 15-dim normal maps to 9-dim image with 6-dim kernel\nPASS (exact Q): vertical directions = 1 Poisson scale + 6 moving-plane directions\nPASS: parabolic tangent (18) + vertical tangent (7) = Jacobian ideal tangent (25)"
+      "result": "Exact split codimension 15; quotient dimensions 2 and 17; forgetful kernel dimension 7=6+1."
     },
     {
       "command": "python3 computations/verify_central_pair_centers.py",
       "exit_code": 0,
       "source_sha256": "ae1f1515a06b6af9bfb66201ceb1ef47c61b0f0b70a9444b94bcccbce2568730",
-      "output_sha256": "744057780ee0a3f7e37ac143d16dfbb16e74cf7f2a30ea63a9ad5581067551dd",
-      "result": "PASS: Rains polynomial, 339 words / 162 relations / rank 144; commutative specialization rank 144\nPASS: 3 exact Rains commutators over Q(q,t)[L1,L2,L3,M1,M2,M3]\nPASS: all three free-algebra 41-term centrality certificates, translation and exact Rains scalar difference\nPASS: ordered cubic minor rows [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16, 17] det=-q^5(q^3-t^3)^2"
+      "result": "339 words, 162 relations, rank 144; three exact Rains commutators; all 41-term centrality certificates; ordered minor -q^5(q^3-t^3)^2."
     },
     {
       "command": "python3 computations/verify_central_pair_orbits.py",
       "exit_code": 0,
       "source_sha256": "33e84f11aed401a1d280e5c677e5dc5be9895fcbdf5312e143d18cb52f19b6af",
-      "output_sha256": "9ec2d5d51db72370213a9f38a2592202d33a39406b99a9ec46c2e309e8d060e2",
-      "result": "PASS: all 120 rational projective maps checked; six-point stabilizer is trivial\nPASS: orbit differential is 150x25, rank24; scalar kernel only\n24x24 minor rows: [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 20, 22, 23, 25, 26, 27, 63, 64] columns: 1..24; determinant: -480000000"
+      "result": "All 120 rational projective maps checked; six-point stabilizer trivial; orbit differential rank 24, minor -480000000."
     },
     {
       "command": "python3 computations/verify_central_symmetry.py --output build/central_symmetry.json",
       "exit_code": 0,
       "source_sha256": "e648b6e3b09f3d07b30ec07cd0688b62cae45f698e85111e55a24d8bf808177e",
-      "output_sha256": "557eb3256f9e30a04ccdc80a24b3a77b344327a9215e1ecaf8983728231985cd",
-      "result": "PASS: v-cubic symmetry, both determinant-character conventions, 2x5 toy obstruction, all nilpotent orders by weight"
+      "result": "Cubic symmetry, both determinant-character conventions, toy obstruction and nilpotent weights checked."
     }
   ],
-  "rat113_certificate_matches_regeneration": true,
+  "certificates": {
+    "two_factor_matches_regeneration": true,
+    "rat113_matches_regeneration": true,
+    "independent_two_factor_minor": "The stored 48x48 minor was independently recomputed with SymPy DomainMatrix over GF(1000003); determinant 815096."
+  },
   "build": {
     "portable_command": "latexmk papers/nc_cubic_threefold_moduli.tex",
     "executed_command": "/workspace/scratch/657cb84e04b6/tex-runtime/with-tex latexmk -g papers/nc_cubic_threefold_moduli.tex",
     "exit_code": 0,
     "engine": "LuaHBTeX 1.18.0 (TeX Live 2025/dev/Debian)",
-    "format": "user-generated lualatex.fmt, LaTeX2e 2024-11-01 patch level2",
-    "private_environment_repair": "Missing TeX runtime packages and format restored in a user directory outside the repository; package checksums verified against the official TeX Live manifest.",
-    "package_versions": {
-      "ctablestack": "1.0",
-      "haranoaji": "20250811",
-      "lua-alt-getopt": "0.7.0",
-      "lua-uni-algos": "0.5",
-      "lualibs": "2.76",
-      "luaotfload": "3.29",
-      "luatexbase": "1.3",
-      "luatexja": "20260130.1"
-    },
-    "pages": 59,
-    "pdf_bytes": 794024,
-    "pdf_sha256": "c58142dd34a6920bbf80b9f79eb8ef7a087c2f4b7f29db5c28434b763746bc3f",
+    "format": "User-generated lualatex.fmt; LaTeX2e 2024-11-01 patch level 2",
+    "private_environment_repair": "Missing runtime packages, format and filename databases were restored outside the repository using the official TeX Live 2025 final archive, with package SHA512 checks against its manifest.",
+    "pages": 84,
+    "pdf_bytes": 971806,
+    "pdf_sha256": "9521cdbe1c4f263b547a17e418c9c2c2213fbc52545c18ef544dd17f6fec427a",
     "all_pages_rendered": true,
     "contact_sheet_pages_visually_checked": [
       1,
@@ -178,19 +180,49 @@
       56,
       57,
       58,
-      59
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84
     ],
     "detailed_pages_visually_checked": [
-      6,
-      23,
-      27,
-      37,
-      45
+      1,
+      11,
+      18,
+      54,
+      55,
+      56,
+      57,
+      69,
+      70,
+      71
     ],
     "undefined_references_or_citations": false,
     "missing_glyphs": false,
-    "layout": "No material clipping or overlap observed. One 1.18604pt overfull box in a code path paragraph; small math-font substitutions, legacy font and PDF-bookmark math warnings remain.",
+    "layout": "No material clipping or overlap observed on contact sheets or the listed detailed pages. One inherited 1.18604pt overfull code-path paragraph; small math-font substitutions, legacy font and PDF bookmark math warnings remain.",
     "pdf_and_intermediates_tracked": false
   },
-  "assets": "Only current plan, notes, manuscript sources, necessary code and small certificates are tracked. No duplicated reference repository, historical bundle, external PDF, TeX runtime or build cache is included."
+  "assets": "Only the current plan, notes, manuscript sources, necessary code and small certificates are tracked. No historical bundle, external PDF, TeX runtime, PDF render or build cache is included."
 }
