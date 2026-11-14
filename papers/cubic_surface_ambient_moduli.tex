@@ -1,5 +1,5 @@
 \documentclass[11pt,a4paper]{ltjsarticle}
-\usepackage[margin=25mm]{geometry}
+\usepackage[margin=23mm]{geometry}
 \usepackage{amsmath,amssymb,amsthm,mathtools,booktabs}
 \usepackage[haranoaji]{luatexja-preset}
 \usepackage[unicode,hidelinks]{hyperref}
@@ -8,27 +8,35 @@
 \newtheorem{lemma}[theorem]{補題}
 \newtheorem{corollary}[theorem]{系}
 \theoremstyle{definition}\newtheorem{remark}[theorem]{注意}
+\newtheorem{definition}[theorem]{定義}
 \renewcommand{\proofname}{証明}
 \newcommand{\PP}{\mathbb P}\newcommand{\kk}{\mathbb C}
 \newcommand{\Sym}{\operatorname{Sym}}\newcommand{\qgr}{\operatorname{qgr}}
+\newcommand{\Ext}{\operatorname{Ext}}\newcommand{\Extop}{\operatorname{Ext}}
 \newcommand{\Hom}{\operatorname{Hom}}\newcommand{\HH}{\operatorname{HH}}
 \newcommand{\Spec}{\operatorname{Spec}}\newcommand{\PGL}{\operatorname{PGL}}
 \newcommand{\OO}{\mathcal O}\newcommand{\rank}{\operatorname{rank}}
-\title{非可換三次曲面と非可換射影三空間のモジュライ\\\large 一意延長・反標準復元・三次中心ペンシル}
+\title{非可換三次曲面と非可換射影三空間のモジュライ\\\large 四周期表示・明示的成分・反標準復元とWeyl商}
 \author{研究草稿（新規性の網羅的確認は未了）}
-\date{2026年11月14日 / surface-v1}
+\date{2026年11月15日 / surface-v2}
 \begin{document}\maketitle
 \begin{abstract}
-本稿の対象は次元2の三次曲面であり、三次三様体ではない。
-滑らかな三次曲面の任意のPoisson構造が射影三空間へ一意に延長し、その像が
-$R(1,3)$成分に稠密であることを証明する。Poissonのスカラーを残す一般有理商では
-次元は$8\to7$、一般ファイバーは三次ペンシルの開部分である。
-全Poisson接空間の有理数上の証明書により、対応する22次元錐の一般正則性を確認する。
-量子側では二次包絡の復元と、仮定を明記した中心三次の$\PP^1$および全indexed正規
-三次イデアルの形式ファイバーを証明する。Abdelgadir--Okawa--Uedaの8次元marked
-モジュライと本比較の関係を整理するが、そのコンパクト化全体からambientモジュライへの
-大域射、全てのheartの同一視、滑らかなtailsの全域支配性は主張しない。
+非可換三次曲面の内在的モジュライと、四頂点表示による非可換射影三空間のモジュライを比較する。
+任意の四周期構造を指定した関係式模型は、非捩れpotential模型と無条件には一致しないことを反例で示す。
+一方、Pymの$R(1,3)$族について全四頂点potentialのrank条件の接空間を厳密計算し、
+67次元の成分、7次元商とその有限型エタールatlasを得る。
+$S^{-1}[2]$と構造対象からの反標準環を用いてweakly markedな曲面のstackと超曲面認識部分を定式化する。
+滑らかな一般可換三次曲面のArtin形式近傍では、標準markingの忘却が$W(E_6)$-torsorをなし、
+AOUのmarked形式モジュライの商と同値になる。
+さらにAOUの有限代数から相対inverse Serreを低次数で計算することでambientの候補射を作り、
+既知のgeneric blow-up表示を入力としてその$R(1,3)$成分への支配性を示す。
+固定ambientの中心三次fiberは$\PP^1$、一般の全正規形式fiberも一次元である。
+Poisson側の一意延長とペンシル、全接空間の証明書を保持する。
+全大域weak moduliのWeyl商同定と全対象の超曲面認識は未証明であり、必要な条件を分離する。
 \end{abstract}
+{\small\tableofcontents}
+\clearpage
+
 
 \section{先行研究と対象の区別}
 非可換三次曲面には、反標準偏極による定義、非可換平面の6点blow-up、
@@ -43,12 +51,15 @@ marked非可換三次曲面のトーリックGITモジュライを構成した�
 $(\mathbb G_m)^8$である（\S5.4）。同論文Theorem 1.1は楕円decupleによる
 双有理表示、Theorem 9.4は所定のblow-upとの導来同値を与える。
 本稿ではこれを「反標準環の族とそのambientへの射の全域での同定」と読み替えない。
+2025年のOkawa--Ueda\cite{OU2025}によるmarked AS曲面の一般化も一次資料として比較する。
 
 Pym\cite[\S3.4]{Pym}の$R(1,3)$成分は、三変数Sklyanin代数の中心一次拡大に対応する。
 中心拡大の代数構造はLe Bruyn--Smith--Van den Bergh\cite{LBS}、
 非斉次potentialの中心元と量子del Pezzo構成はEtingof--Ginzburg\cite{EG}に属する。
 以下の貢献候補は、これらの比較に必要な射・ファイバー・同値関係を分離し、
 具体的証明と有限証明書を与える点にある。個々の結果の初出は未確定である。
+
+\input{papers/sections/surface_stack_comparison.tex}
 
 \section{三次曲面のPoisson構造の一意延長}
 $S=\kk[x,y,z,t]$、$X=V_+(F)\subset\PP^3$を滑らかな三次曲面とし、
@@ -131,7 +142,7 @@ $\Pi$自体をスカラー射影化するとambientの次元は21になる。
 本稿の22と7はPoissonスカラーを残す規約である。
 \end{remark}
 
-\section{一般正則性と有限同一視の証明書}
+\section{Poisson側の一般正則性と有限同一視の証明書}\label{sec:surface-witness}
 次の有理係数の点を取る。
 \begin{align*}
  F_*={}&3(x^3+y^3+z^3)+5xyz+t(x^2+2y^2+3z^2)\\
@@ -177,7 +188,7 @@ $(V\otimes V)/R_\Pi\simeq\Sym^2V$へ写した行列である。
 この有限検査自体は、当該代数の全AS正則性を証明するものではない。
 Pymの中心拡大族の既知の良い範囲とこの非零minor開集合を交差させて使う。
 
-\section{量子側の復元と一次元ファイバー}
+\section{量子側の復元と一次元ファイバー}\label{sec:surface-fiber}
 まず$B=T(V)/(R_2)$は二次、$G\in B_3$は正則正規元、$A=B/(G)$とする。
 三次商は次数一・二を変えないので
 \begin{equation}\label{eq:envelope}
@@ -220,6 +231,7 @@ $\Omega_B$の定数倍を引き、残るactive次数2と1の記号は仮定に�
 中心三次ペンシルを加えて23次元となる。有限射影stabilizerの範囲で一般有理商は
 7次元と8次元である。これは指定した次数付き中心拡大族についての主張であり、
 AOUの全コンパクト化との双有理同定を前提としない。
+定理\ref{thm:aou-dominance}が与える一般AOUからの支配性は、この結論と低次数復元を併用する。
 
 \begin{proposition}[固定ambientの全正規形式ファイバー]\label{prop:normal}
 命題\ref{prop:center}の$B$について、二因子stabilizer
@@ -299,15 +311,25 @@ CY次元も3と4で異なり、同じ箙の単純な部分potentialではない�
 heartとmarkingの同値関係を証明する必要がある。
 
 \paragraph{現在の結論と限界.}
-Poisson側の$8\to7$と像の成分性は定理\ref{thm:extension}--\ref{prop:reduced}で証明した。
-量子側の$\PP^1$と全正規形式ファイバーは明記した仮定下で証明した。
-既知の中心拡大型量子族における7次元ambient・8次元三次対はこの計算と整合する。
-しかしAOUコンパクト化全体から全非可換$\PP^3$モジュライへの正則射、
-その射の全境界での定義、全normal三次成分の分類、smooth proper部分の大域支配性は未証明である。
-8次元同士という一致だけで双有理同定を結論しない。
-本稿の主要証明を今回検討し、コードと組版を実行したが、外部査読・形式検証・新規性調査は未完了。
+定理\ref{thm:r13-open}は四頂点potentialの全方向で成分の一般正則性と7次元atlasを与える。
+命題\ref{prop:period-formal-rigidity}はこの一般点で任意の選択周期の追加方向を排除するが、
+命題\ref{prop:period-counterexample}が示す大域的な相違は残る。
+定理\ref{thm:formal-weyl}は可換点の形式Weyl商であり、
+大域商のためには命題\ref{prop:global-weyl-criterion}のmarking認識を証明する必要がある。
+定理\ref{thm:aou-dominance}では一般AOUからの有理ambient射と余次元0を得たが、
+全weakly marked対象が超曲面認識部分に入ること、コンパクト化全体で射が正則であること、
+全境界でのsmooth proper性は未証明である。
+全potential境界の明示分類、7係数atlasの有限同一視の次数、Weyl商の大域的な一般次数も未決定である。
 
-\begin{thebibliography}{9}
+\paragraph{検証と再現.}
+\texttt{verify\_r13\_potential.py}は19独立係数を保つ微分恒等式、
+四flatteningのrank、全接空間、群作用、7係数横断性を有理数上で検証する。
+\texttt{verify\_surface\_incidence.py}はPoisson側の独立な接空間と二因子stabilizerを再現する。
+有限行列計算と、本文の全次数のAS性・圏の降下の証明は区別する。
+証明を今回検討し、指定した計算と組版を実行したが、外部査読、形式検証、
+新規性・優先権の網羅的確認は実施していない。
+
+\begin{thebibliography}{99}
 \bibitem{AOU} T. Abdelgadir, S. Okawa, K. Ueda,
 \emph{Compact moduli of marked noncommutative cubic surfaces},
 \href{https://arxiv.org/abs/2404.00175}{arXiv:2404.00175}, v1.
@@ -327,5 +349,33 @@ Math. Z. 222 (1996), 171--212.
 \emph{Noncommutative del Pezzo surfaces and Calabi--Yau algebras},
 J. Eur. Math. Soc. 12 (2010), 1371--1416;
 \href{https://arxiv.org/abs/0709.3593}{arXiv:0709.3593v4}, Theorem 3.3.2, \S9.
+
+\bibitem{BSW} R. Bocklandt, T. Schedler, M. Wemyss,
+\emph{Superpotentials and higher order derivations},
+\href{https://arxiv.org/abs/0802.0162}{arXiv:0802.0162v3}, Definitions in \S1 and Theorems 6.2, 6.8.
+\bibitem{MS} I. Mori, S. P. Smith,
+\emph{The classification of 3-Calabi--Yau algebras with 3 generators and 3 quadratic relations},
+\href{https://arxiv.org/abs/1502.07403}{arXiv:1502.07403v2}, Theorem 4.2(1).
+\bibitem{AZ} M. Artin, J. J. Zhang,
+\emph{Noncommutative projective schemes}, Adv. Math. 109 (1994), 228--287,
+\href{https://doi.org/10.1006/aima.1994.1087}{doi:10.1006/aima.1994.1087}.
+\bibitem{Lowen} W. Lowen,
+\emph{Obstruction theory for objects in abelian and derived categories},
+Comm. Algebra 33 (2005), 3195--3223,
+\href{https://arxiv.org/abs/math/0407019}{arXiv:math/0407019}, Theorem A.
+\bibitem{DDL} O. De Deken, W. Lowen,
+\emph{Abelian and derived deformations in the presence of $\mathbb Z$-generating geometric helices},
+J. Noncommut. Geom. 5 (2011), 477--505,
+\href{https://doi.org/10.4171/JNCG/83}{doi:10.4171/JNCG/83},
+Theorems 4.5, 5.13, 5.15 and Definition 5.12.
+\bibitem{OU2025} S. Okawa, K. Ueda,
+\emph{Marked Artin--Schelter surfaces of del Pezzo types},
+\href{https://arxiv.org/abs/2508.04986}{arXiv:2508.04986v1} (2025),
+Definition 1.1 and Theorem 6.4.
+\bibitem{OWR} K. Ueda (joint work with S. Okawa),
+\emph{Affine Weyl group actions on moduli spaces of marked noncommutative del Pezzo surfaces},
+Oberwolfach Reports 44/2024, pp. 2557--2558,
+\href{https://doi.org/10.4171/OWR/2024/44}{doi:10.4171/OWR/2024/44}, Conjectures 1--3.
+
 \end{thebibliography}
 \end{document}

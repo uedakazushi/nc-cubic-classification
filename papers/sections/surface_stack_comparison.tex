@@ -1,0 +1,447 @@
+\section{関係式・potential・選んだ周期構造}\label{sec:period-stack}
+$V_i=\kk^4$ ($i\in\mathbb Z/4$) を頂点$i$から$i+1$への矢空間とし、
+$G=\prod_i\mathrm{GL}(V_i)$、$\overline G=\prod_i\mathrm{PGL}(V_i)$とおく。
+標準AS条件とは左右Koszul解消の型$(1,4,6,4,1)$、Gorenstein parameter 4、
+行Hilbert級数$(1-t)^{-4}$を意味する。族では各成分の局所自由性を要求する。
+
+\begin{proposition}[任意の周期を保持する関係式模型]\label{prop:relation-period}
+$\prod_{i=0}^3\operatorname{Gr}(6,V_i\otimes V_{i+1})$内の標準AS部分関手を
+$\mathcal R^{\rm AS}$とする。商stack$[\mathcal R^{\rm AS}/G]$は、
+4周期同型$\tau:C\xrightarrow{\sim}C(4)$を\emph{指定した}標準AS正則
+$\mathbb Z$-代数のstackと同値である。
+\end{proposition}
+\begin{proof}
+$C_{i,i+1}$ ($0\le i<4$)の基底を選び、$\tau$によって全添字へ延長する。
+二次関係の核が$R_{i+4}=R_i$を満たすので四つのGrassmannianの点となる。
+逆に四つの関係を整数列上へ反復し、自由経路代数をその二次イデアルで割れば$C$を得る。
+$\tau$を保つ同型は四つの基底変更で尽くされる。相対的には矢空間をfpqc局所で自明化して
+同じ構成を行い、ベクトル束・積・関係の降下を用いる。AS部分への制限も両方向で一致する。
+これはAS locus全体が有限型代数的stackであるという主張ではない。
+\end{proof}
+
+\paragraph{符号と微分の規約.}
+$\mathcal W=V_0\otimes V_1\otimes V_2\otimes V_3$とし、最初の矢を最後へ送る回転を$c$とする。
+$w\in\mathcal W$から、異なる始点成分を持つ
+$W(w)=w-cw+c^2w-c^3w$を作る。これは$cW=-W$を満たす四次superpotentialである。
+代数は長さ2の経路微分で$D(W,2)=\kk Q/(\partial_pW:|p|=2)$と定義する。
+BSW\cite[Theorems 6.2, 6.8]{BSW}はKoszul (twisted) CY代数と、対応する
+解消複体が完全な (twisted) superpotentialの対応を与える。
+通常の符号なしcyclic quotientへ$W$を送ると零になるので、その意味のpotentialと混同しない。
+
+\begin{proposition}[任意の4周期には非捩れpotentialは対応しない]\label{prop:period-counterexample}
+命題\ref{prop:relation-period}の対象全体を、非捩れ四次superpotentialのモジュライと
+無条件に同一視することはできない。
+\end{proposition}
+\begin{proof}
+$C=\check{\kk[x_0,x_1,x_2,x_3]}$とし、$\sigma=\operatorname{diag}(2,1,1,1)$から
+$\tau=\check\sigma\circ(\text{添字の4移動})$を選ぶ。
+最初の四つの矢空間を通常の$V$と同定し、その後の基底を$\tau$で運ぶと
+\[
+ R_0=R_1=R_2=\wedge^2V,\qquad R_3=(1\otimes\sigma^{-1})\wedge^2V.
+\]
+この最後の空間は$\wedge^2V$でない。例えば$x_0\otimes x_1-\frac12x_1\otimes x_0$
+が属する。
+もし同じ四窓が非捩れpotentialを持てば、始点0の最高syzygyテンソルは
+\[
+ (\wedge^2V\otimes V^{\otimes2})\cap
+ (V\otimes\wedge^2V\otimes V)\cap
+ (V^{\otimes2}\otimes\wedge^2V)=\wedge^4V
+\]
+に属する。従って非零スカラーを除いて交代テンソルであり、その巡回微分が与える
+$R_3$も$\wedge^2V$となって矛盾する。標準AS性自体は元の多項式$\mathbb Z$-代数から保証される。
+\end{proof}
+
+正しい比較は、非捩れpotentialに対してはFrobeniusに適合する周期を用いること、
+任意の周期を扱う場合はNakayamaの捩れとtraceの変更も含むtwisted potentialを用いることである。
+幾何学的点で適合周期の存在を示すだけでは、任意の\emph{選択}を分類したことにならない。
+また$[U/\mathrm{GL}_4^4]$と$[U/\mathrm{PGL}_4^4]$は異なる。
+射影potentialでは$(\mathbb G_m)^4$が全点を固定し、前者にはその慣性が残る。
+本稿で7次元というときは後者、または対応する一般有理商を指す。
+
+\section{R(1,3)の四頂点表示と有限型の一般開部分}\label{sec:r13-explicit}
+四つの矢空間を一時的に$V=\langle t,x,y,z\rangle$へ同定する。
+完全対称化を$\operatorname{sym}$、四変数の完全交代テンソルを$\operatorname{Alt}(txyz)$とする。
+\[
+ F=f_3(x,y,z)+tq_2(x,y,z)+t^2\ell_1(x,y,z)
+ \quad\bmod\kk t^3
+\]
+は固定した中心直線に対して19係数を持つ。次のテンソルを定める。
+\begin{equation}\label{eq:r13-potential}
+ w_F=\operatorname{Alt}(txyz)
+       -3(1-c+c^2-c^3)\bigl(t\operatorname{sym}(F)\bigr).
+\end{equation}
+式中の回転は、いったん全slotを$V$に同定して行う。得られたテンソルの各slotを
+$V_0,V_1,V_2,V_3$へ戻して$\mathcal W$の元とみなす。
+その四頂点superpotentialは上の$W(w_F)$である。
+
+\begin{proposition}\label{prop:potential-presentation}
+式\eqref{eq:r13-potential}の長さ2の微分が生成する関係空間は各始点で
+\begin{equation}\label{eq:r13-relations}
+ [t,x]=[t,y]=[t,z]=0,\qquad
+ [y,z]=\operatorname{sym}F_x,\quad
+ [z,x]=\operatorname{sym}F_y,\quad
+ [x,y]=\operatorname{sym}F_z
+\end{equation}
+の6次元空間に等しい。$t^3$を$F$へ加えても$w_F$は変わらない。
+$f_3$の平面三次が滑らかな範囲では、この族はnoetherian、Koszul、標準Hilbert型の
+4次元CY代数を与える。
+\end{proposition}
+\begin{proof}
+全二階微分を$V^{\otimes2}$の語で展開する。
+$(\partial_{xy}-\partial_{yx})w_F=2[t,z]$とその巡回式から三つの中心関係を得る。
+$\partial_{tx}w_F$などは、これらの中心関係で割った後に
+$[y,z]-\operatorname{sym}F_x$などとなる。
+逆包含は、各語$x_ix_j$を可換二次式$x_ix_j+\Pi_{ij}/2$へ写すことで直接確認できる。
+ここで$\Pi_{xy}=F_z$など、$\Pi_{ti}=0$である。
+この写像の核は式\eqref{eq:r13-relations}そのものである。
+各式は$F$の19係数についての多項式恒等式であり、付属コードは独立な19文字を残して展開する。
+$F=t^3$に対する補正は$(1-c+c^2-c^3)t^4=0$である。
+
+AS条件について、$t$を係数として三変数potentialの低次摂動とみなす。
+最高次代数はMori--Smith\cite[Theorem 4.2(1)]{MS}の$A_{f_3,1}$であり、
+滑らかな$f_3$では3次元CYである。低次cyclic potentialのPBW定理
+\cite[Proposition 7.3.1(ii)]{EG}により、active次数の随伴は$A_{f_3,1}\otimes\kk[t]$。
+各$t$の特殊化のPBW基底を持ち上げると$\kk[t]$上自由であり、$t$は中心正則一次元となる。
+中心一次拡大のKoszul AS上昇\cite{LBS}から標準4次元AS正則性を得る。
+式\eqref{eq:r13-potential}と完全Koszul解消を使い、BSWによりCY性を得る。
+パラメータ基底上では各固定次数の表示行列のrankが一定で、被約な基底上の局所自由性と
+解消の各内部次数の完全性が従う。必要なら有限個の基底chartへ制限する。
+\end{proof}
+
+\subsection{七係数chartと全四頂点の接空間}
+\begin{equation}\label{eq:seven-parameter}
+ F_{\boldsymbol a}=a(x^3+y^3+z^3)+bxyz
+       +t(x^2+c_2y^2+c_3z^2)
+       +t^2(d_1x+d_2y+d_3z)
+\end{equation}
+を用いる。パラメータは$(a,b,c_2,c_3,d_1,d_2,d_3)$の7個である。
+可逆なHesse変換とshearによる一般形としても理解できるが、以下では厳密な横断行列で
+支配性を示すので、一意な大域正規形を仮定しない。
+
+$Z_6\subset\PP(\mathcal W)=\PP^{255}$を二つのcyclic flattening
+$M_{01|23},M_{12|30}$ ($16\times16$) がともにrank6となる局所閉schemeとする。
+rank条件は全7次minorの消滅と適切な6次minorの非消滅で課す。
+対応する二次関係は、これらおよび転置flatteningの像である。
+
+\begin{theorem}[四頂点成分の一般開部分]\label{thm:r13-open}
+$\overline G=(\mathrm{PGL}_4)^4$とする。
+$\overline G\cdot[w_F]$の像の既約閉包$\mathcal Z_{13}$は$Z_6$の67次元既約成分であり、
+一般点で正則である。ある非空開集合$N\subset\mathbb A^7$と
+$\overline G$-不変な非空開部分$O_{13}\subset\mathcal Z_{13}$が存在して、
+\[
+ \overline G\times N\longrightarrow O_{13},\qquad(g,\boldsymbol a)\longmapsto g[w_{F_{\boldsymbol a}}]
+\]
+はエタール全射となる。$O_{13}$の全代数は標準Koszul AS正則である。
+従って$[O_{13}/\overline G]$は7次元の滑らかな有限型DM stackで、$N$がエタールatlasである。
+\end{theorem}
+\begin{proof}
+式\eqref{eq:seven-parameter}の点
+\[
+ \boldsymbol a_*=(3,5,2,3,1,2,4)
+\]
+を取る。最高三次のHesse判別条件は$9^3+5^3=854\ne0$であり、前命題が適用できる。
+この点のflatteningを$M$とするとrankは6。
+rank条件の一次式は、左核$L$と右核$K$の各組に対する
+$L^{\mathsf T}\dot M K=0$である。両flatteningについて合計200本、未知数256個の行列を$T$とする。
+四つの$\mathfrak{gl}_4$による軌道微分を$O$、7係数変分を加えた行列を$S_7$とする。
+付属の有理数上の行列証明書により
+\begin{gather*}
+ \operatorname{rank}T=188,\qquad
+ \operatorname{rank}O=61,\qquad
+ \operatorname{rank}S_7=68,\qquad TS_7=0.
+\end{gather*}
+従ってprojective接空間は$256-188-1=67$次元であり、族の像の次元も少なくとも$68-1=67$。
+源$\overline G\times\mathbb A^7$の次元が$60+7=67$なので、局所次元と接空間次元が一致する。
+従って$Z_6$はこの点で正則であり、像の閉包はその既約成分である。
+射影軌道は$61-1=60$次元なので、stabilizerのLie代数は零。
+両方が滑らかな67次元空間となる近傍へ制限すると、全射な接写像は同型となり、射はエタールとなる。
+そのエタール locus の像は開である。源の$N$を縮小し、その$\overline G$飽和を$O_{13}$とする。
+源の全点のAS性は前命題で保証されている。相対的な次数成分と解消はエタール忠実平坦降下で
+$O_{13}$へ降りる。stabilizerのLie代数零条件も開に制限できるため商はDMである。
+\end{proof}
+
+これは単にPymの一頂点7次元族の係数を数えた議論ではない。
+\emph{全256テンソル方向}で接空間を計算し、異なる4周期表示の方向も含めて成分性を認定している。
+ただし閉包の全境界におけるAS条件、正規性、正規化、有理不変量の生成元は未決定である。
+具体的なエタール群oidは
+\[
+ \mathcal G_7=\{(\boldsymbol a,\boldsymbol a',g):
+        [w_{F_{\boldsymbol a'}}]=g[w_{F_{\boldsymbol a}}]\}
+       \rightrightarrows N
+\]
+であり、行列のliftでは$(G_0\otimes\cdots\otimes G_3)w_{F_{\boldsymbol a}}
+=u w_{F_{\boldsymbol a'}}$、$u\ne0$、$\det G_i\ne0$という有限式になる。
+一般次数や有限stabilizerの位数をまだ算出していないので、$N$を粗モジュライそのものとは呼ばない。
+GL商のstack次元は$67-64=3$で、4次元スカラー慣性をrigidifyすると7となる。
+
+\subsection{任意の周期を持つ関係式stackとの一般点での比較}
+\begin{proposition}\label{prop:period-formal-rigidity}
+$\check B$のFrobenius標準4周期点を取り、二次関係$R\subset B_1^{\otimes2}$の
+二因子射影stabilizerが有限であるとする。
+この点の全Artin標準AS四窓変形は、射影非捩れpotentialで一意に表示される。
+従ってこの一般点では、任意周期付き関係式stackに潜在的な追加変形方向はない。
+商に使うGLまたはPGLおよびスカラーrigidificationは両側で揃える。
+\end{proposition}
+\begin{proof}
+Artin底$T$上の四窓のKoszul双対$E_T$は、長さ$0,\dots,4$で
+$(1,4,6,4,1)$型の相対Frobenius代数である。
+このことは標準AS条件の線型解消、または固定内部長の有限自由bar複体の底変更から従う。
+最高次数の四つのtraceを選び、特殊ファイバーでは通常の意味で対称なtraceに規格化する。
+そのNakayama自己同型$\nu_T$は各頂点を固定し、特殊ファイバーで恒等となる。
+逆双対の次数一写像は隣接する二次関係を保存する。
+小拡大の核$I$において$\nu=1+I D$と書くと、その射影像は特殊ファイバーの二因子
+stabilizerのLie代数に入る。これは零なので、帰納的に各矢空間上の$\nu_T$はスカラー$c_i$である。
+Nakayamaは最高次数traceを固定するから$\prod_{i=0}^3c_i=1$。
+四つのtraceを単元$t_i$倍すると$c_i$は$(t_i/t_{i+1})c_i$へ変わり、積が1なので全て1にできる。
+さらに頂点$i$のtraceを$(-1)^i$倍すればgraded対称traceとなる。
+これを四次テンソルに双対化し、完全対合を用いれば関係空間はその二階微分となる。
+二つのこのtraceは隣接完全対合により共通スカラーだけ異なるので、射影potentialは一意である。
+この構成は関係式の同型と両立する。
+\end{proof}
+二因子stabilizerの有限性は第\ref{sec:surface-witness}節に記した$60\times32$行列のrank30によって、同じ$F_*$で直接確認される。
+従って命題\ref{prop:period-counterexample}の大域的な不一致と、
+$R(1,3)$一般点での形式的な一致は両立する。
+
+\section{Weakly marked三次曲面の内在的stack}\label{sec:weak-definition}
+\begin{definition}\label{def:weak-cubic}
+体上のweakly marked三次曲面は、noetherianな$\kk$線型Abel圏$\mathcal A$と対象$\OO$の組で、
+$D^b(\mathcal A)$にsmooth properなdg enhancementとSerre自己同値$\mathsf S$があり、
+$H=\mathsf S^{-1}[2]$が$t$-exactな自己同値となり、次を満たすものとする。
+\[
+ \sum_{m\ge0}\dim\Hom(\OO,H^m\OO)t^m
+ =\frac{1-t^3}{(1-t)^4},
+ \qquad(\mathcal A,\OO,H)\text{ はArtin--Zhang ample}.
+\]
+族は、局所的に有限な相対dg模型と有界noetherian heart、平坦な$\OO$、相対Serre同値を持ち、
+上のHomが各次数で所定rankの局所自由加群となり底変更と可換するものとする。
+Abel同値と$\OO$の同定を射、適合する自然同型を2射としてfpqc stack化する。
+二次自己同型を除く必要がある箇所では$\OO$上の恒等を要求してrigidifyする。
+\end{definition}
+
+「$H$がheartを保つ」は片方向の包含ではなく$H(\mathcal A)=\mathcal A$で読む。
+相対性・Hom底変更・enhancementを指定しないまま、体上の対象集合をstackとは呼ばない。
+また、この定義で有限型代数性を既に示したわけではない。
+AOU\cite[Introduction, (2)]{AOU}はSerreと反標準次数によるこの立場を既に提案している。
+本稿のHilbert級数の指定はその数値条件を全次数に精密化したものに当たる。
+
+\begin{proposition}[反標準環とambient候補]\label{prop:intrinsic-ring}
+定義\ref{def:weak-cubic}に対し
+\[
+ \Gamma_{\rm ac}=\bigoplus_{m\ge0}\Hom(\OO,H^m\OO)
+\]
+は積も含めて内在的である。通常のArtin--Zhang再構成の有限性仮定の下で
+$(\mathcal A,\OO,H)$は$(\qgr\Gamma_{\rm ac},\pi\Gamma_{\rm ac},(1))$から回復される。
+$\Gamma_{\rm ac}$が次数一生成なら$Q(\Gamma_{\rm ac})$は一意な二次ambient候補である。
+\end{proposition}
+\begin{proof}
+積は$f\in\Hom(\OO,H^m\OO)$、$g\in\Hom(\OO,H^n\OO)$に対して
+$H^m(g)\circ f$である。Serre同値は特徴付けにより同値で保存され、
+その同型の選択の変更はorbit algebraの同型を与える。
+AZ amplenessと有限性の下でsection algebra再構成\cite{AZ}を適用する。
+二次包絡は長さ二の合成核だけから定義される。
+\end{proof}
+
+Hilbert級数だけでは次数一生成や二次包絡のAS正則性を証明したことにならない。
+本稿ではその一般的な反例を与えてはいないが、これらの含意は未証明である。
+そこで内在的stackの\emph{超曲面認識部分関手}$\mathfrak C^{\rm hyp}$を、
+$A=\Gamma_{\rm ac}$が次数一生成、$B=Q(A)$が標準AS4、
+$I_3=\ker(B_3\to A_3)$がrank1でその生成元が左右正則、という条件で切る。
+Hilbert級数と長さ4の核の次元4から左右乗法の像が一致し、
+正規性と全高次核の生成が従って$A=B/(G)$となる。
+族の局所自由性と分裂核から任意の底変更とも両立する。
+従ってこの部分には実際の射
+\begin{equation}\label{eq:ambient-map}
+ \Phi:\mathfrak C^{\rm hyp}\longrightarrow\mathfrak P^{\rm AS,pt}_3,
+ \qquad(\mathcal A,\OO)\longmapsto Q(\Gamma_{\rm ac})
+\end{equation}
+がある。ここでは源の自然同型と対応する頂点スカラーを処理したpointed targetを用いる。
+rawな$\mathrm{GL}_4^4$商を用いる比較では、源にも同じ周期表示・スカラーのデータを加えた
+presentation stackを用い、その正規incidenceの射を取る。内在的な源とrawなtargetを
+そのまま比較して同じstack次元・同じファイバー次元を主張しない。
+次数付きorbit algebraからの選択周期は次数shiftの4乗である。
+非捩れpotentialのtargetを使う場合は適合周期へ規格化する。
+この二つの選択は一般には同じ対象でなく、$R(1,3)$のCY表示上では適合する。
+
+\section{AOUのマーキングを忘れること：形式定理と大域の条件}\label{sec:weyl}
+AOUのコンパクトGIT scheme、関係式の商stack、AS locus、
+反標準ample locusを別々に扱う。2025年のOkawa--Ueda\cite[Theorem 6.4]{OU2025}は
+marked AS曲面のstackと楕円曲線・二つの次数3線束・六つの次数1線束のデータの
+双有理比較を与える。しかしweakly markedな対象全体が有限Weyl商になるという定理ではない。
+2024年のOkawa--Uedaの報告\cite{OWR}は、例外対象の$K_0$による一意性、
+純粋helixの全域での保存、affine Weyl軌道による分類をそれぞれ予想として分けている。
+本稿はそれらを無条件の入力にしない。
+
+\begin{theorem}[可換点での形式Weyl商]\label{thm:formal-weyl}
+$X$を自己同型群が自明な滑らかな三次曲面とし、特殊ファイバーとの同定を保持する
+flat Artin変形を考える。各通常の幾何学的マーキング$m\in\operatorname{Mark}(X)$について、
+AOUの標準九対象helixを選び、各例外対象のスカラー同定をrigidifyする。
+weakly marked変形にこのhelixの持上げを加えた関手を$\widehat{\mathfrak M}_m$とする。
+すると、忘却は各$m$について形式変形関手の同値
+\[
+ \widehat{\mathfrak M}_m\simeq
+ \widehat{\mathfrak C}_{(\operatorname{coh}X,\OO_X)}
+\]
+である。ここではflat Abel変形とその相対smooth proper模型を用いる。
+AOUの関係式商の$m$における完備化が左辺を表す。
+従って$W(E_6)$による形式的なre-marking作用が存在し、
+\begin{equation}\label{eq:formal-weyl}
+ \left[\coprod_{m\in\operatorname{Mark}(X)}\widehat{\mathfrak M}_m
+       \,\middle/\,W(E_6)\right]
+ \simeq\widehat{\mathfrak C}_{(\operatorname{coh}X,\OO_X)}.
+\end{equation}
+このfunctorのminiversalな底は$\operatorname{Spf}\kk[[q_1,\ldots,q_8]]$である。
+\end{theorem}
+\begin{proof}
+$X$の標準九対象は線束の完全強例外列であり、そのhelixは高次Extの消える幾何的な
+$\mathbb Z$-生成列である。$\OO_X$はその第$(0,0)$対象である
+\cite[(4.1), (9.44)]{AOU}。各対象$E$について
+$\Ext^1(E,E)=\Ext^2(E,E)=0$なので、Lowenの対象持上げの障害理論\cite{Lowen}
+により各Artin小拡大でflat liftが存在し、同型類は一意である。
+相対Hom複体の特殊ファイバーが次数0だけに集中している場合、perfect複体の
+底変更判定によりHomは自由となり高次Ext消滅も持ち上がる。
+De Deken--Lowen\cite[Theorems 4.5, 5.13, 5.15]{DDL}をInd-completionに適用すると、
+Abel変形、helixの$\mathbb Z$-代数の変形、その九対象threadの有限代数の変形が同値になる。
+この適用の入力は、forward Ext$^{1,2}$消滅、生成性、対象のflat性であり、すべて上記helixで満たされる。
+有限代数の変形は冪等元を持ち上げて矢・関係の変形で表される。
+
+$\OO$も一意に持ち上がり、逆Serreはhelixを九項移動する。
+ampleな生成列に対する高次Hom消滅でheartを特徴付ければ、この九項移動は$t$-exactとなる。
+$\OO(m)$の高次コホモロジー消滅 ($m\ge0$) はperfect底変更によって持ち上がるので、
+反標準Homのrankは指定Hilbert関数に一致する。
+反標準subsequenceのAZ生成性とHom全射性は、Artin底の冪零イデアルによる有限filtrationに
+沿う帰納法とSerre消滅によって持ち上がる。
+逆にweakly marked変形からこのhelixを一意に持ち上げられるので、forgetful関手は同値である。
+これは接空間の次元一致だけによる同定ではない。
+
+古典的な$\operatorname{Mark}(X)$は$W(E_6)$のtorsorである\cite[\S2.3]{AOU}。
+持上げの一意性により、各形式chartを同じ忘却先へ同定してre-markingを定義できる。
+rigidification後に同型は一意なのでCoxeterの合成の整合性も従い、商は忘却先に一致する。
+$\HH^2(X)=8$、$\HH^3(X)=\HH^1(X)=0$は命題\ref{prop:hh}で計算する。
+Hochschild変形の無障害性と無限小自己同型の消滅から8次元形式円板を得る。
+\end{proof}
+
+\begin{remark}[何が有限Weylで、何が未証明か]
+上の定理は\emph{commutative pointへの特殊化を指定した通常のマーキングの持上げ}についてのもの。
+全ての非可換対象に通常のマーキングが存在すること、同じ数値類の例外対象が大域的に一意なこと、
+完成したトーリック境界でWeyl作用が正則なことは含まない。
+一般のhelixを忘れる問題にはaffine Weyl群が現れる\cite{OWR}。
+$\OO$を保持することだけから、あらゆる非可換自己同値の余分な同一視が消えるとは結論しない。
+可換点の上の$\OO$を指定した通常のmarking問題では有限$W(E_6)$になる。
+\end{remark}
+
+\begin{proposition}[大域商を証明するための十分条件]\label{prop:global-weyl-criterion}
+内在的stackの部分$\mathfrak C^\circ$とAOUの適切にrigidifyされた良い部分$M^\circ$について、
+次の条件を仮定する。
+(i) 任意の族がエタール局所で標準九対象markingを持つ。
+(ii) そのmarkingの忘却は集合層を表し、数値的markingの層との自然写像が同型である。
+(iii) 数値marking層は$W(E_6)$-torsorで、AOUの全対象・全同型を表す。
+このとき$M^\circ\to\mathfrak C^\circ$は$W(E_6)$-torsorであり、
+$[M^\circ/W(E_6)]\simeq\mathfrak C^\circ$となる。
+\end{proposition}
+\begin{proof}
+仮定(ii),(iii)から、二つのmarkingを持つ同一対象の族の層は
+$M^\circ\times W(E_6)$であり、
+$M^\circ\times_{\mathfrak C^\circ}M^\circ$と同定される。
+仮定(i)がエタール全射性を与えるので、通常のtorsor降下による商stackが$\mathfrak C^\circ$である。
+\end{proof}
+本稿ではこれら三条件を全大域成分で証明していない。
+特にHilbert級数とAZ amplenessだけで(ii)は従わず、
+形式定理\ref{thm:formal-weyl}を大域Weyl商へ無断で昇格させない。
+
+\section{AOUからの有限なambient構成と一般点の支配性}\label{sec:aou-ambient}
+AOUの関係式族は、三つのblockを持つacyclic quiverの代数
+$\Lambda$で、9頂点、18矢、9本の長さ2の関係を持つ。
+長さ3の経路がなく、関係間のoverlapがないので、通常の相対quiver解消は長さ2で完全である。
+$\Lambda$のrankは$9+18+18=45$である。
+従って相対inverse Serre bimodule
+$\Theta_\Lambda=\operatorname{RHom}_{\Lambda^e}(\Lambda,\Lambda^e)$を有限複体で計算できる。
+$P_0$を頂点$(0,0)$の右射影対象とし、
+\begin{equation}\label{eq:finite-serre}
+ K_m=\operatorname{RHom}_\Lambda
+       (P_0,P_0\mathbin{\otimes^L_\Lambda}\Theta_\Lambda^{\otimes^L m}[2m])
+       \quad(0\le m\le4)
+\end{equation}
+と置く。これは係数環上の有限perfect複体である。
+
+\begin{proposition}[低次数からの代数的候補射]\label{prop:aou-candidate}
+一般の可換marked三次曲面を含むAOUのある開部分上で、
+$K_m$は次数0に集中し、そのrankは順に$1,4,10,19,31$となる。
+$V=H^0K_1$、$R=\ker(V^{\otimes2}\to H^0K_2)$により、
+有限Grassmannianの商への代数的射
+\[
+ \Psi_2:M_{\rm AOU}^{\rm low}\longrightarrow
+ [\operatorname{Gr}(6,16)/\mathrm{PGL}_4]
+\]
+が得られる。これはまだ全域でAS性を結論する射ではない。
+\end{proposition}
+\begin{proof}
+可換点では$P_0=\OO_X$、$\mathsf S^{-1}[2]=(-)\otimes\OO_X(1)$なので、
+$K_m=R\Gamma(X,\OO_X(m))$である。$0\le m\le4$の高次コホモロジーは消える。
+有限個のperfect複体に開性と底変更を適用し、rankと次数0集中を保つ開部分を取る。
+$V^{\otimes2}\to H^0K_2$の全射性もこの点で成り立つので開に制限でき、核はrank6。
+積はSerre orbitの合成から定まり、基底変更に両立する。従って所望の商への射がある。
+\end{proof}
+
+\paragraph{generic pointに用いる既知の入力.}
+AOU\cite[Theorem 1.1, \S9, Theorem 9.4]{AOU}と
+Okawa--Ueda\cite[Theorem 6.4]{OU2025}は、一般のmarkedデータを楕円曲線と六点blow-upで記述する。
+AOU (9.44)--(9.57)の同値は頂点$(0,0)$を$\OO$へ送る。
+同論文Lemma 9.2でinverse shifted Serreは次数1shiftとなるので、
+式\eqref{eq:finite-serre}の全次数のorbit環はVan den Berghの反標準環$F$に一致する。
+同論文 (9.6)--(9.10) とVan den Bergh\cite[Chapter 12]{VdB}によれば
+$F=P/(G)$で、$P$は中心一次拡大AS4、$G$は正則正規三次元。
+これは\emph{generic point}で用いる入力であり、無限位数や十分一般の条件を
+コンパクト化全体に適用しない。
+
+一般のSklyanin頂部では三次中心が一次元である。
+正規化自己同型を$Gx=\sigma(x)G$と書くと、中心正則一次元$t$から$\sigma(t)=t$。
+$P/(t)$上で$\overline G$は中心正則なので$\overline\sigma=1$となる。
+よって$\sigma(x_i)=x_i+c_i t$である。
+Pym/LBSの一般Jacobian座標で二次関係を比較すると
+$\sum_i c_i\partial_i\partial_j f_3=0$であり、滑らかな$f_3$から$c_i=0$。
+従ってこの一般部では$G$は中心的である。
+標準の中心持上げと低次数中心の消滅により$Z(P)_3=\kk\Omega\oplus\kk t^3$となる。
+一般の中心拡大の型がPymの$R(1,3)$であることは\cite[\S3.4]{Pym},\cite{LBS}の入力である。
+
+\begin{theorem}[一般AOU点からのambientの像]\label{thm:aou-dominance}
+上記のgeneric blow-up/中心拡大入力の適用範囲で、命題\ref{prop:aou-candidate}は
+AS4 ambientへの有理射を与え、$R(1,3)$の7次元成分を支配する。
+対応する中心三次対への有理像は8次元であり、その一般ファイバーは有限である。
+従ってambientへの有理射の一般ファイバーは1次元である。
+その有限次数を$|W(E_6)|$と同定したわけではない。
+\end{theorem}
+\begin{proof}
+既知入力から幾何学的一般点のorbit環は$P/(G)$であるから、二次包絡は$P$に一致する。
+従って候補射の一般値は$R(1,3)$に属し、三次核もrank1となる。
+これらは有限な式とrank条件なので、低次数の有理射として定義される。
+支配性を以下で示した後、定理\ref{thm:r13-open}のatlasの逆像へ制限する。
+
+像の次元を単なるパラメータ差から推測せず、truncationの微分を使う。
+可換点においてAOUの8方向は定理\ref{thm:formal-weyl}により全Abel変形である。
+反標準環の次数$0,1,2,3$の変形が、基底変更を除いて自明なら、その全次数変形も自明である。
+実際、Artin底で次数一生成性は各次数のNakayamaにより持ち上がる。
+自由テンソル代数からの核$J$は各次数で平坦であり、
+$J/(VJ+JV)$の次数$>3$は特殊化で零なのでNakayamaにより零である。
+従って核は次数2と3で生成され、低次数の自明化は環全体を自明化する。
+AZ再構成によってAbel変形も自明となる。
+よって低次数射の微分は単射であり、曲面同型類の像の次元は8である。
+$A_1$の射影基底を加えると源の次元は$8+15=23$で、低次数像も23次元となる。
+
+一般点ではこの低次数像は中心三次対であり、固定ambientに対する中心直線は$\PP^1$。
+従ってambient像の次元は少なくとも$23-1=22$。
+一方、中心拡大型ambientの座標付き像は22次元であるから等号。
+一般の射影自己同型が有限である範囲で$\mathrm{PGL}_4$を割り、次元7と1次元一般ファイバーを得る。
+四頂点potential側への移行は定理\ref{thm:r13-open}および
+命題\ref{prop:period-formal-rigidity}の一般開部分を用いる。
+\end{proof}
+
+\begin{remark}[有理射と弱い対象の全域の射]
+式\eqref{eq:finite-serre}は有限な行列・tensor積・核の計算による明示的レシピであり、
+8個のトーラス座標から7個の正規形座標への展開済み有理式はまだ計算していない。
+一般点の$\qgr F$はAOUの完全強例外列との導来同値によりsmooth properであり、
+Serre公式とAZの定理により定義\ref{def:weak-cubic}を満たす。
+従って式\eqref{eq:ambient-map}の像はこの成分の幾何学的一般点を含み、
+その閉包の余次元は0である。
+これは認識部分における\emph{一般点の支配性}であり、AOUの全開集合がそのまま
+相対smooth properな族を与えることや、全境界を含む正則射、全内在的成分での認識定理は含まない。
+\end{remark}
