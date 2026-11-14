@@ -1,12 +1,16 @@
 # Codex実行指示
 
-2026-11-14 / v7。最初に00_research_plan.md、次にnotes/research_notes.md、現行論文を読む。公開研究プロジェクトであり、研究継続用の自己完結した一式として維持する。
+2026-11-14 / v8。最初に00_research_plan.md、次にnotes/research_notes.md、現行論文を読む。公開研究プロジェクトであり、研究継続用の自己完結した一式として維持する。
 
 ## 研究の優先順位
 
 非可換cubic n-foldのintrinsicな定義、ambientへのモジュライ射と像を研究する。まずn=3。豊富列付きAbel圏、一般Z-algebra、周期同型付きZ-algebra、次数付き代数、中心三次対、滑らかなtailsを持つ対象を区別する。
 
 厳密なZ-algebra stack、全同定付き圏、弱い2-stack、E_0だけ同定するpointed stackを区別する。全対象は有限窓の商stackの2逆極限で定義済み。Phi:A↦Q(A)の厳密fiberは正規三次incidence集合層であり、固定同型類のaction groupoidとそのfpqc stack化を区別する。相対category比較にはsaturation・Hom基底変換・相対復元を仮定する。
+
+非可換P3の標準14641型Koszul AS Z-algebraは、Frobenius周期で四頂点4-CYへ畳み込む。四次potentialは反巡回で二階の経路微分を使う。[U4^AS/PGL4^4]≃pointed stackを相対barとfpqc降下で証明済み。strict Z-stackの頂点スカラーを落とさない。U4^ASは部分関手として定義しており、全体の有限型代数性は未証明。可換点では二つのscheme論的rank6条件が全Artin形式模型となり、接空間90・射影軌道45・商接空間45。数値165/46の証明書は有限検算であり、全成分の分類ではない。cubic A=B/(G3)はAS Gorenstein index2でgldim∞。四次potentialのAS4代数と取り違えず、五次ambient potential＋normal三次incidenceで比較する。
+
+標準N次元にもpotential商定理は拡張済み。N=5のambientはU5^AS⊂P3124とPGL5^5の商であり、可換点の全Artin模型は五つの25×125 flatteningのrank10条件。係数空間が有限でも全AS locusの有限型性は未証明。normal三次イデアルを保つ相対5周期の存在は別に証明すること。
 
 体上の三次イデアルを保つ1周期性は証明済み。一般族では二因子stabilizerの150×50整数行列がrank48（非零minor mod1000003=815096）なので、Zhang twistによる追加同一視は有限個。一般の中心三次点では全indexed normal incidenceの形式fiberも4次元形式円板である。ただし任意のZ ambient族の相対周期化は未証明。
 

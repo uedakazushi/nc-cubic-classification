@@ -1,12 +1,24 @@
 # 非可換三次三様体と射影四空間のモジュライ
 
-2026-11-14 / v7。再開時は[研究方針](00_research_plan.md)、[研究ノート](notes/research_notes.md)、[現行論文](papers/nc_cubic_threefold_moduli.tex)の順に読む。GitHub mainを正本とする。
+2026-11-14 / v8。再開時は[研究方針](00_research_plan.md)、[研究ノート](notes/research_notes.md)、[現行論文](papers/nc_cubic_threefold_moduli.tex)の順に読む。GitHub mainを正本とする。
 
 ## 現在の結論
 
 非可換cubicとambientの二つのモジュライを、まず相対Z-algebraのfpqc stackとして定義した。三次側のAから二次包絡Q(A)を取る自然な射があり、固定したambientへの厳密なファイバーは正規三次直線束族のincidence集合層である。全代数stackは有限窓の有限型商stackの2逆極限、incidenceは有限窓の準射影schemeの逆極限として記述できる。これを全体の有限型代数性と取り違えない。
 
 圏による定義では豊富列を保持する。全対象の同定を保持する場合は厳密な代数同型と一致し、同定を弱めると頂点スカラーと相対線束による捩れが現れる。Q(A^L)=Q(A)^Lなので比較射はこれらの同値関係に両立する。相対category比較にはsaturation・Hom基底変換・相対復元を仮定する。可換ambientのfiberは非被約基底も含めP34であり、pointed categorical levelでは通常の[P34/PGL5]を回復する。
+
+### 非可換P3の四頂点potential表示と三次側の比較
+
+標準14641型の二次Koszul・左右AS正則Z-algebraは、Koszul双対のFrobenius traceで4周期を規格化すると、四頂点の4-CY代数になる。隣接頂点間に4本ずつの矢を取り、四重テンソルwから反巡回四次superpotential W=w−cw+c²w−c³wを作る。関係は長さ二の経路による微分で与える。
+
+許容potentialをP255内のfpqc部分関手U4^ASとして定義すると、頂点スカラーを除いたpointed stackは[U4^AS/PGL4^4]と同値である。相対bar複体により、全成分が局所自由なAS族のKoszul双対とFrobenius対合は非被約基底でも任意の底変更と両立する。strictなZ-stackとはスカラー慣性が異なり、U4^ASの全体の有限型代数性は未証明。
+
+同じ証明は標準N次元にも適用できる。特にambient P4のpointed stackは[U5^AS/PGL5^5]、U5^AS⊂P3124という五頂点の五次potential模型を持つ。可換点では五つの25×125 flatteningのscheme論的rank10条件が全Artin形式模型を与える。三次→ambientの二次包絡射はこの商へ写るが、三次イデアルを保つ周期の相対降下まで結論したものではない。
+
+可換交代テンソルの形式近傍では、二つの16×16 flatteningのscheme論的rank6条件だけで全Artin基底上の平坦性・Koszul性・相対4-CY性が従う。線型化条件のrankは165、射影potential接空間は90、射影基底変更軌道は45、商の一次変形は45次元。数値は有理数上の厳密計算でも確認した。この接空間次元を成分次元とは解釈しない。
+
+三次三様体A=B/(G)ではambient Bは5次元AS正則だが、Aはinjective dimension 4・AS index 2のAS Gorenstein代数で、global dimensionは無限。有限表示はambientの五次superpotentialと正規三次直線のincidenceである。滑らかな可換三次ではHH±1=k5なので通常の有限次元tilting代数では表せず、dg/A∞模型では残余圏を保持する。比較射の行き先は引き続き非可換P4である。
 
 ### 次数付き表示からZ-algebraへの比較
 
@@ -42,6 +54,9 @@ Rat(1,1,3)の全Poisson接空間の整数証明書とPymの比較により得た
 - [内在的復元](papers/sections/intrinsic_cubic_reconstruction.tex)
 - [二つのstackとnormal incidence](papers/sections/algebraic_moduli_foundations.tex)
 - [豊富列付き圏との比較](papers/sections/categorical_moduli_comparison.tex)
+- [四頂点potential・相対stack・可換点のrank模型](papers/sections/projective_three_space_potentials.tex)
+- [非可換P3と三次三様体の比較](papers/sections/cubic_projective_three_comparison.tex)
+- [potentialの符号・rank・接空間の証明書](computations/p3_potential_certificate.json)
 - [周期忘却・有限同一視・全normal fiber](papers/sections/period_forgetting_moduli.tex)
 - [可換点の全Artin比較・形式成分](papers/sections/formal_ambient_comparison.tex)
 - [二因子stabilizer証明書](computations/two_factor_stabilizer_certificate.json)
@@ -51,6 +66,7 @@ Rat(1,1,3)の全Poisson接空間の整数証明書とPymの比較により得た
 ## 手動再現
 
     python3 scripts/verify.py
+    python3 computations/verify_p3_potentials.py
     python3 computations/verify_two_factor_stabilizer.py
     python3 computations/verify_rat113_tangent.py
     python3 computations/independent/verify_generic17_slice.py
@@ -61,6 +77,6 @@ Rat(1,1,3)の全Poisson接空間の整数証明書とPymの比較により得た
     python3 computations/verify_central_symmetry.py --output build/central_symmetry.json
     latexmk papers/nc_cubic_threefold_moduli.tex
 
-Python3・SymPy、日本語LuaLaTeX・LuaTeX-ja・HaranoAji・latexmkを使う。二つの新しい整数行列計算はPython標準ライブラリだけで動く。二因子コードは同じディレクトリのverify_rat113_tangent.pyを入力生成と小行列式の共通実装に使うため、両ファイルが必要。
+Python3・SymPy、日本語LuaLaTeX・LuaTeX-ja・HaranoAji・latexmkを使う。potential・二因子stabilizer・Poisson接空間の厳密行列計算はPython標準ライブラリだけで動く。二因子コードは同じディレクトリのverify_rat113_tangent.pyを入力生成と小行列式の共通実装に使うため、両ファイルが必要。
 
 生成物はbuild/に置き、PDF・SyncTeX・中間ファイル・キャッシュは追跡しない。VS Code LaTeX Workshopも同じ.latexmkrcを使う。GitHub Actionsは使用しない。生成、計算確認、証明監査、組版、保存を区別し、実施範囲をvalidation.jsonに記す。

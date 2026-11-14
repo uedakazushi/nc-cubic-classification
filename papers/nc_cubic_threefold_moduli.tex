@@ -58,7 +58,7 @@
 \newcommand{\Symm}{\operatorname{sym}}
 \title{非可換三次三様体と射影四空間のモジュライ\\豊富列・二次包絡・周期構造の比較}
 \author{公表準備用研究原稿（著者情報未記入）}
-\date{2026年11月14日・nc cubic moduli研究草稿 v7}
+\date{2026年11月14日・nc cubic moduli研究草稿 v8}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -69,6 +69,15 @@
 豊富列付きAbel圏との比較では、対象の同定、自然同型、頂点スカラー、
 相対線束による捩れを明示する。必要なsaturationと相対復元を仮定した範囲で、
 二次包絡はこれらすべてと両立し、ambientを一意に復元する。
+比較対象として非可換$\PP^3$を扱い、標準14641型の二次Koszul AS正則
+$\mathbb Z$-代数を、Frobenius周期で規格化した四頂点の四次superpotentialで表す。
+相対bar複体と頂点スカラーの降下により、許容potential関手の
+$\PGL_4^4$商とpointed fpqc stackを同定する。
+同じ証明は標準$N$次元へ拡張でき、ambient $\PP^4$側にも五頂点の商表示を与える。
+可換点では二つのrank6条件が全Artin形式模型を与え、
+基底変更を除いた接空間は45次元となる。
+三次三様体側はAS正則代数そのものではなく、5次元ambientの正規三次商であり、
+その有限表示は五次superpotentialと正規三次incidenceを組み合わせたものになる。
 相対Jacobian型の中心三次対の41次元既約代数族を構成し、
 18次元の放物型群作用に横断する17係数正規形を与える。
 31次整数行列の非零行列式によって横断性を証明し、
@@ -174,6 +183,41 @@ Abdelgadir--Okawa--Ueda\cite{AOUNCPlanes}は、quiver relationのモジュライ
 本稿の一般族では二因子stabilizerの新しい整数行列証明書により、
 この追加同一視が有限個であることまで確かめる。
 
+\paragraph{四頂点potentialと非可換$\PP^3$との比較.}
+第\ref{sec:projective-three-potentials}節では、標準14641型の二次Koszul
+AS正則$\mathbb Z$-代数に対象を限定し、Frobenius構造から4周期を規格化する。
+体上のKoszul--Frobenius双対性と周期性は
+Bondal--Polishchuk\cite{PBondalPolishchukHelices}に基づき、
+規格化の選択依存性は\texttt{asz4}の現行原稿
+\cite{ASZ4Canonical}とも照合する。
+一般の$\mathbb Z$-代数のAS条件と、より強いASF条件の区別については
+Mori--Nyman\cite[Theorem~4.19 and Lemma~5.24]{MoriNymanZ}を参照する。
+本稿は弱いAS条件だけから無条件の周期性を推論しない。
+
+Bocklandt--Schedler--Wemyss\cite[Theorem~6.2]{BSWPotentials}は
+Koszul CY代数と高階微分によるsuperpotential表示の対応を与える。
+本稿ではFrobenius周期による四頂点orbitが4-CYとなること、
+全成分が局所自由な族の二次双対が任意の底変更と両立することを示す。
+これにより、頂点スカラーを除くpointed levelで
+$[U_4^{\mathrm{AS}}/\PGL_4^4]\simeq\mathfrak P_3^{\mathrm{pt}}$を得る。
+系\ref{cor:standard-n-potential-stack}は同じ議論を標準$N$次元へ拡張し、
+ambient側も$[U_5^{\mathrm{AS}}/\PGL_5^5]$という有限tensorの商関手で表す。
+さらに可換点の完備化を二つの$16\times16$ flatteningのrank6条件で記述する。
+全Artin基底における平坦性の証明は内部次数の帰納法によるもので、
+接空間の次元一致だけからの推論ではない。
+これらを一体として記述した結果の新規性・初出は未確認である。
+
+Pym\cite[Theorem~1.1 and \S2.2]{Pym}の六成分は可換点の規格化CY変形の芽を
+対象とし、全四頂点potentialモジュライの大域分類を与えるものではない。
+最近のBhatoy--Ingalls--LaRoche--Nookala\cite[\S2.3]{BILNComponents}は
+Hilbert級数$(1+t)^4$の有限次元graded Frobenius代数のモジュライを扱うが、
+その定義ではKoszul条件を課さず、同値関係もgraded同型である。
+Bhatoy--Ingalls\cite[\S1]{BIDiscrete}のsuperpotential不変量も
+Zhang twist不変ではない。
+従って、これらのパラメータ空間・成分数を本稿のpointed
+$\mathbb Z$-代数モジュライへ直接移していない。
+第\ref{sec:cubic-p3-comparison}節では三次三様体側のAS Gorenstein型と残余圏を比較する。
+
 \paragraph{局所変形の比較.}
 De~Deken--Lowen\cite[Theorems~4.5,5.15]{DeDekenLowen}は、
 豊富列を持つAbel変形と$\mathbb Z$-代数の変形、さらに幾何的helixの有限窓の変形を比較する。
@@ -243,6 +287,8 @@ ambientの5周期の直接証明も保持する。上記組合せの初出の網
 \input{papers/sections/intrinsic_cubic_reconstruction.tex}
 \input{papers/sections/algebraic_moduli_foundations.tex}
 \input{papers/sections/categorical_moduli_comparison.tex}
+\input{papers/sections/projective_three_space_potentials.tex}
+\input{papers/sections/cubic_projective_three_comparison.tex}
 
 \section{相対 Jacobian 型の中心三次族}\label{sec:construction}
 本節では基礎体を $k=\C$ とする．$U=ku\oplus kv$ と
@@ -1167,7 +1213,81 @@ Definition~8.6 (normal families of elements in indexed algebras).
 T.~Cassidy, A.~Conner, E.~Kirkman and W.~F.~Moore,
 \emph{Periodic free resolutions from twisted matrix factorizations},
 J. Algebra 455 (2016), 137--163;
-\url{https://arxiv.org/abs/1307.8415}, Theorems~4.7 and 5.5.
+\href{https://doi.org/10.1016/j.jalgebra.2016.01.037}{doi:10.1016/j.jalgebra.2016.01.037};
+\url{https://arxiv.org/abs/1307.8415}.
+arXiv v1のLemma~4.4（Reesの補題）と公刊版のTheorem~5.8
+（twisted matrix factorizationと特異圏）を版を区別して用いる。
+既存の有限位数議論の参照はTheorems~4.7 and~5.5。
+
+\bibitem{BSWPotentials}
+R.~Bocklandt, T.~Schedler and M.~Wemyss,
+\emph{Superpotentials and higher order derivations},
+J. Pure Appl. Algebra \textbf{214} (2010), no.~9, 1501--1522.
+\href{https://doi.org/10.1016/j.jpaa.2009.07.013}{doi:10.1016/j.jpaa.2009.07.013};
+\href{https://arxiv.org/abs/0802.0162v3}{arXiv:0802.0162v3}.
+Equation~(1.3), Theorem~6.2, Lemmas~6.4--6.5,
+およびTheorem~6.2証明直後のtwisted版への拡張。
+
+\bibitem{StacksPerfect}
+The Stacks Project Authors, \emph{The Stacks Project}.
+\href{https://stacks.math.columbia.edu/tag/0BDK}{Tag~0BDK, Lemma~36.31.3},
+\href{https://stacks.math.columbia.edu/tag/0BCD}{Tag~0BCD, Lemma~15.77.7}.
+perfect複体のファイバーでの単一次数集中と局所自由性。2026年11月14日確認。
+
+\bibitem{MoriNymanZ}
+I.~Mori and A.~Nyman,
+\emph{A Categorical Characterization of Quantum Projective $\mathbb Z$-spaces},
+Appl. Categ. Structures \textbf{33} (2025), article~14.
+\href{https://doi.org/10.1007/s10485-025-09806-2}{doi:10.1007/s10485-025-09806-2};
+\url{https://arxiv.org/abs/2307.15253}.
+Theorem~4.19, Lemma~5.24, Theorems~6.4 and~6.11。
+著者版\url{https://faculty.nymana.wwu.edu/regV8.pdf}で該当箇所を確認。
+
+\bibitem{ASZ4Canonical}
+\texttt{uedakazushi/asz4},
+\emph{四次元二次AS正則$\mathbb Z$-代数の分類：
+4周期表示・1周期構造の忘却・全分類への有限atlas},
+\nolinkurl{papers/asz4_classification.tex}, 定理\texttt{canonical-four}。
+参照commit \texttt{91b4504}、2026年11月14日確認。
+\url{https://github.com/uedakazushi/asz4/blob/91b45047739187fc5acb6f906b25e48f49a42c2d/papers/asz4_classification.tex}.
+関連プロジェクトの研究入力であり、公刊済み文献として扱わない。
+
+\bibitem{BILNComponents}
+V.~Bhatoy, C.~Ingalls, F.~LaRoche and R.~Nookala,
+\emph{Some components of the moduli space of Koszul Artin--Schelter regular algebras of dimension four},
+\href{https://arxiv.org/abs/2511.08390v1}{arXiv:2511.08390v1}
+(2025年11月11日), \S2.3, Proposition~5.1 and Theorem~5.8。
+preprint本文を確認。本稿では定義と同値関係を比較し、その成分判定を証明の入力にしない。
+
+\bibitem{BIDiscrete}
+V.~Bhatoy and C.~Ingalls,
+\emph{Discrete Invariants of Koszul Artin--Schelter Regular Algebras of Dimension four},
+\href{https://arxiv.org/abs/2602.13178v1}{arXiv:2602.13178v1}
+(2026年2月13日), Introduction。
+preprint本文を確認し、公刊情報は未確認。
+
+\bibitem{OrlovSingularities}
+D.~Orlov,
+\emph{Derived Categories of Coherent Sheaves and Triangulated Categories of Singularities},
+in \emph{Algebra, arithmetic, and geometry: in honor of Yu.~I.~Manin},
+Vol.~II, Progress in Mathematics \textbf{270}, Birkh\"auser, 2009, 503--531.
+\href{https://doi.org/10.1007/978-0-8176-4747-6_16}{doi:10.1007/978-0-8176-4747-6\_16};
+\href{https://arxiv.org/abs/math/0503632v3}{arXiv:math/0503632v3},
+Theorem~2.5。
+
+\bibitem{KuznetsovFractionalCY}
+A.~Kuznetsov,
+\emph{Calabi--Yau and fractional Calabi--Yau categories},
+J. reine angew. Math. \textbf{753} (2019), 239--267.
+\href{https://doi.org/10.1515/crelle-2017-0004}{doi:10.1515/crelle-2017-0004};
+\href{https://arxiv.org/abs/1509.07657v2}{arXiv:1509.07657v2},
+Corollary~4.1。
+
+\bibitem{KuznetsovHochschild}
+A.~Kuznetsov,
+\emph{Hochschild homology and semiorthogonal decompositions},
+\href{https://arxiv.org/abs/0904.4330v1}{arXiv:0904.4330v1} (2009).
+Theorem~8.3, Corollary~7.5 and Proposition~8.4。
 
 \bibitem{CSBGRSVBertini}
 J.~V.~Rennemo, E.~Segal and M.~Van den Bergh,
