@@ -1,62 +1,64 @@
-# 研究方針：非可換三次曲面と射影三空間のモジュライ
+# 研究方針：内在的非可換三次曲面とambientの成分
 
-2026-11-15 / project-v10、surface-v2。最初に本書、次に `research/cubic_surface_comparison.md`、現行論文を読む。
+2026-11-15 / project-v11 / recognition-v3。再開時は本書、`research/weak_cubic_axioms.md`、`papers/weak_cubic_axioms.tex`を先に読む。中心拡大型を進める際は`research/cubic_surface_comparison.md`と`research/r13_generic_moduli.md`、対応する既存論文も読む。
 
-## I. 恒常的な研究原則と保存許可
+## I. 恒常的な研究原則・保存許可
 
-数学的重要性、新規性、理解の深化、応用、正確性、実現可能性を総合して研究価値を最大化する。重要な変更では理由と達成済み／未解決の核心を現行方針として整理し、変更履歴を積み重ねない。
+数学的重要性、新規性、理解の深化、応用、正確性、実現可能性を総合して研究価値を最大化する。重要な方針変更は理由・達成済み・未解決の核心を現行方針として整理し、変更履歴を時系列に蓄積しない。
 
-証明の記載、今回の検討、追加仮定への依存、計算証明書、未完成、予想、新規性確認を区別する。仮定と証明箇所を明示し、誤りの影響を本文・要約・方針にも反映する。一次資料の適用範囲を確認し、書誌情報を推測しない。公表原稿は日本語LuaLaTeXで、十分な証明を保つ。
+証明記載、今回の証明検討、計算確認、外部入力、追加仮定、未解決、予想、新規性の確認は別の状態として扱う。仮定・依存先・証明箇所を明示し、誤りは本文・要約・方針にも反映する。一次資料の適用範囲と書誌を確認する。日本語LuaLaTeXで公表価値のある結果を十分な証明とともに整理し、成果の数学的内容を削って軽量化しない。
 
-研究継続用bundleは現行の方針・ノート・論文・再現用ソースと最小の証明書から自己完結させる。有効な数学や再現資産は削らず、履歴・旧ZIP・重複・中間生成物を除く。ノートは日誌でなく現在有効な知識を整理する。旧会話・旧版の取得を再開の前提にしない。
+研究継続bundleは現行方針・ノート・論文・ソース・PDF・必要なコード・小証明書と再現手順だけを含む。過去のZIP、旧稿、ログ、キャッシュ、重複を含めず、現行一式から再開できるようにする。既存の有効なsurface/R13/threefold研究は保持する。
 
-ユーザーの常設指示は、研究の区切りで承諾を求めず現行bundleをLibraryへ保存することを許可している。現行ソースはGitHub mainにも通常のfast-forwardで保存する。GitHubではPDF・ログ・キャッシュを追跡せず、Actions・force push・不要なPRを用いない。既存Library資産の削除は別の操作であり明示指示なしには行わない。生成、数学的検討、計算、組版、GitHub保存、Library保存は別々に確認し、失敗や未実行を明示する。
+ユーザーは区切りごとの承諾不要のLibrary保存を許可している。現行bundleをLibraryへ保存し、利用可能ならGitHub mainにも通常のfast-forwardで保存する。既存Library資産の削除は別操作であり無断で行わない。GitHub Actions・force push・不要なPRなし。PDF・コンパイル中間物はGit追跡しない。生成、証明検討、計算、組版、Library保存、GitHub保存を別々に確認する。
 
-## II. 現在の目標と定義の範囲
+## II. 上位目標と認識範囲
 
-最優先はn=2：weakly marked非可換三次曲面を(A,O)、H=S^{-1}[2]、AZ ampleness、反標準Hilbert級数で定義し、AOUのmarkedモジュライ、W(E6)、四頂点ambientのR(1,3)成分を比較する。n=3の既存研究は保持するが、surfaceとthreefoldの次元・周期・障害を混同しない。
+対象は、gd2のk線形Abel圏Aとrank-one torsion-free構造対象O、s=S^{-1}[2]のheart保存、AZ ample、全整数mで可換三次曲面と同じh0により定義されるweakly marked nc cubic surfaceである。通常のnoetherian/Hom有限条件、rank/torsionの意味、族での相対SerreとHom底変更を明示する。
 
-任意に選ぶ4周期、Frobenius/CY適合周期、非捩れpotential、twisted potentialを区別する。GL4^4商の4次元スカラー慣性とPGL4^4によるrigidificationも別。Hilbert級数とAZ ampleだけで二次包絡のAS性を宣言しない。相対stackにはHom底変更、平坦heart、相対Serreとenhancementを指定する。
+**全weak対象の認識と、R(1,3)中心拡大型の分枝の比較は別問題である。** 全公理と一次生成・二次三次関係を満たし、さらに全twistのExt1が消えても、ambientがR13成分の閉包に入らない量子Fermat例がある。全対象をR13一成分へ押し込める目標は採らない。全モジュライの認識・代数性・他成分を追う一方、R13分枝のAOU/Weyl比較を独立に進める。
 
-## III. 現在の到達点と証明の所在
+任意周期、Frobenius適合周期、graded表示、directed関係、rolled-up potential、pointed圏を区別する。GL商とPGL商のスカラー慣性も揃える。Hilbert級数だけから二次包絡のAS性を結論しない。
 
-現行論文は `papers/cubic_surface_ambient_moduli.tex`。主要新証明は `papers/sections/surface_stack_comparison.tex`。
+## III. 新しい結果：四つの問い
 
-1. 関係式stack=[R^AS/GL4^4]と、周期同型を指定したAS Z代数のstackは同値（命題2.1）。任意の周期を非捩れpotentialと同一視するのは誤りで、可換4変数環にdiag(2,1,1,1)を合成した周期が反例（命題2.2）。これはFrobenius適合周期についての既存定理を否定しない。
-2. R13の四次potentialを Alt(txyz)-3(1-c+c^2-c^3)(t sym(F)) と明示。F=f3+tq2+t²l1 mod t³。七係数slice、全256テンソル方向でのrank条件微分rank188、GL4^4軌道rank61、slice+軌道rank68を厳密QQ計算。射影成分67次元、PGL4^4商7次元。滑らかな有限型DM開部分と七係数のエタールatlasを構成した（定理3.2）。全境界、正規化、有限群oidの一般次数は未計算。
-3. 一般点の二因子stabilizer有限性から、任意周期付きAS関係式のArtin変形も非捩れpotentialへ規格化できる（命題3.3）。大域的に任意周期と適合周期が同じとはしない。
-4. 内在的反標準環Γ_acとAZ再構成を定義。次数一生成、Q(Γ)標準AS4、正則三次核という超曲面認識部分ではambient射Φが底変更に両立して存在する。全weakly marked対象がこの部分に入ることは未証明（第4節）。
-5. 一般の滑らかな可換三次曲面の全Artin形式近傍では、例外対象の唯一持上げとDe Deken–Lowenのhelix比較を用いてAOUのmarked完備化と内在的変形を同定。通常markingのW(E6)-torsorから形式Weyl商を得る（定理5.1）。大域同定にはmarkingの存在、数値類による一意性、全同型と降下の三条件が残る（命題5.3）。
-6. AOUの45次元有限代数Λ、P0、inverse Serre bimoduleからm=0..4のHomを有限複体として構成。可換点を含む開でrankは1,4,10,19,31。一般blow-up表示とSerre公式を既知入力としてambientへの有理射を得る。次数≤3が可換点の全8変形を検出するため、三次対への一般有理像は8次元、R13 ambient像は7次元で支配的、一般fiberは1次元（定理6.2）。一般次数をWeyl群の位数とは同定していない。
-7. 固定一般ambientでは中心三次はP1、二因子stabilizer有限なら全indexed normal三次形式fiberもSpf k[[s]]。Poisson一意延長、ペンシル、22次元成分の一般正則性と既存証明を保持（第7–10節）。
+新稿は`papers/weak_cubic_axioms.tex`、補足ノートは`research/weak_cubic_axioms.md`。
 
-本文の通常証明を今回検討し、指定した二つの計算を実行した。外部査読、Lean形式化、新規性の網羅的確認は別であり未実施。
+1. h0(O)=1からR0=kは自動。Serre双対はExt2(O,O(m))=R(-m-1)*とExt1の対称性を与えるが、Ext1の消滅はそれだけでは出ない。
+2. 全次数有限自由な局所Artin変形では、一次生成と関係次数≤3は特殊ファイバーからNakayamaで持ち上がる。正則正規一次元tを持ち、R/(t)がこの提示を持つ場合もRの条件2が従う。中心性は不要。全公理から条件2を導く証明は未完成。
+3. 二次包絡B、三次overlap K3についてdim B3=16+dim K3、新三次関係数=dim K3−3。一本の三次関係はdimK3=4に対応する。AS正則性にはさらに全Koszul複体の完全性が必要。
+4. 量子Fermat反例：ζ³=1≠ζ、E=[[0,1,1,1],[-1,0,0,1],[-1,0,0,1],[-1,-1,-1,0]]、B=k<x_i>/(x_ix_j−ζ^{Eij}x_jx_i)、R=B/(Σx_i³)。BはCY4、Rは整域AS-Gorenstein index1。qgrRはgd2、Serre=(-1)[2]、AZ ampleと全切断数、rank1を満たす。Ext1(O,O(m))も全mで零。整域性は3次cyclic algebraのNorm障害、tails正則性はFermat chartの正則正規元による帰納で証明する。
+5. このBのR13排除は、周期正規直線族の射影returnが恒等というproper閉incidenceで証明する。四つの独立基底変更に不変であり、単にZ(B)1=0という主張ではない。support classは{0},{1,2},{3}、四周returnはいずれも非スカラー。
+6. 有限提示incidence P（J2 rank6、J3 rank45）と全Hilbert rank条件を構成。上界minorのイデアルはNoetherian性で有限生成なので、正しいHilbert値の点の完備化はframed環変形の有限型形式模型を与える。全weak stackの通常の代数性・局所有限型性は未証明。
+7. AS4二次包絡と正則三次核を持つ認識部分には、全ncP3へのambient射がある。R13中心incidenceはP1束で、一般有理商の関数体はK(λ)。幾何学的一般切断がweakとなることは既存のvery-general正則切断の証明を入力とする。正確なweak fiberの除外集合と開性は未完成。
 
-## Directed P3 relationsとpotentialの位置づけ
+`computations/verify_quantum_fermat.py`は指数演算、CY行積、低次数中心、四周return、四次potentialの符号、QQ(ζ)上の64×48 overlap行列rank44、Hilbert値、Norm障害の単純極を厳密確認する。通常の証明と計算を区別する。新稿9ページを組版・描画確認済み。外部査読、形式化、新規性の網羅確認は未実施。
 
-P3のdirected Beilinson四頂点12矢は、二つのrank6二次関係R0,R1を持つ。K=(R0⊗V2)∩(V0⊗R1)がrank4で、Kの両縮約がrank6となる層上では、四次potential w=coev(K)を構成する。GL4^4で割った非射影化potentialの群oidとGL4^3で割ったdirected relationの群oidが同値。Koszul/AS条件は両側の共通代数に課し、全Gr(6,16)^2が適合するとはしない。P2のAOUの単純な「関係の双対を矢へ追加する」操作とは異なり、三次syzygyのrank層が必要。四次は二階微分であり、BSWの符号付きsuperpotentialとDWZの一階Jacobianを区別する。証明は threefold原稿の projective_three_space_potentials.tex、現在有効な記述と境界の課題は research/cubic_surface_comparison.md。GIT境界でKが跳ぶ場合のsyzygy incidence compactificationを次に調べる。
+## IV. 保持する中心拡大型・potential研究
 
-## R(1,3)既約成分の一般モジュライの決定（2026-11-15 / r13-v1）
+`papers/cubic_surface_ambient_moduli.tex`とそのinputs、`research/cubic_surface_comparison.md`は次の有効な研究を保持する。今回これら全証明を再監査したわけではない。
 
-証明の骨格・仮定・計算・残る境界問題は `research/r13_generic_moduli.md` に集約した。主結果は一般のSklyanin中心一次拡大型におけるpointed moduliの開部分
-`[U_19/Aff_3]` （determinant-twisted作用、19−12=7次元）と、Hessian群 `G_216` の七係数正規形の有理商である。中心一次正規族が一意であることを楕円point schemeのtranslation (3p\ne0) から証明し、一般のZhang追加同一視を排除した。したがって七係数写像の一般次数は216。さらに `Hilb^8(A^3)` の特殊なcomplete intersection上の非零integrable 1-formのモジュライと同定する。八つの臨界点・中心変形の線型条件・integrability rank8・216群の有限列挙は新しい独立QQ検算を実施。四頂点rank188と67次元成分性は既存の証明書を入力とし、この回には再実行していない。
+- 4周期付き関係式stackと任意周期付きAS Z代数は同値。ordinary potentialはFrobenius適合周期の部分。任意周期の可換反例との区別を保つ。
+- Directed P3の二つのrank6関係R0,R1から、rank4の三次syzygy K=(R0⊗V2)∩(V0⊗R1)とV3=K*、coevKにより四次potentialを作る。縮約全射とKoszul/AS条件を課して両moduliを比較する。全Gr(6,16)^2ではない。
+- R13の七係数slice、普遍四次potential、rank条件の全接行列rank188、軌道rank61、slice+軌道rank68から、射影成分67・有効商7の一般正則性とエタールchartを得る。境界の全AS性と正規化は未決定。
+- 可換三次曲面近傍の形式AOU/W(E6)比較と、相対inverse Serreの有限低次数模型を保持する。全weak対象の大域Weyl商を意味しない。
+- Poisson一意延長と8→7、固定ambientの中心P1・全normal形式fiber1を保持する。
+- `research/r13_generic_moduli.md`は一般R13の19係数Aff3商、七係数Hessian216有限対応、8臨界点と可積分1形式を整理する。今回配布bundleにはその専門稿の全文も含めた。全境界の分類ではない。
+- Threefold原稿`papers/nc_cubic_threefold_moduli.tex`と既存コードを保持する。surfaceとthreefoldの次元・障害・周期を混同しない。
 
-この結果は**一般開部分の分類**であり、既約成分の全境界のscheme構造、正規化、GIT半安定商、特異なSklyanin境界、3-torsionでのZhang同一視、有限群の不変関数体の最小生成元は未解決である。今後はこの境界と不変量計算を最優先にする。独立査読と新規性の総合確認も未了。
+## V. 次の優先課題
 
-## IV. 次に着手する課題
+最初に公理から提示を認識する：Ext1消滅、反標準環のCohen–Macaulay性、正規一次切断、三次overlap rank4を別々に検討する。条件2のArtin安定性を大域開性に無断で昇格しない。
 
-最優先はW(E6)商の大域化である。定理5.1を単に代数化しただけでは、別のmarkingや自己同値による追加同一視を排除できない。AOUの楕円decuple上でsimple reflectionの有理変換を構成し、P0、Serre orbit、heart、ample locusの保存を証明する。K0上同じmarkingを持つ例外列の一意性が核心。2024年OWRのaffine Weylに関する予想と、有限W(E6)へ制限するための条件を照合する。
+全モジュライの代数性は、全Hilbert関数・saturation・gd2・相対Serre・AZ ample・rank1の一様な有限型chartと全被覆を示すことが核心。有限提示や有限型形式hullだけを代数性の証明としない。
 
-次に、式(6)のfinite Serre algorithmをAOUの八つのトーラス座標で実装し、A1、R2、三次核の実際の有理式を出す。これにより七係数sliceへの写像、一般次数、Weyl作用との可換性を検査する。現在は有限アルゴリズムと支配性の証明があり、展開済み座標式はない。
+R13分枝では、AOU有限代数ΛとP0からinverse Serre orbitの低次数section環を相対計算する。W(E6)の代数的作用、マーキング存在・数値的一意性・降下、weak locusの開性、generic fibreの正確な除外点と慣性を調べる。
 
-並行して、内在的条件から超曲面認識を導く。可換形式近傍と幾何学的一般点では比較できるが、全成分・全境界の次数一生成／AS cover／正則三次核は残る。smooth proper性・AZ amplenessの相対開性を別に検査する。
-
-R13の七係数atlasの有限群oidを解き、generic stabilizer、一般次数、不変関数体、成分の正規化を求める。rank6 locus全体をAS locusと同一視しない。任意周期の別成分をFrobenius sliceで落とさない。
-
-## V. 保持する三次三様体研究
-
-`papers/nc_cubic_threefold_moduli.tex` (v8)、`notes/research_notes.md` と既存の必要コードは引き続き現行資料であり、今回削除・置換しない。相対二次包絡、37/41次元incidence、13/17次元一般有理商、体上の対の周期性、可換P4形式比較、四・五頂点potentialについての詳細がそこにある。今回その102ページ全体は再監査していない。任意周期と適合周期については本書の訂正された区別を用いる。
+量子Fermat例のHH変形、数値K群、AOU型例外列の有無を計算し、R13以外の分枝を調べる。現在はR13閉包の外にあることだけを示しており、別成分の次元やrigidityを主張していない。
 
 ## VI. 再現
 
-`research/cubic_surface_reproduce.md` のコマンドで二つのQQ計算とLuaLaTeX組版を再現する。証明書のrank、minor、行列の行列番号、参照閉包、PDFを確認する。`research/surface_validation.json` は今回実行した範囲のみを記録する。Library用surface bundleはこのsurface研究の全ソース・論文PDF・計算・方針・ノートを含み、別のthreefold論文を再開の前提にしない。
+新計算：`python3 computations/verify_quantum_fermat.py`。
+新稿：`latexmk papers/weak_cubic_axioms.tex`。
+検証範囲：`research/weak_cubic_validation.json`。
+従来のsurface/R13計算の手順はそれぞれの既存ノートとREADMEに保持する。新しいresearch bundleは現行の認識稿・中心分枝稿・一般R13稿・必要コードだけを含み、旧ZIPやコンパイル中間物を含めない。

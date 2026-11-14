@@ -1,0 +1,517 @@
+\documentclass[11pt,a4paper]{ltjsarticle}
+\usepackage[margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,longtable}
+\usepackage[haranoaji]{luatexja-preset}
+\usepackage[unicode,hidelinks]{hyperref}
+\newtheorem{theorem}{定理}[section]
+\newtheorem{proposition}[theorem]{命題}
+\newtheorem{lemma}[theorem]{補題}
+\newtheorem{corollary}[theorem]{系}
+\theoremstyle{definition}\newtheorem{definition}[theorem]{定義}
+\newtheorem{remark}[theorem]{注意}
+\renewcommand{\proofname}{証明}
+\newcommand{\kk}{k}\newcommand{\PP}{\mathbb P}\renewcommand{\AA}{\mathbb A}
+\newcommand{\OO}{\mathcal O}\newcommand{\cA}{\mathcal A}
+\newcommand{\End}{\operatorname{End}}\newcommand{\Hom}{\operatorname{Hom}}\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\qgr}{\operatorname{qgr}}\newcommand{\Gr}{\operatorname{Gr}}
+\newcommand{\rank}{\operatorname{rank}}\newcommand{\gldim}{\operatorname{gldim}}
+\newcommand{\PGL}{\operatorname{PGL}}\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\Spec}{\operatorname{Spec}}\newcommand{\Spf}{\operatorname{Spf}}
+\newcommand{\im}{\operatorname{im}}\newcommand{\cC}{\mathfrak C}
+\newcommand{\cP}{\mathfrak P}\newcommand{\Sym}{\operatorname{Sym}}
+\title{内在的非可換三次曲面の公理とambient成分\\\large 量子Fermat反例・低次数生成・モジュライの認識条件}
+\author{研究原稿：証明済みの命題と未解決の認識条件を区別する}
+\date{2026年11月15日\quad recognition-v3}
+\begin{document}\maketitle
+\begin{abstract}
+大域次元2の$k$線形Abel圏とrank one torsion-free構造対象，反Serre作用，
+Artin--Zhang豊富性，三次曲面と同じ全次数の切断数を公理とする．
+次数零の仮定は冗長である．一次生成・二次三次関係という条件は，
+可換三次環の全次数平坦なArtin変形では自動的に保持されるが，
+全内在的対象に対する認識は未証明である．
+一方，これらの条件すべてを満たす明示的な量子Fermat三次曲面を構成し，
+そのambientが四頂点potentialモジュライの$R(1,3)$成分の閉包に入らないことを証明する．
+したがって全対象を$R(1,3)$へ送るという普遍的な認識命題は偽である．
+全モジュライの代数性は証明済みとはせず，有限提示による候補，その形式局所模型，
+超曲面認識部分での射，中心三次incidenceの一般ファイバーを正確に定式化する．
+\end{abstract}
+\tableofcontents
+
+\section{公理と四つの問いの状態}
+以下，$k$は標数0の代数閉体とする．$\cA$は$k$線形noetherian Abel圏で
+$\gldim\cA=2$，$D^b(\cA)$はHom有限でSerre関手$S$を持つとする．
+$s=S^{-1}[2]$はheartを保ち，$\OO\in\cA$について$(\OO,s)$が
+Artin--Zhang ampleであると仮定する．ここでnoetherian性とHom有限性は
+Artin--Zhang再構成と通常のSerre双対性を適用するための規約である．
+rankについては，torsionをrank零対象からなるSerre部分圏とし，
+$s$がこの部分圏とrankを保つという通常の整な非可換曲面の規約を使う．
+$\OO$はrank one torsion-freeとする．後述する反例では実際にsection環が整域なので，
+rankは次数零商斜体上の次元として曖昧さなく定まる．
+
+$M(m)=s^mM$，$\Gamma(M)=\Hom(\OO,M)$，$R_m=\Gamma(\OO(m))$とし，
+\begin{equation}\label{eq:h}
+ h_m=\dim R_m=
+ \begin{cases}1+\frac32m(m+1)&m\ge0,\\0&m<0\end{cases}
+\end{equation}
+を要求する．従って$R=\bigoplus_{m\ge0}R_m$でよく，
+$a\in R_m,b\in R_n$の積は$s^m(b)\circ a$である．
+負次数まで足しても環は変わらない．
+
+本稿の論理的状態は次の通りである．
+\begin{center}\small
+\begin{tabular}{p{.15\linewidth}p{.76\linewidth}}\toprule
+問い&今回の結論\\\midrule
+低次数提示&$R_0=k$は自動．条件2の全域での冗長性は未証明．Artin平坦変形での保持と，正規境界による十分条件を証明する．\\
+ambient認識&存在すれば二次包絡で一意．$R(1,3)$への全域帰属は量子Fermat例により否定される．全対象でAS4包絡が存在すること自体は未証明．\\
+代数性&族を指定したfpqcモジュライ候補と有限提示空間を作る．候補の全体を通常の代数的stackと同定する証明は完成していない．\\
+像とfiber&中心拡大型のincidenceは7次元ambientを支配し，中心fiberは$\PP^1$．内在的モジュライ全体への無条件の拡張とは区別する．\\\bottomrule
+\end{tabular}
+\end{center}
+既知入力は\cite{AZ,Kanazawa,YZ,Pym,AOU,BN}に区別して示す．
+以下の組合せの新規性・初出は未確認である．
+
+\section{冗長性と低次数認識}
+\begin{proposition}\label{prop:automatic}
+公理\eqref{eq:h}から$R_0=k$が従う．またSerre双対性から
+\[
+ \Ext^2(\OO,\OO(m))\simeq R_{-m-1}^*,\qquad
+ \Ext^1(\OO,\OO(m))\simeq\Ext^1(\OO,\OO(-m-1))^*
+\]
+が従う．通常のrank規約の下で$R$はgraded domainである．
+\end{proposition}
+\begin{proof}
+$h_0=1$であり単位写像$k\to\End(\OO)$は非零なので同型である．
+$S\OO=\OO(-1)[2]$をSerre双対に代入し，$s$で移動すればExtの式を得る．
+非零写像$\OO\to\OO(m)$の像はtorsion-freeであり，rankは1である．
+核はrank零かつtorsion-freeなので零．従って非零斉次切断の積は単射の合成で非零である．
+最高斉次部分を見ることで非斉次元についても整域性が従う．
+\end{proof}
+上の双対性だけから$\Ext^1(\OO,\OO(m))=0$を結論してはいけない．
+Artin--Zhangの再構成は，適切な有限性の下で右noetherian性と$\chi_1$を与えるが，
+すべての高次Serre消滅を無条件に与えるものではない\cite{AZ}．
+
+\begin{proposition}[条件2の形式的安定性]\label{prop:artin}
+$(T,\mathfrak m)$を局所Artin $k$代数とし，$R_T$を各次数有限自由な連結次数付き
+$T$代数とする．特殊ファイバー$R_T/\mathfrak mR_T$が一次生成で，その関係イデアルが
+次数$\le d$で生成されるなら，$R_T$も同じ性質を持つ．特に可換三次曲面環の
+全次数平坦なArtin変形では，条件2は追加の制限を課さない．
+\end{proposition}
+\begin{proof}
+各$n$で$R_{T,1}\otimes R_{T,n-1}\to R_{T,n}$の余核を考える．
+特殊化で零なのでNakayamaにより零であり，一次生成を得る．
+$V=R_{T,1}$，$J=\ker(T_T(V)\to R_T)$とする．各次数の商は自由なので
+$J_n$も直和因子で，核は剰余体への底変更と可換する．
+次数$>d$の最小関係加群
+$J/(VJ+JV)$の各成分を剰余体へ落とすと零になる．
+各成分は有限生成$T$加群なので再びNakayamaで零となる．
+従って$J$は次数$\le d$で生成される．
+\end{proof}
+この命題をAbel圏の変形へ適用する際には，反標準section環の全次数平坦性を
+先に確認する必要がある．可換滑らかな三次曲面の全twistの$H^1$消滅は，
+この確認の標準的な出発点である．形式的安定性から，任意の有限型族での
+全次数の条件の開性まで結論したわけではない．
+
+\begin{proposition}[正則正規な反標準境界による十分条件]\label{prop:boundary}
+$R$に左右正則な正規元$t\in R_1$があり，$R/(t)$が一次生成かつ二次三次関係で提示されるなら，
+$R$も一次生成かつ二次三次関係で提示される．
+\end{proposition}
+\begin{proof}
+$R/(t)$の一次生成元を持ち上げ，$t$とともに$R$を生成することを次数帰納で示す．
+商の二次三次関係を持ち上げると，各誤差は$t$の倍数なので同じ次数の関係へ修正できる．
+正規自己同型を$\sigma$とし，これらと$tx_i-\sigma(x_i)t$で作った代数を$C$とすると
+$t$は$C$でも正規で，$C\twoheadrightarrow R$，
+$C/(t)\simeq R/(t)$である．核$K$の元は$t c$と書け，$R$上の$t$の正則性から$c\in K$．
+従って$K=tK$であり，次数についての帰納で$K=0$である．
+\end{proof}
+楕円境界が三変数Sklyanin代数の中心三次商である場合は，この十分条件が適用できる．
+この命題では中心性は必要ないが，正規元の存在と商の提示は元の公理からは導いていない．
+
+\paragraph{Hilbert級数だけでは足りない．}
+例えば$\deg x_i=1,\deg y=2$とし，$q_2(x)$を既約二次式，
+$g_3(x,y)$をその商で非零な重み3の式とする．
+\[
+ D=k[x_0,x_1,x_2,x_3,y]/(q_2,g_3)
+\]
+は正則列のHilbert級数計算により$(1-t^3)/(1-t)^4$を持つ．
+$q_2$が$y$を含まなければ$y$は一次元で生成されない．
+これはHilbert級数だけに対する障害であり，$\qgr D$が本稿の全圏的公理を
+満たす反例だとは主張しない．
+
+\paragraph{二次包絡の最初の数値障害．}
+一次生成を仮定して$V=R_1$，$J_2=\ker(V^{\otimes2}\to R_2)$とすると
+$\dim V=4$，$\dim J_2=6$．
+\[
+ K_3=(J_2\otimes V)\cap(V\otimes J_2),\quad B=T(V)/(J_2)
+\]
+について
+\begin{equation}\label{eq:overlap}
+ \dim B_3=16+\dim K_3,\qquad
+ \dim\ker(B_3\to R_3)=\dim K_3-3.
+\end{equation}
+したがって「三次関係は一本」は$\dim K_3=4$に相当し，
+$R_3=19$という数値だけからは得られない．
+AS正則性はさらに全次数のKoszul複体の完全性を必要とする．
+
+\section{全公理を満たす量子Fermat三次曲面}
+$\zeta\in k$を原始3乗根とし，
+\begin{equation}\label{eq:matrix}
+ E=(e_{ij})=
+ \begin{pmatrix}
+ 0&1&1&1\\-1&0&0&1\\-1&0&0&1\\-1&-1&-1&0
+ \end{pmatrix},\qquad q_{ij}=\zeta^{e_{ij}}
+\end{equation}
+と置く．
+\begin{equation}\label{eq:quantum}
+ B=k\langle x_0,x_1,x_2,x_3\rangle/(x_ix_j-q_{ij}x_jx_i),\quad
+ F=x_0^3+x_1^3+x_2^3+x_3^3,\quad R=B/(F).
+\end{equation}
+
+\begin{theorem}\label{thm:fermat}
+$\cA=\qgr R$，$\OO=\pi R$は第1節の全公理と条件2を満たす．
+より具体的には，$R$はnoetherian graded domain，$\OO$はrank one torsion-free，
+\[
+ \gldim\cA=2,\qquad S=(-1)[2],\qquad s=(1),\qquad
+ \Hom_{\cA}(\OO,\OO(m))=R_m\quad(m\in\mathbb Z).
+\]
+$R$の二次包絡は$B$であり，$B$は標準Koszul AS正則CY4代数である．
+\end{theorem}
+\begin{proof}
+$B$は反復skew polynomial拡大であり，整列単項式がPBW基底をなす．
+従ってnoetherian，Koszul，AS正則次元4，Hilbert級数$(1-t)^{-4}$である．
+各$q_{ij}^3=1$から$x_i^3$と$F$は中心的．$F\ne0$は$B$上正則なので
+\[
+ H_R(t)=(1-t^3)/(1-t)^4.
+\]
+また$\prod_jq_{ij}=1$なのでNakayama自己同型は恒等である．
+この双対化の計算は\cite[Proposition 2.4]{Kanazawa}と同じで，
+$B$のbalanced dualizing complexは$B(-4)[4]$，$R$のそれは$R(-1)[3]$となる．
+中心有限性とAS Gorenstein性は，局所コホモロジーとSerre双対に必要な有限性を与える
+\cite{YZ}．
+
+整域性，大域次元および全対象へのSerre双対の適用を以下の補題で証明する．
+AS Gorenstein次元3から$\underline\Ext^i_R(k,R)=0$ ($i=0,1$)である．
+有限次元加群のfiltrationと商圏Homの直極限表示を用いれば，
+全整数$m$についてsection map $R_m\to\Hom(\OO,\OO(m))$は同型となる．
+$R$はnoetherianで一次生成かつ$\chi$を満たすので$(\pi R,(1))$はAZ ampleである．
+$\OO$のrank one torsion-free性は整域性から従う．
+$R$は六本の二次関係と一つの三次関係で提示され，三次商は二次を変えないので
+$Q(R)=B$である．
+\end{proof}
+
+\begin{lemma}[商の整域性]\label{lem:domain}
+\eqref{eq:quantum}の$R$は整域である．
+\end{lemma}
+\begin{proof}
+$x_3$に関するmonic三次関係を使うと，$R$は三変数skew polynomial部分環上
+$x_3$次数$0,1,2$の基底を持つ．従って$x_0$は左右正則な正規元である．
+$u_i=x_i x_0^{-1}$ ($i=1,2,3$)とすると，$x_0$局所化の次数零部分は
+\[
+ D=k\langle u_1,u_2,u_3\rangle/
+ (u_1u_2-u_2u_1,\ u_iu_3-\zeta u_3u_i\ (i=1,2),\
+ u_1^3+u_2^3+u_3^3+1).
+\]
+$D$は$k[u_1,u_2]$上$1,u_3,u_3^2$を基底に持つ．
+$u_2$を局所化して$r=u_1/u_2$，$v=u_2^3$と置き，中心体$K=k(r,v)$へ進むと，
+\[
+ u_2^3=v,\quad u_3^3=w=-1-(r^3+1)v,\quad u_2u_3=\zeta u_3u_2
+\]
+という次数3のcyclic algebraを得る．これは斜体である．実際，
+$L=K(u_2)$の$K$に対する3次巡回拡大で，$w=0$の離散付値を考える．
+その剰余体では$v=-1/(r^3+1)$であり，これは単純な極を持つので$k(r)$の三乗ではない．
+従って$L/K$はこの付値で非分岐・剰余次数3となる．
+Normの付値は3の倍数だが$w$の付値は1なので，$w$はNormではない．
+従って$L[u_3;\sigma]/(u_3^3-w)$は斜体になる．
+（次数3のskew polynomialが可約なら一次因子を持ち，Norm条件を与えることでも分かる．）
+$D$は自由基底によってこの中心局所化に単射に入り，整域である．
+$R[x_0^{-1}]$は$D$のskew Laurent拡大なので整域，$R$はその部分環なので整域である．
+\end{proof}
+
+\begin{lemma}[局所正則性からtailsの次元へ]\label{lem:smooth}
+$\qgr R$の全coherent対象はperfectであり，Serre関手は$(-1)[2]$，大域次元は2である．
+\end{lemma}
+\begin{proof}
+中心部分環$k[x_0^3,\ldots,x_3^3]/(F)$のProjは$\PP^2$であり，
+$x_i^3\ne0$という四つのchartが被覆する．各chartの次数零代数は
+\begin{equation}\label{eq:affine-fermat}
+ C=k\langle y_1,y_2,y_3\rangle/
+ (y_iy_j-\epsilon_{ij}y_jy_i,\quad 1+y_1^3+y_2^3+y_3^3),
+ \qquad \epsilon_{ij}^3=1
+\end{equation}
+の形である（非零定数係数は変数のスカラー変更に吸収する）．
+これが大域次元2を持つ証明は，\cite[\S2.3]{Kanazawa}のFermat局所化の証明を
+「変数の個数」と「指数」を分けて適用するものであり，指数が変数個数と等しい必要はない．
+必要な帰納を記す．
+
+$C$は中心部分環$T=k[Y_1,Y_2,Y_3]/(1+Y_1+Y_2+Y_3)$，$Y_i=y_i^3$上有限自由である．
+この中心部分環の閉点$Y_i=a_i$で完備化した代数を$\widehat C$とする．
+全$a_i\ne0$なら，fiberは有限群のtwisted group algebraで，標数0により半単純である．
+$T$の局所環は正則次元2で，$\widehat C$上もパラメータは中心正則列である．
+有限な完備局所基底上ではこれらはJacobson radicalに属する．
+正則正規元$f$に対する
+$\gldim A=\gldim(A/(f))+1$を二回適用して$\gldim\widehat C=2$を得る
+\cite[Lemma 2.8]{Kanazawa}．
+
+$a_i=0$がある場合は，$y_i^3=Y_i$が中心極大イデアルに入るので，
+$y_i$も$\widehat C$のJacobson radicalに入る．これは正規性により
+$(y_i)^3=(Y_i)$であり，半単純な商環では冪零両側イデアルが零になるからである．
+$y_i$は左右正則である：$y_i^3$は中心の非零元で，中心上の自由性により正則だからである．
+$y_i$を落とした商は変数の個数が一つ少ない同型のFermat代数の完備化である．
+対応する中心部分環は，残る$Y_j$が$1+\sum Y_j=0$を満たす正則局所環になる．
+零になる$a_i$を順に落とす帰納と上記の正規元補題により，やはり
+$\gldim\widehat C=(\#\{i:a_i\ne0\}-1)+\#\{i:a_i=0\}=2$となる．
+全ての$a_i$が零になることは和の関係によって起こらない．
+
+有限生成$C$加群の二階syzygyは，どの中心極大点の完備化でも射影的になる．
+中心上の忠実平坦な完備化から射影性を降下し，中心の局所化で貼り合わせれば，
+もとのsyzygyも射影的である．この主張は有限表示の射影分裂を忠実平坦に降下させるか，
+有限生成加群間の$\Ext^1$の中心局所化を使って証明できる．
+よって全有限生成加群のprojective dimensionは高々2であり，
+noetherian性から$\gldim C\le2$となる．
+これは有限長でない加群にJordan--H\"older分解を適用する議論を用いていない．
+
+従って全coherent対象は各chartでperfectである．有限中央被覆上でこれを貼り合わせると，
+$D^b(\qgr R)$は構造対象の全twistで厚く生成されるperfect圏に等しい．
+例えば，高syzygyをgraded行列因子化で表し，局所縮約の分母を払い，
+中心元$x_i^{3N_i}$のKoszul coneを使って局所的perfect性を大域化してもよい．
+それらの零点はProjでは空なのでconeのcohomologyはtorsionであり，商圏で消える．
+
+balanced dualizing complex $R(-1)[3]$によるSerre双対\cite{YZ}は
+まずperfect対象に適用でき，上記により全対象へ適用できる．従って$S=(-1)[2]$であり，
+$\Ext^i(M,N)^*=\Ext^{2-i}(N,M(-1))$から$i>2$の消滅を得る．
+また$\Ext^2(\OO,\OO(-1))=k$なので大域次元は正確に2である．
+\end{proof}
+
+\section{このambientは四頂点の$R(1,3)$成分にも入らない}
+単に$Z(B)_1=0$を示すだけでは，四つの独立な矢空間の基底変更に不変な排除条件にはならない．
+そこで周期的な正規直線族とそのreturn mapを使う．
+
+四頂点の二次関係モジュライで，すべての非零$\ell\in V_i$について
+$\ell V_{i+1}$および$V_{i-1}\ell$への乗法が単射になる開部分を$\mathcal T$とする．
+この条件は線型零因子のprojective incidenceを射影することで開条件となる．
+\begin{lemma}\label{lem:closed}
+$\mathcal T$の中で，非零直線$L_i=k\ell_i\subset V_i$ ($i\bmod4$)が存在して
+\[
+ \ell_iV_{i+1}=V_i\ell_{i+1},\qquad
+ \ell_i v=\phi_i(v)\ell_{i+1},\qquad
+ \phi_0\phi_1\phi_2\phi_3\in k^\times\mathrm{id}_{V_0}
+\]
+となる条件は閉であり，$(\PGL_4)^4$-不変である．
+$R(1,3)$の一般的な中心拡大はこの閉部分に属する．
+\end{lemma}
+\begin{proof}
+$\mathcal T\times\prod_i\PP(V_i)$上で，二つのrank4の乗法像の一致は閉条件である．
+一致する場合，単射性により$\phi_i$は一意の可逆線型写像となる．
+$\ell_i$を$a_i\ell_i$へ変えると$\phi_i$は$a_i/a_{i+1}$倍されるので，
+四つの合成は変わらない．直線束の因子も四周で相殺される．
+従ってreturn mapが射影的に恒等であることはこのprojective incidence上の閉条件である．
+実際，$\Phi-\tfrac14\operatorname{tr}(\Phi)I=0$という行列等式で表される．
+射影がproperなので像は閉．基底変更はreturn mapを共役するだけなので不変である．
+中心拡大では全$\ell_i=t$，$\phi_i=1$を選べる．
+\end{proof}
+
+\begin{lemma}[量子多項式環の正規直線族]\label{lem:lines}
+\eqref{eq:matrix}の$B$で，非零一次元$\ell,m$が$\ell B_1=B_1m$を満たせば，
+$\ell,m$は比例し，その共通supportは
+\[
+ \{0\},\qquad\{1,2\},\qquad\{3\}
+\]
+のいずれかに含まれる．
+\end{lemma}
+\begin{proof}
+$\ell=\sum a_ix_i$，$m=\sum b_ix_i$，$\ell x_j=\phi(x_j)m$とする．
+$x_i^2$の係数を比較すると$a_i=0$と$b_i=0$は同値であり，
+support上で$\phi$の行は対角となる．support外の混合単項式を比較すると
+残る成分も対角で，$\phi(x_j)=\lambda_jx_j$となる．
+$i$がsupportにあれば$\lambda_i=a_i/b_i$かつ
+$\lambda_j=\lambda_iq_{ij}$である．
+従ってsupport内の$i,k$について$q_{ij}/q_{kj}=\lambda_k/\lambda_i$は$j$に依存しない．
+全行の積が1であるため$(\lambda_k/\lambda_i)^4=1$，
+$q_{ij}^3=1$から同じ比の3乗も1．よって比は1であり，対応する行は完全に一致する．
+行が一致するclassは上の三つだけである．
+\end{proof}
+
+\begin{theorem}[問2への反例]\label{thm:not-r13}
+定理\ref{thm:fermat}のweakly marked非可換三次曲面のambient $B$は，
+directed relationとFrobenius rolled-up potentialで定めるモジュライにおいて，
+$R(1,3)$成分の閉包に属さない．
+\end{theorem}
+\begin{proof}
+$B$は整域なので$\mathcal T$に属する．補題\ref{lem:lines}により，
+四周の正規直線は全て同一の直線でなければならない．生成元をすべて$\ell$に揃えると
+各$\phi_i$は$\ell x_j=\sigma_\ell(x_j)\ell$による正規自己同型$\sigma_\ell$である．
+三つの可能なsupportについてその固有値の指数はそれぞれ
+\[
+ (0,1,1,1),\qquad(2,0,0,1),\qquad(2,2,2,0)\pmod3.
+\]
+従って$\sigma_\ell^4=\sigma_\ell$は恒等でもスカラーでもない．
+補題\ref{lem:closed}の閉条件を満たさず，$R(1,3)$一般族の閉包に入らない．
+$B$はCYなので標準4移動はFrobenius適合表示にでき，ここで比較するpotentialは
+問題のpointed ambientに対応する．
+\end{proof}
+この反例は単なる非中心的なZhang表示の差ではない．
+スカラーを除いた四頂点基底変更に不変な閉条件で成分を分離している．
+したがって，内在的公理に条件1・2を加えても，$R(1,3)$への全域帰属は従わない．
+なお本例ではambientのAS正則性自体は成立している．さらに局所コホモロジーの計算から
+$\Ext^1(\OO,\OO(m))=0$も全$m$で成立するので，
+構造対象の全twistの中間コホモロジー消滅を加えてもこの反例は排除されない．全対象に対するAS包絡の認識問題と，
+その成分が$R(1,3)$であるかという問題を混同してはいけない．
+
+\section{モジュライ候補，有限提示，形式局所代数性}
+体上の対象だけの定義から，スキーム上の族とその平坦性は一意には定まらない．
+ここでは$T$上の全次数有限局所自由なsection代数$R_T$を用い，
+各幾何学的fiberが第1節の条件を満たし，section mapが全次数で底変更と両立し，
+相対的なSerre作用が$(-1)[2]$である族を候補とする．
+可逆な反標準作用を既にsection gradingに含める．
+Homのfpqc降下を行い，次数スカラー$a_n\mapsto\lambda^na_n$を適切にrigidifyする．
+得られるfpqc stackを$\cC^{(2,3)}_{\mathrm{wm}}$と書く．
+これは全stackの通常の代数性を主張する記号ではない．
+
+$V=k^4$を固定する．条件2を満たす環は
+\[
+ J_2\in\Gr(6,V^{\otimes2}),\qquad
+ J_3\in\Gr(45,V^{\otimes3}),\qquad
+ VJ_2+J_2V\subset J_3
+\]
+という有限型projective incidence $P$の点から得られる．
+$J_3$は最小三次関係ではなく，次数3の全核である．
+普遍環は$\mathcal R=T(V)/(J_2,J_3)$である．
+各$d\ge4$で，関係式の全倍数を並べた有限行列$M_d$について
+\begin{equation}\label{eq:hilbert-ranks}
+ \rank M_d=4^d-h_d
+\end{equation}
+を課すと，所望の全次数平坦なHilbert関手になる．
+有限係数で提示したことと，全条件が有限個の開閉条件で認識できることは別である．
+
+\begin{proposition}[有限型の形式局所模型]\label{prop:hull}
+$P$において，全$d$について$\rank M_d\le4^d-h_d$を課す閉部分$Z$は有限型である．
+所望のHilbert関数を実際に持つ点$r\in P(k)$で，
+$\widehat Z_r$は，固定した一次基底の下での全次数平坦な条件2付き環のArtin変形関手を表す．
+\end{proposition}
+\begin{proof}
+各条件は有限個のminorの消滅である．全次数のminorを生成元とするイデアルは，
+$P$のnoetherian性により有限生成である．従って$Z$は閉な有限型部分である．
+$r$では各$d$について所定rankの非零minorがある．
+$r$に特殊化するArtin族ではそのminorは単元になるので，rankの下界は自動である．
+上界を与えるminorの消滅と合わせると，行列を局所的な可逆行列で還元して
+その余核が階数$h_d$の自由加群であることが分かる．これが各$d$で成立する．
+逆は平坦性から従う．
+\end{proof}
+この命題は有効な有限の最高次数上界を与えない．また，通常の代数的な開近傍で
+無限個の下界条件が同時に成立することや，圏的条件が開であることを示してはいない．
+Behrend--Noohi\cite{BN}のgraded algebraモジュライと有限切断も，
+内在的Abel圏の指定部分の認識を自動的に与えるものではない．
+
+\paragraph{代数性を完成するための十分条件．}
+有限型scheme $U$上で，(i)全Hilbert関数とsaturation，
+(ii)geometricな大域次元2と相対Serre作用，(iii)AZ ample性，
+(iv)rank one torsion-free性が一様に保証され，
+全対象がfpqc局所でそのようなchartへ入ることを示せば，
+$[U/\PGL_4]$のchartを貼り合わせることで通常の代数的stackを得る．
+条件2により同型は一次部分で決まり，その同型schemeは有限個の二次三次関係の保存条件で
+表されるため，この段階の障害は同型の記述ではなく，全対象を覆う認識・開性・有界性である．
+現時点ではこの全被覆の証明が未完成である．
+
+\section{ambient射の定義域と$R(1,3)$部分の一般fiber}
+\begin{proposition}[超曲面認識部分]\label{prop:recognition}
+$R$が条件2を満たし，$B=Q(R)$がHilbert級数$(1-t)^{-4}$の二次AS正則代数で，
+$B\to R$の三次核の生成元$G$が左右正則とする．
+このとき$R=B/(G)$で$G$は正規である．この復元は，
+各成分と核が有限局所自由である族の任意の底変更に両立する．
+\end{proposition}
+\begin{proof}
+$\dim B_3-R_3=1$，$\dim B_4-R_4=4$である．
+$GB_1$と$B_1G$は正則性によりともに4次元で，次数4の核に含まれるので一致する．
+次数一生成から全次数で正規性が得られる．条件2により核は三次で生成されるので$R=B/(G)$．
+相対版は局所自由な核の形成と二次包絡の普遍性による．
+\end{proof}
+従ってこの部分では自然な射
+\[
+ \Phi:\cC^{\mathrm{hyp}}_{\mathrm{wm}}\longrightarrow\cP_3^{\mathrm{AS}},\quad
+ R\longmapsto Q(R)
+\]
+を定義できる．定理\ref{thm:not-r13}から，その全像を$R(1,3)$に制限することはできない．
+
+$R(1,3)$の一般中心拡大については，既知の入力と保持した研究原稿により
+\[
+ Z(B)_1=kt,\qquad Z(B)_3=k\Omega\oplus kt^3
+\]
+を持つ良い開部分を取る．$E_3=Z(\mathcal B)_3$がrank2の束として底変更に両立する
+chartでは，中心三次直線のincidenceは
+\begin{equation}\label{eq:incidence}
+ \PP(E_3)\longrightarrow U
+\end{equation}
+という射影直線束である．基底変更群を同時に割れば，中心三次商の代数的stackと
+ambientへの射を得る．これは$\gldim\qgr=2$をまだ要求しない環のincidenceである．
+
+\begin{proposition}[一般の中心fiberと関数体]\label{prop:generic-fiber}
+一般ambientの射影自己同型群が自明なら，\eqref{eq:incidence}の一般fiberは$\PP^1$である．
+有限な自己同型群を許しても，その一般有理商は種数0である．
+中心直線$kt^3$は内在的なので，降下後の種数0曲線は有理点を持ち，$\PP^1$へ分裂する．
+従って，対応する中心超曲面模型の関数体はambientの関数体$K$に対して$K(\lambda)$である．
+\end{proposition}
+\begin{proof}
+中心三次商の次数付き同型は二次包絡へ一意に持ち上がるため，
+固定ambientのfiberは$\PP Z(B)_3$の自己同型群商である．
+有限群による$\PP^1$の商は種数0．$Z(B)_1$の三乗で定まる点は自己同型で保たれる．
+従って，Brauer型の捩れがある表示から降下しても対応するconicは点を持ち分裂する．
+\end{proof}
+
+既存の中心拡大型では，楕円境界とPBW条件を保つ範囲で，
+$B/(\Omega+\lambda t^3)$が大域次元2のtailsを持つvery-generalな$\lambda$を得る．
+これは中心局所化と代数的分離拡大の議論\cite{RSV}，
+および有限中央chartの貼合せによる．詳細は本bundleの既存surface稿に保持した．
+任意の代数閉$k$に対しては，幾何学的一般fiberの係数体の超越的な$\lambda$として読む．
+$k=\overline{\mathbb Q}$の各固定ambientに超越数を選べると主張してはいけない．
+
+この結果から，中心超曲面模型の幾何学的一般点がweak条件を満たし，
+$R(1,3)$を支配する枝の像の閉包の余次元が0であることが得られる．
+しかし，全weak stackの代数性とその枝が代数的な開部分をなすことを証明する前に，
+「全weakモジュライから$R(1,3)$への有理射が存在する」と述べるのは誤りである．
+また，weak条件を満たす正確な幾何学的fiberを$\PP^1$全体と呼ぶことも避ける．
+正しい既得の記述は，中心incidenceのfiberが$\PP^1$，
+その一般点がweak，その関数体が$K(\lambda)$，というものである．
+
+\section{残る認識問題と検証範囲}
+優先すべき問題は，次の二つの系統へ分かれる．
+第一は全weak対象の認識であり，条件2の公理からの導出，二次包絡のAS正則性，
+族での全次数平坦性とSerre条件の認識，全stackの代数性を含む．
+第二は可換三次曲面を含む中心拡大型の成分であり，
+AOU型の有限例外列模型との比較，Weyl群によるマーキングの忘却，
+weak条件の開性，正確なfiberの除外点の決定を含む．
+量子Fermat反例により，前者の全対象を後者の一成分に押し込める方針は採れない．
+
+本稿では量子Fermat例の整域性，局所正則性，Serre性，周期的正規直線による
+成分排除を通常の証明で検討した．付属コードは$\mathbb Z/3$上の指数演算により，
+中心性，CY行積，低次数中心，正規supportのclass，四周monodromy，
+四次potentialの符号，Hilbert値，Norm障害の単純極を有限計算で確認する．
+計算は一般の認識定理を証明したものではない．
+外部査読，Lean形式化，新規性の網羅的調査は未実施である．
+
+\begin{thebibliography}{99}
+\bibitem{AZ} M. Artin, J. J. Zhang,
+\emph{Noncommutative projective schemes}, Adv. Math. 109 (1994), 228--287.
+参照：Theorem 4.5および$\chi$とSerre消滅の区別．
+\href{https://doi.org/10.1006/aima.1994.1087}{doi:10.1006/aima.1994.1087}.
+\bibitem{Kanazawa} A. Kanazawa,
+\emph{Non-commutative projective Calabi--Yau schemes},
+\href{https://arxiv.org/abs/1409.4101}{arXiv:1409.4101v2},
+特にProposition 2.4と\S2.3．同論文の主定理は指数と変数個数が等しい場合．
+本稿は局所正則性の証明を指数3・変数4へ明示的に適用する．
+\bibitem{YZ} A. Yekutieli, J. J. Zhang,
+\emph{Serre duality for noncommutative projective schemes},
+\href{https://www.math.bgu.ac.il/~amyekut/publications/nc-serre/nc-serre.html}{著者の公開論文ページ}.
+\bibitem{Pym} B. Pym,
+\emph{Quantum deformations of projective three-space},
+Adv. Math. 281 (2015), 1216--1241;
+\href{https://arxiv.org/abs/1403.6444}{arXiv:1403.6444}, \S3.4.
+\bibitem{AOU} T. Abdelgadir, S. Okawa, K. Ueda,
+\emph{Compact moduli of marked noncommutative cubic surfaces},
+\href{https://arxiv.org/abs/2404.00175}{arXiv:2404.00175}, Introduction, \S5, \S9.
+\bibitem{BN} K. Behrend, B. Noohi,
+\emph{Moduli of non-commutative polarized schemes},
+\href{https://arxiv.org/abs/1507.07054}{arXiv:1507.07054}, Introduction, \S1, \S3.5.
+\bibitem{RSV} J. V. Rennemo, E. Segal, M. Van den Bergh,
+\emph{A non-commutative Bertini theorem},
+\href{https://arxiv.org/abs/1705.01366}{arXiv:1705.01366}, Lemmas 3.2--3.3.
+\end{thebibliography}
+\end{document}

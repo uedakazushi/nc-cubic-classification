@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-15",
+  "version": "recognition-v3",
+  "paper": "papers/weak_cubic_axioms.tex",
+  "new_paper_pages": 9,
+  "checks": {
+    "static_references": "PASS: 19 labels, 8 references, 7 bibliography entries, 14 citations",
+    "latexmk_lualatex": "PASS",
+    "visual": "All nine pages rendered and contact sheet inspected; detailed pages 5-6 additionally inspected",
+    "new_calculation": "PASS: computations/verify_quantum_fermat.py; exact exponent arithmetic and QQ(zeta) rank44",
+    "python": "3.13.5",
+    "sympy": "1.14.0",
+    "certificate_comparison": "JSON values; tracked JSON uses compact arrays while regeneration uses indented arrays",
+    "zip_integrity": "PASS for the separately distributed current research bundle"
+  },
+  "mathematical_status": {
+    "quantum_Fermat_counterexample": "Ordinary proof examined in this work, not independently refereed or formalized",
+    "R13_exclusion": "Closed proper normal-line incidence with nontrivial projective fourfold return",
+    "universal_R13_recognition": "False by the explicit counterexample",
+    "universal_presentation_redundancy": "Not proved",
+    "full_intrinsic_stack_algebraicity": "Not proved",
+    "finite_type_formal_algebra_model": "Proved for framed degreewise-flat algebra deformations with relations of degrees at most three",
+    "R13_generic_fibre": "Rational central-incidence model; exact weak locus and openness remain undetermined"
+  },
+  "retained_research": "Existing surface, generic R13 and threefold sources were preserved; their full proofs and codes were not reaudited or rerun in this work",
+  "literature_scope": "Primary Kanazawa section 2.3, Pym, AOU, Behrend-Noohi and RSV checked; AZ bibliographic information checked; YZ author page checked but full PDF fetch was unsuccessful",
+  "remaining_typesetting_warnings": "CJK italic fallback, tiny math font substitution, mathematical text in PDF bookmarks",
+  "new_source_sha256": {
+    "papers/weak_cubic_axioms.tex": "9f76a31f14ba3ad0bd8610f8e9ac99503ee51addd2f330af826b80e6e4a3bb6f",
+    "computations/verify_quantum_fermat.py": "65c62c7e9fcf73e5d214abb7466432661275dcd57faffafc55dfbd0e1b440a21"
+  },
+  "new_pdf_sha256": "148ee3171dfed550e072a1b18a540275732616268323abb43c9b68b5ce51b603"
+}

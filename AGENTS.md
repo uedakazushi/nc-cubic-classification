@@ -1,21 +1,23 @@
-# 研究実行指示 — 2026-11-15 / project-v10
+# Codex research instructions — 2026-11-15 / recognition-v3
 
-最初に `00_research_plan.md`、`research/cubic_surface_comparison.md`、surface論文とその唯一のinputを読む。現在の最優先はweakly marked非可換三次曲面と四頂点ambientのR(1,3)成分の比較である。既存の三次三様体原稿・必要な証明・計算は保持する。他repoはこのタスクでは変更しない。
+Read `00_research_plan.md` first, then `research/weak_cubic_axioms.md` and `papers/weak_cubic_axioms.tex`. The existing `research/cubic_surface_comparison.md`, `research/r13_generic_moduli.md`, surface paper, threefold paper and computations remain current research assets; preserve their mathematical content.
 
-## 数学的な区別
+## Scope and current correction
 
-任意の4周期τを指定する関係式stackと非捩れpotential stackを同一視しない。非捩れpotentialはFrobenius適合周期を扱う。可換環のτにdiag(2,1,1,1)を合成する反例がある。GL4^4の4次元スカラー慣性とPGL4^4のrigidificationを揃えて比較する。内在的な曲面からのambient射はpointed targetに取る。
+The intrinsic weak-cubic axioms, even with generation in degree one, relations in degrees two and three, and vanishing of Ext1(O,O(m)) for all twists, do NOT force the ambient into R(1,3). Use the quantum Fermat example and proofs in the new paper. Its ambient is separated from the four-vertex R13 orbit closure by a proper closed normal-line incidence with projectively trivial fourfold return. The non-invariant assertion Z(B)_1=0 alone is not the proof.
 
-R13では明示quartic potential、7係数slice、全256方向でrank188/61/68のQQ証明書があり、67次元parameter成分の一般点は正則。PGL4^4商の有限型DM開部分は7次元。全境界のAS性・正規化・有限群oidの一般次数は未決定。一般点では二因子stabilizer有限性により任意周期の全Artin関係式変形も非捩れpotentialに規格化できる。
+Separate universal intrinsic recognition from the R13 central-extension branch. Do not conflate arbitrary periodic markings, Frobenius-compatible periods, graded isomorphisms, indexed Z-algebras, directed relation models and rolled-up potentials. Match GL/PGL scalar inertia before claiming a stack equivalence.
 
-weakly markedは(A,O)、H=S^-1[2]の両方向t-exactness、所定Hilbert級数、AZ amplenessで定義し、族の平坦性・Hom底変更・相対Serreを明記する。全対象の次数一生成、二次包絡AS性、正則三次核は未証明。認識部分ではambient射がある。
+Questions still unresolved are global redundancy of the low-degree presentation axiom, universal AS4 recognition, algebraicity of the entire intrinsic weak stack, a uniform finite-type atlas covering all objects, categorical openness, and the exact weak fibre. A finite presentation or a finite-type formal hull alone does not prove algebraicity. The R13 central-incidence model has P1 fibres and rational generic function field, and the geometric generic central quotient is weak under the stated hypotheses; not every central quotient is a weak smooth surface.
 
-AOUからのW(E6)商は一般可換点の形式近傍で証明している。大域商にはmarking存在、K0による一意性、全同型・降下が残る。形式同値から大域商を断定しない。AOUの一般blow-up表示とSerre公式を入力としてambientへの有理射はR13を支配し、一般fiberは1次元。AOUから中心三次対への有限次数をWeyl群の位数とは同定していない。固定ambientでは中心fiber=P1、全indexed normal形式fiber=Spf k[[s]]。全部のP1の点がsmooth properとはしない。
+The quantum example has an actual domain section ring. For a general Abelian category, state the rank/torsion theory rather than assuming the phrase rank one is self-defining. Relative families need flatness, section base change and relative Serre data.
 
-次は楕円データ上のWeyl reflectionとmarking認識、有限inverse Serreアルゴリズムの座標実装、内在的条件からの超曲面認識を進める。詳細な着手方法は研究方針にある。
+## Work and checks
 
-## 検証と保存
+Keep complete proofs in Japanese LuaLaTeX. Use `python3 computations/verify_quantum_fermat.py` and `latexmk papers/weak_cubic_axioms.tex`. The tracked certificate and regenerated certificate agree as JSON; whitespace need not match. Validation scope is `research/weak_cubic_validation.json`. Distinguish a written proof, this work's proof examination, an exact calculation, an external theorem, a conjecture, formal verification, and novelty. Existing proofs not reexamined this time must not be labelled reverified.
 
-証明記載・今回の検討・有限検算・外部入力・未証明・新規性を区別する。誤りは依存する本文・ノート・方針へ反映する。一次資料を確認し、有限rankだけで全次数AS性を結論しない。証明・反例・再現資産を削らず、履歴・重複・不要物だけを整理する。
+For the central branch, continue the relative inverse-Serre construction from AOU's finite algebra, numerical marking uniqueness, Weyl descent and weak-locus openness. For universal recognition, investigate intermediate cohomology, Cohen-Macaulayness, normal anticanonical boundaries, cubic overlaps and finite-type recognition separately. The R13 generic Hessian and critical-point descriptions are not a classification of all weak cubic surfaces or all component boundaries.
 
-日本語LuaLaTeX、build/非追跡。二つのsurface検算、静的チェック、組版・描画を手動で実行する。GitHub mainへの通常fast-forwardと遠隔確認、現行自己完結bundleのLibrary保存は常設許可に基づいて行う。既存Libraryファイルは無断削除しない。Actions、force push、不要なPR、旧版ZIPの内包は行わない。生成・検証・GitHub・Libraryの状態を分け、実際に成功したことだけを報告する。
+## Persistence
+
+The user has authorized research-break saves without further approval. Maintain a self-contained current bundle and save it to Library; save current source changes to GitHub main by ordinary fast-forward when available. Do not delete existing Library assets without an explicit instruction. No GitHub Actions, force push or unsolicited PR. Do not track PDFs, TeX intermediates, caches or ZIP archives in Git. Preserve useful prior results while removing redundant history from new bundles. Report generation, mathematical checking, computation, typesetting, GitHub save and Library save as separate verified states.
