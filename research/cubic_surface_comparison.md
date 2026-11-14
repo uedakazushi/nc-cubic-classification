@@ -16,6 +16,16 @@ GL4^4の各矢空間スカラーは射影potentialに自明に作用する。67�
 
 以前の「任意の3周期同型を固定した三頂点relationの表示はordinary potentialにならない」という反例は、**指定した周期との両立**を問題にしたものであり、directed箙のRだけを保持し新矢をR*として追加するこの同値の反例ではない。3次元AS正則幾何対象に制限するにはBP/VdBのgeometric quadruple条件（任意の非零縮約がrank≥2など）を対応する双方へ課す。単なるfull flattening rank 3からAS正則性を導かない。一般の長さ6,9等のpotentialまで自由に許すと、ここでの同値から外れる。
 
+## P3のdirected 4頂点relationsとrolled-up 4頂点potential（現行結論）
+
+P2のAOU arXiv:1411.7770 §7 の「directed R⊂V0⊗V1 → 新矢R* → 三次potential」に対応するP3の構成は、4頂点directed Beilinson箙0→1→2→3に4次元矢空間V0,V1,V2、各rank6の二次関係R0⊂V0⊗V1、R1⊂V1⊗V2を取ることから始まる。必要な新矢はR_iの双対ではなく三次syzygy
+K=(R0⊗V2)∩(V0⊗R1)⊂V0⊗V1⊗V2
+の双対V3=K*。標準AS4ではdimK=4。二つの縮約K⊗V2*→R0、V0*⊗K→R1が全射である層上ではcanonical coevaluation w=Σkα cα∈V0⊗V1⊗V2⊗K*から全4関係を二階縮約で回復する。非射影化wとGL4^4の商は、このdirected二関係のAS/Koszul非退化層とGL4^3の商に群oid同値。射影potentialとPGL商では両側のGm慣性を一致させること。証明は papers/sections/projective_three_space_potentials.tex 命題 prop:p3-directed-potential に統合した。
+
+一般の二関係の交わりKは0になり得る。従って全Gr(6,16)^2にpotential表示はなく、K=4の局所閉rank層と縮約rank6・Koszul-AS正則性が必要。境界K>4ではGr(4,K)のsyzygy選択による別のコンパクト化が自然。四次potentialは通常の一階Jacobian（DWZ）ではなく二階微分。BSWのsigned CY superpotentialはW=w-cw+c²w-c³w（反巡回）、通常の符号なしcyclic wordに落とすと零になる。符号なしの巡回和は二階関係空間だけなら同じものを与えるので、potentialの意味を指定する。
+
+可換P3についてQQ上で直接検算：K=Λ³k⁴、dimK=4、四つの二階flatteningの関係rankはすべて6。計算スクリプト computations/verify_directed_p3_syzygy.py。既存のpotential側の可換点projective接空間dim90から、V3のPGL4-torsor（dim15）を除くとdirected側の接空間dim75。directedのPGL4^3軌道のdim30を除けばHH²(P3)=45と一致。これはAS locusの大域成分計算ではない。
+
 ## 明示族と計算
 
 F=a(x³+y³+z³)+bxyz+t(x²+c2y²+c3z²)+t²(d1x+d2y+d3z)。w=Alt(txyz)-3(1-c+c²-c³)(t sym F)。全二階微分で[t,x]=[t,y]=[t,z]=0、[y,z]=sym F_x等を得る。t³はwに寄与しない。

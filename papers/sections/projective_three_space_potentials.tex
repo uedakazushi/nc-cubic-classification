@@ -267,6 +267,110 @@ $V_0\otimes V_1$の全16基底が得られる．
 呼べないことを直接示す．
 \end{remark}
 
+
+\subsection{Directed Beilinson四窓と三次syzygyによるpotential復元}
+\label{subsec:p3-directed-potential}
+
+非可換$\PP^2$のBeilinson関係式と三頂点三次potentialの比較
+\cite[\S7, 特に(7.27)--(7.28)]{AOUNCPlanes}は，
+非可換$\PP^3$の場合に次の形で一般化できる．
+ただし四次では二つの連続する二次関係空間があり，追加する矢の双対は
+\emph{三次syzygy}から作る．
+
+$V_0,V_1,V_2$をrank $4$のベクトル束とし，
+$R_0\subset V_0\otimes V_1$，$R_1\subset V_1\otimes V_2$
+をrank $6$の直和因子とする．
+\begin{equation}\label{eq:p3-directed-K}
+ K=(R_0\otimes V_2)\cap(V_0\otimes R_1)
+ \subset V_0\otimes V_1\otimes V_2.
+\end{equation}
+相対的な交わりは二つの包含の差の核で定義する．
+次の条件を課したfpqc部分関手を$\mathcal D_4$と書く：
+(i) $K$がrank $4$の直和因子で底変更に両立すること；
+(ii) 自然な縮約
+\begin{equation}\label{eq:p3-directed-spanning}
+ K\otimes V_2^*\longrightarrow R_0,\qquad
+ V_0^*\otimes K\longrightarrow R_1
+\end{equation}
+がともに全射であること．
+全体のパラメータは
+$\Gr(6,V_0\otimes V_1)\times\Gr(6,V_1\otimes V_2)$
+であるが，一般点の$K$は零になり得るので，
+$\mathcal D_4$はこの積全体ではない．
+
+\begin{proposition}[Directed relationと四次potentialの群oid同値]
+\label{prop:p3-directed-potential}
+$\mathcal W=V_0\otimes V_1\otimes V_2\otimes V_3$とする．
+その非零テンソルの部分関手$\mathcal U^{\mathrm{dir}}$を以下で定める：
+$w:V_3^*\hookrightarrow V_0\otimes V_1\otimes V_2$の像が
+$K(R_0(w),R_1(w))$と一致するrank $4$の直和因子で，
+二階縮約で得る$R_0(w),R_1(w)$がrank $6$の直和因子である．
+このとき
+\begin{equation}\label{eq:p3-dir-pot-groupoid}
+ \left[\mathcal U^{\mathrm{dir}}/
+ \prod_{i=0}^{3}\GL(V_i)\right]
+ \simeq
+ \left[\mathcal D_4/\prod_{i=0}^{2}\GL(V_i)\right].
+\end{equation}
+両側で展開した四頂点二次代数にKoszul・AS正則性を課した
+全部分群oidにも，この同値は制限される．
+ここで左辺は非射影化したテンソルである．
+射影potentialを使う場合はスカラー慣性のrigidificationを
+\emph{両側で}揃える必要がある．
+\end{proposition}
+\begin{proof}
+$K$がrank $4$の直和因子なら$V_3=K^*$と置き，
+恒等テンソル
+\[
+ w=\operatorname{coev}_K
+ \in K\otimes K^*
+ \subset V_0\otimes V_1\otimes V_2\otimes V_3
+\]
+を取る．局所基底では$w=\sum_{\alpha=1}^4k_\alpha c_\alpha$である．
+$K\subset R_0\otimes V_2$と$K\subset V_0\otimes R_1$から，
+二階縮約の像はそれぞれ$R_0,R_1$に含まれ，
+式\eqref{eq:p3-directed-spanning}によって一致する．
+残りの二箇所の関係空間は反対側の二対二flatteningの
+transposeであり，同じrank $6$を持つ．
+
+逆に$\mathcal U^{\mathrm{dir}}$の$w$は
+$V_3^*\simeq K$を与えるので，この同型で
+$w$は$\operatorname{coev}_K$に戻る．
+固定$(R_0,R_1)$上のその同型の選択空間は$\GL(V_3)$-torsorである．
+これはfpqc局所で自明であり，射と自己同型も同じであるから，
+両群oidの同値を得る．
+AS・Koszul条件は両表示が生成する\emph{同じ}四頂点代数に課す．
+\end{proof}
+
+四次のBSW型非捩れsuperpotentialは
+\[
+ W=w-cw+c^2w-c^3w,\qquad cW=-W
+\]
+であり，関係は長さ二の\emph{左}経路微分から得る．
+符号なしの通常のcyclic path algebraに$W$を射影すると零になるので，
+これは通常のDWZ型\emph{一階Jacobian代数}ではない．
+他方，符号なしの巡回和$W_+=w+cw+c^2w+c^3w$も
+四つの始点ごとに得られる二階縮約の関係\emph{空間}は同じである．
+したがって「ordinary potential」の意味を，
+BSWの符号付き高階微分か，符号なし巡回和の二階微分かで指定すべきである．
+
+\begin{remark}[可換例，境界とmoduliの意義]
+$V_i=V$，$R_0=R_1=\wedge^2V$なら
+$K=\wedge^3V$（rank $4$）で，
+両方の式\eqref{eq:p3-directed-spanning}の像は$\wedge^2V$である．
+双対の体積形式を選べば$w$は完全交代四重テンソルに対応する．
+全Grassmannianの一般の二関係空間では$K=0$となり得るので，
+このpotential表示は\emph{非自明な三次syzygyのrank層}上の表示である．
+境界で$\dim K>4$なら$V_3=K^*$という指定は破れ，
+$\Gr(4,K)$のようなsyzygy選択を保持するincidence compactificationと，
+関係式だけのGITコンパクト化は一般に一致しない．
+従ってpotentialは分類のパラメータ数を直ちに減らす方法ではないが，
+四つの二次関係を一つのテンソルにまとめ，
+4-Calabi--Yau双対性・Koszul複体・Poisson量子化の条件を
+同時に表すという意味で有用である．
+大域AS locusの有限型性とGIT境界の同定は依然として未証明である．
+\end{remark}
+
 \subsection{軌道と自己同型の正確な比較}
 
 $G=\prod_{i=0}^3\GL(V_i)$，$H=\prod_{i=0}^3\PGL(V_i)$とする．

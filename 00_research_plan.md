@@ -32,6 +32,10 @@
 
 本文の通常証明を今回検討し、指定した二つの計算を実行した。外部査読、Lean形式化、新規性の網羅的確認は別であり未実施。
 
+## Directed P3 relationsとpotentialの位置づけ
+
+P3のdirected Beilinson四頂点12矢は、二つのrank6二次関係R0,R1を持つ。K=(R0⊗V2)∩(V0⊗R1)がrank4で、Kの両縮約がrank6となる層上では、四次potential w=coev(K)を構成する。GL4^4で割った非射影化potentialの群oidとGL4^3で割ったdirected relationの群oidが同値。Koszul/AS条件は両側の共通代数に課し、全Gr(6,16)^2が適合するとはしない。P2のAOUの単純な「関係の双対を矢へ追加する」操作とは異なり、三次syzygyのrank層が必要。四次は二階微分であり、BSWの符号付きsuperpotentialとDWZの一階Jacobianを区別する。証明は threefold原稿の projective_three_space_potentials.tex、現在有効な記述と境界の課題は research/cubic_surface_comparison.md。GIT境界でKが跳ぶ場合のsyzygy incidence compactificationを次に調べる。
+
 ## IV. 次に着手する課題
 
 最優先はW(E6)商の大域化である。定理5.1を単に代数化しただけでは、別のmarkingや自己同値による追加同一視を排除できない。AOUの楕円decuple上でsimple reflectionの有理変換を構成し、P0、Serre orbit、heart、ample locusの保存を証明する。K0上同じmarkingを持つ例外列の一意性が核心。2024年OWRのaffine Weylに関する予想と、有限W(E6)へ制限するための条件を照合する。
