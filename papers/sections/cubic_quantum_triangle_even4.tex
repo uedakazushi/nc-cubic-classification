@@ -95,14 +95,83 @@ AS Gorenstein・AZ・Serreと整域性の認識により主張を得る。
 二次元表現について三関係・Casimir・全中心座標も有理式を $q^2+1$ で還元して確認する。
 これは指定pencilの判定であり、偶数位数全体の判定ではない。
 
-\subsubsection{一般偶数位数：残る一点への還元}
-\begin{theorem}[偶数位数の全非端点と位数18以下の完全判定]
+\subsubsection{全偶数位数の完全判定}
+\begin{lemma}[偶数端点の半Chebyshev正規元とsimple次元]
+\label{lem:quantum-triangle-even-endpoint}
+$N=2M\ge4$、$q$ は正確に位数 $N$ とする。
+$\Gamma_x=\Gamma_y=\Gamma_z=-2$、
+$\Omega_q=\Omega_0=q/((q-1)^3(q+1))$ を満たす任意の有限次元既約表現の次元は、
+正の整数 $M$ の倍数である。
+\end{lemma}
+\begin{proof}
+行列 $M(r)$ による左乗法のChebyshev証明を半次数で使う。
+$q^M=-1$ だから
+\[
+ c_M(x)y=-yc_M(x),\qquad c_M(x)z=-zc_M(x).
+\]
+従って $c_M(x)$ は正規元である。
+また $c_M(x)^2=c_{2M}(x)+2\kappa^{2M}=0$ が指定中心fiber上で成立する。
+その核は非零の部分表現なので、既約性から $c_M(x)=0$ となる。
+この多項式は相異なる $M$ 個の根
+\[
+ \lambda_j=-\frac{q^{j+1}+q^{-j}}h,\qquad 0\le j<M
+\]
+を持つ。従って $x$ は半単純で、固有空間を $W_j$ と書ける。
+
+$z=xy-qyx$ を第二関係へ代入すると、$y$ の $(j,k)$ blockは
+\[
+ (1+q^2)\lambda_j\lambda_k-q(\lambda_j^2+\lambda_k^2)-1=0
+\]
+の場合だけ非零になり得る。
+$J=q^j,K=q^k$ によるこの左辺の因数分解は
+\[
+ \frac{(-J+qK)(JK-1)(qJ-K)(q^2JK-1)}{J^2K^2h^2}.
+\]
+指数範囲 $0\le j,k<M$ から、許されるblockは隣接二方向と両端の対角だけである。
+$A_j=q^j-q^{1-j}$、$B=(q^2+1)/h$ とし、内部の $W_j$ 上で
+\[
+ P_j=y_{j,j-1}y_{j-1,j},\qquad Q_j=y_{j,j+1}y_{j+1,j}
+\]
+と置く。関係式とCasimirの対角blockは
+\[
+ \begin{aligned}
+ A_jP_j-A_{j+2}Q_j&=\lambda_j I,\\
+ (\lambda_jq^j+B)P_j+(\lambda_jq^{-j-1}+B)Q_j
+   &=(\Omega_0-\lambda_j^2/h)I
+ \end{aligned}
+\]
+となる。
+この二元一次系の行列式は $J=q^j$ により
+\[
+ \frac{(-J^2+q)(J^2q-1)(J^2q^3-1)}{J^3qh}
+\]
+であり、現れる指数 $2j-1,2j+1,2j+3$ が奇数なので偶数位数 $N$ では非零である。
+従って解は一意で、
+\[
+ P_j=c_jI,\quad Q_j=c_{j+1}I,\qquad
+ c_j=\frac{q^2(q^{2j}+q^{-2j}-2)}{h^2A_jA_{j+1}}
+\]
+となる。
+最初のblockでは $y_{00}^2$ と $Q_0$ の二元一次系となり、行列式は
+$(q-1)^2(q^2+q+1)/(q(q+1))\ne0$。
+その解は $y_{00}^2=0,Q_0=c_1I$ である。
+最後のblockも $x\mapsto-x,z\mapsto-z$ の対称性で同様である。
+
+$1\le j<M$ では $q^{2j}\ne1$ なので全 $c_j$ は非零である。
+従って隣接二方向のblockの合成は両側とも非零スカラー倍の恒等となり、
+全ての $W_j$ は相互に同型である。
+一つが非零なら全て非零であり、表現の次元は $M\dim W_0$ となる。
+\end{proof}
+
+\begin{theorem}[全偶数位数の三角境界pencilの完全判定]
 \label{thm:quantum-triangle-even-partial}
 $q$ の正確な位数を $N=2M\ge4$ とする。
-全 $D\ne D_+,D_-$ の $R_{q,D}$ は強いH3である。
-$D_+$ は全偶数位数で非H3となる。
-$4\le N\le18$ では $D_-$ も非H3であり、従ってこの範囲の偶数位数pencilも完全判定される。
-$N\ge20$ の $D_-$ に対する結論は本定理に含めない。
+全切断に対し
+\[
+ R_{q,D}\text{ が強いH3}\quad\Longleftrightarrow\quad D\ne D_+,D_-.
+\]
+奇数位数の定理と合わせ、$q\ne0,\pm1$ が有限位数を持つ全ての場合の必要十分条件を与える。
+非捩れ $q$ はこの定理に含めない。
 \end{theorem}
 \begin{proof}
 $h=q^2-1$、$\Gamma_x=-h^Nc_N(x)$ cyclicとする。
@@ -179,22 +248,92 @@ $M$ が偶数なら $k=4$ となり、非古典型 $d=M/2$ の四つの既約表
 一つが二次元指標なら寄与は少なくとも $5d>N$ となる。
 いずれも全五指標正重複度は不可能なので非H3である。
 
-$D_-$ は $w_D=2,k=4$ であり、古典型 $r=M$ の表示が既約のまま存在する。
-また、この中心切断には一次元表現は一つもない。
-全characterは零点と四つの符号点で、その $w_D$ は
-$-(q+q^{-1})$ と $q^2+q^{-2}$ であり、いずれも2と異なるからである。
-従ってfull $D_4$ なら全重複度は2以上である。
-次元 $M$ のsimpleが二次元指標に属せばそれだけでrank $2M$ を使い切り、
-一次元指標に属せば最小総rankは
+$D_-$ は $w_D=2,k=4$ であり、唯一の特異中心点は
+$\Gamma_x=\Gamma_y=\Gamma_z=-2$、$\Omega_q=\Omega_0$ である。
+補題\ref{lem:quantum-triangle-even-endpoint}より、この点の全simple次元は正の $M$ の倍数である。
+full $D_4$ McKayなら五指標の全重複度が $M$ 以上となり、
+階数式は
 \[
- M+3\cdot2+2\cdot2=M+10
+ 2M=N=\sum r_\chi\dim\chi\ge M(1+1+1+1+2)=6M
 \]
-となる。$M\le9$ では $M+10>2M$ なのでfull McKayは不可能である。
-これが位数18以下の完全判定を与える。
-$M\ge10$ ではこの下界だけで結論できないため、$D_-$ の判定を保留する。
+という矛盾を与える。従って全偶数位数で $D_-$ は非H3である。
 \end{proof}
 
 \texttt{verify\_cubic\_quantum\_triangle\_\allowbreak even\_representations.py} は、
 $j$ を形式変数 $J=q^j$ に置き換えた全内部再帰、両端の式、Casimirと
 既約性を失う係数の消滅方程式を全有理式で厳密に検算する。
 位数による指数の非消滅とMcKay指標数・rank下界は本文の証明であり、標本計算による外挿ではない。
+
+\texttt{verify\_cubic\_quantum\_triangle\_\allowbreak even\_endpoint.py} は
+半Chebyshev行列恒等式を位数4,6,8,10,12で独立検算し、
+全位数に共通するweight隣接因数分解、二元一次系と両端の行列式・解を形式変数で検算する。
+全位数での正規性そのものは前述のChebyshev固有値証明による。
+
+\subsubsection{有限位数全体の矢・相対中心と候補空間の粗座標}
+\begin{proposition}[粗座標と固定位数表示stack]
+\label{prop:quantum-triangle-coarse}
+全候補pencilの粗モジュライは
+\[
+ \mathcal B=\{(\theta,w):\theta\ne\pm2\},\qquad
+ \theta=q+q^{-1},\quad w=-(q+q^{-1})-h^3D/q^2
+\]
+である。候補stack $[\mathcal Q/\mathfrak S_4]$ はこの上の有限\'etale群の中立gerbeであり、
+二重被覆 $q^2-\theta q+1=0$ 上では $\mathfrak A_4$ の自明なclassifying stackとなる。
+被覆の交換は $\mathfrak A_4$ への奇置換共役で作用する。
+
+正確な位数 $N\ge3$ を固定した有限位数H3表示stackは、代数閉体上で
+$\varphi(N)/2$ 個の
+\[
+ (\mathbb A^1_w\setminus\{-2,2\})\times B\mathfrak A_4
+\]
+の非交和である。全幾何学的pointed矢と、任意底上の全graded表示矢を含む。
+この固定位数の表示族で全中心形成は任意底変更と可換である。
+これは局所的にこのpencilとして表示される族の降下を含むが、
+抽象的な全intrinsic Abel圏族との同一視は主張しない。
+\end{proposition}
+\begin{proof}
+奇置換による $(q,D)\mapsto(q^{-1},-q^2D)$ は $\theta,w$ を固定する。
+逆に $(\theta,w)$ から $q$ を選べば $D$ は一意に復元でき、
+$q^2-\theta q+1=0$ は判別式可逆の二重被覆である。
+$\mathfrak S_4=\mathfrak A_4\rtimes\langle(12)\rangle$ の分裂から、
+候補stackはこの二重被覆で共役twistした有限群
+$\mathcal Q\times_{\mathfrak S_2}\mathfrak A_4$ のclassifying stackである。
+従って中立性と粗空間を得る。
+
+端点 $D_+,D_-$ はそれぞれ $w=-2,2$ へ移る。
+全有限位数でH3条件はこれら二点の除外と証明済みである。
+正確な位数 $N$ の根は $\varphi(N)$ 個、反転に固定点はないので
+$\varphi(N)/2$ 個の粗 $\theta$ 値を得る。
+各値で一方の $q$ を選べばgerbeは $B\mathfrak A_4$ となる。
+
+最後に $q$ を固定し $k[D]$ 上の有限PBW濾過を考える。
+$F_dU\to(F_{d+1}U)^3$ の交換子行列は有限自由加群間の写像である。
+全幾何学的 $D$ で全中心はFricke三生成元と一本の関係を持ち、
+先頭次数は $N,N,N$ と $3N$ で一定なので、各 $d$ の中心次元は一定である。
+従って交換子行列は全底上で定階数である。
+被約環 $k[D]$ 上では大きいminorは零、階数を実現するminorの開集合は全底を覆うので、
+局所的に単位行列と零行列の直和へ変形できる。
+その核は任意底変更と可換であり、提示した相対Fricke中心の基底もこの核を与える。
+Rees環とVeroneseでも同じ次数別議論が成立する。
+有限群の商による表示族のfpqc降下もこの記述に適合する。
+\end{proof}
+
+\begin{corollary}[滑らかな正規楕円境界を持たない有限位数全族]
+全有限位数の許容 $R_{q,D}$ は、どの正則正規一次元を商にしても
+滑らかな次数3楕円THCRを得ることができない。
+また有限位数の許容点は候補粗空間 $\mathcal B$ にZariski稠密である。
+これだけで非捩れ $q$ の許容性やH3 locusの開性は導かない。
+\end{corollary}
+\begin{proof}
+$Z(B_q)_1=kt$ であり、$V_q$ のcharacterは零点と四つの符号点の五点だけである。
+もし $B_q$ がskew多項式環なら、中央一次元を外した量子三変数環は
+座標軸上の無限個のcharacterを持つので矛盾する。
+一方、$B_q$ はCYである。
+既証の正規楕円境界分類より、非中央境界があれば位数3量子Fermatのskew包絡に限られ、
+中央境界は $kt$ のみだが実際の $t=0$ 境界は三角形である。
+従って滑らかな正規楕円境界は存在しない。
+
+有限位数の $\theta=q+q^{-1}$ は無限集合であり、各々の $w\ne\pm2$ の直線は全て許容される。
+この集合上消える二変数多項式は各係数が無限個の $\theta$ で消えるので零となる。
+従って稠密性が従う。
+\end{proof}

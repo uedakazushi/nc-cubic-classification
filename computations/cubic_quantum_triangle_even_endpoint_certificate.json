@@ -1,0 +1,17 @@
+{
+  "version": "classification-v53",
+  "base": "all even N=2M>=4",
+  "half_Chebyshev_normality_samples": [
+    4,
+    6,
+    8,
+    10,
+    12
+  ],
+  "universal_weight_adjacency_factorization": true,
+  "universal_interior_product_equations_and_nonzero_determinant": true,
+  "universal_endpoint_unique_product_and_nilpotent_diagonal": true,
+  "ordinary_proof": "Normal half-Chebyshev elements square to zero at D4 centre; they kill simple modules. x semisimple with M weights; adjacent products are invertible constants, so every simple dimension is a positive multiple of M. Full D4 would require rank>=6M, but rank degree is2M.",
+  "consequence": "Dminus is non-H3 at every even order. Together with prior results, all finite-order q!=+-1 cuts are H3 iff D!=Dplus,Dminus.",
+  "limits": "Nonroot q admissibility and global H3 classification remain open."
+}

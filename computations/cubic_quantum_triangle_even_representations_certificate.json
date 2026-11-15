@@ -7,6 +7,6 @@
   "w_D": "(b**2*q**6 - 2*b**2*q**5 - b**2*q**4 + 4*b**2*q**3 - b**2*q**2 - 2*b**2*q + b**2 + 2*q**2)/q**2",
   "reducibility": "c_j=0 iff w_D=q^(2j)+q^(-2j), hence iff k=4",
   "centre_input": "Huang arXiv1509.08719v4 equation5, Section4.3, explicitly normalized; N4 independently PBW checked",
-  "ordinary_result": "All finite even-order cuts away from Dplus,Dminus are H3. Dplus always bad; Dminus bad for N<=18 by no-character/rank bound. Dminus at even N>=20 remains unproved.",
+  "ordinary_result": "All finite even-order cuts away from Dplus,Dminus are H3. Both endpoints are now bad in all orders by the separate even_endpoint proof/certificate.",
   "scope": "Universal rational identities; exponent bounds and McKay rank arguments are ordinary proofs."
 }

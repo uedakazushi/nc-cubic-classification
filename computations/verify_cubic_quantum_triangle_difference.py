@@ -33,6 +33,13 @@ assert s.cancel(-q*by-q*ai)==0
 assert s.cancel(-q*a-q*byi)==0
 assert s.cancel(-q*(1+a)-q*ai)==0
 assert s.cancel(-q**-2*(-q*q*D)-D)==0
-cert={'version':'classification-v47','base':'q=rho^2, q!=0,+-1','x':'kappa*(u+u^-1), kappa=-rho/(q^2-1)','y':'T+B(u)*T^-1','z':'rho*(u*T+u^-1*B(u)*T^-1)','B(u)':str(bfun),'difference_rule':'T*f(u)=f(q*u)*T','all_three_relations':True,'q_inversion_arrow':'(q,D)->(q^-1,-q^2 D), Omega->q*Omega_prime','Casimir':'Omega=-D','numerator_double_root_values':[str(dplus),str(dminus)],'H3_warning':'The two collision values are candidates only for general q; complete admissibility has been proved only on the primitive-three slice.','scope':'Universal rational operator identities. Faithfulness by PBW leading T coefficients/Chebyshev argument is an ordinary proof.'}
+# Coarse coordinates and inversion, including both bad curves.
+theta=q+1/q; ww=-theta-(q*q-1)**3*D/q**2
+qp=1/q;Dp=-q*q*D
+assert s.cancel(ww-(-(qp+1/qp)-(qp*qp-1)**3*Dp/qp**2))==0
+assert s.cancel(ww.subs(D,dplus)+2)==0
+assert s.cancel(ww.subs(D,dminus)-2)==0
+assert s.cancel(bfun.subs(u,1/u)-bfun.subs(u,q*u))==0
+cert={'version':'classification-v54','coarse_coordinates':'theta=q+q^-1,w=-theta-(q²-1)^3 D/q²; both invariant; Dplus->w-2,Dminus->w2','involution_B_identity':True,'base':'q=rho^2, q!=0,+-1','x':'kappa*(u+u^-1), kappa=-rho/(q^2-1)','y':'T+B(u)*T^-1','z':'rho*(u*T+u^-1*B(u)*T^-1)','B(u)':str(bfun),'difference_rule':'T*f(u)=f(q*u)*T','all_three_relations':True,'q_inversion_arrow':'(q,D)->(q^-1,-q^2 D), Omega->q*Omega_prime','Casimir':'Omega=-D','numerator_double_root_values':[str(dplus),str(dminus)],'H3_warning':'The two collision values are candidates only for general q; complete admissibility is now proved for all finite-order q in the separate odd/even proofs; nonroot admissibility remains open.','scope':'Universal rational operator identities. Faithfulness by PBW leading T coefficients/Chebyshev argument is an ordinary proof.'}
 Path(__file__).with_name('cubic_quantum_triangle_difference_certificate.json').write_text(json.dumps(cert,indent=2)+'\n')
 print('PASS universal difference realization, exact Casimir level, two numerator collision values')
