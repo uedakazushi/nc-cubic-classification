@@ -324,5 +324,21 @@
       "computations/verify_cubic_as4_four_simple_first.py",
       "computations/verify_cubic_as4_four_simple_first_remaining.py"
     ]
+  },
+  "four_simple_zero_fifth_v78": {
+    "commit": "a45f834f51a00c47443b51caf66abaf4629546b9",
+    "presentations": [
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_FOUR_SIMPLE_ZERO_FIFTH_OPEN_COMPLETE.tex",
+        "sha256": "43a2b5736a9e2ac93fc0fe1034663b2fd4cace80129eb08db1fb665431390bb9"
+      },
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_FOUR_SIMPLE_ZERO_FIFTH_BOUNDARY_COMPLETE.tex",
+        "sha256": "cbde5c33bcf0abb7d55d78a5b095e3c6f7e41a0ae48e6e92b93715036cc4448b"
+      }
+    ],
+    "used_part": "Open FZ2/FZ3 M0/M1/N and boundary FB2 C explicit presentations only. R+/-_1 not covered here. No existence sufficiency, isomorphism or full CY/chart coverage theorem imported.",
+    "independent_proofs": "All-p centre rank cover with denominators controlled; two fixed number-field minors; conditional-AS4 anti-cyclic top tensors.",
+    "validator": "computations/verify_cubic_as4_four_simple_zero_fifth.py"
   }
 }
