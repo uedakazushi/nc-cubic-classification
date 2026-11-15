@@ -27,7 +27,7 @@
 【優先課題】全14641 ambient成分上の正規三次incidenceの成分・同型群oid・曲面条件・境界・族と降下を決定し、その後intrinsic定義を弱める。GitHub mainを正本とし、GitHub push成功時はLibraryへの保存を行わない。PDFやZIPをGitで追跡せず、TeX・ノート・検算コードを追跡する。
 
 
-2026-11-15 / project-v22 / recognition-v6 / hearts-v7。最初に本書、`research/cubic_corner.md`、`papers/cubic_heart_corner.tex`を読む。比較の共通枠組みは`research/heart_comparison.md`と`papers/nc_del_pezzo_hearts.tex`、共通公理は`research/common_del_pezzo_framework.md`。次数別・三次三様体の研究はそれぞれの現行ノートから再開する。
+2026-11-15 / project-v23 / recognition-v6 / hearts-v8。最初に本書、`research/cubic_corner.md`、`papers/cubic_heart_corner.tex`を読む。比較の共通枠組みは`research/heart_comparison.md`と`papers/nc_del_pezzo_hearts.tex`、共通公理は`research/common_del_pezzo_framework.md`。次数別・三次三様体の研究はそれぞれの現行ノートから再開する。
 
 ## I. 恒常的な研究原則と保存許可
 
@@ -56,6 +56,8 @@
 **一様消滅次数の完成（今回証明）**：AOU幾何的rolled-up helixの道長7にある21ブロックを(6,9,6)に分け、4つのblow-down線束と例外曲線への制限、base-point-free pencil trick、Kodaira/Kawamata–Viehweg消滅から全てe=A0を経由することを示した。したがって11条件⇔C有限⇔C_7=0、さらに8頂点の対角でdim C_6≥8。M_7の最大minorイデアルの根基は四交比Laurent環でrad(Δ11)に一致する。証明は`papers/sections/cubic_corner_uniform_cutoff.tex`、整数交点検算は`computations/verify_cubic_corner_c7_geometry.py`。前回の特定六点のH_C計算とF7での80点計算は保持するが、一般定理の証明ではない。AS heartとanticanonical heartの自然同値は、既存のAS/noetherian/folding条件下のみで主張する。
 
 **Hilbert関数・平坦性の完成（証明済み）**：AOUの幾何的rolled-up helixで八頂点間の全Hom次元は n=0..7 で(8,21,42,74,105,147,206,252)、e経由の像の次元は(0,0,9,36,72,126,198,252)。例外曲線、二つのconic-bundle pencil、四つのblowdown線束の積写像で全て計算した。道長6の2つのblowdown線束の積の単射性は縮約曲線3本のconic制限から従う。従ってCのHilbert関数は(8,21,33,38,33,21,8)に一様、総次元162。一定階数の関係行列から十一条件開集合上の有限局所自由な代数族が得られる。証明は`papers/sections/cubic_corner_hilbert_series.tex`、再現可能な整数数値台帳は`computations/verify_cubic_corner_hilbert.py`。以前の特定六点の厳密消去と有限体検算は独立の証拠であり、一般定理の証明入力ではない。全AS/全weak対象のheart一致を結論していない。
+
+**古典的根壁の導来障害（証明済み）**：11禁止divisorはE6の有効根（10種類の共線性、1種類のconic）に対応。各因子一般点で六点blow-up Sは弱del Pezzo3、(-2)曲線Eは反標準射 f:S→X によりA1点へ収縮される。F=i_*O_E(-1)は2-sphericalかつ全nでRHom(O_S(n(-K)),F)=0、Rf_*F=0。従ってblow-up側で反標準AZ ampleは失敗し、Db(coh S)≄Db(qgr R)=Db(coh X)。任意次数の弱dPで(-2)曲線があれば同じ障害がある。Q=[[1,1,1],[1,2,2],[1,3,4]]の一壁例でnodeのHessian det=-2304を厳密計算。詳細 `papers/sections/cubic_corner_root_walls.tex`、再現 `computations/verify_cubic_root_wall.py`。非可換Rains/VdB/AS heartの特殊化と11壁のAS locusとの交叉は未解決。導来同値を前提とするHRS tiltとの混同を避ける。
 
 ### HRSと一般heart判定
 
@@ -86,7 +88,7 @@ weakly markedは非零Ext有限noetherian Abel圏、Serre、tau=S^-1[2]のheart�
 ## IV. 優先順位と具体的な着手
 
 1. **Cubicの構造対象と同値の照合**：AOUの実際のmutationでE0≃πFを検証し、AS corner同値と既知のqgr F比較を接続する。数値K0や境界restrictionだけで同定しない。
-2. **cornerの境界とAS locus**：11条件の一般位置全域に対しHilbert関数H_C=8+21t+33t²+38t³+33t⁴+21t⁵+8t⁶、dim C=162を証明した。道長6は常に8、道長7以降は零。四交比開集合上でCは階数162の有限局所自由代数族で基底変更と可換する。次は十一の禁止divisorとAS locusの交叉およびheartの実在する変化を調べる。AS locusとの交叉と全モジュライの閉性を混同しない。
+2. **非可換AS locusと根壁**：古典的11根壁では反標準収縮が2-spherical対象を消し、導来非同値になることを確定した。次は非可換AS-regular potentialと各壁の交叉、Rains/VdB heartの特殊化、実在する核やpointednessを判定する。古典的障害を全非可換境界へ無条件には拡張しない。
 3. **VdB最後の段階**：同じ楕円・六点データでker δ_6*とR1δ_6*を実在root対象で計算する。pointednessと周期作用を確認後、単純対象のEuler符号判定を適用する。Rains raw反復と各段階section模型への置換も区別する。
 4. **境界・一般次数**：有限位数、nodal/cuspidal境界、weak avatar、dP1への拡張ではgrading・noetherian性・realizationを再確認する。正規境界の一般存在、相対PBW、marking降下、Fermat分枝の研究は維持する。
 
@@ -97,6 +99,7 @@ weakly markedは非零Ext有限noetherian Abel圏、Serre、tau=S^-1[2]のheart�
     python3 computations/verify_cubic_six_points.py
     python3 computations/verify_cubic_corner_c7_geometry.py
     python3 computations/verify_cubic_corner_hilbert.py
+    python3 computations/verify_cubic_root_wall.py
     python3 computations/verify_cubic_corner.py
     latexmk papers/cubic_heart_corner.tex
 

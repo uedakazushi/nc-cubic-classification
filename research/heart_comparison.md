@@ -29,6 +29,10 @@ OU arXiv:2508.04986 Definition 1.1, §6はAS heartと標識を定義し、一般
 
 これらの完全な証明は論文に置き、ここで重複しない。既知文献の全証明、新しい命題の外部独立査読、新規性の網羅調査は未実施。dP1原稿の強い反標準導来比較は本研究の入力にしていない。
 
+## 一般次数の古典的反標準障害
+
+弱del Pezzo S上の(-2)曲線EとF=i_*O_E(-1)について、Fは2-spherical、全nでRHom(O_S(n(-K_S)),F)=0、反標準モデルXへのRf_*F=0。従って(O_S,(-)⊗O_S(-K_S))のAZ生成性は失敗し、Db(coh S)≄Db(qgr anti-canonical ring)=Db(coh X)。古典的な十一のcubic根壁で具体化し、唯一の共線三点を持つQ例についてnodeも計算した。証明は`papers/sections/cubic_corner_root_walls.tex`、コードは`computations/verify_cubic_root_wall.py`。非可換Rains/VdB/ASの壁上のheart存在やt-exactnessとは厳密に区別する。HRS tiltは初めから導来同値を仮定する点に注意。
+
 ## cubicの具体的着手
 
 **P1：最後のVdB段階。** A=coh tilde X_6、B=qgr F、F=Rδ_6*についてker δ_6*を求める。対象Mの通常pushforwardとR¹pushforwardを個別に計算する。ker δ_*が非零なら一回のtiltが非自明である。導来同値の既知適用範囲を先に固定する。

@@ -1,6 +1,14 @@
 # Cubic corner の有限性と4交比：現行研究ノート
 
-2026-11-15 / hearts-v7 / corner-v6。最初に `00_research_plan.md` を読み、証明は `papers/cubic_heart_corner.tex` の定理 `thm:general-position-iff` とその依存箇所を読む。全次数のheart比較は `research/heart_comparison.md` にある。
+2026-11-15 / hearts-v8 / corner-v7。最初に `00_research_plan.md` を読み、証明は `papers/cubic_heart_corner.tex` の定理 `thm:general-position-iff` とその依存箇所を読む。全次数のheart比較は `research/heart_comparison.md` にある。
+
+## 古典的根壁と anticanonical heart の障害
+
+**証明済み**：11 divisorは10個の共線性根 h-e_i-e_j-e_k とconic根 2h-sum e_i。一般壁の六点blowup Sは弱dP3、対応(-2)曲線 E を反標準射fがA1点へ収縮。F=i_*O_E(-1)は2-sphericalで、全nについてRHom(O_S(n(-K_S)),F)=0、Rf_*F=0。coh Sでは反標準AZ ampleが失敗し、qgr anticanonical ring=coh XだがDb(coh S)とDb(coh X)は導来非同値（特異点の剰余体の非有界Ext）。任意次数の弱dPで(-2)曲線がある場合にも同じ障害が成立する。**これは古典的blowupの結果であり、非可換Rains/VdB/AS heartの壁特殊化の証明ではない。**
+
+**厳密な一壁例**：Q0=[[1,1,1],[1,2,2],[1,3,4]]で9個のminorのうち1個のみ0、detQ=1、det成分逆数Q=1/24。六点は(1:1:1),(2:1:1),(12:4:3)と三座標点で共線3点はp1,p2,p4だけ。反標準三次のnodeは[0:0:1:1]、局所Hessian det=-2304。多項式恒等式を有理数で厳密検証。証明`papers/sections/cubic_corner_root_walls.tex`、再現`computations/verify_cubic_root_wall.py`。
+
+**一次資料**：AOU arXiv:2404.00175v1 §§1,4,8は六点係数を定義。弱dPの反標準収縮はDolgachev, *Classical Algebraic Geometry*, Thm 8.3.2とBlanc–Lamy, Proc. LMS 105(2012), Introduction/§4。幾何学的事実と新規の具体的対応・spherical計算を区別し、新規性の全面調査・独立査読は未実施。
 
 ## 現行の完全 Hilbert 関数定理と有限平坦族
 
@@ -47,7 +55,7 @@ AOU型AS helixとのfolding、Serre inverse shift、orbit algebraの飽和、お
 
 ## 次の核心
 
-1. **11 divisorの境界と非可換AS locus**：一般位置でのHilbert関数と有限平坦性は決定した。次に十一の各divisorとAS locusが交わるか、交わるならどのheart・導来圏の変化を生むかを実在対象から判定する。有限次元corner条件とAS/noetherian/realizationを混同しない。
+1. **非可換AS locusと根壁**：古典的な11壁のspherical導来障害を確定した。次は各壁に非可換AS-regularが存在するか、Rains/VdB heartがspecializeするかを確かめる。古典的非同値から非可換全点の非同値を推論しない。
 2. **Rains/VdBとの実際の比較**：AOUのmutation後E0≅πFをobject levelで検証し、VdBの最後のδ_*に対するkernelと高次pushforwardを実在対象から計算する。自然同値のt-exactnessと別のderived同値を分離する。
 3. **一般次数とmoduli**：全intrinsic cubicを幾何的六点分枝と同一視せず、量子FermatなどOU AS型でない分枝を保持。dP1と他次数のheart比較へ必要十分条件の方法を移植する。
 
