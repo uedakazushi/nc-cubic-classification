@@ -1,53 +1,23 @@
 {
   "date": "2026-11-15",
-  "version": "recognition-v4",
-  "paper": {
-    "path": "papers/weak_cubic_axioms.tex",
-    "pages": 13,
-    "latexmk_lualatex": "PASS",
-    "references": "PASS",
-    "no_overfull_or_missing_glyphs": true,
-    "rendering": "all 13 pages rendered at 100 dpi, contact sheet inspected; pages 4,5,10 individually inspected",
-    "warnings": "CJK italic fallback; tiny math font substitution; math in PDF bookmarks"
-  },
-  "static_counts": {
-    "labels": 30,
-    "references": 18,
-    "bibliography": 11,
-    "citations": 21
-  },
-  "computations": [
-    {
-      "path": "computations/verify_boundary_fermat.py",
-      "status": "PASS",
-      "scope": "universal Lie-type PBW identities, normal twist, central cubics, 6x6 orbit determinant729, 54-element stabilizer, binary discriminant"
-    },
-    {
-      "path": "computations/verify_quantum_fermat.py",
-      "status": "PASS",
-      "scope": "prior exact quantum Fermat exponent checks and QQ(zeta) cubic overlap rank44 rerun"
-    }
+  "version": "recognition-v5",
+  "current_paper": "papers/weak_cubic_axioms.tex",
+  "paper_git_blob": "05532904cd0c91dc3d986be818b77eaa552f3a15",
+  "math": "Pym L1111 3-dimensional CY skew-polynomial torus; L112 explicit flat degeneration at quantum Fermat; shared GK-rank exceptional weak definition with pre-weak distinction; automatic negative sections",
+  "primary_source": "Pym arXiv:1403.6444 Theorem 1.1, sections 3.1–3.2, verified",
+  "local_lualatex": "PASS, 16 pages, rendered all pages, no unresolved citations or overfull boxes",
+  "local_pdf_sha256": "e2f820d3702925dab3ec2046e7b4a2be97b9e7e05789203c3f0dbb3f035ae4d2",
+  "local_python_checks": [
+    "verify_fermat_pym_components.py (equivalent local version): PASS",
+    "verify_quantum_fermat.py: PASS",
+    "verify_boundary_fermat.py: PASS"
   ],
-  "environment": {
-    "python": "3.13.5",
-    "sympy": "1.14.0"
-  },
-  "proof_status": {
-    "boundary_recognition": "written and examined; input Cassidy-Shelton Thm1.5 and regular-extension theorem",
-    "quantum_orbit": "written and examined; homogeneous-space stack, not full deformation rigidity",
-    "boundary_existence_all_weak_objects": "unproved",
-    "whole_intrinsic_moduli_algebraicity": "unproved",
-    "relative_boundary_atlas": "not established in this work",
-    "peer_review_formalization_novelty": "not performed"
-  },
-  "literature": "Primary Cassidy-Shelton, Braverman-Gaitsgory, LBS relevant statements checked; LBS pages 179-180 visually checked. Retained Kanazawa proof not newly fully reaudited.",
-  "retained_papers": "surface and generic R13 papers/PDFs and other calculation assets preserved, not all rerun or reaudited",
-  "sha256": {
-    "papers/weak_cubic_axioms.tex": "b5371608d396b72de684c22a92623f3a1a40d76847471187c6de1e96af4e04b6",
-    "computations/verify_boundary_fermat.py": "5c7ab476cae083b93193dea40ae88768c2c8bc0d2778bc837de84106db7197cd",
-    "computations/boundary_fermat_certificate.json": "216f4bf1f2b27a2476452b4d9557a1e6f0d9f7c26f203c7f37c07c8a44b60f30",
-    "computations/verify_quantum_fermat.py": "65c62c7e9fcf73e5d214abb7466432661275dcd57faffafc55dfbd0e1b440a21",
-    "computations/quantum_fermat_certificate.json": "d4147ae0079635b09a67102b93f98fa21428627b2edbd766a3a9fa522f55354f",
-    "build/weak_cubic_axioms.pdf": "10c31add082cfbe1a04168b2b5b73c1c6acac0ccb86df2b0f14f7741cfaf1b53"
-  }
+  "github_pym_script_same_bytes_as_executed_local": false,
+  "status": "New theorem proofs examined, no independent peer review; previous R13 non-membership proof not newly reaudited; other Pym component intersections untested",
+  "limitations": [
+    "Pym's component classification is for graded CY deformations, not automatic full 4-periodic AS-Z stack classification",
+    "exceptionality is an extra axiom in aligned definition, not known redundant",
+    "global intrinsic moduli algebraicity unresolved"
+  ],
+  "library_bundle": "/weak_cubic_intrinsic_pym_v5_20261115.zip"
 }
