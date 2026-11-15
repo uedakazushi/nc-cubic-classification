@@ -1,0 +1,61 @@
+\subsection{四つの反標準shiftによる有限window}
+\label{subsec:cubic-four-window}
+\begin{proposition}[全正規三次商のtailed Koszul再帰]
+\label{prop:cubic-four-window}
+$B$ をnoetherian quadratic Koszul AS4型14641、$G$ を正則正規三次、$R=B/(G)$ とする。
+$\OO=\pi R$ と書くと、$\operatorname{qgr}R$ に完全列
+\[
+ 0\longrightarrow\OO(-4)\longrightarrow\OO(-3)^4\longrightarrow
+ \OO(-2)^6\longrightarrow\OO(-1)^4\longrightarrow\OO\longrightarrow0
+\]
+が存在する。従って
+\[
+ \operatorname{thick}\{\OO(n):n\in\mathbb Z\}
+ =\operatorname{thick}(\OO\oplus\OO(1)\oplus\OO(2)\oplus\OO(3)).
+\]
+特に既出の正規楕円境界認識でH3となる全対象では、この四項直和が
+$\mathrm D^b(\operatorname{qgr}R)$ のclassical generatorである。
+\end{proposition}
+\begin{proof}
+右 $B$ 加群 $k$ のKoszul分解を $R$ とtensorする。
+左 $B$ 加群 $R$ は $0\to B(-3)\xrightarrow{\cdot G}B\to R\to0$ を持つから、
+得られた自由 $R$ 複体のhomologyは
+$\operatorname{Tor}_0^B(k,R)=k$、$\operatorname{Tor}_1^B(k,R)=k(-3)$ のみである。
+両者は有限次元なので $\pi$ で消え、表示した完全列を得る。
+この列の全shiftを用い、四つの連続した $\OO(n)$ から
+その直前・直後を帰納的に生成できる。
+最後の主張は、正規楕円境界認識の証明が
+$\mathrm D^b(\operatorname{qgr}R)=\operatorname{thick}\{\OO(n)\}$ を与えたことによる。
+一般の滑らかでない商で全coherent対象を生成するとは結論しない。
+\end{proof}
+
+\begin{corollary}[76次元のcohomologyを持つend dg模型]
+\label{cor:cubic-76-end-model}
+前命題の正規楕円境界H3で $E=\bigoplus_{i=0}^3\OO(i)$ とし、
+$A=\operatorname{RHom}(E,E)$ と置く。
+このproper dg代数のcohomologyは次数0と2に限られ、
+\[
+ \dim H^0(A)=55,\qquad \dim H^2(A)=21.
+\]
+従って $\mathrm D^b(\operatorname{qgr}R)\simeq\operatorname{Perf}(A)$ であり、
+最小 $A_\infty$ 模型の台は76次元となる。
+これは高次積の消滅や有限arity、族としてのdg smoothness開性を主張しない。
+\end{corollary}
+\begin{proof}
+AS Gorenstein深さ3による飽和と局所cohomologyから
+$\operatorname{Hom}(\OO(i),\OO(j))=R_{j-i}$ と
+$\operatorname{Ext}^1(\OO(i),\OO(j))=0$ を得る。
+$R_n=0$、$n<0$ とし、Serre $(-1)[2]$ から
+$\operatorname{Ext}^2(\OO(i),\OO(j))=R_{i-j-1}^*$ である。
+$\dim(R_0,R_1,R_2,R_3)=(1,4,10,19)$ を使うと
+\[
+ 4+3\cdot4+2\cdot10+19=55,\qquad
+ 3+2\cdot4+10=21
+\]
+を得る。classical generatorのdg Morita同値と最小模型の移送を適用する。
+\end{proof}
+
+この有限windowは、中央無限位数の切断でも同じ四対象を使って比較する入口となる。
+ただし有限次元cohomologyだけから高次 $A_\infty$ 積を無視してはいけない。
+全bad中心値の有限性を証明するには、相対模型と対角のperfect性の基底変更を
+さらに確定する必要がある。

@@ -165,3 +165,11 @@ Clifford swapでは正規滑らか楕円境界ktが一意。mu_B負固有空間�
 許容条件は明示quartic Delta_h(b,c)=(h c−2b)((h³−2)b−3h c)(c²+h²bc+2h b²)の非消滅と同値。固定hで四つのbad方向は相異なる。P1_betaから四点を除く係数方向で、任意底変更・fpqc fiber条件に適合する。二character枝x=yと2z+h(x+y)=0の分解・全係数恒等式を検証済み。証明はcubic_normal_order2_arrows.tex。
 
 非中央正規一次楕円境界部分では位数2の被覆・全許容条件・全幾何学的矢と位数3のBH54を得た。相対intrinsic圏の全stack降下、中央無限位数の全bad値、正規一次境界のないH3の被覆は未完成。全H3にこの境界があるとは主張しない。次は有限end dg模型を用いた中央無限位数のsmoothness locusと、境界被覆の欠落を調べる。
+
+### 四shift windowと独立Nakayama監査
+
+全正規三次商でBのKoszul分解をRへtensorするとTorはk,k(−3)のみなので、tailsでO(−4)→O(−3)^4→O(−2)^6→O(−1)^4→Oの完全列となる。四連続shiftで全shiftを生成。正規楕円境界認識済H3ではE=O⊕O1⊕O2⊕O3がDbのclassical generator、EnddgのH0dim55,H2dim21。76次元最小A∞台を得るが高次積を打ち切っていない。Toën math/0609762v3の有限An定理は両側smooth properを仮定し、Lemma3.14はquasicompactnessなので、これだけで中央無限位数bad D有限性を主張しない。
+
+h=b=c=1のClifford swap包絡でKoszul双対を独立計算しE0..4=(1,4,6,4,1)、左右Frobenius積非退化、mu_E=swapxy(t,z固定)、mu_B=−swapxy(t,z負)、普通detmu_B−1・top作用1を確認。全次数AS4は別のcocycle証明による。
+
+次の計算入口（未検証の中心模型）：Clifford swapのu=x+y,v=x−y,w=z+h u/2でG*が−[vw,u]/4になる。T=t²,P=xy+yx,Z=z²はBで中心、G商でa=vw,s={u,v}も中心となり、a²=BC,sC=2Da,sa=2DB（A=u²,B=v²,C=w²,D={u,w}/2）。Delta可逆ならT,P,Z↔B,C,Dは可逆線型で、五中心二次のsubringはcubic scroll候補。Rがこのsubring上Clifford有限ならHS比8、even Veronese中心がscroll、PI degree2を証明できる見込み。全中心・rankの結論はまだ原稿化前なので次に厳密検証する。
