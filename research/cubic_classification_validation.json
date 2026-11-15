@@ -1,6 +1,6 @@
 {
   "date": "2026-11-15",
-  "version": "classification-v76",
+  "version": "classification-v77",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -52,7 +52,8 @@
     "papers/sections/cubic_as4_low_commutator_exclusions.tex",
     "papers/sections/cubic_as4_tt22_exclusions.tex",
     "papers/sections/cubic_as4_ds211_exclusions.tex",
-    "papers/sections/cubic_as4_four_simple_exclusions.tex"
+    "papers/sections/cubic_as4_four_simple_exclusions.tex",
+    "papers/sections/cubic_as4_first_shared_exclusions.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -869,5 +870,18 @@
     "validator": "computations/verify_cubic_as4_four_simple_cocycles.py",
     "certificate": "computations/cubic_as4_four_simple_cocycles_certificate.json",
     "result": "All standard Klein cocycles of explicit shared-zero O/H excluded. H cocycles have exceptional centre3 lines at lambda=-1/4,-3/4, both factored; ordinary H rank20 is not reused at these points. No arbitrary cocycle/twist or full CY coverage claimed."
+  },
+  "four_simple_first_shared_v77": {
+    "status": "exact verification executed",
+    "validators": [
+      "computations/verify_cubic_as4_four_simple_first.py",
+      "computations/verify_cubic_as4_four_simple_first_remaining.py"
+    ],
+    "certificates": [
+      "computations/cubic_as4_four_simple_first_certificate.json",
+      "computations/cubic_as4_four_simple_first_remaining_certificate.json"
+    ],
+    "result": "All seven explicit FN3 presentations excluded. L/M universal Ore-normalizer proof; F0/F1 full rational and number-field rank cover; three fixed QQ ranks. No complete chart/CY coverage or AS4 sufficiency imported.",
+    "execution": "Exact SymPy; optional python-flint acceleration for F specializations; strict exact-input conversion used."
   }
 }

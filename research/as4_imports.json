@@ -313,5 +313,16 @@
     "used_part": "Same explicit presentations; standard cocycles constructed and verified independently here. No full CY/projection coverage or AS4 sufficiency imported.",
     "independent_proofs": "Universal cocycle top tensor with corrected pairing signs; exact H all-value rank and factored kernel cover; O six-relation transport and general PBW character obstruction.",
     "validator": "computations/verify_cubic_as4_four_simple_cocycles.py"
+  },
+  "four_simple_first_shared_v77": {
+    "commit": "a45f834f51a00c47443b51caf66abaf4629546b9",
+    "path": "research/proofs/CY_ZERO_COMMUTATORS_FOUR_SIMPLE_FIRST_SHARED_COMPLETE.tex",
+    "sha256": "fede79f0b5363fdc65dc89d5ca0bdbea34157d9762917933f916ee2eae2b2b2f",
+    "used_part": "FN2/FN3 explicit L/M/F0/F1/G0/G1/K presentations only. No full chart/CY coverage, all-isomorphism or AS4 sufficient theorem imported.",
+    "independent_proofs": "Ore PBW and normalizer cubic resonance obstruction for all L/M; controlled-denominator F0/F1 rank covers at all algebraic values; three fixed QQ minors; anti-cyclic top tensors conditional AS4.",
+    "validators": [
+      "computations/verify_cubic_as4_four_simple_first.py",
+      "computations/verify_cubic_as4_four_simple_first_remaining.py"
+    ]
   }
 }

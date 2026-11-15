@@ -1,0 +1,129 @@
+\subsection{最初の共有係数表示七族の独立排除}
+\label{subsec:cubic-as4-first-shared}
+\cite{AS4lowpinned}のFN2--FN3から、次の具体表示だけを参照する。
+前節と同じ $U,K,A$ を用い、
+\[
+\begin{gathered}
+ x_1=1,\quad x_2=e,\quad x_5=f,\quad x_9=r,\quad
+ x_{11}=-c,\quad x_{15}=c,\\
+ x_{19}=\lambda/16-c^2,\qquad x_{20}=-e/16,
+ \qquad\lambda\ne0,-1
+\end{gathered}
+\]
+として他の $x_j$ を零にした六関係の代数を $B(\lambda;c,e,f,r)$ と書く。
+この記号を全パラメータでAS4と仮定するわけではない。
+以下は指定した表示の独立なH3障害であり、全射影型の被覆や
+AS4存在十分性・全同型は新たに輸入しない。
+
+\begin{proposition}\label{prop:cubic-fn-lm}
+$h\ne\pm1$, $f$ 任意とし、$B=B(1;h/4,0,f,0)$ とする。
+この代数は整域で $Z(B)_3=0$ であり、H3包絡にならない。
+特にFN3の全 $L_c$ ($f=0$) と $M_c$ ($f=1$) を排除する。
+\end{proposition}
+\begin{proof}
+\[
+ q=\frac{h-1}{h+1},\quad
+ \alpha=\frac{h+1}{4},\quad\beta=\frac4{h-1},\quad
+ \gamma=-\frac{h-1}{4},\quad\delta=-\frac4{h+1},\quad
+ t=-\frac{4f}{h-1}
+\]
+と置くと、六関係は
+\[
+ da=-ad,\quad ba=\alpha db,\quad bd=\beta ab,\quad
+ ca=\gamma dc,\quad cd=\delta ac,\quad cb=q^{-1}bc+tad.
+\]
+順序 $a<d<b<c$ の四つの三次重なりは全て解消し、
+PBW基底 $a^id^lb^jc^k$ を得る。
+実際、量子平面 $k\langle a,d\rangle/(da+ad)$ にまず
+$(a,d)\mapsto(\alpha d,\beta a)$ のautomorphismで $b$ を付加し、
+次に $(a,d,b)\mapsto(\gamma d,\delta a,q^{-1}b)$ と
+$\partial(b)=tad$, $\partial(a)=\partial(d)=0$ で $c$ を付加したiterated Ore表示である。
+従って整域である。六関係と元の表示の対応も全係数で可逆に検算した。
+
+正規二次元 $N=ad$ のnormalizerは、順序 $(a,d,b,c)$ で
+\[
+ \nu_N=\operatorname{diag}(-1,-1,-q,-q^{-1}).
+\]
+中心三次 $F$ は $\nu_N(F)=F$ なので、その各PBW単項式は
+\[
+ i+l+j+k=3,\qquad q^{j-k}=-1
+\]
+を満たす。$q\ne0,1$ で $|j-k|\le3$ だから、残るのは
+\[
+ h=0,\qquad h^2=-1,\qquad h^2=-3
+\]
+だけである。具体的に
+\[
+ q+1=\frac{2h}{h+1},\quad q^2+1=\frac{2(h^2+1)}{(h+1)^2},\quad
+ q^3+1=\frac{2h(h^2+3)}{(h+1)^3}.
+\]
+$h=0$ では、非零二次元 $bc-2f ad$ のnormalizerが $-I$ である。
+従ってこの場合は全奇数中心が零となる。
+
+$h^2=-1$ では $q$ は四乗根であり、候補は
+\[
+ F=(u a+v d)b^2+(w a+z d)c^2
+\]
+に限る。$b^2a=q^{-1}ab^2$, $c^2a=qac^2$ と $da=-ad$ を用いると、
+$[F,a]=0$ の四係数はそれぞれ $q^{\pm1}-1$ または $q^{\pm1}+1$ の非零倍である。
+よって $u=v=w=z=0$。
+$h^2=-3$ では $q$ は原始六乗根で、候補は $F=u b^3+v c^3$。
+\[
+ b^3a=q^{-1}\alpha db^3,\qquad c^3a=q\gamma dc^3
+\]
+なので、PBW独立性と $[F,a]=0$ から再び $u=v=0$ となる。
+これらの二つの共鳴での交換子の単射性は、
+$\mathbb Q(i)$ と $\mathbb Q(\sqrt{-3})$ 上でも独立に確認した。
+
+最後に $R A R^{\mathsf T}$ は全 $h,f$ で非零反巡回最高tensorとなる。
+従ってAS4実現では $\mu=I$、H3候補は中心三次でなければならない。
+その消滅が主張を与える。
+\end{proof}
+
+\begin{proposition}\label{prop:cubic-fn-remaining}
+FN3の次の指定表示も全てH3包絡から排除される。
+\[
+\begin{array}{c|c|c}
+ \text{表示}&B(\lambda;c,e,f,r)&\text{範囲}\\\hline
+ F^\varepsilon_\lambda&B(\lambda;0,\varepsilon,1,(\lambda^2-1)/16)
+   &\lambda\ne0,-1,\ \varepsilon=0,1\\
+ G^\varepsilon&B(1;0,\varepsilon,0,1)&\varepsilon=0,1\\
+ K&B(1;0,1,0,0)&
+\end{array}
+\]
+\end{proposition}
+\begin{proof}
+$F^\varepsilon$ のAS4実現を仮定する。
+三次・四次商座標の全係数の分母は
+$\lambda,\lambda-1,\lambda+1,\lambda^2+1$ の積の冪だけであり、
+全関係を消し自由列上でidentityである。
+従ってその四因子を避けた各AS4値で、次元20,35の真の商基底となる。
+中心三次行列の選んだ20次minorは
+\[
+ \frac{\lambda^6(\lambda-1)^{4+\varepsilon}(\lambda+1)^{6+\varepsilon}
+ (\lambda^2+1)^{2-\varepsilon}(\lambda^2-\lambda+1)(\lambda^2+\lambda+1)}
+ {2^{40+2\varepsilon}}.
+\]
+分母の極とこのminorの零点を併せた残余は、許容領域内では
+\[
+ \lambda=1,\qquad \lambda^2+1=0,\qquad
+ \lambda^2+\lambda+1=0,\qquad\lambda^2-\lambda+1=0
+\]
+の七値である。
+各 $\varepsilon$ について $1,i,\omega,-\omega$、
+$\omega=(-1+\sqrt{-3})/2$ における全関係行列を別に構成し、
+$\mathbb Q$, $\mathbb Q(i)$, $\mathbb Q(\sqrt{-3})$ 上で中心行列の階数20を確認する。
+二次の三条件では係数共役がもう一方の根を覆う。
+これにより商座標に極がある値も落とさず、全 $F^\varepsilon$ の中心三次は零となる。
+
+三固定表示 $G^0,G^1,K$ についても、$\mathbb Q$ 上の中心三次行列の
+非零20次minorを独立に確認した。
+全表示で $R A R^{\mathsf T}$ の非零反巡回性を検算しているため、
+AS4実現では $\mu=I$ である。従って中心三次の消滅がH3を排除する。
+\end{proof}
+
+Ore/PBW・normalizerと共鳴単射性は
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}as4\_\allowbreak{}four\_\allowbreak{}simple\_\allowbreak{}first.py}、
+二つの全値rank coverと三固定表示は
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}as4\_\allowbreak{}four\_\allowbreak{}simple\_\allowbreak{}first\_\allowbreak{}remaining.py}
+で検算する。この七表示の排除を、全共有非零領域の被覆と混同しない。
