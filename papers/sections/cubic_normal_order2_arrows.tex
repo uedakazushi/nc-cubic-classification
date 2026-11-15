@@ -1,0 +1,144 @@
+\subsection{Clifford swap部分の境界一意性と全intrinsic矢}
+\label{subsec:normal-order2-arrows}
+\begin{lemma}[非CY Clifford swap切断の楕円境界は一意]
+\label{lem:normal-order2-boundary-unique}
+Clifford swap部分のH3対象では、滑らかな次数3楕円THCRを商に持つ
+正則正規一次直線は $kt$ に限る。
+\end{lemma}
+\begin{proof}
+別の境界 $t'$ があれば、包絡が非CYなので中央境界または位数3境界ではあり得ない。
+従ってその共役も位数2であり、$\mu_B(t')=-t'$ となる。
+$u=x+y,v=x-y$ と書けば $\mu_B$ の負固有空間は $\langle u,z,t\rangle$ だから、
+$t'=au+bz+ct$ と書ける。
+位数2の対角化から、反交換子写像
+$B_1\to B_2$、$w\mapsto t'w+wt'$ の像は正確に $k(t')^2$ である。
+$c\ne0$ なら $\{t',t\}=2ct^2$ によりこの像は $kt^2$ となる。
+一方
+\[
+ \{t',v\}=a\{u,v\}+b\{z,v\}
+\]
+であり、$\{u,v\},\{z,v\},t^2$ は $B_2$ で一次独立である。
+六つの二次関係とこの三元を自由二次tensorで比較すると、minor $-4h^2$ を得る。
+$h$ は単元なので、これは任意の底でも一次独立である。
+従って $a=b=0$、すなわち $kt'=kt$ となる。
+
+$c=0$ なら $t'$ の像は $S_h=B/(t)$ の非零正規一次元となる。
+その正規一次商はAS2であるから、point schemeは $\mathbb P^1$ 全体を持ち、
+$S_h$ のpoint schemeに直線が含まれることになる。
+しかし後者は滑らかな既約楕円三次である。これは不可能である。
+\end{proof}
+
+$\mathcal P$ を $h,b,c$ の係数空間のうち
+$h\ne0,h^3\ne-1,8$ とcharacter完全交叉の被約性を満たす開部分とする。
+$\alpha$ は $x,y$ の交換行列、$\beta=(b,b,c)^{\mathsf T}$ とする。
+$\mathbf r_h^0$ は中央Cliffordの三つのactive関係
+$(yz+zy-hx^2,zx+xz-hy^2,xy+yx-hz^2)^{\mathsf T}$ を表す。
+
+\begin{theorem}[全幾何学的矢と基底変更に適合する有限係数表示]
+\label{thm:normal-order2-full-arrows}
+$\mathcal P$ の二点 $(h,\beta),(h',\beta')$ の間の全intrinsic pointed矢は、
+次の有限方程式の解 $(a,M,N)\in\mathbb G_m\times\mathrm{GL}_3\times\mathrm{GL}_3$ を
+共通次数スカラーで割ったものである。
+\[
+ M\alpha=\alpha M,\qquad
+ \mathbf r_h^0(MX')=N\mathbf r_{h'}^0(X'),\qquad
+ N\beta'=a^2\beta.
+\]
+矢は $t\mapsto at'$、$X\mapsto MX'$ で与えられ、
+$(a,M,N)\sim(sa,sM,s^2N)$、$s\in\mathbb G_m$ とする。
+これらの方程式は $\mathcal P$ からの任意の基底変更上で、
+graded代数族の全同型functorを記述する。
+一般同型類の次元は2、一般慣性は $\mu_2\times\mu_2$ である。
+全H3の成分次元・全intrinsic family stackの同定を主張するものではない。
+\end{theorem}
+\begin{proof}
+反標準環による認識からintrinsic矢は $R$ のgraded同型であり、
+二次包絡 $B$ へ一意に持ち上がる。
+前補題により $kt$ は保存される。
+$t$ の共役の正・負固有空間を保存するため、active生成元には $t$ 平行移動がなく、
+$X\mapsto MX'$ となる。
+さらに $S_h$ のNakayamaは $\alpha$ なので $M\alpha=\alpha M$ が必要である。
+この条件の下でZhang twistを戻すと、active関係の比較は表示した
+$\mathbf r_h^0(MX')=N\mathbf r_{h'}^0(X')$ に等しい。
+$t^2$ 係数の比較が $N\beta'=a^2\beta$ である。
+逆にこれらの条件は包絡間の同型を与える。
+交代tensorと $M\alpha=\alpha M$ により
+$G_*\mapsto\det(M)G_*'$ となるため、三次商の同型にもなる。
+次数スカラーがintrinsic矢の核であることは既出の認識に従う。
+
+任意の基底上でも、二次包絡の相対Koszul Frobenius双対によりNakayamaは自然であり、
+正・負固有直和は2が可逆なので基底変更に適合する。
+同型による $t$ の像 $t'=au+bz+ct$ は幾何学的fiberで $a=b=0,c\ne0$ だから、
+局所的に $c$ は単元である。
+反交換子の像は局所自由な一次直線で、$\{t',t\}=2ct^2$ はその生成元となる。
+前補題の三つの二次元の一次独立性は基底上でもunit minorを持つため、
+非被約底でも $a=b=0$ となる。
+従って同じ係数比較が全同型functorを与え、nilpotentな追加矢もない。
+
+$h$ の比較はHesseの有限群に含まれ、固定 $h$ の射影active同型も有限である。
+残る連続変換はactiveと $t$ の相対スケール一つなので、
+三次元の $\mathcal P$ の一般同型類は二次元となる。
+一般 $h$ では、activeの射影同型で $\alpha$ と可換するものは恒等と $\alpha$ のみである。
+実際、$E[3]\rtimes\{\pm1\}$ 内で反転と可換するtranslationは恒等だけである。
+$\beta\ne0$ なので相対スケールは $a^2=1$ に限られ、
+$\alpha$ と $t\mapsto-t$ が可換な二つのinvolutionを与える。
+従って一般慣性は正確に $\mu_2\times\mu_2$ である。
+\end{proof}
+
+\begin{theorem}[全Clifford swap許容条件の明示四次式]
+\label{thm:normal-order2-quartic-admissibility}
+$h\ne0,h^3\ne-1,8$ とする。Clifford swap切断がH3となる必要十分条件は
+\[
+ \Delta_h(b,c):=(hc-2b)\bigl((h^3-2)b-3hc\bigr)
+                  \bigl(c^2+h^2bc+2hb^2\bigr)\ne0
+\]
+である。各固定 $h$ で、この斉次四次式は幾何学的に相異なる四つの一次因子を持つ。
+従って相対スケールを忘れた係数方向は
+$\mathbb P^1_{[b:c]}$ から四点を除いた曲線となる。
+\end{theorem}
+\begin{proof}
+character方程式の差は $(y-x)(2z+h(x+y))=0$ である。
+$u=x+y,v=x-y$ と置く。
+$v=0$ の対角枝では $x=y=s$ として
+\[
+ 2sz-hs^2=b,\qquad 2s^2-hz^2=c
+\]
+を得る。二変数Jacobianは
+$4(-hz^2+h^2sz-2s^2)$ である。
+非零の臨界点では $s\ne0$ だから $r=z/s$ と置け、
+\[
+ hr^2-h^2r+2=0,\quad
+ b=s^2(2r-h),\quad c=s^2(2-hr^2).
+\]
+$r$ を消去すると臨界値は正確に
+$Q=c^2+h^2bc+2hb^2=0$ となる。
+ここで $2r-h=0$ は $h^3=8$ を強制するため、良い $h$ では消去に余分な方向はない。
+原点の値 $b=c=0$ も四次式で除外される。
+
+もう一つの枝では $z=-hu/2$ であり、
+\[
+ u^2=\frac{4(hc-2b)}{h(8-h^3)},\qquad
+ v^2=\frac{4((h^3-2)b-3hc)}{h(8-h^3)}
+\]
+を得る。この枝が被約であることは両右辺が非零であることと同値である。
+$v=0$ は二枝の交わりでもあり、その場合元の三変数Jacobianは零となる。
+それ以外では二枝は離れ、元の完全交叉は対角枝の四点と
+非対角枝の四点の非交和になる。
+従って全体が被約であることは三因子が全て非零であることと同値である。
+
+最後に $Q$ の $c$ に関する判別式は $h(h^3-8)b^2$ である。
+$hc-2b=0$ と $((h^3-2)b-3hc)=0$ は $h^3=8$ 以外で相異なる。
+それらの直線に $Q$ を代入すると、それぞれ
+\[
+ \frac{4(1+h^3)b^2}{h^2},\qquad
+ \frac{4(1+h^3)^2b^2}{9h^2}
+\]
+となり、良い $h$ では零にならない。
+従って悪い四方向は相異なる。
+\end{proof}
+
+四次式、二枝の正確な係数、四方向の分離は
+\texttt{verify\_cubic\_normal\_order2\_discriminant.py} で全係数恒等式として検証する。
+$\mathcal P=D(\Delta)$ という表示は非被約底を含む任意底変更に適合する。
+H3 fiber条件は $\Delta$ の可逆性そのものなので、fpqc局所的である。
+これはこの表示族での相対許容条件であり、一般のintrinsic圏の族の効果的降下とは区別する。

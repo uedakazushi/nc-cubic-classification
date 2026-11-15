@@ -1,6 +1,6 @@
 {
   "date": "2026-11-15",
-  "version": "classification-v36",
+  "version": "classification-v38",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -34,7 +34,8 @@
     "papers/sections/cubic_normal_elliptic_boundary.tex",
     "papers/sections/cubic_normal_order2_quantum.tex",
     "papers/sections/cubic_normal_order2_clifford.tex",
-    "papers/sections/cubic_normal_order3_coverage.tex"
+    "papers/sections/cubic_normal_order3_coverage.tex",
+    "papers/sections/cubic_normal_order2_arrows.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -518,5 +519,21 @@
     "ordinary_theorem": "Every noncentral order3 normal elliptic H3 is the previously classified quantum Fermat object; geometric pointed groupoid BH54",
     "build": "LuaLaTeX 101 pages; no undefined references/citations or overfull boxes; pages83,84 visually inspected before minor-value sentence refinement",
     "limits": "No all intrinsic family stack descent, no existence of normal elliptic boundary for every H3, not independently refereed/formalized"
+  },
+  "normal_order2_v37_v38": {
+    "proof": "papers/sections/cubic_normal_order2_arrows.tex",
+    "validators": [
+      "computations/verify_cubic_normal_order2_arrows.py",
+      "computations/verify_cubic_normal_order2_discriminant.py"
+    ],
+    "result": "PASS universal unit minor -4h^2, alpha odd cubic, all-parameter four-factor discriminant identities and separated bad directions",
+    "ordinary_theorems": [
+      "Unique normal smooth elliptic boundary, including scheme uniqueness against nilpotent additional arrows",
+      "All pointed geometric arrows from commuting M/alpha plus Clifford quadratic comparison and N*beta_prime=a^2*beta modulo common degree scale",
+      "Generic moduli dimension2, generic inertia mu2 x mu2",
+      "H3 iff (hc-2b)((h^3-2)b-3hc)(c^2+h^2bc+2hb^2)!=0"
+    ],
+    "build": "LuaLaTeX 103 pages successful, no undefined refs/cites or overfull boxes before minor nonskew determinant proof refinement",
+    "limits": "No all intrinsic family-category stack descent or global H3 coverage/components"
   }
 }

@@ -34,7 +34,7 @@
 
 **非中央正規一次楕円境界**：共役位数は2または3に限る。位数2は量子involution（既存符号型）とClifford swapへ漏れなく被覆し、後者の三次は一本、中央volumeへの有限cocycle還元により長さ8 character完全交叉の被約性が必要十分。非skew・非CYの具体例を検算済み。位数3は最高Koszul tensorの8次元随伴模型と全Jordan型の計算から量子P2に限られ、全対象が既知の量子Fermat一対象、幾何学的群oidBH54となる。全H3が正規一次楕円境界を持つとは主張しない。
 
-**次の核心**：Clifford swapの全intrinsic矢・相対stack、中央無限位数の全admissibility、正規一次楕円境界を持たないH3の漏れのない被覆を進める。全既約成分・交叉・境界と全intrinsic family降下は未完成。
+**次の核心**：Clifford swapは境界一意性と全intrinsic矢を有限係数式で得て、一般次元2・一般慣性mu2×mu2を確定した。許容条件は明示四次式Delta_h(b,c)≠0（固定hで四つのbad方向）。次は相対intrinsic stack、中央無限位数の全admissibility、正規一次楕円境界を持たないH3の漏れのない被覆を進める。全既約成分・交叉・境界と全intrinsic family降下は未完成。
 
 既存の主要な構造結果を維持する：
 

@@ -1,0 +1,13 @@
+{
+  "version": "classification-v38",
+  "admissibility_polynomial": "-(2*b - c*h)*(b*h**3 - 2*b - 3*c*h)*(2*b**2*h + b*c*h**2 + c**2)",
+  "H3_iff": "polynomial !=0, h!=0,h^3!=-1,8",
+  "off_diagonal_branch": {
+    "u_squared": "(-8*b + 4*c*h)/(h*(8 - h**3))",
+    "v_squared": "(4*b*(h**3 - 2) - 12*c*h)/(h*(8 - h**3))",
+    "z": "-h*u/2"
+  },
+  "diagonal_branch_critical_polynomial": "2*b**2*h + b*c*h**2 + c**2",
+  "four_distinct_projective_beta_directions": true,
+  "scope": "Exact all-parameter identities; branch decomposition and reducedness proof in cubic_normal_order2_arrows.tex"
+}
