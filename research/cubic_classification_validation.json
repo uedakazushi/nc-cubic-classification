@@ -1,6 +1,6 @@
 {
   "date": "2026-11-15",
-  "version": "classification-v11",
+  "version": "classification-v12",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -13,7 +13,10 @@
     "papers/sections/cubic_as4_reductions.tex",
     "papers/sections/cubic_r13_cut_reduction.tex",
     "papers/sections/cubic_clifford_full_cuts.tex",
-    "papers/sections/cubic_clifford_beta_classification.tex"
+    "papers/sections/cubic_clifford_beta_classification.tex",
+    "papers/sections/cubic_clifford_tangent.tex",
+    "papers/sections/cubic_clifford_integration.tex",
+    "papers/sections/cubic_integrated_envelope.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -118,9 +121,9 @@
     "dependencies": "Workspace-local TeX Live 2025 packages restored from the Utah historic mirror; no generated PDFs or caches tracked"
   },
   "pdf": {
-    "pages": 59,
+    "pages": 63,
     "references": "No unresolved references/citations or overfull boxes in final log",
-    "layout": "All59 pages rendered; contact sheet and new detailed proof pages44–45 inspected"
+    "layout": "All63 pages rendered; contact sheet and new detailed proof pages46–49 inspected"
   },
   "limits": [
     "Not full intrinsic H3 coverage: other elliptic orders, nonsymmetric/non-CY central extensions, other low-commutator and resonant AS4 strata, ambient-direction deformations and global coverage remain",
@@ -130,7 +133,7 @@
     "Concurrent heart/corner work preserved but not independently reaudited here",
     "The earlier split-pencil Lambda=C* theorem assumes low center Z(S)1=Z(S)2=0,Z(S)3=kg; it is not applied as a full-cubic-incidence classification when Z(S)2 is nonzero.",
     "The v9 quotient describes geometric objects and pointed arrows. The entire admissible set is given by a finite geometric criterion and contains a dense open; no unproved full relative intrinsic stack descent or global componenthood is asserted.",
-    "v11 solves all-order CENTRALITY integration of the specified Clifford cuts. Full graded flatness/AS4 and H3 admissibility of the resulting family, new components and full relative descent remain to be proved."
+    "v12 solves full graded flatness and AS4 recognition on V and gives actual H3 for transcendental central values plus finite bad-value existence on order4 branch. Full bad-D lists, all integrated-family geometric arrows, H3 relative openness/descent, components and global ambient coverage remain."
   ],
   "as4_import_manifest": "research/as4_imports.json",
   "commands_retained_from_v4": {
@@ -168,8 +171,9 @@
     "latexmk papers/weak_cubic_axioms.tex": "PASS: Japanese LuaLaTeX,50 pages; no unresolved references/citations or overfull boxes"
   },
   "commands_executed": {
-    "python3 computations/verify_cubic_clifford_integration.py": "PASS: three full-parameter central relation identities, entire gamma0 good-base denominator audit for the central cut AND all relation certificates, exact prescribed Clifford central limit",
-    "latexmk papers/weak_cubic_axioms.tex": "PASS: Japanese LuaLaTeX,59 pages; no unresolved references/citations or overfull boxes; all pages rendered, new proof pages44–45 inspected"
+    "python3 computations/verify_cubic_integrated_envelope.py": "PASS: universal64 W3 lifts,256 W4 cyclic identities, minor -p^6, point graph/translation/order4, exact coprime quartic witness, cyclic-top nonvanishing identities",
+    "python3 computations/verify_cubic_r13_cuts.py": "PASS rerun: exact QQ Sklyanin(1,2,3) centers0,0,1; split-envelope center rank18, smooth/character charts and Hilbert/pencil identities",
+    "latexmk papers/weak_cubic_axioms.tex": "PASS: Japanese LuaLaTeX,63 pages; no unresolved references/citations or overfull boxes; rendered all pages and inspected new proof pages"
   },
   "commands_retained_from_v9": {
     "python3 computations/verify_cubic_clifford_beta.py": "PASS: all-parameter8x8 central volume and Schur determinant, character-coordinate Jacobian, universal12-variable Hessian/Yoneda identity, exact four-node nonsplit center and reduced8-point character scheme",
@@ -203,5 +207,26 @@
     "author_formula_url": "https://math.mit.edu/~etingof/delpezzocenter",
     "author_formula_sha256": "9bfc099967b3b0a627a0e358525718c4df56a7c57d319a3e6ead85a338b856de",
     "formula_scope": "E6 part only. Transcribed from author-hosted MAGMA text, polynomially normalized and independently verified; formula itself external."
+  },
+  "commands_retained_from_v11": {
+    "python3 computations/verify_cubic_clifford_integration.py": "PASS: three full-parameter central relation identities, entire gamma0 good-base denominator audit for the central cut AND all relation certificates, exact prescribed Clifford central limit",
+    "latexmk papers/weak_cubic_axioms.tex": "PASS: Japanese LuaLaTeX,59 pages; no unresolved references/citations or overfull boxes; all pages rendered, new proof pages44–45 inspected"
+  },
+  "new_v12_results": [
+    "Every integrated Clifford cut has a full graded-flat formal AS4-envelope and central domain quotient, not just low-degree flatness.",
+    "All algebraic fibers on explicit V are AS4 and all graded pieces locally free, using external full-parameter IS Sklyanin recognition plus independently checked LBS hypotheses.",
+    "For all gamma!=0 in V, exact H3 reduction to finite affine gldim; all transcendental center values good.",
+    "Order4 branch gamma^4=1+h^3: finitely many bad D per envelope; explicit actual non-Clifford H3 at h1,gamma=2^(1/4),A1,beta=(-1,0,0),D=pi."
+  ],
+  "source_audit_v12": {
+    "EG": "Same PDF/hash as v11; additionally read properties7.1.1–7.1.6, Lemma7.2.1, Cor7.2.4, Proposition7.3.1(i) and its proof, to justify full-degree formal flatness",
+    "LBS": "Same source/hash as earlier audit; Theorem2.6/Cor2.7 and 1-regular definition reread; all hypotheses checked explicitly here",
+    "IS_url": "https://arxiv.org/pdf/1601.00564",
+    "IS_sha256": "94063167f97267efeb1d84ef0855707b22107e87c0381a87b4a1be9fc4366ae1",
+    "IS_parts_read": [
+      "Theorem1.1 and precise nondegenerate parameter condition",
+      "Corollary6.1 and its self-dual Koszul-complex proof"
+    ],
+    "independent_review_limit": "IS full Groebner proof is external, not independently re-proved or claimed independently peer-reviewed here."
   }
 }

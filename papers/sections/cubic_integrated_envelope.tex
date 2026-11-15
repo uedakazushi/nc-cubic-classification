@@ -1,0 +1,271 @@
+\subsection{積分した包絡の全次数平坦性とAS4認識}
+\label{subsec:integrated-envelope-recognition}
+ここでは前節の中心表示に残っていた包絡の認識を解決する。
+基礎となる入力は Etingof--Ginzburg
+\cite[Proposition 7.3.1(i), Lemma 7.2.1, Corollary 7.2.4]{EGdelpezzo}
+の\emph{形式ポテンシャル変形}である。
+中心三次の計算だけから平坦性を推論するのではない。
+
+\begin{lemma}[最高次の明示的AS3 locus]
+\label{lem:integrated-leading-as3}
+$hpq\ne0$ かつ
+$\Delta=(p^3+q^3-h^3)^3+27h^3p^3q^3\ne0$ なら、
+$S=k\langle x,y,z\rangle/(pyz+qzy-hx^2,\text{cyclic})$
+は quadratic Koszul CY AS3、Hilbert 級数 $(1-s)^{-3}$ を持つ。
+\end{lemma}
+\begin{proof}
+Iyudu--Shkarin \cite[Theorem 1.1, Corollary 6.1]{ISSklyanin}を
+$(p,q,r)=(p,q,-h)$ に適用する。
+その仮定は、少なくとも二つの係数が非零で、$p^3=q^3=r^3$ ではないことである。
+ここでは全係数が非零であり、もし $p^3=q^3=-h^3$ なら $\Delta=0$ となるので除外される。
+同定理の全次数 Koszul/Hilbert 結論と同系の自己双対 Koszul bimodule 解消
+$1,3,3,1$ により CY AS3 を得る。
+これは外部の全次数定理の適用であり、point curve の滑らかさだけを
+AS3 認識とするものではない。
+\end{proof}
+
+\begin{lemma}[巡回AS3の全対角中心拡大]
+\label{lem:integrated-general-envelope}
+$p\ne0$ とし
+\[
+ S=k\langle x,y,z\rangle/(pyz+qzy-hx^2,\ \text{cyclic})
+\]
+が quadratic Koszul CY AS3、Hilbert 級数 $(1-s)^{-3}$ を持つとする。
+任意の $\alpha,\beta\in k^3$ に対し、中心 $t$ と関係
+\[
+ pyz+qzy=hx^2+\alpha_x tx+\beta_xt^2,\quad\text{cyclic}
+\]
+を持つ $B$ は左右 noetherian 整域、quadratic Koszul CY AS4 型14641となる。
+$t$ は正則で
+$\operatorname{gr}_{\mathrm{act}}B=S[t]$ である。
+\end{lemma}
+\begin{proof}
+$V=\langle x_0,x_1,x_2,t\rangle$ とし、関係空間の基底を
+\[
+ r_i=f_i-\frac{\alpha_i}{2}(tx_i+x_it)-\beta_it^2,\qquad
+ k_i=tx_i-x_it
+\]
+と取る。$t\ell$ または $\ell t$ がこの関係空間に入るなら、活動二次部分の
+三つの $f_i$ の独立性、次いで $x_it$ または $tx_i$ の係数比較から $\ell=0$ である。
+従って $t$ は LBS の意味で1-regularである。
+巡回ポテンシャルの恒等式 $\sum x_if_i=\sum f_ix_i$ から、自由テンソル空間内で
+\[
+ \sum_i x_i r_i-\sum_i(\alpha_i x_i/2+\beta_it)k_i
+ =\sum_i r_i x_i+\sum_i k_i(\alpha_i x_i/2+\beta_it)
+\]
+を得る。左辺は $V\otimes R_B$、右辺は $R_B\otimes V$ に属し、$t=0$ で
+$S$ の非零三次トップへ写る。従って $W_3(B)\to W_3(S)$ は全射である。
+LBS\cite[Theorem 2.6, Corollary 2.7]{LBS}の全仮定が揃い、
+$t$ の正則性、Koszul AS4、noetherian 整域性と所要の Hilbert 級数を得る。
+
+四次テンソル
+\[
+ w_4=\sum_i(r_i\otimes k_i+k_i\otimes r_i)
+\]
+は符号付き巡回的である。$R_B\otimes R_B$ に属することと巡回性から
+$w_4\in W_4(B)$ となる。二単語
+$(yz,zx,xy,tx,ty,tz)$ で切り出した係数行列の行列式は $-p^6\ne0$ であり、
+AS4 の一次元トップを張る。従って中山自己同型は恒等である。
+この64個の三次恒等式、256個の四次巡回恒等式と小行列式は
+\texttt{verify\_cubic\_integrated\_envelope.py} が全係数で検証する。
+
+最後に $S[t]\twoheadrightarrow\operatorname{gr}_{\mathrm{act}}B$ がある。
+元の全次数を固定すると活動次数濾過は有限であり、両辺の全次数 Hilbert 級数は
+$(1-s)^{-4}$ で一致するから、この全射は同型である。
+\end{proof}
+
+\begin{theorem}[全Clifford切断の平坦なAS4包絡付き形式積分]
+\label{thm:integrated-formal-as4}
+$k=\mathbb C$、$h\in\mathcal H$ とし、$\beta,A,B,C,D\in k$ を任意に固定する。
+$\mathcal O=k[[\gamma]]$、$K=k((\gamma))$ とする。
+前節の包絡 $\mathcal B$ と中心切断
+$\mathcal R=\mathcal B/(\mathcal G_\gamma)$ を $\mathcal O$ 上に取ると、
+\begin{enumerate}
+\item 各斉次成分 $\mathcal B_n,\mathcal R_n$ は有限自由 $\mathcal O$ 加群であり、
+特殊繊維と全次数 Hilbert 級数は所望の Clifford 包絡と切断のものに一致する。
+\item 一般繊維 $\mathcal B_K$ は左右 noetherian quadratic Koszul CY AS4 型14641であり、
+$t$ は正則、$\operatorname{gr}_{\mathrm{act}}\mathcal B_K=S_K[t]$ となる。
+\item $\mathcal B,\mathcal R$ およびその一般繊維は整域であり、
+$\mathcal G_\gamma$ は正則中心三次元である。一般繊維では
+$Q(\mathcal R_K)=\mathcal B_K$ となる。
+\end{enumerate}
+この定理は任意の固定した特殊切断の H3 条件に依存しない。
+特に特殊切断が H3 であっても、そのことだけで一般繊維の H3 を結論しない。
+\end{theorem}
+\begin{proof}
+まず $t=0$ の三変数環を認識する。最高次の巡回ポテンシャルは
+\[
+ \Phi_\gamma=(1+\gamma)xyz+(1-\gamma)xzy
+                   -\frac h3(x^3+y^3+z^3).
+\]
+$\Phi_0$ は既に認識した Clifford CY AS3 のポテンシャルである。
+Etingof--Ginzburg の形式変形定理を適用すると、$S_{\mathcal O}$ は次数ごとに
+$\mathcal O$ 上有限自由となり、一般繊維のポテンシャルは CY3 となる。
+ここでは各活動次数の dg 複体の項が有限自由であるという
+\cite[Corollary 7.2.4]{EGdelpezzo}の仮定も満たしている。
+
+AS/Koszul 条件も確認する。$\Phi_\gamma$ の巡回微分と三次トップから作る
+$1,3,3,1$ の小 Koszul 複体は、特殊繊維では $S_h$ の解消である。
+各内部次数の項は有限自由 $\mathcal O$ 加群なので、完備性と Nakayama の補題で
+その正次数の完全性が持ち上がる。双対複体にも同じ議論を適用すれば
+AS Gorenstein 条件と parameter 3 を得る。
+従って $S_K$ は quadratic Koszul CY AS3、Hilbert 級数 $(1-s)^{-3}$ である。
+前補題を $p=1+\gamma,q=1-\gamma,\alpha=-4\gamma(A,B,C)$ に適用し、
+$\mathcal B_K$ の全ての主張を得る。
+
+次に $\mathcal B_n$ は有限表示 $\mathcal O$ 加群である。
+その一般繊維と特殊繊維の次元は、ともに $\binom{n+3}{3}$ で一致する。
+DVR 上の有限生成加群の構造定理から torsion 部分は零であり、従って有限自由である。
+これは全ての $n$ に対する議論であり、次数4までの検算からの推測ではない。
+
+$\mathcal G_\gamma$ の係数は前節より $\mathcal O$ に入り、特殊化は
+$G_0=g_\beta+t(Ax^2+By^2+Cz^2)+Dt^3$ である。
+$G_0$ は既に認識した整域 $B_{h,\beta}$ 上非零、従って正則である。
+有限自由加群間の写像
+$\mathcal B_{n-3}\xrightarrow{\mathcal G_\gamma}\mathcal B_n$
+は特殊繊維で単射なので、$\mathcal O$ 上分裂単射で cokernel は有限自由となる。
+これで $\mathcal R_n$ の自由性と全次数 Hilbert 級数を得る。
+$\gamma$-進分離性と特殊繊維の整域性から、非零元の最初の $\gamma$-係数の積を
+見ることで $\mathcal B,\mathcal R$ は整域となる。
+一般繊維もその中心局所化だから整域である。
+二次包絡の主張は、三次元で割っても二次関係空間が変わらないことによる。
+\end{proof}
+
+\subsection{実際の複素数体上のH3対象への帰着}
+\label{subsec:integrated-complex-h3}
+$p=1+\gamma,q=1-\gamma$ とし、明示的な代数的開集合
+\[
+ \mathcal V=\{(h,\gamma):h\in\mathcal H,\quad pq\ne0,\quad\Delta\ne0\}
+\]
+を取る。これは $\gamma=0,h\in\mathcal H$ を全て含む。
+以下では $\gamma\ne0$ の部分を $\mathcal V^*$ と書く。
+
+\begin{proposition}[数値パラメータ全体の平坦な包絡・切断族]
+\label{prop:integrated-algebraic-flat}
+$\mathcal V\times\mathbb A^7_{A,B,C,\beta,D}$ 上で、前節の有理式は
+全次数平坦な graded 包絡族と三次商族を定める。
+全包絡繊維は CY AS4 型14641、全商繊維は整域である。
+\end{proposition}
+\begin{proof}
+前二補題から全包絡繊維は同じ Hilbert 級数の AS4 である。
+各次数の関係行列は有限次元で、既約・被約な底上で階数が全閉点で一定である。
+従ってその cokernel は有限局所自由となる。
+
+前節の中心性は稠密な有理式 chart 上で検証済みである。
+$\mathcal G_\gamma$ の自由単語係数の分母は $1+\gamma,h,1+h^3$ の因子だけであり、
+$\gamma$ による見かけの分母は全係数で消えるので $\mathcal V$ 上正則である。
+交換子は有限局所自由な次数4成分の切断であり、稠密開集合上零なら底全体で零である。
+
+$t=0$ の最高活動三次元は $\gamma=0$ で $g_h$ である。
+最高次元の関係類が非零であることも確認する。
+活動自由代数を交換子で割り、$x^3,y^3,z^3$ と三文字全てを含む単語の巡回類の
+block を見る。$U=[xyz],V=[xzy]$ とし、Rains の変数を $q_R,\tau$ と書くと、
+三つの関係は $[x^3]=[y^3]=[z^3]=(U-q_RV)/\tau$ だけであり、この block は $U,V$ の二次元である。
+$\Omega_3$ の巡回類は
+\[
+ \tau(q_R+1)\{(1+2q_R^3-\tau^3)U-q_R(q_R^3+\tau^3+2)V\}
+\]
+となる。二係数が同時に零なら $q_R^3=\tau^3=-1$ となり、元の係数では
+$p^3=q^3=-h^3$、従って $\Delta=0$ で矛盾する。
+$\gamma=0$ でも $(q_R+1)/\gamma=2/(1+\gamma)$ は単元であるから、
+正規化した最高次類は全 $\mathcal V$ で非零である。
+曲線と graph の議論を次の命題で確認すると、この中心元 $g$ の商は滑らかな楕円THCRであり、
+全三次商の活動随伴環はそのTHCRと $k[t]$ のテンソル積になる。
+従って全商繊維は整域となる。$\gamma=0$ では前節の全 Clifford 切断の整域性を使う。
+中心元は各包絡繊維上正則だから、商の Hilbert 級数も全繊維で一致する。
+同じ有限関係行列の一定階数の議論で、商族も次数ごとに有限局所自由となる。
+\end{proof}
+
+\begin{proposition}[明示的開集合上の全中心値の帰着]
+\label{prop:integrated-actual-h3}
+$(h,\gamma)\in\mathcal V^*$ とする。
+任意の $A,B,C,\beta$ について、対応する包絡 $B$ は前補題の CY AS4 整域である。
+また $S=B/(t)$ は
+\[
+ Z(S)_1=Z(S)_2=0,\qquad Z(S)_3=kg,\qquad
+ S/(g)=B(E,\mathcal O_E(1),\rho)
+\]
+を満たし、$E$ は滑らかな整楕円曲線、$\rho$ は非零 translation である。
+従って全 $D$ の切断は整域で、構造対象の Gabriel--Krull rank、飽和、例外性、AZ 条件を満たす。
+残る H3 条件は正確に
+\[
+ \gldim\left(B[t^{-1}]_0/(\mathcal G_\gamma/t^3)\right)<\infty
+\]
+である。特に包絡と中心元の定義体上超越的な全 $D\in\mathbb C$ は H3 を与える。
+\end{proposition}
+\begin{proof}
+最高次の AS3 と包絡の AS4 は前二補題で全パラメータについて認識済みである。
+$p=1+\gamma,q=1-\gamma$ とする。point matrix は
+\[
+ M(X)=\begin{pmatrix}-hx&pz&qy\\qz&-hy&px\\py&qx&-hz\end{pmatrix},\qquad
+ \det M=hpq(x^3+y^3+z^3)+(p^3+q^3-h^3)xyz.
+\]
+その三次曲線が滑らかである条件は
+\[
+ hpq\ne0,\qquad
+ \Delta=(p^3+q^3-h^3)^3+27h^3p^3q^3\ne0.
+\]
+$\gamma=0$ では $\Delta=-(h^3-8)(h^3+1)^2\ne0$ だから非空の開条件である。
+滑らかさから $M$ の階数は曲線上常に2であり、核と転置行列は関係の graph が
+自己同型 $\rho:E\to E$ を定めることを与える。
+不動点の方程式は $2yz=hx^2$ とその巡回置換で、$h^3\ne8$ より解を持たない。
+不動点を持たない楕円自己同型は非零 translation である。
+flex 原点 $o=(1:-1:0)$ の像は $(q:p:-h)$ である。
+三等分点は Hesse pencil の九つの flex、すなわちいずれかの座標が零の点であり、
+$hpq\ne0$ より $\rho^3\ne1$ となる。
+
+graph の二次関係から $S\to B(E,\mathcal O_E(1),\rho)$ を得る。
+次数3の line 束とその translate が非同型であること、および高次数では次数差が正であることから、
+既出の pencil trick により全 twisted 乗法は全射である。
+なお $S$ の整域性は、LBS の同じ系を自明拡大 $S[u]$ に適用し、
+その部分環 $S$ を見ることでも従う。中心三次 $g$ の像が非零なら一次切断との可換性は $\rho^3=1$ を強いるので、像は零である。
+$S$ は整域、$g$ は正則だから、Hilbert 級数を比較して
+$S/(g)\simeq B(E,\mathcal O_E(1),\rho)$ を得る。
+低次数中心も全係数で確認する。
+次数1,2の中心元はTHCRに単射で写り、次数 $m$ の像が非零で中心なら
+一次切断との可換性から $\rho^m=1$ を強いる。
+ここでは $\rho\ne1,\rho^3\ne1$ であり、さらに原点を固定する逆元写像は $(x:y:z)\mapsto(y:x:z)$ である。
+$\rho^2=1$ なら $\rho(o)=(q:p:-h)$ が二等分点であり、その第三座標は非零なので $p=q$、すなわち $\gamma=0$ となる。
+従って $\mathcal V^*$ 上では $Z(S)_1=Z(S)_2=0$ である。
+三次中心元はTHCRで零となるので $Z(S)_3=kg$ を得る。
+独立な有理数計算の control として $(h,\gamma)=(-2,-1/3)$、すなわち
+Sklyanin $(1,2,3)$ の中心次元 $0,0,1$ も再検算しているが、これを全係数への外挿には使わない。
+従って良い楕円中心拡大の仮定が全て確認され、
+定理\ref{thm:r13-exact-cut-reduction}と命題\ref{prop:r13-all-cut-domain-rank}を適用できる。
+固定包絡で $D$ は中心値を定数倍1で動かすので、超越的な全 $D$ の主張は
+命題\ref{prop:r13-all-transcendental-cuts}による。
+任意の体拡大で大域次元が自動的に保たれると仮定してはいない。
+\end{proof}
+
+\begin{corollary}[既分類Clifford部分の外のH3対象]
+任意の $(h,\gamma)\in\mathcal V^*$ において $A=1,B=C=0$、
+例えば $\beta=(-1,0,0)$ と固定し、定義体上超越的な $D$ を取れば、
+既分類の Clifford 包絡を持つものとは内在的 pointed 同型でない H3 対象を得る。
+\end{corollary}
+\begin{proof}
+H3 は前命題による。両方の包絡の中心一次直線は $kt$ であり、内在的 pointed 同型は
+二次包絡の graded 同型を誘導するから、この直線とその商を保つ。
+一方、ここでは $\dim Z(S)_2=0$、Clifford 部分では $\dim Z(S_h)_2=3$ であり、
+この不変量が一致しない。これは本稿の既分類部分を越えるという意味であり、
+Etingof--Ginzburg 型の代数そのものを新発見と主張するものではない。
+\end{proof}
+
+\begin{remark}[未解決部分と有限位数の具体的な次の枝]
+一般の固定係数での悪い $D$ の全一覧、元の各 H3 特殊点から一般 H3 点への
+相対的な開性、全内在的群oid と降下はまだこの命題には含まれない。
+計算上は
+\[
+ \rho^2(o)=(-p(h^3+q^3):q(h^3+p^3):h(p^3-q^3))
+\]
+であり、良い AS3 locus 上で $\rho$ の位数が4となる条件は
+$\gamma^4=1+h^3$ である。
+実際、二等分点の条件は第一、第二座標の一致であり、差は
+$2(\gamma^4-1-h^3)$、$\rho^2(o)=o$ は $\gamma=0$ の場合だけである。
+$h=1,\gamma^4=2$ では $\Delta\ne0$ を厳密に確認できる。
+この枝の AS3 条件は補題\ref{lem:integrated-leading-as3}で既に確認できるので、
+既出の有限位数定理により、各固定包絡の悪い中心値は有限となる。
+特に実数 $\gamma=2^{1/4},h=1,A=1,B=C=0,\beta=(-1,0,0),D=\pi$
+は明示的な非Clifford H3 対象を与える。
+包絡と中心元は $\mathbb Q(2^{1/4})$ 上定義され、$\pi$ はこの体上超越的だからである。
+ただしこの枝でも悪い $D$ の全一覧はまだ計算していない。
+\end{remark}

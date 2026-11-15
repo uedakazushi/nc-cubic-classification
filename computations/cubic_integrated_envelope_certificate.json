@@ -1,0 +1,26 @@
+{
+  "version": "classification-v12",
+  "ring": "QQ[p,q,h,alpha_x,alpha_y,alpha_z,beta_x,beta_y,beta_z]",
+  "W3_lift_tensor_identities": 64,
+  "W4_signed_cyclic_tensor_identities": 256,
+  "W4_rank6_minor": "-p**6",
+  "W3_lift": "sum xi*r_i - sum (alpha_i*xi/2+beta_i*t)*k_i = sum r_i*xi + sum k_i*(alpha_i*xi/2+beta_i*t)",
+  "point_curve": "h*p*q*(x**3 + y**3 + z**3) + x*y*z*(-h**3 + p**3 + q**3)",
+  "smooth_discriminant": "27*h**3*p**3*q**3 + (-h**3 + p**3 + q**3)**3",
+  "gamma0_discriminant": "-(h^3-8)*(h^3+1)^2",
+  "translation_origin_image": [
+    "q",
+    "p",
+    "-h"
+  ],
+  "translation_twice_origin": [
+    "-p*(h**3 + q**3)",
+    "q*(h**3 + p**3)",
+    "h*(p**3 - q**3)"
+  ],
+  "order4_equation_on_smooth_nonzero_parameter_locus": "gamma^4=1+h^3",
+  "order4_exact_witness": "h=1,gamma^4=2; discriminant coprime to gamma^4-2",
+  "ordinary_proof_inputs": "IS Theorem1.1/Corollary6.1; EG Proposition7.3.1(i), Lemma7.2.1 and graded argument; LBS Theorem2.6 and Corollary2.7 with actual 1-regularity and W3 surjectivity",
+  "top_central_class_nonvanishing": "Cyclic U,V coefficients vanish simultaneously only if q_R^3=tau^3=-1, excluded by the smooth discriminant",
+  "scope": "All-degree flat AS4-envelope and central-quotient recognition on explicit smooth leading locus, using IS Theorem1.1/Cor6.1 and LBS. H3 iff finite affine global dimension; transcendental central values good; order4 branch has finitely many bad values. No full relative H3 openness, bad-value list or complete H3 classification certificate."
+}
