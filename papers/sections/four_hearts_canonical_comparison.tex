@@ -20,7 +20,7 @@ $\pi:\operatorname{Gr}R\to\QGr R$の右随伴を$\omega$とする．その次数
 $\Hom_{\QGr R}(\pi R(-n),-)$である．$\pi$はexactで，counit
 $\pi\omega I\to I$は各対象で同型である．従ってinjective resolutionに項別に適用して
 $\pi R\omega Y\simeq Y$を得る．非負内部次数へ切断しても，捨てる負次数部分は
-局所有限なtailsのtorsionとなるため$\pi$の像は変わらない．
+右有界なgraded加群としてtailsのtorsionとなるため$\pi$の像は変わらない．
 一方，指定dg同値と$s$の整合性から
 \[
  \RHom_{\cD}(e,s^nX)
@@ -31,7 +31,7 @@ $\pi R\omega Y\simeq Y$を得る．非負内部次数へ切断しても，捨て
 $G(X)$が有界coherentであることから所要の部分圏に入る．
 \end{proof}
 \begin{remark}
-負次数切断に関する主張は，各内部次数を固定した後で右側を切り落とすtorsionの意味である．
+負次数切断に関する主張は，右有界なgraded加群の各元が十分高次数の作用で消えるというtorsionの意味である．
 有限次元でない負次数全体を，一括して有限次元加群と呼んではいけない．
 また環の同定を固定しなければ，次数付き環の自己同型によるtwistの曖昧さが残る．
 $K_0$の一致やorbitのExtの次元だけでは本補題を適用できない．
@@ -53,8 +53,8 @@ $e_W=\OO_W$，$s_W=\Sfun_W^{-1}[2]$とする．
 \end{theorem}
 \begin{proof}
 VdB \cite[(9.5), Proposition 9.2.3(1)]{VdB}の記号で，blow-upを作るsheaf algebraを
-$\mathscr D$，その大域切断を$D$と書くと
-$R\Gamma(X,\mathscr D\OO_X)=D$である．従って(9.5)から
+$\mathcal D$，その大域切断を$D$と書くと
+$R\Gamma(X,\mathcal D\OO_X)=D$である．従って(9.5)から
 $R\delta_*\OO_W\simeq\pi D=\OO_V$となる．
 Lemma 11.1.1によりこの入力は当該反復の各段階で適用できる．
 Theorem 11.1.3は$R\delta_*$の導来同値を与える．標的のSerre同定
@@ -110,5 +110,5 @@ $\delta_*M=0$なら商圏で$M$も零なので，最初の包含も従う．
 \begin{remark}[既知のexceptional objectsとの関係]
 VdB \cite[Theorem 11.2.1, Lemma 11.2.4]{VdB}は既に境界非交叉対象の有限長性と，
 楕円点配置による単純対象数の公式を与えている．従って有限長性や個数の存在自体を本研究の新規性としない．
-次節では，反標準Euler標数からtorsion pairと単純対象の根類を選ぶ方法を記述する．
+第\ref{sec:rootchambers}節では，反標準Euler標数からtorsion pairと単純対象の根類を選ぶ方法を記述する．
 \end{remark}
