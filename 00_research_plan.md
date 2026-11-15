@@ -1,6 +1,6 @@
-# 研究方針：内在的非可換三次曲面の認識とモジュライ
+# 研究方針：内在的非可換del Pezzo曲面と三次三様体のモジュライ
 
-2026-11-15 / project-v12 / recognition-v4。再開時は本書、`research/weak_cubic_axioms.md`、`papers/weak_cubic_axioms.tex`を読む。中心拡大型の詳細は現在有効な二つの専門稿へ進む。
+2026-11-15 / project-v13 / recognition-v4 / dp1-integration-v1。再開時は本書、`research/common_del_pezzo_framework.md`を読み、次数3は`research/weak_cubic_axioms.md`、次数1は`research/dp1_research_plan.md`に進む。各現行論文・研究ノートはその指示に従って読む。
 
 ## I. 恒常的原則と保存許可
 
@@ -12,7 +12,9 @@
 
 ## II. 現在の目標と区別
 
-対象は、gd2のk線形Abel圏Aとrank-one torsion-free対象O、s=S^{-1}[2]のheart保存、AZ ample、三次曲面と同じ全整数のh0で定義されるweakly marked nc cubic surface。通常のnoetherian/Hom有限条件、s不変のrank/torsion理論、相対Serre・Hom底変更を明示する。
+上位目標は、次数1と3に共通するweakly marked非可換del Pezzo曲面の内在的rank、構造対象、反Serre偏極、AZ再構成、反標準環と幾何学的avatarのモジュライ理論を構築することである。異なる次数のHilbert関数、weighted/standard ambient、heartとdg圏、strong/weak markingを混同しない。共通枠組みは`research/common_del_pezzo_framework.md`、次数1固有の目標・証明状態・着手は`research/dp1_research_plan.md`に置く。論文は役割別に独立させ、現行の三次三様体論文と次数3の証明を削除しない。
+
+次数3について対象は、gd2のk線形Abel圏Aとrank-one torsion-free対象O、s=S^{-1}[2]のheart保存、AZ ample、三次曲面と同じ全整数のh0で定義されるweakly marked nc cubic surface。通常のnoetherian/Hom有限条件、s不変のrank/torsion理論、相対Serre・Hom底変更を明示する。
 
 全weak対象の認識と、R(1,3)中心拡大型の分枝の比較は別問題である。全公理と一次生成・二次三次関係・全twistのExt1消滅を満たす量子Fermat例のambientはR13閉包の外にある。従って全対象をR13一成分へ押し込めない。
 
@@ -32,6 +34,10 @@
 
 新旧二つの検算を実行した。一般認識定理・軌道stackの同定は通常の証明であり、有限検算だけの結論ではない。独立査読・形式化・新規性の網羅的確認は未実施。
 
+### 次数1（dP1）の独立した現行結果
+
+`papers/nc_del_pezzo_degree1_moduli.tex`は、Gabriel–Krullによるrank、内在的定義、境界AS正則被覆を仮定したweighted sextic認識、可換dP1の普遍点からの10次元dg候補族、KS計算、補助的A∞表示空間の成分性、avatar/heartの復元問題を保持する。`papers/dp1_anticanonical_models.tex`は滑らかなgenuine del Pezzoと滑らかな楕円境界を仮定した共鳴・反標準qgrの導来比較を保持する。既存稿に証明を記載した結果であり、今回の統合を全証明の独立再検証や新規性確認とは呼ばない。全intrinsic abelian moduliでの10次元成分性と特異/非局所自由境界は未証明。Rainsの数値的non-amplenessの稠密性をAZ失敗や導来変化の稠密性へ読み替えない。詳細は`research/dp1_research_plan.md`、`research/dp1_research_notes.md`。
+
 ## IV. 次の着手方法
 
 最優先は、内在的公理から標準正規一次境界の存在をどこまで導けるかである。まずR1の正規直線incidenceを構成し、反標準切断の商圏のgd1性、楕円型/退化型のHilbert数とSerre作用を調べる。正規切断が存在しない対象もあり得るので、定理3.1の仮定を全域で自明と扱わない。
@@ -41,6 +47,10 @@
 量子FermatではAC disc(f)=0の境界の正則性と、ambientも動くHochschild変形を調べる。BH54という固定ambient中心sectorの計算はHH2=0を意味しない。残余自然自己同型を除く規約なしにH54を裸のAbel圏の全自己同値群と呼ばない。
 
 R13分枝ではAOUのfinite inverse-Serre計算、W(E6)マーキングの存在・数値的一意性・相対降下、weak locusの開性、P1 fibreの除外点を追う。量子Fermat反例の存在とこれらの中心分枝の結果は両立する。
+
+### 次数1の優先課題
+
+特異な反標準曲線と非局所自由gluingの境界における反標準qgrのderived比較とsingularityを最優先とする。その後、AZ heartとGabriel–Krull rankの認識、finite chartからpointed dg/abel moduliへの比較、weighted sexticの相対境界、weak marking忘却を扱う。一般次数への抽象化は、現在の次数1・3の正確な適用範囲を確保してから進める。
 
 ## V. 保持する現行研究
 

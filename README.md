@@ -1,6 +1,14 @@
-# 非可換三次三様体と射影四空間のモジュライ
+# 内在的非可換del Pezzo曲面と非可換三次三様体のモジュライ
 
-2026-11-14 / v8。再開時は[研究方針](00_research_plan.md)、[研究ノート](notes/research_notes.md)、[現行論文](papers/nc_cubic_threefold_moduli.tex)の順に読む。GitHub mainを正本とする。
+2026-11-15 / v9（dP1統合）。まず[研究方針](00_research_plan.md)と[共通枠組み](research/common_del_pezzo_framework.md)を読む。次数1は[dP1方針](research/dp1_research_plan.md)、次数3は[weak cubicノート](research/weak_cubic_axioms.md)、三次三様体は[現行研究ノート](notes/research_notes.md)へ進む。GitHub mainを現行ソースの正本とする。
+
+## 研究の構成
+
+**次数1・dP1**：[内在的定義・10次元候補族・avatar](papers/nc_del_pezzo_degree1_moduli.tex)、[反標準qgr・共鳴と導来比較](papers/dp1_anticanonical_models.tex)、[現行方針](research/dp1_research_plan.md)、[研究ノート](research/dp1_research_notes.md)、[再現手順](research/dp1_reproduction.md)、[検証状態](research/dp1_validation.md)。反標準境界の特異点および全intrinsic abelian moduliへの成分性は未完成。旧ZIPやPDFはGitに収録しない。
+
+**次数3・cubic surface**：[内在的公理と境界認識](papers/weak_cubic_axioms.tex)、[surfaceのambientとモジュライ](papers/cubic_surface_ambient_moduli.tex)、[研究ノート](research/weak_cubic_axioms.md)。量子Fermatの別分枝とR(1,3)の範囲を区別する。
+
+**三次三様体**：[現行論文](papers/nc_cubic_threefold_moduli.tex)と従来の計算・原稿を維持。以下の「現在の結論」と再現コマンドは主に三次三様体の研究を述べる。全nc del Pezzoの分類を主張するものではない。
 
 ## 現在の結論
 

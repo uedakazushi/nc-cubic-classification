@@ -1,10 +1,10 @@
-# Research continuation — 2026-11-15 / recognition-v4
+# Research continuation — 2026-11-15 / recognition-v4 + dP1-integration-v1
 
-Read the current research plan, research/weak_cubic_axioms.md and papers/weak_cubic_axioms.tex. Preserve the current R13/surface proofs and the threefold research on GitHub.
+Read 00_research_plan.md and research/common_del_pezzo_framework.md first. For degree 3, read research/weak_cubic_axioms.md and papers/weak_cubic_axioms.tex; for degree 1, read research/dp1_research_plan.md, research/dp1_research_notes.md, papers/nc_del_pezzo_degree1_moduli.tex and papers/dp1_anticanonical_models.tex. Keep degree-1 weighted sextic recognition distinct from degree-3 quadratic boundary recognition. Preserve current R13/surface proofs and the threefold research.
 
 The regular-normal-boundary recognition theorem is now proved: R/(t)=S0/(g), regular normal linear t, noetherian Koszul AS3 S0 and regular normal g of degree>=3 imply Q(R) is AS4 and R=Q(R)/(G). Presentation bounds are conclusions. Use low-degree agreement with R and Cassidy–Shelton complexity2; do not assume the ambient was PBW. Normality survives twisting here because the defining relation lines are invariant, not because arbitrary twists preserve all normal elements.
 
-The existence of this boundary for every intrinsic weak cubic and algebraicity of the whole weak moduli stack remain open. The quantum Fermat counterexample still excludes universal R13 membership. Its good fixed-ambient central sector is BH54; this is not full deformation rigidity. Keep strict identified fibres, residual-gerbe quotients, and full moduli neighbourhoods distinct.
+The existence of this boundary for every intrinsic weak cubic and algebraicity of the whole weak moduli stack remain open. Degree 1 has its own 10-dimensional pointed dg candidate and smooth-elliptic anticanonical qgr comparison; global intrinsic abelian component identification, singular boundary and non-locally-free gluing remain open. Dense *numerical* resonance alone never proves dense derived change. The quantum Fermat counterexample still excludes universal R13 membership. Its good fixed-ambient central sector is BH54; this is not full deformation rigidity. Keep strict identified fibres, residual-gerbe quotients, and full moduli neighbourhoods distinct.
 
 Run the two exact scripts verify_boundary_fermat.py and verify_quantum_fermat.py, then latexmk the recognition paper. Record checks actually performed. Use Japanese LuaLaTeX and retain complete proofs; distinguish proof, external input, finite computation, conjecture, novelty and independent review.
 
