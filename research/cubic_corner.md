@@ -1,6 +1,12 @@
 # Cubic corner の有限性と4交比：現行研究ノート
 
-2026-11-15 / hearts-v5 / corner-v4。最初に `00_research_plan.md` を読み、証明は `papers/cubic_heart_corner.tex` の定理 `thm:general-position-iff` とその依存箇所を読む。全次数のheart比較は `research/heart_comparison.md` にある。
+2026-11-15 / hearts-v6 / corner-v5。最初に `00_research_plan.md` を読み、証明は `papers/cubic_heart_corner.tex` の定理 `thm:general-position-iff` とその依存箇所を読む。全次数のheart比較は `research/heart_comparison.md` にある。
+
+## 現行の一様次数定理
+
+**証明済み（標数0・18係数非零）**：四交比の11非零条件と `dim C<∞` と `C_7=0` は同値であり、11条件が成立するとき `dim C_6>=8`。従って `U=U_7={Δ11≠0}`、七が最良の一様消滅次数。証明は `papers/sections/cubic_corner_uniform_cutoff.tex`（現行 `papers/cubic_heart_corner.tex` に `\\input`）。AOU(4.9)の滑らかな可換 cubic の線束モデルを用い、道長7の21ブロックを A_a→B_i（6）、B_i→C_j（9）、C_j→A_a（6）に分け、blow-down線束のconic制限・basepoint-free pencil trick・Kodaira/Kawamata--Viehweg消滅により全て `A0` を経由することを示した。対角道長6の八頂点には各1次元以上の商が残る。これは既存のF7全探索からの推論ではない。有限行列 `M_7` の最大小行列式イデアルの根基は四交比Laurent環で `rad(Δ11)` と一致（scheme構造までは主張しない）。
+
+数値仮定は `computations/verify_cubic_corner_c7_geometry.py` で27本の(-1)曲線との交点、四つのblow-down line class、13個のKV nef/big入力を厳密な整数計算で検査した。これは線束の乗法の代数的証明とは別。LuaLaTeXで新規3ページの単独組版検査を実施したが、リポジトリ全文の再組版は未実施。
 
 ## 現行定理（標数0・18係数非零）
 
@@ -26,12 +32,12 @@ AOU型AS helixとのfolding、Serre inverse shift、orbit algebraの飽和、お
 
 必要性：係数零は一閉路、2×2 minor零は2×2支持、det Q零はrank2分解Q=UVと左右核を使い、k[t]上に非冪零三角閉路を持つJacobi表現を構成する。成分逆数行列のdet零はA1/A2を交換して帰着。全文は現在の論文§§3-4、rank2検算 `computations/verify_cubic_corner_rank2.py`。
 
-六点の幾何的同定は `computations/verify_cubic_six_points.py`（標準Pythonのみ）で、9個の自由な座標変数上の6本の普遍的整数多項式恒等式、3つの有理数例、F7の四交比トーラス1296点の全比較（一般位置は80点）を検査した。以前のC7=0の厳密計算（六点witnessでHilbert次元[8,21,33,38,33,21,8,0]、総次元162）、F7の80点すべてでC7=0という有限体観察も保持する。ただし、11条件上で一様にC7=0となるかは未証明である。
+六点の幾何的同定は `computations/verify_cubic_six_points.py`（標準Pythonのみ）で、9個の自由な座標変数上の6本の普遍的整数多項式恒等式、3つの有理数例、F7の四交比トーラス1296点の全比較（一般位置は80点）を検査した。以前のC7=0の厳密計算（六点witnessでHilbert次元[8,21,33,38,33,21,8,0]、総次元162）、F7の80点すべてでC7=0という有限体観察も保持する。現在は一般位置で一様にC7=0が証明済みであり、以前の有限体結果は独立検算として保持する。
 
 ## 次の核心
 
-1. **均一な道長次数の境界**：11条件上でC7=0が常に成立するか、幾何的な層の正則性によって示す。また特異境界・低次数の跳びを調べる。
+1. **低次数のHilbert関数と境界**：最良の一様消滅次数は7と決定した。次は一般位置全域で `dim C_6=8` および `H_C(t)=8+21t+33t²+38t³+33t⁴+21t⁵+8t⁶` が一様か、あるいは低次数に跳びがあるかを判定する。11 divisor上の無限次元表示とAS locusの交叉も区別する。
 2. **Rains/VdBとの実際の比較**：AOUのmutation後E0≅πFをobject levelで検証し、VdBの最後のδ_*に対するkernelと高次pushforwardを実在対象から計算する。自然同値のt-exactnessと別のderived同値を分離する。
 3. **一般次数とmoduli**：全intrinsic cubicを幾何的六点分枝と同一視せず、量子FermatなどOU AS型でない分枝を保持。dP1と他次数のheart比較へ必要十分条件の方法を移植する。
 
-一次資料はAOU §4（4.1,4.9）、§8（8.1,8.4-8.9）と OU arXiv:2508.04986。定理の新規性・初出は未確認。証明記載、整数検算、LuaLaTeX組版は区別する。再現は `python3 computations/verify_cubic_six_points.py`、`latexmk papers/cubic_heart_corner.tex`。推奨の現行名は Rains heart, VdB heart, AS heart, anticanonical heart。
+一次資料はAOU §4（4.1,4.9）、§8（8.1,8.4-8.9）と OU arXiv:2508.04986。定理の新規性・初出は未確認。証明記載、整数検算、LuaLaTeX組版は区別する。再現は `python3 computations/verify_cubic_six_points.py`、`python3 computations/verify_cubic_corner_c7_geometry.py`、`latexmk papers/cubic_heart_corner.tex`。推奨の現行名は Rains heart, VdB heart, AS heart, anticanonical heart。

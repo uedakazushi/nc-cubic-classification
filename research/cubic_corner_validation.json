@@ -1,6 +1,6 @@
 {
   "date": "2026-11-15",
-  "version": "hearts-v5/corner-v4",
+  "version": "hearts-v6/corner-v5",
   "base_commit": "a9100e1a37187f985dc026e3d9d3fa9378b5fa7d",
   "checks": {
     "six_point_general_position": "exact rational",
@@ -37,20 +37,28 @@
     "six_point_rational_cases": 3,
     "F7_six_point_criterion_total_points": 1296,
     "F7_six_point_general_position_points": 80,
-    "F7_criterion_11_equivalence": true
+    "F7_criterion_11_equivalence": true,
+    "c7_uniform_section_latexmk_exit": 0,
+    "c7_uniform_section_latex_pages": 3,
+    "c7_uniform_section_no_overfull": true,
+    "c7_uniform_section_visual_review": "All three locally typeset pages of new proof section reviewed; standalone wrapper only.",
+    "c7_picard_27_curve_intersections": "exact integers, completed",
+    "c7_four_blowdown_classes": "each six disjoint (-1)-curves, verified",
+    "c7_KV_nef_big_divisor_inputs": 13,
+    "c7_new_script_independently_pushed_execution": "Math-equivalent local script executed; pushed script not separately executed after push."
   },
   "proof_scope": {
-    "proved": "finite corner criterion, openness, explicit nonempty open in noetherian AS sector, conditional HRS sign test; four-cross-ratio orbit classification; nine explicit forbidden minor divisors; two determinant-zero corner obstructions via polynomial module representations; sufficiency of all eleven nonvanishing conditions via general-position six-point reconstruction and AOU(4.9) plus Serre vanishing; four-cross-ratio finite locus is marked cubic six-point moduli",
+    "proved": "finite corner criterion, openness, explicit nonempty open in noetherian AS sector, conditional HRS sign test; four-cross-ratio orbit classification; nine explicit forbidden minor divisors; two determinant-zero corner obstructions via polynomial module representations; sufficiency of all eleven nonvanishing conditions via general-position six-point reconstruction and AOU(4.9) plus Serre vanishing; four-cross-ratio finite locus is marked cubic six-point moduli; uniform C7=0 on all eleven-condition parameters and dim C6>=8; radical of M7 maximal-minor ideal equals radical(Delta11)",
     "unproved": [
       "AS regularity for arbitrary potential coefficients",
       "E0=pi F on the noncommutative AOU/VdB comparison",
       "nontrivial VdB kernel on each resonance wall",
       "all four hearts globally coincide",
-      "uniform arrow-length cutoff C_7=0 for all characteristic-zero six-point general-position parameters"
+      "constancy of the entire Hilbert function of C in degrees 0..6 over the eleven-condition locus"
     ],
     "independent_review": false,
     "novelty_exhaustive_search": false,
     "prior_scripts_rerun": false
   },
-  "persistence": "GitHub main canonical; if push succeeds, no Library upload (user instruction)."
+  "persistence": "GitHub main canonical; successful push implies NO Library save."
 }

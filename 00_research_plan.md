@@ -25,7 +25,7 @@
 【優先課題】全14641 ambient成分上の正規三次incidenceの成分・同型群oid・曲面条件・境界・族と降下を決定し、その後intrinsic定義を弱める。GitHub mainを正本とし、GitHub push成功時はLibraryへの保存を行わない。PDFやZIPをGitで追跡せず、TeX・ノート・検算コードを追跡する。
 
 
-2026-11-15 / project-v20 / recognition-v6 / hearts-v5。最初に本書、`research/cubic_corner.md`、`papers/cubic_heart_corner.tex`を読む。比較の共通枠組みは`research/heart_comparison.md`と`papers/nc_del_pezzo_hearts.tex`、共通公理は`research/common_del_pezzo_framework.md`。次数別・三次三様体の研究はそれぞれの現行ノートから再開する。
+2026-11-15 / project-v21 / recognition-v6 / hearts-v6。最初に本書、`research/cubic_corner.md`、`papers/cubic_heart_corner.tex`を読む。比較の共通枠組みは`research/heart_comparison.md`と`papers/nc_del_pezzo_hearts.tex`、共通公理は`research/common_del_pezzo_framework.md`。次数別・三次三様体の研究はそれぞれの現行ノートから再開する。
 
 ## I. 恒常的な研究原則と保存許可
 
@@ -50,6 +50,8 @@
 六点(1:0:0),(0:1:0),(0:0:1),(1:1:1),(1:2:3),(1:4:2)から27係数potentialを切断の積で構成した。全関係を含む厳密計算でCのHilbert関数は[8,21,33,38,33,21,8,0]、総次元162。7次6804列・21blockがQQとF_1000003でfull rank。従ってU7非空。可換点のAS性はAOU既知定理を使い、有限rankからAS性を推論していない。U7の外が全部非一致であるとはしない。
 
 **四交比への還元（証明済み）**：構造頂点A0を除いた商Cはw_{0bc}の9係数に依存しない。残る18係数の非零トーラスは矢rescalingで四交比lambda_ij=q_ij q_00/(q_i0 q_0j)、q_bc=w_{2bc}/w_{1bc}の四変数に還元される。C有限次元なら18係数が全て非零でqの全九つの2×2小行列式も非零。さらにqと成分ごとの逆数行列の二つの行列式も非零でなければならない（rank2因子分解からk[t]値のJacobi表示を構成し非冪零閉路を得る）。minorが零なら2×2支持のJacobi関係を満たす表現に非零3-cycleを作り、Cの無限次元性を示す。有限corner locusは四次元トーラスの非空真開集合である。11個の明示的divisorが悪いlocusの全体であることを六点配置の復元とSerre消滅により証明した。P=(Qの成分逆数)^Tの三列と座標三点が一般位置であることは十一条件と同値。AOU(4.9)の幾何的rolled-up algebraで高次数のHomがO(-mK)を経由するためCが有限次元となる。四交比の有限corner locusは標識付き可換cubicの六点配置空間に同型。F7の80点でC7=0という既存検算は補助結果であり、標数0の十分性はこの幾何学的証明に依存する。新しい証明は`papers/sections/cubic_corner_determinantal_obstructions.tex`、検算は`computations/verify_cubic_corner_rank2.py`。証明は`papers/cubic_heart_corner.tex`、有理数検算は`computations/verify_cubic_corner_torus.py`。AS locusとの交叉と導来同値の問題は別途確認する。
+
+**一様消滅次数の完成（今回証明）**：AOU幾何的rolled-up helixの道長7にある21ブロックを(6,9,6)に分け、4つのblow-down線束と例外曲線への制限、base-point-free pencil trick、Kodaira/Kawamata–Viehweg消滅から全てe=A0を経由することを示した。したがって11条件⇔C有限⇔C_7=0、さらに8頂点の対角でdim C_6≥8。M_7の最大minorイデアルの根基は四交比Laurent環でrad(Δ11)に一致する。証明は`papers/sections/cubic_corner_uniform_cutoff.tex`、整数交点検算は`computations/verify_cubic_corner_c7_geometry.py`。前回の特定六点のH_C計算とF7での80点計算は保持するが、一般定理の証明ではない。AS heartとanticanonical heartの自然同値は、既存のAS/noetherian/folding条件下のみで主張する。
 
 ### HRSと一般heart判定
 
@@ -80,7 +82,7 @@ weakly markedは非零Ext有限noetherian Abel圏、Serre、tau=S^-1[2]のheart�
 ## IV. 優先順位と具体的な着手
 
 1. **Cubicの構造対象と同値の照合**：AOUの実際のmutationでE0≃πFを検証し、AS corner同値と既知のqgr F比較を接続する。数値K0や境界restrictionだけで同定しない。
-2. **均一な道長次数**：11条件によるCの有限次元性は完全に決定した。次は十一条件上でC_7=0が常に成立するかを幾何的な正則性と有限表示から示し、U_7外の高次挙動を分類する。AS locusとの交叉と全モジュライの閉性を混同しない。
+2. **cornerのHilbert関数と境界**：11条件による有限次元性に加え、一般位置全域でC_7=0、C_n=0(n≥7)、dim C_6≥8を証明した。七が最良の一様消滅次数で、四交比トーラスでU=U_7={Δ11≠0}。次は一般位置全域でC_6=8と全Hilbert関数が一様か、低次数の跳びを判定する。AS locusとの交叉と全モジュライの閉性を混同しない。
 3. **VdB最後の段階**：同じ楕円・六点データでker δ_6*とR1δ_6*を実在root対象で計算する。pointednessと周期作用を確認後、単純対象のEuler符号判定を適用する。Rains raw反復と各段階section模型への置換も区別する。
 4. **境界・一般次数**：有限位数、nodal/cuspidal境界、weak avatar、dP1への拡張ではgrading・noetherian性・realizationを再確認する。正規境界の一般存在、相対PBW、marking降下、Fermat分枝の研究は維持する。
 
@@ -89,6 +91,7 @@ weakly markedは非零Ext有限noetherian Abel圏、Serre、tau=S^-1[2]のheart�
     python3 computations/verify_cubic_corner_torus.py
     python3 computations/verify_cubic_corner_rank2.py --scan-f7
     python3 computations/verify_cubic_six_points.py
+    python3 computations/verify_cubic_corner_c7_geometry.py
     python3 computations/verify_cubic_corner.py
     latexmk papers/cubic_heart_corner.tex
 
