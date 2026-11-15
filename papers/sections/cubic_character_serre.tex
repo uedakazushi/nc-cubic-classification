@@ -70,6 +70,36 @@ H3 なら $t$ による同一視でこの対象の Serre 関手は $[2]$ とな�
 標数0では奇数次元が不可能なので、表示した二場合は H3 から除外される。
 \end{proof}
 
+\begin{corollary}[character障害の有限な完全消去算法]
+\label{cor:character-obstruction-elimination}
+固定した任意の $(h,\gamma,a,\beta)$ において、前命題の奇数障害が検出する
+中心値は高々8個であり、有限 Groebner 消去で全て求められる。
+具体的に character イデアルを $I_\chi$ とし、各主余因子 $m_i$ に対して
+\[
+ J_i=\bigl(I_\chi+(\det M,E(N_i),\mathcal G_D)\bigr):m_i^\infty
+\]
+を作る。$J_i\cap k[D]$ の零集合の和集合に、階数0の値を加えたものが
+正確な character 奇数障害集合である。被約な値の多項式は、その和集合の
+消去イデアルの radical から一意の monic square-free 多項式として得られる。
+これは固定係数の算法であり、係数を動かしたときの saturation・radical と
+基底変更の可換性を無条件に主張しない。
+\end{corollary}
+\begin{proof}
+character 方程式の最高次は $2YZ-hX^2$ とその巡回置換であり、
+射影共通零点は存在しない。座標に零があれば全て零となり、全座標が非零なら
+三式の積から $h^3=8$ となるからである。
+従って三つの最高次二次式は正則列となり、filtered Koszul 複体から
+inhomogeneous character 完全交叉は全係数で長さ8を持つ。
+台の各点は一つの中心値にしか写らないので、値の個数は高々8である。
+
+階数2は少なくとも一つの $m_i\ne0$ という三つの chart で覆われ、
+各 $J_i$ はその chart の全ての対象と中心値を正確に表す。
+固定した character scheme は有限なので、その部分集合の中心値への像も閉集合であり、
+saturation と消去は余分な極限点を加えない。
+階数0は $\xi=a=\beta=0$、中心値 $D=0$ の場合だけである。
+前命題の全階数の判定により、以上で全 character 奇数障害を尽くす。
+\end{proof}
+
 \begin{proposition}[位数4の固定包絡での一つの明示的な悪い値]
 \label{prop:order4-character-bad-value}
 $h=1$、$\gamma^4=2$ とし

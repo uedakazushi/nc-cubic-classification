@@ -4,7 +4,7 @@
 
 最優先は位数4積分族の全 bad D の決定。一次元表現だけについては `cubic_character_serre.tex` と `verify_cubic_character_serre.py` に全奇数Ext1障害を判定する余因子恒等式を得た。Jacobian/2=M の階数2では、核の射影点が楕円 point curve E にあるとき正確に自己Ext1=1。階数1は2、階数3は0、階数0は3。これは全単純表現・高次Extの判定ではない。
 
-固定 h1,gamma^4=2,a=(1/(2gamma),1/(2gamma),0),beta=(1,1,2) では character CI 長さ8、critical scheme は (x+y-2,(y-1)^2,z) の長さ2で台(1,1,0)。中心値のscheme imageは被約な一点 Dstar=(2gamma^4+10gamma^3+21gamma²+19gamma+13)/(4(1+gamma)^5)。Dstarは確実にbad、piは同じ包絡でgood。他のDの良否は未決定。次はこの固定包絡で高次元単純表現／有限中心を計算し、Dstar以外のbadがあるかを判定する。characterだけの結果を完全bad一覧に昇格しない。
+固定 h1,gamma^4=2,a=(1/(2gamma),1/(2gamma),0),beta=(1,1,2) では character CI 長さ8、critical scheme は (x+y-2,(y-1)^2,z) の長さ2で台(1,1,0)。中心値のscheme imageは被約な一点 Dstar=(2gamma^4+10gamma^3+21gamma²+19gamma+13)/(4(1+gamma)^5)。Dstarは確実にbad、piは同じ包絡でgood。他のDの良否は未決定。この固定包絡で次数4以下の中心計算も完了した。`verify_cubic_order4_center.py` は g^4=2 の体上、包絡の次数0..5の次元(1,4,10,20,35,56)を逐次商で作り、中心三次商の次数4/5次元31/46を小行列で求める。138×31交換子行列はD一次。Dに関する重み付き一次ansatzは核次元5（定数1,Dと三四次中心元）、三つの最高四次は独立。全交換子はD記号のまま正確に零と確認、係数式を小JSONに保存した。中心全体の生成・全Dの基底変更に関するfiltered帰納証明、および三中心元の三次関係の係数は次の原稿化・計算対象。未計算の関係や全bad値を完成扱いしない。次はこの固定包絡で高次元単純表現／有限中心を計算し、Dstar以外のbadがあるかを判定する。characterだけの結果を完全bad一覧に昇格しない。
 
 計算の目的・停止基準：まず全 character とそのcritical scheme・中心像を有限Groebner計算で完全に確認する（済）。次のPI中心計算は次数4の中心候補を正確に得た時点でcheckpointし、中心関係や局所global dimensionの証明なしにsmoothnessを断定しない。大きい次数の自由単語全列挙は避け、次数ごとの商基底と乗法を使う。
 

@@ -176,7 +176,8 @@
   },
   "commands_executed": {
     "python3 computations/verify_cubic_character_serre.py": "PASS: all-parameter3 cofactor/point-curve identities,3 rank1 span identities, exact length8 character CI and length2 critical scheme, reduced singleton central image and closed Dstar formula",
-    "latexmk papers/weak_cubic_axioms.tex": "PASS: Japanese LuaLaTeX,67 pages; no unresolved refs/cites or overfull boxes"
+    "latexmk papers/weak_cubic_axioms.tex": "Earlier v14 full build PASS67 pages; newly added fixed-parameter elimination corollary not yet rebuilt at this timed checkpoint",
+    "python3 computations/verify_cubic_order4_center.py": "PASS: degreewise AS4 quotient dimensions1,4,10,20,35,56; small central quotient4x35/10x56; symbolic-D commutator matrix138x31 degree1; five-dimensional constant-field weighted ansatz, three independent polynomial-D quartics plus constant"
   },
   "commands_retained_from_v9": {
     "python3 computations/verify_cubic_clifford_beta.py": "PASS: all-parameter8x8 central volume and Schur determinant, character-coordinate Jacobian, universal12-variable Hessian/Yoneda identity, exact four-node nonsplit center and reduced8-point character scheme",
@@ -249,6 +250,7 @@
   "new_v14_results": [
     "Entire character odd-self-Ext1 obstruction on V*: rank2 kernel on point curve, or rank0; all ranks1/3 have even self-Ext1.",
     "Fixed order4 envelope alpha=(-2,-2,0),beta=(1,1,2) has exactly one character-odd obstruction value Dstar; critical scheme length2 maps to reduced singleton.",
-    "Dstar definitely fails H3, pi is good for same envelope. Complete bad-D list remains unknown."
+    "Dstar definitely fails H3, pi is good for same envelope. Complete bad-D list remains unknown.",
+    "Computed and exactly verified three independent quartic central lifts over QQ(g)[D],g^4=2, for the fixed envelope. Cubic relation and full-center consequences await proof/computation, not all bad-D values."
   ]
 }
