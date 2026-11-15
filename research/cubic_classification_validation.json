@@ -1,6 +1,6 @@
 {
   "date": "2026-11-15",
-  "version": "classification-v9",
+  "version": "classification-v10",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -118,9 +118,9 @@
     "dependencies": "Workspace-local TeX Live 2025 packages restored from the Utah historic mirror; no generated PDFs or caches tracked"
   },
   "pdf": {
-    "pages": 56,
+    "pages": 58,
     "references": "No unresolved references/citations or overfull boxes in final log",
-    "layout": "All56 pages rendered in contact sheet; detailed new proof pages38–41 inspected, no clipping or overflow observed"
+    "layout": "All58 pages rendered; contact sheet and detailed new proof pages42–44 inspected"
   },
   "limits": [
     "Not full intrinsic H3 coverage: other elliptic orders, nonsymmetric/non-CY central extensions, other low-commutator and resonant AS4 strata, ambient-direction deformations and global coverage remain",
@@ -129,7 +129,8 @@
     "No independently performed peer review, formalization or exhaustive novelty audit",
     "Concurrent heart/corner work preserved but not independently reaudited here",
     "The earlier split-pencil Lambda=C* theorem assumes low center Z(S)1=Z(S)2=0,Z(S)3=kg; it is not applied as a full-cubic-incidence classification when Z(S)2 is nonzero.",
-    "The v9 quotient describes geometric objects and pointed arrows. The entire admissible set is given by a finite geometric criterion and contains a dense open; no unproved full relative intrinsic stack descent or global componenthood is asserted."
+    "The v9 quotient describes geometric objects and pointed arrows. The entire admissible set is given by a finite geometric criterion and contains a dense open; no unproved full relative intrinsic stack descent or global componenthood is asserted.",
+    "v10 classifies only the four specified first-order envelope directions. The explicit central lift is not a higher-order integration or a new H3 family/component."
   ],
   "as4_import_manifest": "research/as4_imports.json",
   "commands_retained_from_v4": {
@@ -167,9 +168,18 @@
     "latexmk papers/weak_cubic_axioms.tex": "PASS: Japanese LuaLaTeX,50 pages; no unresolved references/citations or overfull boxes"
   },
   "commands_executed": {
+    "python3 computations/verify_cubic_clifford_second_order.py": "PASS: reruns first-order all-parameter certificate; all degree4 second-order syzygies and centrality equations; explicit kappa and G2; denominator audit over QQ[h,beta,A,B,C,D,1/h,1/(1+h^3)]",
+    "latexmk papers/weak_cubic_axioms.tex": "PASS: Japanese LuaLaTeX,58 pages; no unresolved references/citations or overfull boxes; rendered and inspected"
+  },
+  "commands_retained_from_v9": {
     "python3 computations/verify_cubic_clifford_beta.py": "PASS: all-parameter8x8 central volume and Schur determinant, character-coordinate Jacobian, universal12-variable Hessian/Yoneda identity, exact four-node nonsplit center and reduced8-point character scheme",
     "python3 computations/verify_cubic_clifford_beta_action.py": "PASS: all9 Hessian-generator composition identities over QQ(zeta3)(h), including the essential mixed D correction; scalar2 cancellation control plus ordinary homogeneous-degree proof of general weights",
     "python3 computations/verify_cubic_clifford_lift.py": "PASS rerun: universal99 degree4 relation identities,256 signed-cyclic quartic identities, constant rank6 minor-1 and central-lift obstruction determinant",
     "latexmk papers/weak_cubic_axioms.tex": "PASS: Japanese LuaLaTeX,56 pages; no unresolved references/citations or overfull boxes; rendered contact sheet and detailed new proof pages inspected"
-  }
+  },
+  "new_v10_results": [
+    "Specified four envelope directions: central cubic lifts iff alpha=-4*gamma*(A,B,C), for ALL good h and beta,A,B,C,D.",
+    "Exact rank86 relation unit chart h^14*(1+h^3)^11, rank15 commutator unit chart -256*h^6, and alpha-obstruction unit minor -9/(4*(1+h^3)^2).",
+    "Explicit central lift extends through epsilon^3=0 with all second-order degree4 syzygies, explicit kappa and eight-term G2; no full formal integration or H3-family conclusion."
+  ]
 }

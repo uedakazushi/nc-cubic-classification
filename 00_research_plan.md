@@ -1,5 +1,7 @@
 # 研究方針：非可換del Pezzo曲面のheart比較と内在的モジュライ
 
+classification-v10 では、この族から外れる指定四方向の一次中心 incidence も全係数で判定した。双対数上で最高次を `(1+epsilon*gamma)yz+(1-epsilon*gamma)zy` に変え、対角項を `epsilon*alpha_x*tx`（巡回）だけ動かすと、三次中心切断の持ち上げは正確に `alpha=-4*gamma*(A,B,C)` のとき存在する。持ち上げを明示し、全ての h,beta,A,B,C,D に通用する次数4の階数86、三次交換子階数15、単元障害行列式 `-9/(4*(1+h^3)^2)` を検算した。これは指定方向の一次 incidence であり、積分可能性・全変形空間・新しい H3 成分を主張しない。 また、この明示的持ち上げの二次障害も全係数で消え、対角係数の二次補正 kappa と中心切断 G2 を計算した（epsilon^3=0）。三次以上の積分可能性と H3 族への実現は未解決である。
+
 ## 最上位の分類目標と実行計画（2026-11-15）
 
 **現在の最優先課題は強いintrinsic定義の14641型非可換三次曲面 H3 の完全分類。** 詳細なCodex指示は research/cubic_14641_codex_plan.md に置く。R=⊕Hom(O,tau^n O) は一次生成、二次包絡B=Q(R)は左右noetherian quadratic Koszul AS4、型14641。G∈B3の正則正規性とR=B/(G)は現行認識定理の結論であり公理ではない。

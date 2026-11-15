@@ -1,5 +1,7 @@
 # Codex: 14641 intrinsic nc cubic classification
 
+classification-v10 では、この族から外れる指定四方向の一次中心 incidence も全係数で判定した。双対数上で最高次を `(1+epsilon*gamma)yz+(1-epsilon*gamma)zy` に変え、対角項を `epsilon*alpha_x*tx`（巡回）だけ動かすと、三次中心切断の持ち上げは正確に `alpha=-4*gamma*(A,B,C)` のとき存在する。持ち上げを明示し、全ての h,beta,A,B,C,D に通用する次数4の階数86、三次交換子階数15、単元障害行列式 `-9/(4*(1+h^3)^2)` を検算した。これは指定方向の一次 incidence であり、積分可能性・全変形空間・新しい H3 成分を主張しない。 また、この明示的持ち上げの二次障害も全係数で消え、対角係数の二次補正 kappa と中心切断 G2 を計算した（epsilon^3=0）。三次以上の積分可能性と H3 族への実現は未解決である。
+
 2026-11-15. This document is the authoritative execution plan for the 14641 subclass. Read 00_research_plan.md, research/cubic_14641_classification.md and papers/weak_cubic_axioms.tex before beginning. Existing heart/corner and other del Pezzo projects remain current and must be preserved.
 
 ## Explicit continuation instruction from the user

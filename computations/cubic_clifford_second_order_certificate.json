@@ -1,0 +1,79 @@
+{
+  "version": "classification-v10",
+  "modulus": "epsilon^3=0",
+  "ring": "QQ[h,beta_x,beta_y,beta_z,A,B,C,D,1/h,1/(1+h^3)]",
+  "first_envelope_coefficients": "gamma=1,alpha=-4(A,B,C)",
+  "second_alpha_coefficients": [
+    "4*A*(h**3 + 3)/((h + 1)*(h**2 - h + 1))",
+    "-4*B*(3*h**3 + 1)/((h + 1)*(h**2 - h + 1))",
+    "-4*C*(h**3 - 3)/((h + 1)*(h**2 - h + 1))"
+  ],
+  "second_central_correction": [
+    {
+      "active_word": [
+        1,
+        1,
+        1
+      ],
+      "t_power": 0,
+      "coefficient": "3*h*(2*h**3 - 1)/((h + 1)**2*(h**2 - h + 1)**2)"
+    },
+    {
+      "active_word": [
+        2,
+        1,
+        0
+      ],
+      "t_power": 0,
+      "coefficient": "-(h**3 - 2)*(2*h**3 - 1)/((h + 1)**2*(h**2 - h + 1)**2)"
+    },
+    {
+      "active_word": [
+        1,
+        0
+      ],
+      "t_power": 1,
+      "coefficient": "-2*C*h**2*(2*h**3 + 3)/((h + 1)**2*(h**2 - h + 1)**2)"
+    },
+    {
+      "active_word": [
+        1,
+        2
+      ],
+      "t_power": 1,
+      "coefficient": "2*A*h**2*(2*h**3 + 1)/((h + 1)**2*(h**2 - h + 1)**2)"
+    },
+    {
+      "active_word": [
+        2,
+        0
+      ],
+      "t_power": 1,
+      "coefficient": "-2*B*h**2*(2*h**3 + 3)/((h + 1)**2*(h**2 - h + 1)**2)"
+    },
+    {
+      "active_word": [
+        0
+      ],
+      "t_power": 2,
+      "coefficient": "(12*A**2*h**5 + 16*A**2*h**2 - 8*B*C*h**4 + 4*B*C*h - 2*beta_x*h**3 + beta_x)/((h + 1)**2*(h**2 - h + 1)**2)"
+    },
+    {
+      "active_word": [
+        1
+      ],
+      "t_power": 2,
+      "coefficient": "-2*(-4*A*C*h**4 - 10*A*C*h + 10*B**2*h**5 + 8*B**2*h**2 - 2*beta_y*h**3 + beta_y)/((h + 1)**2*(h**2 - h + 1)**2)"
+    },
+    {
+      "active_word": [
+        2
+      ],
+      "t_power": 2,
+      "coefficient": "(4*A*B*h + 4*C**2*h**5 + 24*C**2*h**2 - 2*beta_z*h**3 + beta_z)/((h + 1)**2*(h**2 - h + 1)**2)"
+    }
+  ],
+  "degree4_second_order_all_syzygies_lift": true,
+  "denominators": "Only h and 1+h^3 factors; all beta and cut coefficients included",
+  "limits": "Existence through epsilon^3 only. No third/higher order integration, genuine H3 family, full ambient tangent space, component or full relative stack claim."
+}

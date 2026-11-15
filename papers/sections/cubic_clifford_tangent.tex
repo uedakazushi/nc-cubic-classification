@@ -1,0 +1,146 @@
+\subsection{Clifford 部分から外れる中心三次 incidence の一次方向}
+\label{subsec:clifford-transverse-tangent}
+前節の全切断分類は、最高次の反交換関係を固定した部分の分類である。
+その外への候補を、中心三次元が持ち上がるという有限次数の条件から調べる。
+以下は任意のよい $h$ と全ての $\beta,A,B,C,D$ に対する一次の計算であり、
+形式変形の積分可能性や新しい H3 成分の存在を結論しない。
+
+$k_\epsilon=k[\epsilon]/(\epsilon^2)$ とし、中心 $t$ を保つ関係式を
+\begin{equation}\label{eq:clifford-tangent-relations}
+ (1+\epsilon\gamma)yz+(1-\epsilon\gamma)zy
+ =hx^2+\epsilon\alpha_x tx+\beta_x t^2
+\end{equation}
+およびその巡回置換とする。$h,\beta$ はこの式では固定する。
+切断の特殊繊維は前節と同じ
+\[
+ G_0=g_\beta+t(Ax^2+By^2+Cz^2)+Dt^3
+\]
+であり、$\dot G$ には任意の同次三次元を許す。
+
+\begin{proposition}[指定四方向の中心 incidence 接空間]
+\label{prop:clifford-transverse-tangent}
+関係式 \eqref{eq:clifford-tangent-relations} の下で
+$G_0+\epsilon\dot G$ が中心となるための必要十分条件は
+\begin{equation}\label{eq:clifford-tangent-criterion}
+ \alpha_x=-4A\gamma,\qquad
+ \alpha_y=-4B\gamma,\qquad
+ \alpha_z=-4C\gamma
+\end{equation}
+である。固定したこの包絡方向について、持ち上げの全体は
+$Z(B_{h,\beta})_3$ を平行移動した五次元アフィン空間となる。
+特に $\gamma=1$ に対する一つの持ち上げは、$d=1+h^3$ として
+\begin{align*}
+ d\dot G={}&-3hy^3+(h^3-2)zyx
+       +2h^2t(Cyx-Ayz-Bzx)\\
+ &-t^2\bigl((4h^2A^2+4hBC-\beta_x)x
+        +2(2hAC+2h^2B^2+\beta_y)y\\
+ &\hspace{37mm}+(4hAB+4h^2C^2-\beta_z)z\bigr).
+\end{align*}
+全ての係数で次数 $3,4$ の包絡成分も $k_\epsilon$ 上自由であり、
+その階数はそれぞれ $20,35$ である。
+\end{proposition}
+
+\begin{proof}
+必要な線形代数を、特殊点でも有効な単元小行列式とともに記す。
+中心 $t$ を左に移し、次数 $n$ の単語 $t^{n-|w|}w$ を $|w|\leq n$ の
+活動変数の単語で表す。これは $t=1$ という記法による有限次元計算であり、
+$t$ を可逆化して低次数の関係を推測する操作ではない。
+係数環を
+\[
+ \mathcal A=\mathbb Q[h,\beta_x,\beta_y,\beta_z,A,B,C,D,
+                       h^{-1},(1+h^3)^{-1}]
+\]
+とする。特殊繊維の三関係式に左右から長さの和が $2$ 以下の単語を
+挿入した行列を $M$ とすると、その大きさは $121\times102$ である。
+$86$ 本の独立列からなる $N$、関係係数行列 $T$、商への射影 $P$ を
+\[
+ M=NT,\qquad PN=0,\qquad \operatorname{rank}P=35
+\]
+となるように取れる。$N$ の証明書の小行列式は
+$h^{14}(1+h^3)^{11}$ であり、従って全ての許された係数で単元である。
+四つの包絡方向の関係行列の微分を $M_j$、選んだ列の微分を $N_j$ とすると
+\[
+ P(M_j-N_jT)=0\qquad (j=\gamma,\alpha_x,\alpha_y,\alpha_z)
+\]
+が係数環全体で成り立つ。これは選んだ関係の間の全ての syzygy も
+一次に持ち上がることを表し、次数 $4$ の自由性を与える。
+次数 $3$ にも同様に単元行列式を持つ $20$ 語の商基底を取る。
+
+この基底の一般の補正 $\dot G$ の三つの交換子を商に射影した
+$105\times20$ 行列を $Z$ とする。$Z$ は階数 $15$ で、選んだ
+$15\times15$ 小行列式は $-256h^6$ となる。
+その像への射影から、$EZ=0$ となる多項式係数の行列 $E$ を取れる。
+$[G_0,x_i]=Nc_i$ と書き、四方向について $-PN_jc_i$ を並べた
+$105\times4$ 行列を $V$ とすると、中心性の方程式は
+\[
+ Z\dot G+V(\gamma,\alpha_x,\alpha_y,\alpha_z)^T=0.
+\]
+$EV$ の三つの行は正確に
+\[
+ \begin{pmatrix}
+ -4A/h&-1/h&0&0\\
+ 6B/d&0&3/(2d)&0\\
+ 6Ch/d&0&0&3h/(2d)
+ \end{pmatrix}
+\]
+となる。後三列の行列式は $-9/(4d^2)$ で単元だから、
+\eqref{eq:clifford-tangent-criterion} が必要である。
+逆に上に表示した $\dot G$ を代入すると、$\gamma=1$ と
+$\alpha=-4(A,B,C)$ に対して全 $105$ 方程式が成り立つ。
+一般の $\gamma$ はこの持ち上げを $\gamma$ 倍すればよい。
+解の差は $\ker Z=Z(B_{h,\beta})_3$ であり、前節より五次元である。
+
+以上の全行列恒等式と単元行列式は
+\texttt{verify\_cubic\_clifford\_tangent.py} が $\mathcal A$ 上で検算する。
+有理関数体で計算しただけで終えず、使用する逆行列・射影・持ち上げの
+分母が $h$ と $1+h^3$ の因子に限られることも確認する。
+従って有限個の標本からの外挿も、$\beta_i\ne0$ という追加条件もない。
+\end{proof}
+
+$\gamma\ne0$ は反交換関係の最高次部分を変えるので、前節の指定
+Clifford 表示の部分から外れる一次 incidence 方向が得られた。
+ただしこの命題は、全ての包絡変形方向の計算、二次以上の障害の消滅、
+積分した切断の H3 条件、あるいは七次元商が全 moduli の成分でないという
+断定を与えない。以下ではこの明示式による第二次の延長を示す。
+その先の形式積分と実際の H3 族への積分はなお判定する必要がある。
+
+\begin{corollary}[指定方向の二次障害の消滅]
+\label{cor:clifford-transverse-second}
+上の明示的 $\dot G$ は、全係数に対して $\epsilon^3=0$ まで延長できる。
+具体的には $\gamma$ の項を $\epsilon$ のまま保ち、対角係数を
+\[
+ -4\epsilon(A,B,C)+\epsilon^2\kappa,
+ \qquad
+ \kappa=\frac4{1+h^3}
+ \bigl(A(h^3+3),\,-B(3h^3+1),\,-C(h^3-3)\bigr)
+\]
+とする。このとき中心切断
+$G_0+\epsilon\dot G+\epsilon^2G_2$ が存在し、次数 $4$ 成分はなお自由である。
+\end{corollary}
+\begin{proof}
+一次方向を代入した関係行列を $M_1$、選んだ独立列を $N_1$ とする。
+前の証明の単元小行列から
+\[
+ NT_1=M_1-N_1T,\qquad PN_1T_1=0
+\]
+を得る。第二式は、第二次の新しい包絡係数をまだ加えない場合の
+全 syzygy 障害が消えることを表す。
+$[G_0,x_i]=Nc_{0i}$ とし、一次の式を
+$[\dot G,x_i]-N_1c_{0i}=Nc_{1i}$ と解く。
+第二次の中心性の残差は $H_i=-PN_1c_{1i}$ である。
+三交換子についてこれを並べた $H$ に対し、前の三つの単元係数の
+障害行を使って第二次の対角係数を解くと、表示した $\kappa$ を得る。
+残りの全行についても
+\[
+ E(H+V_\alpha\kappa)=0
+\]
+が成り立つ。従って $ZG_2+H+V_\alpha\kappa=0$ を解ける。
+$M_2,N_2$ をこの対角係数に対応する行列とすると、さらに
+\[
+ P(M_2-N_1T_1-N_2T)=0
+\]
+であり、全関係の第二次 syzygy も持ち上がる。
+\texttt{verify\_cubic\_clifford\_second\_order.py} はこれらの全行列式を
+同じ係数環上で検証し、$G_2$ の全八項と分母の監査を証明書へ保存する。
+これは $\epsilon^3=0$ の主張であり、全次数の形式積分を意味しない。
+\end{proof}
