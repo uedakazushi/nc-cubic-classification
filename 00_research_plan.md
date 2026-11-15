@@ -1,6 +1,6 @@
 # 研究方針：非可換del Pezzo曲面の内在的モジュライとheart比較
 
-2026-11-15 / research-plan-v30 / resonance-hearts-v7。**再開時は本書を最初に読む。GitHub mainが唯一の正本。** 実行規則は `AGENTS.md`、H3の具体的な分類計画は `research/cubic_14641_codex_plan.md`。ここには現時点の目標・到達点・次の着手だけを置き、証明・計算は下記の現行原稿とノートを参照する。
+2026-11-16 / research-plan-v31 / resonance-hearts-v8。**再開時は本書を最初に読む。GitHub mainが唯一の正本。** 実行規則は `AGENTS.md`、H3の具体的な分類計画は `research/cubic_14641_codex_plan.md`。ここには現時点の目標・到達点・次の着手だけを置き、証明・計算は下記の現行原稿とノートを参照する。
 
 ## I. 恒常的な研究原則と保存許可
 
@@ -51,17 +51,17 @@
 
 ## IV. Rains共鳴：現在の到達点と次の核心
 
-現行原稿 `papers/nc_del_pezzo_resonance_hearts.tex`、ノート `research/resonance_hearts.md`、検証状態 `research/resonance_hearts_validation.json` を読む。新しい証明節は `papers/sections/resonance_mixed_a2_category.tex`。
+現行原稿 `papers/nc_del_pezzo_resonance_hearts.tex`、ノート `research/resonance_hearts.md`、検証状態 `research/resonance_hearts_validation.json` を読む。現在の中心証明は `papers/sections/resonance_mixed_a2_category.tex` と `papers/sections/resonance_global_heart.tex`。
 
-**既存の確定結果**：実在する既約境界非交叉root sheafについてm=chi(e,M)と置くと全tau-orbitでh0=max(m,0)、h1=max(−m,0)、h2=0。正指数は有限次元A=R/(g−1)加群がdegree0、負指数は[-1]、零指数は自然Phiで消える。負指数ではRains heartのAZ amplenessが失敗するが、導来非同値やqgr特異化は導けない。Hilbert値は1+d n(n+1)/2で不変。genuine avatarでは零指数根共鳴なし。
+**符号別Extと最大数値共鳴**：実在する既約境界非交叉root sheafについてm=chi(e,M)と置くと全tau-orbitでh0=max(m,0)、h1=max(−m,0)、h2=0。負指数はRains heartのAZ失敗を検出し、反標準側では有限次元A=R/(g−1)加群[-1]へ移る。Hilbert値1+d n(n+1)/2は不変。genuine avatarでは零指数根共鳴なし。全次数1–6で全根数値共鳴の稠密配置を整数格子とE[3]の9選択で記述し、既約根sheafの直和のExtをADE zigzagと同定した。固定dg圏のframed変形のcubic E6における32個の5次元分枝は、曲面モジュライの成分ではない。
 
-全次数d=1,…,6で、固定楕円E・非torsion qの相異なる正整数倍p_i=N_iqによる全根数値共鳴がE^(9−d)に稠密。単純根指数の整数格子とE[3]の9選択で記述できる。最大共鳴の既約根sheafは単純根に限り一意、その直和のExtはADE zigzag。既知の形式性から固定dg圏のframed変形は辺積x_ij x_ji=0で決まり、cubic E6は32個の5次元分枝。全曲面モジュライの成分ではない。
+**任意正負指数の局所完全判定**：q非torsion、Hnef、H²>0では境界外Zは有限長Serre部分圏。指数p,−nの隣接根の非分裂拡大Pのconnecting rankはmin(p,n)、cohomologyは((p−n)+,(n−p)+)。二根部分圏C≃mod_fd Π(A2)の全対象のcohomologyは、quiverの頂点次元a,bと一方の矢のrank tから(pa−min(p,n)t,nb−min(p,n)t)で決まる。p>nとp<nの両torsion pairを得る。p=nならPが消えるがgenuine avatarではこの同時共鳴自体が不可能。kernel e→Pがline bundleになるのはp−n=1だけであり、一般証明はrank-one torsion-freeのまま行う。
 
-**今回解決した核心**：q非torsion、H=−K nef、H²>0で境界外圏Zは有限長Serre部分圏となり、既約境界外root sheafは全heartの単純対象になる。指数p,−(p−1)の隣接根の非分裂拡大Pについて、e↠Pの核がline bundleとなることからconnecting mapのrankはp−1と証明した。具体的N=(1,3,2,5,7,11)、指数+2/−1では**rank δ=1**であり、全q導来同値は入力でない。
+**指定楕円gluingの導来比較と全heart**：genuine smooth classical del Pezzo Sとsmooth E、q∈Pic0(E)からのRains gluingについて、既存dP1原稿のorbitのInd生成・境界traceの非零性・両位数の環の有限性・source飽和性を一次資料と照合した。自然Φは全qでDb(Rains)≃Db(qgr R)。この範囲で全Rains heartの振幅が[0,1]となり、T=ker H1Φ、F=ker H0Φによる一回のHRS tiltが反標準heartである。q非torsionではZにも制限し、T∩Z=ker Ext1(e,−)、F∩Z=ker Hom(e,−)。全任意nc曲面・weak avatar・特異境界への主張ではない。
 
-二根が生成するCはmod_fd Π(A2)に同値で、四つの直既約S+,S−,P,Qを持つ。cohomologyは(p,0),(0,p−1),(1,0),(p,p−1)、T=add(S+,P)、F=add(S−)が局所torsion pair。PhiはCの非零対象を消さない。内部Ext_Cは二周期的でありambientのExtと異なるので、Db(C)をambient導来部分圏と同一視しない。
+**具体的混合A2のアフィン商**：指数+2/−1では0→W→V→U→0（次元1,2,1）は非分裂でW≄U、作用像は全三角2×2行列代数。逆向き非分裂拡大V'も存在し、A/Ann(V⊕V')≃Π(A2)という四次元商を得る。新しい二単純の根はalpha+beta,−beta、指数は1,1で局所Weyl反射に対応する。商はhomological epimorphismでない。内部Ext_Πの二周期性とambient Ext>2消滅を混同しない。
 
-**次の具体的着手**：p=2の0→W→V+→V−→0（両端一次元）について、Aの生成元のcharacter chi_W、chi_−と非対角項etaを求める。Phiが完全忠実ならcharacterは異なり拡大は非分裂、作用の像は全三角2×2行列代数でなければならない。Hom_A(V+,V−)の次元だけではJordan同一character型や異character分裂型を排除できない。対象の非消失と射の忠実性を区別する。実際の作用行列、全Z・全heartのtorsion pair、既存dP1全q導来比較の独立監査、相対モジュライは未解決。
+**残る具体的着手**：楕円データからAの生成元を固定し、上の四次元商への像を係数式で求める。character分離・非分裂性の真偽と指定gluingの導来同値は解決済みとして扱い、未計算のchi_W(a),chi_U(a),eta(a)と区別する。次に全E6境界外圏のアフィン作用、VdB/AS heartとの指定対象の照合、相対familyと特異/weak境界を調べる。大域H3の未被覆分類はIII節のまま維持する。
 
 ## V. 他のheart/corner成果と継続課題
 
@@ -79,12 +79,12 @@ Cubic cornerの主原稿は `papers/cubic_heart_corner.tex`、ノートは `rese
 
 量子Fermatはintrinsic H3の例だがOU AS型ではない。`papers/quantum_fermat_not_as_surface.tex` は離散torsion付きFermat商stackからHH_{−1}=HH_1=2、HH_0=5を計算する。ambientはPym L1111とL112の交点で、全対象がR13に入るという主張を排除する。曲面圏のOU障害とambient成分帰属は別問題。`papers/cubic_surface_ambient_moduli.tex`、`research/r13_generic_moduli.md` にR13の8→7、Poisson持上げ、中心incidence、Hessian商、AOU形式比較などの詳細を保持する。
 
-次数1は `papers/nc_del_pezzo_degree1_moduli.tex`、`papers/dp1_anticanonical_models.tex`、`research/dp1_research_plan.md`。内在的rank、条件付きweighted sextic認識、10次元dg候補族、KS、補助A∞表示成分、avatar復元を保持する。全intrinsic abelian成分性と特異/非局所自由境界は未完成。全q導来同値の原稿上の主張を今回監査済みとはしない。
+次数1は `papers/nc_del_pezzo_degree1_moduli.tex`、`papers/dp1_anticanonical_models.tex`、`research/dp1_research_plan.md`。内在的rank、条件付きweighted sextic認識、10次元dg候補族、KS、補助A∞表示成分、avatar復元を保持する。全intrinsic abelian成分性と特異/非局所自由境界は未完成。genuine smooth楕円gluingの全q導来比較は今回その証明と主要引用を点検したが、他の次数1の主張を一括して再検証したわけではない。
 
 三次三様体は `papers/nc_cubic_threefold_moduli.tex`、`notes/research_notes.md` と各sectionに保持する。相対Z-algebra fpqc stack、二次包絡と正規三次incidence、有限窓、周期忘却、形式成分を扱う。Rat(1,1,3)の非射影化Poisson/形式ambient37、中心対41、一般PGL商13/17、忘却fiber4と、全大域stackの代数性・成分性を区別する。可換cubic点の局所次元17・接空間20・ambient接写像の核10像10は一般fiber4と別。17係数slice、分離型余次元15、可換cubic忘却核7、混合中心、相対Picard、偶数Veronese等の既存全文・証明・計算を維持する。
 
 ## VII. 再現と検証状態
 
-共鳴の新しい有限検算：`python3 computations/verify_resonance_mixed_a2.py`。有理数でHom/Euler/Ext表、4375通りのcohomology、三角作用の四模型を実行済み。新証明節の独立LuaLaTeX driverは5ページで組版・ページ画像確認済み。**主原稿全体の組版、旧共鳴四スクリプトの再実行、実際の楕円A作用行列計算は今回未実施。** 状態の詳細は `research/resonance_hearts_validation.json`。
+共鳴の有限検算：`python3 computations/verify_resonance_mixed_a2.py`。p,n=1,…,8と直既約重複度0,…,4の40,000通りのcohomology、両chamber、balanced仮想場合、四次元商の積・両三角像・commutant・局所Weyl反射を厳密有理数演算で確認した。更新した二証明節を独立LuaLaTeX driverで9ページに組版し、全ページ画像を点検した。**主原稿全体の組版、旧共鳴四スクリプトの再実行、実際の楕円A生成元の作用係数計算は今回未実施。** 一次資料はPDF解析本文で照合したが、原典web screenshotはCache missで取得できなかった。状態の詳細は `research/resonance_hearts_validation.json`。
 
 主原稿の再生成は `latexmk papers/nc_del_pezzo_resonance_hearts.tex`。旧共鳴検算は `verify_resonance_hearts.py`、`verify_resonance_extensions.py`、`verify_resonance_maximal_a2.py`、`verify_resonance_zigzag.py`。cubic cornerは `research/cubic_corner_validation.json` と同ノートの再現手順、H3は `research/cubic_surface_reproduce.md` と現行分類validation、次数1・三次三様体は各現行ノートを参照する。Python3（必要箇所はSymPy）、LuaLaTeX・LuaTeX-ja・latexmkを使い、生成PDFはGit追跡しない。数学的証明、有限検算、文献入力、独立査読を区別する。
