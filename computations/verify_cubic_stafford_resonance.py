@@ -9,11 +9,11 @@ from verify_cubic_pym_generic import words, relation_rows
 
 
 
-def graded_projections(relations,field):
+def graded_projections(relations,field,degrees=(3,4)):
     degree = lambda w: reduce(int.__xor__, w, 0)
     projections = {}
     dimensions = {}
-    for n in [3,4]:
+    for n in degrees:
         ws = words(n)
         matrix = relation_rows(relations,n)
         lookup = {}

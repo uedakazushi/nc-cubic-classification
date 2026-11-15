@@ -172,5 +172,47 @@
       }
     ],
     "scope": "Read current overview/coverage and plan beginning; searched claim statements for Sklyanin/CY/central cubic. No new AS4 import. Proper elliptic Sklyanin exclusion proved in cubic_sklyanin_rank_obstruction.tex from primary WWY centre results and direct projective-norm factorization; existing imports remain pinned60eac..."
+  },
+  "low_commutator_consultation_v68": {
+    "commit": "a45f834f51a00c47443b51caf66abaf4629546b9",
+    "entry_points": [
+      {
+        "path": "README.md",
+        "sha256": "33897e55cbd3cdbc8e6bc710ddfbf1ff763fdf420ad053a82d334937c95ef95d"
+      },
+      {
+        "path": "research/plan_ja.tex",
+        "sha256": "02897b72b4191fe1271438ef423273414e9a48552f91b6b35bc7bf11d1582a4b"
+      },
+      {
+        "path": "research/COVERAGE.md",
+        "sha256": "bc35fe1a366a152019808f97af375a979564837c5862ba201cbd7c12d728a9e7"
+      },
+      {
+        "path": "research/CLAIMS.json",
+        "sha256": "2c585c8faa33897dc027587fea71c004734f973084600a442c33aa5f3629dc57"
+      },
+      {
+        "path": "research/proofs/CY_COMPLETE.tex",
+        "sha256": "12d6aa2550dd1147f43c14d273d853ae887164743b90e0e548e0e0366da33209"
+      },
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_CI22_COMPLETE.tex",
+        "sha256": "578c5c87778d9831eaed950196d29808b2f8fddf920cf6cfe29ea8a7a5eaa543"
+      },
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_DOUBLE_COVER_COMPLETE.tex",
+        "sha256": "d5d2c2b5e819a702e1dadd135b0b3b247553406049ac8516d198c5b5212c06df"
+      },
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_CURVILINEAR_FOUR_COMPLETE.tex",
+        "sha256": "88dc2b483d4bdd08a31ee8d184b02926c33b317c4508de0b5270b2a8d951752c"
+      },
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_FOUR_SIMPLE_FULL_SHARED_ALL_REGULAR.tex",
+        "sha256": "c2b60f2237b06d11117040c6161a9dfaa2f45d7b98e7414264cf0a1799db8039"
+      }
+    ],
+    "scope": "Read four entry points and CY_COMPLETE/CI22 overview; inspected the explicit double-cover and curvilinear-four presentations. No new all-CY coverage theorem imported; audit_status pending is retained. Next direct calculation concerns odd central obstructions in the displayed double-cover families. Existing mathematical imports remain pinned60eac..."
   }
 }

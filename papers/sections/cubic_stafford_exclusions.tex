@@ -97,11 +97,11 @@ $140\times20$ 行列の非零最大minorを直接計算した。
 循環置換は\cite[Lemma 6.1.11]{DaviesThesis}に従う。
 \end{proof}
 
-\paragraph{未解決の特殊部分への還元.}
+\paragraph{一般点の検算を越えるための還元.}
 残余三族の全H3候補は、それぞれ上の線型写像の全 $20$ 次minorが消える
 閉部分集合に支持される。この条件はadmissibilityの十分条件ではない。
-全パラメータのminor idealの簡約、特殊包絡の正規三次の分解、
-商の内在的H3判定は依然として必要である。
+一般点だけの検算では足りないため、以下では楕円商への単射と平行移動の明示式から
+特殊部分を含む全判定へ進む。
 
 \begin{lemma}[楕円商で消える三次は整域切断にならない]
 \label{lem:elliptic-normal-sequence-cubic}
@@ -178,6 +178,7 @@ $(1-\alpha)-(1+\alpha\beta)=-\alpha(1+\beta)\ne0$ により空である。
 \begin{lemma}[指定二捩れへの三倍平行移動の完全方程式]
 \label{lem:stafford-exact-order-six-locus}
 $T$ 上の標準Sklyaninのpoint curveと自己同型を $(E,\sigma)$ とする。
+$E$ は滑らかで $4\tau\ne0$ である。
 $\theta=\operatorname{diag}(1,1,-1,-1)|_E$ に対して
 \[
  \sigma^3=\theta\quad\Longleftrightarrow\quad
@@ -188,6 +189,8 @@ $\theta=\operatorname{diag}(1,1,-1,-1)|_E$ に対して
 \begin{proof}
 $a=\alpha,b=\beta,c=-(a+b)/(1+ab)$ と置く。
 $T$ 上では $a,b,a\pm1,b\pm1,a+b,1+ab$ は全て単元である。
+point curveの対角pencilの四つの比
+$0,(1+b)/(1+ab),(1-a)/(1+ab),1$ は相異なるので、$E$ は滑らかである。
 有限\'etale被覆上で
 \[
  p=(0:r:s:1)\in E,\qquad
@@ -232,6 +235,11 @@ $K=ab+a-b+3$、$M=3ab-a+b+1$ と置き、三回の更新で順に共通因子
 後者は表示した恒等式で不可能、前者も $z_3\ne0$ に反する。
 なお $L=0$ では $a+3\ne0$ は方程式と $T$ の条件から従う。
 
+第二反復の第一係数は $-4(a+1)(a+b)(b-1)\ne0$ である。
+従って $\sigma^2(p)$ は $v_0=0$ 上にない。
+四つのKlein符号は相異なる二捩れ平行移動全体であり、全て $v_0=0$ を保つ。
+従って $2\tau\notin E[2]$、すなわち $4\tau\ne0$ である。
+
 これで共通因子 $K^2$ の除去も正当化できる。
 正規化した非零座標組は被覆の全体で正則な射影写像を定め、
 稠密開集合で真の $\sigma^3(p)$ と一致するので、分離性から全体で一致する。
@@ -249,7 +257,7 @@ $a\notin\{0,1,-1,3,-3\}$ とし
  (\alpha,\beta,\gamma)
  =\left(a,\frac{1-a}{a+3},\frac{a+1}{a-3}\right)
 \]
-とする。対応する楕円商は滑らかで $4\tau\ne0$ と仮定する。
+とする。対応する楕円商の滑らかさと $4\tau\ne0$ は前補題から従う。
 $S_{d,1},S_{d,2}$ の全許容 $d\in\mathbb P^1$ において $\dim W_1=2$ であり、
 全ての非零 $G\in W_1$ が一次式と二次式の積に分解する。
 また $Z(S_{d,2}^c)_3$ は一次元で、その生成元も一次式で割れる。
@@ -370,10 +378,9 @@ twistの生成元の平方で $Q_1$ を表示するときはcocycleによる符�
 他の三族は定理\ref{thm:stafford-nakayama}の全排除を適用する。
 \end{proof}
 
-\begin{corollary}[通常のproper楕円Stafford包絡の全排除]
+\begin{corollary}[通常のStafford包絡の全排除]
 \label{cor:all-ordinary-stafford-excluded}
-$T$ の全許容 $d$ と循環変種に対して、対応する楕円商が滑らかで
-$4\tau\ne0$ である通常のStafford包絡はH3包絡にならない。
+$T$ の全許容 $d$ と循環変種に対して、通常のStafford包絡はH3包絡にならない。
 \end{corollary}
 \begin{proof}
 $S_\infty$ は $\mu=-I$ で排除済みである。
@@ -382,6 +389,87 @@ $S_{d,1},S_{d,2}$ において、H3三次のTHCR像が零なら
 非零なら normalizer の射影作用は $\theta$ なので $\sigma^3=\theta$。
 前補題より $L=0$、従って前定理の全因数分解により再び非整域となる。
 循環変種は生成元の置換で従う。
-標準cocycle族については、既証の三族と指定曲線上の排除を保持するが、
-この系だけで残る $S_{d,2}^c$ の全パラメータ排除を主張していない。
+標準cocycle族の残余については、後述の符号twist輸送を用いる。
+\end{proof}
+
+\begin{proposition}[通常Stafford族の全三次incidence]
+\label{prop:stafford-exact-W1-support}
+$S_{d,1},S_{d,2}$ では $L\ne0$ のとき $W_1=0$、
+$L=0$ のとき $\dim W_1=2$ で前定理の基底を持つ。
+群次数が斉次な非零候補は、一つの $x_j$ と群次数零の二次式の積である。
+\end{proposition}
+\begin{proof}
+検証器\texttt{verify\_cubic\_stafford\_transport.py}は
+$\mathbb Q(a,b)$ 上で、$f_i$ を除く五関係のみを使い
+$g_1,g_2$ の中心性と $f_i$ のnormalizer $\mu_{S_{d,i}}$ を厳密に確認する。
+AS4族の各次数の局所自由性により全許容fiberへ延びる。
+残余の非零中心二次 $q$ と $f_i$ はTHCRへの核の正則正規列を成す。
+前定理と同じ消去により $W_1$ はTHCRへ単射する。
+非零なら $\sigma^3=\theta$ なので $L=0$、その上は前定理を使う。
+\end{proof}
+
+\begin{theorem}[標準cocycleを含むStafford全族の排除]
+\label{thm:all-stafford-cocycle-excluded}
+領域 $T$ の全許容 $d$ において、通常のStafford三族と標準Klein cocycle三族、
+および循環変種は全てH3包絡から除外される。
+残余のCY族 $S_{d,2}^c$ の中心三次は、群次数ごとに次の曲線上でだけ一次元となる。
+\[
+\begin{array}{c|c}
+g&\text{中心三次が存在する条件}\\\hline
+0&ab+a-b+3=0\\
+e_1&ab+a+3b-1=0\\
+e_2&ab-3a-b-1=0\\
+e_1+e_2&3ab-a+b+1=0
+\end{array}
+\]
+四曲線は $T$ で互いに交わらず、各生成元は $x_j$ と群次数零の二次式の積である。
+任意の楕円AS4包絡、退化Sklyaninや任意の有限群cocycleの全被覆を主張しない。
+\end{theorem}
+\begin{proof}
+通常族と $\mu=-I$ のcocycle族は既に排除した。
+$A=S_{d,2}$、$\mu_A=\theta_{e_1}$ とする。
+全てのKlein符号は $A$ の自己同型であり、その通常の右Zhang twistは、
+対角rescale後、再びStafford族となる。
+$d=d_2/d_1$ のchartで全変換は
+\[
+\begin{array}{c|c|c|c}
+h&(a',b',c')&d'&\text{除く関係の偶奇}\\\hline
+e_1&(a,b^{-1},c^{-1})&-(d+1+bc)/(bc)&\text{保存}\\
+e_2&(a^{-1},b,c^{-1})&-(d+1+c)/c&\text{交換}\\
+e_1+e_2&(a^{-1},b^{-1},c)&(d-b+1)/b&\text{交換}
+\end{array}
+\]
+である。$d=\infty$ は全て $\infty$ へ写る。
+検証器は全六関係の単元倍による一致、二次pencilの変換、
+禁止値二つが新しい禁止値二つへ写ることを全係数で確認する。
+
+$F_g\in Z(A^c)_3$ の群斉次成分を取る。
+untwistすると $F_gv=\theta_g(v)F_g$ である。
+$h=g+e_1$、$B=A^{\theta_h}$ と置く。
+上表と中山作用の表から
+$\mu_B=\eta\theta_{e_1}$、$\eta=1$ ($h=0,e_1$)、
+$\eta=-1$ ($h=e_2,e_1+e_2$) である。
+$\lambda=\theta_h|_{A_{3,g}}$ とすると交代bicharacterにより $\lambda=\eta$。
+右twistの積で直接計算すれば
+\[
+ F_g*v=\theta_g\theta_h(v)F_g=\theta_{e_1}(v)F_g
+       =\mu_B^{-1}(v)*F_g.
+\]
+逆計算も成立し、$Z(A^c)_{3,g}$ は $W_1(B)_g$ と線型同型である。
+
+命題\ref{prop:stafford-exact-W1-support}を各変換先へ適用する。
+変換後の $L$ は、$g=0,e_1,e_2,e_1+e_2$ の順に
+\[
+ \frac{ab+a-b+3}{b},\quad ab+a+3b-1,\quad
+ -\frac{ab-3a-b-1}{ab},\quad\frac{3ab-a+b+1}{a}
+\]
+となる。対応する群次数の $W_1$ は基底の一本だけなので、表の次元を得る。
+四曲線の任意の二つと $T$ の単元の積を反転したidealは単位idealであることを
+検証器で厳密確認した。幾何的にも $3\tau$ が相異なる二捩れ点である条件に対応する。
+
+各非零 $F_g$ は変換先で $x_jQ$、$\deg_GQ=0$ と分解する。
+対角rescaleは群次数を保ち、符号Zhang twistは群次数零の二次式を固定する。
+従って元の $A$、さらにcocycle積でもこの一次因子は保たれる。
+四曲線が交わらないため、任意の非零中心三次は一つの群斉次成分に属し、
+全ての切断が非整域となる。
 \end{proof}

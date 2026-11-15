@@ -1,0 +1,44 @@
+{
+  "version": "classification-v68",
+  "field": "QQ(a,b)",
+  "central_normal_quadratic_equations": 24,
+  "sign_relation_permutations": [
+    [
+      0,
+      1,
+      3,
+      2,
+      5,
+      4
+    ],
+    [
+      1,
+      0,
+      2,
+      3,
+      5,
+      4
+    ],
+    [
+      1,
+      0,
+      3,
+      2,
+      4,
+      5
+    ]
+  ],
+  "pencil_maps": [
+    "(a*b + 1)*(-b*(-a - b)/(a*b + 1) - d - 1)/(b*(-a - b))",
+    "(a*b + 1)*(-d - (-a - b)/(a*b + 1) - 1)/(-a - b)",
+    "(-b + d + 1)/b"
+  ],
+  "cocycle_centre_loci_group_0_1_2_3": [
+    "a*b + a - b + 3",
+    "a*b + a + 3*b - 1",
+    "a*b - 3*a - b - 1",
+    "3*a*b - a + b + 1"
+  ],
+  "pairwise_disjoint_on_T": true,
+  "scope": "Exact identities and forbidden-parameter transport. Paper supplies all-special flatness, W1 transport, factorization and proper elliptic hypotheses."
+}
