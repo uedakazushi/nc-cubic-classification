@@ -4,6 +4,9 @@ Kleinian特異点についてはBridgeland \cite[\S2, Lemma 3.5]{BridgelandKlein
 本節の目的は，その機構を反標準比較へ適用し，\emph{指定構造対象のEuler標数}が
 実際の標的heartをどのように選ぶかを明らかにすることである．
 内部の$\Db(\cZ)$をambient導来部分圏と同一視する必要はなく，zigzagの形式性も仮定しない．
+一般のlength heartの単純tiltが再びlengthとなる条件は\cite[Theorem 2.7]{BCPW}で扱われている．
+ここでは2-spherical・単純辺という仮定から必要な有限長性を直接証明する．
+幾何学的適用には第\ref{sec:A2}節と同じgenuine楕円gluing・非torsionの仮定を用いる．
 
 \subsection{全ての部分対象・商によるtorsion pairの認識}
 $\cD_{\cZ}\subset\Db(\AR)$を，旧heartでの全cohomologyが$\cZ$に属する対象の充満三角部分圏とする．
@@ -66,7 +69,7 @@ $\alpha_i=[S_i]$，$(\alpha_i,\alpha_j)=-\chi(S_i,S_j)$を負定値根形式と�
 
 \begin{lemma}[一つの単純対象でのtilt]\label{lem:simpletilt}
 頂点$j$について
-$\cF_j=\add(S_j)$，$\cT_j=\{M:\Hom(M,S_j)=0\}$はtorsion pairである．
+$\cF_j=\add(S_j)$，$\cT_j=\{M:\Hom(M,S_j)=0\}$とすると，$(\cT_j,\cF_j)$はtorsion pairである．
 $\cH'=\langle S_j[1],\cT_j\rangle$は有限長heartで，その単純対象は
 \[
  S_j[1],\qquad
@@ -108,9 +111,9 @@ $\cH\subset D^{[0,1]}_{\cK}$とする．加法的関数$m:K_0(\cD_0)\to\mathbb Z
 \item 補題\ref{lem:simpletilt}の$\langle S_j[1],\cT_j\rangle$へ移る．
 \item 負の単純がなくなるまで繰り返す．
 \end{enumerate}
-手順は初期正根系$\mathscr R_+$について
+手順は初期正根系$\mathcal R_+$について
 \[
- N(m)=\#\{\alpha\in\mathscr R_+:m(\alpha)<0\}
+ N(m)=\#\{\alpha\in\mathcal R_+:m(\alpha)<0\}
 \]
 回で終了する．終端heartは選択順序に依存せず$\cK$であり，その単純根系は
 正根系$\{\alpha:m(\alpha)>0\}$の単純根系に等しい．
@@ -122,7 +125,7 @@ $S\in\cK$または$S\in\cK[-1]$のいずれかであり，その$m$はそれぞ�
 従って$m(S)=0$は起こらない．負の$S_j$を選ぶと$S_j[1]\in\cK$であるから，
 新heartも$D^{[0,1]}_{\cK}$に入る．補題により有限長性とADE条件も保たれる．
 
-現在の正根系を単純根$s_j$で反射すると，正根の集合は$\alpha_j$だけを
+現在の正根系を単純反射$s_j$で反射すると，正根の集合は$\alpha_j$だけを
 $-\alpha_j$に入れ替えたものとなる．その$m$は負から正へ変わるので，負の正根の数は正確に1減る．
 この数は非負整数であるため手順は停止する．全単純の$m$が正となったとき，
 それらは$\cK$に入り，新heartの有限長性から新heart全体が$\cK$に含まれる．
@@ -137,11 +140,13 @@ $-\alpha_j$に入れ替えたものとなる．その$m$は負から正へ変わ
 \emph{反標準比較が指定する}heartと，そこでの有限次元単純加群の次元を決める．
 得られた根類$\beta_i$に対応する単純加群の次元は$m(\beta_i)$である．
 異なる経路が同じheartに到達することと，それらの合成自己同値が自然に同型であることは別であり，後者は主張しない．
+またこれは固定圏におけるEuler汎関数によるheartの選択であり，
+楕円パラメータの族での全ての壁越えや安定性空間全体の記述ではない．
 \end{remark}
 
 \subsection{最大共鳴の全\texorpdfstring{$E_6$}{E6}部分系}
 \begin{proposition}[全単純根が実在する場合の網羅性]\label{prop:maximalrootexhaustion}
-$\cZ$の根格子が有限ADE型で，全ての選んだ単純根$\alpha_i$に対する
+$\cZ$の根格子が有限ADE型で，選んだ全単純根$\alpha_i$に対する
 既約境界非交叉sheafが実在すると仮定する．このときそれらが$\cZ$の全単純対象であり，
 同根の単純は同型を除き一意である．
 \end{proposition}
