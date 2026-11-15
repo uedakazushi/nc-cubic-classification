@@ -35,9 +35,15 @@ def main():
     R1,_=t_matrix(S.Integer(1));M,rows,projections=central_data(R1,S.QQ_I)
     assert len(rows)==20
     minor=M.extract(rows,list(range(20))).det();assert minor
-    cert={'version':'classification-v84','source_commit':'as4 a45f834f51a00c47443b51caf66abaf4629546b9',
+    special=[]
+    for eta in [1,-1]:
+        for ll in [-1+S.I,-1-S.I]:
+            Rs,_=t_matrix(ll,eta);Ms,rs,_=central_data(Rs,S.QQ_I);assert len(rs)==20
+            special.append({'lambda':str(ll),'eta':eta,'centre3_rank':20,'minor_rows':rs})
+    cert={'version':'classification-v85','source_commit':'as4 a45f834f51a00c47443b51caf66abaf4629546b9',
       'source_scope':'AB2 coefficients and AB14 candidate map; relation identities independently checked',
       'conditional_AS4_nakayama':'identity via nonzero anti-cyclic top tensor',
+      'special_parameters':special,
       'T_1':{'degree3_dimension':20,'degree4_dimension':35,'centre3_rank':20,'minor_rows':rows,'minor':str(S.QQ_I.to_sympy(minor))},
       'involution':{'parameter':str(f),'matrix':str(P),'determinant':str(q**-4),'inverse':'P(f(lambda))'},
       'quartic':str(E),'quartic_and_transport_coprime':True,

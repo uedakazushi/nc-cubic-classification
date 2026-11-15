@@ -86,3 +86,36 @@ $R_{f(\lambda)}$ の列空間に入ることと、表示した逆行列で確認
 \texttt{verify\_\allowbreak{}cubic\_\allowbreak{}as4\_\allowbreak{}four\_\allowbreak{}simple\_\allowbreak{}adjacent\_\allowbreak{}T.py}
 による。有限性の証明は上記の階数の二場合分けに依存する。
 T全例外値の判定、全包絡被覆、全H3分類は引き続き未完である。
+
+\paragraph{全語関係に対する独立な商射影証明書.}
+上の有限性とは別に、三次・四次の有理商座標を構成し、
+元の全語関係行列 $M_n$ に対して独立に検証した。
+$\Pi_n=(P_n+iQ_n)/D_n$ と書くと、
+\[
+ (P_n+iQ_n)M_n=0,\qquad
+ (P_n+iQ_n)_{\mathrm{free}}=D_n I
+\]
+が $\mathbb Q[\lambda]$ の実部・虚部の二恒等式として成り立つ。
+三次の $D_3$ は
+$\lambda^2(\lambda+1)^2(\lambda+2)^2(\lambda^2+2\lambda+2)E$ であり、
+四次は共通因子を除くと次の複素多項式を分母に取れる：
+\[
+\begin{gathered}
+ D_4=\lambda^3(\lambda+1)^5(\lambda+2)^3
+ (\lambda^2+2\lambda+2)A(\lambda)B(\lambda),\\
+ A=\lambda^2+(-1+3i)\lambda-2+2i,\qquad
+ B=\lambda^2+(1-3i)\lambda-4i.
+\end{gathered}
+\]
+AS4のHilbert値を持つ任意の $D_n\ne0$ の点では、
+これらは真の商座標となる。これは全特殊点の平坦性の主張ではない。
+四次商には35本、三次商には20本の自由列を用いている。
+データは
+\texttt{cubic\_\allowbreak{}as4\_\allowbreak{}T\_\allowbreak{}projection\_\allowbreak{}degree3.json},
+\texttt{degree4.json}、独立な再生検証器は
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}as4\_\allowbreak{}T\_\allowbreak{}projections.py}
+である。生成に用いたSingularのGr\"obner基底計算を信頼せずとも、
+この二恒等式はSymPyだけで元の関係から再確認できる。
+さらに $\lambda=-1\pm i$ の両符号を $\mathbb Q(i)$ 上で直接計算し、
+いずれも中心三次が零であることを確認した。
+従ってこの二点もH3包絡から除外される。

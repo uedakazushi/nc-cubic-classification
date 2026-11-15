@@ -1,6 +1,6 @@
 {
   "date": "2026-11-15",
-  "version": "classification-v84",
+  "version": "classification-v85",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -932,5 +932,15 @@
     "validator": "computations/verify_cubic_as4_four_simple_adjacent_T.py",
     "certificate": "computations/cubic_as4_four_simple_adjacent_T_certificate.json",
     "result": "T_1 centre3 rank20; universal conditional CY tensor; exact parameter involution. Possible H3 parameters in each T line form a finite set, not enumerated. Generic polynomial-module output has not yet been independently replayed and is not used as an all-fibre theorem."
+  },
+  "four_simple_adjacent_T_quotients_v85": {
+    "status": "exact independent replay executed",
+    "validator": "computations/verify_cubic_as4_T_projections.py 3 4",
+    "witnesses": [
+      "computations/cubic_as4_T_projection_degree3.json",
+      "computations/cubic_as4_T_projection_degree4.json"
+    ],
+    "result": "Full original degree3/4 word relations annihilated and free-column identities verified over QQ[lambda], including complex denominator cancellation. Conditional AS4 quotient coordinates only. Both T signs at lambda=-1+/-i independently have centre3 rank20. Centre-module all-parameter rank certificate remains pending.",
+    "generator": "computations/generate_cubic_as4_T_centre_input.py; executed, output byte-identical to the current primitive CAS input; no all-parameter rank conclusion yet"
   }
 }
