@@ -1,0 +1,34 @@
+{
+  "version": "classification-v16",
+  "scope": "Exact full-center check at known bad Dstar; A3 center does not suffice for H3; no all-bad-D claim",
+  "Dstar": "(4467*g**3 - 5311*g**2 + 6316*g - 7511)/4",
+  "center_point": [
+    "-4*(132*g**3 + 13*g**2 - 193*g - 32)/343",
+    "-8*(45*g**2 - 58)/343",
+    "0"
+  ],
+  "center_equation_verified": true,
+  "gradient": [
+    "0",
+    "0",
+    "0"
+  ],
+  "Hessian_rank": 2,
+  "D_derivative": "0",
+  "center_status": "singular",
+  "kernel_cubic": "0",
+  "normalized_Hessian_kernel": [
+    "1",
+    "-(g - 1)*(g**2 + 1)",
+    "0"
+  ],
+  "Morse_transverse_indices": [
+    0,
+    2
+  ],
+  "Morse_residual_first_degree": 4,
+  "Morse_residual_first_coefficient": "(3676292*g**3 - 4187127*g**2 + 5446040*g - 6739152)/886528",
+  "formal_center_type": "A3",
+  "Morse_gradient_identity_checked_through": 8,
+  "independent_quartic_Schur_check": true
+}

@@ -16,7 +16,7 @@ for d,x,y in itertools.product(range(5),[-1,0,1,2],[-1,0,1,2]):
  if s.Matrix(rows+[row]).rank()>len(rows):points.append([d,x,y]);rows.append(row)
  if len(rows)==17:break
 matrix=s.Matrix(rows);assert matrix.det()==18432
-certificate={'version':'classification-v15','status':'partial evaluations, not yet a computed all-parameter cubic','degree_bound_proof':'papers/sections/cubic_order4_center.tex, rem:order4-center-interpolation; weights(r,D,Z)=(1,3,4), total12','unisolvent_points':points,'constant_coefficient_monomials':monoms,'constant_evaluation_determinant':'18432','completed_samples':[]}
+certificate={'version':'classification-v16','status':'partial evaluations, not yet a computed all-parameter cubic','degree_bound_proof':'papers/sections/cubic_order4_center.tex, rem:order4-center-interpolation; weights(r,D,Z)=(1,3,4), total12','unisolvent_points':points,'constant_coefficient_monomials':monoms,'constant_evaluation_determinant':'18432','completed_samples':[]}
 def save():
  tmp=output.with_suffix('.tmp');tmp.write_text(json.dumps(certificate,indent=2)+'\n');tmp.replace(output)
 for d,x,y in points:

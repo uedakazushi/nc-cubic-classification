@@ -1,6 +1,6 @@
 {
   "date": "2026-11-15",
-  "version": "classification-v15",
+  "version": "classification-v16",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -125,9 +125,9 @@
     "dependencies": "Workspace-local TeX Live 2025 packages restored from the Utah historic mirror; no generated PDFs or caches tracked"
   },
   "pdf": {
-    "pages": 71,
-    "references": "No unresolved references/citations or overfull boxes in latest v15 log",
-    "layout": "Earlier71-page full contact rendered, detailed finite Ext proof page56 inspected; final slice-lemma build compiled"
+    "pages": 72,
+    "references": "No unresolved references/citations or overfull boxes in v16 final log",
+    "layout": "New A3 center proof compiled; prior detailed centre/Ext pages inspected; full rendering not repeated at timed checkpoint"
   },
   "limits": [
     "Not full intrinsic H3 coverage: other elliptic orders, nonsymmetric/non-CY central extensions, other low-commutator and resonant AS4 strata, ambient-direction deformations and global coverage remain",
@@ -140,7 +140,8 @@
     "v12 solves full graded flatness and AS4 recognition on V and gives actual H3 for transcendental central values plus finite bad-value existence on order4 branch. Full bad-D lists, all integrated-family geometric arrows, H3 relative openness/descent, components and global ambient coverage remain.",
     "v13 solves all geometric arrows in the integrated gamma!=0 chart. It does not enumerate all bad D, prove H3 relative openness or intrinsic descent, identify global components or cover all ambient sectors. Finite center-action controls are not a universal parameter proof.",
     "v14 exhausts only the odd self-Ext1 obstruction on one-dimensional modules, not all non-H3 center values. Higher-dimensional representations or higher Ext can add bad values.",
-    "v15 full center cubic lower coefficients are still being reconstructed. A center cubic relation alone will not classify H3 without local order/global-dimension checks."
+    "v15 full center cubic lower coefficients are still being reconstructed. A center cubic relation alone will not classify H3 without local order/global-dimension checks.",
+    "v16 computes the entire fixed center cubic, not the entire bad-D polynomial. Local noncommutative order checks remain necessary even at Du Val center singularities."
   ],
   "as4_import_manifest": "research/as4_imports.json",
   "commands_retained_from_v4": {
@@ -178,11 +179,9 @@
     "latexmk papers/weak_cubic_axioms.tex": "PASS: Japanese LuaLaTeX,50 pages; no unresolved references/citations or overfull boxes"
   },
   "commands_executed": {
-    "python3 computations/verify_cubic_integrated_envelope.py": "PASS rerun with corrected direct multilinear graph convention p yz+q zy; all64/256 tensor identities and order4 condition unchanged",
-    "python3 computations/verify_cubic_order4_leading_center.py": "PASS:9 direct graph relation identities; exact elliptic coordinate-ring reductions of all10 cubic monomials, matrix138x10 kernel1, explicit leading center cubic",
-    "python3 computations/verify_cubic_order4_center_sample.py --D 0 --z1 -1 --z2 -1": "PASS: quotient dimensions through degree9 stabilize48; exact48x48 cubic matrix identity and power-rank3",
-    "python3 computations/reconstruct_cubic_order4_center.py": "RUNNING sequential exact evaluations; partial certificate records only completed cases; full cubic not yet claimed",
-    "latexmk papers/weak_cubic_axioms.tex": "PASS latest v15 Japanese LuaLaTeX build with48-dimensional slice stopping proof and finite Ext criterion"
+    "python3 computations/reconstruct_cubic_order4_center.py --work-dir ...": "PASS complete: all17 exact48-dimensional evaluations; each cubic matrix identity and power-rank3; full-rank coefficient spaces2,7,17; determinant18432; proved pre-weight bounds imply full cubic",
+    "python3 computations/verify_cubic_order4_bad_center.py": "PASS: independent Dstar center point, F=all grad=0, Hessian rank2, kernel cubic0, formal Morse through8 first degree4 and independent Schur coefficient; center A3 while order non-H3",
+    "latexmk papers/weak_cubic_axioms.tex": "PASS: v16 Japanese LuaLaTeX, full center and A3 counterexample, no unresolved references/citations or overfull boxes"
   },
   "commands_retained_from_v9": {
     "python3 computations/verify_cubic_clifford_beta.py": "PASS: all-parameter8x8 central volume and Schur determinant, character-coordinate Jacobian, universal12-variable Hessian/Yoneda identity, exact four-node nonsplit center and reduced8-point character scheme",
@@ -273,5 +272,16 @@
   "source_audit_v15": {
     "CCKM": "Same primary PDF as v6; Theorem4.7(1),(2) and proof reread. Ambient d4, central twist sigma=id, internal shift killed by t inversion; safe Ext periodic range i>=6.",
     "new_proofs": "Finite Ext/global-dimension criterion and constructibility argument are written ordinary proofs; no independent peer review or novelty audit claimed."
-  }
+  },
+  "commands_retained_from_v15": {
+    "python3 computations/verify_cubic_integrated_envelope.py": "PASS rerun with corrected direct multilinear graph convention p yz+q zy; all64/256 tensor identities and order4 condition unchanged",
+    "python3 computations/verify_cubic_order4_leading_center.py": "PASS:9 direct graph relation identities; exact elliptic coordinate-ring reductions of all10 cubic monomials, matrix138x10 kernel1, explicit leading center cubic",
+    "python3 computations/verify_cubic_order4_center_sample.py --D 0 --z1 -1 --z2 -1": "PASS: quotient dimensions through degree9 stabilize48; exact48x48 cubic matrix identity and power-rank3",
+    "python3 computations/reconstruct_cubic_order4_center.py": "RUNNING sequential exact evaluations; partial certificate records only completed cases; full cubic not yet claimed",
+    "latexmk papers/weak_cubic_axioms.tex": "PASS latest v15 Japanese LuaLaTeX build with48-dimensional slice stopping proof and finite Ext criterion"
+  },
+  "new_v16_results": [
+    "Full cubic center relation explicitly reconstructed by pre-proved finite coefficient spaces and all17 exact sample identities.",
+    "Known bad order4 value has A3 center singularity; local formal Morse coefficient verified independently. Du Val center alone is not sufficient for H3."
+  ]
 }
