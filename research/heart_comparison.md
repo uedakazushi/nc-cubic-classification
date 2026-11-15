@@ -1,6 +1,6 @@
 # 四つのheartの比較：現行研究ノート
 
-2026-11-16 / hearts-v17。最初に `research/four_hearts_plan.md`（プロジェクト全体では `00_research_plan.md`）を読む。論文は `papers/nc_del_pezzo_hearts.tex` と四つの `papers/sections/four_hearts_*.tex`、検証は `research/four_hearts_validation.json`。本文の証明をここに重複させない。
+2026-11-16 / hearts-v18。最初に `research/four_hearts_plan.md`（プロジェクト全体では `00_research_plan.md`）を読む。論文は `papers/nc_del_pezzo_hearts.tex` と四つの `papers/sections/four_hearts_*.tex`、検証は `research/four_hearts_validation.json`。本文の証明をここに重複させない。
 
 ## 比較対象と主張の水準
 
@@ -20,15 +20,23 @@ HnefのRains heartで全対象のExt2(e,s^nM)はn≫0で消える。従って全
 
 **共鳴（定理6.1、系6.2）**：rho(alpha)=q^(−m)は数値条件。実在する境界非交叉既約root sheafではh0=max(m,0)、h1=max(−m,0)、h2=0で2-spherical。負指数はAZ生成性失敗と自然Φの非t-exactnessを検出するが、上記gluingで導来同値は保たれる。数値的ample coneとAZ条件は定義が違う。正指数根だけからAZ失敗とは言えず、負指数根が見つからないだけでF=0とも言えない。pointed heart非一致を抽象的abel非同値に強めない。
 
-**AS–反標準（系7.2）**：AS helixのfoldingでqgrBを得てe=πpB、pBp=R(e,s)を同定した上で、B,R右noetherian、Bp右R有限、pB左R有限を要求する。この範囲で自然cornerがabel同値 iff dim B/BpB<∞。有限次数の消滅を使うには次数1生成等のtail制御が必要。相対有限cornerの開性はcoherent各次数の基底変更適合を明示した命題9.2であり、heartの相対同値を意味しない。
+**AS–反標準（cor:ASac、cor:AOU-texact）**：AS helixのfoldingでqgrBを得てe=πpB、pBp=R(e,s)を同定した上で、B,R右noetherian、Bp右R有限、pB左R有限を要求する。この範囲で自然cornerがabel同値 iff dim B/BpB<∞。有限次数の消滅を使うには次数1生成等のtail制御が必要。相対有限cornerの開性はcoherent各次数の基底変更適合を明示した命題9.2であり、heartの相対同値を意味しない。
 
 **混合A2（§8）**：指数p,−nの隣接単純根の非分裂拡大Pのconnecting rankはmin(p,n)。C=〈S+,S−〉_Serre≃mod_fd Π(A2)、直既約S+,S−,P,Qで、cohomologyは(p,0),(0,n),((p−n)+,(n−p)+),(p,n)。両chamberのtorsion pairを得る。p=nはgenuine avatarに実在しない。指数+2/−1のアフィン側では異なる一次元W,Uと非分裂二次元Vがあり、逆向きV'を合わせてA/Ann(V⊕V')≃Π(A2)。局所反射で根はalpha+beta,−beta、指数は1,1。元の生成元の作用係数は未計算。内部Ext_Πの二周期性をambient Extと混同しない。
 
-## AS比較に残る核心
+## AOUのpointed比較と現在残る核心
 
-AOU §9は最初からcoh tilde X=qgr Fである。smooth elliptic、degree3線束、無限位数σ、sufficiently general六点が範囲。Lemma9.2はSerre=(-1)[2]、Theorem9.4はDb qgr F≃Db AS。mutation後先頭E0はASのO(0,0)へ移るが、E0≃πFの実際の同定を今回完了していない。可換式(9.44)と、その後で非可換対象をmutationで再定義する箇所を区別する。K0・restrictionだけでは対象を同定できない。
+AOU §9は最初からcoh tilde X=qgr Fである。smooth elliptic、degree3線束、無限位数σ、sufficiently general六点とadmissibilityが範囲。Lemma9.2はSerre=(-1)[2]、Theorem9.4はDb qgr F≃Db AS。本稿の `thm:AOU-pointed` ではmutation後先頭E0≃πFを実際の評価triangleにより同定した。
 
-全四heartを一つの図に接続する命題9.1は、pointedなAS–Rains同値とcorner・高次消滅を追加仮定する。これをAOU定理だけで満たしたことにしない。VdBの最後のδ_6と自然Φの同定、σとσ³、中心と標識、各段階のsection置換を実際に追うことが次の課題。
+AOU (9.28)–(9.43)のτ1,…,τ6で、πFの位置は9,9,9,6,6,3と移る。右mutationは右側の対象を変えずに移動し、それ以外の操作はその位置に触れない。従ってτ6の先頭は(A,B,πF)。最後のL1L2にだけπF自身のmutationがある。
+
+(9.52)のrestrictionはLA=L0^(−5) L1^3 O(p1+…+p6)、LB=L0^(−2)L1 O(p1+p2+p3)、Li*πF=O_Y。LA,LBの次数は零で、Definition7.1と(9.53)により双方非自明。Proposition9.3が全RHom(A,πF),RHom(B,πF)をそれぞれRΓ(LA^−1),RΓ(LB^−1)と同定する。楕円曲線上の非自明次数零線束の全cohomologyは零なので、最後の二評価triangleの自然射が同型となる。K0またはrestrictionの一致だけから対象を同定してはいない。
+
+**環の接続（cor:AOU-ring）**：中心正則一次元と正次数境界のH1消滅からF_n→Hom(πF,πF(n))が全n≥0で自然に同型となる。pointedなΨと整合的に反復した反Serre同型によりF≃R(e_AS,s_AS)が乗法込みで従う。これはAS標準heartがqgr Fに無条件で一致するという主張ではない。
+
+**条件付きの相対同定（prop:AOU-relative-object）**：相対mutation列とeが存在し、二つの相対Homがperfectで導来基底変更に適合し、各fiberが上の許容条件を満たすなら、導来Nakayamaで二Homは零。評価triangleの自然射がE0≃eを族として与える。この対象の同定のためのfiberごとの任意なスカラー選択は不要だが、相対圏と全heartの構成・降下は別である。
+
+**次の核心**は全AOU/AS locusの有限corner・folding・両bimodule有限性の検証。これらが成立する範囲では、pointed Ψとample-orbitのheart一意性から指定AOU同値自体もt-exactである。さらにVdBの最後のδ_6と自然Φの同定、σとσ³、中心と標識、各段階のsection置換を同じデータで照合する。全四者の無条件な一致は主張しない。
 
 ## 別稿との役割分担と保持する補足
 
@@ -42,4 +50,6 @@ AOU §9は最初からcoh tilde X=qgr Fである。smooth elliptic、degree3線�
 
 論文末尾に11件の書誌・識別子・使用箇所を収録した。Rains2019のblow-up/t構造、Rains2022の共鳴とtrace、VdB §11–12、AOU §9、OUのAS定義、CHZのrealization、RSS/YZ/Orlovの有限性・飽和性が主要入力。Rains2025 monographの書誌と概要を確認したが、全定理番号対応と全内容の新規性照合は未完了。
 
-今回、比較論文全体をLuaLaTeXで19ページに組版し全ページ画像を点検した。45ラベルと11引用キーの整合を検査し、数値コード二つを実行した。新コードは40,000通りの線形代数検算であり、sheaf存在・導来同値・新規性の計算証明ではない。関連一次資料の本文を照合したが、外部独立査読・機械形式化・網羅的新規性調査は未実施。文献ページ画像の取得成功・失敗はvalidationに区別して記す。
+今回、全文をLuaLaTeXで21ページに組版し、全ページのレンダリングを点検した。50ラベルと11引用キーの整合を検査し、数値コード二つを再実行した。40,000通りの混合A2検算に加え、AOUの標識対象の位置9,9,9,6,6,3,1と最後の二Hom消滅入力、restrictionの形式指数と次数零を検査した。線束の幾何学的非自明性や対象の同型を数値コードで証明したわけではない。
+
+新しい証明についてAOU Definition7.1、Proposition9.3、(9.28)–(9.57)とmutationの定義を一次HTML本文で照合した。原典PDFのweb screenshotはCache missとなったため画像確認済みとはしない。Rainsの一部入力も再確認したが、保持した全証明・全文献を今回再監査したとはしない。2025年monographの全内容との新規性照合、外部独立査読、機械形式化は未実施。生成・再現・遠隔保存の状態はvalidationを参照する。Libraryへの別途保存は行っていない。
