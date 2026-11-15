@@ -1,3 +1,9 @@
+# User continuation instruction — 2026-11-15
+
+**完全分類までなるべく止まらずに作業を続ける。** これはユーザーからの明示的な研究継続指示である。部分定理の証明・検算・組版・通常pushが済んだことだけを終了理由にせず、次の未解決層、被覆、同型群oid、族と降下の課題へ可能な限り自律的に進む。既に許可された研究・可逆的編集・検算・GitHub mainへの通常fast-forward pushについて、繰り返し確認を求めない。必要な情報・権限や実際の技術的制約で進めない場合は、阻害要因と再開可能な具体的課題を記録する。チャット終了後に未設定のバックグラウンド実行を約束しない。
+
+完全分類とは全H3対象の被覆、全admissibleパラメータ、正しい内在的同型群oidと慣性、成分・交叉・境界、Serre/heart/Gabriel–Krull rank/AZ条件、相対族と降下を証明することをいう。有限計算・一般点・部分atlasを全分類へ昇格させない。必要に応じas4の具体的結果を固定SHAと仮定の照合付きで使い、全AS4分類の完成を待たず本研究を進める。
+
 # Cross-project instruction: use as4 selectively (2026-11-15)
 
 **Primary target remains the complete classification of intrinsic H3 cubic surfaces with a 14641 quadratic Koszul AS-regular envelope.** For ambient classification, deformation families, normal degree-three elements, automorphism groupoids, Nakayama/Serre constraints, and component or boundary questions, consult [uedakazushi/as4](https://github.com/uedakazushi/as4) **when its concrete results or executable machinery can eliminate duplicated work or resolve a dependency**. Do not make the completion of the entire AS4 classification a prerequisite for progress here.
