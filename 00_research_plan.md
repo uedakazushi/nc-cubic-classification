@@ -1,5 +1,16 @@
 # 研究方針：非可換del Pezzo曲面のheart比較と内在的モジュライ
 
+## 14641型の内在的非可換三次曲面：当面の完全分類対象（2026-11-15）
+
+統一intrinsic weakly marked三次曲面 (A,O) の反標準環 R をR1で生成されるものに限定し、二次包絡 B=Q(R) が左右noetherianな14641型quadratic Koszul AS4であることを要求するクラス H3 を分類する。外部ambient・埋込み・4周期同型は標識として加えない。公表用の主証明は papers/weak_cubic_axioms.tex の sec:14641-classification、再開用ノートは research/cubic_14641_classification.md。
+
+【証明済み】Levasseurの整域定理（noetherian AS4, GKdim=4）とHilbert数値から、R=B/(G) で G∈B3 が左右正則正規となる。六二次＋一三次関係、三次核の正則性、正規一次境界は追加公理に不要。AS型は非空真部分：可換cubicはOU AS型、量子FermatはH3に属するが HH±1=2 で非OU。全OU退化境界が無条件にH3に入るとは未証明。
+
+【有限方程式】固定ambient B上の全正規三次直線はP(B3)=P19の35×8乗法行列 [Gv|vG] の5次minorで表される。AS-flatな相対chartでも底変更と両立。内在的Serre/heart/rank/AZ条件の認識は別。量子skew torusの3-torsion 27点は座標置換で4軌道（1,8,12,6）、中心三次次元（20,5,6,4）。これは有限部分分類であり全moduliの完全分類ではない。
+
+【優先課題】全14641 ambient成分上の正規三次incidenceの成分・同型群oid・曲面条件・境界・族と降下を決定し、その後intrinsic定義を弱める。GitHub mainを正本とし、GitHub push成功時はLibraryへの保存を行わない。PDFやZIPをGitで追跡せず、TeX・ノート・検算コードを追跡する。
+
+
 2026-11-15 / project-v18 / recognition-v6 / hearts-v3。最初に本書、`research/cubic_corner.md`、`papers/cubic_heart_corner.tex`を読む。比較の共通枠組みは`research/heart_comparison.md`と`papers/nc_del_pezzo_hearts.tex`、共通公理は`research/common_del_pezzo_framework.md`。次数別・三次三様体の研究はそれぞれの現行ノートから再開する。
 
 ## I. 恒常的な研究原則と保存許可

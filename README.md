@@ -73,3 +73,7 @@ Rat(1,1,3)の非射影化Poisson/形式ambient成分は37次元、中心対41次
     latexmk papers/nc_cubic_threefold_moduli.tex
 
 Python3・必要に応じSymPy、日本語LuaLaTeX・LuaTeX-ja・latexmkを使う。新heart計算はPython標準ライブラリのみ。既存二因子stabilizerコードはverify_rat113_tangent.pyも必要。PDF/SyncTeX/ログは`.latexmkrc`に従いbuild/へ出力しGit追跡しない。GitHub Actionsは使用しない。実行した検証と未実行の既存検証を区別する。
+
+## 14641型intrinsic cubicの現行分類課題（2026-11-15）
+
+研究方針は `00_research_plan.md`、詳細は `research/cubic_14641_classification.md`、証明は `papers/weak_cubic_axioms.tex` の `sec:14641-classification`。noetherian 14641二次包絡から一本の正則正規三次関係を導く定理、AS型の真部分性、35×8の正規三次incidence、27点の有限分類を含む。検算は `python3 computations/verify_cubic_skew_strata.py`。PDF・ZIPはGit追跡しない。完全分類と全intrinsic stackの代数性は未解決。

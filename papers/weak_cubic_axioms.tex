@@ -21,7 +21,7 @@
 \newcommand{\cP}{\mathfrak P}\newcommand{\Sym}{\operatorname{Sym}}
 \title{内在的非可換三次曲面の公理とambient成分\\\large dP1共通定義・量子FermatのPym成分・正規境界認識}
 \author{研究原稿：証明済みの命題と未解決の認識条件を区別する}
-\date{2026年11月15日\quad recognition-v6}
+\date{2026年11月15日\quad classification-v1}
 \begin{document}\maketitle
 \begin{abstract}
 大域次元2の$k$線形Abel圏とrank one torsion-free exceptional構造対象，反Serre作用，
@@ -134,6 +134,150 @@ $\gldim\cA\le2$である．一方，非零$N$に対して
 \]
 従って大域次元は正確に2である．
 \end{proof}
+
+\section{14641型ambientを持つ内在的三次曲面：完全分類の対象}
+\label{sec:14641-classification}
+本節では共通の内在的公理を保ち，まず強い部分クラスを分類する．
+\begin{definition}[14641反標準型]\label{def:14641-intrinsic}
+統一weakly marked三次曲面$(\cA,\OO)$の反標準section環
+$R=\bigoplus_{n\ge0}\Hom(\OO,s^n\OO)$について，
+(i) $R$は$R_1$で生成され，
+(ii) 二次包絡
+\[
+ B=Q(R)=T(R_1)/\langle\ker(R_1^{\otimes2}\to R_2)\rangle
+\]
+が左右noetherianで，$\check B$が二次Koszul AS正則，
+次元・Gorenstein parameterともに4，
+解消型$(1,4,6,4,1)$であるとする．
+このクラスを$\mathcal H_3$と書き，ambientを$\qgr\check B$とする．
+ambientの埋込みや四周期同型は追加データに含めない．
+\end{definition}
+この条件は反標準Hom環の二次包絡について述べているためintrinsicである．
+反標準orbitには1周期表示があるが，全四周期AS正則$\mathbb Z$代数の
+1周期性を主張していない．
+
+\begin{theorem}[三次超曲面性の自動性]\label{thm:14641-principal-recognition}
+$R$が一次生成で$H_R(z)=(1-z^3)/(1-z)^4$を持ち，
+$B=Q(R)$が定義\ref{def:14641-intrinsic}の条件(ii)を満たすとする．
+するとある左右正則正規元$G\in B_3$について
+\[
+ R\simeq B/(G),\qquad \ker(B\to R)=BG=GB
+\]
+であり，$B$と直線$kG$は$R$から一意かつ関手的に復元される．
+特に$R$の最小関係は六本の二次関係と一本の三次関係で生成される．
+\end{theorem}
+\begin{proof}
+連結次数付き環$B$はnoetherian AS正則で
+$\operatorname{GKdim}B=\gldim B=4$であるから，
+Levasseur\cite[Theorem 6.2(ii)]{Levasseur}により整域である．
+自然な全射$\phi:B\to R$の核を$I$とすると，Hilbert値から
+\[
+ \dim B_3=20,\quad\dim R_3=19,\quad
+ \dim B_4=35,\quad\dim R_4=31
+\]
+であり，$I_3=kG$，$\dim I_4=4$となる．
+整域性から$GB_1$と$B_1G$はともに4次元で$I_4$に含まれ，
+従って$GB_1=B_1G$である．次数一生成性により$GB=BG$，
+整域性により$G$は左右正則となる．
+$B/(G)\twoheadrightarrow R$の両辺のHilbert級数は
+$(1-z^3)/(1-z)^4$なので同型である．
+$B$は二次関係核，$kG$は$B_3\to R_3$の核から復元される．
+\end{proof}
+正規一次境界の存在も，三次核の正則性も，関係次数の上界も
+この定理では仮定していない．
+
+\subsection{AS型は真の部分クラス}
+OU\cite[Definition 1.1]{OUAS}の三次del Pezzo型AS surfaceである
+基礎圏を持つ$\mathcal H_3$の部分を$\mathcal H_3^{\mathrm{AS}}$と書く．
+\begin{theorem}[AS型と非AS型の共存]\label{thm:strict-AS-inclusion}
+\[
+ \varnothing\ne\mathcal H_3^{\mathrm{AS}}\subsetneq\mathcal H_3.
+\]
+\end{theorem}
+\begin{proof}
+滑らかな可換三次曲面$(\operatorname{coh}X,\OO_X)$は
+反標準環$k[x_0,x_1,x_2,x_3]/(F_3)$の二次包絡が多項式環なので
+$\mathcal H_3$に属し，そのvery strong helixからOU型となる．
+一方，本稿の量子Fermat三次曲面は内在的公理を満たし，
+二次包絡は左右noetherianな四変数量子多項式環なので$\mathcal H_3$に属する．
+別稿\cite[Theorem 3.1]{FermatOU}で
+$HH_{-1}=HH_1=k^2$を得た．OUのAS surfaceは有限完全強例外列を
+持ち，そのHochschild homologyは次数0に集中するので，
+量子Fermat例はOU型ではない．
+\end{proof}
+\begin{remark}
+指定構造対象と反標準作用を保つheart同値，かつ反標準超曲面表示を
+持つOU型も$\mathcal H_3^{\mathrm{AS}}$に入る．
+OUの全退化境界について，任意の構造対象の反標準ample性と
+14641包絡を無条件に保証したわけではない．
+$HH_{\ne0}=0$はOU型の必要条件であって十分条件とは主張しない．
+\end{remark}
+
+\subsection{正規三次incidenceの有限方程式}
+$B$を左右noetherianな14641型とし，$V=B_1$とする．
+$B$は整域なので，$0\ne G\in B_3$に対する
+$m_L(G):V\to B_4,\ v\mapsto Gv$と
+$m_R(G):V\to B_4,\ v\mapsto vG$はともに単射である．
+\begin{equation}\label{eq:normal-cubic-determinantal}
+ \mathcal N_3(B)=
+ \{[G]\in\PP(B_3):\rank[\,m_L(G)\mid m_R(G)\,]\le4\}
+ \subset\PP^{19}.
+\end{equation}
+これは$35\times8$行列の全$5\times5$ minorの零点schemeである．
+\begin{proposition}[相対正規三次incidence]\label{prop:relative-normal-incidence}
+$\mathcal N_3(B)$の幾何学的点は正規三次直線に対応し，
+$B/(G)$はHilbert級数$(1-z^3)/(1-z)^4$を持つ．
+各次数$B_n$が所定階数の局所自由層で，全幾何学的fiberが
+左右noetherianな14641型である相対族でも，
+同じminorが底変更に両立する閉部分schemeを定め，
+その普遍三次商は全次数で局所自由となる．
+\end{proposition}
+\begin{proof}
+左右乗法の像は各4次元であり，結合行列のrankが4以下であることは
+$GB_1=B_1G$と同値．次数一生成性で正規性が従う．
+相対的には，左右乗法は各幾何学的fiberで単射なので局所的に
+split monoである．一方の$4\times4$ minorを単元にしたchartで
+結合行列の全$5\times5$ minorを消すことは，
+両像が同じrank4部分束となる条件に等しい．
+全次数の$G:B_n\otimes\mathcal L\to B_{n+3}$もfiberで単射なので
+局所的にsplit monoとなり，商は局所自由で底変更に両立する．
+\end{proof}
+このincidenceの全点がintrinsicなweak cubicを与えるとは主張しない．
+反標準Serre作用，heart，rank-one torsion-free性，AZ ample性などの
+認識が別途必要である．固定ambient同定付きfiberと自己同型による商も区別する．
+
+\subsection{対角中心Fermatの27点の座標置換分類}
+CY量子多項式ambientを
+\[
+ q_{01}=a,\ q_{02}=b,\ q_{03}=(ab)^{-1},\
+ q_{12}=c,\ q_{13}=a/c,\ q_{23}=bc
+\]
+とし，$(a,b,c)\in(\mu_3)^3$とする．
+$a=\zeta^A,b=\zeta^B,c=\zeta^C$と書く．
+\begin{proposition}[27点の四軌道]\label{prop:fermat-27-orbits}
+4座標の置換による27点の軌道は次の4個で尽くされる．
+\[
+\begin{array}{c|r|r|r}
+(A,B,C)&\text{軌道の点数}&\text{置換安定化群の位数}&\dim Z(B)_3\\\hline
+(0,0,0)&1&24&20\\
+(0,0,1)&8&3&5\\
+(0,1,1)&12&2&6\\
+(0,1,2)&6&4&4
+\end{array}
+\]
+本稿の量子Fermat例$(1,1,0)$は12点の軌道に属する．
+\end{proposition}
+\begin{proof}
+$E_{01}=A,E_{02}=B,E_{03}=-A-B,E_{12}=C,
+E_{13}=A-C,E_{23}=B+C$とした交代行列$E$へ
+$S_4$の24元を作用させる．四つの軌道は相互に交わらず，
+点数の和が27である．中心三次の次元は
+20個の次数3指数ベクトル$v$について$Ev=0$を
+$\mathbb F_3$上で解いて得る．
+付属の標準Pythonコードが全列挙と検算を行う．
+\end{proof}
+これは座標置換による有限分類であり，graded Morita同値や
+Abel圏同値による分類，また全27点の曲面条件の認識ではない．
 
 \section{冗長性と低次数認識}
 \begin{lemma}[共通公理からの負次数消滅]
@@ -979,5 +1123,15 @@ Theorem 0.5, \S3．
 \emph{Twisted graded algebras and equivalences of graded categories},
 Proc. London Math. Soc. (3) 72 (1996), 281--311.
 正則正規一次元の中心化は\cite[\S3.1]{LBS}も参照．
+
+\bibitem{Levasseur} T. Levasseur,
+\emph{Some properties of non-commutative regular graded rings},
+Glasgow Math. J. 34 (1992), 277--300, Theorem 6.2(ii).
+\href{https://doi.org/10.1017/S0017089500008843}{doi:10.1017/S0017089500008843}.
+\bibitem{OUAS} S. Okawa, K. Ueda,
+\emph{Marked Artin--Schelter surfaces of del Pezzo types},
+\href{https://arxiv.org/abs/2508.04986}{arXiv:2508.04986}, Definition 1.1 and \S3.
+\bibitem{FermatOU} \emph{Quantum Fermat cubic surfaces are not OU Artin--Schelter surfaces},
+current project, \texttt{papers/quantum\_fermat\_not\_as\_surface.tex}, Theorem 3.1.
 \end{thebibliography}
 \end{document}
