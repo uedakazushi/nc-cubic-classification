@@ -340,5 +340,13 @@
     "used_part": "Open FZ2/FZ3 M0/M1/N and boundary FB2 C explicit presentations only. R+/-_1 not covered here. No existence sufficiency, isomorphism or full CY/chart coverage theorem imported.",
     "independent_proofs": "All-p centre rank cover with denominators controlled; two fixed number-field minors; conditional-AS4 anti-cyclic top tensors.",
     "validator": "computations/verify_cubic_as4_four_simple_zero_fifth.py"
+  },
+  "four_simple_second_shared_v79": {
+    "commit": "a45f834f51a00c47443b51caf66abaf4629546b9",
+    "path": "research/proofs/CY_ZERO_COMMUTATORS_FOUR_SIMPLE_SECOND_SHARED_OPEN_COMPLETE.tex",
+    "sha256": "9083d0d46d187470e1c718b0cc069ed7fbf395b535ab95850c489dbc121467b7",
+    "used_part": "FO2 explicit H(lambda,p) presentation only; no AS4 sufficiency, full-chart/CY coverage or all-isomorphism theorem imported.",
+    "independent_proofs": "Universal cyclic top tensor and all-parameter centre3 obstruction via four controlled-denominator rank charts plus last QQ point.",
+    "validator": "computations/verify_cubic_as4_four_simple_second.py"
   }
 }

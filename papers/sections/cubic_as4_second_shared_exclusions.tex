@@ -1,0 +1,92 @@
+\subsection{第二共有係数の二パラメータ表示の全排除}
+\label{subsec:cubic-as4-second-shared}
+\cite{AS4lowpinned}の第二共有開表示FO2を扱う。
+以下では表示だけを参照し、AS4十分性・全同型・全射影型被覆は輸入しない。
+
+\begin{proposition}\label{prop:cubic-second-shared-H}
+$\lambda\ne0,-1$, $p\ne1$ とし、
+\[
+\begin{gathered}
+ x_0=x_1=x_5=1,\quad x_2=p,\quad x_9=(\lambda^2-1)/16,\\
+ x_{14}=\frac{\lambda^2}{16(p-1)},\quad
+ x_{19}=-\frac{\lambda}{16(p-1)},\quad
+ x_{20}=\frac p{16(p-1)}
+\end{gathered}
+\]
+として他の $x_j$ を零にした六関係の代数を $H_{\lambda,p}$ と書く。
+この全二パラメータ表示のどの値もH3包絡にならない。
+\end{proposition}
+\begin{proof}
+最高tensor $R A R^{\mathsf T}$ の反巡回性を $\mathbb Q(\lambda,p)$ 上の
+全256係数で確認した。その非消滅は独立な固定対称射影 $U$ と可逆な $A$ に従う。
+従ってAS4実現の下では $\mu=I$ であり、H3には中心三次が必要である。
+以下は全値でその消滅を証明する。
+
+三次・四次の全関係moduleの商座標を構成すると、その分母は
+\[
+ \lambda,\quad\lambda-1,\quad\lambda+1,\quad p-1
+\]
+の積の冪だけである。
+座標は全関係を消し自由列上でidentityなので、この四因子を避けたAS4実現で
+真の20,35次元商基底となる。
+\[
+ D_1=\lambda^2+(2\lambda+1)p,\qquad
+ D_2=\lambda^2+\lambda p+\lambda+1
+\]
+と置くと、中心行列の選んだ20次minorは
+\[
+ \frac{\lambda^6(\lambda-1)^4(\lambda+1)^5D_1D_2}
+ {2^{40}(p-1)^{13}}
+\]
+である。従って残るのは $\lambda=1$, $D_1=0$, $D_2=0$ だけとなる。
+
+$\lambda=1$ の全関係を別に構成すると、商座標の分母は $p-1$ のみであり、
+20次minorは
+\[
+ m_0=\frac{3p+1}{2^{33}(p-1)^{11}}
+\]
+となる。この直線の未処理点は $p=-1/3$ だけである。
+
+次に $D_1=0$ は
+$p=-\lambda^2/(2\lambda+1)$ と表示できる。
+$\lambda=-1/2$ では $D_1=1/4$ なので、この表示が落とす点はない。
+また
+\[
+ p-1=-\frac{(\lambda+1)^2}{2\lambda+1}
+\]
+だから、元の許容条件はこの曲線のパラメータ表示と両立する。
+曲線上の関係moduleを直接構成すると、商座標の分母は
+$\lambda,\lambda-1,\lambda+1,2\lambda+1$ の積の冪だけであり、20次minorは
+\[
+ m_1=-\frac{\lambda^7(\lambda-1)^4(2\lambda+1)^{10}}
+ {2^{40}(\lambda+1)^{15}}
+\]
+となる。許容領域内では $\lambda=1$ 以外を全て排除し、
+残る点は先ほどと同じ $(\lambda,p)=(1,-1/3)$ である。
+
+最後に $D_2=0$ は
+$p=-(\lambda^2+\lambda+1)/\lambda$ と表示でき、
+\[
+ p-1=-\frac{(\lambda+1)^2}{\lambda}.
+\]
+その直接商座標の分母は $\lambda,\lambda-1,\lambda+1$ の積の冪のみであり、
+20次minorは
+\[
+ m_2=-\frac{\lambda^{17}(\lambda-1)^3}{2^{37}(\lambda+1)^{15}}
+\]
+となる。残る $\lambda=1$ は $p=-3$ なので、直線の $m_0\ne0$ により排除済みである。
+このminorは行ごとに分母を払った多項式行列の行列式と、
+分母対角行列の行列式を別々に計算しても確認した。
+
+唯一の未処理点 $(1,-1/3)$ は $\mathbb Q$ 上で全関係行列を構成し、
+非零20次minorを確認した。
+以上は一般点のrrefから特殊値の平坦性を推測する議論ではない。
+各chartの全関係恒等式、分母支持、AS4の固定次元、
+および最後の点の独立計算により全許容値を覆った。
+従ってどのAS4実現でも中心三次は零であり、H3の必要条件に矛盾する。
+\end{proof}
+
+全二変数最高tensor、四つのrank chart、最後の有理点は
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}as4\_\allowbreak{}four\_\allowbreak{}simple\_\allowbreak{}second.py}
+で再現する。商射影と交換子行列を係数体の内部で計算し、
+全関係消滅と自由列identityを直接確認している。
