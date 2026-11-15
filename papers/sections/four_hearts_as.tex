@@ -1,0 +1,103 @@
+\section{AS heartと反標準heart：helixからcornerへ}\label{sec:AS}
+\subsection{AS構成が指定するもの}
+AS heartは，適切なnoetherian性を満たす三次元Artin--Schelter正則
+$\mathbb Z$-代数の$\qgr$として定義する．三次曲面の場合には
+$\{0,1,2\}\times\mathbb Z$を添字とする代数を使い，標準的な九対象のfoundationがある
+\cite[\S3--4]{AOU}．より一般のdel Pezzo型の標識とAS条件は
+\cite[Definitions 1.1, 3.1]{OU}に従う．
+ここでのAS正則次元3は曲面のhelix代数の次元であり，
+非可換射影三空間を与える四次元AS正則ambientと同じものではない．
+また非周期的な$\mathbb Z$-代数を，根拠なく一周期の次数付き代数に置き換えない．
+
+very strong helixは例外性，特定の周期範囲でのstrong性，Serre作用との周期関係を与える．
+そのhelixがheartを再構成するためには，生成性と高次Ext消滅を伴う豊富性も用いる．
+しかし，九対象の全orbitの豊富性から，そのうちの一つ$e$のorbitの豊富性は自動的には従わない．
+本稿で反標準環を作るのは後者であり，ここにcornerを導入する理由がある．
+
+\subsection{既知の導来同値と構造対象の課題}
+AOU \cite[\S9]{AOU}は，滑らかな楕円曲線，次数3の線束，無限位数の平行移動$\sigma$と，
+sufficiently generalな六点を用いる．同節では最初から
+$\coh\widetilde X=\qgr F$と置いている．この$\widetilde X$をVdBのraw blow-upと
+定義上同一視してはならない．Lemma 9.2のSerre関手は$(-1)[2]$であり，
+Theorem 9.4はAS代数$\mathsf A$に対するdg導来同値
+\begin{equation}\label{eq:AOU}
+\Psi:\Db(\qgr F)\xrightarrow{\sim}\Db(\qgr\mathsf A)
+\end{equation}
+を与える．両側のfull strong collectionのEnd代数を同定する証明であり，
+これは標準heart間のabel同値を主張する定理ではない．
+
+mutation後のcollectionの先頭を$E_0\in\Db(\qgr F)$とすると，
+同値は$\Psi(E_0)\simeq\OO_{\mathrm{AS}}(0,0)$と規格化できる．
+\cite[(9.44)]{AOU}の可換表示では先頭は$\OO$だが，その後に非可換版の対象を
+mutationによって定義し直している．従ってpointed比較には
+\begin{equation}\label{eq:E0}
+E_0\stackrel{?}{\simeq}\pi F
+\end{equation}
+を実際の対象として確認する必要がある．$K_0$類や楕円境界へのrestrictionの一致では足りない．
+この同定を未確認の範囲では，$R(E_0,s)$と$R(\pi F,(1))$を同じ環と呼ばない．
+一方，反Serre作用との両立性自体はSerre関手の一意性から得られる．
+
+\begin{corollary}[VdB--ASの導来比較の範囲]\label{cor:VdBAS}
+VdBの最後のsection-model比較とAOUの比較\eqref{eq:AOU}の両方が適用でき，
+中間の$\qgr F$を同じデータで同定しているなら，それらの合成は
+VdBの当該blow-up heartとAS heartの導来同値を与える．
+そのt-exactnessと構造対象の保存は，これだけでは従わない．
+\end{corollary}
+\begin{proof}
+二つの指定dg同値を合成する．VdB側では既に非自明なHRS tiltがあり得るため，
+合成がt-exactであることは同値性だけの帰結ではない．構造対象の保存には
+各関手での像，特に\eqref{eq:E0}の確認が必要である．
+\end{proof}
+
+\subsection{一対象の反標準orbitを判定する}
+AS側の標識されたfoundationを$E_1=e,E_2,\ldots,E_r$とし，
+$T_0=\bigoplus_iE_i$，$B_n=\Hom(T_0,s^nT_0)$と置く．
+$E_1$への射影を$p\in B_0$とすると，積の規約を合わせれば
+\begin{equation}\label{eq:foldedcorner}
+pBp=\bigoplus_{n\ge0}\Hom(e,s^ne)=R(e,s).
+\end{equation}
+以下の条件は，任意のAS退化点で自動的に成立するものではない．
+
+\begin{corollary}[AS--反標準のabel同値判定]\label{cor:ASac}
+上のfoldingが$\AAS\simeq\qgr B$を与え，$e$が$\pi(pB)$に対応するとする．
+$B$と$R=pBp$が局所有限右noetherianで，$Bp$が右$R$有限生成，
+$pB$が左$R$有限生成であると仮定する．このとき自然なcorner関手
+\[
+K:\AAS\simeq\qgr B\longrightarrow\qgr R(e,s)
+\]
+は，$\dim_k B/BpB<\infty$と同値にabel同値となる．
+その場合$K(e)=\pi R$であり，確認したfoldingの下で$s$と$(1)$にも適合する．
+\end{corollary}
+\begin{proof}
+式\eqref{eq:foldedcorner}と命題\ref{prop:corner}を使う．
+$(pB)p=pBp$が構造対象の保存を与える．反標準次数のshiftと$s$の適合性は
+foldingの定義に含めたものである．
+\end{proof}
+
+この系が同定するのは，\emph{AS側の指定対象から作った}反標準heartである．
+これをRains側の$R(e,s)$やAOUの$F$と同定するには，pointedな比較を別に必要とする．
+$B/BpB$が無限次元でも，それはこの自然なabelian corner関手が同値でないことを意味するだけで，
+別の導来同値の不存在ではない．
+
+\begin{lemma}[有限次数による判定が有効になる条件]\label{lem:cutoff}
+$C=B/BpB$が非負次数付きで，有限次元$C_0$上，次数1で生成されるとする．
+このとき$C_N=0$なら全$n\ge N$で$C_n=0$である．
+従って$C$が有限次元であることと，ある$N$で$C_N=0$であることは同値である．
+\end{lemma}
+\begin{proof}
+任意の次数$n\ge N$の生成単項式は，長さ$N$の先頭部分を含む．
+$C_N=0$ならそれが零となる．逆は次数ごとの局所有限性による．
+\end{proof}
+三次曲面のJacobi表示では道長次数と反標準cut次数は異なる．
+補題を道長次数に適用した結果を反標準cornerへ移すには，この二つのgradingの関係を確認する．
+単に有限次数の計算が良好だったという理由だけで，全次数の有限性を結論しない．
+
+\begin{remark}[三次曲面の具体的corner計算との関係]
+同プロジェクトの別稿\nolinkurl{cubic_heart_corner.tex}は，指定された九頂点表示について，
+四交比の十一のdeterminant条件，一様な道長7での消滅，および
+$8+21t+33t^2+38t^3+33t^4+21t^5+8t^6$という有限cornerのHilbert関数を扱う．
+それらの詳細な幾何学的証明と計算資産は別稿に保持する．本稿はその数値を
+全AS表示への無条件な認識定理として用いず，系\ref{cor:ASac}の有限性条件の
+具体的な検査法として位置づける．
+\end{remark}
+
