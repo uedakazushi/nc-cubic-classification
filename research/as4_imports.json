@@ -372,5 +372,13 @@
     "used_part": "AZ2 explicit two fixed L presentations only. No chart coverage, AS4 sufficient or all-isomorphism theorem imported.",
     "independent_proofs": "Ore base/cross relation transport and scalar cube, CY top tensor, exact centre line; general pure-base skew-cone vertex infinite-self-Ext argument in manuscript.",
     "validator": "computations/verify_cubic_as4_four_simple_adjacent_L.py"
+  },
+  "four_simple_adjacent_S_v83": {
+    "commit": "a45f834f51a00c47443b51caf66abaf4629546b9",
+    "path": "research/proofs/CY_ZERO_COMMUTATORS_FOUR_SIMPLE_ADJACENT_SHARED_BOUNDARY_REDUCTION.tex",
+    "sha256": "0adba56ece96ac29d4fa345720a16132f5f8bc1bdcca137e16d0bb9e836e4f0d",
+    "used_part": "AB2/AB3 explicit T/S coefficient formulas only. No full-chart/CY coverage, AS4 sufficiency or all-isomorphism theorem imported; T away from -2 remains undecided here.",
+    "independent_proofs": "Generic four-word relation matrix rank219 with presentation denominator zeta; all-closed rank bound and exact T_-2 equals S endpoint identities.",
+    "validator": "computations/verify_cubic_as4_four_simple_adjacent_S.py"
   }
 }

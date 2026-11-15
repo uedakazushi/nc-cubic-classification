@@ -1,0 +1,46 @@
+\subsection{隣接境界の悪い全一パラメータ表示}
+\label{subsec:cubic-as4-adjacent-S}
+\cite{AS4lowpinned}のAB3にある次の具体表示を $S_\zeta$ と書く。
+ここで $S_\zeta$ は前節のOre base $S$ とは別の四生成元代数である。
+$\zeta\ne0$, $u=(1-16\zeta^2)/(32\zeta)$ とし、
+\[
+\begin{gathered}
+ \lambda=-2,\quad x_0=x_1=x_4=1,\quad x_5=-1,\\
+ x_8=x_{15}=\zeta,\quad x_{10}=x_{11}=2\zeta,\quad x_{12}=-2\zeta,\\
+ x_6=x_7=x_{17}=u,\quad x_{16}=-u,\quad
+ x_{13}=-x_{19}=\zeta^2-1/16,\\
+ x_{14}=-4\zeta^2,\qquad x_9=x_{20}=-u^2
+\end{gathered}
+\]
+として、他の $x_j$ は零とする。
+
+\begin{proposition}\label{prop:cubic-adjacent-S}
+全 $S_\zeta$ は14641型AS4でなく、H3包絡にならない。
+AB2の隣接表示の両符号 $T^\eta_{-2}$ も同じ理由で排除される。
+\end{proposition}
+\begin{proof}
+元の六関係から四次の全語関係行列を構成する。
+これは $288\times256$ 行列で、成分の非定数分母は $\zeta$ の冪だけである。
+$\mathbb Q(\zeta)$ 上の厳密計算による階数は219である。
+従って全220次minorは $\zeta\ne0$ 上で恒等的に零であり、
+各閉値での階数も219以下となる。
+よって
+\[
+ \dim(S_\zeta)_4\ge256-219=37>35=\binom73
+\]
+である。これは14641型AS4のHilbert値に反する。
+ここでは一般商基底を特殊化して平坦性を推測しているのではなく、
+元の全語行列の階数の上界を使っている。
+
+最後にAB2の全係数へ $\lambda=-2$ を代入すると、両符号について文字どおり
+\[
+ T^\eta_{-2}=S_{-\eta i/4}
+\]
+となることを全六関係で独立確認した。
+そのパラメータは非零なので、上の全値障害を適用できる。
+\end{proof}
+
+全一変数の階数と分母支持、二つの端点恒等式は
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}as4\_\allowbreak{}four\_\allowbreak{}simple\_\allowbreak{}adjacent\_\allowbreak{}S.py}
+で再現する。この結果は $T^\eta_\lambda$ の $\lambda\ne-2$ の判定を含めず、
+全chart/CY被覆・AS4十分性・全同型は輸入していない。

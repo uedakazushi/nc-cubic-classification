@@ -1,0 +1,23 @@
+{
+  "version": "classification-v83",
+  "source_commit": "as4 a45f834f51a00c47443b51caf66abaf4629546b9",
+  "source_presentation": "ADJACENT_SHARED_BOUNDARY_REDUCTION.tex AB2/AB3 explicit coefficients only",
+  "S_parameter_domain": "zeta!=0",
+  "presentation_denominator_support": "zeta",
+  "S_generic_degree4_relation_rank": 219,
+  "S_all_closed_degree4_dimension_lower_bound": 37,
+  "AS4_degree4_required": 35,
+  "T_bad_endpoints": [
+    {
+      "eta": 1,
+      "T_lambda": -2,
+      "equals_S_zeta": "-I/4"
+    },
+    {
+      "eta": -1,
+      "T_lambda": -2,
+      "equals_S_zeta": "I/4"
+    }
+  ],
+  "scope": "All explicit S_zeta and both T_-2 endpoints excluded by Hilbert obstruction. No claim for T_lambda away from -2, and no full CY/chart coverage, AS4 sufficiency or isomorphism theorem imported."
+}
