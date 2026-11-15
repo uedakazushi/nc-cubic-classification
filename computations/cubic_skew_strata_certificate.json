@@ -1,0 +1,1263 @@
+{
+  "version": "classification-v2",
+  "date": "2026-11-15",
+  "field": "F3 exponent arithmetic; characteristic-zero quantum algebras",
+  "generic_rational_witness_q_upper": [
+    2,
+    3,
+    5,
+    7,
+    11,
+    13
+  ],
+  "generic_witness_distinct_characters": 20,
+  "exact_QQ_multiplication_checks": {
+    "monomial_rank4": 20,
+    "two_term_rank_above4": 190,
+    "two_term_rank_counts": {
+      "7": 60,
+      "8": 130
+    }
+  },
+  "parameters": 27,
+  "coordinate_permutations": 24,
+  "orbits": [
+    {
+      "representative": [
+        0,
+        0,
+        0
+      ],
+      "orbit_size": 1,
+      "coordinate_stabilizer_order": 24,
+      "orbit_parameters": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "central_degree_three_monomials": [
+        [
+          0,
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          1
+        ],
+        [
+          0,
+          2,
+          1,
+          0
+        ],
+        [
+          0,
+          3,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          2,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0,
+          0
+        ]
+      ],
+      "central_degree_three_dimension": 20,
+      "normal_cubic_character_blocks": [
+        {
+          "character_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "monomials": [
+            [
+              0,
+              0,
+              0,
+              3
+            ],
+            [
+              0,
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              1
+            ],
+            [
+              0,
+              2,
+              1,
+              0
+            ],
+            [
+              0,
+              3,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              2
+            ],
+            [
+              1,
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0,
+              0
+            ]
+          ],
+          "projective_dimension": 19
+        }
+      ],
+      "normal_component_vector_dimensions": [
+        20
+      ],
+      "contains_non_AS_Fermat_example": false
+    },
+    {
+      "representative": [
+        0,
+        0,
+        1
+      ],
+      "orbit_size": 8,
+      "coordinate_stabilizer_order": 3,
+      "orbit_parameters": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          2
+        ]
+      ],
+      "central_degree_three_monomials": [
+        [
+          0,
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          3,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0,
+          0
+        ]
+      ],
+      "central_degree_three_dimension": 5,
+      "normal_cubic_character_blocks": [
+        {
+          "character_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "monomials": [
+            [
+              0,
+              0,
+              0,
+              3
+            ],
+            [
+              0,
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0,
+              0
+            ]
+          ],
+          "projective_dimension": 4
+        },
+        {
+          "character_exponents": [
+            0,
+            0,
+            1,
+            2
+          ],
+          "monomials": [
+            [
+              2,
+              1,
+              0,
+              0
+            ]
+          ],
+          "projective_dimension": 0
+        },
+        {
+          "character_exponents": [
+            0,
+            0,
+            2,
+            1
+          ],
+          "monomials": [
+            [
+              1,
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              0,
+              0
+            ]
+          ],
+          "projective_dimension": 1
+        },
+        {
+          "character_exponents": [
+            0,
+            1,
+            0,
+            2
+          ],
+          "monomials": [
+            [
+              1,
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              1,
+              0,
+              1
+            ]
+          ],
+          "projective_dimension": 1
+        },
+        {
+          "character_exponents": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "monomials": [
+            [
+              0,
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              1,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              1
+            ]
+          ],
+          "projective_dimension": 2
+        },
+        {
+          "character_exponents": [
+            0,
+            1,
+            2,
+            0
+          ],
+          "monomials": [
+            [
+              2,
+              0,
+              0,
+              1
+            ]
+          ],
+          "projective_dimension": 0
+        },
+        {
+          "character_exponents": [
+            0,
+            2,
+            0,
+            1
+          ],
+          "monomials": [
+            [
+              2,
+              0,
+              1,
+              0
+            ]
+          ],
+          "projective_dimension": 0
+        },
+        {
+          "character_exponents": [
+            0,
+            2,
+            1,
+            0
+          ],
+          "monomials": [
+            [
+              1,
+              0,
+              0,
+              2
+            ],
+            [
+              1,
+              1,
+              1,
+              0
+            ]
+          ],
+          "projective_dimension": 1
+        },
+        {
+          "character_exponents": [
+            0,
+            2,
+            2,
+            2
+          ],
+          "monomials": [
+            [
+              0,
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              1,
+              0,
+              2
+            ],
+            [
+              0,
+              2,
+              1,
+              0
+            ]
+          ],
+          "projective_dimension": 2
+        }
+      ],
+      "normal_component_vector_dimensions": [
+        5,
+        3,
+        3,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1
+      ],
+      "contains_non_AS_Fermat_example": false
+    },
+    {
+      "representative": [
+        0,
+        1,
+        1
+      ],
+      "orbit_size": 12,
+      "coordinate_stabilizer_order": 2,
+      "orbit_parameters": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          2,
+          2
+        ]
+      ],
+      "central_degree_three_monomials": [
+        [
+          0,
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          3,
+          0,
+          0
+        ],
+        [
+          1,
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0,
+          0
+        ]
+      ],
+      "central_degree_three_dimension": 6,
+      "normal_cubic_character_blocks": [
+        {
+          "character_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "monomials": [
+            [
+              0,
+              0,
+              0,
+              3
+            ],
+            [
+              0,
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              0,
+              0
+            ],
+            [
+              1,
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0,
+              0
+            ]
+          ],
+          "projective_dimension": 5
+        },
+        {
+          "character_exponents": [
+            0,
+            0,
+            2,
+            1
+          ],
+          "monomials": [
+            [
+              0,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1,
+              1
+            ]
+          ],
+          "projective_dimension": 1
+        },
+        {
+          "character_exponents": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "monomials": [
+            [
+              0,
+              2,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0,
+              1
+            ]
+          ],
+          "projective_dimension": 2
+        },
+        {
+          "character_exponents": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "monomials": [
+            [
+              0,
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              0,
+              2,
+              0
+            ]
+          ],
+          "projective_dimension": 1
+        },
+        {
+          "character_exponents": [
+            1,
+            1,
+            2,
+            2
+          ],
+          "monomials": [
+            [
+              0,
+              0,
+              1,
+              2
+            ]
+          ],
+          "projective_dimension": 0
+        },
+        {
+          "character_exponents": [
+            2,
+            2,
+            0,
+            2
+          ],
+          "monomials": [
+            [
+              0,
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              0,
+              0,
+              2
+            ]
+          ],
+          "projective_dimension": 1
+        },
+        {
+          "character_exponents": [
+            2,
+            2,
+            1,
+            1
+          ],
+          "monomials": [
+            [
+              0,
+              0,
+              2,
+              1
+            ]
+          ],
+          "projective_dimension": 0
+        },
+        {
+          "character_exponents": [
+            2,
+            2,
+            2,
+            0
+          ],
+          "monomials": [
+            [
+              0,
+              2,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              1,
+              0
+            ]
+          ],
+          "projective_dimension": 2
+        }
+      ],
+      "normal_component_vector_dimensions": [
+        6,
+        3,
+        3,
+        2,
+        2,
+        2,
+        1,
+        1
+      ],
+      "contains_non_AS_Fermat_example": true
+    },
+    {
+      "representative": [
+        0,
+        1,
+        2
+      ],
+      "orbit_size": 6,
+      "coordinate_stabilizer_order": 4,
+      "orbit_parameters": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          1,
+          0
+        ]
+      ],
+      "central_degree_three_monomials": [
+        [
+          0,
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          3,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0,
+          0
+        ]
+      ],
+      "central_degree_three_dimension": 4,
+      "normal_cubic_character_blocks": [
+        {
+          "character_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "monomials": [
+            [
+              0,
+              0,
+              0,
+              3
+            ],
+            [
+              0,
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0,
+              0
+            ]
+          ],
+          "projective_dimension": 3
+        },
+        {
+          "character_exponents": [
+            0,
+            0,
+            1,
+            2
+          ],
+          "monomials": [
+            [
+              1,
+              0,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              0,
+              0
+            ]
+          ],
+          "projective_dimension": 1
+        },
+        {
+          "character_exponents": [
+            0,
+            0,
+            2,
+            1
+          ],
+          "monomials": [
+            [
+              0,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              0,
+              0
+            ]
+          ],
+          "projective_dimension": 1
+        },
+        {
+          "character_exponents": [
+            1,
+            2,
+            0,
+            0
+          ],
+          "monomials": [
+            [
+              0,
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              1,
+              0,
+              1
+            ]
+          ],
+          "projective_dimension": 1
+        },
+        {
+          "character_exponents": [
+            1,
+            2,
+            1,
+            2
+          ],
+          "monomials": [
+            [
+              0,
+              2,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              2,
+              0
+            ]
+          ],
+          "projective_dimension": 1
+        },
+        {
+          "character_exponents": [
+            1,
+            2,
+            2,
+            1
+          ],
+          "monomials": [
+            [
+              0,
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              0,
+              0,
+              1
+            ]
+          ],
+          "projective_dimension": 1
+        },
+        {
+          "character_exponents": [
+            2,
+            1,
+            0,
+            0
+          ],
+          "monomials": [
+            [
+              0,
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              1,
+              1,
+              0
+            ]
+          ],
+          "projective_dimension": 1
+        },
+        {
+          "character_exponents": [
+            2,
+            1,
+            1,
+            2
+          ],
+          "monomials": [
+            [
+              0,
+              2,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              2
+            ]
+          ],
+          "projective_dimension": 1
+        },
+        {
+          "character_exponents": [
+            2,
+            1,
+            2,
+            1
+          ],
+          "monomials": [
+            [
+              0,
+              1,
+              0,
+              2
+            ],
+            [
+              2,
+              0,
+              1,
+              0
+            ]
+          ],
+          "projective_dimension": 1
+        }
+      ],
+      "normal_component_vector_dimensions": [
+        4,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "contains_non_AS_Fermat_example": false
+    }
+  ],
+  "principal_recognition_dimensions": {
+    "B3": 20,
+    "R3": 19,
+    "B4": 35,
+    "R4": 31
+  },
+  "normal_cubic_incidence_matrix": [
+    35,
+    8
+  ],
+  "minor_size": 5,
+  "scope": "Finite coordinate-permutation classification only. Reduced normal cubic character blocks also enumerated; no intrinsic quotient classification or scheme reducedness claim. Other proofs are in the manuscript."
+}

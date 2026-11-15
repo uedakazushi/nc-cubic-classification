@@ -4,6 +4,8 @@
 
 **現在の最優先課題は強いintrinsic定義の14641型非可換三次曲面 H3 の完全分類。** 詳細なCodex指示は research/cubic_14641_codex_plan.md に置く。R=⊕Hom(O,tau^n O) は一次生成、二次包絡B=Q(R)は左右noetherian quadratic Koszul AS4、型14641。G∈B3の正則正規性とR=B/(G)は現行認識定理の結論であり公理ではない。
 
+Skew torusの固定ambient上では、全正規三次直線の被約locusを交換指標blockの射影空間として分類した（papers/sections/cubic_skew_normal_incidence.tex）。一般fiberは単項式20点。量子Fermat軌道には中心P5のほか非中心成分もある。minor schemeの非被約構造、自己同型商、各商のintrinsic条件は未解決。次はこれら非中心商のSerre偏極適合性・曲面条件を判定し、他ambient族へ拡張する。厳密列挙は実行済み、組版は日本語TeX依存不足で停止。詳細は research/cubic_skew_normal_validation.json。
+
 **最初は全AS4 ambientの完全分類を目指さず、正規三次incidence I3={(B,[G]):GB1=B1G} の構造定理を最優先。** 各Bに対し35×8積行列の5×5 minorsで正規三次直線を求め、既知族の一般fiber、成分、境界、同型、非中心Gを調べる。Pym六成分で全14641型を尽くすとはしない。as4/asz4とpoisson-p4、既存のheart/corner研究を検証済み入力として利用する。正規商が無条件にintrinsic weak条件を満たすとは仮定しない。
 
 完成基準は全対象の被覆、明示的な幾何データ、同型群oidと慣性、成分・交叉・境界、Serre/heart/rank/AZ条件、相対stack・降下。まず一般点と主要成分を決定し、未分類領域を厳密に縮小する。分類未完なら部分分類の正しい定理と証明を残す。GitHub mainを正本とし、push成功時Library保存なし。

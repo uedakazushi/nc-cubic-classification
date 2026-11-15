@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-15",
+  "scope": "Reduced normal cubic incidence for a fixed quantum polynomial ambient; not intrinsic surface classification",
+  "proof": "papers/sections/cubic_skew_normal_incidence.tex",
+  "argument": "PBW Newton polytope additivity forces every normalizing linear form to be a scalar multiple of the same generator; character blocks classify all closed points",
+  "checks": {
+    "python3 computations/verify_cubic_skew_strata.py": "passed: all 27 torsion parameters, four coordinate orbits, normal character blocks; exact rational witness with 20 distinct characters and 20 monomial / 190 two-term multiplication ranks",
+    "latexmk papers/weak_cubic_axioms.tex": "blocked: ltjsarticle.cls and luaotfload-main unavailable; no PDF produced",
+    "dependency_recovery": "local tlmgr user-tree attempted; historic TeX Live mirror blocked by network proxy HTTP 403",
+    "source_consistency": "passed: input paths, unique labels, references from the new section, git diff --check; not a TeX compilation"
+  },
+  "not_claimed": [
+    "minor scheme reducedness",
+    "relative flatness of the normal incidence",
+    "smoothness or intrinsic Serre/AZ conditions of arbitrary quotients",
+    "categorical or full ambient classification",
+    "independent review or exhaustive novelty audit"
+  ]
+}

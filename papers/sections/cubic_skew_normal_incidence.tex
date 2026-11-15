@@ -1,0 +1,92 @@
+\subsection{量子多項式ambient上の全正規三次直線}
+\label{sec:skew-normal-incidence}
+ここでは固定した座標表示のambient対を分類し，曲面圏の同値による
+分類とは区別する．規約を
+\[
+ B(q)=k\langle x_0,x_1,x_2,x_3\rangle/
+ (x_ix_j-q_{ij}x_jx_i),\qquad
+ q_{ii}=1,\quad q_{ji}=q_{ij}^{-1}
+\]
+とする．$q_{ij}\ne0$であり，順序単項式$x^a=x_0^{a_0}\cdots x_3^{a_3}$は基底をなす．
+$D_3=\{a\in\mathbb N^4:|a|=3\}$に対し
+\[
+ \chi_i(a)=\prod_{j=0}^3q_{ji}^{a_j},\qquad
+ \chi(a)=(\chi_0(a),\ldots,\chi_3(a)),\qquad
+ V_\lambda=\langle x^a:a\in D_3,\ \chi(a)=\lambda\rangle
+\]
+と置く．従って$x^ax_i=\chi_i(a)x_ix^a$である．
+\begin{theorem}[skew torusの正規三次直線の被約分類]
+\label{thm:skew-normal-cubics}
+任意のパラメータ$q$に対し，非零三次元$G$が正規であるための
+必要十分条件は，一つの$\lambda$について$G\in V_\lambda$となることである．
+特に
+\[
+ \mathcal N_3(B(q))_{\mathrm{red}}
+ =\coprod_{\lambda:\,V_\lambda\ne0}\PP(V_\lambda).
+\]
+正規自己同型を$Gx_i=\sigma_G(x_i)G$で定めると
+$\sigma_G(x_i)=\lambda_i x_i$であり，中心三次元はちょうど$V_{(1,1,1,1)}$である．
+この等式は被約schemeの記述であって，minor schemeの被約性は主張しない．
+\end{theorem}
+\begin{proof}
+順序単項式の積は非零スカラー倍の指数和の単項式であるから$B(q)$は整域である．
+非零元$f$のNewton多面体を$P(f)$とすると
+$P(fg)=P(f)+P(g)$となる．実際，一般の実線型重みで両因子の
+最大項が一意になると，その積の係数は非零である．一般の重みでの
+支持関数の加法性を連続性で全重みに延ばせばよい．
+
+$G$が正規なら$GB_1=B_1G$であり，整域性により各$i$に対して
+一意な$\ell_i\in B_1$が$Gx_i=\ell_iG$を満たす．従って
+\[
+ P(G)+\{e_i\}=P(\ell_i)+P(G).
+\]
+凸コンパクト集合の支持関数を引くと$P(\ell_i)=\{e_i\}$であり，
+$\ell_i=\lambda_i x_i$となる．非零係数を持つ各$x^a$について
+単項式基底で係数を比較すると$\chi(a)=\lambda$を得る．
+逆にこの条件を満たす$G$は全生成元と同じ対角自己同型で交換するので正規である．
+対角スケーリングは関係式を保つため，表示された$\sigma_G$は自己同型である．
+
+異なる$V_\lambda$は単項式基底の互いに素な部分で張られ，その射影空間は
+相互に交わらない．各線型空間上では$Gx_i=\lambda_i x_iG$が
+普遍係数で成立するため，全5次minorが恒等的に消える．
+上で全閉点を尽くしたので，代数閉体上のNullstellensatzにより
+それらの合併はminor schemeの被約部分に一致する．
+\end{proof}
+
+\begin{corollary}[有限指標層別化と一般fiber]
+\label{cor:skew-normal-strata}
+六次元パラメータトーラス$(k^*)^6$を，20個の指数の間の
+$\chi(a)=\chi(b)$の成立・不成立で有限個の局所閉集合に分けられる．
+各層で上の射影空間の個数と次元は一定である．
+一般$q$では全20指標が相異なり，被約正規三次locusは20個の単項式点である．
+これらの一般ambientでは中心三次元は存在しない．
+\end{corollary}
+\begin{proof}
+各指標等式はLaurent単項式等式の有限系である．
+$a\ne b$なら$d=a-b\ne0$である．独立な$q_{ij}$に関し
+$\prod_j q_{ji}^{d_j}=1$が全$i$で恒等的に成立することはない．
+実際，各$i$で$q_{ji}$の指数を比較すると全$d_j=0$となる．
+同様に$\chi(a)=1$は$|a|=3$では恒等式にならない．
+従って有限個の真閉集合を除けば結論を得る．
+\end{proof}
+
+上の一般fiberは\emph{曲面条件を満たすfiber}ではない．
+単項式三次商がintrinsicな滑らかな曲面を与えるとは限らず，
+この20点を20個のH3曲面と数えてはならない．
+また層別化は被約幾何学的fiberの記述であって，相対minor schemeの
+平坦性・非被約構造・全AS4 ambientの被覆は別問題である．
+
+\paragraph{27個のtorsion ambientでの非中心成分．}
+命題\ref{prop:fermat-27-orbits}の四代表について，定理を適用すると
+射影線型成分のベクトル次元の多重集合は順に
+\[
+ (20),\quad (5,3,3,2,2,2,1,1,1),\quad
+ (6,3,3,2,2,2,1,1),\quad (4,2,2,2,2,2,2,2,2).
+\]
+例えば量子Fermatの軌道では，中心の$\PP^5$以外に
+$2\PP^2\sqcup3\PP^1\sqcup2\PP^0$が存在する．
+これは中心だけを調べると固定ambientでも正規三次対を取り落とすことを示す．
+計算は$Ea$の$\mathbb F_3$値で20単項式を群分けした厳密列挙であり，
+有限標数の環を特性零へ持ち上げた推論ではない．
+全線型自己同型による商，intrinsic同値，およびこれら非中心商の
+Serre偏極・滑らかさの判定はここでは未解決とする．

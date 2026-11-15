@@ -2,6 +2,10 @@
 
 2026-11-15 / project-v16 / recognition-v6 / hearts-v1。GitHub mainを現行ソースの正本とする。最初に[研究方針](00_research_plan.md)を読む。
 
+## 14641分類：固定skew ambientの正規三次直線
+
+量子多項式ambient上の全正規三次直線の被約locusを、交換指標が一致する単項式blockの射影空間として分類した。[証明](papers/sections/cubic_skew_normal_incidence.tex)／[研究ノート](research/cubic_14641_classification.md)／[検証範囲](research/cubic_skew_normal_validation.json)。一般fiberは単項式20点。量子Fermatの固定ambientには中心P5以外にも非中心成分が存在する。これらの商がintrinsic曲面条件を満たすか、全線型自己同型による商、minor schemeの非被約構造、全ambientの被覆は未解決。厳密計算は実行済み、今回の組版は日本語TeX依存不足で停止した。
+
 ## 現在の重点：heart比較、まずcubic surface
 
 一般の非可換del Pezzoに対する **Rains heart・VdB heart・AS heart・anticanonical heart** の四構成を比較する。dP1に限定せず、最初に次数3のcubic surfaceを扱う。heartの存在、faithfulなrealization、導来同値、t-exactness、構造対象・反Serre・境界・markingの保存と族の降下を区別する。
