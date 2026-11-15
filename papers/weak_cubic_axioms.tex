@@ -21,7 +21,7 @@
 \newcommand{\cP}{\mathfrak P}\newcommand{\Sym}{\operatorname{Sym}}
 \title{内在的非可換三次曲面の14641認識とskew包絡の分類\\\large dP1共通定義・量子FermatのPym成分・正規境界認識}
 \author{研究原稿：証明済みの命題と未解決の認識条件を区別する}
-\date{2026年11月15日\quad classification-v4}
+\date{2026年11月15日\quad classification-v5}
 \begin{document}\maketitle
 \begin{abstract}
 大域次元2の$k$線形Abel圏とrank one torsion-free exceptional構造対象，反Serre作用，
@@ -45,6 +45,9 @@ Cassidy--SheltonのPBW判定を適用することである．
 H3を31パラメータ・五ambient型へ絞り，各型の全admissible係数と幾何学的同型群oidを記述する．
 非CY・非中心の型も実在し，CY族だけによる全H3の被覆は否定される．
 またPymの四つの非skew標準CY chartの一般点を中心三次の消滅によって除外する．
+as4の指定半単純化定理を用い，量子基底の非自明単冪持上げを全て除外する．
+可換三変数の非零導分Ore包絡ではpoint対象の自己Extが任意の高次数で非零となり，
+中心三次が存在する特殊値も含めH3から除外される．
 全モジュライの代数性は証明済みとはせず，有限提示による候補，その形式局所模型，
 超曲面認識部分での射，中心三次incidenceの一般ファイバーを正確に定式化する．
 \end{abstract}
@@ -293,6 +296,7 @@ Abel圏同値による分類，また全27点の曲面条件の認識ではな�
 \input{papers/sections/cubic_skew_finite_reduction.tex}
 \input{papers/sections/cubic_skew_admissible_classification.tex}
 \input{papers/sections/cubic_pym_generic_exclusions.tex}
+\input{papers/sections/cubic_as4_reductions.tex}
 
 \section{冗長性と低次数認識}
 \begin{lemma}[共通公理からの負次数消滅]
@@ -1164,6 +1168,16 @@ Remark 2.5の一般同定予想は使用しない．
 \emph{Some properties of non-commutative regular graded rings},
 Glasgow Math. J. 34 (1992), 277--300, Theorem 6.2(ii).
 \href{https://doi.org/10.1017/S0017089500008843}{doi:10.1017/S0017089500008843}.
+\bibitem{AS4pinned} \emph{as4 research repository},
+\href{https://github.com/uedakazushi/as4/tree/60eacafa28156a5fc62f74eae004d64a84675f4b}{commit 60eacafa28156a5fc62f74eae004d64a84675f4b}.
+\texttt{research/proofs/UNIPOTENT\_UNTWIST.tex}, \texttt{QUANTUM\_UNIPOTENT\_LIFTS.tex},
+\texttt{SCALAR\_LARGE\_COMMUTATORS.tex}, \texttt{CY\_FOUR\_COMMUTATORS.tex},
+\texttt{CY\_THREE\_COMMUTATORS\_REDUCTION.tex}の指定定理．
+元の状態はproof written，独立監査pendingを含む．適用仮定と規約の照合，有限検算の再実行は本稿validationへ区別して記録する．
+\bibitem{LWWOre} L.-Y. Liu, S.-Q. Wang, Q.-S. Wu,
+\emph{Twisted Calabi--Yau property of Ore extensions},
+J. Noncommut. Geom. 8 (2014), 587--609,
+\href{https://arxiv.org/abs/1205.0893}{arXiv:1205.0893}, Theorem 3.3.
 \bibitem{OUAS} S. Okawa, K. Ueda,
 \emph{Marked Artin--Schelter surfaces of del Pezzo types},
 \href{https://arxiv.org/abs/2508.04986}{arXiv:2508.04986}, Definition 1.1 and \S3.

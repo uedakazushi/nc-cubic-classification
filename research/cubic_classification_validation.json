@@ -1,7 +1,7 @@
 {
   "date": "2026-11-15",
-  "version": "classification-v4",
-  "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification.",
+  "version": "classification-v5",
+  "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
     "papers/sections/cubic_nakayama_incidence.tex",
@@ -9,7 +9,8 @@
     "papers/sections/cubic_noncy_sign_example.tex",
     "papers/sections/cubic_skew_finite_reduction.tex",
     "papers/sections/cubic_skew_admissible_classification.tex",
-    "papers/sections/cubic_pym_generic_exclusions.tex"
+    "papers/sections/cubic_pym_generic_exclusions.tex",
+    "papers/sections/cubic_as4_reductions.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -17,7 +18,11 @@
     "skew_sector": "256 coordinate jet patterns, 19 permutation types; integer Smith certificates force order 2 or 3; 49 jet parameters minus 12 common-factor and 6 generic-rank-three exclusions =31 parameters, five ambient types",
     "intrinsic_conditions": "All five types have exact coefficient conditions and geometric pointed groupoids; smoothness via finite equivariant cocycle comparison; division/non-Norm proofs separately establish GK rank-one and torsion-freeness; Serre/exceptionality/AZ verified",
     "rank_three_exclusion": "Norm identity splits the generic cyclic algebra of the six-point third-root orbit as M3(K); the structure object is generically length three",
-    "generic_Pym_exclusions": "Z(B)_3=0 in standard generic L112/R22/S23 charts and nonzero E3 quantization; special loci and boundaries retained"
+    "generic_Pym_exclusions": "Z(B)_3=0 in standard generic L112/R22/S23 charts and nonzero E3 quantization; special loci and boundaries retained",
+    "spectral_filter": "Cubic resonance; a single Nakayama eigenvalue must be 1, eliminating scalar -I and +/-iI Jordan strata",
+    "quantum_unipotent": "All nontrivial unipotent lifts have W1=0; full quantum canonical-untwist sector has the existing five-type classification",
+    "Ore_all_parameters": "Point self-Ext dimensions 1,3,4,4,... prove infinite tails global dimension for every nonzero differential Ore extension over commutative three-variable polynomial base",
+    "CY_structural_strata": "All unipotent lifts of noncommutative CY canonical bases c>=4 and the three-commutator beta stratum excluded"
   },
   "primary_sources_checked": [
     {
@@ -48,9 +53,33 @@
       "version": "v1",
       "parts": "Sections 3.2,3.3,3.5,3.6; relations (5),(7),(11), CGG (12),(14)",
       "use": "Specified standard AS4/CY charts as external inputs; no all-AS4 coverage assumption"
+    },
+    {
+      "source": "https://arxiv.org/abs/1205.0893",
+      "parts": "Definition 1.1 and Theorem 3.3",
+      "use": "Nakayama restriction to the commutative base of a differential Ore extension"
     }
   ],
-  "commands_executed": {
+  "build_environment": {
+    "TEXMFHOME": "/workspace/work/texmf",
+    "TEXMFVAR": "/workspace/work/texcache",
+    "TEXMFCACHE": "/workspace/work/texcache",
+    "dependencies": "Workspace-local TeX Live 2025 packages restored from the Utah historic mirror; no generated PDFs or caches tracked"
+  },
+  "pdf": {
+    "pages": 36,
+    "references": "No unresolved references/citations or overfull boxes; ordinary font substitution and hyperref PDF-string warnings remain",
+    "layout": "All 36 pages rendered and inspected as a contact sheet; new proof pages 19,21,22 inspected at reading size"
+  },
+  "limits": [
+    "Not full intrinsic H3 coverage: R13 cuts, remaining low-commutator CY strata, special loci and non-scalar resonant AS4 families remain",
+    "Not full relative-stack descent, global algebraicity, irreducible componenthood or deformation rigidity",
+    "Pointed geometric equivalences are considered modulo pointed natural isomorphism; no unqualified bare Abelian 2-stack claim",
+    "No independently performed peer review, formalization or exhaustive novelty audit",
+    "Concurrent heart/corner work preserved but not independently reaudited here"
+  ],
+  "as4_import_manifest": "research/as4_imports.json",
+  "commands_retained_from_v4": {
     "python3 computations/verify_cubic_skew_strata.py": "PASS",
     "python3 computations/verify_cubic_nakayama.py": "PASS: exact QQ pencils, non-CY example, 512 cocycle identities, Laurent chart",
     "python3 computations/verify_cubic_skew_jets.py": "PASS: 19 integral unimodular Smith certificates cover all 256 patterns; root-of-unity enumeration is characteristic-zero exponent arithmetic",
@@ -60,22 +89,9 @@
     "python3 computations/verify_quantum_fermat.py": "PASS: retained CY, center, support, monodromy, potential, overlaps, Hilbert and norm residue",
     "latexmk papers/weak_cubic_axioms.tex": "PASS with workspace-local Japanese TeX dependencies; final page/render metadata recorded below"
   },
-  "build_environment": {
-    "TEXMFHOME": "/workspace/work/texmf",
-    "TEXMFVAR": "/workspace/work/texcache",
-    "TEXMFCACHE": "/workspace/work/texcache",
-    "dependencies": "Workspace-local TeX Live 2025 packages restored from the Utah historic mirror; no generated PDFs or caches tracked"
-  },
-  "pdf": {
-    "pages": 32,
-    "references": "no unresolved references or citations in final log",
-    "layout": "All 32 pages rendered and inspected as a contact sheet; detailed pages 6 (epsilon/Nakayama), 12–13 (fixed non-CY and jet reduction), 17–18 (Pym exclusions) inspected at reading size"
-  },
-  "limits": [
-    "Not full intrinsic H3 coverage: non-skew R13 cuts, special loci and other AS4 families remain",
-    "Not full relative-stack descent, global algebraicity, irreducible componenthood or deformation rigidity",
-    "Pointed geometric equivalences are considered modulo pointed natural isomorphism; no unqualified bare Abelian 2-stack claim",
-    "No independently performed peer review, formalization or exhaustive novelty audit",
-    "Concurrent heart/corner work preserved but not independently reaudited here"
-  ]
+  "commands_executed": {
+    "python3 computations/verify_cubic_as4_reductions.py": "PASS: eight exact 140x20 full-rank twist matrices over QQ/QQ(zeta3), convention, spectral gcd, universal Tate matrix identities, Betti and special Ore witness",
+    "as4 original validators": "PASS: verify_quantum_unipotent_lifts.py, verify_scalar_large_commutators.py, verify_cy_four_commutators.py at pinned SHA; certificates match pinned JSON",
+    "latexmk papers/weak_cubic_axioms.tex": "PASS: Japanese LuaLaTeX, 36 pages; all pages rendered and inspected"
+  }
 }

@@ -1,0 +1,259 @@
+\subsection{as4の半単純化を用いる包絡候補の縮小}
+\label{sec:as4-h3-reductions}
+本節は\texttt{uedakazushi/as4}のコミット
+\texttt{60eacafa28156a5fc62f74eae004d64a84675f4b}を参照する．
+輸入するのは，\texttt{UNIPOTENT\_UNTWIST.tex}の一般帰着と，
+\texttt{QUANTUM\_UNIPOTENT\_LIFTS.tex}の量子基底の全被覆，
+および後述する二つのCY構造表示である\cite{AS4pinned}．
+同repoの全CY統合定理・全AS4被覆を，独立監査済み入力として用いるものではない．
+全て通常のgraded・1周期代数についての主張であり，
+最小周期2・4のAS正則$\mathbb Z$代数の例をそのままH3へ移すことはしない．
+H3の二次包絡は，指定構造対象と反Serre orbitから得たgraded環$R$の$Q(R)$である．
+別のhelixの周期表示と比較する際にはこの対象の同定が必要である．
+
+\paragraph{中山規約．}
+as4は右巡回$\tau(abcd)=dabc$と
+$(\nu\otimes1^{\otimes3})\tau(w)=-w$を用いる．
+その量子基底では$\nu_Q(x_i)=(\prod_jq_{ji})x_i$であり，
+本稿の$\mu_Q(x_i)=(\prod_jq_{ij})x_i$の逆である．
+従って本節では$\nu=\mu^{-1}$へ変換する．
+右twistの積は両方で$u*v=uH^{\deg u}(v)$である．
+単冪$H$のhomological determinantは1なので，
+$B=C^H$では
+\[
+ \mu_B=\mu_CH^{-4},\qquad \mu_C H=H\mu_C.
+\]
+この符号は独立にも確認できる．次数$n$で$H^{-n}$を作用させる写像は
+右twist $C^H$を左twist $C^{\widetilde{H^{-1}}}$へ同型にする．
+\cite[Theorem 0.3]{RRZ}の左twist公式へ$H^{-1}$を入れると上の式となる．
+指数の符号を通常の行列式で置き換えない．
+
+\begin{proposition}[H3包絡のスペクトル必要条件]
+\label{prop:h3-spectral-filter}
+$B$がH3の包絡で，$\mu_B|_{B_1}$の固有値を重複込みで
+$\lambda_0,\ldots,\lambda_3$とする．ある$a\in\mathbb N^4$，$|a|=3$について
+\[
+ \lambda_0^{a_0}\lambda_1^{a_1}\lambda_2^{a_2}\lambda_3^{a_3}=1
+\]
+となる必要がある．さらに固有値が一種類$\lambda$だけなら$\lambda=1$である．
+特に半単純部分が$-I$，$iI$，$-iI$である全Jordan層はH3包絡から除外される．
+\end{proposition}
+\begin{proof}
+$\mu_B(G)=G$なので，$B_3$上に固有値1が必要である．
+$B_3$は$B_1^{\otimes3}$の商であり，その固有値は三つの一次固有値の積に限られる．
+これで最初の条件を得る．
+固有値が$\lambda$一種類なら$\mu_B=\xi_\lambda U$と書け，$U$は単冪自己同型である．
+三次作用の固有値は全て$\lambda^3$なので$\lambda^3=1$である．
+またnoetherian Koszul AS正則環の中山はhomological determinant 1を持つ
+\cite[Theorem 6.3]{RRZ}．単冪$U$の一次元Koszul topへの作用は1，
+次数スカラー$\xi_\lambda$のhomological determinantは$\lambda^4$だから
+$\lambda^4=1$となる．従って$\lambda=1$である．
+一般の自己同型のhomological determinantを通常の$4\times4$行列式と同一視してはいない．
+\end{proof}
+
+\begin{lemma}[単冪twist下の反標準三次関係の輸送]
+\label{lem:h3-unipotent-transport}
+$C$は左右noetherian quadratic Koszul AS4型14641で，$\mu_C$は半単純とする．
+$H$は$\mu_C$と可換な単冪graded自己同型，$B=C^H$とする．
+両者の次数付きベクトル空間を同定すれば
+\[
+ W_1(B)=\{F\in C_3:H(F)=F,\quad
+                 Fv=H\mu_C^{-1}(v)F\ \text{for all }v\in C_1\}.
+\]
+従ってH3包絡の三次関係は，半単純化後の$C$でも正規で，
+その正規化自己同型は$H\mu_C^{-1}$となる．
+\end{lemma}
+\begin{proof}
+$0\ne F\in W_1(B)$なら定理\ref{thm:nakayama-cubic-linearization}の逆向きにより
+$F$は正規正則で$\mu_B(F)=F$である．
+$C_3$上の$\mu_C$は半単純，$H^{-4}$は単冪で，両者は可換である．
+従って$\mu_CH^{-4}(F)=F$からそれぞれのJordan部分が$F$を固定し，
+特に$H(F)=F$となる．
+$B$での正規式を$C$の積に戻すと
+\[
+ F H^3(v)=\mu_B^{-1}(v)H(F)=H^4\mu_C^{-1}(v)F.
+\]
+$v$を$H^{-3}(v)$に置き換えれば表示の式を得る．
+逆に二条件を仮定して同じ計算を逆向きに行うと
+$F*v=\mu_B^{-1}(v)*F$となるので$F\in W_1(B)$である．
+\end{proof}
+
+\begin{theorem}[量子半単純化を持つH3包絡には非自明な単冪がない]
+\label{thm:h3-quantum-unipotent-exclusion}
+as4の標準半単純化が量子多項式環$Q(q)$になるH3包絡$B$は，
+$Q(q)$自身とgraded同型である．非自明な単冪持上げには$W_1(B)=0$である．
+従ってこの\emph{非skew持上げを含む部分全体}のH3幾何学的分類は
+定理\ref{thm:all-skew-H3-geometric}の31パラメータ・五型と一致する．
+\end{theorem}
+\begin{proof}
+as4の量子基底全被覆定理により$B=Q(q)^H$と書ける．
+前補題で得た$Q(q)$内の非零正規三次元$F$の正規化自己同型は
+$H\mu_Q^{-1}$である．
+定理\ref{thm:skew-normal-cubics}のNewton多面体の証明は，
+量子多項式環の正規三次元の正規化自己同型が座標ごとに対角となることを示した．
+$\mu_Q$も対角なので$H$は対角となる．単冪かつ対角な$H$は恒等である．
+逆に恒等持上げでは既存skew分類を適用できる．
+この証明はGL4内のJordan型だけの分類や，Zhang同値とgraded同型の同一視を用いない．
+\end{proof}
+
+\begin{lemma}[H3の反標準環は整域]
+\label{lem:h3-orbit-domain}
+H3対象の$R$は整域である．
+\end{lemma}
+\begin{proof}
+構造対象とその反Serre shiftはrank-one torsion-freeである．
+非零射$\OO\to\tau^n\OO$はgeneric商で非零な単純対象間の射なので同型となり，
+核はtorsionであるため零である．generic像が零なら像がtorsionとなり，
+標的のtorsion-free性から元の射も零となるので，この可能性はない．
+従って非零斉次切断の積は非零な単射の合成となる．
+次数付き環の最高非零次数を取れば非斉次元についても零因子がない．
+\end{proof}
+
+\begin{theorem}[中心二平面Heisenberg基底の全単冪持上げの除外]
+\label{thm:h3-central-quadratic-unipotent-exclusion}
+$0\ne q\in k[b,c]_2$とし
+\[
+ C_q=k\langle b,c,u,v\rangle/(b,c\text{ central},\ [u,v]=q(b,c))
+\]
+とする．標準半単純化が$C_q$であるAS4代数はH3包絡にならない．
+従ってas4の$bc$型・$b^2$型の全単冪持上げを，一般値だけでなく全特殊値で除外できる．
+\end{theorem}
+\begin{proof}
+$C_q$はCYで，$k[b,c]$上PBW自由である．
+その中心体$K=k(b,c)$へ局所化すると，$[u,v]=q\in K^*$なので
+一次Weyl代数$A_1(K)$を得る．これは単純環であり，単元は$K^*$に限る．
+非零正規元$F\in C_q$の局所化は非零正規元なので単元となり，$F\in K$である．
+PBW基底から$C_q\cap K=k[b,c]$である．従って全ての正規元は中心的である．
+
+$B=C_q^H$がH3包絡なら，輸送補題によって$C_q$上の正規化は$H$となる．
+しかし正規元が中心的なので$H=1$である．
+残る$G\in k[b,c]_3$は代数閉体上で一次式と二次式の積に分かれる．
+それぞれの因子は三次商で非零なので$C_q/(G)$には零因子があり，
+補題\ref{lem:h3-orbit-domain}に反する．
+$q=0$はWeyl局所化の仮定外であり，可換包絡として保持する．
+\end{proof}
+
+\subsection{可換三変数の非零導分Ore包絡に対する全パラメータ障害}
+\label{sec:ore-point-obstruction}
+以下は一般点での中心三次消滅より強い障害であり，中心三次が存在する特殊値も扱う．
+
+\begin{theorem}[Ore軸のpoint対象の無限自己Ext]
+\label{thm:h3-polynomial-ore-exclusion}
+$D=k[x_1,x_2,x_3]$，$0\ne\delta:D\to D$は次数1の導分，
+$B=D[T;\delta]$，$\deg T=1$とする．
+$B$がH3設定のnoetherian quadratic Koszul AS4条件を満たすとする．
+すると$B$はH3包絡にならない．
+より正確に，任意の$0\ne G\in W_1(B)$に対し$R=B/(G)$と置くと，
+$M=R/(x_1,x_2,x_3)R\simeq k[T]$の像$P=\pi M$は非零で
+\[
+ \dim\Ext^n_{\qgr R}(P,P)=
+ \begin{cases}1&n=0,\\3&n=1,\\4&n\ge2\end{cases}
+\]
+となる．特に$\gldim\qgr R=\infty$である．
+\end{theorem}
+\begin{proof}
+Liu--Wang--Wu\cite[Theorem 3.3]{LWWOre}を$\sigma=1$，$D$の中山恒等へ適用すると
+$\mu_B|_D=1$である．従って$G\in W_1(B)$は全ての$x_i$と可換である．
+$G=\sum_{j=0}^m f_jT^j$，$f_m\ne0$と書くと，$m>0$のとき
+ある$\delta(x_i)\ne0$に対する交換子の最高$T$次数係数は
+$m f_m\delta(x_i)$となり，零ではない．よって$m=0$，$G\in D_3$である．
+$G$の正規性から$\delta(G)\in(G)D$なので，
+\[
+ C=D/(G),\qquad R=C[T;\bar\delta].
+\]
+$J=(x_1,x_2,x_3)$は二側イデアルで，$M=R/J\simeq k[T]$となる．
+
+まず$P$に対するline objectの高次Ext消滅を確かめる．
+$B$は$D$上左右自由であり，$M$の$B$上の解消は
+$D$の三変数Koszul解消を$B$へ誘導したものである．
+従って$\underline\Ext_B^j(M,B)=0$ ($j\ne3$)である．
+正規正則$G$の二項解消とderived Homのchange of ringsから，
+$\underline\Ext_R^j(M,R)=0$ ($j\ne2$)となる．
+正規化自己同型によるtwistはこの消滅次数を変えず，$J$も保つ．
+$R$はAS Gorenstein次元3・parameter 1であり，局所双対から
+$H^i_{R_+}(M)=0$ ($i\ne1$)を得る．従って商圏コホモロジーとの比較により
+\[
+ \Ext^j_{\qgr R}(\pi R(a),P)=0\quad(j>0,\ a\in\mathbb Z).
+\]
+$T$倍写像$M\to M(1)$は$R$線型で有限次元cokernelを持つので$P\simeq P(1)$である．
+さらにsection比較は十分大きい次数で$\dim M_n=1$と一致するため
+$\Hom(\pi R(a),P)=k$が全$a$で成立する．
+
+次に$C$上の$k=C/(x_1,x_2,x_3)$の解消を取る．
+$G=\sum_i x_iG_i$，$G_i\in D_2$と書き，Koszul複体に
+homological次数2・内部次数3の変数$z$を加えて
+\[
+ d(e_i)=x_i,\qquad d(z)=\sum_iG_ie_i
+\]
+とするTate複体を用いる．$d^2(z)=G=0$である．
+元のKoszul複体のhomologyは$k$と，この一次cycleが張る$k(-3)$だけである．
+$z$次数によるspectral sequenceで$d(z^m)=m z^{m-1}d(z)$となり，
+標数0により後者のhomologyを全て殺すので，これは$k$の自由解消となる．
+行列検算では同値なdivided-power基底$z^{[m]}=z^m/m!$を用いる．
+全微分成分が$(x_1,x_2,x_3)$に入るため最小であり，Betti数は
+\[
+ \sum_{n\ge0}\beta_nt^n=\frac{(1+t)^3}{1-t^2}
+ =1+3t+4t^2+4t^3+\cdots.
+\]
+
+$R$は左$C$加群として自由なので，この解消を$-\otimes_CR$で誘導すると
+$M$の有限階数graded自由$R$解消が得られる．
+$\qgr$へ移した解消の各項は$P$に対して上で示したHom-acyclic対象である．
+従ってfirst-quadrantのExt spectral sequenceで$\Ext^n(P,P)$をこのHom複体から計算できる．
+全微分成分は$J$に入り$P$に零作用するので，Hom複体の微分は零である．
+各自由summandから$k$が一つ得られ，表示の次元が従う．
+これはchartへの未証明のOre局所化や，line objectの射影性を仮定した議論ではない．
+\end{proof}
+
+\begin{lemma}[可換三平面を保つCY Ore基底の全単冪持上げ]
+\label{lem:h3-ore-unipotent-exclusion}
+$C=D[T;\delta]$，$D=k[x_1,x_2,x_3]$，$\delta\ne0$，
+$\operatorname{div}\delta=0$とし，$C$はCY AS4とする．
+$D$を保つ任意の単冪graded自己同型$H$について，$C^H$はH3包絡にならない．
+\end{lemma}
+\begin{proof}
+H3関係が存在すれば，輸送補題から$C$上の正規三次元$F$の正規化は$H$である．
+$H(D)=D$なので$D\setminus0$のOre局所化へこの正規式を延ばせる．
+局所化は$K[T;\delta]$，$K=k(x_1,x_2,x_3)$である．
+$\delta\ne0$，標数0のときこの微分作用素環は単純である：
+非零二側イデアルに最小$T$次数の元を取り，正次数なら
+$\delta(a)\ne0$となる$a\in K$との交換子で次数を下げられるので矛盾する．
+次数0の非零元は$K$で可逆である．
+従って$F$は局所化で単元となる．単元の$T$次数は0なので$F\in K\cap C=D$である．
+$D$は可換で$F\ne0$だから，$Fa=H(a)F$から$H|_D=1$を得る．
+単冪性により$H(T)=T+h$，$h\in D_1$となる．
+
+右twistの実際の交換子を計算すると，$C^H$も可換三変数上のOre拡大であり，
+その導分は$\delta'=\delta-hE$，$E=\sum_i x_i\partial_i$となる．
+生成元上の全六関係が一致し，両環のPBW Hilbert級数も一致するので，これは環の同型である．
+もし$\delta'=0$なら$\delta=hE$であり，
+$\operatorname{div}(hE)=4h$と$\operatorname{div}\delta=0$から$h=0$，$\delta=0$となって矛盾する．
+従って$\delta'\ne0$であり，定理\ref{thm:h3-polynomial-ore-exclusion}を適用できる．
+\end{proof}
+
+\begin{corollary}[CY基底の四・五交換子層と三交換子beta層の全持上げの除外]
+\label{cor:h3-cy-commutator-reduction}
+H3包絡$B$の標準半単純化$C$がCYで
+$c(C)=\dim(R_2(C)\cap\bigwedge^2C_1)\ge4$なら，$B$は可換多項式環である．
+また標準半単純化がas4の三交換子$\beta$型となるH3包絡も存在しない．
+元の$B$ではなく，半単純化$C$の交換子次元を用いていることに注意する．
+特にPymの$S(2,3)$標準Ore族は，非零導分の\emph{全パラメータ}で除外される．
+\end{corollary}
+\begin{proof}
+as4の\texttt{SCALAR\_LARGE\_COMMUTATORS.tex}の
+\texttt{thm:scalar-large-commutators}は$c(C)\ge5$を可換型と
+$[u,v]=b^2,bc$の二型へ帰着する．可換基底の非自明持上げは
+定理\ref{thm:h3-quantum-unipotent-exclusion}で除外され，
+後二者の全持上げは定理\ref{thm:h3-central-quadratic-unipotent-exclusion}で除外される．
+$c(C)=4$は\texttt{CY\_FOUR\_COMMUTATORS.tex}の
+\texttt{thm:cy-four-commutators-structure}により
+$k[a,b,c][u;\delta_H]$，$\delta_Ha=0,\delta_Hb=H_c,\delta_Hc=-H_b$で，
+$H_b,H_c$は独立だから$\delta_H\ne0$である．
+同定される全自己同型は可換三平面$\langle a,b,c\rangle$を保つため，
+前補題で全単冪持上げを除外できる．
+同じく\texttt{CY\_THREE\_COMMUTATORS\_REDUCTION.tex}の
+\texttt{thm:cy-three-beta}は$\beta$型を非零divergence-free導分のOre拡大へ帰着し，
+全自己同型が同じ可換三平面を保つことを与える．前補題を適用する．
+これらの輸入はgraded AS4の指定構造表示だけであり，
+全CY atlasの他の層や全Z-algebraの被覆を独立検証したとするものではない．
+\end{proof}

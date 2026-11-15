@@ -1,0 +1,120 @@
+{
+  "date": "2026-11-15",
+  "source_repository": "https://github.com/uedakazushi/as4",
+  "commit": "60eacafa28156a5fc62f74eae004d64a84675f4b",
+  "entry_points_inspected": [
+    {
+      "path": "README.md",
+      "sha256": "33897e55cbd3cdbc8e6bc710ddfbf1ff763fdf420ad053a82d334937c95ef95d"
+    },
+    {
+      "path": "research/plan_ja.tex",
+      "sha256": "77998ff2bfcb7a0212fdef26879665fde0dbc42712cdc7f97033d67ee1d96fd8"
+    },
+    {
+      "path": "research/COVERAGE.md",
+      "sha256": "f347520849d341b6dcac8121e4ad5cbf267a6547ed3335bdd737bd8b2c6d725d"
+    },
+    {
+      "path": "research/CLAIMS.json",
+      "sha256": "b4cac263ab955f0afa71a4c79cfd93743c64c378b8a50b4df3ab9a8e77938e9a"
+    }
+  ],
+  "imports": [
+    {
+      "claim_id": "C-SEMISIMPLE-BASE-UNIPOTENT-ORBIT-REDUCTION",
+      "path": "research/proofs/UNIPOTENT_UNTWIST.tex",
+      "sha256": "10c530abad4c83dc1bb7efcf50ac6cba129aa30ef14f20c2fad1a62cec97cde5",
+      "used_part": "thm:unipotent-untwist only; no principal-Jordan theorem imported",
+      "upstream_proof_status": "proof_written",
+      "upstream_audit_status": "internally_reviewed",
+      "this_task_review": "Read the used mathematical proof and verified H3 hypotheses/conventions; finite controls listed separately. Not an independent review of all upstream dependencies."
+    },
+    {
+      "claim_id": "C-QUANTUM-BASES-ALL-UNIPOTENT-LIFTS",
+      "path": "research/proofs/QUANTUM_UNIPOTENT_LIFTS.tex",
+      "sha256": "7be69ab5bbe221e2776d523f2a5466fc65133b8c5a88231d4a5a6c219a47df2f",
+      "used_part": "thm:quantum-unipotent-lifts, QU1/QU4/QU5/QU6",
+      "upstream_proof_status": "proof_written",
+      "upstream_audit_status": "internally_reviewed",
+      "this_task_review": "Read the used mathematical proof and verified H3 hypotheses/conventions; finite controls listed separately. Not an independent review of all upstream dependencies."
+    },
+    {
+      "claim_id": "C-SCALAR-LARGE-COMMUTATORS",
+      "path": "research/proofs/SCALAR_LARGE_COMMUTATORS.tex",
+      "sha256": "3c3a88f190d0ca6ad47e75c7372bb11087b7810731fe2e187a406d54925f1be7",
+      "used_part": "CY c>=5 structural normal forms only",
+      "upstream_proof_status": "proof_written",
+      "upstream_audit_status": "pending",
+      "this_task_review": "Read the used mathematical proof and verified H3 hypotheses/conventions; finite controls listed separately. Not an independent review of all upstream dependencies."
+    },
+    {
+      "claim_id": "C-CY-FOUR-COMMUTATORS",
+      "path": "research/proofs/CY_FOUR_COMMUTATORS.tex",
+      "sha256": "1478368830b98f82afe1ff34ceffe9a18311560778b7614dab81968459b111b9",
+      "used_part": "thm:cy-four-commutators-structure and preservation of the polynomial three-plane; orbit table not imported",
+      "upstream_proof_status": "proof_written",
+      "upstream_audit_status": "pending",
+      "this_task_review": "Read the used mathematical proof and verified H3 hypotheses/conventions; finite controls listed separately. Not an independent review of all upstream dependencies."
+    },
+    {
+      "claim_id": "C-CY-THREE-COMMUTATORS-REDUCTION",
+      "path": "research/proofs/CY_THREE_COMMUTATORS_REDUCTION.tex",
+      "sha256": "02a7afd9e62f11acffa7191d584e818c21243158b546a12440812afb9fa1560a",
+      "used_part": "thm:cy-three-beta and its full polynomial-three-plane-preserving automorphism form only",
+      "upstream_proof_status": "proof_written",
+      "upstream_audit_status": "pending",
+      "this_task_review": "Read the used mathematical proof and verified H3 hypotheses/conventions; finite controls listed separately. Not an independent review of all upstream dependencies."
+    }
+  ],
+  "upstream_controls_rerun": [
+    {
+      "command": "python3 code/verify_quantum_unipotent_lifts.py",
+      "code_sha256": "3363e097c5115098b5c5eb6363a42cc4ac94b90f1e8ed582c585178fd1e002be",
+      "status": "PASS, independently rerun locally from pinned source",
+      "certificate": "certificates/quantum_unipotent_lifts.json",
+      "matches_upstream_JSON": true,
+      "upstream_certificate_sha256": "7cb59125e1741be7e1ebb638584bf122b6d16adf8f8b0773d6214b9b51ca7211"
+    },
+    {
+      "command": "python3 code/verify_scalar_large_commutators.py",
+      "code_sha256": "c4b23995a0ddc3f5e42502df72ffa6e6a1d83a007b23eb01320d7d8e18954fbd",
+      "status": "PASS, independently rerun locally from pinned source",
+      "certificate": "certificates/scalar_large_commutators_certificate.json",
+      "matches_upstream_JSON": true,
+      "upstream_certificate_sha256": "f44b2c0f5ad93f0a50253f1ee4f46d1c3b619fe0904e7a8c86a7410684d96d40"
+    },
+    {
+      "command": "python3 code/verify_cy_four_commutators.py",
+      "code_sha256": "4a739d621b78162167b9bd484103ba8996314d6290cfc8dab125226651516ef7",
+      "status": "PASS, independently rerun locally from pinned source",
+      "certificate": "certificates/cy_four_commutators_certificate.json",
+      "matches_upstream_JSON": true,
+      "upstream_certificate_sha256": "d6eaa07eddf7de9c1a614f1f0a850d6be7d4a8d8fa702d8e165486466217f7f3"
+    }
+  ],
+  "convention_map": {
+    "upstream_right_cyclic_nu": "mu^{-1} in this project",
+    "quantum_upstream_nu": "diag(product_j q_ji)",
+    "quantum_project_mu": "diag(product_j q_ij)",
+    "right_twist": "a*b=a H^deg(a)(b)",
+    "unipotent_mu_formula": "mu_{C^H}=mu_C H^{-4}"
+  },
+  "H3_hypotheses_checked": [
+    "characteristic zero algebraically closed field",
+    "connected graded, four degree-one generators, quadratic Koszul AS4 type14641",
+    "left/right noetherianity inherited under unipotent Zhang untwist",
+    "domain from the noetherian AS4 domain theorem, or explicit quantum/Ore PBW",
+    "regular normal cubic recognition and mu_R=id from the current H3 theorem",
+    "ordinary graded/1-periodic algebras only; no transfer of non-1-periodic Z-algebra examples without the intrinsic marking",
+    "isomorphism of pointed abelian hearts distinguished from Zhang and derived equivalence",
+    "no relative flatness or family-descent claim imported"
+  ],
+  "not_imported": [
+    "Entire CY_COMPLETE dependency chain as independently audited",
+    "The as4 unrelated global task queue or completion status",
+    "All semisimple AS4 coverage",
+    "Period-2/4 Z-algebra examples as automatic H3 surfaces",
+    "Q/V isomorphism classifications beyond controls executed by the upstream script"
+  ]
+}

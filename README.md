@@ -6,7 +6,7 @@
 
 **全H3ではμ_R=1、Gv=μ_B^{-1}(v)G。固定ambientの候補は単一の140×20線型核に絞られる。** 包絡が量子多項式環である部分は、全六次元skew torusから31パラメータ・五型へ絞り、各型の全admissible係数・内在的rank・幾何学的同型群oidまで分類した。可換、CY符号、非CY符号、3乗根中心一次、3乗根二重指標の五型で、一般同型類の次元は4,1,2,1,0。既存27点の軌道長6の商はgeneric代数M3(K)でrank-one条件に反し除外される。
 
-[証明付き原稿](papers/weak_cubic_axioms.tex)／[研究ノート](research/cubic_14641_classification.md)／[検証範囲](research/cubic_classification_validation.json)。厳密検算とLuaLaTeX全文組版を実施。**全AS4包絡を覆うH3の完全分類・相対stackの降下・成分性は未完成。** Pymの標準CY chartではL112/R22/S23の一般点とE3の非零変形を中心三次の消滅で除外した。次はR13の全admissible切断、他chartの特殊locus、Clifford・Ore等のNakayama正規三次incidenceと被覆を扱う。並行heart/corner研究は維持する。
+[証明付き原稿](papers/weak_cubic_axioms.tex)／[研究ノート](research/cubic_14641_classification.md)／[検証範囲](research/cubic_classification_validation.json)。厳密検算とLuaLaTeX全文組版を実施。**全AS4包絡を覆うH3の完全分類・相対stackの降下・成分性は未完成。** Pymの標準CY chartではL112/R22/S23の一般点とE3の非零変形を中心三次の消滅で除外した。as4の半単純化を使うと、量子基底の全非自明unipotent持上げも除外され、この部分全体は同じ五型で尽くされる。可換三変数の非零微分Ore拡大は、点対象の自己Extが1,3,4,4,…となるため、特殊値も全て除外した。CY半単純化の交換子次元4以上の非可換層と三交換子beta層も全持上げを除外した。輸入元の固定SHA・仮定・原検算は[輸入記録](research/as4_imports.json)に明記。次はR13の全admissible切断、L112/R22/E3の特殊locus、残る低交換子CY・非スカラー共鳴層と相対降下を扱う。並行heart/corner研究は維持する。
 
 ## 現在の重点：heart比較、まずcubic surface
 
