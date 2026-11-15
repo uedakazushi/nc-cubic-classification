@@ -1,18 +1,20 @@
 # 内在的非可換del Pezzo曲面と三次三様体のモジュライ
 
-2026-11-15。GitHub mainが現行ソースの正本。最初に [研究方針](00_research_plan.md) を読む。逐次研究・約15分checkpoint・通常のmain保存については [AGENTS.md](AGENTS.md) に従う。GitHub Actions、force push、不要なPRを使わず、PDF・ZIP・中間生成物は追跡しない。GitHub保存成功時はLibraryに保存しない。
+2026-11-16。GitHub mainが現行ソースの正本。最初に [研究方針](00_research_plan.md) を読む。逐次研究・約15分checkpoint・通常のmain保存については [AGENTS.md](AGENTS.md) に従う。GitHub Actions、force push、不要なPRを使わず、PDF・ZIP・中間生成物は追跡しない。GitHub保存成功時はLibraryに保存しない。
 
-## Rains共鳴：混合A2のconnecting rankと局所heart比較
+## Rains共鳴：全heartのtiltと混合A2のアフィン商
 
-**指数+2/−1の実在混合A2で、connecting map δ:k²→k のrankは1と証明した。** 全q導来同値は仮定していない。より一般に、隣接根の指数がp,−(p−1)なら非分裂拡大Pのconnecting mapはrank p−1であり、(h0(P),h1(P))=(1,0)。非零e→Pが全射となり、その核がRainsのEuler等号条件からline bundleになることが鍵である。
+**指定のgenuine楕円gluingでは、反標準heartは全Rains heartの一回のHRS tiltである。** 滑らかな可換genuine del Pezzo S、滑らかな反標準E、q∈Pic0(E)からの構成に範囲を限定し、既存dP1原稿の全q導来比較を、orbitのInd生成・実際の境界trace・両位数の有限性・source飽和性に分けて点検した。自然ΦはDb(Rains)≃Db(qgr R)、全heartで振幅[0,1]。T=ker H1Φ、F=ker H0Φにより反標準heartは〈F[1],T〉となる。q非torsionでは全境界外Serre部分圏Zにも制限できる。任意のnc曲面、weak avatar、特異境界や相対familyへの無条件な主張ではない。
 
-q非torsion、H=−K nef、H²>0の下で、境界外圏Zは有限長Serre部分圏となる。二根S+,S−が生成するCはΠ(A2)の有限次元加群圏に同値で、直既約はS+,S−,P,Qの四つ。cohomologyは(p,0),(0,p−1),(1,0),(p,p−1)、T=add(S+,P)、F=add(S−)がC上のtorsion pairとなる。ΦはCの非零対象を消さない。全Z・全heartのtorsion pairとは区別し、内部Ext_Cとambient Extも同一視しない。
+**混合A2のconnecting rankは任意の正負指数で決定した。** 指数p>0,−n<0の隣接根の非分裂拡大Pではrankδ=min(p,n)、(h0,h1)=((p−n)+,(n−p)+)。この証明は導来比較を仮定しない。二根の有限長Serre部分圏はmod_fd Π(A2)で、四直既約S+,S−,P,Qの全cohomologyと両chamberのtorsion pairを記述する。p=nならPが消えるが、genuine avatarではこの同時共鳴自体が不可能。
 
-**残る導来比較**：p=2では0→W→V+→V−→0（両端一次元）が得られる。Φの完全忠実性には、WとV−のcharacterが異なり、この加群拡大が非分裂であることが必要。その場合A=R/(g−1)の作用像は次元3の三角行列代数。実際のcharacterと非対角項、全q導来同値は未決定。対象の非消失と射の忠実性は別である。
+**指数+2/−1ではcharacterの分離と非分裂性も解決した。** 反標準側の0→W→V→U→0（次元1,2,1）はW≄Uかつ非分裂であり、Vへの作用像は全三角2×2行列代数。逆向き拡大V'を合わせるとA=R/(g−1)から四次元商A/Ann(V⊕V')≃Π(A2)を得る。新しい根はalpha+beta,−beta、指数は1,1で局所Weyl反射に対応する。商写像はhomological epimorphismではなく、内部Extの二周期性とambient Ext>2消滅を区別する。
 
-[公表用原稿](papers/nc_del_pezzo_resonance_hearts.tex) ／ [新しい完全証明](papers/sections/resonance_mixed_a2_category.tex) ／ [研究ノート](research/resonance_hearts.md) ／ [厳密検算](computations/verify_resonance_mixed_a2.py) ／ [検証状態](research/resonance_hearts_validation.json)
+残る具体的課題は、元の楕円データの生成元に対する二つのcharacterの値と非対角係数、商のkernelの生成元を求めること。表現の同型型の決定と、指定生成元の作用係数の計算は別である。全E6のアフィン作用、VdB/AS heartとの指定同定、退化境界・相対familyも未解決。
 
-新スクリプトでHom/Euler/Ext表、4375通りのcohomologyと三角作用の四模型を有理数上で検算し、新証明節を独立LuaLaTeX driverで5ページに組版した。主原稿全体の組版・既存コードの全再実行・独立査読・網羅的新規性調査は今回の完了事項ではない。
+[公表用原稿](papers/nc_del_pezzo_resonance_hearts.tex) ／ [任意混合指数の証明](papers/sections/resonance_mixed_a2_category.tex) ／ [大域比較とアフィン商](papers/sections/resonance_global_heart.tex) ／ [研究ノート](research/resonance_hearts.md) ／ [厳密検算](computations/verify_resonance_mixed_a2.py) ／ [検証状態](research/resonance_hearts_validation.json)
+
+有理数上で40,000通りのcohomology、Hom/Euler/Ext、四次元商の積・両三角像・Weyl反射を検算した。更新二節を独立LuaLaTeX driverで9ページに組版しページ画像を確認した。主原稿全体の組版・既存四コードの再実行・外部独立査読・網羅的新規性調査は今回の完了事項ではない。
 
 ### 保持する共鳴の構造結果
 
