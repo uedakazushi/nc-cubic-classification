@@ -30,7 +30,7 @@
 
 **固定PI4包絡の完全判定**：h=1、gamma^4=2、alpha=(−2,−2,0)、beta=(1,1,2)のD切断族で、中心特異値は13個だが非H3値は平方因子のない次数6式 b(D)=(D−Dstar)*P4(D)*Q1(D)の根に限る。他のDのaffine切断は大域次元2。`papers/sections/cubic_order4_local_orders.tex` はgrの最大性、中心正則列とbalanced local dualityによる対称双対、DVR標準形の非分岐性、A1二重被覆の指標多重度を使う。小次元表現のnorm・二中心点への分配・次数6式は厳密検算済み。D直線のH3条件は主開集合D(b)で、任意底変更・fpqc降下に適合し、そのaffine族は相対対角の長さ2以下の射影分解を持つ。これは一固定包絡の判定で、全位数4族・全H3の被覆ではない。
 
-**中央楕円境界の現行構造（H3 classification-v23）**：正則normal三次商R=B/(G)、mu_R=id、中央正則一次t、滑らかな楕円THCR境界という仮定で、CY Bやcentral GなしにH3 iff affine U有限gldimを証明した。高次syzygyのExt消滅→t局所化後projective→free因子化の分母払いによりtailsがperfectとなる。一般無限位数でのaffine gldimは<=2のみとし、有限PIの場合に=2を証明する。Yekutieli Example7.16のbalanced dualizing formulaを一次資料で確認し、中央境界自己同型は自動的に平行移動と判明。有限境界位数=intrinsic PI次数、非可換なら中央一次境界はスカラー以外に一意。有限Nの中心・McKay admissibilityと被約固定N表示族の相対中心／H3開性もこのnormal三次設定へ拡張した。新しい非CY例の実在、全H3の中央楕円境界存在、全intrinsic family stackや全成分分類は未完成。次はtranslation型AS3境界と包絡Nakayamaの関係を監査し、中央楕円枝の全包絡がCYへ絞れるかを調べる。
+**中央楕円枝のCY包絡認識（H3 classification-v24）**：中央滑らか楕円境界を持つH3対象の包絡は必ずCY、三次関係Gは中心であると証明した。境界はtranslation、Moore行列からS=B/(t)は標準CY Sklyanin（3-torsion/P2型・可換型も含む）となる。H3 incidenceでmu_B(t)=t、mu_S=idなのでmu_BはX→X+v*tだが、二次関係のtX係数のminor8c³又は(a+b)³からv0を強制する。従って非CY H3はこの中央滑らか楕円境界部分に存在しない。全非可換境界の中央PBW持上げの線型係数は対称で、その対称性はPBWに十分。有限NのMcKay admissibility・相対中心任意底変更・H3開性、固定PI4の六bad値を保持。全H3の中央境界存在、無限位数の全bad値、j0対称potential境界、全intrinsic stackと成分は未完成。次は現在のh³!=-1という正規化で落としたj0部分を、中心元の正則な再規格化で回復する。
 
 既存の主要な構造結果を維持する：
 

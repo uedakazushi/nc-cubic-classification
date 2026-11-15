@@ -1,6 +1,6 @@
 {
   "date": "2026-11-15",
-  "version": "classification-v23",
+  "version": "classification-v24",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -26,7 +26,8 @@
     "papers/sections/cubic_order4_general_criterion.tex",
     "papers/sections/cubic_finite_order_criterion.tex",
     "papers/sections/cubic_finite_order_relative.tex",
-    "papers/sections/cubic_normal_central_boundary.tex"
+    "papers/sections/cubic_normal_central_boundary.tex",
+    "papers/sections/cubic_central_elliptic_cy_envelope.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -404,5 +405,24 @@
     },
     "typesetting": "86-page manuscript built without unresolved refs/cites or overfull boxes; no new visual pass yet",
     "limitations": "Does not prove all H3 admit central smooth elliptic boundary, or existence of new nonCY examples; no all-intrinsic family stack or global component classification; no formalization/independent referee"
+  },
+  "central_smooth_elliptic_H3_envelope_CY": {
+    "proof": "papers/sections/cubic_central_elliptic_cy_envelope.tex",
+    "result": "Every actual H3 with central regular linear smooth elliptic boundary has CY AS4 envelope and central cubicG; excludes nonCY envelopes only in this intrinsic boundary sector",
+    "ordinary_proofs": [
+      "Hesse Moore graph reconstructs quadratic envelope S, including zero-coordinate flex cases; S is Koszul CY AS3",
+      "H3 normal-cubic incidence forces mu_B(t)=t; quotient Nakayama gives identity modt; quadratic tX coefficients kill every translation",
+      "commutative exception treated via N1 Rains center lift; no unrestricted all-AS4 CY reduction claimed",
+      "noncommutative Sklyanin central lifts force symmetric linear coefficient matrix; symmetric matrix/scalar constants satisfy BG PBW obstructions"
+    ],
+    "exact_command": "python3 computations/verify_cubic_central_elliptic_cy.py",
+    "exact_scope": "universal Moore determinant, opposite graph, origin kernel, Heisenberg covariance, all three flex linear maps, cyclic W3, two Nakayama translation minors, two relation symmetrization minors",
+    "typesetting": "89-page LuaLaTeX manuscript built; inspect log verified no unresolved references/citations or overfull boxes; no additional visual pass for this subsection yet",
+    "primary_hesse_source": {
+      "url": "https://arxiv.org/pdf/math/0611590",
+      "sha256": "a3665e3f8af09bdec480351324734f0cdde5f490bd4db771b36f6facf2b3e79a",
+      "read": "Lemma1 proof, section4 generators and translation action; used Hesse normal form and E[3] action only"
+    },
+    "limitations": "No proof that all H3 have this central smooth elliptic boundary; no all-AS4 CY reduction; j0/infinite-order cut classification and intrinsic stack remain incomplete; independent review/novelty unchecked"
   }
 }

@@ -1,6 +1,6 @@
 # Codex: 14641 intrinsic nc cubic classification
 
-正則normal三次商R=B/(G)、mu_R=id、中央正則一次t、滑らかな楕円THCR境界という仮定で、CY Bやcentral GなしにH3 iff affine U有限gldimを証明した。高次syzygyのExt消滅→t局所化後projective→free因子化の分母払いによりtailsがperfectとなる。一般無限位数でのaffine gldimは<=2のみとし、有限PIの場合に=2を証明する。Yekutieli Example7.16のbalanced dualizing formulaを一次資料で確認し、中央境界自己同型は自動的に平行移動と判明。有限境界位数=intrinsic PI次数、非可換なら中央一次境界はスカラー以外に一意。有限Nの中心・McKay admissibilityと被約固定N表示族の相対中心／H3開性もこのnormal三次設定へ拡張した。新しい非CY例の実在、全H3の中央楕円境界存在、全intrinsic family stackや全成分分類は未完成。次はtranslation型AS3境界と包絡Nakayamaの関係を監査し、中央楕円枝の全包絡がCYへ絞れるかを調べる。
+中央滑らか楕円境界を持つH3対象の包絡は必ずCY、三次関係Gは中心であると証明した。境界はtranslation、Moore行列からS=B/(t)は標準CY Sklyanin（3-torsion/P2型・可換型も含む）となる。H3 incidenceでmu_B(t)=t、mu_S=idなのでmu_BはX→X+v*tだが、二次関係のtX係数のminor8c³又は(a+b)³からv0を強制する。従って非CY H3はこの中央滑らか楕円境界部分に存在しない。全非可換境界の中央PBW持上げの線型係数は対称で、その対称性はPBWに十分。有限NのMcKay admissibility・相対中心任意底変更・H3開性、固定PI4の六bad値を保持。全H3の中央境界存在、無限位数の全bad値、j0対称potential境界、全intrinsic stackと成分は未完成。次は現在のh³!=-1という正規化で落としたj0部分を、中心元の正則な再規格化で回復する。
 
 classification-v12 では、積分した族の全次数平坦性・noetherian quadratic Koszul CY AS4 認識を、明示的な開集合 V={h∈H, (1-gamma²)≠0, Delta≠0} 上で証明した。入力は Iyudu–Shkarin Theorem1.1/Corollary6.1、EG形式変形定理、および64個の三次持上げ恒等式・256個の四次巡回恒等式・単元小行列式 -p^6 を確認した LBS 中心拡大定理である。中心三次の関係類の非消滅も巡回商の二係数で全パラメータについて確認した。gamma≠0 では低次数中心が0,0,1、滑らかな楕円THCR境界となり、全中心値の H3 判定は正確に一つの affine 中心切断の有限大域次元へ帰着する。定義体上超越的な全 D は H3。位数4の枝 gamma^4=1+h^3 では固定包絡の悪い D は有限であり、h=1,gamma=2^(1/4),A=1,B=C=0,beta=(-1,0,0),D=pi は明示的な非Clifford H3 対象となる。悪い値の全一覧・全内在的群oid・H3相対開性・降下・全包絡被覆は未解決。
 

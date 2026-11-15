@@ -126,5 +126,29 @@
     "scope": "The same already checked mixed quartic is used for all constant-term beta envelopes. Full AS4 recognition is independently obtained via Clifford PBW t-regularity and LBS Theorem2.6/Corollary2.7, with W3-surjectivity explicitly shown. No upstream full-alpha classification imported.",
     "new_proof": "papers/sections/cubic_clifford_beta_classification.tex",
     "checks": "verify_cubic_clifford_beta.py, verify_cubic_clifford_beta_action.py; verify_cubic_clifford_lift.py rerun"
+  },
+  "latest_scoped_consultation": {
+    "commit": "8ddefc5502d506abf0cb95152637275378f392ed",
+    "date": "2026-11-15",
+    "entrypoints": [
+      {
+        "path": "README.md",
+        "sha256": "33897e55cbd3cdbc8e6bc710ddfbf1ff763fdf420ad053a82d334937c95ef95d"
+      },
+      {
+        "path": "research/plan_ja.tex",
+        "sha256": "b0b044f8d371a626033743bf8c2d3195c3f5c0cdea8ab79b7f8808b929be517d"
+      },
+      {
+        "path": "research/COVERAGE.md",
+        "sha256": "c6b7809d6f47735e31699ff53558772443603bea4d3d9a73f215ea3ba4d758d3"
+      },
+      {
+        "path": "research/CLAIMS.json",
+        "sha256": "6539e490ccf292cede9264e542149bacc7c4734eda21af2db4903deb1798d0ff"
+      }
+    ],
+    "scope": "Read current overview, plan/coverage portions and searched claim statements for central Sklyanin/elliptic extensions. No new theorem imported; central elliptic CY-envelope argument proved directly with Moore/Koszul/Nakayama identities. Existing mathematical imports remain at60eac...",
+    "new_imports": []
   }
 }
