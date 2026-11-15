@@ -1,0 +1,86 @@
+\subsection{三つの射影頂点の形式的量子平面模型}
+\label{subsec:quantum-triangle-vertex}
+全 $q\ne0,\pm1,D$ に対し、三角境界の頂点の形式的計算を行う。
+ここで扱うのは明示的な完備microlocal環であり、
+これだけでqgr全体の有限大域次元や形式的降下を主張するものではない。
+
+\begin{proposition}[頂点の完備microlocal環]
+\label{prop:quantum-triangle-formal-vertex}
+頂点 $[x:y:z:t]=[1:0:0:0]$ に対し
+\[
+ w(x)=0,\qquad w(y)=w(z)=1,\qquad w(t)=2
+\]
+のPBW重みの降下濾過を取る。
+$x$ を形式的に可逆化して完備化し、その元の斉次次数0部分を取った
+$R_{q,D}$ の環を $\widehat R_x^0$ と書く。
+この環は完備noetherian局所環で、その随伴次数環は
+\[
+ k\langle a,b\rangle/(ab-qba)
+\]
+となる。従って大域次元は2である。
+$q$ が非捩れなら $\widehat R_x^0$ 自体が完備量子平面
+$k\langle\!\langle a,b\rangle\!\rangle/(ab-qba)$ と形式的に同型である。
+他の二頂点も循環置換で同様である。
+\end{proposition}
+\begin{proof}
+PBW基底を $x^iy^jz^kt^l$ とする。
+各還元は上記の重みを下げないので、重みが $n$ 以上の基底のspanは乗法的な降下濾過を与える。
+先頭関係は
+\[
+ xy=qyx,\quad zx=qxz,\quad yz-qzy=tx,
+ \qquad t\text{ central}
+\]
+となる。これら自身もPBWで、元の基底の重みごとの個数と一致するから、
+これが厳密に随伴次数環である。
+この先頭環で $x$ は正規正則元なので、その冪による完備microlocalizationを構成できる。
+具体的には $x^{-1}$ を $y,z$ の左右へ移す行列の分母は
+$x^2+q^{-1}t^2$ であり、$x$ を可逆にすればこれは重み正の項を持つ幾何級数で可逆となる。
+重みの有限段階ごとに還元を行い、その逆極限を取る。
+各段階でPBW還元と整合し、随伴次数環は先頭環の $x$-Ore局所化となる。
+
+$a=yx^{-1},b=zx^{-1},s=tx^{-1}$ の先頭類を用いれば、次数0の先頭環は
+\[
+ \mathcal D=
+ k\langle a,b,s\rangle/
+ (as-qsa,\ bs-q^{-1}sb,\ q^{-1}ab-q^2ba-s).
+\]
+これは量子Heisenbergの反復Ore環で、基底 $a^ib^js^k$、重み $(1,1,2)$ を持つ整域である。
+$G_Dx^{-3}$ の重み2の先頭類は
+\[
+ g_0=q^{-1}ab+s/(q^2-1)
+     =\frac q{q^2-1}(ab-qba).
+\]
+$g=ab-qba$ は
+$ga=q^{-3}ag,gb=q^3bg,gs=sg$ を満たす正則正規元である。
+従って正則先頭元の完備濾過商の補題により
+\[
+ \operatorname{gr}\widehat R_x^0=\mathcal D/(g_0)
+       =k\langle a,b\rangle/(ab-qba).
+\]
+この補題は、先頭の積が零にならないことから次数ごとに割り算を行い、
+完備性で補正を収束させれば得られる。
+先頭環がnoetherianであることから濾過はZariskianとなり、
+完備filtered--graded分解の持上げで大域次元は2以下となる。
+剰余体の量子Koszul分解を持ち上げると最小Betti数 $(1,2,1)$ を持つので、
+大域次元は厳密に2である。
+
+非捩れの場合の形式的同型も示す。
+$\widehat R_x^0$ は二生成完備環で、関係は
+$ab-qba+$（次数3以上）と書ける。
+先頭環のPBW基底と完備性により、この一本の形式的関係で全核が生成される。
+次数 $n\ge3$ の補正単項式 $a^ib^j$ を消す。
+$a$ の座標変更 $a\mapsto a+\alpha a^ib^{j-1}$ が可能なとき、その係数は
+$1-q^{1-i}$ である。
+$b\mapsto b+\beta a^{i-1}b^j$ の係数は $1-q^{1-j}$ である。
+非捩れ $q$ では、$i+j\ge3$ に対し使える係数が同時に零となることはない。
+従って次数ごとに全補正を消せる。
+座標変更は各段階で恒等からの差の次数が増加するので完備位相で収束し、
+主張の形式的量子平面同型を得る。
+\end{proof}
+
+\texttt{verify\_cubic\_quantum\_triangle\_\allowbreak vertex.py} は
+量子Heisenbergの唯一の重なり $sba$、先頭Casimirの三つの正規式と
+量子平面商の恒等式を全 $q$ で厳密検算する。
+形式座標変更の一般係数式は本文で証明し、低次数の単項式にも独立に適用して確認する。
+今後必要なのは、この形式的局所perfectionのqgrへの降下と、
+非捩れの特殊weight軌道上のaffine大域次元の判定である。

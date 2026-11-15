@@ -1,0 +1,14 @@
+{
+  "version": "classification-v56",
+  "weighted_B": "w(x)=0,w(y)=w(z)=1,w(t)=2; PBW reductions do not decrease weight",
+  "vertex_gr": "as=qsa,bs=q^-1sb,q^-1ab-q\u00b2ba=s",
+  "initial_Casimir": "g0=q^-1 ab+s/(q\u00b2-1)=q/(q\u00b2-1)*(ab-qba)",
+  "exact_checks": [
+    "only Ore diamond sba",
+    "normal initial Casimir with scalars q^-3,q^3",
+    "initial quotient quantum plane identity",
+    "coordinate-change coefficients on degrees3..10 monomials"
+  ],
+  "ordinary_theorems": "Formal vertex microchart has gr quantum plane and gldim2 for every q!=0,+-1,D. For nonroot q all higher relation terms can be killed formally, giving completed quantum plane.",
+  "limits": "This is a formal vertex statement; global qgr perfection descent and full good-D nonroot admissibility not inferred."
+}

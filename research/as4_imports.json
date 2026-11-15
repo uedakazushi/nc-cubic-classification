@@ -150,5 +150,27 @@
     ],
     "scope": "Read current overview, plan/coverage portions and searched claim statements for central Sklyanin/elliptic extensions. No new theorem imported; central elliptic CY-envelope argument proved directly with Moore/Koszul/Nakayama identities. Existing mathematical imports remain at60eac...",
     "new_imports": []
+  },
+  "sklyanin_scope_consultation_v56": {
+    "commit": "429d8a399513f1a0c1230ec3bd841029f646e380",
+    "entry_points": [
+      {
+        "path": "README.md",
+        "sha256": "33897e55cbd3cdbc8e6bc710ddfbf1ff763fdf420ad053a82d334937c95ef95d"
+      },
+      {
+        "path": "research/plan_ja.tex",
+        "sha256": "a639cd55779ab40dab867e6b73c9b7dcc357688f351cdb0f1e50dff09f017cee"
+      },
+      {
+        "path": "research/COVERAGE.md",
+        "sha256": "cd4f8cde6c29826dbddd6703a0e81d1327cf4a6e013f29aac7ffa0d8bd9261a4"
+      },
+      {
+        "path": "research/CLAIMS.json",
+        "sha256": "dbcb078ff56190c8255abd8fca88206ea62f3af45ff61dad9aed9506a021f7d1"
+      }
+    ],
+    "scope": "Read current overview/coverage and plan beginning; searched all claim statements for Sklyanin, CY and central cubic. No new result imported. Previous mathematical imports remain pinned to60eac... Proper elliptic Sklyanin PI3 rank obstruction to be proved from primary WWY centre/Azumaya results, not inferred from AS4 global coverage."
   }
 }
