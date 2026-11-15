@@ -1,0 +1,109 @@
+\subsection{長さ二・一・一の表示と正規元による縮小}
+\label{subsec:as4-ds211-exclusions}
+引き続きas4の固定commit\cite{AS4lowpinned}から具体的表示だけを参照する。
+本節の最初の二族は
+{\small\texttt{CY\_ZERO\_COMMUTATORS\_DOUBLE\_SIMPLE\_SECOND\_COMPLETE.tex}}
+の(DT1)である。
+
+\begin{theorem}[二パラメータOre表示の全排除]
+\label{thm:ds211-A-all-excluded}
+$l\ne0,\pm1/4$、$r\in k$ とし
+\[
+ q=\frac{4l+1}{4l-1},\quad \beta=-\frac1{4l},\quad
+ u=-\frac{16lr+1}{2l(16l^2-1)},\quad v=\frac{8(l+r)}{16l^2-1}
+\]
+と置く。表示 $\mathcal A_{l,r}$ は量子多項式環
+\[
+ S=k\langle b,c,d\mid cb=qbc,\ db=q^{-1}bd,\ dc=q^2cd\rangle
+\]
+上のOre拡大 $S[a;\sigma,\delta]$ であり
+\[
+ \sigma(b,c,d)=(b,q^{-1}c,qd),\qquad
+ \delta(b,c,d)=(\beta b^2,u bc,v bd)
+\]
+となる。全パラメータでH3包絡にはならない。
+中心三次が非零となるのは
+\[
+ 48l^2+1=0,\quad r=3l\quad\text{または}\quad r=-l
+\]
+だけであり、その中心三次は順に $kc^3$、$kd^3$ である。
+\end{theorem}
+\begin{proof}
+\texttt{verify\_cubic\_as4\_ds211.py}は元の六関係と上の六Ore関係の一致、
+順序 $b<c<d<a$ の四つのPBW重なりを全係数で検証する。
+従って $S$ 上の多項式正常形があり、重み $w(a)=2,w(b,c,d)=1$ の先頭環が量子四平面なので整域である。
+
+$b$ のnormalizerは
+\[
+ a\longmapsto a-\beta b,\quad b\longmapsto b,\quad
+ c\longmapsto q^{-1}c,\quad d\longmapsto qd
+\]
+である。その半単純部分と単冪部分は可換し、単冪部分は $a\mapsto a-\beta b$、他の三生成元を固定する。
+これらは直接Ore関係を保つ自己同型である。
+中心三次 $F$ はnormalizerで固定されるので、その有限次元作用のJordan分解から
+単冪部分でも固定される。
+$F=\sum_{j=0}^m f_j a^j$ と正常形で書くと、$m>0$ の場合
+単冪変換との差の最高 $a$ 次数係数は $-m\beta f_m b$ となり非零である。
+従って全中心三次は $S_3$ に入る。
+
+$S$ の単項式 $b^ic^jd^k$ が中心である条件は
+$q^{j-k}=q^{i-2k}=1$ である。
+$i+j+k=3$ の十組について、二指数の最大公約数は純三乗では三、それ以外では一である。
+$q\ne1,-1$ なので、$q^3\ne1$ では中心三次は零、$q^3=1$ では
+$S$ の中心三次は $b^3,c^3,d^3$ の三本に限る。
+このとき
+\[
+ [a,b^3]=3\beta b^4,\quad
+ [a,c^3]=3u bc^3,\quad [a,d^3]=3v bd^3.
+\]
+これらも検証器で三乗根の係数環上で厳密確認した。
+従って $b^3$ の係数は零、$c^3,d^3$ はそれぞれ $u=0,v=0$ のときだけ残る。
+$u=v=0$ は $16l^2=1$ を要求するので起こらない。
+$q^3=1$ は $48l^2+1=0$ に等しく、その上で $u=0$ は $r=3l$、$v=0$ は $r=-l$ となる。
+
+H3に必要な中山作用も、AS4実現を仮定したときに独立に恒等と判定できる。
+対称射影を $U=(b^2,\langle a,c\rangle,\langle a,d\rangle,
+\langle b,c\rangle,\langle b,d\rangle,\langle c,d\rangle)$ とする正規化関係行列 $R$ と
+\[
+ A_1=\tfrac12\operatorname{Hess}(-z_1z_4+z_2z_3-z_0z_5+z_3z_4)
+\]
+を使い、$RA_1R^{\mathsf T}$ の非零性と全256係数の反巡回性を確認した。
+前節と同じ最高双対汎関数の議論から $\mu=I$ である。
+従ってH3候補は上の中心三次に限り、残る純三乗も非整域商を与える。
+\end{proof}
+
+\begin{theorem}[例外的一パラメータ表示の全排除]
+\label{thm:ds211-B-all-excluded}
+$i^2=-1$ とし、$\mathcal B_r$ を次の六関係で定める。
+\[
+\begin{split}
+0&=b^2+i[a,b]-2[c,d],\\
+0&=(1+i)ac+(1-i)ca-(4r-i)[b,c],\\
+0&=(1-i)ad+(1+i)da+(4r+i)[b,d],\\
+0&=(1+i)bc+(1-i)cb,\\
+0&=(1-i)bd+(1+i)db,\qquad0=cd+dc.
+\end{split}
+\]
+全 $r\in k$ でこの表示はH3包絡にならない。
+\end{theorem}
+\begin{proof}
+前証明と同じ $A_1$ と正規化関係行列を用い、非零最高tensorの反巡回性から
+AS4実現における $\mu=I$ を独立に確認する。
+$c,d$ のnormalizerは
+\[
+\begin{array}{c|rrrr}
+ &a&b&c&d\\\hline
+\nu_c&-ia+(1+4ir)b&-ib&c&-d\\
+\nu_d&ia+(4ir-1)b&ib&-c&d
+\end{array}
+\]
+であり、全八式を元の二次関係の線型結合として確認した。
+従って $N=c^3d$ のnormalizerは
+\[
+ a\longmapsto-a+(8r-4i)b,\quad b\longmapsto-b,\quad
+ c\longmapsto-c,\quad d\longmapsto-d.
+\]
+半単純部分は $-I$ なので、H3包絡を仮定した整域では
+補題\ref{lem:normalizer-minus-unipotent-odd-centre}が中心三次を消す。
+これで全 $r$ を排除する。
+\end{proof}

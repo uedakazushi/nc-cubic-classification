@@ -248,5 +248,21 @@
       "computations/verify_cubic_as4_tt22_c.py",
       "computations/verify_cubic_as4_tt22_remaining.py"
     ]
+  },
+  "ds211_second_presentations_v71": {
+    "commit": "a45f834f51a00c47443b51caf66abaf4629546b9",
+    "presentations": [
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_DOUBLE_SIMPLE_NONZERO_COMPLETE.tex",
+        "sha256": "3cec06e79b97b99ea2b8fa3353142b202b3b77ac63242eb8b384ac71c8eb2cad"
+      },
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_DOUBLE_SIMPLE_SECOND_COMPLETE.tex",
+        "sha256": "31fa9c7f730fdc43f96a9cca5828dce649b3ec10149bf8cf7606c9662d1de64e"
+      }
+    ],
+    "used_part": "DS1-DS2 and DT1 explicit A_l,r and B_r presentations only. No global coverage or AS4 sufficient theorem imported.",
+    "independent_proofs": "Ore PBW, normalizer Jordan action, exact cubic incidence and CY top tensor conditional AS4.",
+    "validator": "computations/verify_cubic_as4_ds211.py"
   }
 }

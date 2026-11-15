@@ -1,0 +1,216 @@
+{
+  "version": "classification-v71",
+  "source_commit": "as4 a45f834f51a00c47443b51caf66abaf4629546b9",
+  "presentation_sources": [
+    "CY_ZERO_COMMUTATORS_DOUBLE_SIMPLE_NONZERO_COMPLETE.tex DS1-DS2",
+    "CY_ZERO_COMMUTATORS_DOUBLE_SIMPLE_SECOND_COMPLETE.tex DT1"
+  ],
+  "A_parameters": {
+    "q": "(4*l + 1)/(4*l - 1)",
+    "beta": "-1/(4*l)",
+    "u": "(-16*l*r - 1)/(2*l*(16*l**2 - 1))",
+    "v": "(8*l + 8*r)/(16*l**2 - 1)"
+  },
+  "four_PBW_overlaps": [
+    [
+      0,
+      2,
+      1
+    ],
+    [
+      0,
+      3,
+      1
+    ],
+    [
+      0,
+      3,
+      2
+    ],
+    [
+      3,
+      2,
+      1
+    ]
+  ],
+  "cyclic_tensor_equations_per_family": 256,
+  "A_normalizer_b": [
+    [
+      "1",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "1/(4*l)",
+      "1",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "(4*l - 1)/(4*l + 1)",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "(4*l + 1)/(4*l - 1)"
+    ]
+  ],
+  "B_normalizer_c3d": [
+    [
+      "-1",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "I*(-12*I*r - 3) + I*(4*I*r - 1)",
+      "-1",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "-1",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "-1"
+    ]
+  ],
+  "base_cubic_weight_table": [
+    {
+      "exponents": [
+        0,
+        0,
+        3
+      ],
+      "weights": [
+        -3,
+        -6
+      ],
+      "gcd": 3
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        2
+      ],
+      "weights": [
+        -1,
+        -4
+      ],
+      "gcd": 1
+    },
+    {
+      "exponents": [
+        0,
+        2,
+        1
+      ],
+      "weights": [
+        1,
+        -2
+      ],
+      "gcd": 1
+    },
+    {
+      "exponents": [
+        0,
+        3,
+        0
+      ],
+      "weights": [
+        3,
+        0
+      ],
+      "gcd": 3
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        2
+      ],
+      "weights": [
+        -2,
+        -3
+      ],
+      "gcd": 1
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        1
+      ],
+      "weights": [
+        0,
+        -1
+      ],
+      "gcd": 1
+    },
+    {
+      "exponents": [
+        1,
+        2,
+        0
+      ],
+      "weights": [
+        2,
+        1
+      ],
+      "gcd": 1
+    },
+    {
+      "exponents": [
+        2,
+        0,
+        1
+      ],
+      "weights": [
+        -1,
+        0
+      ],
+      "gcd": 1
+    },
+    {
+      "exponents": [
+        2,
+        1,
+        0
+      ],
+      "weights": [
+        1,
+        2
+      ],
+      "gcd": 1
+    },
+    {
+      "exponents": [
+        3,
+        0,
+        0
+      ],
+      "weights": [
+        0,
+        3
+      ],
+      "gcd": 3
+    }
+  ],
+  "A_centre3_loci": [
+    "48*l^2+1=0, r=3*l: k*c^3",
+    "48*l^2+1=0, r=-l: k*d^3"
+  ],
+  "scope": "Independent all-parameter identities and paper proof; no upstream AS4 existence or full coverage imported."
+}
