@@ -29,7 +29,7 @@
     "strict_original_script_execution": false,
     "latex_compiled": false,
     "pdf_reviewed": false,
-    "github_push": "PENDING remote HEAD verification",
+    "github_push": "v6 main push succeeded at commit 7bdd673cbbb1ecc4bbcc6044d7070c6deb9a3ab7 and remote HEAD match was directly verified; later commits may advance main.",
     "root_intersections_degrees_1_to_6": "Exact integer checks run locally",
     "sign_duality_41_indices": "Checked via a local mathematically equivalent Python program m=-20..20",
     "local_LuaLaTeX_snippet_exit": 0,
@@ -102,7 +102,10 @@
     },
     "zigzag_script_math_equivalent_local_run": "PASS: Python standard library, all degrees 1..6; git pushed script not independently rerun after push.",
     "liu_wang_pdf_screenshot": "arXiv:2301.06757v3 page 1, Theorem 1.1 directly checked visually and in PDF text.",
-    "new_section_lualatex": "NOT YET RUN; source references and sections checked."
+    "new_section_lualatex": "NOT YET RUN; source references and sections checked.",
+    "github_pushed_source_fetched": true,
+    "committed_script_reexecuted": false,
+    "committed_paper_full_lualatex_compiled": false
   },
   "persistence": "GitHub main is canonical; on successful push do not save Library."
 }
