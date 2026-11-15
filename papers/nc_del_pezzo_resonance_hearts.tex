@@ -20,7 +20,7 @@
 \title{Rains共鳴の稠密軌跡と反標準heart\\
 \large 根sheafの符号別Ext・有限次元アフィン表現・導来切断}
 \author{研究原稿：一次資料の仮定と未検証の導来比較を区別する}
-\date{2026年11月15日 \quad resonance-hearts-v2}
+\date{2026年11月15日 \quad resonance-hearts-v3}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -37,7 +37,7 @@ $[-1]$で移る．正指数では$m$次元表現が次数0に現れ，
 零指数では自然な導来切断が非零根sheafを消す．
 正負の指数の共鳴はそれぞれ滑らかなdel Pezzoを保って
 Zariski稠密に実現する．反標準環のHilbert関数は不変である．
-これらは指定の自然関手の結果であり，
+さらに境界と交わらない任意の一次元以下のsheafへ拡張し，自然導来切断の振幅が$[0,1]$で，拡大に対するconnecting morphismが境界外の有限次元加群の準同型を定めることを示す．正負の根sheafの混合拡大ではこの写像のrankがcohomologyの残存量を決める．異なる根の$Ext^1$は根の交点数で決まり，genuine del Pezzoでは根の和による同時共鳴の禁止条件がある．これらは指定の自然関手の結果であり，
 全パラメータでの導来同値や$qgr$の非特異性を主張しない．
 \end{abstract}
 
@@ -104,6 +104,7 @@ $R/(g)=B(E,L,\sigma)$で$\deg L=d$だから
 \end{proof}
 
 \input{papers/sections/resonance_sign_trichotomy.tex}
+\input{papers/sections/resonance_extension_cancellation.tex}
 
 \section{正負の共鳴がそれぞれ稠密}
 \begin{theorem}[正負各指数のZariski稠密性]
@@ -227,10 +228,12 @@ $\Db(\mathcal A_{\mathrm R})\simeq\Db(\qgr R_q)$を証明したとする
 負指数の代数的Euler計算，$E_6/E_8$の根格子，
 共鳴指数の有限テストは
 \texttt{computations/verify\_resonance\_hearts.py}で再現する．
+拡大による相殺・$E_6$根の交叉の検査は
+\texttt{computations/verify\_resonance\_extensions.py}で再現する．
 この計算はRainsの既約根sheaf存在や導来同値を
 コンピュータで証明するものではない．
-正指数での$\Ext^1$消滅は根sheafについて解決した．
-次は一般の非既約対象におけるtorsion pairとheart全体の移行，
+正指数での$\Ext^1$消滅と，境界外sheafの二項振幅・混合拡大の長完全列・根の交叉障害は解決した．
+次は非既約対象全体のtorsion pairの存在とheart全体の移行，
 境界外の有限次元$R/(g-1)$-加群の分類，
 および既存dP1原稿の導来比較の独立監査を行う．
 

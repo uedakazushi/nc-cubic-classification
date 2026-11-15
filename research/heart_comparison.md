@@ -1,6 +1,6 @@
 # 非可換del Pezzo曲面のheart比較：現行研究ノート
 
-2026-11-15 / hearts-v10。最初に `00_research_plan.md` を読む。証明本文は `papers/nc_del_pezzo_hearts.tex`。対象は全次数の非可換del Pezzo曲面、最初の実行対象はcubic surface（次数3）。
+2026-11-15 / hearts-v11。最初に `00_research_plan.md` を読む。証明本文は `papers/nc_del_pezzo_hearts.tex`。対象は全次数の非可換del Pezzo曲面、最初の実行対象はcubic surface（次数3）。
 
 ## 稠密なRains resonanceでの符号別heart比較
 
@@ -9,6 +9,12 @@
 **自然導来切断**：m>0では境界外R/(g-1)のm次元表現がheart次数0、m<0では(-m)次元表現が[-1]に現れる。m<0でRains heartの(e,tau)はAZ非ample、pointed anticanonical heartとは非一致。m=0の根sheafが存在すれば自然導来切断は消失し保守的でない（genuine smooth del Pezzoではm=0根共鳴は不在）。任意のmでMは2-spherical。正負共鳴各々が六点の滑らかな楕円族でZariski dense。これは全共鳴点・全非可換del Pezzo成分を意味しない。
 
 反標準環RのHilbert数値1+d n(n+1)/2は共鳴で変わらない。新しい定理と仮定の詳細：`papers/nc_del_pezzo_resonance_hearts.tex`、`papers/sections/resonance_sign_trichotomy.tex`、`research/resonance_hearts.md`。既存dP1原稿には全q導来同値の証明が記載されるが、本研究でまだ独立再監査しておらず、今回の符号別定理の入力にはしない。
+
+## 非既約sheafの境界外 exact categoryと根交叉
+
+`papers/sections/resonance_extension_cancellation.tex`の証明済み結果：Z={M in Rains heart | dim M<=1, Li^*M=0}は拡大閉。全M in ZでτM=M、Ext²(e,M)=0、natural Φは振幅[0,1]。cohomologyの局所化V0,V1は有限次元A=R/(g-1)加群。任意の短完全列は0→V0(M1)→V0(M2)→V0(M3)→V1(M1)→V1(M2)→V1(M3)→0を誘導し、正・負の拡大閉部分圏では各加群関手がexact。mixed rootのδのrankでH0/H1の次元が決まり、δ同型なら非零sheafがnatural derived sectionで消える（古典weak dPのEuler列が具体例）。ただしZ全体のtorsion pairを証明したわけではない。
+
+異なる既約root classes alpha,betaなら Hom=Ext²=0、dim Ext¹=alpha·beta。genuine smooth avatarでalpha·beta=1かつm_alpha+m_beta=0の同時共鳴はalpha+beta rootの制限が自明になってしまうため不可能。もしΦがmixed pair上で完全忠実なら、Hom_A(V+,V-)の次元はalpha·betaに等しい必要がある。これが全q導来同値の具体的検証課題。Rains 2019 Cor7.13とCor7.23に依存。E6の72根とrank計算は厳密に検証。新規性全面調査・独立査読は未実施。
 
 ## 目標・達成基準
 

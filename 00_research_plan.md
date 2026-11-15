@@ -31,7 +31,7 @@
 【優先課題】全14641 ambient成分上の正規三次incidenceの成分・同型群oid・曲面条件・境界・族と降下を決定し、その後intrinsic定義を弱める。GitHub mainを正本とし、GitHub push成功時はLibraryへの保存を行わない。PDFやZIPをGitで追跡せず、TeX・ノート・検算コードを追跡する。
 
 
-2026-11-15 / project-v25 / recognition-v6 / hearts-v10。最初に本書、`research/cubic_corner.md`、`papers/cubic_heart_corner.tex`を読む。比較の共通枠組みは`research/heart_comparison.md`と`papers/nc_del_pezzo_hearts.tex`、共通公理は`research/common_del_pezzo_framework.md`。次数別・三次三様体の研究はそれぞれの現行ノートから再開する。
+2026-11-15 / project-v26 / recognition-v6 / hearts-v11。最初に本書、`research/cubic_corner.md`、`papers/cubic_heart_corner.tex`を読む。比較の共通枠組みは`research/heart_comparison.md`と`papers/nc_del_pezzo_hearts.tex`、共通公理は`research/common_del_pezzo_framework.md`。次数別・三次三様体の研究はそれぞれの現行ノートから再開する。
 
 ## I. 恒常的な研究原則と保存許可
 
@@ -79,6 +79,16 @@ Rainsのsimple-root既約sheaf存在結果を用い、smooth elliptic/genuine de
 
 新しい現行証明は`papers/nc_del_pezzo_resonance_hearts.tex`と`papers/sections/resonance_sign_trichotomy.tex`。再開ノート`research/resonance_hearts.md`、E6/E8格子とP1上の双対モデルの数値検算`computations/verify_resonance_hearts.py`。非既約対象のtorsion pair、AS/VdB/Rains各heartの全体的比較、qgr smoothnessは未解決。
 
+### 境界非交叉sheafの二項振幅と混合共鳴の相殺（新定理）
+
+Rains heartの`Z={M | dim M≤1, Li^*M=0}`は拡大閉のexact category。θM→Mが同型、τM=M、Rains Cor7.23からExt²(e,M)=0。中心正則gの周期性により、自然導来切断はZ上でcohomological amplitude [0,1]、`V^j(M)=(⊕Ext^j(e,τ^nM)[g^-1])_0` (j=0,1) は有限次元A=R/(g-1)加群。短完全列からの6項A線型完全列`0→V0(M1)→V0(M2)→V0(M3)→V1(M1)→V1(M2)→V1(M3)→0`を証明。Z+=ker Ext¹(e,-)とZ-=ker Hom(e,-)は拡大閉で各V0/V1はexactだが、この二者がZ上のtorsion pairという結論は未証明。
+
+混合拡大0→M-→M→M+→0のconnecting`δ_M:V+→V-`のrankをrとすると`dim V0(M)=m+-r`、`dim V1(M)=-m--r`。δが同型なら非零Mが自然導来切断で零となり、全q導来同値主張の直接検証条件になる。古典的weak dPの(-2)曲線のEuler完全列`O(-2)→O(-1)^2→O`は実際にδが同型となる例。genuine非可換への存在は未証明。
+
+異なる境界非交叉既約根sheaf Mα,Mβが同じRains heartに存在すれば`Hom=Ext²=0`、`dim Ext¹(Mα,Mβ)=α·β`（Rains Cor7.13 Euler形式）。交点<0なら同時存在不可、=0なら拡大無し、=1ならExt¹が1次元。自然Φがこの二対象間で完全忠実なら`dim Hom_A(V+,V-)=α·β`が必要。αβ=1かつmα+mβ=0の同時共鳴はgenuine Sで不可能：α+βが根となり、そのE制限が自明になってしまうため。E6の72根と46組のrank式を厳密検算した。原稿`papers/sections/resonance_extension_cancellation.tex`、再現`computations/verify_resonance_extensions.py`。
+
+これは負・正指数の稠密性と矛盾せず、共鳴軌跡の交叉に制約を与える。いまだ全Zのheartの完全な分類、全q導来同値、特異qgrの分類は未解決。旧dP1の導来同値の独立監査で、実在する混合拡大のδとアフィン加群間Homの次元を優先的に照合する。
+
 ### HRSと一般heart判定
 
 既存`papers/nc_del_pezzo_hearts.tex`の振幅1比較は(T,U)=(ker R1δ_*,ker δ_*)、transported heart=<U[1],T>、t-exact iff U=0を与える。対象は導来的には消えずshiftされる。既存の豊富orbitによる一意性は高次Ext tail消滅を明示的に必要とする。
@@ -107,7 +117,7 @@ weakly markedは非零Ext有限noetherian Abel圏、Serre、tau=S^-1[2]のheart�
 
 ## IV. 優先順位と具体的な着手
 
-**Rains dense resonanceの次の優先問題**：正指数m>0の既約根sheafのExt¹(e,M)=0はRainsの反変双対から解決済み。次は非既約sheafのtorsion pairとanticanonical qgrの境界外有限次元表現を分類する。既存dP1原稿の全q導来同値・smoothnessの証明を独立監査し、一般次数およびAS/VdB heartのgluingを接続する。負指数でのAZ failure/t-nonexactは解決済みとし、再計算を繰り返さない。
+**Rains dense resonanceの次の優先問題**：既約根の全符号判定と非既約境界非交叉sheafの二項振幅・6項完全列は証明済み。次はZ上のtorsion pairが存在するか、δのrankを実在する混合拡大から決定し、局所有限次元A加群の分類と全q導来切断の完全忠実性を検査する。既存dP1原稿の全q導来同値・smoothnessの証明を独立監査し、一般次数およびAS/VdB heartのgluingを接続する。負指数でのAZ failure/t-nonexactは解決済みとし、再計算を繰り返さない。
 
 1. **Cubicの構造対象と同値の照合**：AOUの実際のmutationでE0≃πFを検証し、AS corner同値と既知のqgr F比較を接続する。数値K0や境界restrictionだけで同定しない。
 2. **非可換AS locusと根壁**：古典的11根壁では反標準収縮が2-spherical対象を消し、導来非同値になることを確定した。次は非可換AS-regular potentialと各壁の交叉、Rains/VdB heartの特殊化、実在する核やpointednessを判定する。古典的障害を全非可換境界へ無条件には拡張しない。
@@ -123,7 +133,8 @@ weakly markedは非零Ext有限noetherian Abel圏、Serre、tau=S^-1[2]のheart�
     python3 computations/verify_cubic_corner_hilbert.py
     python3 computations/verify_cubic_root_wall.py
     python3 computations/verify_cubic_corner.py
-    python3 computations/verify_resonance_hearts.py  # full sign table and E6/E8 lattice
+    python3 computations/verify_resonance_hearts.py  # sign table and roots
+    python3 computations/verify_resonance_extensions.py # E6 root intersections and mixed extensions
     latexmk papers/cubic_heart_corner.tex
 
 Python標準ライブラリで全有理数計算と有限体計算を再現する。証明書summaryは`computations/cubic_corner_certificate.json`、検証状態は`research/cubic_corner_validation.json`。追加した六点復元の完全な証明を含む原稿10ページをLuaLaTeXで組版し参照を確認した。一般cornerの証明、計算機による厳密rank証明、既知AS入力を分ける。独立査読・形式化・網羅的新規性調査は未実施。従来の研究の再現はその現行ノートを参照する。

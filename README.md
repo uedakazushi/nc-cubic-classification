@@ -16,7 +16,7 @@
 
 ## 現在の重点：heart比較、まずcubic surface
 
-**RainsのZariski denseな共鳴への符号別完全判定**：既約根sheaf Mが境界に制限して零となるとき、m=chi(e,M)の正負でdim Hom(e,tau^n M)=max(m,0)、dim Ext¹=max(-m,0)、Ext²=0。正指数はanticanonical heartでm次元の境界外表現が次数0、負指数は(-m)次元表現が[-1]、零指数なら自然導来切断はMを消す。正負各指数の共鳴がそれぞれZariski dense。負指数ではRains heartのAZ amplenessが実際に失敗。すべての根sheafは2-spherical。既約性からの誤った全射性推論を修正し、Rainsの反変双対で正指数を証明した。反標準環のHilbert関数は一定。全パラメータの導来同値・qgr特異化は主張しない。**[証明原稿](papers/nc_del_pezzo_resonance_hearts.tex)**／[研究ノート](research/resonance_hearts.md)。
+**RainsのZariski denseな共鳴への符号別完全判定**：既約根sheaf Mが境界に制限して零となるとき、m=chi(e,M)の正負でdim Hom(e,tau^n M)=max(m,0)、dim Ext¹=max(-m,0)、Ext²=0。正指数はanticanonical heartでm次元の境界外表現が次数0、負指数は(-m)次元表現が[-1]、零指数なら自然導来切断はMを消す。正負各指数の共鳴がそれぞれZariski dense。負指数ではRains heartのAZ amplenessが実際に失敗。すべての根sheafは2-spherical。既約性からの誤った全射性推論を修正し、Rainsの反変双対で正指数を証明した。反標準環のHilbert関数は一定。全パラメータの導来同値・qgr特異化は主張しない。**[証明原稿](papers/nc_del_pezzo_resonance_hearts.tex)**／[研究ノート](research/resonance_hearts.md)。さらに非既約で境界と交わらないsheafについて導来切断の振幅[0,1]と6項A加群完全列を証明。混合正負共鳴の拡大が定めるδのrankによりanticanonical側のcohomologyが決まり、根系の交叉は同時共鳴に明示的な禁止条件を与える。[拡大・根交叉の証明](papers/sections/resonance_extension_cancellation.tex)。
 
 
 一般の非可換del Pezzoに対する **Rains heart・VdB heart・AS heart・anticanonical heart** の四構成を比較する。dP1に限定せず、最初に次数3のcubic surfaceを扱う。heartの存在、faithfulなrealization、導来同値、t-exactness、構造対象・反Serre・境界・markingの保存と族の降下を区別する。

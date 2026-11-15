@@ -12,6 +12,10 @@ quiverを分類対象に含めず、Ext有限・noetherianな非零abel圏、Ser
 
 `papers/nc_del_pezzo_resonance_hearts.tex`：Rainsのsimple-root既約sheaf存在条件の下、m=chi(e,M)に対して全tau-orbitでHom=max(m,0)、Ext¹=max(-m,0)、Ext²=0を証明。Rainsの導来双対R adによりm>0のExt¹消滅も解決。m<0では反標準AZ ampleが失敗し、自然導来切断の像はanticanonical qgrの次元(-m)の境界外アフィン表現[-1]、m>0では次元mの表現がdegree0、m=0ではMは導来的に不可視（genuine smooth avatarではm0共鳴が不在）。正負それぞれの共鳴が次数1の一般位置楕円blowup族でもdense。導来非同値・qgr特異化は従わない。既存`papers/dp1_anticanonical_models.tex`が主張する全q導来同値の独立監査は未実施。一般の研究ノートは`research/resonance_hearts.md`。
 
+## Rains resonanceの非既約sheafと導来比較の検証条件
+
+現行`papers/sections/resonance_extension_cancellation.tex`において、境界と交わらない一次元以下のsheafのextension-closed exact category Zでは、自然導来切断が振幅[0,1]を持ち、2つのcohomologyはA=R/(g-1)の有限次元加群となる。短完全列からの6項A線型完全列と、正負指数根の混合拡大のconnecting map δのrank公式を証明した。δが同型なら非零の中間sheafが自然導来切断で消えるので、既存dP1の全q導来同値の独立監査に使う。異なる根αβのExt¹次元はα·β、根の和が根となりmα+mβ=0の共鳴交叉はgenuine smooth avatarで不可能。既存全q導来同値は独立再監査していない。
+
 ## 現在有効な到達点と証明の所在
 
 - **内在的rank・section環**：`papers/nc_del_pezzo_degree1_moduli.tex` の`sec:intrinsic-rank`。Gabriel–Krull長さをrankとし、適切なample条件の下でgeneric quotientのsemisimplicity、rankの加法性、反標準環の整域性、切断の二次増大を証明している。次数3と同じ数値的な一般化は`research/common_del_pezzo_framework.md`参照。
