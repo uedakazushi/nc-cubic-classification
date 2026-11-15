@@ -1,0 +1,136 @@
+{
+  "version": "classification-v11",
+  "primary_formula_url": "https://math.mit.edu/~etingof/delpezzocenter",
+  "paper": "Etingof–Ginzburg, arXiv:0709.3593, Theorem3.3.2 and Appendix9.1; author-hosted E6 formula used",
+  "relations": "(1+gamma)yz+(1-gamma)zy=h*x^2+alpha_x*t*x+beta_x*t^2, cyclic; central t",
+  "all_parameter_commutator_relation_identities": 3,
+  "relation_matrix": [
+    121,
+    102
+  ],
+  "selected_independent_relations": 86,
+  "polynomial_normalization_of_author_formula": "tau^2*(q+1)*(tau^3+1)",
+  "conversion": {
+    "q": "-(1-gamma)/(1+gamma)",
+    "tau": "h/(1+gamma)",
+    "a1,b1,c1": "-alpha/(1+gamma)",
+    "a2,b2,c2": "-beta/(1+gamma)"
+  },
+  "integrated_envelope": "alpha=-4*gamma*(A,B,C)",
+  "integrated_central_cut": "Omega/(-4*h*(1+h^3)*gamma)+(D-A*beta_x/h)*t^3",
+  "coefficient_limit": "g_beta+t*(A*x^2+B*y^2+C*z^2)+D*t^3",
+  "all_certificate_denominators_regular_at_gamma0": true,
+  "integrated_cut_coefficients": [
+    {
+      "active_word": [
+        1,
+        1,
+        1
+      ],
+      "t_power": 0,
+      "coefficient": "-h*(h + z + 1)*(h**2 - h*z - h + z**2 + 2*z + 1)/(2*(h + 1)*(z + 1)**6*(h**2 - h + 1))"
+    },
+    {
+      "active_word": [
+        1,
+        2,
+        0
+      ],
+      "t_power": 0,
+      "coefficient": "-(-h + z - 1)*(h**2 + h*z - h + z**2 - 2*z + 1)/(2*(h + 1)*(z + 1)**5*(h**2 - h + 1))"
+    },
+    {
+      "active_word": [
+        2,
+        1,
+        0
+      ],
+      "t_power": 0,
+      "coefficient": "(z - 1)*(h + z + 1)*(h**2 - h*z - h + z**2 + 2*z + 1)/(2*(h + 1)*(z + 1)**6*(h**2 - h + 1))"
+    },
+    {
+      "active_word": [
+        2,
+        2,
+        2
+      ],
+      "t_power": 0,
+      "coefficient": "-h*(-h + z - 1)*(h**2 + h*z - h + z**2 - 2*z + 1)/(2*(h + 1)*(z + 1)**6*(h**2 - h + 1))"
+    },
+    {
+      "active_word": [
+        1,
+        0
+      ],
+      "t_power": 1,
+      "coefficient": "-2*C*h**2*z*(z - 1)/((h + 1)*(z + 1)**6*(h**2 - h + 1))"
+    },
+    {
+      "active_word": [
+        1,
+        1
+      ],
+      "t_power": 1,
+      "coefficient": "B*(3*h**3*z + h**3 + 3*z**4 + 6*z**3 + 4*z**2 + 2*z + 1)/((h + 1)*(z + 1)**6*(h**2 - h + 1))"
+    },
+    {
+      "active_word": [
+        1,
+        2
+      ],
+      "t_power": 1,
+      "coefficient": "A*(z - 1)*(-h**3 + z**3 + z**2 - z - 1)/(h*(h + 1)*(z + 1)**5*(h**2 - h + 1))"
+    },
+    {
+      "active_word": [
+        2,
+        0
+      ],
+      "t_power": 1,
+      "coefficient": "-2*B*h**2*z/((h + 1)*(z + 1)**5*(h**2 - h + 1))"
+    },
+    {
+      "active_word": [
+        2,
+        1
+      ],
+      "t_power": 1,
+      "coefficient": "-A*(z - 1)*(h**3 + z**3 - z**2 - z + 1)/(h*(h + 1)*(z + 1)**5*(h**2 - h + 1))"
+    },
+    {
+      "active_word": [
+        2,
+        2
+      ],
+      "t_power": 1,
+      "coefficient": "C*(-3*h**3*z + h**3 + 3*z**4 - 6*z**3 + 4*z**2 - 2*z + 1)/((h + 1)*(z + 1)**6*(h**2 - h + 1))"
+    },
+    {
+      "active_word": [
+        0
+      ],
+      "t_power": 2,
+      "coefficient": "z*(z - 1)*(4*A**2*z**2 - 4*A**2 + 4*B*C*h**2 - beta_x*h)/(h*(h + 1)*(z + 1)**5*(h**2 - h + 1))"
+    },
+    {
+      "active_word": [
+        1
+      ],
+      "t_power": 2,
+      "coefficient": "(8*A*C*h*z**3 - 8*A*C*h*z - 8*B**2*h**2*z**2 - 8*B**2*h**2*z - beta_y*h**3 - 3*beta_y*z**3 - 3*beta_y*z**2 - beta_y*z - beta_y)/(2*(h + 1)*(z + 1)**6*(h**2 - h + 1))"
+    },
+    {
+      "active_word": [
+        2
+      ],
+      "t_power": 2,
+      "coefficient": "(8*A*B*h*z**3 - 8*A*B*h*z + 8*C**2*h**2*z**2 - 8*C**2*h**2*z + beta_z*h**3 - 3*beta_z*z**3 + 3*beta_z*z**2 - beta_z*z + beta_z)/(2*(h + 1)*(z + 1)**6*(h**2 - h + 1))"
+    },
+    {
+      "active_word": [],
+      "t_power": 3,
+      "coefficient": "(-A*beta_x + D*h)/h"
+    }
+  ],
+  "scope": "Actual rational central presentations near gamma=0 and all-order formal central integration of every Clifford cut. Not full graded flatness/AS4 of the entire presentation family, H3 openness or recognition, all-AS4 coverage, a moduli component or relative stack descent."
+}

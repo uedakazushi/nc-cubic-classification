@@ -1,0 +1,105 @@
+\subsection{Rains の中心元による全次数の中心表示への積分}
+\label{subsec:clifford-central-integration}
+前節の指定方向については、中心性だけなら有限次数の計算を越えられる。
+ここでは Etingof--Ginzburg \cite[Theorem 3.3.2, Appendix 9.1]{EGdelpezzo}
+と、その著者サイトの Rains の E6 公式 \cite{RainsE6formula} を用いる。
+中心元の公式自体を新しい結果とはしない。以下の変数変換、Clifford 切断への
+特殊化、三交換子の独立検算が本稿で必要な部分である。
+
+まず活動変数のみの関係を
+\[
+ xy-qyx-\tau z^2+c_1z+c_2=0,\quad
+ yz-qzy-\tau x^2+a_1x+a_2=0,\quad
+ zx-qxz-\tau y^2+b_1y+b_2=0
+\]
+とする。著者サイトの E6 中心元を
+$\tau^2(q+1)(\tau^3+1)$ 倍した多項式を $\Omega=\Omega_3+\Omega_2+\Omega_1$
+と書く。その係数は次の通りである。
+\begin{align*}
+\Omega_3={}&\tau^2(q+1)(\tau^3+1)y^3
+ +\tau(q+1)(q^3-\tau^3)yzx\\
+ &-q\tau(q+1)(\tau^3+1)zyx
+ +\tau^2(q+1)(q^3-\tau^3)z^3,\\
+\Omega_2={}&q(q+1)\tau^3c_1yx
+ -\tau(q^2+q\tau^3+q+2\tau^3+1)b_1y^2\\
+ &+(q\tau^3-q^2)a_1yz+\tau^3(q+1)b_1zx
+ +(q^3+q\tau^3)a_1zy\\
+ &+\tau(-q^4-q^3-q^2+2q\tau^3+\tau^3)c_1z^2,\\
+\Omega_1={}&-(q^3\tau a_2+2q^2\tau a_2+q\tau a_2
+             +q^2a_1^2+q\tau^2b_1c_1)x\\
+ &+\tau\bigl(-(q^3+2q^2+q\tau^3+2q+\tau^3+1)b_2
+             -q\tau a_1c_1+\tau^2b_1^2\bigr)y\\
+ &+\tau\bigl((-q^4-2q^3-2q^2+q\tau^3-q+\tau^3)c_2
+             -q\tau^2c_1^2-q\tau a_1b_1\bigr)z.
+\end{align*}
+同次三次元として使うときは $\Omega_2,\Omega_1$ にそれぞれ中心変数
+$t,t^2$ を掛ける。この正規化では $q=-1$ に代入する前に
+$q+1$ を割る操作はしない。
+
+\begin{proposition}[全 Clifford 切断の中心表示としての積分]
+\label{prop:clifford-central-integration}
+$\gamma$ を一つの変形変数とし、包絡の関係を
+\begin{equation}\label{eq:clifford-integrated-envelope}
+ (1+\gamma)yz+(1-\gamma)zy
+ =hx^2-4\gamma A tx+\beta_x t^2
+\end{equation}
+およびその巡回置換とする。上の式に
+\[
+ q=-\frac{1-\gamma}{1+\gamma},\quad
+ \tau=\frac h{1+\gamma},\quad
+ (a_1,b_1,c_1)=\frac{4\gamma}{1+\gamma}(A,B,C),\quad
+ (a_2,b_2,c_2)=-\frac{\beta}{1+\gamma}
+\]
+を代入する。このとき
+\begin{equation}\label{eq:clifford-integrated-cut}
+ \mathcal G_\gamma
+ =\frac{\Omega}{-4h(1+h^3)\gamma}
+   +\left(D-\frac{A\beta_x}{h}\right)t^3
+\end{equation}
+は $\gamma=0$ の近傍で係数が正則な中心三次元であり、
+\[
+ \mathcal G_0=g_\beta+t(Ax^2+By^2+Cz^2)+Dt^3.
+\]
+従って全ての前節の Clifford 中心切断は、最高次の反交換関係を変える
+実際の有理式による中心表示に延長できる。特に中心性の形式障害は全次数で消える。
+\end{proposition}
+
+\begin{proof}
+変数変換で三つの関係は、$1+\gamma$ を単元として
+\eqref{eq:clifford-integrated-envelope} と一致する。
+$\alpha$ をまだ独立変数として、$a_1=-\alpha_x/(1+\gamma)$ などとする。
+\texttt{verify\_cubic\_clifford\_integration.py} は全係数を残し、中心 $t$ を
+左に移した次数 $4$ の $121\times102$ 関係行列を $M$ とする。
+その $86$ 独立列 $N$ を $\gamma=0$ の単元小行列から選び、
+各 $i=x,y,z$ について係数ベクトル $c_i$ を構成して
+\[
+ [\Omega,i]=Nc_i
+\]
+を有理関数の恒等式として独立に検算する。
+下次数の関係は活動次数を真に下げるので、選んだ最高次の逆行列に対する
+補正は有限の冪零級数で計算できる。大きな多変数関係行列全体の逆を仮定しない。
+
+次に $\alpha=-4\gamma(A,B,C)$ を代入する。
+自由代数の各単語係数で $\Omega$ は $\gamma$ で割れ、表示式の各係数が
+$\gamma=0$ で正則となる。関係係数 $c_i$ も同じように割れる。
+割った後の全分母の $\gamma=0$ への制限は、定数と $h,1+h^3$ の因子だけである。
+従って許された全 $h$、全 $\beta,A,B,C,D$ に対して、
+\eqref{eq:clifford-integrated-cut} の中心性が代入・特殊化を含めて成立する。
+これは標本計算や既知の公式への無検算の依存ではない。
+
+最後に $\gamma=0$ での係数極限を Clifford 関係で簡約すると、正確に
+\[
+ \left.\frac{\Omega}{\gamma}\right|_{\gamma=0}
+ =-4h(1+h^3)\bigl(g_\beta+t(Ax^2+By^2+Cz^2)\bigr)
+   -4A\beta_x(1+h^3)t^3
+\]
+となる。これが定数補正 $D-A\beta_x/h$ を決め、所望の特殊繊維を与える。
+\end{proof}
+
+この積分は前節で選んだ $\dot G$ と同じ一次の包絡方向を持つが、
+その切断の一次補正は中心三次元を加える自由だけ異なりうる。
+従って前節の固定した補正に対する非零の $\kappa$ と矛盾しない。
+ここで証明したのは全次数の\emph{中心表示}への積分である。
+全次数での平坦性・全 AS4 認識・切断後の H3 条件・相対降下をこの計算だけから
+推論しない。特に H3 の七次元族が実際の H3 moduli のどの成分へ入るかは、
+積分した表示の幾何学的 admissibility を確認するまで未解決である。
