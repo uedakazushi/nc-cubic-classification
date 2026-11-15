@@ -1,5 +1,13 @@
 # 研究方針：非可換del Pezzo曲面のheart比較と内在的モジュライ
 
+## 最上位の分類目標と実行計画（2026-11-15）
+
+**現在の最優先課題は強いintrinsic定義の14641型非可換三次曲面 H3 の完全分類。** 詳細なCodex指示は research/cubic_14641_codex_plan.md に置く。R=⊕Hom(O,tau^n O) は一次生成、二次包絡B=Q(R)は左右noetherian quadratic Koszul AS4、型14641。G∈B3の正則正規性とR=B/(G)は現行認識定理の結論であり公理ではない。
+
+**最初は全AS4 ambientの完全分類を目指さず、正規三次incidence I3={(B,[G]):GB1=B1G} の構造定理を最優先。** 各Bに対し35×8積行列の5×5 minorsで正規三次直線を求め、既知族の一般fiber、成分、境界、同型、非中心Gを調べる。Pym六成分で全14641型を尽くすとはしない。as4/asz4とpoisson-p4、既存のheart/corner研究を検証済み入力として利用する。正規商が無条件にintrinsic weak条件を満たすとは仮定しない。
+
+完成基準は全対象の被覆、明示的な幾何データ、同型群oidと慣性、成分・交叉・境界、Serre/heart/rank/AZ条件、相対stack・降下。まず一般点と主要成分を決定し、未分類領域を厳密に縮小する。分類未完なら部分分類の正しい定理と証明を残す。GitHub mainを正本とし、push成功時Library保存なし。
+
 ## 14641型の内在的非可換三次曲面：当面の完全分類対象（2026-11-15）
 
 統一intrinsic weakly marked三次曲面 (A,O) の反標準環 R をR1で生成されるものに限定し、二次包絡 B=Q(R) が左右noetherianな14641型quadratic Koszul AS4であることを要求するクラス H3 を分類する。外部ambient・埋込み・4周期同型は標識として加えない。公表用の主証明は papers/weak_cubic_axioms.tex の sec:14641-classification、再開用ノートは research/cubic_14641_classification.md。

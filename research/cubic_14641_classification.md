@@ -16,6 +16,10 @@ AS部分は非空な真部分：可換滑らかなcubicはOU AS型、量子Ferma
 
 CY skew polynomial torusの3-torsion 27点はS4座標置換で4軌道：代表000,001,011,012、軌道長1,8,12,6、中心三次次元20,5,6,4。非AS量子Fermat 110 は011軌道。全線型同型、Zhang同値、Abel圏同値による分類ではない。
 
+## 次に実行するincidence分類（Codex優先）
+
+全AS4 ambientを先に分類するのではなく、正規三次元Gを持つBを構造的に制限する。research/cubic_14641_codex_plan.md に詳細を記載。最初の具体的計算は R(1,3)、Pym graded CY六族、skew torus/量子Fermat交点での N3(B) のgeneric fiber、成分、非中心G、自己同型群、正規自己同型、qgrのintrinsic条件。次にas4/asz4の別族、境界、AS/OU非ASの交叉と代数的stackの降下を調べる。分類対象が網羅された証明がない限り完全分類と呼ばない。
+
 ## 次の優先課題
 
 14641型ambientの各既約成分上で N3(B) の既約成分・generic正規元・自己同型を求め、Serre作用、rank、heart、AZ ampleを認識する。全モジュライstackの代数性、境界、全対象を覆うAS chartと同型groupoidは未解決。強いクラスの完全分類後に一次生成性・noetherian性を弱める。

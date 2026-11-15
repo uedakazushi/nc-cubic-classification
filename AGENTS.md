@@ -1,3 +1,7 @@
+# Codex classification priority — 2026-11-15
+
+**Highest mathematical priority: complete classification of the strong intrinsic 14641 nc cubic surfaces H3.** Read research/cubic_14641_codex_plan.md and work through its incidence-first phases. Classify normal cubic relations and their ambient pairs before attempting all AS4 algebra classification. Preserve the concurrent heart/corner, del Pezzo, Poisson and threefold work. No unproved completeness claims, no restriction to R(1,3) or central G, no assumption that Pym's graded CY families exhaust AS-Z. Maintain main as canonical, fast-forward push only, and no Library save on success.
+
 # Research continuation — 2026-11-15 / project-v19 / recognition-v6 / hearts-v4
 
 Read 00_research_plan.md, research/cubic_corner.md and papers/cubic_heart_corner.tex first. Keep research/heart_comparison.md and papers/nc_del_pezzo_hearts.tex as the general framework. Heart comparison for ALL noncommutative del Pezzo degrees is central; begin with cubic surfaces.
