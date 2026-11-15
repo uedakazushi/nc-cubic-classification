@@ -1,6 +1,6 @@
 # 四つのheartの比較：研究方針
 
-2026-11-16 / hearts-v20。この一式から再開する場合は本書を最初に読む。現行論文は `papers/nc_del_pezzo_hearts.tex`、補足知識は `research/heart_comparison.md`、検証状態は `research/four_hearts_validation.json`。リポジトリ全体の目標は `00_research_plan.md` にあり、本書はheart比較に対象を限定する。
+2026-11-16 / hearts-v21。この一式から再開する場合は本書を最初に読む。現行論文は `papers/nc_del_pezzo_hearts.tex`、補足知識は `research/heart_comparison.md`、検証状態は `research/four_hearts_validation.json`。リポジトリ全体の目標は `00_research_plan.md` にあり、本書はheart比較に対象を限定する。
 
 ## 恒常的な研究原則と保存許可
 
@@ -18,31 +18,33 @@
 
 ## 最優先の目標：公表する論文の価値を最大化する
 
-個々の未解決項目を順番に埋めることより、正確で独立した中心結果と、先行研究に対する明確な貢献を優先する。主張の数やページ数を増やすことを目的としない。中心は、自然な比較関手の同定、反標準heartの選択原理、および実際の対象・表現への帰結である。現行稿は30ページ、主TeXと七つのsectionからなる。
+個々の未解決項目を順番に埋めることより、正確で独立した中心結果と、先行研究に対する明確な貢献を優先する。主張の数やページ数を目的としない。中心は自然関手の同定、反標準heartを選ぶ原理、実在する対象・表現への帰結である。現行稿は34ページ、主TeXと七つのsectionからなる。
 
 ## 現在の主要な到達点
 
-VdBの最後のraw blow-up W→ProjFについて、既知のRδ_*O_W=πFとSerre関手の保存から、Rδ_*を内在的反標準導来切断と自然に同定した。同じ最終blow-upのRains実現では四者の関手が接続する。十八係数非零かつΔ≠0の標準noetherian AS領域では、VdB/RainsからASへの比較も一回のHRS tiltである。任意の独立した可換avatarやstraight六回raw blow-upとの一致ではない。
+VdB最後のsection-model関手は、同じ最終raw blow-upの構造対象と反Serre作用から作る自然な反標準導来切断に同定される。同じRains表示とAOU比較はこれにより接続する。標準noetherian三block表示のAS–反標準のt-exactnessは十八係数非零と十一因子Δの非零で判定する。独立な全avatarの同一視ではない。
 
-境界非交叉圏Z上で、Tは全非零商Qのχ(e,Q)>0、Fは全非零部分対象Nのχ(e,N)<0という条件で完全に記述される。有限ADE型で全単純がsphericalなら、負指数の単純tiltを繰り返す手順が反標準heartに到達する。停止回数は初期正根のうちEuler値が負の根の個数で、終端heartは選択順序によらない。これは既知のWeyl/tilt機構を、指定された反標準比較の標的heartの認識に用いた結果である。
+指定genuine smooth楕円gluingでq非torsionなら、全heartのtorsionfree部分Fは境界非交叉有限長圏Zに含まれる。従って自然Φがt-exact、(e,s)がAZ-ample、全ての実在Z単純のχ(e,S)>0という三条件が同値となる（thm:globaldefect）。数値共鳴そのものとAZ失敗を同一視しない。
 
-全六単純根sheafが実在するE6最大共鳴の仮定の下、指数(6,2,−1,3,2,4)の例は一回のα2反射で(6,1,1,2,2,4)へ移る。この範囲で全有限次元単純加群の根類・次元と、一次元characterがちょうど二つであることを得る。全六sheafの実在仮定を数値共鳴の計算に置き換えない。
+Zの全単純は有限個の2-spherical対象で、その根類は線形独立な有限ADE系となる。局所Euler-chamber手順は全Rains heartへ延長でき、負の単純を順次tiltして全反標準heartへ到達する（thm:globalADEtilts）。回数は初期負正根数。これは一回のHRS tiltを有限個の単純tiltに細分する記述で、任意のtilt列の最短性を主張してはいない。
 
-既存のgenuine楕円gluingの導来比較、全heartの振幅、AOUのpointed性、十一条件の必要十分判定、有限cornerの係数幾何、混合A2の詳細は現行稿に保持している。十一条件は独立の代数定理で、AS適用には標準周期表示・noetherian性等を使う。
+整数倍点p_i=N_i q（3≤r≤8、相異なる正整数）では、各blowdown単純根にRainsの既知の実在結果を適用した。全有限次元単純A=R/(g−1)加群はr個で、Nを昇順νに並べると次元は(ν1+ν2+ν3,ν2−ν1,…,νr−ν_(r−1))。負単純tiltの回数は元の順序の逆転数であり、全heartが反標準heartと一致するのは昇順の場合だけである。同じ無順序点集合のr!順序は同じpointed導来圏内で相異なるRains heartsを与える（thm:sorted-spectrum、cor:permuted-hearts）。
 
-## 先行研究との差分と公表基準
+六点(1,3,2,5,7,11)の全六根sheafの実在は、この具体的なblowdownとdeterminant条件で確認した既知結果の適用であり、追加の未検証仮定ではない。次元は(6,1,1,2,2,4)、characterは二つ、720個の順序heartのうち昇順のみ反標準heart。抽象的abel圏として720個が互いに非同値とは主張しない。
 
-VdB §11.2は境界非交叉対象の有限長性と単純対象数を既に扱う。BridgelandのKleinian特異点論文はADEのspherical対象とWeyl反射を扱い、Broomhead–Coelho Simões–Pauksztello–Woolfの2026年論文は単純tiltの有限長性を扱う。本稿はこれらの一般機構を新発見として扱わない。自然関手、構造対象、Euler関数、実際の反標準heartを接続することに主張を絞る。
+## 先行研究と主張の確実性
 
-公表前には、主張ごとに既知入力と追加帰結を明示し、自然な右作用と境界の整合性まで証明する。Rains2025 monographは今回も全文を取得できず、網羅的新規性照合は未完成。外部独立査読・機械形式化も未実施。
+Rains 2022 §4 pp34–35は固定blowdownの単純根のq冪共鳴と有効性を記述する。Rains 2019 §11 p141、Proposition11.23の直前は、有効単純根そのものとdeterminant条件を満たすEuler標数に対する境界非交叉既約sheafの実在を明記する。今回の実在入力はこの記述であり、nefなfundamental chamberを仮定するProposition11.23自体を単純根に誤適用しない。
+
+VdBの境界非交叉有限長性と単純数、BridgelandのADE反射、BCPWの単純tilt理論は先行結果である。本稿の追加帰結は、指定反標準関手の全heartの差の局在、Euler値による認識、実際の整数倍点族での整列公式に置く。数学的証明は内部点検済みだが、外部独立査読・機械形式化・網羅的新規性確認は未実施。Rains2025 monograph全文との照合も未完了。
 
 ## 次に着手する課題
 
-最優先は、独立な楕円データ表示の辞書を、境界のshiftと実際のgluingまで合わせることである。同じ最終VdB表示の自然関手の同定は解決したので、それを未解決として反復しない。AOU (9.47)とRains (4.13)の形式的なdeterminant辞書は研究ノートに保持しているが、途中でsection modelを使うか否かと境界作用の規約をまだ一致させていない。まず(9.3),(9.25)と構造対象の反Serre像のrestrictionを独立に比較する。
+最優先は、独立な楕円データ表示の辞書を、境界作用とgluingまで整合させること。AOU (9.47)とRains (4.13)の形式determinant辞書はノートに保持しているが、境界shiftの規約と途中のsection-model置換をまだ同定していない。同じ最終VdB表示での関手同定と、今回の具体的整数倍点族の実在・全heart判定を未解決として反復しない。
 
-次に、明示E6配置での全六単純根sheaf存在の適用条件を原典で一括して確認し、今回の条件付き次元表をそのまま利用できる幾何学的領域を明示する。十一因子を楕円パラメータで書き、実際のadmissible/AS/noetherian領域との交わりを決める。数値chamberの計算だけを幾何学的壁越え定理としない。
+次に、十一因子を実際の楕円パラメータで書き、許容AS/noetherian領域との交わりと負指数根との対応を決める。整数倍点族は明示的な共鳴例であるが、全AS領域や全パラメータの壁を分類したものではない。r!個は順序から得るheartの数であり、同じ導来圏の全heart数ではない。
 
-相対heart、基底変更、標識・kernelの降下、および元の楕円生成元のアフィン作用係数は残る。まず三次曲面の共通領域で比較を実用的に完成させ、他次数の形式的な拡張を先に大量追加しない。
+相対heart、基底変更と標識・kernelの降下、元の楕円生成元のアフィン作用係数は残る。論文の中心結果の独立点検とRains monographとの新規性照合を優先し、結果を増やすためだけの一般化は行わない。
 
 ## 再現と検証範囲
 
@@ -50,8 +52,9 @@ VdB §11.2は境界非交叉対象の有限長性と単純対象数を既に扱�
     python3 computations/verify_four_hearts.py
     python3 computations/verify_four_hearts_corner.py
     python3 computations/verify_four_hearts_chambers.py
+    python3 computations/verify_four_hearts_sorted.py
     latexmk -lualatex -outdir=build papers/nc_del_pezzo_hearts.tex
 
-Python標準ライブラリ、LuaLaTeX、LuaTeX-ja、tikz-cd、latexmkを使う。新しい根検算は六種類の有限根系で192回のregular汎関数生成と三戦略、計576回の反射手順を検査する。実在sheafやt構造は計算で証明していない。従来の40,000通りのA2検算、普遍六点恒等式、具体cornerのQQと有限体消去も再実行した。
+Python標準ライブラリ、LuaLaTeX、LuaTeX-ja、tikz-cd、latexmkを使う。新しい整列検算は六根系で240組の相異なる正整数を選び、Picard格子の明示根列挙とWeyl列挙を照合し、具体六点の全720順列を検査する。従来の576回のchamber手順、40,000通りのA2、六点普遍恒等式、具体cornerのQQ/有限体消去も再実行した。sheaf実在とt構造の証明は文献と本文によるもので、有限検算の帰結ではない。
 
-現在の生成・組版・画像確認・清浄環境での再現・GitHub保存はvalidationに別々に記す。GitHubが正本であり、保存成功時のLibraryアップロードはしない。
+組版・ページ画像・清浄ディレクトリでの再現・GitHub到達はvalidationに別々に記す。GitHub保存成功時にLibraryへアップロードしない。
