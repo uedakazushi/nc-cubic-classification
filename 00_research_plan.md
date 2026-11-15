@@ -1,67 +1,65 @@
-# 研究方針：内在的非可換del Pezzo曲面と三次三様体のモジュライ
+# 研究方針：非可換del Pezzo曲面のheart比較と内在的モジュライ
 
-2026-11-15 / project-v15 / recognition-v6 / dp1-integration-v3。再開時は本書、`research/common_del_pezzo_framework.md`を読み、次数3は`research/weak_cubic_axioms.md`、次数1は`research/dp1_research_plan.md`に進む。各現行論文・研究ノートはその指示に従って読む。
+2026-11-15 / project-v16 / recognition-v6 / hearts-v1。再開時は本書、`research/heart_comparison.md`、`papers/nc_del_pezzo_hearts.tex`を読む。共通公理は`research/common_del_pezzo_framework.md`。次数3、次数1、三次三様体の専門原稿は各ノートから参照する。
 
-## I. 恒常的原則と保存許可
+## I. 恒常的な研究原則と保存許可
 
-数学的重要性、新規性、理解の深化、応用、正確性、実現可能性を総合して研究価値を最大化する。方針は現時点で有効なものへ書き直し、変更履歴を蓄積しない。証明の記載、今回の検討、追加仮定、外部入力、計算、未完成、予想、新規性確認を区別する。誤りの影響は本文・要約・方針へ反映する。
+数学的重要性、新規性、理解の深化、応用、正確性、実現可能性を総合して研究価値を最大化し、目標と論文構成を柔軟に改訂する。方針は現在有効な形に書き直し、変更履歴を蓄積しない。証明済み、追加仮定、既知入力、未完成、予想、有限検算を区別する。証明の記載、今回の点検、外部独立査読、新規性確認を混同しない。誤りの影響を依存する本文・要約・方針へ反映する。
 
-一次資料の適用範囲を確認し、日本語LuaLaTeXで十分な証明を保持する。研究ノートは作業日誌ではなく有効な補足・障害・反例を整理する。軽量化では履歴、重複、中間物を除き、有効な数学や再現資産を削らない。
+一次資料の仮定と適用範囲を確認する。公表用原稿は日本語LuaLaTeXとし、有効な主張と完全な証明を保持する。研究ノートは現在有効な補足・障害・反例・再取得困難な情報を整理し、論文の証明を重複させない。軽量化は履歴・重複・不要物の除去で行い、数学的内容や検証可能性を削らない。
 
-現行bundleには方針、ノート、論文ソースとPDF、必要コード・小証明書・再現手順を含め、旧会話や旧ZIPを再開の前提にしない。ユーザーは研究の区切りで承諾不要のLibrary保存を許可している。現行ソースをGitHub mainにも通常fast-forwardで保存する。既存Libraryファイルは無断削除しない。GitHub Actions・force push・不要なPRは禁止。GitではPDF・TeX中間物・キャッシュ・ZIPを追跡しない。生成、証明検討、計算、組版、Library、GitHubの状態を別々に確認する。
+研究継続用bundleは現行方針・ノート・論文ソース/PDF・必要コード・小証明書・再現手順から自己完結的に再開できるものとする。旧会話・旧ZIPを前提にせず、旧版・中間生成物・キャッシュを収録しない。ユーザーは研究区切りで再承諾なくLibraryへ保存することを許可している。現行ソースはGitHub mainにも通常fast-forwardで保存し、遠隔HEADを確認する。既存Library資料は無断削除しない。GitHub Actions・force push・不要なPRを使わず、GitでPDF/ZIP/TeX中間物を追跡しない。生成、証明点検、計算、組版、Library保存、GitHub保存を別々に報告する。
 
-## II. 現在の目標と区別
+## II. 上位目標と最初の対象
 
-上位目標は、次数1と3に共通するweakly marked非可換del Pezzo曲面の内在的rank、構造対象、反Serre偏極、AZ再構成、反標準環と幾何学的avatarのモジュライ理論を構築することである。異なる次数のHilbert関数、weighted/standard ambient、heartとdg圏、strong/weak markingを混同しない。共通枠組みは`research/common_del_pezzo_framework.md`、次数1固有の目標・証明状態・着手は`research/dp1_research_plan.md`に置く。論文は役割別に独立させ、現行の三次三様体論文と次数3の証明を削除しない。
+一般の非可換del Pezzo surfaceに対し、Rainsの幾何学的heart、Van den Berghのblow-up heart、大川–植田のAS helix heart、反標準環のqgrを比較する。これはdP1だけの補助問題ではなく、内在的モジュライの重要な中心課題とする。最初の実行対象はcubic surface（次数3）。
 
-次数3について対象は、非零のExt有限・noetherianなk線形Abel圏Aとrank-one torsion-free exceptional対象O、Serre関手S、s=S^{-1}[2]のheart保存、AZ ample、三次曲面と同じ全整数のh0で定義されるweakly marked nc cubic surface。大域次元2はSerre双対性から自動的に従う定理であり、独立公理には含めない。通常のnoetherian/Hom有限条件、s不変のrank/torsion理論、相対Serre・Hom底変更を明示する。
+四構成の存在、同じ入力への対応、Db(heart)→Tのrealization同値、指定同値のt-exactness、構造対象と反Serre作用、境界restriction、rank、marking、族での降下を分離する。四ラベルが四つの異なるheartを与えるとも、全て同じとも仮定しない。数値的共鳴をAZ amplenessの失敗や導来特異化へ直結させない。
 
-全weak対象の認識と、R(1,3)中心拡大型の分枝の比較は別問題である。全公理と一次生成・二次三次関係・全twistのExt1消滅を満たす量子Fermat例のambientはR13閉包の外にある。従って全対象をR13一成分へ押し込めない。
+この優先順位は、ambient認識や成分性の前に、どのabel圏・どの構造対象を分類しているかを確定するためである。既存のcubic/dP1の認識・候補族・成分計算は保持するが、heartの比較を飛ばして全intrinsic moduliの分類へ昇格させない。
 
-固定ambientへの同定を保持した切断空間、ambient自己同型で割ったstack、ambientも変形する全モジュライの形式近傍も別。GL商/PGL商、任意周期/Frobenius適合周期、graded/Z代数/pointed圏の同値関係を揃える。
+## 共通公理と既存の成分判定
 
-## 共通定義と量子Fermatの成分に関する新しい結論
+次数1・3のweakly markedは、非零のExt有限・noetherianなAbel圏A、Db(A)のSerre関手S、tau=S^{-1}[2]のheart保存、Gabriel–Krull rank-one torsion-free exceptional対象O、AZ amplenessと次数dのHilbert数値を用いる。hdim A=2は独立公理ではなくSerre双対から従う。exceptionalityを要求しない広い旧条件はpre-weakと呼び、そこからExt¹(O,O)=0が従うかは未解決。低次数提示やAS ambientは定義ではなく認識問題である。
 
-dP1と共通のGabriel–Krull rank-one torsion-freeおよびexceptional構造対象Oを次数3にも採用した。例外性を要求しない旧条件はpre-weakと呼び、そこからExt1消滅が従うかは未解決。負次数の切断値はrank-one/Hilbert増大から従う。一次生成・二次三次提示・AS包絡は共通定義ではなく認識問題に置く。
+量子Fermat ambientはPym L(1,1,1,1)の(a,b,c)=(ζ,ζ,1)で、L(1,1,2)のQ→u²Q平坦族の特殊点でもある。従って少なくとも二成分の交点に属する一方R(1,3)閉包外。全係数非零の対角中心Fermat三次を持つtorus点はT[3]の27点。他成分との交差は未決定。これらの既存の証明・検算は保持し、今回新たに検証したとは報告しない。
 
-量子Fermat BはPym L(1,1,1,1) CY skew-polynomial 3-torusの(a,b,c)=(ζ,ζ,1)であり、Pym L(1,1,2)のQ→u²Q平坦族の特殊点u=0でもある。従って二成分の交点に属するが、R(1,3)の閉包外（既存の四頂点閉incidence）。他成分との交差は未決定。四変数の対角中心Fermat三次を全係数非零で持つtorus点はT[3]の27点に限る。証明はrecognition-v5（papers/weak_cubic_axioms.tex）。
+## III. 現在の到達点
 
-## III. 到達点と証明の所在
+### Heart比較：今回の開始結果
 
-現行認識稿は `papers/weak_cubic_axioms.tex`（recognition-v5、16ページ）。
+証明本文は`papers/nc_del_pezzo_hearts.tex`、補足と文献位置は`research/heart_comparison.md`。
 
-1. **標準正規境界からの認識（定理3.1）**：Rに左右正則正規一次元tがあり、R/(t)=S0/(g)、S0がnoetherianな3次元二次Koszul AS正則、gが正則正規d次元(d≥3)なら、Rは一次生成、Q(R)はnoetherian Koszul AS4で、R=Q(R)/(G)、Gは正則正規d次元。d=3では六二次関係＋一三次関係が結論となる。ambientのAS性や条件2を前提としていない。
-2. **証明の核心**：中心化後、B=Q(R)の次数0,1,2はRと一致するのでtは低次数正則。Cassidy–SheltonのKoszul複雑度2の定理から全次数正則性が従う。LBSの正則一次拡大からAS4へ進み、I∩tB=tIとI/tI=(g)から三次核を持ち上げる。正規の場合はZhang twistで中心化。g,Gの直線が捩り自己同型に不変であることを使い、一般の正規元が任意twistで正規のままだとは主張しない。
-3. **圏的帰結（系3.2）**：この境界を持つweak cubicは超曲面認識部分に属し、Ext1(O,O(m))=0、Oは例外対象。全weak対象がこの境界を持つかは未証明。境界S0は楕円Sklyaninに限定せず、量子多項式例も含む。
-4. **有限PBW入力（§3.1）**：S0=T(W)/(U)、dimW=dimU=3、L=(U⊗W)∩(W⊗U)が一次元のとき、中心拡大は12個のα,β係数とBGの三条件で記述される。係数等式は最大6+3+1本だが独立性を仮定しない。全stackの代数性を結論するものではない。
-5. **量子Fermat反例を保持（§§4–5）**：ζ³=1、B=k<t,x,y,z>のq行列は(0,1,1,1),(2,0,0,1),(2,0,0,1),(2,2,2,0)。R=B/(t³+x³+y³+z³)は整域、qgrはgd2、Serre=(-1)[2]。properな周期正規直線incidenceの四周returnでR13閉包から排除する。
-6. **量子Fermat中心切断の開部分を完全分類（定理6.2）**：Z(B)3=kt³⊕k[x,y]3⊕kz³。U_F={At³+f(x,y)+Cz³ : AC disc(f)≠0}⊂P5。G=(Gm×GL2×Gm)/Gm_degによる商はBH54、H54=(μ3^4/μ3_diag)⋊S2、位数54。全切断は実際にFermat商とgraded同型なのでweak条件を満たす。全weak変形のrigidityや孤立成分とは主張しない。
-7. **以前の認識結果を保持**：R0=k自動、条件2のArtin平坦変形での保持、任意の正規一次商を使う提示十分条件、三次overlap数値、有限型形式代数模型、超曲面認識部分のambient射。全stackの代数性・全weak fibreの開性は未完成。
+- **既知比較の範囲**：VdB Theorem 11.1.3は一般位置の下でraw blow-upから次のsectionモデルへの導来同値を与える。AOU §9の左辺は最初からqgr Fであり、Theorem 9.4はAS qgrとの導来同値である。両者を無条件に同じheartとはしない。AOUのmutation後の先頭E0とπFの同定は実際の対象として追う。
+- **振幅1からHRS tilt**：T_j=ker R¹δ_j*、U_j=ker δ_j*はtorsion pairで、Lδ_j*(coh X_(j+1))=〈U_j[1],T_j〉。heart一致はU_j=0と同値。非零M∈U_jは導来的には消えず、R¹δ_j*Mのshiftとなる。これは標準理論の適用で、原稿に証明を記載し点検した。
+- **二つの判定方法**：固定した(e,τ)のAZ amplenessと高次Ext tail消滅の下でheartは一意。必要な有限性を明記したidempotent cornerでは、自然なqgr B→qgr eBeの同値性はB/BeBの有限次元性に等しい。全helixの豊富性を一対象の反Serre orbitの豊富性と混同しない。
+- **非一致の検出**：反標準ample heart内の非零τ固定対象はχ(e,M)>0。実在対象で反例を示せればheart非一致を検出する。共鳴式だけで対象を作ったとはしない。
+- **初期厳密検算**：AOUの九線束のEuler行列、総和45、反Serre作用と反標準twist、E6の72根、H²=3を有理数計算で確認。heartのt-exactnessや非可換effectivityの証明ではない。
 
-新旧二つの検算を実行した。一般認識定理・軌道stackの同定は通常の証明であり、有限検算だけの結論ではない。独立査読・形式化・新規性の網羅的確認は未実施。
+### 保持する次数3の結果
 
-### 次数1（dP1）の独立した現行結果
+`papers/weak_cubic_axioms.tex`は、正則正規一次境界R/(t)=S0/(g)から一次生成・二次包絡AS4・正規超曲面表示を導く。d=3では六二次関係と一三次関係が結論。Cassidy–Sheltonの低次数判定、正規直線の不変性を使うtwistを区別する。全weak対象の境界存在は未証明。
 
-`papers/nc_del_pezzo_degree1_moduli.tex`は、Gabriel–Krullによるrank、内在的定義、境界AS正則被覆を仮定したweighted sextic認識、可換dP1の普遍点からの10次元dg候補族、KS計算、補助的A∞表示空間の成分性、avatar/heartの復元問題を保持する。`papers/dp1_anticanonical_models.tex`は滑らかなgenuine del Pezzoと滑らかな楕円境界を仮定した共鳴・反標準qgrの導来比較を保持する。既存稿に証明を記載した結果であり、今回の統合を全証明の独立再検証や新規性確認とは呼ばない。全intrinsic abelian moduliでの10次元成分性と特異/非局所自由境界は未証明。Rainsの数値的non-amplenessの稠密性をAZ失敗や導来変化の稠密性へ読み替えない。詳細は`research/dp1_research_plan.md`、`research/dp1_research_notes.md`。
+量子Fermat例は全weak対象をR(1,3)へ押し込める主張を排除する。固定ambientの良い中心三次切断U_F={At³+f(x,y)+Cz³:AC disc(f)≠0}のrigidified商はBH54で、全変形のrigidityではない。PBWの12係数と三条件、Artin平坦変形での低次数関係保持、有限型形式模型も保持する。
 
-## IV. 次の着手方法
+`papers/cubic_surface_ambient_moduli.tex`はR13分枝、surfaceのPoisson一意延長、8→7、AOU形式比較、四頂点potentialと中心incidenceを保持する。`research/r13_generic_moduli.md`は一般R13の商・臨界点等の現行知識を保持する。全weak moduliの代数性、大域marking存在/一意性/降下、全対象の成分分類は未完成。
 
-最優先は、内在的公理から標準正規一次境界の存在をどこまで導けるかである。まずR1の正規直線incidenceを構成し、反標準切断の商圏のgd1性、楕円型/退化型のHilbert数とSerre作用を調べる。正規切断が存在しない対象もあり得るので、定理3.1の仮定を全域で自明と扱わない。
+### 保持する次数1と三次三様体
 
-次に、定理3.1とPBW三条件を相対化する。境界のKoszul解消とgの直線をベクトル束として保持し、t正則性・sectionの底変更・相対Serreの一様な条件を作る。有限型の境界付きchartを先に構成し、その後で境界を忘れる射と全被覆を検討する。有限型形式hullを全stack代数性へ昇格しない。
+`papers/nc_del_pezzo_degree1_moduli.tex`はGabriel–Krull rank、条件付きweighted sextic認識、普遍点からの10次元dg候補族、KS、補助A∞表示空間の成分性、avatar復元を保持する。`papers/dp1_anticanonical_models.tex`の滑らかな楕円領域の比較証明は保持するが、今回独立に再監査した結果でも、本heart研究の入力でもない。特異/非局所自由境界と全intrinsic abelian成分性は未完成。
 
-量子FermatではAC disc(f)=0の境界の正則性と、ambientも動くHochschild変形を調べる。BH54という固定ambient中心sectorの計算はHH2=0を意味しない。残余自然自己同型を除く規約なしにH54を裸のAbel圏の全自己同値群と呼ばない。
+`papers/nc_cubic_threefold_moduli.tex`とそのsection・計算資産は独立した現行研究として保持する。37次元形式ambient成分、41次元中心対、商13/17、fiber4、全大域stackでの代数性/成分性の区別を維持する。今回これらを再証明・再検算したとは報告しない。
 
-R13分枝ではAOUのfinite inverse-Serre計算、W(E6)マーキングの存在・数値的一意性・相対降下、weak locusの開性、P1 fibreの除外点を追う。量子Fermat反例の存在とこれらの中心分枝の結果は両立する。
+## IV. 次の課題と具体的着手
 
-### 次数1の優先課題
+1. **cubicの最後のVdB段階**：j=6のker δ_6*を実在するcoherent対象で記述し、R¹δ_6*を計算する。非自明なtiltか否かを決める。まず既知導来同値の一般位置条件内で行う。
+2. **AS–反標準heart**：AOUの実際の九対象を追いE0≃πFを照合。反Serre orbitの生成性/高次消滅、またはfolding・cornerの有限性とB/BeBを調べ、t-exactnessを判定する。有限次数検算だけで全次数性を主張しない。
+3. **Rainsとraw blow-up**：同じ六点・楕円データで各段階のrestriction/構造対象を追う。sectionモデルの入替えを挟む構成とraw反復を区別する。これを共鳴root対象の挙動へ接続する。
+4. **境界と一般次数**：cubicの有限位数・特異境界を扱い、その後dP1等へ展開する。既存の正規境界の存在問題、相対PBW、marking降下、Fermat別分枝も並行するが、heart比較の主線を優先する。
 
-特異な反標準曲線と非局所自由gluingの境界における反標準qgrのderived比較とsingularityを最優先とする。その後、AZ heartとGabriel–Krull rankの認識、finite chartからpointed dg/abel moduliへの比較、weighted sexticの相対境界、weak marking忘却を扱う。一般次数への抽象化は、現在の次数1・3の正確な適用範囲を確保してから進める。
+## V. 再現と達成基準
 
-## V. 保持する現行研究
+    python3 computations/verify_cubic_heart_numerics.py
+    latexmk papers/nc_del_pezzo_hearts.tex
 
-`papers/cubic_surface_ambient_moduli.tex`はsurfaceのPoisson一意延長、8→7、AOUの形式比較、四頂点potential成分と中心incidenceを保持する。配布bundleの`papers/r13_component_moduli.tex`は一般R13のAff3商、Hessian216対応、8臨界点と可積分1形式を保持する（GitHubでの対応資料は`research/r13_generic_moduli.md`）。今回これら全文と全コードは再監査していない。GitHubにはthreefoldの現行論文も保持し、surface専用bundleには重複収録しない。
-
-## VI. 再現
-
-`python3 computations/verify_boundary_fermat.py`、`python3 computations/verify_quantum_fermat.py`、`latexmk papers/weak_cubic_axioms.tex`。静的参照・全13ページ・ZIPを確認する。実施範囲とハッシュは`research/weak_cubic_validation.json`。旧版・ログ・キャッシュを新bundleへ収録しない。
+新しい検証状態は`research/heart_comparison_validation.json`。既存のcubic認識には`computations/verify_boundary_fermat.py`、`computations/verify_quantum_fermat.py`、`computations/verify_fermat_pym_components.py`、`papers/weak_cubic_axioms.tex`、dP1には`research/dp1_reproduction.md`を使う。初期研究の達成は、文献の正確な比較図、証明付きのheart判定、再現可能な数値基準を揃えること。四heartの全域一致や全moduliの完成を現在の成果として扱わない。

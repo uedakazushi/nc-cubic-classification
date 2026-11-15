@@ -1,6 +1,12 @@
-# 非可換del Pezzo曲面の共通内在的枠組み（次数1と3）
+# 非可換del Pezzo曲面の共通内在的枠組みとheart比較
 
-2026-11-15 / integration-v3。これは次数1と次数3の既存研究を接続するための方針文書であり、全次数についての分類定理を主張するものではない。
+2026-11-15 / hearts-v1。全次数のheart比較を上位課題とし、最初はcubic surfaceを研究する。次数1・3の既存研究を保持し、全次数の分類定理を主張しない。最初に `00_research_plan.md` と `research/heart_comparison.md` を読む。
+
+## 最優先のheart比較
+
+Rains、Van den Bergh raw blow-up、AS helix、反標準qgrの四構成について、存在、realization Db(heart)→Tの同値、指定同値のt-exactness、構造対象・反Serre・境界restriction・rank・marking、族の降下を分離する。数値的non-amplenessをAZ失敗や導来変化と同一視しない。
+
+cubicではVdBの振幅1同値からT=ker R¹δ_*、U=ker δ_*による一回のHRS tiltを得る。heart一致はU=0に帰着する。AOU Theorem 9.4の左辺はqgr Fであり、AS qgrとの導来比較を与える。t-exactnessと実際のmutation後の構造対象の同定は別課題。証明と判定補題は `papers/nc_del_pezzo_hearts.tex`、次の計算は `research/heart_comparison.md`。
 
 ## 共有する候補公理
 
@@ -38,6 +44,7 @@ Gabriel–Krull rank-one torsion-freeとn≥0のHilbert数値により負次数�
 
 ## 各論文の役割
 
+- `papers/nc_del_pezzo_hearts.tex`：全次数のheart比較問題とcubicにおけるHRS・orbit・corner判定。
 - `papers/weak_cubic_axioms.tex`：d=3。標準正規境界の認識定理と量子Fermat反例。
 - `papers/cubic_surface_ambient_moduli.tex`：d=3。モジュライ成分・marked potentialとの比較。
 - `papers/nc_del_pezzo_degree1_moduli.tex`：d=1。内在的rank、weighted sextic、pointed dg族、avatar。
@@ -46,8 +53,8 @@ Gabriel–Krull rank-one torsion-freeとn≥0のHilbert数値により負次数�
 
 ## 論理的状態
 
-既存の各論文に記載された証明と、全てのintrinsic対象の網羅性、全モジュライの代数性・既約成分性、heartを保つ標識忘却の大域同値は区別する。次数1の特異楕円境界での導来比較、次数3の正規一次境界の一般存在はいずれも未解決。今回の統合作業は論文内の全証明の独立再監査ではない。
+既存の各論文に記載された証明と、全てのintrinsic対象の網羅性、全モジュライの代数性・既約成分性、heartを保つ標識忘却の大域同値は区別する。次数1の特異楕円境界での導来比較、次数3の正規一次境界の一般存在はいずれも未解決。既存稿の証明記載と今回の点検を区別する。新しいheart研究はdP1の強い導来比較を入力にせず、cubicの一次文献から始める。
 
 ## 量子Fermat ambientの所属成分
 
-量子Fermat BはPymのgraded Calabi–Yauのskew-polynomial成分 L(1,1,1,1) の3-torsion特殊点であり、L(1,1,2)の関係式中の二次補正項Qをu^2 Qにする平坦退化のu=0にもなる。従って少なくとも二成分の交点に属する。一方、既存の四頂点正規直線returnの閉incidenceによりR(1,3)の閉包外。その他の成分との交叉は未解決。式と証明は papers/weak_cubic_axioms.tex recognition-v5。
+量子Fermat BはPymのgraded Calabi–Yauのskew-polynomial成分 L(1,1,1,1) の3-torsion特殊点であり、L(1,1,2)の関係式中の二次補正項Qをu^2 Qにする平坦退化のu=0にもなる。従って少なくとも二成分の交点に属する。一方、既存の四頂点正規直線returnの閉incidenceによりR(1,3)の閉包外。その他の成分との交叉は未解決。式と証明は papers/weak_cubic_axioms.tex。
