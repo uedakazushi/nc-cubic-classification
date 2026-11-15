@@ -1,0 +1,58 @@
+{
+  "version": "classification-v20",
+  "PI_degree": 4,
+  "positive_cyclic_multiplicities": {
+    "1": [
+      [
+        4
+      ]
+    ],
+    "2": [
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        1
+      ]
+    ],
+    "3": [
+      [
+        1,
+        1,
+        2
+      ],
+      [
+        1,
+        2,
+        1
+      ],
+      [
+        2,
+        1,
+        1
+      ]
+    ],
+    "4": [
+      [
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "5": []
+  },
+  "A1_test": "at least one simple of dimension1 or2",
+  "A2_test": "at least two distinct dimension1 simples",
+  "A3_test": "four distinct dimension1 simples",
+  "Morse_kernel_cubic": "p",
+  "Morse_kernel_quartic": "-(a*r**2 - 2*b*q*r + c*q**2)/(2*(a*c - b**2))",
+  "verified": "all weak compositions of4 for cyclic orders1..5; general symbolic Hessian2 Morse elimination to degree4",
+  "ordinary_proof_dependency": "cubic_order4_general_criterion.tex; Schur multiplier vanishing, reflexive descent, finite-pd MCM projectivity, rational center theorem; not established by these finite checks"
+}

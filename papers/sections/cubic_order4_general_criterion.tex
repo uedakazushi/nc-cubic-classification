@@ -1,0 +1,161 @@
+\subsection{積分した位数4部分全体の幾何学的admissibility}
+\label{subsec:order4-general-criterion}
+この節では固定数値例から離れる。
+先頭パラメータは既出の滑らかな開集合 $V^*$ に属し、
+$\gamma^4=1+h^3$ を満たすものとする。
+従って楕円境界の平行移動は正確に位数4である。
+低次係数 $a,\beta$ と切断値 $D$ は任意である。
+これは積分族の位数4部分であって、全H3包絡の被覆を主張するものではない。
+
+\begin{lemma}[全係数での中心と対称最大整環]
+\label{lem:order4-general-center-order}
+この部分の各幾何学的点で、$U$ の中心は三つの濾過次数4の元で生成され、
+滑らかな楕円三次を最高次とする一本の三次関係を持つ。
+中心は正規Gorenstein曲面で、$U$ は中心上階数16の極大Cohen--Macaulay最大整環である。
+その中心双対は両側加群として $U$、余次元1では非分岐Azumayaとなる。
+\end{lemma}
+\begin{proof}
+$H=\operatorname{gr}U=B(E,\mathcal L,\rho)$ とする。
+Rains\cite[Theorem 2.13]{RainsCut}より、$Z(U)$ は $Z(H)$ の濾過変形である。
+$Z(H)$ は $E/\langle\rho\rangle$ 上次数3の切断環で、次数を4倍したものである。
+三つの四次生成元を持ち上げ、最高記号を引く帰納法を用いると、
+定理\ref{thm:order4-relative-center}と同じ議論で三生成元と一本の三次関係を得る。
+必要なら中心座標を取り直し、第三座標の三乗係数を1とする。
+最高三次の滑らかさから、中心の射影閉包は無限遠で滑らかであり、
+特異点は孤立する。正規性とGorenstein性が従う。
+二つの一般四次中心元を取れば、先頭環での正則列とHilbert級数から
+中心多項式部分環上の階数48、最高基底次数8の自由性を得る。
+この自由性、双対化の次数差8、最大性の濾過移行、DVR標準形による非分岐性は、
+補題\ref{lem:order4-symmetric-maximal}の証明が係数の数値に依存せずそのまま適用できる。
+ここでの主張は各幾何学的点についてであり、Rainsの定理だけから
+任意の非被約底上の中心底変更を主張してはいない。
+\end{proof}
+
+\begin{lemma}[Du Val中心上の非分岐整環の指標表示]
+\label{lem:order4-duval-multiplicities}
+前補題の中心のDu Val点を完備化し、$C=k[[u,v]]^G$、$G\subset\mathrm{SL}_2(k)$ と書く。
+このとき
+\[
+ U^{\wedge}\simeq\operatorname{End}_C\left(\bigoplus_{\chi\in\operatorname{Irr}G}M_\chi^{\,r_\chi}\right),
+ \qquad r_\chi\ge0,\qquad \sum_\chi r_\chi\dim\chi=4,
+\]
+である。$M_\chi=(k[[u,v]]\otimes\chi)^G$ の階数は $\dim\chi$。
+局所大域次元が有限となる必要十分条件は、全ての $r_\chi$ が正であることであり、
+その場合大域次元は2である。
+\end{lemma}
+\begin{proof}
+非分岐Artin被覆\cite[Theorem 3.1]{CHIOrders}を取ると、
+正則二重形式円板 $S=k[[u,v]]$ 上の分裂行列環 $\operatorname{Mat}_4(S)$ と、
+その上の半線形 $G$ 作用を得る。
+この射影作用の線形化の障害は $H^2(G,S^*)$ にある。
+$S^*=k^*\times(1+\mathfrak m)$ で、後者は形式対数と平均化により正次数の群cohomologyを持たない。
+また有限部分群 $G\subset\mathrm{SL}_2$ では $H^2(G,k^*)=0$ である。
+これを確認するには複素数体上で $G$ を $\mathrm{SU}_2$ に共役させる。
+$G$ は $S^3$ 上自由に作用し、$S^3/G$ は有限基本群を持つ向き付けられた閉三次元多様体となる。
+二連結な普遍被覆の低次数homologyとPoincar\'e双対性により
+\[
+ H_2(G,\mathbb Z)=H_2(S^3/G,\mathbb Z)
+ =H^1(S^3/G,\mathbb Z)=0.
+\]
+$k^*$ の可除性と普遍係数定理が所望の消滅を与える。
+任意の代数閉標数0体でも、有限群cohomologyのこの障害は根付き単位群を介するため同じである。
+従って作用は $S^4$ に持ち上がり、平均化した剰余表現の基底を持ち上げれば
+定数表現 $\bigoplus\chi^{r_\chi}$ に線形化できる。
+不変部分と反射的延長により表示した End 代数を得る。
+
+全指標が現れれば、表示した加群と $S$ は同じ加法的包絡を持つ。
+End代数は $S\rtimes G$ とMorita同値で、大域次元は2である。
+逆を詳しく確認する。$N$ を中心 $C$ 上反射的な $U^{\wedge}$-加群とし、射影次元が有限と仮定する。
+中心の二つのparametersは $U^{\wedge}$ と $N$ の両方に正則列となる。
+両側対称双対をこの正則列で割ると、商整環 $\overline U$ は有限次元Frobenius代数となる。
+実際、Gorenstein局所双対性と中心正則列の変換によって
+$\operatorname{Hom}_k(\overline U,k)\simeq\Ext_C^2(\overline U,C)\simeq
+\operatorname{Hom}_C(U^{\wedge},C)/(f_1,f_2)\simeq\overline U$ を得る。
+ここで $f_1,f_2$ は選んだparametersである。
+$N$ の最小射影分解は正則列で割った後も完全かつ最小である。
+Frobenius代数上で有限射影次元の加群は射影的なので、この最小分解は第0項で停止する。
+Nakayama補題で元の $N$ も射影的となる。
+
+$M=\bigoplus M_\chi^{r_\chi}$ とする。
+$\operatorname{Hom}_C(M,M_\psi)$ は各 $\psi$ に対して反射的な右 End 加群である。
+$\operatorname{Hom}_C(M,-)$ は反射的加群上で忠実充満であり、
+これは高さ1でのMorita同値を余次元2へ延長すれば分かる。
+従ってこの Hom 加群が射影的なら $M_\psi\in\operatorname{add}(M)$ となる。
+有限大域次元の場合には前段落から全ての $\psi$ でこれが必要である。
+反射的 $C$ 加群は $S$ への引戻しと平均化によって $M_\chi$ の直和に分解し、
+相異なる $M_\chi$ は相異なる直既約である。
+Krull--Schmidt性により全ての $r_\psi$ が正でなければならない。
+\end{proof}
+
+\begin{theorem}[位数4積分部分の必要十分な幾何学的判定]
+\label{thm:order4-sector-admissibility}
+この部分の切断がH3となる必要十分条件は、中心の全特異点が次の表のいずれかであることである。
+表中の単純表現は当該中心点上の相異なる同型類を数え、schemeの長さや重複度を数えない。
+\[
+\begin{array}{c|c|c}
+ \text{中心の型}&\text{必要十分な小次元表現条件}&\text{全単純表現の次元}\\\hline
+ A_1&\text{次元1または2の単純表現が存在}&(1,3)\text{ または }(2,2)\\
+ A_2&\text{相異なるcharacterが少なくとも2個}&(1,1,2)\\
+ A_3&\text{相異なるcharacterが4個}&(1,1,1,1)
+\end{array}
+\]
+中心の滑らかな点には追加条件はない。
+$A_n$ の $n\ge4$、$D_n$、$E_6,E_7,E_8$、および非Du Val特異点が一つでもあればH3ではない。
+これは指定積分chartの位数4部分全体での幾何学的admissibility判定であり、
+全H3被覆やこの全係数族の相対stack分類の主張ではない。
+\end{theorem}
+\begin{proof}
+まずH3なら $U$ は有限大域次元を持つ。
+前補題の自由性と対称双対から、rigid dualizing complex は $U[2]$ である。
+Stafford--Van den Bergh\cite[Proposition 2.6, Theorem 4.3]{SVdBRational}より、
+$U$ はhomologically homogeneousで、その中心は有理特異点のみを持つ。
+ここでは標数0、affine、prime、中心上有限、有限大域次元という全仮定を満たしている。
+中心はGorenstein曲面なので、その有理特異点はDu Valである\cite[Theorem (0.3)]{ReidCanonicalSurface}。
+
+Du Val型に対して前補題を適用する。
+$A_n$ では $G$ は位数 $n+1$ の巡回群で、全既約指標は一次元である。
+全指標の正多重度が必要なので $n+1\le4$。
+$D_n$、$E_6,E_7,E_8$ では、McKay対応\cite[\S5.2]{CBMcKayNotes}による既約指標の数はそれぞれ
+$n+1,7,8,9$ であり、いずれも5以上となる。
+階数の和が4なので全指標を含むことはできない。
+$A_1,A_2,A_3$ では正整数 $r_i$ の和4の全ての場合を取れば、表の次元分布を得る。
+零多重度も許した全組を調べると、表の小次元条件は全多重度の正値性と同値である。
+従って必要性が従う。
+
+逆に表の条件が各特異点で成り立てば、前補題で各完備局所大域次元は2となる。
+中心の正則点では非分岐性と反射性からAzumayaである。
+中心全体での一様な完備局所判定により $\operatorname{gldim}U=2$ を得る。
+既出のaffine認識によってH3となる。
+\end{proof}
+
+\begin{remark}[判定に必要な微分と表現方程式は有限である]
+中心三次式を $F(Z)$ とする。各特異点でHessian階数3なら $A_1$。
+階数2なら核ベクトル $n$ と非退化横断二方向を取り、
+その二次Hessianを $H_2$ とする。
+核方向の三次係数 $c_3$ が非零なら $A_2$ である。
+$c_3=0$ の場合、横断座標 $y$ と核座標 $s$ における三次項の $s^2y$ 係数ベクトルを $q$ とすれば、
+形式Morse消去後の四次係数は
+\[
+ c_4=-\tfrac12 q^{\mathsf t}H_2^{-1}q.
+\]
+$c_4\ne0$ なら $A_3$、それ以外は本定理により非H3となる。
+Hessian階数1以下の場合も非H3である。
+従って形式級数の無限個の係数を計算する必要はない。
+
+ambientのcharacter候補は $2\xi_j\xi_k-h\xi_i^2-\alpha_i\xi_i-\beta_i=0$ という長さ8の完全交叉で全て得られる。切断式 $G_D$ と中心座標の条件を加えて当該fiberを取る。
+二次元単純表現については
+\[
+ L_{ii}=h\xi_i+\alpha_i/2,\quad L_{ij}=-\xi_k,\quad T=\operatorname{adj}L,
+\]
+\[
+ \gamma^2(2\xi_j\xi_k-h\xi_i^2-\alpha_i\xi_i-\beta_i)-2T_{jk}+hT_{ii}=0,
+ \qquad\det L\ne0
+\]
+を用いる。命題\ref{prop:order4-two-dimensional-traces}のPauli分解の証明が全係数で有効である。
+中心元の評価は同じ半trace公式で与えられ、中心点上のfiberを取る。
+中心は三四次元の線型核から構成でき、中心の特異点とこれらの表現fiberは有限である。
+従って全係数での判定は、有限線型計算、有限消去、三次・四次jet、有限点の個数へ帰着する。
+全パラメータでの単一の展開済み中心三次式やbad判別式を既に計算した、という主張ではない。
+\path{verify_cubic_order4_local_types.py} は多重度の全組と普遍四次Morse式を検算するが、
+上の通常の整環論・有理特異点定理の証明を代替しない。
+\end{remark}

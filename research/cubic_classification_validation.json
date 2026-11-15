@@ -1,6 +1,6 @@
 {
   "date": "2026-11-15",
-  "version": "classification-v19",
+  "version": "classification-v20",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -22,7 +22,8 @@
     "papers/sections/cubic_order4_center.tex",
     "papers/sections/cubic_order4_ext_bound.tex",
     "papers/sections/cubic_order4_small_reps.tex",
-    "papers/sections/cubic_order4_local_orders.tex"
+    "papers/sections/cubic_order4_local_orders.tex",
+    "papers/sections/cubic_order4_general_criterion.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -327,5 +328,35 @@
       "read": "Definition2.1 and its etale DVR standard form, Theorem2.2, Proposition2.4, Theorem3.1 with hypotheses; used only local standard form / cover, not full canonical-order classification",
       "secondary_crosscheck_not_imported": "Nebe math/0310191 symmetric-order definitions and duality; arithmetic assumptions not imported as char0-surface theorem"
     }
+  },
+  "order4_general_geometric_criterion": {
+    "result": "All geometric points of the integrated order4 chart: H3 iff center has only A1/A2/A3 with small-simple tests (exists dim1/2; >=2 distinct characters; 4 distinct characters), respectively",
+    "proof": "papers/sections/cubic_order4_general_criterion.tex",
+    "ordinary_proofs": [
+      "pointwise Rains center lift and cubic center; symmetric unramified maximal order",
+      "Schur multiplier vanishing for finite SL2 groups from S3/G homology; linearized Artin cover",
+      "finite-pd center-MCM modules projective by Frobenius central-parameter quotient; full McKay multiplicities iff finite global dimension",
+      "finite gldim + rigid dualizing U[2] imply homogeneous and rational center; Gorenstein rational surfaces DuVal; rank4 excludes all other ADE"
+    ],
+    "exact_command": "python3 computations/verify_cubic_order4_local_types.py",
+    "typesetting": "80 pages built without undefined refs/cites or overfull boxes; general criterion table and proof on page63 inspected; final Frobenius detail added after this build",
+    "limitations": "pointwise geometric admissibility on specified chart only; all-coefficient relative center/base-change and H3 openness not proved; not all intrinsic H3 coverage; no independent referee/formalization",
+    "primary_audits": [
+      {
+        "url": "https://arxiv.org/pdf/math/0612032",
+        "sha256": "b594d4f8cf2ec5bf1e912437d6409aea03069382b8a53fe8f5719cea609236f1",
+        "read": "Lemma2.4, Proposition2.6 with proof, Remark3.2, Theorem4.3 with hypotheses and proof; imported rational-center implication, not claimed new"
+      },
+      {
+        "url": "https://webhomes.maths.ed.ac.uk/cheltsov/quotient/pdf/reid1.pdf",
+        "sha256": "002b3efc7c54495eb995818bc1982d1f6e9c08165049bb8500b1f1f95cef9260",
+        "read": "Theorem(0.3) on printed274-275, OCR and direct image; rational Gorenstein / DuVal / finite SL2 quotient characterization"
+      },
+      {
+        "url": "https://www.math.uni-bielefeld.de/~wcrawley/dmvlecs.pdf",
+        "sha256": "190f65bca80a1ebc3c21f00fcce606d2e43c99cfb2a6a3eed0d3d825f2ba5749",
+        "read": "section5.2 McKay affine-Dynkin and dimension radical generator; section5.4 contextual crosscheck only"
+      }
+    ]
   }
 }
