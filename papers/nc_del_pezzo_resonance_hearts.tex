@@ -18,25 +18,27 @@
 \DeclareMathOperator{\Ind}{Ind}
 \newcommand{\Db}{D^b}
 \title{Rains共鳴の稠密軌跡と反標準heart\\
-\large 負Euler指数の根sheaf・次数シフト・非可換アフィン表現}
+\large 根sheafの符号別Ext・有限次元アフィン表現・導来切断}
 \author{研究原稿：一次資料の仮定と未検証の導来比較を区別する}
-\date{2026年11月15日 \quad resonance-hearts-v1}
+\date{2026年11月15日 \quad resonance-hearts-v2}
 \begin{document}
 \maketitle
 \begin{abstract}
-滑らかな楕円反標準境界を持つRains型非可換del Pezzo曲面で，根の
-共鳴がZariski稠密な軌跡においてanticanonical heartに何を生じるかを調べる．
-負のEuler指数$m<0$で境界から離れた既約根sheaf $M$が存在するとき，
-Rains heart内では$\Hom(e,\tau^nM)=0$，$\Ext^1(e,\tau^nM)$は
-次元$-m$であり，構造対象の反標準orbitはArtin--Zhang ampleでない．
-反標準環の導来切断は$M$を$(-m)$次元のアフィン表現に対応する対象の
-$[-1]$ shiftへ送る．負指数の共鳴のみでもZariski稠密となる明示的な
-楕円曲線上の一パラメータ族を構成する．反標準環のHilbert関数は変化しない．
-これはRains heartとanticanonical heartのpointedな非一致を与えるが，
-導来圏の非同値・anticanonical heartの特異化を意味しない．
-指数零の古典的$(-2)$曲線の収縮と，指数非零の稠密共鳴を区別する．
-Rainsのsheaf存在定理，gluingと境界のtriangleを既知入力として明記する．
-次数1の既存原稿に書かれた広い導来同値定理の独立再検証は行っていない．
+滑らかな楕円反標準境界を持つRains型非可換del Pezzo曲面で
+Zariski稠密に生じるroot resonanceを解析する．
+境界と交わらない既約純一次元根sheaf $M$のEuler指数
+$m=\chi(e,M)$に応じて，$\Hom(e,M)$と$\Ext^1(e,M)$の次元は
+それぞれ$\max(m,0)$と$\max(-m,0)$であり，$\Ext^2=0$となる．
+これはRainsのquotient sheafのEuler下界を正確に使い，
+反変導来双対$\mathbf R\mathrm{ad}$で符号を反転して証明する．
+負指数ではRains heartで反標準Artin--Zhang amplenessが失敗し，
+anticanonical heartへは境界外の$(-m)$次元アフィン表現が
+$[-1]$で移る．正指数では$m$次元表現が次数0に現れ，
+零指数では自然な導来切断が非零根sheafを消す．
+正負の指数の共鳴はそれぞれ滑らかなdel Pezzoを保って
+Zariski稠密に実現する．反標準環のHilbert関数は不変である．
+これらは指定の自然関手の結果であり，
+全パラメータでの導来同値や$qgr$の非特異性を主張しない．
 \end{abstract}
 
 \section{共鳴の規約と入力の範囲}
@@ -101,141 +103,59 @@ $R/(g)=B(E,L,\sigma)$で$\deg L=d$だから
 \cite[Proposition 5.1]{RainsFiltered}の仮定内での結果である．
 \end{proof}
 
-\section{負Euler指数でのheartの違い}
-\begin{theorem}[負指数共鳴のheart障害]\label{thm:negative}
-上記のRains型曲面で，$\alpha^2=-2$，$\alpha K_S=0$を満たす根の
-既約な純一次元sheaf $M$があり，
-$Li^*M=0$，$m=\chi(e,M)<0$とする．すると次が成立する．
-\begin{enumerate}
-\item $\tau M\simeq M$であり，全整数$n$について
-\[
-\Hom(e,\tau^nM)=0,\qquad
-\Ext^2(e,\tau^nM)=0,\qquad
-\dim_k\Ext^1(e,\tau^nM)=-m.
-\]
-\item Rains heartの$(e,\tau)$はArtin--Zhang ampleでない．
-\item $N=\bigoplus_{n\ge0}\Ext^1(e,\tau^nM)$は
-次数付き右$R$加群であり，$g$による次数上昇作用は同型である．
-$N$は有限生成$k[g]$加群で，各次数の次元は$-m$．
-従って$\pi N\in\qgr R$は非零で，境界$g=0$の外にある．
-\item $A=R/(g-1)$をdehomogenizationとすると，
-$V=(N[g^{-1}])_0$は$A$の有限次元右加群で，
-\[
-\dim_kV=-m.
-\]
-自然な導来切断が$M$で定義される範囲では
-\[
-\Phi(M):=\pi\mathbf R\Gamma_*(M)
- \simeq(\pi N)[-1],\qquad
-\mathbf R\Gamma_*(M)_n=\RHom(e,\tau^nM).
-\]
-従って$\Phi$はRains heartからanticanonical heartへの
-$t$-exact functorになり得ない．
-\end{enumerate}
-\end{theorem}
-\begin{proof}
-式\eqref{eq:boundarytriangle}と$Li^*M=0$から
-$\theta M\simeq M$，従って$\tau M\simeq M$．
-$e$はtorsion-free line bundleで$M$は純一次元既約である．
-非零の写像$e\to M$があれば，その像は純一次元の$M$の
-非零部分sheafである．Rainsの既約性により全射となる．
-しかしRains\cite[Corollary 10.16]{RainsBirational}は
-$e\to M$が全射で，$M\ne e$，$c_1(M)=\alpha$なら
-\[
-\chi(e,M)=\chi(M)\ge
--\tfrac12\alpha\cdot(\alpha+K_S)=1
-\]
-を与え，$m<0$に矛盾する．よって$\Hom(e,M)=0$．
-$\tau M\simeq M$より全$n$でも同じ．
-Rains\cite[Corollary 7.23]{RainsBirational}は
-line bundleから一次元以下のsheafへの$\Ext^2$の消滅を与える．
-Eulerの定義から$\dim\Ext^1(e,M)=-m$となり，
-$\tau$による周期性で全$n$に成立する．
+\input{papers/sections/resonance_sign_trichotomy.tex}
 
-AZの生成条件は，非零$M$に対して十分負の全$\tau$-twistの
-有限直和から$M$へ全射があることを要求する．
-これら全てからの$\Hom$が零なので矛盾する．
-
-中心次数1の$g$は，\eqref{eq:boundarytriangle}の自然変換に由来する．
-$M$上ではこの自然変換が同型なので，
-$\Ext^1(e,\tau^nM)\to\Ext^1(e,\tau^{n+1}M)$は全$n$で同型．
-したがって$N$は$k[g]$上次数0の有限次元空間から生成され，
-$\pi N\ne0$（有限次元次数付きtorsion加群ではない）．
-$g$の局所化により$N[g^{-1}]$は$A$-加群$V$に対応し，
-$\dim V=\dim \Ext^1(e,M)=-m$．
-$\RHom(e,\tau^nM)$はcohomological degree 1にのみ集中するので，
-$\pi\mathbf R\Gamma_*(M)$は$\pi N[-1]$である．
-\end{proof}
-
-\begin{corollary}[pointedなabel圏比較の非一致]
-\label{cor:not-pointed}
-定理\ref{thm:negative}が成立し，$R$が標準的なnoetherian
-$\qgr$を与え$(\pi R,(1))$がAZ-ampleであるとする．
-このとき$(\mathcal A_{\mathrm R},e,\tau)$と
-$(\qgr R,\pi R,(1))$の間に，$e$と$\tau$を保つabel圏同値はない．
-\end{corollary}
-\begin{proof}
-Artin--Zhang amplenessは標識付きabel圏同値で保たれる．
-右辺の標準pairはampleだが，左辺は定理によってampleでない．
-\end{proof}
-\begin{remark}
-対象$M$の$\Phi$による像が非零であることと，
-$\Phi$が全導来圏で同値であることは別の問題である．
-$\pi N[-1]$が得られたことから，非同値・非滑らかさは従わない．
-また$m>0$では$\dim\Hom(e,M)-\dim\Ext^1(e,M)=m$なので
-$\Hom(e,M)\ne0$は従うが$\Ext^1$消滅は従わない．
-正指数の全共鳴で$t$-exactかどうかは未解決である．
-\end{remark}
-
-\section{負指数の共鳴だけで稠密}
-\begin{theorem}[明示的なZariski稠密な非$t$-exact locus]
-\label{thm:dense-negative}
+\section{正負の共鳴がそれぞれ稠密}
+\begin{theorem}[正負各指数のZariski稠密性]
+\label{thm:dense-both}
 滑らかな平面三次曲線$E\subset\mathbb P^2$，
 無限位数の$q\in\Pic^0(E)$を固定する．
 $p_1,p_2,p_4,p_5,p_6\in E$を十分一般に固定し，
-$L=\mathcal O_E(1)$と置く．各$n\ge1$に対し
+$L=\mathcal O_E(1)$と置く．各$n\ge1$と$\varepsilon\in\{+1,-1\}$に対し
 \[
- \mathcal O_E(p_3(n))\simeq
- L\otimes\mathcal O_E(-p_1-p_2)\otimes q^{-n}
+ \mathcal O_E(p_3^\varepsilon(n))\simeq
+ L\otimes\mathcal O_E(-p_1-p_2)\otimes q^{-\varepsilon n}
 \]
-を満たす唯一の$p_3(n)\in E$を取る．
-すると有限個の例外を除いて六点は$\mathbb P^2$で一般位置であり，
-$S_n=\operatorname{Bl}_{p_1,p_2,p_3(n),p_4,p_5,p_6}\mathbb P^2$
-はgenuineな滑らかなcubic surfaceである．
+を満たす唯一の$p_3^\varepsilon(n)\in E$を取る．
+各符号について有限個の例外を除いて六点は一般位置であり，
+そのblow-upはgenuineで滑らかなcubic surfaceである．
 単純根$\alpha=h-e_1-e_2-e_3$に対し
 \[
- \mathcal O_E(\alpha)=q^n,\qquad m=-n
+ \mathcal O_E(\alpha)=q^{\varepsilon n},\qquad
+ m=-\varepsilon n.
 \]
-となる．Rainsの単純根sheaf存在定理がこれらの共鳴で適用されるなら，
-負指数の既約根sheaf$M_n$が存在し，
-定理\ref{thm:negative}のAZ失敗と$[-1]$ shiftが
-Zariski denseな点集合で起こる．
+Rainsの単純根sheaf存在定理の範囲では，
+$\varepsilon=+1$の負指数sheafは
+反標準切断の$[-1]$に移り，$\varepsilon=-1$の正指数sheafは
+次数0にある．それぞれの符号の共鳴点集合が
+Zariski denseである．
 \end{theorem}
 \begin{proof}
-$\Pic^1(E)\simeq E$だから$p_3(n)$は一意に存在する．
-$q$が無限位数ゆえ$p_3(n)$は相異なる．
+$\Pic^1(E)\simeq E$だから$p_3^\varepsilon(n)$は一意に存在する．
+$q$が無限位数ゆえ各符号について$p_3^\varepsilon(n)$は相異なる．
 五つの固定点に対し，追加の一点が三点共線性や六点
 conic上条件を満たすのは有限個の点だけである．
-従って一般位置を失う$n$は有限個であり，
-$\{p_3(n):n\ge1\}$は曲線$E$のZariski稠密部分集合をなす．
-根の制限は$L(-p_1-p_2-p_3(n))=q^n$である．
-式\eqref{eq:resonance}に$m=-n$を代入し，
-Rainsの単純根sheaf存在結果を適用すると結論を得る．
+従って一般位置を失う$n$は各符号について有限個であり，
+$\{p_3^\varepsilon(n):n\ge1\}$はいずれも
+$E$のZariski稠密部分集合である．
+根の制限は$L(-p_1-p_2-p_3^\varepsilon(n))=q^{\varepsilon n}$．
+式\eqref{eq:resonance}に$m=-\varepsilon n$を代入し，
+定理\ref{thm:sign}を適用すれば結論を得る．
 \end{proof}
 
-\begin{corollary}[負指数共鳴が全パラメータ空間で稠密]
+\begin{corollary}[正負共鳴が全パラメータ空間で稠密]
 \label{cor:dense-total}
 滑らかな平面三次$E$，非torsionの$q\in\Pic^0(E)$，
 および他の五吹き上げ点をパラメータとして動かす
-六点配置の局所的な族において，定理\ref{thm:dense-negative}
-の負指数共鳴点の合併はZariski稠密である．
+六点配置の局所的な族において，定理\ref{thm:dense-both}の正指数および負指数の
+共鳴点の合併はそれぞれZariski稠密である．
 従ってこのチャートのいかなる非空Zariski開部分にも，
-$\mathcal A_{\mathrm R}$で$(e,\tau)$がAZ-ampleでない点が存在する．
+$\mathcal A_{\mathrm R}$で$(e,\tau)$がAZ-ampleでない負指数点が存在する．
 \end{corollary}
 \begin{proof}
 各基底パラメータに対する$p_3$のファイバーは楕円曲線$E$であり，
 無限位数$q$を持つ基底点はZariski稠密である．
-それらの各ファイバーで定理の負指数列はZariski稠密なので，
+それらの各ファイバーで定理の正負各指数列はZariski稠密なので，
 全空間の任意の非空開集合は適当なファイバーでこの列に交わる．
 基底全体のirreducibilityと$p_3$を動かす開写像性を用いる．
 \end{proof}
@@ -253,7 +173,7 @@ genuine del Pezzo条件を破る$p_3$の集合は，固定した他の点が
 十分一般なら$E$の有限集合である．
 根$\alpha=h-e_1-e_2-e_3$はどの次数でも
 $\alpha^2=-2$，$\alpha\cdot K=0$を満たすため，
-Rainsの単純根sheaf存在結果の適用範囲で負指数の稠密性は
+Rainsの単純根sheaf存在結果の適用範囲で正負各指数の稠密性は
 次数$1,\ldots,6$へ同様に及ぶ．これは全moduli成分への
 稠密性を主張するものではない．
 \end{remark}
@@ -294,10 +214,12 @@ genuine smooth del Pezzo，smooth elliptic boundaryの全$q$で
 $\Db(\mathcal A_{\mathrm R})\simeq\Db(\qgr R_q)$を証明したとする
 現行研究原稿を含む．しかし今回は同原稿の完全忠実性・
 本質的全射性を独立再監査していないので，
-この主張を本稿の定理\ref{thm:negative}と
-定理\ref{thm:dense-negative}の入力にしていない．
+この主張を本稿の定理\ref{thm:sign}と
+定理\ref{thm:dense-both}の入力にしていない．
 その導来同値が正しければ，負指数稠密共鳴は
 \emph{導来同値を保ったままの稠密なheartの変更}となる．
+正指数共鳴の根sheafについては，この自然な関手が
+その対象単独では$t$-exactである．
 全ての共鳴・特異楕円境界・非局所自由gluingへの拡張は未解決である．
 \end{remark}
 
@@ -307,9 +229,10 @@ $\Db(\mathcal A_{\mathrm R})\simeq\Db(\qgr R_q)$を証明したとする
 \texttt{computations/verify\_resonance\_hearts.py}で再現する．
 この計算はRainsの既約根sheaf存在や導来同値を
 コンピュータで証明するものではない．
-次は正指数での$\Ext^1$消滅判定，負指数の局所的な
-point-module/finite-dimensional representationの
-分類，および既存dP1原稿の導来比較の独立監査を行う．
+正指数での$\Ext^1$消滅は根sheafについて解決した．
+次は一般の非既約対象におけるtorsion pairとheart全体の移行，
+境界外の有限次元$R/(g-1)$-加群の分類，
+および既存dP1原稿の導来比較の独立監査を行う．
 
 \begin{thebibliography}{9}
 \bibitem{RainsBirational}
