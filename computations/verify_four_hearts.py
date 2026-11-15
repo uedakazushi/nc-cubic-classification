@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact finite checks for nc_del_pezzo_hearts.tex, hearts-v17.
+"""Exact finite checks for nc_del_pezzo_hearts.tex, hearts-v18.
 
 Python standard library only. Checks mixed A2 linear algebra and source
 references. It does not prove sheaf existence, derived equivalence or novelty.
@@ -129,6 +129,43 @@ def main() -> None:
     form=[[-2,1],[1,-2]]
     assert mul(mul([list(r) for r in zip(*reflection)],form),reflection)==form
     assert mul([[2,-1]],reflection)==[[1,1]]
+    # Track the actual marked slot in AOU (9.29)--(9.43).
+    # This tests composition order and unchanged slots, NOT categorical Hom vanishing.
+    marked = 'structure_object'
+    collection = [f'T{i}' for i in range(1,7)] + ['plane_minus2','plane_minus1',marked]
+    positions = [collection.index(marked)+1]
+    operations = [('L',[1,2,3,4,5,6]), ('R',[5,6,7]),
+                  ('R',[6,7,8]), ('L',[2,3,4]),
+                  ('R',[3,4,5]), ('L',[1,2])]
+    final_vanishing_inputs = 0
+    for stage,(side,composition) in enumerate(operations, start=2):
+        for i in reversed(composition):
+            j=i-1
+            left,right=collection[j:j+2]
+            if side == 'R':
+                assert left != marked, 'The marked object would be mutated'
+                collection[j:j+2] = [right, f'R({left},{right})']
+            else:
+                if right == marked:
+                    assert stage == 7
+                    final_vanishing_inputs += 1
+                    # In the theorem these two RHom vanish by elliptic admissibility.
+                    mutation = marked
+                else:
+                    mutation = f'L({left},{right})'
+                collection[j:j+2] = [mutation,left]
+        positions.append(collection.index(marked)+1)
+    assert positions == [9,9,9,6,6,3,1]
+    assert final_vanishing_inputs == 2
+    # Formal Picard exponents: L0, L1, O(p1), ..., O(p6).
+    degrees = [3,3,1,1,1,1,1,1]
+    restriction_A = [-5,3,1,1,1,1,1,1]
+    restriction_B = [-2,1,1,1,1,0,0,0]
+    assert sum(x*y for x,y in zip(degrees,restriction_A)) == 0
+    assert sum(x*y for x,y in zip(degrees,restriction_B)) == 0
+    assert restriction_A != [0]*8 and restriction_B != [0]*8
+    # Nontriviality in Pic^0(Y) is a geometric admissibility hypothesis;
+    # a nonzero formal exponent vector alone does not establish it.
     def read_tex(path: Path, seen: set[Path]) -> str:
         if path in seen:
             raise ValueError(f'Repeated TeX input: {path}')
@@ -150,13 +187,19 @@ def main() -> None:
            for k in group.split(',')}
     assert not cites-bib, 'Unresolved bibliography keys'
     result={
-        'date':'2026-11-16','version':'hearts-v17','arithmetic':'QQ exact',
+        'date':'2026-11-16','version':'hearts-v18','arithmetic':'QQ exact',
         'object_order':['S+','S-','P','Q'],'Hom':h,'ambient_Ext1':ext1,
         'cohomology_cases':counts,'total_cases':sum(counts.values()),
         'quotient_dimension':4,'radical_square_zero':True,
         'two_representation_image_dimensions':image_dims,
         'reflection_matrix':reflection,'reflected_indices':[1,1],
         'source_labels':len(labels),'bibliography_entries':len(bib),
+        'AOU_marked_positions':positions,
+        'AOU_final_mutation_vanishing_inputs':final_vanishing_inputs,
+        'AOU_restriction_exponent_basis':['L0','L1','p1','p2','p3','p4','p5','p6'],
+        'AOU_restriction_A':restriction_A,'AOU_restriction_B':restriction_B,
+        'AOU_restriction_degrees':[0,0],
+        'AOU_geometric_nontriviality_proved_by_computation':False,
         'all_source_references_resolved':True,
         'actual_elliptic_generator_coefficients_computed':False,
         'category_existence_or_equivalence_proved_by_computation':False
