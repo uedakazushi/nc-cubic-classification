@@ -422,3 +422,111 @@ $h^2(h^3-8)^2(h^3+1)^2$である（無限遠固定点の因子は除く）．
 
 この四次元有限商は，明示的な位数二Hesse分裂包絡を持つ部分の全admissible対象・同型・慣性を与える．
 非分裂中心拡大，別の楕円位数，この族の外への変形，および全H3相対降下は依然別問題である．
+
+\subsection{非分裂中心拡大の二次ポテンシャルを除く一次障害}
+\label{sec:clifford-nonsplit-lift-obstruction}
+分裂族の外でも，中心三次の存在が包絡係数を厳しく制限する．
+$h\in\mathcal H$を固定し，中心$t$を持つ二次代数
+\[
+ \widehat B_{h,\alpha,\beta}:
+ \quad yz+zy=h x^2+\alpha_x tx+\beta_x t^2,
+\]
+およびその巡回二関係を考える．
+$\alpha=(\alpha_x,\alpha_y,\alpha_z)$，$\beta=(\beta_x,\beta_y,\beta_z)$とする．
+この表示だけから全係数でAS4と仮定するのではなく，次の定理は実際にH3包絡となる場合の必要条件を与える．
+
+\begin{theorem}[正規化された二次ポテンシャル係数は全て零]
+\label{thm:clifford-quadratic-lift-obstruction}
+$\widehat B_{h,\alpha,\beta}$がH3対象の二次包絡なら
+\[
+ \alpha_x=\alpha_y=\alpha_z=0
+\]
+である．これは任意の$\beta$について成立し，$h\in\mathcal H$の特殊値にも例外はない．
+より座標不変には，commutative symmetric potential
+\[
+ H_0=2xyz-\frac h3(x^3+y^3+z^3),\qquad
+ H=H_0+t f_2+t^2f_1\pmod{kt^3}
+\]
+の二次項から作る中心一次拡大がH3包絡なら
+\[
+ f_2\in\operatorname{Span}\{\partial_xH_0,\partial_yH_0,\partial_zH_0\}.
+\]
+従って適切な三変数の$t$平行移動により$f_2=0$へできる．
+ここでは偏微分の二次式を平均対称化して関係式に使う．
+\end{theorem}
+\begin{proof}
+H3包絡なので$\widehat B$は整域で，非零中心元$t$は正則である．
+$\widehat B/(t)=S_h$であり，このH3包絡の中山も恒等であることを先に確認する．
+$V=\operatorname{Span}(x,y,z,t)$，$k_i=t\otimes x_i-x_i\otimes t$とし，
+$q_i$を対称化した三関係，例えば
+\[
+ q_x=yz+zy-hx^2-\frac{\alpha_x}{2}(tx+xt)-\beta_xt^2
+\]
+と置く．四次テンソル
+\[
+ w=\sum_{i=x,y,z}(q_i\otimes k_i+k_i\otimes q_i)
+\]
+は右巡回で符号を変える．これは三変数ポテンシャルの混合トップの式であり，
+as4の指定$\alpha$表示と同じ式をここで直接検証している\cite{AS4pinned}．
+256係数の巡回恒等式は全$h,\alpha,\beta$で成立する．
+また六列$q_i,k_i$の独立性とblock行列
+$\left(\begin{smallmatrix}0&I_3\\I_3&0\end{smallmatrix}\right)$から収縮階数は6である．
+実際，二文字$yz,zx,xy,tx,ty,tz$による$6\times6$minorは常に$-1$である．
+従って$w$は非零で，$w\in R_2\otimes R_2$と巡回性からKoszulトップ$W_4$へ入る．
+H3包絡はKoszul AS4で$\dim W_4=1$なので，この符号付き巡回トップが
+$\mu_{\widehat B}=1$を与える．従ってH3関係$G$は中心的となる．
+
+もし$G\in t\widehat B_2$なら，商に非零の一次元$t$と二次元の零因子が生じてH3の整域性に反する．
+従って$G$の$t=0$への像は$Z(S_h)_3=kg_h$の非零元である．
+定数倍を除き，$G=g_h+tq+t^2\ell+t^3d$と書ける．
+$t^2$で割った環では$\beta$の項は消え，$tq$の交換子には$S_h$の二次元$q$のliftだけが現れる．
+
+その一次障害を直接計算する．$d_h=1+h^3$と置くと，定義関係から
+\begin{align*}
+ d_h[y^2,z]&=t\{-h^2\alpha_y[y,z]+h\alpha_z[z,x]+\alpha_x[y,x]\},\\
+ d_h[y,z^2]&=t\{-h^2\alpha_z[y,z]+h\alpha_y[x,y]+\alpha_x[x,z]\}
+                         \pmod{t^2}
+\end{align*}
+を得る．これは三回の交換子恒等式で移項した式であり，$d_h$は対象範囲で可逆である．
+二次関係から$xx,xy,xz$を，この二式から$yyz,yzz$をそれぞれ置換する．
+$t$を左へ寄せて$t^2$を零とすれば，active語のdegree-lex順序が常に下がるのでこの置換は停止する．
+その係数は$k[h,h^{-1},(1+h^3)^{-1},\alpha_x,\alpha_y,\alpha_z]$に入る．
+
+$S_h$の三次正常語は
+\[
+ y^2x,\ y^3,\ yzx,\ yzy,\ zyx,\ zy^2,\ zyz,\ z^2x,\ z^2y,\ z^3
+\]
+である\cite[Lemma 3.7 and proof]{ISClifford}．
+$t$の正則性から，次数4の$t^2$商では$S_{h,4}\oplus t S_{h,3}$のliftが基底になる．
+上の停止する置換はその基底への座標を与える．
+次の三つの係数汎関数を取る：
+\[
+ [g_h+tq,y]_{t\,zyz},\qquad
+ [g_h+tq,y]_{t\,z^2x},\qquad
+ [g_h+tq,z]_{t\,yzy}.
+\]
+全ての二次$q$に対して$tq$の寄与はこの三係数で零となり，$g_h$の寄与は正確に
+\[
+ -\frac{3\alpha_z}{2d_h},\qquad
+ \frac{3h\alpha_x}{2d_h},\qquad
+ \frac{3\alpha_y}{2d_h}
+\]
+である．この表は前記五つの置換を各交換子に適用すれば得られる．
+付属検証器は全99個の次数4関係挿入が零に帰着することも，
+$\mathbb Q[h,\alpha,h^{-1},(1+h^3)^{-1}]$上の恒等式として確認する．
+係数の有限標本や一般値からの外挿ではない．
+三係数の$\alpha$に関する行列式は
+$-27h/(8(1+h^3)^3)\ne0$なので，中心性は$\alpha=0$を強制する．
+
+最後に一般の$f_2$へ戻す．$X\mapsto X+b t$の平行移動は二次項を
+$f_2+\sum b_i\partial_iH_0$へ変える．
+$\partial_xH_0=2yz-hx^2$と巡回形の混合係数は独立なので，
+唯一の$b$で全混合項を消せる．残る対角項を
+$-(\alpha_x x^2+\alpha_y y^2+\alpha_z z^2)/2$と書けば，上の必要条件がこれら全てを消す．
+従って元の$f_2$は表示の三次元Jacobian部分空間に入る．
+\end{proof}
+
+残る関係$yz+zy=h x^2+\beta_x t^2$と巡回形では，二次中心が保たれる．
+従って次の非分裂問題はこの定数項$\beta$族に絞られる．
+そのClifford中心のrank-one退化点ではAzumaya性が失われるため，
+分裂族と同じ「中心の滑らかさのみ」の判定を無条件に適用してはならない．

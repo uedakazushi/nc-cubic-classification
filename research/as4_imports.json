@@ -61,10 +61,10 @@
       "claim_id": "C-CY-THREE-COMMUTATORS-REDUCTION",
       "path": "research/proofs/CY_THREE_COMMUTATORS_REDUCTION.tex",
       "sha256": "02a7afd9e62f11acffa7191d584e818c21243158b546a12440812afb9fa1560a",
-      "used_part": "thm:cy-three-beta and its full polynomial-three-plane-preserving automorphism form only",
+      "used_part": "thm:cy-three-beta and its polynomial-three-plane-preserving automorphism form; additionally the mixed quartic tensor in the proof of thm:cy-three-alpha, independently specialized and checked in classification-v8. No full alpha orbit/regularity theorem imported.",
       "upstream_proof_status": "proof_written",
       "upstream_audit_status": "pending",
-      "this_task_review": "Read the used mathematical proof and verified H3 hypotheses/conventions; finite controls listed separately. Not an independent review of all upstream dependencies."
+      "this_task_review": "Read the used mathematical proof and verified H3 hypotheses/conventions; finite controls listed separately. Not an independent review of all upstream dependencies. For the alpha tensor, directly checked all256 signed-cyclic coefficient identities and a constant rank6 minor -1 for every h,alpha,beta; under the existing H3 Koszul-AS4 hypothesis this proves mu_B=id without importing ambient regularity for arbitrary coefficients."
     }
   ],
   "upstream_controls_rerun": [
@@ -116,5 +116,10 @@
     "All semisimple AS4 coverage",
     "Period-2/4 Z-algebra examples as automatic H3 surfaces",
     "Q/V isomorphism classifications beyond controls executed by the upstream script"
-  ]
+  ],
+  "downstream_v8_control": {
+    "command": "python3 computations/verify_cubic_clifford_lift.py",
+    "status": "PASS",
+    "scope": "Universal signed-cyclic quartic and rank6; all99 degree4 normal-form identities modulo t^2; all-parameter central-cubic obstruction. Not an upstream full-alpha validation rerun."
+  }
 }

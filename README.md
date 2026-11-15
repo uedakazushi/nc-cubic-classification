@@ -14,6 +14,8 @@
 
 **位数二Clifford–Sklyaninの明示的Hesse分裂包絡族についても全切断を分類した。** 中心三次の五基底から全切断を復元し、H3条件をアフィン中心曲面の滑らかさへ帰着。h=1の固定包絡では四次式Ψを明示し、三次元の位数54有限商を得た。一係数方向の悪い値は0,−16A³/27,8A³/49。hも動かす全指定族は**四次元・位数648の有限商**で、全矢と慣性の判定を与える。証明は[Clifford全切断](papers/sections/cubic_clifford_full_cuts.tex)。全AS4包絡の被覆や成分性とは区別する。
 
+非分裂の位数二Clifford中心拡大にも進み、**H3では二次ポテンシャルf2を平行移動で全て除ける**ことを証明した。標準形の三つの係数αに対する障害行列式は−27h/(8(1+h³)³)で全対象範囲で非零。残る定数関係項β族ではCliffordの非Azumaya点の局所判定を進める。
+
 ## 現在の重点：heart比較、まずcubic surface
 
 **RainsのZariski denseな共鳴への符号別完全判定**：既約根sheaf Mが境界に制限して零となるとき、m=chi(e,M)の正負でdim Hom(e,tau^n M)=max(m,0)、dim Ext¹=max(-m,0)、Ext²=0。正指数はanticanonical heartでm次元の境界外表現が次数0、負指数は(-m)次元表現が[-1]、零指数なら自然導来切断はMを消す。正負各指数の共鳴がそれぞれZariski dense。負指数ではRains heartのAZ amplenessが実際に失敗。すべての根sheafは2-spherical。既約性からの誤った全射性推論を修正し、Rainsの反変双対で正指数を証明した。反標準環のHilbert関数は一定。全パラメータの導来同値・qgr特異化は主張しない。**[証明原稿](papers/nc_del_pezzo_resonance_hearts.tex)**／[研究ノート](research/resonance_hearts.md)。さらに非既約で境界と交わらないsheafについて導来切断の振幅[0,1]と6項A加群完全列を証明。混合正負共鳴の拡大が定めるδのrankによりanticanonical側のcohomologyが決まり、根系の交叉は同時共鳴に明示的な禁止条件を与える。[拡大・根交叉の証明](papers/sections/resonance_extension_cancellation.tex)。

@@ -1,0 +1,50 @@
+{
+  "version": "classification-v8",
+  "ring": "QQ[h,alpha_x,alpha_y,alpha_z,1/h,1/(1+h^3)]",
+  "modulus": "t^2=0; t central",
+  "rule_leads": [
+    "xx",
+    "xy",
+    "xz",
+    "yyz",
+    "yzz"
+  ],
+  "all_inserted_degree4_relation_identities": 99,
+  "universal_quartic_signed_cyclic_identities": 256,
+  "universal_quartic_rank6_minor": -1,
+  "functional_targets": [
+    {
+      "commutator_generator": 1,
+      "active_word": [
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "commutator_generator": 1,
+      "active_word": [
+        2,
+        2,
+        0
+      ]
+    },
+    {
+      "commutator_generator": 2,
+      "active_word": [
+        1,
+        2,
+        1
+      ]
+    }
+  ],
+  "functional_values": [
+    "-3*az/(2*(h + 1)*(h**2 - h + 1))",
+    "3*ax*h/(2*(h + 1)*(h**2 - h + 1))",
+    "3*ay/(2*(h + 1)*(h**2 - h + 1))"
+  ],
+  "functional_values_on_t_quadratic_corrections": "zero for every quadratic correction",
+  "obstruction_determinant": "-27*h/(8*(h + 1)**3*(h**2 - h + 1)**3)",
+  "conclusion": "In the specified normalized order-two Hesse central extensions, any H3 cubic forces all three diagonal quadratic-potential coefficients alpha_i=0, independently of beta_i.",
+  "limits": "A necessary all-parameter H3 condition. The surviving nonsplit beta family is not yet fully classified here."
+}

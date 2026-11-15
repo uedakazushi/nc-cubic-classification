@@ -1,7 +1,7 @@
 {
   "date": "2026-11-15",
-  "version": "classification-v7",
-  "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim.",
+  "version": "classification-v8",
+  "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
     "papers/sections/cubic_nakayama_incidence.tex",
@@ -33,7 +33,8 @@
     "Clifford_fixed_h1_all_cuts": "All H3 cuts of the fixed B=S[t], yz+zy=x^2 cyclic, are g+t(Au+Bv+Cw)+Dt^3 with D*Psi(I,J,K,D) nonzero; after D=1 the full geometric groupoid is [V/G(3,3,3)], coarse open Spec k[I,J,K,Psi^-1], inertia full explicit stabilizer",
     "Clifford_axis": "Bad values exactly D=0,-16*A^3/27,8*A^3/49; A!=0 good groupoid (A1 minus three values) x BS3, A=0,D!=0 is BG(3,3,3)",
     "Clifford_Hesse_family": "For h!=0,h^3!=-1,8, all H3 cuts and all geometric arrows of B_h=S_h[t] form a dimension4 open finite quotient by the mu3 central extension of Hessian216 (order648). The explicit finite resultant determines admissibility for every h. Fixed-h comparison group has order54, or108 precisely at h^6+20*h^3-8=0",
-    "Clifford_unipotent": "Aut(B_h)^0=Gm^2 with finite components, hence no nonidentity unipotent automorphisms or nontrivial canonical unipotent lifts"
+    "Clifford_unipotent": "Aut(B_h)^0=Gm^2 with finite components, hence no nonidentity unipotent automorphisms or nontrivial canonical unipotent lifts",
+    "nonsplit_Clifford_f2_obstruction": "Any H3 envelope in the normalized symmetric-potential order-two Hesse central-extension family has alpha=0, independently of beta. General f2 must lie in Jac(H0)2 and is removable by t translation. The remaining beta-only non-Azumaya local classification is open."
   },
   "primary_sources_checked": [
     {
@@ -104,12 +105,12 @@
     "dependencies": "Workspace-local TeX Live 2025 packages restored from the Utah historic mirror; no generated PDFs or caches tracked"
   },
   "pdf": {
-    "pages": 48,
-    "references": "No unresolved references/citations or overfull boxes in final log",
-    "layout": "All48 pages rendered and inspected as a contact sheet; detailed new proof pages29,30,32,33,34 inspected at reading size (odd point trace, quartic, all cuts, 648-group and special stabilizers)."
+    "pages": 50,
+    "references": "No unresolved references/citations or overfull boxes in final build",
+    "layout": "v7 full48-page rendering retained; v8 proof pages35-36 inspected at reading size; final50-page extraction checked. No claim that all50 pages were freshly visually inspected."
   },
   "limits": [
-    "Not full intrinsic H3 coverage: nonsplit central extensions even at order two, other elliptic orders, degenerations outside the specified Hesse family, remaining low-commutator CY and non-scalar resonant AS4 strata remain",
+    "Not full intrinsic H3 coverage: surviving nonsplit beta-only Clifford extensions and their non-Azumaya local cuts, other elliptic orders, other low-commutator CY and non-scalar resonant AS4 strata remain",
     "Not full relative-stack descent, global algebraicity, irreducible componenthood or deformation rigidity",
     "Pointed geometric equivalences are considered modulo pointed natural isomorphism; no unqualified bare Abelian 2-stack claim",
     "No independently performed peer review, formalization or exhaustive novelty audit",
@@ -142,9 +143,13 @@
     "python3 computations/verify_cubic_r13_cuts.py": "PASS: exact QQ Sklyanin (1,2,3) center dimensions0,0,1; split center140x20 rank18; smooth and nonzero-character charts; Hilbert and affine action identities",
     "latexmk papers/weak_cubic_axioms.tex": "PASS: Japanese LuaLaTeX, 41 pages; no unresolved references/citations or overfull boxes"
   },
-  "commands_executed": {
+  "commands_retained_from_v7": {
     "python3 computations/verify_cubic_clifford_cuts.py": "PASS: Chevalley 8x8 Clifford identities, center dimensions0/3/1, B cubic-center rank15 in140x20, Frobenius dual, curve/character ideals, quartic coefficient spaces2/4/6/9 with full-rank rational norm interpolation, axis exceptional values",
     "python3 computations/verify_cubic_clifford_hesse.py": "PASS: exact QQ(zeta3) enumeration of all216 Hessian matrices, base image12 and kernel18, fixed h=1 stabilizer18, all12 rational j identities, complete exceptional fixed-point products",
     "latexmk papers/weak_cubic_axioms.tex": "PASS: Japanese LuaLaTeX, 48 pages; no unresolved references/citations or overfull boxes"
+  },
+  "commands_executed": {
+    "python3 computations/verify_cubic_clifford_lift.py": "PASS: all99 degree4 inserted relation identities over QQ[h,alpha,1/h,1/(1+h^3)]; all256 signed-cyclic quartic identities with constant minor-1; exact nonzero central-lift obstruction determinant",
+    "latexmk papers/weak_cubic_axioms.tex": "PASS: Japanese LuaLaTeX,50 pages; no unresolved references/citations or overfull boxes"
   }
 }
