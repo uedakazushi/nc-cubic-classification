@@ -208,7 +208,7 @@ AOUの許容領域では定理\ref{thm:AOU-pointed}によりsection model--AS比
 VdB--Rains & 同じblow-up・gluing・blow-down表示でabel同値 & 独立に選んだavatarのデータ対応\\
 Rains--反標準 & genuine smooth楕円gluingで導来同値，一回のHRS tilt & 任意nc曲面・特異境界への拡張\\
 VdB--section model & VdBの一般位置条件下で振幅1の導来同値 & raw blow-upとのheart一致\\
-AS--反標準 & foldingと両bimodule有限性の下，有限cornerとabel同値が同値 & 全AS locusでの条件成立\\
+AS--反標準 & 標準noetherian三次曲面型では十一条件で指定同値のt-exactnessを判定 & 全AS locusでの条件成立\\
 section model--AS & 許容領域でpointed導来同値，反標準環も一致 & 全域での標準heartの一致\\
 四者の接続 & pointed比較を揃えれば命題\ref{prop:alignment} & 相対familyと標識忘却の降下\\
 \bottomrule
@@ -245,6 +245,7 @@ $T$がnoetherianなら，この開locus上である共通の$N$を選べる．
 補題\ref{lem:cutoff}によってこれらは$N$とともに増加し，合併が求めるlocusとなる．
 noetherian空間の開集合は準コンパクトなので有限部分被覆を選び，最大の$N$を取る．
 \end{proof}
+三次曲面型では第\ref{sec:explicitcorner}節の十一条件がこの開集合の明示式を与える．
 この命題は有限cornerのfiber条件を述べるだけであり，heartの相対同値・flatness・stack降下を
 証明するものではない．本稿のt構造比較と，内在的非可換del Pezzoモジュライの
 全成分分類は分離して扱う．
@@ -292,12 +293,13 @@ Hom消滅の入力が必要であることを検査する．
 これは非自明な楕円線束のcohomology消滅やmutation対象の同型を計算で証明するものではなく，
 証明に使う順序と数値の独立な確認である．
 
-本稿は主TeXファイルと四つのsectionソースからなり，\texttt{latexmk -lualatex}で再生成できる．
+本稿は主TeXファイルと五つのsectionソースからなり，\texttt{latexmk -lualatex}で再生成できる．
 日本語LuaLaTeX，LuaTeX-ja，\texttt{tikz-cd}，Python~3を用いる．
 リポジトリrootでの主要コマンドは
 \begin{verbatim}
 python3 computations/verify_cubic_heart_numerics.py
 python3 computations/verify_four_hearts.py
+python3 computations/verify_four_hearts_corner.py
 latexmk -lualatex papers/nc_del_pezzo_hearts.tex
 \end{verbatim}
 である．数値検算は，sheafの存在，derived type，導来完全忠実性，
