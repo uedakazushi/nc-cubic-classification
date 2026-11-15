@@ -1,6 +1,17 @@
 # Cubic corner の有限性と4交比：現行研究ノート
 
-2026-11-15 / hearts-v6 / corner-v5。最初に `00_research_plan.md` を読み、証明は `papers/cubic_heart_corner.tex` の定理 `thm:general-position-iff` とその依存箇所を読む。全次数のheart比較は `research/heart_comparison.md` にある。
+2026-11-15 / hearts-v7 / corner-v6。最初に `00_research_plan.md` を読み、証明は `papers/cubic_heart_corner.tex` の定理 `thm:general-position-iff` とその依存箇所を読む。全次数のheart比較は `research/heart_comparison.md` にある。
+
+## 現行の完全 Hilbert 関数定理と有限平坦族
+
+**証明済み（標数0・十八係数非零・十一条件）**：道長 graded の商 C=B/BeB は六点配置に依存せず Hilbert 級数
+`H_C(t)=8+21t+33t^2+38t^3+33t^4+21t^5+8t^6`、総次元 `162`。前回の下界 `dim C_6>=8` は等号。一般位置 locus で次数 0..6 の次元跳びは存在しない。完全証明は `papers/sections/cubic_corner_hilbert_series.tex`（`papers/cubic_heart_corner.tex` に input）。
+
+AOU(4.9)の可換 cubic の九線束間のHomと、e=A0を経由する積の像を個別に計算した。八頂点間の全Homの次数別次元は(8,21,42,74,105,147,206,252)、経由部分の次元は(0,0,9,36,72,126,198,252)。次数2..5は例外曲線の定義切断とbase-point-free pencil trickで計算。次数6のA_a→A_bに必要な3×3の積写像の単射性は、一方のblowdownで縮約され、他方で滑らかなconicに写る非共線な3曲線への制限で証明する。B_i→B_kとC_j→C_kの2つの経由位置の像の包含もpencil trickで証明する。次元計算はPicard格子のRR（AOU helixのacyclicityを使用）による。
+
+**有限平坦性**：四交比トーラスの十一条件の補開集合 U 上で、universal quotient C_U は道長0..6の階数(8,21,33,38,33,21,8)の局所自由成分の直和で、全体として階数162の有限局所自由 O_U-代数となり、任意の基底変更と可換する。各道長の有限関係行列が全幾何学的fiberで一定階数なので従う。非可換potentialの全27係数のAS性、Rains heart・VdB heartとの比較は主張しない。
+
+**数値検算**：`computations/verify_cubic_corner_hilbert.py` は27本の(-1)曲線、4組のblow-down線束、RRによる各次数全Hom、経由部分の次元台帳を整数演算で検査する（積写像の一般的な単射・全射の証明はTeX）。一般位置の別の有理六点配置3組でも既存のJacobian消去を F_1000003 で実行し、同じ次数列を得た。追加部分を日本語LuaLaTeXで3ページ単独組版し、警告・見た目を確認。リポジトリ本稿全体の組版は今回未実施。
 
 ## 現行の一様次数定理
 
@@ -36,8 +47,8 @@ AOU型AS helixとのfolding、Serre inverse shift、orbit algebraの飽和、お
 
 ## 次の核心
 
-1. **低次数のHilbert関数と境界**：最良の一様消滅次数は7と決定した。次は一般位置全域で `dim C_6=8` および `H_C(t)=8+21t+33t²+38t³+33t⁴+21t⁵+8t⁶` が一様か、あるいは低次数に跳びがあるかを判定する。11 divisor上の無限次元表示とAS locusの交叉も区別する。
+1. **11 divisorの境界と非可換AS locus**：一般位置でのHilbert関数と有限平坦性は決定した。次に十一の各divisorとAS locusが交わるか、交わるならどのheart・導来圏の変化を生むかを実在対象から判定する。有限次元corner条件とAS/noetherian/realizationを混同しない。
 2. **Rains/VdBとの実際の比較**：AOUのmutation後E0≅πFをobject levelで検証し、VdBの最後のδ_*に対するkernelと高次pushforwardを実在対象から計算する。自然同値のt-exactnessと別のderived同値を分離する。
 3. **一般次数とmoduli**：全intrinsic cubicを幾何的六点分枝と同一視せず、量子FermatなどOU AS型でない分枝を保持。dP1と他次数のheart比較へ必要十分条件の方法を移植する。
 
-一次資料はAOU §4（4.1,4.9）、§8（8.1,8.4-8.9）と OU arXiv:2508.04986。定理の新規性・初出は未確認。証明記載、整数検算、LuaLaTeX組版は区別する。再現は `python3 computations/verify_cubic_six_points.py`、`python3 computations/verify_cubic_corner_c7_geometry.py`、`latexmk papers/cubic_heart_corner.tex`。推奨の現行名は Rains heart, VdB heart, AS heart, anticanonical heart。
+一次資料はAOU §4（4.1,4.9）、§8（8.1,8.4-8.9）と OU arXiv:2508.04986。定理の新規性・初出は未確認。証明記載、整数検算、LuaLaTeX組版は区別する。再現は `python3 computations/verify_cubic_six_points.py`、`python3 computations/verify_cubic_corner_c7_geometry.py`、`python3 computations/verify_cubic_corner_hilbert.py`、`latexmk papers/cubic_heart_corner.tex`。推奨の現行名は Rains heart, VdB heart, AS heart, anticanonical heart。

@@ -1,6 +1,6 @@
 {
   "date": "2026-11-15",
-  "version": "hearts-v6/corner-v5",
+  "version": "hearts-v7/corner-v6",
   "base_commit": "a9100e1a37187f985dc026e3d9d3fa9378b5fa7d",
   "checks": {
     "six_point_general_position": "exact rational",
@@ -45,20 +45,59 @@
     "c7_picard_27_curve_intersections": "exact integers, completed",
     "c7_four_blowdown_classes": "each six disjoint (-1)-curves, verified",
     "c7_KV_nef_big_divisor_inputs": 13,
-    "c7_new_script_independently_pushed_execution": "Math-equivalent local script executed; pushed script not separately executed after push."
+    "c7_new_script_independently_pushed_execution": "Math-equivalent local script executed; pushed script not separately executed after push.",
+    "hilbert_picard_27_exceptional_curves_exact": true,
+    "hilbert_four_blowdown_pairs_exact": true,
+    "hilbert_total_hom_dimensions": [
+      8,
+      21,
+      42,
+      74,
+      105,
+      147,
+      206,
+      252
+    ],
+    "hilbert_through_structure_dimensions": [
+      0,
+      0,
+      9,
+      36,
+      72,
+      126,
+      198,
+      252
+    ],
+    "hilbert_final_dimensions": [
+      8,
+      21,
+      33,
+      38,
+      33,
+      21,
+      8,
+      0
+    ],
+    "hilbert_total_dimension": 162,
+    "additional_rational_six_point_modular_checks": 3,
+    "additional_modulus": 1000003,
+    "additional_six_point_modular_check_status": "Three additional rational configurations passed the exact modular Jacobian elimination (all degrees 0..7).",
+    "hilbert_new_tex_standalone_pages": 3,
+    "hilbert_new_tex_standalone_lualatex_exit": 0,
+    "hilbert_new_tex_standalone_warning_check": "No undefined references, no overfull boxes; final standalone wrapper tested. Full repository paper not compiled in this turn."
   },
   "proof_scope": {
-    "proved": "finite corner criterion, openness, explicit nonempty open in noetherian AS sector, conditional HRS sign test; four-cross-ratio orbit classification; nine explicit forbidden minor divisors; two determinant-zero corner obstructions via polynomial module representations; sufficiency of all eleven nonvanishing conditions via general-position six-point reconstruction and AOU(4.9) plus Serre vanishing; four-cross-ratio finite locus is marked cubic six-point moduli; uniform C7=0 on all eleven-condition parameters and dim C6>=8; radical of M7 maximal-minor ideal equals radical(Delta11)",
+    "proved": "finite corner criterion, openness, explicit nonempty open in noetherian AS sector, conditional HRS sign test; four-cross-ratio orbit classification; nine explicit forbidden minor divisors; two determinant-zero corner obstructions via polynomial module representations; sufficiency of all eleven nonvanishing conditions via general-position six-point reconstruction and AOU(4.9) plus Serre vanishing; four-cross-ratio finite locus is marked cubic six-point moduli; uniform C7=0 on all eleven-condition parameters and dim C6>=8; radical of M7 maximal-minor ideal equals radical(Delta11); uniform full Hilbert function (8,21,33,38,33,21,8), dim C=162, finite-flat rank-162 universal corner algebra over the eleven-condition torus",
     "unproved": [
       "AS regularity for arbitrary potential coefficients",
       "E0=pi F on the noncommutative AOU/VdB comparison",
       "nontrivial VdB kernel on each resonance wall",
       "all four hearts globally coincide",
-      "constancy of the entire Hilbert function of C in degrees 0..6 over the eleven-condition locus"
+      "intersection of the eleven forbidden divisors with AS/noetherian loci and resulting faithful-heart wall crossings"
     ],
     "independent_review": false,
     "novelty_exhaustive_search": false,
     "prior_scripts_rerun": false
   },
-  "persistence": "GitHub main canonical; successful push implies NO Library save."
+  "persistence": "Source of truth GitHub main; do not upload Library if GitHub push succeeds."
 }
