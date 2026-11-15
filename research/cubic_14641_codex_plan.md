@@ -2,6 +2,10 @@
 
 2026-11-15. This document is the authoritative execution plan for the 14641 subclass. Read 00_research_plan.md, research/cubic_14641_classification.md and papers/weak_cubic_axioms.tex before beginning. Existing heart/corner and other del Pezzo projects remain current and must be preserved.
 
+## Current completed subproblem and next action
+
+The skew-polynomial envelope sector has a geometric-object/groupoid classification: 31 coordinate parameters in five types, all coefficient conditions and generic rank checked. See research/cubic_14641_classification.md. Whole H3 has mu_R=id and sigma_G=mu_B^{-1}; hence work with the single linear kernel W1 of a 140x20 matrix. The RRZtri epsilon hypothesis is proved by R tensor a finite B-resolution of k. The scalar ambiguity is eliminated by AS index1; do not continue treating c as a free candidate. CY ambient forces central G, but an explicit complete non-CY sign family exists. The six-point third-root orbit fails GK rank-one despite smooth tails. The standard Pym L112/R22/S23 generic charts and nonzero E3 quantization have Z3=0 (see cubic_pym_generic_exclusions.tex and exact QQ certificates). Next classify all R13 cuts and the special loci of those charts, extend W1/admissibility to other Clifford/Ore/non-CY AS4 families, then prove coverage and family descent. Do not claim global completeness or componenthood from the skew classification.
+
 ## Ultimate mathematical goal
 
 **Completely classify the strong intrinsic weakly marked nc cubic surface subclass H3**, not merely its generic points. In characteristic-zero algebraically closed k, a member is (A,O), with the Gabriel–Krull rank-one torsion-free exceptional O, inverse Serre heart-preserving polarization tau=S^{-1}[2], Artin–Zhang ampleness, cubic Hilbert series, R=⊕Hom(O,tau^n O) generated in degree one, and its quadratic envelope B=Q(R) left/right noetherian quadratic Koszul AS-regular of type (1,4,6,4,1). Do not include an external ambient, arbitrary four-periodicity, a quiver basis, or an exceptional collection as extra marking. Homological dimension 2 is derived from Serre and heart preservation.

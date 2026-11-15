@@ -4,9 +4,13 @@
 
 **現在の最優先課題は強いintrinsic定義の14641型非可換三次曲面 H3 の完全分類。** 詳細なCodex指示は research/cubic_14641_codex_plan.md に置く。R=⊕Hom(O,tau^n O) は一次生成、二次包絡B=Q(R)は左右noetherian quadratic Koszul AS4、型14641。G∈B3の正則正規性とR=B/(G)は現行認識定理の結論であり公理ではない。
 
-Skew torusの固定ambient上では、全正規三次直線の被約locusを交換指標blockの射影空間として分類した（papers/sections/cubic_skew_normal_incidence.tex）。一般fiberは単項式20点。量子Fermat軌道には中心P5のほか非中心成分もある。minor schemeの非被約構造、自己同型商、各商のintrinsic条件は未解決。次はこれら非中心商のSerre偏極適合性・曲面条件を判定し、他ambient族へ拡張する。厳密列挙は実行済み、組版は日本語TeX依存不足で停止。詳細は research/cubic_skew_normal_validation.json。
+**現在の到達点：全H3にμ_R=1、σ_G=μ_B^{-1}が必要であり、固定Bの候補は単一の140×20線型核W1。** RRZtriのDε≠0はBの有限自由解消をRへtensorした非零perfect複体で検証した。CY包絡ではGは中心だが、非CY・非中心H3も実在する。
 
-**最初は全AS4 ambientの完全分類を目指さず、正規三次incidence I3={(B,[G]):GB1=B1G} の構造定理を最優先。** 各Bに対し35×8積行列の5×5 minorsで正規三次直線を求め、既知族の一般fiber、成分、境界、同型、非中心Gを調べる。Pym六成分で全14641型を尽くすとはしない。as4/asz4とpoisson-p4、既存のheart/corner研究を検証済み入力として利用する。正規商が無条件にintrinsic weak条件を満たすとは仮定しない。
+**Skew包絡部分の幾何学的H3対象を分類した。** 六次元全skew torusを座標jet・整数Smith証明書で37候補へ絞り、generic代数がM3(K)でrank-one条件に反する6点を除いて31パラメータ・五型となる。可換、CY符号、非CY符号、3乗根中心一次、3乗根二重指標。全admissible係数、滑らかさ、整域性、Serre/GK rank/AZ、幾何学的同型群oidを証明した。一般同型類の次元は順に4,1,2,1,0。全AS4包絡上のH3被覆や族のstack分類ではない。次はskewでないR13・Clifford・Ore等のW1、admissible切断・境界・相対降下。詳細はresearch/cubic_14641_classification.mdとresearch/cubic_classification_validation.json。日本語TeX依存はworkspace内で復旧し、全文組版を実行した。
+
+非skewの標準CY chartでも、Pym L112/R22/S23の一般点とE3の非零変形は中心三次が零となりH3包絡から除外された。R22ではQQの20次小行列式280000000000/279926361、S23では−243の証明書を得た。Pym六標準chartの一般点で残るのはR13だが、特殊locus・交叉・他のAS4は未分類である。
+
+**最初は全AS4 ambientの完全分類を目指さず、正規三次incidence I3={(B,[G]):GB1=B1G} の構造定理を最優先。** 一般正規対は35×8積行列の5×5 minorsで求め、H3はさらにW1の線型核へ絞り、既知族の一般fiber、成分、境界、同型、非中心Gを調べる。Pym六成分で全14641型を尽くすとはしない。as4/asz4とpoisson-p4、既存のheart/corner研究を検証済み入力として利用する。正規商が無条件にintrinsic weak条件を満たすとは仮定しない。
 
 完成基準は全対象の被覆、明示的な幾何データ、同型群oidと慣性、成分・交叉・境界、Serre/heart/rank/AZ条件、相対stack・降下。まず一般点と主要成分を決定し、未分類領域を厳密に縮小する。分類未完なら部分分類の正しい定理と証明を残す。GitHub mainを正本とし、push成功時Library保存なし。
 
@@ -16,7 +20,7 @@ Skew torusの固定ambient上では、全正規三次直線の被約locusを交�
 
 【証明済み】Levasseurの整域定理（noetherian AS4, GKdim=4）とHilbert数値から、R=B/(G) で G∈B3 が左右正則正規となる。六二次＋一三次関係、三次核の正則性、正規一次境界は追加公理に不要。AS型は非空真部分：可換cubicはOU AS型、量子FermatはH3に属するが HH±1=2 で非OU。全OU退化境界が無条件にH3に入るとは未証明。
 
-【有限方程式】固定ambient B上の全正規三次直線はP(B3)=P19の35×8乗法行列 [Gv|vG] の5次minorで表される。AS-flatな相対chartでも底変更と両立。内在的Serre/heart/rank/AZ条件の認識は別。量子skew torusの3-torsion 27点は座標置換で4軌道（1,8,12,6）、中心三次次元（20,5,6,4）。これは有限部分分類であり全moduliの完全分類ではない。
+【有限方程式】固定ambient B上の全正規三次直線はP(B3)=P19の35×8乗法行列 [Gv|vG] の5次minorで表される。AS-flatな相対chartでも底変更と両立。内在的Serre/heart/rank/AZ条件の認識は別。量子skew torusの3-torsion 27点は座標置換で4軌道（1,8,12,6）、中心三次次元（20,5,6,4）。この27点のうち軌道長6の対角Fermat商はgeneric rank3でH3から除外される。全skew包絡のH3は上記31パラメータ・五型の分類で尽くされる。全AS4包絡の分類とは区別する。
 
 【優先課題】全14641 ambient成分上の正規三次incidenceの成分・同型群oid・曲面条件・境界・族と降下を決定し、その後intrinsic定義を弱める。GitHub mainを正本とし、GitHub push成功時はLibraryへの保存を行わない。PDFやZIPをGitで追跡せず、TeX・ノート・検算コードを追跡する。
 

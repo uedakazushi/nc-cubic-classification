@@ -1,0 +1,101 @@
+\subsection{Skewでない標準CY chartの一般点の除外}
+\label{sec:pym-generic-cubic-exclusions}
+単一線型条件は，skewでない族でも適用できる．
+ここではPym\cite[\S\S3.2--3.6]{Pym}の\emph{指定された標準chart}を扱い，
+そのKoszul AS4性・CY性と一般点の表示を既知入力とする．
+Pymの六つのgraded CY変形族が全AS4包絡を尽くすとは仮定しない．
+
+\begin{proposition}[四つの非skew CY chartの一般点はH3包絡にならない]
+\label{prop:pym-four-generic-empty}
+Pymの標準$L(1,1,2)$，$R(2,2)$，$S(2,3)$ chartの非空稠密開部分，
+および標準$E(3)$の非零変形は，$Z(B)_3=0$を満たす．
+従ってそれらはH3の二次包絡にならない．
+特殊パラメータ，chartの境界，成分間の交叉はこの命題では除外しない．
+\end{proposition}
+\begin{proof}
+全てCYなので，系\ref{cor:CY-cubic-central}から$Z(B)_3=0$を示せばよい．
+
+\emph{$L(1,1,2)$．}
+Pymの式(5)では$x_0,x_1$は可換，
+\[
+ x_2x_0=p_0^{-1}x_0x_2,\quad x_3x_0=p_0x_0x_3,\quad
+ x_2x_1=p_1x_1x_2,\quad x_3x_1=p_1^{-1}x_1x_3,
+\]
+かつ$x_3x_2=p_0^{-1}p_1x_2x_3+F(x_0,x_1)$である．
+$x_0,x_1$の補助weightを0，$x_2,x_3$を1とすると，PBW性から
+associated gradedは
+\[
+ (q_{01},q_{02},q_{03},q_{12},q_{13},q_{23})
+ =(1,p_0,p_0^{-1},p_1^{-1},p_1,p_0p_1^{-1})
+\]
+のskew環である．$p_0,p_1$が独立な一般パラメータなら，中心単項式の指数$a$は
+$a_2=a_3$，$a_0=a_3$，$a_1=a_3$を満たす必要がある．
+総次数3では不可能なので，このassociated gradedの中心三次は零である．
+中央元の最高weight記号はassociated gradedの中央元となるため，$Z(B)_3=0$となる．
+次数3の有限個の指標等式を除けばよいので，これは非空開条件である．
+
+\emph{$R(2,2)$．}
+Pymの式(7)のSklyaninパラメータを
+$(q_1,q_2,q_3)=(2,3,-5/7)$とする．
+$q_1+q_2+q_3+q_1q_2q_3=0$を満たし，標準AS4・CY locus上にある．
+六二次関係から生成される関係部分空間のrankを$\mathbb Q$上で求めると，
+次数3で44，次数4で221となり，商の次元は20と35である．
+この商基底で四つの交換子$Gx_i-x_iG$を並べた140行20列行列はrank20である．
+付属証明書に指定した20行の小行列式は
+\[
+ 280000000000/279926361\ne0
+\]
+となる．従ってこの点の中心三次は零であり，AS-flatな標準族の
+中心核の上半連続性から非空開部分でも零となる．
+ここでAS正則性はPymの標準Sklyanin族を入力とし，この低次数計算だけから推論しない．
+
+\emph{$S(2,3)$．}
+このchartは$B=k[x,y,z][T;\delta]$という次数一のOre拡大であり，
+$\delta$はdivergence-freeな二次ベクトル場である．
+$\delta\ne0$なら中央元$\sum_{j=0}^m f_jT^j$に対し，$m>0$のとき
+基底変数との交換子の最高$T$次数係数は$m f_m\delta(x_i)$となる．
+ある$\delta(x_i)\ne0$を選べるので，char0と整域性から矛盾し，中央元は$k[x,y,z]$内にある．
+従って$Z(B)_3=\ker(\delta:k[x,y,z]_3\to k[x,y,z]_4)$である．
+Pymの式(11)で$b_i=c_i=-1,d_i=0$を選ぶと
+\[
+ \delta x=x^2-xy-xz,\quad
+ \delta y=y^2-yz-xy,\quad
+ \delta z=z^2-zx-yz
+\]
+となり，確かにdivergenceは零である．この15行10列の行列の
+指定10行小行列式は$-243$である．よって単射であり，一般点でも単射となる．
+
+\emph{$E(3)$．}
+Pymの式(12),(14)のCGG積を，通常の多項式空間上で用いる．
+\[
+ X=(-5x_0\partial_0-x_1\partial_1+3x_2\partial_2+7x_3\partial_3)/4,
+ \qquad Y=4(x_0\partial_1+x_1\partial_2+x_2\partial_3),
+\]
+\[
+ f\star g=\sum_{k\ge0}Y^k(f)\binom Xk(g).
+\]
+$Y$は各斉次部分で冪零である．$x_0\star f=x_0f$，
+$f\star x_0=x_0\sum_k\binom{-5/4}{k}Y^k(f)$なので，
+中央元$f$は$Yf=0$を満たす．実際，右の作用素から恒等を引くと
+$Y$に定数項$-5/4$の可逆な$Y$多項式を掛けたものとなる．
+続いて$x_1\star f=x_1f+4x_0Xf$，$f\star x_1=fx_1$なので$Xf=0$となる．
+逆向きもCGG積から従い，中心は$\ker X\cap\ker Y$である．
+総次数$n$の単項式の$4X$ weightは$-5n+4\sum_j j a_j$であり，
+零weightが存在するには$4\mid n$が必要である．特に$n=3$では中心は零である．
+非零変形パラメータはPymの表示により同型なので，全て同じ結論となる．
+\end{proof}
+
+\paragraph{検算と分類上の意味．}
+\texttt{computations/verify\_cubic\_pym\_generic.py}は，
+$R(2,2)$の商空間を自由語から有理数上で構成し，関係の消去と非零小行列式を検証する．
+$S(2,3)$の微分行列，$L(1,1,2)$の二つの独立パラメータの整数weight，
+$E(3)$の全20個の三次weightも検査する．
+これらは有限体の標本ではなく，特性零の証明書である．
+
+Skew $L(1,1,1,1)$の一般点も既に除外されている．
+従ってPymの六つの標準CY chartの中で，一般点がH3包絡となり得るものとして
+残るのは$R(1,3)$である．その良い中心三次ペンシルの存在は既存の
+中心拡大認識・ambient原稿で扱う．
+この一般点の結論から，全H3の$R(1,3)$帰属，特殊locusの不在，
+または全AS4包絡の被覆を結論してはいけない．
+既に構成した量子Fermat型と非CY符号型を保持する必要がある．

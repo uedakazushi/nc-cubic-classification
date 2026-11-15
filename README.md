@@ -2,9 +2,11 @@
 
 2026-11-15 / project-v16 / recognition-v6 / hearts-v1。GitHub mainを現行ソースの正本とする。最初に[研究方針](00_research_plan.md)を読む。
 
-## 14641分類：固定skew ambientの正規三次直線
+## 14641分類：全skew包絡部分の幾何学的対象
 
-量子多項式ambient上の全正規三次直線の被約locusを、交換指標が一致する単項式blockの射影空間として分類した。[証明](papers/sections/cubic_skew_normal_incidence.tex)／[研究ノート](research/cubic_14641_classification.md)／[検証範囲](research/cubic_skew_normal_validation.json)。一般fiberは単項式20点。量子Fermatの固定ambientには中心P5以外にも非中心成分が存在する。これらの商がintrinsic曲面条件を満たすか、全線型自己同型による商、minor schemeの非被約構造、全ambientの被覆は未解決。厳密計算は実行済み、今回の組版は日本語TeX依存不足で停止した。
+**全H3ではμ_R=1、Gv=μ_B^{-1}(v)G。固定ambientの候補は単一の140×20線型核に絞られる。** 包絡が量子多項式環である部分は、全六次元skew torusから31パラメータ・五型へ絞り、各型の全admissible係数・内在的rank・幾何学的同型群oidまで分類した。可換、CY符号、非CY符号、3乗根中心一次、3乗根二重指標の五型で、一般同型類の次元は4,1,2,1,0。既存27点の軌道長6の商はgeneric代数M3(K)でrank-one条件に反し除外される。
+
+[証明付き原稿](papers/weak_cubic_axioms.tex)／[研究ノート](research/cubic_14641_classification.md)／[検証範囲](research/cubic_classification_validation.json)。厳密検算とLuaLaTeX全文組版を実施。**全AS4包絡を覆うH3の完全分類・相対stackの降下・成分性は未完成。** Pymの標準CY chartではL112/R22/S23の一般点とE3の非零変形を中心三次の消滅で除外した。次はR13の全admissible切断、他chartの特殊locus、Clifford・Ore等のNakayama正規三次incidenceと被覆を扱う。並行heart/corner研究は維持する。
 
 ## 現在の重点：heart比較、まずcubic surface
 

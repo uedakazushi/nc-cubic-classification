@@ -1,0 +1,81 @@
+{
+  "date": "2026-11-15",
+  "version": "classification-v4",
+  "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification.",
+  "proof_root": "papers/weak_cubic_axioms.tex",
+  "proof_inputs": [
+    "papers/sections/cubic_nakayama_incidence.tex",
+    "papers/sections/cubic_skew_normal_incidence.tex",
+    "papers/sections/cubic_noncy_sign_example.tex",
+    "papers/sections/cubic_skew_finite_reduction.tex",
+    "papers/sections/cubic_skew_admissible_classification.tex",
+    "papers/sections/cubic_pym_generic_exclusions.tex"
+  ],
+  "mathematical_results": {
+    "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
+    "epsilon_hypothesis": "R tensor a finite free B-resolution of k is perfect with cohomology k and k(-3); hence nonzero D_epsilon(R). RRZtri Theorem 4.1(2) with AS index 1 eliminates the scalar.",
+    "skew_sector": "256 coordinate jet patterns, 19 permutation types; integer Smith certificates force order 2 or 3; 49 jet parameters minus 12 common-factor and 6 generic-rank-three exclusions =31 parameters, five ambient types",
+    "intrinsic_conditions": "All five types have exact coefficient conditions and geometric pointed groupoids; smoothness via finite equivariant cocycle comparison; division/non-Norm proofs separately establish GK rank-one and torsion-freeness; Serre/exceptionality/AZ verified",
+    "rank_three_exclusion": "Norm identity splits the generic cyclic algebra of the six-point third-root orbit as M3(K); the structure object is generically length three",
+    "generic_Pym_exclusions": "Z(B)_3=0 in standard generic L112/R22/S23 charts and nonzero E3 quantization; special loci and boundaries retained"
+  },
+  "primary_sources_checked": [
+    {
+      "source": "https://arxiv.org/abs/1302.0437",
+      "version": "v2",
+      "parts": "Lemma 1.5, Lemma 3.5, Example 5.5",
+      "use": "Normal quotient Nakayama formula; regular normal element eigencondition supplied separately; right-module inverse dualizing twist convention"
+    },
+    {
+      "source": "https://arxiv.org/abs/1408.0536",
+      "version": "v3",
+      "parts": "Theorem 4.1(2), Lemma 5.2(3), Corollary 5.4(ii)",
+      "use": "AS-index-one scalar triviality with the nonzero epsilon condition explicitly proved"
+    },
+    {
+      "source": "https://arxiv.org/abs/1709.09292",
+      "version": "v1",
+      "parts": "Proposition 2.3 and proof",
+      "use": "Regular normal element is a Nakayama eigenvector; NOT the general Xi=hdet conjecture"
+    },
+    {
+      "source": "https://www.math.bgu.ac.il/~amyekut/publications/nc-serre/paper.pdf",
+      "parts": "Theorem 4.2, Corollary 4.3",
+      "use": "Balanced dualizing complex, saturation, chi and Serre comparison on the structure-object orbit"
+    },
+    {
+      "source": "https://arxiv.org/abs/1403.6444",
+      "version": "v1",
+      "parts": "Sections 3.2,3.3,3.5,3.6; relations (5),(7),(11), CGG (12),(14)",
+      "use": "Specified standard AS4/CY charts as external inputs; no all-AS4 coverage assumption"
+    }
+  ],
+  "commands_executed": {
+    "python3 computations/verify_cubic_skew_strata.py": "PASS",
+    "python3 computations/verify_cubic_nakayama.py": "PASS: exact QQ pencils, non-CY example, 512 cocycle identities, Laurent chart",
+    "python3 computations/verify_cubic_skew_jets.py": "PASS: 19 integral unimodular Smith certificates cover all 256 patterns; root-of-unity enumeration is characteristic-zero exponent arithmetic",
+    "python3 computations/verify_cubic_skew_admissible.py": "PASS: exact polynomial norms, center identities, 20 projective Jacobian charts, S4 isotropy, 31/five-type accounting",
+    "python3 computations/verify_cubic_pym_generic.py": "PASS: QQ relation quotient ranks44/221, center-rank20 and determinant280000000000/279926361; Ore determinant-243; exact E3/L112 weights",
+    "python3 computations/verify_boundary_fermat.py": "PASS: retained binary-cubic orbit, rank6/determinant729, H54 and PBW identities",
+    "python3 computations/verify_quantum_fermat.py": "PASS: retained CY, center, support, monodromy, potential, overlaps, Hilbert and norm residue",
+    "latexmk papers/weak_cubic_axioms.tex": "PASS with workspace-local Japanese TeX dependencies; final page/render metadata recorded below"
+  },
+  "build_environment": {
+    "TEXMFHOME": "/workspace/work/texmf",
+    "TEXMFVAR": "/workspace/work/texcache",
+    "TEXMFCACHE": "/workspace/work/texcache",
+    "dependencies": "Workspace-local TeX Live 2025 packages restored from the Utah historic mirror; no generated PDFs or caches tracked"
+  },
+  "pdf": {
+    "pages": 32,
+    "references": "no unresolved references or citations in final log",
+    "layout": "All 32 pages rendered and inspected as a contact sheet; detailed pages 6 (epsilon/Nakayama), 12–13 (fixed non-CY and jet reduction), 17–18 (Pym exclusions) inspected at reading size"
+  },
+  "limits": [
+    "Not full intrinsic H3 coverage: non-skew R13 cuts, special loci and other AS4 families remain",
+    "Not full relative-stack descent, global algebraicity, irreducible componenthood or deformation rigidity",
+    "Pointed geometric equivalences are considered modulo pointed natural isomorphism; no unqualified bare Abelian 2-stack claim",
+    "No independently performed peer review, formalization or exhaustive novelty audit",
+    "Concurrent heart/corner work preserved but not independently reaudited here"
+  ]
+}

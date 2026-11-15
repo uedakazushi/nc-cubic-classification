@@ -1,0 +1,197 @@
+\subsection{Skew包絡を持つH3の幾何学的対象の分類}
+\label{sec:skew-admissible-classification}
+ここでは前節の六候補型の残るrank条件と係数条件を決定する．
+全H3の分類ではなく，\emph{包絡が量子多項式環である部分}の分類である．
+族のstackとしての効果的降下や，全AS4 moduliでの成分性は主張しない．
+
+\begin{proposition}[CY符号型の全admissible係数]
+\label{prop:CY-sign-classification}
+$t$が中心，$x,y,z$が相互に反可換である包絡を固定する．
+$W_1$は
+\[
+ G=At^3+t(Bx^2+Cy^2+Dz^2)+Exyz
+\]
+で尽くされ，H3となるための必要十分条件は
+\[
+ ABCDE(AE^2-4BCD)\ne0.
+\]
+幾何学的同型群oidは，この$\PP^4$の開部分を
+$P((\mathbb G_m)^4\rtimes S_3)$で割った作用群oidである．
+粗い同型類は$w=AE^2/(BCD)\in k^*\setminus\{4\}$で尽くされ，
+各対象のpointed自己同型群は$S_4$である．
+\end{proposition}
+\begin{proof}
+次数一の指標は四つとも異なり，$kt$だけが中心直線である．
+従ってambient自己同型は四つのスケーリングと$x,y,z$の置換に限る．
+$\Gamma=(\mathbb Z/2)^3$で$x,y,z$の次数を標準基底，
+$t$の次数をその和とし，前定理と同じ三角cocycleを用いる．
+順序積のcocycle係数は$t^3$のみ$-1$，他の四項は1である．
+従って可換untwistは
+\[
+ f=-At^3+t(Bx^2+Cy^2+Dz^2)+Exyz.
+\]
+$E=0$なら可約，$B,C,D$のいずれかが零なら対応する座標点が特異となる．
+$BCD E\ne0$で$t=0$上には特異点がない．$t=1$上の臨界点は
+原点と，全座標が非零で
+$x^2=4CD/E^2$，$y^2=4BD/E^2$，$z^2=4BC/E^2$，
+$xyz=-8BCD/E^3$となる点に限られる．
+それらの$f$値は$-A$と$-A+4BCD/E^2$であり，表示の必要十分条件を得る．
+有限同変cocycle比較により，これはtailsの大域次元2と同値である．
+
+整域性は別に証明する．$t$は正則であり，$t=1$のchart代数を$C_0$とする．
+$x^2=s,y^2=r,h=xyz$は中心であり，$h^2=-srz^2$となる．
+$D\ne0$により$C_0$は量子平面$k\langle x,y\rangle/(xy+yx)$上
+$1,z$を基底に持つ．従って$k[s,r]$上自由階数8であり，その体へ単射に局所化する．
+中心拡大は
+\[
+ Dh^2-Esrh-sr(A+Bs+Cr)=0.
+\]
+$s=0$で判別式の付値が1なので，これは$k(s,r)$上既約な二次式である．
+$k_0=h/(sr)$と置けば中心体は$L=k(k_0,s)$，
+\[
+ r=\frac{A+Bs}{(Dk_0^2-Ek_0)s-C}.
+\]
+この中心体上の代数は$x^2=s,y^2=r,xy=-yx$というquaternionである．
+分母$H=(Dk_0^2-Ek_0)s-C$の付値で，$s$の剰余は
+$C/[k_0(Dk_0-E)]$となり，二つの単純な極を持つため平方ではない．
+$A+Bs$はこの付値で単元，$r$の付値は$-1$なので，$r$は$L(\sqrt s)/L$のNormではない．
+従ってquaternionは斜体であり，自由基底から$C_0$も整域である．
+$t$の正則性は，$G\bmod t=Exyz\ne0$と$B/(t)$の整域性を使う正則列の議論で従う．
+よって$R\subset C_0[t^{\pm1}]$も整域となる．
+残るH3条件は前定理と同じGorenstein・中心有限・AZの議論による．
+
+全係数が非零なので，スケーリングで$A=B=C=D=1$にできる．
+残る$E$と$-E$は符号変更で同型となり，$w=E^2$が全同型類を区別する．
+$t$のスカラーを次数スカラーで除くと，安定化は三変数の符号付き置換のうち
+置換の符号と三符号の積が等しいものとなる．位数24の回転立方体群であり$S_4$と同型である．
+\end{proof}
+
+\begin{proposition}[3乗根・中心一次型の全admissible係数]
+\label{prop:CY-third-Hesse-classification}
+$t$は中心，$xy=\zeta yx$，$yz=\zeta zy$，$zx=\zeta xz$とする．
+この固定包絡の全H3関係式は
+\[
+ G=At^3+Bx^3+Cy^3+Dz^3+Exyz,\qquad
+ ABCD(E^3+27BCD)\ne0
+\]
+で尽くされる．ambient自己同型群は$(\mathbb G_m)^4\rtimes C_3$であり，
+上の$\PP^4$の開部分のprojective作用群oidが幾何学的分類を与える．
+粗い同型類は$w=E^3/(BCD)\in k\setminus\{-27\}$で尽くされる．
+$w\ne0$の自己同型群は$(\mu_3)^2\rtimes C_3$（位数27），
+$w=0$では$(\mu_3)^3\rtimes C_3$（位数81）である．
+\end{proposition}
+\begin{proof}
+四つの一次指標は異なり，$t$は唯一の中心一次直線である．
+$x,y,z$の置換で交換係数を保つのは循環置換だけなので，表示の自己同型群を得る．
+$\Gamma=(\mathbb Z/3)^2$で$x,y,z,t$の次数をそれぞれ
+$e_0,e_1,-e_0-e_1,0$とする．
+$\alpha(a,b)=\zeta^{-a_1b_0}$のtwistはこの包絡を与え，
+可換untwistの式は
+\[
+ f=At^3+Bx^3+Cy^3+Dz^3+\zeta Exyz.
+\]
+座標点とHesse三次の勾配から，滑らかさは表示の条件と同値である．
+
+整域性のため$x$を局所化する．
+$u=yx^{-1},v=zx^{-1},T=tx^{-1}$とすると$u,v$は可換，
+$Tu=\zeta^2uT,Tv=\zeta vT$であり，
+\[
+ AT^3+B+Cu^3+Dv^3+\zeta^2Euv=0.
+\]
+$A\ne0$なのでこの代数は$k[u,v]$上$1,T,T^2$を基底に持つ．
+$r=uv,s=u^3$とすると，体$K=k(r,s)$上で
+$L=K(u)$，$u^3=s$という巡回拡大と
+\[
+ T^3=w_0=-\bigl(B+Cs+Dr^3/s+\zeta^2Er\bigr)/A
+\]
+からなる巡回代数になる．$w_0=0$の剰余曲線は滑らかなHesse楕円曲線の
+$[X:Y:Z]\mapsto[X:\zeta^2Y:\zeta Z]$による商である．
+この位数3作用の固定点は三つの座標点だけであり，$BCD\ne0$により曲線上にはない．
+従って曲線は連結なエタール3次被覆となり，この付値で$L/K$の剰余次数は3である．
+$w_0$はこの既約divisorで付値1を持つのでNormではなく，巡回代数は斜体となる．
+ここで商曲線の既約性は楕円曲線の既約性から従い，$s$を可逆にした不変環は
+$k[r,s^{\pm1}]/(B+Cs+Dr^3/s+\zeta^2Er)$である．
+$x$の正則性と自由基底から$R$も整域となる．
+残るH3条件は既に用いた議論で従う．
+
+スケーリングで$A=B=C=D=1$に規格化でき，$E$の残る同値は3乗根倍である．
+よって$w$が粗い同型類を尽くす．$t$のスカラーを除いた安定化は
+$x,y,z$の3乗根スケーリングと循環置換である．$E\ne0$のときだけ
+三つのスカラーの積を1とする条件が加わり，表示の群を得る．
+\end{proof}
+
+\begin{proposition}[3乗根の残る六パラメータはrank-one条件を満たさない]
+\label{prop:third-six-rank-obstruction}
+定理\ref{thm:skew-finite-37}の最後の行の固定包絡では，H3対象は存在しない．
+\end{proposition}
+\begin{proof}
+$W_1$は四つの立方単項式で張られる．有限同変比較と座標点の滑らかさから，
+候補は四係数が全て非零の場合に限られ，スケーリングで$G=\sum x_i^3$にできる．
+$q$を表の代表とし，$x_0$を局所化して
+$y=x_1x_0^{-1},u=x_2x_0^{-1},v=x_3x_0^{-1}$と置くと
+\[
+ yu=\zeta uy,\qquad yv=\zeta^2vy,\qquad uv=\zeta^2vu,
+ \qquad 1+y^3+u^3+v^3=0.
+\]
+三変数も可逆にした量子トーラスの中心は
+$r=uvy^{-1},s=y^3,t=u^3$で張られ，$v^3=r^3s/t$である．
+三次関係により
+\[
+ s=-\frac{t(t+1)}{t+r^3},\qquad K=k(r,t).
+\]
+この中心体上の代数は，$u^3=t$の巡回拡大$K(u)/K$と
+$y^3=s,yu=\zeta uy$で与えられる．しかし
+\[
+ s=\operatorname{Norm}_{K(u)/K}
+       \left(-\frac{u(u+1)}{u+r}\right)
+\]
+である．実際，$\operatorname{Norm}(u)=t$，
+$\operatorname{Norm}(u+1)=t+1$，$\operatorname{Norm}(u+r)=t+r^3$である．
+従って巡回代数は分裂して$M_3(K)$となる．
+中心格子の指数は9であり，量子トーラスは中心上自由階数9なので，
+この表示は中心体上の全generic代数を同定している．
+座標超平面上の商はGK次元高々2であるため，この局所化は
+$qgr$の最大Gabriel--Krull商を変えない．
+構造対象のgeneric像は$M_3(K)$の右正則加群であり，単純加群の三個の直和となる．
+従って構造対象は内在的rank-one条件を満たさない．
+滑らかなtailsを得ることとrank-one構造対象を得ることの差がここで現れる．
+\end{proof}
+
+\begin{theorem}[Skew包絡を持つH3の幾何学的分類]
+\label{thm:all-skew-H3-geometric}
+包絡が量子多項式環であるH3は，座標表示を固定した31パラメータ，
+座標置換では次の五つのambient型で尽くされる．
+\[
+\begin{array}{c|r|r|l}
+\text{型}&\text{座標パラメータ数}&\text{一般同型類の次元}&\text{全admissible係数の記述}\\\hline
+\text{可換}&1&4&\text{滑らかな三次式}/\PGL_4\\
+\text{CY符号型}&4&1&\text{命題\ref{prop:CY-sign-classification}}\\
+\text{非CY符号型}&6&2&\text{定理\ref{thm:fixed-sign-classification}}\\
+\text{3乗根・中心一次型}&8&1&\text{命題\ref{prop:CY-third-Hesse-classification}}\\
+\text{3乗根・二重指標型}&12&0&\mathcal U_F/G=B H_{54}
+\end{array}
+\]
+ここで同型群oidは，各行の全admissible開集合を
+$P\operatorname{Aut}_{\mathrm{gr}}B$で割った幾何学的作用群oidである．
+特にZhang同値や導来同値を代わりの同値関係として用いていない．
+この五行が全AS4包絡上のH3を尽くすとも，全moduliの成分であるとも主張しない．
+\end{theorem}
+\begin{proof}
+37候補から前命題の六点を除くと31点となる．
+可換型は通常の滑らかな三次曲面の分類である．
+二つの符号型と中心一次3乗根型は上の必要十分条件・整域性・作用群oidで尽くされる．
+最後の12点の型では補題\ref{lem:fermat-aut}の表示を使うと
+$W_1=kt^3\oplus k[x,y]_3\oplus kz^3$となる．
+有限群によるuntwistの可換三次式も同じ形であり，滑らかさは
+$AC\Delta(f)\ne0$と同値である．よって定理\ref{thm:fermat-gerbe}の
+$\mathcal U_F$の外に新たなH3対象はなく，その定理が全admissible係数を尽くす．
+異なる行の包絡の同型も除外できる．一次正規直線locusは
+可換型では$\PP^3$，CY符号型と3乗根・中心一次型では四点，
+非CY符号型と3乗根・二重指標型では$\PP^1$と二点となる．四点型の同型は単項式変換に限られ，
+交換係数の位数2と3を区別する．$\PP^1$と二点の二型は
+Nakayama自己同型が恒等か否かで区別される．
+従って別の行が全線型基底変更によって混同されることはない．
+同型群oidは命題\ref{prop:intrinsic-ring-isomorphisms}による．
+表の次元は固定ambient領域での作用群商の一般次元であり，
+全AS4の中の変形方向を計算した値ではない．
+\end{proof}

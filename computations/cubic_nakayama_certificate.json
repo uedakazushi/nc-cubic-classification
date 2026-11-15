@@ -1,0 +1,374 @@
+{
+  "date": "2026-11-15",
+  "scope": "Nakayama linear candidate incidence and explicit non-CY H3 example",
+  "noncy_q_upper": [
+    1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+  ],
+  "nakayama_B": [
+    1,
+    1,
+    -1,
+    -1
+  ],
+  "G_support": [
+    [
+      3,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      3,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      2,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      2
+    ]
+  ],
+  "W1_monomials": [
+    [
+      0,
+      1,
+      0,
+      2
+    ],
+    [
+      0,
+      1,
+      2,
+      0
+    ],
+    [
+      0,
+      3,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      2
+    ],
+    [
+      1,
+      0,
+      2,
+      0
+    ],
+    [
+      1,
+      2,
+      0,
+      0
+    ],
+    [
+      2,
+      1,
+      0,
+      0
+    ],
+    [
+      3,
+      0,
+      0,
+      0
+    ]
+  ],
+  "W1_dimension": 8,
+  "smooth_generic_stabilizer_witness": {
+    "binary_coefficients": [
+      1,
+      1,
+      2,
+      3
+    ],
+    "discriminant": -175,
+    "projective_stabilizer_order": 4
+  },
+  "fixed_ambient_generic_quotient_dimension": 2,
+  "pencil_ranks": {
+    "c=1": 12,
+    "c=-1": 20
+  },
+  "normal_multiplication_rank": 4,
+  "cocycle_triples_checked": 512,
+  "coordinate_permutation_orbit_size": 6,
+  "ore_chart": "uv=-vu; y central; v^2+y*u^2-y^3-1=0",
+  "torsion_27_central_only": [
+    {
+      "parameter": [
+        0,
+        0,
+        0
+      ],
+      "all_normal_cubic_monomials": 20,
+      "anticanonical_candidate_dimension": 20
+    },
+    {
+      "parameter": [
+        0,
+        0,
+        1
+      ],
+      "all_normal_cubic_monomials": 20,
+      "anticanonical_candidate_dimension": 5
+    },
+    {
+      "parameter": [
+        0,
+        0,
+        2
+      ],
+      "all_normal_cubic_monomials": 20,
+      "anticanonical_candidate_dimension": 5
+    },
+    {
+      "parameter": [
+        0,
+        1,
+        0
+      ],
+      "all_normal_cubic_monomials": 20,
+      "anticanonical_candidate_dimension": 5
+    },
+    {
+      "parameter": [
+        0,
+        1,
+        1
+      ],
+      "all_normal_cubic_monomials": 20,
+      "anticanonical_candidate_dimension": 6
+    },
+    {
+      "parameter": [
+        0,
+        1,
+        2
+      ],
+      "all_normal_cubic_monomials": 20,
+      "anticanonical_candidate_dimension": 4
+    },
+    {
+      "parameter": [
+        0,
+        2,
+        0
+      ],
+      "all_normal_cubic_monomials": 20,
+      "anticanonical_candidate_dimension": 5
+    },
+    {
+      "parameter": [
+        0,
+        2,
+        1
+      ],
+      "all_normal_cubic_monomials": 20,
+      "anticanonical_candidate_dimension": 4
+    },
+    {
+      "parameter": [
+        0,
+        2,
+        2
+      ],
+      "all_normal_cubic_monomials": 20,
+      "anticanonical_candidate_dimension": 6
+    },
+    {
+      "parameter": [
+        1,
+        0,
+        0
+      ],
+      "all_normal_cubic_monomials": 20,
+      "anticanonical_candidate_dimension": 5
+    },
+    {
+      "parameter": [
+        1,
+        0,
+        1
+      ],
+      "all_normal_cubic_monomials": 20,
+      "anticanonical_candidate_dimension": 4
+    },
+    {
+      "parameter": [
+        1,
+        0,
+        2
+      ],
+      "all_normal_cubic_monomials": 20,
+      "anticanonical_candidate_dimension": 6
+    },
+    {
+      "parameter": [
+        1,
+        1,
+        0
+      ],
+      "all_normal_cubic_monomials": 20,
+      "anticanonical_candidate_dimension": 6
+    },
+    {
+      "parameter": [
+        1,
+        1,
+        1
+      ],
+      "all_normal_cubic_monomials": 20,
+      "anticanonical_candidate_dimension": 6
+    },
+    {
+      "parameter": [
+        1,
+        1,
+        2
+      ],
+      "all_normal_cubic_monomials": 20,
+      "anticanonical_candidate_dimension": 6
+    },
+    {
+      "parameter": [
+        1,
+        2,
+        0
+      ],
+      "all_normal_cubic_monomials": 20,
+      "anticanonical_candidate_dimension": 4
+    },
+    {
+      "parameter": [
+        1,
+        2,
+        1
+      ],
+      "all_normal_cubic_monomials": 20,
+      "anticanonical_candidate_dimension": 5
+    },
+    {
+      "parameter": [
+        1,
+        2,
+        2
+      ],
+      "all_normal_cubic_monomials": 20,
+      "anticanonical_candidate_dimension": 6
+    },
+    {
+      "parameter": [
+        2,
+        0,
+        0
+      ],
+      "all_normal_cubic_monomials": 20,
+      "anticanonical_candidate_dimension": 5
+    },
+    {
+      "parameter": [
+        2,
+        0,
+        1
+      ],
+      "all_normal_cubic_monomials": 20,
+      "anticanonical_candidate_dimension": 6
+    },
+    {
+      "parameter": [
+        2,
+        0,
+        2
+      ],
+      "all_normal_cubic_monomials": 20,
+      "anticanonical_candidate_dimension": 4
+    },
+    {
+      "parameter": [
+        2,
+        1,
+        0
+      ],
+      "all_normal_cubic_monomials": 20,
+      "anticanonical_candidate_dimension": 4
+    },
+    {
+      "parameter": [
+        2,
+        1,
+        1
+      ],
+      "all_normal_cubic_monomials": 20,
+      "anticanonical_candidate_dimension": 6
+    },
+    {
+      "parameter": [
+        2,
+        1,
+        2
+      ],
+      "all_normal_cubic_monomials": 20,
+      "anticanonical_candidate_dimension": 5
+    },
+    {
+      "parameter": [
+        2,
+        2,
+        0
+      ],
+      "all_normal_cubic_monomials": 20,
+      "anticanonical_candidate_dimension": 6
+    },
+    {
+      "parameter": [
+        2,
+        2,
+        1
+      ],
+      "all_normal_cubic_monomials": 20,
+      "anticanonical_candidate_dimension": 6
+    },
+    {
+      "parameter": [
+        2,
+        2,
+        2
+      ],
+      "all_normal_cubic_monomials": 20,
+      "anticanonical_candidate_dimension": 6
+    }
+  ],
+  "generic_rational_W1_dimension": 0,
+  "proofs_not_replaced_by_calculation": [
+    "Serre scalar detection",
+    "AS-index-one scalar triviality with an explicit epsilon object",
+    "CY centrality",
+    "smoothness via finite equivariant cocycle twist",
+    "quaternion division via odd valuation of non-norm",
+    "Gabriel--Krull rank and AZ conditions"
+  ],
+  "not_claimed": [
+    "all ambient coverage",
+    "intrinsic groupoid classification",
+    "independent peer review",
+    "exhaustive novelty audit"
+  ]
+}

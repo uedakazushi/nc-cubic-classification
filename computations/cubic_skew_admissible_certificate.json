@@ -1,0 +1,116 @@
+{
+  "date": "2026-11-15",
+  "classification_scope": "Geometric H3 objects with skew-polynomial envelope only",
+  "necessary_parameters_before_rank": 37,
+  "rank_three_exclusions": 6,
+  "admissible_ambient_parameters": 31,
+  "ambient_coordinate_types": 5,
+  "generic_coarse_dimensions": [
+    4,
+    1,
+    2,
+    1,
+    0
+  ],
+  "CY_sign_projective_isotropy_order": 24,
+  "CY_sign_isotropy_action": "all permutations of four body diagonals",
+  "third_Hesse_isotropy_orders": {
+    "E_nonzero": 27,
+    "E_zero": 81
+  },
+  "rank_three_obstruction": "s=-t(t+1)/(t+r^3)=Norm(-u(u+1)/(u+r)), u^3=t; generic algebra M3(K)",
+  "smooth_jacobian_charts": [
+    [
+      "CY_sign",
+      "t"
+    ],
+    [
+      "CY_sign",
+      "x"
+    ],
+    [
+      "CY_sign",
+      "y"
+    ],
+    [
+      "CY_sign",
+      "z"
+    ],
+    [
+      "nonCY_sign",
+      "t"
+    ],
+    [
+      "nonCY_sign",
+      "x"
+    ],
+    [
+      "nonCY_sign",
+      "y"
+    ],
+    [
+      "nonCY_sign",
+      "z"
+    ],
+    [
+      "third_Hesse_Fermat",
+      "t"
+    ],
+    [
+      "third_Hesse_Fermat",
+      "x"
+    ],
+    [
+      "third_Hesse_Fermat",
+      "y"
+    ],
+    [
+      "third_Hesse_Fermat",
+      "z"
+    ],
+    [
+      "third_Hesse_nonzero",
+      "t"
+    ],
+    [
+      "third_Hesse_nonzero",
+      "x"
+    ],
+    [
+      "third_Hesse_nonzero",
+      "y"
+    ],
+    [
+      "third_Hesse_nonzero",
+      "z"
+    ],
+    [
+      "third_double_character",
+      "t"
+    ],
+    [
+      "third_double_character",
+      "x"
+    ],
+    [
+      "third_double_character",
+      "y"
+    ],
+    [
+      "third_double_character",
+      "z"
+    ]
+  ],
+  "normalization_checks": [
+    "quaternion center rationalization",
+    "cubic norm identity over Q(zeta)",
+    "index-nine central lattice",
+    "CY-sign critical value"
+  ],
+  "proof_scope_limits": [
+    "not all AS4 envelopes",
+    "no relative stack descent claim",
+    "no claim these five types are global moduli components",
+    "no independent review or exhaustive novelty audit"
+  ]
+}

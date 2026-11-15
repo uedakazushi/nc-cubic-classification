@@ -1,0 +1,161 @@
+\subsection{反標準偏極による正規三次incidenceの線型化}
+\label{sec:nakayama-normal-incidence}
+本節で$\mu_B$は
+$\underline\Ext^4_{B^e}(B,B^e)\simeq {}^1B^{\mu_B}(4)$
+という規約のNakayama自己同型とする．
+正規化自己同型は$Gv=\sigma_G(v)G$と定める．
+次数スカラー自己同型を$\xi_c|_{B_n}=c^n$と書く．
+
+\begin{lemma}[飽和された構造対象が自己同型のスカラー性を検出する]
+\label{lem:twist-scalar-detection}
+$R$は一次生成連結次数付き環で，$\OO=\pi R$について
+$\End(\OO)=\End(\OO(1))=k$，
+$R_1\simeq\Hom(\OO,\OO(1))$が成立するとする．
+次数付き自己同型$\varphi$による右加群のtwistを$T_\varphi$とする．
+$T_\varphi$と恒等関手の自然同型が，少なくとも$\OO,\OO(1)$と
+それらの間のすべての射上で存在するなら，$\varphi=\xi_c$となる$c\in k^*$がある．
+逆に$T_{\xi_c}$は次数付き加群圏ですでに恒等関手と自然同型である．
+\end{lemma}
+\begin{proof}
+標準同型$R(n)_\varphi\to R(n)$を$r\mapsto\varphi^{-1}(r)$で定める．
+これでtwistした$\OO,\OO(1)$を元の対象へ同定すると，
+$\Hom(\OO,\OO(1))$上の作用は$\varphi^{-1}$になる．
+仮定の自然同型の二成分はそれぞれ非零スカラーである．
+自然性から$\varphi^{-1}|_{R_1}$は一つのスカラー倍となり，
+一次生成性により結論を得る．逆向きは，斉次元$m\in M_n$に対する
+$m\mapsto c^{-n}m$が$M_{\xi_c}\to M$の自然な$R$線型同型を与える．
+\end{proof}
+
+\begin{theorem}[H3に対する単一のNakayama正規線型条件]
+\label{thm:nakayama-cubic-linearization}
+定理\ref{thm:14641-principal-recognition}で得たH3対象の
+$R=B/(G)$について
+\[
+ \mu_R=1,\qquad \sigma_G=\mu_B^{-1},\qquad \mu_B(G)=G
+\]
+となる．特に固定ambient$B$上でH3の関係式は単一の線型空間
+\[
+ W_1(B)=\{G\in B_3:Gv=\mu_B^{-1}(v)G\ \text{for all }v\in B_1\}
+\]
+に属する．これは$140\times20$の行列の核として計算できる．
+逆に非零$G\in W_1$は左右正則正規で，その三次商のNakayama自己同型は恒等である．
+この逆向きだけでは滑らかさ・H3帰属を主張しない．
+さらに任意の$c\in k^*$について
+$W_c(B)=\{G:Gv=c\mu_B^{-1}(v)G\}$と置けば，$c\ne1$では$W_c=0$である．
+\end{theorem}
+\begin{proof}
+まず$B$はnoetherian AS正則整域である．
+正則正規元はNakayama自己同型の固有ベクトルになる
+\cite[Proposition 2.3]{ZSL}．よって正規商の公式
+\cite[Lemma 1.5]{RRZ}の仮定が満たされ，
+\[
+ \mu_R=(\mu_B\sigma_G)|_R
+\]
+となる．この公式は正規三次商がAS正則であるとは要求しない．
+商はAS Gorenstein次元3・parameter 1であり，balanced dualizing complexは
+${}^{\mu_R}R^1(-1)[3]$である．
+その商圏への双対性\cite[Theorem 4.2, Corollary 4.3]{YZ}は，
+少なくとも構造対象のtwistとその間の射上で
+$S=T_{\mu_R^{-1}}(-1)[2]$を与える．
+ここで双対化複体の左twistが，右加群のtensor関手では逆twistとなることに注意する．
+
+H3ではAZ再構成が$(\OO,(1))$を$(\OO,S^{-1}[2])$へ同定するので，
+$S(1)[-2]$は恒等である．従って$T_{\mu_R^{-1}}$は構造対象のorbit上で
+恒等と自然同型になる．AS Gorenstein深さ3による飽和から
+$\Hom(\OO,\OO(n))=R_n$，$\End(\OO(n))=k$であり，
+補題\ref{lem:twist-scalar-detection}より$\mu_R=\xi_c$となる．
+次にこのスカラーを消す．$R$はAS GorensteinでAS indexは1である．
+有限自由$B$解消$P_\bullet\to k$を取り，$X=R\otimes_B P_\bullet$と置く．
+これはperfectな左$R$複体である．$R$の右$B$加群解消は
+$0\to B(-3)\xrightarrow{G\cdot}B\to R\to0$なので，
+$H^0(X)=k$，$H^{-1}(X)=k(-3)$，他のcohomologyは零である．
+従って有限次元cohomologyを持つperfect複体の圏$D_\epsilon(R)$は非零である．
+\cite[Theorem 4.1(2)]{RRZtri}を$\mu_R=\xi_c$，AS index $l=1$へ適用すると
+$c^l=1$，すなわち$c=1$となる．
+この追加仮定$D_\epsilon(R)\ne0$を省略して一般のAS Gorenstein環へ適用していない．
+上の具体的な複体で当該仮定を検証した．
+
+$R_1=B_1$なので$\mu_R=1$と正規商公式から
+$\sigma_G=\mu_B^{-1}$が$B$全体で成立する．
+$G^2=\sigma_G(G)G$と整域性より$\sigma_G(G)=G$，従って$\mu_B(G)=G$である．
+各生成元について$B_3\to B_4$の線型式を並べると$4\cdot35$行20列となる．
+
+逆に非零$G\in W_c$なら$\xi_c\mu_B^{-1}$は$B$の自己同型なので，
+定義式は次数一から全次数へ延び，$G$は正規となる．整域性から正則である．
+$\sigma_G(G)=G$より$\mu_B(G)=c^3G$なのでRRZの公式を適用でき，
+$\mu_{B/(G)}=\xi_c$となる．この商にも上の非零$\epsilon$複体が存在するため，
+再び\cite[Theorem 4.1(2)]{RRZtri}より$c=1$となる．
+これで$W_c=0$ ($c\ne1$)と逆向きを得る．
+\end{proof}
+
+この結果は全AS4 ambientの分類を前提とせず，H3に必要なincidenceを
+$35\times8$の非線型rank条件から単一の$140\times20$線型核へ絞る．
+ただしこれは固定ambient・幾何学的点の結果であり，非被約構造，
+相対降下，自己同型による商，H3条件の十分性は残る．
+
+\begin{corollary}[CY ambientでは三次関係が中心となる]
+\label{cor:CY-cubic-central}
+H3対象の14641包絡がgraded CY，すなわち$\mu_B=1$なら，
+$G$は中心である．従ってCY ambient上のH3分類候補は$\PP(Z(B)_3)$に限られる．
+これは非CY ambientに中心性を仮定する主張ではない．
+\end{corollary}
+\begin{proof}
+定理により$\sigma_G=\mu_B^{-1}=1$である．
+\end{proof}
+
+\paragraph{量子多項式ambientでの直接検算．}
+定理\ref{thm:skew-normal-cubics}の規約では
+\cite[Example 5.5]{RRZ}を変換して
+\[
+ \mu_B(x_i)=m_ix_i,\quad m_i=\prod_jq_{ij},\qquad
+ W_c=\langle x^a:m_i\chi_i(a)=c\ \text{for all }i\rangle
+\]
+となる．$W_c\ne0\Rightarrow c=1$は，この場合には次の初等的な方法でも検算できる．
+指数$a$を一つ選ぶと，交代性から$\prod_i\chi_i(a)^{a_i}=1$，
+$\prod_im_i=1$，$\prod_i\chi_i(a)=\prod_im_i^{a_i}$となる．
+$m_i\chi_i(a)=c$を$a_i$乗して積を取ると右辺は$c^3$，
+$i$に関してそのまま積を取ると$c^4$なので，$c^3=c^4$となる．
+従って全skew torus上のH3候補三次空間は単一の線型空間
+\[
+ W_1=\langle x^a:\chi_i(a)=m_i^{-1}\ (0\le i\le3)\rangle
+\]
+に限られる．一般の六パラメータではこの空間は零である：
+独立な$q_{ij}$について上の等式が恒等的なら全$a_j=1$が必要だが，$|a|=3$に反する．
+
+CY skew torusでは$m_i=1$なので$W_1=Z(B)_3$となる．
+27個のtorsion ambientで前節の正規三次locusに現れた非中心成分は，
+\emph{指定gradingを反標準とするH3の関係式候補から除外される}．
+それらの商が別の偏極・別のsection環で何らかの曲面圏を与える可能性までは否定しない．
+中心候補についても滑らかさ・Gabriel--Krull rank等の判定は別途必要である．
+
+\begin{proposition}[幾何学的対象の同型と次数スカラー]
+\label{prop:intrinsic-ring-isomorphisms}
+H3の幾何学的対象二つが，構造対象を保つ$k$線型exact同値を持つことと，
+それらの反標準section環が次数付き同型であることは同値である．
+そのようなpointed同値をpointed自然同型で割った自己同型群は
+\[
+ \operatorname{Aut}(\cA,\OO)
+ \simeq\operatorname{Aut}_{\mathrm{gr}}(R)/\{\xi_c:c\in k^*\}.
+\]
+従って固定した$B$上でのadmissibleな$[G]$の幾何学的同型群oidは，
+$\operatorname{Aut}_{\mathrm{gr}}(B)/\mathbb G_m$の作用群oidとなる．
+ここで族のstack同値・降下までを主張していない．
+\end{proposition}
+\begin{proof}
+exact同値は導来圏のSerre関手を自然同型の範囲で保つ．
+構造対象の同型と$Fs\simeq s'F$を選び，この同型の反復を用いれば
+全$\Hom(\OO,s^n\OO)$の積を保つ次数付き同型が得られる．
+逆向きはAZ再構成である．
+
+自己同型群に関して，$\cA$上の恒等関手の自然自己同型はスカラーに限る．
+実際，$\OO(n)$上の成分は$\End(\OO(n))=k$からスカラーであり，
+非零の次数一射に対する自然性が隣接する成分を一致させる．
+これらの対象からの有限表示が全対象を生成するので，全成分は同一スカラーである．
+従って$Fs\simeq sF$の選択を変える効果は$\xi_c$に限られ，
+$\operatorname{Aut}_{\mathrm{gr}}(R)\to\operatorname{Aut}(\cA,\OO)$は全射となる．
+核については，誘導されたtwistがpointedに恒等なら
+補題\ref{lem:twist-scalar-detection}により次数スカラーであり，
+逆に次数スカラーのtwistは恒等と自然同型である．
+最後に$B=Q(R)$と$kG=\ker(B_3\to R_3)$は関手的に復元されるため，
+$R$の全次数付き自己同型は$B$の$[G]$安定化群と一致する．
+\end{proof}

@@ -19,9 +19,9 @@
 \newcommand{\Spec}{\operatorname{Spec}}\newcommand{\Spf}{\operatorname{Spf}}
 \newcommand{\im}{\operatorname{im}}\newcommand{\cC}{\mathfrak C}
 \newcommand{\cP}{\mathfrak P}\newcommand{\Sym}{\operatorname{Sym}}
-\title{内在的非可換三次曲面の公理とambient成分\\\large dP1共通定義・量子FermatのPym成分・正規境界認識}
+\title{内在的非可換三次曲面の14641認識とskew包絡の分類\\\large dP1共通定義・量子FermatのPym成分・正規境界認識}
 \author{研究原稿：証明済みの命題と未解決の認識条件を区別する}
-\date{2026年11月15日\quad classification-v2}
+\date{2026年11月15日\quad classification-v4}
 \begin{document}\maketitle
 \begin{abstract}
 大域次元2の$k$線形Abel圏とrank one torsion-free exceptional構造対象，反Serre作用，
@@ -39,6 +39,12 @@ Cassidy--SheltonのPBW判定を適用することである．
 量子Fermat ambientの一般中心三次切断はすべて同型であり，
 次数スカラーを除いた固定ambient中心商のstackは位数54の群の分類stackになる．
 固定量子多項式ambient上では，全正規三次直線の被約locusを交換指標blockの射影空間として分類する．
+さらにH3の反標準偏極とAS index 1は商のNakayama自己同型を恒等にし，
+固定ambient上の候補を単一の140行20列の線型核へ絞る．CY包絡では三次関係は中心となる．
+全skew torusでは座標jetの整数格子計算とgeneric rankの判定から，
+H3を31パラメータ・五ambient型へ絞り，各型の全admissible係数と幾何学的同型群oidを記述する．
+非CY・非中心の型も実在し，CY族だけによる全H3の被覆は否定される．
+またPymの四つの非skew標準CY chartの一般点を中心三次の消滅によって除外する．
 全モジュライの代数性は証明済みとはせず，有限提示による候補，その形式局所模型，
 超曲面認識部分での射，中心三次incidenceの一般ファイバーを正確に定式化する．
 \end{abstract}
@@ -247,6 +253,8 @@ split monoである．一方の$4\times4$ minorを単元にしたchartで
 反標準Serre作用，heart，rank-one torsion-free性，AZ ample性などの
 認識が別途必要である．固定ambient同定付きfiberと自己同型による商も区別する．
 
+\input{papers/sections/cubic_nakayama_incidence.tex}
+
 \subsection{対角中心Fermatの27点の座標置換分類}
 CY量子多項式ambientを
 \[
@@ -281,6 +289,10 @@ $\mathbb F_3$上で解いて得る．
 Abel圏同値による分類，また全27点の曲面条件の認識ではない．
 
 \input{papers/sections/cubic_skew_normal_incidence.tex}
+\input{papers/sections/cubic_noncy_sign_example.tex}
+\input{papers/sections/cubic_skew_finite_reduction.tex}
+\input{papers/sections/cubic_skew_admissible_classification.tex}
+\input{papers/sections/cubic_pym_generic_exclusions.tex}
 
 \section{冗長性と低次数認識}
 \begin{lemma}[共通公理からの負次数消滅]
@@ -934,7 +946,8 @@ $\mathcal U_F\subset\PP^5$である．その同定を忘れてambient自己同�
 式\eqref{eq:fermat-gerbe}となり，粗い同型類は一点である．
 一方，ambientも変形させる全weak cubicモジュライにおける形式近傍は未計算であり，
 $BH_{54}$がその開部分や孤立成分であるとは主張しない．
-また$AC\Delta(f)=0$の境界で全ての商が非weakとなることも，ここでは証明していない．
+境界$AC\Delta(f)=0$は定理\ref{thm:all-skew-H3-geometric}によりH3から除外される．
+これは任意の構造対象・偏極を持つ裸の圏への主張とは区別する．
 
 本定理をpolarizedな$(\qgr R,\pi R,(1))$の同型群oidとして読むことは，
 section saturationと二次包絡の関手性から正当化される．
@@ -1071,7 +1084,10 @@ $R(1,3)$を支配する枝の像の閉包の余次元が0であることが得�
 AOU型の有限例外列模型との比較，Weyl群によるマーキングの忘却，
 weak条件の開性，正確なfiberの除外点の決定を含む．
 量子Fermat反例により，前者の全対象を後者の一成分に押し込める方針は採れない．
-第三の具体的課題は量子Fermatの全Hochschild変形と，$AC\Delta(f)=0$の中心切断の正則性である．
+第三はskewでない包絡上のNakayama正規incidenceの分類である．
+Skew包絡の幾何学的H3対象は定理\ref{thm:all-skew-H3-geometric}で尽くされ，
+量子Fermatの$AC\Delta(f)=0$の境界もH3から除外された．
+全Hochschild変形，skew型間と他ambientとの交叉，族の降下は残る．
 
 本稿では量子Fermat例の整域性，局所正則性，Serre性，周期的正規直線による
 成分排除を通常の証明で検討した．付属コードは$\mathbb Z/3$上の指数演算により，
@@ -1079,7 +1095,10 @@ weak条件の開性，正確なfiberの除外点の決定を含む．
 四次potentialの符号，Hilbert値，Norm障害の単純極を有限計算で確認する．
 新しい\texttt{verify\_boundary\_fermat.py}は，PBW恒等式のLie型検算，
 中心三次の六基底，六係数軌道の行列式729，位数54の安定化群の閉性を検証する．
-計算は一般の認識定理を証明したものではない．
+Nakayama条件，非CY符号型，256座標jetの整数Smith証明書，
+31パラメータ・五型のadmissibilityとrank障害，
+四つの標準CY chartの中心三次障害は追加の四検証器で厳密検算する．
+計算は一般の認識定理や全AS4の分類を証明したものではない．
 外部査読，Lean形式化，新規性の網羅的調査は未実施である．
 
 \begin{thebibliography}{99}
@@ -1126,6 +1145,20 @@ Theorem 0.5, \S3．
 \emph{Twisted graded algebras and equivalences of graded categories},
 Proc. London Math. Soc. (3) 72 (1996), 281--311.
 正則正規一次元の中心化は\cite[\S3.1]{LBS}も参照．
+
+\bibitem{RRZ} M. Reyes, D. Rogalski, J. J. Zhang,
+\emph{Skew Calabi--Yau algebras and homological identities},
+Adv. Math. 264 (2014), 308--354;
+\href{https://arxiv.org/abs/1302.0437}{arXiv:1302.0437v2}, Lemma 1.5, Lemma 3.5, Example 5.5.
+\bibitem{RRZtri} M. Reyes, D. Rogalski, J. J. Zhang,
+\emph{Skew Calabi--Yau triangulated categories and Frobenius Ext-algebras},
+Trans. Amer. Math. Soc. 369 (2017), 309--340;
+\href{https://arxiv.org/abs/1408.0536}{arXiv:1408.0536v3}, Theorem 4.1(2), Lemma 5.2(3), Corollary 5.4(ii).
+\href{https://doi.org/10.1090/tran/6640}{doi:10.1090/tran/6640}.
+\bibitem{ZSL} G.-S. Zhou, Y. Shen, D.-M. Lu,
+\emph{Skew Calabi--Yau property of normal extensions},
+\href{https://arxiv.org/abs/1709.09292}{arXiv:1709.09292v1}, Proposition 2.3 and its proof.
+Remark 2.5の一般同定予想は使用しない．
 
 \bibitem{Levasseur} T. Levasseur,
 \emph{Some properties of non-commutative regular graded rings},

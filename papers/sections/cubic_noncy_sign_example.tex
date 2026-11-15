@@ -1,0 +1,193 @@
+\subsection{非CY包絡と非中心三次関係を持つH3の明示例}
+\label{sec:noncy-sign-cubic}
+前節のCY包絡上の中心性を，全H3の包絡のCY性と読み替えてはならない．
+以下の例がそれを否定する．
+\begin{theorem}[符号型の非中心反標準三次商]
+\label{thm:noncy-sign-cubic}
+$B$を量子多項式環とし，$q_{01}=1$，他の五つの$i<j$について
+$q_{ij}=-1$とする．
+\[
+ G=x_0^3+x_1^3+x_0x_2^2+x_1x_3^2,\qquad R=B/(G).
+\]
+このとき$(\qgr R,\pi R)$はH3に属する．一方
+\[
+ \mu_B=\sigma_G=\operatorname{diag}(1,1,-1,-1),\qquad \mu_R=1.
+\]
+従って包絡$B$はgraded CYではなく，$G$は中心でもない．
+全H3の包絡をPymのgraded CY族に限定することはできない．
+\end{theorem}
+\begin{proof}
+PBW基底により$B$は左右noetherianなKoszul AS正則整域，型14641である．
+行積から表示された$\mu_B$を得る．四単項式は全て同じ交換指標
+$(1,1,-1,-1)$を持つので$G$は正則正規，$\sigma_G=\mu_B$となる．
+$\mu_B(G)=G$であり，RRZの商公式から$\mu_R=1$である．
+特に$R$のbalanced dualizing complexは$R(-1)[3]$となる．
+
+\emph{tailsの滑らかさ．}
+$\Gamma=(\mathbb Z/2)^3$とし，$x_0,x_1$の$\Gamma$次数を$e_0$，
+$x_2$を$e_1$，$x_3$を$e_2$とする．可換多項式環の積を
+\[
+ u*v=\alpha(a,b)uv,\qquad
+ \alpha(a,b)=(-1)^{a_1b_0+a_2b_0+a_2b_1}
+ \quad(\deg_\Gamma u=a,\ \deg_\Gamma v=b)
+\]
+で捩ると$B$になる．この式は双線型な指数なので2-cocycle恒等式を満たす．
+可換多項式
+\[
+ f=x_0^3+x_1^3+x_0x_2^2+x_1x_3^2
+\]
+は$\Gamma$次数$e_0$であり，順序積に付く上のcocycle係数は四項とも1である．
+従って$R$は$A=k[x_0,x_1,x_2,x_3]/(f)$の同じcocycle twistである．
+$X=\operatorname{Proj}A$は滑らかである：
+$\partial_2f=2x_0x_2$と$\partial_0f=3x_0^2+x_2^2$の同時消滅は
+$x_0=x_2=0$を与え，他の二変数も同様に零となるので射影特異点がない．
+
+ここで多重次数のcocycle twistを，もとの$qgr$同値と同一視してはいけない．
+必要なのは次の有限群の議論である．$H=\operatorname{Hom}(\Gamma,k^*)$とすると，
+$\Gamma$次数付き$qgr$は$H$同変な$qgr$である．
+cocycle twistはこの\emph{次数付き}商圏をexact同値にする．
+有限群$H$の位数は可逆なので，同変圏と元の圏の大域次元は等しい．
+実際，前者のExtは後者のExtの$H$不変部分であり，Reynolds作用素により不変部分はexactである．
+逆の不等式にはexactな誘導$\operatorname{Ind}M=\bigoplus_{h\in H}hM$と忘却を使い，
+\[
+ \Ext^n_H(\operatorname{Ind}M,\operatorname{Ind}N)
+ \simeq\bigoplus_{h\in H}\Ext^n(M,hN)
+\]
+の恒等元成分を取ればよい．この議論は$QGr$のinjective解消で行い，
+noetherian対象のYoneda Extへ制限できる．従って
+\[
+ \gldim\qgr R=\gldim(\qgr R)^H
+ =\gldim(\operatorname{coh}X)^H=2.
+\]
+有限群の同変化とcocycle同値は有限次元Hom・Extも保つ．
+Gorenstein双対性とこの滑らかさから全有界導来圏上で
+$S=(-1)[2]$となる．
+
+\emph{整域性と内在的rank．}
+$x_1$は$R$上正則である．これを確認するため，$B$上で
+$x_1b=Gh$なら$B/(x_1)$へ移す．$\bar G=x_0^3+x_0x_2^2\ne0$であり，
+$B/(x_1)$は整域なので$\bar h=0$，すなわち$h=x_1h'$である．
+$Gx_1=x_1G$と$B$の整域性から$b=Gh'$を得る．右側も同じである．
+従って$x_1$のOre局所化へ$R$は単射に入る．次数零部分を
+$y=x_0x_1^{-1}$，$u=x_2x_1^{-1}$，$v=x_3x_1^{-1}$で書けば
+\[
+ C=k[y]\langle u,v\rangle/
+ (uv+vu,\ v^2+yu^2-y^3-1).
+\]
+この表示は$x_1$を可逆にした元の関係式を変換して得られ，
+$x_1$の共役は$(y,u,v)\mapsto(y,-u,-v)$なので，
+$R[x_1^{-1}]$は$C$のskew Laurent拡大である．
+$s=u^2$とすると$C$は中心多項式環$k[y,s]$上
+$1,u,v,uv$を基底に持つ．これはまず$k[y,u]$に$u\mapsto-u$の
+Ore変数$v$を加え，monic関係$v^2=y^3+1-yu^2$で割ることから従う．
+中心体$K=k(y,s)$へ移すと
+\[
+ u^2=s,\qquad v^2=w=y^3+1-ys,\qquad uv=-vu
+\]
+というquaternion algebraとなり，これは斜体である．
+実際，$w=0$の離散付値で，$s$の剰余は$(y^3+1)/y$である．
+この有理関数は単純な零点と極を持つので$k(y)$の平方ではない．
+従って$K(\sqrt{s})/K$はこの付値で非分岐・剰余次数2であり，
+Normの付値は偶数となる．$w$の付値は1だからNormではなく，
+quaternion algebraは分裂しない．次数2の中心単純環なので斜体となる．
+自由基底により$C$はこの斜体へ単射に入り，
+$R[x_1^{-1}]$と$R$も整域である．
+
+$R$は四つの中心元$x_i^2$が生成する可換部分環上有限である．
+$H_R=(1-z^3)/(1-z)^4$なのでGK次元は3で，$qgr$のGabriel--Krull次元は2である．
+中心有限整域のgeneric商は斜体の有限次元加群圏となり，
+$\pi R$のgeneric像は単純，低次元torsionから$\pi R$への射は零となる．
+これでGabriel--Krull rank-one torsion-free条件を得る．
+
+最後にAS Gorenstein深さ3の飽和と局所コホモロジー消滅から
+$\Hom(\pi R,\pi R(n))=R_n$，$\Ext^1(\pi R,\pi R(n))=0$である．
+$\Ext^2(\pi R,\pi R)=R_{-1}^*=0$なので構造対象は例外的．
+noetherian AS Gorenstein環は$\chi$を満たす\cite[Corollary 4.3]{YZ}ので
+$(\pi R,(1))$はAZ ampleとなる．$\mu_R=1$からこのshiftは反Serre作用であり，
+三次商は二次関係を変えないので$Q(R)=B$となる．全H3公理が満たされた．
+\end{proof}
+
+この例の$qgr$は同変化を通じて可換滑らかな三次曲面と比較したのであり，
+もとの二つの$qgr$がexact同値であるとは主張しない．
+この例のOU型・非OU型，および全非CY ambient成分は未分類である．
+固定包絡上のintrinsic同型群は以下で決定する．
+
+\begin{theorem}[固定符号ambientのH3対象の全分類]
+\label{thm:fixed-sign-classification}
+定理\ref{thm:noncy-sign-cubic}の固定$B$に対し，H3の関係式はちょうど
+\[
+ G=f_3(x_0,x_1)+\ell_2(x_0,x_1)x_2^2+\ell_3(x_0,x_1)x_3^2
+\]
+のうち，対応する\emph{可換}三次多項式が滑らかな射影曲面を定めるものとなる．
+これらは$\PP(W_1)=\PP^7$の非空開部分$U$をなす．
+$\ell_2,\ell_3$は必ず独立であり，それらを$x_0,x_1$に規格化して
+\[
+ f_3=ax_0^3+bx_0^2x_1+cx_0x_1^2+dx_1^3
+\]
+と書くと，必要十分条件は
+\[
+ ad\,\Delta(a,b,c,d)\ne0,\qquad
+ \Delta=b^2c^2-4ac^3-4b^3d-27a^2d^2+18abcd
+\]
+である．固定包絡上の幾何学的H3同型群oidは
+\[
+ [\,U/P\operatorname{Aut}_{\mathrm{gr}}B\,](k),\qquad
+ \operatorname{Aut}_{\mathrm{gr}}B
+ =\GL_2\times((\mathbb G_m)^2\rtimes S_2)
+\]
+で記述される．この分枝の一般同型類は2次元で，一般自己同型群は
+$(\mu_2)^2$である．$abcd\ne0$の範囲での有理商は
+\[
+ u=ac/b^2,\qquad v=bd/c^2,\qquad k(u+v,uv)
+\]
+を関数体に持つ有理曲面となる．
+ここで全H3 moduliの既約成分性は主張していない．
+\end{theorem}
+\begin{proof}
+$\mu_B\chi(a)=1$を20指数について解くと，四つのbinary cubic単項式と
+$x_0x_2^2,x_1x_2^2,x_0x_3^2,x_1x_3^2$のみが残る．
+前節の全skew torusに対する$c=1$の結論により，H3候補はこの8次元空間で尽くされる．
+全項の$\Gamma$次数は$e_0$なので，前定理の有限同変cocycle比較は
+任意の係数で成立する．従って商圏の大域次元が有限となることと
+可換射影三次曲面の滑らかさは同値である．
+特異点があれば，その可換局所環の剰余体のprojective dimensionは無限となり，
+$\operatorname{coh}X$の大域次元も無限となる．
+
+$\ell_2,\ell_3$が従属なら，直線$x_0=x_1=0$上に
+$x_2^2\ell_2+x_3^2\ell_3=0$を線型形式として満たす非零$(x_2,x_3)$があり，
+この点は特異点となる．独立なら$\GL_2$で$\ell_2=x_0,\ell_3=x_1$にできる．
+$a=0$なら$x_1=0,x_3^2=-bx_0^2,x_2=0$上に特異点があり，
+$d=0$についても同様である．
+$a,d\ne0$なら，勾配の$x_2,x_3$成分から
+$x_0x_2=x_1x_3=0$となる．$x_0$または$x_1$が零のケースは
+$a,d\ne0$によって除外される．残るケースは$x_2=x_3=0$での
+binary cubicの重根であり，これが$\Delta=0$と同値である．
+
+滑らかな係数について整域性も確認する必要がある．規格化後の$x_1$局所化は
+前定理と同じで，$v^2=f_3(y,1)-yu^2$に置き換わる．
+対応するquaternionの分岐付値での$s$の剰余は$f_3(y,1)/y$であり，
+$d\ne0$から$y=0$に単純な極を持つ．従って同じ非Norm証明で整域となる．
+深さ，Serre作用，例外性，rankおよびAZの残る証明も前定理と同じである．
+よって滑らかな係数は全てH3となり，必要十分性が得られる．
+
+一次正規直線の被約locusは，次数一の交換指標分類により
+$\PP\langle x_0,x_1\rangle\sqcup\{[x_2],[x_3]\}$となる．
+次数付き自己同型はこの直線成分と二つの孤立点の集合を保つ．
+逆に$\langle x_0,x_1\rangle$上の任意の$\GL_2$，
+$x_2,x_3$の独立スケーリングと交換は全関係を保つ．
+これで自己同型群を尽くす．同型群oidの主張は
+命題\ref{prop:intrinsic-ring-isomorphisms}による．
+
+規格化後に残る作用は$x_0,x_1$の対角スケーリング，$x_2,x_3$の
+スケーリング，および同時交換$(x_0,x_2)\leftrightarrow(x_1,x_3)$である．
+$abcd\ne0$では対角安定化は，次数スカラーを除けば
+$x_2,x_3$の独立符号変更だけになる．
+交換を含む安定化が存在するための条件は$db^3=ac^3$であり，一般には成立しない．
+例えば$(a,b,c,d)=(1,1,2,3)$は$ad\Delta\ne0$かつ$db^3\ne ac^3$を満たす．
+従って一般慣性は$(\mu_2)^2$であり，作用群の有効次元は$6-1=5$だから
+$\dim U-5=2$となる．
+対角作用の不変有理関数体は$k(u,v)$であり，同時交換は$u,v$を交換する．
+従って有理商の関数体は表示された対称関数体となる．
+$b=0$または$c=0$の滑らかな境界は$U$から削除せず，
+有理座標のchartの外として作用群oidの記述に保持する．
+\end{proof}
