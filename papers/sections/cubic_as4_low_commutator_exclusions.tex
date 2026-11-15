@@ -1,0 +1,106 @@
+\subsection{as4の低交換子表示に対する独立な三次障害}
+\label{subsec:as4-low-commutator-direct}
+ここではas4の固定commit\cite{AS4lowpinned}に書かれた具体的表示を用いる。
+同リポジトリのCY全被覆定理やAS正則性の十分性を、新しい無条件入力としては用いない。
+表示がH3包絡だと仮定した際に必要な中山作用と三次核を独立に計算して排除する。
+
+\begin{lemma}[符号反転を実現する正規元]
+\label{lem:normal-parity-odd-centre}
+標数が二でないgraded整域 $B$ に非零元 $N$ があり、
+$Nv=-vN$ が全 $v\in B_1$ で成り立つなら、$Z(B)$ の奇数次数成分は零である。
+さらに $B$ がH3包絡なら $\mu_B(N)=-N$ が必要である。
+\end{lemma}
+\begin{proof}
+奇数次の中心元 $F$ について $NF=-FN$ と $NF=FN$ を合わせ、整域性で消去する。
+H3三次 $G$ では $GN=\mu_B^{-1}(N)G$ なので
+$NG=-GN=-\mu_B^{-1}(N)G$、再び消去して結論を得る。
+\end{proof}
+
+\begin{theorem}[二重被覆表示の全非零パラメータ排除]
+\label{thm:as4-double-cover-h3-exclusion}
+$i^2=-1$、$h\ne0$ とする。次の二表示はH3包絡にならない。
+\[
+\begin{array}{c|c|c}
+ &D_{\mathrm I}(h)&D_{\mathrm{II}}(h)\\\hline
+ &ba=iab,\quad dc=icd&ba=iab,\quad dc=icd\\
+ &a^2=-2h[b,d]&a^2=-2h[b,c]\\
+ &b^2=-2[a,c]&b^2=-2[a,d]\\
+ &c^2=2h[b,d]&c^2=2h[a,d]\\
+ &d^2=-2[a,c]&d^2=-2[b,c]
+\end{array}
+\]
+これはas4の \texttt{CY\_ZERO\_COMMUTATORS\_DOUBLE\_COVER\_COMPLETE.tex}
+の(DCC1)であり、ここで両表示の存在・整域性・noetherian性自体を主張しているのではない。
+\end{theorem}
+\begin{proof}
+H3包絡だと仮定すればKoszul AS4整域である。
+この仮定の下で中山作用が恒等となることを、全 $h\ne0$ で先に確認する。
+検証器\texttt{verify\_cubic\_as4\_double\_cover.py}は $R^\perp$ から双対を作り、
+$\mathbb Q(i)(h)$ 上で次数四汎関数 $\varphi$ と四つの次数三monomialを求める。
+$\varphi$ の全係数は $\mathbb Q(i)[h,h^{-1}]$ に属し、
+双対の全次数四関係を消す恒等式を同環上で直接確認する。
+相補次数一・三の左右pairing行列式は、第一表示でともに $-1/(2h^2)$、
+第二表示でともに $1/(2h^2)$ である。
+従って、どの非零 $h$ のAS4実現でも、これらは最高次数汎関数と基底を与える。
+Frobenius中山行列は $-I$、従って元の代数の中山作用は $I$ となる。
+一般点の双対次元だけから、全特殊値のAS正則性を推論してはいない。
+
+第一表示では $a^2=-c^2$、$b^2=d^2$ である。
+$ba=iab,dc=icd$ から、$a^2$ のnormalizerは
+$\operatorname{diag}(1,-1,1,-1)$、$b^2$ のそれは
+$\operatorname{diag}(-1,1,-1,1)$ となる。
+第二表示では $a^2=h d^2$、$c^2=-h b^2$ なので、同じ計算は順に
+$\operatorname{diag}(1,-1,-1,1)$ と
+$\operatorname{diag}(-1,1,1,-1)$ を与える。
+検証器にはこの八つの二次正規関係それぞれを、元の二次関係の左右一次倍の
+Laurent係数線型結合として保存してある。
+両場合とも $N=a^2b^2$ は非零で、$Nv=-vN$ が全一次元で成立する。
+前補題から中心三次は零であり、$\mu_B=I$ のH3必要条件と矛盾する。
+\end{proof}
+
+\begin{theorem}[非被約基点の三つの固定表示の排除]
+\label{thm:as4-curvilinear4-h3-exclusion}
+$\langle x,y\rangle=(xy+yx)/2$ とする。次の三表示 $C_1,C_2,C_{31}$ はH3包絡にならない。
+\[
+\begin{aligned}
+C_1:\quad0={}&\langle a,c\rangle-b^2-\tfrac{10}{21}[a,b]
+ +\tfrac{47}{280}[a,d]-\tfrac9{800}[c,d],\\
+0={}&\langle a,d\rangle-\langle b,c\rangle+\tfrac{10}{7}[a,c]-\tfrac38[b,d],\\
+0={}&\langle b,d\rangle-\tfrac27[a,d]+\tfrac3{40}[c,d],\\
+0={}&c^2-\tfrac27[a,d]-\tfrac{10}{3}[b,c]-\tfrac9{40}[c,d],\\
+0={}&\langle c,d\rangle-\tfrac23[b,d],\qquad0=d^2+2[c,d];
+\end{aligned}
+\]
+\[
+\begin{aligned}
+C_2:\quad0={}&\langle a,c\rangle-b^2-2[a,b]+\tfrac18[a,d],\\
+0={}&\langle a,d\rangle-\langle b,c\rangle+2[a,c]-\tfrac18[b,d],\\
+0={}&\langle b,d\rangle+2[b,c],\\
+0={}&c^2+2[a,d]+2[b,c]-\tfrac18[c,d],\\
+0={}&\langle c,d\rangle-2[b,d],\qquad0=d^2+2[c,d].
+\end{aligned}
+\]
+最初の二つは同commitの {\small\texttt{CY\_ZERO\_COMMUTATORS\_CURVILINEAR\_FOUR\_COMPLETE.tex}}
+の(CF2),(CF3)である。第三表示は同commitの {\small\texttt{CY\_ZERO\_COMMUTATORS\_CURVILINEAR\_THREE\_ONE\_COMPLETE.tex}}
+の(CT2)であり、次式で与える。
+\[
+\begin{aligned}
+C_{31}:\quad0&=\langle a,c\rangle-b^2-2[a,d],&
+0&=\langle b,c\rangle-2[b,d],\\
+0&=c^2+2[c,d],&
+0&=\langle a,d\rangle+2[a,b]-\tfrac18[a,c],\\
+0&=\langle b,d\rangle-2[a,c]+\tfrac18[b,c],&
+0&=\langle c,d\rangle+2[b,c].
+\end{aligned}
+\]
+射影型の被覆自体はここでは輸入していない。
+\end{theorem}
+\begin{proof}
+検証器\texttt{verify\_cubic\_as4\_curvilinear\_fixed.py}は各六関係から双対Frobenius pairingを
+有理数上で直接計算する。AS4実現を仮定すれば $\mu_B=I$ である。
+一方、元の関係商の次数三・四をそれぞれ全ての関係の左右倍から作ると次元は $20,35$ であり、
+中心三次の $140\times20$ 行列は三表示とも階数 $20$ である。
+証明書に各非零最大minorの行番号と厳密な有理数行列式を保存した。
+従って $Z(B)_3=0$ であり、H3の正規三次が存在しない。
+これは三つの固定表示の全係数計算であり、パラメータ一般点の外挿ではない。
+\end{proof}

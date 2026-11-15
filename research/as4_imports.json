@@ -214,5 +214,28 @@
       }
     ],
     "scope": "Read four entry points and CY_COMPLETE/CI22 overview; inspected the explicit double-cover and curvilinear-four presentations. No new all-CY coverage theorem imported; audit_status pending is retained. Next direct calculation concerns odd central obstructions in the displayed double-cover families. Existing mathematical imports remain pinned60eac..."
+  },
+  "low_commutator_presentations_v69": {
+    "commit": "a45f834f51a00c47443b51caf66abaf4629546b9",
+    "presentations": [
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_DOUBLE_COVER_COMPLETE.tex",
+        "sha256": "d5d2c2b5e819a702e1dadd135b0b3b247553406049ac8516d198c5b5212c06df"
+      },
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_CURVILINEAR_FOUR_COMPLETE.tex",
+        "sha256": "88dc2b483d4bdd08a31ee8d184b02926c33b317c4508de0b5270b2a8d951752c"
+      },
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_CURVILINEAR_THREE_ONE_COMPLETE.tex",
+        "sha256": "29db71800d41de6e499d7084919432f7556c19b4da95005de5e1fb9a76170ffa"
+      }
+    ],
+    "used_part": "Explicit DCC1, CF2, CF3, CT2 presentations only. No AS4 existence, domain/noetherianity or full CY coverage theorem imported.",
+    "independent_proofs": "Laurent socle functionals/pairings conditional on AS4; normal parity quartic; exact QQ centre3 minors for three fixed presentations.",
+    "validators": [
+      "computations/verify_cubic_as4_double_cover.py",
+      "computations/verify_cubic_as4_curvilinear_fixed.py"
+    ]
   }
 }
