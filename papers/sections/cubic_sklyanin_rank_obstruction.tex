@@ -1,0 +1,124 @@
+\subsection{四次元楕円Sklyanin包絡の位数3枝をrankで排除する}
+\label{subsec:sklyanin-rank-obstruction}
+三次中心の存在はH3の十分条件ではなく、generic行列次数を区別する必要がある。
+まず全標数0代数閉体で使えるreduced norm障害を示す。
+
+\begin{lemma}[最小中心次元での全norm切断の排除]
+\label{lem:central-norm-rank}
+$B$ をconnected graded整域とし、正規中心 $Z$ 上有限、PI次数を $n\ge2$ とする。
+$d=\dim B_1$、$r=\dim Z_n$ と置く。このとき $r\ge d$ である。
+$r=d$ なら、全ての非零 $G\in Z_n$ は次数1と $n-1$ の二元の積へ分解する。
+従って $B/(G)$ は整域でない。
+\end{lemma}
+\begin{proof}
+中央分数環は次数 $n$ の斜体である。
+そのreduced characteristic polynomialの係数は $B$ が中心上有限であることから整で、
+$Z$ の正規性により $Z$ に入る。
+次数1の元 $\ell=\sum a_ix_i$ について $\operatorname{Nrd}(\ell)$ は
+$a_i$ の次数 $n$ 多項式であり、内的次数も $n$ なので $Z_n$ に入る。
+パラメータを独立変数としても $Z[a_1,\ldots,a_d]$ は正規であるから、
+これは $B_1\to Z_n$ の多項式写像を与える。
+非零 $\ell$ の斜体内のnormは非零なので、この写像は原点以外にbase pointを持たない。
+従って
+\[
+ \mathbb P(B_1)\longrightarrow\mathbb P(Z_n),\qquad
+ [\ell]\longmapsto[\operatorname{Nrd}(\ell)]
+\]
+は射であり、$\mathcal O(1)$ の引き戻しは $\mathcal O(n)$ である。
+ampleな引き戻しを持つ射は正次元fiberを持てないので像へ有限であり、$r\ge d$ を得る。
+$r=d$ なら像は全 $\mathbb P(Z_n)$ である。
+従って任意の $G$ は非零スカラーを除きある $\ell$ のnormである。
+Cayley--Hamilton式を $\ell$ で評価すれば
+\[
+ \operatorname{Nrd}(\ell)=(-1)^{n+1}\ell
+ \bigl(\ell^{n-1}-c_1(\ell)\ell^{n-2}+\cdots+(-1)^{n-1}c_{n-1}(\ell)\bigr).
+\]
+右辺の二因子は非零、次数は1と $n-1$ である。
+商で両因子は消えないため $B/(G)$ は零因子を持つ。
+\end{proof}
+
+\begin{corollary}[CY PI3包絡の中心三次の必要下界]
+\label{cor:PI3-central-dimension}
+H3包絡 $B$ がCY、正規中心上有限でPI次数3なら、$\dim Z(B)_3\ge5$ が必要である。
+\end{corollary}
+\begin{proof}
+$\dim B_1=4$ であり、H3の正則正規三次は中心である。
+$R=B/(G)$ が整域であることから $B$ も整域となる。
+実際、$G$ の正則性と正次数性により各非零元の有限な $G$-進位数を取り、
+商整域内の先頭積を比較すればよい。
+前補題の $r\ge4$ と $r=4$ の排除を使う。
+\end{proof}
+
+\begin{theorem}[proper楕円四次元Sklyanin包絡の排除]
+\label{thm:sklyanin-no-H3}
+$S$ を滑らかな楕円曲線データ $(E,\mathcal L,\sigma)$ を持つ標準四次元Sklyanin代数とする。
+$\deg\mathcal L=4$、$\sigma$ は平行移動であり、
+その位数 $n$ は無限または $n\notin\{1,2,4\}$ と仮定する。
+この $S$ を二次包絡とする強いintrinsic H3対象は存在しない。
+退化した非楕円Sklyanin特殊値や任意のZhang twistまでこの定理で覆うとは主張しない。
+\end{theorem}
+\begin{proof}
+以下のSklyanin入力は一次資料
+\cite[Lemma 2.9, Propositions 2.11, 2.12, 2.18, Theorem 3.13]{WWYSklyanin4}で確認する。
+$S$ はnoetherian quadratic Koszul AS4で、中央二次正則列 $g_1,g_2$ を持ち、
+$S/(g_1,g_2)$ は次数4楕円THCRとなる。
+中央正規商の中山公式を二回用い、平行移動THCRのcanonical bimodule
+\cite[Example 7.16]{YeTHCR}を使うと、$\mu_S$ は一次生成空間上恒等、従って $\mu_S=1$ となる。
+H3の三次 $G$ はしたがって中心元である。
+
+$n=\infty$ では $Z(S)=\mathbb C[g_1,g_2]$、有限 $n$ では中心は次数2の二元と
+次数 $n$ の四元で生成される。
+従って $Z(S)_3\ne0$ となり得る残余は $n=3$ だけである。
+この場合、中心は重み $(3,3,3,3,2,2)$ の二つの六次完全交叉である。
+その特異集合は四本のcuspidal曲線で、余次元3なので中心は正規である。
+また $\dim Z(S)_3=4$、PI次数は3である。
+$S$ は整域なので補題\ref{lem:central-norm-rank}を適用でき、
+全中心三次 $G$ は一次式と二次式の積へ分解する。
+従ってどの $S/(G)$ も整域でなく、H3のrank-one条件に矛盾する。
+より具体的には $Z(S)_1=0$ なので $\operatorname{Trd}(\ell)=0$ であり、
+\[
+ \operatorname{Nrd}(\ell)
+   =\ell\left(\ell^2-\tfrac12\operatorname{Trd}(\ell^2)\right).
+\]
+射影norm写像 $\mathbb P^3\to\mathbb P^3$ は有限全射で次数27を持つ。
+この議論は複素数への限定を必要とせず、一次資料の中心記述が成立する標数0代数閉体上で有効である。
+\end{proof}
+
+この排除は、中心三次が四次元存在する位数3でも、
+有限大域次元だけを満たす切断をH3と誤認しないためのものである。
+ここではgeneric一パラメータのrank計算を全閉値へ外挿していない。
+全central norm切断の因数分解により、各候補を直接排除する。
+
+\subsubsection{独立な幾何学的rank障害}
+次の複素曲面上の障害も、非分岐候補の排除に利用できる。
+\begin{lemma}[非分岐orderのrank障害]
+\label{lem:unramified-delpezzo-rank}
+$Z$ を射影正規複素曲面とし、商特異点のみを持ち、$-K_Z$ は $\mathbb Q$-ampleとする。
+$\Lambda$ を中心 $\mathcal O_Z$ 上有限なprime orderとし、余次元1でAzumaya、
+$H^1(Z,\Lambda)=0$ と仮定する。
+このときgeneric Brauer類は零である。
+特にgeneric代数が斜体ならその次数は1に限る。
+\end{lemma}
+\begin{proof}
+正規性と整性により正規化reduced trace $\Lambda\to\mathcal O_Z$ は全体で定義され、
+単位を単位へ送る。従って $H^1(Z,\mathcal O_Z)=0$ である。
+商特異点は有理特異点なので、解消 $\widetilde Z$ でも $q(\widetilde Z)=0$。
+$K_{\widetilde Z}$ は $Z$ からのample類の引き戻しと負に交わるので、
+$\widetilde Z$ の小平次元は $-\infty$ である。
+曲面の分類からこれは種数0の曲線上のruled曲面、従って有理曲面となる。
+
+余次元1Azumaya性によりBrauer類は $Z$ の全素因子で非分岐である。
+商特異点の解消の例外因子でも非分岐となることを確認する。
+完備局所表示 $\mathbb C[[u,v]]^G$ で $G$ をsmall有限群とする。
+穿孔平面へ引き戻したBrauer類はpurityから零であり、
+残る障害は $H^2(G,\mathbb C[[u,v]]^\times)$ に入る。
+正次数単元の対数と平均化から、この群は $H^2(G,\mathbb C^\times)$ に等しい。
+$G$ は $S^3$ 上自由に作用し、$S^3/G$ は閉向き付き三次元多様体である。
+$H_2(S^3/G,\mathbb Z)=0$ であり、普遍被覆が2-connectedなので
+$H_2(G,\mathbb Z)=0$。
+可除係数の普遍係数定理から $H^2(G,\mathbb C^\times)=0$ を得る。
+従ってBrauer類は局所解消でも零となり、全例外素因子のresidueが消える。
+再びpurityにより $\operatorname{Br}\widetilde Z$ へ延びる。
+滑らかな有理複素射影曲面のBrauer群は零なので、generic類も零である。
+\end{proof}
+

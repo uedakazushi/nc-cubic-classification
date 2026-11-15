@@ -1,6 +1,6 @@
 {
   "date": "2026-11-15",
-  "version": "classification-v56",
+  "version": "classification-v58",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -43,7 +43,8 @@
     "papers/sections/cubic_quantum_triangle_general.tex",
     "papers/sections/cubic_quantum_triangle_even4.tex",
     "papers/sections/cubic_quantum_triangle_gwa.tex",
-    "papers/sections/cubic_quantum_triangle_vertex.tex"
+    "papers/sections/cubic_quantum_triangle_vertex.tex",
+    "papers/sections/cubic_sklyanin_rank_obstruction.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -695,5 +696,18 @@
     "ordinary_theorem": "All q!=0,+-1 and D formal projective-vertex microcharts have gr quantum plane and gldim2; nonroot formal isomorphism to completed quantum plane",
     "build": "LuaLaTeX125 pages successful; no undefined refs/cites or overfull boxes",
     "limits": "No qgr formal-perfection descent or full nonroot good-D admissibility claimed"
+  },
+  "sklyanin_norm_v58": {
+    "proof": "papers/sections/cubic_sklyanin_rank_obstruction.tex",
+    "ordinary_theorem": "Over any algebraically closed characteristic0 field, no H3 with proper elliptic standard4D Sklyanin envelope, n infinite or n not1,2,4. General normal-centre PI domain: dimZ_n>=dimB1; equality makes all central degree n cuts factor. CY PI3 H3 requires dimZ3>=5.",
+    "validator": "computations/verify_cubic_sklyanin_rank_obstruction.py",
+    "result": "PASS weighted Hilbert/canonical/rank identities and universal traceless3x3 Cayley-Hamilton norm factorization",
+    "source_audit": {
+      "WWY": "1802.06487v2 Lemma2.9,Props2.11/2.12/2.18,Thm3.13: central regular sequence/domain/centre/normality; no Azumaya theorem needed for norm proof",
+      "WWY_pdf_sha256": "d4bac3562a27ad33248df939916d53b209e949ba23a2186ea42808bcf522ac83",
+      "CY": "Central regular quadric quotient formula twice plus translation THCR canonical module; no determinant shortcut"
+    },
+    "build": "LuaLaTeX127 pages successful no undefined refs/cites or overfull boxes; final minor wording/version refresh pending",
+    "limits": "Proper elliptic standard Sklyanin only; degenerate parameters and arbitrary twists excluded; no independent referee/formalization/novelty claim"
   }
 }

@@ -171,6 +171,6 @@
         "sha256": "dbcb078ff56190c8255abd8fca88206ea62f3af45ff61dad9aed9506a021f7d1"
       }
     ],
-    "scope": "Read current overview/coverage and plan beginning; searched all claim statements for Sklyanin, CY and central cubic. No new result imported. Previous mathematical imports remain pinned to60eac... Proper elliptic Sklyanin PI3 rank obstruction to be proved from primary WWY centre/Azumaya results, not inferred from AS4 global coverage."
+    "scope": "Read current overview/coverage and plan beginning; searched claim statements for Sklyanin/CY/central cubic. No new AS4 import. Proper elliptic Sklyanin exclusion proved in cubic_sklyanin_rank_obstruction.tex from primary WWY centre results and direct projective-norm factorization; existing imports remain pinned60eac..."
   }
 }
