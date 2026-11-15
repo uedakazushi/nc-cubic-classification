@@ -1,0 +1,108 @@
+\subsection{Clifford swap対象の中心はcubic scrollとなる}
+\label{subsec:normal-order2-scroll}
+\begin{theorem}[偶Veroneseの全中心とquaternion order]
+\label{thm:normal-order2-scroll-center}
+$\Delta_h(b,c)\ne0$ のClifford swap H3反標準環を $R$ とする。
+\[
+ \begin{gathered}
+ u=x+y,\quad v=x-y,\quad w=z+\frac h2u,\\
+ B_0=v^2,\quad C_0=w^2,\quad D_0=\frac{uw+wu}{2},\quad a_0=vw,\quad s_0=uv+vu
+ \end{gathered}
+\]
+と置くと、これら五つの二次元は $R$ の中心に属する。
+それらの生成するgraded部分環は
+\[
+ \begin{gathered}
+ \mathcal C=k[B_0,C_0,D_0,a_0,s_0]/
+ (B_0C_0-a_0^2,\ C_0s_0-2D_0a_0,\ a_0s_0-2D_0B_0),\\
+ \deg(B_0,C_0,D_0,a_0,s_0)=2
+ \end{gathered}
+\]
+であり、$R$ は $\mathcal C$ 上有限・一般階数8である。
+偶Veronese $R^{(2)}$ の全中心は、次数を半分にした $\mathcal C$ に等しい。
+その中心上の一般階数は4、generic algebraはquaternion division algebraである。
+特に $R$ のPI次数は2であり、
+\[
+ \operatorname{Proj}Z(R)=\operatorname{Proj}\mathcal C\simeq\mathbb F_1
+\]
+はcubic scrollである。
+$\operatorname{qgr}R$ はこの $\mathbb F_1$ 上の階数4 orderのcoherent加群圏に同値となる。
+この記述で $\tau^2$ はscrollのhyperplane線型束 $\OO_{\mathbb F_1}(E+2F)$ によるtensorに対応する。
+orderの極大性・全分岐因子まではここで結論しない。
+\end{theorem}
+\begin{proof}
+$T=t^2,P=xy+yx,Z=z^2$ は、中央Cliffordからのcocycle構成で$\Gamma$次数0の中心元の像なので
+包絡の段階から中心である。
+二次関係より
+\[
+ A_0=u^2=hZ+cT+P,\qquad B_0=hZ+cT-P,\qquad [v,w]=0,
+\]
+\[
+ C_0=(1+h^3/4)Z+(3h^2/4)P+(hb+h^2c/4)T,
+ \quad D_0=hP+(h^2/2)Z+(b+hc/2)T
+\]
+も中心である。交代tensorの式を $u,v,w$ に直すと
+$G_*=-[vw,u]/4$ となる。
+従って $a_0=vw$ は三次商で $u,v,w,t$ 全てと可換する。
+$u^2,v^2$ が中心なので $s_0=uv+vu$ は $u,v$ と可換し、
+$[v,w]=0$、$uw+wu=2D_0$、$vw=a_0$ を使えば $w$ とも可換する。
+$t$ とは偶次数によって可換する。
+同じ式から表示した三つのscroll minorが零となる。
+
+$\alpha_0=(1+h^3)/(2h)$、$\beta_0=(2-h^3)/(4h)$、$\kappa=hb-c/h$ と置くと
+\[
+ C_0=\alpha_0A_0+\beta_0B_0+\kappa T,\qquad
+ D_0=(3h/4)A_0-(h/4)B_0+bT.
+\]
+$A_0$ を消去した後の $D_0$ の $T$ 係数は
+\[
+ -\frac{(h^3-2)b-3hc}{2(1+h^3)}\ne0
+\]
+である。従って $T,P,Z$ と $B_0,C_0,D_0$ は可逆な線型変換で結ばれる。
+五つの中心元を係数環に取れば、$u,v,w,t$ の全二乗と全反交換子はこの係数環に属する。
+四生成元Cliffordの標準書換えにより $R$ はその中心部分環上有限となる。
+
+抽象的な三minor環は行列
+$\left(\begin{smallmatrix}C_0&a_0&2D_0\\a_0&B_0&s_0\end{smallmatrix}\right)$
+のcubic scroll環であり、次元3の整な正規環である。
+その次数を1に直したHilbert級数は $(1+2q)/(1-q)^3$ である。
+具体的には
+$C_0=\lambda r^2,a_0=\lambda rs,B_0=\lambda s^2,2D_0=\mu r,s_0=\mu s$
+という標準scroll parametrizationから素性を得る。
+三minorのHilbert--Burch解消からCohen--Macaulay性を得て、
+頂点以外で滑らかなscrollの錐なので正規性が従う。
+この環から $R$ の中心部分環への全射に追加核があれば次元は2以下となるが、
+$R$ はその環上有限でGK次元3なので矛盾する。
+従って表示した環が正確に $\mathcal C$ である。
+
+Hilbert級数
+\[
+ H_R(q)=\frac{1-q^3}{(1-q)^4},\qquad
+ H_{\mathcal C}(q)=\frac{1+2q^2}{(1-q^2)^3}
+\]
+の最高極の比は8である。
+$K=\operatorname{Frac}\mathcal C$ と置き $C_0$ を逆にすれば $v=a_0w/C_0$ であり、
+$R\otimes_{\mathcal C}K$ は $u,w,t$ による三変数Clifford環になる。
+その二次形式は $u^2=A_0,w^2=C_0,t^2=T,uw+wu=2D_0$、他の反交換子は零である。
+$C_0,D_0,a_0/C_0$ は一般点で独立な有理座標なので
+$T(A_0C_0-D_0^2)\ne0$ となる。実際 $T$ の $D_0$ 係数は単元であり、
+$A_0$ は $B_0,C_0,D_0$ の一次式だから $A_0C_0-D_0^2$ の $D_0^2$ 係数は $-1$ である。
+一般階数8との比較により、次元8のこのClifford環からの全射は同型である。
+その偶部分は中心 $K$ のquaternion algebraであり、$R$ が整域なので斜体となる。
+全Clifford環の中心は二次体拡大で、中心上の次数は2である。
+その生成元は実際に中央三次 $\Omega=(uw-D_0)t$ として $R$ に属し、
+$\Omega^2=T(D_0^2-A_0C_0)$ を満たす。
+
+$R^{(2)}$ の中心元は一般点で $K$ に属し、$R^{(2)}$ が $\mathcal C$ 上有限なので整である。
+$\mathcal C$ の正規性からその元は $\mathcal C$ に属する。
+従って偶Veroneseの全中心を得る。
+$Z(R)^{(2)}=\mathcal C$ でもあるから、Projはcubic scroll $\mathbb F_1$ に一致する。
+中心有限な偶Veroneseのsheaf化とVeronese同値によりorder表示を得る。
+$R$ のshift2は $R^{(2)}$ のshift1であり、中心の標準hyperplaneによるtensorなので最後の主張も従う。
+\end{proof}
+
+指定例 $h=b=c=1$ では独立に、中心二次の次元5、十五の対称積の階数12、
+三つのminorとvolume交換子恒等式を有理数上で確認した。
+一般階数8・偶部分階数4のHilbert級数比と線型変換係数も
+\texttt{verify\_cubic\_normal\_order2\_scroll.py} が厳密に検算する。
+この中心計算はcocycle前後の圏を同一視することなく、得られたH3自体の中心的幾何を記述する。

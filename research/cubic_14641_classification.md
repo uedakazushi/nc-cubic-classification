@@ -191,4 +191,4 @@ Clifford swapでは正規滑らか楕円境界ktが一意。mu_B負固有空間�
 
 h=b=c=1のClifford swap包絡でKoszul双対を独立計算しE0..4=(1,4,6,4,1)、左右Frobenius積非退化、mu_E=swapxy(t,z固定)、mu_B=−swapxy(t,z負)、普通detmu_B−1・top作用1を確認。全次数AS4は別のcocycle証明による。
 
-次の計算入口（未検証の中心模型）：Clifford swapのu=x+y,v=x−y,w=z+h u/2でG*が−[vw,u]/4になる。T=t²,P=xy+yx,Z=z²はBで中心、G商でa=vw,s={u,v}も中心となり、a²=BC,sC=2Da,sa=2DB（A=u²,B=v²,C=w²,D={u,w}/2）。Delta可逆ならT,P,Z↔B,C,Dは可逆線型で、五中心二次のsubringはcubic scroll候補。Rがこのsubring上Clifford有限ならHS比8、even Veronese中心がscroll、PI degree2を証明できる見込み。全中心・rankの結論はまだ原稿化前なので次に厳密検証する。
+Clifford swapの中心模型は証明・原稿化した（classification-v40）。u=x+y,v=x−y,w=z+h u/2、A=u²,B=v²,C=w²,D={u,w}/2,a=vw,s={u,v}とする。G*=−[vw,u]/4なのでa,sがRで中心、T=t²,P=xy+yx,Z=z²は包絡で既に中心。Delta可逆ならT,P,Z↔B,C,Dは可逆で、五中心二次の全関係は三scroll minor BC−a²,Cs−2Da,as−2DB。Rは中心subring C上Clifford有限、Hilbert比rank8、generic三変数Cliffordの偶部分rank4 quaternion。normal cubic scroll Cの正規性によりZ(R^2)=C、ProjZ(R)=F1、PI degree2を証明した。Omega=(uw−D)t中心三次でOmega²=T(D²−AC)。qgrRはF1上rank4 quaternion order、tau²はhyperplane E+2F twist。全分岐・極大性はまだ未主張。検証器はh=b=c=1で中心二次dim5、対称積rank12、全minor、volume交換子恒等式を独立確認。次は判別conic pencilとBrauer ramificationを厳密化する。

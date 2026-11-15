@@ -1,0 +1,25 @@
+{
+  "version": "classification-v40",
+  "example": "h=b=c=1",
+  "volume_commutator_identity": "Gstar=-[vw,u]/4",
+  "central_quadrics_dimension": 5,
+  "quadrics": [
+    "B=v^2",
+    "C=w^2",
+    "D=(uw+wu)/2",
+    "a=vw",
+    "s=uv+vu"
+  ],
+  "u_v_w": [
+    "x+y",
+    "x-y",
+    "z+h*(x+y)/2"
+  ],
+  "degree4_symmetric_products_rank": 12,
+  "all_three_scroll_minors_zero": true,
+  "scroll_matrix": "[[C,a,2D],[a,B,s]]",
+  "conversion_T_coefficient_in_D": "-(b*h**3 - 2*b - 3*c*h)/(2*(h + 1)*(h**2 - h + 1))",
+  "Hilbert_generic_rank_R_over_scroll": 8,
+  "Hilbert_generic_rank_even_over_scroll": 4,
+  "scope": "Exact witness central-space and relation ranks; all-parameter centre exhaustion, normal scroll and quaternion claims are ordinary proofs."
+}
