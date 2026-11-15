@@ -1,0 +1,15 @@
+{
+  "version": "classification-v34",
+  "example": "h=1,beta_x=beta_y=beta_z=1; Clifford involution x<->y",
+  "affine_quadratic_relation_rank_degree4": 86,
+  "exact_Gstar_normal_identities": [
+    "Gstar*x=-y*Gstar",
+    "Gstar*y=-x*Gstar",
+    "Gstar*z=-z*Gstar"
+  ],
+  "central_Clifford_character_CI_length": 8,
+  "Jacobian_unit_ideal": true,
+  "finite_cocycle_identities": 512,
+  "volume_degree": "(active parity1, alpha parity1, t parity0)",
+  "scope": "Exact specified witness and finite bicharacter checks; all-parameter cocycle reduction and W1 exhaustion are ordinary proofs in cubic_normal_order2_clifford.tex"
+}

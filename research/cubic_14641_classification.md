@@ -169,16 +169,14 @@ h=-1,gamma=2,A=1,B=C=0,beta=0の非分裂CY AS4包絡に、729G0=13y³−3yzx+13
 
 関係yz=qzy+b1,zx=qxz+b2,xy=qyx+b3（q²+q+1=0）ではX=x³,Y=y³,Z=z³,W=xyz+(b1x+q b2y+b3z)/(q−1)が全中心を生成する。d=1/(q−1),e=−(2q+1)/9としてW³−d b1b2b3W−XYZ−eΣbi³Xi=0。滑らかなHesse中央切断X+Y+Z−3lambda W+Dの中心は実際にこの中心環の商と一致する（最高記号中心とRainsで証明）。b=(1,1,1),lambda=0では全非H3値は(D²+4e)(D²+36e)=0の四つ。D²+9e=0の二値は中心A1だがMcKay(1,2)でH3。他の四値にはcharactersがなく非H3。証明はcubic_quantum3_center.tex、全中心式と臨界値の厳密検算は二つのquantum3検証器。次は全beta/lambdaのMcKay分配と判別式、または中央境界のないH3被覆を進める。
 
-### 正規楕円境界への拡張（classification-v29）
+### 正規一次楕円境界の現行分類（classification-v35）
 
-全量子Weyl chart（線型項なし）でH3は全中心特異点の有限判定に等しい：Hessian rank3ならcharacter存在、rank2かつ核cubic非零なら三distinct character、その他はbad。character方程式はpairproducts=−d betaと中央cutのみ。被約係数空間では固定N3定理によりH3開性・任意底変更・fpqc降下を得る。
+mu_R=idの正規三次商でR/(t)が滑らかな次数3楕円THCRの場合、共役theta（ta=theta(a)t）は有限位数1,2,3,4,6。lambda1のunipotentはSklyanin二次minor（可換例外は三次方向微分）で消える。s=t^mの中央分母払いによりH3 iff gldim U有限（U=R[t^-1]_0）を証明。中央化Zhang twist R^(theta^-1)は同じUとgrU≅Hの通常の濾過を与えるが、mu_Rtwist=thetaでintrinsic反標準gradingは変わる。
 
-正規一次元tでR/(t)が滑らかな次数3楕円THCRとなる全H3について、共役theta（ta=theta(a)t）は位数1,2,3,4,6のいずれかでt^mが中心。中心t iff境界rhoはtranslation。RRZ normal商公式とYekutieli elliptic canonicalからtheta modulo tは微分作用逆の次数scalar。lambda!=1はt方向平行移動で対角化。lambda1のunipotent項はSklyanin二次関係のminorで消え、可換例外も滑らかな三次gの方向微分で消える。証明はcubic_normal_elliptic_boundary.tex。これは正規一次境界存在の被覆定理ではなく、t^m境界は非被約なので中央一次Rees認識を適用しない。次は有限非自明共役のaffine認識・群oidと正規境界のない全H3被覆。
+位数4,6および位数3D0はskew elliptic coneとなり除外。位数3はB=S[t;lambda],G=g+D t³、B CY、g中心、mu_S=scalar(lambda)となり、全admissibilityはD!=0。S[g^-1]の中央cube-root有限etale/separable拡大が(S/(g−1))[z±]となるため有限glを得る。全S同型類の具体的列挙と群oidは別問題。
 
-### 正規非中央楕円境界のaffine認識と二・三位数制限（classification-v31）
+位数2の全包絡被覆も証明した。S=QHのmu_S(g)=−gとhdet mu_S=1から誘導楕円自己同型fは反転型involution。mu_S²=scalar(c),c³1を適切なscalarで補正したalphaでSをtwistすると、境界は二つの可換involutionの積、従ってtranslation order1or2。既証のtranslation包絡CY性がc1を強制し、Sは可換P2のinvolution twistまたはCliffordのswap twistに限る。前者の全非skew定数持上げはPBW overlapとWeyl中心化環k[w²]の奇偶で除外され、既存符号skew分類へ入る。
 
-mu_R=idの正規三次商では、正規一次楕円境界tの共役有限位数を使いs=t^mで分母を払い、H3 iff gldim U有限（U=R[t^-1]_0）を証明。Uは一般には通常のTHCR filtered deformationではなくskew Laurent構造を保持する。theta固有値で関係を比較するとm=4,6（およびm3D0）はR=H[t;scalar]となりU≅Hの楕円coneでgl∞、従ってH3では非中央位数は2または3のみ。m2ではr_i+beta_i*t²,G=g+t²*l。m3ではB=S[t;lambda],G=g+D*t³,D!=0で、正規性からG中心、B CY。明示m3例も原稿に保持（tが全activeとomega交換、xy可換、xz/yzがomega交換、Fermat四三乗cut）。既存skew部分の例で新成分ではない。次は位数2 normal incidenceとaffine全判定、位数3の非skew S被覆、全H3に正規一次境界があるかを調べる。
+Clifford swap枝はBの関係yz+zx=hxy+b t²,zy+xz=hyx+b t²,x²+y²=hz²+c t²,tは全activeと反交換。W1は一本、6G*=x²z−xzy+yzx−y²z+zy²−zx²。有限Gamma cocycle (-1)^(a e'+r a')で中央Clifford beta=(b,b,c)に戻すとG*は純volume。H3 iff長さ8 CI（2yz−hx²−b,2zx−hy²−b,2xy−hz²−c）が被約。h=b=c=1は実際の非skew・非CY H3例で、degree4三正規式、CI長さ8・Jacobian unit、全512 cocycle恒等式を厳密検算済み。証明はcubic_normal_order2_clifford.tex、quantum排除はcubic_normal_order2_quantum.tex。
 
-### 正規境界の中央化と位数3全切断（classification-v32）
-
-R^(theta^-1)への右Zhang twistでtを中心化でき、局所化degree0 Uは変わらずgrU≅Hの通常の濾過を得る。ただしmu_Rtwist=thetaでintrinsic anticanonical gradingは変わる。位数2ではU=<y_i | r_i(y)=beta_i, g(y)=l(y)>。位数3の全構造表示ではU=S/(g+D),mu_S=scalar(lambda),g中心でD!=0なら全てH3。S[g^-1]に中央cube rootを添加する有限etale/separable拡大が(S/(g−1))[z±]に一致するため有限glを証明。D0はellipticconeで除外。この意味で位数3の全admissibilityは完了し、残るのはSの非skew被覆・矢と全H3被覆。次は位数2でSが可換P2のinvolution Zhang twistの場合のbeta項をPBWとWeyl centralizerから除外する。
+これは正規一次楕円境界の位数2部分の漏れのない候補と必要十分admissibilityであり、全intrinsic矢・相対stack降下・全H3被覆は未完成。次は位数3のAS3 scalar Nakayama領域の具体的被覆、中央無限位数の全bad値、正規一次境界のないH3の欠落を進める。全H3にこの境界があるとは主張しない。

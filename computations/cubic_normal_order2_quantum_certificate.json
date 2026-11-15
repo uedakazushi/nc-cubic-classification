@@ -1,0 +1,9 @@
+{
+  "version": "classification-v33",
+  "relations": "t anticommutes x,y,z; xy-yx+beta1*t^2=xz+zx+beta2*t^2=yz+zy+beta3*t^2=0",
+  "overlap": "zyx, reduce zy first minus reduce yx first",
+  "difference": "-2*beta3*t^2*x+2*beta2*t^2*y",
+  "PBW_forces": "beta2=beta3=0",
+  "remaining_exclusion": "beta1 nonzero gives affine Weyl parity extension; its simultaneous u,v centralizer is k[w^2], so no nonzero odd anticanonical cubic can exist. Ordinary proof in cubic_normal_order2_quantum.tex.",
+  "scope": "Exact free-word overlap only; no numeric sampling or replacement of Weyl-centralizer proof"
+}

@@ -1,0 +1,148 @@
+\subsection{Clifford involutionの非中央境界：有限cocycleへの還元}
+\label{subsec:normal-order2-clifford}
+$h\ne0$、$h^3\ne-1,8$ とし、Clifford型Sklyanin環
+$S_h^0=(yz+zy=hx^2,\ zx+xz=hy^2,\ xy+yx=hz^2)$ の
+involution $\alpha(x)=y,\alpha(y)=x,\alpha(z)=z$ を取る。
+$\alpha$ は対称cyclic三次tensorを固定するので $\operatorname{hdet}\alpha=1$ である。
+右Zhang twist $S_h=(S_h^0)^\alpha$ は
+\[
+ yz+zx=hxy,\quad zy+xz=hyx,\quad x^2+y^2=hz^2
+\]
+と表示され、$\mu_{S_h}=\alpha$ を持つ。
+
+\begin{theorem}[Clifford involution部分の全切断とadmissibility]
+\label{thm:normal-order2-clifford-cuts}
+正規楕円境界の位数2構造表示で $S=S_h$ とする。
+このとき包絡の全関係は、ある $b,c$ に対し
+\[
+ tx=-xt,\quad ty=-yt,\quad tz=-zt,
+\]
+\[
+ yz+zx=hxy+bt^2,\quad zy+xz=hyx+bt^2,\quad
+ x^2+y^2=hz^2+ct^2
+\]
+となる。この包絡で $W_1(B)$ は一次元であり、生成元は
+\[
+ 6G_*=x^2z-xzy+yzx-y^2z+zy^2-zx^2
+\]
+である。切断 $R=B/(G_*)$ がH3となる必要十分条件は、長さ8の完全交叉
+\[
+ 2yz-hx^2-b=2zx-hy^2-b=2xy-hz^2-c=0
+\]
+が被約であることである。
+例えば $h=1,b=c=1$ はこの条件を満たし、非skew・非CY包絡を持つH3を与える。
+\end{theorem}
+\begin{proof}
+位数2構造定理により二次持上げは定数項三つだけである。
+Nakayamaは境界共役と可換するので $kt$ を保存し、正規商公式より
+$\mu_B|_{\langle x,y,z\rangle}=-\alpha$ である。
+$\operatorname{hdet}_{S_h}\alpha=1$、
+$\operatorname{hdet}_{S_h}\xi_{-1}=-1$ と
+$\operatorname{hdet}_B\mu_B=1$ を正規線型商の公式で比較すると $\mu_B(t)=-t$ となる。
+従って $\xi_{-1}\mu_B$ は $t$ を固定して $x,y$ を交換する自己同型であり、
+初めの二関係の定数項は等しくなければならない。
+
+対応する中央Clifford包絡を
+\[
+ B^0=(t\text{ central};\ yz+zy=hx^2+bt^2,\ zx+xz=hy^2+bt^2,\ xy+yx=hz^2+ct^2)
+\]
+とする。これは既出のCY AS4包絡である。
+$\Gamma=(\mathbb Z/2)^3$ に、active次数の偶奇 $a$、$\alpha$ 固有値の偶奇 $e$、
+$t$ 次数の偶奇 $r$ を取る。$x+y,x-y,z,t$ を固有基底に使う。
+関係は $\Gamma$ 斉次であり、二重指標
+\[
+ c((a,e,r),(a',e',r'))=(-1)^{ae'+ra'}
+\]
+でcocycle twistすると、active積は $u*v=u\alpha(v)$、$t$ とactive積は反交換となる。
+従ってそのtwistは表示した $B$ であり、AS4性もこの有限cocycleから従う。
+
+$B^0$ の中央volumeを
+$g_{b,c}=\frac16\sum_{\pi\in\mathfrak S_3}\operatorname{sgn}(\pi)x_{\pi(1)}x_{\pi(2)}x_{\pi(3)}$
+と置く。その $\Gamma$ 次数は $(1,1,0)$ である。
+この次数のcocycle交換指標はactive上で $-\alpha$、$t$ 上で $-1$ なので、
+volumeの像は $\mu_B^{-1}$-正規三次となる。
+通常の積による表示に戻すと、中央化前の中間文字に $\alpha$ を作用させて
+上記の $G_*$ を得る。
+
+逆に $G\in W_1(B)$ は境界共役で奇、$\mu_B(G)=G$ だから $\alpha$ でも奇であり、
+$\Gamma$ 次数 $(1,1,0)$ に属する。
+cocycleを戻すと $G$ は $B^0$ の中心三次となる。
+既出のClifford中心計算より
+\[
+ Z(B^0)_3=kg_{b,c}\oplus\langle tx^2,ty^2,tz^2,t^3\rangle.
+\]
+最後の四元はactive偶・$t$ 奇なので、該当する次数にはvolumeしかない。
+従って $W_1(B)=kG_*$ である。
+
+有限群の同変化とReynolds作用素により、cocycle twist前後でtailsの大域次元は等しい。
+中央volume商のH3判定は系\ref{cor:beta-pure-volume}により表示した完全交叉の被約性と同値である。
+twist後も $t$ は正則正規であり、境界は整域楕円THCRのZhang twistだから整域である。
+従って $R$ の整域性とrank-one条件が保たれ、$\mu_R=1$ とparameter1から残りのH3条件を得る。
+指定例では完全交叉にJacobian determinantを加えたidealのGr\"obner基底は $\{1\}$ となる。
+$S_h$ のpoint schemeは滑らかな楕円曲線なので量子多項式環でなく、
+正規一次商を取っても量子多項式環となるskew包絡との同型は存在しない。
+$\mu_B\ne1$ により包絡は非CYである。
+\end{proof}
+
+この定理は指定したClifford involution部分の全admissibilityを与える。
+全位数2正規境界がこの部分または前節の量子平面部分に属することは次の定理で証明する。
+cocycle後の全intrinsic矢・相対降下は別途確認を要する。
+cocycle twistを元の二つのpointed $qgr$ のexact同値とはしていない。
+
+\begin{theorem}[位数2正規楕円境界の包絡被覆]
+\label{thm:normal-order2-coverage}
+強いH3が正則正規な一次楕円境界を持ち、その共役が位数2であるとする。
+このとき、その包絡と三次切断は前節の符号型量子包絡部分、または
+本節のClifford involution部分に属する。
+従って正規一次楕円境界の共役位数2部分では、候補の漏れのない被覆と
+各候補のH3 admissibility判定を得る。
+これは全intrinsic同型の軌道整理・族のstack降下、
+および正規一次境界そのものの存在定理とは区別する。
+\end{theorem}
+\begin{proof}
+$S=Q(H)=B/(t)$ はnoetherian quadratic Koszul AS3である。
+ここでは $t$ の正則性は前構造定理で証明済みであり、
+$B$ を境界共役の逆でZhang twistして $t$ を中心化し、
+正則中心一次拡大のKoszul・AS正則性の同値を適用すればよい。
+境界上の逆twistは次数スカラーなので $S$ の同型類を変えない。
+$S\to H$ の三次核を $g$ と書く。
+
+$\mu_H=\xi_{-1}$ だから $g$ の正規化は
+$\sigma_g=\xi_{-1}\mu_S^{-1}$ である。
+正則性から $\sigma_g(g)=g$、従って $\mu_S(g)=-g$ となる。
+$\operatorname{hdet}_S\mu_S=1$ を $g$ で割る公式に入れると
+$\operatorname{hdet}_H\overline\mu_S=-1$ を得る。
+$H$ のAS indexは0であり、$H^2_{\mathfrak m}(H)_0=H^1(E,\OO_E)$ はそのsocleである。
+従ってこのhomological determinantは、誘導された $f\in\operatorname{Aut}(E)$ の
+正則微分形式上の作用が $-1$ であることを意味する。
+よって $f$ は非translationのinvolutionである。
+これは楕円THCRのdualizing計算の自然性からも従う。
+
+$f^2=1$ かつ $E$ が平面を張るので、$\mu_S^2=\xi_c$ と書ける。
+$\mu_S(g)=-g$ から $c^3=1$ である。
+$\alpha=\xi_c\mu_S$ と置けば $\alpha^2=1$、
+$\operatorname{hdet}\alpha=1$、$\alpha(g)=-g$ となる。
+$\overline\alpha=f$ はpoint graphを保存するから $\rho$ と可換する。
+$S^0=S^\alpha$ の境界自己同型は $\rho f$ であり、
+二つの可換な非translation involutionの積なので、位数1または2のtranslationである。
+従って補題\ref{lem:translation-elliptic-quadratic-envelope}より $S^0$ はCYである。
+一方右twistのNakayama公式は $\mu_{S^0}=\xi_{c^2}$ を与える。
+$c^3=c^2=1$ だから $c=1$、従って $\alpha=\mu_S$ である。
+
+translationが恒等なら $S^0$ は可換多項式環である。
+$\alpha$ のprojective involutionを対角化すると
+$S$ は前節の $xy=yx,xz=-zx,yz=-zy$ に同型となる。
+従って非skew持上げは除外され、全符号型分類へ入る。
+
+translationが非零二捩れなら、Hesse表示で $S^0$ は
+$yz+zy=hx^2$ cyclic、$h\ne0,h^3\ne-1,8$ と書ける。
+これはMoore表示で二捩れ点を $a=b$ に取ったClifford表示である。
+$\alpha$ は次数3偏極を保存する非translation involutionである。
+原点を固定する反転と $E[3]$ translationの積に書け、
+$E[3]$ 上2が可逆なのでtranslationによる共役で反転に直せる。
+Hesse座標で反転は $x,y$ の交換である。
+次数スカラーの持上げの曖昧さは、$\alpha^2=1$ と
+$\operatorname{hdet}\alpha=1$ の二条件で消える。
+従って本節のClifford involution表示になり、定数項の対称条件と
+全候補・admissibilityは既に証明した定理を適用できる。
+\end{proof}

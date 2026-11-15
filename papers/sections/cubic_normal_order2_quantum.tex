@@ -1,0 +1,61 @@
+\subsection{位数2正規境界の量子平面包絡には非skew持上げがない}
+\label{subsec:normal-order2-quantum}
+\begin{theorem}[involution型量子平面の定数変形の除外]
+\label{thm:normal-order2-quantum-rigid}
+位数2正規楕円境界の構造定理で
+\[
+ S=k\langle x,y,z\rangle/(xy-yx,\ xz+zx,\ yz+zy)
+\]
+とする。このときH3包絡は $B=S[t;\xi_{-1}]$ に限る。
+従ってこの $S$ の全ての非skew二次持上げは除外され、
+残る切断・intrinsic矢・慣性は既存の符号型skew分類に含まれる。
+\end{theorem}
+\begin{proof}
+構造定理から、$t$ は三つのactive生成元と反交換し、active関係は
+\[
+ xy-yx+\beta_1t^2=0,\quad
+ xz+zx+\beta_2t^2=0,\quad
+ yz+zy+\beta_3t^2=0
+\]
+に限る。重なり $zyx$ を二通りに還元すると
+$2t^2(\beta_3x-\beta_2y)=0$ を得る。
+$t$ の正則性と一次独立性から $\beta_2=\beta_3=0$ である。
+
+$\beta_1\ne0$ と仮定する。
+Nakayama自己同型は全graded自己同型と可換する。
+これはdualizing bimoduleの一意性から従い、connected gradedでは
+次数0のinnerの曖昧さはスカラーだけなので消える。
+従って $\mu_B$ は $\theta=\operatorname{diag}(1,-1,-1,-1)$ と可換し、
+$kt$ を保存する。正規線型商公式より
+\[
+ \mu_S=(\mu_B\theta)|_S,
+ \qquad \mu_S=\operatorname{diag}(-1,-1,1).
+\]
+一次元では $t$ 成分との混合がないので
+$\mu_B(x)=x$、$\mu_B(y)=y$、$\mu_B(z)=-z$ である。
+H3三次 $G$ は $x,y$ と可換し、$t$ とは反交換する。
+
+$V=B[t^{-1}]_0$ とし $u=xt^{-1},v=yt^{-1},w=zt^{-1}$ と置くと
+\[
+ V=k\langle u,v,w\rangle/([u,v]-\beta_1,\ uw+wu,\ vw+wv)
+   =A_1(k;\beta_1)[w;\varepsilon],
+ \qquad \varepsilon(u)=-u,\quad\varepsilon(v)=-v.
+\]
+ここで $A_1(k;\beta_1)$ はWeyl代数である。
+この環における $u,v$ の同時中心化環は正確に $k[w^2]$ である。
+実際 $\sum f_n(u,v)w^n$ を $u,v$ と交換させる。
+偶数 $n$ では $f_n$ はWeyl中心 $k$ に属する。
+奇数 $n$ では $f_n$ は $u$ と反交換しなければならないが、
+Weyl濾過の最高記号で $2u\operatorname{gr}f_n=0$ となるため $f_n=0$ である。
+
+一方 $f=Gt^{-3}= -g(u,v,w)+\ell(u,v,w)$ は非零で、$u,v$ と可換する。
+$G$ と $t$ が反交換するため、ここで二つの符号は相殺する。
+$V$ は三生成元を全て奇とする $\mathbb Z/2$ 次数を持ち、$f$ は奇である。
+しかし中心化環 $k[w^2]$ は全て偶なので矛盾する。
+従って $\beta_1=0$ でなければならない。
+
+残る包絡は $tx=-xt,ty=-yt,tz=-zt,xy=yx,xz=-zx,yz=-zy$ であり、
+変数 $(x,y,t,z)$ の並び替えにより
+定理\ref{thm:fixed-sign-classification}の固定符号包絡に一致する。
+従って既存の全切断・幾何学的矢の分類をそのまま適用できる。
+\end{proof}
