@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-15",
+  "version": "hearts-v2/corner-v1",
+  "base_commit": "a9100e1a37187f985dc026e3d9d3fa9378b5fa7d",
+  "checks": {
+    "six_point_general_position": "exact rational",
+    "potential_from_polynomial_relations": "exact rational, all 9 relation spaces dimension one",
+    "quotient_rank_QQ": true,
+    "quotient_rank_mod_1000003": true,
+    "hilbert_function": [
+      8,
+      21,
+      33,
+      38,
+      33,
+      21,
+      8,
+      0
+    ],
+    "full_degree7_columns": 6804,
+    "blocks": 21,
+    "latexmk_exit": 0,
+    "pdf_pages": 5,
+    "undefined_references": false,
+    "duplicate_labels": false,
+    "overfull_boxes": false,
+    "visual_review": "all 5 pages rendered and visually reviewed; final source checked"
+  },
+  "proof_scope": {
+    "proved": "finite corner criterion, openness, explicit nonempty open in noetherian AS sector, conditional HRS sign test",
+    "unproved": [
+      "AS regularity for arbitrary potential coefficients",
+      "E0=pi F on the noncommutative AOU/VdB comparison",
+      "nontrivial VdB kernel on each resonance wall",
+      "all four hearts globally coincide"
+    ],
+    "independent_review": false,
+    "novelty_exhaustive_search": false,
+    "prior_scripts_rerun": false
+  },
+  "source_sha256": {
+    "papers/cubic_heart_corner.tex": "9d4c3c0b482f8761903f30bcf9ae4bf818620b218218d67b4431b2af4635b670",
+    "computations/verify_cubic_corner.py": "87974d9f52499ed5170b5c916c547b7c2593662aed911950b09c0cbeef52039e",
+    "computations/cubic_corner_certificate.json": "f7844db80026e4638e4104f2cda2c0036a9eef23563a3c71ff2d7b21b1125550"
+  },
+  "persistence": "GitHub and Library results are reported only after confirmed tool responses."
+}
