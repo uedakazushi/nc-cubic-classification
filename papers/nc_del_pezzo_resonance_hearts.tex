@@ -9,6 +9,8 @@
 \theoremstyle{definition}\newtheorem{remark}[theorem]{注意}
 \DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Perf}{Perf}
 \DeclareMathOperator{\RHom}{RHom}
 \DeclareMathOperator{\Pic}{Pic}
 \DeclareMathOperator{\qgr}{qgr}
@@ -18,9 +20,9 @@
 \DeclareMathOperator{\Ind}{Ind}
 \newcommand{\Db}{D^b}
 \title{Rains共鳴の稠密軌跡と反標準heart\\
-\large 根sheafの符号別Ext・有限次元アフィン表現・導来切断}
+\large 根sheafの符号別Ext・混合$A_2$の有限長圏・導来切断}
 \author{研究原稿：一次資料の仮定と未検証の導来比較を区別する}
-\date{2026年11月15日 \quad resonance-hearts-v6}
+\date{2026年11月15日 \quad resonance-hearts-v7}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -29,17 +31,25 @@ Zariski稠密に生じるroot resonanceを解析する．
 境界と交わらない既約純一次元根sheaf $M$のEuler指数
 $m=\chi(e,M)$に応じて，$\Hom(e,M)$と$\Ext^1(e,M)$の次元は
 それぞれ$\max(m,0)$と$\max(-m,0)$であり，$\Ext^2=0$となる．
-これはRainsのquotient sheafのEuler下界を正確に使い，
-反変導来双対$\mathbf R\mathrm{ad}$で符号を反転して証明する．
 負指数ではRains heartで反標準Artin--Zhang amplenessが失敗し，
 anticanonical heartへは境界外の$(-m)$次元アフィン表現が
 $[-1]$で移る．正指数では$m$次元表現が次数0に現れ，
 零指数では自然な導来切断が非零根sheafを消す．
-正負の指数の共鳴はそれぞれ滑らかなdel Pezzoを保って
-Zariski稠密に実現する．反標準環のHilbert関数は不変である．
-さらに境界と交わらない任意の一次元以下のsheafへ拡張し，自然導来切断の振幅が$[0,1]$で，拡大に対するconnecting morphismが境界外の有限次元加群の準同型を定めることを示す．正負の根sheafの混合拡大ではこの写像のrankがcohomologyの残存量を決める．異なる根の$Ext^1$は根の交点数で決まり，genuine del Pezzoでは根の和による同時共鳴の禁止条件がある．さらに次数$d=1,\ldots,6$において$E_8,E_7,E_6,D_5,A_4,A_2+A_1$の全根が同時に非零指数で共鳴する滑らかなdel Pezzo配置の稠密性を証明する．
-特に$E_6$の72根が同時に数値的共鳴する六点配置を分類し，隣接する正負の単純根sheafが同じRains heartに実在する滑らかなcubicを構成する．最大共鳴で実際に既約な根sheafは単純根に限ることを示し，その直和のExt代数をADE zigzagと同定する．Liu--Wangの内在的形式性定理から，固定Rains dg圏内でのframed形式変形は二次方程式で完全に決定される．この$A_2$部分系では二段混合拡大が自然な導来切断で消失しないことと，完全忠実性に対する二次元・一次元加群の商のテストを得る．これらは指定の自然関手の結果であり，
-全パラメータでの導来同値や$qgr$の非特異性を主張しない．
+反標準環のHilbert関数は不変である．
+正負の共鳴はそれぞれ滑らかなdel Pezzoを保ってZariski稠密に実現し，
+さらに次数$d=1,\ldots,6$で全根が非零指数で同時に共鳴する点配置も稠密である．
+全根共鳴の整数表示を与え，最大共鳴の既約根sheafの直和のExt代数を
+ADE zigzagと同定する．既知の内在的形式性から，固定dg圏内の
+framed形式変形を二次方程式で記述する．
+
+非torsionの$q$では境界外圏が有限長Serre部分圏になることを示す．
+隣接する根の指数が$p,-(p-1)$の場合，非分裂混合拡大のconnecting mapは
+導来完全忠実性を仮定せずrank $p-1$を持つ．二根が生成するSerre部分圏は
+$\Pi(A_2)$の有限次元加群圏であり，四つの直既約対象，局所torsion pair，
+全対象の反標準cohomologyを決定する．特に指数$+2,-1$の明示例では
+connecting mapのrankは1である．導来比較に残る具体的な必要条件として，
+二つの一次元characterの分離と二次元加群拡大の非分裂性を得る．
+全パラメータでの導来同値，全heartの比較，および$qgr$の非特異性は主張しない．
 \end{abstract}
 
 \section{共鳴の規約と入力の範囲}
@@ -80,6 +90,7 @@ gluingパラメータ$q\in\Pic^0(E)$の向きを
 \cite[\S4, pp.~33--35]{RainsFiltered}が適用され，
 $Li^*M=0$である\emph{既約な純一次元sheaf}が実在する共鳴を扱う．
 特に，固定したblowdownのsimple rootの共鳴を使えばよい．
+非torsion仮定を使う単純性・有限長性は\S\ref{sec:mixed-a2-category}で別に証明する．
 
 \begin{proposition}[共鳴による反標準環のHilbert関数の跳びはない]
 \label{prop:hilbert-no-jump}
@@ -183,6 +194,7 @@ Rainsの単純根sheaf存在結果の適用範囲で正負各指数の稠密性�
 \input{papers/sections/resonance_maximal_a2.tex}
 \input{papers/sections/resonance_maximal_all_degrees.tex}
 \input{papers/sections/resonance_zigzag_unique.tex}
+\input{papers/sections/resonance_mixed_a2_category.tex}
 
 \section{零指数，弱avatar，導来同値の論理状態}
 \begin{proposition}[genuine del Pezzoでは零指数根共鳴がない]
@@ -218,10 +230,10 @@ $i_*\mathcal O_D(-1)$は反標準orbitに
 \texttt{papers/dp1\_anticanonical\_models.tex}は，
 genuine smooth del Pezzo，smooth elliptic boundaryの全$q$で
 $\Db(\mathcal A_{\mathrm R})\simeq\Db(\qgr R_q)$を証明したとする
-現行研究原稿を含む．しかし今回は同原稿の完全忠実性・
+現行研究原稿を含む．しかし同原稿の完全忠実性・
 本質的全射性を独立再監査していないので，
-この主張を本稿の定理\ref{thm:sign}と
-定理\ref{thm:dense-both}の入力にしていない．
+この主張を本稿の定理\ref{thm:sign}，定理\ref{thm:dense-both}，
+定理\ref{thm:a2-delta-rank}の入力にしていない．
 その導来同値が正しければ，負指数稠密共鳴は
 \emph{導来同値を保ったままの稠密なheartの変更}となる．
 正指数共鳴の根sheafについては，この自然な関手が
@@ -230,30 +242,36 @@ $\Db(\mathcal A_{\mathrm R})\simeq\Db(\qgr R_q)$を証明したとする
 \end{remark}
 
 \section{再現と今後の重点}
-負指数の代数的Euler計算，$E_6/E_8$の根格子，
-共鳴指数の有限テストは
-\texttt{computations/verify\_resonance\_hearts.py}で再現する．
-拡大による相殺・$E_6$根の交叉の検査は
-\texttt{computations/verify\_resonance\_extensions.py}で再現する．
-全根共鳴の有理楕円点・$A_2$部分系・直和拡大のrank検査は
-\texttt{computations/verify\_resonance\_maximal\_a2.py}で再現する．
-同じスクリプトは全次数$d=1,\ldots,6$の根数と非零共鳴指数も検算する．
-既約根の排除条件，zigzag Ext代数と形式変形の枝数は
+符号別Euler計算と根格子は
+\texttt{computations/verify\_resonance\_hearts.py}，
+拡大の相殺と根の交叉は
+\texttt{computations/verify\_resonance\_extensions.py}，
+全根共鳴の有理楕円点・全次数の根数・整数指数は
+\texttt{computations/verify\_resonance\_maximal\_a2.py}，
+既約根の排除条件とzigzagの分枝数は
 \texttt{computations/verify\_resonance\_zigzag.py}で検算する．
-この計算はRainsの既約根sheaf存在や導来同値を
-コンピュータで証明するものではない．
-正指数での$\Ext^1$消滅と，境界外sheafの二項振幅・混合拡大の長完全列・根の交叉障害は解決した．
-次は本稿の実在する混合$A_2$配置で$A=R/(g-1)$の
-二次元表現$V_\alpha$と一次元表現$V_\beta$の行列を明示し，
-connecting mapのrankと$\Hom_A(V_\alpha,V_\beta)$を決定する．
-非既約対象全体のtorsion pair，境界外の有限次元加群の分類，
-および既存dP1原稿の導来比較の独立監査を行う．
+混合$A_2$のHom行列，ambient Ext，直和のcohomology公式と
+三角行列表現の必要条件は
+\texttt{computations/verify\_resonance\_mixed\_a2.py}で検算する．
+これらはRainsのsheaf存在定理や導来同値を計算で証明するものではない．
+
+指数和一の混合$A_2$ではconnecting mapのrank，そのSerre部分圏の
+全対象，局所torsion pairと対象の非消失を解決した．
+次は具体的な$A=R/(g-1)$の生成元について，二次元表現$V_+$の
+二つのcharacter $\chi_W,\chi_-$と非対角項$\eta$を求める．
+全$q$導来比較が正しければcharacterは相異なり，拡大は非分裂で，
+作用の像は次元3の三角行列代数でなければならない．
+これらは必要条件であり，十分性は未証明である．
+全境界外圏のtorsion pair，VdB/AS heartとの比較，
+および既存dP1原稿の導来比較の独立監査も残る．
 
 \begin{thebibliography}{9}
 \bibitem{RainsBirational}
 E.~M.~Rains, \emph{The birational geometry of noncommutative surfaces},
-arXiv:1907.11301v1, \S7 (Corollary 7.23),
-\S9, \S10 (Corollary 10.16), \S11 (pp.~139--141).
+arXiv:1907.11301v1, \S7 (Corollaries 7.7, 7.13, 7.15, 7.23;
+Propositions 7.6, 7.32), \S9,
+\S10 (Corollaries 10.12, 10.16; Proposition 10.13),
+\S11 (pp.~139--141).
 \url{https://arxiv.org/abs/1907.11301}.
 \bibitem{RainsFiltered}
 E.~M.~Rains, \emph{Filtered deformations of elliptic algebras},
