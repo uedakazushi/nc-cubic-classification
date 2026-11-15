@@ -1,0 +1,42 @@
+{
+  "version": "classification-v66",
+  "field": "QQ(a)",
+  "five_relation_quotient_group_dimensions": {
+    "3": [
+      6,
+      6,
+      6,
+      6
+    ],
+    "4": [
+      14,
+      12,
+      10,
+      10
+    ]
+  },
+  "Q0": {
+    "(0, 0)": "2",
+    "(1, 1)": "2",
+    "(2, 2)": "-2*a",
+    "(3, 3)": "2*a"
+  },
+  "Q1": {
+    "(0, 0)": "2*a**2 - 18",
+    "(1, 1)": "2*a**2 - 2",
+    "(2, 2)": "-2*a*(a + 1)*(a + 3)",
+    "(3, 3)": "2*a*(a - 3)*(a - 1)"
+  },
+  "H0": {
+    "(1, 0)": "-16",
+    "(2, 3)": "8*a*(a - 1)",
+    "(3, 2)": "-8*a*(a + 1)"
+  },
+  "normality_equations": 8,
+  "quadratic_normality_equations": 12,
+  "factorization_coefficient_equations": 2,
+  "left_right_factor_equations": 2,
+  "factor_map_ratio": "t*(t**2 + 1)/(a**2 + t**2*(a**2 - 9) - 1)",
+  "resultant": "64*(a - 1)*(a + 1)",
+  "scope": "Exact rational-function identities. Paper gives all-special flatness extension, dimension two and cocycle centre dimension one, not inferred from these identities alone."
+}

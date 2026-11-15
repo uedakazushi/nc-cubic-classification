@@ -41,7 +41,8 @@ $c((p,q),(r,s))=(-1)^{ps}$ であり、上添字 $c$ でtwistを表す。
 である。従って $S_\infty,S_\infty^c,S_{d,1}^c$ は全体がH3包絡から除外される。
 残る $S_{d,1},S_{d,2},S_{d,2}^c$ も各パラメータ領域の非空開稠密集合で
 $W_1=0$ となる。循環置換で得られる他のStafford族にも対応する結論が成り立つ。
-残る閉部分集合の全排除は主張しない。
+この一般点の計算だけでは残る閉部分集合を分類しない。
+通常のStafford族は以下の楕円商の議論で全排除へ進める。
 \end{theorem}
 \begin{proof}
 各基底は既約である。実際 $1+\alpha\beta\ne0$ なので
@@ -160,10 +161,85 @@ $\mu_A^{-1}$ の射影作用は $t_{3\tau}$ と一致する。
 $\operatorname{diag}(1,1,-1,-1)$ である。
 これは $E$ 上固定点を持たない非自明な対合であり、
 ある $s\in E[2]\setminus\{0\}$ による平行移動である。
-実際その射影固定平面二つと $g_1=g_2=0$ の交わりは、
-$A,C,A-C\ne0$ により空である。
+ここでpoint curveの二次式と中心二次式を区別する。
+point curveは\cite[Definition--Lemma 2.4]{WWYSklyanin4}の
+\[
+ v_0^2+v_1^2+v_2^2+v_3^2=0,\qquad
+ (1+\beta)v_1^2+(1-\alpha)v_2^2+(1+\alpha\beta)v_3^2=0
+\]
+である。この二式と射影固定平面 $v_2=v_3=0$ の交わりは
+$1+\beta\ne0$ により空である。
+もう一つの固定平面 $v_0=v_1=0$ との交わりも
+$(1-\alpha)-(1+\alpha\beta)=-\alpha(1+\beta)\ne0$ により空である。
 従って $3\tau=s$、$6\tau=0$、$3\tau\ne0$。
 位数二は $4\tau\ne0$ で除外され、位数は六に限られる。
+\end{proof}
+
+\begin{lemma}[指定二捩れへの三倍平行移動の完全方程式]
+\label{lem:stafford-exact-order-six-locus}
+$T$ 上の標準Sklyaninのpoint curveと自己同型を $(E,\sigma)$ とする。
+$\theta=\operatorname{diag}(1,1,-1,-1)|_E$ に対して
+\[
+ \sigma^3=\theta\quad\Longleftrightarrow\quad
+ L:=\alpha\beta+\alpha+3\beta-1=0.
+\]
+分母が零になるchartを除いた一般点だけの主張ではない。
+\end{lemma}
+\begin{proof}
+$a=\alpha,b=\beta,c=-(a+b)/(1+ab)$ と置く。
+$T$ 上では $a,b,a\pm1,b\pm1,a+b,1+ab$ は全て単元である。
+有限\'etale被覆上で
+\[
+ p=(0:r:s:1)\in E,\qquad
+ r^2=P=-\frac{a(1+b)}{a+b},\quad
+ s^2=Q=\frac{b(a-1)}{a+b}
+\]
+を取る。これはpoint curveの二式を満たし、$r,s$ は非零である。
+\cite[(2.5)]{WWYSklyanin4}の三次表示を反復する。
+各反復の座標は $(u r s:v r:w s:z)$ の形を保つ。
+その係数の更新は、$u_2=u^2PQ,v_2=v^2P,w_2=w^2Q,z_2=z^2$ として
+\[
+\begin{split}
+ u'&=-2abc vwz-u(-u_2+bcv_2+acw_2+abz_2),\\
+ v'&=2auwzQ+v(u_2-bcv_2+acw_2+abz_2),\\
+ w'&=2buvzP+w(u_2+bcv_2-acw_2+abz_2),\\
+ z'&=2cuvwPQ+z(u_2+bcv_2+acw_2-abz_2).
+\end{split}
+\]
+初期値は $(0,1,1,1)$ である。
+$K=ab+a-b+3$、$M=3ab-a+b+1$ と置き、三回の更新で順に共通因子
+\[
+ \frac{ab}{1+ab},\quad
+ \frac{ab(a-1)^2(b+1)^2}{1+ab},\quad
+ \frac{abK^2}{1+ab}
+\]
+を除いた多項式係数を $(u_3,v_3,w_3,z_3)$ とする。
+検証器\texttt{verify\_cubic\_sklyanin\_order6.py}は全更新を厳密に実行し
+\[
+\begin{split}
+ u_3&=2(a+b)(ab-3a-b-1)KLM,\\
+ v_3+z_3&=-2(a-1)L^2M^2,\\
+ w_3-z_3&=2a(b+1)K^2L^2
+\end{split}
+\]
+を確認する。また
+\[
+ (a-1)M-(3a+1)K=-4(a+1)^2,
+ \qquad z_3\big|_{L=0}=\frac{1024(a-1)^2(a+1)^6}{(a+3)^5}\ne0.
+\]
+従って第三座標組は $T$ のどの点でも同時に零にならない。
+実際、同時零なら後二式から $L=0$ または $K=M=0$、
+後者は表示した恒等式で不可能、前者も $z_3\ne0$ に反する。
+なお $L=0$ では $a+3\ne0$ は方程式と $T$ の条件から従う。
+
+これで共通因子 $K^2$ の除去も正当化できる。
+正規化した非零座標組は被覆の全体で正則な射影写像を定め、
+稠密開集合で真の $\sigma^3(p)$ と一致するので、分離性から全体で一致する。
+$K=0$ のfiberを除外していない。
+$\sigma^3(p)=\theta(p)$ は
+$u_3=0,v_3+z_3=0,w_3-z_3=0$ に等しく、
+上の式と $K=M=0$ の不可能性から正確に $L=0$ となる。
+$\sigma^3,\theta$ はいずれも楕円曲線の平行移動なので、一点での一致が全体の一致を与える。
 \end{proof}
 
 \begin{theorem}[非零候補が現れるStafford曲線も全排除される]
@@ -174,12 +250,14 @@ $a\notin\{0,1,-1,3,-3\}$ とし
  =\left(a,\frac{1-a}{a+3},\frac{a+1}{a-3}\right)
 \]
 とする。対応する楕円商は滑らかで $4\tau\ne0$ と仮定する。
-$S_{d,1}$ の全許容 $d\in\mathbb P^1$ において $\dim W_1=2$ であり、
+$S_{d,1},S_{d,2}$ の全許容 $d\in\mathbb P^1$ において $\dim W_1=2$ であり、
 全ての非零 $G\in W_1$ が一次式と二次式の積に分解する。
-従ってこの曲線上の $S_{d,1}$ は全てH3包絡から除外される。
-この曲線の外の位数六部分全体を排除したという主張ではない。
+また $Z(S_{d,2}^c)_3$ は一次元で、その生成元も一次式で割れる。
+従ってこの曲線上のStafford三族と標準cocycle三族は全てH3包絡から除外される。
+この式は前補題の指定二捩れへの三倍平行移動locus全体をパラメータ表示する。
 \end{theorem}
 \begin{proof}
+\emph{$S_{d,1}$ の場合.}
 次の式は $d$ に依存しない。
 \[
 \begin{split}
@@ -236,4 +314,74 @@ $st\ne0$ では二つの二次式の係数行列式が $8$、
 両端では $a-1,a+1\ne0$ を使う。
 従って次数三の全射 $\mathbb P^1\to\mathbb P(W_1)$ を定める。
 全ての非零 $G$ が表示された積に分解し、商に零因子が生じる。
+
+\emph{$S_{d,2}$ の場合.}
+次の四式を使う。
+\[
+\begin{split}
+ Q_0&=2(x_0^2+x_1^2-a x_2^2+a x_3^2),\\
+ Q_1&=2\bigl((a^2-9)x_0^2+(a^2-1)x_1^2
+       -a(a+1)(a+3)x_2^2+a(a-1)(a-3)x_3^2\bigr),\\
+ F_0&=x_0Q_0=Q_0x_0,\qquad F_1=x_1Q_1=Q_1x_1,\\
+ H_0&=-16x_1x_0+8a(a-1)x_2x_3-8a(a+1)x_3x_2.
+\end{split}
+\]
+検証器\texttt{verify\_cubic\_stafford\_resonance\_even.py}は
+$f_2$ 以外の五関係だけを課した $\mathbb Q(a)$ 上の商で、
+$F_0,F_1$ がnormalizer $\operatorname{diag}(1,1,-1,-1)$ を持つこと、
+$g_1,g_2$ の中心性と $f_2$ の同じnormalizerを直接確認する。
+前と同じ平坦性による延長を行う。
+$Q_0,Q_1$ が残余の二次関係のscalar倍にならないことも四係数から分かる。
+例えば $Q_1$ の $x_0^2,x_1^2$ の比例条件を解いた後の $x_2^2$ の差は
+$4(a-1)(a+1)(a+3)\ne0$ である。$d=\infty$ は非零の $x_0^2$ 係数を使う。
+従って $F_0,F_1$ は全fiberで独立である。
+中心二次の残余と $f_2$ の正則正規列からTHCRへの単射性を得て、
+同じ次数二の降下評価により $W_1=kF_0\oplus kF_1$ となる。
+
+因数分解の恒等式は
+\[
+\begin{split}
+ &(s x_0+t x_1)\bigl((a^2-1)s^2Q_0+stH_0+t^2Q_1\bigr)\\
+ &\quad=s\bigl((a^2-1)s^2+(a^2-9)t^2\bigr)F_0
+       +t(s^2+t^2)F_1.
+\end{split}
+\]
+である。同検証器は二つの混合係数を厳密確認する。
+係数写像の共通零点は存在しない。$t=0$ では $a^2-1\ne0$、
+$s=0$ では第二係数が非零、$st\ne0$ かつ $s^2+t^2=0$ なら
+第一係数は $8s^3\ne0$ である。
+これも次数三の全射なので、全非零候補は分解する。
+
+\emph{$S_{d,2}^c$ の場合.}
+中心三次を群次数 $g$ に分けてuntwistすると、通常の $S_{d,2}$ で
+$F_gv=\theta_g(v)F_g$ となる。ここで $\theta_g$ はKleinの交代bicharacter符号である。
+残余中心二次 $q$ は群次数零で $\theta_g$ に固定されるので、
+前と同じ消去の議論で各成分はTHCRへ単射する。
+非零像があるなら $t_{3\tau}=\theta_g|_E$ である。
+既に $3\tau=s_{e_1}\ne0$ と分かっており、四つの $\theta_g|_E$ は
+相異なる二捩れ平行移動なので $g=e_1$ だけが可能である。
+このとき $\theta_{e_1}=\mu_{S_{d,2}}$ だから、当該成分は
+$W_1(S_{d,2})_{e_1}=kF_1$ に限られる。
+逆に $F_1$ はtwistで中心になるため中心三次は正確にこの一本である。
+$Q_1$ は群次数零なので、underlying vectorとして
+$F_1=x_1*Q_1$ がcocycle積でも成立する。
+twistの生成元の平方で $Q_1$ を表示するときはcocycleによる符号を変換する。
+従ってこの唯一の中心三次も分解する。
+他の三族は定理\ref{thm:stafford-nakayama}の全排除を適用する。
+\end{proof}
+
+\begin{corollary}[通常のproper楕円Stafford包絡の全排除]
+\label{cor:all-ordinary-stafford-excluded}
+$T$ の全許容 $d$ と循環変種に対して、対応する楕円商が滑らかで
+$4\tau\ne0$ である通常のStafford包絡はH3包絡にならない。
+\end{corollary}
+\begin{proof}
+$S_\infty$ は $\mu=-I$ で排除済みである。
+$S_{d,1},S_{d,2}$ において、H3三次のTHCR像が零なら
+補題\ref{lem:elliptic-normal-sequence-cubic}により商は非整域となる。
+非零なら normalizer の射影作用は $\theta$ なので $\sigma^3=\theta$。
+前補題より $L=0$、従って前定理の全因数分解により再び非整域となる。
+循環変種は生成元の置換で従う。
+標準cocycle族については、既証の三族と指定曲線上の排除を保持するが、
+この系だけで残る $S_{d,2}^c$ の全パラメータ排除を主張していない。
 \end{proof}

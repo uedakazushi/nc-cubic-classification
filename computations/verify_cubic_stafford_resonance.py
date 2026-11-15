@@ -8,17 +8,8 @@ from sympy.polys.matrices import DomainMatrix
 from verify_cubic_pym_generic import words, relation_rows
 
 
-def main():
-    a = S.Symbol('a')
-    field = S.QQ.frac_field(a)
-    b, c = (1-a)/(a+3), (a+1)/(a-3)
-    assert S.cancel(a+b+c+a*b*c) == 0
-    fs = []
-    for (i,j,k), v in zip([(1,2,3),(2,3,1),(3,1,2)], [a,b,c]):
-        fs += [{(0,i):1,(i,0):-1,(j,k):-v,(k,j):-v},
-               {(0,i):1,(i,0):1,(j,k):-1,(k,j):1}]
-    # Work before imposing ANY pencil quadric, with the five retained f's.
-    relations = fs[1:]
+
+def graded_projections(relations,field):
     degree = lambda w: reduce(int.__xor__, w, 0)
     projections = {}
     dimensions = {}
@@ -40,6 +31,22 @@ def main():
                 for j,l in enumerate(free): p[j,k]=-rr[i,l]
             lookup[g] = {ws[k]:p[:,j] for j,k in enumerate(cols)}
         projections[n] = lookup
+
+    return projections, dimensions
+
+def main():
+    a = S.Symbol('a')
+    field = S.QQ.frac_field(a)
+    b, c = (1-a)/(a+3), (a+1)/(a-3)
+    assert S.cancel(a+b+c+a*b*c) == 0
+    fs = []
+    for (i,j,k), v in zip([(1,2,3),(2,3,1),(3,1,2)], [a,b,c]):
+        fs += [{(0,i):1,(i,0):-1,(j,k):-v,(k,j):-v},
+               {(0,i):1,(i,0):1,(j,k):-1,(k,j):1}]
+    # Work before imposing ANY pencil quadric, with the five retained f's.
+    relations = fs[1:]
+    degree = lambda w: reduce(int.__xor__, w, 0)
+    projections, dimensions = graded_projections(relations,field)
 
     def add(*polys):
         result = {}
