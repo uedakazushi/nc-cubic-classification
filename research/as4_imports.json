@@ -237,5 +237,16 @@
       "computations/verify_cubic_as4_double_cover.py",
       "computations/verify_cubic_as4_curvilinear_fixed.py"
     ]
+  },
+  "tt22_presentations_v70": {
+    "commit": "a45f834f51a00c47443b51caf66abaf4629546b9",
+    "path": "research/proofs/CY_ZERO_COMMUTATORS_CURVILINEAR_TWO_TWO_COMPLETE.tex",
+    "sha256": "f969ac7da7588acab6152ed9ddd56a8b0926abfa9e9c0f0af7ae8e2fc8dd2e00",
+    "used_part": "TT1-TT3 explicit six presentations only; no atlas coverage or AS4 sufficient theorem imported.",
+    "independent_proofs": "PBW/faithful quantum torus and cubic norm; normalizer spectrum; cyclic top tensor conditional AS4 and exact fixed centre minors.",
+    "validators": [
+      "computations/verify_cubic_as4_tt22_c.py",
+      "computations/verify_cubic_as4_tt22_remaining.py"
+    ]
   }
 }

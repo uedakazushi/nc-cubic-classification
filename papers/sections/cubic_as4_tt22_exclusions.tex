@@ -1,0 +1,194 @@
+\subsection{長さ二対の表示における三乗根の残余とnorm排除}
+\label{subsec:as4-tt22-exclusions}
+ここでは同じas4 commit\cite{AS4lowpinned}の
+{\small\texttt{CY\_ZERO\_COMMUTATORS\_CURVILINEAR\_TWO\_TWO\_COMPLETE.tex}}
+の(TT1)--(TT3)から $\mathcal C_r$ の表示だけを用いる。
+射影型の全被覆やAS正則性の十分性は入力にしない。
+
+\begin{theorem}[一パラメータ $\mathcal C_r$ の全排除]
+\label{thm:tt22-C-all-excluded}
+$r\ne0,\pm1/4$ に対し $q=(4r+1)/(4r-1)$ と置く。
+対応する表示は、次の $q\ne0,1,-1$ の代数 $D_q$ と同じである。
+\[
+\begin{split}
+ [a,b]&=\tfrac12d^2,\qquad
+ [c,d]=-\frac{2(q-1)^2}{q}b^2,\\
+ ac-qca&=-\frac{q^2+1}{q+1}[b,d],\\
+ da&=qad,\qquad cb=qbc,\qquad db=q^{-1}bd.
+\end{split}
+\]
+$D_q$ の中心三次は $q^3\ne1$ では零、$q^3=1$ では
+\[
+ Z(D_q)_3=ka^3\oplus kb^3\oplus kc^3\oplus kd^3
+\]
+である。後者でも全非零中心三次は一次式と二次式の積に分解する。
+従って全ての $r$ でこの表示はH3包絡にならない。
+\end{theorem}
+\begin{proof}
+\emph{PBWと忠実な模型.}
+正規順序を $b<d<a<c$ とし、六つの逆順対を上の式で還元する。
+例えば $ca=q^{-1}ac+sbd$、
+$s=(q^2+1)(q-1)/(q^2(q+1))$ である。
+長さ三の重なりは四つだけであり、
+\texttt{verify\_cubic\_as4\_tt22\_c.py}はそれらの全有理関数恒等式を確認する。
+次数付き辞書式順序で各還元は下がるため、全PBW基底
+\[
+ b^i d^j a^k c^l\qquad(i,j,k,l\ge0)
+\]
+を得る。
+
+$\kappa=1/(2(q^2-1))$、$\eta=2q(q-1)/(q+1)$ と置く。
+中央多項式変数 $z_1,z_2$ を持つ量子トーラス
+\[
+ \mathcal T=k[z_1,z_2]\langle b^{\pm1},d^{\pm1}\mid db=q^{-1}bd\rangle
+\]
+において
+\[
+ a=z_1b^{-1}-\kappa q^2b^{-1}d^2,\qquad
+ c=z_2d^{-1}-\eta b^2d^{-1}
+\]
+と定める。検証器は六関係を全 $q$ で直接確認する。
+PBW単項式の $z_1,z_2$ に関する先頭項は、非零scalar倍を除き
+$z_1^kz_2^l b^{i-k}d^{j-l}$ であり、互いに異なる。
+従って写像は忠実である。この模型により
+\[
+ z_1=ab+\kappa d^2,\qquad z_2=cd+\eta b^2
+\]
+は実際に $D_q$ の中心二次元である。
+
+\emph{全三次中心.}
+中心元の像の各Laurent単項式 $b^e d^f$ は $q^e=q^f=1$ を満たす。
+次数三のPBW表示で $k+l$ が最大の先頭項を取る。
+その指数は $(i-k,j-l)$、$i+j+k+l=3$ である。
+$q$ が非捩れ、または位数が四以上なら、この二指数はともに零でなければならない。
+すると $i=k,j=l$ となり総次数が偶数になるので矛盾する。
+従って中心三次は零である。
+
+$q$ の位数が三なら、先頭項で可能なのは $a^3,b^3,c^3,d^3$ だけである。
+模型における $a,c$ の二項はprimitive三乗根の交換関係を満たすので、
+それぞれの三乗は二項の三乗の和となり中心に入る。
+$b^3,d^3$ も中心である。
+これらを順に引けば先頭項を下げられるので全中心三次を張り、PBW独立性から次元は四である。
+
+\emph{AS4実現での中山作用.}
+H3包絡を仮定したときだけ必要となる $\mu=I$ も独立に確認する。
+$U=(b^2,d^2,\langle a,c\rangle,\langle a,d\rangle,\langle b,c\rangle,\langle b,d\rangle)$
+を対称射影とする正規化関係行列を $R$、
+\[
+ A_0=\tfrac12\operatorname{Hess}(-z_2z_5+z_3z_4-z_0z_1+z_5^2)
+\]
+とする。$A_0$ は可逆で、$R$ は全 $q$ で列階数六を持つ。
+検証器は $w=RA_0R^{\mathsf T}$ の全256係数について
+一段の巡回移動が $-w$ となる恒等式を確認する。
+$w\in R\otimes R$ と巡回性から $w$ は最高Koszul tensorに属し、非零である。
+AS4実現では最高双対次数は一次元なので、これは最高次数汎関数を与える。
+巡回符号 $-1$ は双対のFrobenius中山作用が $-I$ であることを意味し、
+元の四次元Koszul代数では $\mu=I$ となる。
+この議論は全次数のAS正則性を低次数rankから推論していない。
+従ってH3候補は上で計算した中心三次に限る。
+
+\emph{三乗根の全norm因数分解.}
+$q^3=1$ とする。$\operatorname{Frac}\mathcal T$ の中心は
+$K=k(z_1,z_2,b^3,d^3)$、その上の次元は九である。
+実際 $b^i d^j$ ($0\le i,j<3$) は共役作用の相異なる指標に属し、独立である。
+中心を分数化した九次元代数は整域なのでdivision algebraであり、PI次数は三である。
+$D_q$ の生成元はこの中にあり、$z_1,z_2,b,d$ とその逆も分数体に入るので両者のdivision closureは同じである。
+
+$\ell=u a+v b+w c+t d$ とする。
+量子トーラスの指標から、reduced traceは
+\[
+ \operatorname{Trd}(\ell)=0,\qquad
+ \tfrac12\operatorname{Trd}(\ell^2)=3(uvz_1+wtz_2)
+\]
+となる。検証器も後式を三乗根の係数体で厳密確認する。
+従ってCayley--Hamiltonから
+\[
+ \operatorname{Nrd}(\ell)
+  =\ell^3-3(uvz_1+wtz_2)\ell
+  =\ell\bigl(\ell^2-3(uvz_1+wtz_2)\bigr)\in Z(D_q)_3.
+\]
+これによりnormの係数が元の中心に属することを直接示したので、
+中心有限性・中心正規性の別定理を仮定する必要はない。
+非零 $\ell$ のnormはdivision algebra内で非零である。
+従って射影normは基点のない三次写像 $\mathbb P^3\to\mathbb P^3$ となる。
+補題\ref{lem:central-norm-rank}の射影的議論と同じく、
+$\mathcal O(1)$ の引戻しが豊富な $\mathcal O(3)$ なので像への有限性、従って全射性を得る。
+全非零中心三次が表示した積に分解し、H3の整域条件に反する。
+\end{proof}
+
+\begin{lemma}[他の正規元のスペクトルによる奇数中心の消滅]
+\label{lem:normalizer-minus-unipotent-odd-centre}
+次数一生成のgraded整域 $B$ に非零正規元 $N$ があり、そのnormalizerの
+$B_1$ 上の半単純部分が $-I$ なら、$Z(B)$ の全奇数次数成分は零である。
+\end{lemma}
+\begin{proof}
+normalizerを $\nu=-U$、$U$ は単冪と書く。
+奇数次 $n$ ではテンソル次数 $n$ 上、従って商 $B_n$ 上でも $\nu$ の固有値は全て $-1$ である。
+中心元 $F$ について $NF=FN=\nu(F)N$ を消去すると $\nu(F)=F$ となり、零に限られる。
+\end{proof}
+
+\begin{theorem}[残る二つの一パラメータ表示の全排除]
+\label{thm:tt22-EF-all-excluded}
+同commitの(TT3)の $\mathcal E_t$ ($t\ne0,-2$) と $\mathcal F_h$ ($h\in k$) は
+全てH3包絡にならない。これらはそれぞれ
+\[
+\begin{split}
+ \mathcal E_t:\quad [a,b]&=b^2/t,\qquad[c,d]=4t d^2,\\
+ 0&=\langle a,c\rangle-2(t+1)[a,d]+\frac{t+4}{8t}[b,c],
+\end{split}
+\]
+および
+\[
+\begin{split}
+ \mathcal F_h:\quad [a,b]&=-b^2/2,\qquad[c,d]=-8d^2,\\
+ 0&=\langle a,c\rangle+2[a,d]-\tfrac18[b,c]-2h[b,d],
+\end{split}
+\]
+に、両者に共通な三関係
+\[
+ \{a,d\}=\tfrac14[b,d],\qquad
+ \{b,c\}=-4[b,d],\qquad \{b,d\}=0
+\]
+を加えた表示である。
+\end{theorem}
+\begin{proof}
+AS4実現における $\mu=I$ は前定理と同じ $A_0$ と正規化関係行列による
+非零最高tensorの巡回符号から従う。
+\texttt{verify\_cubic\_as4\_tt22\_remaining.py}は各パラメータの有理関数体上で
+全256巡回係数を検証する。分母は表示に現れる $t$ だけであり、$h=0$ も含めて適用できる。
+
+$\mathcal E_t$ で $b,d$ のnormalizerをそれぞれ $\nu_b,\nu_d$ とすると
+\[
+\begin{array}{c|rrrr}
+ &a&b&c&d\\\hline
+\nu_b&a-b/t&b&-c+8d&-d\\
+\nu_d&-a+b/2&-b&c-4td&d
+\end{array}
+\]
+となる。全八式は元の二次関係の線型結合として直接検証した。
+従って $N=bd$ のnormalizerは
+\[
+ a\longmapsto-a+\frac{t+2}{2t}b,\quad b\longmapsto-b,\quad
+ c\longmapsto-c+4(t+2)d,\quad d\longmapsto-d.
+\]
+$(\nu_N+I)^2=0$ なので、半単純部分は $-I$ である。
+$\mathcal F_h$ では同じnormalizer表に $t=-2$ を代入でき、$\nu_N=-I$ となる。
+この計算は $h$ に依存しない。
+H3包絡を仮定すれば $N\ne0$ なので前補題が中心三次を消し、$\mu=I$ の必要条件に反する。
+\end{proof}
+
+\begin{proposition}[三つの固定表示の排除]
+\label{prop:tt22-fixed-all-excluded}
+同じ(TT3)の固定三表示 $\mathcal A,\mathcal B,\mathcal D$ もH3包絡にならない。
+従って(TT3)に列挙された六表示は全て排除される。
+\end{proposition}
+\begin{proof}
+同検証器が各六関係の全係数を再構成し、非零最高tensorの巡回符号と
+次数三・四商の次元 $20,35$ を直接確認する。
+中心三次の $140\times20$ 行列は、$\mathcal A$ では $\mathbb Q(i)$ 上、
+$\mathcal B,\mathcal D$ では $\mathbb Q$ 上で全て階数 $20$ である。
+証明書に全六関係、非零最大minorの行番号と厳密な行列式を保存した。
+AS4実現では $\mu=I$ なので、中心三次の消滅がH3を排除する。
+固定三表示の全係数検算であり、一般点への外挿ではない。
+この六表示による全射影型の被覆そのものは別の入力であり、ここで独立に証明したとはしていない。
+\end{proof}

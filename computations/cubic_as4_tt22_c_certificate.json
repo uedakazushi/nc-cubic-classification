@@ -1,0 +1,38 @@
+{
+  "version": "classification-v70",
+  "source_commit": "as4 a45f834f51a00c47443b51caf66abaf4629546b9",
+  "presentation": "CY_ZERO_COMMUTATORS_CURVILINEAR_TWO_TWO_COMPLETE.tex TT1-TT3, C_r",
+  "parameter_map": "(q + 1)/(4*q - 4)",
+  "PBW_order": "b,d,a,c",
+  "four_overlaps": [
+    [
+      0,
+      3,
+      1
+    ],
+    [
+      2,
+      0,
+      1
+    ],
+    [
+      2,
+      0,
+      3
+    ],
+    [
+      2,
+      3,
+      1
+    ]
+  ],
+  "six_torus_relations_verified": true,
+  "central_quadrics": [
+    "1/(2*q**2 - 2)",
+    "2*q*(q - 1)/(q + 1)"
+  ],
+  "potential_cyclic_equations": 256,
+  "potential_pair_matrix_determinant": "-1/64",
+  "trace_half_at_primitive_cube_root": "3*A*l0*l1 + 3*C*l2*l3",
+  "scope": "Universal identities. Faithfulness, centre3 classification and surjective reduced norm are ordinary paper proofs. No upstream all-CY coverage or existence theorem imported."
+}
