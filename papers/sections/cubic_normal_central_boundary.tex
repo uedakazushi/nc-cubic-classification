@@ -1,0 +1,150 @@
+\subsection{正規三次商の中央境界認識：CY包絡仮定を外す}
+\label{subsec:normal-cubic-central-boundary}
+ここでは包絡がCYであることや三次関係が中心であることを仮定しない。
+中央一次境界は認識のために選ぶもので、intrinsic対象の標識には加えない。
+
+\begin{theorem}[中央楕円境界を持つ正規三次商のH3認識]
+\label{thm:normal-cubic-central-boundary-recognition}
+$B$ を左右noetherian quadratic Koszul AS4型14641、
+$G\in B_3$ を正則正規とし、$R=B/(G)$ のNakayama自己同型は恒等と仮定する。
+$R$ に中央正則な一次元 $t$ が存在し、
+\[
+ R/(t)=B(E,\mathcal L,\rho),\qquad \deg\mathcal L=3
+\]
+が滑らかな楕円曲線上のTHCRであるとする。
+このとき $(\qgr R,\pi R)$ がH3となることは
+$U=R[t^{-1}]_0$ が有限大域次元を持つことと同値である。
+その場合 $\operatorname{gldim}U\le2$、$\qgr R$ のSerre関手は $(-1)[2]$ である。
+$\rho$ が有限位数の平行移動なら $\operatorname{gldim}U=2$ となる。
+\end{theorem}
+\begin{proof}
+正則正規三次商なので、$R$ はnoetherian AS Gorenstein次元3・parameter1で、
+balanced dualizing complex は $R(-1)[3]$ となる。
+中心 $t$ を逆にすると $R[t^{-1}]=U[t,t^{-1}]$ であり、
+$t$ によるRees濾過は $\operatorname{gr}U=R/(t)$ を持つ。
+従って $U$、次いで $R$ は整域である。
+
+$U$ の大域次元が有限と仮定する。
+任意の有限生成graded $R$ 加群 $M$ の三次以上のsyzygy $N$ を取れば
+\[
+ \Ext_R^i(N,R)=0\qquad(i>0)
+\]
+である。中心局所化後もこの消滅は保たれ、一方
+$U[t,t^{-1}]$ の大域次元は有限なので $N[t^{-1}]$ の射影次元は有限となる。
+有限生成加群が有限射影次元を持ち、正次数の環へのExtが全て零なら射影的である。
+実際、最短の有限生成射影分解の最高項を双対化すると、最高Extの零から双対写像が全射になる。
+有限生成射影加群の双対性で元の最高微分が分裂し、正の最短長に矛盾する。
+従って $N[t^{-1}]$ は射影的である。
+
+Laurent環の強次数付けにより、その次数0部分も $U$ 上射影的であり、
+$N[t^{-1}]$ は有限graded free加群の直和因子となる。
+その恒等写像のfree因子化の有限個の $t$ 分母を払えば、
+ある $a\ge0$ に対し $t^a\mathrm{id}_N:N(-a)\to N$ が有限graded free $R$ 加群を経由する。
+ここでは $N$ はfree加群の部分加群なので $t$-torsionを持たず、
+局所化後の写像の等式を分母払いして元へ戻せる。
+
+$\mathcal P=\operatorname{thick}\{\pi R(n)\}$ とし、
+$\mathrm D^b(\qgr R)/\mathcal P$ で考える。
+$\pi H(n)$ は中央正則 $t$ の二項解消から $\mathcal P$ に属する。
+$\mathrm D^b(\operatorname{coh}E)$ はample線型束twistで生成されるので、
+全てのcoherent $t$-torsion対象も $\mathcal P$ に属する。
+$t^a\mathrm{id}_N$ のconeはそのようなcohomologyしか持たないから、商圏でこの写像は同型となる。
+一方free因子化により商圏では零であり、$\pi N=0$ となる。
+高次syzygyと元の加群はfree複体を除けば同じなので、商圏全体が零である。
+従って全coherent対象はperfectである。
+
+balanced dualityと一般化Serre双対性\cite{YZ,ChenCut}を適用すると
+全有界導来圏でSerre関手が $(-1)[2]$ となり、heartのExtは次数2以下となる。
+正確に次元2であること、構造対象の飽和・exceptionality、AZ ampleness、
+反Serreのheart保存は、parameter1とHilbert級数から
+定理\ref{thm:r13-exact-cut-reduction}の証明と同じに従う。
+Gabriel--Krull rank-one条件も、整域性と $t$ 境界のcoherent楕円曲線を使った
+命題\ref{prop:r13-all-cut-domain-rank}の証明がそのまま有効である。
+三次商では次数2の関係が変わらないので二次包絡は与えた $B$ に等しい。
+よって全H3条件を得る。
+
+逆にH3ならSerreから $\qgr R$ のExtは次数2以下である。
+中心 $t$ の局所化について有限表示とYoneda図式の分母払いを使えば、
+$U$ 上のExtはcofinalな $t$-lattice上のExtの直極限となる。
+従って $\operatorname{gldim}U\le2$。
+有限位数の平行移動の場合は前節の中心正則点での行列環から等号となる。
+一般無限位数では、ここで必要な結論は有限性と上界2であり、等号までは主張しない。
+\end{proof}
+
+\begin{remark}[大域次元の等号の範囲]
+前定理の一般無限位数では、証明で直ちに得た結論は $\operatorname{gldim}U\le2$ である。
+位数有限の全応用では $\operatorname{gldim}U=2$ が証明済みである。
+有限次元単純加群が存在しない可能性を無視して無限位数でも等号を外挿しない。
+\end{remark}
+
+\begin{proposition}[中央楕円境界の自己同型は平行移動]
+\label{prop:central-elliptic-boundary-translation}
+前定理の仮定だけで、$\rho$ は平行移動である。
+特に固定点を持つ非平行移動の楕円自己同型を、この中央境界に使うことはできない。
+\end{proposition}
+\begin{proof}
+中央正則 $t$ による商のbalanced dualizing complexは $H[2]$ である。
+一方 Yekutieli\cite[Theorem 7.3, Example 7.16]{YeTHCR}は、
+一般の楕円THCRのbalanced dualizing complexを、
+$\rho$ の正則一形式への作用から来る次数スカラーで捩った $H[2]$ と記述している。
+そのスカラーは $\rho$ の正則一形式への固有値の逆数である。
+balanced dualizing complexの一意性と $H_0=k$ により、この捩れは恒等でなければならない。
+実際、次数0の生成元を持つ二つの両側加群の同型はスカラーであり、非自明な次数スカラーを消せない。
+従って $\rho$ は正則一形式に恒等として作用する。
+標数0の楕円自己同型では、この作用の核は平行移動群である。
+\end{proof}
+
+\begin{corollary}[非CY包絡・非中心正規三次への適用]
+\label{cor:normal-cubic-finite-order-admissibility}
+前定理の $\rho$ が有限位数 $N$ の平行移動なら、
+定理\ref{thm:finite-order-elliptic-admissibility}の中心・PI次数・局所McKay条件による
+必要十分判定が有効である。
+さらに固定位数の被約PBW表示族では、
+定理\ref{thm:finite-order-relative-center}と定理\ref{thm:finite-order-relative-H3-open}も有効である。
+包絡のCY性や $G$ の中心性をこの適用に要求しない。
+新しい非CY例の実在や、全H3に中央楕円境界が存在することをこの一般化から主張しない。
+\end{corollary}
+\begin{proof}
+中心・自由性・最大整環・相対境界の証明で用いたのは
+$R$ のbalanced dualizing complex $R(-1)[3]$、中央正則 $t$、
+楕円THCR先頭環、PBW平坦性だけである。
+これらは現在の仮定で全て成立する。
+H3認識だけを前定理に置き換えればよい。
+なお $t$ の $B_1$ への持上げも中心である。
+実際、$B_2\to R_2$ は同型なので一次生成元との二次交換子は $B$ ですでに零である。
+\end{proof}
+
+\begin{proposition}[有限境界位数はintrinsicなPI次数]
+\label{prop:central-boundary-PI-invariant}
+前定理の $R$ について、$\rho$ は命題\ref{prop:central-elliptic-boundary-translation}より平行移動である。
+その $\rho$ が有限位数となることは $R$ がPIとなることと同値である。
+有限の場合その正確な位数は $R$ のPI次数に等しい。
+従ってH3の場合、同じintrinsic対象の別の中央楕円境界を選んでも、この有限位数は変わらない。
+\end{proposition}
+\begin{proof}
+有限位数 $N$ なら前節から $U$ のPI次数は $N$ であり、
+中心Laurent変数の付加と正則中心局所化は商斜体の次数を変えないので、$R$ のPI次数も $N$ である。
+逆に $R$ がPIならその商 $H=R/(t)$ もPIである。
+楕円THCRの商斜体は $k(E)(z;\rho)$ で、平行移動の位数が無限ならPIではない。
+有限位数ならこの商斜体は中心上次元 $N^2$ の巡回型となる。
+従って $\rho$ は有限であり、最初の議論で $N=\operatorname{PIdeg}R$ を得る。
+H3のintrinsic pointed同値は反標準graded環を保存するので、この数も保存する。
+\end{proof}
+
+\begin{corollary}[非可換の場合の中央境界の一意性]
+\label{cor:noncomm-central-boundary-unique}
+前定理の切断 $R$ で非可換なものは $Z(R)_1=kt$ を満たす。
+従って中央楕円境界の選択はスカラー以外にない。
+$\rho=1$ の場合は $R$ 自身が可換であり、$\dim Z(R)_1=4$ となる。
+この範囲で中央一次元の次元2または3は起こらない。
+\end{corollary}
+\begin{proof}
+有限位数 $N>1$ なら先頭中心 $Z(H)$ の正次数は $N$ の倍数なので、
+$F_1Z(U)=k$ である。$N=1$ なら Rainsの中心持上げから
+$\operatorname{gr}Z(U)=H=\operatorname{gr}U$ となり、最高記号を引く帰納法で $Z(U)=U$、
+従って $R\subset U[t,t^{-1}]$ も可換である。
+無限位数の平行移動では $Z(H)=k$ であり、任意の $U$ の中心元の最高記号から
+$Z(U)=k$ を得る。
+中央元の同次化は $Z(R)$ と濾過中心 $Z(U)$ を対応させるので、非可換の場合は常に $Z(R)_1=kt$。
+$R_1$ は4次元であるから、可換の場合は最後の結論も従う。
+\end{proof}

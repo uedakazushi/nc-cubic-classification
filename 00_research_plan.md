@@ -30,7 +30,7 @@
 
 **固定PI4包絡の完全判定**：h=1、gamma^4=2、alpha=(−2,−2,0)、beta=(1,1,2)のD切断族で、中心特異値は13個だが非H3値は平方因子のない次数6式 b(D)=(D−Dstar)*P4(D)*Q1(D)の根に限る。他のDのaffine切断は大域次元2。`papers/sections/cubic_order4_local_orders.tex` はgrの最大性、中心正則列とbalanced local dualityによる対称双対、DVR標準形の非分岐性、A1二重被覆の指標多重度を使う。小次元表現のnorm・二中心点への分配・次数6式は厳密検算済み。D直線のH3条件は主開集合D(b)で、任意底変更・fpqc降下に適合し、そのaffine族は相対対角の長さ2以下の射影分解を持つ。これは一固定包絡の判定で、全位数4族・全H3の被覆ではない。
 
-**有限楕円位数の相対結果（H3 classification-v22）**：固定位数Nの被約有限型PBW表示族で、相対中心の各濾過片が局所自由かつ任意底変更（非被約も可）と可換することを証明した。相対三生成元・三次関係とrank3N²の基底を得る。射影中心の無限遠では正則二次元環とmuN擬反射のskew-group型を持ち、properな中心二重積上で対角の二次syzygyの非射影supportを射影することでH3 locusのZariski開性を得た。good locus上は相対長さ2の対角射影分解が任意底変更で保たれ、fiber条件はfpqc降下する。積分した位数4全係数族に適用済み。全有限位数のpointwise admissibility（DuVal中心と全McKay指標）および固定PI4の六bad値も保持する。有限位数条件を横断する非被約変形、全intrinsic family stackの降下、全H3被覆・成分は未完成。次はCY包絡・中心Gの制限を、mu_R=idの正規三次商と中央一次境界へ弱められるか、affine認識の証明から確認する。
+**中央楕円境界の現行構造（H3 classification-v23）**：正則normal三次商R=B/(G)、mu_R=id、中央正則一次t、滑らかな楕円THCR境界という仮定で、CY Bやcentral GなしにH3 iff affine U有限gldimを証明した。高次syzygyのExt消滅→t局所化後projective→free因子化の分母払いによりtailsがperfectとなる。一般無限位数でのaffine gldimは<=2のみとし、有限PIの場合に=2を証明する。Yekutieli Example7.16のbalanced dualizing formulaを一次資料で確認し、中央境界自己同型は自動的に平行移動と判明。有限境界位数=intrinsic PI次数、非可換なら中央一次境界はスカラー以外に一意。有限Nの中心・McKay admissibilityと被約固定N表示族の相対中心／H3開性もこのnormal三次設定へ拡張した。新しい非CY例の実在、全H3の中央楕円境界存在、全intrinsic family stackや全成分分類は未完成。次はtranslation型AS3境界と包絡Nakayamaの関係を監査し、中央楕円枝の全包絡がCYへ絞れるかを調べる。
 
 既存の主要な構造結果を維持する：
 

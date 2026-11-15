@@ -1,6 +1,6 @@
 {
   "date": "2026-11-15",
-  "version": "classification-v22",
+  "version": "classification-v23",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -25,7 +25,8 @@
     "papers/sections/cubic_order4_local_orders.tex",
     "papers/sections/cubic_order4_general_criterion.tex",
     "papers/sections/cubic_finite_order_criterion.tex",
-    "papers/sections/cubic_finite_order_relative.tex"
+    "papers/sections/cubic_finite_order_relative.tex",
+    "papers/sections/cubic_normal_central_boundary.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -384,5 +385,24 @@
     "typesetting": "84-page full manuscript built without unresolved refs/cites or overfull boxes; new boundary and openness page67 inspected visually",
     "limitations": "Not an all-intrinsic family-stack/descent theorem; excludes torsion-transverse nilpotent deformations; no claim that all H3 have central smooth elliptic boundary; proof not computer-formalized or independently reviewed",
     "counterexample_retained": "[epsilon] over k[epsilon]/epsilon² has constant geometric fiber rank but center-kernel base change fails; reduced-base hypothesis used genuinely"
+  },
+  "normal_cubic_central_elliptic_boundary": {
+    "proof": "papers/sections/cubic_normal_central_boundary.tex",
+    "assumptions": "Noetherian quadratic Koszul AS4 B; regular normal cubicG; mu_R=id; regular central degree1 t; smooth elliptic THCR boundary degree3",
+    "ordinary_results": [
+      "H3 iff affine U finite gldim, via high-syzygy Ext vanishing and central denominator clearing of projective factorization; CY B and central G not assumed",
+      "rho automatically translation from balanced-dualizing uniqueness and elliptic THCR differential scalar",
+      "finite rho order iff R PI, exact order=PIdegreeR, hence intrinsic",
+      "noncommutative R has Z(R)1=kt; identity rho gives commutative R, so no dimZ1=2/3 in this boundary class",
+      "prior finiteN geometric and fixed-order reduced-family relative results apply with these weaker normal-cut assumptions"
+    ],
+    "dimension_scope": "qgr global dimension2; affine<=2 in general, equality2 proved for finite PI case only; no infinite-order equality claim",
+    "primary_audit": {
+      "url": "https://www.math.bgu.ac.il/~amyekut/publications/dual-com/dual-com.pdf",
+      "sha256": "6099babfc2037b0788b1441a7718ee3c0ce20d7fce4f5b43a1b5c3aa6a72c63d",
+      "read": "sections6 equivariant bimodule construction, Theorem7.3, Example7.16 differential scalar, Theorem7.18 context; imported only elliptic THCR balanced-dualizing formula"
+    },
+    "typesetting": "86-page manuscript built without unresolved refs/cites or overfull boxes; no new visual pass yet",
+    "limitations": "Does not prove all H3 admit central smooth elliptic boundary, or existence of new nonCY examples; no all-intrinsic family stack or global component classification; no formalization/independent referee"
   }
 }
