@@ -10,6 +10,10 @@
 
 研究継続用bundleは現行方針・ノート・論文ソース/PDF・必要コード・小証明書・再現手順から自己完結的に再開できるものとする。旧会話・旧ZIPを前提にせず、旧版・中間生成物・キャッシュを収録しない。ユーザーは研究区切りで再承諾なくLibraryへ保存することを許可している。現行ソースはGitHub mainにも通常fast-forwardで保存し、遠隔HEADを確認する。既存Library資料は無断削除しない。GitHub Actions・force push・不要なPRを使わず、GitでPDF/ZIP/TeX中間物を追跡しない。生成、証明点検、計算、組版、Library保存、GitHub保存を別々に報告する。
 
+## 量子FermatはOU AS surfaceではない（証明済み）
+
+`papers/quantum_fermat_not_as_surface.tex` で金沢型量子Fermat cubicの曲面導来圏を非退化な離散torsion付きFermat商stackと同定し、HH_{-1}=HH_1=2, HH_0=5を証明。OUのAS surfaceならvery strong helix由来の有限完全強例外列を持つため奇数次HHは消滅する。従って量子Fermatはintrinsic weak cubicだがOUのAS surfaceではない。以前のPym L1111/L112帰属、R13閉包外というambient成分の記述とは独立な、**曲面圏そのもの**の障害である。全weakをOU/AOUのWeyl商と同定する全域仮説は成り立たない。OUのある部分族がweakのどの開集合に埋め込まれるかは引き続き研究する。
+
 ## II. 上位目標と最初の対象
 
 一般の非可換del Pezzo surfaceに対し、Rainsの幾何学的heart、Van den Berghのblow-up heart、大川–植田のAS helix heart、反標準環のqgrを比較する。これはdP1だけの補助問題ではなく、内在的モジュライの重要な中心課題とする。最初の実行対象はcubic surface（次数3）。

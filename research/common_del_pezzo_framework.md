@@ -2,6 +2,12 @@
 
 2026-11-15 / hearts-v1。全次数のheart比較を上位課題とし、最初はcubic surfaceを研究する。次数1・3の既存研究を保持し、全次数の分類定理を主張しない。最初に `00_research_plan.md` と `research/heart_comparison.md` を読む。
 
+## 金沢型量子FermatとOUのAS surfaceの厳密な差
+
+**証明済み**：金沢型量子Fermat cubicのA=qgr B/(t³+x³+y³+z³)は、OU arXiv:2508.04986 Definition 1.1のAS surfaceではない。現行の完全証明は `papers/quantum_fermat_not_as_surface.tex` の定理3.1。H=(mu3)^2の非退化な2-cocycle αを使い、古典Fermat cubic Xに対し Db(A)≃Db(coh^α[X/H]) という明示的なgraded Morita同値を構成する。捩れ付きorbifold HKRと固定楕円曲線2本から HH_-1=2, HH_0=5, HH_1=2 を得る。有限群の全9元と指標は `computations/verify_quantum_fermat_ou_sectors.py` と証明書で検算。OU AS surfaceなら有限なvery strong helix、従って完全強例外列がありHH_i(i≠0)=0なので矛盾する。
+
+**意味**：反Serre作用がheartを保ち、AZ ampleで、gd2・exceptional O・Hilbert関数を満たすintrinsic weak cubicはOU AS surfaceであるとは限らない。量子Fermatはその明示的な反例。次数3の全weak moduliがOU/AOUのmarked locusのW(E6)商だけからなるという全域分類は成立しない。一方、可換三次曲面を含むOU部分の大域化、R13支配部分のgeneric同定は別問題として保持する。全weakモジュライの代数性は未証明。
+
 ## 最優先のheart比較
 
 Rains、Van den Bergh raw blow-up、AS helix、反標準qgrの四構成について、存在、realization Db(heart)→Tの同値、指定同値のt-exactness、構造対象・反Serre・境界restriction・rank・marking、族の降下を分離する。数値的non-amplenessをAZ失敗や導来変化と同一視しない。

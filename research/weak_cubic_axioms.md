@@ -8,6 +8,12 @@
 
 全weak対象、条件2付き、AS4二次包絡＋正則三次核という超曲面認識部分、R13中心拡大型部分は別々。含意を逆にしない。smooth proper enhancementを要求する定義と、今回のgd2＋Serreの定義も同一視しない。
 
+## 金沢型量子FermatはOUのAS surfaceでない（確定）
+
+厳密な証明は `papers/quantum_fermat_not_as_surface.tex` の定理3.1。本稿では証明を重複しない。S=k[t,x,y,z]/(t³+x³+y³+z³)、L=(Z/3)^2、重み(t,x,y,z)=((1,0),(0,1),(0,1),(-1,1))、cocycle μ(g,h)=ζ^{g1 h2} とすると quantum R=S^μ。T=k_μ L=M3、H=L^∨、(S⊗T)^H=R、averaging idempotentは(S⊗T)#Hでfull（T#H=M9）。従ってgraded MoritaでqgrR≃coh^α[X/H]。Hの作用は(a,b):(t,x,y,z)↦(ζ^a t,ζ^b x,ζ^b y,ζ^{−a+b}z)。捩れ付きorbifold HKRで固定楕円E_t（g=(0,1),(0,2)）とE_z（g=(1,1),(2,2)）が各HH_{±1}に1寄与。その他は有限点集合で奇数次寄与なし。HH_−1=2,HH_0=5,HH_1=2。OU AS surfaceは有限完全強例外列を持つためHH_±1=0。結論としてASではない。
+
+有限計算の範囲：9元の固定点型・character・Picard invariant rankとHHの次元だけ。Morita同値とorbifold HKRは通常の数学的証明・既知理論であり計算だけでは証明できない。OU Definition1.1と§3は一次資料で確認。独立査読/Lean/新規性調査なし。
+
 ## 自動的な大域次元2
 
 Serre関手Sが存在してs=S^{-1}[2]がheartを保つだけで、Ext^i_A(M,N)≅Hom(sN,M[2−i])^*によりExt^{>2}=0となる。非零NについてExt²_A(sN,N)=End_A(sN)^*≠0なのでhdim A=2。これを独立公理から外す。sのheart上での本質的全射性は不要。証明はpapers/weak_cubic_axioms.texの命題prop:serre-heart-global-dimension。構成した圏でsがheartを保つことを示す必要は残る。
