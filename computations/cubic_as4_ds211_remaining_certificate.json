@@ -1,0 +1,317 @@
+{
+  "version": "classification-v72",
+  "source_commit": "as4 a45f834f51a00c47443b51caf66abaf4629546b9",
+  "source": "CY_ZERO_COMMUTATORS_DOUBLE_SIMPLE_NONZERO_COMPLETE.tex DS1-DS3",
+  "generic_rank_covers": [
+    {
+      "family": "T",
+      "projection_denominators": [
+        "1",
+        "16",
+        "16*p",
+        "2",
+        "2*p",
+        "256*p",
+        "256*p**2",
+        "4",
+        "4*p",
+        "4*p**2",
+        "64*p",
+        "64*p**2",
+        "8",
+        "8*p",
+        "p"
+      ],
+      "minor_rows": [
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        18,
+        19,
+        25,
+        44,
+        45,
+        49
+      ],
+      "minor_determinant": "(8*p + 1)*(16*p + 1)/(8388608*p**6)",
+      "all_possible_zero_factors": [
+        "p",
+        "8*p + 1",
+        "16*p + 1"
+      ],
+      "scope": "Projection relations and identity free columns hold away from the displayed parameter-unit poles. At an AS4 realization these are quotient bases; no rank-flatness extrapolation is used."
+    },
+    {
+      "family": "U",
+      "projection_denominators": [
+        "1",
+        "16",
+        "2",
+        "4",
+        "8"
+      ],
+      "minor_rows": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        18,
+        19,
+        20,
+        21,
+        25,
+        39
+      ],
+      "minor_determinant": "-536870912*p**6*(4*p - 1)*(48*p**2 + 8*p + 1)",
+      "all_possible_zero_factors": [
+        "p",
+        "4*p - 1",
+        "48*p**2 + 8*p + 1"
+      ],
+      "scope": "Projection relations and identity free columns hold away from the displayed parameter-unit poles. At an AS4 realization these are quotient bases; no rank-flatness extrapolation is used."
+    }
+  ],
+  "critical_rank_covers": [
+    {
+      "name": "T at -1/8",
+      "field": "QQ",
+      "dimensions_3_4": [
+        20,
+        35
+      ],
+      "minor_rows": [
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        18,
+        19,
+        20,
+        25,
+        44,
+        45,
+        49
+      ],
+      "minor_determinant": "-1/32"
+    },
+    {
+      "name": "T at -1/16",
+      "field": "QQ",
+      "dimensions_3_4": [
+        20,
+        35
+      ],
+      "minor_rows": [
+        2,
+        3,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        18,
+        19,
+        25,
+        31,
+        44,
+        45,
+        49
+      ],
+      "minor_determinant": "1/32"
+    },
+    {
+      "name": "U at 1/4",
+      "field": "QQ",
+      "dimensions_3_4": [
+        20,
+        35
+      ],
+      "minor_rows": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        18,
+        19,
+        21,
+        22,
+        25,
+        39
+      ],
+      "minor_determinant": "-131072"
+    },
+    {
+      "name": "U at -1/12 + sqrt(2)*I/12",
+      "field": "QQ<sqrt(2)*I>",
+      "dimensions_3_4": [
+        20,
+        35
+      ],
+      "minor_rows": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        18,
+        19,
+        21,
+        22,
+        25,
+        39
+      ],
+      "minor_determinant": "7340032/6561 + 1114112*sqrt(2)*I/6561"
+    }
+  ],
+  "fixed_rank_covers": [
+    {
+      "name": "L_plus; L_minus by conjugation",
+      "field": "QQ<I>",
+      "dimensions_3_4": [
+        20,
+        35
+      ],
+      "minor_rows": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        19,
+        20,
+        22,
+        24,
+        44,
+        45
+      ],
+      "minor_determinant": "-8 + 8*I"
+    },
+    {
+      "name": "P",
+      "field": "QQ<I>",
+      "dimensions_3_4": [
+        20,
+        35
+      ],
+      "minor_rows": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        9,
+        10,
+        11,
+        14,
+        15,
+        16,
+        18,
+        19,
+        22,
+        24,
+        25,
+        26,
+        27,
+        31,
+        44
+      ],
+      "minor_determinant": "-216"
+    },
+    {
+      "name": "V_0",
+      "field": "QQ",
+      "dimensions_3_4": [
+        20,
+        35
+      ],
+      "minor_rows": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        19,
+        20,
+        24,
+        39,
+        45,
+        48
+      ],
+      "minor_determinant": "-1119744"
+    }
+  ],
+  "scope": "All allowed T/U parameters and three fixed L+/L-/P presentations excluded. V_0 boundary checked. Cyclic tensor gives mu=id conditional AS4; full upstream existence/coverage is not imported."
+}

@@ -107,3 +107,124 @@ $c,d$ のnormalizerは
 補題\ref{lem:normalizer-minus-unipotent-odd-centre}が中心三次を消す。
 これで全 $r$ を排除する。
 \end{proof}
+
+\begin{theorem}[残る二族と固定表示の三次核消滅]
+\label{thm:ds211-TU-fixed-excluded}
+同commitの
+{\small\texttt{CY\_\allowbreak{}ZERO\_\allowbreak{}COMMUTATORS\_\allowbreak{}DOUBLE\_\allowbreak{}SIMPLE\_\allowbreak{}NONZERO\_\allowbreak{}COMPLETE.tex}}
+の(DS3)にある $\mathcal T_h$ ($h\ne0$)、$\mathcal U_u$ ($u\ne0$)、
+$\mathcal L_{i/4},\mathcal L_{-i/4},\mathcal P$ は全てH3包絡にならない。
+また同表の $\mathcal V_0$ も中心三次を持たない。
+\end{theorem}
+\begin{proof}
+\texttt{verify\_cubic\_as4\_ds211\_remaining.py}は(DS1)--(DS3)から全六関係を再構成する。
+最高tensorの全256反巡回恒等式を確認し、AS4実現で $\mu=I$ となることを独立に得る。
+$\mathcal T_h,\mathcal U_u$ の中心三次行列から選んだ最大minorはそれぞれ
+\[
+ \frac{(8h+1)(16h+1)}{2^{23}h^6},\qquad
+ -2^{29}u^6(4u-1)(48u^2+8u+1)
+\]
+である。次数三・四の商座標の分母は前者では $h$ の冪と有理定数だけ、後者では有理定数だけである。
+商座標は全関係を消し、選んだ自由列上では恒等である。
+従って任意のAS4実現では、次数三・四の次元 $20,35$ を使えばこれらは全許容値で実際の商基底となる。
+一般点のrow reductionの結果だけから、特殊fiberの階数不変性を推論してはいない。
+
+残る値は $h=-1/8,-1/16$、$u=1/4$ および $48u^2+8u+1=0$ だけである。
+最後の二値は $u=(-1\pm\sqrt{-2})/12$ と書ける。
+有理数または $\mathbb Q(\sqrt{-2})$ 上で、各値の元の全関係商を改めて計算し、
+全てで中心三次行列の階数が $20$ となる非零minorを得た。
+数体の二つの埋込みが両根を覆うので、有限標本からの外挿ではない。
+これで $\mathcal T_h,\mathcal U_u$ の全許容値を覆う。
+
+固定表示 $\mathcal L_{i/4},\mathcal P$ は $\mathbb Q(i)$ 上、
+$\mathcal V_0$ は $\mathbb Q$ 上で同じ階数 $20$ を得る。
+$\mathcal L_{-i/4}$ は係数体の共役により同じ結論となる。
+全六関係、商座標の分母、minorの行番号と厳密な行列式をコードと証明書に保持した。
+従って全ての表示で必要な中心三次が存在しない。
+\end{proof}
+
+\begin{theorem}[最後の一パラメータ表示 $\mathcal V_h$ の全排除]
+\label{thm:ds211-V-all-excluded}
+(DS3)の $\mathcal V_h$ ($h\ne-1/16$) も全てH3包絡にならない。
+その中心三次は $h\ne1/48$ では零、$h=1/48$ では四次元であり、
+後者の全非零切断も一次式と二次式の積に分解する。
+従って(DS3),(DT1)に列挙された全表示がH3包絡から排除される。
+この一覧が全AS4の当該射影型を覆うという定理そのものは、ここでは入力としていない。
+\end{theorem}
+\begin{proof}
+$h=0$ は前定理で処理した。
+$h\ne0$ では $r^2=-h$ を取り、$r\ne0,\pm1/4$ とする。
+\[
+ p=\frac{4r-1}{4r+1},\quad
+ \alpha=\frac{p^2}{2(p+1)^2},\quad
+ \beta=\frac1{2(p+1)^2},\quad \gamma=\frac{p}{(p+1)^2},
+\]
+\[
+ a'=a+\gamma b,\quad x=c-rd,\quad y=c+rd,\quad
+ \vartheta=p-p^{-1},\quad
+ t_0=\frac{p-1}{2(p+1)},\quad
+ s_0=\frac{(p-p^{-1})(1+p^2)}{2(p+1)^2}
+\]
+と置く。この有限平方根被覆は $h\ne0,-1/16$ を漏れなく覆い、$p\ne0,\pm1$ である。
+新しい六関係は
+\[
+\begin{split}
+ xb&=p^{-1}bx,\qquad yb=pby,\qquad yx=xy-\vartheta b^2,\\
+ a'b&=ba'+t_0(x^2-y^2),\\
+ a'x&=p^{-1}xa'+s_0by,\qquad
+ a'y=pya'-s_0bx.
+\end{split}
+\]
+検証器\texttt{verify\_cubic\_as4\_ds211\_v.py}は四つのDiamondを全 $p$ で確認し、
+PBW基底 $b^i x^j y^k(a')^l$ を得る。
+
+中央多項式変数 $z_1,z_2$ を持つ量子トーラス $xb=p^{-1}bx$ 上で
+\[
+ y=z_2x^{-1}-p b^2x^{-1},\qquad
+ a'=b^{-1}(z_1-\alpha x^2-\beta y^2)
+\]
+と定める。全六関係に加え、元の $\mathcal V_h$ の全六関係も検証器で確認した。
+対称射影の列階数六と新しいPBW二次元数十から、両表示の二次関係空間は一致する。
+$z_1,z_2$ の補助重みをそれぞれ三、一とすると、PBW単項式の先頭項は
+非零scalar倍の $z_1^l z_2^k b^{i-l}x^{j-k}$ となり、互いに異なる。
+従って模型は忠実であり
+\[
+ z_2=xy+p^{-1}b^2,\qquad z_1=ba'+\alpha x^2+\beta y^2
+\]
+は実際の中心二次元である。
+
+前節と同じ先頭項の指数比較から、$p^3\ne1$ では中心三次は零である。
+また
+\[
+ h-\frac1{48}=-\frac{p^2+p+1}{12(p-1)^2}
+\]
+なので、残余は正確に $h=1/48$ である。
+$p^3=1$ では量子トーラスのdivision algebraは中心上九次元となる。
+$\ell=u a'+v b+w x+t y$ のreduced traceは
+\[
+ \operatorname{Trd}\ell=0,\qquad
+ \tfrac12\operatorname{Trd}(\ell^2)
+ =3\bigl(uvz_1+(wt+u^2/4)z_2\bigr).
+\]
+後式と、非中央Laurent項のtraceが消えることも三乗根の係数環で厳密検算した。
+従って
+\[
+ N_{a'}=(a')^3-\tfrac34z_2a'
+\]
+は中心三次である。
+$b^3,x^3,y^3$ も中心であり、先頭項比較によりこの四本は独立で全中心三次を張る。
+実際、中心三次の先頭指数 $(i-l,j-k)$ は三の倍数なので純三乗以外に可能性がなく、
+各生成元を引けば先頭項が下がる。
+
+Cayley--Hamiltonは全一次元に対して
+\[
+ \operatorname{Nrd}(\ell)
+ =\ell\Bigl(\ell^2-3\bigl(uvz_1+(wt+u^2/4)z_2\bigr)\Bigr)\in Z(B)_3
+\]
+を与える。忠実なdivision模型で非零一次元のnormは非零なので、
+再び基点のない射影norm $\mathbb P^3\to\mathbb P^3$ の全射性を得る。
+全非零中心三次が分解する。
+最後に、全 $h$ のAS4実現では元の正規化関係行列と $A_1$ の反巡回最高tensorから
+$\mu=I$ であることを独立に確認してある。
+従って全H3候補を中心三次へ制限でき、例外値も非整域となる。
+\end{proof}

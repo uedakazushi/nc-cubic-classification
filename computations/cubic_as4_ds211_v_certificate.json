@@ -1,0 +1,45 @@
+{
+  "version": "classification-v72",
+  "source_commit": "as4 a45f834f51a00c47443b51caf66abaf4629546b9",
+  "source": "CY_ZERO_COMMUTATORS_DOUBLE_SIMPLE_NONZERO_COMPLETE.tex DS1-DS3, V_h",
+  "cover": {
+    "r": "(p + 1)/(4 - 4*p)",
+    "h": "-(p + 1)**2/(4 - 4*p)**2"
+  },
+  "linear_change": {
+    "a_prime": "a+gamma*b",
+    "x": "c-r*d",
+    "y": "c+r*d",
+    "gamma": "p/(p + 1)**2"
+  },
+  "alpha": "p**2/(2*(p + 1)**2)",
+  "beta": "1/(2*(p + 1)**2)",
+  "four_PBW_overlaps": [
+    [
+      0,
+      2,
+      1
+    ],
+    [
+      0,
+      3,
+      1
+    ],
+    [
+      0,
+      3,
+      2
+    ],
+    [
+      3,
+      2,
+      1
+    ]
+  ],
+  "six_source_relations_verified": true,
+  "cyclic_top_tensor": true,
+  "trace_half_at_cube_root": "3*Z1*l0*l1 + 3*Z2*(l0**2/4 + l2*l3)",
+  "a_prime_norm": "a_prime^3-(3/4)*Z2*a_prime",
+  "centre3_locus": "h=1/48, dimension4; boundary h=0 checked separately",
+  "scope": "Exact all-cover identities; injectivity, centre and norm surjectivity are proved in the paper. No upstream AS4 existence/coverage imported."
+}

@@ -264,5 +264,15 @@
     "used_part": "DS1-DS2 and DT1 explicit A_l,r and B_r presentations only. No global coverage or AS4 sufficient theorem imported.",
     "independent_proofs": "Ore PBW, normalizer Jordan action, exact cubic incidence and CY top tensor conditional AS4.",
     "validator": "computations/verify_cubic_as4_ds211.py"
+  },
+  "ds211_nonzero_presentations_v72": {
+    "commit": "a45f834f51a00c47443b51caf66abaf4629546b9",
+    "path": "research/proofs/CY_ZERO_COMMUTATORS_DOUBLE_SIMPLE_NONZERO_COMPLETE.tex",
+    "used_part": "DS1-DS3 explicit L+/L-/P/T/U/V presentations only; same source hash as ds211_second_presentations_v71. No full projection coverage or existence sufficiency imported.",
+    "independent_proofs": "Generic-to-all exact rank covers with denominators controlled; faithful square-root-cover PBW quantum torus and surjective reduced norm; cyclic top tensor conditional AS4.",
+    "validators": [
+      "computations/verify_cubic_as4_ds211_remaining.py",
+      "computations/verify_cubic_as4_ds211_v.py"
+    ]
   }
 }

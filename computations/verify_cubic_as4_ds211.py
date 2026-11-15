@@ -23,7 +23,7 @@ def source_matrix(vals):
 
 def cyclic(R):
  W=R*A*R.T
- assert all(S.cancel(W[ix[v[:2]],ix[v[2:]]]+W[ix[v[1:3]],ix[(v[3],v[0])]])==0 for v in words(4))
+ assert all(S.cancel(S.expand(W[ix[v[:2]],ix[v[2:]]]+W[ix[v[1:3]],ix[(v[3],v[0])]]))==0 for v in words(4))
 
 def main():
  l,r=S.symbols('l r');q=(4*l+1)/(4*l-1);beta=-1/(4*l)

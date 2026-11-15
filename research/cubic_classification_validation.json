@@ -1,6 +1,6 @@
 {
   "date": "2026-11-15",
-  "version": "classification-v71",
+  "version": "classification-v72",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -830,5 +830,18 @@
     "certificate": "computations/cubic_as4_ds211_certificate.json",
     "status": "All-parameter exact PBW/normalizer/cyclic/cubic identities passed",
     "scope": "Two displayed DS211 second-layer families excluded; full DS211/CY/H3 coverage not imported."
+  },
+  "ds211_nonzero_v72": {
+    "proof": "papers/sections/cubic_as4_ds211_exclusions.tex",
+    "validators": [
+      "computations/verify_cubic_as4_ds211_remaining.py",
+      "computations/verify_cubic_as4_ds211_v.py"
+    ],
+    "certificates": [
+      "computations/cubic_as4_ds211_remaining_certificate.json",
+      "computations/cubic_as4_ds211_v_certificate.json"
+    ],
+    "status": "All allowed T/U values covered by exact rational/number-field minors; fixed cases rank20; V all-cover PBW/model/cyclic/trace/norm identities passed. Existing A/B validator rerun after symbolic zero-normalization.",
+    "scope": "All DS3/DT1 listed presentations excluded, not a new all-AS4/CY/H3 coverage theorem."
   }
 }
