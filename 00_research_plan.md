@@ -41,7 +41,7 @@ classification-v10 では、この族から外れる指定四方向の一次中�
 【優先課題】全14641 ambient成分上の正規三次incidenceの成分・同型群oid・曲面条件・境界・族と降下を決定し、その後intrinsic定義を弱める。GitHub mainを正本とし、GitHub push成功時はLibraryへの保存を行わない。PDFやZIPをGitで追跡せず、TeX・ノート・検算コードを追跡する。
 
 
-2026-11-15 / project-v28 / recognition-v6 / hearts-v13。最初に本書、`research/cubic_corner.md`、`papers/cubic_heart_corner.tex`を読む。比較の共通枠組みは`research/heart_comparison.md`と`papers/nc_del_pezzo_hearts.tex`、共通公理は`research/common_del_pezzo_framework.md`。次数別・三次三様体の研究はそれぞれの現行ノートから再開する。
+2026-11-15 / project-v29 / recognition-v6 / hearts-v14。最初に本書、`research/cubic_corner.md`、`papers/cubic_heart_corner.tex`を読む。比較の共通枠組みは`research/heart_comparison.md`と`papers/nc_del_pezzo_hearts.tex`、共通公理は`research/common_del_pezzo_framework.md`。次数別・三次三様体の研究はそれぞれの現行ノートから再開する。
 
 ## I. 恒常的な研究原則と保存許可
 
@@ -115,6 +115,14 @@ Eを変曲点oで原点を定めた滑らかな平面三次、q∈Eを非torsion
 
 証明`papers/sections/resonance_maximal_all_degrees.tex`を既存の`papers/nc_del_pezzo_resonance_hearts.tex`へ統合。再現可能な全根整数列挙は`computations/verify_resonance_maximal_a2.py`に集約し、既存cubic有理楕円証明書を保持。数値共鳴≠全根sheaf既約existence。Z全体のtorsion pair、Aの2次元/1次元表現とδ rank、全q導来同値、特異境界は未解決。
 
+### 最大共鳴の既約root分類・zigzag形式性（証明済み）
+
+Rainsのsimple-root存在の仮定下、最大共鳴でr=9−d個の単純根sheaf M_iが実在するとき、他の根類の境界非交叉既約純一次元sheafは存在しない。非単純正根gammaはgamma²=-2からどれかのsimple alpha_iとgamma·alpha_i<0になり、Ext¹次元の非負性に反する。負根はRains Prop7.19で排除、q非torsionなら同根sheafは数値EulerとRains Cor7.7で一意。T=⊕M_iのgraded Yoneda代数はDynkin zigzag Z(Δ)、次数別次元(r,2s,r)、総次元d6,...,1で8,14,18,22,26,30。既知一次定理 Liu–Wang, J. Algebra 677 (2025), Thm1.1（Etgü–Lekili/Lekili–Uedaの先行結果）を実際のPDFで確認し、char0のADE zigzagのintrinsic formalityを適用。d6のA2+A1は成分分離と孤立A1の次数理由による。
+
+結果として**固定したenhanced Rains導来圏でのTのframed形式変形**は二次Maurer–Cartan方程式m₂(x,x)=0のみ。Dynkin森の葉からの帰納法で定義イデアルは各辺積(x_ij x_ji)。gauge商前の形式スキームは2^s個のs次元形式座標空間の合併：d6,...,1で分枝数2,8,16,32,64,128、cubic E6は32個の5次元分枝。高次A∞障害はないが、Rains曲面そのものの相対moduli、anticanonical heart全体、有限次元A=R/(g−1)表現の行列と混合δのrankはまだ決定していない。
+
+全文`papers/sections/resonance_zigzag_unique.tex`を`papers/nc_del_pezzo_resonance_hearts.tex`にinput、計算は`computations/verify_resonance_zigzag.py`。Rains Prop7.19, Cor7.7, Cor7.13とLiu–Wang Thm1.1を使用。新規性・独立査読未確認。
+
 ### HRSと一般heart判定
 
 既存`papers/nc_del_pezzo_hearts.tex`の振幅1比較は(T,U)=(ker R1δ_*,ker δ_*)、transported heart=<U[1],T>、t-exact iff U=0を与える。対象は導来的には消えずshiftされる。既存の豊富orbitによる一意性は高次Ext tail消滅を明示的に必要とする。
@@ -143,7 +151,7 @@ weakly markedは非零Ext有限noetherian Abel圏、Serre、tau=S^-1[2]のheart�
 
 ## IV. 優先順位と具体的な着手
 
-**Rains dense resonanceの次の優先問題**：最大E6全72根の数値共鳴と正負の実在A2根対を構成済み。次はこの有理数例のA=R/(g-1)の2次元・1次元表現を明示し、mixed δのrank（0/1）とHom_A(V_alpha,V_beta)を決定して全q導来切断の完全忠実性を監査する。Z全体のtorsion pairは未証明。既存dP1原稿の全q導来同値・smoothnessの証明を独立監査し、一般次数およびAS/VdB heartのgluingを接続する。負指数でのAZ failure/t-nonexactは解決済みとし、再計算を繰り返さない。
+**Rains dense resonanceの次の優先問題**：既約rootの全根類分類・zigzag Ext代数・形式性・固定dg圏内のframed形式変形は解決した。最優先は実在する混合A2根対のA=R/(g−1)の2次元と1次元表現の作用行列を構成し、connecting δのrank(0または1)とHom_A(Vα,Vβ)を実測し、既存dP1全q導来同値の完全忠実性を独立検証する。全Rains heartのtorsion pairと相対moduliは未解決。
 
 1. **Cubicの構造対象と同値の照合**：AOUの実際のmutationでE0≃πFを検証し、AS corner同値と既知のqgr F比較を接続する。数値K0や境界restrictionだけで同定しない。
 2. **非可換AS locusと根壁**：古典的11根壁では反標準収縮が2-spherical対象を消し、導来非同値になることを確定した。次は非可換AS-regular potentialと各壁の交叉、Rains/VdB heartの特殊化、実在する核やpointednessを判定する。古典的障害を全非可換境界へ無条件には拡張しない。
@@ -162,6 +170,7 @@ weakly markedは非零Ext有限noetherian Abel圏、Serre、tau=S^-1[2]のheart�
     python3 computations/verify_resonance_hearts.py  # sign table and roots
     python3 computations/verify_resonance_extensions.py # E6 root intersections and mixed extensions
     python3 computations/verify_resonance_maximal_a2.py # 72 simultaneous roots and rational A2 witness
+    python3 computations/verify_resonance_zigzag.py # root classes, zigzag and formal cone
     latexmk papers/cubic_heart_corner.tex
 
 Python標準ライブラリで全有理数計算と有限体計算を再現する。証明書summaryは`computations/cubic_corner_certificate.json`、検証状態は`research/cubic_corner_validation.json`。追加した六点復元の完全な証明を含む原稿10ページをLuaLaTeXで組版し参照を確認した。一般cornerの証明、計算機による厳密rank証明、既知AS入力を分ける。独立査読・形式化・網羅的新規性調査は未実施。従来の研究の再現はその現行ノートを参照する。

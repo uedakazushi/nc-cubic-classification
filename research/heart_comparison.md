@@ -1,6 +1,6 @@
 # 非可換del Pezzo曲面のheart比較：現行研究ノート
 
-2026-11-15 / hearts-v13。最初に `00_research_plan.md` を読む。証明本文は `papers/nc_del_pezzo_hearts.tex`。対象は全次数の非可換del Pezzo曲面、最初の実行対象はcubic surface（次数3）。
+2026-11-15 / hearts-v14。最初に `00_research_plan.md` を読む。証明本文は `papers/nc_del_pezzo_hearts.tex`。対象は全次数の非可換del Pezzo曲面、最初の実行対象はcubic surface（次数3）。
 
 ## 稠密なRains resonanceでの符号別heart比較
 
@@ -25,6 +25,12 @@
 ## 全次数1–6の最大数値共鳴（証明済み）
 
 滑らかな楕円三次E上の非torsion qを固定し、p_i=N_iq（相異なる正整数、r=9−d）を取るとgenuine smooth dP_dを保ち、全根が非零整数指数のq-power restrictionとなる。d=6,5,4,3,2,1で根系A2+A1(8),A4(20),D5(40),E6(72),E7(126),E8(240)。E^rで最大共鳴の点集合はZariski dense。単純根整数m0,...,m_(r-1)とE[3]の9選択が全共鳴格子を分類、genuine条件は全根指数非零。N1<N3<N2の稠密な部分で正負の隣接A2根の共鳴が同時にあり、Rainsのsimple-root effectivityによって各々の実在root sheafが得られるとExt¹=k、負指数はAZ非ample。数値共鳴と全根sheaf存在を同一視しない。証明は`papers/sections/resonance_maximal_all_degrees.tex`。次は2/1次元アフィン加群の具体表示とmixed δのrankを計算し、既存全q導来比較の完全忠実性を監査。
+
+## 最大共鳴における既約根sheafとzigzag形式変形
+
+**定理の範囲**：Rainsの単純根が実在する最大共鳴点では、境界非交叉既約純一次元root sheafの根類はr個の単純根に限り、q非torsionなら各同型類は一意。非単純正根gammaには交点数gamma·alpha_i<0の既約単純根が存在し、Ext¹の非負性に矛盾する。負根はRains Prop7.19、同根の一意性はRains Cor7.7とCor7.13。
+
+**graded Yoneda**：T=⊕MiのExt代数はADE Dynkin zigzag、各次数の次元(r,2s,r)。Liu–Wang, J. Algebra 677 (2025), Theorem 1.1 (arXiv:2301.06757v3) によりchar0のADE zigzagはintrinsically formal。d6のA2+A1は成分分離＋孤立A1の次数理由で形式的。従って**固定Rains enhanced dg圏でのTのframed形式変形**はedge equations x_ij*x_ji=0だけ。Dynkin森で2^s個のs次元formal分枝、d6,..,1で(2,8,16,32,64,128)。cubic E6は32の5次元分枝。これはRains曲面の相対moduliやanticanonical heart全体の変形を説明しない。現行証明`papers/sections/resonance_zigzag_unique.tex`、検算`computations/verify_resonance_zigzag.py`。A=R/(g−1)の具体的作用行列とmixed δは未決定、全q導来同値は未監査。
 
 ## 目標・達成基準
 

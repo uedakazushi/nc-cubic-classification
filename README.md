@@ -26,6 +26,9 @@ classification-v10 では、この族から外れる指定四方向の一次中�
 
 ## 現在の重点：heart比較、まずcubic surface
 
+**最大共鳴の既約根sheaf・zigzag形式性**：全根が数値的に共鳴する滑らかなRains chartでも、境界非交叉の既約root sheafの根類はr個の単純根だけ（q非torsionで各一意）。T=⊕Miのgraded ExtはADE Dynkin zigzagで、Liu–Wang (J Algebra 677, 2025) Thm1.1のintrinsic A∞ formalityから、**固定Rains dg圏のframed形式変形**は各辺の積方程式x_ij x_ji=0だけで決まる。cubic E6では32個の5次元formal分枝（gauge商前）。曲面自体の相対変形、anticanonical heartの全体、混合根のA加群の行列やδは別問題。[数学的証明](papers/sections/resonance_zigzag_unique.tex)／[整数検算](computations/verify_resonance_zigzag.py)。
+
+
 **全次数1–6の最大根共鳴定理**：固定した滑らかな楕円三次E、非torsion qと、r=9−d個の相異なる正整数倍p_i=N_iqからgenuine del Pezzoを作ると、次数d=6,5,4,3,2,1の根系A₂+A₁(8根),A₄(20),D₅(40),E₆(72),E₇(126),E₈(240)の全ての根が同時に非零指数で共鳴する。各E^rでこのような点はZariski dense。根指数をr整数とE[3]の9選択から完全に記述。[全次数の証明](papers/sections/resonance_maximal_all_degrees.tex)。ただし全根sheafの同時実在や全非可換モジュライの既約成分での密度は主張しない。
 
 **最大E6根共鳴の新定理**：smooth plane cubic上で非torsion qを固定し、六点p_i=N_iq（相異なる正整数N_i）を取るとgenuine smooth cubicを保ちつつE6の72根が全て非零指数で数値的に共鳴する。これらの点は六点配置空間でZariski dense。共鳴チャートを六単純根に対する整数m0,...,m5と3-torsionの9通りで完全に記述。N=(1,3,2,5,7,11)では同じRains heartにm=2とm=-1の隣接する既約根sheafが存在し、Ext¹は1次元。二段直和混合拡大はEuler 0でも自然な反標準導来切断で消失しない。全q導来同値が正しければ対応する2次元アフィン加群は1次元加群を商に持つ必要がある。[定理・証明](papers/sections/resonance_maximal_a2.tex)／[再開ノート](research/resonance_hearts.md)。

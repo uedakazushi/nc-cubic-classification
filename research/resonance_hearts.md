@@ -1,6 +1,6 @@
 # Rains resonance と anticanonical heart：研究継続ノート
 
-2026-11-15 / resonance-hearts-v5。再開時は `00_research_plan.md` を最初に読み、本ノート、`papers/nc_del_pezzo_resonance_hearts.tex` と同稿が input する4つの証明節 `papers/sections/resonance_sign_trichotomy.tex`、`resonance_extension_cancellation.tex`、`resonance_maximal_a2.tex`、`resonance_maximal_all_degrees.tex` を参照する。名称は Rains heart / VdB heart / AS heart / anticanonical heart に統一する。
+2026-11-15 / resonance-hearts-v6。再開時は `00_research_plan.md` を最初に読み、本ノート、`papers/nc_del_pezzo_resonance_hearts.tex` と同稿が input する5つの証明節 `papers/sections/resonance_sign_trichotomy.tex`、`resonance_extension_cancellation.tex`、`resonance_maximal_a2.tex`、`resonance_maximal_all_degrees.tex`、`resonance_zigzag_unique.tex` を参照する。名称は Rains heart / VdB heart / AS heart / anticanonical heart に統一する。
 
 ## 1. 主結果の仮定と符号別Ext
 
@@ -55,7 +55,17 @@ m(alpha_i)=m_iで、任意の根alpha=Σc_i alpha_iの指数はm(alpha)=Σc_i m_
 
 論文中の完全な証明は`papers/sections/resonance_maximal_all_degrees.tex`（`papers/nc_del_pezzo_resonance_hearts.tex`がinput）。既存の`computations/verify_resonance_maximal_a2.py`に$r=3,…,8$の全根列挙と整数指数検算を統合した。数学的に同等なローカル整数コードを実行し root counts=(8,20,40,72,126,240)を検査。push後のGitHub版スクリプト自体を実行したとはまだ報告しない。これは**全モジュライ成分での稠密性や全根既約sheafの同時存在を証明した結果ではない**。
 
-## 5. 保存する全次数の知識と未解決の核
+## 5. 最大共鳴での既約根sheaf・zigzag形式性
+
+**証明済み（Rainsのsimple-root存在入力）**：最大共鳴でr=9−d個の単純根に対応する境界非交叉既約純一次元sheaf M_iが実在するとき、他の根類の既約sheafは存在しない。非単純正根gamma=Σc_i alpha_iについてgamma²=-2からgamma·alpha_i<0となるsimpleがあり、RainsのExt¹次元=交点数に矛盾。負根は有効錐のpointedness（Rains Prop7.19）に反する。q非torsionなら同根sheafのEuler指数はrestriction determinantにより一意。二sheaf間のEuler χ=2から非零Homが存在し、純粋性・既約性で単射、同数値類の単射はRains Cor7.7で同型。よって同型類数はd6,..,1で3,4,5,6,7,8。**全根数値共鳴≠全根既約sheaf存在**。
+
+**graded Ext**：T=⊕M_iのYoneda代数はDynkin図Δのzigzag Z(Δ)。次数(0,1,2)の次元は(r,2s,r)、s=辺数。Serre pairingにより往復矢の積が非零、非往復の長さ二の積は零。全次元はd6,..,1で(8,14,18,22,26,30)。
+
+**dg形式性とframed形式変形**：Liu–Wang, *A∞-deformations of zigzag algebras via Ginzburg dg algebras*, J. Algebra 677 (2025), Theorem1.1, arXiv:2301.06757v3 の一次資料を確認。標数0のADE zigzagはintrinsically formal。d6のA2+A1は成分別、孤立A1は次数理由で形式的。固定したRains enhanced dg圏の中のTのframed形式変形はMaurer–Cartan方程式m₂(x,x)=0のみ。Dynkin森の葉からの帰納法で定義イデアルは各辺の(x_ij x_ji)に等しく、gauge商前の形式的スキームは2^s個のs次元formal座標部分空間の合併。d6,..,1で成分数(2,8,16,32,64,128)、cubic E6で32個の5次元formal分枝。高次A∞障害による追加切断はない。**Rains曲面自身の相対変形／anticanonical heart全体の変形／A=R/(g−1)の表現行列・connecting δ rankは別問題**。
+
+完全証明：`papers/sections/resonance_zigzag_unique.tex`。標準Python検算：`computations/verify_resonance_zigzag.py`（各次数の全根、非単純正根のnegative pairing、Ext次数と葉消去）。これはRainsの既約sheaf存在・Liu–Wangの形式性を計算で証明するものではない。新規性全面調査と独立査読は未実施。
+
+## 6. 保存する全次数の知識と未解決の核
 
 - 中心正則g∈R1とR/(g)=B(E,L,σ), deg L=dよりdim R_n=1+d n(n+1)/2は共鳴で跳ばない。
 - q非torsion、smooth genuine classical avatarではm=0の根共鳴はない。古典weak dPの(-2)曲線が反標準収縮で消える現象とは区別する。
@@ -68,4 +78,4 @@ m(alpha_i)=m_iで、任意の根alpha=Σc_i alpha_iの指数はm(alpha)=Σc_i m_
 
 Rains, *Filtered deformations of elliptic algebras*, arXiv:2107.13540v2, §4 pp33--35（単純根のeffectivityと稠密性、K0の制限）。Rains, *The birational geometry of noncommutative surfaces*, arXiv:1907.11301v1, Definition 9.1, Theorem 9.2 (simple roots/formal(-2)-curves), §11 pp139--141 (root sheaf existence), Cor7.13 (Euler形式), Cor7.23/7.26--31/10.16等。原典PDFのtext layerを照合した。Web screenshot取得はcache miss、独立査読と網羅的新規性調査は未実施。
 
-主要再現コマンド：`python3 computations/verify_resonance_maximal_a2.py`、`python3 computations/verify_resonance_extensions.py`、`python3 computations/verify_resonance_hearts.py`、`latexmk papers/nc_del_pezzo_resonance_hearts.tex`。新しい算術コードと数学的に同等のローカルコードを有理数上で実行したが、GitHubにpushしたコード自体の実行・全原稿組版は別途確認事項。GitHub mainを正本としてpush成功ならLibraryへ保存しない。
+主要再現コマンド：`python3 computations/verify_resonance_zigzag.py`、`python3 computations/verify_resonance_maximal_a2.py`、`python3 computations/verify_resonance_extensions.py`、`python3 computations/verify_resonance_hearts.py`、`latexmk papers/nc_del_pezzo_resonance_hearts.tex`。新しい算術コードと数学的に同等のローカルコードを有理数上で実行したが、GitHubにpushしたコード自体の実行・全原稿組版は別途確認事項。GitHub mainを正本としてpush成功ならLibraryへ保存しない。
