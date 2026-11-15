@@ -81,5 +81,23 @@ result["symmetric_squarefree"]=[{"multiplicity":i,"factor":ser(p)} for i,p in sf
 result["off_axis_squarefree"]=[{"multiplicity":i,"factor":ser(p)} for i,p in sfo]
 result["distinct_center_singular_values"]=sum(p.degree() for _,p in sfs+sfo)-1
 assert result["distinct_center_singular_values"]==13
+def detsmall(M):
+ n=len(M);out=zero
+ for perm in itertools.permutations(range(n)):
+  term=one
+  for j in range(n):term*=M[j][perm[j]]
+  out+=(-1 if sum(perm[i]>perm[j] for i in range(n) for j in range(i+1,n))%2 else 1)*term
+ return out
+minor_gcd=zero
+for rows in itertools.combinations(range(4),3):
+ for cols in itertools.combinations(range(4),3):
+  minor_gcd=minor_gcd.gcd(detsmall([[V[r][c] for c in cols] for r in rows]))
+  if minor_gcd.degree()==0:break
+ if minor_gcd.degree()==0:break
+assert minor_gcd.degree()==0
+assert (bb**2-3*aa*cc).gcd(off).degree()==0
+result['Jacobian_f_multiplication_3minor_gcd_is_unit']=True
+result['off_axis_no_triple_roots_at_discriminant']=True
+result['singularity_inventory']='Dstar: one A3; other9 symmetric values: one A1 each; other3 off-axis values: two A1 each'
 (Path(__file__).parent/'cubic_order4_center_critical_certificate.json').write_text(json.dumps(result,indent=2)+'\n')
 print('CENTER CRITICAL POLYNOMIALS VERIFIED',flush=True)

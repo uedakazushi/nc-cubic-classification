@@ -1,0 +1,121 @@
+\subsection{位数4固定包絡の小次元単純表現と中心像}
+\label{subsec:order4-small-reps}
+ここでは命題\ref{prop:order4-center-critical-values}と同じ固定包絡だけを扱う。
+平方因子分解を monic に正規化して
+\[
+ \Delta_s\sim P_4 P_6^2,\qquad
+ \Delta_o\sim Q_1 Q_2^2(D-D_*)^3
+\]
+と書く。下添字は次数である。全因子は各分解内で平方因子を持たず互いに素であり、
+$\gcd(\Delta_s,\Delta_o)=(D-D_*)^2$ である。
+特に $P_6$ は $D-D_*$ をちょうど一度含む。
+
+\begin{lemma}[全中心特異点の型]
+\label{lem:order4-all-center-nodes}
+$D_*$ では中心はただ一つの $A_3$ 点を持つ。
+それ以外の $\Delta_s$ の9根ではただ一つの $A_1$ 点を持ち、
+$\Delta_o$ の他の3根では正確に二つの $A_1$ 点を持つ。
+その他の中心は滑らかである。
+\end{lemma}
+\begin{proof}
+前節の階数4 Jacobian 代数上で、$f$ の乗法行列の全ての $3\times3$ 小行列式の
+最大公約数が単元であることを厳密に確認した。
+従って $\Delta_s=0$ での $f$ の余核は常に一次元であり、
+$f=0$ は一つの Milnor 数1の特異点を持つ。
+$\Delta_s,\Delta_o$ の共通根以外では $A\ne0$ なので、$v$ 方向も非退化となる。
+第二の枝では、$f_0=az^3+bz^2+cz+d$ に対し
+$\gcd(\Delta_o,b^2-3ac)=1$ を厳密に確認した。
+従って重根はちょうど一つの二重根である。
+共通根以外では $v^2=-f_u/3\ne0$ なので、二つの点を得る。
+座標 $A,z,v$ で Hessian を見ると $A,v$ の混合項と $f_0''$ が非零で、両点とも $A_1$ となる。
+共通根 $D_*$ では前節の特異点が唯一の候補となり、
+命題\ref{prop:order4-bad-A3-center}により $A_3$ である。
+二つの新しい単元判定も \path{verify_cubic_order4_center_critical.py} が確認する。
+\end{proof}
+
+\begin{proposition}[二次元単純表現の完全なtrace表示]
+\label{prop:order4-two-dimensional-traces}
+$k$ は $K$ を含む代数閉体とする。
+$U_D$ の二次元単純表現の同型類は、次の三方程式の解で中心値が $D$ となるものと一対一に対応する。
+\[
+ L=\begin{pmatrix}x-1&-z&-y\\-z&y-1&-x\\-y&-x&z\end{pmatrix},\quad T=\operatorname{adj}(L),
+\]
+\[
+ \gamma^2(2\xi_j\xi_k-\xi_i^2-\alpha_i\xi_i-\beta_i)-2T_{jk}+T_{ii}=0,
+ \quad(\xi_1,\xi_2,\xi_3)=(x,y,z),\quad
+ \alpha=(-2,-2,0),\quad\beta=(1,1,2).
+\]
+この解スキームは長さ8で被約、全ての点で $\det L\ne0$ である。
+\end{proposition}
+\begin{proof}
+Pauli行列で表現行列を $X_i=\xi_i I+\mathbf a_i\cdot\boldsymbol\sigma$ と書き、
+$A=(\mathbf a_1,\mathbf a_2,\mathbf a_3)$ とする。
+関係式のベクトル部分は
+\[
+ A L=\sqrt{-1}\,\gamma\operatorname{cof}(A)
+\]
+である。$A$ の階数2で像平面が非退化なら、右辺の非零像はその直交補空間であり、
+左辺の像平面とは交わらず矛盾する。
+像平面が退化なら、その根基を表す非零 nilpotent を上三角標準形に移すことで、
+平面全体が上三角 traceless 行列となり表現は可約である。
+階数1以下でも可約である。
+従って単純表現では $A$ は可逆であり、
+\[
+ A^{\mathsf t}A=-\gamma^{-2}\operatorname{adj}(L),\qquad
+ \sqrt{-1}\det A=-\gamma^{-3}\det L
+\]
+を得る。スカラー部分は表示した三方程式となる。
+逆に $\det L\ne0$ の解から非退化 Gram 行列とこの向きを持つ $A$ を取れば、
+ベクトル部分も満たす。Gram 行列と向きを固定した二つの $A$ は
+$\mathrm{SO}_3(k)=\mathrm{PGL}_2(k)$ の作用で移り合うので共役類は一意である。
+三つの traceless 部分が全 $\mathfrak{sl}_2$ を張るので単純性も従う。
+
+\path{verify_cubic_order4_small_reps.py} はこの三次元可換多項式環で
+Groebner 基底を計算し、標準単項式が8個であること、
+$\det L$ を加えたイデアルが単位イデアルとなること、
+Jacobian 行列式を加えたイデアルも単位イデアルとなることを確認する。
+これにより解の欠落も非被約重複もない。
+\end{proof}
+
+\begin{proposition}[小次元表現の中心値の全体]
+\label{prop:order4-small-rep-norms}
+character スキームの中心値のノルムを $N_1(D)$、
+命題\ref{prop:order4-two-dimensional-traces}の8点の中心値のノルムを $N_2(D)$ とする。
+両者を monic として
+\[
+ N_1(D)^2 N_2(D)=P_6(D)^2Q_2(D)^4(D-D_*)^4.
+\]
+$N_1$ と $N_2$ の台は互いに素で、それぞれ5個、3個の値を持つ。
+$N_1$ の台のうち、$P_6$ に4個（$D_*$ を含む）、$Q_2$ に1個、
+$N_2$ の台のうち、$P_6$ に2個、$Q_2$ に1個がある。
+$Q_2$ のcharacterを持つ根では二つの非対称中心点に一つずつcharacterがあり、
+もう一つの根では各中心点に二つずつ二次元単純表現がある。
+これは全小次元単純表現の結論であり、単独では有限大域次元の判定ではない。
+\end{proposition}
+\begin{proof}
+character は既出の長さ8完全交叉である。
+それぞれの有限座標環に、中心切断 $G_0$ の評価の負号を持つ元 $d$ を取る。
+character では可換評価、二次元表現では半traceを用いる。
+後者は $G_{ij}=-\gamma^{-2}T_{ij}$、$\eta=-\gamma^{-3}\det L$ として
+\[
+ \tfrac12\operatorname{tr}(X_iX_j)=\xi_i\xi_j+G_{ij},\quad
+ \tfrac12\operatorname{tr}(X_iX_jX_k)
+ =\xi_i\xi_j\xi_k+\xi_iG_{jk}+\xi_jG_{ik}+\xi_kG_{ij}+\eta\epsilon_{ijk}
+\]
+で与えられる。四語では全スカラー項、六つの一対縮約、
+四つの $\eta\epsilon$ 項、
+$G_{ij}G_{kl}-G_{ik}G_{jl}+G_{il}G_{jk}$ を足す。
+これらは Pauli の積公式から直接従う。
+$d$ の8次元乗法行列の特性多項式を計算して $N_1,N_2$ を得る。
+全係数と積の恒等式を係数体内で厳密に比較する。
+$N_1$ の平方因子分解の次数・重複度は $(3,1),(1,2),(1,3)$、
+$N_2$ は $(2,2),(1,4)$。
+各因子との最大公約数と合わせると表示した台の個数と配置を得る。
+
+最後に $Q_2$ の各該当根へ特殊化し、四次中心元の半traceから
+$v=Y_1-Y_2$ の乗法行列を作る。
+character 側は次元2、二次元表現側は次元4である。
+両行列とも $v^2$ は非零スカラー、trace は零と厳密に確認される。
+従って二つの中心点 $v=\pm\sqrt{v^2}$ への分配はそれぞれ $(1,1)$ と $(2,2)$ である。
+全データは \path{cubic_order4_small_rep_certificate.json} に保存する。
+\end{proof}

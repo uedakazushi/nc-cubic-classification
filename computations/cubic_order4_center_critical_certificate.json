@@ -322,5 +322,8 @@
       ]
     }
   ],
-  "distinct_center_singular_values": 13
+  "distinct_center_singular_values": 13,
+  "Jacobian_f_multiplication_3minor_gcd_is_unit": true,
+  "off_axis_no_triple_roots_at_discriminant": true,
+  "singularity_inventory": "Dstar: one A3; other9 symmetric values: one A1 each; other3 off-axis values: two A1 each"
 }
