@@ -1,0 +1,117 @@
+\subsection{楕円THCRの全filtered deformationからの包絡復元}
+\label{subsec:filtered-elliptic-recognition}
+この節では、包絡を最初から外部データとして選ぶ必要を除く。
+filtered deformationは $F_{-1}U=0,F_0U=k$ の局所有限な非負増大濾過を持ち、
+$\operatorname{gr}U=H$ となるものをいう。
+
+\begin{lemma}[非可換平行移動型の全中央PBW包絡はCY]
+\label{lem:sklyanin-central-PBW-CY}
+補題\ref{lem:translation-elliptic-quadratic-envelope}の非可換 $S$ に対し、
+対称線型係数と任意の定数係数のPBW持上げを同次化した包絡 $B$ は
+noetherian quadratic Koszul CY AS4である。
+\end{lemma}
+\begin{proof}
+前節のBG判定によりPBW平坦であり、同次化した $B$ は中央正則一次 $t$ を持ち $B/(t)=S$ となる。
+noetherian性は先頭環 $S[t]$ から移り、正則中心拡大定理\cite{LBS}を適用できる。
+ここでは全次数の $t$ 正則性はPBWから既に得られ、最高三次syzygyの持上げも対称係数の巡回恒等式で得られる。
+従ってKoszul AS4である。
+
+非恒等平行移動のTHCRでは $Z(H)_1=0$ なので $Z(S)_1=0$、従って $Z(B)_1=kt$。
+Nakayama自己同型は $\mu_B(t)=c t$、$c\ne0$ と書け、商では $\mu_S=1$ となる。
+\cite[(E3.9.1), Theorem 6.3]{RRZ}を用いると
+\[
+ 1=\operatorname{hdet}_B\mu_B
+   =c\operatorname{hdet}_S(\mu_B\bmod t)=c.
+\]
+Theorem 6.3の仮定はnoetherian connected graded Koszul AS regularであり、ここで全て確認済みである。
+一般AS Gorensteinに対する同論文のConjecture 6.4や、条件付きLemma 7.1は使っていない。
+$t$ が固定されれば、$\mu_B$ の残りは $X_i\mapsto X_i+v_i t$ となる。
+前節の二つのminorで $v=0$ を得て、CY性が従う。
+\end{proof}
+
+\begin{theorem}[全filtered deformationの強い14641包絡認識]
+\label{thm:all-filtered-elliptic-strong-envelope}
+滑らかな楕円THCR $H=B(E,\mathcal L,\rho)$、$\deg\mathcal L=3$、
+平行移動 $\rho$ の任意のfiltered deformation $U$ を取る。
+そのRees環 $R$ は一次生成で、二次包絡 $B=Q(R)$ はnoetherian quadratic Koszul CY AS4型14641、
+\[
+ R=B/(G),\qquad G\in Z(B)_3\text{ 正則}
+\]
+となる。従って $(\qgr R,\pi R)$ がH3である必要十分条件は
+$\operatorname{gldim}U<\infty$ である。
+この認識は $U$ の有限大域次元を仮定する前に包絡のAS4性を与える。
+\end{theorem}
+\begin{proof}
+$H$ は一次生成なので、最高記号の帰納法により $U$ は $F_1U$ でfiltered生成され、
+$R$ は $t,X_1,X_2,X_3$ で一次生成される。
+$S=Q(H)$ は前節のCY Sklyanin型である。
+まず $\rho\ne1$ とする。このとき $S$ は非可換であり、
+$B=Q(R)$ の六二次関係は $[t,X_i]=0$ と
+$r_i+t\sum_jA_{ij}X_j+\beta_i t^2$ と書ける。
+巡回tensor恒等式を $R$ 内で使い、$R$ 上の $t$ 正則性で割ると
+$\sum A_{ij}[X_i,X_j]=0$ を得る。
+$S$ の関係空間と反対称tensorの交わりは零なので $A$ は対称である。
+従ってBG判定と前補題を適用でき、$B$ はnoetherian Koszul CY AS4となる。
+ここでは $B$ の正則性を仮定してから同じ結論へ戻る循環論法を使っていない。
+
+$R$ のHilbert級数は
+\[
+ H_R(s)=\frac{H_H(s)}{1-s}=\frac{1-s^3}{(1-s)^4}
+\]
+なので、全射 $B\to R$ の核の三次部分は一次元である。
+非零生成元を $G$ と取る。AS4の整域性から $GB$ と $BG$ は共にHilbert級数 $s^3H_B$ を持つ。
+これは核のHilbert級数に等しいので、核は $GB=BG$、従って $G$ は正則正規となる。
+
+$g=G\bmod t$ についても同じHilbert議論を $S\to H$ に適用できる。
+$S$ と $H$ のNakayama自己同型が恒等であることと正規商公式から、$g$ は中心である。
+$G$ のnormalizerは $t$ を固定し、$S$ 上で $g$ のnormalizerである恒等に降りる。
+従って $X_i\mapsto X_i+v_i t$ と書け、二次関係の二つのminorによって $v=0$。
+よって $G$ 自身も中心となる。
+
+$\rho=1$ の場合、Rains\cite[Theorem 2.13]{RainsCut}により
+$\operatorname{gr}Z(U)=H=\operatorname{gr}U$ であるから $U$ は可換となる。
+従って $R$ は可換、二次包絡は四変数多項式環である。
+同じHilbert議論で一本の中心三次関係を得る。
+最後に定理\ref{thm:normal-cubic-central-boundary-recognition}を適用する。
+\end{proof}
+
+\begin{corollary}[非可換中央楕円枝の全候補と幾何学的矢]
+\label{cor:filtered-elliptic-geometric-groupoid}
+非可換H3対象のうち中央正則な滑らか楕円一次境界を持つ部分の幾何学的群oidは、
+非恒等平行移動の次数3楕円THCRのfiltered deformationで有限大域次元を持つものと、
+そのfiltered同型によって記述できる。
+ここで境界やassociated gradedの同定をintrinsic標識に追加してはいない。
+全候補とその全同型比較は以下の有限presentation incidenceで与えられる。
+\end{corollary}
+\begin{proof}
+任意の対象から中央境界を使って $U$ を取れる。
+逆向きは前定理であり、非可換の場合は中央一次直線が一意なので余分な選択はない。
+$t$ をスカラー倍しても $F_nU=R_n t^{-n}$ という部分空間は変わらない。
+graded同型 $R\to R'$ は $t\mapsto a t'$ と作用してfiltered同型を誘導し、
+その核は $R_n$ 上 $a^n$ の次数スカラーに等しい。
+逆にfiltered同型はRees環のgraded同型を誘導する。
+反標準環による既出のintrinsic同値認識から群oidの主張を得る。
+これは幾何学的矢の主張であり、一般の圏の族に関する全降下定理とは区別する。
+
+有限incidenceを具体化する。
+Hesse係数 $\lambda$ と $p=(a:b:c)\in E_\lambda$ を取り、三二次関係をMoore行列で定める。
+対称行列 $A$ の六係数と $\beta$ の三係数を選ぶ。
+$S_3\to H_3$ の核は一次元であり、有限なsection乗法計算でその生成元 $g$ を得る。
+局所的に $G\bmod t=g$ と規格化し、$B_3$ の残り十係数を未知数とする。
+$B_3\to B_4^{\oplus3}$ の交換子方程式は有限線型方程式である。
+これは先に導入した単一の $140\times20$ 核 $W_1(B)$ のCY部分であり、$t$ との交換子列は零である。
+従って中心三次の全持上げを漏れなく与える。
+$g$ の基底規格化には有限個の非零係数chartを使えばよい。
+逆にこのincidenceの各点では $g$ と $t$ の正則列から
+$R/(t)=H$、$\operatorname{gr}U=H$ を得るので余分な候補を加えない。
+
+filtered同型は $F_1U/k$ 上の可逆行列 $M$ と定数ベクトル $v$ により
+$X\mapsto MX'+v$ と書ける。
+三二次関係と一三次関係の像を $F_3U'$ 内で零とする有限係数方程式、
+および $\det M\ne0$ が必要十分である。
+associated gradedの同型と最高記号の帰納法により、この写像は同型となる。
+同一点で同じ方程式を解けば全自己同型群を得る。
+有限位数では前節の中心McKay条件がadmissibilityの完全判定を与える。
+無限位数での全許容切断、intrinsic族のstack降下、
+この中央楕円部分が全H3を覆うかどうかは依然として未解決である。
+\end{proof}

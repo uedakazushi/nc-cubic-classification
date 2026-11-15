@@ -1,6 +1,6 @@
 {
   "date": "2026-11-15",
-  "version": "classification-v24",
+  "version": "classification-v25",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -27,7 +27,8 @@
     "papers/sections/cubic_finite_order_criterion.tex",
     "papers/sections/cubic_finite_order_relative.tex",
     "papers/sections/cubic_normal_central_boundary.tex",
-    "papers/sections/cubic_central_elliptic_cy_envelope.tex"
+    "papers/sections/cubic_central_elliptic_cy_envelope.tex",
+    "papers/sections/cubic_filtered_elliptic_recognition.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -417,12 +418,26 @@
     ],
     "exact_command": "python3 computations/verify_cubic_central_elliptic_cy.py",
     "exact_scope": "universal Moore determinant, opposite graph, origin kernel, Heisenberg covariance, all three flex linear maps, cyclic W3, two Nakayama translation minors, two relation symmetrization minors",
-    "typesetting": "89-page LuaLaTeX manuscript built; inspect log verified no unresolved references/citations or overfull boxes; no additional visual pass for this subsection yet",
+    "typesetting": "88-page LuaLaTeX manuscript built; inspect log verified no unresolved references/citations or overfull boxes; no additional visual pass for this subsection yet",
     "primary_hesse_source": {
       "url": "https://arxiv.org/pdf/math/0611590",
       "sha256": "a3665e3f8af09bdec480351324734f0cdde5f490bd4db771b36f6facf2b3e79a",
       "read": "Lemma1 proof, section4 generators and translation action; used Hesse normal form and E[3] action only"
     },
     "limitations": "No proof that all H3 have this central smooth elliptic boundary; no all-AS4 CY reduction; j0/infinite-order cut classification and intrinsic stack remain incomplete; independent review/novelty unchecked"
+  },
+  "all_elliptic_filtered_deformations_strong_envelope": {
+    "proof": "papers/sections/cubic_filtered_elliptic_recognition.tex",
+    "result": "Every nonnegative locally finite filtered deformation of smooth degree3 elliptic THCR with translation has Rees quadratic envelope noetherian Koszul CY AS4 and regular central cubic quotient; H3 iff finite affine gldim",
+    "ordinary_proofs": [
+      "derive symmetric quadratic-linear coefficients inside the given Rees ring before applying BG to obtain AS4; no circular assumed ambient regularity",
+      "RRZ Theorem6.3 + E3.9.1 force central t fixed by Nakayama; relation minors force full identity",
+      "Hilbert-series equality makes cubic kernel principal on both sides; its normalizer fixed modt/t has no translation hence cubic central",
+      "noncomm intrinsic geometric equivalences exactly filtered isomorphisms; all candidate data and arrows have finite coefficient incidence"
+    ],
+    "known_inputs_checked": "RRZ Theorem6.3 proof and E3.9.1 checked in the primary text; no appeal to Conjecture6.4 or conditional Lemma7.1",
+    "exact_checks": "No new computation needed beyond existing universal cyclic/Moore/translation and BG obstruction identities; theorem proof ordinary, not machine-formalized",
+    "typesetting": "90-page manuscript built without unresolved refs/cites or overfull boxes; no extra visual pass for this subsection yet",
+    "limitations": "No classification of all infinite-order admissible cuts, global irreducible components, all intrinsic families/stack, or proof all H3 have this boundary; no independent referee/novelty audit"
   }
 }
