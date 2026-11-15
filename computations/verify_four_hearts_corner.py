@@ -167,12 +167,66 @@ def rank_two_relations():
     return q,vals
 
 
+
+def matrix_rank(rows):
+    """Exact rank over QQ; used for the character-lattice weight matrices."""
+    a = [[F(x) for x in row] for row in rows]
+    r = 0
+    for j in range(len(a[0])):
+        pivot = next((i for i in range(r, len(a)) if a[i][j]), None)
+        if pivot is None:
+            continue
+        a[r], a[pivot] = a[pivot], a[r]
+        d = a[r][j]
+        a[r] = [x/d for x in a[r]]
+        for i in range(len(a)):
+            if i != r and a[i][j]:
+                d = a[i][j]
+                a[i] = [x-d*y for x,y in zip(a[i],a[r])]
+        r += 1
+        if r == len(a):
+            break
+    return r
+
+
+def coefficient_tori():
+    triples = list(product(range(3), repeat=3))
+    weights = []
+    for a,b,c in triples:
+        row = [0]*27
+        for j in (3*a+b, 9+3*b+c, 18+3*c+a):
+            row[j] += 1
+        weights.append(row)
+    remaining = [i for i,(a,b,c) in enumerate(triples) if a in (1,2)]
+    assert matrix_rank(weights) == 19
+    assert matrix_rank([weights[i] for i in remaining]) == 14
+    index = {t:i for i,t in enumerate(triples)}
+    invariants = []
+    pairs = list(product((1,2),repeat=2))
+    for i,j in pairs:
+        e = [0]*27
+        for a,b,c,sign in ((2,i,j,1),(1,i,j,-1),(2,0,0,1),(1,0,0,-1),
+                           (2,i,0,-1),(1,i,0,1),(2,0,j,-1),(1,0,j,1)):
+            e[index[(a,b,c)]] += sign
+        assert all(sum(e[k]*weights[k][l] for k in range(27)) == 0 for l in range(27))
+        invariants.append(e)
+    # The section w0=w1=1, w2=normalized Q is integral, not just an isogeny.
+    section_pairing = [[e[index[(2,i,j)]] for i,j in pairs] for e in invariants]
+    assert section_pairing == [[int(i==j) for j in range(4)] for i in range(4)]
+    return {'full_weight_rank':19, 'remaining_weight_rank':14,
+            'full_quotient_dimension':8, 'remaining_quotient_dimension':4,
+            'cross_ratio_characters_gauge_invariant':True,
+            'integral_section_pairing':section_pairing,
+            'split_kernel_dimension':4}
+
+
 def main():
     ap=argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--output',type=Path,default=Path('build/four_hearts_corner_checks.json'))
     ap.add_argument('--mod-only',action='store_true',help='Skip independent QQ elimination; use full rank modulo the prime.')
     args=ap.parse_args()
     identities=universal_syzygies()
+    tori=coefficient_tori()
     q=[[F(W[2][b][c],W[1][b][c]) for c in range(3)] for b in range(3)]
     vals=checks_q(q); assert all(vals)
     lam=[[q[i][j]*q[0][0]/(q[i][0]*q[0][j]) for j in (1,2)] for i in (1,2)]
@@ -193,6 +247,7 @@ def main():
     bad2=checks_q(qbad2)
     assert all(bad2[:9]) and bad2[9]==80640 and bad2[10]==0
     result={'date':'2026-11-16','version':'hearts-v19','arithmetic':'Z and QQ; independent finite field',
+      'coefficient_torus_checks':tori,
       'universal_six_point_syzygies_verified':identities,'universal_polynomial_variables':12,
       'potential_matrices':W,'witness_cross_ratios':[[str(x) for x in row] for row in lam],
       'normalized_nine_minors':[str(x) for x in factors[:9]],
