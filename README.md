@@ -28,7 +28,7 @@ q非torsion、H=−K nef、H²>0の下で、境界外圏Zは有限長Serre部分
 
 良い楕円R13のH3判定はaffine中心商の有限大域次元に帰着する。分裂B=S[t]の全非零切断は一軌道で、零切断は除外。位数二Cliffordの分裂全切断・非分裂対称beta族は、中心の滑らかさまたはClifford rank1の通常二重点を許す局所条件で完全判定し、全pointed幾何学的矢・慣性を記述している。gamma≠0への積分族は明示開集合上で平坦CY AS4となり、Hesse216と混合平行移動による一般八次元の表示商を持つ。これらを全H3の被覆や成分分類とは呼ばない。
 
-**指定位数4固定包絡のD切断は完全判定済み**（現行H3原稿）：h=1、gamma^4=2、alpha=(−2,−2,0)、beta=(1,1,2)で中心特異値は13個だが、非H3値は次数6の平方因子なし多項式b(D)=(D−Dstar)*P4(D)*Q1(D)の根に限る。他のDのaffine切断は大域次元2。D直線の主開集合D(b)は底変更・fpqc降下と両立する。[局所orderの証明](papers/sections/cubic_order4_local_orders.tex)を参照。さらに[位数4全係数の幾何学的判定](papers/sections/cubic_order4_general_criterion.tex)を得た：中心特異点A1/A2/A3で、それぞれ次元1又は2の単純表現、異なるcharacter2個以上、異なるcharacter4個が必要十分。全係数族の相対開性・降下と全H3被覆は未完成。中心がDu Valであることだけでは十分でない。この並行成果を共鳴研究で独立再監査したとはしていない。
+**指定位数4固定包絡のD切断は完全判定済み**（現行H3原稿）：h=1、gamma^4=2、alpha=(−2,−2,0)、beta=(1,1,2)で中心特異値は13個だが、非H3値は次数6の平方因子なし多項式b(D)=(D−Dstar)*P4(D)*Q1(D)の根に限る。他のDのaffine切断は大域次元2。D直線の主開集合D(b)は底変更・fpqc降下と両立する。[局所orderの証明](papers/sections/cubic_order4_local_orders.tex)を参照。さらに[位数4全係数の幾何学的判定](papers/sections/cubic_order4_general_criterion.tex)を得た：中心特異点A1/A2/A3で、それぞれ次元1又は2の単純表現、異なるcharacter2個以上、異なるcharacter4個が必要十分。全係数族の相対開性・降下と全H3被覆は未完成。 さらに[有限位数N一般の判定](papers/sections/cubic_finite_order_criterion.tex)を得た：中心がDuValで全McKay指標を含むことが必要十分で、次元3N²以下の有限中心fiberの正則trace形式から判定できる。中心がDu Valであることだけでは十分でない。この並行成果を共鳴研究で独立再監査したとはしていない。
 
 ## 四つのheartとcubic corner
 

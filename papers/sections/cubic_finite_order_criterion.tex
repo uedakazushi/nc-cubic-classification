@@ -1,0 +1,109 @@
+\subsection{良い楕円CY中心拡大の全有限位数への拡張}
+\label{subsec:finite-order-elliptic-criterion}
+位数4の局所整環法は、PI次数だけを変えて他の有限楕円位数にも適用できる。
+以下の仮定を明記して、非CY・非中心包絡や一般の無限位数境界へ拡張したと読まないようにする。
+
+\begin{theorem}[有限楕円位数の中心と幾何学的H3判定]
+\label{thm:finite-order-elliptic-admissibility}
+$B$ を noetherian quadratic Koszul CY AS4包絡とし、
+活動次数濾過について $\operatorname{gr}_{\mathrm{act}}B=S\otimes k[t]$ と仮定する。
+既出の良い楕円中心拡大の構造条件を使うが、
+ここでは $Z(S)_1,Z(S)_2,Z(S)_3$ の次元条件を課さない。
+$t\in Z(B)_1$ は正則、$S=B/(t)$ はAS3、$G\in Z(B)_3$ の像 $g\in S_3$ は正則で、
+\[
+ H=S/(g)=B(E,\mathcal L,\rho),\qquad \deg\mathcal L=3
+\]
+と仮定する。$E$ は滑らか、$\rho$ は正確に有限位数 $N\ge1$ の平行移動である。
+$R=B/(G)$、$U=R[t^{-1}]_0$ と置く。
+\begin{enumerate}
+\item $Z(U)$ は三つの濾過次数 $N$ の元で生成され、一本の三次関係を持つ。
+その最高三次は $E/\langle\rho\rangle$ の滑らかな平面三次である。
+中心は正規Gorenstein曲面、$U$ はその上階数 $N^2$ の対称非分岐最大整環である。
+二つの適切な中心座標上では $U$ は階数 $3N^2$ の自由加群となる。
+\item 切断がH3である必要十分条件は、中心の全特異点がDu Valであり、
+その各点で完備化した整環が
+\[
+ \operatorname{End}_{k[[u,v]]^G}
+   \left(\bigoplus_{\chi\in\operatorname{Irr}G}M_\chi^{\,r_\chi}\right),
+ \qquad \sum_\chi r_\chi\dim\chi=N
+\]
+と書かれたとき全ての $r_\chi$ が正となることである。
+同値な条件は、当該中心点上の相異なる単純表現の個数が
+$|\operatorname{Irr}G|$ に等しいことである。
+そのとき $\operatorname{gldim}U=2$。
+\item 係数体の厳密演算と有限代数拡大が利用可能なら、この判定は有限次数の中心線型計算、中心の孤立特異点の型、
+次元 $3N^2$ 以下の有限代数のradicalと中心の計算で実行できる。
+特に表現の全行列軌道を列挙する必要はない。
+\end{enumerate}
+この定理はこれらの仮定を満たす部分全体の幾何学的admissibilityを述べる。
+全intrinsic H3の被覆、全包絡の構造分類、全係数族の相対中心底変更やstack降下は別問題である。
+\end{theorem}
+\begin{proof}
+Rains\cite[Theorem 2.13]{RainsCut}は $N$ の3に対する互除性を仮定していない。
+従って $\operatorname{gr}Z(U)=Z(H)$ である。
+ノルム線型束は商楕円曲線上次数3であるから、その切断環は三つの生成元と一本の滑らかな三次関係を持ち、
+それらの濾過次数は $N$ となる。
+最高記号からの帰納法で中心生成と唯一の三次関係を持ち上げる。
+中心の正規性は無限遠の滑らかさと超曲面性による。
+
+二つの一般中心座標 $Z_1,Z_2$ を選ぶ。
+$H$ の深さ2と先頭中心の正則列から、対応する中心多項式部分環上で $H$ は自由であり、
+基底次数の母関数は
+\[
+ (1-s^N)^2\frac{1+s+s^2}{(1-s)^2}
+   =(1+s+s^2)(1+s+\cdots+s^{N-1})^2.
+\]
+総数は $3N^2$、最高基底次数は $2N$。
+基底を持ち上げれば $U$ も $k[Z_1,Z_2]$ 上階数 $3N^2$ の自由加群となり、
+monic三次中心上の階数は $N^2$、PI次数は $N$ となる。
+同次化した $R$ は $P_0=k[t,Z_1,Z_2]$ 上自由である。
+その三生成元の次数和は $2N+1$ なので、balanced dualizing complexの比較は
+\[
+ R(-1)[3]=\operatorname{Hom}_{P_0}(R,P_0)(-2N-1)[3]
+\]
+を与える。従って $\operatorname{Hom}_{P_0}(R,P_0)\simeq R(2N)$、
+$t=1$ と中心monic三次拡大の双対を用いると
+$\operatorname{Hom}_{Z(U)}(U,Z(U))\simeq U$ を得る。
+最大性の濾過移行とDVR標準形のtrace双対の証明も $N=4$ に依存しない。
+従って(1)が従う。
+
+有限大域次元の場合、rigid dualizing complexは $U[2]$ である。
+\cite[Proposition 2.6, Theorem 4.3]{SVdBRational}と
+\cite[Theorem (0.3)]{ReidCanonicalSurface}により中心特異点はDu Valとなる。
+補題\ref{lem:order4-duval-multiplicities}のArtin被覆、Schur乗数の消滅、
+平均化、Frobenius商による有限射影次元判定は、行列次数を $N$ として全て有効である。
+その証明の最後の階数式だけを $\sum r_\chi\dim\chi=N$ に置き換えればよい。
+全指標が現れる場合に限り $k[[u,v]]\rtimes G$ とMorita同値となり、
+各完備局所大域次元は2である。
+一切断のrank証明、affine chartによる滑らかさ、AS Gorensteinの局所双対による
+構造対象のexceptionality・section環・Serre・AZの証明は、
+\S\ref{sec:r13-all-cut-reduction}で低次数中心の次元条件を使っていない。
+その条件は全切断を一つのpencilへ列挙するときにのみ必要だった。
+従って指定したこの切断のH3認識も同じ証明で有効であり、(2)を得る。
+
+最後の計算性も有限次数で確認できる。
+四つの中心候補 $1,Z_1,Z_2,Z_3$ は
+\[
+ F_NU\longrightarrow(F_{N+1}U)^3,\qquad z\longmapsto([z,x],[z,y],[z,z_0])
+\]
+の核で得られる。$x,y,z_0$ は活動三生成元である。
+20個の中心単項式（全次数3以下）の唯一の関係は $F_{3N}U$ 内で計算する。
+中心点 $c$ のfiberを作るには、まず二つの中心座標で割った $3N^2$ 次元代数を構成する。
+そのRees濾過は次数 $2N$ で全体に達し、$t$ 乗法は $2N$ から $2N+1$ で同型となる。
+従って次数 $2N+1$ までの逐次商で真の有限正則表現を取得できる。
+第三中心座標の乗法 $Z_3-c_3$ の像でさらに割れば、当該中心fiberの有限代数 $A_c$ を得る。
+その次元は $3N^2$ 以下である。
+
+標数0の有限代数では、左正則表現のtrace形式
+\[
+ (a,b)\longmapsto\operatorname{Tr}(L_aL_b)
+\]
+の核は正確に $J(A_c)$ である。
+radicalの元は全ての単純組成因子に零として作用するので核に入り、
+半単純商の各行列成分では正則加群の正整数組成重複度がtrace形式の非零係数となるため、
+これ以上の核はない。
+従って線型計算でradicalを取り、その商の中心次元
+$\dim Z(A_c/J(A_c))$ を求めれば相異なる幾何学的単純表現の個数を得る。
+中心特異点は孤立し有限個であり、Du Val型は有限型の孤立超曲面特異点の通常の算法で判定できる。
+これが(3)を与える。有限行列の実装だけが、(1)(2)の通常の数学的証明を代替するとはしない。
+\end{proof}

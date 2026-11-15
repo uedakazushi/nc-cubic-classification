@@ -1,0 +1,88 @@
+{
+  "scope": "Exact finite cyclic-quotient central fibers; radical trace and simple count; not full ordinary theorem proof",
+  "cases": [
+    {
+      "cyclic_order": 2,
+      "multiplicities": [
+        1,
+        3
+      ],
+      "PI_degree": 4,
+      "fiber_dimension": 22,
+      "regular_trace_radical_dimension": 12,
+      "semisimple_dimension": 10,
+      "semisimple_center_dimension": 2,
+      "full_generator": true
+    },
+    {
+      "cyclic_order": 2,
+      "multiplicities": [
+        2,
+        2
+      ],
+      "PI_degree": 4,
+      "fiber_dimension": 24,
+      "regular_trace_radical_dimension": 16,
+      "semisimple_dimension": 8,
+      "semisimple_center_dimension": 2,
+      "full_generator": true
+    },
+    {
+      "cyclic_order": 2,
+      "multiplicities": [
+        4,
+        0
+      ],
+      "PI_degree": 4,
+      "fiber_dimension": 16,
+      "regular_trace_radical_dimension": 0,
+      "semisimple_dimension": 16,
+      "semisimple_center_dimension": 1,
+      "full_generator": false
+    },
+    {
+      "cyclic_order": 3,
+      "multiplicities": [
+        1,
+        1,
+        2
+      ],
+      "PI_degree": 4,
+      "fiber_dimension": 26,
+      "regular_trace_radical_dimension": 20,
+      "semisimple_dimension": 6,
+      "semisimple_center_dimension": 3,
+      "full_generator": true
+    },
+    {
+      "cyclic_order": 4,
+      "multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "PI_degree": 4,
+      "fiber_dimension": 28,
+      "regular_trace_radical_dimension": 24,
+      "semisimple_dimension": 4,
+      "semisimple_center_dimension": 4,
+      "full_generator": true
+    },
+    {
+      "cyclic_order": 4,
+      "multiplicities": [
+        1,
+        3,
+        0,
+        0
+      ],
+      "PI_degree": 4,
+      "fiber_dimension": 22,
+      "regular_trace_radical_dimension": 12,
+      "semisimple_dimension": 10,
+      "semisimple_center_dimension": 2,
+      "full_generator": false
+    }
+  ]
+}
