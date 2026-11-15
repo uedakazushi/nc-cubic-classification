@@ -94,8 +94,43 @@ for copies_a in range(1,6):
             assert H0>=copies_a>0 and H0-H1==2*copies_a-copies_b
             rank_checks+=1
 
+# Uniform classification of roots of E_(9-r), r=3,...,8.
+# All positive h-coefficient roots have nonnegative exceptional multiplicities.
+root_counts={3:8,4:20,5:40,6:72,7:126,8:240}
+uniform_sample=(1,3,2,5,7,11,13,17)
+degree_data={}
+for r in range(3,9):
+    nr=uniform_sample[:r]
+    root_list=[]
+    for i,j in combinations(range(r),2):
+        v=[0]*r;v[i]=-1;v[j]=1
+        root_list += [(0,tuple(v)),(0,tuple(-x for x in v))]
+    for ids in combinations(range(r),3):
+        v=tuple(int(i in ids) for i in range(r))
+        root_list += [(1,v),(-1,tuple(-x for x in v))]
+    for ids in combinations(range(r),6):
+        v=tuple(int(i in ids) for i in range(r))
+        root_list += [(2,v),(-2,tuple(-x for x in v))]
+    if r==8:
+        for i in range(r):
+            v=tuple(2 if j==i else 1 for j in range(r))
+            root_list += [(3,v),(-3,tuple(-x for x in v))]
+    assert len(root_list)==root_counts[r]
+    for aa,bb in root_list:
+        assert 3*aa==sum(bb) and aa*aa-sum(x*x for x in bb)==-2
+        assert sum(x*n for x,n in zip(bb,nr))!=0
+    root_simples=[(1,(1,1,1)+(0,)*(r-3))]
+    for i in range(r-1):
+        bb=[0]*r;bb[i]=-1;bb[i+1]=1
+        root_simples.append((0,tuple(bb)))
+    mm=[sum(x*n for x,n in zip(bb,nr)) for aa,bb in root_simples]
+    assert mm[:3]==[6,2,-1]
+    degree_data[str(9-r)]={'blowups':r,'root_count':len(root_list),
+                           'all_root_indices_nonzero':True,
+                           'simple_indices':mm}
+
 result={
-  'date':'2026-11-15','version':'resonance-maximal-a2-v1',
+  'date':'2026-11-15','version':'resonance-maximal-roots-v2',
   'elliptic_curve':'y^2=x^3-x+1','q':['0','1'],
   'two_q':['1/4','-7/8'],
   'non_torsion_reason':'Nagell--Lutz; 2q has nonintegral x coordinate',
@@ -108,7 +143,8 @@ result={
                     'Euler_alpha':2,'Euler_beta':-1,'intersection':1,
                     'Ext1_dimension_from_Rains':1},
   'two_step_extension_rank_cases_checked':rank_checks,
-  'scope':'Exact arithmetic only; Rains effectiveness for simple roots is primary-source input. No affine-module matrices or delta rank were computed.'
+  'all_degrees_1_through_6':degree_data,
+  'scope':'Exact arithmetic only (E6 rational witness and integer root systems in degrees 1..6). Rains effectiveness for simple roots is primary-source input. No affine-module matrices or delta rank were computed.'
 }
 out=Path('build/resonance_maximal_a2_certificate.json')
 out.parent.mkdir(parents=True,exist_ok=True)

@@ -1,6 +1,6 @@
 # 非可換del Pezzo曲面のheart比較：現行研究ノート
 
-2026-11-15 / hearts-v12。最初に `00_research_plan.md` を読む。証明本文は `papers/nc_del_pezzo_hearts.tex`。対象は全次数の非可換del Pezzo曲面、最初の実行対象はcubic surface（次数3）。
+2026-11-15 / hearts-v13。最初に `00_research_plan.md` を読む。証明本文は `papers/nc_del_pezzo_hearts.tex`。対象は全次数の非可換del Pezzo曲面、最初の実行対象はcubic surface（次数3）。
 
 ## 稠密なRains resonanceでの符号別heart比較
 
@@ -21,6 +21,10 @@
 `papers/sections/resonance_maximal_a2.tex`に新しい証明。E上非torsion q、六点p_i=N_iq（正整数相異）でsmooth cubicかつ72根が全て非零指数で数値的共鳴する点をZariski denseに構成。単純根の整数指数(m0,...,m5)から全共鳴配置を9-torsion choices of p1（正確にはE[3]の9通り）として分類し、regular m（全72根指数非零）と一般位置を同値にする。N=(1,3,2,5,7,11)はsimple indices (6,2,-1,3,2,4)、alpha=e1-e2 m=2、beta=e2-e3 m=-1でalpha·beta=1。Rains 2022 §4と2019 §9/11によりその二simple rootの**実在sheaf**が同じheartに存在し、Ext¹=k。
 
 混合拡大のdelta:V_alpha(2d)→V_beta(1d)はrank 0/1で未計算。a copies M_alphaとb copies M_betaの二段拡大ではdelta=d tensor T、H0=2a-r>=a>0、H1=b-r。従ってEuler=0でもこの型はPhiで消失しない。Phiがpair上で完全忠実ならHom_A(V_alpha,V_beta)=k、V_alphaはV_betaを1d商に持つ。これは既存dP1全q導来比較の明示的な必要条件であり、実際のA-moduleの表現行列計算が次の課題。数学的な「全根numerical resonance」と「全根の既約sheaf存在」は区別する。
+
+## 全次数1–6の最大数値共鳴（証明済み）
+
+滑らかな楕円三次E上の非torsion qを固定し、p_i=N_iq（相異なる正整数、r=9−d）を取るとgenuine smooth dP_dを保ち、全根が非零整数指数のq-power restrictionとなる。d=6,5,4,3,2,1で根系A2+A1(8),A4(20),D5(40),E6(72),E7(126),E8(240)。E^rで最大共鳴の点集合はZariski dense。単純根整数m0,...,m_(r-1)とE[3]の9選択が全共鳴格子を分類、genuine条件は全根指数非零。N1<N3<N2の稠密な部分で正負の隣接A2根の共鳴が同時にあり、Rainsのsimple-root effectivityによって各々の実在root sheafが得られるとExt¹=k、負指数はAZ非ample。数値共鳴と全根sheaf存在を同一視しない。証明は`papers/sections/resonance_maximal_all_degrees.tex`。次は2/1次元アフィン加群の具体表示とmixed δのrankを計算し、既存全q導来比較の完全忠実性を監査。
 
 ## 目標・達成基準
 

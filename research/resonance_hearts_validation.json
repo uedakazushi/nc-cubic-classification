@@ -1,6 +1,6 @@
 {
   "date": "2026-11-15",
-  "version": "resonance-hearts-v4",
+  "version": "resonance-hearts-v5",
   "primary_sources": [
     "Rains arXiv:1907.11301v1 Sec7 Cor7.23 Sec10 Cor10.16 Sec11 pp139-141",
     "Rains arXiv:2107.13540v2 Sec4 pp33-35 Sec5 Prop5.1 Eq5.1",
@@ -11,13 +11,13 @@
   ],
   "manuscript": "papers/nc_del_pezzo_resonance_hearts.tex",
   "claims": {
-    "proved_conditional": "Complete sign trichotomy for existing irreducible pure 1D root sheaf disjoint from elliptic boundary: h0=max(m,0), Ext1=max(-m,0), Ext2=0; all are 2-spherical; m>0 heart degree0, m<0 heart degree1 / shifted [-1], m=0 natural derived section kills M. Corrected image/cokernel proof; Rains derived adjoint duality for m>0. Positive and negative resonances individually Zariski dense on relevant smooth blowup charts; ring Hilbert has no jump. Global derived equivalence remains unverified. Extended to extension-closed exact category of boundary-disjoint <=1d sheaves: amplitude [0,1], g-periodic finite A-modules V0/V1, six-term A-linear sequence; mixed extension rank formulas; E6 root-intersection Ext1=alpha dot beta and equal opposite-index adjacent-root resonance exclusion on smooth genuine avatar; classical Euler sequence cancellation and conditional derived full-faithfulness test. Complete arithmetic classification of full 72-root E6 numerical resonance via 6 simple integer indices and 9 E[3]-choices, and its Zariski density on smooth cubic six-point chart. Rains simple-root effectiveness implies coexistent +2/-1 irreducible roots, Ext1=1; their 2-step direct-sum extensions cannot be annihilated by natural derived section even at total Euler=0.",
+    "proved_conditional": "Complete sign trichotomy for existing irreducible pure 1D root sheaf disjoint from elliptic boundary: h0=max(m,0), Ext1=max(-m,0), Ext2=0; all are 2-spherical; m>0 heart degree0, m<0 heart degree1 / shifted [-1], m=0 natural derived section kills M. Corrected image/cokernel proof; Rains derived adjoint duality for m>0. Positive and negative resonances individually Zariski dense on relevant smooth blowup charts; ring Hilbert has no jump. Global derived equivalence remains unverified. Extended to extension-closed exact category of boundary-disjoint <=1d sheaves: amplitude [0,1], g-periodic finite A-modules V0/V1, six-term A-linear sequence; mixed extension rank formulas; E6 root-intersection Ext1=alpha dot beta and equal opposite-index adjacent-root resonance exclusion on smooth genuine avatar; classical Euler sequence cancellation and conditional derived full-faithfulness test. Complete arithmetic classification of full 72-root E6 numerical resonance via 6 simple integer indices and 9 E[3]-choices, and its Zariski density on smooth cubic six-point chart. Rains simple-root effectiveness implies coexistent +2/-1 irreducible roots, Ext1=1; their 2-step direct-sum extensions cannot be annihilated by natural derived section even at total Euler=0. Uniform maximal root numerical resonance for all degree d=1..6 smooth genuine elliptic del Pezzo blowups via positive multiples of non-torsion q; integer-index and E[3] nine-lift classification; Zariski density in E^r; simultaneous positive-negative adjacent A2 simple roots under Rains effective-simple-root existence hypotheses.",
     "primary_inputs": "Rains existence theorem for irreducible simple-root sheaves with determinant condition; boundary triangle and central g; Rains quotient Euler bound and Ext2 vanishing.",
     "not_verified": "All-q derived equivalence, full heart t-exactness or HRS torsion pair, and nonsingularity of qgr; source PDF screenshot cache miss; no independent peer review or novelty search.",
     "mathematical_novelty": "Not established; primary results may imply some or all statements elsewhere.",
     "proof_correction": "Irreducibility does NOT imply nonzero e->M is surjective; image I has c1 alpha and coker T is zero-dimensional; χ(I)>=1,χ(T)>=0.",
     "new_limitations": "Do not claim subcategories ker Ext1(e,-) and ker Hom(e,-) form a torsion pair on all Z; no full HRS identification. The classical cancellation example is a weak del Pezzo root wall, not an existing genuine noncommutative mixed extension. No full all-q derived equivalence or classification of all affine modules.",
-    "next_question": "Compute actual matrices for 2d and 1d R/(g-1) modules and rank of delta; if full faithfulness then dim Hom_A(V_alpha,V_beta)=1 and the 2d module is not simple. Need not infer full faithfulness from numerical intersection alone.",
+    "next_question": "Explicit 2d and 1d A=R/(g-1) modules, delta rank and Hom_A on a mixed A2 pair, plus independent audit of all-q derived equivalence.",
     "novelty": "Not exhaustively checked; much of Rains's simple root theory is prior work, new point is explicit lattice chart and mixed cohomological test."
   },
   "checks": {
@@ -62,7 +62,17 @@
     "new_local_equivalent_python": "PASS: equivalent rational arithmetic script executed locally",
     "github_source_python_rerun": false,
     "all_paper_lualatex_in_this_turn": false,
-    "screenshot_original_pdf": "Web screenshot attempts returned cache miss; primary original PDF text layer checked."
+    "screenshot_original_pdf": "Web screenshot attempts returned cache miss; primary original PDF text layer checked.",
+    "root_counts_all_degrees": {
+      "1": 240,
+      "2": 126,
+      "3": 72,
+      "4": 40,
+      "5": 20,
+      "6": 8
+    },
+    "all_degrees_integer_root_count_and_indices": "Exact integer enumeration on math-equivalent local code performed for r=3..8; committed code itself not rerun",
+    "full_paper_latex_in_this_turn": false
   },
   "persistence": "GitHub main is canonical; on successful push do not save Library."
 }

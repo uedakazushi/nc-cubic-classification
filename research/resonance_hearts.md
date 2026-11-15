@@ -1,6 +1,6 @@
 # Rains resonance と anticanonical heart：研究継続ノート
 
-2026-11-15 / resonance-hearts-v4。再開時は `00_research_plan.md` を最初に読み、本ノート、`papers/nc_del_pezzo_resonance_hearts.tex` と同稿が input する2つの証明節 `papers/sections/resonance_sign_trichotomy.tex`、`resonance_extension_cancellation.tex`、`resonance_maximal_a2.tex` を参照する。名称は Rains heart / VdB heart / AS heart / anticanonical heart に統一する。
+2026-11-15 / resonance-hearts-v5。再開時は `00_research_plan.md` を最初に読み、本ノート、`papers/nc_del_pezzo_resonance_hearts.tex` と同稿が input する4つの証明節 `papers/sections/resonance_sign_trichotomy.tex`、`resonance_extension_cancellation.tex`、`resonance_maximal_a2.tex`、`resonance_maximal_all_degrees.tex` を参照する。名称は Rains heart / VdB heart / AS heart / anticanonical heart に統一する。
 
 ## 1. 主結果の仮定と符号別Ext
 
@@ -47,11 +47,19 @@ m(alpha_i)=m_iで、任意の根alpha=Σc_i alpha_iの指数はm(alpha)=Σc_i m_
 
 **有理数上の証明書**：E:y²=x³−x+1、q=(0,1)。2q=(1/4,−7/8)のxが非整数なのでNagell–Lutzによりqは非torsion。上の六倍点(1,3,2,5,7,11)は有理点で、20通りの三点determinantとconic評価行列式が全て非零。E6全72根の指数は非零、単純根指数[6,2,−1,3,2,4]。整数・有理数計算は `computations/verify_resonance_maximal_a2.py` と小証明書にある。
 
-## 4. 保存する全次数の知識と未解決の核
+## 4. 次数1から6への最大根共鳴の拡張
+
+**証明済み**：任意の$d=1,…,6$で$r=9-d$点を楕円平面三次$E$の相異なる正整数倍$p_i=N_iq$（$q$非torsion）として選べば、滑らかなgenuine del Pezzo blow-upを保ちながら当該根系の全ての根が非零指数で同時に数値的共鳴する。根系と根数は$d=6:A_2+A_1(8)$、$5:A_4(20)$、$4:D_5(40)$、$3:E_6(72)$、$2:E_7(126)$、$1:E_8(240)$。いずれもこの最大共鳴点集合は$E^r$にZariski dense。$N_1<N_3<N_2$を追加してもdenseであり、Rainsのsimple-root effectiveness/irreducible-sheaf存在仮定下で正負の隣接するroot sheafが同じheartに実在し、$\operatorname{Ext}^1=k$、負指数によるAZ ampleness失敗が起こる。
+
+**全次数の指数チャート**：単純根$α_0=h-e_1-e_2-e_3$と$α_i=e_i-e_{i+1}$（$1≤i<r$）による$r$整数$m_0,…,m_{r-1}$から $3p_1=(m_0-2m_1-m_2)q$, $p_i=p_1+(m_1+…+m_{i-1})q$ を復元。$p_1$は$E[3]$の9通り。genuineであることと全根指数非零は同値。$a h-Σb_ie_i$の根は$Σb_i=3a, Σb_i^2=a^2+2$を満たし、positive-$a$根は$a=1$の三点、$a=2$の六点、$r=8$に限って$a=3$の$(2,1,…,1)$型と分類される。楕円曲線の正整数倍では全ての非差根指数が正、差根の指数は$N_i-N_j≠0$。滑らかな反標準曲線の存在から$-K$はnef・bigであり、非ampleなら有効$(-2)$曲線の根制限が自明になるため矛盾する。
+
+論文中の完全な証明は`papers/sections/resonance_maximal_all_degrees.tex`（`papers/nc_del_pezzo_resonance_hearts.tex`がinput）。既存の`computations/verify_resonance_maximal_a2.py`に$r=3,…,8$の全根列挙と整数指数検算を統合した。数学的に同等なローカル整数コードを実行し root counts=(8,20,40,72,126,240)を検査。push後のGitHub版スクリプト自体を実行したとはまだ報告しない。これは**全モジュライ成分での稠密性や全根既約sheafの同時存在を証明した結果ではない**。
+
+## 5. 保存する全次数の知識と未解決の核
 
 - 中心正則g∈R1とR/(g)=B(E,L,σ), deg L=dよりdim R_n=1+d n(n+1)/2は共鳴で跳ばない。
 - q非torsion、smooth genuine classical avatarではm=0の根共鳴はない。古典weak dPの(-2)曲線が反標準収縮で消える現象とは区別する。
-- 正指数と負指数の個別共鳴は各々Zariski dense（楕円点p3(n)の正負q軌道）。全72根同時共鳴の点も稠密。一般のnc dP moduliの全成分での稠密性までは主張しない。
+- 正指数と負指数の個別共鳴は各々Zariski dense（楕円点p3(n)の正負q軌道）。全72根同時共鳴の点も稠密であり、次数1,...,6の全てに当該根系の最大共鳴稠密点集合がある。一般のnc dP moduliの全成分での稠密性までは主張しない。
 - **優先1**：具体的混合A2においてaffine A=R/(g−1)の2次元・1次元表現行列を算出し、dのrankとHom_A(V_alpha,V_beta)を決定する。必要ならRainsの差分作用素表示から構成する。
 - **優先2**：既存`papers/dp1_anticanonical_models.tex`の全q derived equivalenceの完全忠実性・本質的全射性を独立に監査する。原稿に証明が書かれていることと今回の監査を区別する。
 - **優先3**：Zのtorsion pair/全heart、非既約対象、VdB/AS heartとの対象の同定、特異楕円境界、非局所自由gluingを調べる。負指数の自然Phiの非t-exact性やqgrのHilbert不変性から導来非同値・qgrの特異化は結論しない。

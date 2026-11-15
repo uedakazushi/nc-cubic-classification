@@ -33,7 +33,7 @@
 【優先課題】全14641 ambient成分上の正規三次incidenceの成分・同型群oid・曲面条件・境界・族と降下を決定し、その後intrinsic定義を弱める。GitHub mainを正本とし、GitHub push成功時はLibraryへの保存を行わない。PDFやZIPをGitで追跡せず、TeX・ノート・検算コードを追跡する。
 
 
-2026-11-15 / project-v27 / recognition-v6 / hearts-v12。最初に本書、`research/cubic_corner.md`、`papers/cubic_heart_corner.tex`を読む。比較の共通枠組みは`research/heart_comparison.md`と`papers/nc_del_pezzo_hearts.tex`、共通公理は`research/common_del_pezzo_framework.md`。次数別・三次三様体の研究はそれぞれの現行ノートから再開する。
+2026-11-15 / project-v28 / recognition-v6 / hearts-v13。最初に本書、`research/cubic_corner.md`、`papers/cubic_heart_corner.tex`を読む。比較の共通枠組みは`research/heart_comparison.md`と`papers/nc_del_pezzo_hearts.tex`、共通公理は`research/common_del_pezzo_framework.md`。次数別・三次三様体の研究はそれぞれの現行ノートから再開する。
 
 ## I. 恒常的な研究原則と保存許可
 
@@ -100,6 +100,12 @@ smooth plane cubic E（flex origin o）、非torsion qを固定。六点blowup�
 混合拡大0→M_beta→M→M_alpha→0のδ:V_alpha(2d)→V_beta(1d)のrankは0/1、従って自然導来切断のcohomologyは(2,1)または(1,0)。δの値は未計算。より一般にb個のM_betaとa≥1個のM_alphaの二段拡大でδ=d⊗T、rank≤min(a,b)、dimV0≥a>0。従ってb=2aでχ(e,M)=0でもPhi(M)は非零。**Phiがこのpairで完全忠実なら**Hom_A(V_alpha,V_beta)=kとなり、2次元V_alphaは1次元V_betaを商に持つため単純A-moduleではない。これは独立検証すべき具体的予測であって、全q導来同値の証明ではない。
 
 有理数例：E:y²=x³−x+1、q=(0,1) は2q=(1/4,−7/8)とNagell–Lutzから無限位数。上の六倍点は全20三点行列式とconic評価行列式が非零、E6全72根のmが非零。原稿`papers/sections/resonance_maximal_a2.tex`（`papers/nc_del_pezzo_resonance_hearts.tex`からinput）、再現`computations/verify_resonance_maximal_a2.py`。今回全根共鳴の**数値条件**とRainsの**効果的simple根の実在**を区別する。
+
+### 全次数1–6における最大根共鳴の稠密性（証明済み）
+
+Eを変曲点oで原点を定めた滑らかな平面三次、q∈Eを非torsionとする。次数d=9-r（r=3,...,8）に対して、任意の相異なる正整数N_iを選びp_i=N_i qとするとBl_{p_i}P²はsmooth genuine del Pezzoで、A2+A1,A4,D5,E6,E7,E8の全根（順に8,20,40,72,126,240個）が同時に非零整数指数で数値的共鳴する。この最大共鳴点は各E^rでZariski dense。単純根指数m0,...,m_(r-1)から 3p1=(m0-2m1-m2)q、p_i=p1+Σ_{j<i}m_j q で復元し、p1は9個の3-torsion選択を持つ。一般位置は全根指数非零と同値。r8の追加3h−2e_i−Σ_{j≠i}e_jも正整数指数を持つ。N1<N3<N2の部分も稠密で、Rains既約simple-root sheaf existenceが適用されれば正負の隣接A2根が同時存在し、Ext¹=kかつ負指数Rains AZ失敗が稠密に起こる。
+
+証明`papers/sections/resonance_maximal_all_degrees.tex`を既存の`papers/nc_del_pezzo_resonance_hearts.tex`へ統合。再現可能な全根整数列挙は`computations/verify_resonance_maximal_a2.py`に集約し、既存cubic有理楕円証明書を保持。数値共鳴≠全根sheaf既約existence。Z全体のtorsion pair、Aの2次元/1次元表現とδ rank、全q導来同値、特異境界は未解決。
 
 ### HRSと一般heart判定
 
