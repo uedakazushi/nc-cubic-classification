@@ -51,7 +51,8 @@ $q$または境界平行移動の位数に制限はない．
 Rains\cite[Proposition 5.1]{RainsFiltered}より，$R$は中心正則元
 $g\in R_1$を持ち，$R/gR=B(E,L,\sigma)$，$\deg L=d=(-K_S)^2>0$．
 $R$は$A=R/(g-1)$のRees環である．
-$g$進initial termの有限次数での持上げから左右noetherian性を得る．
+$\operatorname{gr}_{(g)}R=B[g]$が整域で，固定内部次数では$g$進filtrationが有限なので，
+$R$も整域である．同じinitial termの持上げから左右noetherian性を得る．
 $\sigma$が無限位数ならRogalski--Sierra--Stafford
 \cite[Proposition 2.4]{RSSResonance}が，$\deg L\ge1$のままで
 左右の$\chi$と有限cohomological dimensionを与える．
@@ -117,7 +118,9 @@ H^1(E,\mathcal O_E)\simeq\Ext^2(\mathcal O_R,\mathcal O_R(-1))
 $\Phi$の完全忠実性を得る．Extの次元一致だけを使う議論ではない．
 
 \emph{本質的全射性．}
-sourceはsmooth properなperfect gluingであり，
+$\mathcal B$は$\Perf(S)$のadmissible部分圏なのでsmooth properである．
+gluing moduleは各対象上で有限次元の全cohomologyを持ち，
+Orlovのperfectness判定によりperfectである．従ってsourceはsmooth properであり，
 Orlov\cite[Theorems 3.18, 3.25, Corollary 3.19]{OrlovResonance}から飽和的である．
 任意の$Y\in D^b(\qgr R)$に対し
 $X\mapsto\RHom(\Phi X,Y)$は，環の有限性とsourceのthick生成から
