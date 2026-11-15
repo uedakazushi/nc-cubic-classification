@@ -1,6 +1,6 @@
 {
   "date": "2026-11-15",
-  "version": "classification-v45",
+  "version": "classification-v47",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -39,7 +39,8 @@
     "papers/sections/cubic_four_window.tex",
     "papers/sections/cubic_normal_order2_scroll.tex",
     "papers/sections/cubic_normal_order2_ramification.tex",
-    "papers/sections/cubic_quantum_triangle.tex"
+    "papers/sections/cubic_quantum_triangle.tex",
+    "papers/sections/cubic_quantum_triangle_general.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -597,5 +598,17 @@
     "validator": "computations/verify_cubic_quantum_triangle.py now verifies12 distinct even permutations on the4 nonzero characters",
     "build": "LuaLaTeX111 pages successful; final weighted-centre normality clarification pending rebuild",
     "limits": "Only this specified root-three triangular pencil, not all triangular deformations or intrinsic abstract category-family stack"
+  },
+  "quantum_triangle_v47": {
+    "proof": "papers/sections/cubic_quantum_triangle_general.tex",
+    "validator": "computations/verify_cubic_quantum_triangle_difference.py",
+    "result": "PASS universal rational three-relation, Casimir, discriminant and q-inversion identities",
+    "ordinary_proofs": [
+      "Faithful difference model and domain for all q!=0,+-1 and D",
+      "Full centre generators via Chebyshev; whole H3 candidate pencil for q nonroot or order>3",
+      "All candidate graded arrows [Q/S4], constant inertia A4, separated DM2 presentation quotient"
+    ],
+    "build": "LuaLaTeX114 pages successful, no undefined references/citations or overfull boxes",
+    "limits": "General-q H3 admissibility and openness unproved; D+- collision values are candidates only. Not all H3 coverage."
   }
 }

@@ -1,0 +1,150 @@
+\subsection{一般の $q$ における忠実な差分模型と全候補pencil}
+\label{subsec:quantum-triangle-general}
+$q\ne0,\pm1$ とする。$V_q$ を $yz-qzy=x$ cyclic、$B_q$ をその中央Rees環とする。
+\[
+ \Omega_q=xyz+\frac{x^2+q^2y^2+z^2}{q^2-1},\qquad
+ U_{q,D}=V_q/(\Omega_q+D)
+\]
+と置く。
+
+\begin{theorem}[全 $q,D$ の整域性と差分表示]
+\label{thm:quantum-triangle-faithful-difference}
+$B_q$ はnoetherian quadratic Koszul CY AS4であり、$\Omega_q$ は中心元である。
+全 $D$ で $U_{q,D}$ と $R_{q,D}=B_q/(\Omega_{q,h}+Dt^3)$ は整域となる。
+$U_{q,D}$ の基底は $x^iy^jz^k$、$i,j,k\ge0$、$ijk=0$ である。
+
+$\rho^2=q$、$\kappa=-\rho/(q^2-1)$ とし、
+$\mathcal T g(u)=g(qu)\mathcal T$ を満たす差分作用素環を使う。
+\[
+ b_D(u)=\frac{q(u^2+1)(u^2+q^2)+u^2(q^2-1)^3D}
+                  {(q^2-1)^2(u^2-q^2)(u^2-1)}
+\]
+と置くと、忠実表示は
+\[
+ \begin{aligned}
+ x&=\kappa(u+u^{-1}),\\
+ y&=\mathcal T+b_D(u)\mathcal T^{-1},\\
+ z&=\rho\bigl(u\mathcal T+u^{-1}b_D(u)\mathcal T^{-1}\bigr)
+ \end{aligned}
+\]
+で与えられる。
+\end{theorem}
+\begin{proof}
+$V_q$ の唯一のPBW重なり $zyx$ は、どちらから還元しても
+$q^{-1}(xyz-x^2+y^2-z^2)$ となる。
+従って先頭環は量子多項式環 $S_q$ である。
+中央ReesのAS4性はcyclic tensorの対称PBW条件と正則中心拡大から従う。
+$\mu_{S_q}=1$ で、$Z(S_q)_1=0$ だから $\mu_{B_q}(t)$ は $t$ の倍数である。
+homological determinant1と正規商公式でその倍数は1となり、
+残る $x_i\mapsto x_i+v_it$ の平行移動も、二次関係の $tX$ 係数と $q\ne1$ から零となる。
+従って $B_q$ はCYである。
+
+表示した差分作用素を代入すると三関係が成立し、$\Omega_q$ の像は厳密に $-D$ となる。
+まず $D$ を独立な変数としてこの写像の忠実性を示す。
+$\Omega_q$ の最高項は $xyz$ だから
+$\Omega_q^l x^iy^jz^k$、$ijk=0$、$l\ge0$ は $V_q$ のfiltered基底となる。
+ここではまだ中心性を使っていない。
+
+$n=j+k$ ごとに最高 $\mathcal T$ 係数を取る。
+$n>0$ では、非零定数倍を除き、その線型結合は
+\[
+ F(x(u))+u^nG(x(u))+\sum_{k=1}^{n-1}c_ku^k
+\]
+の形になる。
+これが零なら $u\mapsto u^{-1}$ の式との差を $u-u^{-1}$ で割る。
+$(u^k-u^{-k})/(u-u^{-1})$ は $x(u)$ の次数 $k-1$ 多項式なので、
+次数 $n-1$ の項から $G=0$、続いて全 $c_k=0$、最後に $F=0$ を得る。
+$n=0$ は $x(u)$ の多項式の独立性である。
+$\Omega_q^l$ の像 $(-D)^l$ も独立だから、$V_q$ の写像は忠実である。
+従って $\Omega_q$ は中心となる。
+さらにこの基底は $k[\Omega_q]$ 上の自由基底を与え、
+各固定 $D$ の商でも上記最高係数の独立性は変わらない。
+従って各 $U_{q,D}$ も差分作用素整域へ忠実に埋まり、Rees環 $R_{q,D}$ も整域となる。
+\end{proof}
+
+\begin{proposition}[全候補incidenceと有限位数のChebyshev中心元]
+\label{prop:quantum-triangle-all-candidates}
+$q$ が非捩れなら $Z(V_q)=k[\Omega_q]$、$Z(B_q)=k[t,\Omega_{q,h}]$ である。
+$q$ が正確に位数 $N\ge3$ なら、
+\[
+ c_0(X)=2,\quad c_1(X)=X,\quad
+ c_n(X)=Xc_{n-1}(X)-\kappa^2c_{n-2}(X)
+\]
+に対し $c_N(x),c_N(y),c_N(z),\Omega_q$ が全中心を生成する。
+特に非捩れまたは $N>3$ の場合、この固定包絡上の全H3候補は
+$\Omega_{q,h}+Dt^3$ のpencilに限られる。
+全候補のrank-one整域条件は前定理で満たされており、
+残る問題はtailsの有限大域次元の正確な判定である。
+\end{proposition}
+\begin{proof}
+非捩れでは $Z(S_q)=k[xyz]$ であり、最高項の帰納法を用いる。
+有限位数では $Z(S_q)$ は $x^N,y^N,z^N,xyz$ で生成される。
+全てが持ち上がることを示せば同じ帰納法で十分である。
+
+右側の $x$ を変数 $r$ と書けば、左からの $x$ の作用は
+\[
+ x\begin{pmatrix}y&z\end{pmatrix}
+ =\begin{pmatrix}y&z\end{pmatrix}
+ M(r),\qquad
+ M(r)=\begin{pmatrix}qr&-q^{-1}\\1&q^{-1}r\end{pmatrix}
+\]
+となる。
+$r=\kappa(u+u^{-1})$ を代入すると二つの固有値は
+$\kappa(qu+q^{-1}u^{-1})$ と $\kappa(q^{-1}u+qu^{-1})$ である。
+$q^N=1$ だから、両者に $c_N$ を作用させた値は $c_N(r)$ に等しい。
+従って $c_N(M(r))=c_N(r)I$ が多項式恒等式として成立し、
+$c_N(x)$ は $y,z$ と可換する。循環的に他も従う。
+
+非捩れまたは $N>3$ では中心三次は
+$k\Omega_{q,h}\oplus kt^3$ である。
+CY包絡ではH3三次は中心であり、$t^3$ のみでは商が整域でないので除外する。
+$R_{q,D}$ は整域でHilbert値も三次曲面型だから、
+Gabriel--Krull critical性とrank-one torsion-free条件を満たす。
+tailsが有限大域次元なら、AS Gorenstein parameter1の双対・飽和・AZ認識によりH3を得る。
+一般 $q$ でこの有限大域次元条件が未判定であることは保持する。
+\end{proof}
+
+差分係数の分子が重根となる二つの値は
+\[
+ D_+=-\frac{q}{(q-1)(q+1)^3},\qquad
+ D_-=-\frac{q}{(q-1)^3(q+1)}
+\]
+である。原始三乗根では、既に完全判定した $f,-f/3$ に一致する。
+しかし一般 $q$ でこの二値だけが非H3であるとはまだ証明していない。
+分母の特殊軌道、有限次元表現とtailsの局所条件をさらに調べる必要がある。
+\texttt{verify\_cubic\_quantum\_triangle\_difference.py} は、
+三関係、Casimir値、分子判別式を全 $q,D$ の有理関数恒等式として検算する。
+
+\begin{proposition}[全候補pencilの幾何学的矢]
+\label{prop:quantum-triangle-general-arrows}
+$\mathcal Q=\{(q,D):q\ne0,\pm1\}$ とする。
+$R_{q,D}$ の全graded同型を次数スカラーで割ると、同型群oidは
+\[
+ [\mathcal Q/\mathfrak S_4]
+\]
+となる。ここで $\mathfrak A_4$ は $\mathcal Q$ 上自明に作用し、奇置換は
+\[
+ (q,D)\longmapsto(q^{-1},-q^2D)
+\]
+として作用する。従って全候補表示のrigidified stackは分離二次元DM stackで、慣性は常に $\mathfrak A_4$ である。
+H3部分へ制限すれば全intrinsic pointed矢を与えるが、一般 $q$ での許容部分の開性はまだ主張しない。
+\end{proposition}
+\begin{proof}
+中央一次直線は $kt$ に限るので、同型は $t\mapsto dt'$、$X\mapsto MX'+vt'$ と書ける。
+先頭の三量子関係の平方係数を比較すると
+$(1-q)M_{ik}M_{jk}=0$、$i\ne j$ となる。
+局所底上で $M$ は可逆だから、各列に単元が存在し、他の成分は零となる。
+従って非被約底でも $M$ はmonomialである。
+循環置換では $q'=q$、奇置換では $q'=q^{-1}$ に限る。
+$vt'$ は非対角の一次係数比較で消える。
+
+循環置換の場合、共通スカラーを除く自由度は二符号変更と循環置換だけである。
+奇置換の代表 $x\leftrightarrow y,z\mapsto z$ は $t\mapsto-qt'$ と組み合わせれば
+$q$ の関係を $q^{-1}$ の関係に移す。
+このとき $\Omega_{q,h}\mapsto q\Omega_{q^{-1},h}$ なので
+$D'=-q^2D$ となる。
+二度作用すれば恒等に戻り、二符号変更と全三置換は
+$(\mu_2)^2\rtimes\mathfrak S_3\simeq\mathfrak S_4$ をなす。
+$q\ne\pm1$ では奇置換は基底点を固定しないから慣性は正確に $\mathfrak A_4$ である。
+平方係数比較は全基底で成り立ち、有限群作用によるquotientなのでstackの主張も従う。
+\end{proof}
