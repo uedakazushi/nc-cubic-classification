@@ -1,6 +1,6 @@
 # 四つのheartの比較：現行研究ノート
 
-2026-11-16 / hearts-v22。最初に `research/four_hearts_plan.md`（プロジェクト全体では `00_research_plan.md`）を読む。論文は `papers/nc_del_pezzo_hearts.tex` と八つの `papers/sections/four_hearts_*.tex`、検証は `research/four_hearts_validation.json`。本文の証明をここに重複させない。
+2026-11-16 / hearts-v23。最初に `research/four_hearts_plan.md`（プロジェクト全体では `00_research_plan.md`）を読む。論文は `papers/nc_del_pezzo_hearts.tex` と八つの `papers/sections/four_hearts_*.tex`、検証は `research/four_hearts_validation.json`。本文の証明をここに重複させない。
 
 ## 比較対象と主張の水準
 
@@ -24,13 +24,15 @@ HnefのRains heartで全対象のExt2(e,s^nM)はn≫0で消える。従って全
 
 **混合A2（prop:rank、prop:A2category）**：指数p,−nの隣接単純根の非分裂拡大Pのconnecting rankはmin(p,n)。C=〈S+,S−〉_Serre≃mod_fd Π(A2)、直既約S+,S−,P,Qで、cohomologyは(p,0),(0,n),((p−n)+,(n−p)+),(p,n)。両chamberのtorsion pairを得る。p=nはgenuine avatarに実在しない。指数+2/−1のアフィン側では異なる一次元W,Uと非分裂二次元Vがあり、逆向きV'を合わせてA/Ann(V⊕V')≃Π(A2)。局所反射で根はalpha+beta,−beta、指数は1,1。元の生成元の作用係数は未計算。内部Ext_Πの二周期性をambient Extと混同しない。
 
-## AOUのpointed比較：実際のrestrictionに対する条件付き結果
+## AOU型のpointed比較：actual条件と規格化した構成
 
-AOU §9の既知の導来同値と、我々が構造対象の保存を確認するための条件を区別する。実際のordered restrictionを(k_pi,U2,U1,O)とし、LA=U2(Σ_1^6 pi)、LB=U1(p1+p2+p3)が非自明な次数零線束となる条件(R)を明示する。未整合な印刷座標を自動代入して(R)を結論しない。次の「楕円境界データ」節にその理由を記す。
+一般のmutation比較は `four_hearts_as.tex` の実際のrestriction条件(R)の下で扱う。初期tupleは(k_pi,U2,U1,O)、必要条件はU2(D6)とU1(D123)が非自明な次数零線束であること。forward RHomと境界の同定を使い、最後の二つの左mutationが構造対象を変えないことを示す。K0やrestrictionだけの一致から対象の同型を推論しない。
 
-AOU (9.28)–(9.43)のmutationで標識構造対象の位置は9,9,9,6,6,3と移る。最後のL1L2の直前は(A,B,πF)。実際のrestrictionとAOU Proposition9.3によるforward RHom比較の下で、RHom(A,πF)=RΓ(LA^−1)、RHom(B,πF)=RΓ(LB^−1)。条件(R)なら両方零で、評価triangleの自然射からE0=πFが従う。これは実際のrestrictionを入力とする証明であり、K0一致からの推論ではない。
+右加群の初期平面shiftをVdB (5.4),§10に固定した場合は、下記の具体的な辞書とsheaf-normalized mutationで(R)を三条件(U+)から確認できる。得られる代数と関手はA+,Ψ+と書き、未変更の印刷されたdecupleから作る代数・関手と無条件に同一視しない。元の隣接交換の順序は保つが、右mutationのcone[-1]と途中の三つの[1]を明示する。
 
-この条件付きpointed性の下で、自然な飽和F_n=Hom(πF,πF(n))と反Serre作用を用いF=R(e_AS,s_AS)を乗法込みで得る。条件付き相対版は相対Homのperfectnessと基底変更を仮定し、導来Nakayamaを使う。相対圏やheart全体の降下は別問題である。
+pointed同値によりF≃R(e_AS,+,s_AS,+)を乗法込みで得る。系cor:AOU-texactと十一条件の判定は、actual条件を満たしたこの指定Ψ+に適用する。標準AS周期表示の右noetherian性は依然として条件である。
+
+相対版は、相対mutation列と二つの相対Homのperfectness・導来基底変更、各fiberでの(R)を仮定すれば導来Nakayamaで自然なE0≃eを得る。相対圏全体の存在やheart・markingの降下をこの対象単独の同定からは結論しない。
 
 ## 標準三次曲面型における明示的な一致領域
 
@@ -76,23 +78,29 @@ p_i=N_iq、N_i相異なる正整数、3≤r≤8なら全根のrestriction指数�
 
 具体例はν=(1,2,3,5,7,11)、全simple次元(6,1,1,2,2,4)、一次元二個。元の順序(1,3,2,5,7,11)から一手、同無順序六点から720 hearts。全根の数値共鳴とAZ amplenessは昇順heartで両立する。明示行列やkernel生成元は未計算である。
 
-## 楕円境界データ：確定した式と未確定の原典規約
+## 楕円境界データ：右規約での辞書と印刷式の区別
 
-証明は `four_hearts_boundary_data.tex`。原点o、t_a(x)=x+a、P_a=O(a−o)とする。次数dの線束Mにt_a^*はP_a^(−d)、t_(a*)はP_a^dをtensorする。pushforwardとpullbackを混同しない。
+証明は `four_hearts_boundary_data.tex`。Rains型のrank u,c1=D,c=χ(e,x)についてdetFq(x)=ρ(D)q^(c−u)。q=P_aならFq s=t_(a*)(−⊗ρ(H))Fqであり、構造対象の像はρ(H)q^d。actual tuple(k_pi,U2,U1,O)からq=U2U1^−2、L=U1U2^−1を一意に復元する。forward RHomと合成を保つrestrictionを入力として、Rains (4.11)の三角dg模型を同定する。単なる数値復元とは違う。
 
-Rainsの基底(T_i=O_ei(−1),B2=O(−2h),B1=O(−h),e=O)は境界で(k_pi,L^−2q^−1,L^−1q^−1,O)となる。一般類の数値を(u,D,c)=(rank,c1,χ(e,−))とするとdetFq=ρ(D)q^(c−u)、rankFq=u。sは(u,D+uH,c+DH+ud)と作用する。従ってq=P_aの境界作用はΨ=t_(a*)(−⊗ρ(H))、ΨO=ρ(H)q^d。既知のtranslation-tensor型の中で支持とOの像を決めており、K0から任意の関手を同定したわけではない。
+**右加群の固定規約**：VdB (5.4)のN_τの作用はτ_*(−⊗N)、§10のo_Y(1)=L_σ。従ってS+(M)=σ_*(M⊗L0)、S+^−1(M)=σ*M⊗L0^−1。初期平面O(−1),O(−2)のactual restrictionはL0^−1,(L0L1)^−1である。VdB Theorem6.3.1(1),(4)と随伴からLj*Lα*=Lβ*Li*、Proposition9.1.8の(9.11)からLi*Rδ*=Rδ_E*Lj*を得る。各段階の境界同型で運ぶと最終Orlov tupleも同じであり、例外点はk_pi、構造対象はOとなる。
 
-実際のrestriction tuple(U2,U1)からはq=U2 U1^−2、L=U1 U2^−1。境界へのforward RHomと合成がquasi-isomorphismならRains(4.11)のdirected dg模型でpointed復元ができる。必要な整合条件は、点支持がqのtranslationで動くことと、ΨO=U2^(d−3)U1^(3−2d)(−Σpi)。三次曲面ではΨO=U1^−3(−Σpi)。独立にOrlov Euler行列Cからs=(C^t)^−1 Cを計算すると、pt=B2−2B1+e、sT_i=T_i+pt、se=4e−3B1−ΣT_iで同じ条件を得る。
+**確定した辞書（thm:right-dictionary）**：q=L0/L1、L=L1。σpiのL0一般位置はpiのL1一般位置に等しい。sourceのfull EC、AOU Proposition9.3のforward RHom比較、Rainsのdg復元により境界・構造対象を保つdg同値を得る。σ=t_bならq=P_(3b)、ρ(H)=L1³(−D6)であり、境界反Serreはσ_*³(−⊗L1³(−D6))と一致する。固定した初期twist U1=L0^−1が九候補L=L1εのε=Oを決める。
 
-**共通座標での障害**：AOU v1 (9.47)をU2=L0^−5L1^3、U1=L0^−2L1、L1=σ*L0、σ=t_bとして読むと、Q=L1/L0=P_(−3b)、q=Q、L=L0³L1^−2。必要な境界translationはt_(−3b)、ΨO=L0³Q^−3(−Σpi)。一方(9.2),(9.3),(9.25)のshiftをσ_*³(−⊗N)、N=L0 σ*L0 σ²*L0(−Σpi)と同じ同定で読むと、translationはt_(3b)、ΨO=L0³(−Σpi)。前者にはQ²=O、後者にはQ³=Oが必要なのでQ=Oとなり、無限位数σでは両立しない。
+**印刷tupleとの整合検査**：S−(M)=L0⊗σ*MとすればS−^−1O=L0^−2L1、S−^−2O=L0^−5L1³であり、印刷式(9.47)を再現する。S−とS+を同じshiftとして扱うと点支持でQ²、構造対象でQ³の障害が残る。この具体的な説明は得たが、原典の全記号の正式な翻訳や著者訂正を確定したとはしない。本文ではS+を明記して構成を追う。
 
-これは原典全体の誤りを断定する結果ではない。逆同値、異なる境界同定、点のrelabeling、push/pull、または誤植のどれを修正すべきかは元の構成で未確定。今回の原稿はこの同時代入を取りやめ、AOUのpointed性と依存するt-exactnessを実際の条件(R)付きへ修正した。十一条件の純代数判定とRains単独の整列結果はこのAOU座標入力に依存しないが、保持した全証明を今回再監査したという意味ではない。
+**cohomological shiftも明示**：L_EF=Cone(RHom(E,F)⊗E→F)、R_F^-E=Cone(E→RHom(E,F)^*⊗F)[−1]とする。点を線束の右へ動かすとR^-_M k_p=M(p)。次数−2線束MをOの右へ動かすと、0→M→O²→M^−1→0からR^-_O M=M^−1[−1]。従ってR6^-R7^-R8^-の後の末尾三対象に[1]を施す。以後これらは動かず、個別shiftはfullnessとexceptionalityを保つ。この指定列と、印刷されたmutation記号をshift確認なしに併用しない。
 
-**境界作用から先に復元する候補**：実際のΨ=t_(a*)(−⊗N)と支持piが固定ならq=P_a、L³=N(Σpi)。L∈Pic³Eの九候補はE[3] torsor。印刷されたshiftを採る場合にはq=L0/L1、L=L1ε、U1=L0^−1ε^−1、U2=(L0L1)^−1ε^−2（ε∈E[3]）。この式は必要な整合的候補であり、(9.47)の確認済み訂正式ではない。実際のordered restrictionを確認すれば一つに決まる。同じ境界作用で九つのgluing圏が互いに同値とはしない。
+**actual decuple（prop:normalized-admissible）**：最終restrictionは(O,(L0L1)^−1(D6),L0^−1(D123);O(p1),O(p2),O(p3);L0(−p4),L0(−p5),L0(−p6))。相異なる六点に対してadmissibilityはO(D123)≠L0、O(D456)≠L1、O(D6)≠L0L1の三条件(U+)と同値。固定E,σ,L0では一般位置との共通部分が非空開である。非torsion条件自体をvarying familyの開条件とはしない。forwardの境界Ext消滅からfull strongとなり、AOU §7/§9の方法によりactual decupleのAS代数A+とΨ+を構成する。条件(R)も成立するのでpointedである。
+
+**逆辞書（prop:inverse-decuple）**：based ordered decuple (O,A0,B0;K1,K2,K3;C1,C2,C3)からO(pi)=Ki、L0=K1K2K3/B0、O(p3+j)=L0/Cj、L1=O(D6)/(L0A0)、q=L0/L1。actual六点相異性とL1一般位置の範囲で正規化したforward constructionへ戻る。σ*L0=L1を解くと九つのσ、E[3] torsorを得る。これは入力にσがない逆辞書の曖昧さであり、σと初期twistを固定してε=Oを選んだ問題とは別。原点とline-classを固定したPicardパラメータで有限étale [3]引戻しとなるが、全moduli stackの九対一同型ではない。
+
+**整数倍点との接続**：pi=Ni a、q=P_a、L1=O(3o)、L0=L1q、3b=aのσ=t_bを取る。三比はq^(N1+N2+N3−1)、q^(N4+N5+N6)、q^(ΣNi−1)で全て非自明。正整数倍点の既存共鳴例の全順序が正規化した許容decupleに入る。ここからΔ非零、標準AS noetherian性、各順序AS heartの相互同定を自動的に結論しない。
 
 ## 次の核心
 
-最優先はAOUの構成から実際のB1,B2のrestrictionと反Serre boundary shiftを同じ同定で再計算し、条件(R)の成立と上記九候補の選択を確定すること。式の矛盾を隠して辞書を完成したと報告しない。この作業の後で、十一因子の楕円パラメータ表示、実在AS領域、独立avatar同定、相対heartへ進む。Rains単独の実在・整列結果とVdBの抽象的pointed認識は保持する。
+右規約を固定した実際の構成の辞書、九候補εの選択、mutationのshiftと三条件、decupleの逆復元は完了した。次はactual normalized decupleのpotentialを計算し、十一因子の楕円表示とAS/noetherian適用域を決める。特に整数倍点例にΔを直接適用し、Rains順序heartの整列とAS+側の一致領域を同じ座標で比較する。U+だけからΔ≠0を推論しない。
+
+変更のない印刷AOU表示への全記号の翻訳は別課題である。今回定義したΨ+の結果をそのまま印刷代数の同じ係数へ移さない。相対kernel・基底変更・標識とheartの降下、Rains2025全書との新規性照合、元のアフィン生成元の作用係数も残る。
 
 ## 別稿との役割分担と保持する補足
 
@@ -104,12 +112,10 @@ Rainsの基底(T_i=O_ei(−1),B2=O(−2h),B1=O(−h),e=O)は境界で(k_pi,L^−
 
 ## 先行研究との差分・検証範囲
 
-主文献に加え、Bridgeland *Stability conditions and Kleinian singularities*, IMRN2009 no21,4142–4157, arXiv:math/0508257v3の§2とLemma3.5を一次PDF本文・ページ画像で照合した。内部Db(modΠ)とambient圏の区別、spherical twistとWeyl反射は既知入力・先行する機構である。Broomhead–Coelho Simões–Pauksztello–Woolf *Simple tilts of length hearts and simple-minded mutation*, Adv.Math.503(2026)111197, arXiv:2401.02947v3のTheorem2.7,Remark2.8を本文で確認し、TheoremAのページ画像も確認した。一般のsimple tiltの有限長性を自動としないことが重要で、本稿のrigid spherical場合は直接証明した。
+今回の直接入力はVdB (5.4)、§10冒頭、Theorem6.3.1(1),(4)、Proposition9.1.8/(9.11)、Proposition9.2.3、§11.1、AOU §3.5、Definition7.1、Lemma7.4とその後、Proposition9.3、(9.24)–(9.43)、Rains2022 (4.4),(4.11)–(4.13)。関連本文を一次HTML/PDF解析本文で照合した。VdBおよびRainsのweb PDF screenshotはCache missで失敗したため原典ページ画像を確認したとはしない。AOU arXivの取得した版情報はv1であり、正式な修正版や著者の訂正を確認したとは報告しない。
 
-VdB (9.5),9.1.8,9.1.9,9.2.3,11.1.1,11.1.3,11.2.1,11.2.4を関連本文で照合した。PDFページ画像の取得はCache missで失敗したので、その原典を画像で確認したとはしない。Rains2025 monographの全文取得は複数経路で成功せず、書誌・概要以上の新規性照合は未完了。VdBの有限長性/単純数、Bridgelandの一般機構を本研究の新規成果に数えない。
+この正規化と順逆辞書はVdBのbimodule、既知のblow-up/section比較、AOUのmutation/AS構成、Rainsの三角dg復元を結び付けた帰結として書く。これらの一般理論を新規成果としない。Rains2025 monograph全文との網羅的照合は未完了。VdBの有限長性、BridgelandのADE反射、BCPWの単純tiltの既知入力も保持しており、今回それら全証明を新たに再監査したという意味ではない。
 
-現行全文38ページ、95ラベル、13文献。六コードを現行入力で実行した。新コード `verify_four_hearts_boundary.py` は六次数の1587個のK0ベクトル、Euler行列からの反Serre作用、restriction determinant、支持と構造対象の二つの不整合、九つのE[3]候補を厳密整数・有理数で確認する。shared checkerは実際のU2,U1を指数基底とするよう変更し、原典の幾何学的非自明性を計算済みとしない。
+現行全文41ページ・109ラベル・13文献。六つの検算を実行した。新たな境界検査は325個の形式線束上のshift/inverse、符号付きrank・Picard exponentによるmutation列、末尾三対象の[1]、九候補からの唯一のε=0、逆decupleのround-trip、具体六点の全720順序での三条件を検査する。既存の1587数値類、六根系576chamber手順、240整数列と720整列順序、40,000混合A2、普遍六点恒等式とQQ/有限体corner消去も再実行した。数値検査でfull strong性・sheaf実在・dg同値・原典の正式訂正を証明したものではない。
 
-従来の40,000通りのA2、576回のchamber、240組の整数列と全720順列、六点の普遍恒等式、QQ/有限体のcorner消去も再実行した。古いコードの固有versionタグは保持しているが、現行ソースで実行した出力である。有限算術は実在sheaf・heart同値・原典の修正式を証明しない。
-
-今回の一次資料確認はAOU v1の(9.2),(9.3),(9.25),(9.47)をprimary HTMLで、Rains2022 v2の(4.4),(4.11)–(4.13)をPDF解析本文で行った。Rains原典ページ画像はweb screenshotがCache missで取得できず、画像確認済みとはしない。arXivで表示された版はAOU v1とRains2022 v2を確認した。Rains2025 monograph全文取得は今回も成功しなかった。外部査読・機械形式化・網羅的新規性確認は未実施。生成・組版・画像・清浄再現・遠隔保存はvalidationに分けて記す。GitHub保存成功時にLibraryへ別途保存しない。
+全文の組版・画像確認・清浄ディレクトリ再現・遠隔保存はvalidationで別々に記す。外部独立査読・機械形式化・網羅的新規性確認は未実施。GitHub保存成功時にLibraryへ別途保存しない。

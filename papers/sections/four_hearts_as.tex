@@ -27,6 +27,8 @@ Theorem 9.4はAS代数$\mathsf A$に対するdg導来同値
 を与える．右側の構造対象を$e_{\mathrm{AS}}=\OO(0,0)$と書く．
 原典の構成では，mutation後のfoundationの先頭$E_0$が$e_{\mathrm{AS}}$へ移る．
 以下では$E_0$を実際の対象として同定する．これは$K_0$や境界restrictionだけによる同定ではない．
+本稿で新たに構成する$\Psi_+$については，第\ref{eq:mutation-shift-normalization}式の
+mutation規約と明示したshiftを使う．以下の先頭対象の議論は，後方三対象のshiftを変更しても影響を受けない．
 
 ここで境界の同定を一つ固定し，初期collectionの最後の三対象の実際のrestrictionを
 $(\mathcal U_2,\mathcal U_1,\OO_Y)$と書く．$\mathcal U_2,\mathcal U_1$はそれぞれ
@@ -44,7 +46,10 @@ $(\mathcal U_2,\mathcal U_1,\OO_Y)$と書く．$\mathcal U_2,\mathcal U_1$はそ
 AOU v1の(9.47)に印刷された$\mathcal U_2=L_0^{-5}L_1^3$，$\mathcal U_1=L_0^{-2}L_1$を
 他の境界式と同じ座標で無条件に使えるわけではない．第\ref{subsec:boundaryaudit}節の
 検査がその障害を示すため，ここでは印刷式の代入でなく，条件\eqref{eq:two-nontrivial}を入力とする．
-この修正により，本節の論証は未確認のパラメータ規約に依存しない．
+この形なら，本節の論証は座標式の規約に依存しない．
+第\ref{thm:right-dictionary}定理の右加群規格化では実際の$\mathcal U_i$を計算し，
+命題\ref{prop:normalized-admissible}の三条件の下で(R)を確認する．
+そのdecupleから構成した同値は$\Psi_+$と書き，元の印刷式でラベル付けした同値とは区別する．
 
 \begin{theorem}[AOUの構造対象の同定]\label{thm:AOU-pointed}
 AOU導来比較の設定と実際のrestriction条件\eqref{eq:two-nontrivial}の下で，最後のmutationで得る対象は

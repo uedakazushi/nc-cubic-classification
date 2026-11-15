@@ -1,6 +1,6 @@
 # 四つのheartの比較：研究方針
 
-2026-11-16 / hearts-v22。この一式から再開する場合は本書を最初に読む。現行論文は `papers/nc_del_pezzo_hearts.tex`、補足知識は `research/heart_comparison.md`、検証状態は `research/four_hearts_validation.json`。リポジトリ全体の目標は `00_research_plan.md` にあり、本書はheart比較に対象を限定する。
+2026-11-16 / hearts-v23。この一式から再開する場合は本書を最初に読む。現行論文は `papers/nc_del_pezzo_hearts.tex`、補足知識は `research/heart_comparison.md`、検証状態は `research/four_hearts_validation.json`。リポジトリ全体の目標は `00_research_plan.md` にあり、本書はheart比較に対象を限定する。
 
 ## 恒常的な研究原則と保存許可
 
@@ -18,33 +18,38 @@
 
 ## 最優先の目標：公表する論文の価値と正確性
 
-自然な比較関手と構造対象を明示し、先行研究と区別できる正確な中心結果を優先する。主張を増やすことより、依存する規約・仮定を解決することを重視する。現行稿は38ページ、主TeXと八つのsectionからなる。今回の中心は `four_hearts_boundary_data.tex` の復元式と整合性検査である。
+自然な比較関手と構造対象を明示し、先行研究と区別できる正確な中心結果を優先する。主張やページ数を増やすことを目的としない。現行稿は41ページ、主TeXと八つのsectionからなる。現在の中心は `four_hearts_boundary_data.tex` の右加群規約での辞書、正規化したmutation列、decupleの順逆復元である。
 
-## 現在の結論と要注意事項
+## 確定した正規化と到達点
 
-**公表前の最優先事項**：AOU v1 (9.2),(9.3),(9.25)の境界shiftと(9.47)のrestriction tupleを、同じ曲線・点ラベル・restriction同定で文字通り併用すると、非torsion translationと両立しない。このことは原典の主定理全体の否定でも、どの式が誤植かを確定した結果でもない。独立な表示を接続する際の規約の障害である。
+VdB (5.4)と§10の右加群規約を固定し、境界の正shiftをS+(M)=σ_*(M⊗L0)とする。負の平面twistの実際のrestrictionはU1=L0^−1、U2=(L0L1)^−1、L1=σ*L0。blow-upのβとsection-modelの境界同型を使って同じ境界同定で運ぶと、このtupleは最終Orlov collectionでも保たれる（lem:plane-negative-twists、prop:transported-tuple）。
 
-σ=t_b、L1=σ*L0、Q=L1/L0=P_(−3b)とすると、restriction側からq=Q、境界translation t_(−3b)、構造対象の境界像L0³Q^−3(−D)を得る。印刷されたshiftをσ_*³(−⊗N)、N=L0 σ*L0 σ²*L0(−D)と読むと、translation t_(3b)、構造対象像L0³(−D)。同時成立にはQ²=Q³=Oが必要である。点支持と構造対象を使う独立の検査であり、単なる符号の好みではない。
+この指定構成のRains辞書は **q=L0/L1、L=L1** であり、可換avatarはL1による平面内の六点blow-upとなる（thm:right-dictionary）。VdBのσpiがL0一般位置という条件は、piがL1一般位置と同じである。full collectionのforward RHomと合成の境界比較により、構造対象・境界つきdg同値を得る。これだけからheartのt-exactnessは結論しない。境界作用だけで残っていたε∈E[3]の九候補は、初期平面twistをさらに固定するとε=Oに決まる。
 
-このためAOUのpointed性と、それを使う指定AOU関手のt-exactness・四者接続は、**実際のrestrictionが与える二つの次数零線束が非自明である条件(R)**の下の結果として書き直した。既存のmutationの評価triangleによる証明は保持するが、未整合な座標式から(R)が自動成立するとは現在主張しない。前の自動的な座標適用の評価は修正した。独立の十一条件の純代数定理とRainsのgenuine gluing・整列結果はこの座標同定に依存しないので保持する（今回それら全証明を新たに独立再監査したという意味ではない）。
+右mutationはR_F^-E=Cone(E→RHom(E,F)^*⊗F)[−1]、左はshiftなしのconeと定義する。AOUの隣接交換順を使うが、R6^-R7^-R8^-の後の末尾三対象に[1]を明示的に施す。境界で負次数2線束のcoevalution coneが逆線束[−1]になるためである。このsheaf-normalized列で得るdecupleは
 
-**復元の明示式**：Rains gluingのrank u、c1=D、c=χ(e,x)に対しdet Fq(x)=ρ(D)q^(c−u)。q=P_aなら境界反Serre作用はt_(a*) (−⊗ρ(H))である。実際のordered restriction tupleが(k_pi,U2,U1,O)ならq=U2 U1^−2、L=U1 U2^−1。forward RHomと合成を保つrestrictionの下で、Rainsの既知の三角dg模型を使ってpointed復元ができる。これはheartのt-exact同定ではない。
+    (O, (L0L1)^−1(D6), L0^−1(D123);
+     O(p1), O(p2), O(p3); L0(−p4), L0(−p5), L0(−p6)).
 
-境界作用t_(a*)(−⊗N)を先に固定すればq=P_a、L³=N(Σpi)となり、Lの候補はE[3]の九通り。印刷shiftを保持する場合にはq=L0/L1、L=L1 ε、U1=L0^−1 ε^−1、U2=(L0L1)^−1 ε^−2（ε∈E[3]）が必要な候補となる。これを未検証の原典訂正式として採用してはならない。実際のrestriction tupleを計算して九候補のどれかを決める必要がある。
+点が相異なるとき、そのadmissibilityは三条件 **O(D123)≠L0、O(D456)≠L1、O(D6)≠L0L1** と同値。固定E,σ,L0上では一般位置条件との共通部分は非空Zariski開である。そこではactual restriction条件(R)が成立し、このdecupleから構成したAS代数A+と指定Ψ+のpointed比較を得る。標準周期表示が右noetherianであれば、十一因子ΔはΨ+のt-exactnessを判定する。未変更の印刷decuple・同じラベルのAS代数への無条件な同一視はしていない。
 
-## 保持する成果と適用範囲
+逆に(O,A0,B0;K1,K2,K3;C1,C2,C3)から、O(pi)=Ki、L0=K1K2K3/B0、O(p3+j)=L0/Cj、L1=O(D6)/(L0A0)、q=L0/L1を一意に復元する（prop:inverse-decuple）。平行移動σそのものは[3]のfiberの九選択を持つ。これはdecupleだけからσを復元する曖昧さであり、σを既に固定した前記εの選択とは異なる。全moduli stackの九対一同型とは主張しない。
 
-同じ最終VdB blow-upの構造対象・Serre作用を使う抽象的な関手認識は保持する。ASへ接続するときには上の実際の条件(R)を明示する。十一因子ΔによるC=B/BpBの有限性判定は独立の代数定理であり、ASの標準noetherian周期表示への適用と分離する。
+整数倍点pi=Ni a、q=P_a、L1=O(3o)、L0=L1q、3b=aとすれば、従来の共鳴族はこの正規化した共通領域に入る。三条件の比はq^(N1+N2+N3−1)、q^(N4+N5+N6)、q^(ΣNi−1)で全て非自明。これは全対応potentialのnoetherian性やΔ非零を保証するものではない。
 
-Rains単独の指定genuine楕円gluing、q非torsionでは、全heartの差Fは境界非交叉有限長圏Zに集中し、t-exactness、AZ ampleness、全実在Z単純のEuler正値が同値となる。有限ADEのEuler chamber手順と、正整数倍点の整列公式、同じ六点から得る720個の埋め込まれたheart、全simple次元(6,1,1,2,2,4)は現行稿に保持する。具体行列や全heartの分類ではない。
+## 原典の印刷式との関係と保持する成果
+
+印刷されたtuple U1=L0^−2L1、U2=L0^−5L1³は別のshift S−(M)=L0⊗σ*Mの負twistから得られる。一方、S+の境界作用とそのtupleを同時に用いるとQ²=Q³=Oという不整合が出る。この検査と、原典全記号の正式な読み替え・訂正の確定は区別する。本稿は初期右加群規約と各transport、各cohomological shiftを明示して独立に構成したΨ+を扱う。著者による正式訂正の確認や未変更の印刷AS代数との同一視は未完了。
+
+十一条件の純代数定理、Rains単独のgenuine gluingの導来比較、全heartの差の局在、Euler chamberと整列結果、同じ六点から得る720個の埋め込まれたRains heartsは保持する。これら全証明を今回新たに独立再査読したという意味ではない。今回の共同領域の構成は旧成果との接続を与えるが、全パラメータ・全heart・相対familyの分類を意味しない。
 
 ## 次の着手と成功条件
 
-最優先はAOUの元のblow-up構成から、同じ固定境界同定でB1,B2の実際のrestrictionとshiftを独立に再計算すること。(9.3),(9.25)を採るなら上のE[3]候補に一致するかを確認する。(9.47)を採るなら境界shift側の同定を追い直す。inverse、点の移動、push/pull、途中のsection-modelへの置換のどれが必要かを明示する。未確認のどれか一つを修正式として固定しない。
+最優先は **正規化した実際のdecupleからpotentialを作り、十一因子の楕円パラメータ式とnoetherian適用域を確定すること**。右規約での辞書、εの選択、三つのactual admissibility条件は解決済みなので再び未決定としない。原典の変更されていない各記号への翻訳は別の確認課題として残す。
 
-実際の二つの次数零restrictionの非自明性を確認して初めて、AOU許容パラメータへの無条件なpointed適用を回復する。その後、十一因子の楕円パラメータ表示と実在AS/noetherian領域との交叉へ進む。境界作用のみを合わせても全gluingやheartが一致したとはしない。
+逆decuple辞書を用い、一般位置と三条件の開集合上でどの係数chartに入るかを明示する。特に整数倍点例のAS+がΔ非零となるかは、三条件だけから推測せず別計算する。その後、比較kernelの相対perfectness、基底変更、標識・heartの降下へ進む。対象の同型・pointed dg同値・t-exactnessを分ける。
 
-Rains 2025 monographの全文との新規性照合は未完了。今回も取得を試みたが成功せず、概要以上を確認したとはしない。外部査読・形式化・相対heartと降下・元の生成元の作用係数も未完了である。
+Rains2025 monograph全文との網羅的新規性照合、外部独立査読、機械形式化、元の楕円生成元のアフィン表現係数は未完了。公表稿の主張は既知のVdB・AOU・Rainsの入力と追加的な正規化・辞書・heart選択の帰結を区別する。
 
 ## 再現と検証
 
@@ -56,6 +61,6 @@ Rains 2025 monographの全文との新規性照合は未完了。今回も取得
     python3 computations/verify_four_hearts_boundary.py
     latexmk -lualatex -outdir=build papers/nc_del_pezzo_hearts.tex
 
-Python標準ライブラリ、LuaLaTeX、LuaTeX-ja、tikz-cd、latexmkを用いる。六コードを現行入力で実行した。新しい境界検査は六次数の1587個のK0ベクトル、Orlov Euler行列からの反Serre列、Picardの形式計算と九つの3捩れ候補を検査する。これは実際の境界同定や原典の修正式を計算で証明したものではない。
+Python標準ライブラリ、LuaLaTeX、LuaTeX-ja、tikz-cd、latexmkを使う。六コードを現行入力で実行した。境界コードは1587個のK0ベクトルに加え、325個のshift逆演算、符号付きrankを含むmutation列、[1]補正、逆decupleのround-trip、具体六点の720順序の三条件を検査する。実際の線束同型、full strong性、dg同値は計算の帰結ではなく本文と一次資料による。
 
-全文38ページ・95ラベル・13文献。生成、全文組版、画像点検、清浄ディレクトリでの再現、遠隔保存の状態はvalidationで区別する。GitHub保存成功時にはLibraryへ別途保存しない。
+全文41ページ・109ラベル・13文献。全文組版・画像点検・清浄ディレクトリでの再現・遠隔保存をvalidationで分けて記す。GitHub保存成功時にLibraryへ別途アップロードしない。

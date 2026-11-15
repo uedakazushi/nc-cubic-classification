@@ -1,100 +1,137 @@
 {
   "date": "2026-11-16",
-  "version": "hearts-v22",
+  "version": "hearts-v23",
   "manuscript": "papers/nc_del_pezzo_hearts.tex",
   "continuation_plan": "research/four_hearts_plan.md",
   "research_notes": "research/heart_comparison.md",
-  "priority": "Correct publication-level claims and source conventions take precedence over adding results.",
+  "priority": "Publication value and correctness; fix a fully specified construction rather than silently mixing printed conventions.",
   "current_claims": {
-    "boundary_formula": {
-      "state": "Proved as an explicit application and check of Rains gluing; not a new general reconstruction theory.",
-      "proof": "four_hearts_boundary_data.tex; prop:boundarynormal",
-      "statement": "For (rank,c1,chi(e,-))=(u,D,c), det F_q(x)=rho(D) q^(c-u). If q=P_a, boundary antiserre is t_a* (- tensor rho(H)); its value at O_E is rho(H) q^d.",
-      "convention": "t_a(x)=x+a. Pullback of degree k tensors by P_a^(-k), pushforward by P_a^k."
+    "right_plane_twists": {
+      "proof": "four_hearts_boundary_data.tex, lem:plane-negative-twists / prop:transported-tuple",
+      "state": "Proved using the fixed VdB right-module shift and actual boundary-adjoint compatibility.",
+      "statement": "With S+(M)=sigma_*(M tensor L0), the negative plane twists restrict to L0^-1 and (L0 L1)^-1. They are preserved under the explicitly identified boundary transports through Lalpha* and Rdelta*."
     },
-    "actual_dictionary": {
-      "proof": "prop:actualdictionary",
-      "state": "Conditional reconstruction from actual ordered boundary objects and a composition-preserving forward-RHom quasi-isomorphism.",
-      "statement": "q=U2 U1^(-2), L=U1 U2^(-1); this identifies pointed directed dg models when the reconstructed geometric gluing exists. No t-exactness assertion."
+    "right_dictionary": {
+      "proof": "thm:right-dictionary",
+      "statement": "The specified transported Orlov collection gives q=L0/L1, L=L1, and the genuine L1-plane six-point blow-up. The boundary and structure object are preserved by the directed-dg reconstruction. Initial plane twists select epsilon=O from the prior nine boundary-only candidates.",
+      "limitation": "No t-exactness of the resulting Rains/section-model dg comparison is inferred solely from this dictionary."
     },
-    "literal_normalization_obstruction": {
-      "proof": "subsec:boundaryaudit; eq:normalization-obstruction",
-      "state": "Exact algebraic obstruction under a deliberately explicit common-boundary reading.",
-      "input": "AOU v1 (9.2),(9.3),(9.25),(9.47) with the same E, point labels, sigma, and restriction identification.",
-      "conclusion": "The printed restriction and printed boundary shift require Q^2=Q^3=O, Q=L1/L0=P_(-3b), so they cannot both hold in this common reading for infinite-order sigma=t_b.",
-      "not_concluded": "Which source formula/convention needs correction, or that the source main theorem is false. No unverified replacement formula is used as an original theorem."
+    "normalized_mutations": {
+      "proof": "eq:mutation-shift-normalization, prop:normalized-admissible",
+      "statement": "Use left cone, inverse right cone[-1], and explicitly shift the last three objects by [1] after the R6 R7 R8 stage. The resulting actual line-bundle decuple is (O,(L0L1)^-1(D6),L0^-1(D123);O(p1),O(p2),O(p3);L0(-p4),L0(-p5),L0(-p6)).",
+      "safeguard": "Not the unedited printed mutation notation with cohomological shifts ignored."
     },
-    "conditional_AOU_pointedness": {
-      "state": "Now explicitly assumes actual restriction nontriviality (R); automatic coordinate specialization is not verified.",
-      "proof": "four_hearts_as.tex; thm:AOU-pointed",
-      "condition": "Actual U2,U1 yield nontrivial degree-zero U2(sum six points) and U1(sum first three points).",
-      "dependencies_updated": "The indicated AOU anticanonical ring, specified-functor t-exactness, and four-way connection now carry this actual restriction hypothesis. Pure finite-corner algebra and the independent Rains gluing statements do not use this coordinate specialization."
+    "normalized_pointed_comparison": {
+      "proof": "cor:normalized-pointed",
+      "hypotheses": "VdB/AOU comparison conditions, the fixed right normalization, six distinct points, and O(D123)!=L0, O(D456)!=L1, O(D6)!=L0L1.",
+      "statement": "These actual conditions yield a full strong normalized collection and the corresponding AOU-type pointed dg equivalence Psi+ to the AS algebra A+ of the actual normalized decuple. F is its structure-object anticanonical ring.",
+      "limitation": "The eleven-factor t-exactness criterion additionally retains the standard periodic right-noetherian AS hypothesis. A+ is not identified without further proof with the algebra obtained from unchanged printed decuple coordinates."
     },
-    "boundary_first_candidates": {
-      "proof": "prop:boundaryfirst; eq:boundaryfirst-AOU",
-      "state": "Necessary consistent candidates and conditional sufficiency if the corresponding geometric gluing exists.",
-      "statement": "For actual boundary t_a*(- tensor N), q=P_a and L^3=N(sum points); L lies in a nine-element E[3] torsor. Keeping the printed shift gives q=L0/L1, L=L1 epsilon, U1=L0^-1 epsilon^-1, U2=(L0 L1)^-1 epsilon^-2.",
-      "not_concluded": "The actual AOU epsilon, a corrected source theorem, or equivalence among the nine candidate gluing categories."
+    "inverse_decuple": {
+      "proof": "prop:inverse-decuple",
+      "statement": "A based ordered decuple recovers the six point line bundles, L0, L1, and q uniquely by the displayed formulas. Recovering sigma gives a nine-element E[3] torsor. On the actual distinct/general-position locus the forward construction returns the original normalized decuple.",
+      "limitation": "The nine choices of sigma when sigma is absent from the input differ from the resolved epsilon ambiguity with sigma already fixed. This is not a degree-nine identification of full moduli stacks."
     },
-    "retained_results": "Standalone eleven-factor criterion, canonical pointed-functor recognition, Rains genuine elliptic comparison, Euler chambers, integer-point sorting, and mixed A2 results retained under their explicit hypotheses. This is not a fresh independent audit of all their proofs."
+    "integer_common_locus": {
+      "proof": "cor:normalized-cyclic-family",
+      "statement": "For pi=Ni a with distinct positive integers, q=P_a nontorsion, L1=O(3o), L0=L1q and 3b=a, the three admissibility ratios have positive exponents. Thus the existing cyclic examples lie in the actual normalized common construction.",
+      "limitation": "Noetherianity and Delta nonvanishing are not concluded from these three conditions."
+    },
+    "printed_obstruction_retained": {
+      "statement": "The old literal common-normalization obstruction Q^2=Q^3=O is retained. The printed tuple is reproduced by the different shift S-(M)=L0 tensor sigma*M.",
+      "state": "The manuscript specifies its own consistent construction. A complete translation of all unchanged original symbols or an author-endorsed correction is not claimed."
+    },
+    "retained_mathematics": "The pure algebraic corner criterion, Rains genuine-gluing comparison, Euler-chamber and sorted-spectrum results, and mixed A2 proofs remain. This turn is not a new independent audit of every retained result."
   },
-  "publication_blockers": [
-    "Recompute the actual original boundary identification and restriction of B1,B2, resolving inverse/push-pull/relabeling or typo possibilities.",
-    "Verify (R) for the actual AOU family rather than substituting incompatible printed coordinate expressions.",
-    "Determine which E[3] candidate and compare the full gluing/composition data.",
-    "Full Rains 2025 monograph novelty comparison, external independent review, relative-heart descent and original affine generator coefficients remain unfinished."
+  "remaining": [
+    "Compute the actual normalized decuple potential and pull back the eleven factors to elliptic parameters; verify the right-noetherian categorical application locus.",
+    "Identify the relation to every unchanged printed AOU coordinate and mutation convention if that particular presentation is required.",
+    "Relative kernel/heart construction, base change and marked descent.",
+    "Original elliptic affine-generator action coefficients.",
+    "Exhaustive novelty comparison including the full 2025 Rains monograph, external independent review and formal verification."
   ],
   "primary_sources_this_iteration": [
     {
+      "id": "arXiv:math/9809116v1",
+      "locations": "(5.4); Section 10 opening; Theorem 6.3.1(1),(4); Proposition 9.1.8 and (9.11); Proposition 9.2.3; Section 11.1 and Theorem 11.1.3.",
+      "verification": "Relevant primary parsed-PDF passages checked. Page screenshot attempts at the convention and comparison passages failed with Cache miss; no visual inspection of these source PDF pages claimed."
+    },
+    {
       "id": "arXiv:2404.00175v1",
-      "locations": "(9.2),(9.3),(9.25),(9.47); related mutation/restriction context",
-      "method": "Primary HTML checked. Displayed arXiv history checked; this audit concerns v1."
+      "locations": "Section 3.5 (explicit cone convention); Definition 7.1, Lemma 7.4 and following AS construction; Section 9, Proposition 9.3, (9.24)-(9.43), printed (9.47)/(9.53).",
+      "verification": "Primary HTML checked. The manuscript explicitly declares its inverse-right-mutation and subsequent shifts. Retrieved arXiv version information showed v1; no author-endorsed correction or exhaustive erratum search claimed."
     },
     {
       "id": "arXiv:2107.13540v2",
-      "locations": "(4.4),(4.11)-(4.13), boundary gluing and reconstruction",
-      "method": "Primary parsed PDF text checked. Required page screenshot attempts returned Cache miss; no original-image-inspection claim."
+      "locations": "(4.4), (4.11)-(4.13).",
+      "verification": "Primary parsed PDF checked for the triangular gluing and tuple reconstruction. Screenshot attempt failed with Cache miss."
     },
     {
       "id": "arXiv:2504.16187",
-      "locations": "Bibliography/abstract only",
-      "method": "Full PDF/HTML/source attempts unsuccessful. No full novelty or theorem-number audit claimed."
+      "verification": "Bibliography/abstract only retained. Full-text novelty audit remains incomplete."
     }
   ],
   "checks": {
-    "full_LuaLaTeX": "PASS",
-    "pdf_pages": 38,
+    "full_manuscript_LuaLaTeX": "PASS",
+    "pdf_pages": 41,
     "all_final_page_images_inspected": true,
     "undefined_references_or_citations": false,
-    "missing_glyphs": false,
+    "missing_glyph_warnings": false,
     "overfull_or_underfull_boxes": false,
-    "harmless_warning": "Inherited ltjsarticle legacy mathematical font command rm notice.",
-    "labels": 95,
+    "harmless_warning": "Legacy ltjsarticle mathematical font command \\rm notice.",
+    "labels": 109,
     "bibliography_entries": 13,
     "all_six_programs_executed": true,
-    "new_boundary_arithmetic": {
-      "basis_and_random_K0_vectors": 1587,
-      "blowup_ranks": [
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
+    "shared_checker_tags": "Some unchanged checkers retain their own older version tags; they were executed on the current source tree. The current reference checker reports 109 labels and 13 bibliography entries.",
+    "boundary_checks": {
+      "K0_vectors": 1587,
+      "right_shift_inverse_tests": 325,
+      "boundary_only_candidates": 9,
+      "unique_candidate_after_actual_plane_twists": [
+        0,
+        0
       ],
-      "Euler_inverse_Serre_checked_independently": true,
-      "literal_support_residual_b_coefficient": -6,
-      "literal_structure_residual_b_coefficient": 9,
-      "all_nine_E3_candidates_checked": true,
-      "actual_source_geometric_identification_proved_by_computation": false
+      "normalized_mutation_stages": 7,
+      "explicit_shift_stage": 4,
+      "explicit_shift_positions": [
+        7,
+        8,
+        9
+      ],
+      "cohomological_shift": 1,
+      "final_ranks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "final_degrees": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "inverse_decuple_round_trip": true,
+      "integer_configuration_orders": 720
     },
-    "retained_checks_rerun": {
-      "mixed_A2": 40000,
-      "chamber_runs": 576,
-      "sorted_random_orders": 240,
-      "all_cubic_permutations": 720,
-      "universal_six_point_identities": 6,
-      "QQ_and_mod_1000003_corner_Hilbert": [
+    "other_checks_rerun": {
+      "mixed_A2_cases": 40000,
+      "root_chamber_runs": 576,
+      "sorted_random_integer_lists": 240,
+      "six_point_permutations": 720,
+      "universal_six_point_syzygies": 6,
+      "polynomial_variables": 12,
+      "independent_QQ_and_mod_1000003_corner_Hilbert": [
         8,
         21,
         33,
@@ -105,55 +142,46 @@
         0
       ]
     },
-    "shared_checker_actual_restriction_basis": [
-      "U2",
-      "U1",
-      "p1",
-      "p2",
-      "p3",
-      "p4",
-      "p5",
-      "p6"
-    ],
-    "older_program_tags": "Unchanged code retains its original version tag but was rerun on current inputs; no archived outputs substituted.",
     "isolated_reproduction": {
-      "pages": 38,
+      "pages": 41,
       "all_text_pages_identical": true,
-      "all_pixel_pages_identical": true,
+      "all_rendered_pages_pixel_identical": true,
       "render_scale": 1.1,
-      "all_six_JSON_outputs_identical": true,
-      "source_and_code_identical": true
+      "all_six_calculation_outputs_identical": true,
+      "source_and_code_identical": true,
+      "layout_reference_errors": []
     },
-    "finite_checks_prove_sheaf_existence_or_actual_parameter_identification": false
+    "geometry_or_dg_equivalence_proved_by_code": false,
+    "original_elliptic_affine_action_matrices_computed": false
   },
   "git_blob_sha1": {
-    "papers/nc_del_pezzo_hearts.tex": "9db50d6a2367c872835dab3a7f20f46a8981d6f1",
-    "papers/sections/four_hearts_as.tex": "bb3e545056f8ad36f54b4e1e666eb0db17bd8160",
-    "papers/sections/four_hearts_boundary_data.tex": "f55745b71b0befc77cb6bce56819c007639ed255",
-    "papers/sections/four_hearts_canonical_comparison.tex": "42b70611bf24a6130b8bec73e504447a11ba4dc3",
-    "papers/sections/four_hearts_corner_locus.tex": "c8e86167816e5d144c8043a64bbfb161c397964a",
-    "papers/sections/four_hearts_examples.tex": "feb50d66b74634862d17cfc358e83f6f44bb031d",
-    "papers/sections/four_hearts_foundations.tex": "082bcebd48175b1480e042c439788f2cdbbc5430",
-    "papers/sections/four_hearts_geometric.tex": "89b436034cf928f577e54ec4e9628ce28e81e942",
-    "papers/sections/four_hearts_root_chambers.tex": "64587b5eebf89cb6b2c96c24299e41e71ab376c5",
     "computations/verify_cubic_heart_numerics.py": "53fec082f8814f3dca2c3be0803c2c4fff6de0d4",
     "computations/verify_four_hearts.py": "97081e9887f14fe50e365fa009f9e7db6a279ba2",
-    "computations/verify_four_hearts_boundary.py": "cf84d29fed55bf2e17d38da58661492d81ce391f",
+    "computations/verify_four_hearts_boundary.py": "396eca30ce3928363f8b9affda1ba7d6cf433d57",
     "computations/verify_four_hearts_chambers.py": "a82e600c1a2d15d89331ffa08373969ed558a6cf",
     "computations/verify_four_hearts_corner.py": "eda177b6595d4e467eae6bc4c2e6b1719d2fef3e",
     "computations/verify_four_hearts_sorted.py": "6b8c3f6eab41d66760841287ff9cd318305c4572",
-    "research/four_hearts_plan.md": "ef62254a8fd67dd9df5bbc5943d62fd7fbbeaeb7",
-    "research/heart_comparison.md": "2d76c4700a1eb8a3e176fb6b0b9daa79cae76c92"
+    "papers/nc_del_pezzo_hearts.tex": "80664e85853a343df1bbcd909cfe5d4a1b00fa23",
+    "papers/sections/four_hearts_as.tex": "5c001acbf33a092691d12d98b8f4ce705a112ab6",
+    "papers/sections/four_hearts_boundary_data.tex": "27dccc8f02b679fa4ccdd109791e36099451322d",
+    "papers/sections/four_hearts_canonical_comparison.tex": "42b70611bf24a6130b8bec73e504447a11ba4dc3",
+    "papers/sections/four_hearts_corner_locus.tex": "c8e86167816e5d144c8043a64bbfb161c397964a",
+    "papers/sections/four_hearts_examples.tex": "75080b12c2ec7a437591dedc2a043809c7d5e55c",
+    "papers/sections/four_hearts_foundations.tex": "9ab8315f91478da5216fc7245b5ff82eb418b28c",
+    "papers/sections/four_hearts_geometric.tex": "89b436034cf928f577e54ec4e9628ce28e81e942",
+    "papers/sections/four_hearts_root_chambers.tex": "64587b5eebf89cb6b2c96c24299e41e71ab376c5",
+    "research/four_hearts_plan.md": "75b28616dac415bd6925e7213654e45636c1dd5f",
+    "research/heart_comparison.md": "8d295eb2b165248f8f6c034266380b11053f9f25"
   },
   "external_independent_peer_review": false,
   "machine_formalization": false,
   "exhaustive_novelty_search": false,
   "persistence": {
     "canonical": "GitHub main",
-    "prepared_against_commit": "ab1f7376b7a1b4692e72cf5cb97f521a9120ecd5",
-    "remote_confirmation": "Reported separately after normal expected-head ref update; this record contains the actual tested source hashes, not its own future commit hash.",
+    "local_source_state": "Hashes below identify the executed and typeset sources. Remote write and main-ref confirmation are performed separately and reported with the resulting commit.",
     "Library_upload_performed": false,
-    "PDF_tracked_in_Git": false
+    "PDF_tracked_in_Git": false,
+    "chat_attachments": "Current PDF and clean continuation ZIP, not a separate Library upload."
   },
   "reproduction": [
     "python3 computations/verify_cubic_heart_numerics.py",
