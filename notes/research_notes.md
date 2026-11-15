@@ -130,3 +130,6 @@ Pymのscheme/formal germ比較と実際のQmod比較により、Q113は射影基
 文献上の範囲：Sierraの厳密twist比較、AOUのAS3での内部O(n)認識、Behrend–Noohiの切断stackは一次資料を確認。AOUの裸のqgr復元をAS5/cubicへ無証明で一般化しない。新しい主張の初出・優先権と、保持した全旧証明の独立全面監査は未完了。実施した計算・組版・証明監査はvalidation.jsonで区別する。
 
 point graph規約の訂正：p yz+q zy-h x²に対する行列は(-hx,qz,py)を第一行とする。以前のp,q逆順は逆translationを表していた。`verify_cubic_integrated_envelope.py` に関係式からの直接検算を加えた。E、位数4条件、character余因子判定、既得bad Dは不変。
+
+固定PI4族の有限Ext判定も `cubic_order4_ext_bound.tex` に証明した。CCKM Theorem4.7をAS4右加群（oppositeで適用）に使うとdehomogenization後Extはi>=6で2周期。全単純加群の組（次元<=4）のExt6,7が零 iff H3。有限中心の完備化、左右双対、semiperfect最小解消による証明。普遍表現の8段有限自由解消は基底上平坦syzygyを持ち、単純性の有限開条件とExt非零の有限階数条件からbad像はconstructible。超越的Dが全てgoodなので像は有限。この有限データの全生成とbad多項式計算は未実行。
+48次元sliceの停止保証は `lem:order4-fortyeight-slice`：HのAS Gorenstein local dualityから中心2パラメータ上graded free、基底次数<=8。Uのfiltered基底を持ち上げると全(D,c1,c2)でrank48、次数9までで正則表現を得る。重み付き再構成は17ケース全完了と係数空間の可逆性が揃うまで未完として扱う。

@@ -2,7 +2,7 @@
 \label{subsec:order4-explicit-center}
 前節の固定包絡に対し $K=\mathbb Q(\gamma)$、$\gamma^4=2$ とし、
 中心値 $D$ を記号のまま残す。$U_D=B[t^{-1}]_0/(\mathcal G_D/t^3)$ と書く。
-$Z_1,Z_2,Z_3$ を \path{cubic_order4_center_certificate.json} の最初の三つの四次元の
+$Z_1,Z_2,Z_3$ を \path{cubic_order4_center_certificate.json} の最初の三つの四次中心元の
 $t=1$ での像とする。ここで係数は $K[D]$ に入り、各 $Z_i$ は
 「$D$ に依らない活動次数4以下の項」と「$D$ 倍の活動次数1以下の項」の和である。
 巨大な自由単語行列や有限個の $D$ での外挿は用いない。
@@ -12,7 +12,7 @@ $t=1$ での像とする。ここで係数は $K[D]$ に入り、各 $Z_i$ は
 $\mathcal U=U_D$ を $K[D]$ 上の族として扱うと、次が成り立つ。
 \begin{enumerate}
 \item 全ての $D$ に対して $Z(U_D)\cap F_4U_D$ は
-$1,Z_1,Z_2,Z_3$ を基底とする。三つの四次元は中心全体を生成する。
+$1,Z_1,Z_2,Z_3$ を基底とする。三つの四次中心元は中心全体を生成する。
 \item 唯一の関係は
 \[
  \mathcal F_D(Z_1,Z_2,Z_3)=\Phi(Z_1,Z_2,Z_3)+Q_D(Z_1,Z_2,Z_3)=0,
@@ -37,7 +37,7 @@ $Q_D$ の全係数はまだこの定理の検算では求めていない。
 \end{theorem}
 
 \begin{proof}
-四次元の構成を先に述べる。中心三次商を取る前の包絡で、各次数の
+四次中心元の構成を先に述べる。中心三次商を取る前の包絡で、各次数の
 $V\otimes B_{n-1}$ を六二次関係 $R_2\otimes B_{n-2}$ で割る逐次商を作る。
 次数0から5の次元は正確に $(1,4,10,20,35,56)$ となる。
 次いで次数4、5で $\mathcal G_D B_1,\mathcal G_D B_2$ を割る。
@@ -72,7 +72,7 @@ $y=1$ の elliptic 座標環
  K[x,z]/(z^3+\kappa xz+x^3+1),\qquad
  \kappa=(1+6\gamma^2)/(1-\gamma^2)
 \]
-内で関係の実際の graph に沿って四次元を評価する。
+内で関係の実際の graph に沿って四次中心元を評価する。
 $p=1+\gamma,q=1-\gamma$ に対して graph の第二点は
 \[
  (q^2xz+py^2:p^2yz+qx^2:xy-pqz^2)
@@ -101,6 +101,32 @@ $U_D$ は中心上有限となる。Hilbert級数
 従って中心商斜体は次数4の中心単純除法環となる。
 \end{proof}
 
+\begin{lemma}[48次元sliceと有限停止次数]
+\label{lem:order4-fortyeight-slice}
+全ての $D,c_1,c_2$ について
+$U_D/(Z_1-c_1,Z_2-c_2)$ は次元48である。
+その活動濾過は次数8で全体に達し、同次Rees表示では次数8から9への $t$ 乗法が同型となる。
+従って次数9までの逐次商から、真の48次元正則表現を得られる。
+\end{lemma}
+\begin{proof}
+$H=S/(g)$ は次元2の AS Gorenstein 環であり、balanced local duality により
+augmentation local cohomology は次数2以外で零である\cite{YZ}。
+先頭中心の $Z_1,Z_2$ で割ると、$\Phi(0,0,Z_3)=Z_3^3$ から有限次元となる。
+従ってこの二中心元のイデアルは augmentation に cofinal であり、
+$H$ は $K[\overline Z_1,\overline Z_2]$ 上 depth2の有限graded加群となる。
+二変数多項式環上の Auslander--Buchsbaum により graded free である。
+その基底の次数分布は
+\[
+ (1-s^4)^2 H_H(s)=(1+s+s^2)(1+s+s^2+s^3)^2
+\]
+で、総数48、最高次数8となる。
+この基底を $U_D$ へ持ち上げ、最高活動記号を引く帰納法を使うと、
+$U_D$ は $K[Z_1,Z_2]$ 上もこの基底を持つ自由加群となる。
+独立性も先頭記号の独立性から従う。
+特殊化後のフィルター基底とRees環での主張が全て従い、
+次数9以降に新たな隠れた関係が現れて次元が落ちる可能性も除かれる。
+\end{proof}
+
 \begin{remark}[全三次関係の有限補間に必要な事前次数境界]
 \label{rem:order4-center-interpolation}
 $Q_D$ の三次元に関する次数が $j$ の係数は、$D$ について
@@ -112,7 +138,7 @@ $Q_D$ の三次元に関する次数が $j$ の係数は、$D$ について
 となる。これを標本から推測するのではない。
 実際 $a\mapsto r a,\beta\mapsto r^2\beta$ とした二変数族を取り、
 $X,r,D,Z_i$ の重みを $1,1,3,4$ とする。
-$r^4Z_i(X/r;D/r^3)$ は、構成した四次元の $D$ 一次項が活動次数1以下であることから
+$r^4Z_i(X/r;D/r^3)$ は、構成した四次中心元の $D$ 一次項が活動次数1以下であることから
 $r$ の負冪を持たず、$r=0$ にも延長する。
 その先頭記号は同じ三生成元なので、上の中心生成・唯一の関係の証明は
 $K[r,D]$ 上でも成立する。唯一の monic 関係は重み12であり、表示した境界を得る。
