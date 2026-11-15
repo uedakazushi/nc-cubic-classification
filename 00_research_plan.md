@@ -30,7 +30,11 @@
 
 **固定PI4包絡の完全判定**：h=1、gamma^4=2、alpha=(−2,−2,0)、beta=(1,1,2)のD切断族で、中心特異値は13個だが非H3値は平方因子のない次数6式 b(D)=(D−Dstar)*P4(D)*Q1(D)の根に限る。他のDのaffine切断は大域次元2。`papers/sections/cubic_order4_local_orders.tex` はgrの最大性、中心正則列とbalanced local dualityによる対称双対、DVR標準形の非分岐性、A1二重被覆の指標多重度を使う。小次元表現のnorm・二中心点への分配・次数6式は厳密検算済み。D直線のH3条件は主開集合D(b)で、任意底変更・fpqc降下に適合し、そのaffine族は相対対角の長さ2以下の射影分解を持つ。これは一固定包絡の判定で、全位数4族・全H3の被覆ではない。
 
-**楕円filtered deformationの全包絡認識（H3 classification-v25）**：滑らかな次数3楕円THCR（translation）の全filtered deformationについて、Rees環の二次包絡がnoetherian quadratic Koszul CY AS4で、一本の正則中心三次の商になることを証明した。AS4包絡を外部に仮定せず復元できる。非可換では境界が一意なので、intrinsic中央楕円H3の幾何学的群oidは有限gldim filtered deformationとfiltered同型に一致する。Hesse/Moore・対称線型係数・中心三次の単一線型核による有限候補atlasと全同型係数比較を得た。有限Nは中心McKay条件で全admissibilityを判定し、被約固定N族では相対中心とH3開性も証明済み。無限位数の全bad値、全intrinsic family stack・既約成分、中央境界を持たないH3被覆は未完成。j0対称potential境界でも正則化した非分裂中央三次と無限位数の具体例を得た。三捩れ量子Weyl chartの全中心も求め、b=(1,1,1),lambda=0のD族では非H3四値を完全に判定した。全beta/lambdaもHessianと有限character方程式による必要十分条件を得た（A1でcharacter存在、A2で三character）。被約係数空間上H3開性・任意底変更も固定N定理から従う。正規一次楕円境界も共役位数1,2,3,4,6に制限し、中心境界iff translationを証明した。正規境界でもaffine有限gldimとの同値を証明し、共役位数4,6を除外した。残る非中央位数2,3は二次・三次の形まで制限し、位数3では包絡CYを強制する。位数2の全包絡も量子involutionとClifford swapへ被覆し、後者は一意三次の中央volume cocycle還元で全admissibilityを得た。次は位数3 AS3同型類と、中央無限位数・正規境界のない全H3被覆を進める。
+**滑らかな楕円境界部分（H3 classification-v36）**：中央境界では、次数3 translation THCRの全filtered deformationからCY AS4包絡と正則中心三次を復元し、全幾何学的矢をfiltered同型で記述した。有限Nのadmissibilityは中心McKay条件で完全判定し、被約固定N族ではH3開性・任意底変更・fpqc降下も得た。三捩れ量子Weyl chartの全中心と有限Hessian/character判定、j0 potential境界の非分裂例も保持する。
+
+**非中央正規一次楕円境界**：共役位数は2または3に限る。位数2は量子involution（既存符号型）とClifford swapへ漏れなく被覆し、後者の三次は一本、中央volumeへの有限cocycle還元により長さ8 character完全交叉の被約性が必要十分。非skew・非CYの具体例を検算済み。位数3は最高Koszul tensorの8次元随伴模型と全Jordan型の計算から量子P2に限られ、全対象が既知の量子Fermat一対象、幾何学的群oidBH54となる。全H3が正規一次楕円境界を持つとは主張しない。
+
+**次の核心**：Clifford swapの全intrinsic矢・相対stack、中央無限位数の全admissibility、正規一次楕円境界を持たないH3の漏れのない被覆を進める。全既約成分・交叉・境界と全intrinsic family降下は未完成。
 
 既存の主要な構造結果を維持する：
 

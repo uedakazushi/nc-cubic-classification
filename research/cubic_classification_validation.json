@@ -1,6 +1,6 @@
 {
   "date": "2026-11-15",
-  "version": "classification-v35",
+  "version": "classification-v36",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -33,7 +33,8 @@
     "papers/sections/cubic_quantum3_center.tex",
     "papers/sections/cubic_normal_elliptic_boundary.tex",
     "papers/sections/cubic_normal_order2_quantum.tex",
-    "papers/sections/cubic_normal_order2_clifford.tex"
+    "papers/sections/cubic_normal_order2_clifford.tex",
+    "papers/sections/cubic_normal_order3_coverage.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -506,7 +507,16 @@
     ],
     "result": "PASS quantum PBW overlap; Clifford swap specified exact normal cubic, length8 reduced CI, 512 cocycle identities",
     "ordinary_proofs": "All order2 boundary AS3 envelopes untwist by Nakayama to translation order1/2; quantum branch only skew; Clifford branch W1 line and H3 iff reduced8 CI",
-    "build": "LuaLaTeX 99 pages, no undefined refs/cites or overfull boxes; visual inspection pending",
+    "build": "LuaLaTeX successful; page83 coverage proof visually inspected",
     "limits": "No all intrinsic arrow orbit/relative stack classification, no normal smooth elliptic boundary existence theorem, no independent refereeing/formalization"
+  },
+  "normal_order3_v36": {
+    "proof": "papers/sections/cubic_normal_order3_coverage.tex",
+    "validator": "computations/verify_cubic_scalar_nakayama_as3.py",
+    "certificate": "computations/cubic_scalar_nakayama_as3_certificate.json",
+    "result": "PASS rank8 minor81(2q+1), all cyclic identities, all traceless Jordan point determinants; repeated eigenvalue gives quantum P2",
+    "ordinary_theorem": "Every noncentral order3 normal elliptic H3 is the previously classified quantum Fermat object; geometric pointed groupoid BH54",
+    "build": "LuaLaTeX 101 pages; no undefined references/citations or overfull boxes; pages83,84 visually inspected before minor-value sentence refinement",
+    "limits": "No all intrinsic family stack descent, no existence of normal elliptic boundary for every H3, not independently refereed/formalized"
   }
 }

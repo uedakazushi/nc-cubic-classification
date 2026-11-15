@@ -1,0 +1,90 @@
+\subsection{位数3非中央境界は既知の量子Fermat一対象に帰着する}
+\label{subsec:normal-order3-coverage}
+\begin{lemma}[原始三乗根スカラーNakayamaのAS3と楕円境界]
+\label{lem:scalar-mu3-elliptic-quantum}
+$S$ を三生成元noetherian quadratic Koszul AS3とし、
+$\mu_S=\xi_\lambda$、$\lambda$ を原始三乗根とする。
+$S$ の正則中心三次商が滑らかな次数3楕円THCRなら、座標を取って
+\[
+ S=k\langle x,y,z\rangle/(xy-yx,\ xz-\lambda zx,\ yz-\lambda zy)
+\]
+となる。特に、ここでsmooth elliptic point schemeを持つ非skew AS3は現れない。
+\end{lemma}
+\begin{proof}
+$V=S_1$ とする。Koszul AS3の最高tensor
+$w\in(V\otimes\mathcal R)\cap(\mathcal R\otimes V)$ は一次元を張り、
+その三つの第一成分sliceが二次関係空間 $\mathcal R$ の基底となる。
+Koszul双対のFrobeniusとNakayamaの対応\cite{RRZ}により、
+左巡回 $C(v_1v_2v_3)=v_2v_3v_1$ に対し
+$Cw=qw$、$q=\lambda^{-1}$ である。
+この固有空間は次元8である。実際、三つの定数文字列以外の24 tensor単項式は八つの長さ3巡回orbitをなす。
+
+交代tensor $\epsilon\in\bigwedge^3V$ の非零元を取り、
+\[
+ T(A)=\bigl(1+q^{-1}C+q^{-2}C^2\bigr)(A\otimes1\otimes1)\epsilon,
+ \qquad A\in\mathfrak{sl}(V)
+\]
+と置く。この写像は全単射である。
+実際、標準的な二つの対角行列と六つの行列単位でminor $81(2q+1)\ne0$ を得る。
+また自然性から、$M\in\mathrm{GL}(V)$ の座標変換は
+$A\mapsto MAM^{-1}$ と共通係数 $\det M$ に対応する。
+従って $A$ のJordan標準形だけを調べればよい。
+
+$T(A)$ の第一成分sliceのmultilinear行列を $M_A(X)$ とする。
+$X=(x,y,z)$ と書き、三つのJordan場合の行列式を計算すると
+\[
+\begin{array}{c|l}
+ A&\det M_A(X)\\\hline
+ \operatorname{diag}(a,b,-a-b)&
+ 3(2q+1)(a-b)(a+2b)(2a+b)xyz\\
+ \begin{pmatrix}a&1&0\\0&a&0\\0&0&-2a\end{pmatrix}&
+ -27(2q+1)a^2x^2z\\
+ \begin{pmatrix}0&1&0\\0&0&1\\0&0&0\end{pmatrix}&
+ -3(2q+1)x^3
+\end{array}
+\]
+を得る。この表はtrace零行列の全Jordan場合を尽くす。
+非零の表示は全て可約三次であり、滑らかな既約楕円三次を含めない。
+第二行で $a=0$ なら第二sliceが零となり、AS3の三関係の独立性に反する。
+従って残るのは、第一行で非零な二重固有値を持つ対角行列だけである。
+置換と共通係数を除き $A=\operatorname{diag}(1,1,-2)$ に取れる。
+このとき関係は
+$xy=yx$、$xz=q^2zx$、$yz=q^2zy$ となり、$q^2=\lambda$ で主張を得る。
+rank8、巡回固有式、表の三行と二重固有値の関係式は検証器で全て厳密に確認する。
+\end{proof}
+
+\begin{theorem}[位数3非中央正規楕円境界の幾何学的分類]
+\label{thm:normal-order3-quantum-Fermat}
+強いH3が、共役位数3の非中央正規一次楕円境界を持つとする。
+このH3対象は例\ref{ex:normal-elliptic-order3}の $D=1$ に同型である。
+従ってこの部分の幾何学的pointed群oidは、既知の量子Fermatの
+\[
+ B H_{54},\qquad
+ H_{54}=(\mu_3^4/\mu_3^{\mathrm{diag}})\rtimes\mathfrak S_2
+\]
+に一致する。境界の選択は標識に加えない。
+一般のintrinsic圏の族の全stack降下まで新たに主張するものではない。
+\end{theorem}
+\begin{proof}
+位数3構造定理とadmissibilityから
+$B=S[t;\xi_\lambda]$、$G=g+Dt^3$、$D\ne0$、
+$\mu_S=\xi_\lambda$、$g$ 中心である。
+前補題により $S$ は表示した量子射影平面に限る。
+PBW単項式 $x^iy^jz^k$ の中心条件は
+$k\equiv0$、$i+j\equiv0\pmod3$ だから、
+\[
+ Z(S)_3=\operatorname{Sym}^3\langle x,y\rangle\oplus kz^3.
+\]
+従って $g=f_3(x,y)+az^3$ である。
+$S$ は可換多項式環の $\operatorname{diag}(1,1,\lambda)$ によるZhang twistで、
+$g$ の可換式も同じである。
+滑らかさは $a\ne0$ とbinary cubic $f_3$ が三つの相異なる根を持つことに等しい。
+$\mathrm{GL}_2$ と $z$ のスケールにより $g=x^3+y^3+z^3$ に直せる。
+$t$ のスケールで $D=1$ に取れる。
+$\lambda$ と $\lambda^{-1}$ の二表示は $t,z$ の交換で同型になる。
+
+この環は既存の3乗根二重指標型の量子Fermat環である。
+全intrinsic pointed矢を反標準環のgraded同型として認識する既出の定理により、
+その一対象の自己同型群は既計算の $H_{54}$ となる。
+したがって境界を忘れた全幾何学的群oidが表示した分類群oidに一致する。
+\end{proof}

@@ -1,0 +1,57 @@
+{
+  "version": "classification-v36",
+  "cyclic_eigenvalue": "q, q^2+q+1=0; algebra Nakayama scalar q^-1",
+  "tensor_map": "project q eigenspace of (A tensor1 tensor1)*alternating tensor, A traceless",
+  "rank8_minor": "162*q + 81",
+  "rank8_minor_rows": [
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      2
+    ],
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      0,
+      2,
+      1
+    ],
+    [
+      0,
+      2,
+      2
+    ],
+    [
+      1,
+      1,
+      2
+    ],
+    [
+      1,
+      2,
+      2
+    ]
+  ],
+  "column_basis": "diag(1,-1,0),diag(0,1,-1), then Eij i!=j in lex order",
+  "all_traceless_Jordan_determinants": {
+    "diagonal": "3*x*y*z*(a - b)*(a + 2*b)*(2*a + b)*(2*q + 1)",
+    "J2": "-27*a**2*x**2*z*(2*q + 1)",
+    "J3": "-3*x**3*(2*q + 1)"
+  },
+  "nilpotent_J2_has_zero_relation": true,
+  "smooth_elliptic_boundary_forces": "repeated nonzero diagonal eigenvalue; S=quantum P2 with xy=yx,xz=q^2*zx,yz=q^2*zy",
+  "scope": "Exact 8-dimensional eigentensor rank, cyclic identities and Jordan determinant formulas; ordinary proof links AS3 top Koszul tensor and geometric boundary."
+}
