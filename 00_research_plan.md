@@ -1,6 +1,6 @@
 # 研究方針：内在的非可換del Pezzo曲面と三次三様体のモジュライ
 
-2026-11-15 / project-v14 / recognition-v5 / dp1-integration-v2。再開時は本書、`research/common_del_pezzo_framework.md`を読み、次数3は`research/weak_cubic_axioms.md`、次数1は`research/dp1_research_plan.md`に進む。各現行論文・研究ノートはその指示に従って読む。
+2026-11-15 / project-v15 / recognition-v6 / dp1-integration-v3。再開時は本書、`research/common_del_pezzo_framework.md`を読み、次数3は`research/weak_cubic_axioms.md`、次数1は`research/dp1_research_plan.md`に進む。各現行論文・研究ノートはその指示に従って読む。
 
 ## I. 恒常的原則と保存許可
 
@@ -14,7 +14,7 @@
 
 上位目標は、次数1と3に共通するweakly marked非可換del Pezzo曲面の内在的rank、構造対象、反Serre偏極、AZ再構成、反標準環と幾何学的avatarのモジュライ理論を構築することである。異なる次数のHilbert関数、weighted/standard ambient、heartとdg圏、strong/weak markingを混同しない。共通枠組みは`research/common_del_pezzo_framework.md`、次数1固有の目標・証明状態・着手は`research/dp1_research_plan.md`に置く。論文は役割別に独立させ、現行の三次三様体論文と次数3の証明を削除しない。
 
-次数3について対象は、gd2のk線形Abel圏Aとrank-one torsion-free対象O、s=S^{-1}[2]のheart保存、AZ ample、三次曲面と同じ全整数のh0で定義されるweakly marked nc cubic surface。通常のnoetherian/Hom有限条件、s不変のrank/torsion理論、相対Serre・Hom底変更を明示する。
+次数3について対象は、非零のExt有限・noetherianなk線形Abel圏Aとrank-one torsion-free exceptional対象O、Serre関手S、s=S^{-1}[2]のheart保存、AZ ample、三次曲面と同じ全整数のh0で定義されるweakly marked nc cubic surface。大域次元2はSerre双対性から自動的に従う定理であり、独立公理には含めない。通常のnoetherian/Hom有限条件、s不変のrank/torsion理論、相対Serre・Hom底変更を明示する。
 
 全weak対象の認識と、R(1,3)中心拡大型の分枝の比較は別問題である。全公理と一次生成・二次三次関係・全twistのExt1消滅を満たす量子Fermat例のambientはR13閉包の外にある。従って全対象をR13一成分へ押し込めない。
 

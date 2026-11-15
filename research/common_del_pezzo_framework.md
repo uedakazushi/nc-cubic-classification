@@ -1,16 +1,20 @@
 # 非可換del Pezzo曲面の共通内在的枠組み（次数1と3）
 
-2026-11-15 / integration-v2。これは次数1と次数3の既存研究を接続するための方針文書であり、全次数についての分類定理を主張するものではない。
+2026-11-15 / integration-v3。これは次数1と次数3の既存研究を接続するための方針文書であり、全次数についての分類定理を主張するものではない。
 
 ## 共有する候補公理
 
-基礎体k上のExt有限・noetherianなhomological dimension 2のabel圏Aと、Serre関手S、反標準作用tau=S^{-1}[2]を取る。tauはheartを両方向で保つexact autoequivalence、Oはrank-one torsion-free exceptional object、(O,tau)はArtin–Zhang ampleとする。次数dを全n≥0の
+基礎体k上のExt有限・noetherianな非零abel圏Aを取り、D^b(A)にSerre関手Sが存在するとし、反標準作用tau=S^{-1}[2]を定義する。**homological dimension 2は別には要求しない。**tauはheartを両方向で保つexact autoequivalence、Oはrank-one torsion-free exceptional object、(O,tau)はArtin–Zhang ampleとする。次数dを全n≥0の
 
     dim_k Hom_A(O,tau^n O)=1+(d/2)n(n+1)
 
 で指定する。Oを指定するのがweak marking。quiver、blowdown基底、例外列は定義に含めない。rankをGabriel–Krull長さで定義する場合の必要仮定・証明は次数1主論文を参照する。数値K群のrankと同一視するときには別途比較する。
 
 反標準環 R=⊕_{n≥0}Hom_A(O,tau^nO) はArtin–Zhangの条件下でqgrへの再構成を与えるが、所望のambientの存在・正規境界・smoothnessをHilbert seriesだけから結論できない。
+
+## Serre作用による大域次元の自動性
+
+任意のM,N∈AについてExt^i_A(M,N)≅Hom_{D^b(A)}(tau N,M[2−i])^*。tau(A)⊂Aからi>2の群は零であり、非零Nに対してExt²_A(tau N,N)≅End_A(tau N)^*≠0。よってhdim A=2は厳密に従う。tauのheart上での本質的全射性は不要。証明は次数1原稿の命題prop:serre-heart-hdim、次数3原稿の命題prop:serre-heart-global-dimensionに置く。
 
 ## 定義の整合
 

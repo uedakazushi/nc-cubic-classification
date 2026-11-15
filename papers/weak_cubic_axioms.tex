@@ -21,7 +21,7 @@
 \newcommand{\cP}{\mathfrak P}\newcommand{\Sym}{\operatorname{Sym}}
 \title{内在的非可換三次曲面の公理とambient成分\\\large dP1共通定義・量子FermatのPym成分・正規境界認識}
 \author{研究原稿：証明済みの命題と未解決の認識条件を区別する}
-\date{2026年11月15日\quad recognition-v5}
+\date{2026年11月15日\quad recognition-v6}
 \begin{document}\maketitle
 \begin{abstract}
 大域次元2の$k$線形Abel圏とrank one torsion-free exceptional構造対象，反Serre作用，
@@ -44,8 +44,10 @@ Cassidy--SheltonのPBW判定を適用することである．
 \tableofcontents
 
 \section{公理と四つの問いの状態}
-以下，$k$は標数0の代数閉体とする．$\cA$は$k$線形noetherian Abel圏で
-$\gldim\cA=2$，$D^b(\cA)$はHom有限でSerre関手$S$を持つとする．
+以下，$k$は標数0の代数閉体とする．
+$\cA$は$k$線形noetherian Abel圏で，
+$D^b(\cA)$はHom有限でSerre関手$S$を持つとする．
+大域次元2は独立の公理に含めず，以下で証明する．
 $s=S^{-1}[2]$はheartを保ち，$\OO\in\cA$について$(\OO,s)$が
 Artin--Zhang ampleであると仮定する．ここでnoetherian性とHom有限性は
 Artin--Zhang再構成と通常のSerre双対性を適用するための規約である．
@@ -96,7 +98,7 @@ $a\in R_m,b\in R_n$の積は$s^m(b)\circ a$である．
 \begin{center}\small
 \begin{tabular}{p{.15\linewidth}p{.76\linewidth}}\toprule
 問い&今回の結論\\\midrule
-低次数提示&$R_0=k$は自動．条件2の全域での冗長性は未証明．Artin平坦変形での保持と，標準正規境界からの低次数提示・AS4包絡の認識を証明する．\\
+低次数提示&$R_0=k$は自動．大域次元2は命題\ref{prop:serre-heart-global-dimension}から自動．条件2の全域での冗長性は未証明．Artin平坦変形での保持と，標準正規境界からの低次数提示・AS4包絡の認識を証明する．\\
 ambient認識&存在すれば二次包絡で一意．$R(1,3)$への全域帰属は量子Fermat例により否定される．標準正規境界があればAS4包絡は存在する．全対象での存在は未証明．\\
 代数性&族を指定したfpqcモジュライ候補と有限提示空間を作る．候補の全体を通常の代数的stackと同定する証明は完成していない．\\
 像とfiber&中心拡大型のincidenceは7次元ambientを支配し，中心fiberは$\PP^1$．量子Fermatの良い中心切断は一軌道で，rigidifyした商は分類stack $BH_{54}$．全対象への拡張とは区別する．\\\bottomrule
@@ -104,6 +106,34 @@ ambient認識&存在すれば二次包絡で一意．$R(1,3)$への全域帰属�
 \end{center}
 既知入力は\cite{AZ,Kanazawa,YZ,Pym,AOU,BN}に区別して示す．
 以下の組合せの新規性・初出は未確認である．
+
+
+\begin{proposition}[反Serre作用からの大域次元の自動性]
+\label{prop:serre-heart-global-dimension}
+$\cA\ne0$で$D^b(\cA)$がSerre関手$S$を持ち，
+$s=S^{-1}[2]$が$\cA$を$\cA$へ写すとする．
+このとき
+\[
+\Ext^i_{\cA}(M,N)\simeq
+\Hom_{D^b(\cA)}(sN,M[2-i])^*
+\quad(M,N\in\cA)
+\]
+であり，$\gldim\cA=2$となる．
+$s|_{\cA}$が本質的全射であることは要求しない．
+\end{proposition}
+\begin{proof}
+Serre双対性によって
+\[
+\Hom(M,N[i])\simeq\Hom(N[i],SM)^*
+\simeq\Hom(sN,M[2-i])^*
+\]
+を得る．$i>2$ならheartの二対象間の負次数Homなので零であり，
+$\gldim\cA\le2$である．一方，非零$N$に対して
+\[
+\Ext^2_{\cA}(sN,N)\simeq\End_{\cA}(sN)^*\ne0.
+\]
+従って大域次元は正確に2である．
+\end{proof}
 
 \section{冗長性と低次数認識}
 \begin{lemma}[共通公理からの負次数消滅]

@@ -37,7 +37,7 @@
 \newcommand{\Bl}{\operatorname{Bl}}
 \title{非可換del Pezzo曲面の内在的構造と\\次数1変形族}
 \author{}
-\date{2026年11月15日 JST・統合版4.1\\研究原稿：内在的な全モジュライと完全分類は未完成}
+\date{2026年11月15日 JST・統合版4.2\\研究原稿：内在的な全モジュライと完全分類は未完成}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -133,8 +133,7 @@ $H^\bullet(S,\OO_S(H-E_j))=0$を課す．
 次数$d$の弱標識付き反標準ample非可換曲面の候補を，以下を満たす
 $(\AA,\OO)$とする．
 \begin{enumerate}
-\item $\AA$は本質的に小さい$\mathbb C$線形noetherian Ext-finite abel圏で，
-$\operatorname{hdim}\AA=2$である．
+\item $\AA$は本質的に小さい$\mathbb C$線形noetherian Ext-finite abel圏である．
 \item $\Db(\AA)$はSerre functorを持ち，
 $\theta=\SSer[-2]$は$\AA$を保つexact autoequivalenceである．
 \item $\AA_0$を有限長対象のSerre部分圏，$\AA_1$を$\AA/\AA_0$で
@@ -151,6 +150,34 @@ $\Hom(\OO,\OO)=\mathbb C$，$\Ext^i(\OO,\OO)=0$ for $i>0$．
 が成立する．
 \end{enumerate}
 \end{definition}
+
+\begin{proposition}[反Serre作用のheart保存からの大域次元]
+\label{prop:serre-heart-hdim}
+$\AA\ne0$であり，$\Db(\AA)$にSerre関手$\SSer$が存在して，
+$\tau=\SSer^{-1}[2]$が$\AA$を$\AA$へ写すとする．
+このとき$\operatorname{hdim}\AA=2$であり，
+任意の$M,N\in\AA$，$i\in\mathbb Z$について
+\begin{equation}\label{eq:serre-automatic-ext}
+\Ext^i_{\AA}(M,N)\simeq
+\Hom_{\Db(\AA)}(\tau N,M[2-i])^*
+\end{equation}
+が成り立つ．ここでは$\tau|_{\AA}$の本質的全射性さえ必要ない．
+\end{proposition}
+\begin{proof}
+Serre双対性から
+\[
+\Hom_{\Db(\AA)}(M,N[i])
+\simeq\Hom_{\Db(\AA)}(N[i],\SSer M)^*
+\simeq\Hom_{\Db(\AA)}(\tau N,M[2-i])^*
+\]
+を得る．$i>2$なら$\tau N,M$はheartの対象であり，
+右辺は負次数のHomなので零．従って$\operatorname{hdim}\AA\le2$である．
+非零$N\in\AA$に対して$M=\tau N$とすれば
+\[
+\Ext^2_{\AA}(\tau N,N)\simeq\End_{\AA}(\tau N)^*\ne0.
+\]
+よって$\operatorname{hdim}\AA=2$である．
+\end{proof}
 
 この定義案自体はquiverを選ばない．$\OO$の存在だけを要求してその選択を忘れた対象を
 unmarkedと呼び，実際に$\OO$を指定した対象をweakly markedと呼べる．
@@ -453,9 +480,9 @@ Hilbert増大度で先に仮定し，後から両者が一致すると述べる�
 \end{remark}
 
 \subsection{Serre双対性から従う消滅と残る問題}
-さらに$\AA$のhomological dimensionを2とし，
-$D^b(\AA)$がHom-finiteで，Serre functorが
-$\SSer=\tau^{-1}[2]$であると仮定する．
+定義\ref{def:fano}と命題\ref{prop:serre-heart-hdim}から，
+$\AA$のhomological dimensionは既に2である．
+以下ではSerre関手$\SSer=\tau^{-1}[2]$を用いる．
 
 \begin{proposition}\label{prop:rank-ext-two-vanishing}
 任意の$F\in\AA$について$\Ext^2(\OO,\tau^nF)=0$が$n\gg0$で成り立つ．

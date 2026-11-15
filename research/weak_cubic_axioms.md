@@ -1,12 +1,16 @@
 # 現行研究ノート：weak cubicの四問
 
-2026-11-15 / recognition-v5。最初に00_research_plan.mdを読む。完全な新証明はpapers/weak_cubic_axioms.tex。証明の重複は避け、再開に必要な補足をここに残す。
+2026-11-15 / recognition-v6。最初に00_research_plan.mdを読む。完全な新証明はpapers/weak_cubic_axioms.tex。証明の重複は避け、再開に必要な補足をここに残す。
 
 ## 構造的な整理
 
 定義に全整数のh0が入るので仮定1は自動。Rの負次数は零。sがheartを保つという条件は、負twistも使うため両方向のexact autoequivalenceとして読む。rankは裸のAbel圏には未定義なので、s不変のtorsion Serre部分圏とrank関数を固定するか、整域section環の商斜体から定義する。反例では後者が使える。
 
 全weak対象、条件2付き、AS4二次包絡＋正則三次核という超曲面認識部分、R13中心拡大型部分は別々。含意を逆にしない。smooth proper enhancementを要求する定義と、今回のgd2＋Serreの定義も同一視しない。
+
+## 自動的な大域次元2
+
+Serre関手Sが存在してs=S^{-1}[2]がheartを保つだけで、Ext^i_A(M,N)≅Hom(sN,M[2−i])^*によりExt^{>2}=0となる。非零NについてExt²_A(sN,N)=End_A(sN)^*≠0なのでhdim A=2。これを独立公理から外す。sのheart上での本質的全射性は不要。証明はpapers/weak_cubic_axioms.texの命題prop:serre-heart-global-dimension。構成した圏でsがheartを保つことを示す必要は残る。
 
 ## 統合後のweak定義とPymの交点
 

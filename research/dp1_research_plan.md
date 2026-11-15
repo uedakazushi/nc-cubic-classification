@@ -1,10 +1,10 @@
 # 次数1の非可換del Pezzo曲面：研究方針
 
-2026-11-15 / integration-v1（原稿の内容は2026-11-14版を保持）。再開時は`00_research_plan.md`、本書、`research/dp1_research_notes.md`、二つの現行TeX論文を読む。一般原則と保存許可は上位計画に置き、この文書には次数1固有の計画だけを記す。
+2026-11-15 / integration-v3（大域次元公理の冗長性を整理）。再開時は`00_research_plan.md`、本書、`research/dp1_research_notes.md`、二つの現行TeX論文を読む。一般原則と保存許可は上位計画に置き、この文書には次数1固有の計画だけを記す。
 
 ## 目標と達成基準
 
-quiverを分類対象に含めず、homological dimension 2 のabel圏、rank-one torsion-free exceptional構造対象、反標準Serre作用、Artin–Zhang ample pair、次数1のHilbert関数から weakly marked nc dP1を定義する。可換dP1を含む10次元の候補族のintrinsicな既約成分性を証明し、幾何学的avatar、重み付き次数6超曲面、反標準qgrおよび弱標識の忘却と比較する。
+quiverを分類対象に含めず、Ext有限・noetherianな非零abel圏、Serre関手とheartを保つ反Serre作用、rank-one torsion-free exceptional構造対象、Artin–Zhang ample pair、次数1のHilbert関数からweakly marked nc dP1を定義する。homological dimension 2はSerre双対性から自動的に従い、独立公理にはしない（命題prop:serre-heart-hdim）。可換dP1を含む10次元の候補族のintrinsicな既約成分性を証明し、幾何学的avatar、重み付き次数6超曲面、反標準qgrおよび弱標識の忘却と比較する。
 
 特に、Rains型の数値的amplenessの共鳴条件と、導来圏の変化・homological singularityを厳密に区別する。公表に必要なのは仮定・同値関係・自然性・全射性を揃えた正確な定理と証明である。
 
