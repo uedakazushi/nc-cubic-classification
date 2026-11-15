@@ -348,5 +348,13 @@
     "used_part": "FO2 explicit H(lambda,p) presentation only; no AS4 sufficiency, full-chart/CY coverage or all-isomorphism theorem imported.",
     "independent_proofs": "Universal cyclic top tensor and all-parameter centre3 obstruction via four controlled-denominator rank charts plus last QQ point.",
     "validator": "computations/verify_cubic_as4_four_simple_second.py"
+  },
+  "four_simple_boundary_R_v80": {
+    "commit": "a45f834f51a00c47443b51caf66abaf4629546b9",
+    "path": "research/proofs/CY_ZERO_COMMUTATORS_FOUR_SIMPLE_GENERAL_BOUNDARY_COMPLETE.tex",
+    "sha256": "00c80079cab99d229ab7adab3140c4b061f125298c8590a5118da77087a5f7a7",
+    "used_part": "FG2/FG6 explicit R and At relation/linear transformation formulas only. No AS4 sufficiency, full-chart/CY coverage or isomorphism theorem imported.",
+    "independent_proofs": "Exact all-lambda six-relation twist transport, eigenbasis and CY tensor; polynomial centrality witnesses and nonzero quadric dual functionals; elementary central-weight obstruction gives all odd centre zero in domains.",
+    "validator": "computations/verify_cubic_as4_four_simple_boundary_R.py"
   }
 }

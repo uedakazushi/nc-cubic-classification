@@ -1,0 +1,130 @@
+{
+  "version": "classification-v80",
+  "source_commit": "as4 a45f834f51a00c47443b51caf66abaf4629546b9",
+  "source_presentation": "GENERAL_BOUNDARY_COMPLETE.tex FG2/FG6 only",
+  "domain": "lambda!=0,-1; both eta signs by formal coefficient conjugation",
+  "six_relation_transport": true,
+  "basis_determinant": "-I*lambda**2/(lambda + 1)",
+  "target_t": "(lambda-1)/(lambda+1)",
+  "sigma_weights": [
+    "i",
+    "-i",
+    "1",
+    "-1"
+  ],
+  "right_Zhang_twist_convention": "A_t=(R in C basis)^(sigma^-1)",
+  "central_quadrics": [
+    "a^2",
+    "d^2"
+  ],
+  "sigma_inverse_quadratic_weights": [
+    -1,
+    1
+  ],
+  "centrality_polynomial_witnesses": [
+    [],
+    [
+      {
+        "row": 1,
+        "coefficient": "-1"
+      },
+      {
+        "row": 14,
+        "coefficient": "1/16"
+      },
+      {
+        "row": 21,
+        "coefficient": "1/16"
+      },
+      {
+        "row": 25,
+        "coefficient": "1"
+      },
+      {
+        "row": 38,
+        "coefficient": "-1/16"
+      },
+      {
+        "row": 45,
+        "coefficient": "1/16"
+      }
+    ],
+    [
+      {
+        "row": 2,
+        "coefficient": "-1"
+      },
+      {
+        "row": 26,
+        "coefficient": "1"
+      }
+    ],
+    [
+      {
+        "row": 3,
+        "coefficient": "1"
+      },
+      {
+        "row": 27,
+        "coefficient": "1"
+      }
+    ],
+    [
+      {
+        "row": 21,
+        "coefficient": "-1"
+      },
+      {
+        "row": 45,
+        "coefficient": "-1"
+      }
+    ],
+    [
+      {
+        "row": 23,
+        "coefficient": "-1"
+      },
+      {
+        "row": 47,
+        "coefficient": "1"
+      }
+    ],
+    [
+      {
+        "row": 3,
+        "coefficient": "32*t"
+      },
+      {
+        "row": 4,
+        "coefficient": "-16"
+      },
+      {
+        "row": 8,
+        "coefficient": "-16"
+      },
+      {
+        "row": 13,
+        "coefficient": "-16"
+      },
+      {
+        "row": 28,
+        "coefficient": "16"
+      },
+      {
+        "row": 32,
+        "coefficient": "16"
+      },
+      {
+        "row": 37,
+        "coefficient": "16"
+      }
+    ],
+    []
+  ],
+  "nonzero_quadrics_dual_witnesses": [
+    "aa-bb",
+    "cc-dd"
+  ],
+  "universal_CY_top_tensor": true,
+  "scope": "All explicit R_lambda+/- excluded: every domain realization has zero odd centre by opposite central quadratic weights after Zhang twist. No AS4 existence/coverage/isomorphism theorem imported."
+}

@@ -1,0 +1,110 @@
+\subsection{一般行列式零境界とtwist後の中心指標}
+\label{subsec:cubic-as4-boundary-R}
+まず、AS正則性に依存しない中心の制限を記す。
+ここで右Zhang twistは $x\star y=x\psi^{\deg x}(y)$ の規約を使う。
+
+\begin{lemma}\label{lem:cubic-twist-central-weights}
+$D$ を局所有限な連結次数付き整域、$\psi$ を次数付き自己同型とし、$A=D^\psi$ とする。
+$A$ が同じ正次数 $d$ の非零中心元 $q_1,q_2$ を持ち、
+$\psi(q_j)=\chi_jq_j$ であるとする。
+$Z(D)_n\ne0$ なら $(\chi_1/\chi_2)^n=1$ である。
+特に二指標の比が $-1$ なら $D$ の全奇数中心は零となる。
+\end{lemma}
+\begin{proof}
+$\psi$ は有限次元空間 $Z(D)_n$ を保つので、非零固有ベクトル $F$、
+$\psi(F)=\rho F$ を選べる。
+$D$ での $F$ の中心性から、$A$ では
+\[
+ F\star v=\theta(v)\star F,\qquad
+ \theta|_{D_1}=\rho^{-1}\psi^n|_{D_1}
+\]
+となる。一次生成を用いる場合の表示で書いたが、一般には
+$\theta(x)=\rho^{-\deg x}\psi^n(x)$ で同じ計算が成立する。
+$A$ も整域なので、$F$ のnormalizerは $Z(A)$ を各元ごとに固定する。
+従って $\rho^{-d}\chi_j^nq_j=q_j$、すなわち
+$\rho^d=\chi_j^n$ である。二つを比較して結論を得る。
+\end{proof}
+
+\begin{proposition}\label{prop:cubic-boundary-R}
+\cite{AS4lowpinned}のFG2にある全 $R^\eta_\lambda$、
+$\lambda\ne0,-1$, $\eta=\pm1$ はH3包絡にならない。
+より強く、この表示の整域実現の全奇数中心は零である。
+\end{proposition}
+\begin{proof}
+正符号の表示は
+\[
+\begin{gathered}
+ x_0=x_1=x_2=x_5=1,\quad x_9=(\lambda^2-1)/16,\\
+ x_{10}=-\frac{i\lambda^2}{4(\lambda+1)},\quad
+ x_{16}=-\frac{i}{4(\lambda+1)},\quad
+ x_{11}=x_{15}=\frac{i\lambda}{4(\lambda+1)},\\
+ x_{14}=\frac{\lambda^4}{16(\lambda+1)^2},\quad
+ x_{19}=\frac{\lambda^2}{16(\lambda+1)^2},\quad
+ x_{20}=\frac1{16(\lambda+1)^2}
+\end{gathered}
+\]
+であり、他の $x_j$ は零である。
+$k=\lambda/(4(\lambda+1))$ とし、元の生成空間で
+\[
+ \phi=\begin{pmatrix}
+ 0&0&0&1\\0&0&\lambda k&0\\0&k/\lambda&0&0\\-k^2&0&0&0
+ \end{pmatrix},\qquad
+ C=(a+ikd,\ a-ikd,\ \lambda b+c,\ -\lambda b+c)
+\]
+を取る。$C$ は列を新基底とする行列を表し、
+\[
+ \det C=-4ik\lambda\ne0,\qquad
+ C^{-1}\phi C=k\sigma,\quad \sigma=\operatorname{diag}(i,-i,1,-1).
+\]
+新基底を再び $a,b,c,d$ と書く。
+六関係の $(1\otimes\phi)$ による像を $C$ 基底で書くと、
+$t=(\lambda-1)/(\lambda+1)$ に対する次の代数 $A_t$ となる。
+\[
+\begin{aligned}
+ a^2+b^2+\frac{t}{16}(cd+dc)&=0,&
+ ab+ba-\frac{c^2+d^2}{16}&=0,\\
+ ac+ca&=0,&ad-da&=0,\\
+ bc+cb-2t da&=0,&bd+db&=0.
+\end{aligned}
+\]
+この全六関係の一致を $\mathbb Q(i)(\lambda)$ 上で独立確認した。
+比較にはこの六関係の固定した六係数がidentityとなる左逆を使っており、
+$\lambda-1$ 等を割って特殊値を落としていない。
+$\sigma$ はこの関係空間を保つことも直接確認した。
+関係空間の等式 $R_{A_t}=(1\otimes\sigma)R_D$ から、
+$\sigma$ は $D$ の関係も保つ。従って本稿の右twist規約では、$D$ を $R^+_\lambda$ の $C$ 基底表示とすると
+\[
+ A_t=D^{\sigma^{-1}}.
+\]
+ここでのtwistは中心を制限する補助であり、intrinsic同型の同定には使わない。
+
+$A_t$ において $a^2,d^2$ は非零中心二次元である。
+これをAS4存在定理から輸入する必要はない。
+例えば
+\[
+ [a^2,b]=[a,ab+ba]=\tfrac1{16}[a,c^2+d^2]=0
+\]
+であり、他の $a^2$ の交換子も二つの二項関係から従う。
+また
+\[
+ [c,ab+ba]=2t[da,a]=0
+\]
+なので、第二関係から $[c,d^2]=0$ を得る。
+$d^2$ と $a,b$ の可換性も明らかである。
+これら八つの三次恒等式には $\mathbb Q[t]$ 上の関係moduleの証明書があり、
+$t=0$ を含む全値で成立する。
+さらに $aa-bb$ と $cc-dd$ の係数汎関数がそれぞれ全六関係を消すので、
+$a^2,d^2$ は非零である。
+
+$\psi=\sigma^{-1}$ はこの二中心元に $-1,+1$ で作用する。
+$D$ が整域なら補題\ref{lem:cubic-twist-central-weights}により全奇数中心は零となる。
+元の $R A R^{\mathsf T}$ の非零反巡回性も全 $\lambda$ で検証したので、
+AS4実現では $\mu=I$、従ってH3切断は中心三次を必要として矛盾する。
+負符号は、形式パラメータ $\lambda$ を固定した全恒等式の $i\mapsto-i$ 共役で同じ結論を得る。
+このため $\lambda=1$ や $\lambda=\pm i$ も欠落しない。
+\end{proof}
+
+六関係の輸送・可逆基底・最高tensorと、八つの分母なし中心恒等式は
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}as4\_\allowbreak{}four\_\allowbreak{}simple\_\allowbreak{}boundary\_\allowbreak{}R.py}
+で再現する。FG2/FG6の具体表示のみを参照し、
+全CY被覆・AS4十分性・通常同型分類は輸入していない。
