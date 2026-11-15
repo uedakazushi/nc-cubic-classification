@@ -1,0 +1,105 @@
+\subsection{非捩れ三角境界のOre開集合と二端点の排除}
+\label{subsec:quantum-triangle-gwa}
+$q\ne0,\pm1$ とし、差分模型の記号を用いる。
+$r(u)=u-u^{-1}$ と置き、$\sigma(u)=qu$ とする。
+\[
+ a_D(u)=\frac{u^2+q^2u^{-2}+1+q^2}{(q^2-1)^2}
+          +\frac{q^2-1}{q}D
+\]
+を定義する。
+
+\begin{theorem}[反転GWA模型と非捩れ端点の非許容性]
+\label{thm:quantum-triangle-gwa}
+\[
+ f_j(x)=x^2-\kappa^2(q^j+q^{-j})^2\quad(j\in\mathbb Z)
+\]
+の積で生成される集合 $\mathcal S$ は $U_{q,D}$ の左右正則Ore集合である。
+\[
+ A_0=k[u^{\pm1},r(q^ju)^{-1}:j\in\mathbb Z],\qquad
+ \mathcal G=A_0(\sigma,a_D)
+\]
+を、$Af=\sigma(f)A,Bf=\sigma^{-1}(f)B,BA=a_D,AB=\sigma(a_D)$
+の規約の一般化Weyl代数とする。
+反転 $\iota(u)=u^{-1},\iota(A)=-B,\iota(B)=-A$ に対して
+\[
+ U_{q,D}[\mathcal S^{-1}]=\mathcal G^{\iota},\qquad
+ \mathcal G^{\iota}\text{ と }\mathcal G\#\langle\iota\rangle
+ \text{ はMorita同値}
+\]
+である。
+
+$q$ が非捩れなら、このOre局所化の大域次元が有限となる必要十分条件は
+$D\ne D_+,D_-$ であり、有限なら2以下である。
+特に非捩れ $q$ でも $D=D_+,D_-$ は非H3である。
+端点以外の非局所化 $U_{q,D}$ の有限大域次元、および全 $R_{q,D}$ のH3許容性は
+この定理だけでは結論しない。
+\end{theorem}
+\begin{proof}
+左からの $x$ 乗法行列 $M(x)$ に対し
+\[
+ \det f_j(M(x))=f_{j-1}(x)f_{j+1}(x)
+\]
+が成立する。$x=\kappa(u+u^{-1})$ を代入し、
+固有値 $\kappa(qu+q^{-1}u^{-1})$ とその逆方向の式で確認できる。
+右乗法も対角を入れ替えた同じ特性多項式の行列を持つ。
+多項式行列の随伴行列を掛ければ、$f_j(x)^{-1}$ を $y,z$ の左右へ動かす際の
+分母は再び $\mathcal S$ に入る。
+積と単語の長さで帰納することで左右Ore条件を得る。
+正則性は既証の整域性による。
+
+差分環内で
+\[
+ A=r(u)\mathcal T,\qquad B=r(u)b_D(u)\mathcal T^{-1}
+\]
+と置く。直接積を取ると $BA=a_D(u),AB=a_D(qu)$ となる。
+$a_D(q/u)=a_D(u)$ なので $\iota$ はGWAのinvolutionであり、
+差分環では $\iota(\mathcal T)=b_D(u)\mathcal T^{-1}$ である。
+$b_D(u^{-1})=b_D(qu)$ により二度作用すれば恒等となる。
+$x,y,z$ は全て固定される。
+
+反転ノルム
+\[
+ r(q^ju)r(q^ju^{-1})=-f_j(x)/\kappa^2
+\]
+から、$A_0$ の不変部分は $k[x,\mathcal S^{-1}]$ である。
+$r(u)$ は単元であり、$A_0$ はこの不変部分上の二次\'etale拡大となる。
+また
+\[
+ A=z/\rho-u^{-1}y,\qquad B=uy-z/\rho
+\]
+なので、$\mathcal G$ は $A_0$ と局所化した $U_{q,D}$ で生成される。
+$yf,zf$、$f\in A_0$ は、$\mathcal T,b_D\mathcal T^{-1}$ の二係数を解けば
+$A_0y+A_0z$ に入る。ここで割るのは単元 $r(u)$ だけであり、$b_D$ を可逆にはしない。
+従って $\mathcal G=A_0U_{q,D}[\mathcal S^{-1}]$。
+平均化すると各係数が $A_0^{\iota}$ に入るので、固定環は正確に主張のOre局所化である。
+
+$e=(1+\iota)/2$ とすれば、反不変単元 $r(u)$ により
+$r(u)e r(u)^{-1}=1-e$ となる。
+従って $e$ はskew群環のfull idempotentで、Morita同値が従う。
+標数0の有限群によるskew群環は元の環と同じ大域次元を持つ。
+
+$A_0$ はLaurent多項式PIDの局所化なのでDedekind環である。
+この基底上の一次GWAの大域次元定理
+\cite[Theorem 3.1]{BavulaGWAOverview}を適用する。
+その定理は、定義元の零点に重複度2以上があれば大域次元無限、
+全零点が単純なら大域次元1または2と述べている。
+$u^2a_D(u)$ は単元倍を除いて
+\[
+ v^2+\left(1+q^2+\frac{(q^2-1)^3}{q}D\right)v+q^2,
+ \qquad v=u^2
+\]
+であり、重根を持つのは $D_+,D_-$ だけである。
+これらの重根はそれぞれ $v=-q,q$。
+非捩れ $q$ では $\pm q$ はどの $q^{2j}$ とも等しくならないので、
+この重根は $A_0$ への局所化でも除かれない。
+従って両端点で局所化の大域次元は無限となる。
+左右Ore局所化の大域次元は元の環を越えないので $U_{q,D}$ も無限大域次元である。
+H3なら中央 $t$ を可逆にしたaffine開集合の大域次元は有限となるため矛盾する。
+\end{proof}
+
+\texttt{verify\_cubic\_quantum\_triangle\_\allowbreak gwa.py} は
+GWA積・反転・Ore分母行列式・分子の重根判別式を全有理式で検算する。
+Bavulaの著者講義原稿のDedekind基底に対する定理を一次資料で確認して用い、
+多項式基底の定理を無条件に無限局所化へ拡張してはいない。
+端点以外では、残る可能な障害はこのOre開集合の外、
+$x$ の $\pm\kappa(q^j+q^{-j})$ 軌道に沿う部分と射影無限遠に限られる。

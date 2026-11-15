@@ -1,0 +1,12 @@
+{
+  "version": "classification-v55",
+  "GWA_base": "k[u^+-1,(q^j*u-q^-j*u^-1)^-1 : j in Z]",
+  "GWA_a": "D*(q**2 - 1)/q + (q**2 + q**2/u**2 + u**2 + 1)/(q**2 - 1)**2",
+  "GWA_generators": "A=(u-u^-1)T, B=(u-u^-1)b_D(u)T^-1",
+  "involution": "u->u^-1,A->-B,B->-A",
+  "Ore_f": "f_j(x)=x\u00b2-kappa\u00b2(q^j+q^-j)\u00b2",
+  "Ore_determinant": "det f_j(M(x))=f_(j+1)(x) f_(j-1)(x)",
+  "all_universal_identities": true,
+  "ordinary_consequence": "For nonroot q, both D endpoints have infinite gldim U; every other D has finite gldim after this Ore localization. Unlocalized admissibility remains open.",
+  "source": "Bavula author overview Theorem3.1: rank1 GWA over a Dedekind ring has infinite global dimension at a repeated zero."
+}

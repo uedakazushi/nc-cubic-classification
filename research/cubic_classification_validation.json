@@ -1,6 +1,6 @@
 {
   "date": "2026-11-15",
-  "version": "classification-v54",
+  "version": "classification-v55",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -41,7 +41,8 @@
     "papers/sections/cubic_normal_order2_ramification.tex",
     "papers/sections/cubic_quantum_triangle.tex",
     "papers/sections/cubic_quantum_triangle_general.tex",
-    "papers/sections/cubic_quantum_triangle_even4.tex"
+    "papers/sections/cubic_quantum_triangle_even4.tex",
+    "papers/sections/cubic_quantum_triangle_gwa.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -670,5 +671,20 @@
     ],
     "build": "LuaLaTeX123 pages successful, no undefined refs/cites or overfull boxes; page106 visually inspected",
     "limits": "General nonroot admissibility, global H3 coverage/components/intersections and intrinsic abstract category-family comparison remain unproved"
+  },
+  "quantum_triangle_v55": {
+    "proof": "papers/sections/cubic_quantum_triangle_gwa.tex",
+    "validator": "computations/verify_cubic_quantum_triangle_gwa.py",
+    "result": "PASS universal GWA products, inversion, Ore determinant and double-root identities",
+    "ordinary_theorem": "For nonroot q both endpoints are non-H3; all other D have gldim<=2 on explicit Ore open subset only",
+    "source_audits": {
+      "Bavula": "Author lecture manuscript Theorem3.1, Dedekind base; repeated zero iff infinite global dimension",
+      "Bavula_pdf_sha256": "0afb8169721f0d5ba6df4490118d14bb991807556479ad48960c8557f1471ef4",
+      "Liu": "arXiv1304.7117 inspected as context, polynomial-base smoothness not used to extend to infinite localization",
+      "Kaplan_Schedler": "ANT2023 Theorem1.2 requires unoriented cycle; affineD4 remains conjectural there, no import",
+      "EOR": "math0406480 Section11 leg-distinct Morita result inspected, not a blanket gldim theorem"
+    },
+    "build": "LuaLaTeX124 pages successful, no undefined refs/cites or overfull boxes",
+    "limits": "Unlocalized good-D U and projective boundary/global H3 not inferred"
   }
 }
