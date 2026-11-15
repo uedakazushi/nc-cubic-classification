@@ -1,6 +1,6 @@
 {
   "date": "2026-11-15",
-  "version": "hearts-v3/corner-v2",
+  "version": "hearts-v4/corner-v3",
   "base_commit": "a9100e1a37187f985dc026e3d9d3fa9378b5fa7d",
   "checks": {
     "six_point_general_position": "exact rational",
@@ -20,27 +20,32 @@
     "full_degree7_columns": 6804,
     "blocks": 21,
     "latexmk_exit": 0,
-    "pdf_pages": 7,
+    "pdf_pages": 8,
     "undefined_references": false,
     "duplicate_labels": false,
     "overfull_boxes": false,
-    "visual_review": "Seven-page local proof draft rendered and inspected; repository TeX contains equivalent verified argument",
+    "visual_review": "Local 8-page LuaLaTeX manuscript rendered; pages 4-7 visually reviewed. Final standalone LuaLaTeX pass had no undefined refs or overfull warnings. Repository version differs by an input-based split and was not separately compiled after push.",
     "four_cross_ratios": "proved by row-column gauge normalization",
     "nine_minor_obstruction": "proved using a 2x2 supported Jacobian representation",
-    "explicit_bad_example": "21 Jacobian relations checked over Q"
+    "explicit_bad_example": "21 Jacobian relations checked over Q",
+    "rank2_jacobian_scalar_entries_exact": 27,
+    "rank2_example_determinants_exact": true,
+    "entrywise_reciprocal_example_exact": true,
+    "F7_admissible_crossratio_points_exhaustive": 80,
+    "F7_all_C7_zero": true
   },
   "proof_scope": {
-    "proved": "finite corner criterion, openness, explicit nonempty open in noetherian AS sector, conditional HRS sign test; four-cross-ratio orbit classification; nine explicit forbidden minor divisors",
+    "proved": "finite corner criterion, openness, explicit nonempty open in noetherian AS sector, conditional HRS sign test; four-cross-ratio orbit classification; nine explicit forbidden minor divisors; two determinant-zero corner obstructions via polynomial module representations",
     "unproved": [
       "AS regularity for arbitrary potential coefficients",
       "E0=pi F on the noncommutative AOU/VdB comparison",
       "nontrivial VdB kernel on each resonance wall",
       "all four hearts globally coincide",
-      "whether nine forbidden divisors exhaust the entire bad corner locus"
+      "whether all eleven explicit forbidden divisors exhaust the bad locus in characteristic zero"
     ],
     "independent_review": false,
     "novelty_exhaustive_search": false,
     "prior_scripts_rerun": false
   },
-  "persistence": "GitHub and Library results are reported only after confirmed tool responses."
+  "persistence": "Repository GitHub main is canonical. If push succeeds, NO Library upload; GitHub head verification separately reported."
 }

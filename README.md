@@ -10,7 +10,7 @@
 
 開始結果は、VdBの振幅1の比較同値を **T=ker R¹δ_*、U=ker δ_* による一回のHRS tilt** として記述したこと。heart一致はU=0と同値で、Uの非零対象も導来的には消えずshiftとして残る。AOU Theorem 9.4はqgr FとAS qgrの導来比較であり、raw blow-upと反標準heartの一致定理ではない。実際のmutation対象E0と構造対象πFの同定も別に追う。
 
-次は最後のcubic段階のker δ_6*の実在対象による記述と、AS–反標準比較のt-exactness判定。全四heartの一致や、共鳴壁ごとの非自明なtiltはまだ証明していない。数値的amplenessの稠密な失敗からAZ失敗や導来特異化を結論しない。
+Cubic のcornerについて、四交比における九つの小行列式に加え、qと成分逆数qの二つの行列式の非零性も必要と証明した。十一条件の十分性は標数0で未解決。詳細は[corner原稿](papers/cubic_heart_corner.tex)と[ノート](research/cubic_corner.md)。次は最後のcubic段階のker δ_6*の実在対象による記述と、AS–反標準比較のt-exactness判定。全四heartの一致や、共鳴壁ごとの非自明なtiltはまだ証明していない。数値的amplenessの稠密な失敗からAZ失敗や導来特異化を結論しない。
 
 ## 各研究の現行原稿
 

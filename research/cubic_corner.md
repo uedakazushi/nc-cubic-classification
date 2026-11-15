@@ -1,6 +1,6 @@
 # Cubic：AS heartとanticanonical heartの一致開集合
 
-2026-11-15 / hearts-v3 / corner-v2。最初に `00_research_plan.md` を読む。証明本文は `papers/cubic_heart_corner.tex`。従来のHRS・orbit・一般corner判定は `papers/nc_del_pezzo_hearts.tex` に保持する。
+2026-11-15 / hearts-v4 / corner-v3。最初に `00_research_plan.md` を読む。証明本文は `papers/cubic_heart_corner.tex`。従来のHRS・orbit・一般corner判定は `papers/nc_del_pezzo_hearts.tex` に保持する。
 
 ## 現在の結論
 
@@ -10,13 +10,20 @@ C有限次元からBeの右eBe有限生成性とeBの左eBe有限生成性を道
 
 反標準比較にはcut grading deg(x)=deg(y)=0,deg(z)=1を使う。道長gradingをそのままAS heartと同一視しない。標準AS helixのfolding/Serre同定とprojective飽和の下でeB_cut e=⊕Hom(O,tau^n O)、O=π(eB)、tau=S^-1[2]。したがってU上のnoetherian AS領域でAS heartとこのanticanonical heartは自然にabel同値。全potentialのAS性・noetherian性を判定した結果ではない。
 
-## 四交比と九つの禁止divisor
+## 四交比と11個の必要条件
 
 C=B/BeBはw_{0bc}の9係数に依存しない。a=1,2の18係数がすべて非零なら、q_bc=w_{2bc}/w_{1bc}を行・列rescalingで規格化し、四交比lambda_ij=q_ij q_00/(q_i0 q_0j)だけが残る。係数トーラスで矢rescalingの軌道はこの四交比で完全に分類される。
 
 **証明済みの必要条件**：C有限なら18係数は非零で、qの九つの2×2 minorは全て非零。係数零なら一つの3-cycle、minor零なら2×2支持上のT=[[1,-1],[-1,1]]を用い、全Jacobi関係を消す一方で非零3-cycleを持つ表現を構成する。各矢をt倍した行列表示で閉路の全ての冪が非零となり、Cが無限次元と分かる。四交比ではlambda_ij≠1の4式、同一行・列の相異4式、lambda_11 lambda_22≠lambda_12 lambda_21の1式を避ける必要がある。これら九divisorの和が悪いlocusの全体かは未証明。
 
 六点の可換witnessの交比は[[-1/4,1/16],[1/6,-1/4]]、九minorは全て非零かつC_7=0。従って四次元トーラス上の良いlocusは非空真開集合。一般証明は`papers/cubic_heart_corner.tex`、検算コードは`computations/verify_cubic_corner_torus.py`。AS locusとの交叉や導来非同値は別問題。
+
+
+**二つの追加行列式障害（今回証明）**：qのrankが2以下なら、q=UVの左・右核h,kを用いて、各頂点をk[t]加群とするJacobi関係の表現を構成でき、ある三角閉路がh_bk_ct^3（非零）となる。従ってCは無限次元。A1,A2を交換してyをrescaleするとqは成分ごとの逆数行列に変わるので、det(q^{<-1>})=0でも無限次元。前の九つの小行列式に加えdet(q)とdet(q^{<-1>})の二つの非零性が必要。四交比(a,b,c,d)では (a-1)(d-1)-(b-1)(c-1) !=0 と bc(1-a)(1-d)-ad(1-b)(1-c) !=0 である。証明は `papers/sections/cubic_corner_determinantal_obstructions.tex` をinputする現行論文。
+
+**独立した例**：Q0=[[3,4,5],[5,6,7],[7,8,9]]、Q1=2520/Q0（成分ごと）。両方とも九小行列式が非零だが、det(Q0)=0、det(Q1)=80640およびdet(成分逆数Q1)=0。有理数で27個のJacobi表示成分が全て消えることを検証し、t^3の非零閉路を確認。
+
+**計算的観察（十分性は未解決）**：F7の四交比トーラスで11条件を満たす80点を全列挙し、いずれもC7=0（Hilbert次元[8,21,33,38,33,21,8,0]）。この有限体の結果から標数0での十分性は従わない。コード `computations/verify_cubic_corner_rank2.py --scan-f7`、証明書 `computations/cubic_corner_rank2_certificate.json`。
 
 ## 明示的な非空性
 
@@ -36,7 +43,7 @@ A0を削除すると21矢・21二次関係。全prefix×relation×suffixの行�
 
 ## 次の課題
 
-1. 四交比トーラス上で九つの禁止divisor以外にも悪いlocusがあるかを判定し、U_Nの安定閾値とAS locusとの交叉を調べる。U7の補集合を全非一致locusと同一視しない。
+1. 四交比トーラス上で11個の必要条件が十分かを判定し、U_Nの安定閾値とAS locusとの交叉を調べる。U7の補集合を全非一致locusと同一視しない。
 2. AOU§9のmutation後E0とVdB模型のπFを対象として同定し、既知導来同値と自然corner同値の比較を行う。本結果はAS側のOから作る反標準環についての定理である。
 3. VdB最後の段階のker δ_*を、実在するroot単純対象で調べる。上の符号判定を、pointednessと周期作用を確認した場合に適用する。
 4. 有限位数・特異境界・他次数では生成次数、cutと周期、noetherian性を個別に検証する。
