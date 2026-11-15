@@ -7,6 +7,7 @@
 \newtheorem{proposition}[theorem]{命題}
 \newtheorem{lemma}[theorem]{補題}
 \newtheorem{corollary}[theorem]{系}
+\newtheorem{example}[theorem]{例}
 \theoremstyle{definition}\newtheorem{definition}[theorem]{定義}
 \newtheorem{remark}[theorem]{注意}
 \renewcommand{\proofname}{証明}
@@ -19,9 +20,9 @@
 \newcommand{\Spec}{\operatorname{Spec}}\newcommand{\Spf}{\operatorname{Spf}}
 \newcommand{\im}{\operatorname{im}}\newcommand{\cC}{\mathfrak C}
 \newcommand{\cP}{\mathfrak P}\newcommand{\Sym}{\operatorname{Sym}}
-\title{内在的非可換三次曲面の14641認識とskew包絡の分類\\\large dP1共通定義・量子FermatのPym成分・正規境界認識}
+\title{内在的非可換三次曲面の14641認識と包絡別分類\\\large skew包絡・Ore障害・Clifford中心切断}
 \author{研究原稿：証明済みの命題と未解決の認識条件を区別する}
-\date{2026年11月15日\quad classification-v8}
+\date{2026年11月15日\quad classification-v9}
 \begin{document}\maketitle
 \begin{abstract}
 大域次元2の$k$線形Abel圏とrank one torsion-free exceptional構造対象，反Serre作用，
@@ -53,6 +54,8 @@ as4の指定半単純化定理を用い，量子基底の非自明単冪持上�
 有限位数楕円境界の固定ambientでは非admissible値が有限個であることも示す．
 さらに位数二Clifford--Sklyaninの明示的分裂族では全H3切断を四次式・判別式で判定し，
 全幾何学的群oidを位数648の有限商として記述する．
+非分裂Clifford定数項族も全切断を判定し，非Azumaya点に通常二重点がある場合を許容する．
+指定した位数二対称ポテンシャル中心拡大部分の全幾何学的群oidは，一般次元7の明示的群商となる．
 全モジュライの代数性は証明済みとはせず，有限提示による候補，その形式局所模型，
 超曲面認識部分での射，中心三次incidenceの一般ファイバーを正確に定式化する．
 \end{abstract}
@@ -304,6 +307,7 @@ Abel圏同値による分類，また全27点の曲面条件の認識ではな�
 \input{papers/sections/cubic_as4_reductions.tex}
 \input{papers/sections/cubic_r13_cut_reduction.tex}
 \input{papers/sections/cubic_clifford_full_cuts.tex}
+\input{papers/sections/cubic_clifford_beta_classification.tex}
 
 \section{冗長性と低次数認識}
 \begin{lemma}[共通公理からの負次数消滅]
@@ -1102,6 +1106,11 @@ weak条件の開性，正確なfiberの除外点の決定を含む．
 Skew包絡の幾何学的H3対象は定理\ref{thm:all-skew-H3-geometric}で尽くされ，
 量子Fermatの$AC\Delta(f)=0$の境界もH3から除外された．
 全Hochschild変形，skew型間と他ambientとの交叉，族の降下は残る．
+
+位数二の指定対称ポテンシャル中心拡大については，
+定理\ref{thm:beta-all-cut-classification}と\ref{thm:beta-global-geometric-classification}で
+非分裂も含む全切断・全矢・慣性を判定した．
+別の楕円位数，非対称ポテンシャル包絡や非CY包絡の全被覆，全相対降下は残る．
 
 本稿では量子Fermat例の整域性，局所正則性，Serre性，周期的正規直線による
 成分排除を通常の証明で検討した．付属コードは$\mathbb Z/3$上の指数演算により，

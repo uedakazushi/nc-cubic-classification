@@ -121,5 +121,10 @@
     "command": "python3 computations/verify_cubic_clifford_lift.py",
     "status": "PASS",
     "scope": "Universal signed-cyclic quartic and rank6; all99 degree4 normal-form identities modulo t^2; all-parameter central-cubic obstruction. Not an upstream full-alpha validation rerun."
+  },
+  "downstream_v9_extension": {
+    "scope": "The same already checked mixed quartic is used for all constant-term beta envelopes. Full AS4 recognition is independently obtained via Clifford PBW t-regularity and LBS Theorem2.6/Corollary2.7, with W3-surjectivity explicitly shown. No upstream full-alpha classification imported.",
+    "new_proof": "papers/sections/cubic_clifford_beta_classification.tex",
+    "checks": "verify_cubic_clifford_beta.py, verify_cubic_clifford_beta_action.py; verify_cubic_clifford_lift.py rerun"
   }
 }

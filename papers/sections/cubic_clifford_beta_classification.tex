@@ -1,0 +1,351 @@
+\subsection{定数関係項を持つClifford包絡と非Azumaya点}
+\label{sec:clifford-beta-full}
+前節の一次障害の後に残る全族を扱う．$h\in\mathcal H$，$\beta\in k^3$とし
+\[
+ B_{h,\beta}:
+ \quad yz+zy=h x^2+\beta_xt^2,\quad zx+xz=h y^2+\beta_yt^2,\quad
+ xy+yx=h z^2+\beta_zt^2,\quad t\text{ central}
+\]
+と置く．$u=x^2,v=y^2,w=z^2$は中心的である．
+$D_\beta=B_{h,\beta}[t^{-1}]_0$では$t=1$と書き，次の記号を用いる：
+\[
+ Q_\beta=\begin{pmatrix}
+ u&(hw+\beta_z)/2&(hv+\beta_y)/2\\
+ (hw+\beta_z)/2&v&(hu+\beta_x)/2\\
+ (hv+\beta_y)/2&(hu+\beta_x)/2&w
+ \end{pmatrix},\quad T_\beta=\det Q_\beta.
+\]
+$g_\beta$はClifford volumeで，$g_\beta^2=-T_\beta$である．
+斉次表示では各$\beta_i$に$t^2$を掛け，例えば
+\[
+ g_\beta=xyz-\frac12\{(hw+\beta_zt^2)z-(hv+\beta_yt^2)y+(hu+\beta_xt^2)x\}
+\]
+となる．これは三つの生成元の交代積である．
+
+\begin{lemma}[全定数項での包絡の認識と中心]
+\label{lem:beta-envelope-center}
+全ての$h\in\mathcal H,\beta\in k^3$で$B_{h,\beta}$は左右noetherian quadratic Koszul CY AS4型14641である．
+全H3切断の候補は，三次関係の倍率を除き，正確に
+\[
+ R_{h,\beta,a,D}=B_{h,\beta}/(g_\beta+t(Au+B_0v+Cw)+Dt^3),\quad a=(A,B_0,C)
+\]
+である．全候補$R$は整域で，構造対象は内在的Gabriel--Krull rank-one torsion-freeとなる．
+残るH3条件はアフィン環
+\[
+ U=D_\beta/(g_\beta+L+D),\quad L=Au+B_0v+Cw
+\]
+の有限大域次元だけである．その中心からの自然な単射は
+\[
+ C_F=k[u,v,w]/(F)\hookrightarrow U,\qquad F=T_\beta+(L+D)^2
+\]
+であり，$U$は$C_F$上階数4のCohen--Macaulay加群である．
+$Q_\beta$の階数が2以上の点では$U$はこの中心上Azumayaとなる．
+\end{lemma}
+\begin{proof}
+三回の交換子の計算で中心二次$u,v,w$を得る．
+$B_{h,\beta}$は$k[u,v,w,t]$上階数8の自由Clifford環で，$t$は正則である．
+$t=0$の商は既に認識した$S_h$となる．
+前節のmixed quarticの$t$による左収縮を$t=0$へ落とすと，$S_h$の非零三次トップを得る．
+従って$W_3(B)\to W_3(S_h)$は全射である．
+LBS\cite[Theorem 2.6, Corollary 2.7]{LBS}へ，$t$の一次正則性，$S_h$のAS3/Koszul性，
+この全射性を確認して適用し，Koszul AS4と所要のHilbert級数を得る．
+mixed quarticの符号付き巡回性から中山は恒等である．
+noetherian性は中心多項式環上の有限自由性からも直接従う．
+
+全中心は$k[u,v,w,t]\oplus k[u,v,w,t]g_\beta$である．
+前節と同じgeneric Clifford中心とPBWの$xyz$係数の議論が全$\beta$で成立する．
+従って中心三次の基底は$g_\beta,tu,tv,tw,t^3$であり，$g_\beta$係数零の商は$t$を因子に持つためH3でない．
+Clifford PBW基底から$\operatorname{gr}_{\mathrm{act}}B_{h,\beta}=S_h[t]$である．
+残る候補の最高active記号は$g_h$なので，随伴商は$H[t]$となる．
+これが整域で，滑らかな楕円境界を持つことから，既に証明した全切断の整域/rank認識と
+一chart貼合せが全て適用できる．飽和・例外性・AZ・Serreの確認も同じである．
+
+アフィン中心は$Z(D_\beta)=k[u,v,w,g_\beta]/(g_\beta^2+T_\beta)$である．
+$D_\beta$は$k[u,v,w]$上自由なのでこの三次元中心上Cohen--Macaulayで，
+中心正則元$g_\beta+L+D$で割れば$U$は$C_F$上Cohen--Macaulayとなる．
+中心の商は単射である：中心元$z=(g_\beta+L+D)b$なら，整域性から$[b,D_\beta]=0$となり，
+$b$自体が中心に入る．generic Clifford中心上の階数から$\operatorname{rank}_{C_F}U=4$となる．
+階数2以上のAzumaya性は，非退化二平面とvolumeによる第三生成元の消去で前節と同様に従う．
+\end{proof}
+
+\begin{lemma}[階数一の点の局所表示]
+\label{lem:beta-local-schur}
+$F(q)=0$，$\operatorname{rank}Q_\beta(q)=1$とする．座標を入れ替えて$u(q)\ne0$とできる．
+完備化内で$r=\sqrt u$を選び，
+\[
+ e=x/r,\quad Y=y-Q_{12}x/u,\quad Z=z-Q_{13}x/u,
+\]
+\[
+ a=v-Q_{12}^2/u,\quad b=w-Q_{13}^2/u,\quad
+ c=Q_{23}-Q_{12}Q_{13}/u,\quad m=(L+D)/r
+\]
+と置く．このとき
+\[
+ e^2=1,\quad eY=-Ye,\quad eZ=-Ze,\quad
+ Y^2=a,\ Z^2=b,\ YZ=c-me,\ ZY=c+me.
+\]
+また$T_\beta=u(ab-c^2)$であり，中心の完備化は
+\[
+ k[[\xi_1,\xi_2,\xi_3]]/(ab-c^2+m^2)
+\]
+である．ここで$\xi=(u-u(q),v-v(q),w-w(q))$，$a,b,c,m$は零定数項の形式級数である．
+$E=d(a,b,c,m)/d\xi$の階数は2または3であり，
+二つの単純加群$S_+,S_-$の自己$\Ext^1$次元は共に$3-\operatorname{rank}E$となる．
+\end{lemma}
+\begin{proof}
+Schur補とClifford関係の直接計算による．$g_\beta=x(YZ-c)$なので，切断により$YZ=c-me$となる．
+中心の等式は$F/u=ab-c^2+m^2$である．
+$e_\pm=(1\pm e)/2$の二idempotentを取り，$Y,Z$は両向きの二つずつの矢を与える．
+中央変数$\xi$の一次部分に対して，二次積$Y^2,Z^2,YZ,ZY$は零なので，
+自己loop空間は$\ker E$となる．したがって表示の$\Ext^1$次元を得る．
+
+階数の下界も確認する．$p=(r,Q_{12}/r,Q_{13}/r)$と置くと
+\[
+ (2p_yp_z-hp_x^2-\beta_x,\ 2p_zp_x-hp_y^2-\beta_y,\ 2p_xp_y-hp_z^2-\beta_z)
+ =(-2c,ha,hb).
+\]
+$\xi\mapsto p$のJacobianは$-h^2/(8r^3)$で可逆である．
+左辺の$p$に関するJacobianは$2M_h(p)$で，$M_h$は前節のpoint matrixである．
+$p\ne0$なら$M_h(p)$の階数は2以上であり，階数1以下なら滑らかなpoint cubicの勾配も零となってしまう．
+従って$d(a,b,c)$の階数は2以上，$E$の階数は2または3となる．
+\end{proof}
+
+\begin{lemma}[階数一での正確な局所homological判定]
+\label{lem:beta-node-equivalence}
+階数一の点$q$において，完備化した$U$が大域次元2を持つための十分条件は
+\[
+ \det\operatorname{Hess}_{u,v,w}F(q)\ne0
+\]
+である．この条件を満たすとき，完備化した$U$は
+$k[[s_1,s_2]]\rtimes\{\pm1\}$と同型で，符号は両変数へ同時に作用する．
+逆に$R$がH3なら必ずこのHessian条件を満たす．
+\end{lemma}
+\begin{proof}
+まず十分性を示す．階数一の点では$T_\beta=0$，$L+D=0$であり，$\nabla F=0$である．
+Hessianが非退化なら形式的Morse補題により中心$C$は通常二重点
+$k[[a_1,b_1,c_1]]/(a_1b_1-c_1^2)$となる．
+$U$はこの中心上Cohen--Macaulayなので反射的である．
+Schur表示から$e_+Ue_+=C=e_-Ue_-$，off-diagonal $M=e_-Ue_+$は階数一の反射的加群となる．
+その閉fiberは$Y,Z$による二次元空間なので$M$は自由でない．
+
+この二重点には非自由な階数一反射的加群が一種類しかない．
+実際$C=k[[s_1,s_2]]^{\{\pm1\}}$であり，punctured spectrum上の二重被覆は\'{e}taleである．
+被覆側は階数一の因子類群が零なので，直線束の降下は符号character二つで決まる．
+形式単元$1+\mathfrak m$の群コホモロジーはlogと平均化により零となる．
+従って$\operatorname{Cl}(C)=\mathbb Z/2$で，非自明加群は奇数級数の加群$M_{\mathrm{odd}}$である．
+$U\to\operatorname{End}_C(Ue_+)$は閉点以外でAzumaya Morita同型であり，両側は反射的なので閉点を越えて同型となる．
+したがって
+\[
+ U\simeq\operatorname{End}_C(C\oplus M_{\mathrm{odd}})
+ \simeq k[[s_1,s_2]]\rtimes\{\pm1\}.
+\]
+最後の同型もpunctured spectrumのGalois被覆上での同型を反射性で延長して得る．
+有限群の平均化から，この交差積の大域次元は二変数正則環の大域次元2と同じである．
+
+次にH3を仮定して必要性を示す．点支持のExtとそのYoneda積は中心局所化・完備化で変わらない．
+$t$可逆な単純対象のSerre関手は$[2]$である．
+従って$\operatorname{rank}E=2$なら前補題の自己$\Ext^1$が1次元となり，交代Serre対に反する．
+残る場合は$\operatorname{rank}E=3$である．
+$E$の像のhyperplane方程式を
+$\lambda_a a+\lambda_b b+\lambda_c c+\lambda_m m=0$とする．
+中央変数の一次項は全て二次積で消去できるため，二頂点のquiverには両向きに$Y,Z$の二矢ずつが残る．
+$S_+$頂点の非零二次関係の行列は
+\[
+ K=\begin{pmatrix}
+ \lambda_a&(\lambda_c-\lambda_m)/2\\
+ (\lambda_c+\lambda_m)/2&\lambda_b
+ \end{pmatrix}.
+\]
+H3のSerre双対性では$\Ext^2(S_+,S_+)=k$であり，二つのcross-$\Ext^1$間の積は非退化となる．
+最小射影解消の最初の二段階により，このYoneda積は最小関係の二次部分と双対である．
+上の非零二次関係はその一意な最小関係を張るので，$\det K\ne0$が必要である．
+もし高次の追加最小関係があれば$\Ext^2$の次元が既に1を越え，やはりH3でない．
+
+これはHessianの非退化性と同値である．実際$q_0=ab-c^2+m^2$は四次元の非退化二次形式であり，
+$E$の像への制限が退化する条件は
+$4\lambda_a\lambda_b-\lambda_c^2+\lambda_m^2=4\det K=0$である．
+より直接には$\lambda_i=(-1)^i\det E_{\widehat i}$と取ると，Cauchy--Binetによって
+\[
+ \det(E^{\mathsf T}\operatorname{Hess}(q_0)E)=8\det K
+\]
+となる．$F/u=q_0(a,b,c,m)$だから，$F$のHessianの非退化性はこれと同じである．
+\end{proof}
+
+\begin{theorem}[全定数項Clifford族の全切断の必要十分条件]
+\label{thm:beta-all-cut-classification}
+$h\in\mathcal H$，$\beta,a,D$を任意に取る．上記$R_{h,\beta,a,D}$がH3であるための必要十分条件は，
+アフィン曲面$F=0$の全特異点$q$について
+\[
+ \operatorname{rank}Q_\beta(q)=1,\qquad
+ \det\operatorname{Hess}F(q)\ne0
+\]
+となることである．すなわち中心の特異点は全て通常二重点であり，その全てがCliffordの非Azumaya点でなければならない．
+この判定は全$\beta,a,D$に適用でき，中心が滑らかな場合も含む．
+同値な有限判定は，以下の二集合がともに空となることである：
+\begin{align*}
+ &\{F=\nabla F=0,\ \operatorname{rank}Q_\beta\ge2\},\\
+ &\{F=0,\ I_2(Q_\beta)=0,\ \det\operatorname{Hess}F=0\}.
+\end{align*}
+$I_2$は全二次minorの集合である．従ってGroebner基底とsaturationで全係数のadmissibilityを有限判定できる．
+\end{theorem}
+\begin{proof}
+階数2以上の点ではAzumayaなので，中心の正則性が有限大域次元の必要十分条件となる．
+階数一の点は前補題で判定できる．階数零は$\beta=0,u=v=w=0$の場合しかなく，
+切断がこの点を通れば$D=0$である．このとき自己$\Ext^1$は3次元なので除外され，Hessianも階数1以下となる．
+これで必要性を得る．
+
+十分性について，rank-one点の集合は有限である．
+その射影無限遠は前節の滑らかな$T_h=0$上で階数2以上なので，正次元のrank-one閉集合は存在できない．
+仮定の下で，中心の正則点では完備化した$U$は行列環，
+特異点では前補題の交差積となり，どちらも大域次元2である．
+有限生成$U$加群の第二syzygyの射影性は，中心の全極大イデアルでの忠実平坦完備化により判定できる．
+従って全有限生成加群の射影次元は一様に2以下となり，noetherian性から$\gldim U\le2$を得る．
+一chart貼合せ，Serre，整域/rank認識により$R$は全H3条件を満たす．
+
+rank-oneの点が$F=0$に入れば$L+D=0$であり，$\nabla T_\beta=0$から自動的に$\nabla F=0$となる．
+従って最後の二集合は正確に不許容点を検出し，rank-zero点も第二集合で除外される．
+\end{proof}
+
+\begin{corollary}[volume切断を全定数項で判定する]
+\label{cor:beta-pure-volume}
+$G=g_\beta$，すなわち$a=0,D=0$とする．この切断がH3であるための必要十分条件は，
+長さ8のcharacter完全交叉
+\[
+ Z_{h,\beta}=V(2yz-hx^2-\beta_x,\ 2zx-hy^2-\beta_y,\ 2xy-hz^2-\beta_z)
+\]
+が被約であることである．これは具体的には
+\[
+ (2yz-hx^2-\beta_x,\ 2zx-hy^2-\beta_y,\ 2xy-hz^2-\beta_z,\ \det M_h(x,y,z))=(1)
+\]
+で判定できる．この非空開部分では中心曲面は四個の通常二重点を持ち，
+それらは全て非可換環によって正則化される．
+\end{corollary}
+\begin{proof}
+三つの最高二次式には$h^3\ne8$により射影共通零点がないため，全ての$\beta$で長さ8の完全交叉となる．
+その有限写像のJacobianは非零多項式$8\det M_h$なので，標数零で一般fiberは被約となり，許容部分は非空開である．
+$\beta\ne0$なら原点は含まれず，$p\mapsto-p$の自由作用の商がrank-one中心点の長さ4のschemeとなる．
+前のSchur表示とcharacter座標の変換がこの商を局所的に同定する．
+
+$g_\beta=0$では$m=0$である．従ってrank-one点でHessianが非退化である条件は
+$d(a,b,c)$が可逆なこと，すなわちcharacterのJacobian $2M_h(p)$が可逆なことと同値となる．
+$\beta=0$の非被約原点は既に不許容である．
+また$T_\beta=0$の階数2点が特異となることはない．もしそうなら$\operatorname{adj}Q$は
+非零の$zz^{\mathsf T}$の倍数となり，$\partial T_\beta=0$から
+\[
+ z_1^2+h z_2z_3=z_2^2+h z_1z_3=z_3^2+h z_1z_2=0
+\]
+を得るが，$h^3\ne-1$によりこの三式には射影解がない．
+従って特異点はrank-one点だけであり，前定理で結論する．
+被約なら八点が$\pm$の四組に分かれるので中心の二重点は正確に四個である．
+\end{proof}
+
+\begin{example}[特異中心を持つ明示的な非分裂H3]
+\label{ex:beta-four-node-H3}
+$h=1,\beta=(-1,0,0),a=0,D=0$を取る．包絡は
+\[
+ yz+zy=x^2-t^2,\quad zx+xz=y^2,\quad xy+yx=z^2,\quad t\text{ central}
+\]
+で，切断は$g_\beta=g_1+t^2x/2=0$である．アフィン中心は
+\[
+ (5u-1)vw-u(u-1)^2-v^3-w^3=0
+\]
+である．その四特異点は
+\[
+ (1,0,0),\qquad(-1/7,-4\eta/7,-4\eta^2/7),\quad\eta^3=1.
+\]
+全てrank-oneの通常二重点であり，したがってこの商はH3である．
+付属検証器は中心の特異schemeの長さ4，全二次minorの消滅，
+Hessian零点との交わりが空であること，character schemeの長さ8と被約性を有理数上で検査する．
+中心が特異であることだけからH3を除外してはいけない具体例となる．
+\end{example}
+
+\subsection{非分裂対称ポテンシャル部分の全同型groupoid}
+\label{sec:beta-global-groupoid}
+中心$t$，最高部分$H_0=2xyz-h\Sigma/3$，対称ポテンシャル$H_0+tf_2+t^2f_1$を持つ表示全体を対象とする．
+前節の一次障害により，この表示のH3包絡は平行移動で全て$B_{h,\beta}$へ入る．
+したがってこの\emph{指定部分全体}では，上の必要十分条件が全係数を覆う．
+全AS4の包絡や非CYの別型の被覆を主張していない．
+
+$\mathcal P$を前定理の許容点$(h,\beta,a,D)\in\mathcal H\times\mathbb A^7$の集合とし，
+\[
+ \mathcal G=\{(M,a_0):[M]\in\Gamma_{216},\ a_0\in\mathbb G_m\}
+                 /\{(rI,r):r\in\mathbb G_m\}
+\]
+と置く．これは$\mathbb G_m$を恒等成分とし，成分群が$\Gamma_{216}$となる群である．
+
+\begin{theorem}[全定数項と全切断の幾何学的矢]
+\label{thm:beta-global-geometric-classification}
+この指定対称ポテンシャル中心拡大部分の全H3幾何学的群oidは
+\[
+ [\mathcal P/\mathcal G]
+\]
+である．全矢と慣性は次の明示的作用から得られる．
+$C_h(MX)=cC_{h'}(X)$と書くと
+\[
+ \beta'=\frac{a_0^2}{c}M^{\mathsf T}\beta.
+\]
+$q_{h'}(M)$を前節の二次中心係数行列とし，$k_{\beta'}(M)$の行を
+\[
+ k_i=M_{i1}M_{i2}\beta'_z+M_{i1}M_{i3}\beta'_y+M_{i2}M_{i3}\beta'_x
+\]
+とすると
+\[
+ a'=\frac{a_0}{\det M}\,a q_{h'}(M),\qquad
+ D'=\frac{a_0^3D+a_0a k_{\beta'}(M)}{\det M}.
+\]
+特に非分裂族では$D=0$にも許容切断があり，$D$の作用には混合補正項が必要である．
+分裂族の$D=1$規格化をそのまま全族へ適用してはならない．
+
+恒等成分の作用は重み$(2,2,2,1,1,1,3)$，すなわち
+$\beta\mapsto r^2\beta,a\mapsto ra,D\mapsto r^3D$である．
+許容対象の全慣性は有限で，この指定部分の一般同型類の次元は7である．
+これは幾何学的対象・矢・stabilizerの分類であり，全intrinsic相対stackの降下や成分性の証明ではない．
+\end{theorem}
+\begin{proof}
+中心一次は$kt$だけなので，包絡間のgraded同型は$t\mapsto a_0t$，$X\mapsto MX+b t$と書ける．
+$t=0$の同型は一意な対称三次トップを保つため，$C_h(MX)=cC_{h'}(X)$を満たし，
+その射影行列は$\Gamma_{216}$に入る．両側の二次ポテンシャル項は零なので，
+平行移動から生じる$\sum b_i\partial_iH_0$も零となる必要がある．三つの偏微分の独立性から$b=0$となる．
+従ってこれ以外の平行移動同一視は残らない．
+
+対称ポテンシャルのchain ruleにより，関係ベクトルは
+$q_h(MX)=cM^{-\mathsf T}q_{h'}(X)$となる．定数項を比較して$\beta'$の式を得る．
+volumeは交代積なので$g_\beta\mapsto\det M\,g_{\beta'}$である．
+一方，$S_{h',\beta'}$で二次式を展開すると
+\[
+ (MX)_i^2=\sum_j q_{h'}(M)_{ij}u_j+k_i t^2
+\]
+となる．これを三次切断へ代入し，volume係数で割れば表示の$a',D'$を得る．
+$t$と全三変数を同じ$r$倍すると全係数は変わらないため，正確に$\mathcal G$で次数スカラーを除く．
+同型は二次包絡へ一意に持ち上がるので，作用群oidにない内在的pointed矢は存在しない．
+付属検証器はHessian三生成元の全9組合成を$\mathbb Q(\zeta_3)(h)$上で厳密に比較し，
+特に$D$の混合項を含む全作用式の合成則を照合する．
+
+正の重みのtorus作用は，$(\beta,a,D)\ne0$では有限stabilizerを持つ．
+全係数零の切断は既に除外されているので，有限成分群と合わせ全慣性は有限となる．
+最後に許容集合が八次元の係数空間に稠密な部分を持つことを確認する．
+固定$h,\beta,a$で，中心三次元多様体
+$X_\beta=V(g^2+T_\beta)$の特異点は有限のrank-one以下の点だけである．
+その滑らかな部分上の関数$g+L$のcritical locusの各既約成分では，標数零により関数は定数である．
+従ってcritical valueは有限個である．それらと有限の特異点の値を避けた$D$では中心切断が滑らかなので許容となる．
+この悪い値の集合は係数全体でconstructibleであり，一般fiberで有限なので，その閉包は全八次元を覆わない．
+従って許容集合は稠密な非空開部分を含む．一次元の$\mathcal G$で割った一般次元は7となる．
+\end{proof}
+
+\begin{corollary}[慣性の一般値と単冪持上げ]
+\label{cor:beta-inertia-unipotent}
+全七次元指定部分の一般慣性は自明である．volume切断$a=D=0$の被約character開部分では
+一般慣性は$\mu_2$で，その一般同型類の次元は3となる．
+また全ての$B_{h,\beta}$に非自明な単冪graded自己同型はなく，
+標準半単純化がこの包絡族に入るAS4部分にも新しい単冪持上げはない．
+\end{corollary}
+\begin{proof}
+固定$h$で有限個の非スカラー$M$の固有空間を避けた一般$\beta$を取れば，
+$\beta'=(a_0^2/c)M^{\mathsf T}\beta=\beta$を満たす射影$M$は恒等だけである．
+残るtorusの安定化は$r^2=1$であり，一般の$a\ne0$が$r=-1$も除く．
+volume切断ではそれが残り，$h$と三つの$\beta$からtorus一次元を除いて次元3となる．
+
+切断を忘れた包絡の自己同型群でも，射影$M$は有限個だけである．
+$\beta\ne0$なら恒等成分は次数スカラーだけで，$\beta=0$ならそれと独立な$t$スカラーの二次元torusである．
+どちらの場合も単冪元は恒等だけである．従って既存の標準単冪untwist表示にも非自明な持上げはない．
+\end{proof}

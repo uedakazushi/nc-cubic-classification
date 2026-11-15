@@ -16,7 +16,11 @@ Classification-v7: all H3 cuts and geometric arrows for B_h=S_h[t] with yz+zy=h 
 
 ## Nonsplit reduction now proved
 
-Classification-v8: the normalized three diagonal f2 coefficients alpha_i in order-two Hesse central extensions are all zero for H3, independently of constant terms beta. Universal central-cubic obstruction determinant -27*h/(8*(1+h^3)^3),99 symbolic relation identities, and256 mixed-quartic cyclic identities certify the all-parameter reduction. Thus f2 is removable by translation. The next concrete nonsplit target is the surviving beta-only Clifford family and its rank-one non-Azumaya local homological behavior; do not replace this by center smoothness without proving equivalence.
+Classification-v8: the normalized three diagonal f2 coefficients alpha_i in order-two Hesse central extensions are all zero for H3, independently of constant terms beta. Universal central-cubic obstruction determinant -27*h/(8*(1+h^3)^3),99 symbolic relation identities, and256 mixed-quartic cyclic identities certify the all-parameter reduction. Thus f2 is removable by translation. The surviving beta-only family and its rank-one non-Azumaya behavior are now solved in v9: ordinary nodes are allowed, worse singularities are excluded.
+
+## Complete nonsplit beta-sector recognition and geometric classification
+
+Classification-v9: The entire specified order-two symmetric-potential central-extension sector has all H3 cuts and all geometric arrows classified by [P/G], generic dimension7. Every singular point of the affine center must be a rank-one Clifford ordinary double point; this is necessary and sufficient. Such local orders complete to k[[s,t]] semidirect Z2 (gldim2); worse points are ruled out by odd self-Ext1 or a degenerate quadratic cross-Yoneda/Serre pairing. All beta envelopes are AS4 by explicit PBW/W3 checks and LBS2.6/2.7. Pure volume cuts are exactly reduced8-point character fibers and have4 nodal center points; h=1,beta=(-1,0,0) is an exact witness. Group G has Gm identity component and Hessian216 components, full beta/A/D action includes a mixed correction to D, and D=0 is allowed. Generic inertia is trivial, or mu2 on the3-dimensional volume subfamily. No additional unipotent lifts. Read cubic_clifford_beta_classification.tex and both beta checkers. Next: other elliptic orders, nonsymmetric/non-CY envelopes, deformations into other ambient directions, full coverage and relative descent.
 
 ## Ultimate mathematical goal
 

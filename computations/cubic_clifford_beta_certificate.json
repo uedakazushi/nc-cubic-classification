@@ -1,0 +1,25 @@
+{
+  "version": "classification-v9",
+  "field": "QQ / rational-function identities",
+  "Schur_determinant": "T=u*(a*b-c^2)",
+  "universal_beta_volume_8x8": "central and volume^2=-det(Q), all h,beta",
+  "character_coordinate_Jacobian": "-h^2/(8*r^3)",
+  "quadratic_Ext_pairing_Hessian_identity": "det(E^T H E)=8 det(K), for universal4x3 E",
+  "nonsplit_witness": {
+    "h": 1,
+    "beta": [
+      -1,
+      0,
+      0
+    ],
+    "cut": "g_beta=0",
+    "affine_center": "-(u**3 - 2*u**2 - 5*u*v*w + u + v**3 + v*w + w**3)/4",
+    "center_singular_scheme_length": 4,
+    "all_singular_points_rank_at_most_one": true,
+    "all_singular_points_ordinary_double": true,
+    "character_scheme_length": 8,
+    "character_scheme_reduced": true,
+    "Hessian_determinant_at_axis_node": "1/2"
+  },
+  "limits": "Universal algebraic identities and exact geometric witness only. A1-endomorphism, Serre/Yoneda necessity and completion-local global-dimension descent are ordinary proofs in cubic_clifford_beta_classification.tex."
+}

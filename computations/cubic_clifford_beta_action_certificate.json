@@ -1,0 +1,19 @@
+{
+  "version": "classification-v9",
+  "field": "QQ(zeta3)(h)",
+  "Hessian_generator_pairs_checked_universally": 9,
+  "comparison_formulas": {
+    "beta_new": "a^2/c * M^T beta",
+    "A_new": "a/det(M) * A q_hprime(M)",
+    "D_new": "(a^3 D+a A k_beta_new(M))/det(M)"
+  },
+  "scalar_two_cancellation_control": true,
+  "general_scalar_quotient": "The universal grading-scalar cancellation follows from homogeneous degrees in the proof; the additional executable control uses scalar2.",
+  "torus_weights": {
+    "beta": 2,
+    "A": 1,
+    "D": 3
+  },
+  "mixed_D_correction_required": true,
+  "limits": "Checks full rational-function identities on generating substitutions. Completeness of geometric arrows follows from the proved Hesse normal form and unique quadratic-potential translation, not from sample evaluation."
+}

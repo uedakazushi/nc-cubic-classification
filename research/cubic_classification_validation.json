@@ -1,7 +1,7 @@
 {
   "date": "2026-11-15",
-  "version": "classification-v8",
-  "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction.",
+  "version": "classification-v9",
+  "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
     "papers/sections/cubic_nakayama_incidence.tex",
@@ -12,7 +12,8 @@
     "papers/sections/cubic_pym_generic_exclusions.tex",
     "papers/sections/cubic_as4_reductions.tex",
     "papers/sections/cubic_r13_cut_reduction.tex",
-    "papers/sections/cubic_clifford_full_cuts.tex"
+    "papers/sections/cubic_clifford_full_cuts.tex",
+    "papers/sections/cubic_clifford_beta_classification.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -34,7 +35,13 @@
     "Clifford_axis": "Bad values exactly D=0,-16*A^3/27,8*A^3/49; A!=0 good groupoid (A1 minus three values) x BS3, A=0,D!=0 is BG(3,3,3)",
     "Clifford_Hesse_family": "For h!=0,h^3!=-1,8, all H3 cuts and all geometric arrows of B_h=S_h[t] form a dimension4 open finite quotient by the mu3 central extension of Hessian216 (order648). The explicit finite resultant determines admissibility for every h. Fixed-h comparison group has order54, or108 precisely at h^6+20*h^3-8=0",
     "Clifford_unipotent": "Aut(B_h)^0=Gm^2 with finite components, hence no nonidentity unipotent automorphisms or nontrivial canonical unipotent lifts",
-    "nonsplit_Clifford_f2_obstruction": "Any H3 envelope in the normalized symmetric-potential order-two Hesse central-extension family has alpha=0, independently of beta. General f2 must lie in Jac(H0)2 and is removable by t translation. The remaining beta-only non-Azumaya local classification is open."
+    "nonsplit_Clifford_f2_obstruction": "Any H3 envelope in the normalized symmetric-potential order-two Hesse central-extension family has alpha=0, independently of beta. General f2 must lie in Jac(H0)2 and is removable by t translation. The remaining beta-only non-Azumaya local classification is open.",
+    "beta_all_envelopes": "Every constant-term Clifford B_h,beta is noetherian quadratic Koszul CY AS4 of type14641 by explicit PBW t-regularity, W3-surjectivity and LBS2.6/2.7; not inferred from a finite rank sample",
+    "beta_all_cuts": "All normalized central cuts are H3 iff every affine center singular point is an ordinary double point at Clifford rank1. Azumaya singular points, worse rank1 singularities and rank0 points are excluded. This is an explicit finite empty-locus criterion for all coefficients.",
+    "beta_rank1_local_proof": "At an allowed node, the completed order is End_C(C+M_odd)=k[[s,t]] semidirect Z2, global dimension2. Necessity uses rankE2 odd self-Ext1 or rankE3 degenerate cross-Ext1 Yoneda/Serre pairing; det(E^T Hess(q) E)=8detK. No external unreviewed NCCR classification used.",
+    "beta_volume_all_parameters": "Pure volume cut is H3 iff the length8 character complete intersection is reduced; then its center has exactly4 ordinary double points. Explicit h=1,beta=(-1,0,0) example certified over QQ.",
+    "beta_geometric_groupoid": "The specified symmetric-potential central-extension sector is [P/G] geometrically, generic dimension7. G has identity Gm and component group Hessian216; beta/A/D arrows and all stabilizers explicitly determined. D transformation includes a mixed A-beta term and good D=0 cuts exist.",
+    "beta_inertia_and_unipotents": "Generic inertia trivial; pure-volume dimension3 subfamily has generic mu2. All beta-envelope automorphism identity components are tori, so no extra canonical unipotent lifts."
   },
   "primary_sources_checked": [
     {
@@ -96,6 +103,12 @@
       "parts": "Lemma3.7 and its finite Groebner/Koszul proof for p^3=q^3; Theorem1.1; Lemma5.1 and its proof identifying every flex-preserving projective matrix",
       "use": "Koszulity at (1,1,-h) with h^3!=-1, and completeness of the216-element flex-preserving comparison group. AS/Frobenius, noetherianity, center, THCR via direct graph/pencil argument, Azumaya, H3 conditions and coefficient group actions supplied separately",
       "sha256": "1062e8bc0f4d8ba8aa66efa098dbbe7ec4c38b6c893c3706c848fa4de2e2900c"
+    },
+    {
+      "source": "https://sites.math.washington.edu/~smith/Research/Central-extns.pdf",
+      "parts": "Theorem2.6, Corollary2.7, Remark2.8 and relevant proofs",
+      "use": "All-beta AS4/Koszul recognition: Clifford PBW proves t1-regularity, quotient S_h is already AS3, and the mixed-quartic t contraction verifies the exact W3-surjectivity hypothesis",
+      "sha256": "501e20a3b082fe66a09e3756568da00b224ff64a22905db7ec74b8ed276b55fb"
     }
   ],
   "build_environment": {
@@ -105,17 +118,18 @@
     "dependencies": "Workspace-local TeX Live 2025 packages restored from the Utah historic mirror; no generated PDFs or caches tracked"
   },
   "pdf": {
-    "pages": 50,
-    "references": "No unresolved references/citations or overfull boxes in final build",
-    "layout": "v7 full48-page rendering retained; v8 proof pages35-36 inspected at reading size; final50-page extraction checked. No claim that all50 pages were freshly visually inspected."
+    "pages": 56,
+    "references": "No unresolved references/citations or overfull boxes in final log",
+    "layout": "All56 pages rendered in contact sheet; detailed new proof pages38–41 inspected, no clipping or overflow observed"
   },
   "limits": [
-    "Not full intrinsic H3 coverage: surviving nonsplit beta-only Clifford extensions and their non-Azumaya local cuts, other elliptic orders, other low-commutator CY and non-scalar resonant AS4 strata remain",
+    "Not full intrinsic H3 coverage: other elliptic orders, nonsymmetric/non-CY central extensions, other low-commutator and resonant AS4 strata, ambient-direction deformations and global coverage remain",
     "Not full relative-stack descent, global algebraicity, irreducible componenthood or deformation rigidity",
     "Pointed geometric equivalences are considered modulo pointed natural isomorphism; no unqualified bare Abelian 2-stack claim",
     "No independently performed peer review, formalization or exhaustive novelty audit",
     "Concurrent heart/corner work preserved but not independently reaudited here",
-    "The earlier split-pencil Lambda=C* theorem assumes low center Z(S)1=Z(S)2=0,Z(S)3=kg; it is not applied as a full-cubic-incidence classification when Z(S)2 is nonzero."
+    "The earlier split-pencil Lambda=C* theorem assumes low center Z(S)1=Z(S)2=0,Z(S)3=kg; it is not applied as a full-cubic-incidence classification when Z(S)2 is nonzero.",
+    "The v9 quotient describes geometric objects and pointed arrows. The entire admissible set is given by a finite geometric criterion and contains a dense open; no unproved full relative intrinsic stack descent or global componenthood is asserted."
   ],
   "as4_import_manifest": "research/as4_imports.json",
   "commands_retained_from_v4": {
@@ -148,8 +162,14 @@
     "python3 computations/verify_cubic_clifford_hesse.py": "PASS: exact QQ(zeta3) enumeration of all216 Hessian matrices, base image12 and kernel18, fixed h=1 stabilizer18, all12 rational j identities, complete exceptional fixed-point products",
     "latexmk papers/weak_cubic_axioms.tex": "PASS: Japanese LuaLaTeX, 48 pages; no unresolved references/citations or overfull boxes"
   },
-  "commands_executed": {
+  "commands_retained_from_v8": {
     "python3 computations/verify_cubic_clifford_lift.py": "PASS: all99 degree4 inserted relation identities over QQ[h,alpha,1/h,1/(1+h^3)]; all256 signed-cyclic quartic identities with constant minor-1; exact nonzero central-lift obstruction determinant",
     "latexmk papers/weak_cubic_axioms.tex": "PASS: Japanese LuaLaTeX,50 pages; no unresolved references/citations or overfull boxes"
+  },
+  "commands_executed": {
+    "python3 computations/verify_cubic_clifford_beta.py": "PASS: all-parameter8x8 central volume and Schur determinant, character-coordinate Jacobian, universal12-variable Hessian/Yoneda identity, exact four-node nonsplit center and reduced8-point character scheme",
+    "python3 computations/verify_cubic_clifford_beta_action.py": "PASS: all9 Hessian-generator composition identities over QQ(zeta3)(h), including the essential mixed D correction; scalar2 cancellation control plus ordinary homogeneous-degree proof of general weights",
+    "python3 computations/verify_cubic_clifford_lift.py": "PASS rerun: universal99 degree4 relation identities,256 signed-cyclic quartic identities, constant rank6 minor-1 and central-lift obstruction determinant",
+    "latexmk papers/weak_cubic_axioms.tex": "PASS: Japanese LuaLaTeX,56 pages; no unresolved references/citations or overfull boxes; rendered contact sheet and detailed new proof pages inspected"
   }
 }
