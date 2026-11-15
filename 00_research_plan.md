@@ -1,6 +1,6 @@
 # 研究方針：非可換del Pezzo曲面のheart比較と内在的モジュライ
 
-2026-11-15 / project-v17 / recognition-v6 / hearts-v2。最初に本書、`research/cubic_corner.md`、`papers/cubic_heart_corner.tex`を読む。比較の共通枠組みは`research/heart_comparison.md`と`papers/nc_del_pezzo_hearts.tex`、共通公理は`research/common_del_pezzo_framework.md`。次数別・三次三様体の研究はそれぞれの現行ノートから再開する。
+2026-11-15 / project-v18 / recognition-v6 / hearts-v3。最初に本書、`research/cubic_corner.md`、`papers/cubic_heart_corner.tex`を読む。比較の共通枠組みは`research/heart_comparison.md`と`papers/nc_del_pezzo_hearts.tex`、共通公理は`research/common_del_pezzo_framework.md`。次数別・三次三様体の研究はそれぞれの現行ノートから再開する。
 
 ## I. 恒常的な研究原則と保存許可
 
@@ -18,11 +18,13 @@
 
 ## III. 現在の到達点
 
-### Cubicの明示的corner開集合
+### Cubicの四交比還元と明示的corner開集合
 
 `papers/cubic_heart_corner.tex`が完全な証明と計算の意味を記す。B=Jac(Q,W)、e=e_(A0)、C=B/BeB。Cは道長1で生成されるのでC_N=0から全高次数消滅が従う。最大minorによるU_Nは開、U=union U_NはC有限次元locus。C有限から両corner bimoduleの有限生成性を導き、B右noetherianの下でqgr B_cut→qgr eB_cut eをabel同値とする。標準AS helixのfolding・Serre・飽和の範囲でeB_cut eは指定構造対象の反標準環。道長gradingと反標準cut gradingは必ず区別する。
 
 六点(1:0:0),(0:1:0),(0:0:1),(1:1:1),(1:2:3),(1:4:2)から27係数potentialを切断の積で構成した。全関係を含む厳密計算でCのHilbert関数は[8,21,33,38,33,21,8,0]、総次元162。7次6804列・21blockがQQとF_1000003でfull rank。従ってU7非空。可換点のAS性はAOU既知定理を使い、有限rankからAS性を推論していない。U7の外が全部非一致であるとはしない。
+
+**四交比への還元（証明済み）**：構造頂点A0を除いた商Cはw_{0bc}の9係数に依存しない。残る18係数の非零トーラスは矢rescalingで四交比lambda_ij=q_ij q_00/(q_i0 q_0j)、q_bc=w_{2bc}/w_{1bc}の四変数に還元される。C有限次元なら18係数が全て非零でqの全九つの2×2小行列式も非零。minorが零なら2×2支持のJacobi関係を満たす表現に非零3-cycleを作り、Cの無限次元性を示す。有限corner locusは四次元トーラスの非空真開集合である。九divisorが悪いlocusの全体かは未証明。証明は`papers/cubic_heart_corner.tex`、有理数検算は`computations/verify_cubic_corner_torus.py`。AS locusとの交叉と導来同値の問題は別途確認する。
 
 ### HRSと一般heart判定
 
@@ -53,12 +55,13 @@ weakly markedは非零Ext有限noetherian Abel圏、Serre、tau=S^-1[2]のheart�
 ## IV. 優先順位と具体的な着手
 
 1. **Cubicの構造対象と同値の照合**：AOUの実際のmutationでE0≃πFを検証し、AS corner同値と既知のqgr F比較を接続する。数値K0や境界restrictionだけで同定しない。
-2. **Corner開集合の境界**：U7外をU_N(N>7)と真の無限次元Cへ分類する。有限次数の零は道長1生成を根拠に全次数へ進める。標識を忘れた全モジュライの閉性と混同しない。
+2. **四交比トーラスの境界**：九つの小行列式が非零な四次元領域でCの有限次元性を決定し、U7外をU_N(N>7)と真の無限次元Cへ分類する。AS locusとの交叉と全モジュライの閉性を混同しない。
 3. **VdB最後の段階**：同じ楕円・六点データでker δ_6*とR1δ_6*を実在root対象で計算する。pointednessと周期作用を確認後、単純対象のEuler符号判定を適用する。Rains raw反復と各段階section模型への置換も区別する。
 4. **境界・一般次数**：有限位数、nodal/cuspidal境界、weak avatar、dP1への拡張ではgrading・noetherian性・realizationを再確認する。正規境界の一般存在、相対PBW、marking降下、Fermat分枝の研究は維持する。
 
 ## V. 再現と検証状態
 
+    python3 computations/verify_cubic_corner_torus.py
     python3 computations/verify_cubic_corner.py
     latexmk papers/cubic_heart_corner.tex
 
