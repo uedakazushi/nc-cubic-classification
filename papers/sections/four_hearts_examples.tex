@@ -166,15 +166,19 @@ $C$の半単純像は$k\times k$である．$J=\operatorname{rad}C_0$は$J^2=0$�
 
 反射$s_\beta(v)=v+(v\beta)\beta$は$(\alpha,\beta)$を$(\alpha+\beta,-\beta)$へ送る．
 従ってこの局所模型では，正負の共鳴から反標準heartの正指数二単純への組替えがWeyl反射に対応する．
-これは全$E_6$のheartを一つの反射で記述する主張ではない．
+ここまでの主張は二根部分系に限る．全六単純根の実在を仮定した$E_6$への拡張は，
+後の系\ref{cor:E6spectrum}で別に与える．
 商$A\to\Pi(A_2)$もhomological epimorphismではない．商の単純加群の高次Extは二周期的だが，
 ambientのExtは次数2を超えて消えるからである．
 
 \begin{remark}[同型型と生成元の係数]
 この定理は実際の有限次元商の同型型を与える．しかし，楕円データからあらかじめ固定した
 $A$の生成元に対するcharacterの値や拡大cocycleの係数を数値式で与えてはいない．
-その明示計算，および全$E_6$の境界外圏のアフィン作用は別の課題として残る．
+その明示計算と全$E_6$のアフィン作用行列は別の課題として残る．
+単純加群の根類と次元の決定とは区別する．
 \end{remark}
+
+\input{papers/sections/four_hearts_root_chambers.tex}
 
 \section{四者を同じ図式に置くための条件}\label{sec:alignment}
 比較は二圏ずつの同値の存在だけでは完了しない．同じ$e$と$s$を使って反標準環を作り，
@@ -197,7 +201,8 @@ $\cF=0$のときの結論は命題\ref{prop:hrs}から従う．
 \end{proof}
 
 AOUの許容領域では定理\ref{thm:AOU-pointed}によりsection model--AS比較のpointed性が確定した．
-これを上の$E$へ接続するには，同じsection modelとRainsデータとの指定した同定を用いる．
+VdBの最後のraw blow-upと同じRains表示については，系\ref{cor:fourfunctors}で
+指定関手を実際に接続した．異なるavatarとの比較にはなおデータの同定を要する．
 確認済みの範囲と残る同定は，次の表のとおりである．
 \begin{center}
 \small
@@ -210,7 +215,7 @@ Rains--反標準 & genuine smooth楕円gluingで導来同値，一回のHRS tilt
 VdB--section model & VdBの一般位置条件下で振幅1の導来同値 & raw blow-upとのheart一致\\
 AS--反標準 & 標準noetherian三次曲面型では十一条件で指定同値のt-exactnessを判定 & 全AS locusでの条件成立\\
 section model--AS & 許容領域でpointed導来同値，反標準環も一致 & 全域での標準heartの一致\\
-四者の接続 & pointed比較を揃えれば命題\ref{prop:alignment} & 相対familyと標識忘却の降下\\
+四者の接続 & 同じ最終VdB表示では自然関手を同定，$\Delta\ne0$で単一tilt & 独立avatarの同定，相対降下\\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -293,15 +298,22 @@ Hom消滅の入力が必要であることを検査する．
 これは非自明な楕円線束のcohomology消滅やmutation対象の同型を計算で証明するものではなく，
 証明に使う順序と数値の独立な確認である．
 
-本稿は主TeXファイルと五つのsectionソースからなり，\texttt{latexmk -lualatex}で再生成できる．
+Euler chamberの検算は有限根系$A_2+A_1,A_4,D_5,E_6,E_7,E_8$について行う．
+各型で32個のregular汎関数を作り，負の単純を選ぶ三通りの規則を比較する．
+停止回数が初期負正根数に一致し，終端根集合が正値根の単純根集合に一致することを整数上で検査する．
+これは有限個の根格子計算であって，単純sheafの実在やheartの同定を数値実験に置き換えるものではない．
+
+本稿は主TeXファイルと七つのsectionソースからなり，\texttt{latexmk -lualatex}で再生成できる．
 日本語LuaLaTeX，LuaTeX-ja，\texttt{tikz-cd}，Python~3を用いる．
 リポジトリrootでの主要コマンドは
 \begin{verbatim}
 python3 computations/verify_cubic_heart_numerics.py
 python3 computations/verify_four_hearts.py
 python3 computations/verify_four_hearts_corner.py
+python3 computations/verify_four_hearts_chambers.py
 latexmk -lualatex papers/nc_del_pezzo_hearts.tex
 \end{verbatim}
 である．数値検算は，sheafの存在，derived type，導来完全忠実性，
 または新規性を計算によって証明するものではない．
+
 
