@@ -1,394 +1,118 @@
+\RequirePackage{fix-cm}
 \documentclass[11pt,a4paper]{ltjsarticle}
 \usepackage[margin=24mm]{geometry}
-\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,longtable}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,longtable,array}
+\usepackage{tikz-cd}
 \usepackage[unicode,hidelinks]{hyperref}
+\usepackage{bookmark}
+\setlength{\emergencystretch}{3em}
+\setlength{\parskip}{0.22em}
 \newtheorem{theorem}{定理}[section]
 \newtheorem{proposition}[theorem]{命題}
 \newtheorem{lemma}[theorem]{補題}
 \newtheorem{corollary}[theorem]{系}
-\theoremstyle{definition}\newtheorem{definition}[theorem]{定義}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{定義}
+\newtheorem{assumption}[theorem]{仮定}
 \newtheorem{remark}[theorem]{注意}
+\newtheorem{example}[theorem]{例}
 \renewcommand{\proofname}{証明}
 \newcommand{\cA}{\mathcal A}\newcommand{\cB}{\mathcal B}
-\newcommand{\cH}{\mathcal H}\newcommand{\cT}{\mathcal T}\newcommand{\cF}{\mathcal F}
-\newcommand{\OO}{\mathcal O}\newcommand{\Db}{D^b}
+\newcommand{\cC}{\mathcal C}\newcommand{\cD}{\mathcal D}\newcommand{\cH}{\mathcal H}
+\newcommand{\cT}{\mathcal T}\newcommand{\cF}{\mathcal F}
+\newcommand{\cZ}{\mathcal Z}\newcommand{\OO}{\mathcal O}
+\newcommand{\Db}{D^b}\newcommand{\Sfun}{\mathbb S}
+\newcommand{\AR}{\mathcal A_{\mathrm R}}
+\newcommand{\AV}{\mathcal A_{\mathrm V}}
+\newcommand{\AAS}{\mathcal A_{\mathrm{AS}}}
+\newcommand{\AAC}{\mathcal A_{\mathrm{ac}}}
 \DeclareMathOperator{\Hom}{Hom}\DeclareMathOperator{\Ext}{Ext}
-\DeclareMathOperator{\End}{End}\DeclareMathOperator{\qgr}{qgr}
-\DeclareMathOperator{\coh}{coh}\DeclareMathOperator{\gr}{gr}
-\DeclareMathOperator{\rk}{rk}\DeclareMathOperator{\RHom}{RHom}
-\title{非可換 del Pezzo 曲面の heart 比較\\\large cubic surface における導来比較・HRS tilt・反標準 corner}
-\author{研究原稿：既知入力・形式的帰結・未解決の幾何学的判定を区別する}
-\date{2026年11月15日\quad hearts-v1}
-\begin{document}\maketitle
+\DeclareMathOperator{\End}{End}\DeclareMathOperator{\RHom}{RHom}
+\DeclareMathOperator{\coh}{coh}\DeclareMathOperator{\qgr}{qgr}
+\DeclareMathOperator{\QGr}{QGr}\DeclareMathOperator{\gr}{gr}
+\DeclareMathOperator{\Perf}{Perf}\DeclareMathOperator{\Pic}{Pic}
+\DeclareMathOperator{\Ind}{Ind}\DeclareMathOperator{\thick}{thick}
+\DeclareMathOperator{\rk}{rk}\DeclareMathOperator{\add}{add}
+\DeclareMathOperator{\Ann}{Ann}
+\title{非可換del Pezzo曲面の四つのheart\\
+\large VdB・Rains・反標準・Artin--Schelter構成の比較}
+\author{}
+\date{2026年11月16日\qquad 統合研究稿 hearts-v17}
+\hypersetup{pdftitle={非可換del Pezzo曲面の四つのheart},pdfsubject={導来比較、HRS tilt、共鳴、反標準corner}}
+\begin{document}
+\maketitle
 \begin{abstract}
-一般の非可換 del Pezzo 曲面について，Rains，Van den Bergh の blow-up，
-Artin--Schelter helix，反標準環の四つの構成が与える abel 圏を比較する．
-最初の対象を cubic surface とする．一次文献では，AOU の定理9.4の左辺は
-反標準型環の $\qgr$ として定義されており，raw blow-up heart ではない．
-Van den Bergh の振幅1の比較同値から，transport された heart を
-$\ker R^1\delta_*$ と $\ker\delta_*$ による一回の HRS tilt として記述する．
-また豊富な反標準 orbit による heart の一意性，有限性を明記した
-idempotent corner の tails 同値判定，周期対象の Euler 標数による非一致判定を証明する．
-これらは標準的手法の整理と適用であり，新規性は未確認である．
-非可換 cubic の一般点で四 heart が全て一致することや，共鳴壁ごとの tilt の非自明性を
-証明したとは主張しない．
+非可換del Pezzo曲面に付随するVdB heart，Rains heart，anticanonical heart，
+AS heartを，比較関手と構造対象を指定して比較する．同じblow-up表示に由来する
+VdBとRainsのt構造は，blow-down関手のpseudo-canonical性によって同定される．
+一方，blow-upの各段階で行うsection modelへの移行は別の操作であり，
+Van den Berghの適用条件下では一回のHRS tiltとして記述される．
+滑らかなgenuine del Pezzo曲面と滑らかな楕円境界からのRains gluingについては，
+自然な反標準導来切断を用いて導来同値と全heartの振幅$[0,1]$を示す．
+負指数の実在共鳴根は，導来同値を失わずに反標準AZ amplenessとheart一致が失敗することを検出する．
+AS側では，helix全体の豊富性と一つの構造対象の反Serre orbitの豊富性を区別し，
+後者をnoetherianなfolded algebraのidempotent cornerによって判定する．
+三次曲面の混合$A_2$部分系を例として，connecting map，有限長部分圏，
+反標準側の三角表現と四次元アフィン商を記述する．
+一般の四heartの無条件な一致，AS比較の全域的t-exactness，および族での降下は主張しない．
 \end{abstract}
+\tableofcontents
 
-\section{問題設定と比較の水準}\label{sec:setup}
-基礎体を標数0の代数閉体 $k$ とする．導来圏を比較する際には
-適合する dg enhancement と realization functor を用いる．
-Euler 標数を用いる箇所では，対象間の RHom の全 cohomology が有限次元かつ有界であると仮定する．
-$\cH$ が三角圏 $\cT$ の有界 $t$-構造の heart であるとき，
-\[
- \operatorname{real}_{\cH}:\Db(\cH)\longrightarrow\cT
-\]
-が同値ならば，ここでは \emph{derived type}（faithful）の heart と呼ぶ．
-この用語の慣用は一様でないため，必要な性質は常に上式で明記する．
-有界性だけでこの性質が従うわけではない\cite{CHZ}．
-
-比較する四つの名称を \emph{Rains heart} $\cA_{\mathrm R}$，
-\emph{VdB heart} $\cA_{\mathrm V}$，
-\emph{AS heart} $\cA_{\mathrm{AS}}$，
-\emph{anticanonical heart} $\cA_{\mathrm{ac}}$ とする．
-前二者は，対応する既知の blow-up 構成で同じ abel 圏を表す場合がある．
-$\cA_{\mathrm{AS}}$ は very strong helix の3次元 AS 正則
-$\mathbb Z$-代数（cubic では $\{0,1,2\}\times\mathbb Z$-代数）の $\qgr$ である．
-最後は，構造対象 $e$ と $\tau=\mathbb S^{-1}[2]$ に対する
-\[
- R(e,\tau)=\bigoplus_{n\ge0}\Hom(e,\tau^ne),\qquad
- \cA_{\mathrm{ac}}=\qgr R(e,\tau)
-\]
-である．右加群を使い，$a\in R_m,b\in R_n$ の積は
-$ab=\tau^n(a)\circ b$ とする．他の原稿で反対環の規約を使う場合には，
-その比較を別途行う．
-
-四つの abel 圏が定義されたこと，それぞれの導来圏が同値であること，
-指定した同値が $t$-exact であること，構造対象・反標準作用・境界制限を保つこと，
-および族での降下は異なる命題である．同じ三角圏内の heart と呼ぶためには，
-まず導来同値を指定して transport しなければならない．
-大川--植田\cite[Definition 1.1, \S6]{OU}の一般の比較はこの区別の下で用いる．
-
-\section{cubic の既知比較を正確に固定する}\label{sec:known}
-\subsection{Van den Bergh の二つの操作}
-\cite[\S11.1]{VdB}の記号を保持し，
-\[
- X_j\xleftarrow{\alpha_j}\widetilde X_j
-       \xrightarrow{\delta_j}X_{j+1}
-\]
-とする．$\alpha_j$ が blow-up，$\delta_j$ が section-algebra モデルへの比較である．
-従って $\widetilde X_j$ と $X_{j+1}$ を定義から同じ heart としてはいけない．
-同論文の Definition 11.1.2 の一般位置条件を，指定された平面埋込みでの
-$(\sigma p_i)$ に課すと，Theorem 11.1.3 は
-\begin{equation}\label{eq:vdb}
- F_j=R\delta_{j*}:\Db\coh\widetilde X_j
-   \xrightarrow{\sim}\Db\coh X_{j+1},\qquad
- G_j=L\delta_j^*=F_j^{-1}
-\end{equation}
-を与え，$F_j$ の heart 上の振幅は $[0,1]$，$G_j$ は $[-1,0]$ である．
-有限生成部分の保存には同論文 Lemma 9.1.5 も用いる．
-これは大きい導来圏の定理を，コヒーレントな有界部分へ制限したもの．
-
-$cubic$ では $X_7=\operatorname{Proj}F$ であり，\cite[Chapter 12]{VdB}は
-$F=P/(C_3)$ という AS 正則4次元 ambient 内の表示を与える．
-同章は，この表示の構成には Theorem 11.1.3 の一般位置条件を要求しないと明記する．
-\emph{表示の存在範囲を，導来同値の適用範囲へ広げてはならない．}
-Remark 12.0.5 も straight blow-up と section model の相違を指摘する．
-
-\subsection{AS heart と anticanonical heart の既知同値}
-AOU\cite[\S9]{AOU}は滑らかな楕円曲線 $Y$，次数3の線束，無限位数の平行移動
-$\sigma$，および sufficiently general な六点から出発する．
-\emph{その節の $\coh\widetilde X$ は，最初から $\qgr F$ と定義される．}
-Lemma 9.2 は Serre 関手を $(-1)[2]$ と同定し，Theorem 9.4 は
-\begin{equation}\label{eq:aou}
- \Psi:\Db\qgr F\xrightarrow{\sim}\Db\qgr A
-\end{equation}
-を与える．右辺は AS heart の導来圏である．
-証明は九対象の full strong collection と共通の有限次元代数を使う．
-その mutation 後の collection の先頭を $E_0$ と書くと，
-式(9.55)--(9.57)の同値は $\Psi(E_0)=\OO(0,0)$ と規格化できる．
-可換な式(9.44)では $E_0=\OO$ だが，その直後の非可換版は同じ記号を
-mutation で定め直している．したがって内在的な構造対象との比較では，
-$E_0\simeq\pi F$ を実際の mutation 対象について照合する課題を残す．
-数値類や境界への制限が一致するだけでこの同一視を済ませない．
-Serre 関手の一意性により $\Psi$ は反 Serre 作用と両立する．
-しかし定理の記述は導来同値であり，$t$-exactness の主張ではない．
-
-Rains\cite[Introduction, \S4]{Rains}は，既存の平面・ruled surface・blow-up の
-abel 圏を用いて gluing 圏の $t$-構造とその realization を正当化する．
-これを任意の gluing に対する faithful heart の存在定理と読み替えない．
-また反復の各段階で $X_j$ を section model に取り替える操作と，
-一つの固定した heart 上で raw blow-up を反復する操作は，追加比較なしには同じではない．
-
-\section{振幅1の同値は一回の HRS tilt を与える}\label{sec:hrs}
-以下の命題は HRS 理論の標準的帰結を，具体的な核によって書いたものである．
-\begin{proposition}\label{prop:hrs}
-$F:\Db(\cA)\to\Db(\cB)$ を同値，$G$ を逆とし，
-\[
- F(\cA)\subset D^{[0,1]}(\cB),\qquad
- G(\cB)\subset D^{[-1,0]}(\cA)
-\]
-と仮定する．
-\[
- \cT=\{M\in\cA:H^1_{\cB}(FM)=0\},\qquad
- \cF=\{M\in\cA:H^0_{\cB}(FM)=0\}
-\]
-は $\cA$ 上の torsion pair であり，transport した heart は
-\begin{equation}\label{eq:tilt}
- G(\cB)=\langle\cF[1],\cT\rangle
- =\{X:H^{-1}_{\cA}X\in\cF,\ H^0_{\cA}X\in\cT,
-                 \ H^i_{\cA}X=0\ (i\ne-1,0)\}.
-\end{equation}
-この heart は derived type である．さらに $F$ が $t$-exact であることと
-$\cF=0$ は同値である．
-\end{proposition}
-\begin{proof}
-$M\in\cA$ とし，$B_i=H^i_{\cB}(FM)$ と置く．truncation triangle に $G$ を施すと
-\[
- G B_0\longrightarrow M\longrightarrow G B_1[-1]\longrightarrow
-\]
-を得る．振幅条件と長完全列から
-$H^{-1}_{\cA}(G B_0)=0$ および $H^0_{\cA}(G B_1)=0$．従って
-\begin{equation}\label{eq:torsionsequence}
- 0\longrightarrow G B_0\longrightarrow M
- \longrightarrow H^{-1}_{\cA}(G B_1)\longrightarrow0
-\end{equation}
-は $\cA$ の完全列である．その最初の項は $\cT$，最後の項は $\cF$ に入る．
-$T\in\cT,U\in\cF$ なら $FT\in\cB$，$FU\in\cB[-1]$ なので
-$\Hom(T,U)=0$．これで torsion pair を得る．
-
-$X=GB$ とすると $X$ の $\cA$-cohomology は次数 $-1,0$ のみ．
-三角 $H^{-1}X[1]\to X\to H^0X$ に $F$ を施し，負次数と次数1の
-長完全列を取ると $H^0F(H^{-1}X)=0$ および $H^1F(H^0X)=0$ となる．
-逆に式\eqref{eq:tilt}の対象は両 cohomology の像から $FX\in\cB$ を満たす．
-従って式\eqref{eq:tilt}が成り立つ．$G(\cB)\to\cB$ は abel 圏の同値で，
-その有界導来圏からの realization は $G$ と同一視できるため derived type である．
-最後に $\cF=0$ なら式\eqref{eq:torsionsequence}より $\cT=\cA$，
-従って heart は変わらない．逆向きは $t$-exact な同値の保存性による．
-\end{proof}
-
-\begin{corollary}[Van den Bergh の一段階の比較]\label{cor:vdb-tilt}
-式\eqref{eq:vdb}の適用範囲で，
-\[
- \cT_j=\ker R^1\delta_{j*},\qquad \cF_j=\ker\delta_{j*}
- \quad\text{（いずれも $\coh\widetilde X_j$ 内）}
-\]
-とすると，
-\[
- L\delta_j^*(\coh X_{j+1})=\langle\cF_j[1],\cT_j\rangle.
-\]
-したがって一段階の heart の一致判定は $\ker\delta_{j*}=0$ に帰着する．
-非零 $M\in\ker\delta_{j*}$ に対しては
-\[
- R\delta_{j*}M\simeq (R^1\delta_{j*}M)[-1]\ne0.
-\]
-\end{corollary}
-\begin{proof}
-命題\ref{prop:hrs}と文献定理を適用する．最後の非零性は導来同値の保守性による．
-\end{proof}
-この系は，その kernel が具体的な cubic パラメータで非零であることをまだ主張しない．
-また六回の blow-up の前後を一つの固定圏内で六回 tilt するとの主張でもない．
-各段階の transport と構造対象の照合が必要である．
-単なる HRS tilt は一般には derived type を保証しない\cite{CHZ}が，
-本系では既に得られた導来同値を使うため保証される．
-
-\section{反標準 orbit による heart の一意性}\label{sec:unique}
-\begin{proposition}\label{prop:unique}
-$\cH\subset\cT$ は derived type の有界 heart であり，$\tau$ が $\cH$ を両方向で保つとする．
-$e\in\cH$ とし，$(e,\tau)$ が AZ-ample，かつ
-\begin{equation}\label{eq:serrevan}
- \Ext^p_{\cH}(e,\tau^nM)=0\quad(p>0,\ n\gg0)
-\end{equation}
-が全 $M\in\cH$ について成り立つとする．ここで十分大きい $n$ の閾値は
-$M$ ごとに取り，全 $p>0$ に共通とする．すると
-\begin{equation}\label{eq:heart-recognition}
- \cH=\{X\in\cT:\Hom(e,\tau^nX[i])=0
-                         \quad(i\ne0,\ n\gg0)\}.
-\end{equation}
-従って，固定した $(\cT,e,\tau)$ に対し，上の条件を満たす heart は高々一つである．
-\end{proposition}
-\begin{proof}
-$X$ の有限個の $\cH$-cohomology に\eqref{eq:serrevan}を同時に適用すると
-hyper-Ext spectral sequence が退化し，
-\[
- \Hom(e,\tau^nX[i])=\Hom_{\cH}(e,\tau^nH^i_{\cH}X)
-\]
-となる．非零 $M\in\cH$ に対し，右辺が全ての十分大きい $n$ で零になることは
-AZ の生成条件に反する．実際，任意に大きい $N$ に対して
-$\tau^NM$ を負 twist の有限直和から生成すれば，ある $n\ge N$ で非零射を得る．
-従って\eqref{eq:heart-recognition}は $H^i_{\cH}X=0$ for $i\ne0$ と同値である．
-\end{proof}
-
-\begin{corollary}\label{cor:texact}
-二つの heart が命題\ref{prop:unique}の仮定を満たし，導来同値が構造対象と
-反標準作用を保てば，その同値は $t$-exact である．
-\end{corollary}
-ここで\eqref{eq:serrevan}を AZ の二公理だけから無条件に導いてはいない．
-また AS helix 全体が豊富であることと，そのうち一対象 $e$ の反 Serre orbit が
-豊富であることは別である．この区別が AS--反標準比較の中心になる．
-
-\begin{proposition}[固定対象による非一致の判定]\label{prop:negative}
-命題\ref{prop:unique}の仮定を満たす反標準 heart $\cH$ において，非零 $M\in\cH$ が
-$\tau M\simeq M$ を満たせば $\chi(e,M)>0$ である．
-従って，別の heart 内で $\tau$-固定の非零対象 $M$ が存在し
-$\chi(e,M)\le0$ なら，その対象は反標準 heart には属さない．
-\end{proposition}
-\begin{proof}
-十分大きい $n$ について\eqref{eq:serrevan}と固定性を使うと
-$\Ext^{>0}(e,M)=0$ であり，$\chi(e,M)=\dim\Hom(e,M)$．
-この値が零なら $\Hom(e,\tau^nM)=0$ が全 $n$ で成り立ち，AZ 生成性に反する．
-\end{proof}
-一般の周期 $r>0$ について得られる結論は
-$\sum_{a=0}^{r-1}\chi(e,\tau^aM)>0$ である．これは
-$\bigoplus_{a=0}^{r-1}\tau^aM$ に命題を適用すれば従う．
-個々の residue の Euler 標数が正とは主張しない．
-
-\section{AS--反標準比較の corner 判定}\label{sec:corner}
-次の標準的な idempotent 議論を，有限性の仮定を省略せずに用いる．
-\begin{proposition}\label{prop:corner}
-$B=\bigoplus_{n\ge0}B_n$ は局所有限な右 noetherian 次数付き代数，
-$e\in B_0$ は idempotent，$R=eBe$ は右 noetherian とする．
-$Be$ が右 $R$ 加群として有限生成，$eB$ が左 $R$ 加群として有限生成であると仮定する．
-$\qgr$ は有限生成次数付き右加群を有限次元加群で割った圏とする．
-このとき自然な restriction
-\[
- \overline{(-)e}:\qgr B\longrightarrow\qgr R
-\]
-が同値であることと $\dim_k(B/BeB)<\infty$ は同値である．
-\end{proposition}
-\begin{proof}
-$Be$ の有限生成性より $Me$ は有限生成 $R$ 加群となる．この操作は完全であり，
-有限次元加群を有限次元加群に送るので商圏へ降りる．
-左随伴 $L(N)=N\otimes_R eB$ は右 $B$ 加群として有限生成であり，
-$eB$ の左 $R$ 有限生成性から有限次元の $N$ を有限次元へ送る．
-$B/BeB$ が有限次元と仮定する．$e$ を掛けると
-\[
- (N\otimes_R eB)e\simeq N,
- \qquad (Me\otimes_R eB)e\xrightarrow{\sim}Me
-\]
-となる．従って counit $Me\otimes_R eB\to M$ の核・余核は $e$ に消される．
-核も有限生成なのは $B$ の右 noetherian 性による．これらは有限次元代数
-$B/BeB$ 上の有限生成加群なので有限次元である．
-また短完全列に $L$ を施した際の左端の核も $e$ を掛けると零となり，
-同じ理由で有限次元である．ゆえに $L$ は商圏上で完全となり，
-上の unit/counit が二つの商圏で同型を与える．
-逆に restriction が同値なら，$\pi(B/BeB)$ は $e$ で零に送られるので零である．
-$B/BeB$ は有限生成だから有限次元である．
-\end{proof}
-
-cubic の標識された九対象を $E_1,\ldots,E_9$，$E_1=e$ とし，
-$T=\bigoplus_iE_i$，$B_n=\Hom(T,\tau^nT)$ と置く．
-$B$ と AS $\mathbb Z$-代数の folding が $\qgr$ 同値を与え，
-命題\ref{prop:corner}の有限性が成り立つことを\emph{確認した範囲では}，
-\[
- eBe=R(e,\tau),\qquad \dim_k B/BeB<\infty
-\]
-が AS heart と anticanonical heart の自然な同定の必要十分条件になる．
-この folding と有限性は任意の退化パラメータで自動とはしない．
-有限次数まで $(B/BeB)_n=0$ を計算しただけでは，全次数の消滅も有限次元性も証明できない．
-生成次数の上界や Gröbner 基底，または幾何的な生成性証明が必要である．
-$B/BeB$ が無限次元でも，それはこの自然な \emph{abelian restriction} の失敗であって，
-別の導来同値の不存在を意味しない．
-
-\section{cubic の初期データと次の計算}\label{sec:cubic}
-可換 cubic の標準格子を
-$\operatorname{Pic}(S)=\mathbb Zl\oplus\bigoplus_{i=1}^6\mathbb Ze_i$，
-$l^2=1$，$e_i^2=-1$，$H=-K_S=3l-\sum e_i$ とする．
-AOU\cite[(4.1)]{AOU}の九線束の類を次の順序で使う：
-\[
- 0,\quad -2l+\sum_{i=1}^6e_i,\quad -l+e_1+e_2+e_3,
- \quad e_1,e_2,e_3,\quad l-e_4,l-e_5,l-e_6.
-\]
-各三つが一つの block で，$H$ 次数はそれぞれ $0,1,2$ である．
-Riemann--Roch により
-\[
- \chi(\OO(D),\OO(E))=1+\tfrac12(E-D)\cdot(E-D+H)
-\]
-であり，この Euler 行列は
-\[
- C=\begin{pmatrix}I_3&J_3&2J_3\\0&I_3&J_3\\0&0&I_3\end{pmatrix}
-\]
-となる．ここで $J_3$ は全成分が1の行列である．従って $\det C=1$，
-成分総和は $45$ である．これは可換点での既知の full strong 性と合わせて
-有限代数の次元を確認するが，Euler 行列だけから strong 性を推論しない．
-
-$K_0$ の Serre 行列は $C^{-1}C^{\mathsf t}$，反 Serre 行列はその逆である．
-この作用が線束に $H$ を tensor する作用と一致することを，
-添付コードで有理数上の厳密計算として確認する．
-root は
-\[
- e_i-e_j\ (i\ne j),\qquad
- \pm(l-e_i-e_j-e_k)\ (i<j<k),\qquad
- \pm(2l-\sum e_i)
-\]
-の計72個である．いずれも $\alpha^2=-2$，$H\cdot\alpha=0$．
-この列挙は共鳴における実在対象の構成ではなく，検査すべき数値型を固定するためのもの．
-
-\paragraph{可換基準点．}
-滑らかな可換 cubic $S$ では，幾何学的 heart は $\coh S$ であり，
-$H=-K_S$ の ampleness と Serre の対応により反標準 $\qgr$ もこれと一致する．
-上の線束 helix の各周期部分列は $\OO(D_i-nH)$ である．
-任意の coherent sheaf に対し，この部分列での生成性と高次 Ext 消滅は
-通常の Serre 定理から従う．従って同じ helix の $\mathbb Z$-代数の $\qgr$ も
-$\coh S$ を再構成する．ここでは heart の一致を実際に確認できるが，
-この可換基準点での一致だけから非可換パラメータでの開性は結論しない．
-
-\paragraph{最初に決定する三つの問題．}
-まず式\eqref{eq:vdb}の最後の段階 $j=6$ で $\ker\delta_{6*}$ を実在対象により記述する．
-次に AOU の式\eqref{eq:aou}における九対象，特に $E_0$ と $\pi F$ の同定，および反 Serre orbit を追い，
-命題\ref{prop:unique}または命題\ref{prop:corner}によって $t$-exactness を判定する．
-最後に，同じ六点データを用いた Rains heart との帰納的比較を行う．
-異なる marking，$\sigma$ と $\sigma^3$，構造対象，境界 restriction の同定を省略しない．
-
-\paragraph{共鳴と退化．}
-Rains\cite[\S4]{Filtered}の effective root と数値的 ample cone に関する条件から，
-AZ ampleness の失敗，$\ker\delta_*$ の非零性，導来同値の失敗を直接推論しない．
-命題\ref{prop:negative}は，実在する $\tau$-固定対象と Euler 標数が確認できたときの
-heart 非一致の十分条件を与える．共鳴条件だけからその対象の存在を補わない．
-特異な楕円境界，有限位数の平行移動，非局所自由 gluing への拡張は別課題である．
-本稿は dP1 原稿の滑らかな楕円領域の比較定理を入力として使っていない．
-
-\section{証明状態・再現手順}\label{sec:status}
-\ref{sec:known}節は一次文献の記述・仮定を確認した既知入力であり，その長い証明全体を
-独立に再監査したものではない．命題\ref{prop:hrs}，系\ref{cor:vdb-tilt}，
-命題\ref{prop:unique}，系\ref{cor:texact}，命題\ref{prop:negative}，
-命題\ref{prop:corner}は本稿に証明を記載し，shift，核，有限性の条件を点検した．
-標準的理論の適用であり独立の新規性は未確認．四 heart の全一致定理ではない．
-
-リポジトリ root で
-\begin{verbatim}
-python3 computations/verify_cubic_heart_numerics.py
-latexmk papers/nc_del_pezzo_hearts.tex
-\end{verbatim}
-を実行する．コードは Python 標準ライブラリの Fraction だけで計算し，
-外部入力ファイルを必要としない．有限数値検算は heart の存在・faithful 性・
-$t$-exactness・全パラメータの正則性を証明しない．
+\input{papers/sections/four_hearts_foundations.tex}
+\input{papers/sections/four_hearts_geometric.tex}
+\input{papers/sections/four_hearts_as.tex}
+\input{papers/sections/four_hearts_examples.tex}
 
 \begin{thebibliography}{99}
-\bibitem{VdB} M. Van den Bergh,
-\emph{Blowing up of non-commutative smooth surfaces},
-Mem. Amer. Math. Soc. 154 (2001), x+140.
+\bibitem{VdB}
+M.~Van den Bergh, \emph{Blowing up of non-commutative smooth surfaces},
+Mem. Amer. Math. Soc. \textbf{154} (2001), no.~734;
 \href{https://arxiv.org/abs/math/9809116}{arXiv:math/9809116v1}.
-Lemma 9.1.5, Definition 11.1.2, Theorem 11.1.3, Remark 12.0.5.
-本稿の節番号はこの arXiv 版で確認した．
-\bibitem{AOU} T. Abdelgadir, S. Okawa, K. Ueda,
+使用箇所：Lemma 9.1.5，Definition 11.1.2，Theorem 11.1.3，Chapter 12，Remark 12.0.5．
+\bibitem{Rains}
+E.~M.~Rains, \emph{The birational geometry of noncommutative surfaces},
+\href{https://arxiv.org/abs/1907.11301}{arXiv:1907.11301v1} (2019).
+使用箇所：Lemma 4.9，Theorem 4.10，Propositions 4.13, 4.17，Theorem 4.30，
+\S5，\S7，Theorem 9.10，Corollaries 10.12, 10.16，Proposition 10.13，\S11．
+\bibitem{Filtered}
+E.~M.~Rains, \emph{Filtered deformations of elliptic algebras},
+\href{https://arxiv.org/abs/2107.13540}{arXiv:2107.13540v2} (2022).
+使用箇所：Corollary 3.8とtraceの証明，\S4，Proposition 5.1．
+\bibitem{RainsBook}
+E.~M.~Rains, \emph{The (noncommutative) geometry of difference equations},
+\href{https://arxiv.org/abs/2504.16187}{arXiv:2504.16187} (2025).
+本稿は書誌と概要を確認し，定理番号・仮定の照合には上記2019年稿を用いた．
+\bibitem{AOU}
+T.~Abdelgadir, S.~Okawa, K.~Ueda,
 \emph{Compact moduli of marked noncommutative cubic surfaces},
 \href{https://arxiv.org/abs/2404.00175}{arXiv:2404.00175v1} (2024).
-\S4.1, \S9, Lemma 9.2, Theorem 9.4, (9.44), (9.54)--(9.57).
-\bibitem{OU} S. Okawa, K. Ueda,
-\emph{Marked Artin--Schelter surfaces of del Pezzo types},
+使用箇所：\S3--4，(4.1)，\S9，Lemma 9.2，Theorem 9.4，(9.44)，(9.54)--(9.57)．
+\bibitem{OU}
+S.~Okawa, K.~Ueda, \emph{Marked Artin--Schelter surfaces of del Pezzo types},
 \href{https://arxiv.org/abs/2508.04986}{arXiv:2508.04986v1} (2025).
-Definition 1.1, Definition 3.1, \S6（特に(6.3)--(6.4)付近）．
-\bibitem{Rains} E. M. Rains,
-\emph{The birational geometry of noncommutative surfaces},
-\href{https://arxiv.org/abs/1907.11301}{arXiv:1907.11301v1} (2019).
-Introduction, \S4冒頭，Lemma 5.7.
-\bibitem{Filtered} E. M. Rains,
-\emph{Filtered deformations of elliptic algebras},
-\href{https://arxiv.org/abs/2107.13540}{arXiv:2107.13540v2} (2022), \S4.
-\bibitem{CHZ} X.-W. Chen, Z. Han, Y. Zhou,
-\emph{Derived equivalences via HRS-tilting},
-Adv. Math. 354 (2019), 106749.
+使用箇所：Definitions 1.1, 3.1，\S6．
+\bibitem{AZ}
+M.~Artin, J.~J.~Zhang, \emph{Noncommutative projective schemes},
+Adv. Math. \textbf{109} (1994), 228--287.
+\href{https://doi.org/10.1006/aima.1994.1087}{doi:10.1006/aima.1994.1087}.
+\bibitem{CHZ}
+X.-W.~Chen, Z.~Han, Y.~Zhou, \emph{Derived equivalences via HRS-tilting},
+Adv. Math. \textbf{354} (2019), 106749;
 \href{https://arxiv.org/abs/1804.05629}{arXiv:1804.05629v2}.
-Theorems A, B; \S2--3.
+使用箇所：Theorems A, B，\S2--3．
+\bibitem{RSS}
+D.~Rogalski, S.~J.~Sierra, J.~T.~Stafford,
+\emph{Noncommutative Blowups of Elliptic Algebras},
+\href{https://arxiv.org/abs/1308.2216}{arXiv:1308.2216v2} (2015).
+使用箇所：Proposition 2.4（正次数，無限位数の境界自己同型）．
+\bibitem{YZ}
+A.~Yekutieli, J.~J.~Zhang, \emph{Rings with Auslander Dualizing Complexes},
+J. Algebra \textbf{213} (1999), 1--51;
+\href{https://arxiv.org/abs/math/9804005}{arXiv:math/9804005v3}.
+使用箇所：Theorems 4.5, 5.1(1), 5.13．
+\bibitem{Orlov}
+D.~Orlov, \emph{Smooth and proper noncommutative schemes and gluing of DG categories},
+\href{https://arxiv.org/abs/1402.7364}{arXiv:1402.7364v5} (2015).
+使用箇所：Theorems 3.18, 3.25，Corollary 3.19．
 \end{thebibliography}
 \end{document}
