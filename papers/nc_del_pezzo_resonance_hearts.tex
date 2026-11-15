@@ -2,6 +2,7 @@
 \usepackage[margin=23mm]{geometry}
 \usepackage{amsmath,amssymb,amsthm,mathtools,booktabs}
 \usepackage[unicode,hidelinks]{hyperref}
+\setlength{\emergencystretch}{2em}
 \newtheorem{theorem}{定理}[section]
 \newtheorem{proposition}[theorem]{命題}
 \newtheorem{lemma}[theorem]{補題}
@@ -20,39 +21,38 @@
 \DeclareMathOperator{\Ind}{Ind}
 \newcommand{\Db}{D^b}
 \title{Rains共鳴の稠密軌跡と反標準heart\\
-\large 根sheafの符号別Ext・混合$A_2$の有限長圏・導来切断}
-\author{研究原稿：一次資料の仮定と未検証の導来比較を区別する}
-\date{2026年11月15日 \quad resonance-hearts-v7}
+\large 根sheafの符号別Ext・大域HRS比較・混合$A_2$のアフィン商}
+\author{研究原稿：仮定・既知入力・未計算の係数を区別する}
+\date{2026年11月16日 \quad resonance-hearts-v8}
 \begin{document}
 \maketitle
 \begin{abstract}
-滑らかな楕円反標準境界を持つRains型非可換del Pezzo曲面で
-Zariski稠密に生じるroot resonanceを解析する．
-境界と交わらない既約純一次元根sheaf $M$のEuler指数
-$m=\chi(e,M)$に応じて，$\Hom(e,M)$と$\Ext^1(e,M)$の次元は
-それぞれ$\max(m,0)$と$\max(-m,0)$であり，$\Ext^2=0$となる．
-負指数ではRains heartで反標準Artin--Zhang amplenessが失敗し，
-anticanonical heartへは境界外の$(-m)$次元アフィン表現が
-$[-1]$で移る．正指数では$m$次元表現が次数0に現れ，
-零指数では自然な導来切断が非零根sheafを消す．
-反標準環のHilbert関数は不変である．
-正負の共鳴はそれぞれ滑らかなdel Pezzoを保ってZariski稠密に実現し，
-さらに次数$d=1,\ldots,6$で全根が非零指数で同時に共鳴する点配置も稠密である．
-全根共鳴の整数表示を与え，最大共鳴の既約根sheafの直和のExt代数を
-ADE zigzagと同定する．既知の内在的形式性から，固定dg圏内の
-framed形式変形を二次方程式で記述する．
+滑らかな楕円反標準境界を持つRains型非可換del Pezzo曲面のroot resonanceを解析する．
+境界非交叉の既約根sheafのEuler指数$m$に応じ，$h^0=\max(m,0)$，
+$h^1=\max(-m,0)$，$h^2=0$となる．負指数ではRains heartの反標準AZ amplenessが失敗する．
+反標準環のHilbert関数は不変であり，次数1--6で全根が非零指数で同時に数値共鳴する
+genuine del Pezzo配置はZariski稠密である．最大共鳴の既約根sheafの直和のExtは
+ADE zigzagとなり，既知の内在的形式性から固定dg圏内のframed変形を記述できる．
 
-非torsionの$q$では境界外圏が有限長Serre部分圏になることを示す．
-隣接する根の指数が$p,-(p-1)$の場合，非分裂混合拡大のconnecting mapは
-導来完全忠実性を仮定せずrank $p-1$を持つ．二根が生成するSerre部分圏は
-$\Pi(A_2)$の有限次元加群圏であり，四つの直既約対象，局所torsion pair，
-全対象の反標準cohomologyを決定する．特に指数$+2,-1$の明示例では
-connecting mapのrankは1である．導来比較に残る具体的な必要条件として，
-二つの一次元characterの分離と二次元加群拡大の非分裂性を得る．
-全パラメータでの導来同値，全heartの比較，および$qgr$の非特異性は主張しない．
+非torsionの$q$では境界外圏は有限長Serre部分圏となる．
+正負指数$p,-n$の隣接根の非分裂拡大のconnecting mapは，
+導来完全忠実性を仮定せずrank $\min(p,n)$を持つ．
+二根部分圏の全対象とcohomologyを決定する．さらにgenuine smooth classical avatarと
+smooth elliptic boundaryからのgluingに限定して，既存の自然導来比較の証明と入力を点検する．
+この範囲では全Rains heartの像の振幅は$[0,1]$で，反標準heartは一回のHRS tiltで得られる．
+指数$+2,-1$の具体例では二つの一次元characterが異なり，対応する二次元加群は非分裂となる．
+両向きの拡大を合わせてアフィン環の四次元商$\Pi(A_2)$を構成する．
+特異境界・weak avatar・任意の非可換del Pezzoへの拡張，VdB/AS heartとの指定同定，
+および元の楕円生成元でのcharacterの数値式は未解決である．
 \end{abstract}
 
 \section{共鳴の規約と入力の範囲}
+Rainsの既知のeffective-root理論，境界triangleと反標準環の構成を入力とする．
+zigzagの形式性はLiu--Wangの既知定理であり，本研究の新定理として扱わない．
+全$q$の導来比較は別稿\texttt{dp1\_anticanonical\_models.tex}に既に証明があり，
+\S\ref{sec:resonance-global-heart}でorbit生成・trace・飽和性を改めて点検する．
+本稿の組合せによる新規性の網羅的調査および独立査読は未完了である．
+
 基礎体を$k=\mathbb C$とする．Rainsの意味のsmooth elliptic
 noncommutative del Pezzo $(\mathcal A_{\mathrm R},E)$に
 構造line bundle $e=\mathcal O_X$，Serre関手$\mathbb S$，
@@ -195,8 +195,9 @@ Rainsの単純根sheaf存在結果の適用範囲で正負各指数の稠密性�
 \input{papers/sections/resonance_maximal_all_degrees.tex}
 \input{papers/sections/resonance_zigzag_unique.tex}
 \input{papers/sections/resonance_mixed_a2_category.tex}
+\input{papers/sections/resonance_global_heart.tex}
 
-\section{零指数，弱avatar，導来同値の論理状態}
+\section{零指数，弱avatar，比較定理の適用範囲}
 \begin{proposition}[genuine del Pezzoでは零指数根共鳴がない]
 \label{prop:zero-index}
 $S$は滑らかなgenuine del Pezzoで$E\in|-K_S|$が滑らかとする．
@@ -221,69 +222,67 @@ $H^0(E,\mathcal O_E(\alpha))=0$となり，自明束ではない．
 $i_*\mathcal O_D(-1)$は反標準orbitに
 \emph{導来的にも}直交し$\mathbf Rf_*$で消える．
 これは零指数・弱avatarの現象であり，
-今回の負指数の稠密resonanceで$\Ext^1$が残る現象とは異なる．
-厳密な証明は\texttt{papers/sections/cubic\_corner\_root\_walls.tex}
-を参照．
+負指数の稠密resonanceで$\Ext^1$が残る現象とは異なる．
+厳密な証明は\texttt{papers/sections/cubic\_corner\_root\_walls.tex}を参照．
 \end{remark}
 
-\begin{remark}[既存dP1原稿の検証状態]
-\texttt{papers/dp1\_anticanonical\_models.tex}は，
-genuine smooth del Pezzo，smooth elliptic boundaryの全$q$で
-$\Db(\mathcal A_{\mathrm R})\simeq\Db(\qgr R_q)$を証明したとする
-現行研究原稿を含む．しかし同原稿の完全忠実性・
-本質的全射性を独立再監査していないので，
-この主張を本稿の定理\ref{thm:sign}，定理\ref{thm:dense-both}，
-定理\ref{thm:a2-delta-rank}の入力にしていない．
-その導来同値が正しければ，負指数稠密共鳴は
-\emph{導来同値を保ったままの稠密なheartの変更}となる．
-正指数共鳴の根sheafについては，この自然な関手が
-その対象単独では$t$-exactである．
-全ての共鳴・特異楕円境界・非局所自由gluingへの拡張は未解決である．
+\begin{remark}[導来比較の検証範囲と依存関係]
+定理\ref{thm:resonance-global-comparison}では，別稿の全$q$比較について
+sourceのInd生成，境界traceの非零性，標的の有限性，sourceの飽和性を点検した．
+これに依存して定理\ref{thm:resonance-global-tilt}，
+\ref{thm:resonance-affine-triangular}，\ref{thm:resonance-preprojective-quotient}を得る．
+一方，符号別Extと任意正負指数の最大rankはこの比較を入力にしない．
+指定したgenuine smooth avatar・smooth elliptic gluingでは，
+負指数共鳴は導来同値を保ちながらのheartの変更であり，
+単なる数値的共鳴の稠密性から導来特異化を結論できない．
+特異境界・非局所自由gluing・weak avatarおよび全intrinsic moduliへの拡張は未解決である．
 \end{remark}
 
 \section{再現と今後の重点}
-符号別Euler計算と根格子は
-\texttt{computations/verify\_resonance\_hearts.py}，
-拡大の相殺と根の交叉は
-\texttt{computations/verify\_resonance\_extensions.py}，
+符号別Euler計算と根格子は\texttt{computations/verify\_resonance\_hearts.py}，
+拡大の相殺と根の交叉は\texttt{computations/verify\_resonance\_extensions.py}，
 全根共鳴の有理楕円点・全次数の根数・整数指数は
 \texttt{computations/verify\_resonance\_maximal\_a2.py}，
-既約根の排除条件とzigzagの分枝数は
-\texttt{computations/verify\_resonance\_zigzag.py}で検算する．
-混合$A_2$のHom行列，ambient Ext，直和のcohomology公式と
-三角行列表現の必要条件は
-\texttt{computations/verify\_resonance\_mixed\_a2.py}で検算する．
-これらはRainsのsheaf存在定理や導来同値を計算で証明するものではない．
+既約根の排除条件とzigzag分枝数は\texttt{computations/verify\_resonance\_zigzag.py}で検算する．
+混合$A_2$のHom/Euler/Ext，任意正負指数の両chamber，四次元商の行列模型，
+および局所Weyl反射は\texttt{computations/verify\_resonance\_mixed\_a2.py}で検算する．
+これらはsheaf存在や導来比較を計算で証明するものではない．
 
-指数和一の混合$A_2$ではconnecting mapのrank，そのSerre部分圏の
-全対象，局所torsion pairと対象の非消失を解決した．
-次は具体的な$A=R/(g-1)$の生成元について，二次元表現$V_+$の
-二つのcharacter $\chi_W,\chi_-$と非対角項$\eta$を求める．
-全$q$導来比較が正しければcharacterは相異なり，拡大は非分裂で，
-作用の像は次元3の三角行列代数でなければならない．
-これらは必要条件であり，十分性は未証明である．
-全境界外圏のtorsion pair，VdB/AS heartとの比較，
-および既存dP1原稿の導来比較の独立監査も残る．
+現在の具体的な未解決問題は，元の楕円データから$A=R/(g-1)$の生成元を固定し，
+商$A\twoheadrightarrow\Pi(A_2)$の各係数を明示することである．
+characterの分離，二次元拡大の非分裂性，および指定gluingでの全heartのtorsion pairは
+もはや未決定として扱わない．一方，全$E_6$境界外圏のアフィン作用，
+VdB/AS heartとの指定同定，相対family比較と退化境界は引き続き課題である．
+実行済み検算・組版・文献照合の正確な範囲は
+\texttt{research/resonance\_hearts\_validation.json}に記す．
 
 \begin{thebibliography}{9}
 \bibitem{RainsBirational}
 E.~M.~Rains, \emph{The birational geometry of noncommutative surfaces},
-arXiv:1907.11301v1, \S7 (Corollaries 7.7, 7.13, 7.15, 7.23;
-Propositions 7.6, 7.32), \S9,
-\S10 (Corollaries 10.12, 10.16; Proposition 10.13),
-\S11 (pp.~139--141).
+arXiv:1907.11301v1, Theorem 4.30, \S7, Theorem 9.10,
+Corollaries 10.12, 10.16, Proposition 10.13, \S11.
 \url{https://arxiv.org/abs/1907.11301}.
 \bibitem{RainsFiltered}
 E.~M.~Rains, \emph{Filtered deformations of elliptic algebras},
-arXiv:2107.13540v2 (2022), \S4 (pp.~33--35), \S5 (Proposition 5.1).
+arXiv:2107.13540v2 (2022), Corollary 3.8, \S4, Proposition 5.1.
 \url{https://arxiv.org/abs/2107.13540}.
 \bibitem{LiuWangZigzag} J.~Liu and Z.~Wang,
 \emph{$A_\infty$-deformations of zigzag algebras via Ginzburg dg algebras},
-J. Algebra 677 (2025), 360--371, Theorem 1.1;
-arXiv:2301.06757v3.
+J. Algebra 677 (2025), 360--371, Theorem 1.1; arXiv:2301.06757v3.
 \url{https://arxiv.org/abs/2301.06757}.
-\bibitem{AZ}
-M.~Artin, J.~J.~Zhang, \emph{Noncommutative projective schemes},
+\bibitem{AZ} M.~Artin, J.~J.~Zhang, \emph{Noncommutative projective schemes},
 Adv. Math. 109 (1994), 228--287.
+\bibitem{RSSResonance} D.~Rogalski, S.~J.~Sierra, J.~T.~Stafford,
+\emph{Noncommutative Blowups of Elliptic Algebras},
+arXiv:1308.2216v2 (2015), Proposition 2.4.
+\url{https://arxiv.org/abs/1308.2216}.
+\bibitem{YZResonance} A.~Yekutieli, J.~J.~Zhang,
+\emph{Rings with Auslander Dualizing Complexes},
+J. Algebra 213 (1999), 1--51, Theorems 4.5, 5.1(1), 5.13;
+arXiv:math/9804005v3. \url{https://arxiv.org/abs/math/9804005}.
+\bibitem{OrlovResonance} D.~Orlov,
+\emph{Smooth and proper noncommutative schemes and gluing of DG categories},
+arXiv:1402.7364v5 (2015), Theorems 3.18, 3.25, Corollary 3.19.
+\url{https://arxiv.org/abs/1402.7364}.
 \end{thebibliography}
 \end{document}
