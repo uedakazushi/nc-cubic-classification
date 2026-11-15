@@ -196,7 +196,8 @@ $J$のt-exactnessはtorsion pairを$\AV$へ運び，定理\ref{thm:globaltilt}�
 $\cF=0$のときの結論は命題\ref{prop:hrs}から従う．
 \end{proof}
 
-この命題のpointedな$E$の存在を，一般のAOU比較\eqref{eq:AOU}だけから結論してはいけない．
+AOUの許容領域では定理\ref{thm:AOU-pointed}によりsection model--AS比較のpointed性が確定した．
+これを上の$E$へ接続するには，同じsection modelとRainsデータとの指定した同定を用いる．
 確認済みの範囲と残る同定は，次の表のとおりである．
 \begin{center}
 \small
@@ -208,7 +209,7 @@ VdB--Rains & 同じblow-up・gluing・blow-down表示でabel同値 & 独立に�
 Rains--反標準 & genuine smooth楕円gluingで導来同値，一回のHRS tilt & 任意nc曲面・特異境界への拡張\\
 VdB--section model & VdBの一般位置条件下で振幅1の導来同値 & raw blow-upとのheart一致\\
 AS--反標準 & foldingと両bimodule有限性の下，有限cornerとabel同値が同値 & 全AS locusでの条件成立\\
-section model--AS & AOUの条件下で導来同値 & $E_0=\pi F$，標準heartの一致\\
+section model--AS & 許容領域でpointed導来同値，反標準環も一致 & 全域での標準heartの一致\\
 四者の接続 & pointed比較を揃えれば命題\ref{prop:alignment} & 相対familyと標識忘却の降下\\
 \bottomrule
 \end{tabular}
@@ -228,7 +229,9 @@ ASの$\mathbb Z$-代数から同じheartを再構成する．この場合には�
 少なくともgluing bimoduleとkernelの相対perfect性，orbitのHomの基底変更，
 有限性と消滅次数の一様性，t構造の基底変更適合性を確認する必要がある．
 構造対象の同型と反Serre作用への適合を降下データとして保つことも必要である．
-特に，個々のfiberで$E_0\simeq\pi F$であることと，その同型が族として選べることは異なる．
+構造対象の同定については命題\ref{prop:AOU-relative-object}が相対Homのperfectnessと
+基底変更の下で評価triangleから自然な同型を与える．その前提となる相対圏の構成と
+全heartの降下を，この対象単独の同定から推論しない．
 
 有限cornerの範囲だけなら次の初等的な相対判定が使える．
 \begin{proposition}\label{prop:relativecorner}
@@ -281,6 +284,13 @@ Euler形式とSerre双対からambient Ext$^1$を検算する．
 指数$p,n=1,\ldots,8$，四直既約の重複度$0,\ldots,4$について
 40,000通りのcohomology公式を検査する．$p=n$の検算は仮想的線形代数の確認であって，
 genuine avatar上にそのsheafが存在することの証拠ではない．
+
+構造対象のmutationについては，AOUの操作の合成順序を実装し，
+標識対象の位置が$9,9,9,6,6,3,1$と移ることと，最後の二箇所だけに
+Hom消滅の入力が必要であることを検査する．
+\eqref{eq:two-degree-zero}の指数ベクトルと次数零性も整数演算で検査する．
+これは非自明な楕円線束のcohomology消滅やmutation対象の同型を計算で証明するものではなく，
+証明に使う順序と数値の独立な確認である．
 
 本稿は主TeXファイルと四つのsectionソースからなり，\texttt{latexmk -lualatex}で再生成できる．
 日本語LuaLaTeX，LuaTeX-ja，\texttt{tikz-cd}，Python~3を用いる．
