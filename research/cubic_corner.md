@@ -1,4 +1,4 @@
-# Cubic：AS heartと反標準heartの一致開集合
+# Cubic：AS heartとanticanonical heartの一致開集合
 
 2026-11-15 / hearts-v2 / corner-v1。最初に `00_research_plan.md` を読む。証明本文は `papers/cubic_heart_corner.tex`。従来のHRS・orbit・一般corner判定は `papers/nc_del_pezzo_hearts.tex` に保持する。
 
@@ -8,7 +8,7 @@ AOUの3×3 block cyclic quiverに27係数potential Wを入れ、B=Jac(Q,W)、e=e
 
 C有限次元からBeの右eBe有限生成性とeBの左eBe有限生成性を道の分解で導ける。B右noetherianならcorner eBeも右noetherianで、M→Meはqgr同値。逆に自然restrictionが同値ならπC=0なのでC有限。既存のcorner判定のbimodule有限性を今回の道長条件で具体的に確保した。
 
-反標準比較にはcut grading deg(x)=deg(y)=0,deg(z)=1を使う。道長gradingをそのままAS heartと同一視しない。標準AS helixのfolding/Serre同定とprojective飽和の下でeB_cut e=⊕Hom(O,tau^n O)、O=π(eB)、tau=S^-1[2]。したがってU上のnoetherian AS領域でAS heartとこの反標準heartは自然にabel同値。全potentialのAS性・noetherian性を判定した結果ではない。
+反標準比較にはcut grading deg(x)=deg(y)=0,deg(z)=1を使う。道長gradingをそのままAS heartと同一視しない。標準AS helixのfolding/Serre同定とprojective飽和の下でeB_cut e=⊕Hom(O,tau^n O)、O=π(eB)、tau=S^-1[2]。したがってU上のnoetherian AS領域でAS heartとこのanticanonical heartは自然にabel同値。全potentialのAS性・noetherian性を判定した結果ではない。
 
 ## 明示的な非空性
 

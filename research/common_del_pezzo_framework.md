@@ -14,6 +14,10 @@ Rains、Van den Bergh raw blow-up、AS helix、反標準qgrの四構成につい
 
 cubicではVdBの振幅1同値からT=ker R¹δ_*、U=ker δ_*による一回のHRS tiltを得る。heart一致はU=0に帰着する。AOU Theorem 9.4の左辺はqgr Fであり、AS qgrとの導来比較を与える。t-exactnessと実際のmutation後の構造対象の同定は別課題。証明と判定補題は `papers/nc_del_pezzo_hearts.tex`、次の計算は `research/heart_comparison.md`。
 
+## heart 比較の名称
+
+比較する四つの構成の名称は **Rains heart、VdB heart、AS heart、anticanonical heart** に統一する。前二者が同じabel圏を表す可能性もあるが、対象の同定・導来同値・t-exactnessを個別に確認する。VdB heart は literal blow-up に由来する側を表し、section-algebra 型の射影モデルを自動的に指すものではない。四つの名称が四つの異なるheartの存在を意味するわけではない。
+
 ## 共有する候補公理
 
 基礎体k上のExt有限・noetherianな非零abel圏Aを取り、D^b(A)にSerre関手Sが存在するとし、反標準作用tau=S^{-1}[2]を定義する。**homological dimension 2は別には要求しない。**tauはheartを両方向で保つexact autoequivalence、Oはrank-one torsion-free exceptional object、(O,tau)はArtin–Zhang ampleとする。次数dを全n≥0の

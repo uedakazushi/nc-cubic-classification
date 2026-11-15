@@ -4,7 +4,7 @@
 
 ## 目標・達成基準
 
-Rainsの幾何学的heart、Van den Berghのraw blow-up heart、Okawa–UedaのAS helix heart、反標準環のqgrを比較する。四ラベルを四つの相異なるheartと仮定しない。まず同じ入力データの対応と導来同値を指定し、その後にheartをtransportする。存在、realization Db(heart)→Tの同値、t-exactness、構造対象、反Serre作用、境界restriction、rank、marking、族の降下をそれぞれ判定する。
+Rains heart、VdB heart、AS heart、anticanonical heartを比較する。四ラベルを四つの相異なるheartと仮定しない。名称は由来を表すもので、RainsのgluingとVdBのliteral blow-upが同じabel圏を定める場合でも名称を維持し、指定された同定を別途明記する。VdBのsection-model qgrはVdB heartと自動的に一致せず、射影模型の標準heartとして区別する。まず同じ入力データの対応と導来同値を指定し、その後にheartをtransportする。存在、realization Db(heart)→Tの同値、t-exactness、構造対象、反Serre作用、境界restriction、rank、marking、族の降下をそれぞれ判定する。
 
 cubicでの第一達成基準は、Van den Berghの最後のsection-model移行のtorsion pairを実在対象で記述し、AS–反標準比較のt-exactnessを証明するか、非一致を示す実在対象を与えること。数値的一致だけをもってheartの一致とはしない。
 
@@ -35,7 +35,7 @@ OU arXiv:2508.04986 Definition 1.1, §6はAS heartと標識を定義し、一般
 
 **P2：AS–反標準。** AOUの九対象とmutationsを実際の複体として追う。先頭E0と構造対象πFの同定、反Serre周期、境界restrictionを確認する。次にT=⊕E_iからB_n=Hom(T,τ^nT)を作り、e=E0のcornerを調べる。folding、Be/eBの有限性、B/BeBの全次数判定を行う。別法として、指定構造対象のorbitのAZ条件と高次消滅を直接示す。
 
-**P3：Rainsの幾何学的heart。** 同じ楕円データと六点に対し、各段階のraw blow-upとsection-model移行を比較する。六段のt-構造を無条件に一回のtiltや六回のtiltにまとめない。標識、σとσ³、構造対象の違いを追う。
+**P3：Rains heart。** 同じ楕円データと六点に対し、各段階のraw blow-upとsection-model移行を比較する。六段のt-構造を無条件に一回のtiltや六回のtiltにまとめない。標識、σとσ³、構造対象の違いを追う。
 
 **P4：共鳴・境界・他次数。** まずcubicで実在root対象を作り、上のtorsion pairやEuler障害と照合する。数値的non-ampleness、AZ失敗、heart変化、導来変化、qgrの特異性は別のlocusとして扱う。その後に有限位数・特異境界・非局所自由gluing、さらに次数1,2,4等へ拡張する。
 

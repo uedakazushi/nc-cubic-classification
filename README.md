@@ -4,7 +4,7 @@
 
 ## 現在の重点：heart比較、まずcubic surface
 
-一般の非可換del Pezzoに対する **Rains・Van den Bergh blow-up・大川–植田AS・反標準qgr** の四構成を比較する。dP1に限定せず、最初に次数3のcubic surfaceを扱う。heartの存在、faithfulなrealization、導来同値、t-exactness、構造対象・反Serre・境界・markingの保存と族の降下を区別する。
+一般の非可換del Pezzoに対する **Rains heart・VdB heart・AS heart・anticanonical heart** の四構成を比較する。dP1に限定せず、最初に次数3のcubic surfaceを扱う。heartの存在、faithfulなrealization、導来同値、t-exactness、構造対象・反Serre・境界・markingの保存と族の降下を区別する。
 
 [研究ノートと具体的着手](research/heart_comparison.md) ／ [証明付き原稿](papers/nc_del_pezzo_hearts.tex) ／ [共通枠組み](research/common_del_pezzo_framework.md) ／ [今回の検証範囲](research/heart_comparison_validation.json)
 

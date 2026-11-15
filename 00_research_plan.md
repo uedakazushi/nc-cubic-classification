@@ -12,7 +12,7 @@
 
 ## II. 上位目標と最初の対象
 
-一般の非可換del Pezzo surfaceに対し、Rains幾何学的heart、VdB raw blow-up heart、大川–植田AS helix heart、反標準環qgrを比較する。これはdP1だけの補助問題ではなく内在的モジュライの中心課題であり、最初の実行対象はcubic surface（次数3）。四構成の存在、同じ入力、realization、指定同値のt-exactness、構造対象と反Serre作用、境界restriction、rank、marking、族への降下を分離する。四ラベルが四つの相異なるheartを与えるとも、全て同じとも仮定しない。
+一般の非可換del Pezzo surfaceに対し、Rains heart、VdB heart、AS heart、anticanonical heartを比較する。これはdP1だけの補助問題ではなく内在的モジュライの中心課題であり、最初の実行対象はcubic surface（次数3）。四構成の存在、同じ入力、realization、指定同値のt-exactness、構造対象と反Serre作用、境界restriction、rank、marking、族への降下を分離する。四ラベルが四つの相異なるheartを与えるとも、全て同じとも仮定しない。以後この四名称を固定し、Rainsのgluing由来・VdBのliteral blow-up由来などは構成の説明に限って用いる。特にVdBのblow-up heartとsection-model側のheartを定義上同一視しない。
 
 最初のAS–反標準比較は、標識と構造頂点を固定したnoetherian AS chartの非空開部分でabel同値まで進んだ。全域比較、VdB/Rains側とのpointedness、共鳴ごとの非自明tiltは未解決。どのabel圏・構造対象を分類するかを確定してから全intrinsic moduliへ進む。数値的共鳴の稠密性をAZ失敗・導来特異化へ直結しない。
 
