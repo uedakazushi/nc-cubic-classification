@@ -1,6 +1,6 @@
 {
   "date": "2026-11-15",
-  "version": "classification-v61",
+  "version": "classification-v63",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -46,7 +46,8 @@
     "papers/sections/cubic_quantum_triangle_vertex.tex",
     "papers/sections/cubic_sklyanin_rank_obstruction.tex",
     "papers/sections/cubic_quantum_triangle_full_cuts.tex",
-    "papers/sections/cubic_quantum_triangle_incidence.tex"
+    "papers/sections/cubic_quantum_triangle_incidence.tex",
+    "papers/sections/cubic_twisted_envelope_exclusions.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -737,5 +738,22 @@
     ],
     "build": "LuaLaTeX132 pages successful no undefined refs/cites or overfull boxes",
     "limits": "Restricted normal-form incidence/presentation families only; no global H3 component or nonroot openness assertion"
+  },
+  "twisted_envelopes_v62_v63": {
+    "proof": "papers/sections/cubic_twisted_envelope_exclusions.tex",
+    "validator": "computations/verify_cubic_twisted_envelope_exclusions.py",
+    "result": "PASS exact all-six relation-space sign-twist transport, parameter identity, central-pencil eigenvalue differences, alternating projection and Klein bicharacter table",
+    "ordinary_theorems": [
+      "All single-automorphism Zhang twists of skewQ with W1 nonzero are skew",
+      "All self-automorphism Zhang twists of proper elliptic Sklyanin with nondegenerate central quadric pencil yield no H3",
+      "Standard Klein cocycle twist of same sector: Z3dim1 only for translation orders3/6 and its generator factors; otherwise Z3zero; no H3"
+    ],
+    "source_audit": {
+      "Davies": "1512.05717v2 equations3.4,3.5,4.3 only; Hyp4.1 infinite-order geometry not imported at finite order",
+      "pdf_sha256": "e8dab03401ef5d3d08afe810b23c42e36068c72d415815ed536b2e329095e3a5",
+      "CY": "Cocycle topGdegree0/Frobenius argument given directly; no claim hdet equals ordinary determinant"
+    },
+    "build": "LuaLaTeX134 pages successful no undefined refs/cites or overfull boxes",
+    "limits": "Nondegenerate central-pencil proper Sklyanin sector only; arbitrary twisting systems, finite-group cocycles, degenerate/exotic elliptic coverage remain open"
   }
 }

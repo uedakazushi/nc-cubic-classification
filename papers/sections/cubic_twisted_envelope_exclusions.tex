@@ -1,0 +1,171 @@
+\subsection{一般の自己同型Zhang twistにも残らない包絡候補}
+\label{subsec:general-zhang-exclusions}
+ここでは一つのgraded自己同型による通常の右Zhang twistを扱う。
+任意のtwisting systemや非1周期的 $\mathbb Z$-algebraの全体へ拡張した主張ではない。
+
+\begin{lemma}[反標準三次の固有成分によるtwist輸送]
+\label{lem:general-zhang-cubic-eigen}
+$A$ をnoetherian quadratic Koszul AS4整域、$\phi\in\operatorname{Aut}_{\rm gr}A$、
+$B=A^\phi$、$\eta=\operatorname{hdet}_A\phi$ とする。
+$W_1(B)\ne0$ なら、その中に $\phi(F)=\lambda F$ を満たす非零元が存在し、
+$A$ の積では
+\[
+ Fv=\theta(v)F,\qquad
+ \theta=\lambda\eta^{-1}\phi\mu_A^{-1}
+\]
+となる。特に $\theta$ は $A$ の全中心を点ごとに固定する。
+\end{lemma}
+\begin{proof}
+右twistの中山公式は $\mu_B=\xi_\eta\mu_A\phi^{-4}$ である。
+$\mu_A$ は $\phi$ と可換し、従って $W_1(B)$ は $\phi$ で保たれる。
+有限次元の非零空間上の可逆線型作用は固有ベクトルを持つ。
+その $F$ に対し $F*v=\mu_B^{-1}(v)*F$ を元の積へ戻すと
+\[
+ F\phi^3(v)=\lambda\eta^{-1}\phi^4\mu_A^{-1}(v)F.
+\]
+$v$ を $\phi^{-3}(v)$ で置き換えて主張を得る。
+中心 $z$ に対して $Fz=zF=\theta(z)F$ なので、整域性から $\theta(z)=z$ となる。
+\end{proof}
+
+\begin{theorem}[twisted skewからの追加H3はない]
+\label{thm:all-twisted-skew-exclusion}
+$Q(q_{ij})$ を任意の四変数量子多項式環とする。
+任意のgraded自己同型 $\phi$ に対し、$Q^\phi$ がH3包絡ならば
+$\phi$ は元の量子座標で対角であり、$Q^\phi$ 自体がskew多項式環である。
+従ってこのtwist全体のH3分類は既証の31パラメータ・五skew型の分類に一致する。
+$\phi$ の単冪性や半単純性は仮定しない。
+\end{theorem}
+\begin{proof}
+前補題で $Q$ 内の非零正規三次 $F$ を得る。
+量子多項式環の正規三次のNewton多面体の証明により、その正規化自己同型 $\theta$ は対角である。
+$\mu_Q$ も対角なので、$\theta=\lambda\eta^{-1}\phi\mu_Q^{-1}$ から $\phi$ は対角となる。
+対角twistは交換係数を変えるだけなので、既存の全skew分類を適用できる。
+\end{proof}
+
+\begin{theorem}[非退化中心quadric pencilを持つSklyaninの全twist排除]
+\label{thm:twisted-sklyanin-exclusion}
+前節のproper楕円Sklyanin $S(\alpha,\beta,\gamma)$ とし、
+$\alpha\beta\gamma\ne0$、二つの中央二次形式のpencilが四つの相異なる頂点を持つと仮定する。
+任意のgraded自己同型 $\phi$ に対し、$S^\phi$ は強いH3包絡にならない。
+追加のpencil非退化性を、未確認の退化Sklyanin locusへ省略して適用しない。
+\end{theorem}
+\begin{proof}
+背理法で $S^\phi$ がH3包絡と仮定する。すると $W_1(S^\phi)\ne0$ であり、前補題の $F,\theta$ を取れる。
+$\mu_S=1$ なので $\theta$ は $\phi$ の次数スカラー倍である。
+$S$ の六関係の交代射影は独立な六つの外積を与えるため、
+$\operatorname{Sym}^2S_1\to S_2$ は単射である。
+従って $\theta(g_i)=g_i$ は、通常の可換対称二次形式の厳密な等式となる。
+
+$g_1=-x_0^2+x_1^2+x_2^2+x_3^2$ は非退化で、$g_2$ とのpencil作用素は
+四つの異なる固有値
+\[
+ 0,\quad1,\quad A=\frac{1+\alpha}{1-\beta},\quad
+ C=\frac{1-\alpha}{1+\gamma}
+\]
+を持つ。
+二つの形式を点ごとに固定する $\theta$ はこの作用素と可換するので対角であり、
+$\theta(x_i)=\varepsilon_i x_i$、$\varepsilon_i^2=1$ となる。
+六つのSklyanin関係と $\alpha\beta\gamma\ne0$ から $\prod\varepsilon_i=1$ を得る。
+従って $\phi$ は共通スカラーと偶符号変更の積に限られる。
+共通スカラーtwistは二次関係空間を変えない。
+
+共通符号と循環置換を除けば非自明な場合は
+$\varepsilon=(1,1,-1,-1)$ だけ調べればよい。
+$\beta=b^2,\gamma=c^2$ を選び、twist後の変数を
+\[
+ (y_0,y_1,y_2,y_3)=(x_0,-\sqrt{-1}\,bc\,x_1,
+                         \sqrt{-1}\,c\,x_2,bx_3)
+\]
+へ変換すると、全六関係は標準Sklyaninの
+$(\alpha,\beta^{-1},\gamma^{-1})$ の関係となる。
+これは $\alpha+\beta+\gamma+\alpha\beta\gamma=0$ と両立する。
+全係数で六関係が単元倍と置換で一致することを付属検証器で確認する。
+
+この符号変更は滑らかな楕円正規四次曲線上で固定点を持たないinvolutionであり、
+二捩れ平行移動となる。
+実際、固定部分は二つの座標直線で、滑らかな二つの対角二次曲面の交叉はそのどちらとも交わらない。
+Zhang twist後の平行移動は元のものと二捩れだけ異なる。
+従ってその位数が $1,2,4$ になることはなく、滑らかなproper楕円Sklyaninのままである。
+前節の全Sklyanin排除定理により、どの三次切断もH3とならず矛盾する。
+\end{proof}
+
+中心pencilの非退化性を係数で使う場合は $0,1,A,C$ の相異性をそのまま課せばよい。
+$\gamma=-(\alpha+\beta)/(1+\alpha\beta)$ のchartでは
+\[
+ A-C=\alpha,\qquad A-1=-\gamma C,\qquad C-1=\beta A
+\]
+となるので、分母と明示因子の非消滅だけで確認できる。
+
+\texttt{verify\_cubic\_twisted\_envelope\_\allowbreak exclusions.py} は
+非自明符号twistの全六関係の正確な単元倍対応、変換後のパラメータ等式、
+中心pencilの固有値差、交代射影の非退化性を有理式で検算する。
+中山輸送とnormalizerによる全候補排除は本文の通常の証明である。
+
+\subsubsection{Klein四群cocycle twistの中心三次も残らない}
+$G=(\mathbb Z/2)^2$ とし、$\deg_Gx_0=0,\deg_Gx_1=g_1,
+\deg_Gx_2=g_2,\deg_Gx_3=g_1+g_2$ とする。
+Daviesの規約\cite[(3.4), (3.5), (4.3)]{DaviesSklyaninCocycle}に従い
+\[
+ \mu(g_1^pg_2^q,g_1^rg_2^s)=(-1)^{ps},\qquad
+ u*_{\mu}v=\mu(g,h)uv
+\]
+を用いる。非自明な $g$ に対応する符号自己同型を
+$\theta_g(x_h)=\mu(h,g)\mu(g,h)^{-1}x_h$ と書く。
+これは $x_0$ と次数 $g$ の生成元を固定し、他の二生成元の符号を変える。
+
+\begin{theorem}[標準Klein cocycle Sklyaninの排除]
+\label{thm:cocycle-sklyanin-exclusion}
+前定理の仮定を満たすproper楕円 $S$ について、標準cocycle twist $S^{G,\mu}$ は
+強いH3包絡にならない。
+その中心三次は、$\sigma$ の位数が3または6のときだけ一次元、他では零である。
+非零の場合、その生成元は次数1と2の積へ分解する。
+\end{theorem}
+\begin{proof}
+まず、このcocycle twistの中山は恒等である。
+各非自明な符号 $\theta_g$ は楕円曲線上の二捩れ平行移動であり、
+$g_1,g_2$ の中央二次正則列を点ごとに固定する。
+THCRのcanonical module上の作用と正則商のhomological determinant公式から
+$\operatorname{hdet}_S\theta_g=1$ となる。
+従ってKoszul双対の一次元topは $G$-次数0を持つ。
+元のFrobenius積をcocycleでtwistしても、topへ積が入る二つの $G$-次数は
+$g$ と $-g=g$ であり、左右の積に掛かるスカラーは等しい。
+従ってFrobenius中山は変わらず、$\mu_{S^{G,\mu}}=1$ となる。
+ここでは点schemeの有限性など、Daviesの無限位数仮定下の結果を有限位数へ輸入していない。
+
+中心は $G$-gradedなので、その $g$-成分 $F_g$ を個別に調べる。
+Twistを戻すと
+\[
+ F_gv=\theta_g(v)F_g,\qquad \theta_g(F_g)=F_g
+\]
+となる。
+$\theta_g^2=1$ なので、次数3の $F_g$ は右Zhang twist $S^{\theta_g}$ で中心である。
+前定理の明示的符号twist同定により、$S^{\theta_g}$ は別の標準proper楕円Sklyaninとなる。
+$\theta_0=1$ も含めて、その楕円平行移動は
+\[
+ \tau_g=\tau-s_g,\qquad s_g\in E[2]
+\]
+であり、$g$ を動かすと $s_g$ は四つの二捩れを相異なって走る。
+中心三次が非零となるのは $\tau_g$ が位数3のときだけである。
+これは $3\tau=s_g$ と同値なので、そのような $g$ は高々一つ。
+存在条件は $\tau$ が位数3または6であることに等しい。
+
+この一つの $S^{\theta_g}$ では、全中心三次は
+\[
+ z_i'=x_i^3+x_i(c_{i1}g_1'+c_{i2}g_2'),\qquad0\le i\le3
+\]
+の四元で生成される。
+標準生成元の対角rescaleのみを行っているので、
+これらの $G$-次数は相異なる $0,g_1,g_2,g_1+g_2$ である。
+従って指定した $g$-成分の中心は一次元で、その生成元は
+$x_i*Q_i$、$\deg_Gx_i=g,\deg_GQ_i=0$ の形である。
+$\theta_g(Q_i)=Q_i$、$\mu(g,0)=1$ なので、この積は元の $S$ の積でも
+cocycle twistの積でも同じベクトルを与える。
+すなわち $F_g=x_i*_{\mu}Q_i$ と因数分解する。
+
+他の群次数の中心三次は零なので、全中心三次 $G$ もこの一元のスカラー倍に限る。
+従ってどの三次商も整域でない。
+中山が恒等であるためH3の三次は中心でなければならず、rank-one条件に反する。
+\end{proof}
+
+この結果は標準 $V_4$ gradingとその非自明cocycleに対するものであり、
+任意の有限群cocycle、退化Sklyaninの全特殊値、他のexotic elliptic algebraを覆うとは主張しない。
