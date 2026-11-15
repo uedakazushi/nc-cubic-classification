@@ -1,0 +1,18 @@
+{
+  "version": "classification-v48",
+  "odd_orders_checked": [
+    3,
+    5,
+    7,
+    9
+  ],
+  "orbit_product": true,
+  "universal_elimination_identity": true,
+  "root_three_normalization_matches_PBW": true,
+  "Fricke_Hessians": [
+    "8 alpha^3",
+    "-32 alpha^3"
+  ],
+  "scope": "Exact supporting identities and finite cyclotomic checks; all odd N centre and full-centre equality are ordinary proofs, not inferred from samples.",
+  "admissibility": "Only endpoint non-H3 obstruction proved here; interior singular fibres require full McKay multiplicities."
+}

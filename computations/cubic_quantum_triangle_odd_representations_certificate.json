@@ -1,0 +1,16 @@
+{
+  "version": "classification-v50",
+  "formal_variables": "Q=q^d, J=q^j; classical R^2=-q^2/Q",
+  "universal_checks": [
+    "classical all interior diagonal recurrences",
+    "classical both boundary coefficients zero",
+    "nonclassical all interior diagonal recurrences",
+    "nonclassical top boundary and special first-row diagonal term",
+    "both last-row Casimir values"
+  ],
+  "classical_w": "-(q^d+q^-d)",
+  "nonclassical_w": "q^(2d)+q^(-2d)",
+  "dimension_range": "1<=d<=(N-1)/2, N odd; irreducibility is an exponent-bound proof",
+  "consequence": "All interior singular centres at odd order have a simple of dimension < N. Complete H3 iff (D-Dplus)(D-Dminus)!=0.",
+  "scope": "Universal symbolic recurrence identities, not finite parameter sampling; maximal-order, terminal boundary and McKay are ordinary proofs."
+}

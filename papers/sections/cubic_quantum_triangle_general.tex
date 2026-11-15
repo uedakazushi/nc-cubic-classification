@@ -112,7 +112,7 @@ tailsが有限大域次元なら、AS Gorenstein parameter1の双対・飽和・
 である。原始三乗根では、既に完全判定した $f,-f/3$ に一致する。
 しかし一般 $q$ でこの二値だけが非H3であるとはまだ証明していない。
 分母の特殊軌道、有限次元表現とtailsの局所条件をさらに調べる必要がある。
-\texttt{verify\_cubic\_quantum\_triangle\_difference.py} は、
+\texttt{verify\_\allowbreak cubic\_\allowbreak quantum\_\allowbreak triangle\_\allowbreak difference.py} は、
 三関係、Casimir値、分子判別式を全 $q,D$ の有理関数恒等式として検算する。
 
 \begin{proposition}[全候補pencilの幾何学的矢]
@@ -148,3 +148,290 @@ $(\mu_2)^2\rtimes\mathfrak S_3\simeq\mathfrak S_4$ をなす。
 $q\ne\pm1$ では奇置換は基底点を固定しないから慣性は正確に $\mathfrak A_4$ である。
 平方係数比較は全基底で成り立ち、有限群作用によるquotientなのでstackの主張も従う。
 \end{proof}
+
+\subsubsection{奇数位数の全中心と特異切断の有限一覧}
+$q$ の正確な位数を奇数 $N\ge3$ とし、$h=q^2-1$ と置く。
+$P_0(W)=2,P_1(W)=W,P_n(W)=WP_{n-1}(W)-P_{n-2}(W)$ とする。
+$q$-so3中心のChebyshev表示は既知である\cite{HuangAWCentre}。
+ここでは直前の忠実模型から、本稿のCasimir正規化で直接導く。
+新規性を主張するものではない。
+
+\begin{theorem}[奇数位数のFricke中心と二つの非許容端点]
+\label{thm:quantum-triangle-odd-centre}
+$X=c_N(x),Y=c_N(y),Z=c_N(z)$、
+\[
+ w_D=-(q+q^{-1})-\frac{h^3}{q^2}D,\qquad
+ \alpha=h^{-N},\qquad
+ \beta_N(D)=-h^{-3N}\bigl(2+P_N(w_D)\bigr)
+\]
+と置く。このとき
+\[
+ Z(U_{q,D})=
+ k[X,Y,Z]/\bigl(XYZ+\alpha(X^2+Y^2+Z^2)+\beta_N(D)\bigr).
+\]
+$U_{q,D}$ のPI次数は $N$ である。
+中心が特異な $D$ は正確に $N+1$ 個で、
+$P_N(w_D)=-2$ なら原点に一つの $A_1$、
+$P_N(w_D)=2$ なら四点 $-2\alpha(\epsilon_x,\epsilon_y,\epsilon_z)$
+（$\epsilon_x\epsilon_y\epsilon_z=1$）に $A_1$ を持つ。
+
+$w_D=-2,2$ に対応する値はそれぞれ上記 $D_+,D_-$ であり、
+この二つの切断はH3でない。
+残る $N-1$ 個の特異中心値を持つ切断については、
+この定理だけでH3とも非H3とも結論しない。
+\end{theorem}
+\begin{proof}
+差分環内で $a=u^N,s=\mathcal T^N$、$K=\kappa^N$、$\nu=\rho^N$ と書く。
+$N$ は奇数だから $\nu^2=1$、$K^2=h^{-2N}$、$\nu/K=-h^N$ である。
+$X=K(a+a^{-1})$ が成立する。
+$Y$ は $x$ と可換するので、その $\mathcal T$ 指数は $N$ の倍数である。
+一方、奇数多項式 $c_N(y)$ の指数は奇数で絶対値が $N$ 以下だから、
+$\pm N$ の二項だけが残る。同様に $Z$ も計算でき、
+\[
+ Y=s+P/s,\qquad Z=\nu(as+a^{-1}P/s),\qquad
+ P=\prod_{j=0}^{N-1}b_D(q^ju)
+\]
+となる。
+$b_D$ の分子を $q(v-r_1)(v-r_2)$、$v=u^2$ と書くと
+$r_1r_2=q^2$、$(r_1+r_2)/q=w_D$ である。
+$q^2$ も位数 $N$ なので積を厳密に取れ、
+\[
+ P=\frac{a^4-P_N(w_D)a^2+1}{h^{2N}(a^2-1)^2}
+\]
+を得る。
+$Y,Z$ から $s$ を消去すれば
+\[
+ Z^2-\frac{\nu X}{K}YZ+Y^2+
+ P\bigl((X/K)^2-4\bigr)=0
+\]
+となり、表示したFricke関係が従う。
+
+$D=-\Omega_q$ を独立変数として同じ恒等式を用いると、
+$Z(V_q)$ の全関係はこの一本である。
+実際、$k[X,Y,Z]$ 上の $1,\Omega_q,\ldots,\Omega_q^{N-1}$ は
+最高PBW記号の指数を $N$ で割った余りから独立であり、
+関係は $\Omega_q$ に関して次数 $N$ のモニック式である。
+また $V_q$ 自身は $k[X,Y,Z]$ 上PBW基底 $x^iy^jz^k$、$0\le i,j,k<N$ を持つ。
+従って全中心上のgeneric階数は $N^2$ である。
+
+固定 $D$ のFricke環を $C_D$ とする。
+偏微分を解くと特異点は主張の有限集合だけなので、$C_D$ は正規整域である。
+$U_{q,D}$ は $C_D$ 上有限であり、filtered Hilbert多項式の最高係数の比は $N^2$。
+その中心分数体に余分な拡大がないことも次のように確認できる。
+$L=k(a,s)$ はFricke分数体の二次拡大で、
+$a$ は $a+a^{-1}=X/K$ を満たす。
+$x/\kappa=u+u^{-1}$ と $u^N=a$ の二式から $u$ を有理的に復元でき、
+さらに $y,z$ から $\mathcal T$ を復元できる。
+従ってgeneric代数を $L$ へ拡大すると位数 $N$ の差分巡回代数そのものとなる。
+両辺の階数は $N^2$ なので同型であり、generic中心は正確に $\operatorname{Frac}C_D$ である。
+$C_D$ の正規性と中心元の整性から $Z(U_{q,D})=C_D$ を得る。
+
+Fricke偏微分の解は原点または上記四点に限る。
+それぞれのHessian行列式は $8\alpha^3,-32\alpha^3$ で非零である。
+$P_N(W)\mp2$ の根は、端点 $\pm2$ だけ単根で、他は重根となる。
+両式の根の和集合は $N+1$ 個であり、$w_D$ は $D$ の可逆な一次式だから個数も従う。
+
+最後に、$V_q$ は上の多項式部分環上自由、中心上MCMである。
+そのCY双対・filtered最大整環性と正則中心上のAzumaya性の証明は、
+三乗根の場合の証明で指数3を $N$ に置き換えればそのまま成立する。
+具体的には先頭の量子多項式環がtoric最大整環であり、
+$\operatorname{Hom}_{Z(V_q)}(V_q,Z(V_q))\simeq V_q$、
+余次元1非分岐性、正則点でのMCM自由性を順に用いる。
+端点では $P_N'(\pm2)\ne0$ だから、切断中心の全二重点で
+三次元中心 $Z(V_q)$ は正則である。
+従って完備局所化した切断は特異な $A_1$ 中心上の行列環となり、
+大域次元は無限である。affine開集合で既に失敗するのでH3でない。
+内部の重根では三次元中心自身が通常二重点となり、
+このAzumaya除外を適用できないことに注意する。
+\end{proof}
+
+\begin{lemma}[奇数位数の境界orderとaffine判定]
+\label{lem:quantum-triangle-odd-boundary}
+前定理の奇数位数で、$R_{q,D}^{(N)}$ の全中心のProjは
+\[
+ XYZ+\alpha T(X^2+Y^2+Z^2)+\beta_N(D)T^3=0
+ \quad\subset\mathbb P^3_{T,X,Y,Z}
+\]
+である。対応するorderは無限遠三角形に沿ってterminalである。
+従ってH3判定はaffine $U_{q,D}$ の有限大域次元と同値である。
+中心が滑らかな切断は全てH3となる。
+中心の $A_1$ 点では、次元が $1,\ldots,N-1$ の既約表現が少なくとも一つ存在することが、
+局所有限大域次元の必要十分条件である。
+\end{lemma}
+\begin{proof}
+$B_q$ は $k[t,X_h,Y_h,Z_h]$ 上自由階数 $N^3$ である。
+その正則中心三次商は中心hypersurface上MCMとなる。
+重み $(1,N,N,N)$ の中心hypersurfaceは、affineの孤立二重点と
+無限遠の三本の軸以外では正則なので正規である。
+前定理のgeneric中心と整性により全中心と一致する。
+$N$-Veroneseを取れば表示した通常の三次曲面となる。
+
+無限遠三角形上でこの中心曲面は滑らかである。
+例えば辺 $X=0$ で $Y,Z$ を可逆にすれば $y,z$ が単元となる。
+$c_N$ の斉次化を
+$Y_h=y^N+\sum_{j\ge1}a_jt^{2j}y^{N-2j}$ と書き、$v=ty^{-1}$ と置くと
+\[
+ v^N=\frac{T}{Y_h}\left(1+\sum_{j\ge1}a_jv^{2j}\right),
+ \qquad J=(v),\quad J^N=(T).
+\]
+residueは $u=zy^{-1}$ による $k(u)/k(u^N)$ である。
+三乗根の場合と同じ主radicalの証明でgeneric辺orderは非可換DVRとなり、
+coverは両頂点で完全分岐指数 $N$ を持つ。
+三辺全てに同じ証明を適用し、terminal判定と局所模型
+\cite[Theorems 2.7, 2.17]{CHIOrders}を用いる。
+
+affineでは $U_{q,D}$ は正規中心上の対称MCM非分岐最大整環である。
+これは $V_q$ の正則中心上のAzumaya性を余次元1で制限し、
+中心商の双対と反射性を用いれば得られる。
+$A_1$ の被覆群は $\mu_2$ であり、完備局所orderの二つのMcKay重複度は
+$r,s\ge0$、$r+s=N$ を満たす。
+両方正なら局所大域次元2、一方零なら特異中心上の行列環となる。
+従って次元 $0<r<N$ のsimpleが一つ見つかれば両方正となる。
+逆も同じ重複度記述から従う。
+最後にAS Gorenstein parameter1、整域性、AZ飽和とSerre認識を適用する。
+\end{proof}
+
+\begin{theorem}[位数5三角境界pencilの全H3切断]
+\label{thm:quantum-triangle-order5}
+$q$ が原始五乗根なら
+\[
+ R_{q,D}\text{ が強いH3}\quad\Longleftrightarrow\quad
+ (D-D_+)(D-D_-)\ne0.
+\]
+四つの内部特異中心値も全てH3である。
+このpencil内の全intrinsic幾何学的矢は
+命題\ref{prop:quantum-triangle-general-arrows}の制限で与えられる。
+\end{theorem}
+\begin{proof}
+$\theta=q+q^{-1}$、$\eta=q^2+q^{-2}$ と置く。
+端点以外の四つの $w_D$ は $-\theta,-\eta,\theta,\eta$ で相異なる。
+負の二値では原点に一つの $A_1$、正の二値では四つの $A_1$ がある。
+$w_D=-\theta$ は $D=0$ で零characterを持つ。
+$w_D=\eta$ は非零四character
+$(x,y,z)=(\epsilon_x,\epsilon_y,\epsilon_z)/(1-q)$ に対応する。
+
+残る二値には次の二次元既約表現を用いる。
+これらの関係恒等式自体は一般 $q$ の有理式で成立する。
+まず $A=\sqrt{-1}/(q+1)$ として
+\[
+ x=\begin{pmatrix}A&0\\0&-A\end{pmatrix},\quad
+ y=\begin{pmatrix}0&1\\A^2&0\end{pmatrix},\quad
+ z=\begin{pmatrix}0&(1+q)A\\-(1+q)A^3&0\end{pmatrix}
+\]
+は $w_D=-(q^2+q^{-2})=-\eta$ を持つ。
+次に
+\[
+ a=\frac1{1-q},\quad b=a(q+q^{-1}-1),\quad
+ c=\frac b{q-1},\quad d=\frac{q^2+1}{q(q-1)}
+\]
+として
+\[
+ x=\begin{pmatrix}a&0\\0&b\end{pmatrix},\quad
+ y=\begin{pmatrix}d&1\\c&0\end{pmatrix},\quad
+ z=\begin{pmatrix}d&q\\q^{-1}c&0\end{pmatrix}
+\]
+は $w_D=q^4+q^{-4}=\theta$ を持つ。
+両者で $x$ の固有値は相異なり、$y$ の両非対角成分は非零なので既約である。
+前者の中心値は原点、後者の中心三座標は全て非零である。
+後者に二符号変更群を作用させれば四つの $A_1$ 全てを覆う。
+これらは $\Phi_5(q)$ による厳密な係数還元でも確認している。
+
+全内部二重点に次元1または2のsimpleが存在し、いずれもPI次数5より小さい。
+前補題により全て局所有限大域次元となる。
+端点は前定理で除外済み、他の切断は滑らかな中心を持つので主張が従う。
+\end{proof}
+
+\texttt{verify\_\allowbreak cubic\_\allowbreak quantum\_\allowbreak triangle\_\allowbreak \allowbreak odd\_\allowbreak center.py} は
+消去恒等式、位数3,5,7,9の巡回積、三乗根での独立PBW中心式との一致、
+Fricke Hessianを厳密検算する。
+\texttt{verify\_\allowbreak cubic\_\allowbreak quantum\_\allowbreak triangle\_\allowbreak \allowbreak order5.py} は
+全有理式での二次元表現恒等式と、位数5での中心値・既約性・四内部値の区別を検算する。
+次に、この二次元表示を任意次元の三重対角表示へ拡張して、全奇数位数を扱う。
+
+\begin{theorem}[全奇数位数の三角境界pencilの完全判定]
+\label{thm:quantum-triangle-all-odd}
+$q$ が任意の奇数位数 $N\ge3$ を持つとき、
+\[
+ R_{q,D}\text{ が強いH3}\quad\Longleftrightarrow\quad
+ (D-D_+)(D-D_-)\ne0.
+\]
+全 $N-1$ 個の内部特異中心切断もH3である。
+ただし、この結論は偶数位数または非捩れ $q$ の許容条件を含まない。
+\end{theorem}
+\begin{proof}
+$m=(N-1)/2$ とする。各 $1\le d\le m$ に対して次元 $d$ の既約表現を二種類構成する。
+$d=1$ は既述の零characterと四つの非零characterである。
+以下 $d\ge2$ とし、添字は $j=0,\ldots,d-1$ とする。
+$h=q^2-1$ と置く。
+
+第一の型では $R^2=-q^{2-d}$ を選び、
+\[
+ \lambda_j=-\frac{Rq^j+q^{1-j}R^{-1}}h,\qquad
+ A_j=Rq^{j-1}-q^{2-j}R^{-1},
+\]
+\[
+ c_j=\frac{q^2\{q^d+q^{-d}-q^{2j-d}-q^{d-2j}\}}
+                  {h^2A_jA_{j+1}}\quad(1\le j<d),\qquad c_0=c_d=0
+\]
+と置く。$x$ は対角 $\lambda_j$、$y$ は対角零、上隣接成分1、下隣接成分 $c_j$ とする。
+$z=xy-qyx$ は対角零で、上隣接成分 $Rq^j$、下隣接成分 $R^{-1}q^{1-j}c_j$ となる。
+三関係のうち二つは定義と $\lambda_j$ の式から従い、残りは
+\[
+ c_jA_j-c_{j+1}A_{j+2}=\lambda_j
+\]
+である。これは等比級数を和すれば成立する。
+両端では $c_0=c_d=0$ である。
+最後の対角成分でCasimirを評価すると
+\[
+ w_D=-(q^d+q^{-d})
+\]
+を得る。
+$A_j=0$ や異なる $\lambda_j$ の一致は $q$ の冪が $-1$ になることを要求するので起こらない。
+$c_j=0$ は $q^{2j-d}=q^{\pm d}$ を要求するが、$0<j<d\le m$ では起こらない。
+従って両向きに全隣接成分が非零で、対角 $x$ の固有値は相異なる。
+補間多項式で各固有空間を射影できるため表現は既約である。
+
+第二の型では
+\[
+ \lambda_j=-\frac{q^{j+1}+q^{-j}}h,\qquad
+ A_j=q^j-q^{1-j},\qquad
+ c_j=\frac{q^2\{q^{2j}+q^{-2j}-q^{2d}-q^{-2d}\}}
+                  {h^2A_jA_{j+1}}\quad(1\le j<d)
+\]
+と置く。$x$ は対角 $\lambda_j$、$y$ の上隣接成分は1、下隣接成分は $c_j$ とし、
+対角は $j=0$ のみ
+\[
+ d_0=\frac{q^d-q^{-d}}{(q-q^{-1})(q-1)}
+\]
+とする。$z=xy-qyx$ の上隣接成分は $q^{j+1}$、下隣接成分は $q^{-j}c_j$、
+対角は $j=0$ のみ $d_0$ となる。
+内部の関係は同じ再帰式で、最初の対角式だけ
+\[
+ (1-q)d_0^2-c_1A_2=\lambda_0
+\]
+となる。最後は $c_d=0$ であり、全て表示式で満たされる。
+Casimir値は
+\[
+ w_D=q^{2d}+q^{-2d}
+\]
+である。
+分母には $q^{2j-1}-1$ と $q^{2j+1}-1$ が現れるが、
+$1\le j<d\le m$ ではその指数は $1,\ldots,N-2$ に収まる。
+$c_j=0$ なら $N\mid2(d-j)$ または $N\mid2(d+j)$ となり不可能である。
+異なる $\lambda_j$ の一致も $N\mid j+k+1$ を要求し、
+$1\le j+k+1\le2d-1<N$ なので起こらない。
+従ってこの型も既約である。
+
+$-(q^d+q^{-d})$、$d=1,\ldots,m$ は、$P_N(w)=-2$ の端点以外の全根を相異なって走る。
+各々の唯一の $A_1$ 点に次元 $d<N$ のsimpleを得る。
+同様に $q^{2d}+q^{-2d}$ は $P_N(w)=2$ の端点以外の全根を走る。
+これは $N$ が奇数で2が可逆であることによる。
+この場合中心の四点に二符号変更群を作用させれば全てに次元 $d<N$ のsimpleを得る。
+前補題のMcKay判定とterminal境界から、内部特異値も全てH3となる。
+端点二値の除外と滑らかな中心の許容性は既証である。
+\end{proof}
+
+\texttt{verify\_\allowbreak cubic\_\allowbreak quantum\_\allowbreak triangle\_\allowbreak \allowbreak odd\_\allowbreak representations.py} は
+$Q=q^d,J=q^j$ を形式変数として、両型の全再帰式・端点式とCasimir式を厳密検算する。
+古典型では $R^2=-q^2/Q$ での多項式剰余を取り、有限個の位数での標本検算へ還元していない。
+分母の非消滅・既約性・全中心点の被覆は上記の指数範囲による証明である。
