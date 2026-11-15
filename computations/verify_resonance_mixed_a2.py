@@ -1,13 +1,11 @@
 #!/usr/bin/env python3
-"""Exact finite checks for the mixed A2 category (standard library only).
+"""Exact arithmetic for mixed A2 ranks, both tilt chambers, and Pi(A2).
 
-Checks quiver Hom spaces, Euler/Ext1 bookkeeping, line-bundle equality,
-cohomology of every small direct sum, and triangular-image obstructions.
-This is NOT a computation of the actual elliptic A=R/(g-1) action matrices,
-Rains sheaf existence, or a proof of a derived equivalence.
+This verifies finite linear algebra, not sheaf existence or derived equivalence.
+Actual elliptic generator characters and off-diagonal coefficients are not computed.
+Run from the repository root; Python standard library only.
 """
 from __future__ import annotations
-
 import argparse
 import json
 from fractions import Fraction as F
@@ -15,140 +13,168 @@ from itertools import product
 from pathlib import Path
 
 
-def rank(rows: list[list[int | F]], ncols: int | None = None) -> int:
+def rank(rows: list[list[int | F]]) -> int:
     if not rows:
         return 0
     a = [[F(x) for x in row] for row in rows]
-    cols = len(a[0]) if ncols is None else ncols
-    assert all(len(row) == cols for row in a)
-    pivot = 0
+    cols, pivot = len(a[0]), 0
+    if any(len(row) != cols for row in a):
+        raise ValueError('Nonrectangular matrix')
     for col in range(cols):
-        at = next((j for j in range(pivot, len(a)) if a[j][col]), None)
-        if at is None:
+        j = next((j for j in range(pivot, len(a)) if a[j][col]), None)
+        if j is None:
             continue
-        a[pivot], a[at] = a[at], a[pivot]
+        a[pivot], a[j] = a[j], a[pivot]
         c = a[pivot][col]
-        a[pivot] = [x / c for x in a[pivot]]
+        a[pivot] = [x/c for x in a[pivot]]
         for j in range(len(a)):
             if j != pivot and a[j][col]:
                 c = a[j][col]
-                a[j] = [x - c*y for x, y in zip(a[j], a[pivot])]
+                a[j] = [x-c*y for x,y in zip(a[j],a[pivot])]
         pivot += 1
         if pivot == len(a):
             break
     return pivot
 
 
-# Vertex dimensions plus x:+->- and y:-->+ (all entries are 0 or 1).
-REPS = {'S+': (1, 0, 0, 0), 'S-': (0, 1, 0, 0),
-        'P': (1, 1, 1, 0), 'Q': (1, 1, 0, 1)}
+# Vertex dimensions, scalar x:+->-, scalar y:-->+.
+REPS = {'S+': (1,0,0,0), 'S-': (0,1,0,0),
+        'P': (1,1,1,0), 'Q': (1,1,0,1)}
 
 
-def hom_dim(src: tuple[int, ...], dst: tuple[int, ...]) -> int:
-    a, b, x, y = src
-    c, d, u, v = dst
-    vars_ = [(0, i, j) for i in range(c) for j in range(a)]
-    vars_ += [(1, i, j) for i in range(d) for j in range(b)]
-    pos = {key: i for i, key in enumerate(vars_)}
-    equations: list[list[int]] = []
-    # f_- x = u f_+ and f_+ y = v f_-.
-    for side, outdim, indim, middle, targetmid, arr, tar in (
-        (1, d, a, b, c, x, u), (0, c, b, a, d, y, v)):
+def hom_dim(src: tuple[int,...], dst: tuple[int,...]) -> int:
+    a,b,x,y = src
+    c,d,u,v = dst
+    variables = [(0,i,j) for i in range(c) for j in range(a)]
+    variables += [(1,i,j) for i in range(d) for j in range(b)]
+    index = {key:i for i,key in enumerate(variables)}
+    eqs = []
+    for side,outdim,indim,middle,targetmid,arr,tar in (
+        (1,d,a,b,c,x,u), (0,c,b,a,d,y,v)):
         for i in range(outdim):
             for j in range(indim):
-                eq = [0] * len(vars_)
+                row = [0]*len(variables)
                 for k in range(middle):
-                    eq[pos[(side, i, k)]] += arr
+                    row[index[(side,i,k)]] += arr
                 for k in range(targetmid):
-                    eq[pos[(1-side, k, j)]] -= tar
-                equations.append(eq)
-    return len(vars_) - rank(equations)
+                    row[index[(1-side,k,j)]] -= tar
+                eqs.append(row)
+    return len(variables)-rank(eqs)
 
 
-def mul(a: tuple[int, ...], b: tuple[int, ...]) -> tuple[int, ...]:
-    return (a[0]*b[0]+a[1]*b[2], a[0]*b[1]+a[1]*b[3],
-            a[2]*b[0]+a[3]*b[2], a[2]*b[1]+a[3]*b[3])
+def multiply(a: list[list[int]], b: list[list[int]]) -> list[list[int]]:
+    return [[sum(a[i][k]*b[k][j] for k in range(len(b)))
+             for j in range(len(b[0]))] for i in range(len(a))]
 
 
-def algebra_dim(gens: list[tuple[int, ...]]) -> int:
-    basis = [(1, 0, 0, 1)]
-    changed = True
-    while changed:
-        changed = False
-        for a in list(basis):
-            for g in gens:
-                z = mul(a, g)
-                if rank([list(x) for x in basis + [z]]) > len(basis):
-                    basis.append(z)
-                    changed = True
-    return len(basis)
+def transpose(a: list[list[int]]) -> list[list[int]]:
+    return [list(row) for row in zip(*a)]
+
+
+def flat(a: list[list[int]]) -> list[int]:
+    return [x for row in a for x in row]
+
+
+def unit(i: int, j: int, n: int = 4) -> list[list[int]]:
+    return [[int(r == i and c == j) for c in range(n)] for r in range(n)]
+
+
+def add(a: list[list[int]], b: list[list[int]]) -> list[list[int]]:
+    return [[x+y for x,y in zip(r,s)] for r,s in zip(a,b)]
+
+
+def commutant_dim(gens: list[list[list[int]]]) -> int:
+    n = len(gens[0]); basis = [unit(i,j,n) for i in range(n) for j in range(n)]
+    equations = []
+    for g in gens:
+        cols = []
+        for e in basis:
+            eg,ge = multiply(e,g),multiply(g,e)
+            cols.append([x-y for x,y in zip(flat(eg),flat(ge))])
+        equations.extend(transpose(cols))
+    return n*n-rank(equations)
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--output', type=Path,
-                        default=Path('build/resonance_mixed_a2_certificate.json'))
+    parser.add_argument('--output',type=Path,
+        default=Path('build/resonance_mixed_a2_certificate.json'))
     args = parser.parse_args()
     names = list(REPS)
-    hom = [[hom_dim(REPS[u], REPS[v]) for v in names] for u in names]
-    expected = [[1,0,0,1],[0,1,1,0],[1,0,1,1],[0,1,1,1]]
-    assert hom == expected, hom
+    hom = [[hom_dim(REPS[u],REPS[v]) for v in names] for u in names]
+    assert hom == [[1,0,0,1],[0,1,1,0],[1,0,1,1],[0,1,1,1]]
     dims = [(1,0),(0,1),(1,1),(1,1)]
     euler = [[2*a*c+2*b*d-a*d-b*c for c,d in dims] for a,b in dims]
-    ext1 = [[hom[i][j]+hom[j][i]-euler[i][j]
-             for j in range(4)] for i in range(4)]
+    ext1 = [[hom[i][j]+hom[j][i]-euler[i][j] for j in range(4)]
+            for i in range(4)]
     assert ext1 == [[0,1,0,0],[1,0,0,0],[0,0,0,0],[0,0,0,0]]
-    # Kernel L: rank 1, c1=-(alpha+beta), chi(e,L)=0, K.c1=0.
-    assert -1 + 2*0 - (-2) == 1
-    checks = 0
-    for p in range(2, 9):
-        for aa, bb, cc, dd in product(range(5), repeat=4):
-            a, b, t = aa+cc+dd, bb+cc+dd, cc
-            h0, h1 = p*aa+cc+p*dd, (p-1)*(bb+dd)
-            assert (h0,h1) == (p*a-(p-1)*t, (p-1)*(b-t))
-            assert (h0 == 0 and h1 == 0) == (aa+bb+cc+dd == 0)
-            assert (h1 == 0) == (bb == 0 and dd == 0)
-            assert (h0 == 0) == (aa == cc == dd == 0)
-            checks += 1
-    cases = {
-        'repeated_scalar': [(2,0,0,2)],
-        'distinct_split': [(0,0,0,1)],
-        'same_character_Jordan': [(0,0,1,0)],
-        'distinct_nonsplit': [(0,0,0,1),(0,0,1,0)],
-    }
-    result_cases = {}
-    for name, gens in cases.items():
-        conditions = [[g[0]-g[3],0] for g in gens]
-        conditions += [[g[2],0] for g in gens]
-        h = 2-rank(conditions)
-        repeated = all(g[0] == g[3] and g[2] == 0 for g in gens)
-        assert h == (2 if repeated else 1)
-        coeff = [[g[3]-g[0]] for g in gens]
-        aug = [[g[3]-g[0], g[2]] for g in gens]
-        split = rank(coeff) == rank(aug)
-        distinct = any(g[0] != g[3] for g in gens)
-        image_dim = algebra_dim(gens)
-        assert (image_dim == 3) == (distinct and not split)
-        result_cases[name] = {'Hom_to_quotient_dimension': h,
-            'distinct_characters': distinct, 'extension_split': split,
-            'image_algebra_dimension': image_dim}
+    counts = {'positive_sum':0,'negative_sum':0,'balanced_sum':0}
+    for p,n in product(range(1,9),repeat=2):
+        r = min(p,n)
+        if p>n:
+            assert (3-2*(p-n) == 1) == (p-n == 1)
+        for aa,bb,cc,dd in product(range(5),repeat=4):
+            a,b,t = aa+cc+dd,bb+cc+dd,cc
+            h0 = p*aa+max(p-n,0)*cc+p*dd
+            h1 = n*bb+max(n-p,0)*cc+n*dd
+            assert (h0,h1) == (p*a-r*t,n*b-r*t)
+            assert h0-h1 == p*a-n*b
+            if p>n:
+                assert (h1 == 0) == (bb == dd == 0)
+                assert (h0 == 0) == (aa == cc == dd == 0)
+                counts['positive_sum'] += 1
+            elif p<n:
+                assert (h1 == 0) == (bb == cc == dd == 0)
+                assert (h0 == 0) == (aa == dd == 0)
+                counts['negative_sum'] += 1
+            else:
+                assert (h0 == h1 == 0) == (aa == bb == dd == 0)
+                counts['balanced_sum'] += 1
+            if p != n:
+                assert (h0 == h1 == 0) == (aa+bb+cc+dd == 0)
+    # Canonical right-action matrices on the two nonsplit modules V and V'.
+    eW = add(unit(0,0),unit(2,2)); eU = add(unit(1,1),unit(3,3))
+    a,b = unit(1,0),unit(2,3)
+    zero = [[0]*4 for _ in range(4)]
+    gens = [eW,eU,a,b]
+    assert rank([flat(g) for g in gens]) == 4
+    assert multiply(eW,eW)==eW and multiply(eU,eU)==eU
+    assert multiply(eW,eU)==multiply(eU,eW)==zero
+    assert multiply(eU,a)==multiply(a,eW)==a
+    assert multiply(eW,b)==multiply(b,eU)==b
+    for x,y in product([a,b],repeat=2):
+        assert multiply(x,y) == zero
+    for offset in [0,2]:
+        blocks = [flat([row[offset:offset+2] for row in g[offset:offset+2]])
+                  for g in gens]
+        assert rank(blocks)==3
+    assert commutant_dim(gens)==4
+    cartan = [[-2,1],[1,-2]]
+    reflection = [[1,0],[1,-1]]  # columns alpha+beta and -beta
+    assert multiply(multiply(transpose(reflection),cartan),reflection)==cartan
+    assert multiply([[2,-1]],reflection)==[[1,1]]
+    target_order = ['W','U','V','Vprime']
+    target_reps = [REPS['S+'],REPS['S-'],REPS['Q'],REPS['P']]
+    target_hom = [[hom_dim(u,v) for v in target_reps] for u in target_reps]
     cert = {
-        'date': '2026-11-15', 'version': 'resonance-mixed-a2-v1',
-        'field': 'QQ', 'object_order': names, 'Hom_dimensions': hom,
-        'ambient_Euler_pairing': euler, 'ambient_Ext1_dimensions': ext1,
-        'kernel_rank_one_Euler_self_pairing': 1,
-        'direct_sum_and_cohomology_cases': checks,
-        'triangular_tests': result_cases,
-        'actual_elliptic_action_matrices_computed': False,
-        'categorical_existence_numerically_proved': False,
-        'derived_full_faithfulness_proved': False,
-        'proof': 'papers/sections/resonance_mixed_a2_category.tex',
-        'reproduction': 'python3 computations/verify_resonance_mixed_a2.py',
+        'date':'2026-11-16','version':'resonance-hearts-v8',
+        'field':'QQ','source_object_order':names,'source_Hom':hom,
+        'source_ambient_Ext1':ext1,'general_indices_range':[1,8],
+        'direct_sum_cases':counts,'total_cases':sum(counts.values()),
+        'quotient_basis':dict(zip(['eW','eU','a','b'],gens)),
+        'quotient_dimension':4,'radical_square_zero':True,
+        'both_two_dimensional_image_dimensions':[3,3],
+        'regular_module_commutant_dimension':4,
+        'Weyl_reflection_matrix':reflection,'reflected_indices':[1,1],
+        'target_object_order':target_order,'target_Hom':target_hom,
+        'proof_sections':['resonance_mixed_a2_category.tex','resonance_global_heart.tex'],
+        'actual_elliptic_generator_matrices_computed':False,
+        'sheaf_existence_or_derived_comparison_proved_by_computation':False,
+        'scope':'Exact finite linear algebra only. See manuscripts for categorical proofs.'
     }
-    args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(json.dumps(cert, ensure_ascii=False, indent=2)+'\n',
-                           encoding='utf-8')
-    print(json.dumps(cert, ensure_ascii=False, indent=2))
+    args.output.parent.mkdir(parents=True,exist_ok=True)
+    args.output.write_text(json.dumps(cert,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    print(json.dumps(cert,ensure_ascii=False,indent=2))
 
 
 if __name__ == '__main__':
