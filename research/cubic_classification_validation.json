@@ -1,6 +1,6 @@
 {
   "date": "2026-11-15",
-  "version": "classification-v18",
+  "version": "classification-v19",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -21,7 +21,8 @@
     "papers/sections/cubic_character_serre.tex",
     "papers/sections/cubic_order4_center.tex",
     "papers/sections/cubic_order4_ext_bound.tex",
-    "papers/sections/cubic_order4_small_reps.tex"
+    "papers/sections/cubic_order4_small_reps.tex",
+    "papers/sections/cubic_order4_local_orders.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -292,7 +293,7 @@
       "python3 computations/verify_cubic_order4_center_critical.py"
     ],
     "not_claimed": "13 bad H3 values, local order classification or full intrinsic coverage",
-    "typesetting": "new proposition not yet recompiled at this checkpoint"
+    "typesetting": "Recompiled within 77-page manuscript"
   },
   "order4_small_representations": {
     "proof": "papers/sections/cubic_order4_small_reps.tex",
@@ -301,7 +302,30 @@
       "python3 computations/verify_cubic_order4_center_critical.py",
       "python3 computations/verify_cubic_order4_small_reps.py"
     ],
-    "not_proved_yet": "Local maximal unramified symmetric-order comparison, hence the candidate degree6 full bad polynomial remains conditional",
+    "not_proved_yet": "Local order comparison now proved in cubic_order4_local_orders.tex; no all-envelope classification claim",
     "typesetting": "LuaLaTeX run for the enlarged manuscript; inspect log before final validation"
+  },
+  "order4_local_order_and_complete_fixed_line": {
+    "result": "Exactly six bad values in ONE fixed envelope, b=(D-Dstar)*P4*Q1 squarefree degree6; all other D affine gldim2 and H3",
+    "proof": "papers/sections/cubic_order4_local_orders.tex",
+    "ordinary_proofs": [
+      "H maximal via punctured Azumaya and reflexivity; filtered maximality",
+      "P0-free rank48 and balanced local duality give Hom_P0(R,P0)=R(8); monic center duality gives Hom_C(U,C)=U",
+      "tame DVR block trace-dual comparison gives no codim1 ramification",
+      "A1 double-cover descent gives End(C^r+M^s), r+s4; finite gldim iff both multiplicities positive",
+      "relative principal open D(b), fpqc descent of fiber condition, and relative diagonal projective dimension<=2 preserved by arbitrary base change"
+    ],
+    "exact_commands": [
+      "python3 computations/verify_cubic_order4_bad_polynomial.py"
+    ],
+    "typesetting": "77-page LuaLaTeX manuscript built; no undefined references/citations or overfull boxes; page60 inspected visually before adding the relative corollary",
+    "limitations": "not all order4 envelopes; no full H3 coverage, global components or global intrinsic family stack; ordinary proofs not computer-formalized or independently refereed",
+    "primary_source_audit": {
+      "url": "https://arxiv.org/pdf/math/0401425",
+      "version": "math/0401425v3",
+      "sha256": "23b131d11d05dd42cfe1df63948629f294a51641634abfaaa7645e05fec69b52",
+      "read": "Definition2.1 and its etale DVR standard form, Theorem2.2, Proposition2.4, Theorem3.1 with hypotheses; used only local standard form / cover, not full canonical-order classification",
+      "secondary_crosscheck_not_imported": "Nebe math/0310191 symmetric-order definitions and duality; arithmetic assumptions not imported as char0-surface theorem"
+    }
   }
 }

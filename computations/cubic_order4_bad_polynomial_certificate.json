@@ -1,0 +1,44 @@
+{
+  "version": "classification-v19",
+  "fixed_envelope": "h=1,g^4=2,alpha=(-2,-2,0),beta=(1,1,2)",
+  "bad_polynomial_degree": 6,
+  "squarefree_verified": true,
+  "factorization": "(D-Dstar)*P4*Q1; monic squarefree layers of center-critical certificate",
+  "coefficients": [
+    {
+      "D_power": 6,
+      "coefficient": "1"
+    },
+    {
+      "D_power": 5,
+      "coefficient": "(1155830*g**3 - 1375241*g**2 + 1635167*g - 1944495)/378"
+    },
+    {
+      "D_power": 4,
+      "coefficient": "-(271468892676974*g**3 - 322832739302796*g**2 + 383914987683882*g - 456554436811243)/1037232"
+    },
+    {
+      "D_power": 3,
+      "coefficient": "(470311858297310581422*g**3 - 559298208157299934181*g**2 + 665121408548934341861*g - 790967111387085831155)/28005264"
+    },
+    {
+      "D_power": 2,
+      "coefficient": "(728072357695328263602681444*g**3 - 865828828008090506593376848*g**2 + 1029649802641688485879341516*g - 1224466871262643488901958153)/448084224"
+    },
+    {
+      "D_power": 1,
+      "coefficient": "(25994447197811963501208727026422*g**3 - 30912781558200532052867612188285*g**2 + 36761699773536975055098984941575*g - 43717274930284090488833650490147)/896168448"
+    },
+    {
+      "D_power": 0,
+      "coefficient": "(962491914604798354481191757491252942*g**3 - 1144602232980617621004019312349256740*g**2 + 1361169119308552671033292915661356410*g - 1618712001403718548732485586315989497)/7169347584"
+    }
+  ],
+  "ordinary_proof_dependency": "papers/sections/cubic_order4_local_orders.tex: filtered maximality, central local duality, tame DVR block structure, A1 double-cover descent",
+  "scope": "Complete D-line classification in this ONE fixed envelope, not all order4 envelopes nor all intrinsic H3; novelty and independent review unchecked",
+  "DVR_block_trace_dual_valuation_checks": [
+    1,
+    2,
+    4
+  ]
+}

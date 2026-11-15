@@ -1,0 +1,223 @@
+\subsection{最大整環の局所判定と固定包絡の全bad値}
+\label{subsec:order4-local-orders}
+この節では前二節と同じ固定包絡だけを考える。
+以下の局所議論は通常の可換・非可換整環論による証明であり、
+有限標本計算や小次元表現の個数だけで大域次元を推測するものではない。
+
+\begin{lemma}[対称な非分岐最大整環]
+\label{lem:order4-symmetric-maximal}
+全ての $D$ に対して $C=Z(U_D)$ は正規整域で、$U_D$ は $C$ 上の
+最大整環かつ極大Cohen--Macaulay加群である。
+さらに $C$-線形双対について、両側加群同型
+\[
+ \operatorname{Hom}_C(U_D,C)\simeq U_D
+\]
+が成り立つ。$U_D$ は $C$ の余次元1の全ての点で Azumaya である。
+\end{lemma}
+\begin{proof}
+$C$ は三変数中の既出の三次超曲面で、その射影閉包の無限遠切断は滑らかな三次 $\Phi$ である。
+無限遠の全点で射影閉包も滑らかなので、正の次元の閉特異集合は存在しない。
+実際、射影的な正次元閉集合は超平面と交わる。
+従って $C$ は余次元1で正則、超曲面ゆえ $S_2$ であり正規である。
+$U_D$ の $P=k[Z_1,Z_2]$ 上の自由性から、中心上も極大Cohen--Macaulay、特に反射的となる。
+
+$H=\operatorname{gr}U_D=B(E,\mathcal L,\rho)$ を考える。
+その中心は $E/\langle\rho\rangle$ 上次数3の切断環であり正規である。
+$H$ は頂点で depth2、頂点以外では中心上 Azumaya である。
+後者は次のように直接見られる。
+$H^{(4)}$ は $E$ 上の次数12の通常の可換切断環であり、
+中心からの被覆は、頂点を除くと自由な位数4の平行移動に由来する有限\'{e}tale被覆である。
+次数を4で割った剰余の四成分はこの被覆上の可逆加群となり、
+乗法は巡回 crossed product を与える。
+\'{e}tale局所的にこの代数は $4\times4$ 行列環になる。
+$H$ の反射性と余次元1での最大性から $H$ 自身が最大整環となる。
+すなわち同値な上整環は、各高さ1の局所化で $H$ に含まれ、
+それらの共通部分である $H$ に含まれる。
+
+この最大性は濾過を通して $U_D$ に移る。
+$U_D\subset V\subset Q(U_D)$ を同値な上整環とし、$aVb\subset U_D$ となる
+非零 $a,b\in U_D$ を取る。
+$\operatorname{gr}U_D$ が整域なので、商斜体の次数は
+$\deg(ab^{-1})=\deg a-\deg b$ で定まり、乗法的である。
+誘導濾過の $\operatorname{gr}V$ は $Q(H)$ 内の $H$ と同値な上整環となり、
+$H$ の最大性より $\operatorname{gr}V=H$ である。
+$aVb\subset U_D$ により $V$ の濾過は下に有界である。
+最高記号を $U_D$ の元で順に引くと有限段階で停止し、$V=U_D$ を得る。
+
+双対性も、この族では明示的な中心正則列から従う。
+$R=B/(G_D)$、$P_0=k[t,Z_1,Z_2]$ と置く。$P_0$ の三生成元の次数は $1,4,4$ である。
+補題\ref{lem:order4-fortyeight-slice}の濾過基底を同次化すると、
+$R$ は $P_0$ 上階数48の graded free 加群となる。
+$R$ の balanced dualizing complex は、$B$ のCY性と中心正則三次によって
+$R(-1)[3]$ である。
+一方、$P_0$ の中心 irrelevant ideal は $R$ の irrelevant ideal と cofinal なので、
+同じ局所コホモロジーを $P_0$ の中央\v Cech複体で計算できる。
+$P_0$ 上の自由性と局所双対性を使うと、この複体の双対は
+\[
+ \operatorname{Hom}_{P_0}(R,P_0)(-9)[3]
+\]
+となる。従って両側加群として
+$\operatorname{Hom}_{P_0}(R,P_0)\simeq R(8)$。
+$t=1$ とすると $\operatorname{Hom}_{P}(U_D,P)\simeq U_D$ を得る。
+ここで $C=P[Z_3]/(\mathcal F_D)$ は monic 三次拡大であり、
+$Z_3^2$ の係数を取るFrobenius汎関数により $\operatorname{Hom}_P(C,P)\simeq C$ である。
+有限写像の随伴
+\[
+ \operatorname{Hom}_C(U_D,\operatorname{Hom}_P(C,P))
+   \simeq\operatorname{Hom}_P(U_D,P)
+\]
+が求める双対同型を与える。
+これはNakayama自己同型が恒等であることを両側加群として使用している。
+
+最後に高さ1でDVRへ局所化し完備化する。
+両側双対同型は、商中心上で reduced trace を通じて中心スカラーによる乗法となる。
+従って最大整環 $\Lambda$ のtrace双対について $\Lambda^\#=c\Lambda$ である。
+標数0の tame DVR 最大整環の巡回格子鎖表示を使う。
+この表示は\cite[Definition 2.1直後]{CHIOrders}の標準形と同じものである。
+非分岐な忠実平坦拡大で剰余代数を分裂させると、分岐指数 $e$ に対応する
+$e$ ブロックの表示は、対角およびその上が $R$、対角より下が $\pi R$ となる。
+この表示は剰余体の共役成分を並べ、巡回一様化元の $e$ 乗が $\pi$ となる基底を取って得られる。
+非分岐な行列因子は同じ計算を変えない。
+trace双対のブロックは元の転置逆イデアルなので、対角が $R$、上が $\pi^{-1}R$、下が $R$ である。
+$c\Lambda$ と対角を比較すると $\operatorname{val}(c)=0$ が必要だが、
+$e>1$ では上のブロックの指数が一致しない。
+従って $e=1$ であり、この局所最大整環は Azumaya である。
+同じ計算を根基の冪で書けば、通常の $\Lambda^\#=\mathfrak P^{1-e}$ と
+$\mathfrak P^e=\pi\Lambda$ の比較になる。
+このDVRの構造議論は通常の整環論の入力であり、有限標本からの推測ではない。
+\end{proof}
+
+\begin{lemma}[$A_1$中心における小次元単純表現判定]
+\label{lem:order4-A1-local-order}
+$U_D$ の中心の滑らかな点では、完備化は $4\times4$ 行列環である。
+$A_1$ 点では $C^{\wedge}=k[[s,t]]^{\mu_2}$ と書き、
+$M$ を符号指標の反射的階数1加群とすると、ある $r+s=4$ に対して
+\[
+ U_D^{\wedge}\simeq
+ \operatorname{End}_{C^{\wedge}}\bigl((C^{\wedge})^r\oplus M^s\bigr)
+\]
+である。ここで指数の $s$ は多重度を表す。
+この局所代数が有限大域次元を持つことは、中心点上に次元1または2の単純表現が存在することと同値である。
+そのとき局所大域次元は2となる。
+\end{lemma}
+\begin{proof}
+前補題より、滑らかな完備局所中心の上では反射的加群 $U_D^{\wedge}$ は自由である。
+左右乗法写像
+$U_D^{\wedge}\otimes(U_D^{\wedge})^{\mathrm{op}}\to\operatorname{End}(U_D^{\wedge})$
+は高さ1で同型である。自由加群間の行列式の零集合は、非空なら余次元1を持つので、
+この写像は至る所同型である。完備局所環の剰余体は代数閉なので Azumaya 代数は分裂する。
+
+$A_1$ の場合は、穿孔スペクトルで\'{e}taleな二重被覆
+$S=k[[s,t]]\to C^{\wedge}$ へ引き戻し、反射的包絡を取る。
+得られた $S$-代数は自由で、同じ行列式の議論から $\operatorname{Mat}_4(S)$ となる。
+これは\cite[Theorem 3.1]{CHIOrders}の非分岐Artin被覆の場合でもある。
+ここでは最大性が完備化で保たれるとは仮定せず、反射性と穿孔上のAzumaya性だけを使用する。
+被覆変換の半線形作用は行列加群上に持ち上がる。
+実際 Skolem--Noether により生成元は $J\sigma$ と書け、
+$J\sigma(J)$ は不変な単元スカラーである。
+その平方根で正規化して $(J\sigma)^2=1$ とできる。
+剰余体上の正負固有ベクトルの持上げを $\mu_2$ で平均すれば、
+Nakayama補題により作用は基底上で $r$ 個の正指標と $s$ 個の負指標となる。
+従って不変行列代数は表示した End 代数である。
+元の整環もこの不変代数も反射的であり、穿孔スペクトルで一致するので、完備局所環上でも一致する。
+
+$r,s>0$ ならこの加群は $S\simeq C^{\wedge}\oplus M$ と同じ加法的包絡を持ち、
+End代数は $\operatorname{End}_{C^{\wedge}}(S)=S\rtimes\mu_2$ とMorita同値である。
+従って大域次元は2、その二つの単純表現の次元は $r,s$。
+一方 $r=0$ または $s=0$ なら $\operatorname{Mat}_4(C^{\wedge})$ であり、
+特異可換局所環の上なので大域次元は無限、単純表現は次元4のみである。
+$r+s=4$ だから、前者は次元1または2の単純表現の存在と正確に同値となる。
+\end{proof}
+
+\begin{theorem}[指定位数4固定包絡の全切断値の判定]
+\label{thm:order4-fixed-all-bad}
+$h=1,\gamma^4=2,a=(1/(2\gamma),1/(2\gamma),0),\beta=(1,1,2)$ の固定包絡について、
+正規化した中心切断 $G_D$ が H3 を与えない値は正確に
+\[
+ \boxed{\quad (D-D_*)P_4(D)Q_1(D)=0\quad}
+\]
+の6個の相異なる根である。
+ここで $P_4,Q_1$ は前節の厳密な平方因子分解の重複度1の因子であり、
+\path{cubic_order4_center_critical_certificate.json} に全係数を保存した。
+それ以外の全ての $D$ について $\operatorname{gldim}U_D=2$ であり、対応する切断は H3 である。
+この定理はこの固定包絡の一次元の切断族の完全判定であり、
+全ての位数4包絡や全intrinsic H3の完全分類を意味しない。
+\end{theorem}
+\begin{proof}
+$D_*$ は奇数自己 $\Ext^1$ により既に除外済みである。
+その他の中心特異点は全て補題\ref{lem:order4-all-center-nodes}の $A_1$ 点である。
+命題\ref{prop:order4-small-rep-norms}の積の恒等式と最大公約数判定によれば、
+$P_4$ または $Q_1$ の根では次元1、2の単純表現は全く存在しない。
+従って補題\ref{lem:order4-A1-local-order}により、その中心点で局所大域次元は無限となる。
+
+$P_6$ の $D_*$ 以外の5根では、唯一の中心特異点上に
+次元1または2の単純表現が存在する。
+$Q_2$ の二つの根では、命題\ref{prop:order4-small-rep-norms}の最後の分配判定により、
+二つの特異中心点のいずれにも小次元単純表現が存在する。
+これらの点では局所大域次元は2である。
+中心が滑らかな全ての点では前補題によって行列環となる。
+従って除外した6値以外では、全ての中心極大点における完備化の大域次元が一様に2となる。
+有限中心代数の有限生成加群の射影次元は、この忠実平坦な完備化と中心局所化で判定でき、
+一様な上界2を得る。noetherian性から大域次元も2以下で、
+滑らかな中心点の行列環から等号となる。
+既出のaffine切断のH3認識定理を適用して結論を得る。
+因子は平方因子を持たず互いに素なので、除外値は正確に6個である。
+\end{proof}
+
+\begin{corollary}[このD直線上の相対的開性と任意底変更]
+\label{cor:order4-relative-open}
+$b(D)=(D-D_*)P_4(D)Q_1(D)$ と置く。
+この固定包絡の切断族において、全ての幾何学的fiberが H3 となる底の条件は
+\[
+ \operatorname{Spec}K[D,b(D)^{-1}]\subset\mathbb A^1_K
+\]
+という主開集合で表され、任意の底変更とfpqc降下に適合する。
+さらに $A=K[D,b(D)^{-1}]$ 上のアフィン切断族 $\mathcal U$ は
+相対的にhomologically smoothであり、対角両側加群は
+$\mathcal U\otimes_A\mathcal U^{\mathrm{op}}$ 上長さ2以下の有限生成射影分解を持つ。
+この分解は任意の $A$-代数への底変更後も有効である。
+非正則な底変更後の絶対大域次元が2であるとは主張しない。
+また、全intrinsic moduliの代数性や相対降下の証明ではない。
+\end{corollary}
+\begin{proof}
+幾何学的fiberの条件は定理\ref{thm:order4-fixed-all-bad}そのものである。
+底の全ての幾何学的点で $b(D)$ が零でないことは、それが単元であることと同値である。
+主開集合への因子化と単元性は任意底変更および忠実平坦降下に適合する。
+
+相対的smoothnessについては、まず代数閉体上のgood fiber $U$ の対角を考える。
+$U^e=U\otimes U^{\mathrm{op}}$ は $C\otimes C$ 上有限であり、対角加群の台は中心対角に含まれる。
+中心対角上の極大点で完備化すると、前補題の行列環または
+$k[[s,t]]\rtimes\mu_2$ とMorita同値な局所模型を得る。
+その対角は、二変数の形式的Koszul対角分解と有限群による誘導により、
+完備tensor積上の長さ2の射影分解を持つ。
+群の位数は可逆なので群環に由来する項も射影的である。
+中心対角外では対角加群は零である。
+有限中心代数の射影次元をこれらの忠実平坦完備化で検出して、$\operatorname{pd}_{U^e}U\le2$ を得る。
+
+$B_A=\mathcal U\otimes_A\mathcal U^{\mathrm{op}}$ とする。
+これは有限型可換中心代数上有限なのでnoetherianであり、$A$ 上平坦である。
+$\mathcal U$ も $A$ 上平坦である。
+有限自由分解の最初の二段を取り
+\[
+ 0\longrightarrow N\longrightarrow F_1\longrightarrow F_0\longrightarrow\mathcal U\longrightarrow0
+\]
+とする。全syzygyは $A$ 上平坦であり、任意のfiberでこの列は完全となる。
+上のfiber判定より $N$ の全幾何学的fiberは射影的である。
+$K$ を代数閉体へ拡大して証明すれば、有限表示射影性は忠実平坦降下する。
+その場合 $B_A$ の全単純加群 $V$ は有限次元であり、$D$ はある $d$ として作用する。
+$N$ の $A$-平坦性と $D-d$ に関する二項分解から
+\[
+ N\otimes_{B_A}^{\mathbf L}B_A/(D-d)=N/(D-d)N
+\]
+を得る。導来随伴により
+\[
+ \Ext^1_{B_A}(N,V)=\Ext^1_{B_A/(D-d)}(N/(D-d)N,V)=0.
+\]
+有限中心代数の有限生成加群について、全単純加群へのこの消滅は射影性を検出する。
+実際、中心極大点で完備化すればsemiperfectであり、最小射影被覆の非零核は
+単純商を持って非零 $\Ext^1$ を与える。従って各完備化で $N$ は射影的で、
+忠実平坦性と中心局所化から元の $N$ も射影的となる。
+よって表示した長さ2の射影分解を得る。
+最後に $A$-平坦なsyzygyの列を任意の底へtensorすれば完全性が保たれ、
+有限生成射影加群の底変更も射影的なので結論を得る。
+\end{proof}

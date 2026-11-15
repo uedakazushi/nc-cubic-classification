@@ -5,7 +5,7 @@
   "fixed_envelope": "h1,alpha=(-2,-2,0),beta=(1,1,2)",
   "D_degree_of_commutator_matrix": 1,
   "leading_quartic_rank": 3,
-  "center_relation_status": "Cubic relation coefficients not computed; no all-bad-D claim",
+  "center_relation_status": "Quartic generators verified here; complete cubic relation stored separately in cubic_order4_center_relation_certificate.json",
   "B_dimensions": [
     1,
     4,
