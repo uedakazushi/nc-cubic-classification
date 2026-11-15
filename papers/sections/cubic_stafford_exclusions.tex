@@ -101,3 +101,139 @@ $140\times20$ 行列の非零最大minorを直接計算した。
 閉部分集合に支持される。この条件はadmissibilityの十分条件ではない。
 全パラメータのminor idealの簡約、特殊包絡の正規三次の分解、
 商の内在的H3判定は依然として必要である。
+
+\begin{lemma}[楕円商で消える三次は整域切断にならない]
+\label{lem:elliptic-normal-sequence-cubic}
+$A$ を次数一生成のgraded整域とし、二つの二次式による正則正規列
+$(q_1,q_2)$ の商を $C=B(E,L,\sigma)$ とする。
+ここで $E$ は滑らかな楕円曲線、$L$ は次数四のline bundle、
+$\sigma=t_\tau$、$4\tau\ne0$ とする。
+$G\in A_3$ が正規で、そのnormalizer $\theta$ が $q_1$ をscalar倍し、
+$G$ の $C$ への像が零なら、$A/(G)$ は整域ではない。
+\end{lemma}
+\begin{proof}
+まず $C$ に非零の正規一次元は存在しない。
+そのような $\ell$ と可逆線型写像 $\psi:C_1\to C_1$ の関係
+$\ell v=\psi(v)\ell$ を $H^0(E,L\otimes\sigma^*L)$ で評価する。
+$\ell$ と $\sigma^*\ell$ の零点を除く稠密開集合上で、
+全 $v\in H^0(E,L)$ の比から、$\psi$ の射影作用が
+$L$ による埋込み上の $\sigma$ と一致する。
+従って $\sigma^*L\simeq L$、すなわち $4\tau=0$ となり矛盾する。
+ここではTHCRの全自己同型分類を必要としない。
+
+$\overline A=A/(q_1)$ と置く。$\theta$ はこの商へ降り、
+$G$ の像は $\ell q_2$、$\ell\in\overline A_1$ と書ける。
+$q_2 v=\nu(v)q_2$ とすると、$q_2$ の右正則性による消去から
+\[
+ \ell u=\theta\nu^{-1}(u)\ell\quad(u\in\overline A_1)
+\]
+を得る。この式をさらに $C$ へ写す。
+$\ell\ne0$ なら次数から $C$ における像も非零である。
+$\theta\nu^{-1}$ の次数一の可逆行列が $C$ の関係を保つことも、
+上の式と $C$ の整域性で消去すれば従う。
+従ってこれは $C$ の正規一次元を与え、前段に反する。
+ゆえに $G\in(q_1)$、すなわち $G=\ell_1q_1$ である。
+$G\ne0$ なら両因子は非零で次数 $1,2$ を持つため、
+$A/(G)$ に零因子が生じる。
+\end{proof}
+
+\begin{corollary}[通常のStafford族は位数六へ還元される]
+\label{cor:stafford-order-six-only}
+上の $S_{d,1},S_{d,2}$ の対応する楕円THCRを
+$B(E,L,t_\tau)$ とし、$E$ が滑らか、$4\tau\ne0$ とする。
+これらがH3包絡となるなら $\tau$ は位数六である。
+従って無限位数および位数六以外のproper楕円部分は全て排除される。
+この系はcocycle twistの非整域THCR商には適用していない。
+\end{corollary}
+\begin{proof}
+Davies\cite[Theorem 6.1.10の証明]{DaviesThesis}で確認されるように、
+楕円THCRへの核は二次式の正則正規列で生成される。
+この核の次数二部分は $f_i$ と $g_1,g_2$ の残余一本で張られる。
+定理\ref{thm:stafford-nakayama}の二つの通常の中山行列は、この二次元空間を
+点ごとに固定する。従って列の第一元 $q_1$ は
+H3三次のnormalizer $\mu_A^{-1}$ で固定される。
+H3商は整域なので、前補題より $G$ の楕円商への像は非零である。
+
+その像の正規関係を $E$ 上で評価すると、前補題と同様に
+$\mu_A^{-1}$ の射影作用は $t_{3\tau}$ と一致する。
+どちらの通常の中山行列も射影的には
+$\operatorname{diag}(1,1,-1,-1)$ である。
+これは $E$ 上固定点を持たない非自明な対合であり、
+ある $s\in E[2]\setminus\{0\}$ による平行移動である。
+実際その射影固定平面二つと $g_1=g_2=0$ の交わりは、
+$A,C,A-C\ne0$ により空である。
+従って $3\tau=s$、$6\tau=0$、$3\tau\ne0$。
+位数二は $4\tau\ne0$ で除外され、位数は六に限られる。
+\end{proof}
+
+\begin{theorem}[非零候補が現れるStafford曲線も全排除される]
+\label{thm:stafford-resonant-pencil-exclusion}
+$a\notin\{0,1,-1,3,-3\}$ とし
+\[
+ (\alpha,\beta,\gamma)
+ =\left(a,\frac{1-a}{a+3},\frac{a+1}{a-3}\right)
+\]
+とする。対応する楕円商は滑らかで $4\tau\ne0$ と仮定する。
+$S_{d,1}$ の全許容 $d\in\mathbb P^1$ において $\dim W_1=2$ であり、
+全ての非零 $G\in W_1$ が一次式と二次式の積に分解する。
+従ってこの曲線上の $S_{d,1}$ は全てH3包絡から除外される。
+この曲線の外の位数六部分全体を排除したという主張ではない。
+\end{theorem}
+\begin{proof}
+次の式は $d$ に依存しない。
+\[
+\begin{split}
+ Q_2&=2\bigl((a-3)(x_0^2+x_3^2)+(a+1)(-x_1^2+x_2^2)\bigr),\\
+ Q_3&=2\bigl(-(a+3)(x_0^2+x_2^2)+(a-1)(x_1^2-x_3^2)\bigr),\\
+ F_2&=x_2Q_2,\qquad F_3=x_3Q_3,\\
+ H&=-16a x_1x_0+8(a-1)x_2x_3-8(a+1)x_3x_2.
+\end{split}
+\]
+検証器\texttt{verify\_cubic\_stafford\_resonance.py}は $\mathbb Q(a)$ 上で、
+二次関係 $f_2,\ldots,f_6$ だけを課した商において
+\[
+ F_jx_i=\epsilon_i x_iF_j\quad
+ (j=2,3),\qquad (\epsilon_0,\epsilon_1,\epsilon_2,\epsilon_3)=(-1,-1,1,1)
+\]
+と、$g_1,g_2$ の中心性、$f_1$ の同じ $\epsilon$ による正規性を直接確認する。
+従って全許容Stafford族でもこれらの恒等式が成り立つ。
+特殊パラメータへの延長は、全fiberが14641型であることによる各次数の局所自由性を使う。
+有理関数体でのrow reductionの分母を、未確認の特殊値で形式的に反転してはいない。
+
+四つの平方係数を比較すると、$Q_2,Q_3$ のいずれも
+$k(d_1g_1+d_2g_2)$ に属さない。従って $F_2,F_3$ は各fiberで非零であり、
+異なる群次数に属するので独立である。これで $\dim W_1\ge2$ となる。
+
+次に $W_1$ から楕円THCRへの写像は単射である。
+実際、核の第一二次元として $g_1,g_2$ の非零の残余中心元 $q$ を取れる。
+$q$ と $f_1$ は正則正規列を成す。
+第一元の正則性は整域性、第二元はTHCRのHilbert級数との比較による。
+補題\ref{lem:elliptic-normal-sequence-cubic}の証明により、
+楕円商で消える $G\in W_1$ は $\ell q$ である。
+$q$ は中心なので、消去すると $\ell$ もnormalizer $\mu_A^{-1}$ を持つ。
+その楕円商への像は非零の正規一次元となり、$4\tau\ne0$ に反する。
+
+非零の像があるので、前系の評価の議論から $\tau$ は位数六である。
+同一normalizerを持つ非零三次切断の比は $\sigma$ 不変な有理関数であり、
+その零因子も $\sigma$ 不変である。
+自由な六重被覆 $\pi:E\to E/\langle\tau\rangle$ で降下すると、
+次数十二の零因子は次数二の因子となる。
+従ってそのような切断の空間は次数二のline bundleの切断空間へ入り、次元は高々二である。
+単射性と先の独立性から $W_1=kF_2\oplus kF_3$ を得る。
+
+最後に次の普遍恒等式を使う。
+\[
+\begin{split}
+ &(s x_2+t x_3)
+ \bigl((a-1)s^2Q_2+stH-(a+1)t^2Q_3\bigr)\\
+ &\quad=s\bigl((a-1)s^2+(a+3)t^2\bigr)F_2
+       -t\bigl((a-3)s^2+(a+1)t^2\bigr)F_3.
+\end{split}
+\]
+検証器は $s^2t,st^2$ の二係数を五つの二次関係から厳密検証する。
+右辺の二係数は $\mathbb P^1_{s:t}$ 上に共通零点を持たない。
+$st\ne0$ では二つの二次式の係数行列式が $8$、
+両端では $a-1,a+1\ne0$ を使う。
+従って次数三の全射 $\mathbb P^1\to\mathbb P(W_1)$ を定める。
+全ての非零 $G$ が表示された積に分解し、商に零因子が生じる。
+\end{proof}

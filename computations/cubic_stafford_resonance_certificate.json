@@ -1,0 +1,45 @@
+{
+  "version": "classification-v65",
+  "field": "QQ(a)",
+  "curve": {
+    "alpha": "a",
+    "beta": "(1 - a)/(a + 3)",
+    "gamma": "(a + 1)/(a - 3)"
+  },
+  "five_relation_quotient_group_dimensions": {
+    "3": [
+      6,
+      6,
+      6,
+      6
+    ],
+    "4": [
+      14,
+      12,
+      10,
+      10
+    ]
+  },
+  "Q2": {
+    "(0, 0)": "2*a - 6",
+    "(1, 1)": "-2*a - 2",
+    "(2, 2)": "2*a + 2",
+    "(3, 3)": "2*a - 6"
+  },
+  "Q3": {
+    "(0, 0)": "-2*a - 6",
+    "(1, 1)": "2*a - 2",
+    "(2, 2)": "-2*a - 6",
+    "(3, 3)": "2 - 2*a"
+  },
+  "H": {
+    "(1, 0)": "-16*a",
+    "(2, 3)": "8*a - 8",
+    "(3, 2)": "-8*a - 8"
+  },
+  "normality_equations_verified": 8,
+  "factorization_coefficient_equations_verified": 2,
+  "factor_map_ratio": "-t*(a + t**2*(a + 1) - 3)/(a + t**2*(a + 3) - 1)",
+  "affine_resultant": "64*(a - 1)",
+  "scope": "Exact rational-function identities before the pencil relation. The paper uses AS4 flatness for all allowed parameters and THCR descent for W1 dimension two; neither follows just from low-degree ranks."
+}
