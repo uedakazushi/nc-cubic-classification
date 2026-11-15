@@ -1,33 +1,53 @@
 {
   "date": "2026-11-15",
-  "version": "recognition-v3",
-  "paper": "papers/weak_cubic_axioms.tex",
-  "new_paper_pages": 9,
-  "checks": {
-    "static_references": "PASS: 19 labels, 8 references, 7 bibliography entries, 14 citations",
+  "version": "recognition-v4",
+  "paper": {
+    "path": "papers/weak_cubic_axioms.tex",
+    "pages": 13,
     "latexmk_lualatex": "PASS",
-    "visual": "All nine pages rendered and contact sheet inspected; detailed pages 5-6 additionally inspected",
-    "new_calculation": "PASS: computations/verify_quantum_fermat.py; exact exponent arithmetic and QQ(zeta) rank44",
+    "references": "PASS",
+    "no_overfull_or_missing_glyphs": true,
+    "rendering": "all 13 pages rendered at 100 dpi, contact sheet inspected; pages 4,5,10 individually inspected",
+    "warnings": "CJK italic fallback; tiny math font substitution; math in PDF bookmarks"
+  },
+  "static_counts": {
+    "labels": 30,
+    "references": 18,
+    "bibliography": 11,
+    "citations": 21
+  },
+  "computations": [
+    {
+      "path": "computations/verify_boundary_fermat.py",
+      "status": "PASS",
+      "scope": "universal Lie-type PBW identities, normal twist, central cubics, 6x6 orbit determinant729, 54-element stabilizer, binary discriminant"
+    },
+    {
+      "path": "computations/verify_quantum_fermat.py",
+      "status": "PASS",
+      "scope": "prior exact quantum Fermat exponent checks and QQ(zeta) cubic overlap rank44 rerun"
+    }
+  ],
+  "environment": {
     "python": "3.13.5",
-    "sympy": "1.14.0",
-    "certificate_comparison": "JSON values; tracked JSON uses compact arrays while regeneration uses indented arrays",
-    "zip_integrity": "PASS for the separately distributed current research bundle"
+    "sympy": "1.14.0"
   },
-  "mathematical_status": {
-    "quantum_Fermat_counterexample": "Ordinary proof examined in this work, not independently refereed or formalized",
-    "R13_exclusion": "Closed proper normal-line incidence with nontrivial projective fourfold return",
-    "universal_R13_recognition": "False by the explicit counterexample",
-    "universal_presentation_redundancy": "Not proved",
-    "full_intrinsic_stack_algebraicity": "Not proved",
-    "finite_type_formal_algebra_model": "Proved for framed degreewise-flat algebra deformations with relations of degrees at most three",
-    "R13_generic_fibre": "Rational central-incidence model; exact weak locus and openness remain undetermined"
+  "proof_status": {
+    "boundary_recognition": "written and examined; input Cassidy-Shelton Thm1.5 and regular-extension theorem",
+    "quantum_orbit": "written and examined; homogeneous-space stack, not full deformation rigidity",
+    "boundary_existence_all_weak_objects": "unproved",
+    "whole_intrinsic_moduli_algebraicity": "unproved",
+    "relative_boundary_atlas": "not established in this work",
+    "peer_review_formalization_novelty": "not performed"
   },
-  "retained_research": "Existing surface, generic R13 and threefold sources were preserved; their full proofs and codes were not reaudited or rerun in this work",
-  "literature_scope": "Primary Kanazawa section 2.3, Pym, AOU, Behrend-Noohi and RSV checked; AZ bibliographic information checked; YZ author page checked but full PDF fetch was unsuccessful",
-  "remaining_typesetting_warnings": "CJK italic fallback, tiny math font substitution, mathematical text in PDF bookmarks",
-  "new_source_sha256": {
-    "papers/weak_cubic_axioms.tex": "9f76a31f14ba3ad0bd8610f8e9ac99503ee51addd2f330af826b80e6e4a3bb6f",
-    "computations/verify_quantum_fermat.py": "65c62c7e9fcf73e5d214abb7466432661275dcd57faffafc55dfbd0e1b440a21"
-  },
-  "new_pdf_sha256": "148ee3171dfed550e072a1b18a540275732616268323abb43c9b68b5ce51b603"
+  "literature": "Primary Cassidy-Shelton, Braverman-Gaitsgory, LBS relevant statements checked; LBS pages 179-180 visually checked. Retained Kanazawa proof not newly fully reaudited.",
+  "retained_papers": "surface and generic R13 papers/PDFs and other calculation assets preserved, not all rerun or reaudited",
+  "sha256": {
+    "papers/weak_cubic_axioms.tex": "b5371608d396b72de684c22a92623f3a1a40d76847471187c6de1e96af4e04b6",
+    "computations/verify_boundary_fermat.py": "5c7ab476cae083b93193dea40ae88768c2c8bc0d2778bc837de84106db7197cd",
+    "computations/boundary_fermat_certificate.json": "216f4bf1f2b27a2476452b4d9557a1e6f0d9f7c26f203c7f37c07c8a44b60f30",
+    "computations/verify_quantum_fermat.py": "65c62c7e9fcf73e5d214abb7466432661275dcd57faffafc55dfbd0e1b440a21",
+    "computations/quantum_fermat_certificate.json": "d4147ae0079635b09a67102b93f98fa21428627b2edbd766a3a9fa522f55354f",
+    "build/weak_cubic_axioms.pdf": "10c31add082cfbe1a04168b2b5b73c1c6acac0ccb86df2b0f14f7741cfaf1b53"
+  }
 }

@@ -19,9 +19,9 @@
 \newcommand{\Spec}{\operatorname{Spec}}\newcommand{\Spf}{\operatorname{Spf}}
 \newcommand{\im}{\operatorname{im}}\newcommand{\cC}{\mathfrak C}
 \newcommand{\cP}{\mathfrak P}\newcommand{\Sym}{\operatorname{Sym}}
-\title{内在的非可換三次曲面の公理とambient成分\\\large 量子Fermat反例・低次数生成・モジュライの認識条件}
+\title{内在的非可換三次曲面の公理とambient成分\\\large 正規一次境界による認識・量子Fermat族・モジュライの局所模型}
 \author{研究原稿：証明済みの命題と未解決の認識条件を区別する}
-\date{2026年11月15日\quad recognition-v3}
+\date{2026年11月15日\quad recognition-v4}
 \begin{document}\maketitle
 \begin{abstract}
 大域次元2の$k$線形Abel圏とrank one torsion-free構造対象，反Serre作用，
@@ -29,9 +29,15 @@ Artin--Zhang豊富性，三次曲面と同じ全次数の切断数を公理と�
 次数零の仮定は冗長である．一次生成・二次三次関係という条件は，
 可換三次環の全次数平坦なArtin変形では自動的に保持されるが，
 全内在的対象に対する認識は未証明である．
+ただし，正則正規な一次切断の商が3次元二次Koszul AS正則環の正則三次商ならば，
+一次生成，六つの二次関係と一つの三次関係，および二次包絡のAS4正則性がすべて従う．
+その核心は，曲面環上の正則性から二次包絡の低次数の正則性を導き，
+Cassidy--SheltonのPBW判定を適用することである．
 一方，これらの条件すべてを満たす明示的な量子Fermat三次曲面を構成し，
 そのambientが四頂点potentialモジュライの$R(1,3)$成分の閉包に入らないことを証明する．
 したがって全対象を$R(1,3)$へ送るという普遍的な認識命題は偽である．
+量子Fermat ambientの一般中心三次切断はすべて同型であり，
+次数スカラーを除いた固定ambient中心商のstackは位数54の群の分類stackになる．
 全モジュライの代数性は証明済みとはせず，有限提示による候補，その形式局所模型，
 超曲面認識部分での射，中心三次incidenceの一般ファイバーを正確に定式化する．
 \end{abstract}
@@ -61,10 +67,10 @@ $a\in R_m,b\in R_n$の積は$s^m(b)\circ a$である．
 \begin{center}\small
 \begin{tabular}{p{.15\linewidth}p{.76\linewidth}}\toprule
 問い&今回の結論\\\midrule
-低次数提示&$R_0=k$は自動．条件2の全域での冗長性は未証明．Artin平坦変形での保持と，正規境界による十分条件を証明する．\\
-ambient認識&存在すれば二次包絡で一意．$R(1,3)$への全域帰属は量子Fermat例により否定される．全対象でAS4包絡が存在すること自体は未証明．\\
+低次数提示&$R_0=k$は自動．条件2の全域での冗長性は未証明．Artin平坦変形での保持と，標準正規境界からの低次数提示・AS4包絡の認識を証明する．\\
+ambient認識&存在すれば二次包絡で一意．$R(1,3)$への全域帰属は量子Fermat例により否定される．標準正規境界があればAS4包絡は存在する．全対象での存在は未証明．\\
 代数性&族を指定したfpqcモジュライ候補と有限提示空間を作る．候補の全体を通常の代数的stackと同定する証明は完成していない．\\
-像とfiber&中心拡大型のincidenceは7次元ambientを支配し，中心fiberは$\PP^1$．内在的モジュライ全体への無条件の拡張とは区別する．\\\bottomrule
+像とfiber&中心拡大型のincidenceは7次元ambientを支配し，中心fiberは$\PP^1$．量子Fermatの良い中心切断は一軌道で，rigidifyした商は分類stack $BH_{54}$．全対象への拡張とは区別する．\\\bottomrule
 \end{tabular}
 \end{center}
 既知入力は\cite{AZ,Kanazawa,YZ,Pym,AOU,BN}に区別して示す．
@@ -151,6 +157,153 @@ $\dim V=4$，$\dim J_2=6$．
 したがって「三次関係は一本」は$\dim K_3=4$に相当し，
 $R_3=19$という数値だけからは得られない．
 AS正則性はさらに全次数のKoszul複体の完全性を必要とする．
+
+
+\section{正規一次境界からのAS正則ambient認識}
+\label{sec:boundary-recognition}
+本節は，条件2を仮定せずに適用できる認識定理を与える．
+境界の幾何を仮定することと，求めるambientのAS正則性を仮定することは異なる．
+使用する既知の入力はCassidy--Sheltonの低次数正則性判定
+\cite[Theorems 1.3 and 1.5]{CS}，および正則な一次拡大のKoszul・AS性
+\cite[Theorem 2.6, Corollary 2.7, Remark 2.8]{LBS}である．
+
+\begin{theorem}[標準正規境界による超曲面認識]
+\label{thm:normal-boundary-recognition}
+$R$は連結局所有限な非負次数付き$k$代数とし，
+$t\in R_1$を左右正則正規元とする．あるnoetherianな3次元二次Koszul
+AS正則代数$S_0$と，その左右正則正規元$g\in(S_0)_d$，$d\ge3$に対して
+\[
+ R/(t)\simeq S_0/(g),\qquad H_{S_0}(z)=(1-z)^{-3}
+\]
+と仮定する．このとき次が成り立つ．
+\begin{enumerate}
+\item $R$は次数一で生成される．
+\item 二次包絡$B=Q(R)$はnoetherianな4次元二次Koszul AS正則代数である．
+$t$は$B$にも左右正則正規元として持ち上がり，$B/(t)\simeq S_0$．
+\item $g$は$G\in B_d$へ持ち上がり，$G$は左右正則正規，
+\[
+ \ker(B\to R)=BG=GB,\qquad R\simeq B/(G).
+\]
+\item $H_B(z)=(1-z)^{-4}$，$H_R(z)=(1-z^d)/(1-z)^4$．
+$d=3$では最小関係は六本の二次関係と一本の三次関係であり，
+条件2と$\dim K_3=4$は結論になる．
+\end{enumerate}
+$S_0$が整域なら$B$も整域である．$R$の整域性はこの定理の結論には含めない．
+\end{theorem}
+\begin{proof}
+まず$R/(t)$の一次生成元を$R_1$へ持ち上げる．任意の斉次元$r\in R_n$は，
+これらの生成元の多項式を引けば$tR_{n-1}$に入る．次数帰納法から，
+$t$とこの三つの持上げが$R$を生成する．
+
+\emph{中心元の場合．}
+$t$が中心的とする．$B=Q(R)$は定義により$R$へ全射し，
+次数$0,1,2$では同型である．$[t,R_1]=0$は二次関係なので$B$でも$t$は中心である．
+二次関係の$t$を零にした像を取ることにより
+\begin{equation}\label{eq:boundary-envelope-quotient}
+ B/(t)=Q(R/(t))=S_0
+\end{equation}
+を得る．最初の等式は，$R/(t)$で零になる二次式の任意の持上げが，
+$R_2$では$tR_1$に入るため，その$tR_1$成分を引いて$R$の二次関係へ直せることによる．
+最後の等式には$d\ge3$と$S_0$の二次性を使った．
+
+$0\le i\le2$，$b\in B_i$，$n\ge1$について$t^nb=0$とする．
+$R$へ写すと，$R$上の$t$の正則性から$b$の像は零である．
+$B_i\simeq R_i$なので$b=0$．従って$t$は$B$の次数$\le2$で正則である．
+$S_0$はKoszulなのでCassidy--Sheltonの複雑度は2であり，
+\cite[Theorem 1.5]{CS}から$t$は$B$の\emph{全次数}で正則となる．
+この適用では，三次商において正則であることを，ambientが先に平坦だと
+仮定するために用いていない．ambientの低次数だけが$R$と一致することを使っている．
+正則中心一次拡大の定理\cite{LBS}から，$B$はKoszul・noetherian・AS正則次元4となる．
+Hilbert級数は式\eqref{eq:boundary-envelope-quotient}と$t$の正則性から従う．
+$S_0$が整域なら，$t$進の最低記号を取ることで$B$も整域と分かる．
+
+$I=\ker(B\to R)$とする．$B$と$R$における$t$の正則性により，
+\begin{equation}\label{eq:boundary-ideal-reduction}
+ 0\longrightarrow I(-1)\xrightarrow{t}I
+ \longrightarrow (g)\subset S_0\longrightarrow0
+\end{equation}
+が完全である．具体的には$I\cap tB=tI$であり，
+$S_0$の$(g)$の元は，任意の$B$への持上げから適切な$tB$の元を引けば$I$へ持ち上がる．
+従って$I_d$に$g$を持ち上げる$G$がある．
+$I/tI=S_0g=gS_0$において$G$の像が生成元なので，
+次数帰納法から$I=BG=GB$となる．
+もし$Gb=0$なら，$b$を可能な限り$t$で割った後の非零記号$\bar b\in S_0$について
+$g\bar b=0$となり，$g$の正則性に反する．左側も同様で，$G$は左右正則である．
+
+\emph{正規元の場合．}
+正規自己同型を$t a=\sigma(a)t$で定める．正則性により$\sigma(t)=t$である．
+Zhang twist $R'=R^{\sigma^{-1}}$，すなわち
+\[
+ a\star b=a\,\sigma^{-\deg a}(b)
+\]
+では$t$が中心になる：$t\star b=t\sigma^{-1}(b)=bt=b\star t$．
+誘導された境界自己同型は二次包絡$S_0=Q(R/(t))$へ関手的に持ち上がるので，
+$R'/(t)$も3次元二次Koszul AS正則代数の正則正規$d$次商となる．
+中心の場合を適用し，twistを戻す．twistは二次包絡と両立し，
+Koszul性・AS正則性とHilbert関数を保つ\cite{ZhangTwist}．
+ここで境界の核$(g)$と包絡の核$I$は捩り自己同型に不変であり，
+それぞれの次数$d$成分は一次元なので，$g$と$G$は固有ベクトルとなる．
+従ってこの場合には正規性・左右正則性もtwistとuntwistで保たれる．
+$d=3$では$\dim B_2=10$，$\dim B_3=20$であり，最後の主張も従う．
+\end{proof}
+
+\begin{corollary}[weak cubicへの帰結]\label{cor:boundary-weak}
+本稿の内在的公理を満たす反標準環$R$が定理
+\ref{thm:normal-boundary-recognition}の$d=3$の境界を持つなら，
+仮定2は不要であり，$R$は超曲面認識部分に属する．
+また，Artin--Zhangのsection再構成の規約の下で
+\[
+ \Ext^1_{\cA}(\OO,\OO(m))=0\quad(m\in\mathbb Z)
+\]
+となり，$\OO$は例外対象である．
+\end{corollary}
+\begin{proof}
+前半は定理そのもの．正則正規三次商$R=B/(G)$はAS Gorenstein次元3・parameter 1で，
+AS正則$B$から誘導されるbalanced dualizing complexを持つ．
+局所双対により$H^i_{R_+}(R)=0$ ($i\ne3$)である．
+商圏コホモロジーと局所コホモロジーの比較から$\Ext^1(\pi R,\pi R(m))=0$を得る．
+AZ再構成で$\pi R$は$\OO$へ対応する．
+$\Ext^2(\OO,\OO)=R_{-1}^*=0$と$\End(\OO)=k$を合わせれば例外性が従う．
+\end{proof}
+
+\begin{remark}[この認識が主張しないこと]
+正則正規な一次切断の\emph{存在}と，その商が$S_0/(g)$であることは，
+全weak公理からまだ導いていない．また，正規元をtwistで中心化する操作は
+もとの反標準gradingを保存するとは限らない．従ってこの定理から
+ambientの$R(1,3)$への所属を結論してはいけない．
+実際，後述の量子Fermat例でも$t=x_0$を取れば本定理が適用できる．
+$t$は正規だが中心でなく，境界$S_0$は楕円型Sklyaninではなく量子多項式環である．
+\end{remark}
+
+\subsection{中心化した表示での有限PBW方程式}
+$S_0=T(W)/(U)$，$\dim W=\dim U=3$とし，
+$L=(U\otimes W)\cap(W\otimes U)$は一次元とする．
+$t$が中心の表示では二次包絡を
+\[
+ B_{\alpha,\beta}=
+ T(W\oplus kt)/(tw-wt,\ r-t\alpha(r)-t^2\beta(r):r\in U)
+\]
+と書ける．ここで$\alpha:U\to W$，$\beta:U\to k$．
+$\delta_\alpha=\alpha\otimes1-1\otimes\alpha$，
+$\delta_\beta=\beta\otimes1-1\otimes\beta$と置くと，PBW条件は
+\begin{equation}\label{eq:bg-conditions}
+ \delta_\alpha(L)\subset U,\qquad
+ \alpha\delta_\alpha+\delta_\beta=0,\qquad
+ \beta\delta_\alpha=0.
+\end{equation}
+これはBraverman--Gaitsgoryの条件\cite[Theorem 0.5 and \S3]{BG}である．
+例えば$\dim(W^{\otimes2}/U)=6$なので，$L$の生成元を選べば
+最初は6個，第二は3個，第三は1個の係数等式で書ける．
+重複する等式があり得るため，10個の独立条件であるとはいわない．
+
+本研究の状況では，これらの条件は$R$上の$t$の正則性からも直接読み取れる．
+$\ell\in L$の二通りの表示を二次関係に代入すると
+$t\delta_\alpha(\ell)+t^2\delta_\beta(\ell)=0$が$B_3$で成立する．
+$t:B_2\to B_3$の単射性で一度消去し，$t=0$で制限すれば最初の条件を得る．
+再び二次関係と$t:B_1\to B_2$の単射性を用いれば，第二・第三の条件になる．
+従って無限次数のPBW性に必要な最初の障害は，\emph{仮定する曲面環}の正則性により消える．
+この有限方程式は，境界を指定した認識問題を実装するための入力になる．
+任意基底上の全weak stackの代数性を，この体上の議論だけから結論しない．
 
 \section{全公理を満たす量子Fermat三次曲面}
 $\zeta\in k$を原始3乗根とし，
@@ -356,6 +509,101 @@ $\Ext^1(\OO,\OO(m))=0$も全$m$で成立するので，
 構造対象の全twistの中間コホモロジー消滅を加えてもこの反例は排除されない．全対象に対するAS包絡の認識問題と，
 その成分が$R(1,3)$であるかという問題を混同してはいけない．
 
+
+\section{量子Fermat ambientの良い中心三次商を分類する}
+\label{sec:fermat-fibre}
+本節では式\eqref{eq:matrix}のambientを固定し，
+$x_0=t,x_1=x,x_2=y,x_3=z$と書く．
+以下は中心三次の\emph{ある開部分}の完全な分類であり，
+この曲面の全Hochschild変形を計算したものではない．
+
+\begin{lemma}[中心三次とambient自己同型]\label{lem:fermat-aut}
+この$B$について
+\[
+ Z(B)_3=kt^3\oplus k[x,y]_3\oplus kz^3,
+ \qquad \operatorname{Aut}_{\mathrm{gr}}(B)
+     =\mathbb G_m\times\GL(\langle x,y\rangle)\times\mathbb G_m.
+\]
+右辺の作用は$t\mapsto at$，$(x,y)^{\mathsf T}\mapsto M(x,y)^{\mathsf T}$，
+$z\mapsto cz$である．
+\end{lemma}
+\begin{proof}
+PBW基底の単項式の中心性は指数ベクトル$v$に対する$Ev=0\pmod3$で判定できる．
+全次数3で解くと$t^3,z^3$と$x^3,x^2y,xy^2,y^3$の六つに限られる．
+異なるPBW単項式は一次生成元との交換で混ざらないので，これが全中心である．
+
+補題\ref{lem:lines}を$\ell=m$に適用すると，正規一次直線の集合は
+$\{[t]\}\sqcup\PP(\langle x,y\rangle)\sqcup\{[z]\}$である．
+次数付き自己同型はこの集合を保つため，$\langle x,y\rangle$を保ち，
+$kt,kz$を保つか交換する．後者なら$tx=\zeta xt$の像が
+$zM(x)=\zeta M(x)z$となるが，実際には$zM(x)=\zeta^2M(x)z$なので不可能．
+よって表示した形に限られ，その全てが関係式を保つ．
+\end{proof}
+
+係数を$A,C\in k$，$f\in k[x,y]_3$として
+\[
+ F_{A,f,C}=At^3+f(x,y)+Cz^3
+\]
+と置く．$\Delta(f)$をbinary cubicの判別式とし，
+\begin{equation}\label{eq:fermat-open}
+ \mathcal U_F=\{[F_{A,f,C}]\in\PP Z(B)_3:\ AC\Delta(f)\ne0\}
+\end{equation}
+とする．これは$\PP^5$の非空開部分である．
+\begin{theorem}[中心三次の開部分は一つの軌道]\label{thm:fermat-gerbe}
+$G=\operatorname{Aut}_{\mathrm{gr}}(B)/\mathbb G_m^{\mathrm{deg}}$とする．
+ここで分母は全生成元を同じ定数倍する次数スカラーである．
+$G$は$\mathcal U_F$に推移的に作用し，
+$F_0=t^3+x^3+y^3+z^3$の安定化群は
+\[
+ H_{54}=(\mu_3^4/\mu_3^{\mathrm{diag}})\rtimes\mathfrak S_2,
+ \qquad |H_{54}|=54
+\]
+である．$\mathfrak S_2$は$x,y$を交換する．従って
+\begin{equation}\label{eq:fermat-gerbe}
+ [\mathcal U_F/G]\simeq B H_{54}.
+\end{equation}
+$\mathcal U_F$の全ての三次商は，定理\ref{thm:fermat}の量子Fermat曲面と
+同型であり，全weak公理を満たす．
+\end{theorem}
+\begin{proof}
+$\Delta(f)\ne0$なら$\PP^1$上の三つの零点は相異なる．
+$\PGL_2$の三重推移性により，$f$を$x^3+y^3$の定数倍へ移せる．
+$k$は代数閉なのでさらに一様スカラーを使ってその定数を吸収する．
+$A,C\ne0$も$t,z$のスカラー変更で1にできる．よって全て$[F_0]$の軌道である．
+
+$k[x,y]$の$f_0=x^3+y^3$を\emph{元として}保つ線型群は
+$\mu_3^2\rtimes\mathfrak S_2$である．実際，その射影像は三根の置換群
+$\mathfrak S_3$，核は共通$\mu_3$なので位数は18であり，
+三乗根による二つの独立スカラーと交換は既に18元を与える．
+従って$F_0$を元として保つambient自己同型群は
+$\mu_3^4\rtimes\mathfrak S_2$である．
+$kF_0$を保つ自己同型は，一様スカラーを除けばこの形になる．
+その一様スカラーとの共通部分は対角$\mu_3$なので安定化群は$H_{54}$となる．
+
+これは幾何学的点の軌道計算だけではない．$G$は滑らか，$H_{54}$は有限エタールであり，
+軌道の次元は$\dim G=5=\dim\mathcal U_F$．実際，アフィン係数空間で
+$t,z$の二つのスカラーと$\GL_2$の微分は六方向を張り，
+指定基底で行列式は$3^6=729\ne0$である．
+従って$G/H_{54}\to\mathcal U_F$はエタールかつ幾何学的に単射・全射であり同型である．
+通常のhomogeneous-spaceの降下から式\eqref{eq:fermat-gerbe}を得る．
+最後のweak条件は，具体的なgraded同型で定理\ref{thm:fermat}へ戻すことで従う．
+\end{proof}
+
+\begin{remark}[三つの異なるfiberと，rigidityについての限界]
+固定したambientへの\emph{同定まで}保持する中心切断のパラメータは
+$\mathcal U_F\subset\PP^5$である．その同定を忘れてambient自己同型で割ると
+式\eqref{eq:fermat-gerbe}となり，粗い同型類は一点である．
+一方，ambientも変形させる全weak cubicモジュライにおける形式近傍は未計算であり，
+$BH_{54}$がその開部分や孤立成分であるとは主張しない．
+また$AC\Delta(f)=0$の境界で全ての商が非weakとなることも，ここでは証明していない．
+
+本定理をpolarizedな$(\qgr R,\pi R,(1))$の同型群oidとして読むことは，
+section saturationと二次包絡の関手性から正当化される．
+$(1)=S^{-1}[2]$の比較同型を忘れた裸の2-stackへ移る際は，
+残る自然自己同型と次数スカラーの規約を改めて揃える必要がある．
+従って$H_{54}$を，規約を指定しない全Abel圏自己同値群と呼ぶことはしない．
+\end{remark}
+
 \section{モジュライ候補，有限提示，形式局所代数性}
 体上の対象だけの定義から，スキーム上の族とその平坦性は一意には定まらない．
 ここでは$T$上の全次数有限局所自由なsection代数$R_T$を用い，
@@ -472,6 +720,11 @@ $R(1,3)$を支配する枝の像の閉包の余次元が0であることが得�
 その一般点がweak，その関数体が$K(\lambda)$，というものである．
 
 \section{残る認識問題と検証範囲}
+正規境界認識定理\ref{thm:normal-boundary-recognition}により，
+条件2とAS4包絡の存在は，標準的な正規一次境界を持つ範囲で解決した．
+一方，その境界の全対象における存在は未証明である．
+量子Fermatの中心切断については定理\ref{thm:fermat-gerbe}で良い開部分の軌道stackを決定したが，
+全変形のrigidityとは区別する．
 優先すべき問題は，次の二つの系統へ分かれる．
 第一は全weak対象の認識であり，条件2の公理からの導出，二次包絡のAS正則性，
 族での全次数平坦性とSerre条件の認識，全stackの代数性を含む．
@@ -479,11 +732,14 @@ $R(1,3)$を支配する枝の像の閉包の余次元が0であることが得�
 AOU型の有限例外列模型との比較，Weyl群によるマーキングの忘却，
 weak条件の開性，正確なfiberの除外点の決定を含む．
 量子Fermat反例により，前者の全対象を後者の一成分に押し込める方針は採れない．
+第三の具体的課題は量子Fermatの全Hochschild変形と，$AC\Delta(f)=0$の中心切断の正則性である．
 
 本稿では量子Fermat例の整域性，局所正則性，Serre性，周期的正規直線による
 成分排除を通常の証明で検討した．付属コードは$\mathbb Z/3$上の指数演算により，
 中心性，CY行積，低次数中心，正規supportのclass，四周monodromy，
 四次potentialの符号，Hilbert値，Norm障害の単純極を有限計算で確認する．
+新しい\texttt{verify\_boundary\_fermat.py}は，PBW恒等式のLie型検算，
+中心三次の六基底，六係数軌道の行列式729，位数54の安定化群の閉性を検証する．
 計算は一般の認識定理を証明したものではない．
 外部査読，Lean形式化，新規性の網羅的調査は未実施である．
 
@@ -513,5 +769,23 @@ Adv. Math. 281 (2015), 1216--1241;
 \bibitem{RSV} J. V. Rennemo, E. Segal, M. Van den Bergh,
 \emph{A non-commutative Bertini theorem},
 \href{https://arxiv.org/abs/1705.01366}{arXiv:1705.01366}, Lemmas 3.2--3.3.
+
+\bibitem{CS} T. Cassidy, B. Shelton,
+\emph{PBW-deformation theory and regular central extensions},
+\href{https://arxiv.org/abs/math/0603375}{arXiv:math/0603375v2},
+Theorems 1.3, 1.5．Koszul環の複雑度2と二次成分での正則性判定．
+\bibitem{LBS} L. Le Bruyn, S. P. Smith, M. Van den Bergh,
+\emph{Central extensions of three dimensional Artin--Schelter regular algebras},
+Math. Z. 222 (1996), 171--212,
+\href{https://sites.math.washington.edu/~smith/Research/Central-extns.pdf}{著者公開PDF},
+Theorem 2.6, Corollary 2.7, Remark 2.8, \S3.1．
+\bibitem{BG} A. Braverman, D. Gaitsgory,
+\emph{Poincar\'e--Birkhoff--Witt theorem for quadratic algebras of Koszul type},
+\href{https://arxiv.org/abs/hep-th/9411113}{arXiv:hep-th/9411113},
+Theorem 0.5, \S3．
+\bibitem{ZhangTwist} J. J. Zhang,
+\emph{Twisted graded algebras and equivalences of graded categories},
+Proc. London Math. Soc. (3) 72 (1996), 281--311.
+正則正規一次元の中心化は\cite[\S3.1]{LBS}も参照．
 \end{thebibliography}
 \end{document}
