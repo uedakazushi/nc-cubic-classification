@@ -20,7 +20,7 @@
 \newcommand{\cA}{\mathcal A}\newcommand{\cB}{\mathcal B}
 \newcommand{\cC}{\mathcal C}\newcommand{\cD}{\mathcal D}\newcommand{\cH}{\mathcal H}
 \newcommand{\cT}{\mathcal T}\newcommand{\cF}{\mathcal F}
-\newcommand{\cZ}{\mathcal Z}\newcommand{\OO}{\mathcal O}
+\newcommand{\cK}{\mathcal K}\newcommand{\cZ}{\mathcal Z}\newcommand{\OO}{\mathcal O}
 \newcommand{\Db}{D^b}\newcommand{\Sfun}{\mathbb S}
 \newcommand{\AR}{\mathcal A_{\mathrm R}}
 \newcommand{\AV}{\mathcal A_{\mathrm V}}
@@ -37,28 +37,24 @@
 \title{非可換del Pezzo曲面の四つのheart\\
 \large VdB・Rains・反標準・Artin--Schelter構成の比較}
 \author{}
-\date{2026年11月16日\qquad 公表準備稿 hearts-v19}
+\date{2026年11月16日\qquad 公表準備稿 hearts-v20}
 \hypersetup{pdftitle={非可換del Pezzo曲面の四つのheart},pdfsubject={導来比較、HRS tilt、共鳴、反標準corner}}
 \begin{document}
 \maketitle
 \begin{abstract}
-非可換del Pezzo曲面に付随するVdB heart，Rains heart，anticanonical heart，
-AS heartを，比較関手と構造対象を指定して比較する．同じblow-up表示に由来する
-VdBとRainsのt構造は，blow-down関手のpseudo-canonical性によって同定される．
-一方，blow-upの各段階で行うsection modelへの移行は別の操作であり，
-Van den Berghの適用条件下では一回のHRS tiltとして記述される．
-滑らかなgenuine del Pezzo曲面と滑らかな楕円境界からのRains gluingについては，
-自然な反標準導来切断を用いて導来同値と全heartの振幅$[0,1]$を示す．
-負指数の実在共鳴根は，導来同値を失わずに反標準AZ amplenessとheart一致が失敗することを検出する．
-AS側では，helix全体の豊富性と一つの構造対象の反Serre orbitの豊富性を区別し，
-後者をnoetherianなfolded algebraのidempotent cornerによって判定する．
-AOUの許容楕円データでは，最後の二つのmutationにおける全Hom消滅から構造対象を同定し，
-同論文の導来比較がpointedであることと反標準環の一致を示す．
-さらに標準noetherian三block表示では，指定AOU同値のt-exactnessを四交比の十一の非零条件で完全に判定する．
-有限cornerから両bimodule有限性が従い，一致係数開集合は古典的六点moduliと四次元torusの積として記述される．
-三次曲面の混合$A_2$部分系を例として，connecting map，有限長部分圏，
-反標準側の三角表現と四次元アフィン商を記述する．
-一般の四heartの無条件な一致，AS比較の全域的t-exactness，および族での降下は主張しない．
+非可換del Pezzo曲面のVdB，Rains，反標準，Artin--Schelterという四つのheartを，
+構造対象と自然な比較関手を指定して比較する．genuineな滑らかな可換del Pezzoと
+滑らかな楕円境界からのRains gluingでは，反標準導来切断が導来同値を与え，
+全heartの比較は一回のHRS tiltとなる．VdBの最後のsection-model関手は，
+構造対象と反Serre作用を保つことからその内在的な導来切断と自然に同定される．
+AOUの許容楕円データではmutation後の構造対象を同定し，
+標準noetherian三block表示における指定同値のt-exactnessを四交比の十一条件で判定する．
+境界非交叉部分では，全ての商・部分対象の反標準Euler標数がtorsion pairを決める．
+有限ADE型の単純根sheafを持つ場合，負指数の単純tiltを繰り返すことで
+反標準heartをEuler chamberから回復し，停止回数と新しい単純の根類・次元を決定する．
+混合$A_2$の具体模型を保ったまま，実在条件を明記した最大$E_6$共鳴へ適用する．
+既知の単純tilt・Weyl反射・境界非交叉対象の有限長性と，本稿の自然関手への適用を区別する．
+独立に選んだ全avatarの同定，任意のAS表示への拡張，相対heartの降下は主張しない．
 \end{abstract}
 \tableofcontents
 
@@ -66,6 +62,7 @@ AOUの許容楕円データでは，最後の二つのmutationにおける全Hom
 \input{papers/sections/four_hearts_geometric.tex}
 \input{papers/sections/four_hearts_as.tex}
 \input{papers/sections/four_hearts_corner_locus.tex}
+\input{papers/sections/four_hearts_canonical_comparison.tex}
 \input{papers/sections/four_hearts_examples.tex}
 
 \begin{thebibliography}{99}
@@ -73,7 +70,8 @@ AOUの許容楕円データでは，最後の二つのmutationにおける全Hom
 M.~Van den Bergh, \emph{Blowing up of non-commutative smooth surfaces},
 Mem. Amer. Math. Soc. \textbf{154} (2001), no.~734;
 \href{https://arxiv.org/abs/math/9809116}{arXiv:math/9809116v1}.
-使用箇所：Lemma 9.1.5，Definition 11.1.2，Theorem 11.1.3，Chapter 12，Remark 12.0.5．
+使用箇所：(9.5)，Lemma 9.1.5，Proposition 9.1.8，Theorem 9.1.9，Proposition 9.2.3，
+Lemma 11.1.1，Definition 11.1.2，Theorems 11.1.3, 11.2.1，Lemma 11.2.4，Remark 12.0.5．
 \bibitem{Rains}
 E.~M.~Rains, \emph{The birational geometry of noncommutative surfaces},
 \href{https://arxiv.org/abs/1907.11301}{arXiv:1907.11301v1} (2019).
@@ -119,5 +117,16 @@ J. Algebra \textbf{213} (1999), 1--51;
 D.~Orlov, \emph{Smooth and proper noncommutative schemes and gluing of DG categories},
 \href{https://arxiv.org/abs/1402.7364}{arXiv:1402.7364v5} (2015).
 使用箇所：Theorems 3.18, 3.25，Corollary 3.19．
+\bibitem{BridgelandKleinian}
+T.~Bridgeland, \emph{Stability conditions and Kleinian singularities},
+Int. Math. Res. Not. \textbf{2009} (2009), no.~21, 4142--4157;
+\href{https://arxiv.org/abs/math/0508257}{arXiv:math/0508257v3}.
+使用箇所：\S2（ambient圏と内在的導来圏の区別），Lemma 3.5と\S3（単純tiltとWeyl反射）．
+\bibitem{BCPW}
+N.~Broomhead, R.~Coelho Sim\~oes, D.~Pauksztello, J.~Woolf,
+\emph{Simple tilts of length hearts and simple-minded mutation},
+Adv. Math. \textbf{503} (2026), Part B, 111197;
+\href{https://arxiv.org/abs/2401.02947}{arXiv:2401.02947v3}.
+使用箇所：Theorem 2.7およびRemark 2.8（left/right tiltの有限長性）．
 \end{thebibliography}
 \end{document}
