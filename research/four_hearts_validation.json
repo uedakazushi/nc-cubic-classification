@@ -1,49 +1,61 @@
 {
   "date": "2026-11-16",
-  "version": "hearts-v18",
+  "version": "hearts-v19",
   "manuscript": "papers/nc_del_pezzo_hearts.tex",
   "continuation_plan": "research/four_hearts_plan.md",
   "research_notes": "research/heart_comparison.md",
-  "new_claims": {
-    "AOU_structure_object": {
-      "state": "proved under the stated admissible AOU hypotheses",
-      "proof": "four_hearts_as.tex, thm:AOU-pointed",
-      "argument": "Track the unchanged structure object to slot three of tau6. Proposition 9.3 and nontrivial degree-zero elliptic restrictions kill the two final RHom complexes. The evaluation triangles identify the actual object, not only its K0 class."
-    },
-    "anticanonical_ring": {
-      "state": "proved in the same setting",
-      "proof": "cor:AOU-ring",
-      "argument": "Natural saturation via the central degree-one boundary sequence, followed by the pointed equivalence and coherent anti-Serre iterates, preserves multiplication."
-    },
-    "relative_structure_object": {
-      "state": "conditional theorem",
-      "proof": "prop:AOU-relative-object",
-      "additional_hypotheses": "A relative mutation construction exists; both relative RHom complexes are perfect and commute with derived base change; the geometric fibers satisfy the restriction comparison and admissibility. No full relative-heart construction or stack descent is asserted."
+  "current_results": {
+    "eleven_factor_criterion": {
+      "state": "proved as a purely algebraic theorem, without AS or noetherian assumptions",
+      "proof": "four_hearts_corner_locus.tex, thm:eleven",
+      "origin": "The finite-corner criterion was already present in the separate current project paper cubic_heart_corner.tex. Its complete proof was audited and integrated here, not claimed as first discovered in this revision.",
+      "statement": "C=B/BpB is finite-dimensional precisely when the remaining eighteen coefficients are nonzero and the nine two-by-two minors of Q, det Q, and the determinant of entrywise reciprocal Q are nonzero.",
+      "proof_method": "Necessity by explicit k[t] representations with a surviving cycle; sufficiency by reconstruction of six classical general-position points and all-degree Serre factorization through the structure vertex."
     },
     "specified_AOU_t_exactness": {
-      "state": "conditional corollary",
-      "proof": "cor:AOU-texact",
-      "additional_hypotheses": "Identified folding, right-noetherian rings, both corner bimodule finiteness conditions, and finite B/BpB. Not proved over the entire AOU or AS locus."
+      "state": "proved under the specified admissible AOU and standard right-noetherian periodic AS hypotheses",
+      "proof": "thm:AOUexactlocus (Theorem 8.4)",
+      "statement": "The pointed AOU functor is t-exact iff the natural corner is an abelian equivalence iff C is finite-dimensional iff the explicit eighteen-nonzero and eleven-factor conditions hold.",
+      "new_connection": "Uses the previously proved structure-object identification; proves automatic corner bimodule finiteness and coherent high-Ext tail vanishing in the standard AS setting. The reverse implication factors all high orbit morphisms through the structure object."
     },
-    "prior_work_status": "The structure-object identification is an explicit consequence of existing AOU results. The known AOU derived-equivalence theorem is not claimed as new."
+    "automatic_finiteness": {
+      "state": "proved",
+      "proof": "lem:automaticcorner",
+      "statement": "Finite C implies both corner bimodules are finite over pBp. Right-noetherian B implies right-noetherian pBp."
+    },
+    "coefficient_geometry": {
+      "state": "proved for the geometric coefficient-torus quotient, not the full AS moduli stack",
+      "proof": "cor:coefficientopen",
+      "statement": "D(Delta) in the four-cross-ratio torus is the ordered six-point cubic moduli. The finite-corner open in the eight-dimensional coefficient quotient is noncanonically M_cubic times (G_m)^4; an integral section splits the torus map."
+    },
+    "retained_results": "The earlier VdB/Rains comparison, genuine elliptic derived comparison, HRS tilt, resonance sign results, AOU pointedness and relative object statement, and mixed A2 results are retained. Their full proofs were not all independently re-audited in this iteration."
   },
+  "scope_limits": [
+    "No claim that every potential is AS-regular or noetherian.",
+    "No claim that infinite-order elliptic translation is a Zariski-open condition.",
+    "No claim that every zero of Delta belongs to the admissible AS locus or produces an actual negative-index Rains root.",
+    "No exclusion of every abstract abelian equivalence with another structure object.",
+    "No full relative-heart construction, stack descent, or complete four-heart identification for unrelated data."
+  ],
   "remaining": [
-    "Determine the finite-corner and bimodule conditions throughout the actual AOU/AS parameter locus.",
-    "Match the last VdB section-model functor and the natural Rains section functor with the same six-point data and grading conventions.",
-    "Construct relative hearts and prove descent beyond the conditional object-level statement.",
-    "Compute original elliptic-generator coefficients in the affine A2 quotient.",
+    "Match the last VdB section-model functor and the natural Rains functor for the same elliptic data, including structure object, boundary, and gluing bimodule.",
+    "Pull back the eleven factors explicitly to elliptic parameters and determine their intersection with the actual admissible/noetherian AS locus.",
+    "Handle standard-presentation and noetherianity limitations and relative-heart descent.",
+    "Compute original elliptic-generator coefficients in the finite affine A2 quotient.",
     "Complete publication-level novelty comparison, including the 2025 Rains monograph."
   ],
   "checks": {
     "full_manuscript_LuaLaTeX": "PASS",
-    "pdf_pages": 21,
-    "final_rendering": "All 21 rendered pages inspected in contact sheets; the main new proof page also inspected at full resolution.",
+    "pdf_pages": 25,
+    "final_page_images": "All 25 rendered pages inspected; inspection images were checked against the final exact-remote-source build.",
     "undefined_references_or_citations": false,
     "missing_glyph_warnings": false,
     "overfull_or_underfull_box_warnings": false,
-    "both_python_scripts_rerun": true,
-    "arithmetic": "Exact integers and Fraction, Python standard library",
-    "cohomology_cases": {
+    "harmless_log_warning": "ltjsarticle reports the legacy mathematical font command \\rm; no missing glyph or layout error.",
+    "all_three_calculation_programs_executed": true,
+    "arithmetic": "Exact integers and Fraction; Python standard library, plus independent finite-field elimination.",
+    "shared_A2_checker": "The unchanged shared checker carries its own hearts-v18 program tag; it was rerun on the current hearts-v19 sources and validates 61 labels, not an archived v18 output.",
+    "mixed_A2_cases": {
       "positive": 17500,
       "negative": 17500,
       "balanced_hypothetical": 5000,
@@ -58,47 +70,103 @@
       3,
       1
     ],
-    "AOU_final_Hom_vanishing_inputs": 2,
-    "AOU_boundary_degrees": [
-      0,
-      0
-    ],
-    "source_labels": 50,
+    "labels": 61,
     "bibliography_entries": 11,
-    "all_source_inputs_and_references_resolved": true,
-    "geometric_nontriviality_or_sheaf_isomorphism_proved_by_computation": false,
-    "clean_package_rebuild": "PASS: clean directory with only distributed sources; both scripts and full LuaLaTeX rerun. JSON outputs, all 21 pages of extracted text and rendered pixel data agree with the validated working copy."
+    "new_corner_checks": {
+      "universal_six_point_syzygies": 6,
+      "polynomial_variables": 12,
+      "coefficient_ring": "Z",
+      "QQ_Hilbert_dimensions": [
+        8,
+        21,
+        33,
+        38,
+        33,
+        21,
+        8,
+        0
+      ],
+      "finite_field_prime": 1000003,
+      "finite_field_Hilbert_dimensions": [
+        8,
+        21,
+        33,
+        38,
+        33,
+        21,
+        8,
+        0
+      ],
+      "degree_seven_full_rank_columns": 6804,
+      "endpoint_blocks": 21,
+      "weight_ranks_full_and_remaining": [
+        19,
+        14
+      ],
+      "quotient_torus_dimensions": [
+        8,
+        4
+      ],
+      "integral_cross_ratio_section_pairing": "I_4",
+      "rank_two_obstructions_all_relations_verified": true,
+      "original_AS_regularity_or_noetherianity_proved_by_computation": false
+    },
+    "isolated_reproduction": {
+      "state": "PASS",
+      "source_and_code_files_identical": true,
+      "all_25_extracted_text_pages_identical": true,
+      "all_25_rendered_pages_pixel_identical": true,
+      "render_scale": 1.1,
+      "three_calculation_outputs_identical": true
+    },
+    "finite_arithmetic_does_not_prove_sheaf_existence_or_derived_equivalence": true,
+    "actual_elliptic_generator_coefficients_computed": false
   },
-  "primary_source_review": {
-    "new_proof_primary_source": "AOU, arXiv:2404.00175v1, mutation definitions, Definition 7.1, Proposition 9.3, (9.28)-(9.57). Relevant primary HTML passages checked.",
-    "other_inputs": "Selected Rains gluing/trace and pseudo-canonical passages rechecked. Other existing proofs and bibliography are retained, not claimed to have received a complete new audit this session.",
-    "primary_PDF_screenshots": "Attempted for AOU and selected Rains pages but failed with Cache miss. Primary HTML/parsed text was available; no successful visual check of those source pages is claimed.",
-    "Rains_2025_monograph": "Bibliography and abstract checked; exhaustive theorem-number correspondence and novelty comparison remain incomplete.",
-    "exhaustive_novelty_review": false,
-    "external_independent_peer_review": false,
-    "machine_formalization": false
-  },
+  "primary_source_checks_this_iteration": [
+    {
+      "id": "arXiv:2404.00175v1",
+      "locations": "Theorem 1.1; Section 4 including (4.9); Section 8 including (8.4)-(8.7); coefficient-torus quotient.",
+      "method": "Primary HTML/text reviewed for the new corner connection. The earlier Section 9 pointedness check is retained, not claimed as a fresh full audit."
+    },
+    {
+      "id": "arXiv:2508.04986v1",
+      "locations": "Definition 3.1; text preceding (3.10); (3.9)-(3.10); Remark 5.4.",
+      "method": "Primary PDF text and the relevant page screenshots inspected for very strong projective helices, saturation, and periodic cover."
+    },
+    {
+      "id": "arXiv:2504.16187",
+      "locations": "Bibliography and abstract only.",
+      "method": "Full HTML retrieval failed; no exhaustive theorem-by-theorem novelty audit claimed."
+    }
+  ],
+  "prior_inputs": "Rains 2019/2022, VdB, CHZ, RSS, Yekutieli-Zhang and Orlov references are retained with the manuscript locations. This revision is not a fresh independent audit of every imported theorem.",
+  "exhaustive_novelty_search": false,
+  "external_independent_peer_review": false,
+  "machine_formalization": false,
   "git_blob_sha1": {
-    "papers/nc_del_pezzo_hearts.tex": "20b6ab0abb1780582bbd17753d1829d9af4ae2fc",
-    "papers/sections/four_hearts_foundations.tex": "1be10e419282488ce8080c50dfbbd9d9db100329",
-    "papers/sections/four_hearts_geometric.tex": "89b436034cf928f577e54ec4e9628ce28e81e942",
-    "papers/sections/four_hearts_as.tex": "74ac526b3785065e3368e8a927135ace0beb350e",
-    "papers/sections/four_hearts_examples.tex": "b83ec22ae744ff59187de0fbc79e51f1f24cf97a",
-    "computations/verify_four_hearts.py": "edbc7bc0627d7691c46edc5653177d69f4f7f46f",
     "computations/verify_cubic_heart_numerics.py": "53fec082f8814f3dca2c3be0803c2c4fff6de0d4",
-    "research/four_hearts_plan.md": "9d8fe4aeab5e5eda4e9bf74517e34484d6cb5000",
-    "research/heart_comparison.md": "b70bddcde7272a9611fa9ca58d73c5863a881d3d"
+    "computations/verify_four_hearts.py": "edbc7bc0627d7691c46edc5653177d69f4f7f46f",
+    "computations/verify_four_hearts_corner.py": "eda177b6595d4e467eae6bc4c2e6b1719d2fef3e",
+    "papers/nc_del_pezzo_hearts.tex": "118e6bad62299f264b57f377900ce2cd478490d4",
+    "papers/sections/four_hearts_as.tex": "5695184b96a9a2e6a03c80a42221f4938c0e2c70",
+    "papers/sections/four_hearts_corner_locus.tex": "23264e95cf3b07f08829be99d8ebfc914a82d348",
+    "papers/sections/four_hearts_examples.tex": "c1cb7c565ea15c3c4d528ef4064f09862f639541",
+    "papers/sections/four_hearts_foundations.tex": "8c02e3af4ac78cb5925196eafded9a445fd4f9cd",
+    "papers/sections/four_hearts_geometric.tex": "89b436034cf928f577e54ec4e9628ce28e81e942",
+    "research/four_hearts_plan.md": "dbbe0f28f66ce7f767e136640f6d0e6aa9f97c2c",
+    "research/heart_comparison.md": "508ae784949a59d17af6937356a1a38e3f36be09"
   },
   "persistence": {
     "canonical": "GitHub main",
-    "source_and_code_remote_blobs_matched": true,
-    "PDF_tracked_in_git": false,
+    "source_match": "All reported source and code hashes match the executed and typeset local files and successful GitHub writes; remote main arrival is checked separately after saving this validation.",
     "Library_upload_performed": false,
-    "scope": "This records explicit save operations, not a claim about automatic retention of chat attachments."
+    "PDF_tracked_in_Git": false,
+    "chat_attachments": "A current PDF and clean source/research bundle may be supplied in the chat. This is not a separate Library upload action."
   },
   "reproduction": [
     "python3 computations/verify_cubic_heart_numerics.py",
     "python3 computations/verify_four_hearts.py",
+    "python3 computations/verify_four_hearts_corner.py",
     "latexmk -lualatex -outdir=build papers/nc_del_pezzo_hearts.tex"
   ]
 }
