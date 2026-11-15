@@ -1,20 +1,24 @@
 {
   "date": "2026-11-15",
-  "version": "resonance-hearts-v3",
+  "version": "resonance-hearts-v4",
   "primary_sources": [
     "Rains arXiv:1907.11301v1 Sec7 Cor7.23 Sec10 Cor10.16 Sec11 pp139-141",
     "Rains arXiv:2107.13540v2 Sec4 pp33-35 Sec5 Prop5.1 Eq5.1",
     "Rains arXiv:1907.11301v1 Sec5 Cor5.9 Eq5.24 Sec7 Prop7.6 Cor7.26/7.30/7.31 Prop7.16 Cor7.13; duality changes q to q^{-1}",
-    "Rains arXiv:1907.11301v1 Def 7.1, Cor 7.13 equation (7.4), Cor 7.23 (Ext2 for <=1 dimensional sheaves); exact localization argument in present paper"
+    "Rains arXiv:1907.11301v1 Def 7.1, Cor 7.13 equation (7.4), Cor 7.23 (Ext2 for <=1 dimensional sheaves); exact localization argument in present paper",
+    "Rains arXiv:2107.13540v2 Sec4 p33, (4.14)-(4.15): simple-root effective iff q-power restriction",
+    "Rains arXiv:1907.11301v1 Sec9 Def9.1 Thm9.2 effective simple roots/formal(-2); Sec11 p140 existence of irreducible sheaf at determinant resonance"
   ],
   "manuscript": "papers/nc_del_pezzo_resonance_hearts.tex",
   "claims": {
-    "proved_conditional": "Complete sign trichotomy for existing irreducible pure 1D root sheaf disjoint from elliptic boundary: h0=max(m,0), Ext1=max(-m,0), Ext2=0; all are 2-spherical; m>0 heart degree0, m<0 heart degree1 / shifted [-1], m=0 natural derived section kills M. Corrected image/cokernel proof; Rains derived adjoint duality for m>0. Positive and negative resonances individually Zariski dense on relevant smooth blowup charts; ring Hilbert has no jump. Global derived equivalence remains unverified. Extended to extension-closed exact category of boundary-disjoint <=1d sheaves: amplitude [0,1], g-periodic finite A-modules V0/V1, six-term A-linear sequence; mixed extension rank formulas; E6 root-intersection Ext1=alpha dot beta and equal opposite-index adjacent-root resonance exclusion on smooth genuine avatar; classical Euler sequence cancellation and conditional derived full-faithfulness test.",
+    "proved_conditional": "Complete sign trichotomy for existing irreducible pure 1D root sheaf disjoint from elliptic boundary: h0=max(m,0), Ext1=max(-m,0), Ext2=0; all are 2-spherical; m>0 heart degree0, m<0 heart degree1 / shifted [-1], m=0 natural derived section kills M. Corrected image/cokernel proof; Rains derived adjoint duality for m>0. Positive and negative resonances individually Zariski dense on relevant smooth blowup charts; ring Hilbert has no jump. Global derived equivalence remains unverified. Extended to extension-closed exact category of boundary-disjoint <=1d sheaves: amplitude [0,1], g-periodic finite A-modules V0/V1, six-term A-linear sequence; mixed extension rank formulas; E6 root-intersection Ext1=alpha dot beta and equal opposite-index adjacent-root resonance exclusion on smooth genuine avatar; classical Euler sequence cancellation and conditional derived full-faithfulness test. Complete arithmetic classification of full 72-root E6 numerical resonance via 6 simple integer indices and 9 E[3]-choices, and its Zariski density on smooth cubic six-point chart. Rains simple-root effectiveness implies coexistent +2/-1 irreducible roots, Ext1=1; their 2-step direct-sum extensions cannot be annihilated by natural derived section even at total Euler=0.",
     "primary_inputs": "Rains existence theorem for irreducible simple-root sheaves with determinant condition; boundary triangle and central g; Rains quotient Euler bound and Ext2 vanishing.",
     "not_verified": "All-q derived equivalence, full heart t-exactness or HRS torsion pair, and nonsingularity of qgr; source PDF screenshot cache miss; no independent peer review or novelty search.",
     "mathematical_novelty": "Not established; primary results may imply some or all statements elsewhere.",
     "proof_correction": "Irreducibility does NOT imply nonzero e->M is surjective; image I has c1 alpha and coker T is zero-dimensional; χ(I)>=1,χ(T)>=0.",
-    "new_limitations": "Do not claim subcategories ker Ext1(e,-) and ker Hom(e,-) form a torsion pair on all Z; no full HRS identification. The classical cancellation example is a weak del Pezzo root wall, not an existing genuine noncommutative mixed extension. No full all-q derived equivalence or classification of all affine modules."
+    "new_limitations": "Do not claim subcategories ker Ext1(e,-) and ker Hom(e,-) form a torsion pair on all Z; no full HRS identification. The classical cancellation example is a weak del Pezzo root wall, not an existing genuine noncommutative mixed extension. No full all-q derived equivalence or classification of all affine modules.",
+    "next_question": "Compute actual matrices for 2d and 1d R/(g-1) modules and rank of delta; if full faithfulness then dim Hom_A(V_alpha,V_beta)=1 and the 2d module is not simple. Need not infer full faithfulness from numerical intersection alone.",
+    "novelty": "Not exhaustively checked; much of Rains's simple root theory is prior work, new point is explicit lattice chart and mixed cohomological test."
   },
   "checks": {
     "root_intersections_degree3_and1": "exact integer arithmetic tested",
@@ -22,7 +26,7 @@
     "strict_original_script_execution": false,
     "latex_compiled": false,
     "pdf_reviewed": false,
-    "github_push": "pending remote HEAD verification",
+    "github_push": "PENDING remote-HEAD verification",
     "root_intersections_degrees_1_to_6": "Exact integer checks run locally",
     "sign_duality_41_indices": "Checked via a local mathematically equivalent Python program m=-20..20",
     "local_LuaLaTeX_snippet_exit": 0,
@@ -38,7 +42,27 @@
     "mixed_rank_formulas_checked": 46,
     "classical_euler_sequence_acylcity": "Exact O_P1 cohomology checked",
     "extension_typeset_excerpt_LuaLaTeX": "Successful one-page representative excerpt, not full new section",
-    "full_source_LuaLaTeX": "NOT RUN in this turn"
+    "full_source_LuaLaTeX": "NOT RUN in this turn",
+    "maximal_E6_roots_checked": 72,
+    "maximal_E6_nonzero_indices": true,
+    "rational_elliptic_curve": "y^2=x^3-x+1",
+    "rational_q_nontorsion": "2q=(1/4,-7/8); Nagell-Lutz",
+    "six_point_triple_determinants_nonzero": 20,
+    "six_point_conic_determinant_nonzero": true,
+    "simple_root_indices": [
+      6,
+      2,
+      -1,
+      3,
+      2,
+      4
+    ],
+    "mixed_two_step_rank_cases_checked": 125,
+    "actual_connecting_delta_rank": "NOT computed: rank could be 0 or 1",
+    "new_local_equivalent_python": "PASS: equivalent rational arithmetic script executed locally",
+    "github_source_python_rerun": false,
+    "all_paper_lualatex_in_this_turn": false,
+    "screenshot_original_pdf": "Web screenshot attempts returned cache miss; primary original PDF text layer checked."
   },
-  "persistence": "GitHub main is canonical. On successful push, do not save to Library."
+  "persistence": "GitHub main is canonical; on successful push do not save Library."
 }

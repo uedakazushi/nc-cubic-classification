@@ -33,7 +33,7 @@
 【優先課題】全14641 ambient成分上の正規三次incidenceの成分・同型群oid・曲面条件・境界・族と降下を決定し、その後intrinsic定義を弱める。GitHub mainを正本とし、GitHub push成功時はLibraryへの保存を行わない。PDFやZIPをGitで追跡せず、TeX・ノート・検算コードを追跡する。
 
 
-2026-11-15 / project-v26 / recognition-v6 / hearts-v11。最初に本書、`research/cubic_corner.md`、`papers/cubic_heart_corner.tex`を読む。比較の共通枠組みは`research/heart_comparison.md`と`papers/nc_del_pezzo_hearts.tex`、共通公理は`research/common_del_pezzo_framework.md`。次数別・三次三様体の研究はそれぞれの現行ノートから再開する。
+2026-11-15 / project-v27 / recognition-v6 / hearts-v12。最初に本書、`research/cubic_corner.md`、`papers/cubic_heart_corner.tex`を読む。比較の共通枠組みは`research/heart_comparison.md`と`papers/nc_del_pezzo_hearts.tex`、共通公理は`research/common_del_pezzo_framework.md`。次数別・三次三様体の研究はそれぞれの現行ノートから再開する。
 
 ## I. 恒常的な研究原則と保存許可
 
@@ -91,6 +91,16 @@ Rains heartの`Z={M | dim M≤1, Li^*M=0}`は拡大閉のexact category。θM→
 
 これは負・正指数の稠密性と矛盾せず、共鳴軌跡の交叉に制約を与える。いまだ全Zのheartの完全な分類、全q導来同値、特異qgrの分類は未解決。旧dP1の導来同値の独立監査で、実在する混合拡大のδとアフィン加群間Homの次元を優先的に照合する。
 
+### 最大E6共鳴の完全な整数表示と実在混合A2対（新定理）
+
+smooth plane cubic E（flex origin o）、非torsion qを固定。六点blowupの根格子E6の単純根alpha0=h-e1-e2-e3、alpha_i=e_i-e_(i+1) (1≤i≤5)を用いる。全72根のrestrictionが<q>にあることは六単純根共鳴と同値。共鳴指数m0,...,m5∈Zを指定すると、六点は`3p1=(m0-2m1-m2)q`、`p_i=p1+(Σ_{j<i}m_j)q`で決まり、p1の選択は3-torsionの9通り。全72根の指数が非零であることが六点一般位置（genuine smooth cubic）の必要十分条件であり、整数のE6根超平面を避けるregular lattice pointsとして記述できる。
+
+相異なる**正整数**N_iについてp_i=N_i qとすると全72根が非零指数で共鳴し六点は一般位置。これらの点はE^6にZariski dense。N1<N3<N2を課した部分もdense。N=(1,3,2,5,7,11)では六単純根指数[6,2,-1,3,2,4]、alpha=e1-e2はm=2、beta=e2-e3はm=-1、alpha·beta=1。Rains 2022 §4のsimple-root effectivityと2019 §9,§11のformal(-2)根sheaf存在から、同じRains heartに境界非交叉の**実在する**正負既約根sheaf M_alpha,M_betaがあり、Ext¹(M_alpha,M_beta)=k。72根が共鳴しても72のroot sheafが全て既約で存在するとは言わない。
+
+混合拡大0→M_beta→M→M_alpha→0のδ:V_alpha(2d)→V_beta(1d)のrankは0/1、従って自然導来切断のcohomologyは(2,1)または(1,0)。δの値は未計算。より一般にb個のM_betaとa≥1個のM_alphaの二段拡大でδ=d⊗T、rank≤min(a,b)、dimV0≥a>0。従ってb=2aでχ(e,M)=0でもPhi(M)は非零。**Phiがこのpairで完全忠実なら**Hom_A(V_alpha,V_beta)=kとなり、2次元V_alphaは1次元V_betaを商に持つため単純A-moduleではない。これは独立検証すべき具体的予測であって、全q導来同値の証明ではない。
+
+有理数例：E:y²=x³−x+1、q=(0,1) は2q=(1/4,−7/8)とNagell–Lutzから無限位数。上の六倍点は全20三点行列式とconic評価行列式が非零、E6全72根のmが非零。原稿`papers/sections/resonance_maximal_a2.tex`（`papers/nc_del_pezzo_resonance_hearts.tex`からinput）、再現`computations/verify_resonance_maximal_a2.py`。今回全根共鳴の**数値条件**とRainsの**効果的simple根の実在**を区別する。
+
 ### HRSと一般heart判定
 
 既存`papers/nc_del_pezzo_hearts.tex`の振幅1比較は(T,U)=(ker R1δ_*,ker δ_*)、transported heart=<U[1],T>、t-exact iff U=0を与える。対象は導来的には消えずshiftされる。既存の豊富orbitによる一意性は高次Ext tail消滅を明示的に必要とする。
@@ -119,7 +129,7 @@ weakly markedは非零Ext有限noetherian Abel圏、Serre、tau=S^-1[2]のheart�
 
 ## IV. 優先順位と具体的な着手
 
-**Rains dense resonanceの次の優先問題**：既約根の全符号判定と非既約境界非交叉sheafの二項振幅・6項完全列は証明済み。次はZ上のtorsion pairが存在するか、δのrankを実在する混合拡大から決定し、局所有限次元A加群の分類と全q導来切断の完全忠実性を検査する。既存dP1原稿の全q導来同値・smoothnessの証明を独立監査し、一般次数およびAS/VdB heartのgluingを接続する。負指数でのAZ failure/t-nonexactは解決済みとし、再計算を繰り返さない。
+**Rains dense resonanceの次の優先問題**：最大E6全72根の数値共鳴と正負の実在A2根対を構成済み。次はこの有理数例のA=R/(g-1)の2次元・1次元表現を明示し、mixed δのrank（0/1）とHom_A(V_alpha,V_beta)を決定して全q導来切断の完全忠実性を監査する。Z全体のtorsion pairは未証明。既存dP1原稿の全q導来同値・smoothnessの証明を独立監査し、一般次数およびAS/VdB heartのgluingを接続する。負指数でのAZ failure/t-nonexactは解決済みとし、再計算を繰り返さない。
 
 1. **Cubicの構造対象と同値の照合**：AOUの実際のmutationでE0≃πFを検証し、AS corner同値と既知のqgr F比較を接続する。数値K0や境界restrictionだけで同定しない。
 2. **非可換AS locusと根壁**：古典的11根壁では反標準収縮が2-spherical対象を消し、導来非同値になることを確定した。次は非可換AS-regular potentialと各壁の交叉、Rains/VdB heartの特殊化、実在する核やpointednessを判定する。古典的障害を全非可換境界へ無条件には拡張しない。
@@ -137,6 +147,7 @@ weakly markedは非零Ext有限noetherian Abel圏、Serre、tau=S^-1[2]のheart�
     python3 computations/verify_cubic_corner.py
     python3 computations/verify_resonance_hearts.py  # sign table and roots
     python3 computations/verify_resonance_extensions.py # E6 root intersections and mixed extensions
+    python3 computations/verify_resonance_maximal_a2.py # 72 simultaneous roots and rational A2 witness
     latexmk papers/cubic_heart_corner.tex
 
 Python標準ライブラリで全有理数計算と有限体計算を再現する。証明書summaryは`computations/cubic_corner_certificate.json`、検証状態は`research/cubic_corner_validation.json`。追加した六点復元の完全な証明を含む原稿10ページをLuaLaTeXで組版し参照を確認した。一般cornerの証明、計算機による厳密rank証明、既知AS入力を分ける。独立査読・形式化・網羅的新規性調査は未実施。従来の研究の再現はその現行ノートを参照する。

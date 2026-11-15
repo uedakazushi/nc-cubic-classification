@@ -1,57 +1,63 @@
-# Rains resonance と anticanonical heart：現行研究ノート
+# Rains resonance と anticanonical heart：研究継続ノート
 
-2026-11-15 / resonance-hearts-v3。再開時は `00_research_plan.md` → `papers/nc_del_pezzo_resonance_hearts.tex` → 本ノートを読む。四名称は Rains heart / VdB heart / AS heart / anticanonical heart。証明本文は現行原稿へ集約し、旧ノート・旧TeXを必要としない。
+2026-11-15 / resonance-hearts-v4。再開時は `00_research_plan.md` を最初に読み、本ノート、`papers/nc_del_pezzo_resonance_hearts.tex` と同稿が input する2つの証明節 `papers/sections/resonance_sign_trichotomy.tex`、`resonance_extension_cancellation.tex`、`resonance_maximal_a2.tex` を参照する。名称は Rains heart / VdB heart / AS heart / anticanonical heart に統一する。
 
-## 中心定理：符号別の完全な Ext 判定
+## 1. 主結果の仮定と符号別Ext
 
-Rains型 smooth elliptic noncommutative del Pezzo X に、境界 E、構造line bundle e、theta=S[-2]、tau=theta^{-1}、theta→id と中心正則g∈R1 がある。根 alpha²=-2、alpha·K=0、c1(M)=alpha の**既約純一次元sheaf Mが実在して境界制限 Li^*M=0**となるとき、m=chi(e,M) で
+Rains型のsmooth elliptic nc del Pezzo Xに境界 E、構造line bundle e、theta=S[-2]、tau=theta^{-1}、自然変換 theta→id がある。R=⊕_{n≥0}Hom(e,tau^n e)、中心正則g∈R1、A=(R[g^{-1}])0≅R/(g-1)。rank-zero root alpha²=-2, alpha·K=0の**既約純一次元sheaf Mが実在し、Li^*M=0**なら m=chi(e,M) と置いて全n∈Zで
 
-| m | dim Hom(e,tau^n M) | dim Ext¹(e,tau^n M) | Ext² | natural derived section |
-|---|---:|---:|---:|---|
-| m>0 | m | 0 | 0 | g-invertible finite module of dimension m in degree 0 |
-| m=0 | 0 | 0 | 0 | M ≠0 but Phi(M)=0 |
-| m<0 | 0 | -m | 0 | g-invertible finite module of dimension -m shifted by [-1] |
+- Hom(e,tau^n M) の次元 = max(m,0)
+- Ext¹(e,tau^n M) の次元 = max(-m,0)
+- Ext²(e,tau^n M)=0
+- Mは2-spherical。自然なderived section Phi(M)は、m>0でAのm次元加群（degree0）、m<0でAの(-m)次元加群の[-1] shift、m=0なら0に写す。
 
-全整数nで成立。各 M は2-spherical（End=k、Ext¹(M,M)=0、Ext²(M,M)=k）。これは単なる数値的共鳴式だけの結論ではなく、**当該既約根sheafの存在、境界非交叉、Rains側のdual theoryが適用される範囲**を仮定する。
+証明：m≤0では非零e→Mのimage Iはc1(I)=alphaで、余核Tは0次元。Rains Cor10.16よりχ(I)≥1、Prop7.6よりχ(T)≥0なので矛盾してHom=0。**「既約なら非零e→Mは全射」は誤りであり採用しない。** Ext²=0はRains Cor7.23。m>0はRainsの反変導来ad双対（Cor5.9, Cor7.26/7.30/7.31, Prop7.16）で指数を−mに反転し、Serre双対でHomとExt¹を交換する。自己ExtはRains Cor7.13のEuler自己値2とEnd=kから決まる。
 
-- **m≤0 の証明の訂正**：旧稿の「既約Mへのe→M非零射は全射」は誤り。正しくはimage Iのc1(I)=alpha、cokernel T=M/Iは零次元。Rains Cor10.16からchi(e,I)≥-alpha(alpha+K)/2=1、Prop7.6からchi(e,T)≥0。よってchi(e,M)≥1となりm≤0ではHom=0。Rains Cor7.23でExt²=0、EulerからExt¹=-m。
-- **m>0 の新結果**：Rains R ad は双対曲面 X^adへの反変導来同値。N=R¹ad Mは双対側の既約純一次元境界非交叉根sheaf（Cor7.26,7.30,7.31）、χ(e^ad,N)=-m（Prop7.16）。負指数補題をNに適用して Hom(e^ad,N)=0、Ext¹(e^ad,N)=m。R ad と Serre dualを合成し Hom_X(e,M)=Ext¹_ad(e^ad,N)^*、Ext¹_X(e,M)=Hom_ad(e^ad,N)^*。従ってHom=m、Ext¹=0。**正指数共鳴のExt¹消滅問題は、既約根sheafに限って解決**。
-- **m=0 の新帰結**：zero-index根sheaf Mが存在すればHom=Ext¹=Ext²=0で、全orbitに導来的に右直交。自然PhiはMを消す（保守的でない）。Genuine smooth classical del Pezzo avatar SではO_E(alpha)非自明なのでm=0根共鳴は存在しない。Weak del Pezzoの(-2)曲線収縮と対応するメカニズム。
+**m<0**の実在根sheafがあればRains heartの(e,tau)はAZ-ampleでない。構造対象・tauを保つpointedなRains–anticanonical heartのabel同値は不可能。ただし自然なPhiがt-exactでないことから、抽象的な導来圏の非同値・qgrの特異化を結論しない。
 
-## 境界非交叉の非既約sheafと混合拡大（新定理）
+## 2. 境界非交叉の非既約sheaf
 
-公表用論文の現行節：`papers/sections/resonance_extension_cancellation.tex`。Rains heartの `Z={M | dim M<=1, Li^* M=0}` は拡大に閉じたexact categoryで、thetaM→Mは同型、Ext^j(e,M)=0 (j≠0,1)。反標準中心正則元gの作用は各Ext^jのtwist次数間の同型。よって `V^j(M)=(⊕_{n>=0}Ext^j(e,tau^nM)[g^-1])_0` は有限次元の右A=R/(g-1)加群で `dim V^j=dim Ext^j(e,M)`。自然導来切断の振幅は[0,1]（このZ上での主張であり全Rains heartではない）。
+Z={M in Rains heart | dim(M)≤1, Li^*M=0}は拡大閉のexact category。全M∈ZでtauM≅M、Ext^j(e,M)=0 (j≠0,1)、自然導来切断の振幅は[0,1]（**全Rains heart上の振幅ではない**）。各j=0,1のg周期的ExtからV^j(M)=(⊕_{n≥0}Ext^j(e,tau^nM)[g^{-1}])0という有限次元A加群が得られ、dim V^j=dim Ext^j(e,M)。
 
-任意の `0→M1→M2→M3→0` in Z はA加群完全列 `0→V0(M1)→V0(M2)→V0(M3) --δ→ V1(M1)→V1(M2)→V1(M3)→0` を与える。Z+=ker Ext¹(e,-) とZ-=ker Hom(e,-)は拡大に閉じ、それぞれV0,V1は短完全列を保つ。しかしこれらがZ全体のtorsion pairという主張は未証明。
+短完全列0→M1→M2→M3→0は6項A加群完全列0→V0(M1)→V0(M2)→V0(M3)→V1(M1)→V1(M2)→V1(M3)→0を誘導する。Z+=ker Ext¹(e,-)、Z-=ker Hom(e,-)はそれぞれ拡大閉だが、**Z全体のtorsion pairの存在は未証明**。
 
-正指数m+>0根sheaf M+、負指数m-<0根sheaf M-が同じRains heartに実在し `0→M-→M→M+→0` なら、δ_M:V+=V0(M+)→V-=V1(M-) のrank rで `dim V0(M)=m+-r`, `dim V1(M)=-m--r`。Euler指数だけでは両cohomologyの次元は決まらない。m+=-m-でδが同型なら非零Mが自然導来切断で消失する。従ってPhiの保守性・全導来同値を主張するならこのような拡大を排除する必要がある。
+正根M+、負根M-の混合拡大0→M-→M→M+→0は、connecting δ:V+→V-のrank rによってdim V0(M)=m+−r、dim V1(M)=−m−−rとなる。δ同型なら非零MがPhiで消えるので、Phiが保守的または全導来同値ならそのような拡大は禁止される。弱del Pezzoの(-2)曲線上のEuler列0→O(-2)→O(-1)^2→O→0は完全相殺の古典的模型。genuine非可換への存在を断定しない。
 
-**古典的な完全相殺の例**：weak dPの(-2)曲線D≅P1上のEuler列 `0→O_D(-2)→O_D(-1)^2→O_D→0`。δ:k→kは同型、中間項は非零だが全反標準twistとのRHomが零。これはweak avatarでありgenuine非可換曲面に同様の拡大があるとは言わない。
+異なる根類alpha≠betaの境界非交叉既約sheafについてHomとExt²は零、dim Ext¹(M_alpha,M_beta)=alpha·beta（Rains Cor7.13）。alpha·beta<0なら同時存在不可、=0なら拡大無し、=1ならExt¹が1次元。genuine classical avatarではalpha·beta=1、m_alpha+m_beta=0の同時共鳴は不可（alpha+betaがrootとなりそのE制限が自明になってしまうため）。Phiがmixed pairで完全忠実ならdim Hom_A(V+,V-)=alpha·betaという具体的テストを得る。
 
-**根系の交叉障害**：異なる根類α≠βの既約境界非交叉sheafが同じ心に実在すれば Hom(Mα,Mβ)=Ext²=0、`dim Ext¹(Mα,Mβ)=α·β`（Rains Cor7.13のrank-zero Euler形式）。ゆえに交点<0なら同時存在不可能、=0なら混合Ext¹なし、=1なら1次元。自然Phiがこの二対象で完全忠実なら `dim Hom_A(V+,V-)=α·β` が必要。genuine smooth del Pezzoで `α·β=1` かつ `mα+mβ=0` は数値的に不可能：γ=α+βが根となりO_E(γ)=Oが強制されるがgenuineのroot restrictionは非自明。
+## 3. 今回の新結果：最大E6根共鳴を整数格子で分類
 
-**検算**：E6の72根を全列挙し、異なる有向根対の交点分布 -1:1440,0:2160,1:1440,2:72。交点1なら和も根、46組の混合rank公式と古典Euler列を標準Python整数計算で確認。証明はTeX、検算コードは `computations/verify_resonance_extensions.py`。原論文の既約root sheaf存在と古い全q導来同値の独立再監査は引き続き必要。
+滑らかな平面三次Eの変曲点oを原点とし、非torsion q∈Eを固定する。六点p_i∈EでS=Bl_{p_i}P²、根格子Lambda=K_S^perp≅E6。alpha=a h−Σ b_i e_iのrestrictionはO_E(3a o−Σ b_i p_i)。
 
-## Anticanonical heartと代数の意味
+単純根alpha0=h−e1−e2−e3、alpha_i=e_i−e_{i+1} (i=1,...,5)。**72根全てのrestrictionが<q>に入ることと、次を満たす整数m0,...,m5の存在は同値：**
 
-R=⊕_{n≥0}Hom(e,tau^n e)、R/(g)=B(E,L,σ), deg L=d。Rainsの条件下で dim R_n=1+d n(n+1)/2 は共鳴全点で一定。m≠0では (P^j(M)=piigoplus_{nge0}Ext^j(e,	au^nM)) の唯一非零のjが0（m>0）または1（m<0）。gはM上で同型なので各次数を周期1で結び、局所化次数0 (V=(igoplusExt^j)[g^{-1}]_0) はA=R/(g-1)の|m|次元右加群。**非零表現が現れたことと R の Hilbert 数値の跳び・qgrの特異化・導来非同値を混同しない。**
+`3 p1=(m0−2m1−m2) q,``p_i=p1+(Σ_{j<i}m_j)q` (i=2,...,6)。
 
-m<0ではRains heartの(e,tau)はAZ ampleでない（全Hom零）。qgrRの標準対がAZ-ampleのとき、eとtauを保つ Rains–anticanonical abel同値は存在しない。自然導来切断Phi(M)=πP¹(M)[-1]でt-exactでない。m>0の**その根sheaf**についてPhi(M)=πP⁰(M)はheartにあり、他の根や一般対象でのt-exactnessは未判定。m=0で存在すればPhi非保守的。全qでの導来同値は本結果の入力ではない。
+m(alpha_i)=m_iで、任意の根alpha=Σc_i alpha_iの指数はm(alpha)=Σc_i m_i。mを固定するとp1は3-torsion分だけ9通りある。**六点が一般位置でgenuine cubicとなる必要十分条件はm(alpha)≠0 (全72根)**。根の型は±(e_i−e_j)、±(h−e_i−e_j−e_k)、±(2h−Σe_i)、それぞれ二点の一致・三点共線・六点conicに対応する。
 
-## 正・負それぞれのZariski dense resonance
+より強く、互いに異なる正整数N_iについてp_i=N_i qとすれば、全根が非零指数で同時共鳴し、六点は常に一般位置。正整数倍集合はEにZariski denseで、その六重直積から対角を除いてもdense。N1<N3<N2と課してもdense（(u,v,w)→(u,u+v+w,u+v)はdet=−1のE³自己同型）。
 
-smooth plane cubic E⊂P²上で非torsion q∈Pic⁰(E)と5点p1,p2,p4,p5,p6を固定。n≥1、ε=±1 に対し O_E(p3^ε(n))=O_E(1)(-p1-p2)⊗q^{-εn}。各符号について点は相異なり（一般位置を破るのは有限個）、六点blow-upはgenuine cubic。simple root alpha=h-e1-e2-e3のrestrictionはq^{εn}なので共鳴m=-εn。**負指数も正指数も別々に稠密**。基底の一般パラメータを動かすと各ファイバーで稠密、ゆえに関連するgluingチャート全体でも稠密。r=3..8 blowups（d=6..1）でも同様。全nc del Pezzoモジュライの任意成分への稠密性は主張しない。
+**具体的な混合A2根対**：N=(1,3,2,5,7,11)では六単純根の指数は(m0,...,m5)=(6,2,−1,3,2,4)。alpha=e1−e2のm=2、beta=e2−e3のm=−1、alpha·beta=1、alpha+beta=e1−e3のm=1。Rains 2022 §4のsimple-root effectivity判定、Rains 2019 §9,§11のformal(-2)-curve/sheaf存在の入力から、同じRains heartに両方の既約境界非交叉sheafが**実在**し、Ext¹(M_alpha,M_beta)=k。全72根が数値的に共鳴することは、全72向きのroot sheafが同じheartで既約になることを意味しない。
 
-## 根 sheaf が2-spherical
+その非分裂拡大0→M_beta→M→M_alpha→0のconnecting δ:V_alpha (dim2)→V_beta (dim1)のrankは0か1。従って(dim V0(M),dim V1(M))=(2,1)または(1,0)。**rankそのものは未決定**。
 
-Rains既約性＋純一次元性より非零自己射は核を持たない。余核は数値類零の零次元sheafとなりRains Prop7.6で零。End(M)=k。Serre theta M=MからExt²(M,M)=k、Euler χ(M,M)=-alpha²=2からExt¹(M,M)=0。双対・[−1]・境界非交叉の論理的役割を区別する。
+任意の二段直和拡大0→M_beta^⊕b→M→M_alpha^⊕a→0 (a≥1,b≥0)について、Ext¹(M_alpha,M_beta)=kのgeneratorのconnecting dと、拡大の係数行列T∈Mat_{b×a}(k)を使いδ=d⊗T。r=rank d × rank T≤min(a,b)なのでdim V0(M)=2a−r≥a>0、dim V1(M)=b−r。**この二段拡大はEuler標数が0の場合(b=2a)でもPhiで消失しない**。
 
-## 次の課題と検証
+もしPhiがこの二対象間で完全忠実なら、dim Hom_A(V_alpha,V_beta)=1で、2次元A加群V_alphaは1次元V_betaを商として持つ（すなわち単純加群ではない）。これが既存dP1論文の全q導来同値主張の明示的な検証課題。現在、Aの表現行列とconnecting dを計算したわけではない。
 
-1. 非既約sheafの**二項振幅・6項完全列は証明済み**。次はZ全体のtorsion pair、connecting mapδの可能な像、非根sheafの完全な分類。
-2. 実在する異根の同時共鳴でExt¹(M+,M-)→Hom_A(V+,V-)を比較し、古い全q導来同値に対する具体的な完全忠実性テストを実施する。根の和で禁止された交叉を誤って例として使わない。
-3. 既存dP1原稿`papers/dp1_anticanonical_models.tex`の全q導来同値の証明を、完全忠実性・本質的全射性・核の消滅・smoothnessの順に**独立監査**する。原稿に証明記載はあるが今回独立に検証していない。正しければm<0の稠密共鳴は導来同値を保つheart変化。
-4. VdB heart/AS heartの対象と自然導来比較、非自明HRS tiltのtorsion pairとsemistable finite-dimensional A moduleをつなぐ。Zariski dense非t-exact locusに非空Zariski開t-exact領域はない（現在のRains chartの範囲）。
-5. 特異/非局所自由境界とweak avatarではm0の導来的消失に注意。局所qgr singularityか否かは別途調べる。
+**有理数上の証明書**：E:y²=x³−x+1、q=(0,1)。2q=(1/4,−7/8)のxが非整数なのでNagell–Lutzによりqは非torsion。上の六倍点(1,3,2,5,7,11)は有理点で、20通りの三点determinantとconic評価行列式が全て非零。E6全72根の指数は非零、単純根指数[6,2,−1,3,2,4]。整数・有理数計算は `computations/verify_resonance_maximal_a2.py` と小証明書にある。
 
-一次資料：Rains *Birational geometry* arXiv:1907.11301v1 §5 Cor5.9 Eq(5.24)、§7 Prop7.6, Cor7.23, Cor7.26,7.30,7.31, Prop7.16、§10 Cor10.16、§11 pp138–141（既約simple root sheafの存在）。Rains *Filtered deformations* arXiv:2107.13540v2 §§4–5（稠密有効根、natural boundary triangle、中心g）。引用と証明の全文は論文。PDFページ画像のWeb取得はcache missで、抽出原文との照合にとどまる。独立査読/新規性網羅調査は未実施。計算コード`computations/verify_resonance_hearts.py`、現在の原稿`papers/nc_del_pezzo_resonance_hearts.tex`をLuaLaTeXで再生成。GitHub mainを正本とし、push成功ならLibraryへの保存なし。
+## 4. 保存する全次数の知識と未解決の核
+
+- 中心正則g∈R1とR/(g)=B(E,L,σ), deg L=dよりdim R_n=1+d n(n+1)/2は共鳴で跳ばない。
+- q非torsion、smooth genuine classical avatarではm=0の根共鳴はない。古典weak dPの(-2)曲線が反標準収縮で消える現象とは区別する。
+- 正指数と負指数の個別共鳴は各々Zariski dense（楕円点p3(n)の正負q軌道）。全72根同時共鳴の点も稠密。一般のnc dP moduliの全成分での稠密性までは主張しない。
+- **優先1**：具体的混合A2においてaffine A=R/(g−1)の2次元・1次元表現行列を算出し、dのrankとHom_A(V_alpha,V_beta)を決定する。必要ならRainsの差分作用素表示から構成する。
+- **優先2**：既存`papers/dp1_anticanonical_models.tex`の全q derived equivalenceの完全忠実性・本質的全射性を独立に監査する。原稿に証明が書かれていることと今回の監査を区別する。
+- **優先3**：Zのtorsion pair/全heart、非既約対象、VdB/AS heartとの対象の同定、特異楕円境界、非局所自由gluingを調べる。負指数の自然Phiの非t-exact性やqgrのHilbert不変性から導来非同値・qgrの特異化は結論しない。
+
+## 文献・再現・検証範囲
+
+Rains, *Filtered deformations of elliptic algebras*, arXiv:2107.13540v2, §4 pp33--35（単純根のeffectivityと稠密性、K0の制限）。Rains, *The birational geometry of noncommutative surfaces*, arXiv:1907.11301v1, Definition 9.1, Theorem 9.2 (simple roots/formal(-2)-curves), §11 pp139--141 (root sheaf existence), Cor7.13 (Euler形式), Cor7.23/7.26--31/10.16等。原典PDFのtext layerを照合した。Web screenshot取得はcache miss、独立査読と網羅的新規性調査は未実施。
+
+主要再現コマンド：`python3 computations/verify_resonance_maximal_a2.py`、`python3 computations/verify_resonance_extensions.py`、`python3 computations/verify_resonance_hearts.py`、`latexmk papers/nc_del_pezzo_resonance_hearts.tex`。新しい算術コードと数学的に同等のローカルコードを有理数上で実行したが、GitHubにpushしたコード自体の実行・全原稿組版は別途確認事項。GitHub mainを正本としてpush成功ならLibraryへ保存しない。
