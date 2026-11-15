@@ -1,0 +1,70 @@
+{
+  "version": "classification-v81",
+  "source_commit": "as4 a45f834f51a00c47443b51caf66abaf4629546b9",
+  "source_presentation": "IMAGINARY_BOUNDARY_COMPLETE.tex FI2 explicit coefficients only",
+  "both_signs_directly_verified": true,
+  "families": [
+    {
+      "eta": 1,
+      "generic_minor_rows": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15,
+        16,
+        17,
+        18,
+        19,
+        21,
+        22,
+        31,
+        37
+      ],
+      "generic_minor_determinant": "I*h**9/2048",
+      "projection_denominator_support": "h",
+      "centre3_dimension_h_nonzero": 0,
+      "h_zero_degree5_relation_rank": 966,
+      "h_zero_degree5_dimension": 58
+    },
+    {
+      "eta": -1,
+      "generic_minor_rows": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        19,
+        21,
+        22,
+        23,
+        24,
+        31,
+        37
+      ],
+      "generic_minor_determinant": "h**10*(1 - I)/128",
+      "projection_denominator_support": "h",
+      "centre3_dimension_h_nonzero": 0,
+      "h_zero_degree5_relation_rank": 966,
+      "h_zero_degree5_dimension": 58
+    }
+  ],
+  "universal_anti_cyclic_top_tensors": true,
+  "scope": "Both entire J_h families excluded. h!=0 uses all-value centre3 rank20 conditional AS4; h=0 fails AS4 Hilbert degree5 independently. No full chart/CY coverage, AS4 sufficiency or all-isomorphism theorem imported."
+}

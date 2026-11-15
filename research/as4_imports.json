@@ -356,5 +356,13 @@
     "used_part": "FG2/FG6 explicit R and At relation/linear transformation formulas only. No AS4 sufficiency, full-chart/CY coverage or isomorphism theorem imported.",
     "independent_proofs": "Exact all-lambda six-relation twist transport, eigenbasis and CY tensor; polynomial centrality witnesses and nonzero quadric dual functionals; elementary central-weight obstruction gives all odd centre zero in domains.",
     "validator": "computations/verify_cubic_as4_four_simple_boundary_R.py"
+  },
+  "four_simple_boundary_J_v81": {
+    "commit": "a45f834f51a00c47443b51caf66abaf4629546b9",
+    "path": "research/proofs/CY_ZERO_COMMUTATORS_FOUR_SIMPLE_IMAGINARY_BOUNDARY_COMPLETE.tex",
+    "sha256": "ee5919c7055152f86597eaff6927c606aa826784cf1325682a5c6dcfc37fbb0f",
+    "used_part": "FI2 explicit J_h+/- presentations only. No full-chart/CY coverage, AS4 sufficiency or isomorphism theorem imported.",
+    "independent_proofs": "Both signs directly checked: universal anti-cyclic tensor; all-h nonzero centre3 rank20 and controlled denominators; endpoint h0 exact degree5 rank966/dimension58.",
+    "validator": "computations/verify_cubic_as4_four_simple_boundary_J.py"
   }
 }

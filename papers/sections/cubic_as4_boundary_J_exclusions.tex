@@ -1,0 +1,47 @@
+\subsection{純虚境界の二族の全値排除}
+\label{subsec:cubic-as4-boundary-J}
+\cite{AS4lowpinned}の純虚境界FI2から次の具体表示を参照する。
+$\lambda=i$, $\eta=\pm1$ として
+\[
+\begin{gathered}
+ x_0=x_1=x_2=x_5=1,\qquad
+ x_{10}=x_{16}=\eta(1-i)/8,\quad
+ x_{15}=-x_{11}=\eta(1+i)/8,\\
+ x_{12}=h,\quad x_{17}=ih,\quad
+ x_{13}=-\eta(1+i)h/4,\quad x_{18}=\eta(1-i)h/4,\\
+ x_{14}=h^2+i/32,\quad x_{19}=i(h^2-1/32),\quad x_{20}=-h^2+i/32
+\end{gathered}
+\]
+とし、他の $x_j$ は零とする。この代数を $J^\eta_h$ と書く。
+
+\begin{proposition}\label{prop:cubic-boundary-J}
+両符号の $J^\eta_h$ は、全 $h\ne0$ でH3包絡にならない。
+$h=0$ の表示も14641型AS4ではなく、H3から排除される。
+\end{proposition}
+\begin{proof}
+両符号を別々に $\mathbb Q(i)(h)$ 上で計算する。
+最高tensor $R A R^{\mathsf T}$ は全 $h$ で非零反巡回なので、AS4実現では $\mu=I$ である。
+三次・四次の全関係moduleから構成した商座標は、分母が $h$ の冪のみであり、
+全関係を消し自由列上でidentityとなる。
+従って $h\ne0$ のAS4実現では真の20,35次元基底である。
+中心三次行列の20次minorはそれぞれ
+\[
+ \eta=+1:\quad \frac{i h^9}{2^{11}},\qquad
+ \eta=-1:\quad \frac{(1-i)h^{10}}{2^7}
+\]
+であり、全非零 $h$ で階数20を得る。
+従って中心三次が零となり、H3を排除する。
+
+$h=0$ には上の商座標を適用しない。
+元の六関係の五次全語行列を $\mathbb Q(i)$ 上で別に構成すると、
+両符号でその階数は966であり、
+\[
+ \dim(J^\eta_0)_5=4^5-966=58>56=\binom83.
+\]
+14641型AS4のHilbert級数に反するので、こちらもH3にならない。
+四次までのHilbert値が一致し得ることを、AS4十分性として使っていない。
+\end{proof}
+
+二符号を直接検算し、分母支持と端点の五次行列も確認する再現コードは
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}as4\_\allowbreak{}four\_\allowbreak{}simple\_\allowbreak{}boundary\_\allowbreak{}J.py}
+である。FI2表示のみを参照し、全chart/CY被覆・AS4存在十分性・全同型は輸入しない。
