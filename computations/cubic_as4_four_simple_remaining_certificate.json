@@ -1,0 +1,470 @@
+{
+  "version": "classification-v74",
+  "source_commit": "as4 a45f834f51a00c47443b51caf66abaf4629546b9",
+  "H_rank_cover": [
+    {
+      "epsilon": 0,
+      "generic_minor_rows": [
+        1,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15,
+        16,
+        19,
+        21,
+        22,
+        23,
+        36,
+        38,
+        45
+      ],
+      "generic_determinant": "16384*lambda**12*(lambda + 1)**9*(2*lambda + 1)**4*(4*lambda + 1)*(4*lambda + 3)",
+      "projection_denominators_one": true,
+      "special_rank20": [
+        {
+          "lambda": "-1/2",
+          "minor_rows": [
+            1,
+            3,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            12,
+            13,
+            15,
+            16,
+            20,
+            22,
+            23,
+            36,
+            38,
+            45,
+            46,
+            55
+          ],
+          "minor_determinant": "-1/2"
+        },
+        {
+          "lambda": "-1/4",
+          "minor_rows": [
+            1,
+            3,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            15,
+            16,
+            19,
+            21,
+            23,
+            36,
+            38,
+            45,
+            58
+          ],
+          "minor_determinant": "-19683/1073741824"
+        },
+        {
+          "lambda": "-3/4",
+          "minor_rows": [
+            1,
+            3,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            15,
+            16,
+            19,
+            21,
+            22,
+            36,
+            38,
+            45,
+            48
+          ],
+          "minor_determinant": "59049/67108864"
+        }
+      ]
+    },
+    {
+      "epsilon": 1,
+      "generic_minor_rows": [
+        1,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15,
+        16,
+        19,
+        21,
+        22,
+        23,
+        36,
+        38,
+        45
+      ],
+      "generic_determinant": "16384*lambda**12*(lambda + 1)**9*(2*lambda + 1)**4*(4*lambda + 1)*(4*lambda + 3)",
+      "projection_denominators_one": true,
+      "special_rank20": [
+        {
+          "lambda": "-1/2",
+          "minor_rows": [
+            1,
+            3,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            12,
+            13,
+            15,
+            16,
+            20,
+            22,
+            23,
+            24,
+            36,
+            38,
+            45,
+            55
+          ],
+          "minor_determinant": "2"
+        },
+        {
+          "lambda": "-1/4",
+          "minor_rows": [
+            1,
+            3,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            15,
+            16,
+            19,
+            21,
+            23,
+            36,
+            38,
+            45,
+            58
+          ],
+          "minor_determinant": "-19683/1073741824"
+        },
+        {
+          "lambda": "-3/4",
+          "minor_rows": [
+            1,
+            3,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            15,
+            16,
+            19,
+            21,
+            22,
+            36,
+            38,
+            45,
+            48
+          ],
+          "minor_determinant": "59049/67108864"
+        }
+      ]
+    }
+  ],
+  "O_normalizers_a_b": [
+    [
+      "1",
+      "-1",
+      "(-4*A + lambda + 1)/(4*A + lambda + 1)",
+      "-(4*A + lambda + 1)/(-4*A + lambda + 1)"
+    ],
+    [
+      "-1",
+      "1",
+      "(-4*A - lambda)/(4*A - lambda)",
+      "-(4*A - lambda)/(-4*A - lambda)"
+    ]
+  ],
+  "O_q_and_correction": [
+    "(-4*A - lambda)*(-4*A + lambda + 1)/((4*A - lambda)*(4*A + lambda + 1))",
+    "-32*A/((4*A - lambda)*(4*A + lambda + 1))"
+  ],
+  "O_PBW_four_diamonds": true,
+  "O_twenty_degree3_characters": [
+    {
+      "exponents": [
+        0,
+        0,
+        0,
+        3
+      ],
+      "a_sign": -1,
+      "b_sign": -1,
+      "power": -3
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        1,
+        2
+      ],
+      "a_sign": 1,
+      "b_sign": 1,
+      "power": -1
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        2,
+        1
+      ],
+      "a_sign": -1,
+      "b_sign": -1,
+      "power": 1
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        3,
+        0
+      ],
+      "a_sign": 1,
+      "b_sign": 1,
+      "power": 3
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        0,
+        2
+      ],
+      "a_sign": -1,
+      "b_sign": 1,
+      "power": -2
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "a_sign": 1,
+      "b_sign": -1,
+      "power": 0
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        2,
+        0
+      ],
+      "a_sign": -1,
+      "b_sign": 1,
+      "power": 2
+    },
+    {
+      "exponents": [
+        0,
+        2,
+        0,
+        1
+      ],
+      "a_sign": -1,
+      "b_sign": -1,
+      "power": -1
+    },
+    {
+      "exponents": [
+        0,
+        2,
+        1,
+        0
+      ],
+      "a_sign": 1,
+      "b_sign": 1,
+      "power": 1
+    },
+    {
+      "exponents": [
+        0,
+        3,
+        0,
+        0
+      ],
+      "a_sign": -1,
+      "b_sign": 1,
+      "power": 0
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        0,
+        2
+      ],
+      "a_sign": 1,
+      "b_sign": -1,
+      "power": -2
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "a_sign": -1,
+      "b_sign": 1,
+      "power": 0
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        2,
+        0
+      ],
+      "a_sign": 1,
+      "b_sign": -1,
+      "power": 2
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "a_sign": 1,
+      "b_sign": 1,
+      "power": -1
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "a_sign": -1,
+      "b_sign": -1,
+      "power": 1
+    },
+    {
+      "exponents": [
+        1,
+        2,
+        0,
+        0
+      ],
+      "a_sign": 1,
+      "b_sign": -1,
+      "power": 0
+    },
+    {
+      "exponents": [
+        2,
+        0,
+        0,
+        1
+      ],
+      "a_sign": -1,
+      "b_sign": -1,
+      "power": -1
+    },
+    {
+      "exponents": [
+        2,
+        0,
+        1,
+        0
+      ],
+      "a_sign": 1,
+      "b_sign": 1,
+      "power": 1
+    },
+    {
+      "exponents": [
+        2,
+        1,
+        0,
+        0
+      ],
+      "a_sign": -1,
+      "b_sign": 1,
+      "power": 0
+    },
+    {
+      "exponents": [
+        3,
+        0,
+        0,
+        0
+      ],
+      "a_sign": 1,
+      "b_sign": -1,
+      "power": 0
+    }
+  ],
+  "O_cubic_root_conditions": [
+    "(16*A**2 + 3*lambda**2 + 6*lambda + 3)/(4*A + lambda + 1)**2",
+    "(16*A**2 + 3*lambda**2)/(4*A - lambda)**2",
+    "(48*A**2 + lambda**2 + 2*lambda + 1)/(4*A + lambda + 1)**2",
+    "(48*A**2 + lambda**2)/(4*A - lambda)**2"
+  ],
+  "O_centre3": "k c^3 if lambda=-1/2,A^2=-3/64; k d^3 if lambda=-1/2,A^2=-1/192; zero otherwise",
+  "cyclic_top_tensor_all_three_families": true,
+  "scope": "Independent all-value obstruction for explicit FZ4/FZ5 presentations conditional AS4/domain as required by H3. No full CY/projection coverage theorem imported."
+}

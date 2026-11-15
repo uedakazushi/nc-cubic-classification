@@ -115,3 +115,102 @@ FZ2の条件は
 およびskew行列の厳密検算は
 \texttt{verify\_cubic\_as4\_four\_simple.py} にある。
 四単純基点の他の共有係数・対角零境界はまだこの二命題で覆われない。
+
+\begin{proposition}\label{prop:cubic-fs-remaining}
+共有頂点係数零層FZ4の一補正項族 $\mathcal O_{\lambda,A_*}$ と
+FZ5の二境界族 $\mathcal H^\varepsilon_\lambda$ ($\varepsilon=0,1$) も、
+全許容値でH3包絡から排除される。
+したがって共有頂点係数零の列挙表示は、既存skew部分以外にH3を生じない。
+全四単純基点表示の被覆はこの主張に含めない。
+\end{proposition}
+\begin{proof}
+$\mathcal O$ の指定係数は
+\[
+ x_0=1,\quad x_8=A_*,\quad x_{11}=\lambda(\lambda+1)/(16A_*),
+\]
+他は零であり、$\lambda\ne0,-1$ および
+$A_*(16A_*^2-\lambda^2)(16A_*^2-(\lambda+1)^2)\ne0$ である。
+\[
+ r=-\frac{4A_*-\lambda-1}{4A_*+\lambda+1},\quad
+ s=-\frac{4A_*+\lambda}{4A_*-\lambda},\quad
+ q=rs,\quad \kappa=-\frac{32A_*}{(4A_*-\lambda)(4A_*+\lambda+1)}
+\]
+とおけば六関係は
+\[
+ ab=-ba,\quad ac=r ca,\quad ad=-r^{-1}da,\quad
+ bc=s cb,\quad bd=-s^{-1}db,\quad cd=qdc+\kappa ab.
+\]
+許容条件から $r,s\ne0,\pm1$、また
+\[
+ rs-1=-\frac{8A_*}{(4A_*-\lambda)(4A_*+\lambda+1)}\ne0.
+\]
+順序 $a<b<c<d$ の四つの三次重なりは全て解消する。
+補助重み $\deg(a,b,c,d)=(1,1,2,2)$ の先頭環はskew多項式環なので、
+PBW基底 $a^ib^jc^ud^v$ を持つ整域である。
+
+正規な $a,b$ のnormalizerはそれぞれ
+\[
+ (1,-1,r,-r^{-1}),\qquad(-1,1,s,-s^{-1}).
+\]
+従って中心三次に現れる各PBW単項式は
+\[
+ i+j+u+v=3,\qquad
+ (-1)^{j+v}r^{u-v}=(-1)^{i+v}s^{u-v}=1
+\]
+を満たす。$u-v=0$ なら $i+j$ が奇数となり二符号が両方1にはならない。
+$|u-v|=1$ は $r,s\ne\pm1$ に矛盾し、$|u-v|=2$ でも
+$i+j=1$ なので少なくとも一方の平方が1になって矛盾する。
+残るのは $c^3$ と $d^3$ だけであり、前者には $r^3=s^3=1$、
+後者には $r^3=s^3=-1$ が必要である。
+両者が同時に現れることはない。
+二つの非自明根が互いの逆数なら $rs=1$ になるため、いずれの場合も $r=s$。
+\[
+ r-s=\frac{8A_*(2\lambda+1)}{(4A_*-\lambda)(4A_*+\lambda+1)}
+\]
+から $\lambda=-1/2$ となる。
+直接の二次式比較により、中心三次は正確に
+\[
+ Z(\mathcal O)_3=
+ \begin{cases}
+ kc^3&\lambda=-1/2,\ A_*^2=-3/64,\\
+ kd^3&\lambda=-1/2,\ A_*^2=-1/192,\\
+ 0&\text{その他}
+ \end{cases}
+\]
+である。ここで $k$ は係数体である。
+十分性は $q$ が非自明三乗根となることと
+$1+q+q^2=0$ による交換子計算から従う。
+したがって全非零中心三次は分解する。
+
+次に $\mathcal H^\varepsilon$ の指定係数は
+\[
+ x_2=x_5=1,\quad x_9=x_{14}=\lambda(\lambda+1)/16,\quad
+ x_{20}=\varepsilon,
+ \qquad\lambda\ne0,-1,
+\]
+他は零である。
+両方について三次・四次の全関係moduleの商座標を構成すると、
+その行列の係数は $\mathbb Q[\lambda]$ に属し、
+全関係を消し、自由列上ではidentityである。
+一般次数別次元は20,35なので、AS4実現の下では各特殊値でも真の商基底になる。
+従って中心三次行列の20次minor
+\[
+ 16384\lambda^{12}(\lambda+1)^9(2\lambda+1)^4(4\lambda+1)(4\lambda+3)
+\]
+が非零なら中心三次は零である。
+残る $\lambda=-1/2,-1/4,-3/4$ は各 $\varepsilon$ について
+$\mathbb Q$ 上で別の非零20次minorを確認した。
+よって全許容値で中心三次は零である。
+これは一般点のrrefから特殊値の平坦性を推論する議論ではなく、
+全関係恒等式・分母なしの商座標・仮定されたAS4次元の組合せである。
+
+三つの表示全てについて、非零最高tensor $R A R^{\mathsf T}$ の反巡回性も
+全係数で独立検算した。従ってAS4実現では $\mu=I$ であり、
+H3切断は中心三次を必要とする。
+$\mathcal H$ ではその消滅、$\mathcal O$ では全切断の分解がH3整域条件に矛盾する。
+\end{proof}
+
+検証器 \texttt{verify\_cubic\_as4\_four\_simple\_remaining.py} は、
+二境界族の全値rank cover、四Diamond、二normalizer、
+二十個の三次characterと例外純三乗の中心性を厳密に検算する。
+全CY被覆、共有頂点係数非零の全領域、および任意cocycle/twistは未主張である。

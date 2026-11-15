@@ -290,5 +290,13 @@
     "used_part": "FS1-FS4 S and FZ2 Q explicit presentations only; no existence sufficiency, all-isomorphism or full CY coverage imported.",
     "independent_proofs": "Exact six-relation Sklyanin transport; all-value normal parity identities at three boundary curves; cyclic top tensor conditional AS4, standard cocycle preservation; literal Q skew recognition.",
     "validator": "computations/verify_cubic_as4_four_simple.py"
+  },
+  "four_simple_remaining_v74": {
+    "commit": "a45f834f51a00c47443b51caf66abaf4629546b9",
+    "path": "research/proofs/CY_ZERO_COMMUTATORS_FOUR_SIMPLE_SHARED_ZERO_COMPLETE.tex",
+    "sha256_reference": "four_simple_presentations_v73",
+    "used_part": "FZ4/FZ5 explicit O/H0/H1 presentations only; no existence/full coverage/isomorphism theorem imported.",
+    "independent_proofs": "Four PBW diamonds, normal character proof, pure cube resonances; all-value H rank cover; conditional-AS4 anti-cyclic top tensor.",
+    "validator": "computations/verify_cubic_as4_four_simple_remaining.py"
   }
 }
