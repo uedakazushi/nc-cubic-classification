@@ -1,71 +1,45 @@
-# 非可換del Pezzo曲面のheart比較：現行研究ノート
+# 四つのheartの比較：現行研究ノート
 
-2026-11-16 / hearts-v16。最初に `00_research_plan.md` を読む。共通比較の証明は `papers/nc_del_pezzo_hearts.tex`、共鳴と大域比較の証明は `papers/nc_del_pezzo_resonance_hearts.tex`、詳細な現行知識は `research/resonance_hearts.md`。対象は全次数、最初の実行対象はcubic surface（次数3）。
+2026-11-16 / hearts-v17。最初に `research/four_hearts_plan.md`（プロジェクト全体では `00_research_plan.md`）を読む。論文は `papers/nc_del_pezzo_hearts.tex` と四つの `papers/sections/four_hearts_*.tex`、検証は `research/four_hearts_validation.json`。本文の証明をここに重複させない。
 
-## 指定genuine楕円gluingの大域比較
+## 比較対象と主張の水準
 
-**滑らかな可換genuine del Pezzo S、滑らかなE∈|−K_S|、q∈Pic0(E)からのRains gluingでは、自然Φ=πRΓ*は全qでDb(Rains heart)≃Db(qgr R)となる。** 既存 `papers/dp1_anticanonical_models.tex` の証明について、orbitのInd生成、実際の境界拡大による非零trace、有限/無限位数の両方での環の有限性、source飽和性を点検した。再構成した証明と入力は `papers/sections/resonance_global_heart.tex`。異なるqの圏どうしを同値とする主張ではない。
+VdBはliteral/raw blow-upのcoherent heart、Rainsは指定blowdown/gluingのt構造、anticanonicalは指定eとs=S^−1[2]のorbit環のqgr、ASはAS正則三次元Z-algebraのqgr。名称が四つの異なる圏を意味するわけではない。ASのhelix全体と一頂点の反Serre orbit、AS正則三次元とambient AS4、Z-algebraと一周期graded algebraを分ける。
 
-さらにH=−KがnefなRains heartの全対象Mについて、ΦMの振幅は[0,1]である。Mをline bundleの有限直和の商とし、Ext2(e,τ^nM)=Hom(M,θ^(n+1)e)*をn≫0で消す。T=ker H1Φ、F=ker H0Φは全heart上のtorsion pairで、反標準heartの引戻しは〈F[1],T〉。q非torsionでは境界外Serre部分圏Zにも制限し、T∩Z=ker Ext1(e,−)、F∩Z=ker Hom(e,−)。全任意nc del Pezzo、特異境界、weak avatar、非局所自由gluingやfamily降下はこの定理の範囲外。
+有界heartの存在はDb(heart)のrealization同値を含意しない。pointed同値には構造対象とsへの両立同型が必要で、境界・rank・marking・相対降下はさらに別である。右加群の積はab=s^(deg b)(a)∘b。
 
-VdB/AS heartとの指定同定は未解決である。今回の全Rains–反標準比較から、既知VdBの各段階の比較関手やAOUのmutation後の構造対象を自動的に同定しない。
+## 現行論文に収めた確定結果
 
-## 共鳴での符号別比較と最大根配置
+**VdB–Rains（定理4.1、thm:RV）**：同じ初期heart・blow-up中心・gluing bimodule・blow-down関手を同定し、Rains Lemma4.9/Proposition4.17のpseudo-canonical認識を使う。全整数ellについてRα_*θ^ell Mが非負にあることが上のt構造を決めるため、誘導同値はt-exactとなる。独立なavatar間のパラメータ対応はこの定理に含まれない。
 
-Rainsの境界非交叉な既約root sheaf M、alpha²=−2、m=chi(e,M)に対して、全tau-orbitでHom=max(m,0)、Ext1=max(−m,0)、Ext2=0。根sheafは2-spherical。Φはm>0でm次元A=R/(g−1)加群を次数0へ、m<0で(−m)次元加群を[-1]へ送り、m=0なら消す。負指数ではRains heartのAZ amplenessが失敗し、pointed anticanonical heartと一致しない。指定genuine gluingでは、このheart変化は導来同値を保つ。Hilbert値1+d n(n+1)/2は不変で、genuine avatarには零指数根共鳴がない。
+VdBの図式X_j←tilde X_j→X_(j+1)で左はblow-up、右δはsection model。Definition11.1.2の一般位置条件下のTheorem11.1.3とLemma9.1.5はRδ_*の振幅[0,1]と導来同値を与える。T=ker R1δ_*、F=ker δ_*、輸送heart=〈F[1],T〉。Chapter12のF=P/(C3)表示は同じ一般位置条件なしにも存在するので、表示の範囲を導来比較へ広げない。Remark12.0.5のraw/sectionの区別を保つ。
 
-正負各指数の共鳴は滑らかな楕円blow-up chartでそれぞれZariski dense。固定E・非torsion q、p_i=N_iq（相異なる正整数、r=9−d）で全根が非零指数で同時共鳴する。d=6,…,1の根数は8,20,40,72,126,240。単純根整数指数とE[3]の9通りから全共鳴配置を復元する。全モジュライの全成分での密度ではない。
+**Rains–反標準（定理5.2、5.4）**：genuine smooth classical del Pezzo S、smooth E∈|−K_S|、q∈Pic0(E)の指定gluingが範囲。全qで自然Φ=πRΓ*はdg導来同値。証明はIndでのorbit生成、境界自己拡大を追ったtraceの非零性、sourceのsmooth proper性と飽和性による右随伴と全射性。target smoothnessを前提にしない。無限位数にはRSS Proposition2.4（degree1も許す）、有限位数にはYZのPI・中心持上げ・χの三定理を使う。
 
-最大共鳴で全単純根sheafが実在すれば、他の根類の既約sheafはなく、各単純根sheafはq非torsionで一意。直和のExtはDynkin zigzag、Liu–Wangの既知形式性から固定dg圏のframed変形は辺ごとのx_ij*x_ji=0となる。cubicでは32個の5次元formal分枝（gauge商前）。曲面の相対モジュライではない。
+HnefのRains heartで全対象のExt2(e,s^nM)はn≫0で消える。従って全heartの振幅[0,1]、T=ker H1Φ、F=ker H0Φによる一回のHRS tiltとなる。q非torsionなら境界外有限長Serre圏Zへ制限され、T∩Z=ker Ext1(e,−)、F∩Z=ker Hom(e,−)。一般対象に生のExt消滅を同一視しない。
 
-## 境界外圏と任意混合指数のA2
+**共鳴（定理6.1、系6.2）**：rho(alpha)=q^(−m)は数値条件。実在する境界非交叉既約root sheafではh0=max(m,0)、h1=max(−m,0)、h2=0で2-spherical。負指数はAZ生成性失敗と自然Φの非t-exactnessを検出するが、上記gluingで導来同値は保たれる。数値的ample coneとAZ条件は定義が違う。正指数根だけからAZ失敗とは言えず、負指数根が見つからないだけでF=0とも言えない。pointed heart非一致を抽象的abel非同値に強めない。
 
-Z={M | dimM≤1,Li^*M=0}でV0,V1は有限次元A加群となり、短完全列は6項A線型完全列を誘導する。q非torsion、Hnef、H²>0ならZは有限長Serre部分圏である。零次元の境界外対象・商はdeterminant q^ellから排除され、既約境界外root sheafは全heartで単純となる。既約性だけから全射性を推論するものではない。
+**AS–反標準（系7.2）**：AS helixのfoldingでqgrBを得てe=πpB、pBp=R(e,s)を同定した上で、B,R右noetherian、Bp右R有限、pB左R有限を要求する。この範囲で自然cornerがabel同値 iff dim B/BpB<∞。有限次数の消滅を使うには次数1生成等のtail制御が必要。相対有限cornerの開性はcoherent各次数の基底変更適合を明示した命題9.2であり、heartの相対同値を意味しない。
 
-隣接根S+,S−の指数p>0,−n<0について、非分裂P:0→S−→P→S+→0のconnecting rankはmin(p,n)と証明した。非零e→Pがあれば全射であり、rank-one torsion-free核LのExt2(e,L)=0からh1(P)=0を得る。p>nではこれが起こり、p≤nではEuler値からHom(e,P)=0になる。この証明は導来比較に依存しない。Lがline bundleになるのはp−n=1だけである。
+**混合A2（§8）**：指数p,−nの隣接単純根の非分裂拡大Pのconnecting rankはmin(p,n)。C=〈S+,S−〉_Serre≃mod_fd Π(A2)、直既約S+,S−,P,Qで、cohomologyは(p,0),(0,n),((p−n)+,(n−p)+),(p,n)。両chamberのtorsion pairを得る。p=nはgenuine avatarに実在しない。指数+2/−1のアフィン側では異なる一次元W,Uと非分裂二次元Vがあり、逆向きV'を合わせてA/Ann(V⊕V')≃Π(A2)。局所反射で根はalpha+beta,−beta、指数は1,1。元の生成元の作用係数は未計算。内部Ext_Πの二周期性をambient Extと混同しない。
 
-C=〈S+,S−〉_Serre≃mod_fd Π(A2)、直既約はS+,S−,P,Q（逆向き非分裂拡大）。cohomologyは(p,0),(0,n),((p−n)+,(n−p)+),(p,n)。quiver頂点次元a,b、一方の矢のrank tに対しh0=pa−min(p,n)t、h1=nb−min(p,n)t。p>nでは(T,F)=(add(S+,P),add(S−))、p<nでは(add(S+),add(S−,P))。p≠nで非零対象は消えず、p=nの仮想場合では核add(P)となる。genuine avatarでは隣接する等しい反対指数が零指数根を生むため存在しない。
+## AS比較に残る核心
 
-内部Ext_Cは二周期で高次にも残るがambient Ext>2は零であり、Db(C)→Db(Rains heart)は完全忠実でない。Euler指数だけで非既約対象のheart位置は決まらず、P,Qが同じEuler値を持つことが具体例である。
+AOU §9は最初からcoh tilde X=qgr Fである。smooth elliptic、degree3線束、無限位数σ、sufficiently general六点が範囲。Lemma9.2はSerre=(-1)[2]、Theorem9.4はDb qgr F≃Db AS。mutation後先頭E0はASのO(0,0)へ移るが、E0≃πFの実際の同定を今回完了していない。可換式(9.44)と、その後で非可換対象をmutationで再定義する箇所を区別する。K0・restrictionだけでは対象を同定できない。
 
-## 二つのcharacterと四次元アフィン商
+全四heartを一つの図に接続する命題9.1は、pointedなAS–Rains同値とcorner・高次消滅を追加仮定する。これをAOU定理だけで満たしたことにしない。VdBの最後のδ_6と自然Φの同定、σとσ³、中心と標識、各段階のsection置換を実際に追うことが次の課題。
 
-指数+2/−1では0→W→V→U→0（次元1,2,1）が非分裂でW≄Uとなる。導来比較によりHom_A(W,U)=Ext1_X(P,S−)=0、包含S−→Pが非零の加群拡大へ移ることを使う。Vへの作用像は全三角行列代数で、Hom_A(V,U)=k。これは必要条件のままではなく、指定genuine gluingで成立を証明した結果である。
+## 別稿との役割分担と保持する補足
 
-逆向き非分裂拡大V'を合わせるとA/Ann(V⊕V')≃Π(A2)。二characterのSerre部分圏はmod_fd Π(A2)で、四つの直既約W,U,V,V'を持つ。根類alpha+beta,−betaと指数1,1はbetaの局所Weyl反射で得られる。全E6 heartが一反射で記述できるという意味ではない。商の内部Extとambient Extは異なるため、この商はhomological epimorphismでない。
+`papers/cubic_heart_corner.tex` は11 determinant条件、一様C7=0、C6非零、Hilbert関数8+21t+33t²+38t³+33t⁴+21t⁵+8t⁶、総次元162を扱う。道長gradingと反標準cut gradingを確認して使う。本比較稿はこれらの詳細証明を未確認の全AS表示へ拡張しない。古典的11根壁のi_*O_D(−1)の導来的消失は `papers/sections/cubic_corner_root_walls.tex` に保持され、非可換壁上のheart存在とは別である。
 
-**未計算**なのは、元の楕円データに対するAの生成元のcharacter値・非対角係数とkernelの生成元である。同型型の決定と係数式の計算を区別する。次はこの商の具体式、全E6の作用、VdB/ASとの指定同定、相対familyと退化境界を扱う。
+`papers/nc_del_pezzo_resonance_hearts.tex` と `research/resonance_hearts.md` は全次数最大共鳴・整数格子とE[3]の九選択・既約根の一意性・zigzag形式性・固定dg圏のframed分枝を保持する。cubicの32個の5次元formal分枝を曲面モジュライの成分と呼ばない。本比較稿はこの詳細分類を証明の必須入力としないため、単独bundleに別稿全体を複製しない。
 
-## 比較の共通枠組みと一次資料
+可換cubicでは四者がcohSを再構成するが、その一点の一致から非可換一致locusの開性は導かない。weak(-2)曲線のEuler零の不可視対象と、非零負指数が[-1]に残る現象は異なる。相対比較にはperfectness・基底変更・消滅の一様性・t構造の適合性・pointed descentが追加で必要。
 
-Rains heart、VdB heart、AS heart、anticanonical heartの四名称は由来を表し、四つが相異なるとも一致するとも仮定しない。VdB literal blow-upとsection-model qgrも自動的に同じではない。入力データの対応と指定導来同値を先に固定し、その後t-exactness、構造対象、反Serre、境界、rank、marking、族の降下を個別に確認する。
+## 先行研究と検証上の限界
 
-VdBの図式X_j ←α_j− tilde X_j −δ_j→ X_(j+1)で、αはblow-up、δはsection-algebra比較。σp_iが指定平面埋込みで一般位置ならThm11.1.3はRδ_*とLδ*の逆同値とheart振幅[0,1],[-1,0]を与え、coherent bounded保存にはLemma9.1.5も使う。cubicはX_7=Proj F。Ch12のF=P/(C3)表示は一般位置条件なしにも存在するので、表示だけから導来同値を使わない。Rem12.0.5はraw反復と各段階section-modelへの取り替えを区別する。
+論文末尾に11件の書誌・識別子・使用箇所を収録した。Rains2019のblow-up/t構造、Rains2022の共鳴とtrace、VdB §11–12、AOU §9、OUのAS定義、CHZのrealization、RSS/YZ/Orlovの有限性・飽和性が主要入力。Rains2025 monographの書誌と概要を確認したが、全定理番号対応と全内容の新規性照合は未完了。
 
-AOU arXiv:2404.00175 §9はcoh tilde X=qgr Fから始める。滑らかな楕円、次数3線束、無限位数σ、sufficiently general六点の設定で、Lemma9.2はSerre=(-1)[2]、Thm9.4はDb qgr F≃Db qgr A。左辺をraw blow-up heartと呼び替えず、abelian同値とも読まない。(9.44)は可換mutation表示で、その直後に非可換collectionを同じ記号で定義し直す。実際の先頭E0はO(0,0)へ移るが、E0≃πFは対象として確認する必要がある。K0や境界restrictionの一致だけでは不足。
-
-OU arXiv:2508.04986 Def1.1,§6はAS heartと標識、一般幾何的blow-upとの導来比較を扱い、全パラメータheart一致ではない。Rains 2019 Introduction,§4も既存abelian構成を用いてrealizationを正当化しており、任意の抽象gluingのfaithful heart存在を無条件には与えない。
-
-## 形式的帰結と適用範囲
-
-**振幅1のHRS比較**（heart原稿§3）：F:Db(A)≃Db(B)、F(A)⊂D^[0,1](B)、G(B)⊂D^[-1,0](A)ならT=ker H1F、U=ker H0Fはtorsion pair、G(B)=〈U[1],T〉、Fがt-exact iff U=0。VdBではT_j=ker R1δ_j*、U_j=ker δ_j*。非零M∈U_jもRδ_j*M=(R1δ_j*M)[−1]≠0で、heartからの消失と導来的消失は異なる。既知HRS理論の適用である。
-
-**ample orbit一意性**（§4）：faithful bounded heart、tauのheart保存、AZ amplenessと全対象の高次Extの一様tail消滅の下で、heartはHom(e,tau^nX[i])=0（i≠0,n≫0）で一意。高次消滅をAZ二公理だけから導かない。
-
-**固定対象のEuler障害**（§4）：上のheartの非零tau固定対象はchi(e,M)>0。別heartの実在固定対象のchi≤0で非一致を検出する。周期rではresidue和の正性だけ。数値共鳴だけから存在を補わない。
-
-**corner判定**（§5）：必要な左右有限性・noetherian性の下でqgr B→qgr eBeが同値 iff dim B/BeB<∞。AS helixのfoldingとbimodule有限性を照合した範囲に限る。有限次数実験やHilbert級数一致だけでは不足。
-
-## 古典的根壁とcubicでの着手
-
-弱del Pezzoの(-2)曲線D上のF=i_*O_D(−1)は2-sphericalで全反標準orbitに直交し、反標準収縮で消える。AZ生成性失敗とDb(coh S)≄Db(qgr反標準環)を得る。十一のcubic根壁と一壁の節点三次の有理例は `papers/sections/cubic_corner_root_walls.tex`、`verify_cubic_root_wall.py`。非可換壁上のheart存在やt-exactnessとは別であり、HRS tiltは初めから導来同値を仮定する。
-
-cubicでは最後のVdB段階Rδ_6*のker δ_6*を実在対象で求める。AOU九対象とmutationを追ってE0とπF、反Serre、境界を照合しcorner有限性を使う。今回のRains–反標準の一回のtiltから、VdB六段の合成が同じ指定関手だと無条件に結論しない。有限位数、特異境界、非局所自由gluing、他次数へは適用条件を保って進む。
-
-初期exact検算ではAOU九線束のEuler行列は対角I3・隣接J3・離れたblock2J3の上三角、総和45、det1。C^−1 C^tの逆がH twist、E6は72根、H²=3。反標準Euler値n=0,…,8は1,4,10,19,31,46,64,85,109。再現は `python3 computations/verify_cubic_heart_numerics.py`、`latexmk papers/nc_del_pezzo_hearts.tex`。有限検算はeffective root、strong性、heart同値の証明ではない。
-
-## 文献・検証範囲
-
-Van den Bergh, *Blowing up of non-commutative smooth surfaces*, arXiv:math/9809116v1：Lemma9.1.5、Def11.1.2、Thm11.1.3、Ch12、Rem12.0.5。AOU, *Compact moduli of marked noncommutative cubic surfaces*, arXiv:2404.00175v1：§4.1、§9、Lemma9.2、Thm9.4、(9.44)直後、(9.54)–(9.57)。Okawa–Ueda, *Marked Artin–Schelter surfaces of del Pezzo types*, arXiv:2508.04986v1：Def1.1、Def3.1、§6。Chen–Han–Zhou, *Derived equivalences via HRS-tilting*, Adv.Math.354(2019),106749、arXiv:1804.05629v2：ThmA,B、§§2–3。Rains二論文、RSS Prop2.4、YZ Th4.5/5.1/5.13、Orlov Th3.18/3.25/Cor3.19の精密な監査箇所は共鳴ノートとvalidationを参照する。
-
-今回の更新二節は独立LuaLaTeX driverで9ページに組版・画像確認し、新コードを40,000通りの厳密有理数計算で実行した。主原稿全文の組版、旧コード全再実行、独立査読・網羅的新規性調査は未実施。原典は解析本文で照合したがweb PDF screenshotはCache missで取得できなかった。詳細は `research/resonance_hearts_validation.json`。
+今回、比較論文全体をLuaLaTeXで19ページに組版し全ページ画像を点検した。45ラベルと11引用キーの整合を検査し、数値コード二つを実行した。新コードは40,000通りの線形代数検算であり、sheaf存在・導来同値・新規性の計算証明ではない。関連一次資料の本文を照合したが、外部独立査読・機械形式化・網羅的新規性調査は未実施。文献ページ画像の取得成功・失敗はvalidationに区別して記す。
