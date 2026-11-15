@@ -1,0 +1,19 @@
+{
+  "version": "classification-v61",
+  "universal_base": "q*(q-1)*(q+1) invertible",
+  "central_incidence_equations": [
+    "(q\u00b2+q+1) beta=0",
+    "(q\u00b2+q+1) gamma=0",
+    "(q\u00b2+q+1) delta=0"
+  ],
+  "ordinary_proof": "Highest active degree kills all other coefficients by q-1 and q\u00b2-1 units; subtract Omega,c3x,c3y,c3z; all remaining central coefficients constant. Exact over nonreduced bases.",
+  "local_mixed_equations": "u beta=u gamma=u delta=0 at root3 pencil, components dimensions2 and4 meeting along dim1",
+  "tetrahedral_invariants": {
+    "P": "x\u00b2+y\u00b2+z\u00b2",
+    "Q": "xyz",
+    "R": "x\u00b2y\u00b2+y\u00b2z\u00b2+z\u00b2x\u00b2",
+    "J": "(x\u00b2-y\u00b2)(y\u00b2-z\u00b2)(z\u00b2-x\u00b2)",
+    "relation": "J\u00b2=P\u00b2R\u00b2-4R\u00b3-4P\u00b3Q\u00b2-27Q\u2074+18PRQ\u00b2"
+  },
+  "scope": "Universal centrality/divisibility and invariant identities exact; component and family interpretation are ordinary proofs, not global H3 moduli claims."
+}
