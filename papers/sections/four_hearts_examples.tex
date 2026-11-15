@@ -118,8 +118,8 @@ $\alpha+\beta$が零指数根となるためこの同時共鳴自体が排除さ
 とする．三点共線なら対応する正整数の和の$q$倍が零となり，六点conicも同様なので，
 六点は一般位置である．$\alpha=e_1-e_2$，$\beta=e_2-e_3$の指数は$2,-1$．
 Rainsのsimple-root effectivityと既約sheaf存在結果
-\cite[\S4]{Filtered}\cite[\S9,\S11]{Rains}がこのchartで適用されると，
-上記の$S_+,S_-$が同じheartに実在する．
+\cite[\S4]{Filtered}\cite[\S11, p.~141]{Rains}の適用条件を
+補題\ref{lem:Rains-simple-existence}で確認する．このchartでは上記の$S_+,S_-$が同じheartに実在する．
 数値計算だけをsheaf存在の代わりには用いない．
 \end{example}
 
@@ -166,7 +166,7 @@ $C$の半単純像は$k\times k$である．$J=\operatorname{rad}C_0$は$J^2=0$�
 
 反射$s_\beta(v)=v+(v\beta)\beta$は$(\alpha,\beta)$を$(\alpha+\beta,-\beta)$へ送る．
 従ってこの局所模型では，正負の共鳴から反標準heartの正指数二単純への組替えがWeyl反射に対応する．
-ここまでの主張は二根部分系に限る．全六単純根の実在を仮定した$E_6$への拡張は，
+ここまでの主張は二根部分系に限る．Rainsの単純根存在結果を適用した$E_6$への拡張は，
 後の系\ref{cor:E6spectrum}で別に与える．
 商$A\to\Pi(A_2)$もhomological epimorphismではない．商の単純加群の高次Extは二周期的だが，
 ambientのExtは次数2を超えて消えるからである．
@@ -303,6 +303,11 @@ Euler chamberの検算は有限根系$A_2+A_1,A_4,D_5,E_6,E_7,E_8$について�
 停止回数が初期負正根数に一致し，終端根集合が正値根の単純根集合に一致することを整数上で検査する．
 これは有限個の根格子計算であって，単純sheafの実在やheartの同定を数値実験に置き換えるものではない．
 
+整数倍点族では$3\le r\le8$の各型で40組の相異なる正整数を選び，
+Picard格子での根の明示列挙とWeyl反射による列挙を照合する．
+具体的六点の全720順列について，停止回数が逆転数に等しく，全単純の次元が同じ整列公式となることを検査する．
+これらは格子の検算であり，Rainsの既知のsheaf存在結果を計算で証明するものではない．
+
 本稿は主TeXファイルと七つのsectionソースからなり，\texttt{latexmk -lualatex}で再生成できる．
 日本語LuaLaTeX，LuaTeX-ja，\texttt{tikz-cd}，Python~3を用いる．
 リポジトリrootでの主要コマンドは
@@ -311,6 +316,7 @@ python3 computations/verify_cubic_heart_numerics.py
 python3 computations/verify_four_hearts.py
 python3 computations/verify_four_hearts_corner.py
 python3 computations/verify_four_hearts_chambers.py
+python3 computations/verify_four_hearts_sorted.py
 latexmk -lualatex papers/nc_del_pezzo_hearts.tex
 \end{verbatim}
 である．数値検算は，sheafの存在，derived type，導来完全忠実性，
