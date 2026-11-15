@@ -168,3 +168,13 @@ h=-1,gamma=2,A=1,B=C=0,beta=0の非分裂CY AS4包絡に、729G0=13y³−3yzx+13
 ### 三捩れ量子Weyl chartの全中心と固定切断（classification-v27）
 
 関係yz=qzy+b1,zx=qxz+b2,xy=qyx+b3（q²+q+1=0）ではX=x³,Y=y³,Z=z³,W=xyz+(b1x+q b2y+b3z)/(q−1)が全中心を生成する。d=1/(q−1),e=−(2q+1)/9としてW³−d b1b2b3W−XYZ−eΣbi³Xi=0。滑らかなHesse中央切断X+Y+Z−3lambda W+Dの中心は実際にこの中心環の商と一致する（最高記号中心とRainsで証明）。b=(1,1,1),lambda=0では全非H3値は(D²+4e)(D²+36e)=0の四つ。D²+9e=0の二値は中心A1だがMcKay(1,2)でH3。他の四値にはcharactersがなく非H3。証明はcubic_quantum3_center.tex、全中心式と臨界値の厳密検算は二つのquantum3検証器。次は全beta/lambdaのMcKay分配と判別式、または中央境界のないH3被覆を進める。
+
+### 正規楕円境界への拡張（classification-v29）
+
+全量子Weyl chart（線型項なし）でH3は全中心特異点の有限判定に等しい：Hessian rank3ならcharacter存在、rank2かつ核cubic非零なら三distinct character、その他はbad。character方程式はpairproducts=−d betaと中央cutのみ。被約係数空間では固定N3定理によりH3開性・任意底変更・fpqc降下を得る。
+
+正規一次元tでR/(t)が滑らかな次数3楕円THCRとなる全H3について、共役theta（ta=theta(a)t）は位数1,2,3,4,6のいずれかでt^mが中心。中心t iff境界rhoはtranslation。RRZ normal商公式とYekutieli elliptic canonicalからtheta modulo tは微分作用逆の次数scalar。lambda!=1はt方向平行移動で対角化。lambda1のunipotent項はSklyanin二次関係のminorで消え、可換例外も滑らかな三次gの方向微分で消える。証明はcubic_normal_elliptic_boundary.tex。これは正規一次境界存在の被覆定理ではなく、t^m境界は非被約なので中央一次Rees認識を適用しない。次は有限非自明共役のaffine認識・群oidと正規境界のない全H3被覆。
+
+### 正規非中央楕円境界のaffine認識と二・三位数制限（classification-v31）
+
+mu_R=idの正規三次商では、正規一次楕円境界tの共役有限位数を使いs=t^mで分母を払い、H3 iff gldim U有限（U=R[t^-1]_0）を証明。Uは一般には通常のTHCR filtered deformationではなくskew Laurent構造を保持する。theta固有値で関係を比較するとm=4,6（およびm3D0）はR=H[t;scalar]となりU≅Hの楕円coneでgl∞、従ってH3では非中央位数は2または3のみ。m2ではr_i+beta_i*t²,G=g+t²*l。m3ではB=S[t;lambda],G=g+D*t³,D!=0で、正規性からG中心、B CY。明示m3例も原稿に保持（tが全activeとomega交換、xy可換、xz/yzがomega交換、Fermat四三乗cut）。既存skew部分の例で新成分ではない。次は位数2 normal incidenceとaffine全判定、位数3の非skew S被覆、全H3に正規一次境界があるかを調べる。

@@ -1,6 +1,6 @@
 {
   "date": "2026-11-15",
-  "version": "classification-v27",
+  "version": "classification-v31",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -30,7 +30,8 @@
     "papers/sections/cubic_central_elliptic_cy_envelope.tex",
     "papers/sections/cubic_filtered_elliptic_recognition.tex",
     "papers/sections/cubic_j0_boundary.tex",
-    "papers/sections/cubic_quantum3_center.tex"
+    "papers/sections/cubic_quantum3_center.tex",
+    "papers/sections/cubic_normal_elliptic_boundary.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -459,5 +460,27 @@
     "theorem": "b=(1,1,1),lambda=0: H3 iff (D^2+4e)(D^2+36e)!=0; e=-(2q+1)/9",
     "limits": "Whole family all beta/lambda explicit elimination not performed; all H3 coverage incomplete",
     "build": "LuaLaTeX 92 pages; no undefined references/citations or overfull boxes; page76 visually inspected"
+  },
+  "quantum3_v28": {
+    "proof": "papers/sections/cubic_quantum3_center.tex, thm:quantum3-all-parameters",
+    "status": "ordinary proof using proved general PI3 McKay classification and fixed-N relative theorem",
+    "scope": "All beta,lambda,D in the specified zero-linear-term chart; finite character and Hessian equations; not all E3 deformations"
+  },
+  "normal_elliptic_v29": {
+    "proof": "papers/sections/cubic_normal_elliptic_boundary.tex",
+    "inputs": "RRZ Lemma1.5, Yekutieli Example7.16, translation Sklyanin quadratic minors and smooth cubic directional derivative",
+    "status": "ordinary proof; not independently refereed/formalized",
+    "scope": "Algebraic normal cubic cut with mu_R=id; normal regular degree1 smooth elliptic boundary assumed; no global existence claim"
+  },
+  "normal_elliptic_v30_v31": {
+    "proof": "papers/sections/cubic_normal_elliptic_boundary.tex",
+    "status": "ordinary proofs; LuaLaTeX 96 pages, no undefined references/citations or overfull boxes; page79 visually inspected; Yekutieli Example7.16 source reread",
+    "theorems": [
+      "H3 iff gldim R[t^-1]_0 finite for every normal smooth elliptic degree1 boundary",
+      "Orders4,6 excluded by skew-cone affine infinite global dimension; only noncentral conjugation orders2,3 survive",
+      "Order2 r_i+beta_i*t^2 and G=g+t^2*l; order3 split skew extension and central G=g+D*t^3, D nonzero, CY B",
+      "Explicit order3 H3 example with fixed-point elliptic automorphism, contained in existing skew classification"
+    ],
+    "limits": "Not complete admissibility/groupoid for order2/3, no existence of a normal elliptic boundary for every H3"
   }
 }
