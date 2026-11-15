@@ -19,12 +19,12 @@
 \newcommand{\Spec}{\operatorname{Spec}}\newcommand{\Spf}{\operatorname{Spf}}
 \newcommand{\im}{\operatorname{im}}\newcommand{\cC}{\mathfrak C}
 \newcommand{\cP}{\mathfrak P}\newcommand{\Sym}{\operatorname{Sym}}
-\title{内在的非可換三次曲面の公理とambient成分\\\large 正規一次境界による認識・量子Fermat族・モジュライの局所模型}
+\title{内在的非可換三次曲面の公理とambient成分\\\large dP1共通定義・量子FermatのPym成分・正規境界認識}
 \author{研究原稿：証明済みの命題と未解決の認識条件を区別する}
-\date{2026年11月15日\quad recognition-v4}
+\date{2026年11月15日\quad recognition-v5}
 \begin{document}\maketitle
 \begin{abstract}
-大域次元2の$k$線形Abel圏とrank one torsion-free構造対象，反Serre作用，
+大域次元2の$k$線形Abel圏とrank one torsion-free exceptional構造対象，反Serre作用，
 Artin--Zhang豊富性，三次曲面と同じ全次数の切断数を公理とする．
 次数零の仮定は冗長である．一次生成・二次三次関係という条件は，
 可換三次環の全次数平坦なArtin変形では自動的に保持されるが，
@@ -54,6 +54,35 @@ $s$がこの部分圏とrankを保つという通常の整な非可換曲面の�
 $\OO$はrank one torsion-freeとする．後述する反例では実際にsection環が整域なので，
 rankは次数零商斜体上の次元として曖昧さなく定まる．
 
+\paragraph{統合したdP1との共通定義．}
+\label{par:unified-dp}
+次数1の研究と同じ内在的rankを用いるため，$\cA_0$を有限長対象のSerre部分圏，
+$\cA_1$を$\cA/\cA_0$で有限長になる対象の逆像と定める．
+$Q=\cA/\cA_1$への商関手を$q$と書く．構造対象$\OO$について
+\begin{equation}\label{eq:unified-rank}
+ q\OO\ \text{は非零単純},\qquad
+ \Hom_{\cA}(T,\OO)=0\quad(T\in\cA_1)
+\end{equation}
+を要求する．これがGabriel--Krull商によるrank one torsion-freeの意味である．
+また$\OO$は例外対象，すなわち
+\begin{equation}\label{eq:unified-exceptional}
+ \End(\OO)=k,\qquad \Ext^{1,2}(\OO,\OO)=0
+\end{equation}
+とする．この二条件を加えた定義を，本稿の\emph{統一weakly marked非可換三次曲面}と呼ぶ．
+元の「rank-one torsion-freeとHilbert切断数だけ」を要求する弱い条件は，
+必要に応じ\emph{pre-weak}と呼んで区別する．
+例外性がpre-weakの全公理から従うとは現在証明されていないため，
+ここは単なる言い換えではなく，定義の実質的な絞り込みである．
+一方，後述の正規三次商と量子Fermat反例は全て例外性を満たすので，
+本稿の主結果の対象範囲は変わらない．
+
+両次数で共通する反標準Hilbert関数は
+$h_{d}(m)=1+\frac d2m(m+1)$ ($m\ge0$) であり，
+$d=3$の式\eqref{eq:h}を用いる．元の全整数の切断数条件は保持する．
+本稿ではquadricなambientや次数二・三の提示は\emph{公理に入れず}，
+次数3の認識定理の結論ないし部分モジュライの条件として扱う．
+元の仮定2付きでの反例や形式局所計算にも，この規約を使う．
+
 $M(m)=s^mM$，$\Gamma(M)=\Hom(\OO,M)$，$R_m=\Gamma(\OO(m))$とし，
 \begin{equation}\label{eq:h}
  h_m=\dim R_m=
@@ -77,6 +106,28 @@ ambient認識&存在すれば二次包絡で一意．$R(1,3)$への全域帰属�
 以下の組合せの新規性・初出は未確認である．
 
 \section{冗長性と低次数認識}
+\begin{lemma}[共通公理からの負次数消滅]
+\label{lem:negative-auto}
+次数$d\ge1$のGabriel--Krull rank-one torsion-free構造対象について，
+$s$がexactで$h^0(\OO(n))=1+\frac d2n(n+1)$ ($n\ge0$)なら，
+$\Hom(\OO,\OO(-m))=0$ ($m>0$)は自動的に従う．
+また$\End(\OO)=k$と$\Ext^2(\OO,\OO)=0$も従う．
+従って統一定義でexceptionalityとして独立に加える実質的条件は
+$\Ext^1(\OO,\OO)=0$だけである．
+\end{lemma}
+\begin{proof}
+rank-one torsion-free対象間の非零射は，generic quotientで単純対象間の同型となり，
+核はtorsionであるため単射である．$h^0(\OO(1))=d+1>0$から
+非零射$u:\OO\to\OO(1)$を選び，その正方向の反標準shiftの合成によって
+非零単射$u_m:\OO\to\OO(m)$を作る．
+もし$f:\OO\to\OO(-m)$が非零なら，$s^m(f):\OO(m)\to\OO$も単射である．
+合成$s^m(f)u_m:\OO\to\OO$は非零なので，
+$h^0(\OO)=1$により非零スカラーであり同型である．
+よって$s^m(f)$はsplit epiかつmono，従って同型である．
+すると$h^0(\OO(m))=h^0(\OO)=1$となり，$m>0$に矛盾する．
+$\End(\OO)=k$は$h_0=1$，$\Ext^2$の消滅はSerre双対と$m=1$から従う．
+\end{proof}
+
 \begin{proposition}\label{prop:automatic}
 公理\eqref{eq:h}から$R_0=k$が従う．またSerre双対性から
 \[
@@ -433,6 +484,117 @@ balanced dualizing complex $R(-1)[3]$によるSerre双対\cite{YZ}は
 $\Ext^i(M,N)^*=\Ext^{2-i}(N,M(-1))$から$i>2$の消滅を得る．
 また$\Ext^2(\OO,\OO(-1))=k$なので大域次元は正確に2である．
 \end{proof}
+
+\section{量子Fermat ambientのPym成分と交叉}
+\label{sec:fermat-Pym-L}
+\begin{proposition}[量子Fermat ambientは$L(1,1,1,1)$に属する]
+\label{prop:fermat-in-L1111}
+定理\ref{thm:fermat}の$B$は，Pymの4変数graded Calabi--Yau変形の
+$L(1,1,1,1)$既約成分に属する．より具体的には，
+$k$上の3次元torus
+\[
+ T=\{(a,b,c):a,b,c\in k^\times\}\simeq(\mathbb G_m)^3
+\]
+に対し，四変数skew polynomial環$B_{a,b,c}$を，独立な交換係数
+\begin{equation}\label{eq:L1111-multiparameter}
+ q_{01}=a,\quad q_{02}=b,\quad q_{03}=(ab)^{-1},\quad
+ q_{12}=c,\quad q_{13}=a/c,\quad q_{23}=bc
+\end{equation}
+で定めると，その全点がKoszul AS正則4次元かつgraded 4-Calabi--Yauであり，
+\[
+ B=B_{\zeta,\zeta,1}.
+\]
+従って量子Fermatはこの成分の\emph{3-torsionの特殊点}である．
+ただし他のPym成分との交差に属さないことは，本命題の結論ではない．
+またPymの分類はgraded CYの変形空間について述べており，
+より一般の四周期付き$\mathbb Z$代数の全stackの成分性は別途検査が必要である．
+\end{proposition}
+\begin{proof}
+反対向きには$q_{ji}=q_{ij}^{-1}$とし，$q_{ii}=1$とする．
+4変数skew polynomial環のPBW基底とKoszul性・AS正則性は標準的である．
+そのNakayama自己同型が恒等となる必要十分条件は
+$\prod_jq_{ij}=1$ ($0\le i\le3$)であり，
+式\eqref{eq:L1111-multiparameter}を代入すると各行で積は1になる．
+例えば$j=1$の行では$a^{-1}c(a/c)=1$，$j=2$の行では
+$b^{-1}c^{-1}(bc)=1$である．よって全てgraded 4-CYである．
+Pym\cite[Theorem 1.1, \S3.1]{Pym}の$L(1,1,1,1)$族はまさにこの
+4変数CY skew polynomial環の族の線型基底変更軌道の閉包として定義される．
+$(a,b,c)=(\zeta,\zeta,1)$に代入すれば
+$q_{01}=q_{02}=q_{03}=q_{13}=q_{23}=\zeta$，$q_{12}=1$となり，
+式\eqref{eq:matrix}に一致する．
+\end{proof}
+
+\begin{corollary}[四つの三乗を同時に中心にするのはtorsion条件]
+\label{cor:central-Fermat-torsion}
+上の$T$内で，全ての$x_i^3$が中心元となるための必要十分条件は
+\[
+ a^3=b^3=c^3=1.
+\]
+従って，$F=\sum_{i=0}^3\lambda_i x_i^3$が中心で
+$\lambda_i\ne0$（全$i$）となる対角型の三次商は，
+$T[3]\simeq(\mu_3)^3$上に限られる．
+このtorsion条件は，$L(1,1,1,1)$成分の一般ambientが
+量子Fermat型の中心三次切断を持つことを意味しない，という具体的な障害である．
+\end{corollary}
+\begin{proof}
+$x_i^3x_j=q_{ij}^3x_jx_i^3$である．
+PBW基底による独立性から，$x_i^3$の中心性は
+$q_{ij}^3=1$（全$j$）に同値である．
+式\eqref{eq:L1111-multiparameter}ではこれは$a^3=b^3=c^3=1$に同値．
+全係数非零の$F$が中心であるときも，$x_j$との交換の係数を
+各相異なるPBW monomialに関して比較すれば，同じ条件が必要となる．
+\end{proof}
+
+\begin{proposition}[量子Fermat点は$L(1,1,2)$にも属する]
+\label{prop:fermat-in-L112}
+定理\ref{thm:fermat}の$B$はPymの$L(1,1,2)$成分の閉包にも属する．
+従って
+\[
+ [B]\in\overline{L(1,1,1,1)}\cap\overline{L(1,1,2)}
+\]
+である．この交差はgraded CY代数の分類空間において成立し，
+Frobenius適合四周期のrolled-up potentialによる部分にも移る．
+\end{proposition}
+\begin{proof}
+Pym\cite[\S3.2, 式(5)]{Pym}の$L(1,1,2)$型について，
+生成元$X_0,X_1,X_2,X_3$が満たす関係を
+\begin{align*}
+ X_1X_0&=X_0X_1,
+ &X_2X_0&=p_0^{-1}X_0X_2,
+ &X_3X_0&=p_0X_0X_3,\\
+ X_2X_1&=p_1X_1X_2,
+ &X_3X_1&=p_1^{-1}X_1X_3,\\
+ X_3X_2&=p_0^{-1}p_1X_2X_3+Q(X_0,X_1)
+\end{align*}
+と書く．CY条件を満たす二次式の一つは
+\[
+ Q=(p_1-p_0)(X_0^2+X_1^2)
+   +(1-p_0^2)X_0^2+(p_1^2-1)X_1^2
+\]
+である（同論文の$\lambda=0$）．
+$p_0=\zeta^2$，$p_1=\zeta$と置くと
+\[
+ Q=(1-\zeta^2)X_0^2+(\zeta-1)X_1^2.
+\]
+$u\in\mathbb A^1$に対して最後の関係の$Q$を$u^2Q$に置き換え，
+他は変えない族を考える．$u\ne0$では
+$X_0\mapsto u^{-1}X_0'$，$X_1\mapsto u^{-1}X_1'$という基底変更で
+$u=1$のPym型に同型になる．$u=0$では$Q$が消え，
+$X_0=x$，$X_1=y$，$X_2=t$，$X_3=z$と読めば，
+$p_0^{-1}=\zeta$，$p_1=\zeta$，$p_0^{-1}p_1=\zeta^2$から
+式\eqref{eq:quantum}の量子多項式環$B$になる．
+この族はPymの型のPBW表示により各次数で平坦で，
+特殊ファイバーもKoszul CY4である．従って閉包への所属が示された．
+Frobenius適合四周期とsuperpotentialへの移行は，
+この平坦なKoszul--Frobenius構造を相対的に適用すればよい．
+\end{proof}
+
+\begin{remark}[他成分との交叉]
+Pymは六つの成分の交わりが一般に非自明であると明記している．
+本稿は上の二成分への所属と$R(1,3)$閉包からの排除を証明するが，
+残りの$R(2,2),S(2,3),E(3)$への所属までは判定していない．
+またこの特殊点の接空間の大きさを，各成分の次数や横断性の証明と混同しない．
+\end{remark}
 
 \section{このambientは四頂点の$R(1,3)$成分にも入らない}
 単に$Z(B)_1=0$を示すだけでは，四つの独立な矢空間の基底変更に不変な排除条件にはならない．

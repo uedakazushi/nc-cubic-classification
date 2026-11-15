@@ -1,6 +1,6 @@
 # 研究方針：内在的非可換del Pezzo曲面と三次三様体のモジュライ
 
-2026-11-15 / project-v13 / recognition-v4 / dp1-integration-v1。再開時は本書、`research/common_del_pezzo_framework.md`を読み、次数3は`research/weak_cubic_axioms.md`、次数1は`research/dp1_research_plan.md`に進む。各現行論文・研究ノートはその指示に従って読む。
+2026-11-15 / project-v14 / recognition-v5 / dp1-integration-v2。再開時は本書、`research/common_del_pezzo_framework.md`を読み、次数3は`research/weak_cubic_axioms.md`、次数1は`research/dp1_research_plan.md`に進む。各現行論文・研究ノートはその指示に従って読む。
 
 ## I. 恒常的原則と保存許可
 
@@ -20,9 +20,15 @@
 
 固定ambientへの同定を保持した切断空間、ambient自己同型で割ったstack、ambientも変形する全モジュライの形式近傍も別。GL商/PGL商、任意周期/Frobenius適合周期、graded/Z代数/pointed圏の同値関係を揃える。
 
+## 共通定義と量子Fermatの成分に関する新しい結論
+
+dP1と共通のGabriel–Krull rank-one torsion-freeおよびexceptional構造対象Oを次数3にも採用した。例外性を要求しない旧条件はpre-weakと呼び、そこからExt1消滅が従うかは未解決。負次数の切断値はrank-one/Hilbert増大から従う。一次生成・二次三次提示・AS包絡は共通定義ではなく認識問題に置く。
+
+量子Fermat BはPym L(1,1,1,1) CY skew-polynomial 3-torusの(a,b,c)=(ζ,ζ,1)であり、Pym L(1,1,2)のQ→u²Q平坦族の特殊点u=0でもある。従って二成分の交点に属するが、R(1,3)の閉包外（既存の四頂点閉incidence）。他成分との交差は未決定。四変数の対角中心Fermat三次を全係数非零で持つtorus点はT[3]の27点に限る。証明はrecognition-v5（papers/weak_cubic_axioms.tex）。
+
 ## III. 到達点と証明の所在
 
-現行認識稿は `papers/weak_cubic_axioms.tex`（13ページ）。
+現行認識稿は `papers/weak_cubic_axioms.tex`（recognition-v5、16ページ）。
 
 1. **標準正規境界からの認識（定理3.1）**：Rに左右正則正規一次元tがあり、R/(t)=S0/(g)、S0がnoetherianな3次元二次Koszul AS正則、gが正則正規d次元(d≥3)なら、Rは一次生成、Q(R)はnoetherian Koszul AS4で、R=Q(R)/(G)、Gは正則正規d次元。d=3では六二次関係＋一三次関係が結論となる。ambientのAS性や条件2を前提としていない。
 2. **証明の核心**：中心化後、B=Q(R)の次数0,1,2はRと一致するのでtは低次数正則。Cassidy–SheltonのKoszul複雑度2の定理から全次数正則性が従う。LBSの正則一次拡大からAS4へ進み、I∩tB=tIとI/tI=(g)から三次核を持ち上げる。正規の場合はZhang twistで中心化。g,Gの直線が捩り自己同型に不変であることを使い、一般の正規元が任意twistで正規のままだとは主張しない。

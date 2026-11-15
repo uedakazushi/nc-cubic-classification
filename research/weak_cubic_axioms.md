@@ -1,12 +1,20 @@
 # 現行研究ノート：weak cubicの四問
 
-2026-11-15 / recognition-v4。最初に00_research_plan.mdを読む。完全な新証明はpapers/weak_cubic_axioms.tex。証明の重複は避け、再開に必要な補足をここに残す。
+2026-11-15 / recognition-v5。最初に00_research_plan.mdを読む。完全な新証明はpapers/weak_cubic_axioms.tex。証明の重複は避け、再開に必要な補足をここに残す。
 
 ## 構造的な整理
 
 定義に全整数のh0が入るので仮定1は自動。Rの負次数は零。sがheartを保つという条件は、負twistも使うため両方向のexact autoequivalenceとして読む。rankは裸のAbel圏には未定義なので、s不変のtorsion Serre部分圏とrank関数を固定するか、整域section環の商斜体から定義する。反例では後者が使える。
 
 全weak対象、条件2付き、AS4二次包絡＋正則三次核という超曲面認識部分、R13中心拡大型部分は別々。含意を逆にしない。smooth proper enhancementを要求する定義と、今回のgd2＋Serreの定義も同一視しない。
+
+## 統合後のweak定義とPymの交点
+
+次数1・3の共通weakly marked条件は、Gabriel–Krull商圏でrank-one torsion-freeかつexceptionalなO、Serre逆作用s、AZ ample、h_d(n)=1+d n(n+1)/2（n≥0）。従来のexceptionalityなしの広いcubic公理はpre-weakと呼ぶ。Ext^1(O,O)=0が冗長とは未証明である。負次数の切断消滅はrank-one、正次数Hilbert増大により自動。quadric/weighted提示は共通公理に入れない。
+
+量子Fermat BはPym §3.1のCY skew torus T=(Gm)^3、q01=a,q02=b,q03=(ab)^-1,q12=c,q13=a/c,q23=bc、(a,b,c)=(ζ,ζ,1) に属するためL(1,1,1,1)型。Pym §3.2のL(1,1,2)型でp0=ζ²,p1=ζ,λ=0とし、Q=(1−ζ²)X0²+(ζ−1)X1² を u² Q とする族はu≠0でL112型、u=0で量子Fermat B（X0,X1,X2,X3)=(x,y,t,z)を与える。PBWにより平坦なのでBはL1111とL112の交点。既存の四頂点正常直線return不変量によりR13の閉包外である。
+
+中心対角Fermat三次 F=Σλ_i x_i³（全係数非零）の中心性はa³=b³=c³=1と同値。T[3]は27点であり、一般L1111で同じ中心切断があるわけではない。一般のnormal cubicやweak曲面の不在は示していない。残りR22/S23/E3との交叉、全四頂点AS stackの局所成分の重複度は未決定。Pymの一次資料 arXiv:1403.6444 Theorem 1.1, §§3.1–3.2を参照。
 
 ## 標準正規境界が認識問題を解く範囲
 

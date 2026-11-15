@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-15",
+  "arithmetic": "exact symbolic/cyclotomic checks over Q(zeta)",
+  "cy_skew_3_torus": {
+    "12": "c",
+    "13": "a/c",
+    "23": "b*c",
+    "01": "a",
+    "02": "b",
+    "03": "1/(a*b)"
+  },
+  "fermat_parameters": "a=b=zeta,c=1",
+  "L112_parameters": "p0=zeta^2,p1=zeta,lambda=0; X0=x,X1=y,X2=t,X3=z",
+  "L112_correction": "(1-zeta^2)*X0^2+(zeta-1)*X1^2",
+  "degeneration": "Q -> s^2 Q; s!=0 obtained by a basis change; s=0 is skew Fermat B",
+  "central_diagonal_cubic": "a^3=b^3=c^3=1",
+  "torsion_point_count": 27,
+  "limitations": "No tangent/intersection multiplicity or exclusion of other Pym components."
+}

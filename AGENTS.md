@@ -1,4 +1,4 @@
-# Research continuation — 2026-11-15 / recognition-v4 + dP1-integration-v1
+# Research continuation — 2026-11-15 / recognition-v5 + dP1-integration-v2
 
 Read 00_research_plan.md and research/common_del_pezzo_framework.md first. For degree 3, read research/weak_cubic_axioms.md and papers/weak_cubic_axioms.tex; for degree 1, read research/dp1_research_plan.md, research/dp1_research_notes.md, papers/nc_del_pezzo_degree1_moduli.tex and papers/dp1_anticanonical_models.tex. Keep degree-1 weighted sextic recognition distinct from degree-3 quadratic boundary recognition. Preserve current R13/surface proofs and the threefold research.
 
@@ -9,3 +9,5 @@ The existence of this boundary for every intrinsic weak cubic and algebraicity o
 Run the two exact scripts verify_boundary_fermat.py and verify_quantum_fermat.py, then latexmk the recognition paper. Record checks actually performed. Use Japanese LuaLaTeX and retain complete proofs; distinguish proof, external input, finite computation, conjecture, novelty and independent review.
 
 The user authorizes research-break Library saves without further approval. Save the current self-contained bundle to Library and source changes to GitHub main by ordinary fast-forward when available. No deletion of existing Library assets without explicit instructions. No GitHub Actions, force push or unsolicited PR. Do not track PDFs, archives, caches or TeX intermediates in Git. Report generation, verification and each persistent save separately.
+
+Degree-3 weak marking now follows the dP1 Gabriel–Krull rank-one torsion-free plus exceptional-object axioms; the former broad class is labelled pre-weak. The Fermat ambient lies in both Pym L(1,1,1,1) and L(1,1,2), outside R(1,3), with explicit degeneration. Do not assert exclusive membership among all six components. Consult recognition-v5.
