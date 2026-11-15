@@ -1,0 +1,316 @@
+\section{非torsion境界外圏と混合\texorpdfstring{$A_2$}{A2}の完全判定}
+\label{sec:mixed-a2-category}
+本節は，命題\ref{prop:actual-mixed-a2}のconnecting morphismを
+導来完全忠実性を仮定せず決定する．さらに二つの根sheafが生成する
+Serre部分圏全体を記述する．入力はRains
+\cite[Corollaries 7.7, 7.13, 7.15, Propositions 7.6, 7.32,
+Corollary 10.12, Proposition 10.13]{RainsBirational}，
+前節までの符号別Ext，および境界triangleである．
+$H=-K_X$はnef，$H^2=d>0$，$q$は非torsionとする．
+構造line bundle $e$はexceptionalである．
+以下，$\operatorname{Ext}_X$は常に\emph{ambientのRains heart}で計算する．
+
+\subsection{境界外圏は有限長のSerre部分圏}
+\begin{lemma}[零次元の境界外対象と商の排除]
+\label{lem:offboundary-no-points}
+$Li^*M=0$とする．$M$の零次元の商は零である．
+従って，境界非交叉の既約純一次元sheafはRains heartの
+\emph{単純対象}である．これは非torsion仮定を用いる結論であり，
+既約性だけから全射性を推論するものではない．
+\end{lemma}
+\begin{proof}
+零次元の商$M\twoheadrightarrow Z$を取る．
+$i^*$は右完全なので$i^*Z=0$であり，境界triangleから
+$\theta Z\to Z$は全射である．
+Rainsの$\theta$の数値作用式によれば$[\theta Z]=[Z]$である．
+同じ数値類の間の全射は同型
+\cite[Corollary 7.7]{RainsBirational}だから$Li^*Z=0$となる．
+一方，$[Z]=\ell[\mathrm{pt}]$，$\ell=\chi(e,Z)\ge0$であり，
+その境界制限のdeterminantは$q^\ell$である
+\cite[Proposition 7.6, \S7, Proposition 7.24の直前]{RainsBirational}．
+非torsion性から$\ell=0$，従って$Z=0$である．
+既約純一次元sheafの任意の非零部分対象の商は零次元なので，
+後半も従う．
+\end{proof}
+
+\begin{proposition}[境界外圏の有限長性]
+\label{prop:offboundary-serre-length}
+$\mathcal Z=\{M\in\mathcal A_{\mathrm R}:\dim M\le1,\ Li^*M=0\}$は
+Serre部分圏であり，全対象は有限長である．
+その単純対象は境界非交叉の2-sphericalな根sheafである．
+最大共鳴で全単純根sheafが実在する場合，その単純対象は
+定理\ref{thm:only-simple-irreducible}の$r=9-d$個に尽きる．
+\end{proposition}
+\begin{proof}
+$0\to N\to M\to P\to0$，$M\in\mathcal Z$とする．
+次元は部分商で増加しない．$H$のnef性とChern類の加法性から
+\[
+0=Hc_1(M)=Hc_1(N)+Hc_1(P),\qquad Hc_1(N),Hc_1(P)\ge0,
+\]
+よって両項は零である．$i^*P=0$なので$\theta P\to P$は全射．
+rank零かつ$K_Xc_1(P)=0$ゆえ，Rains Corollary 7.15により
+$[\theta P]=[P]$であり，Corollary 7.7から同型である．
+従って$Li^*P=0$．短完全列における$\theta\to\mathrm{id}$の自然性から
+$\theta N\to N$も同型である．拡大閉性は境界triangleから従う．
+
+非零零次元対象は補題\ref{lem:offboundary-no-points}により存在しない．
+従って真の降鎖の非零逐次商はすべて一次元であり，
+Rains Proposition 7.32のfinitely partitive性によって降鎖は停止する．
+coherent heartのnoetherian性と合わせて有限長性を得る．
+
+単純対象$S$について$D=c_1(S)\ne0$，$HD=0$である．
+$H^\perp$は負定値で，Riemann--Rochの偶奇から$D^2$は偶数．
+$\operatorname{End}(S)=k$，$\theta S=S$とSerre双対性から
+\[
+-D^2=\chi(S,S)=2-\dim\operatorname{Ext}_X^1(S,S)\le2.
+\]
+従って$D^2=-2$，$\operatorname{Ext}_X^1(S,S)=0$であり，根sheafとなる．
+最後の主張には既に証明した単純根の排他性と一意性を使う．
+\end{proof}
+
+\subsection{Euler指数和が一の場合のconnecting map}
+$S_+=M_\alpha$，$S_-=M_\beta$を境界非交叉の既約根sheafとし，
+\[
+\alpha\beta=1,\qquad m_+=p,\qquad m_-=-(p-1),\qquad p\ge2
+\]
+とする．$\gamma=\alpha+\beta$は根で，$m_\gamma=1$である．
+両向きの$\operatorname{Ext}_X^1$は一次元なので，非分裂拡大を
+\begin{equation}\label{eq:a2-two-extensions}
+0\to S_-\to P\to S_+\to0,\qquad
+0\to S_+\to Q\to S_-\to0
+\end{equation}
+と書く．各中間項は同型を除き一意である．
+ここで$P,Q$はsheafの記号であり，境界は引き続き$E$と書く．
+
+\begin{theorem}[connecting mapの無条件な最大rank]
+\label{thm:a2-delta-rank}
+非分裂拡大$P$のconnecting mapは全射であり，
+\[
+\delta:V_+\twoheadrightarrow V_-,\qquad
+\operatorname{rank}\delta=p-1,\qquad
+(\dim V^0(P),\dim V^1(P))=(1,0).
+\]
+さらにline bundle $L$を核とする短完全列
+\[
+0\longrightarrow L\longrightarrow e\longrightarrow P\longrightarrow0,
+\qquad c_1(L)=-\gamma,\quad \chi(e,L)=0
+\]
+が存在する．特に命題\ref{prop:actual-mixed-a2}の$p=2$では
+$\delta:k^2\to k$のrankは\emph{1}であり，
+$V_+$は1次元加群$V_-$を商に持つ．この結論に
+$\Phi$の完全忠実性や全$q$導来同値は必要ない．
+\end{theorem}
+\begin{proof}
+符号別Extから$\dim\Hom(e,S_+)=p$，
+$\dim\Ext^1(e,S_-)=p-1$，$\Hom(e,S_-)=0$である．
+長完全列により$\Hom(e,P)=\ker\delta\ne0$．
+非零射$f:e\to P$を取ると，$P\to S_+$との合成は非零なので全射．
+その像$I$と$S_-$の交わりは，単純性により$0$か$S_-$である．
+前者なら$I\cong S_+$が拡大を分裂させるため不可能であり，
+後者なら$I=P$．従って$f$は全射である．
+
+$L=\ker f$はrank-one torsion-freeで，
+$c_1(L)=-\gamma$，$\chi(e,L)=1-\chi(e,P)=0$．
+RainsのEuler式から
+\[
+\chi(L,L)=-1+2\chi(e,L)-c_1(L)(c_1(L)-K_X)
+=-1-(-2)=1.
+\]
+従ってRains Proposition 10.13の等号条件により$L$はline bundle．
+$\Hom(e,L)=0$である：非零射があれば$L\hookrightarrow e$との合成は
+$e$の非零自己射，従って同型となり$P\ne0$に反する．
+また
+\[
+\Ext^2(e,L)=\Hom(L,\theta e)^*=0.
+\]
+実際，右辺の非零射があれば
+$c_1(\theta e)-c_1(L)=K_X+\gamma$が有効となる
+\cite[Corollary 10.12]{RainsBirational}が，
+$H(K_X+\gamma)=-d<0$はnef性に反する．
+$\chi(e,L)=0$なので$\Ext^1(e,L)=0$も従う．
+$e$のexceptionalityと$0\to L\to e\to P\to0$から
+$\Hom(e,P)=k$，$\Ext^1(e,P)=0$を得る．
+従って$\delta$は全射である．
+\end{proof}
+
+\begin{corollary}[直和を用いた二段拡大の正確な公式]
+\label{cor:a2-rank-matrix-exact}
+$0\to S_-^{\oplus b}\to M\to S_+^{\oplus a}\to0$の拡大類を
+$T\in\operatorname{Mat}_{b\times a}(k)$とし，$t=\operatorname{rank}T$とする．
+すると
+\[
+\operatorname{rank}\delta_M=(p-1)t,\qquad
+\dim V^0(M)=pa-(p-1)t,\qquad
+\dim V^1(M)=(p-1)(b-t).
+\]
+$p=2$では$(\dim V^0,\dim V^1)=(2a-t,b-t)$である．
+\end{corollary}
+\begin{proof}
+$\delta_M=\delta\otimes T$と前定理を使う．
+\end{proof}
+
+\subsection{混合\texorpdfstring{$A_2$}{A2}の全有限長対象とtorsion pair}
+\begin{theorem}[四つの直既約対象による完全分類]
+\label{thm:a2-serre-category}
+$\mathcal C=\langle S_+,S_-\rangle_{\rm Serre}$をRains heartの
+有限長Serre部分圏とする．$\mathcal C$の直既約対象は
+\[
+S_+,\quad S_-,\quad P,\quad Q
+\]
+の四つだけである．$P\oplus Q$は$\mathcal C$のprojective generatorであり，
+\[
+\mathcal C\simeq\operatorname{mod}_{fd}\Pi(A_2),\qquad
+\Pi(A_2)=k(\, +\mathrel{\substack{\longrightarrow\\[-2pt]\longleftarrow}}-\,)/
+(\hbox{両方の長さ二の道})
+\]
+となる．これは次元4のradical-square-zero代数である．
+\end{theorem}
+\begin{proof}
+非分裂性と単純性から，順序$(S_+,S_-,P,Q)$でのHom次元表は
+\[
+\left(\dim\Hom(U,V)\right)_{U,V}=
+\begin{pmatrix}1&0&0&1\\0&1&1&0\\1&0&1&1\\0&1&1&1\end{pmatrix}.
+\]
+例えば$\Hom(S_+,P)=\Hom(P,S_-)=0$は，
+$k\to\operatorname{Ext}_X^1(S_+,S_-)=k$のconnecting mapが
+拡大類を送る同型であることから従う．
+$\Hom(P,Q)=k$は$P\twoheadrightarrow S_+\hookrightarrow Q$で生成され，
+逆方向も同様で，両合成は零である．
+
+全対象で$\theta$が自然に恒等なので，Serre双対性とEuler形式により
+\[
+\dim\operatorname{Ext}_X^1(U,V)
+=\dim\Hom(U,V)+\dim\Hom(V,U)+c_1(U)c_1(V).
+\]
+この表を代入すると，$S_+,S_-$間の両向きの一次元Ext以外は全て零である．
+とくに$\operatorname{Ext}_X^1(P,S_\pm)=
+\operatorname{Ext}_X^1(Q,S_\pm)=0$．
+長さに関する帰納法から$P,Q$は$\mathcal C$でprojectiveであり，
+各単純対象への全射を持つので$P\oplus Q$がprojective generatorとなる．
+通常のMorita理論により，$\mathcal C$はそのEnd代数の有限次元右加群圏と同値．
+上記のHomと合成の記述が次元4の表示を与える．
+
+最後にこの代数の表現を，$U_+,U_-$と二写像
+$x:U_+\to U_-$，$y:U_-\to U_+$，$xy=yx=0$で書く．
+$\operatorname{im}y\subset\ker x$，$\operatorname{im}x\subset\ker y$を用い
+各空間に適合する基底を選ぶと，$x$のみが同型の一次元対，
+$y$のみが同型の一次元対，および孤立した一次元空間に分解できる．
+これらがそれぞれ$P,Q,S_+,S_-$である．
+\end{proof}
+
+\begin{corollary}[局所torsion pairと全対象での非消失]
+\label{cor:a2-torsion-pair}
+$\mathcal C$では
+\[
+\mathcal T=\ker\Ext^1(e,-)=\operatorname{add}(S_+,P),\qquad
+\mathcal F=\ker\Hom(e,-)=\operatorname{add}(S_-)
+\]
+がtorsion pairである．各直既約対象のcohomology次元は
+\[
+\begin{array}{c|rrrr}
+M&S_+&S_-&P&Q\\\hline
+\dim V^0(M)&p&0&1&p\\
+\dim V^1(M)&0&p-1&0&p-1
+\end{array}
+\]
+となる．特に$\Phi(M)=0$である$M\in\mathcal C$は$M=0$だけである．
+一般の上記quiver表現では$a=\dim U_+$，$b=\dim U_-$，
+$t=\operatorname{rank}x$として
+\[
+\dim V^0(M)=pa-(p-1)t,\qquad
+\dim V^1(M)=(p-1)(b-t).
+\]
+$p=2$では$\chi(e,P)=\chi(e,Q)=1$だが，
+$P$の像は次数0に集中し，$Q$の像は二つの次数に残る．
+従って非既約対象のEuler指数の符号だけではheartの位置を判定できない．
+\end{corollary}
+\begin{proof}
+$P$の項は定理\ref{thm:a2-delta-rank}，$Q$の項は
+第二の短完全列\eqref{eq:a2-two-extensions}の六項完全列から得る．
+Hom表から$\Hom(\mathcal T,\mathcal F)=0$である．
+$Q$については$0\to S_+\to Q\to S_-\to0$がtorsion分解を与え，
+残る三対象は既にどちらかの部分圏に入る．直和を取れば全対象の分解を得る．
+quiverの分解の重複度はそれぞれ
+$a-\operatorname{rank}x-\operatorname{rank}y$，
+$b-\operatorname{rank}x-\operatorname{rank}y$，
+$\operatorname{rank}x$，$\operatorname{rank}y$であり，表から公式が従う．
+非零直既約はいずれも像が非零なので最後の非消失も従う．
+\end{proof}
+
+\begin{remark}[局所分類と導来比較の区別]
+このtorsion pairは$\mathcal C$上の結果であり，全$\mathcal Z$や全Rains heartへ
+拡張したとは主張しない．また$\mathcal C$の\emph{内在的}高次ExtとambientのExtを
+同一視してはならない．実際，$\Pi(A_2)$の単純加群のprojective resolutionは
+二周期的で，$\operatorname{Ext}_{\mathcal C}^{2n}(S_+,S_+)=k$ $(n\ge0)$である．
+一方$\operatorname{Ext}_X^j=0$ $(j>2)$なので，
+$D^b(\mathcal C)\to D^b(\mathcal A_{\mathrm R})$は完全忠実でない．
+本節は$\Phi$が全導来圏で同値であることも，$\mathcal C$上で射をすべて保つことも
+証明していない．
+\end{remark}
+
+\subsection{残る二次元アフィン表現テストの縮約}
+\begin{proposition}[完全忠実性に残る一つの代数的退化]
+\label{prop:a2-scalar-test}
+$p=2$とし，$W=V^0(P)$とする．有限次元右$A$加群の短完全列
+\[
+0\to W\to V_+\xrightarrow{\delta}V_-\to0,
+\qquad \dim W=\dim V_-=1
+\]
+が存在し，$\delta$は非零である．さらに
+\[
+\dim\Hom_A(V_+,V_-)=
+\begin{cases}2,&V_+\cong V_-^{\oplus2},\\1,&\text{それ以外}\end{cases}
+\]
+となる．従って自然写像
+$\operatorname{Ext}_X^1(S_+,S_-)\to\Hom_A(V_+,V_-)$は常に単射であり，
+同型であることは$V_+\not\cong V_-^{\oplus2}$と同値である．
+\end{proposition}
+\begin{proof}
+短完全列は既知の六項完全列と$V^1(P)=0$による．
+$\Hom_A(V_+,V_-)$は二次元の$\Hom_k(V_+,V_-)$の非零部分空間．
+独立な二つの準同型があれば，それらを並べた写像
+$V_+\to V_-^{\oplus2}$はベクトル空間としても$A$加群としても同型である．
+逆は明らか．拡大類の生成元は非零$\delta$に写るので単射性も従う．
+\end{proof}
+
+右加群を行ベクトルで表し，$W$を第一座標，$\delta$を第二座標への射影に
+取れば，作用は必ず
+\[
+\rho(a)=\begin{pmatrix}\chi_W(a)&0\\ \eta(a)&\chi_-(a)\end{pmatrix},\qquad
+\eta(ab)=\eta(a)\chi_W(b)+\chi_-(a)\eta(b)
+\]
+の形になる．上の未解決退化は$\chi_W=\chi_-$かつ$\eta=0$に正確に対応する．
+これは表現の\emph{正規形と検査条件}であって，指定楕円データに対する
+$A$の生成元の$\chi_W,\chi_-,\eta$を算出したという主張ではない．
+それらの計算と，全$q$導来比較の監査が次の課題である．
+
+\begin{proposition}[characterの分離と非分裂性という必要条件]
+\label{prop:a2-character-obstructions}
+$p=2$で，$\Phi$が$S_+,S_-$の生成する三角圏上で完全忠実であるなら，
+\[
+W\not\cong V_-,\qquad
+0\to W\to V_+\to V_-\to0\text{ は非分裂}
+\]
+でなければならない．従って上の二次元表現での$A$の像は
+全ての下三角$2\times2$行列からなる次元3の代数である．
+これは必要条件であって，導来完全忠実性の十分条件とはしない．
+\end{proposition}
+\begin{proof}
+Hom表とEuler式から$\Ext_X^1(P,S_-)=0$である．
+完全忠実性があれば，$\Phi(P)=W$，$\Phi(S_-[1])=V_-$なので
+$\Hom_A(W,V_-)=0$，従って二つのcharacterは異なる．
+また非零の包含$S_-\hookrightarrow P$は，$\Phi$の下で
+$\Ext_A^1(V_-,W)$の元，すなわち表示した短完全列の拡大類へ移る．
+忠実性からその類は非零である．
+
+characterが異なると，像代数には対角成分の異なる行列があり，
+その多項式から二つの相補的冪等元を得る．基底をそれらに合わせると，
+非分裂性は像代数の非対角成分が非零であることに等しい．
+この成分も一次元なので，二つの冪等元と合わせて全下三角代数を得る．
+\end{proof}
+\begin{remark}
+$\chi_W=\chi_-$だが$\eta\ne0$というJordan型なら
+命題\ref{prop:a2-scalar-test}の一次元Homテストには合格しても，
+本命題のcharacter分離に失敗する．またcharacterが異なっても拡大が分裂すれば，
+非零sheaf射が$\Phi$で零になる．対象の非消失と射の忠実性は別の条件である．
+\end{remark}
