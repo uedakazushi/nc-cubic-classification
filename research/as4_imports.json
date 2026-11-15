@@ -298,5 +298,13 @@
     "used_part": "FZ4/FZ5 explicit O/H0/H1 presentations only; no existence/full coverage/isomorphism theorem imported.",
     "independent_proofs": "Four PBW diamonds, normal character proof, pure cube resonances; all-value H rank cover; conditional-AS4 anti-cyclic top tensor.",
     "validator": "computations/verify_cubic_as4_four_simple_remaining.py"
+  },
+  "four_simple_P_v75": {
+    "commit": "a45f834f51a00c47443b51caf66abaf4629546b9",
+    "path": "research/proofs/CY_ZERO_COMMUTATORS_FOUR_SIMPLE_FULL_SHARED_INVERTIBLE_REDUCTION.tex",
+    "sha256": "b5d86f3853c49a62cc9d34c04cfe2f2a26213dd9d883baee395cbd93d44e3986",
+    "used_part": "FT2-FT3 explicit P presentation only, extended wherever its denominators are nonzero; full-shared-all-regular proof consulted for scope but no AS4 sufficiency, coverage or isomorphism theorem imported.",
+    "independent_proofs": "Universal P anti-cyclic top tensor conditional AS4. Entire lambda=2 slice centre3 zero by two coprime exact maximal minor numerators, plus formal nonempty-open exclusion.",
+    "validator": "computations/verify_cubic_as4_four_simple_p.py"
   }
 }
