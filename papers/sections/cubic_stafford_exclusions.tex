@@ -1,0 +1,103 @@
+\subsection{Stafford型楕円包絡の中山作用と一般点の排除}
+\label{subsec:stafford-exclusions}
+標準Sklyanin以外にも、同じ楕円THCRへの全射を持つAS4包絡が存在する。
+ここではDaviesの一次資料\cite[(6.1.3)--(6.1.4), Theorem 6.1.10]{DaviesThesis}
+にあるStafford族を扱う。点加群の無限位数に関する結果は用いない。
+パラメータ領域を
+\[
+ T=\{(\alpha,\beta,\gamma):\alpha+\beta+\gamma+\alpha\beta\gamma=0,
+ \quad \alpha,\beta,\gamma\notin\{0,1,-1\}\}
+\]
+とし、$(i,j,k)=(1,2,3),(2,3,1),(3,1,2)$ に対して
+\[
+ f_{2i-1}=[x_0,x_i]-\alpha_i\{x_j,x_k\},\qquad
+ f_{2i}=\{x_0,x_i\}-[x_j,x_k],\quad
+ (\alpha_1,\alpha_2,\alpha_3)=(\alpha,\beta,\gamma)
+\]
+と置く。さらに
+\[
+ g_1=-x_0^2+x_1^2+x_2^2+x_3^2,\quad
+ g_2=x_1^2+A x_2^2+C x_3^2,\quad
+ A=\frac{1+\alpha}{1-\beta},\quad C=\frac{1-\alpha}{1+\gamma}.
+\]
+$S_\infty$ の関係空間は $\langle f_1,f_2,f_3,f_4,g_1,g_2\rangle$、
+$S_{d,i}$ は $f_i$ を $d_1g_1+d_2g_2$ へ置換したものとする。
+$i=1$ では $d\ne(1:0),(1:-1-\beta\gamma)$、
+$i=2$ では $d\ne(1:\beta-1),(1:-1-\gamma)$ を仮定する。
+この領域では元の族も標準Klein cocycle twistもnoetherian Koszul AS4整域である。
+cocycle規約は前節と同じ $\deg(x_0,x_1,x_2,x_3)=(0,e_1,e_2,e_1+e_2)$、
+$c((p,q),(r,s))=(-1)^{ps}$ であり、上添字 $c$ でtwistを表す。
+
+\begin{theorem}[Stafford族の中山作用]
+\label{thm:stafford-nakayama}
+上の全許容パラメータに対して、順序 $(x_0,x_1,x_2,x_3)$ で
+\[
+\begin{array}{c|ccc}
+ B&S_\infty&S_{d,1}&S_{d,2}\\\hline
+ \mu_B&-I&\operatorname{diag}(-1,-1,1,1)&\operatorname{diag}(1,1,-1,-1)\\
+ \mu_{B^c}&-I&-I&I
+\end{array}
+\]
+である。従って $S_\infty,S_\infty^c,S_{d,1}^c$ は全体がH3包絡から除外される。
+残る $S_{d,1},S_{d,2},S_{d,2}^c$ も各パラメータ領域の非空開稠密集合で
+$W_1=0$ となる。循環置換で得られる他のStafford族にも対応する結論が成り立つ。
+残る閉部分集合の全排除は主張しない。
+\end{theorem}
+\begin{proof}
+各基底は既約である。実際 $1+\alpha\beta\ne0$ なので
+$\gamma=-(\alpha+\beta)/(1+\alpha\beta)$ により $T$ は平面の開集合であり、
+$d$ の二つの禁止切断を除く $\mathbb P^1$ 族も既約である。
+有限群次数の四つの異なる指標で分解される $B_1$ 上で、
+中山自己同型は符号群の全自己同型と可換するため対角である。
+ここではgraded中山作用の内的曖昧さは次数零の単元、すなわちscalarのみである。
+
+$S_{d,i}$ の群次数零の関係はただ一本 $Q_d=d_1g_1+d_2g_2$ である。
+その四つの平方係数が全て非零となる稠密開集合では、
+$\mu(x_j)=m_jx_j$ が $kQ_d$ を保つことから全 $m_j^2$ が等しい。
+$S_\infty$ では平方関係のpencilを保つ。四つの比 $0,1,A,C$ は全て異なる。
+例えば $A-C=\alpha$、$A-1=-\gamma C$、$C-1=\beta A$ である。
+従ってその $2\times4$ 係数行列の全六Pl\"ucker座標は非零であり、
+対角作用 $\operatorname{diag}(m_j^2)$ が行空間を保つなら
+全 $m_i^2m_j^2$ は等しく、再び全 $m_j^2$ が等しい。
+cocycle twistは平方係数の各列を非零符号倍するだけなので同じ議論が通る。
+
+従って稠密開集合で $\mu=\lambda\epsilon$、$\epsilon$ は対角符号行列となる。
+Koszul AS正則環の恒等式 $\operatorname{hdet}\mu=1$
+\cite[Theorem 6.3]{RRZ} と、AS index $4$ による
+$\operatorname{hdet}(\lambda I)=\lambda^4$ を使う。
+$\epsilon^2=I$ より $\operatorname{hdet}\epsilon\in\{1,-1\}$ なので
+$\lambda^8=1$。従って中山行列は有限集合に値を取る。
+
+この有限性を一つの標本からの無条件な外挿と混同しないため、
+族における正則性も確認する。二次関係行列から作るKoszul双対の
+次数 $3,4$ 商は、全許容fiberで次元 $4,1$ が一定なので局所自由である。
+AS4入力により双対Frobenius pairingは全fiberで非退化である。
+最高次数の直線束を局所自明化すると、中山行列は二つのpairing行列の
+積と逆行列で与えられ、従って正則であり自明化に依存しない。
+既約な被約基底上のこの正則写像が稠密開集合で有限集合に値を取るので、
+基底全体で一定である。
+
+残る定数の決定は $(\alpha,\beta,\gamma)=(2,3,-5/7)$、$d=(1:4)$ で行う。
+ここは全ての禁止値を避ける。検証器
+\texttt{verify\_cubic\_stafford.py} は六つの関係空間からそれぞれ $R^\perp$ を計算し、
+双対次数 $3,4$ 商と非退化pairingを有理数上で直接求める。
+$\varphi$ を最高次数汎関数、$w_j$ を双対次数三の基底とし
+$L_{ij}=\varphi(x_iw_j)$、$P_{ji}=\varphi(w_jx_i)$ と置くと、
+$\mu_E=(L(P^{\mathsf T})^{-1})^{\mathsf T}$、
+$\mu_B=-\mu_E^{-\mathsf T}$ が表の値を与える。
+証明書にはpairing行列式と最高次数汎関数を保存してある。
+
+$\mu_B=-I$ なら次数三では $\mu_B(G)=-G$ であり、
+H3の必要条件 $\mu_B(G)=G$ と両立しない。
+他の三族では同じ標本で $B_3,B_4$ の次元 $20,35$ と
+$140\times20$ 行列の非零最大minorを直接計算した。
+関係商が局所自由で中山行列が一定であるため、このminor非零条件は開であり、
+各既約基底の開稠密部分で $W_1=0$ を得る。
+循環置換は\cite[Lemma 6.1.11]{DaviesThesis}に従う。
+\end{proof}
+
+\paragraph{未解決の特殊部分への還元.}
+残余三族の全H3候補は、それぞれ上の線型写像の全 $20$ 次minorが消える
+閉部分集合に支持される。この条件はadmissibilityの十分条件ではない。
+全パラメータのminor idealの簡約、特殊包絡の正規三次の分解、
+商の内在的H3判定は依然として必要である。
