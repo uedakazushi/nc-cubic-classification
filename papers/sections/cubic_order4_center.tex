@@ -188,3 +188,54 @@ Hessian の階数は2で、その核は
 高次を有限次数から外挿するのではなく、非退化二方向に対する形式的陰関数定理を使っている。
 非H3性は命題\ref{prop:order4-character-bad-value}の奇数自己 $\Ext^1$ による。
 \end{proof}
+
+\begin{proposition}[固定包絡の全ての特異中心値]
+\label{prop:order4-center-critical-values}
+上の固定包絡では、中心曲面が特異となる $D$ は正確に13個である。
+これは中心についての結論であり、非H3値の全分類ではない。
+\end{proposition}
+\begin{proof}
+係数体を $K=\mathbb Q(\gamma)$ とする。三つの四次中心座標を
+\[
+ r_1=(\gamma-1)(\gamma^2-1)/2,\quad
+ r_2=(\gamma^2-1)^2/2,\quad r_3=1
+\]
+で拡大縮小し、純二乗項を消す一意の平行移動を行う。
+全三次式は、$\lambda=7\gamma^2-13$ として
+\[
+ F=Y_1^3+Y_2^3+z^3+\lambda Y_1Y_2z+B Y_1Y_2
+       +C(Y_1+Y_2)z+L(Y_1+Y_2)+Nz+J
+\]
+となる。$B$ は定数、$C,L,N,J$ はそれぞれ $D$ 次数1、2、2、4以下である。
+全係数と平行移動は
+\path{cubic_order4_symmetric_center_certificate.json} に保存し、
+\path{verify_cubic_order4_symmetric_center.py} は全多項式恒等式を確認する。
+$u=Y_1+Y_2,v=Y_1-Y_2$ とすると
+\[
+ 4F=f+v^2 A,\quad A=3u-\lambda z-B,\qquad
+ f=u^3+4z^3+\lambda u^2z+Bu^2+4Cuz+4Lu+4Nz+4J.
+\]
+従って特異点は次の二場合で尽くされる。
+$v=0$ の場合は $f=f_u=f_z=0$。
+$v\ne0$ の場合は $A=0$ と、
+$f_0(z)=f((\lambda z+B)/3,z)$ の重根条件である。
+逆に $f_0$ の重根から $v^2=-f_u/3$ を解けば特異点を得る。
+$v=0$ になる場合も第一の場合に含まれるので、重根条件は常に十分である。
+
+$K[D,u,z]/(f_u,f_z)$ は基底 $1,u,z,uz$ の自由加群である。
+実際、先頭二次式は射影直線上で共通零点を持たず、
+$u^2,z^2,u^2z,uz^2$ の消去は $D$ に依らない単元で行える。
+この階数4代数で $f$ の乗法行列を作り、その行列式を $\Delta_s(D)$ とする。
+第二の場合は三次式 $f_0$ の判別式 $\Delta_o(D)$ で判定できる。
+先頭係数 $4(\lambda^3+27)/27$ は非零であり、次数低下の例外はない。
+\path{verify_cubic_order4_center_critical.py} は係数体上の厳密演算で
+二つの乗法行列の可換性、両偏微分関係、行列式と判別式を計算する。
+結果は $\deg\Delta_s=16,\deg\Delta_o=8$。
+$\Delta_s$ の平方因子分解は重複度1の次数4因子と重複度2の次数6因子、
+$\Delta_o$ は重複度1、2、3の次数1、2、1因子となる。
+両者の monic 最大公約数は正確に $(D-D_*)^2$ である。
+従って異なる根の総数は $4+6+1+2+1-1=13$。
+全多項式は \path{cubic_order4_center_critical_certificate.json} に保存する。
+根の重複度はこの二つの消去多項式の重複度であり、
+そのまま局所非可換代数の特異性やH3障害の重複度とは解釈しない。
+\end{proof}
