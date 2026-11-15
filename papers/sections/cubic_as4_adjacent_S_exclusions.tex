@@ -50,7 +50,7 @@ AB2の表示 $T^\eta_\lambda$ は $\lambda\ne0,-1$ 上の有理的な関係族�
 次の結果は全値の排除とは異なる。
 \begin{proposition}\label{prop:cubic-adjacent-T-finite}
 各符号について、$T^\eta_\lambda$ がH3包絡となり得るパラメータは有限個である。
-この有限集合の列挙はまだ行っていない。
+後述の定理では、この有限候補も全て排除する。
 また $f(\lambda)=-\lambda/(\lambda+1)$ と置くと、
 $P=\operatorname{diag}(1,-1/(\lambda+1),-1/(\lambda+1)^2,-1/(\lambda+1))$
 と $b,d$ の交換の積は $T^+_\lambda\simeq T^+_{f(\lambda)}$ を与える。
@@ -85,7 +85,7 @@ $R_{f(\lambda)}$ の列空間に入ることと、表示した逆行列で確認
 有限入力の再現は
 \texttt{verify\_\allowbreak{}cubic\_\allowbreak{}as4\_\allowbreak{}four\_\allowbreak{}simple\_\allowbreak{}adjacent\_\allowbreak{}T.py}
 による。有限性の証明は上記の階数の二場合分けに依存する。
-T全例外値の判定、全包絡被覆、全H3分類は引き続き未完である。
+この予備判定だけではT全値の排除を与えない。全包絡被覆・全H3分類は別の課題である。
 
 \paragraph{全語関係に対する独立な商射影証明書.}
 上の有限性とは別に、三次・四次の有理商座標を構成し、
@@ -119,3 +119,59 @@ AS4のHilbert値を持つ任意の $D_n\ne0$ の点では、
 さらに $\lambda=-1\pm i$ の両符号を $\mathbb Q(i)$ 上で直接計算し、
 いずれも中心三次が零であることを確認した。
 従ってこの二点もH3包絡から除外される。
+
+\begin{theorem}\label{thm:cubic-adjacent-T-all}
+AB2の全 $T^\eta_\lambda$ はH3包絡にならない。
+従ってAB2/AB3の隣接共有境界に列挙された表示は全て排除される。
+この主張は全CY包絡の被覆を意味しない。
+\end{theorem}
+\begin{proof}
+$\lambda=-2$ は命題\ref{prop:cubic-adjacent-S}で処理済みであり、
+$\lambda=-1\pm i$ も上の独立計算で排除した。
+まず正符号とし、残るパラメータでAS4性を仮定する。
+そのとき $\dim B_3=20$, $\dim B_4=35$ であり、$\mu=1$ なので
+非零中心三次の存在がH3の必要条件となる。
+
+$D_4\ne0$ 上で、検証済みの $\Pi_4$ を使って
+64本の全三次語の四生成元との交換子を取る。
+分母 $D_4$ を払った写像の転置を $C$ と書くと、これは
+$64\times140$ の複素係数多項式行列である。
+各列から $D_4$ の約数である共通因子 $h_j$ のみを除いて
+$C_0=C\operatorname{diag}(h_j^{-1})$ とする。
+従ってこの開集合では $C$ と $C_0$ の階数は等しい。
+独立検証した多項式証明書は
+\[
+ C_0X=N,\qquad X\in\operatorname{Mat}_{140\times20}(\mathbb Q(i)[\lambda]),
+ \quad N\in\operatorname{Mat}_{64\times20}(\mathbb Q(i)[\lambda])
+\]
+である。$N$ の20列は異なる先頭行を持ち、先頭行より上は零である。
+その対角成分の零点支持は
+\[
+ \lambda(\lambda+1)(\lambda+2)(\lambda^2+2\lambda+2)
+ A(\lambda)C_*(\lambda),\qquad
+ C_* =\lambda^2+(2-4i)\lambda-4i
+\]
+に含まれる。恒等式・列因子の整除・対角支持は全て元の関係から再生でき、
+Gr\"obner基底の正しさを前提にしない。
+よって $H=AB C_*$ と置けば、$H\ne0$ の残る点で交換子写像の階数は20以上である。
+写像は20次元の $B_3$ を経由するので単射であり、$Z(B)_3=0$ となる。
+ここでは特定の20本の三次語が全特殊点で商基底になるとは仮定しない。
+
+最後に、$f(\lambda)=-\lambda/(\lambda+1)$ に対して
+\[
+ \gcd\bigl(H(\lambda),\operatorname{num}H(f(\lambda))\bigr)=1
+ \quad\text{in }\mathbb Q(i)[\lambda]
+\]
+を厳密に確認する。従って残る任意の点では $\lambda$ または $f(\lambda)$ の
+いずれかに上の単射性を適用できる。
+既証の次数付き同型は中心を保つので、正符号の全点を排除する。
+形式係数の共役 $i\mapsto-i$ を全恒等式に施せば、負符号にも同じ証明が成立する。
+これは形式変数 $\lambda$ を固定した証明書の共役であり、
+任意の特殊パラメータを固定する体の自己同型を仮定するものではない。
+\end{proof}
+再生検証器は
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}as4\_\allowbreak{}T\_\allowbreak{}centre\_\allowbreak{}lift.py}、
+多項式証明書は
+\texttt{cubic\_\allowbreak{}as4\_\allowbreak{}T\_\allowbreak{}centre\_\allowbreak{}lift.json}
+である。生成時はSingular 4.4.1の\texttt{liftstd}を用いたが、
+再生はSymPyだけで行う。一般商の平坦性や全値AS4十分性は用いていない。

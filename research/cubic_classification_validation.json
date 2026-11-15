@@ -1,6 +1,6 @@
 {
   "date": "2026-11-15",
-  "version": "classification-v85",
+  "version": "classification-v86",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -931,7 +931,7 @@
     "status": "exact finite inputs verified; finiteness argument in manuscript",
     "validator": "computations/verify_cubic_as4_four_simple_adjacent_T.py",
     "certificate": "computations/cubic_as4_four_simple_adjacent_T_certificate.json",
-    "result": "T_1 centre3 rank20; universal conditional CY tensor; exact parameter involution. Possible H3 parameters in each T line form a finite set, not enumerated. Generic polynomial-module output has not yet been independently replayed and is not used as an all-fibre theorem."
+    "result": "Independent finite-locus argument, T1 rank20, universal CY top tensor and parameter involution; strengthened to all-T exclusion by v86."
   },
   "four_simple_adjacent_T_quotients_v85": {
     "status": "exact independent replay executed",
@@ -940,7 +940,19 @@
       "computations/cubic_as4_T_projection_degree3.json",
       "computations/cubic_as4_T_projection_degree4.json"
     ],
-    "result": "Full original degree3/4 word relations annihilated and free-column identities verified over QQ[lambda], including complex denominator cancellation. Conditional AS4 quotient coordinates only. Both T signs at lambda=-1+/-i independently have centre3 rank20. Centre-module all-parameter rank certificate remains pending.",
+    "result": "Full original degree3/4 word relations annihilated and free-column identities independently verified over QQ[lambda], with complex denominator cancellation. Both signs at lambda=-1+/-i centre3 rank20. All-parameter centre proof completed separately in v86.",
     "generator": "computations/generate_cubic_as4_T_centre_input.py; executed, output byte-identical to the current primitive CAS input; no all-parameter rank conclusion yet"
+  },
+  "four_simple_adjacent_T_all_v86": {
+    "status": "exact independent replay executed; manuscript theorem",
+    "validator": "computations/verify_cubic_as4_T_centre_lift.py",
+    "certificate": "computations/cubic_as4_T_centre_lift.json",
+    "result": "Every explicit T_lambda+/- excluded. Full 64 cubic words, primitive column scales dividing D4, polynomial C*X=N identity and 20 triangular pivots; all artificial rank/pole factors covered by parameter involution. Special lambda=-1+/-i rank20 and lambda=-2 Hilbert obstruction separately verified. No all-fibre AS4 existence, full CY coverage or all-isomorphism theorem imported.",
+    "dependencies": [
+      "verified fourth-word quotient certificate",
+      "anti-cyclic top tensor conditional AS4",
+      "literal AB14 relation transport",
+      "gcd(H,num H(f))=1 over QQ(i)[lambda]"
+    ]
   }
 }

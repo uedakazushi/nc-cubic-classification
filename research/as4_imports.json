@@ -386,5 +386,12 @@
     "source": "CY_ZERO_COMMUTATORS_FOUR_SIMPLE_ADJACENT_SHARED_BOUNDARY_REDUCTION.tex AB2/AB14",
     "scope": "Explicit coefficients and candidate involution only; independently verified relation transport, CY top tensor and T_1 centre rank. No AS4 sufficiency, full chart coverage or all-isomorphism theorem imported.",
     "validator": "computations/verify_cubic_as4_four_simple_adjacent_T.py"
+  },
+  "four_simple_adjacent_T_all_v86": {
+    "commit": "a45f834f51a00c47443b51caf66abaf4629546b9",
+    "source": "CY_ZERO_COMMUTATORS_FOUR_SIMPLE_ADJACENT_SHARED_BOUNDARY_REDUCTION.tex AB2/AB14; explicit formulas only",
+    "proof": "papers/sections/cubic_as4_adjacent_S_exclusions.tex thm:cubic-adjacent-T-all",
+    "validator": "computations/verify_cubic_as4_T_centre_lift.py",
+    "result": "All explicit T excluded independently. Universal highest tensor, word quotients, centre polynomial lift, opposite-chart gcd, exact special fibres. No full CY/AS4 coverage or existence sufficiency imported."
   }
 }

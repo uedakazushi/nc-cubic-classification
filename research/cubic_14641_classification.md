@@ -323,9 +323,14 @@ V_h(h!=-1/16)のh!=0は平方根r²=−h、p=(4r−1)/(4r+1)で全被覆。a'=a+
 原稿cubic_as4_adjacent_S_exclusions.tex、検証verify_cubic_as4_four_simple_adjacent_S.pyを実行。AB2/AB3具体表示のみ参照し、Tのlambda!=-2、全CY/chart被覆、AS4十分性・全同型は未輸入。TのQQ(i)(lambda)による無準備なcentral_data消去は600秒上限で未完（数学的結論なし）。同じ計算を反復しない。次はSingular 4.4.1等の厳密多項式module計算で商射影を生成し、char0で全関係消滅・自由列identity・分母支持を独立検証する。有限体は必要なら探索だけに使い、標数零の証明としない。P全残余、非捩れqso3許容性、大域成分・抽象族降下も未完。
 
 
-隣接T直線のH3候補を有限集合まで縮小した（classification-v84）。T_1の元の関係でdim3=20,dim4=35,中心3階数20を厳密確認し、全パラメータの反巡回tensorからAS4実現のmu=idを確認。一般Hilbert値が違えばAS4点は有限、同じなら定階数開集合の中心核の半連続性で候補有限となる。全値AS4存在を仮定しない。有限集合の列挙は未完。AB14候補Pの全関係輸送と逆を独立確認し、f(lambda)=-lambda/(lambda+1)、detP=(lambda+1)^-4。E=lambda^4+2lambda^3+10lambda²+24lambda+16とE(f)の分子は互いに素。
-原稿cubic_as4_adjacent_S_exclusions.tex、検証verify_cubic_as4_four_simple_adjacent_T.py。T三次商射影は作業領域でQQ[lambda]上の実部/虚部恒等式を確認したが、証明データの移植は未完。四次はSingular 4.4.1のQQ(i)[lambda]多項式module GBで221本・異なるleading componentを取得し、三角再帰で商射影を復元中。GBだけを全特殊fiberの平坦性の証明としない。次は商射影の元関係消滅と自由列identityの独立検証、中心rankの全値cover。T全例外、P全残余、非捩れqso3許容性、全被覆・大域成分・抽象族降下は未完。
+## 隣接T全値の排除（classification-v86）
 
+AB2のT_lambda両符号を全lambda!=0,-1で排除した。lambda=-2はS_zetaとの文字どおりの同一性とdim4>=37、lambda=-1±iは両符号の直接QQ(i)計算でcentre3 rank20。その他はAS4実現でdim3=20,dim4=35と最高反巡回tensorによるmu=idを必要条件として使う。T1での厳密rank20と一般presentation-rank二場合分けによる独立な有限性証明も原稿に保持する。全値AS4存在を仮定しない。
 
-隣接Tの三次・四次有理商射影をJSON証明データとSymPy独立検証器へ移植した（classification-v85）。元の全語関係消滅と自由列identityをQQ[lambda]の実部/虚部恒等式で実行確認。D3=lambda²(lambda+1)²(lambda+2)²(lambda²+2lambda+2)E。複素共通因子の除去後D4=lambda³(lambda+1)^5(lambda+2)³(lambda²+2lambda+2)AB、A=lambda²+(-1+3i)lambda−2+2i、B=lambda²+(1−3i)lambda−4i。AS4 Hilbert値の点でのみ商基底と結論し、全値平坦性を推論しない。両符号のT_(-1±i)も元の関係で直接centre3階数20と確認し排除。
-再現verify_cubic_as4_T_projections.py 3 4。四次生成はQQ(i)[lambda] module GBから三角再帰し、遅いGaussian分数体演算を実部/虚部のQQ(lambda)演算へ変更。証明の再生はSingular不要。次は64本全三次語から作る64×140転置交換子行列の20階数証明。liftstdの無縮約計算は180秒で未完、数学的結論なし。D4と各列成分の共通因子を除き、D4非零上で同じ階数のprimitive行列に切り替えた。生成器generate_cubic_as4_T_centre_input.pyでSingular入力と列scaleを再生成可能。得たC*X=Nを独立に再生し、三角pivotの零点支持を調べる。ABとAB(f(lambda))の分子は互いに素なので、余分な支持が無ければ二枚で被覆できる。現時点ではT全例外値の判定を完了したとはしない。P全残余、非捩れqso3許容性、全被覆・大域成分・抽象族降下も未完。
+三次・四次商射影は元の全語関係消滅と自由列identityをQQ[lambda]の実部/虚部恒等式で独立再生した。D3=lambda²(lambda+1)²(lambda+2)²(lambda²+2lambda+2)E、E=lambda^4+2lambda³+10lambda²+24lambda+16。共通複素因子の除去後D4=lambda³(lambda+1)^5(lambda+2)³(lambda²+2lambda+2)AB、A=lambda²+(-1+3i)lambda−2+2i、B=lambda²+(1−3i)lambda−4i。AS4 Hilbert値の非極点でのみ商基底と結論し、全値平坦性は推論しない。P4分母を実normへ戻すと不要な共役極を増やすため、複素分母を維持する。
+
+64本全三次語から作る64×140転置交換子行列の各列を、D4との共通因子h_jだけで割る。独立検証器はh_j|D4とC_0 X=NをQQ[lambda]の実部/虚部多項式行列で検証する。Nの20列は異なる先頭行を持つ三角形で、対角零点支持はlambda(lambda+1)(lambda+2)(lambda²+2lambda+2)AC_*、C_*=lambda²+(2−4i)lambda−4i。H=ABC_*とnum H(f(lambda))は互いに素、f=-lambda/(lambda+1)。literalなgraded同型P=diag(1,-1/q,-1/q²,-1/q)P_(bd),q=lambda+1、detP=q^-4、P(f)P=Iにより二枚で全残余を覆う。従ってcentre3は零。負符号は形式lambdaを固定した係数i共役で証明書全体を移す。20本の三次語が全特殊点で商基底になるとは仮定しない。
+
+再生verify_cubic_as4_T_projections.py 3 4、verify_cubic_as4_T_centre_lift.py。入力generate_cubic_as4_T_centre_input.py、出力整形export_cubic_as4_T_centre_lift.py。商射影・centre liftのJSON証明データを保存し、証明再生はSymPyのみ、Singular 4.4.1は生成にのみ用いる。元のGaussian分数体消去と無縮約liftstdは設定上限で未完だったが、その結果は不使用。三角再帰の実部/虚部計算とprimitive列化に変更して成功した。GitHub正本から入力生成と証明の独立検証を再開できる。
+
+これでAB2/AB3の隣接共有境界の列挙表示は全排除。次はFT3のP全二パラメータ残余。Pはlambda2の全rと非空開集合のみ排除済み。非捩れqso3許容性、全包絡被覆・大域成分・抽象族降下も未完であり、全H3完全分類とはしない。

@@ -1,5 +1,5 @@
 {
-  "version": "classification-v85",
+  "version": "classification-v86",
   "source_commit": "as4 a45f834f51a00c47443b51caf66abaf4629546b9",
   "source_scope": "AB2 coefficients and AB14 candidate map; relation identities independently checked",
   "conditional_AS4_nakayama": "identity via nonzero anti-cyclic top tensor",
@@ -149,6 +149,6 @@
   },
   "quartic": "lambda**4 + 2*lambda**3 + 10*lambda**2 + 24*lambda + 16",
   "quartic_and_transport_coprime": true,
-  "mathematical_consequence": "Only finitely many parameters in this T line can be H3 envelopes; finite set not enumerated. Proof uses presentation-rank dichotomy and kernel semicontinuity on the constant-rank open, not assumed all-fibre AS4 existence.",
-  "scope": "Not all-parameter T exclusion or all-H3 coverage; polynomial-module generic calculations are separate until independently replayed."
+  "mathematical_consequence": "Initial finite-locus proof uses presentation-rank dichotomy and kernel semicontinuity without assuming all-fibre AS4 existence. All T parameters are now excluded by the separate independently replayed centre-lift certificate.",
+  "scope": "This certificate verifies finite inputs and involution only; the full T exclusion additionally uses verify_cubic_as4_T_centre_lift.py and the manuscript. No all-H3 coverage."
 }
