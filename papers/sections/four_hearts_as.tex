@@ -14,7 +14,7 @@ very strong helixは例外性，特定の周期範囲でのstrong性，Serre作�
 しかし，九対象の全orbitの豊富性から，そのうちの一つ$e$のorbitの豊富性は自動的には従わない．
 本稿で反標準環を作るのは後者であり，ここにcornerを導入する理由がある．
 
-\subsection{AOU同値は構造対象を保つ}
+\subsection{実際のrestrictionを用いた構造対象の同定}
 AOU\cite[\S9]{AOU}の設定を固定する．楕円曲線$Y$は滑らかで，
 $L_0=\OO_Y(H)$，$L_1=\sigma^*L_0$は次数3，$\sigma$は無限位数の平行移動とし，
 六点は同節の比較が成り立つ一般位置にあるとする．
@@ -28,20 +28,26 @@ Theorem 9.4はAS代数$\mathsf A$に対するdg導来同値
 原典の構成では，mutation後のfoundationの先頭$E_0$が$e_{\mathrm{AS}}$へ移る．
 以下では$E_0$を実際の対象として同定する．これは$K_0$や境界restrictionだけによる同定ではない．
 
-$D_6=p_1+\cdots+p_6$，$D_3=p_1+p_2+p_3$と置き，
+ここで境界の同定を一つ固定し，初期collectionの最後の三対象の実際のrestrictionを
+$(\mathcal U_2,\mathcal U_1,\OO_Y)$と書く．$\mathcal U_2,\mathcal U_1$はそれぞれ
+次数$-6,-3$の線束とする．$D_6=p_1+\cdots+p_6$，$D_3=p_1+p_2+p_3$と置き，
 \begin{equation}\label{eq:two-degree-zero}
-\mathcal L_A=L_0^{-5}\otimes L_1^3\otimes\OO_Y(D_6),\qquad
-\mathcal L_B=L_0^{-2}\otimes L_1\otimes\OO_Y(D_3)
+\mathcal L_A=\mathcal U_2\otimes\OO_Y(D_6),\qquad
+\mathcal L_B=\mathcal U_1\otimes\OO_Y(D_3)
 \end{equation}
-とする．両者の次数は零である．AOUのadmissibility
-\cite[Definition 7.1, (9.53)]{AOU}により，degree-zero blockの
-$\OO_Y,\mathcal L_A,\mathcal L_B$は相異なる．特に
+を定める．両者の次数は零である．以下のpointed比較には，\emph{実際のrestriction}に対する条件
 \begin{equation}\label{eq:two-nontrivial}
-\mathcal L_A\not\simeq\OO_Y,\qquad\mathcal L_B\not\simeq\OO_Y.
+\mathcal L_A\not\simeq\OO_Y,\qquad\mathcal L_B\not\simeq\OO_Y
+\tag{R}
 \end{equation}
+を明示的に仮定する．実際のdegree-zero blockがadmissibleならこの条件を満たす．
+AOU v1の(9.47)に印刷された$\mathcal U_2=L_0^{-5}L_1^3$，$\mathcal U_1=L_0^{-2}L_1$を
+他の境界式と同じ座標で無条件に使えるわけではない．第\ref{subsec:boundaryaudit}節の
+検査がその障害を示すため，ここでは印刷式の代入でなく，条件\eqref{eq:two-nontrivial}を入力とする．
+この修正により，本節の論証は未確認のパラメータ規約に依存しない．
 
 \begin{theorem}[AOUの構造対象の同定]\label{thm:AOU-pointed}
-AOUの上記許容設定では，最後のmutationで得る対象は
+AOU導来比較の設定と実際のrestriction条件\eqref{eq:two-nontrivial}の下で，最後のmutationで得る対象は
 $E_0\simeq e_F$である．従って\eqref{eq:AOU}は
 \[
 \Psi(e_F)\simeq e_{\mathrm{AS}},\qquad
@@ -60,7 +66,8 @@ $\tau_4\to\tau_5$はその位置に触れず，$R_3R_4R_5$で第六位置から�
 従って$\tau_6$の先頭三対象は$(A,B,e_F)$である．
 ここまでの$e_F$の位置は$9,9,9,6,6,3$であり，いずれも対象そのものは保存されている．
 
-AOUの(9.52)により，境界の導来restrictionは
+点対象のspherical twistが線束を対応する点でtwistすることを用い，
+AOU (9.48)--(9.52)のmutation計算を実際の$\mathcal U_i$で行うと，境界の導来restrictionは
 $Li^*A=\mathcal L_A$，$Li^*B=\mathcal L_B$，$Li^*e_F=\OO_Y$である．
 $(A,e_F)$と$(B,e_F)$は例外対なので，AOU Proposition 9.3により
 \[
@@ -167,13 +174,14 @@ foldingの定義に含めたものである．
 \end{proof}
 
 この系が同定するのは，\emph{AS側の指定対象から作った}反標準heartである．
-AOUの許容領域では系\ref{cor:AOU-ring}がこれを$F$と同定する．
+実際のrestriction条件\eqref{eq:two-nontrivial}を確認したAOU領域では，
+系\ref{cor:AOU-ring}がこれを$F$と同定する．
 独立に指定したRains側の環との比較には，そのパラメータと構造対象の同定をなお要する．
 $B/BpB$が無限次元でも，それはこの自然なabelian corner関手が同値でないことを意味するだけで，
 別の導来同値の不存在ではない．
 
 \begin{corollary}[指定されたAOU同値のt-exactnessへの帰結]\label{cor:AOU-texact}
-AOUの許容領域で，系\ref{cor:ASac}のfoldingと有限性条件が成立し，
+実際のrestriction条件\eqref{eq:two-nontrivial}を満たすAOU領域で，系\ref{cor:ASac}のfoldingと有限性条件が成立し，
 $\dim_k B/BpB<\infty$であるとする．このときAOUの指定同値$\Psi$自体がt-exactである．
 \end{corollary}
 \begin{proof}

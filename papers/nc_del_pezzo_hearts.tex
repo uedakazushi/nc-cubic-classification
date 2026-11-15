@@ -37,31 +37,30 @@
 \title{非可換del Pezzo曲面の四つのheart\\
 \large VdB・Rains・反標準・Artin--Schelter構成の比較}
 \author{}
-\date{2026年11月16日\qquad 公表準備稿 hearts-v21}
+\date{2026年11月16日\qquad 公表準備稿 hearts-v22}
 \hypersetup{pdftitle={非可換del Pezzo曲面の四つのheart},pdfsubject={導来比較、HRS tilt、共鳴、反標準corner}}
 \begin{document}
 \maketitle
 \begin{abstract}
 非可換del Pezzo曲面のVdB，Rains，反標準，Artin--Schelterという四つのheartを，
-構造対象と自然な比較関手を指定して比較する．genuineな滑らかな可換del Pezzoと
-滑らかな楕円境界からのRains gluingでは，反標準導来切断が導来同値を与え，
-全heartの比較は一回のHRS tiltとなる．VdBの最後のsection-model関手は，
-構造対象と反Serre作用を保つことからその内在的な導来切断と自然に同定される．
-AOUの許容楕円データではmutation後の構造対象を同定し，
-標準noetherian三block表示における指定同値のt-exactnessを四交比の十一条件で判定する．
-境界非交叉部分では，全ての商・部分対象の反標準Euler標数がtorsion pairを決める．
-非torsionの場合，全heartの差は境界非交叉部分に集中し，その単純根は有限ADE型となる．
-負指数単純の有限回のtiltで全反標準heartへ到達し，AZ amplenessの失敗を実在負指数単純根で認識する．
-正整数倍点の族ではRainsの単純根存在結果を適用し，全有限次元単純加群の次元を，
-整列した最小三整数の和と隣接差で決定する．同じ無順序点集合の$r!$個のRains heartsは
-同じpointed導来圏内で相異なり，昇順のものだけが反標準heartと一致する．
-既知の単純tilt・Weyl反射・境界非交叉対象の有限長性と，本稿の自然関手への適用を区別する．
-独立に選んだ全avatarの同定，任意のAS表示への拡張，相対heartの降下は主張しない．
+構造対象・境界関手・自然な導来比較を指定して扱う．genuineな滑らかな楕円gluingでは
+反標準導来切断が導来同値を与え，非torsionの場合，AZ amplenessとt-exactnessの失敗は
+実在する負指数単純根によって必要十分に検出される．有限ADE型ではEuler chamberが
+移行先のheartを選び，整数倍点族では単純表現の次元とtilt回数を整列公式で記述する．
+AS側の標準noetherian三block表示では，実際のrestrictionに対する消滅条件の下で
+指定同値のt-exactnessを十一の係数条件で判定する．
+独立な表示を接続するため，restrictionのdeterminantからgluingパラメータと境界作用を復元する．
+この検査により，AOU v1のrestriction式と境界shift式を同じ座標で文字通り組み合わせる辞書には
+非torsionの場合の不整合があることを明示する．したがって未確認の具体座標を使わず，
+構造対象の同定を実際のrestriction条件付きで述べ，boundary-firstの整合的候補を$E[3]$の九通りへ絞る．
+一般のWeyl反射・単純tiltは既知の機構として用い，未確認の境界規約，
+独立avatarの全同定，相対heartの降下を完成結果として扱わない．
 \end{abstract}
 \tableofcontents
 
 \input{papers/sections/four_hearts_foundations.tex}
 \input{papers/sections/four_hearts_geometric.tex}
+\input{papers/sections/four_hearts_boundary_data.tex}
 \input{papers/sections/four_hearts_as.tex}
 \input{papers/sections/four_hearts_corner_locus.tex}
 \input{papers/sections/four_hearts_canonical_comparison.tex}
@@ -91,7 +90,8 @@ E.~M.~Rains, \emph{The (noncommutative) geometry of difference equations},
 T.~Abdelgadir, S.~Okawa, K.~Ueda,
 \emph{Compact moduli of marked noncommutative cubic surfaces},
 \href{https://arxiv.org/abs/2404.00175}{arXiv:2404.00175v1} (2024).
-使用箇所：\S3--4，(4.1)，\S9，Lemma 9.2，Theorem 9.4，(9.28)--(9.57)，Definition 7.1，Proposition 9.3．
+使用箇所：\S3--4，(4.1)，\S9，Lemma 9.2，Theorem 9.4，(9.2)--(9.3)，(9.25)，(9.28)--(9.57)，Definition 7.1，Proposition 9.3．
+これらの境界表示の同時使用に関する検査は第\ref{subsec:boundaryaudit}節を参照．
 \bibitem{OU}
 S.~Okawa, K.~Ueda, \emph{Marked Artin--Schelter surfaces of del Pezzo types},
 \href{https://arxiv.org/abs/2508.04986}{arXiv:2508.04986v1} (2025).

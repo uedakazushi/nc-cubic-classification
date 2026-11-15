@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact finite checks for nc_del_pezzo_hearts.tex, hearts-v18.
+"""Exact finite checks for nc_del_pezzo_hearts.tex, hearts-v22.
 
 Python standard library only. Checks mixed A2 linear algebra and source
 references. It does not prove sheaf existence, derived equivalence or novelty.
@@ -149,7 +149,7 @@ def main() -> None:
                 if right == marked:
                     assert stage == 7
                     final_vanishing_inputs += 1
-                    # In the theorem these two RHom vanish by elliptic admissibility.
+                    # In the theorem these two RHom vanish by the actual restriction nontriviality assumption.
                     mutation = marked
                 else:
                     mutation = f'L({left},{right})'
@@ -157,10 +157,11 @@ def main() -> None:
         positions.append(collection.index(marked)+1)
     assert positions == [9,9,9,6,6,3,1]
     assert final_vanishing_inputs == 2
-    # Formal Picard exponents: L0, L1, O(p1), ..., O(p6).
-    degrees = [3,3,1,1,1,1,1,1]
-    restriction_A = [-5,3,1,1,1,1,1,1]
-    restriction_B = [-2,1,1,1,1,0,0,0]
+    # Actual Picard exponents: U2, U1, O(p1), ..., O(p6).
+    # Printed L0/L1 formulas are separately audited in verify_four_hearts_boundary.py.
+    degrees = [-6,-3,1,1,1,1,1,1]
+    restriction_A = [1,0,1,1,1,1,1,1]
+    restriction_B = [0,1,1,1,1,0,0,0]
     assert sum(x*y for x,y in zip(degrees,restriction_A)) == 0
     assert sum(x*y for x,y in zip(degrees,restriction_B)) == 0
     assert restriction_A != [0]*8 and restriction_B != [0]*8
@@ -187,7 +188,7 @@ def main() -> None:
            for k in group.split(',')}
     assert not cites-bib, 'Unresolved bibliography keys'
     result={
-        'date':'2026-11-16','version':'hearts-v18','arithmetic':'QQ exact',
+        'date':'2026-11-16','version':'hearts-v22','arithmetic':'QQ exact',
         'object_order':['S+','S-','P','Q'],'Hom':h,'ambient_Ext1':ext1,
         'cohomology_cases':counts,'total_cases':sum(counts.values()),
         'quotient_dimension':4,'radical_square_zero':True,
@@ -196,7 +197,7 @@ def main() -> None:
         'source_labels':len(labels),'bibliography_entries':len(bib),
         'AOU_marked_positions':positions,
         'AOU_final_mutation_vanishing_inputs':final_vanishing_inputs,
-        'AOU_restriction_exponent_basis':['L0','L1','p1','p2','p3','p4','p5','p6'],
+        'AOU_restriction_exponent_basis':['U2','U1','p1','p2','p3','p4','p5','p6'],
         'AOU_restriction_A':restriction_A,'AOU_restriction_B':restriction_B,
         'AOU_restriction_degrees':[0,0],
         'AOU_geometric_nontriviality_proved_by_computation':False,

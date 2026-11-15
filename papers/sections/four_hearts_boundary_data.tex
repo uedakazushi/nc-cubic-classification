@@ -1,0 +1,163 @@
+\section{楕円境界データの復元と規約の整合性}\label{sec:boundarydata}
+独立な構成のパラメータを同定するには，pointedな導来圏だけでなく，
+境界関手の\emph{実際の像}とその上の反Serre作用を揃える必要がある．
+以下はRains \cite[(4.11)--(4.13)]{Filtered}の復元を，境界作用を検査できる形に書き直したものである．
+新しい一般的復元原理を主張するのではなく，本稿の比較の入力を検証するために用いる．
+
+\subsection{rank・Chern類・Euler標数によるrestrictionの式}
+$S=\operatorname{Bl}_{p_1,\ldots,p_r}\mathbb P^2$，$d=9-r>0$，
+$H=-K_S=3h-\sum_i e_i$とし，滑らかな境界$E$への古典的restrictionを
+$\rho:\Pic S\to\Pic E$と書く．$L=\rho(h)$，$q\in\Pic^0(E)$とし，
+Rainsのgluingにおける境界関手を$F_q$とする．原点$o\in E$を選び，
+$a\in E$と$P_a=\OO_E(a-o)\in\Pic^0(E)$を同一視する．
+平行移動を$t_a(x)=x+a$と書くので，線束$M$について
+\begin{equation}\label{eq:translation-convention}
+ t_a^*M\simeq M\otimes P_a^{-\deg M},\qquad
+ t_{a*}M\simeq M\otimes P_a^{\deg M}
+\end{equation}
+である．この二つを入れ替えてはならない．
+
+\begin{proposition}[restrictionと反Serre境界作用]\label{prop:boundarynormal}
+$x\in K_0(S)\simeq K_0(\cD_q)$のrank，第一Chern類，Euler標数を
+$u,D,c=\chi(e,x)$と書く．このとき
+\begin{equation}\label{eq:detrestriction}
+ \operatorname{rank}F_q(x)=u,\qquad
+ \det F_q(x)=\rho(D)\otimes q^{c-u}.
+\end{equation}
+境界上で$F_qs=\Psi_EF_q$と書き，$\Psi_E$が平行移動と線束のtensor積からなる
+Rainsの自己同値であるとする．$q=P_a$なら
+\begin{equation}\label{eq:boundarynormal}
+ \boxed{\Psi_E=t_{a*}(-\otimes\rho(H)),\qquad
+ \Psi_E(\OO_E)=\rho(H)\otimes q^d.}
+\end{equation}
+これらは線束・自己同値の同型類の式であり，すべての線束同型の標準的な選択を主張しない．
+\end{proposition}
+\begin{proof}
+$K_0(S)$の基底を$[\OO_{e_i}(-1)]$，$[\OO(-2h)]$，$[\OO(-h)]$，$[\OO]$とする．
+それらのrankとEuler標数は順に$(0,0),(1,0),(1,0),(1,1)$である．
+Rainsの境界像は，順に$k_{p_i}$，$L^{-2}q^{-1}$，$L^{-1}q^{-1}$，$\OO_E$であるから，
+全基底について\eqref{eq:detrestriction}が成り立ち，加法性により一般の類にも従う．
+
+Serre作用の数値式は可換側と同じなので，$s$は
+\[
+ (u,D,c)\longmapsto(u,D+uH,c+D\cdot H+ud)
+\]
+と作用する．$\delta=D\cdot H$と置けば，$\det F_q(sx)$は
+$\det F_q(x)\otimes\rho(H)^u\otimes q^{\delta+ud}$となる．
+これは\eqref{eq:translation-convention}による\eqref{eq:boundarynormal}の作用と一致する．
+数値式だけで任意のdg関手を同定しているわけではない．ここでは既知の
+平行移動・tensor積型の中で作用を決めている．実際，
+$s[\OO_{e_i}(-1)]=[\OO_{e_i}(-1)]+[\mathrm{pt}]$から
+$\Psi_E(k_{p_i})=k_{p_i+a}$となり，平行移動が$a$と決まる．
+また$\det F_q(se)=\rho(H)q^d$がtensor因子を決める．
+\end{proof}
+
+\subsection{実際のrestriction tupleによる辞書}
+\begin{proposition}[境界像からのpointed復元]\label{prop:actualdictionary}
+境界関手を備えたdg圏にfull exceptional collection
+$(T_1,\ldots,T_r,B_2,B_1,e)$があるとする．
+その\emph{実際の}境界像が$(k_{p_1},\ldots,k_{p_r},U_2,U_1,\OO_E)$であるとする．
+$\deg U_2=-6$，$\deg U_1=-3$とし，forward pairのRHomを境界restrictionが
+quasi-isomorphismに写すと仮定する．このとき候補パラメータは一意に
+\begin{equation}\label{eq:actualdictionary}
+ q=U_2U_1^{-2},\qquad L=U_1U_2^{-1}
+\end{equation}
+である．$L$による埋込みと$p_i$のblow-upにRainsの構成を適用できれば，
+そのordered directed dg模型は元の圏とpointedに同値となる．
+この主張は指定heartのt-exactな一致を含まない．
+\end{proposition}
+\begin{proof}
+$U_2=L^{-2}q^{-1}$，$U_1=L^{-1}q^{-1}$を解けば\eqref{eq:actualdictionary}を得る．
+各forward RHomとその合成を境界のdg模型へ写すと，後向き射を零とし対角を$k$にした
+同じtriangular dg代数が得られる．これは\cite[(4.11)]{Filtered}の模型である．
+full exceptional collectionは各圏をそのperfect module圏に同定するので結論を得る．
+個々の$K_0$類の一致だけを用いず，実際のrestriction関手が保存する合成を使っている．
+\end{proof}
+
+$c_1(T_i)=e_i$，$D_E=\sum_i p_i$とすると，この辞書には次の必要条件が伴う：
+\begin{equation}\label{eq:dictionarycompatibility}
+ \Psi_E(k_{p_i})=k_{p_i+a},\qquad
+ \Psi_E(\OO_E)=U_2^{d-3}U_1^{3-2d}\otimes\OO_E(-D_E),
+ \qquad P_a=U_2U_1^{-2}.
+\end{equation}
+特に三次曲面では第二の式は$U_1^{-3}(-D_E)$である．
+これはEuler行列からも独立に検査できる．Orlov順序のEuler行列を$C$とすれば，
+列ベクトルへの反Serre作用は$(C^{\mathsf t})^{-1}C$であり，三次曲面では
+\begin{equation}\label{eq:point-class-audit}
+ [\mathrm{pt}]=[B_2]-2[B_1]+[e],\quad
+ [sT_i]=[T_i]+[\mathrm{pt}],\quad
+ [se]=4[e]-3[B_1]-\sum_i[T_i].
+\end{equation}
+従ってこの検査は，gluingの公式の単なる再代入ではない．
+
+\subsection{文献の表示を共通座標へ移す際の障害}\label{subsec:boundaryaudit}
+ここではAOU v1の(9.2)，(9.3)，(9.25)，(9.47)を，\emph{同じ曲線上の同じ記号と同じrestriction同定}
+で同時に読むことができるかを検査する．原典の全構成や主定理を否定するものではなく，
+本稿で独立な表示を接続する際の，明確な整合性条件を与える．
+$\sigma=t_b$，$L_1=\sigma^*L_0$，$\deg L_0=3$，$Q=L_1L_0^{-1}=P_{-3b}$とする．
+印刷されたrestriction tupleは
+\begin{equation}\label{eq:printedtuple}
+ U_2=L_0^{-5}L_1^3=L_0^{-2}Q^3,\qquad
+ U_1=L_0^{-2}L_1=L_0^{-1}Q
+\end{equation}
+である．これから得る$q_{\rm res}=Q$と$L_{\rm res}=L_0^3L_1^{-2}$に対し，
+\eqref{eq:dictionarycompatibility}は境界の平行移動を$t_{-3b}$とし，
+構造対象の像を$L_0^3Q^{-3}(-D_E)$とする．
+一方，印刷された境界shiftを文字通り
+\begin{equation}\label{eq:printedshift}
+ \Psi_{\rm lit}=\sigma_*^3(-\otimes N),\qquad
+ N=L_0\otimes\sigma^*L_0\otimes(\sigma^2)^*L_0\otimes\OO_E(-D_E)
+\end{equation}
+と読むと，$\Psi_{\rm lit}(k_p)=k_{p+3b}$，
+$\Psi_{\rm lit}(\OO_E)=L_0^3(-D_E)$となる．
+従って二つの表示の同時成立には
+\begin{equation}\label{eq:normalization-obstruction}
+ Q^2\simeq\OO_E,\qquad Q^3\simeq\OO_E
+\end{equation}
+が必要であり，結局$Q\simeq\OO_E$となる．$\sigma$が無限位数ならこれは不可能である．
+この不整合は形式的な整数指数でなく，\eqref{eq:point-class-audit}による
+点支持と構造対象の像の二つの独立な検査で検出される．
+
+\begin{remark}[依存関係と公表前の確認事項]
+この計算は，\eqref{eq:printedtuple}と\eqref{eq:printedshift}を
+\emph{同じ境界同定で}用いる素朴な辞書を排除する．どの表示で逆自己同値，
+点のrelabeling，pullback/pushforward，あるいは誤植の訂正が必要なのかは，
+元の構成から別に確認する必要がある．本稿では未確認の修正式を原典の定理として採用しない．
+構造対象のmutation証明は実際のrestrictionに対する消滅条件へ書き直し，
+十一条件の純代数的判定，Rains単独のgluingと整列定理，および同じ最終VdB表示での
+抽象的関手同定は保持する．独立なAOU/Rainsの具体パラメータの同定が完了したとはしない．
+\end{remark}
+
+\subsection{境界作用を先に固定した復元と九つの候補}
+\begin{proposition}[boundary-first復元]\label{prop:boundaryfirst}
+実際の境界作用を$\Psi_E=t_{a*}(-\otimes N)$と固定し，
+$T_i$のrestrictionを$k_{p_i}$，$e$のrestrictionを$\OO_E$とする．
+上のRains型gluingと両立する候補は
+\[
+ q=P_a,\qquad L^{\otimes3}\simeq N(D_E)
+\]
+である．$N$の次数が$9-r$なら，$L$は次数3の線束であり，その選択は$E[3]$の九通り．
+$L$を選ぶと$U_1=L^{-1}q^{-1}$，$U_2=L^{-2}q^{-1}$が決まる．
+これらから実際のblow-upとgluingを作れる場合には，復元された境界作用は指定した$\Psi_E$に一致する．
+\end{proposition}
+\begin{proof}
+命題\ref{prop:boundarynormal}から$q=P_a$，$N=\rho(H)=L^3(-D_E)$が必要である．
+逆にこの式を満たす$L$を選び，対応するblow-up上のRains gluingを作れば同命題が十分性を与える．
+$\Pic^3(E)\to\Pic^9(E)$，$L\mapsto L^3$は複素楕円曲線上の$[3]$のtorsorであり，
+各fiberは$E[3]\simeq(\mathbb Z/3)^2$である．同じ境界作用だけで九つのgluing圏やheartが
+互いに同値になるとは主張しない．
+\end{proof}
+
+たとえば\eqref{eq:printedshift}を境界作用として固定し，点のラベルも固定するなら，
+$N=L_1^3(-D_E)$であるから，これと両立する候補は必ず
+\begin{equation}\label{eq:boundaryfirst-AOU}
+ \begin{split}
+ q&=L_0L_1^{-1},\qquad L=L_1\otimes\varepsilon,\qquad\varepsilon\in E[3],\\
+ U_1&=L_0^{-1}\varepsilon^{-1},\qquad
+ U_2=(L_0L_1)^{-1}\varepsilon^{-2}
+ \end{split}
+\end{equation}
+となる．これは\eqref{eq:printedshift}を採った場合の\emph{必要な整合的候補}であり，
+原典の(9.47)を無断でこの式に置換するものではない．
+実際のordered restriction tupleを一度確認すれば，命題\ref{prop:actualdictionary}により
+$\varepsilon$の選択も決まり，dg模型を比較できる．

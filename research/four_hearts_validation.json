@@ -1,130 +1,100 @@
 {
   "date": "2026-11-16",
-  "version": "hearts-v21",
+  "version": "hearts-v22",
   "manuscript": "papers/nc_del_pezzo_hearts.tex",
   "continuation_plan": "research/four_hearts_plan.md",
   "research_notes": "research/heart_comparison.md",
-  "priority": "Correct publication-value maximization, with explicit literature inputs and scope.",
-  "claims": {
-    "global_defect": {
-      "proof": "four_hearts_root_chambers.tex; lem:g-surjection, thm:globaldefect (Theorem 11.3)",
-      "scope": "Specified smooth genuine classical del Pezzo / smooth elliptic Rains gluing, non-torsion q, nef H with H^2>0, and the existing natural derived comparison.",
-      "statement": "The full torsionfree part F is contained in the off-boundary finite-length category Z. Natural Phi is t-exact iff (e,s) is AZ-ample iff every actual simple object of Z has positive Euler value. Numerical resonance alone is not equivalent to failure.",
-      "key_argument": "Compare restriction amplitudes, then use eventual surjectivity of g and stabilization of finite graded dimensions to identify a finite-dimensional affine module."
+  "priority": "Correct publication-level claims and source conventions take precedence over adding results.",
+  "current_claims": {
+    "boundary_formula": {
+      "state": "Proved as an explicit application and check of Rains gluing; not a new general reconstruction theory.",
+      "proof": "four_hearts_boundary_data.tex; prop:boundarynormal",
+      "statement": "For (rank,c1,chi(e,-))=(u,D,c), det F_q(x)=rho(D) q^(c-u). If q=P_a, boundary antiserre is t_a* (- tensor rho(H)); its value at O_E is rho(H) q^d.",
+      "convention": "t_a(x)=x+a. Pullback of degree k tensors by P_a^(-k), pushforward by P_a^k."
     },
-    "global_simple_tilts": {
-      "proof": "lem:finiteADEautomatic; thm:globalADEtilts (Theorem 11.10)",
-      "statement": "Off-boundary simples form a finite independent ADE root system under the geometric hypotheses. The local negative-simple procedure extends to the full heart and reaches the anticanonical heart after the initial number of negative positive roots.",
-      "limitation": "This counts the specified negative-simple factorization, not an absolute minimum over arbitrary HRS tilts; the whole comparison is also one HRS tilt."
+    "actual_dictionary": {
+      "proof": "prop:actualdictionary",
+      "state": "Conditional reconstruction from actual ordered boundary objects and a composition-preserving forward-RHom quasi-isomorphism.",
+      "statement": "q=U2 U1^(-2), L=U1 U2^(-1); this identifies pointed directed dg models when the reconstructed geometric gluing exists. No t-exactness assertion."
     },
-    "root_existence": {
-      "proof": "lem:Rains-simple-existence (Lemma 11.12)",
-      "status": "Application of an established Rains result, not a new general existence theorem.",
-      "inputs": "Rains 2107.13540v2 Section 4 pp.34-35: effectiveness of a fixed blowdown simple root with q-power restriction; Rains 1907.11301v1 Section 11 p.141, the paragraph immediately before Proposition 11.23: irreducible off-boundary sheaf for the effective simple root itself with the determinant condition.",
-      "safeguard": "Does not apply Proposition 11.23 itself with its nef/fundamental-chamber hypothesis to a simple root. Arbitrary numerical root resonance is not sufficient."
+    "literal_normalization_obstruction": {
+      "proof": "subsec:boundaryaudit; eq:normalization-obstruction",
+      "state": "Exact algebraic obstruction under a deliberately explicit common-boundary reading.",
+      "input": "AOU v1 (9.2),(9.3),(9.25),(9.47) with the same E, point labels, sigma, and restriction identification.",
+      "conclusion": "The printed restriction and printed boundary shift require Q^2=Q^3=O, Q=L1/L0=P_(-3b), so they cannot both hold in this common reading for infinite-order sigma=t_b.",
+      "not_concluded": "Which source formula/convention needs correction, or that the source main theorem is false. No unverified replacement formula is used as an original theorem."
     },
-    "sorted_spectrum": {
-      "proof": "thm:sorted-spectrum (Theorem 11.14); cor:permuted-hearts (Corollary 11.15)",
-      "scope": "3<=r<=8, fixed smooth plane elliptic curve with flex origin, non-torsion q, distinct positive integers N_i, and the indicated ordered Rains blowdown.",
-      "statement": "The r simple-root sheaves all exist. For sorted nu, the affine algebra has exactly r finite-dimensional simples with dimensions (nu1+nu2+nu3, nu2-nu1,...,nur-nu_(r-1)). The negative-simple procedure has inversion-number length. Only increasing order has the anticanonical heart.",
-      "same_pointed_category": "All r! orders of the same unordered point set give distinct embedded Rains hearts in the same pointed derived category, with a common anticanonical algebra.",
-      "limitations": "Not a classification of abstract abelian equivalences or all possible hearts. Original generator action matrices are not computed."
+    "conditional_AOU_pointedness": {
+      "state": "Now explicitly assumes actual restriction nontriviality (R); automatic coordinate specialization is not verified.",
+      "proof": "four_hearts_as.tex; thm:AOU-pointed",
+      "condition": "Actual U2,U1 yield nontrivial degree-zero U2(sum six points) and U1(sum first three points).",
+      "dependencies_updated": "The indicated AOU anticanonical ring, specified-functor t-exactness, and four-way connection now carry this actual restriction hypothesis. Pure finite-corner algebra and the independent Rains gluing statements do not use this coordinate specialization."
     },
-    "explicit_E6": {
-      "proof": "cor:E6spectrum (Corollary 11.16)",
-      "N": [
-        1,
-        3,
-        2,
-        5,
-        7,
-        11
-      ],
-      "simple_dimensions": [
-        6,
-        1,
-        1,
-        2,
-        2,
-        4
-      ],
-      "one_dimensional_characters": 2,
-      "ordered_hearts": 720,
-      "status": "The previously separate six-sheaf existence assumption is discharged for this explicit chart by the cited Rains input. All other stated geometric hypotheses remain."
+    "boundary_first_candidates": {
+      "proof": "prop:boundaryfirst; eq:boundaryfirst-AOU",
+      "state": "Necessary consistent candidates and conditional sufficiency if the corresponding geometric gluing exists.",
+      "statement": "For actual boundary t_a*(- tensor N), q=P_a and L^3=N(sum points); L lies in a nine-element E[3] torsor. Keeping the printed shift gives q=L0/L1, L=L1 epsilon, U1=L0^-1 epsilon^-1, U2=(L0 L1)^-1 epsilon^-2.",
+      "not_concluded": "The actual AOU epsilon, a corrected source theorem, or equivalence among the nine candidate gluing categories."
     },
-    "retained": "Earlier VdB/AOU/corner and genuine derived-comparison proofs are retained. This iteration is not a fresh independent audit of every prior theorem."
+    "retained_results": "Standalone eleven-factor criterion, canonical pointed-functor recognition, Rains genuine elliptic comparison, Euler chambers, integer-point sorting, and mixed A2 results retained under their explicit hypotheses. This is not a fresh independent audit of all their proofs."
   },
-  "primary_sources_checked": [
+  "publication_blockers": [
+    "Recompute the actual original boundary identification and restriction of B1,B2, resolving inverse/push-pull/relabeling or typo possibilities.",
+    "Verify (R) for the actual AOU family rather than substituting incompatible printed coordinate expressions.",
+    "Determine which E[3] candidate and compare the full gluing/composition data.",
+    "Full Rains 2025 monograph novelty comparison, external independent review, relative-heart descent and original affine generator coefficients remain unfinished."
+  ],
+  "primary_sources_this_iteration": [
+    {
+      "id": "arXiv:2404.00175v1",
+      "locations": "(9.2),(9.3),(9.25),(9.47); related mutation/restriction context",
+      "method": "Primary HTML checked. Displayed arXiv history checked; this audit concerns v1."
+    },
     {
       "id": "arXiv:2107.13540v2",
-      "title": "Filtered deformations of elliptic algebras",
-      "locations": "Section 4, (4.4), (4.13), (4.15), pp.34-35, Section 5 opening and Proposition 5.1",
-      "verification": "Relevant primary parsed PDF text directly checked."
+      "locations": "(4.4),(4.11)-(4.13), boundary gluing and reconstruction",
+      "method": "Primary parsed PDF text checked. Required page screenshot attempts returned Cache miss; no original-image-inspection claim."
     },
     {
-      "id": "arXiv:1907.11301v1",
-      "title": "The birational geometry of noncommutative surfaces",
-      "locations": "Effective-root and numerical background; Section 11 p.141, paragraph immediately preceding Proposition 11.23",
-      "verification": "Relevant primary parsed PDF text directly checked, including the distinction from Proposition 11.23 itself."
+      "id": "arXiv:2504.16187",
+      "locations": "Bibliography/abstract only",
+      "method": "Full PDF/HTML/source attempts unsuccessful. No full novelty or theorem-number audit claimed."
     }
   ],
-  "primary_source_limits": {
-    "PDF_page_images": "Screenshot attempts for both Rains PDFs failed with Cache miss; no claim that those original PDF images were inspected.",
-    "prior_sources": "Existing VdB, AOU, OU, Bridgeland, BCPW, RSS, YZ and Orlov inputs remain with the manuscript references, not all newly re-audited.",
-    "Rains_2025_monograph": "Full-text comprehensive comparison remains incomplete; prior bibliography/abstract check is retained."
-  },
   "checks": {
-    "full_manuscript_LuaLaTeX": "PASS",
-    "pdf_pages": 34,
+    "full_LuaLaTeX": "PASS",
+    "pdf_pages": 38,
     "all_final_page_images_inspected": true,
-    "final_citation_edit": "Only page 23 changed after the initial full-page inspection; its final image was separately inspected.",
     "undefined_references_or_citations": false,
-    "missing_glyph_warnings": false,
+    "missing_glyphs": false,
     "overfull_or_underfull_boxes": false,
-    "source_labels": 80,
+    "harmless_warning": "Inherited ltjsarticle legacy mathematical font command rm notice.",
+    "labels": 95,
     "bibliography_entries": 13,
-    "all_five_scripts_executed": true,
-    "shared_program_tags": "Unchanged checkers retain program tags v18/v19/v20; they were rerun on the current sources. The sorted checker is v21.",
-    "new_sorted_checks": {
-      "random_orders_degree_1_to_6": 240,
-      "all_cubic_orders": 720,
-      "distinct_cubic_root_bases": 720,
-      "cross_check": "Weyl-enumerated roots equal the independent explicit Picard root list.",
-      "inversion_histogram": [
-        1,
+    "all_six_programs_executed": true,
+    "new_boundary_arithmetic": {
+      "basis_and_random_K0_vectors": 1587,
+      "blowup_ranks": [
+        3,
+        4,
         5,
-        14,
-        29,
-        49,
-        71,
-        90,
-        101,
-        101,
-        90,
-        71,
-        49,
-        29,
-        14,
-        5,
-        1
-      ],
-      "example_reflection_sequence": [
-        2
-      ],
-      "example_dimensions": [
         6,
-        1,
-        1,
-        2,
-        2,
-        4
-      ]
+        7,
+        8
+      ],
+      "Euler_inverse_Serre_checked_independently": true,
+      "literal_support_residual_b_coefficient": -6,
+      "literal_structure_residual_b_coefficient": 9,
+      "all_nine_E3_candidates_checked": true,
+      "actual_source_geometric_identification_proved_by_computation": false
     },
-    "prior_checks_rerun": {
-      "mixed_A2_cases": 40000,
+    "retained_checks_rerun": {
+      "mixed_A2": 40000,
       "chamber_runs": 576,
-      "universal_six_point_syzygies": 6,
-      "QQ_and_mod_1000003_corner_dimensions": [
+      "sorted_random_orders": 240,
+      "all_cubic_permutations": 720,
+      "universal_six_point_identities": 6,
+      "QQ_and_mod_1000003_corner_Hilbert": [
         8,
         21,
         33,
@@ -133,52 +103,57 @@
         21,
         8,
         0
-      ],
-      "coefficient_torus_checks": true,
-      "K0_Euler_and_mutation_checks": true
+      ]
     },
+    "shared_checker_actual_restriction_basis": [
+      "U2",
+      "U1",
+      "p1",
+      "p2",
+      "p3",
+      "p4",
+      "p5",
+      "p6"
+    ],
+    "older_program_tags": "Unchanged code retains its original version tag but was rerun on current inputs; no archived outputs substituted.",
     "isolated_reproduction": {
-      "state": "PASS",
-      "all_34_text_pages_identical": true,
-      "all_34_rendered_pages_pixel_identical": true,
+      "pages": 38,
+      "all_text_pages_identical": true,
+      "all_pixel_pages_identical": true,
       "render_scale": 1.1,
-      "all_five_calculation_outputs_identical": true,
-      "source_and_code_files_identical": true
+      "all_six_JSON_outputs_identical": true,
+      "source_and_code_identical": true
     },
-    "finite_checks_prove_geometric_existence_or_heart_equality": false
+    "finite_checks_prove_sheaf_existence_or_actual_parameter_identification": false
   },
-  "remaining": [
-    "Independent AOU/Rains boundary-shift and gluing parameter dictionary.",
-    "Explicit elliptic pullback of the eleven factors and actual admissible/noetherian AS intersections.",
-    "Relative heart comparison, base change, marked descent and explicit elliptic-generator affine actions.",
-    "Full Rains 2025 monograph novelty review and external independent review."
-  ],
-  "external_independent_peer_review": false,
-  "machine_formalization": false,
-  "exhaustive_novelty_review": false,
   "git_blob_sha1": {
-    "papers/nc_del_pezzo_hearts.tex": "8777635b538313a4b2bad093a4db235503620ddc",
-    "papers/sections/four_hearts_as.tex": "5695184b96a9a2e6a03c80a42221f4938c0e2c70",
-    "papers/sections/four_hearts_canonical_comparison.tex": "be25c7c1ab38488db70c4fdfe9c03f450b29a61f",
-    "papers/sections/four_hearts_corner_locus.tex": "23264e95cf3b07f08829be99d8ebfc914a82d348",
-    "papers/sections/four_hearts_examples.tex": "6240bc65ee911664401668f25b8aab64547a8c6f",
-    "papers/sections/four_hearts_foundations.tex": "d4a983f737f752c6718b55a3813393890aeb8a88",
+    "papers/nc_del_pezzo_hearts.tex": "9db50d6a2367c872835dab3a7f20f46a8981d6f1",
+    "papers/sections/four_hearts_as.tex": "bb3e545056f8ad36f54b4e1e666eb0db17bd8160",
+    "papers/sections/four_hearts_boundary_data.tex": "f55745b71b0befc77cb6bce56819c007639ed255",
+    "papers/sections/four_hearts_canonical_comparison.tex": "42b70611bf24a6130b8bec73e504447a11ba4dc3",
+    "papers/sections/four_hearts_corner_locus.tex": "c8e86167816e5d144c8043a64bbfb161c397964a",
+    "papers/sections/four_hearts_examples.tex": "feb50d66b74634862d17cfc358e83f6f44bb031d",
+    "papers/sections/four_hearts_foundations.tex": "082bcebd48175b1480e042c439788f2cdbbc5430",
     "papers/sections/four_hearts_geometric.tex": "89b436034cf928f577e54ec4e9628ce28e81e942",
     "papers/sections/four_hearts_root_chambers.tex": "64587b5eebf89cb6b2c96c24299e41e71ab376c5",
     "computations/verify_cubic_heart_numerics.py": "53fec082f8814f3dca2c3be0803c2c4fff6de0d4",
-    "computations/verify_four_hearts.py": "edbc7bc0627d7691c46edc5653177d69f4f7f46f",
+    "computations/verify_four_hearts.py": "97081e9887f14fe50e365fa009f9e7db6a279ba2",
+    "computations/verify_four_hearts_boundary.py": "cf84d29fed55bf2e17d38da58661492d81ce391f",
     "computations/verify_four_hearts_chambers.py": "a82e600c1a2d15d89331ffa08373969ed558a6cf",
     "computations/verify_four_hearts_corner.py": "eda177b6595d4e467eae6bc4c2e6b1719d2fef3e",
     "computations/verify_four_hearts_sorted.py": "6b8c3f6eab41d66760841287ff9cd318305c4572",
-    "research/four_hearts_plan.md": "56feab82089b2651cd7693950ffedd39f958388c",
-    "research/heart_comparison.md": "80d9d89bd5c64afea0056048b2a05e679862cb57"
+    "research/four_hearts_plan.md": "ef62254a8fd67dd9df5bbc5943d62fd7fbbeaeb7",
+    "research/heart_comparison.md": "2d76c4700a1eb8a3e176fb6b0b9daa79cae76c92"
   },
+  "external_independent_peer_review": false,
+  "machine_formalization": false,
+  "exhaustive_novelty_search": false,
   "persistence": {
     "canonical": "GitHub main",
-    "source_and_code": "New or modified files match successful remote content hashes; unchanged source hashes are retained from the confirmed baseline.",
+    "prepared_against_commit": "ab1f7376b7a1b4692e72cf5cb97f521a9120ecd5",
+    "remote_confirmation": "Reported separately after normal expected-head ref update; this record contains the actual tested source hashes, not its own future commit hash.",
     "Library_upload_performed": false,
-    "PDF_tracked_in_Git": false,
-    "final_remote_arrival": "Checked separately after saving this validation; see the final response for commit."
+    "PDF_tracked_in_Git": false
   },
   "reproduction": [
     "python3 computations/verify_cubic_heart_numerics.py",
@@ -186,6 +161,7 @@
     "python3 computations/verify_four_hearts_corner.py",
     "python3 computations/verify_four_hearts_chambers.py",
     "python3 computations/verify_four_hearts_sorted.py",
+    "python3 computations/verify_four_hearts_boundary.py",
     "latexmk -lualatex -outdir=build papers/nc_del_pezzo_hearts.tex"
   ]
 }
