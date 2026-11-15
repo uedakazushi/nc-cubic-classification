@@ -1,55 +1,37 @@
-# Cubic：AS heartとanticanonical heartの一致開集合
+# Cubic corner の有限性と4交比：現行研究ノート
 
-2026-11-15 / hearts-v4 / corner-v3。最初に `00_research_plan.md` を読む。証明本文は `papers/cubic_heart_corner.tex`。従来のHRS・orbit・一般corner判定は `papers/nc_del_pezzo_hearts.tex` に保持する。
+2026-11-15 / hearts-v5 / corner-v4。最初に `00_research_plan.md` を読み、証明は `papers/cubic_heart_corner.tex` の定理 `thm:general-position-iff` とその依存箇所を読む。全次数のheart比較は `research/heart_comparison.md` にある。
 
-## 現在の結論
+## 現行定理（標数0・18係数非零）
 
-AOUの3×3 block cyclic quiverに27係数potential Wを入れ、B=Jac(Q,W)、e=e_(A0)、C=B/BeBとする。道長gradingではBは矢で生成され、関係は二次。C_N=0なら全n≥NでC_n=0。ゆえに U_N={rank M_N=dim paths_N} は最大minorの非消滅による開集合で、U=union U_N はCが有限次元であるlocusそのもの。係数空間のnoetherian性からU=U_N0となる一様なN0は存在するが、N0=7とは未証明。従ってこの有限係数chartの自然corner比較の失敗は相対閉条件であり、抽象的な導来同値の失敗locusとは別。
+AOU型の3×3 cyclic quiver Qtilde と27係数potential W=(w_abc)を取り、B=Jac(Qtilde,W)、e=e_(A0)、C=B/BeBとする。Cはw_0bcに依存しない。w_1bc,w_2bcがすべて非零とし、q_bc=w_2bc/w_1bcを定める。矢の非零rescalingによりqは行・列rescalingを受けるだけで、完全不変量は四つの交比 lambda_ij=q_ij q_00/(q_i0 q_0j) (i,j=1,2)。Q=[[1,1,1],[1,a,b],[1,c,d]]と規格化できる。
 
-C有限次元からBeの右eBe有限生成性とeBの左eBe有限生成性を道の分解で導ける。B右noetherianならcorner eBeも右noetherianで、M→Meはqgr同値。逆に自然restrictionが同値ならπC=0なのでC有限。既存のcorner判定のbimodule有限性を今回の道長条件で具体的に確保した。
+**証明済みの必要十分条件**：Cが有限次元 iff Qの9個の2×2小行列式、det Q、det(Qの成分ごとの逆数)がすべて非零。18係数が零なら、先行補題の一閉路表示によりCは無限次元。よって係数トーラスでの悪いlocusは明示的な11 divisorの和集合で尽くされる。
 
-反標準比較にはcut grading deg(x)=deg(y)=0,deg(z)=1を使う。道長gradingをそのままAS heartと同一視しない。標準AS helixのfolding/Serre同定とprojective飽和の下でeB_cut e=⊕Hom(O,tau^n O)、O=π(eB)、tau=S^-1[2]。したがってU上のnoetherian AS領域でAS heartとこのanticanonical heartは自然にabel同値。全potentialのAS性・noetherian性を判定した結果ではない。
+四交比での追加二式は (a-1)(d-1)-(b-1)(c-1) !=0 と bc(1-a)(1-d)-ad(1-b)(1-c) !=0。九小行列式はa,b,c,d !=1、a!=b、c!=d、a!=c、b!=d、ad!=bc。11条件全体の十分性は有限体の推測ではなく、以下の六点復元＋AOUの既知定理＋Serre消滅で証明した。
 
-## 四交比と11個の必要条件
+## 幾何学的再構成と証明の依存関係
 
-C=B/BeBはw_{0bc}の9係数に依存しない。a=1,2の18係数がすべて非零なら、q_bc=w_{2bc}/w_{1bc}を行・列rescalingで規格化し、四交比lambda_ij=q_ij q_00/(q_i0 q_0j)だけが残る。係数トーラスで矢rescalingの軌道はこの四交比で完全に分類される。
+P=(Qの成分ごとの逆数)^t の列をp1,p2,p3とし、p4,p5,p6をP2の座標三点とする。Qの各成分非零→可動点1・座標点2の非共線、9小行列式非零→可動点2・座標点1の非共線、det Q^{had-inv}非零→可動点3の非共線、det Q非零→六点がconic上にない。従って六点は一般位置でS=Bl_{p1...p6}P2は滑らかなcubic。
 
-**証明済みの必要条件**：C有限なら18係数は非零で、qの九つの2×2 minorは全て非零。係数零なら一つの3-cycle、minor零なら2×2支持上のT=[[1,-1],[-1,1]]を用い、全Jacobi関係を消す一方で非零3-cycleを持つ表現を構成する。各矢をt倍した行列表示で閉路の全ての冪が非零となり、Cが無限次元と分かる。四交比ではlambda_ij≠1の4式、同一行・列の相異4式、lambda_11 lambda_22≠lambda_12 lambda_21の1式を避ける必要がある。これら九divisorの和が悪いlocusの全体かは未証明。
+AOU arXiv:2404.00175v1, (4.1),(4.7),(4.9),(8.4)-(8.7)で、同じ基底規約なら幾何的potentialの二関係系列がw1_bc=P_cb、w2_bc=1となり、比w2/w1=qを回復する。六点の線束関係で使う conic D_b=(u_{b+1}×u_{b+2})·(X1X2,X2X3,X3X1) と直線 L_{bc}=det[p_{b+1},p_{c+4},X] は、sum_b P_cb D_b L_bc=0 と sum_b M_b L_bc=0 という整数係数の恒等式を満たす。6つの全恒等式は新規の標準ライブラリ検算スクリプトで普遍的に検証した。
 
-六点の可換witnessの交比は[[-1/4,1/16],[1/6,-1/4]]、九minorは全て非零かつC_7=0。従って四次元トーラス上の良いlocusは非空真開集合。一般証明は`papers/cubic_heart_corner.tex`、検算コードは`computations/verify_cubic_corner_torus.py`。AS locusとの交叉や導来非同値は別問題。
+AOU(4.9)はJac(Qtilde,Wgeo)=⊕_{v,v',n≥0}Hom_S(Ev,Ev'(nH))を同定する。H=-K_SがampleなのでEv^∨(mH)の大域生成とSerre消滅を用い、n≫0で全Homを Ev→O_S(mH)→Ev'(nH) に分解できる。これがeを通る経路に対応しCの全高次cut成分が零になるため、C有限次元。w0はCに影響しない。したがって四交比の有限corner locusは、ordered six-point general-position moduli Mcubicと正則同型になる。これは全27係数potentialが幾何的であるという主張ではない。
 
+## Heart比較への帰結と留保
 
-**二つの追加行列式障害（今回証明）**：qのrankが2以下なら、q=UVの左・右核h,kを用いて、各頂点をk[t]加群とするJacobi関係の表現を構成でき、ある三角閉路がh_bk_ct^3（非零）となる。従ってCは無限次元。A1,A2を交換してyをrescaleするとqは成分ごとの逆数行列に変わるので、det(q^{<-1>})=0でも無限次元。前の九つの小行列式に加えdet(q)とdet(q^{<-1>})の二つの非零性が必要。四交比(a,b,c,d)では (a-1)(d-1)-(b-1)(c-1) !=0 と bc(1-a)(1-d)-ad(1-b)(1-c) !=0 である。証明は `papers/sections/cubic_corner_determinantal_obstructions.tex` をinputする現行論文。
+AOU型AS helixとのfolding、Serre inverse shift、orbit algebraの飽和、およびnoetherian性が成立する対象では、自然なrestriction qgr B_cut→qgr(eB_cut e)が同値 iff この11条件。右辺は構造対象Oからのanticanonical heart。よってAS heartとanticanonical heartがabel同値となる領域を、指定の自然関手に関して完全に決定した。11条件外で他のabel同値・導来同値が一切ないとは言わない。Rains heart/VdB heartとのpointedness、実際のAOU mutation後E0とπFの同定は未解決。
 
-**独立した例**：Q0=[[3,4,5],[5,6,7],[7,8,9]]、Q1=2520/Q0（成分ごと）。両方とも九小行列式が非零だが、det(Q0)=0、det(Q1)=80640およびdet(成分逆数Q1)=0。有理数で27個のJacobi表示成分が全て消えることを検証し、t^3の非零閉路を確認。
+## 補助定理と検算
 
-**計算的観察（十分性は未解決）**：F7の四交比トーラスで11条件を満たす80点を全列挙し、いずれもC7=0（Hilbert次元[8,21,33,38,33,21,8,0]）。この有限体の結果から標数0での十分性は従わない。コード `computations/verify_cubic_corner_rank2.py --scan-f7`、証明書 `computations/cubic_corner_rank2_certificate.json`。
+必要性：係数零は一閉路、2×2 minor零は2×2支持、det Q零はrank2分解Q=UVと左右核を使い、k[t]上に非冪零三角閉路を持つJacobi表現を構成する。成分逆数行列のdet零はA1/A2を交換して帰着。全文は現在の論文§§3-4、rank2検算 `computations/verify_cubic_corner_rank2.py`。
 
-## 明示的な非空性
+六点の幾何的同定は `computations/verify_cubic_six_points.py`（標準Pythonのみ）で、9個の自由な座標変数上の6本の普遍的整数多項式恒等式、3つの有理数例、F7の四交比トーラス1296点の全比較（一般位置は80点）を検査した。以前のC7=0の厳密計算（六点witnessでHilbert次元[8,21,33,38,33,21,8,0]、総次元162）、F7の80点すべてでC7=0という有限体観察も保持する。ただし、11条件上で一様にC7=0となるかは未証明である。
 
-六点は(1:0:0),(0:1:0),(0:0:1),(1:1:1),(1:2:3),(1:4:2)。全三点は非共線、六点conic評価行列式は-12。AOU(4.1)の九線束を用い、各二段道の切断を直線・conicの積として構成する。唯一の関係を原始整数係数で正規化すると、w_abcのb行c列行列は
+## 次の核心
 
-    W0 = [[1,1,1],[-1,-2,-2],[1,3,1]]
-    W1 = [[2,1,1],[-1,2,-4],[-1,-3,1]]
-    W2 = [[1,1,2],[-1,-1,-1],[1,1,1]].
+1. **均一な道長次数の境界**：11条件上でC7=0が常に成立するか、幾何的な層の正則性によって示す。また特異境界・低次数の跳びを調べる。
+2. **Rains/VdBとの実際の比較**：AOUのmutation後E0≅πFをobject levelで検証し、VdBの最後のδ_*に対するkernelと高次pushforwardを実在対象から計算する。自然同値のt-exactnessと別のderived同値を分離する。
+3. **一般次数とmoduli**：全intrinsic cubicを幾何的六点分枝と同一視せず、量子FermatなどOU AS型でない分枝を保持。dP1と他次数のheart比較へ必要十分条件の方法を移植する。
 
-A0を削除すると21矢・21二次関係。全prefix×relation×suffixの行空間を始終点ごとに構成し、FractionによるQQ消去とF_1000003消去を実行した。Cの次元列は[8,21,33,38,33,21,8,0]、総次元162。7次では6804列、21blockがすべてfull rank。従ってU7非空。有限体rankだけから低次数の正確な次元を主張せず、QQ計算で確認している。
-
-この可換点のAS性はAOUの既知helix結果、noetherian性は反標準環上の有限加群性による。数値rankをAS性の代用にしない。計算の証明書はコードから再生成する。保存したsummary JSONに生成される全block証明書のSHA256を記す。
-
-## HRSの追加判定
-
-振幅[0,1]の同値F、逆振幅[-1,0]、F(e)=e'、F tau=tau' F、標的のAZ豊富性と高次Serre消滅を仮定する。tau固定の非零単純対象MはT=ker H1FまたはU=ker H0Fに属し、chi(e,M)>0 iff M∈T、chi(e,M)<0 iff M∈U。chi=0はこの仮定下で起きない。U側のRHom(e,M)は次数1のみで次元-chi。非単純MのEuler符号だけからM全体がUに属するとはしない。実在する共鳴単純対象とpointednessの照合は未完成。
-
-## 次の課題
-
-1. 四交比トーラス上で11個の必要条件が十分かを判定し、U_Nの安定閾値とAS locusとの交叉を調べる。U7の補集合を全非一致locusと同一視しない。
-2. AOU§9のmutation後E0とVdB模型のπFを対象として同定し、既知導来同値と自然corner同値の比較を行う。本結果はAS側のOから作る反標準環についての定理である。
-3. VdB最後の段階のker δ_*を、実在するroot単純対象で調べる。上の符号判定を、pointednessと周期作用を確認した場合に適用する。
-4. 有限位数・特異境界・他次数では生成次数、cutと周期、noetherian性を個別に検証する。
-
-## 文献・確認範囲
-
-AOU, arXiv:2404.00175v1, (3.19), (4.1)–(4.13), §9。§4のquiver/potential図・公式はPDF画像と本文で確認。OU, arXiv:2508.04986v1, Definitions1.1,5.2,§6、p8画像確認。VdB, arXiv:math/9809116v1, Theorems9.1.9,11.1.3の本文を照合したが今回の一部画像取得は失敗。本結果の新規性は未確認。証明の検討・厳密計算・組版を行ったが外部独立査読やproof assistantによる形式化はない。
-
-再現: `python3 computations/verify_cubic_corner.py`、`latexmk papers/cubic_heart_corner.tex`。Python標準ライブラリのみ。既存の数学や計算は変更・削除していない。
+一次資料はAOU §4（4.1,4.9）、§8（8.1,8.4-8.9）と OU arXiv:2508.04986。定理の新規性・初出は未確認。証明記載、整数検算、LuaLaTeX組版は区別する。再現は `python3 computations/verify_cubic_six_points.py`、`latexmk papers/cubic_heart_corner.tex`。推奨の現行名は Rains heart, VdB heart, AS heart, anticanonical heart。
