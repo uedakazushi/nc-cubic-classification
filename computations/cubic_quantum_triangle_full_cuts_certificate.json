@@ -1,0 +1,89 @@
+{
+  "version": "classification-v60",
+  "norm_image": "alpha^3+27 beta gamma delta=0 in P4[alpha,beta,gamma,delta,epsilon]",
+  "linear_norm": "Nrd(a t+b x+c y+d z)=b\u00b3X+c\u00b3Y+d\u00b3Z-3q bcd Omega+(a\u00b3+q\u00b2a(b\u00b2+c\u00b2+d\u00b2))t\u00b3",
+  "compact_centre": "F=2UVW-T(U\u00b2+V\u00b2+W\u00b2)+3TS\u00b2+2S\u00b3 in P4",
+  "five_nodes": [
+    [
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      -1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      -1,
+      1,
+      -1,
+      -1,
+      1
+    ],
+    [
+      -1,
+      -1,
+      1,
+      -1,
+      1
+    ],
+    [
+      -1,
+      -1,
+      -1,
+      1,
+      1
+    ]
+  ],
+  "no_four_nodes_coplanar": true,
+  "node_normal_quadric": "Hessian inverse covector, exact formulas verified",
+  "Casimir_pencil_regular_tangencies": [
+    "rho=3/2 (one point)",
+    "rho=-1/2 (four points)"
+  ],
+  "scope": "Exact universal PBW cubic norm identity, norm-image equation, compact nodes/ranks/Hessians and pencil tangency identities. Full-cut H3 proof is ordinary geometry/order/McKay argument.",
+  "exact_good_inertia_examples": [
+    [
+      "A4",
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      "C2",
+      [
+        1,
+        1,
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      "C3",
+      [
+        0,
+        1,
+        1,
+        1,
+        0
+      ]
+    ]
+  ],
+  "stabilizer_orders": [
+    12,
+    2,
+    3
+  ],
+  "regular_tangency_ideals": "unit ideals, exact Groebner",
+  "generic_stabilizer_example_order": 1
+}

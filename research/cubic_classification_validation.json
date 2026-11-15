@@ -1,6 +1,6 @@
 {
   "date": "2026-11-15",
-  "version": "classification-v58",
+  "version": "classification-v60",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -44,7 +44,8 @@
     "papers/sections/cubic_quantum_triangle_even4.tex",
     "papers/sections/cubic_quantum_triangle_gwa.tex",
     "papers/sections/cubic_quantum_triangle_vertex.tex",
-    "papers/sections/cubic_sklyanin_rank_obstruction.tex"
+    "papers/sections/cubic_sklyanin_rank_obstruction.tex",
+    "papers/sections/cubic_quantum_triangle_full_cuts.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -709,5 +710,18 @@
     },
     "build": "LuaLaTeX127 pages successful no undefined refs/cites or overfull boxes; final minor wording/version refresh pending",
     "limits": "Proper elliptic standard Sklyanin only; degenerate parameters and arbitrary twists excluded; no independent referee/formalization/novelty claim"
+  },
+  "quantum_triangle_v59_v60": {
+    "proof": "papers/sections/cubic_quantum_triangle_full_cuts.tex",
+    "validator": "computations/verify_cubic_quantum_triangle_full_cuts.py",
+    "result": "PASS universal norm identity/hypersurface; five nodes/all4node ranks/inverse Hessians; Casimir compatibility; exact good A4/C2/C3 examples and projective stabilizers",
+    "ordinary_theorems": [
+      "Entire root3 fixed envelope central-cubic H3 locus: norm cubic complement intersect projective-dual complement of five-nodal cubic threefold",
+      "All outside-norm cuts domain via nontrivial boundary residue; all boundary curve types E,I1,I2,I3 terminal",
+      "Full geometric and graded-family stack [U/A4], separated irreducible DM4; only inertia1,C2,C3,A4 with explicit fixed loci",
+      "Flat presentation family, full centres commute every basechange, fpqc presentation descent"
+    ],
+    "build": "LuaLaTeX130 pages successful no undefined refs/cites or overfull boxes",
+    "limits": "One fixed root3 envelope; no global H3 component or abstract category-family coverage claim; no independent referee/formalization/novelty claim"
   }
 }
