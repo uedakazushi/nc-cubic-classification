@@ -1,0 +1,424 @@
+\subsection{位数二Clifford--Sklyanin包絡の全切断を分類する}
+\label{sec:clifford-all-cuts}
+前節の低次中心条件$Z(S)_2=0$の外にも楕円境界がある．
+本節では一つの非skew包絡を固定し，その\emph{全ての}H3切断を判定し，
+三次元の幾何学的商を与える．標数零の代数閉体上で
+\[
+ S=k\langle x,y,z\rangle/(yz+zy=x^2,\ zx+xz=y^2,\ xy+yx=z^2),\qquad B=S[t].
+\]
+と置く．全生成元の次数は1で，$t$は中心的である．
+
+\begin{lemma}[中心・楕円境界・Azumaya範囲]
+\label{lem:clifford-center-azumaya}
+$S$はnoetherian quadratic Koszul CY AS3，$B$は同じ条件のAS4型14641である．
+$u=x^2,v=y^2,w=z^2$と置けば$P=k[u,v,w]$は中心多項式環で，$S$は$P$上階数8の自由Clifford環である．
+\[
+ Q=\begin{pmatrix}u&w/2&v/2\\w/2&v&u/2\\v/2&u/2&w\end{pmatrix},\quad
+ T=\det Q=\frac{5uvw-u^3-v^3-w^3}{4},\quad
+ g=xyz-\frac{z^3-y^3+x^3}{2}
+\]
+とすると
+\[
+ Z(S)=P\oplus Pg\simeq k[u,v,w,g]/(g^2+T),\qquad
+ Z(B)_3=kg\oplus kt u\oplus kt v\oplus kt w\oplus kt^3.
+\]
+$H=S/(g)$は滑らかな整楕円曲線のTHCRで，translationの位数は2である．
+$S$は$\operatorname{Spec}Z(S)$の原点以外の全域で階数4のAzumaya代数である．
+\end{lemma}
+\begin{proof}
+交換子の恒等式を三回使うと
+$[x^2,y]=[x,z^2]=[y^2,z]=-[x^2,y]$となる．
+標数零なのでこれらは零であり，他の組も同様である．従って$u,v,w$は中心的である．
+形式的な$P$上で対称行列$Q$のClifford環を作れば，通常の外積型PBW基底
+$1,x,y,z,xy,xz,yz,xyz$を持つ．逆に$u=x^2,v=y^2,w=z^2$なので，
+三生成元で書き直した表示は正確に$S$と一致する．これで$P$の独立性，階数8，noetherian性を得る．
+このPBW基底から$H_S(z)=(1-z)^{-3}$でもある．
+
+$S$はSklyaninパラメータ$(p,q,r)=(1,1,-1)$であり，
+Iyudu--Shkarin\cite[Lemma 3.7, Theorem 1.1]{ISClifford}はこの非退化パラメータでKoszul性を与える．
+二次双対は可換環
+$k[X,Y,Z]/(X^2+YZ,Y^2+ZX,Z^2+XY)$である．
+三つの二次式の射影共通零点はなく，従ってこれは完全交叉で，Hilbert級数は$(1+z)^3$となる．
+また$X^2Y,X^2Z$およびその巡回形は零で，次数1の基底$X,Y,Z$と
+次数2の基底$YZ,ZX,XY$の積の対はsocle $XYZ$に対して単位行列となる．
+従ってFrobeniusであり，Koszul双対判定によりAS正則次元3を得る．
+この有限計算は付属検証器でも商空間と二つの$3\times3$行列により照合する．
+トップは巡回テンソル
+\[
+ -x^{\otimes3}-y^{\otimes3}-z^{\otimes3}
+ +xyz+xzy+yxz+yzx+zxy+zyx
+\]
+であり，その巡回性から中山は恒等である．中心多項式拡大により$B$はCY AS4型14641となる．
+整域性も，以下の中心volumeと楕円境界から直接確認する．
+
+$g$はCliffordの三次volumeであり，Clifford関係から$g$は中心的で$g^2=-T$となる．
+$T$は$P$の非零元で$S$は$P$上自由なので，$g$は両側正則である．
+$\operatorname{Frac}P$上の中心は$k(u,v,w)\oplus k(u,v,w)g$である．
+PBW基底の$xyz$係数は$g$で1なので，$S$内の中心元の$g$係数は$P$に入る．
+残るスカラー係数も$P$に入り，表示の全中心が得られる．
+
+二次関係の多重線型化は
+\[
+ M(x,y,z)=\begin{pmatrix}-x&z&y\\z&-y&x\\y&x&-z\end{pmatrix},\qquad
+ \det M=x^3+y^3+z^3+xyz
+\]
+である．この平面三次は滑らかで，全点で$M$の階数は2である．
+従ってkernelにより楕円曲線の自己同型$\rho$を得る．関係が対称なので$\rho^2=1$である．
+不動点は$2yz=x^2,2zx=y^2,2xy=z^2$を満たす射影点だが，三式の積は
+$7x^2y^2z^2=0$を与え，さらに三式から全座標零となってしまう．
+従って不動点はなく，$\rho$は非零二等分点によるtranslationである．
+ここで必要なTHCRへの射を直接構成する．$V=S_1=H^0(E,\mathcal O_E(1))$の評価を使い，
+point graph上で二次関係が零となることから$S\to B(E,\mathcal O_E(1),\rho)$を得る．
+この射は全次数で全射である．実際，楕円曲線上の次数3の線束と次数3以上の線束の切断の積は全射となる：
+次数が異なるとき，低い方からbasepoint-free pencilを取りpencil trickを使えば
+差の線束の$H^1$は零である．同じ次数3で異なる線束のときも差は非自明な次数0なので同様である．
+同じ次数3線束なら平面三次埋込みに二次関係がないことから二次の積は全射である．
+これを反復すればTHCRの全次数が一次部分で生成される．
+この射で$g$は零に写る．
+実際，中心三次の非零切断があれば，それと一次元との可換性をpoint graph上で評価して
+$\rho^3(p)=p$を得るが，これは$\rho^3=\rho$が不動点を持たないことに反する．
+三次元数と全Hilbert級数が一致するので，核は正確に$(g)$である．
+これで$H$は整THCRとなる．
+さらに$g$は正次数の中心正則元で，次数付き環では$\bigcap_n g^nS=0$である．
+二つの非零斉次元から最大の$g$冪を取り出せば，残る積は整域$S/(g)$で非零となるので，
+$S$自体も整域であり，従って$B=S[t]$も整域である．
+
+最後に$T=0$も滑らかな平面三次である．$Q$の階数が1以下なら全cofactorが零となり，
+$\partial T/\partial u,\partial T/\partial v,\partial T/\partial w$も零となるため，
+$(u,v,w)=(0,0,0)$に限られる．原点以外では$Q$に非退化二平面を取れる．
+局所的に$Q=\operatorname{diag}(q_1,q_2,q_3)$，$q_1,q_2$可逆とすれば，
+中心volumeを使って第三生成元は最初の二生成元の積の逆数と$g$で書ける．
+従って中心上で$S$は二生成元の可逆係数Clifford，すなわちAzumaya quaternion環となる．
+非退化二平面を取るための忠実平坦局所化から降下し，原点以外の全範囲で結論する．
+\end{proof}
+
+\begin{lemma}[反Serre固定点の奇数接空間障害]
+\label{lem:odd-point-tangent-obstruction}
+H3商$R$に中心一次元$t$があり，$P\in\qgr R$で$t:P(-1)\to P$が同型なら，
+$\Ext^1(P,P)$は非退化交代形式を持つ．従ってその次元は偶数である．
+特に上記$B$における
+\[
+ R_{a,D}=B/(g+t(Au+B_0v+Cw)+Dt^3),\quad a=(A,B_0,C)
+\]
+は$D=0$のときH3ではない．（係数$B_0$は包絡$B$との混同を避けるための記号である．）
+\end{lemma}
+\begin{proof}
+$\operatorname{thick}(P)$上では中心$t$の自然変換が可逆であり，
+これはshift，cone，直和因子に対して保たれる．
+H3のSerre関手$S=(-1)[2]$は，$t$による次数shiftの自然な自明化により
+この部分圏で$[2]$となる．Serre traceの巡回性とshiftの符号から
+\[
+ \langle a,b\rangle=\operatorname{tr}_P(b[1]\circ a),\qquad
+ \langle a,b\rangle=-\langle b,a\rangle
+ \quad(a,b\in\Ext^1(P,P))
+\]
+を得る．ここで次数1の二射を巡回させる符号は$(-1)^{1\cdot1}=-1$であり，
+$t$の自明化は次数0なのでこの符号を変えない．非退化性はSerre双対性そのものである．
+標数零なので交代形式の次元は偶数である．
+
+$D=0$の場合，$t\ne0$のchartは
+$U=S/(g+Au+B_0v+Cw)$である．そのaugmentation $k$は存在し，
+関係に一次項がないため
+$\dim\Ext^1_U(k,k)=\dim(\mathfrak m/\mathfrak m^2)=3$である．
+$P=\pi k[t]$とすると$t:P(-1)\to P$は同型となる．
+有限次元$U$加群と，$t$が可逆なcoherent tailsとの対応は完全で，
+自己拡大も$t$可逆性を保つので$\Ext^1(P,P)=\Ext^1_U(k,k)$である．
+奇数次元3は前半に反する．$D=0$を中心の特異性だけから除外した議論ではない．
+\end{proof}
+
+以下，係数を再び$(A,B_0,C,D)$と書き，
+\[
+ I=A^3+B_0^3+C^3,\qquad
+ J=A^3B_0^3+B_0^3C^3+C^3A^3,\qquad K=AB_0C
+\]
+と置く．次のmonic四次式を定める：
+\begin{align*}
+ \Psi(I,J,K,D)={}&D^4+\frac{8(17I-1350K)}{1323}D^3\\
+ &-\frac{64(5751I^2+92025IK+57707J-469395K^2)}{1750329}D^2\\
+ &+\frac{512}{2315685267}
+ (194643I^3+1087425I^2K-7758072IJ\\
+ &\hspace{28mm}+21605265IK^2+12789000JK-48655837K^3)D\\
+ &-\frac{8192(27I^2-450IK+392J-85K^2)^2}{2315685267}.
+\end{align*}
+
+\begin{theorem}[この固定非skew包絡の全H3三次切断]
+\label{thm:clifford-all-H3-cuts}
+$B=S[t]$の全H3三次商は，固定包絡の同定を保持すれば一意に
+\[
+ R_{a,D}=B/(g+t(Au+B_0v+Cw)+Dt^3)
+\]
+と書け，admissibilityの必要十分条件は
+\[
+ D\ne0,\qquad \Psi(I,J,K,D)\ne0
+\]
+である．固定包絡の全H3幾何学的群oidは
+\[
+ [\mathcal V/G(3,3,3)],\qquad
+ \mathcal V=\{(A,B_0,C)\in\mathbb A^3:\Psi(I,J,K,1)\ne0\},
+\]
+で与えられる．ここで$G(3,3,3)=(\mu_3)^2\rtimes S_3$は位数54のmonomial群で，
+対角因子の積は1である．その粗い幾何学的同型類空間は
+\[
+ \operatorname{Spec}k[I,J,K,\Psi(I,J,K,1)^{-1}]
+\]
+であり，慣性は各三つ組の$G(3,3,3)$内のstabilizerである．
+この定理は全AS4包絡の被覆でも，別ambientへの変形rigidityでもない．
+\end{theorem}
+\begin{proof}
+全H3では三次関係が中心的である．中心の表示によれば$g$の係数が零の三次元は$t$を因子に持つため，
+商に零因子が生じる．従ってH3の整域性に反し，$g$の係数は1に規格化できる．
+全$a,D$で最高active記号は$g$なので
+$\operatorname{gr}_{\mathrm{act}}R_{a,D}=H[t]$は整域である．
+命題\ref{prop:r13-all-cut-domain-rank}の整域とGabriel--Krull rankの証明は
+低次中心条件を使わず，この随伴環と正則$t$，楕円境界だけを用いていた．
+従って全$a,D$で同じrank条件を満たす．飽和・例外性・AZの証明も同じであり，
+補題\ref{lem:r13-one-chart-smoothness}の一chart貼合せは，中心三次式が
+$g+t(Au+B_0v+Cw)+Dt^3$であってもそのまま適用できる．
+残る条件は$U_{a,D}=S/(g+Au+B_0v+Cw+D)$の有限大域次元である．
+
+$D=0$は前補題で除外された．$D\ne0$なら中心切断は原点を通らないため，
+前のAzumaya表示から$U_{a,D}$は
+\[
+ C_{a,D}=k[u,v,w]/(F),\qquad
+ F=T(u,v,w)+(Au+B_0v+Cw+D)^2
+\]
+上のAzumaya代数である．Azumaya代数と中心は忠実平坦な分裂後にMorita同値なので，
+有限大域次元を持つことは同値である．従って$C_{a,D}$が正則，すなわち$F=0$が滑らかなことが必要十分となる．
+
+$L=Au+B_0v+Cw$と置く．$F=\partial F=0$にEuler式を使うと
+\[
+ L+D=-2D,\qquad L=-3D,\qquad \nabla T=4D(A,B_0,C)
+\]
+を得る．もう一つの可能性$L+D=0$では$\nabla T=0$となり，$T$の滑らかさと$D\ne0$に反する．
+$a\ne0$の場合，polar写像
+\[
+ f:\mathbb P^2\longrightarrow\mathbb P^2,\qquad p\longmapsto[\nabla T(p)]
+\]
+を取る．$T=0$が滑らかなので基点はなく，$f^*\mathcal O(1)=\mathcal O(2)$から
+$f$は有限次数4である．両側が滑らかな二次元なので有限flatでもある．
+$f(p)=[a]$で$\nabla T(p)=\lambda_p a$と書き，
+\[
+ d_a(p)=\frac{4(a\cdot p)^2}{9\lambda_p}
+\]
+と定めると，これは$p$の代表によらず，$a\ne0$上の次数4有限flat族における正則関数である．
+$\lambda_p$は零でなく，局所的には$a_i\ne0$のchartで$T_i(p)/a_i$を使える．
+上の特異点条件は正確に$D=d_a(p)$である．
+実際，$a\cdot p\ne0$なら$r=-3D/(a\cdot p)$として$(u,v,w)=rp$を代入すればよく，
+$\nabla T(rp)=4Da$とEuler式から$F=0$も従う．
+$a\cdot p=0$の場合は$d_a(p)=0$であり，ここで扱う$D\ne0$の特異点は生じない．
+
+従って必要な四次式は，階数4の代数における$d_a$倍写像の特性多項式である．
+その係数は$\mathbb A^3_a\setminus\{0\}$上正則で，正規性により原点を越えて多項式へ一意に延長する．
+$a$を$s$倍すると$d_a$は$s^3$倍となるので，$D^{4-n}$の係数は$a$の次数$3n$の斉次式である．
+$T$を保つmonomial群$G(3,3,3)$に対して不変であり，その不変環は$k[I,J,K]$である．
+実際，対角不変単項式の三指数はmodulo 3で等しく，$K$の冪を取り出せば
+$A^3,B_0^3,C^3$の対称式となる．第三基本対称式は$K^3$である．
+従って係数が属する空間の基底は$I^iJ^jK^k$，$i+2j+k=n$であり，
+$n=1,2,3,4$で次元はそれぞれ$2,4,6,9$である．
+
+この有限次元の係数空間で，付属検証器は有理数16点のpolar代数を厳密に構成する．
+$p=[1:r:s]$のchartでその二つの二次式は
+\[
+ B_0(5rs-3)-A(5s-3r^2),\qquad
+ C(5rs-3)-A(5r-3s^2)
+\]
+であり，検算点では$1,s,s^2,s^3$が正確に商の基底となる．
+$d_a$倍写像は
+\[
+ \frac{16A}{9}\,(A+B_0r+Cs)^2(5rs-3)^{-1}
+\]
+の$4\times4$乗法行列である．係数評価行列の階数はそれぞれ$2,4,6,9$で全て最大となり，
+その全評価が上に掲げた$\Psi$の係数と一致する．
+既に証明した次数・不変式空間の上界により，これは全パラメータでの多項式恒等式の証明である．
+単なる有限標本からの正則性の外挿ではない．$a=0$では$\Psi=D^4$であり，
+$\nabla T=0$の零点が原点だけなので同じ判定が成立する．
+これで全admissibility条件を得た．
+
+最後に同型を調べる．$S$の唯一のcharacterはaugmentationなので，
+中心一次の一意性と合わせると$\operatorname{Aut}_{\mathrm{gr}}B
+=\operatorname{Aut}_{\mathrm{gr}}S\times\mathbb G_m$であり，$x,y,z$への$t$平行移動はない．
+$S$の全自己同型は一意な巡回トップの可換化
+$x^3+y^3+z^3-6xyz$の射影自己同型を誘導する．
+その全射影自己同型は九つのflexを保つので，
+\cite[Lemma 5.1 and proof]{ISClifford}の位数216のHessian群に入る．
+付属検証器はこの全216個の行列を厳密列挙し，この曲線を保つものが18個であると確認する．
+一方，$x_i\mapsto d_i x_{\pi(i)}$，$\pi\in S_3$，
+$d_i^3=d_0d_1d_2$のmonomial行列は既に射影的に18個の自己同型を与える．
+従ってこれらで全てである．$g$はvolumeなので$g\mapsto c g$，$c=\det(d_i\pi)$となる．
+$t\mapsto a_0t$なら係数の作用は
+\[
+ A_{\pi(i)}'=(a_0d_i^2/c)A_i,\qquad D'=a_0^3D/c.
+\]
+$D\ne0$なので$D=1$へ規格化できる．$g+t^3$を保つ条件$a_0^3=c$を課し次数スカラーを除けば，
+係数三つ組への作用は正確に積1の三乗根対角変換と全座標置換，すなわち$G(3,3,3)$となる．
+商環のgraded同型は二次包絡へ一意に持ち上がるので，これ以外の内在的pointed同一視はない．
+不変環の計算と$\Psi$の不変性から粗い商とstabilizerの記述も従う．
+\end{proof}
+
+\begin{corollary}[一係数方向の例外値と慣性を全て明示する]
+\label{cor:clifford-axis-exact-cuts}
+$G=g+A t x^2+Dt^3$という全切断についてH3条件は正確に
+\[
+ D(27D+16A^3)(49D-8A^3)\ne0
+\]
+である．$A\ne0$の部分では$A=1$へ規格化でき，
+$\kappa=D/A^3\in\mathbb A^1\setminus\{0,-16/27,8/49\}$が完全な同型不変量となる．
+この部分の幾何学的群oidは
+$(\mathbb A^1\setminus\{0,-16/27,8/49\})\times BS_3$である．
+$A=0,D\ne0$は一軌道で，慣性は$G(3,3,3)$となる．
+\end{corollary}
+\begin{proof}
+四次式の制限は
+\[
+ \Psi(A^3,0,0,D)
+ =(D+16A^3/27)(D-8A^3/49)^3
+\]
+なので判定は直ちに従う．非零の二つの悪い値は，中心曲面の特異点からも直接確認できる．
+$D=-16A^3/27$では$(u,v,w)=(16A^2/9,0,0)$，
+$D=8A^3/49$では
+\[
+ (u,v,w)=(-24A^2/49,-40\eta^2A^2/49,-40\eta A^2/49),\qquad\eta^3=1
+\]
+が特異点である．$A\ne0$ならいずれも中心原点以外であり，Azumaya上の実際の特異性である．
+
+非零一係数の切断間の同型は，monomial表示でその座標直線を保たなければならない．
+作用式から$D/A^3$は変わらず，残る$t$スカラーで$A=1$にできる．
+そのstabilizerは三乗根対角群の一因子と残る二座標の交換からなる$S_3$で，
+$\kappa$に依存しない同じ行列で作用するため表示の積群oidとなる．
+全係数零では位数54の群全体が残る．
+\end{proof}
+
+\subsection{位数二の分裂楕円族全体と位数648の有限比較}
+\label{sec:clifford-hesse-family}
+固定値1に限らない被覆も得られる．以下の族と切断は全て明示的であり，
+全AS4包絡の被覆という主張を含めない．
+\[
+ \mathcal H=\{h\in k^*:h^3\ne-1,8\},\qquad B_h=S_h[t],
+\]
+\[
+ S_h=k\langle x,y,z\rangle/(yz+zy=h x^2,\ zx+xz=h y^2,\ xy+yx=h z^2).
+\]
+$u=x^2,v=y^2,w=z^2$，
+\[
+ g_h=xyz-\frac h2(z^3-y^3+x^3),\qquad
+ T_h=\frac{(4+h^3)uvw-h^2(u^3+v^3+w^3)}4
+\]
+と置く．$s$を可換な射影化変数として
+\[
+ \mathcal F_{h,a}(u,v,w,s)
+   =T_h(u,v,w)+s(Au+B_0v+Cw+s)^2
+\]
+を作り，四つの二次偏微分の斉次resultantを$\Delta_h(a)$と書く．
+その非零性は$\mathcal F_{h,a}=0\subset\mathbb P^3$の滑らかさの有限方程式であり，
+resultantの任意の非零定数倍を使ってよい．
+
+$\Sigma=x^3+y^3+z^3$，$\Pi=xyz$とし，$\Gamma_{216}\subset\PGL_3$を
+Hesse pencil $\langle\Sigma,\Pi\rangle$の九つのflexを保つ群とする．
+次の有限中心拡大を用いる：
+\[
+ \widetilde\Gamma
+ =\{(M,a_0):[M]\in\Gamma_{216},\ a_0^3=\det M\}
+       /\{(rI,r):r\in k^*\},
+ \qquad 1\to\mu_3\to\widetilde\Gamma\to\Gamma_{216}\to1.
+\]
+従って$|\widetilde\Gamma|=648$である．
+
+\begin{theorem}[このHesse分裂族の全H3幾何学的分類]
+\label{thm:clifford-hesse-all-cuts}
+全ての$h\in\mathcal H$について$B_h$はnoetherian quadratic Koszul CY AS4型14641で，
+その全H3切断は
+\[
+ B_h/(g_h+t(Au+B_0v+Cw)+Dt^3)
+\]
+のうち$D\ne0$かつ，$D=1$へ規格化した後に$\Delta_h(a)\ne0$となるものに限られ，
+これらは全てH3である．族全体の幾何学的対象と内在的pointed矢の群oidは
+\[
+ [\mathcal W/\widetilde\Gamma],\qquad
+ \mathcal W=\{(h,a)\in\mathcal H\times\mathbb A^3:\Delta_h(a)\ne0\}
+\]
+となる．特にこれは非空四次元の明示的有限商である．
+
+作用は有限個の行列による次の処方で決まる．
+$C_h=-h\Sigma+6\Pi$と置き
+\[
+ C_h(MX)=c C_{h'}(X),\qquad c\ne0
+\]
+で$h'$を定める．$q_{h'}(M)$を，$S_{h'}$内で$(MX)_i^2$を$u,v,w$へ展開した三行行列とすれば，
+\[
+ (h,(A,B_0,C))\longmapsto
+ \left(h',\frac{a_0}{\det M}(A,B_0,C)q_{h'}(M)\right).
+\]
+行$(\alpha,\beta,\gamma)$に対応する$q$の行は
+\[
+ (\alpha^2+h'\beta\gamma,\ \beta^2+h'\alpha\gamma,\ \gamma^2+h'\alpha\beta)
+\]
+である．全慣性はこの有限作用のstabilizerで与えられる．
+固定$h$の比較群の位数は
+\[
+ \begin{cases}54,&h^6+20h^3-8\ne0,\\108,&h^6+20h^3-8=0.\end{cases}
+\]
+また標準半単純化がいずれかの$B_h$となる包絡には，非自明な単冪持上げは存在しない．
+\end{theorem}
+\begin{proof}
+前のClifford表示を$h$付きで繰り返す．
+三回の交換子の計算は$(1+h^3)[x^2,y]=0$となり，$h^3\ne-1$なので中心二次の表示は同じである．
+二次双対は
+$k[X,Y,Z]/(X^2+hYZ,Y^2+hZX,Z^2+hXY)$となる．
+$1+h^3\ne0$により三つの二次式に射影共通零点はなく，完全交叉Frobeniusである．
+Iyudu--ShkarinのKoszul性と巡回トップにより全$h\in\mathcal H$でCY AS3を得る．
+中心は$k[u,v,w,g_h]/(g_h^2+T_h)$である．
+point curveと中心の三次曲線はそれぞれ
+\[
+ h(x^3+y^3+z^3)+(2-h^3)xyz=0,\qquad T_h=0
+\]
+である．Hesse判別式の因子は
+\[
+ (2-h^3)^3+27h^3=-(h^3-8)(h^3+1)^2,\quad
+ (h^3+4)^3-27h^6=(h^3-8)^2(h^3+1)
+\]
+であり，$h\in\mathcal H$で両方滑らかである．
+point graphは対称なので二周期，不動点は$h^3\ne8$により存在しない．
+従って前と同じTHCR，整域・内在的rank，Azumayaおよび奇数接空間障害の証明が全て適用できる．
+$D\ne0$でのアフィン中心は$T_h+(Au+B_0v+Cw+D)^2=0$となり，
+その滑らかさは一chartのH3条件と同値である．
+$D=1$とすれば射影閉包の無限遠は滑らかな$T_h=0$であり，
+従ってアフィン滑らかさと$\Delta_h(a)\ne0$は同値となる．
+$a=0$では$T_h+s^3$は滑らかなので各$h$で非空開集合となる．
+
+全同型の被覆を確認する．一意な巡回トップが完全対称テンソルであるため，
+$S_h\simeq S_{h'}$の線型同型は正確に$C_h(MX)=cC_{h'}(X)$を満たす行列である．
+両曲線は滑らかなHesse pencilの元で同じ九つのflexを持つので，
+その射影行列は全flex保存群$\Gamma_{216}$に入る．
+この群の全生成元と被覆は\cite[Lemma 5.1 and proof]{ISClifford}に明記されている．
+付属検証器はその三生成元から$\mathbb Q(\zeta_3)$上で216個の射影行列を全列挙し，
+各行列がpencilを保つこと，baseの作用が12個でkernelが18個であることを確認する．
+baseの作用は$C_h$の$j$値
+\[
+ j(h)=\frac{110592(1+h^3)^3}{h^3(8-h^3)^3}
+\]
+を保ち，$\mathcal H$はpencilの特異値と$j=0$の値を除いた部分なので不変である．
+従って全ての同型がこの有限集合で比較でき，別の線型同一視を落としていない．
+
+各$S_h$のcharacterはaugmentationだけなので，包絡間の同型にも$t$平行移動はない．
+$g_h$は交代volumeであるため$g_h\mapsto\det M\,g_{h'}$であり，
+$D=1$を保つ条件は$a_0^3=\det M$となる．
+二次中心への作用をClifford関係で展開すれば表示の$q_{h'}$が得られ，
+三次元の係数作用も従う．次数スカラーを除くことが，正確に$\widetilde\Gamma$の定義である．
+二次包絡への同型の一意持上げにより，内在的pointed同値の群oidもこれで尽くされる．
+
+baseの12個の作用は$A_4$をなし，恒等1個，位数2が3個，位数3が8個である．
+位数2の三つの固定点多項式の積は定数倍を除き$h^6+20h^3-8$，
+位数3の八つの固定点多項式の積は
+$h^2(h^3-8)^2(h^3+1)^2$である（無限遠固定点の因子は除く）．
+後者の零点は$\mathcal H$の外なので，内部でのbase stabilizerは通常自明，
+前者の六点で位数2だけとなる．kernelの18と中心拡大の3を掛けて位数54，108を得る．
+これらの多項式恒等式も付属検証器で係数を厳密に比較する．
+
+最後に，$\operatorname{Aut}_{\mathrm{gr}}S_h$の恒等成分は次数スカラー$\mathbb G_m$である．
+従って$\operatorname{Aut}_{\mathrm{gr}}B_h$の恒等成分は二次元torusで，その他は有限成分である．
+単冪行列はZariski閉包が連結な単冪群を生成するため恒等成分に入り，torus内では恒等しかない．
+標準単冪持上げには従って非自明なものが存在しない．
+\end{proof}
+
+この四次元有限商は，明示的な位数二Hesse分裂包絡を持つ部分の全admissible対象・同型・慣性を与える．
+非分裂中心拡大，別の楕円位数，この族の外への変形，および全H3相対降下は依然別問題である．

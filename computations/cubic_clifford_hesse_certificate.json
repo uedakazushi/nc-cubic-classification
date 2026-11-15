@@ -1,0 +1,135 @@
+{
+  "version": "classification-v7",
+  "field": "QQ(zeta3)",
+  "projective_Hessian_group_order": 216,
+  "base_image_order": 12,
+  "base_kernel_order": 18,
+  "fixed_h_one_projective_stabilizer": 18,
+  "base_orders": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+  },
+  "base_transformations": [
+    {
+      "matrix": [
+        "1",
+        "-2*CRootOf(z**2 + z + 1, 1)",
+        "-CRootOf(z**2 + z + 1, 1)",
+        "1 + CRootOf(z**2 + z + 1, 1)"
+      ],
+      "order": 3
+    },
+    {
+      "matrix": [
+        "1",
+        "-2*CRootOf(z**2 + z + 1, 1)",
+        "-1",
+        "-CRootOf(z**2 + z + 1, 1)"
+      ],
+      "order": 3
+    },
+    {
+      "matrix": [
+        "1",
+        "-2*CRootOf(z**2 + z + 1, 1)",
+        "1 + CRootOf(z**2 + z + 1, 1)",
+        "-1"
+      ],
+      "order": 2
+    },
+    {
+      "matrix": [
+        "1",
+        "-2",
+        "-CRootOf(z**2 + z + 1, 1)",
+        "-CRootOf(z**2 + z + 1, 1)"
+      ],
+      "order": 3
+    },
+    {
+      "matrix": [
+        "1",
+        "-2",
+        "-1",
+        "-1"
+      ],
+      "order": 2
+    },
+    {
+      "matrix": [
+        "1",
+        "-2",
+        "1 + CRootOf(z**2 + z + 1, 1)",
+        "1 + CRootOf(z**2 + z + 1, 1)"
+      ],
+      "order": 3
+    },
+    {
+      "matrix": [
+        "1",
+        "2 + 2*CRootOf(z**2 + z + 1, 1)",
+        "-CRootOf(z**2 + z + 1, 1)",
+        "-1"
+      ],
+      "order": 2
+    },
+    {
+      "matrix": [
+        "1",
+        "2 + 2*CRootOf(z**2 + z + 1, 1)",
+        "-1",
+        "1 + CRootOf(z**2 + z + 1, 1)"
+      ],
+      "order": 3
+    },
+    {
+      "matrix": [
+        "1",
+        "2 + 2*CRootOf(z**2 + z + 1, 1)",
+        "1 + CRootOf(z**2 + z + 1, 1)",
+        "-CRootOf(z**2 + z + 1, 1)"
+      ],
+      "order": 3
+    },
+    {
+      "matrix": [
+        "1",
+        "0",
+        "0",
+        "-1 - CRootOf(z**2 + z + 1, 1)"
+      ],
+      "order": 3
+    },
+    {
+      "matrix": [
+        "1",
+        "0",
+        "0",
+        "CRootOf(z**2 + z + 1, 1)"
+      ],
+      "order": 3
+    },
+    {
+      "matrix": [
+        "1",
+        "0",
+        "0",
+        "1"
+      ],
+      "order": 1
+    }
+  ],
+  "good_base": "h != 0, h^3 != -1,8",
+  "special_stabilizer_polynomial": "h^6+20*h^3-8",
+  "PAut_orders": {
+    "generic": 18,
+    "special": 36
+  },
+  "normalized_cut_stabilizer_group_orders": {
+    "generic_base": 54,
+    "special_base": 108
+  },
+  "global_group_order": 648,
+  "ordinary_proof_dependency": "Flex-preserving group completeness; AS3/THCR, Azumaya and chart proofs. Enumeration alone is not an all-AS4 coverage theorem."
+}

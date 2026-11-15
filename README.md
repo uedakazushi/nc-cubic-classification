@@ -10,7 +10,9 @@
 
 [証明付き原稿](papers/weak_cubic_axioms.tex)／[研究ノート](research/cubic_14641_classification.md)／[検証範囲](research/cubic_classification_validation.json)。厳密検算とLuaLaTeX全文組版を実施。**全AS4包絡を覆うH3の完全分類・相対stackの降下・成分性は未完成。** Pymの標準CY chartではL112/R22/S23の一般点とE3の非零変形を中心三次の消滅で除外した。as4の半単純化を使うと、量子基底の全非自明unipotent持上げも除外され、この部分全体は同じ五型で尽くされる。可換三変数の非零微分Ore拡大は、点対象の自己Extが1,3,4,4,…となるため、特殊値も全て除外した。CY半単純化の交換子次元4以上の非可換層と三交換子beta層も全持上げを除外した。輸入元の固定SHA・仮定・原検算は[輸入記録](research/as4_imports.json)に明記。次はR13の全admissible切断、L112/R22/E3の特殊locus、残る低交換子CY・非スカラー共鳴層と相対降下を扱う。並行heart/corner研究は維持する。
 
-良い楕円境界を持つ固定CY中心拡大では、全切断の整域性と内在的rank条件を証明し、H3条件をアフィン中心商の有限大域次元へ正確に帰着した。さらに**複素数体上の分裂中心拡大 B=S[t] は全切断を判定**：g+λt³はλ≠0で一つのH3同型軌道、λ=0とt³は除外。慣性はμ3によるPAut(S)の中心拡大。証明は[全切断の認識](papers/sections/cubic_r13_cut_reduction.tex)。有限位数translationの楕円境界を持つ固定包絡では、非admissible値が有限個であることも証明した。一般の非分裂中心値の明示と全境界・相対降下は未完成。
+良い楕円境界を持つ固定CY中心拡大では、全切断の整域性と内在的rank条件を証明し、H3条件をアフィン中心商の有限大域次元へ正確に帰着した。さらに**低次中心Z(S)1=Z(S)2=0,Z(S)3=kgを仮定した複素数体上の分裂中心拡大 B=S[t] は全切断を判定**：g+λt³はλ≠0で一つのH3同型軌道、λ=0とt³は除外。慣性はμ3によるPAut(S)の中心拡大。証明は[全切断の認識](papers/sections/cubic_r13_cut_reduction.tex)。有限位数translationの楕円境界を持つ固定包絡では、非admissible値が有限個であることも証明した。一般の非分裂中心値の明示と全境界・相対降下は未完成。
+
+**位数二Clifford–Sklyaninの明示的Hesse分裂包絡族についても全切断を分類した。** 中心三次の五基底から全切断を復元し、H3条件をアフィン中心曲面の滑らかさへ帰着。h=1の固定包絡では四次式Ψを明示し、三次元の位数54有限商を得た。一係数方向の悪い値は0,−16A³/27,8A³/49。hも動かす全指定族は**四次元・位数648の有限商**で、全矢と慣性の判定を与える。証明は[Clifford全切断](papers/sections/cubic_clifford_full_cuts.tex)。全AS4包絡の被覆や成分性とは区別する。
 
 ## 現在の重点：heart比較、まずcubic surface
 
