@@ -21,7 +21,7 @@
 \newcommand{\cP}{\mathfrak P}\newcommand{\Sym}{\operatorname{Sym}}
 \title{内在的非可換三次曲面の14641認識とskew包絡の分類\\\large dP1共通定義・量子FermatのPym成分・正規境界認識}
 \author{研究原稿：証明済みの命題と未解決の認識条件を区別する}
-\date{2026年11月15日\quad classification-v5}
+\date{2026年11月15日\quad classification-v6}
 \begin{document}\maketitle
 \begin{abstract}
 大域次元2の$k$線形Abel圏とrank one torsion-free exceptional構造対象，反Serre作用，
@@ -48,6 +48,9 @@ H3を31パラメータ・五ambient型へ絞り，各型の全admissible係数�
 as4の指定半単純化定理を用い，量子基底の非自明単冪持上げを全て除外する．
 可換三変数の非零導分Ore包絡ではpoint対象の自己Extが任意の高次数で非零となり，
 中心三次が存在する特殊値も含めH3から除外される．
+良い楕円中心拡大の全切断の整域性と内在的rankを証明し，
+複素数体上の分裂中心拡大では全切断と幾何学的群oidを分類する．
+有限位数楕円境界の固定ambientでは非admissible値が有限個であることも示す．
 全モジュライの代数性は証明済みとはせず，有限提示による候補，その形式局所模型，
 超曲面認識部分での射，中心三次incidenceの一般ファイバーを正確に定式化する．
 \end{abstract}
@@ -297,6 +300,7 @@ Abel圏同値による分類，また全27点の曲面条件の認識ではな�
 \input{papers/sections/cubic_skew_admissible_classification.tex}
 \input{papers/sections/cubic_pym_generic_exclusions.tex}
 \input{papers/sections/cubic_as4_reductions.tex}
+\input{papers/sections/cubic_r13_cut_reduction.tex}
 
 \section{冗長性と低次数認識}
 \begin{lemma}[共通公理からの負次数消滅]
@@ -1060,10 +1064,13 @@ ambientへの射を得る．これは$\gldim\qgr=2$をまだ要求しない環�
 従って，Brauer型の捩れがある表示から降下しても対応するconicは点を持ち分裂する．
 \end{proof}
 
-既存の中心拡大型では，楕円境界とPBW条件を保つ範囲で，
-$B/(\Omega+\lambda t^3)$が大域次元2のtailsを持つvery-generalな$\lambda$を得る．
-これは中心局所化と代数的分離拡大の議論\cite{RSV}，
-および有限中央chartの貼合せによる．詳細は本bundleの既存surface稿に保持した．
+良い楕円中心拡大の仮定の下では，定理\ref{thm:r13-exact-cut-reduction}と
+命題\ref{prop:r13-all-transcendental-cuts}により，
+$B/(\Omega+\lambda t^3)$は定義体上超越的な全$\lambda$でH3となる．
+整域性と内在的rankは全$\lambda$で成立し，滑らかさは一つのアフィン中心商へ帰着する．
+分裂包絡の全切断は定理\ref{thm:r13-split-all-cuts}で決定した．
+有限位数楕円境界の固定包絡では定理\ref{thm:r13-torsion-finite-exceptions}により例外は有限個だが，
+非分裂の例外値の明示と全境界の被覆はなお残る．
 任意の代数閉$k$に対しては，幾何学的一般fiberの係数体の超越的な$\lambda$として読む．
 $k=\overline{\mathbb Q}$の各固定ambientに超越数を選べると主張してはいけない．
 
@@ -1081,7 +1088,7 @@ $R(1,3)$を支配する枝の像の閉包の余次元が0であることが得�
 一方，その境界の全対象における存在は未証明である．
 量子Fermatの中心切断については定理\ref{thm:fermat-gerbe}で良い開部分の軌道stackを決定したが，
 全変形のrigidityとは区別する．
-優先すべき問題は，次の二つの系統へ分かれる．
+優先すべき問題は，次の三つの系統へ分かれる．
 第一は全weak対象の認識であり，条件2の公理からの導出，二次包絡のAS正則性，
 族での全次数平坦性とSerre条件の認識，全stackの代数性を含む．
 第二は可換三次曲面を含む中心拡大型の成分であり，
@@ -1102,6 +1109,10 @@ Skew包絡の幾何学的H3対象は定理\ref{thm:all-skew-H3-geometric}で尽�
 Nakayama条件，非CY符号型，256座標jetの整数Smith証明書，
 31パラメータ・五型のadmissibilityとrank障害，
 四つの標準CY chartの中心三次障害は追加の四検証器で厳密検算する．
+追加の\texttt{verify\_cubic\_r13\_cuts.py}はSklyaninの低次中心，
+分裂包絡の中心三次，曲線Jacobianとcharacterの三chart，Hilbertと作用の恒等式を検算する．
+全切断のrank認識，有限位数境界の有限例外および分裂族の分類は通常の証明であり，
+有限rankから高次正則性を外挿してはいない．
 計算は一般の認識定理や全AS4の分類を証明したものではない．
 外部査読，Lean形式化，新規性の網羅的調査は未実施である．
 
@@ -1130,7 +1141,7 @@ Adv. Math. 281 (2015), 1216--1241;
 \href{https://arxiv.org/abs/1507.07054}{arXiv:1507.07054}, Introduction, \S1, \S3.5.
 \bibitem{RSV} J. V. Rennemo, E. Segal, M. Van den Bergh,
 \emph{A non-commutative Bertini theorem},
-\href{https://arxiv.org/abs/1705.01366}{arXiv:1705.01366}, Lemmas 3.2--3.3.
+\href{https://arxiv.org/abs/1705.01366v2}{arXiv:1705.01366v2}, Proposition 2.1, Lemmas 3.2--3.3.
 
 \bibitem{CS} T. Cassidy, B. Shelton,
 \emph{PBW-deformation theory and regular central extensions},
@@ -1168,6 +1179,13 @@ Remark 2.5の一般同定予想は使用しない．
 \emph{Some properties of non-commutative regular graded rings},
 Glasgow Math. J. 34 (1992), 277--300, Theorem 6.2(ii).
 \href{https://doi.org/10.1017/S0017089500008843}{doi:10.1017/S0017089500008843}.
+\bibitem{RainsCut} E. M. Rains, \emph{Filtered deformations of elliptic algebras},
+\href{https://arxiv.org/abs/2107.13540v2}{arXiv:2107.13540v2}, Theorem 2.13 and preceding discussion.
+\bibitem{CCKMcut} T. Cassidy, A. Conner, E. Kirkman, W. F. Moore,
+\emph{Periodic free resolutions from twisted matrix factorizations},
+\href{https://arxiv.org/abs/1307.8415v1}{arXiv:1307.8415v1}, Theorems 4.7, 5.5.
+\bibitem{ChenCut} X.-W. Chen, \emph{Generalized Serre duality},
+\href{https://arxiv.org/abs/math/0610258}{arXiv:math/0610258}, Theorem 3.10.
 \bibitem{AS4pinned} \emph{as4 research repository},
 \href{https://github.com/uedakazushi/as4/tree/60eacafa28156a5fc62f74eae004d64a84675f4b}{commit 60eacafa28156a5fc62f74eae004d64a84675f4b}.
 \texttt{research/proofs/UNIPOTENT\_UNTWIST.tex}, \texttt{QUANTUM\_UNIPOTENT\_LIFTS.tex},

@@ -10,6 +10,8 @@
 
 [証明付き原稿](papers/weak_cubic_axioms.tex)／[研究ノート](research/cubic_14641_classification.md)／[検証範囲](research/cubic_classification_validation.json)。厳密検算とLuaLaTeX全文組版を実施。**全AS4包絡を覆うH3の完全分類・相対stackの降下・成分性は未完成。** Pymの標準CY chartではL112/R22/S23の一般点とE3の非零変形を中心三次の消滅で除外した。as4の半単純化を使うと、量子基底の全非自明unipotent持上げも除外され、この部分全体は同じ五型で尽くされる。可換三変数の非零微分Ore拡大は、点対象の自己Extが1,3,4,4,…となるため、特殊値も全て除外した。CY半単純化の交換子次元4以上の非可換層と三交換子beta層も全持上げを除外した。輸入元の固定SHA・仮定・原検算は[輸入記録](research/as4_imports.json)に明記。次はR13の全admissible切断、L112/R22/E3の特殊locus、残る低交換子CY・非スカラー共鳴層と相対降下を扱う。並行heart/corner研究は維持する。
 
+良い楕円境界を持つ固定CY中心拡大では、全切断の整域性と内在的rank条件を証明し、H3条件をアフィン中心商の有限大域次元へ正確に帰着した。さらに**複素数体上の分裂中心拡大 B=S[t] は全切断を判定**：g+λt³はλ≠0で一つのH3同型軌道、λ=0とt³は除外。慣性はμ3によるPAut(S)の中心拡大。証明は[全切断の認識](papers/sections/cubic_r13_cut_reduction.tex)。有限位数translationの楕円境界を持つ固定包絡では、非admissible値が有限個であることも証明した。一般の非分裂中心値の明示と全境界・相対降下は未完成。
+
 ## 現在の重点：heart比較、まずcubic surface
 
 一般の非可換del Pezzoに対する **Rains heart・VdB heart・AS heart・anticanonical heart** の四構成を比較する。dP1に限定せず、最初に次数3のcubic surfaceを扱う。heartの存在、faithfulなrealization、導来同値、t-exactness、構造対象・反Serre・境界・markingの保存と族の降下を区別する。

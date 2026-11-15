@@ -1,0 +1,341 @@
+\subsection{良い楕円中心拡大における全切断の認識}
+\label{sec:r13-all-cut-reduction}
+ここでは$R(1,3)$全境界を覆うとは主張せず，次の明示的な仮定を満たす
+\emph{固定した}包絡の全三次切断を扱う．
+$B$は左右noetherian quadratic Koszul CY AS4型14641，$t\in Z(B)_1$は正則とし，
+三つのactive変数の次数による非負濾過が
+\[
+ \operatorname{gr}_{\mathrm{act}}B=S\otimes_k k[t]
+\]
+を満たすとする．$S=B/(t)$は三変数二次AS正則整域で
+\[
+ Z(S)_1=Z(S)_2=0,\qquad Z(S)_3=kg,
+ \qquad H=S/(g)=B(E,\mathcal L,\rho)
+\]
+と仮定する．ここで$E$は滑らかな整楕円曲線，$\deg\mathcal L=3$である．
+$g$を最高active記号に持つ$\Omega\in Z(B)_3$の存在も仮定する．
+これらを以下で\emph{良い楕円中心拡大の仮定}と呼ぶ．
+特に中心三次の持上げの存在や中心の低次数条件を，任意の特殊ambientに仮定なしで拡張しない．
+
+\begin{proposition}[全切断での整域性と内在的rank]
+\label{prop:r13-all-cut-domain-rank}
+良い楕円中心拡大の仮定の下で
+\[
+ Z(B)_1=kt,\quad Z(B)_3=k\Omega\oplus kt^3,\qquad
+ R_\lambda=B/(\Omega+\lambda t^3)\quad(\lambda\in k)
+\]
+と置く．全ての$\lambda$について
+\[
+ \operatorname{gr}_{\mathrm{act}}R_\lambda=H\otimes_k k[t]
+\]
+は整域であり，$R_\lambda$も整域である．さらに
+$\mathcal A=\qgr R_\lambda$の構造対象$\OO=\pi R_\lambda$は
+\eqref{eq:unified-rank}のGabriel--Krull rank-one torsion-free条件を満たす．
+この結論にtailsの有限大域次元を仮定しない．
+\end{proposition}
+\begin{proof}
+中心の最高active記号を取ると$S$の中心へ写る．
+三次では$g$の倍数を$\Omega$で引き，次いでactive次数2，1の中心が零であることを使えば，
+残るものは$kt^3$だけである．一次でも同様に$kt$だけとなる．
+
+$G_\lambda=\Omega+\lambda t^3$の最高active記号は$g$で，整域
+$S\otimes k[t]$上正則である．任意の非零$b\in B$について
+$\operatorname{in}(bG_\lambda)=\operatorname{in}(b)g$であり，
+中心性からイデアル$(G_\lambda)$の全元は一つの積$bG_\lambda$で書ける．
+従って初期イデアルは正確に$(g)$であり，表示の随伴商を得る．
+THCR $H$は$k(E)[z,z^{-1};\rho]$へ埋め込まれるので整域である．
+随伴次数付き環が整域なら元の濾過環も整域である．特に$t$は$R_\lambda$上正則で
+$R_\lambda/(t)=H$となる．
+
+rankについて，単に整域だからと結論せず，定義された二段階のSerre商を調べる．
+以下$R=R_\lambda$と略記する．全ての有限生成graded $R$加群$M$は$B$上も有限生成で，
+$B$上有限graded自由解消を持つ．従って
+$H_M(z)=p_M(z)/(1-z)^4$である．$M$は有限個の$R$のshiftの商なので
+$\dim M_n=O(n^2)$であり，十分大きい$n$では次数高々2の整数値多項式となる．
+$\mathcal T_d$をHilbert多項式の次数が$d-1$以下の対象のSerre部分圏とする．
+多項式零は$\qgr$で零である．$\mathcal T_1$では正の定数項の加法性から全対象が有限長である．
+$\mathcal T_2/\mathcal T_1$では正の整数である一次係数の加法性から全対象が有限長となる．
+従って$\mathcal T_1\subset\mathcal A_0$，$\mathcal T_2\subset\mathcal A_1$である．
+ここで$\mathcal A_0,\mathcal A_1$は\eqref{eq:unified-rank}の定義と同じである．
+Serre商の部分対象は代表を取って比較できるので，この有限長性は
+さらに$\mathcal A/\mathcal A_0$へ商を取っても保たれる．
+
+$\OO$は$\mathcal A_1$に入らない．実際
+$\OO\supset\pi tR\supset\pi t^2R\supset\cdots$の連続商は
+$\pi H$のshiftである．$\qgr H\simeq\operatorname{coh}E$は
+$t$に殺される対象の完全忠実な完全部分圏として$\qgr R$に入り，
+$\pi H$は$\mathcal O_E$に対応する．これは閉点$p\in E$に対する
+$\mathcal O_E(-np)$の鎖により有限長ではない．
+従って上の鎖は$\mathcal A/\mathcal A_0$でも真に減少し，$\OO\notin\mathcal A_1$となる．
+
+任意の非零斉次右イデアル$I\subset R$はある$fR\simeq R(-a)$を含む．
+整域性とHilbert級数から$H_{R/fR}=(1-z^a)H_R$は極の位数高々2を持つので，
+$\pi(R/I)\in\mathcal T_2\subset\mathcal A_1$である．
+$\OO$の非零部分対象はtailsでこのような$I$により表せる．
+よって$\mathcal A/\mathcal A_1$で$\OO$の全非零部分対象は全体と一致し，
+その像は非零単純である．また非零部分対象は$\pi fR$を含むので
+$\mathcal A_1$に入れない．これにより$\Hom(T,\OO)=0$ ($T\in\mathcal A_1$)を得る．
+\end{proof}
+
+\begin{lemma}[滑らかな中心境界と一つのアフィンchart]
+\label{lem:r13-one-chart-smoothness}
+$B,t,G_\lambda,R_\lambda$を前命題の通りとし
+\[
+ D=B[t^{-1}]_0,\qquad \omega=\Omega/t^3\in Z(D),\qquad
+ U_\lambda=D/(\omega+\lambda)
+\]
+と置く．$U_\lambda$の大域次元が有限なら
+\[
+ \mathrm D^b(\qgr R_\lambda)
+  =\operatorname{thick}\{\pi R_\lambda(n):n\in\mathbb Z\},
+ \qquad \gldim\qgr R_\lambda=2.
+\]
+逆に$\gldim\qgr R_\lambda=2$なら$\gldim U_\lambda\le2$である．
+従ってこの固定ambientの滑らかな切断パラメータは，正確に
+$\{\lambda:\gldim U_\lambda<\infty\}$である．
+これはその集合の有限方程式や有限な例外値の一覧をまだ与えるものではない．
+\end{lemma}
+\begin{proof}
+$R=R_\lambda$と略記し，$\mathcal P=\operatorname{thick}\{\pi R(n)\}$，
+$\mathcal Q=\mathrm D^b(\qgr R)/\mathcal P$と置く．
+$R/(t)=H$で，$t$は正則だから，$\pi H(n)$は二項自由解消を持ち$\mathcal P$に入る．
+滑らかな楕円曲線上では$\mathrm D^b(\operatorname{coh}E)$はample line束のtwistsで厚く生成される．
+実際，全対象にtwistsの有限直和からの全射を反復し，曲線のExt次数上界1で
+二段階のYoneda拡大を分裂すれば有限複体の直和因子として表せる．
+従って$t^N$に殺されるcoherent $R$加群は$t$による有限filtrationを通じて$\mathcal P$に入る．
+
+任意のcoherent対象のgraded liftは，有限syzygyの後に$B$上の$G_\lambda$の
+有限自由行列因子化により表せる\cite[Theorems 4.7, 5.5]{CCKMcut}．
+右加群には$B^{\mathrm{op}}$を適用し，中心元なのでnormalizing twistは恒等である．
+この因子化を$d^2=G_\lambda$と略記する．$t$を逆にすると
+$R[t^{-1}]=U_\lambda[t,t^{-1}]$であり，仮定によりcokernelの射影次元は有限である．
+従って周期解消は分裂する．その縮約$\bar h$を
+$B[t^{-1}]$上へ持ち上げれば$dh+hd=1+G_\lambda T$となる．
+$d$と可換することと$G_\lambda$の正則性から$[d,T]=0$であり，
+$h'=h-\frac12dT$は$dh'+h'd=1$を満たす．
+有限個の分母を払うと，元の因子化上で
+$t^N\mathrm{id}=dK+Kd$となる．
+従って$\mathcal Q$で$t^N$はこの対象に零作用する．
+一方，$t^N$のconeのcohomologyは$t^N$に殺されるので$\mathcal P$に入る．
+$\mathcal Q$ではこのconeは元の対象とそのtwist・shiftの直和へ分裂するから，
+元の対象も零である．これで$\mathcal Q=0$を得る．
+一様な$N$を全対象に要求してはいない．
+
+$R$のbalanced dualizing complexは$R(-1)[3]$である．
+左右$\chi$と有限local cohomological dimensionは正則中心商に保存される
+\cite{YZ}．特に$\pi R(n)$は有限射影次元を持ち，
+前段の生成性から全有界coherent対象がそうなる．
+Chen\cite[Theorem 3.10]{ChenCut}の一般化Serre双対性により
+全圏で$S=(-1)[2]$となる．従って
+$\Ext^i(M,N)^*\simeq\Ext^{2-i}(N,M(-1))$は$i>2$で零であり，
+$M=\OO,N=\OO(-1)$なら$\Ext^2(M,N)^*\simeq\End(N)\ne0$となる．
+これで正確に大域次元2を得る．
+
+逆向きには中心局所化によるcoherent圏の商
+$\qgr R\to\operatorname{mod}_{\mathrm{fg}}U_\lambda$を使う．
+有限生成$U_\lambda$加群は有限表示の分母を払ってgraded $R$加群へ延長できる．
+Yoneda拡大およびその同値を表す有限図式も，有限表示性と中心$t$の分母払いにより延長できる．
+従って局所化後のExtは，$t$-torsionを除いたcoherent lattice間のExtの直極限で計算される．
+cofinalなlatticeは$t^r$倍で取れる．$\qgr R$で次数$i>2$のExtが零なら，
+局所化後も零である．noetherian環では有限生成加群の射影次元の一様上界は
+全大域次元の上界を与えるので$\gldim U_\lambda\le2$となる．
+\end{proof}
+
+\begin{theorem}[良い楕円中心拡大のH3切断の正確な帰着]
+\label{thm:r13-exact-cut-reduction}
+良い楕円中心拡大の仮定の下で
+\[
+ \Lambda_B=\{\lambda\in k:\gldim D/(\omega+\lambda)<\infty\}
+\]
+と置く．固定包絡$B$を持つH3対象の幾何学的群oidは
+\[
+ [\Lambda_B/(\operatorname{Aut}_{\mathrm{gr}}B/\mathbb G_m)]
+\]
+で与えられる．ここで$\Lambda_B$を代数的開集合と断定せず，
+表示は幾何学的対象とその矢の作用群oidの意味で用いる．
+$\phi(t)=a t$，$\phi(\Omega)=b\Omega+c t^3$なら作用は
+\[
+ \lambda\longmapsto\frac{c+a^3\lambda}{b}\qquad(a,b\ne0)
+\]
+である．特に固定切断の内在的自己同型群はこの作用のstabilizerである．
+\end{theorem}
+\begin{proof}
+$B$はCYなのでH3関係は中心三次であり，前命題のペンシルに限られる．
+$G=t^3$の商は零因子を持つため補題\ref{lem:h3-orbit-domain}に反する．
+残りは一意に$G=\Omega+\lambda t^3$と書ける．
+前二命題よりrank条件と滑らかさは正確に表示の条件となる．
+その他のH3条件も確認する．正則中心商$R$は左右noetherian AS Gorenstein次元3・parameter 1で
+$H_R(z)=(1-z^3)/(1-z)^4$，$Q(R)=B$を持つ．
+深さ3と局所双対からsection map
+$R_n\simeq\Hom(\OO,\OO(n))$は全$n$で同型，
+$\Ext^1(\OO,\OO)=0$，
+$\Ext^2(\OO,\OO)\simeq R_{-1}^*=0$，$\End(\OO)=k$となる．
+左右$\chi$・一次生成・noetherian性により$(\OO,(1))$はAZ ampleである．
+$S=(-1)[2]$なので反Serreは$(1)$でheartを保つ．
+従って$\lambda\in\Lambda_B$なら全H3条件を満たす．
+
+内在的pointed exact同値は反Serre section環のgraded同型を与え，
+三次商の同型は二次包絡$B$へ一意に持ち上がる．逆に包絡同型は商の同値を誘導する．
+pointed自然同型を除くと次数スカラーが消え，主張の作用群oidとなる．
+中心一次直線$kt$は内在的に保存され，$\Omega$の像は表示の形だから作用式を得る．
+\end{proof}
+
+\begin{proposition}[定義体上超越的な全切断のadmissibility]
+\label{prop:r13-all-transcendental-cuts}
+$k=\mathbb C$とし，良い楕円中心拡大の有限表示と$t,\Omega$が
+有限生成体$k_0\subset\mathbb C$上定義されるとする．
+このとき$k_0$上超越的な全ての$\lambda\in\mathbb C$は$\Lambda_B$に入る．
+従って例外は可算集合に含まれる．ただしこの命題から
+有限個の例外，Zariski開性，有理係数の良い切断の存在は結論しない．
+\end{proposition}
+\begin{proof}
+$B[t^{-1}]$は$B$の中心局所化なので有限大域次元を持つ．
+$B[t^{-1}]=D[t,t^{-1}]$であり，制限と誘導，$t=1$での分裂から
+$D$も有限大域次元を持つ．$\omega$のactive最高記号は$g$だから，
+$\omega$の冪は$k_0$上独立である．
+
+$\lambda$を含む$\mathbb C/k_0$の超越基底$T$を選び，
+$K=k_0(T\setminus\{\lambda\})$とする．
+$D_0$を定義体上の環とし$D_K=D_0\otimes K$と置く．
+忠実平坦な体拡大と$K$-線形な$\mathbb C\to K$の分裂により，
+$D_K$へnoetherian性と大域次元の上界が降下する．
+$\omega$の冪は$K$上でも独立なので，
+中心局所化$D_K\otimes_{K[\omega]}K(\omega)$は有限大域次元を持つ．
+$\omega\mapsto-\lambda$で$K(\omega)\simeq K(\lambda)$と同定した後，
+代数的分離拡大$\mathbb C/K(\lambda)$を施すと$D/(\omega+\lambda)$となる．
+これはnoetherian環$D$の商なのでnoetherianであり，
+\cite[Lemmas 3.2, 3.3]{RSV}により有限大域次元が保たれる．
+前定理を適用する．任意の超越的体拡大で大域次元が保たれると仮定してはいない．
+$k_0$は可算なのでその代数閉包も可算であり，最後の結論を得る．
+\end{proof}
+
+以上によりこの良い固定ambientでは，整域性・内在的rank・例外性・飽和・AZを
+各$\lambda$で再び判定する必要はなく，正確な残課題は
+アフィン中心値$\Lambda_B$の決定である．
+全$R(1,3)$境界の被覆，$\Lambda_B$の有効な方程式，低位数楕円境界の追加中心，
+他ambientとの交叉および相対降下は未解決として残す．
+
+\begin{theorem}[分裂中心拡大の全切断：複素数体上の厳密な例外値]
+\label{thm:r13-split-all-cuts}
+$k=\mathbb C$とし，良い楕円中心拡大のうち$B=S[t]$，$\Omega=g$となるものを取る．
+このとき
+\[
+ \Lambda_B=\mathbb C^*.
+\]
+従って$g+\lambda t^3$の商は，$\lambda\ne0$なら全てH3で互いに同型であり，
+$\lambda=0$だけが非admissibleである．$t^3$切断も既に除外されている．
+さらに$S$のpoint schemeが滑らかな$E$で，shiftが非零translationであると仮定する．
+$\psi(g)=c(\psi)g$ ($\psi\in\operatorname{Aut}_{\mathrm{gr}}S$)と書けば，
+この固定ambientのH3幾何学的群oidは$BH_S$であり
+\[
+ H_S=\{(\psi,a)\in\operatorname{Aut}_{\mathrm{gr}}S\times\mathbb G_m:
+                      c(\psi)=a^3\}/\mathbb G_m^{\mathrm{diag}},
+ \qquad
+ 1\longrightarrow\mu_3\longrightarrow H_S
+ \longrightarrow\operatorname{Aut}_{\mathrm{gr}}S/\mathbb G_m\longrightarrow1.
+\]
+これは指定分裂ambientの分類であり，非分裂変形に対するrigidityではない．
+\end{theorem}
+\begin{proof}
+$S$全体をスカラー倍する自己同型は$g$を三乗倍するので，
+$\lambda\ne0$の全パラメータは一つの軌道をなす．
+前命題で定義体上超越的な$\lambda$は全てadmissibleであるから，
+非零軌道全体がadmissibleとなる．この議論では可算例外集合から
+Zariski開性を一般に推論せず，この分裂族の実際の推移的自己同型作用を用いている．
+
+$\lambda=0$では$R_0=H[t]$と置き，$M=k[t]$，$P=\pi M$を取る．
+$S$のAS Gorenstein条件と$B=S[t]$への誘導から
+$\underline\Ext_B^j(M,B)$は$j=3$以外で零である．
+中心正則元$g$に対するRees/change-of-ringsと局所双対により，
+定理\ref{thm:h3-polynomial-ore-exclusion}と同じく
+\[
+ \Ext^j_{\qgr R_0}(\pi R_0(a),P)=0\ (j>0),\qquad
+ \Hom_{\qgr R_0}(\pi R_0(a),P)=k
+\]
+が全$a$で成立する．ここでは可換三変数の解消の代わりに，$S$の三次元Koszul解消を使った．
+$H$上の$k$の最小graded自由解消のBetti数を$\beta_n$とする．
+これを$-\otimes_HH[t]$で誘導して$\qgr$へ移し，前述のacyclicityを用いると
+\[
+ \dim\Ext^n_{\qgr R_0}(P,P)=\beta_n
+\]
+となる．最小微分の係数は$H_{\ge1}$に入り，$P$には零作用するからである．
+もし$k$の$H$上射影次元が有限なら，Hilbert級数のEuler式は
+\[
+ \frac1{H_H(z)}=\frac{(1-z)^3}{1-z^3}
+              =\frac{(1-z)^2}{1+z+z^2}
+\]
+が多項式であることを意味する．しかし原始三乗根で分母は零，分子は非零なので矛盾する．
+よって$\beta_n>0$は全$n$で成立し，$P$は無限高次の自己Extを持つ．
+従って$\lambda=0$はH3でない．
+
+最後の群oidのために包絡自己同型を調べる．中心一次の一意性から
+$t\mapsto at$，$X\mapsto A X+\beta t$と書ける．
+$X=0,t=1$で評価した合成は$S$のcharacterを与える．
+非零characterは二次関係の多重線型化における点$(p,p)$を与えるが，
+滑らかなpoint scheme上の非零translationに不動点はない．
+従って$\beta=0$で，$\operatorname{Aut}_{\mathrm{gr}}B
+=\operatorname{Aut}_{\mathrm{gr}}S\times\mathbb G_m$である．
+$g+t^3$の直線を保つ条件は$c(\psi)=a^3$となる．
+次数スカラーを除けば表示の$H_S$を得る．
+任意の$\psi$について$c(\psi)$の三乗根を選べるため右射は全射であり，
+核は三つの$t$スカラーである．これらは中心的なので表示の中心拡大を得る．
+\end{proof}
+
+\begin{theorem}[有限位数楕円境界の場合の有限例外と開性]
+\label{thm:r13-torsion-finite-exceptions}
+良い楕円中心拡大の仮定に加えて，$H=B(E,\mathcal L,\rho)$の
+$\rho$が有限位数のtranslationであるとする．
+このとき非零多項式$p_B\in k[a]$が存在し，$p_B(\lambda)\ne0$なら
+$\lambda\in\Lambda_B$である．従って\emph{この固定ambientの一変数切断族}では
+$\mathbb A^1(k)\setminus\Lambda_B$は有限集合，$\Lambda_B$は非空Zariski開集合となる．
+この証明は例外値そのものの計算法や，ambientも動かした全相対族の開性を与えるものではない．
+\end{theorem}
+\begin{proof}
+アフィン切断の全代数を
+\[
+ \mathcal U=D[a]/(\omega+a)\simeq D,\qquad A=k[a]
+\]
+と置き，$a$のfiltration次数を0，active生成元の次数を1とする．
+$g$の正則性による初期イデアルの計算から
+\[
+ \operatorname{gr}\mathcal U=H\otimes_k A
+\]
+となる．各$F_d\mathcal U$は有限自由$A$加群で，全ての閉点への底変更と両立する．
+実際，$H$の各次数の基底を持ち上げ，次数を下げる帰納法を使うと，
+随伴環の基底が$F_d\mathcal U$の$A$基底を与える．
+
+Rains\cite[Theorem 2.13]{RainsCut}は，この有限位数translationでtwistされた楕円環の
+任意のfiltered変形$U$について$\operatorname{gr}Z(U)=Z(H)$を与える．
+これを各fiber $U_\lambda$へ適用する．
+有限自由$A$加群間の交換子行列
+\[
+ M_d:F_d\mathcal U\longrightarrow(F_{d+1}\mathcal U)^{\oplus3},
+       \quad z\longmapsto([z,x_i])_i
+\]
+の核は$Z(\mathcal U)\cap F_d\mathcal U$である．
+各閉点で核の次元は$\sum_{j\le d}\dim Z(H)_j$と一定なので，$M_d$のrankも一定である．
+被約環$A$上で高すぎるminorは零となり，最大rankのminorによる開被覆上では
+行基本変形で核が直和因子となる．従って核の形成はfiberと可換する．
+最高記号の写像
+\[
+ \ker M_d\longrightarrow Z(H)_d\otimes_k A
+\]
+は全閉点で全射なので全射である．右辺は自由だから，任意の中心斉次元を
+$\mathcal U$の中心へ持ち上げられる．
+
+有限位数translationのTHCRは，商曲線$E/\langle\rho\rangle$上のnorm line束の
+斉次環で与えられる有限生成中心上有限である．その有限個の中心生成元を
+$\mathcal U$へ持ち上げ，それらと$A$が生成する可換有限型$A$代数を$C$とする．
+$H$の中心上の有限加群生成元も持ち上げれば，filtration次数を下げる帰納法で
+$\mathcal U$が$C$上有限と分かる．
+
+$\mathcal U\simeq D$は有限大域次元を持つ．
+従って\cite[Proposition 2.1, proof steps (6)--(8)]{RSV}へ
+$(R,S,\text{algebra})=(A,C,\mathcal U)$を代入できる．
+ある$p_B\ne0$を逆にした上で相対対角が有限射影解消を持ち，
+全ての幾何学的fiberは有限大域次元を持つ．
+一つのchartと滑らかな境界の補題で，それらの切断はH3となる．
+$k$は代数閉体で，$p_B$の零点は有限個だから，実際の非admissible集合もその有限部分集合である．
+従って実際の$\Lambda_B$自体が開集合となる．
+この最終推論は一変数固定ambientを使っており，多変数の相対開性への推論ではない．
+\end{proof}

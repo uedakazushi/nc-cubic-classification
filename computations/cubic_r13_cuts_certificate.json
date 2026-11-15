@@ -1,0 +1,68 @@
+{
+  "version": "classification-v6",
+  "field": "QQ",
+  "Sklyanin_witness": {
+    "parameters": [
+      1,
+      2,
+      3
+    ],
+    "center_dimensions_degrees_1_2_3": [
+      0,
+      0,
+      1
+    ],
+    "central_cubic_representatives": [
+      [
+        [
+          1,
+          1,
+          1
+        ],
+        "-26/19"
+      ],
+      [
+        [
+          1,
+          2,
+          0
+        ],
+        "-1/3"
+      ],
+      [
+        [
+          2,
+          1,
+          0
+        ],
+        "52/57"
+      ],
+      [
+        [
+          2,
+          2,
+          2
+        ],
+        "1"
+      ]
+    ],
+    "point_scheme_cubic": "x**3 - 6*x*y*z + y**3 + z**3",
+    "smooth_projective_jacobian_charts": 3,
+    "nonzero_character_charts_empty": 3
+  },
+  "split_envelope": {
+    "center_matrix_shape": [
+      140,
+      20
+    ],
+    "rank": 18,
+    "kernel_basis": "span(g,t^3)"
+  },
+  "identities": [
+    "cubic Hilbert series and regular boundary difference",
+    "nonpolynomial inverse Hilbert series at lambda=0",
+    "affine pencil action composition"
+  ],
+  "proof": "papers/sections/cubic_r13_cut_reduction.tex",
+  "limits": "Low-degree linear algebra and identities only. The all-parameter domain/rank, chart criterion, transcendental regularity, split Lambda=C* and groupoids are ordinary proofs using stated external inputs, not finite-rank extrapolations."
+}
