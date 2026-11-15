@@ -106,9 +106,9 @@ Ore局所化と強次数付き同値を通じたExtの直極限により、
 $\operatorname{Ext}_U^{>2}=0$ となり上界を得る。
 \end{proof}
 
-この認識では $U$ を楕円THCRの通常のfiltered deformationと同一視していない。
-$t$ の共役が非自明な場合はskew Laurent構造を保持する必要がある。
-従って有限translation用のRains中心計算・McKay判定の移植は別問題として残る。
+この認識の直接の局所化はskew Laurent環であり、$R$ 自体を通常のRees環とは同一視しない。
+後述の中央化Zhang twistによって $U$ の通常の濾過を構成できるが、
+境界は非translationなので有限translation用のRains中心計算・McKay判定の移植は別問題として残る。
 
 \begin{theorem}[非中央正規楕円境界は位数2または3に限る]
 \label{thm:normal-elliptic-two-three}
@@ -179,3 +179,73 @@ $(\mathbb Z/3)^4$ 次数0である。
 Nakayamaの四行積は全て1なので、整域性、parameter1とこの滑らかさから全H3条件を得る。
 この例は既存のskew包絡分類に含まれ、新しい全包絡成分を主張するものではない。
 \end{example}
+
+\begin{proposition}[中央化twistと位数2の具体的affine表示]
+\label{prop:normal-boundary-centralizing-twist}
+上記の正規境界について $R'=R^{\theta^{-1}}$ を右Zhang twistとする。
+このとき $t$ は $R'$ で中心となり、
+\[
+ R'[t^{-1}]_0\simeq U,\qquad
+ \operatorname{gr}U\simeq H
+\]
+となる通常のRees濾過を与える。
+ただし $\mu_{R'}=\theta$ であり、非中央の場合 $R'$ をintrinsic反標準環と取り違えてはいけない。
+位数2の構造表示では、$y_i=x_it^{-1}$ を生成元として
+\[
+ U=k\langle y_1,y_2,y_3\rangle/
+ (r_i(y)-\beta_i,\ g(y)-\ell(y))
+\]
+となる。
+\end{proposition}
+\begin{proof}
+斉次元 $a$ に対し $t*a=t\theta^{-1}(a)=at=a*t$ である。
+Ore局所化後の次数0積はZhang twistで変わらないので、affine環は $U$ のままである。
+境界は $H^{\xi_{\lambda^{-1}}}$ となるが、次数 $n$ を
+$\lambda^{n(n-1)/2}$ 倍することで $H$ と同型になる。
+従って通常の中央Rees環から主張する濾過を得る。
+正規元 $t$ に対するhomological determinant公式では
+$\operatorname{hdet}_R\theta=\operatorname{hdet}_H\xi_\lambda=1$ である。
+最後の等号は $H$ のAS indexが0であることによる。
+右twistのNakayama公式と $R$ のindex1から $\mu_{R'}=\theta$ となる。
+位数2では $y_iy_j=-x_ix_jt^{-2}$、
+$y_iy_jy_k=-x_ix_jx_kt^{-3}$ を代入すれば表示した関係を得る。
+逆写像は局所化の次数0部分を生成するので、この表示は全関係を与える。
+\end{proof}
+
+\begin{theorem}[位数3の正規非中央楕円境界の全admissibility]
+\label{thm:normal-order3-admissibility}
+非中央共役位数3の構造表示
+$B=S[t;\xi_\lambda]$、$G=g+Dt^3$ を考える。
+$S$ はnoetherian quadratic Koszul AS3で、$g$ は正則中心三次、
+$S/(g)$ は滑らかな次数3楕円THCRとする。
+さらに $\mu_S=\xi_\lambda$、$\lambda$ は原始三乗根とする。
+このとき $B$ はCY AS4で、切断が強いH3である必要十分条件は $D\ne0$ である。
+これは前定理の位数3部分を全て扱う。
+\end{theorem}
+\begin{proof}
+Ore拡大のNakayama公式で
+$\mu_B|_S=\mu_S\xi_{\lambda^{-1}}=1$、
+$\mu_B(t)=\operatorname{hdet}_S\xi_\lambda\,t=\lambda^3t=t$ となる。
+$G$ は正則中心で、$R$ は $\mu_R=1$ を持つ。
+前命題のaffine生成元では $\lambda^3=1$ により
+$U\simeq S/(g+D)$ である。
+$D=0$ は既に楕円錐として除外した。
+
+$D\ne0$ の有限大域次元を証明する。
+次数スカラーで $g=1$ の場合に帰着できる。
+$A=S[g^{-1}]$ はAS3の中心局所化なので有限大域次元である。
+中心変数 $z$ を $z^3=g$ により添加した環
+$\widetilde A=A[z]/(z^3-g)$ は、$3z^2$ が単元だから
+中心上有限\'{e}tale、従ってseparableな有限自由拡大である。
+$\widetilde A$ 加群は $A$ からの誘導加群の直和因子であるため、
+$\operatorname{gldim}\widetilde A\le\operatorname{gldim}A$ となる。
+一方 $a_n\mapsto\overline a_n z^n$ と逆方向の斉次代入により
+\[
+ \widetilde A\simeq(S/(g-1))[z,z^{-1}]
+\]
+である。従って $S/(g-1)$ も有限大域次元となる。
+正規楕円境界のaffine認識を適用してH3を得る。
+逆に、前構造定理で抽出した位数3の $S$ は、split Ore環 $B$ の有限大域次元から
+有限大域次元を持ち、正規線型商のAS Gorenstein性とHilbert級数からAS3となる。
+$\mu_B=1$ のOre公式により $\mu_S=\xi_\lambda$ であり、ここでの仮定を満たす。
+\end{proof}

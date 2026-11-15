@@ -30,6 +30,8 @@ q非torsion、H=−K nef、H²>0の下で、境界外圏Zは有限長Serre部分
 
 **指定位数4固定包絡のD切断は完全判定済み**（現行H3原稿）：h=1、gamma^4=2、alpha=(−2,−2,0)、beta=(1,1,2)で中心特異値は13個だが、非H3値は次数6の平方因子なし多項式b(D)=(D−Dstar)*P4(D)*Q1(D)の根に限る。他のDのaffine切断は大域次元2。D直線の主開集合D(b)は底変更・fpqc降下と両立する。[局所orderの証明](papers/sections/cubic_order4_local_orders.tex)を参照。さらに[位数4全係数の幾何学的判定](papers/sections/cubic_order4_general_criterion.tex)を得た：中心特異点A1/A2/A3で、それぞれ次元1又は2の単純表現、異なるcharacter2個以上、異なるcharacter4個が必要十分。固定位数の被約表示族では[相対中心・H3開性](papers/sections/cubic_finite_order_relative.tex)も証明した。任意底変更とfiber条件のfpqc降下に適合するが、有限位数を横断する変形・全intrinsic family stack・全H3被覆は未完成。 さらに[有限位数N一般の判定](papers/sections/cubic_finite_order_criterion.tex)を得た：中心がDuValで全McKay指標を含むことが必要十分で、次元3N²以下の有限中心fiberの正則trace形式から判定できる。中心がDu Valであることだけでは十分でない。この並行成果を共鳴研究で独立再監査したとはしていない。 [正規三次商の中央境界認識](papers/sections/cubic_normal_central_boundary.tex)ではCY包絡・中心Gの仮定を外し、境界が平行移動であること、有限位数がintrinsic PI次数であること、非可換中央境界の一意性も証明した。 さらに[中央滑らか楕円枝の包絡認識](papers/sections/cubic_central_elliptic_cy_envelope.tex)により、このH3部分の包絡は実際にCY、Gは中心となる。全H3がこの境界を持つとは主張しない。 [全filtered deformationの認識](papers/sections/cubic_filtered_elliptic_recognition.tex)ではAS4包絡と中心三次商を外部仮定なしに復元し、この非可換境界部分の全幾何学的矢をfiltered同型で記述した。
 
+[正規一次楕円境界の認識](papers/sections/cubic_normal_elliptic_boundary.tex)も得た。非中央共役は位数2または3に限られ、位数3の全切断はD非零と同値にH3となる。位数2は明示affine表示まで帰着した。[三捩れ量子Weyl chart](papers/sections/cubic_quantum3_center.tex)は全中心とHessian・有限characterによる全係数の許容判定を持ち、b=(1,1,1),lambda=0では非H3四値を明示した。いずれも全H3被覆や全群oid・成分分類とは区別する。
+
 ## 四つのheartとcubic corner
 
 Rains、VdB、AS、anticanonicalの四名称は由来を表す。VdB raw blow-upとsection-model qgrを区別し、導来同値・t-exactness・構造対象・反Serre・境界・rank・marking・族の降下を個別に検証する。振幅1の既知導来同値は(T,U)=(ker R¹δ_*,ker δ_*)によるHRS tiltを与えるが、全共鳴でのheart一致を意味しない。

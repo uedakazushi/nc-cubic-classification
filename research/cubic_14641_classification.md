@@ -178,3 +178,7 @@ h=-1,gamma=2,A=1,B=C=0,beta=0の非分裂CY AS4包絡に、729G0=13y³−3yzx+13
 ### 正規非中央楕円境界のaffine認識と二・三位数制限（classification-v31）
 
 mu_R=idの正規三次商では、正規一次楕円境界tの共役有限位数を使いs=t^mで分母を払い、H3 iff gldim U有限（U=R[t^-1]_0）を証明。Uは一般には通常のTHCR filtered deformationではなくskew Laurent構造を保持する。theta固有値で関係を比較するとm=4,6（およびm3D0）はR=H[t;scalar]となりU≅Hの楕円coneでgl∞、従ってH3では非中央位数は2または3のみ。m2ではr_i+beta_i*t²,G=g+t²*l。m3ではB=S[t;lambda],G=g+D*t³,D!=0で、正規性からG中心、B CY。明示m3例も原稿に保持（tが全activeとomega交換、xy可換、xz/yzがomega交換、Fermat四三乗cut）。既存skew部分の例で新成分ではない。次は位数2 normal incidenceとaffine全判定、位数3の非skew S被覆、全H3に正規一次境界があるかを調べる。
+
+### 正規境界の中央化と位数3全切断（classification-v32）
+
+R^(theta^-1)への右Zhang twistでtを中心化でき、局所化degree0 Uは変わらずgrU≅Hの通常の濾過を得る。ただしmu_Rtwist=thetaでintrinsic anticanonical gradingは変わる。位数2ではU=<y_i | r_i(y)=beta_i, g(y)=l(y)>。位数3の全構造表示ではU=S/(g+D),mu_S=scalar(lambda),g中心でD!=0なら全てH3。S[g^-1]に中央cube rootを添加する有限etale/separable拡大が(S/(g−1))[z±]に一致するため有限glを証明。D0はellipticconeで除外。この意味で位数3の全admissibilityは完了し、残るのはSの非skew被覆・矢と全H3被覆。次は位数2でSが可換P2のinvolution Zhang twistの場合のbeta項をPBWとWeyl centralizerから除外する。
