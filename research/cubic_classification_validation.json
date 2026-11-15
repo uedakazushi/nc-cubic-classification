@@ -1,6 +1,6 @@
 {
   "date": "2026-11-15",
-  "version": "classification-v50",
+  "version": "classification-v52",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -40,7 +40,8 @@
     "papers/sections/cubic_normal_order2_scroll.tex",
     "papers/sections/cubic_normal_order2_ramification.tex",
     "papers/sections/cubic_quantum_triangle.tex",
-    "papers/sections/cubic_quantum_triangle_general.tex"
+    "papers/sections/cubic_quantum_triangle_general.tex",
+    "papers/sections/cubic_quantum_triangle_even4.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -636,5 +637,24 @@
     },
     "build": "LuaLaTeX118 pages successful; no undefined references/citations or overfull boxes after filename break correction; page101 visually inspected",
     "limits": "Even order and nonroot admissibility, general-q relative H3 locus, all-H3 coverage not proved"
+  },
+  "quantum_triangle_v51_v52": {
+    "proof": "papers/sections/cubic_quantum_triangle_even4.tex",
+    "validators": [
+      "computations/verify_cubic_quantum_triangle_order4.py",
+      "computations/verify_cubic_quantum_triangle_even_representations.py"
+    ],
+    "results": [
+      "PASS degree12 PBW full centre at q4, central commutators, singularities and 2D representation",
+      "PASS universal M-dimensional even-order recurrence, both endpoints, Casimir and reducibility identities"
+    ],
+    "ordinary_theorems": [
+      "Every finite even N>=4: all D except the two endpoints are H3; Dplus always bad",
+      "Even N4 through18: Dminus also bad, complete pencil criterion",
+      "Even N>=20: only Dminus remains unclassified in specified pencil"
+    ],
+    "source": "Huang1509.08719v4 eq5 and Section4.3: all even centre relation; explicit qAW=rho^-1 normalization recorded",
+    "build": "LuaLaTeX121 pages successful; no undefined refs/cites; one equation overfull5pt corrected, final reflow pending",
+    "limits": "Even N>=20 Dminus, nonroot admissibility, global H3 coverage and category-family stack remain unproved"
   }
 }

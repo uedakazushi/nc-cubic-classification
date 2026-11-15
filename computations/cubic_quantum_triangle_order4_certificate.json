@@ -1,0 +1,19 @@
+{
+  "version": "classification-v51",
+  "base": "q^2+1=0",
+  "full_centre": "XYZ+(X\u00b2+Y\u00b2+Z\u00b2)/16-Omega\u00b2*(X+Y+Z)/2+Omega^4+Omega\u00b2/16-1/1024=0",
+  "normalization": "Gamma_i=-16 X_i, k=64D\u00b2",
+  "singularities": "three A1 for k!=0,4; four A1 at k0; one D4 at k4",
+  "bad_D": [
+    "1/4",
+    "-1/4"
+  ],
+  "good": "Every other D; persistent A1 receive 2D reps, extra A1 at D0 receives origin character",
+  "exact_checks": [
+    "PBW full centre relation degree12",
+    "all central commutators",
+    "singular fibre factorization and D4 tangent model",
+    "2x2 family relations, Casimir and central positions"
+  ],
+  "limits": "Ordinary proof supplies full-centre equality, maximality, McKay and terminal infinity; not all even orders."
+}
