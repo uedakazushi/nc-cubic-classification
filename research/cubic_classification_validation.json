@@ -1,6 +1,6 @@
 {
   "date": "2026-11-15",
-  "version": "classification-v43",
+  "version": "classification-v44",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -38,7 +38,8 @@
     "papers/sections/cubic_normal_order2_arrows.tex",
     "papers/sections/cubic_four_window.tex",
     "papers/sections/cubic_normal_order2_scroll.tex",
-    "papers/sections/cubic_normal_order2_ramification.tex"
+    "papers/sections/cubic_normal_order2_ramification.tex",
+    "papers/sections/cubic_quantum_triangle.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -580,5 +581,14 @@
     ],
     "build": "LuaLaTeX108 pages; no undefined refs/cites or overfull boxes; pages87,91 visually inspected",
     "limits": "Abstract intrinsic category-family comparison/global H3 components and missing-boundary coverage remain unproved"
+  },
+  "quantum_triangle_v44": {
+    "proof": "papers/sections/cubic_quantum_triangle.tex",
+    "validator": "computations/verify_cubic_quantum_triangle.py",
+    "result": "PASS PBW diamond, central Chebyshev cubes/Casimir, exact full centre relation, four singular central values, five reduced characters, cyclic invariance",
+    "ordinary_theorem": "Root-three q-so3 Casimir pencil H3 iff (D-f)(3D+f)!=0. Good examples have no regular normal degree1 smooth elliptic THCR boundary. GenericPIdegree3, compact centre Fricke cubic, terminal order at infinity triangle.",
+    "primary_source_audit": "CHI Orders Theorems2.7 and2.17 reread: smooth centre, cyclic degree3 covers on triangle edges totally ramified at vertices give terminal normal order and local gldim2",
+    "build": "LuaLaTeX111 pages successful, no undefined refs/cites or overfull boxes; final short DVR proof refinement not yet rebuilt",
+    "limits": "All geometric arrows and relative presentation stack for this new pencil not yet written; no all-H3 coverage/components; no independent refereeing/formalization"
   }
 }

@@ -32,6 +32,8 @@ q非torsion、H=−K nef、H²>0の下で、境界外圏Zは有限長Serre部分
 
 [正規一次楕円境界の認識](papers/sections/cubic_normal_elliptic_boundary.tex)も得た。非中央共役は位数2または3に限られ、位数3の全切断はD非零と同値にH3となり、[全包絡被覆](papers/sections/cubic_normal_order3_coverage.tex)から既知の量子Fermat一対象（幾何学的群oidBH54）に帰着する。位数2も[量子involutionの非skew排除](papers/sections/cubic_normal_order2_quantum.tex)と[Clifford swapの全候補・許容条件](papers/sections/cubic_normal_order2_clifford.tex)へ漏れなく被覆した。Clifford swapは中央volume切断の有限cocycle twistで、被約な長さ8 character完全交叉、同値に[明示四次式の非消滅](papers/sections/cubic_normal_order2_arrows.tex)が必要十分。境界は一意で、全intrinsic矢を任意底変更に適合する有限係数式で記述し、一般次元2・一般慣性mu2×mu2を得た。非skew・非CY H3の厳密例も得た。[中心幾何](papers/sections/cubic_normal_order2_scroll.tex)はcubic scroll F1上のrank4極大quaternion orderとなり、[二conicのBrauer分岐と全局所模型](papers/sections/cubic_normal_order2_ramification.tex)を記述した。表示族のrigidificationは分離既約DMstack2である。[三捩れ量子Weyl chart](papers/sections/cubic_quantum3_center.tex)は全中心とHessian・有限characterによる全係数の許容判定を持ち、b=(1,1,1),lambda=0では非H3四値を明示した。いずれも全H3被覆や全群oid・成分分類とは区別する。
 
+[三角境界のq-so3切断](papers/sections/cubic_quantum_triangle.tex)でもDline全体を判定した。非H3値はD=f,−f/3の二つ。許容例は非skew CY包絡とFricke cubic中心を持ち、どの正規一次元でも滑らかな楕円境界を得られないため、上記normal-elliptic部分の外に実在する。
+
 ## 四つのheartとcubic corner
 
 Rains、VdB、AS、anticanonicalの四名称は由来を表す。VdB raw blow-upとsection-model qgrを区別し、導来同値・t-exactness・構造対象・反Serre・境界・rank・marking・族の降下を個別に検証する。振幅1の既知導来同値は(T,U)=(ker R¹δ_*,ker δ_*)によるHRS tiltを与えるが、全共鳴でのheart一致を意味しない。
