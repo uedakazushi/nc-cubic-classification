@@ -4,7 +4,7 @@
 
 最優先は位数4積分族の全 bad D の決定。一次元表現だけについては `cubic_character_serre.tex` と `verify_cubic_character_serre.py` に全奇数Ext1障害を判定する余因子恒等式を得た。Jacobian/2=M の階数2では、核の射影点が楕円 point curve E にあるとき正確に自己Ext1=1。階数1は2、階数3は0、階数0は3。これは全単純表現・高次Extの判定ではない。
 
-固定 h1,gamma^4=2,a=(1/(2gamma),1/(2gamma),0),beta=(1,1,2) では character CI 長さ8、critical scheme は (x+y-2,(y-1)^2,z) の長さ2で台(1,1,0)。中心値のscheme imageは被約な一点 Dstar=(2gamma^4+10gamma^3+21gamma²+19gamma+13)/(4(1+gamma)^5)。Dstarは確実にbad、piは同じ包絡でgood。他のDの良否は未決定。この固定包絡で次数4以下の中心計算も完了した。`verify_cubic_order4_center.py` は g^4=2 の体上、包絡の次数0..5の次元(1,4,10,20,35,56)を逐次商で作り、中心三次商の次数4/5次元31/46を小行列で求める。138×31交換子行列はD一次。Dに関する重み付き一次ansatzは核次元5（定数1,Dと三四次中心元）、三つの最高四次は独立。全交換子はD記号のまま正確に零と確認、係数式を小JSONに保存した。中心全体の生成・全Dの基底変更に関するfiltered帰納証明、および三中心元の三次関係の係数は次の原稿化・計算対象。未計算の関係や全bad値を完成扱いしない。次はこの固定包絡で高次元単純表現／有限中心を計算し、Dstar以外のbadがあるかを判定する。characterだけの結果を完全bad一覧に昇格しない。
+固定 h1,gamma^4=2,a=(1/(2gamma),1/(2gamma),0),beta=(1,1,2) では character CI 長さ8、critical scheme は (x+y-2,(y-1)^2,z) の長さ2で台(1,1,0)。中心値のscheme imageは被約な一点 Dstar=(2gamma^4+10gamma^3+21gamma²+19gamma+13)/(4(1+gamma)^5)。Dstarは確実にbad、piは同じ包絡でgood。他のDの良否は未決定。この固定包絡で次数4以下の中心計算も完了した。`verify_cubic_order4_center.py` は g^4=2 の体上、包絡の次数0..5の次元(1,4,10,20,35,56)を逐次商で作り、中心三次商の次数4/5次元31/46を小行列で求める。138×31交換子行列はD一次。Dに関する重み付き一次ansatzは核次元5（定数1,Dと三四次中心元）、三つの最高四次は独立。全交換子はD記号のまま正確に零と確認、係数式を小JSONに保存した。中心全体の三生成元・全Dの任意底変更・中心上階数16をfiltered帰納で証明し `cubic_order4_center.tex` に統合した。先頭のHesse型三次関係は楕円座標環での厳密計算で取得済み。下位項26係数は、重み(r,D,Z)=(1,3,4)から事前次数境界を証明し、17個の厳密48次元sliceで再構成中。設計行列式18432、途中成果は `cubic_order4_center_relation_certificate.json` にpartialとして保存する。未計算の関係や全bad値を完成扱いしない。次はこの固定包絡で高次元単純表現／有限中心を計算し、Dstar以外のbadがあるかを判定する。characterだけの結果を完全bad一覧に昇格しない。
 
 計算の目的・停止基準：まず全 character とそのcritical scheme・中心像を有限Groebner計算で完全に確認する（済）。次のPI中心計算は次数4の中心候補を正確に得た時点でcheckpointし、中心関係や局所global dimensionの証明なしにsmoothnessを断定しない。大きい次数の自由単語全列挙は避け、次数ごとの商基底と乗法を使う。
 
@@ -128,3 +128,5 @@ Pymのscheme/formal germ比較と実際のQmod比較により、Q113は射影基
 次の技術的入口は、P3のrank6形式模型の既約枝とPym六族の比較、および一般H_R有限なP4点の相対helix再構成である。相対Koszul–Frobeniusの存在は全成分の局所自由性から得られたので、正規三次イデアルを保つ周期降下と有限係数incidenceに焦点を置く。smooth proper部分の開性には、相対dg模型と対角のperfect性の有限検査が必要。
 
 文献上の範囲：Sierraの厳密twist比較、AOUのAS3での内部O(n)認識、Behrend–Noohiの切断stackは一次資料を確認。AOUの裸のqgr復元をAS5/cubicへ無証明で一般化しない。新しい主張の初出・優先権と、保持した全旧証明の独立全面監査は未完了。実施した計算・組版・証明監査はvalidation.jsonで区別する。
+
+point graph規約の訂正：p yz+q zy-h x²に対する行列は(-hx,qz,py)を第一行とする。以前のp,q逆順は逆translationを表していた。`verify_cubic_integrated_envelope.py` に関係式からの直接検算を加えた。E、位数4条件、character余因子判定、既得bad Dは不変。

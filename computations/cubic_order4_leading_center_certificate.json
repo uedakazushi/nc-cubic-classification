@@ -1,0 +1,76 @@
+{
+  "version": "classification-v15",
+  "field": "QQ(g),g^4=2",
+  "direct_multilinear_relation_checks": 9,
+  "method": "Exact point-graph evaluation in K[x,z]/(z^3+kappa*x*z+x^3+1), no point sampling",
+  "monomials": [
+    [
+      0,
+      0,
+      3
+    ],
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      0,
+      2,
+      1
+    ],
+    [
+      0,
+      3,
+      0
+    ],
+    [
+      1,
+      0,
+      2
+    ],
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      2,
+      0
+    ],
+    [
+      2,
+      0,
+      1
+    ],
+    [
+      2,
+      1,
+      0
+    ],
+    [
+      3,
+      0,
+      0
+    ]
+  ],
+  "coefficients": [
+    "1",
+    "0",
+    "0",
+    "-(70*g**2 - 99)/8",
+    "0",
+    "-(g - 1)*(114*g**2 - 161)/4",
+    "0",
+    "0",
+    "0",
+    "(8*g**3 + 16*g**2 - 11*g - 23)/8"
+  ],
+  "z3_cube_coefficient": 1,
+  "matrix_shape": [
+    138,
+    10
+  ],
+  "kernel_dimension": 1
+}

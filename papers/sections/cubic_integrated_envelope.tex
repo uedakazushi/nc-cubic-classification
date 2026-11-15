@@ -197,7 +197,7 @@ $(h,\gamma)\in\mathcal V^*$ とする。
 最高次の AS3 と包絡の AS4 は前二補題で全パラメータについて認識済みである。
 $p=1+\gamma,q=1-\gamma$ とする。point matrix は
 \[
- M(X)=\begin{pmatrix}-hx&pz&qy\\qz&-hy&px\\py&qx&-hz\end{pmatrix},\qquad
+ M(X)=\begin{pmatrix}-hx&qz&py\\pz&-hy&qx\\qy&px&-hz\end{pmatrix},\qquad
  \det M=hpq(x^3+y^3+z^3)+(p^3+q^3-h^3)xyz.
 \]
 その三次曲線が滑らかである条件は
@@ -210,7 +210,7 @@ $\gamma=0$ では $\Delta=-(h^3-8)(h^3+1)^2\ne0$ だから非空の開条件で�
 自己同型 $\rho:E\to E$ を定めることを与える。
 不動点の方程式は $2yz=hx^2$ とその巡回置換で、$h^3\ne8$ より解を持たない。
 不動点を持たない楕円自己同型は非零 translation である。
-flex 原点 $o=(1:-1:0)$ の像は $(q:p:-h)$ である。
+flex 原点 $o=(1:-1:0)$ の像は $(p:q:-h)$ である。
 三等分点は Hesse pencil の九つの flex、すなわちいずれかの座標が零の点であり、
 $hpq\ne0$ より $\rho^3\ne1$ となる。
 
@@ -225,7 +225,7 @@ $S/(g)\simeq B(E,\mathcal O_E(1),\rho)$ を得る。
 次数1,2の中心元はTHCRに単射で写り、次数 $m$ の像が非零で中心なら
 一次切断との可換性から $\rho^m=1$ を強いる。
 ここでは $\rho\ne1,\rho^3\ne1$ であり、さらに原点を固定する逆元写像は $(x:y:z)\mapsto(y:x:z)$ である。
-$\rho^2=1$ なら $\rho(o)=(q:p:-h)$ が二等分点であり、その第三座標は非零なので $p=q$、すなわち $\gamma=0$ となる。
+$\rho^2=1$ なら $\rho(o)=(p:q:-h)$ が二等分点であり、その第三座標は非零なので $p=q$、すなわち $\gamma=0$ となる。
 従って $\mathcal V^*$ 上では $Z(S)_1=Z(S)_2=0$ である。
 三次中心元はTHCRで零となるので $Z(S)_3=kg$ を得る。
 独立な有理数計算の control として $(h,\gamma)=(-2,-1/3)$、すなわち
@@ -255,7 +255,7 @@ Etingof--Ginzburg 型の代数そのものを新発見と主張するもので�
 相対的な開性、全内在的群oid と降下はまだこの命題には含まれない。
 計算上は
 \[
- \rho^2(o)=(-p(h^3+q^3):q(h^3+p^3):h(p^3-q^3))
+ \rho^2(o)=(-q(h^3+p^3):p(h^3+q^3):h(q^3-p^3))
 \]
 であり、良い AS3 locus 上で $\rho$ の位数が4となる条件は
 $\gamma^4=1+h^3$ である。

@@ -9,14 +9,14 @@
   "smooth_discriminant": "27*h**3*p**3*q**3 + (-h**3 + p**3 + q**3)**3",
   "gamma0_discriminant": "-(h^3-8)*(h^3+1)^2",
   "translation_origin_image": [
-    "q",
     "p",
+    "q",
     "-h"
   ],
   "translation_twice_origin": [
-    "-p*(h**3 + q**3)",
-    "q*(h**3 + p**3)",
-    "h*(p**3 - q**3)"
+    "-q*(h**3 + p**3)",
+    "p*(h**3 + q**3)",
+    "h*(-p**3 + q**3)"
   ],
   "order4_equation_on_smooth_nonzero_parameter_locus": "gamma^4=1+h^3",
   "order4_exact_witness": "h=1,gamma^4=2; discriminant coprime to gamma^4-2",

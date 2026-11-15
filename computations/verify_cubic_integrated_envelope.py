@@ -25,12 +25,14 @@ for word in product(range(4),repeat=3):assert s.expand(left[word]-right[word])==
 for word in product(range(4),repeat=4):assert s.expand(w4[word]+w4[word[-1:]+word[:-1]])==0
 selected=[(1,2),(2,0),(0,1),(3,0),(3,1),(3,2)]
 minor=s.factor(s.Matrix([[w4[a+b] for b in selected] for a in selected]).det());assert minor==-p**6
-x,y,z=s.symbols('x y z');M=s.Matrix([[-h*x,p*z,q*y],[q*z,-h*y,p*x],[p*y,q*x,-h*z]])
+x,y,z=s.symbols('x y z');M=s.Matrix([[-h*x,q*z,p*y],[p*z,-h*y,q*x],[q*y,p*x,-h*z]])
+xp,yp,zp=s.symbols('xp yp zp')
+assert M*s.Matrix([xp,yp,zp])==s.Matrix([p*y*zp+q*z*yp-h*x*xp,p*z*xp+q*x*zp-h*y*yp,p*x*yp+q*y*xp-h*z*zp])
 curve=h*p*q*(x**3+y**3+z**3)+(p**3+q**3-h**3)*x*y*z
 assert s.expand(M.det()-curve)==0
-origin=s.Matrix([1,-1,0]);P=s.Matrix([q,p,-h]);P2=s.Matrix([-p*(h**3+q**3),q*(h**3+p**3),h*(p**3-q**3)])
+origin=s.Matrix([1,-1,0]);P=s.Matrix([p,q,-h]);P2=s.Matrix([-q*(h**3+p**3),p*(h**3+q**3),h*(q**3-p**3)])
 assert M.subs({x:1,y:-1,z:0})*P==s.zeros(3,1)
-assert (M.subs({x:q,y:p,z:-h})*P2).applyfunc(s.expand)==s.zeros(3,1)
+assert (M.subs({x:p,y:q,z:-h})*P2).applyfunc(s.expand)==s.zeros(3,1)
 gamma=s.symbols('gamma');sub={p:1+gamma,q:1-gamma}
 assert s.expand((P2[0]-P2[1]).subs(sub)-2*(gamma**4-1-h**3))==0
 Delta=(p**3+q**3-h**3)**3+27*h**3*p**3*q**3
@@ -56,7 +58,7 @@ certificate={'version':'classification-v12','ring':'QQ[p,q,h,alpha_x,alpha_y,alp
     'W3_lift':'sum xi*r_i - sum (alpha_i*xi/2+beta_i*t)*k_i = sum r_i*xi + sum k_i*(alpha_i*xi/2+beta_i*t)',
     'point_curve':str(curve),'smooth_discriminant':str(Delta),
     'gamma0_discriminant':'-(h^3-8)*(h^3+1)^2',
-    'translation_origin_image':['q','p','-h'],
+    'translation_origin_image':['p','q','-h'],
     'translation_twice_origin':list(map(str,P2)),
     'order4_equation_on_smooth_nonzero_parameter_locus':'gamma^4=1+h^3',
     'order4_exact_witness':'h=1,gamma^4=2; discriminant coprime to gamma^4-2',
