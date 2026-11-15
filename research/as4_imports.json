@@ -393,5 +393,11 @@
     "proof": "papers/sections/cubic_as4_adjacent_S_exclusions.tex thm:cubic-adjacent-T-all",
     "validator": "computations/verify_cubic_as4_T_centre_lift.py",
     "result": "All explicit T excluded independently. Universal highest tensor, word quotients, centre polynomial lift, opposite-chart gcd, exact special fibres. No full CY/AS4 coverage or existence sufficiency imported."
+  },
+  "four_simple_P_quotients_v87": {
+    "commit": "a45f834f51a00c47443b51caf66abaf4629546b9",
+    "source": "CY_ZERO_COMMUTATORS_FOUR_SIMPLE_FULL_SHARED_INVERTIBLE_REDUCTION.tex FT2/FT3 explicit formulas only",
+    "validator": "computations/verify_cubic_as4_P_projections.py",
+    "scope": "Independent entire two-parameter word-quotient identities. No all-fibre AS4 sufficiency, chart coverage or all-isomorphism theorem imported."
   }
 }

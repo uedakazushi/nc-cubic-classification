@@ -315,3 +315,8 @@ AB2のT_lambda両符号を全lambda!=0,-1で排除した。lambda=-2はS_zetaと
 再生verify_cubic_as4_T_projections.py 3 4、verify_cubic_as4_T_centre_lift.py。入力generate_cubic_as4_T_centre_input.py、出力整形export_cubic_as4_T_centre_lift.py。商射影・centre liftのJSON証明データを保存し、証明再生はSymPyのみ、Singular 4.4.1は生成にのみ用いる。元のGaussian分数体消去と無縮約liftstdは設定上限で未完だったが、その結果は不使用。三角再帰の実部/虚部計算とprimitive列化に変更して成功した。GitHub正本から入力生成と証明の独立検証を再開できる。
 
 これでAB2/AB3の隣接共有境界の列挙表示は全排除。次はFT3のP全二パラメータ残余。Pはlambda2の全rと非空開集合のみ排除済み。非捩れqso3許容性、全包絡被覆・大域成分・抽象族降下も未完であり、全H3完全分類とはしない。
+
+
+十二共有Pの全二変数商射影を厳密に構成・独立再生した（classification-v87）。D3=lambda^4(lambda+1)²(r−1)²、D4=lambda^7(lambda+1)³(r−1)³a、a=2lambda²+2lambda+1。全分母は元のFT2領域で非零。元の三次・四次の全語関係消滅と自由列identityをQQ[lambda,r]の実部/虚部恒等式でSymPy検証し、さらにFLINT有理多変数多項式の直接積でも再確認した。従って元の領域のAS4実現では同じ語が商基底になるが、AS4十分性は輸入しない。再現verify_cubic_as4_P_projections.py 3 4、構造化JSON二点、exact_polynomial_complex_product.py。
+Gaussian分数体を避けるため各語の実/虚座標を隣接させ、Singularの係数体QQ(lambda,r)でrealificationを消去した。三次・四次とも短時間で完了し、QQ(lambda)[r]の無準備な元関係module GB（180秒未完）を反復しない。出力を巨大な式文字列から単項式係数列へ変更して再生を高速化した。全二変数のprimitive中心行列をgenerate_cubic_as4_P_centre_input.pyで再生成できる。
+中心側はQQ(lambda)[r]の40×280 realified primitive moduleについてliftstdが40本の三角基底を生成し、生成CAS自身によるA*X=N検証も成功した。対角は1、lambda、2lambda²、r−1、(r−1)²又はlambda(r−1)だけである。出力64MBは作業領域のみ。文字列上で除算記号はないが、特殊lambdaへの全値結論の前に、全係数の多項式性と恒等式を別の厳密再生で照合する。未検証の全P排除をこの段階で確定扱いしない。次は巨大証明書の単項式AST再生又は局所化による小さい証明書の構成。非捩れqso3許容性・全包絡被覆・大域成分・抽象族降下は未完。

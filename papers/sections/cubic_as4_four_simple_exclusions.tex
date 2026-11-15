@@ -343,3 +343,32 @@ $\mathbb Q(i)[r]$ で $\gcd(P,Q)=1$ を厳密確認した。
 再現は \texttt{verify\_cubic\_as4\_four\_simple\_p.py}。
 二変数の最高tensor恒等式と、一変数の全値minor coverを区別している。
 有理関数体の消去は任意導入の \texttt{python-flint} で高速化できる。
+
+\paragraph{十二共有族の全二変数商座標.}
+$a=2\lambda^2+2\lambda+1$ と置く。
+FT2の元のパラメータ領域は
+$\lambda(\lambda+1)(r-1)adef\ne0$ である。
+全二変数の三次・四次商射影を構成し、
+元の全語関係消滅と自由列identityを $\mathbb Q[\lambda,r]$ の
+実部・虚部恒等式として独立に検証した。
+共通分母には
+\[
+ D_3=\lambda^4(\lambda+1)^2(r-1)^2,\qquad
+ D_4=\lambda^7(\lambda+1)^3(r-1)^3a
+\]
+を取れる。従ってこの元の領域の任意のAS4実現では、
+同じ20本・35本の語が三次・四次の真の商基底になる。
+これは全値AS4性の十分性を主張するものではない。
+
+生成時は複素係数行列を有理係数の二倍の大きさの行列に移し、
+各語の実部・虚部を隣接させて $\mathbb Q(\lambda,r)$ 上で消去した。
+従って非可換語を可換化したのではなく、語ごとの関係加群の線型代数である。
+入力と生成CASに依存しない再生検証器は
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}as4\_\allowbreak{}P\_\allowbreak{}projections.py}、
+証明データは
+\texttt{cubic\_\allowbreak{}as4\_\allowbreak{}P\_\allowbreak{}projection\_\allowbreak{}degree3.json},
+\texttt{degree4.json} である。
+係数を単項式と有理数の組で保持し、巨大な式の再展開を避ける。
+SymPyによる厳密検証に加え、任意導入のFLINT多変数有理係数多項式でも
+同じ恒等式を直接検証できる。有限体の標本検査ではない。
+中心行列の全パラメータ階数は、この商座標の存在だけからは結論しない。
