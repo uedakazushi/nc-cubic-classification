@@ -1,6 +1,6 @@
 # 四つのheartの比較：現行研究ノート
 
-2026-11-16 / hearts-v19。最初に `research/four_hearts_plan.md`（プロジェクト全体では `00_research_plan.md`）を読む。論文は `papers/nc_del_pezzo_hearts.tex` と五つの `papers/sections/four_hearts_*.tex`、検証は `research/four_hearts_validation.json`。本文の証明をここに重複させない。
+2026-11-16 / hearts-v20。最初に `research/four_hearts_plan.md`（プロジェクト全体では `00_research_plan.md`）を読む。論文は `papers/nc_del_pezzo_hearts.tex` と七つの `papers/sections/four_hearts_*.tex`、検証は `research/four_hearts_validation.json`。本文の証明をここに重複させない。
 
 ## 比較対象と主張の水準
 
@@ -22,7 +22,7 @@ HnefのRains heartで全対象のExt2(e,s^nM)はn≫0で消える。従って全
 
 **AS–反標準（cor:ASac、cor:AOU-texact）**：AS helixのfoldingでqgrBを得てe=πpB、pBp=R(e,s)を同定した上で、B,R右noetherian、Bp右R有限、pB左R有限を要求する。この範囲で自然cornerがabel同値 iff dim B/BpB<∞。有限次数の消滅を使うには次数1生成等のtail制御が必要。相対有限cornerの開性はcoherent各次数の基底変更適合を明示した命題prop:relativecornerであり、heartの相対同値を意味しない。
 
-**混合A2（§9）**：指数p,−nの隣接単純根の非分裂拡大Pのconnecting rankはmin(p,n)。C=〈S+,S−〉_Serre≃mod_fd Π(A2)、直既約S+,S−,P,Qで、cohomologyは(p,0),(0,n),((p−n)+,(n−p)+),(p,n)。両chamberのtorsion pairを得る。p=nはgenuine avatarに実在しない。指数+2/−1のアフィン側では異なる一次元W,Uと非分裂二次元Vがあり、逆向きV'を合わせてA/Ann(V⊕V')≃Π(A2)。局所反射で根はalpha+beta,−beta、指数は1,1。元の生成元の作用係数は未計算。内部Ext_Πの二周期性をambient Extと混同しない。
+**混合A2（prop:rank、prop:A2category）**：指数p,−nの隣接単純根の非分裂拡大Pのconnecting rankはmin(p,n)。C=〈S+,S−〉_Serre≃mod_fd Π(A2)、直既約S+,S−,P,Qで、cohomologyは(p,0),(0,n),((p−n)+,(n−p)+),(p,n)。両chamberのtorsion pairを得る。p=nはgenuine avatarに実在しない。指数+2/−1のアフィン側では異なる一次元W,Uと非分裂二次元Vがあり、逆向きV'を合わせてA/Ann(V⊕V')≃Π(A2)。局所反射で根はalpha+beta,−beta、指数は1,1。元の生成元の作用係数は未計算。内部Ext_Πの二周期性をambient Extと混同しない。
 
 ## AOUのpointed比較
 
@@ -30,7 +30,7 @@ AOU §9は最初からcoh tilde X=qgr Fである。smooth elliptic、degree3線�
 
 AOU (9.28)–(9.43)のτ1,…,τ6で、πFの位置は9,9,9,6,6,3と移る。右mutationは右側の対象を変えずに移動し、それ以外の操作はその位置に触れない。従ってτ6の先頭は(A,B,πF)。最後のL1L2にだけπF自身のmutationがある。
 
-(9.52)のrestrictionはLA=L0^(−5) L1^3 O(p1+…+p6)、LB=L0^(−2)L1 O(p1+p2+p3)、Li*πF=O_Y。LA,LBの次数は零で、Definition7.1と(9.53)により双方非自明。Proposition9.3が全RHom(A,πF),RHom(B,πF)をそれぞれRΓ(LA^−1),RΓ(LB^−1)と同定する。楕円曲線上の非自明次数零線束の全cohomologyは零なので、最後の二評価triangleの自然射が同型となる。K0またはrestrictionの一致だけから対象を同定してはいない。
+(9.52)のrestrictionはLA=L0^(−5) L1^3 O(p1+…+p6)、LB=L0^(−2)L1 O(p1+p2+p3)、Li*πF=O_Y。LA,LBの次数は零で、Definition7.1と(9.53)により双方非自明。Proposition9.3が全RHom(A,πF),RHom(B,πF)をそれぞれRΓ(LA^−1),RΓ(LB^−1)と同定する。楕円曲線の非自明次数零線束の全cohomologyは零なので、最後の二評価triangleの自然射が同型となる。K0またはrestrictionの一致だけから対象を同定してはいない。
 
 **環の接続（cor:AOU-ring）**：中心正則一次元と正次数境界のH1消滅からF_n→Hom(πF,πF(n))が全n≥0で自然に同型となる。pointedなΨと整合的に反復した反Serre同型によりF≃R(e_AS,s_AS)が乗法込みで従う。これはAS標準heartがqgr Fに無条件で一致するという主張ではない。
 
@@ -38,7 +38,7 @@ AOU (9.28)–(9.43)のτ1,…,τ6で、πFの位置は9,9,9,6,6,3と移る。右
 
 ## 標準三次曲面型における明示的な一致領域
 
-完全な証明は `four_hearts_corner_locus.tex` の thm:eleven / thm:AOUexactlocus / cor:coefficientopen。別稿の有限corner判定を今回再点検して比較稿へ統合した。十一条件自体を今回初めて発見したとはしていない。
+完全な証明は `four_hearts_corner_locus.tex` の thm:eleven / thm:AOUexactlocus / cor:coefficientopen。別稿の有限corner判定は証明付きで比較稿へ統合してある。十一条件を独立に新発見したとはしない。この部分の全証明を今回再監査したという意味でもない。
 
 W=Σw_abc[z_ca y_bc x_ab]、B=Jac(Q,W)、p=e_A0、C=B/BpB。道長とcut次数はell=3cut+lambda(end)−lambda(start)、lambda(A,B,C)=0,1,2で関係する。標準周期coverはAOUの無限quiverへreindexされ、qgr BcutがAS heartとなる。道長qgrそのものを同じheartにしない。
 
@@ -50,9 +50,29 @@ Qを[[1,1,1],[1,a,b],[1,c,d]]と正規化し、Δ=(a−1)(b−1)(c−1)(d−1)(a
 
 範囲外：全potentialのAS正則性・noetherian性、無限位数条件のZariski開性、Δ零の全点での実在負指数Rains根、任意の別abel同値の不存在、全相対stack降下。AOU birational対応の定義域で係数開集合の逆像が非空稠密開であることと、圏の定理の適用条件を別に記す。
 
+## 自然関手の接続とEuler chamberによる選択
+
+証明は `four_hearts_canonical_comparison.tex`、`four_hearts_root_chambers.tex`。VdB (9.5)とProposition9.2.3(1)によりRδ_*O_W=πF。target Serre=(-1)[2]と同値性から反Serre作用も保存する。pointedなdg同値のRHom右作用を、QGrのsection右随伴ωとπRω=Idで再構成すると、指定Rδ_*は自然な反標準導来切断と同型になる。ここでは環の同定を誘導されたものに固定し、単なるK0一致・次元一致を使わない。
+
+同じ最終raw blow-upのRains実現とAOU比較はこれで接続する。Δ≠0の適用域ではVdB/Rains–AS比較も単一HRS tilt。VdB Theorem9.1.9とProposition9.1.8により、torsionfree側kerδ_*と高次像は境界非交叉部分に入り、境界restrictionは保存される。境界非交叉部分によるabel商圏では既に同値である。この事実はVdBの既知結果を適用したもの。
+
+Zの全cohomologyを持つambient三角部分圏D_Zは、反標準側の有限次元A=R/(g−1)cohomologyを持つ充満部分圏へ写る。内部Db(Z)やDb(mod_fd A)をambient圏と同一視しない。θ→Idが自然に同型なのでSerre=[2]となる。χ(e,Φ^−1 U)=dim Uは非零target対象で正。
+
+T∩Zは全非零商Qでχ(e,Q)>0、F∩Zは全非零部分対象Nでχ(e,N)<0と同値。総Euler値やcomposition factorsの符号だけでは代用できない。証明はtorsion分解のT部分/F商を使うだけだが、全対象に有効な認識式となる。
+
+有限ADE型のspherical simplesを持つ旧heartで、負の単純S_jを選び、F_j=add(S_j)、T_j=Hom(−,S_j)=0として〈S_j[1],T_j〉へ移る。隣接単純は0→S_j→P_i→S_i→0の非分裂拡大へ変わり、非隣接は不変、根類はs_j反射。有限長性は候補の有限filtrationとHom直交性から直接証明する。各段階でtarget振幅[0,1]を保つため、単純のEuler値は零にならない。負正根数は一つずつ減り、全単純が正になればtarget heartへの包含から一致を得る。終端heartは経路によらないが、経路の合成自己同値の同型は主張しない。
+
+E6では辺03,12,23,34,45、旧指数(6,2,−1,3,2,4)。全六単純根sheafが実在するならZの全単純を尽くす（非単純正根は既存単純との負交点、負根は有効錐のpointednessで排除）。α2を一度反射すると根はα0,α1+α2,−α2,α3+α2,α4,α5、次元は6,1,1,2,2,4となり、全有限次元simpleと二つのcharacterを決定する。この系は全六実在を明示した条件付き帰結であり、単なる数値共鳴から実在を補っていない。一般E型でmod_fd A≃modΠ(E)という主張ではない。
+
+## 独立avatarの辞書：保持する着想と未確認の障害
+
+AOU (9.47)の二つのline restrictionをU2=L0^−5 L1^3、U1=L0^−2 L1と置くと、Rains (4.13)のdeterminant処方は形式的にq_R=U2 U1^−2=L1 L0^−1、L_classical=(U1 q_R)^−1=L0^3 L1^−2を与える。従ってU2=L_classical^−2 q_R^−1、U1=L_classical^−1 q_R^−1が一致する。これは有用な候補辞書であるが、対象全体・合成・heartの一致を証明したものではない。
+
+注意すべき点：VdBの反復は各段階でsection modelを使い、独立なclassical avatarのraw heartと同じとは限らない。さらにAOU (9.3),(9.25)のboundary shiftを、そのまま上記determinant辞書へ代入した計算は、構造対象の反Serre像のrestrictionと未整合である。push/pull、qの向き、点のshift、collectionのラベルのどれが原因か未確定であり、原典の誤りとも本研究の定理ともしていない。この未整合を解決するまでは独立avatar間の無条件なパラメータ同定を本文へ入れない。
+
 ## 次の核心
 
-同じ楕円データでVdB最後のδとRains自然Φのkernelまたはgluing moduleを同定し、構造対象・境界の保存を確認する。AOUの構造対象と標準三blockのt-exactness判定は済んでいる。楕円パラメータ上の十一因子の式、退化点とAS admissibilityの交叉、標準表示外・noetherian未確認域、相対heart・標識降下を進める。混合A2では商の元の生成元に対する係数が残る。
+同じ最終VdB表示の関手同定は完了した。残るのは独立な楕円avatarとの辞書とboundary actionの規約、実際のadmissible locus上の十一因子の式、E6全六根の実在定理の適用範囲、相対heartと降下である。新たな標準型を多数増やすより、この共通データの接続を優先する。
 
 ## 別稿との役割分担と保持する補足
 
@@ -62,12 +82,12 @@ Qを[[1,1,1],[1,a,b],[1,c,d]]と正規化し、Δ=(a−1)(b−1)(c−1)(d−1)(a
 
 可換cubicでは四者がcohSを再構成するが、その一点の一致から非可換一致locusの開性は導かない。weak(-2)曲線のEuler零の不可視対象と、非零負指数が[-1]に残る現象は異なる。相対比較にはperfectness・基底変更・消滅の一様性・t構造の適合性・pointed descentが追加で必要。
 
-## 先行研究と検証上の限界
+## 先行研究との差分・検証範囲
 
-論文末尾に11件の書誌・識別子・使用箇所を収録した。Rains2019のblow-up/t構造、Rains2022の共鳴とtrace、VdB §11–12、AOU §9、OUのAS定義、CHZのrealization、RSS/YZ/Orlovの有限性・飽和性が主要入力。Rains2025 monographの書誌と概要を確認したが、全定理番号対応と全内容の新規性照合は未完了。
+主文献に加え、Bridgeland *Stability conditions and Kleinian singularities*, IMRN2009 no21,4142–4157, arXiv:math/0508257v3の§2とLemma3.5を一次PDF本文・ページ画像で照合した。内部Db(modΠ)とambient圏の区別、spherical twistとWeyl反射は既知入力・先行する機構である。Broomhead–Coelho Simões–Pauksztello–Woolf *Simple tilts of length hearts and simple-minded mutation*, Adv.Math.503(2026)111197, arXiv:2401.02947v3のTheorem2.7,Remark2.8を本文で確認し、TheoremAのページ画像も確認した。一般のsimple tiltの有限長性を自動としないことが重要で、本稿のrigid spherical場合は直接証明した。
 
-今回、全文をLuaLaTeXで25ページに組版し、全ページのレンダリングを点検した。61ラベルと11引用キーの整合を検査し、数値コード三つを再実行した。40,000通りの混合A2検算に加え、AOUの標識対象の位置9,9,9,6,6,3,1と最後の二Hom消滅入力、restrictionの形式指数と次数零を検査した。線束の幾何学的非自明性や対象の同型を数値コードで証明したわけではない。
+VdB (9.5),9.1.8,9.1.9,9.2.3,11.1.1,11.1.3,11.2.1,11.2.4を関連本文で照合した。PDFページ画像の取得はCache missで失敗したので、その原典を画像で確認したとはしない。Rains2025 monographの全文取得は複数経路で成功せず、書誌・概要以上の新規性照合は未完了。VdBの有限長性/単純数、Bridgelandの一般機構を本研究の新規成果に数えない。
 
-今回の追加証明ではAOUの§4、§8のpotentialとrolled-up同定、係数商、OU Definition3.1、(3.9)–(3.10)、Remark5.4を一次本文で照合した。OUの該当ページ画像も確認した。AOUの構造対象の証明は既存の一次HTML確認を保持し、今回独立に全て再監査したとはしない。既存のRains入力の確認を保持するが、保持した全証明・全文献を今回再監査したとはしない。2025年monographの全内容との新規性照合、外部独立査読、機械形式化は未実施。生成・再現・遠隔保存の状態はvalidationを参照する。Libraryへの別途保存は行っていない。
+現行全文30ページ、73ラベル、13文献。四コードを実行した。新コードはA2+A1,A4,D5,E6,E7,E8の全根を整数上で生成し（8,20,40,72,126,240）、各型32個のregular汎関数に三戦略を適用した。計576反射手順で停止回数と終端simple root集合が一致した。具体E6は一手で(6,1,1,2,2,4)。計算は有限検査であり、一般の停止定理・sheaf実在・t構造の同定は本文の証明と仮定に依存する。
 
-新コード `computations/verify_four_hearts_corner.py` は、六つの普遍恒等式をZ上で検査し、指定WのHilbert値(8,21,33,38,33,21,8,0)をQQとF_1000003の別消去で確認する。7次は21endpoint blocks、総6804列。rank2障害Q0=[[3,4,5],[5,6,7],[7,8,9]]は九minor非零だがdet0、逆数行列式1/198450。逆数を2520倍したQ1も九minor非零だが逆数行列式0であり、最後の二条件は省けない。係数重み階数は27係数で19、18係数で14、四交比と切断の整数pairingはI4。これらは具体算術・恒等式検証であり、noetherian性やsheaf存在の計算証明ではない。
+従来のK0/Euler、40,000通りのA2、六点の普遍恒等式、cornerのQQ/有限体消去、係数torus重み/整数切断も再実行した。生成・組版・清浄環境での再現・遠隔保存の状態はvalidationで別々に管理する。保持した全証明・全文献を今回再監査したわけではなく、外部査読・機械形式化・網羅的新規性確認は未実施。Libraryへの別途保存は行わない。
