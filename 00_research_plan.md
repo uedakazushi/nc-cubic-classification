@@ -30,7 +30,7 @@
 
 **固定PI4包絡の完全判定**：h=1、gamma^4=2、alpha=(−2,−2,0)、beta=(1,1,2)のD切断族で、中心特異値は13個だが非H3値は平方因子のない次数6式 b(D)=(D−Dstar)*P4(D)*Q1(D)の根に限る。他のDのaffine切断は大域次元2。`papers/sections/cubic_order4_local_orders.tex` はgrの最大性、中心正則列とbalanced local dualityによる対称双対、DVR標準形の非分岐性、A1二重被覆の指標多重度を使う。小次元表現のnorm・二中心点への分配・次数6式は厳密検算済み。D直線のH3条件は主開集合D(b)で、任意底変更・fpqc降下に適合し、そのaffine族は相対対角の長さ2以下の射影分解を持つ。これは一固定包絡の判定で、全位数4族・全H3の被覆ではない。
 
-**有限楕円位数の現行判定（H3 classification-v21）**：良い楕円CY中心切断の全有限位数Nに幾何学的admissibilityを拡張した。三つの次数N中心元と三次関係、中心上rankN²、二中心元上free rank3N²、最高基底次数2Nを証明。H3 iff 中心がDuValのみで、各点の非分岐整環に全McKay指標が正多重度で現れる。同値に有限中心fiberの異なる単純表現の個数が|Irr G|に等しい。中心fiberは次元3N²以下で、正則trace形式からradicalを線型計算し半単純商の中心次元を数えればよい。次数3との互除性は不要。低次数中心の次元条件は一切断の認識には不要で、pencilの全切断列挙だけに必要だったことを確認した。これは中央一次境界を持つ指定CY部分のadmissibilityであり、非CY・非中心・無限位数境界、全intrinsic H3の被覆・成分・相対stackは未完成。次は固定有限Nの被約パラメータ族について相対中心生成・任意基底変更とH3開性を証明する。
+**有限楕円位数の相対結果（H3 classification-v22）**：固定位数Nの被約有限型PBW表示族で、相対中心の各濾過片が局所自由かつ任意底変更（非被約も可）と可換することを証明した。相対三生成元・三次関係とrank3N²の基底を得る。射影中心の無限遠では正則二次元環とmuN擬反射のskew-group型を持ち、properな中心二重積上で対角の二次syzygyの非射影supportを射影することでH3 locusのZariski開性を得た。good locus上は相対長さ2の対角射影分解が任意底変更で保たれ、fiber条件はfpqc降下する。積分した位数4全係数族に適用済み。全有限位数のpointwise admissibility（DuVal中心と全McKay指標）および固定PI4の六bad値も保持する。有限位数条件を横断する非被約変形、全intrinsic family stackの降下、全H3被覆・成分は未完成。次はCY包絡・中心Gの制限を、mu_R=idの正規三次商と中央一次境界へ弱められるか、affine認識の証明から確認する。
 
 既存の主要な構造結果を維持する：
 

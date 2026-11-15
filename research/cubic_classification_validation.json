@@ -1,6 +1,6 @@
 {
   "date": "2026-11-15",
-  "version": "classification-v21",
+  "version": "classification-v22",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -24,7 +24,8 @@
     "papers/sections/cubic_order4_small_reps.tex",
     "papers/sections/cubic_order4_local_orders.tex",
     "papers/sections/cubic_order4_general_criterion.tex",
-    "papers/sections/cubic_finite_order_criterion.tex"
+    "papers/sections/cubic_finite_order_criterion.tex",
+    "papers/sections/cubic_finite_order_relative.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -368,6 +369,20 @@
     "exact_command": "python3 computations/verify_cubic_finite_order_fibers.py",
     "exact_scope": "six rational cyclic-order central fiber models and idempotent amplifications; regular trace radicals and semisimple center dimensions, not a machine proof of the general theorem",
     "typesetting": "82-page full manuscript compiled with no undefined refs/cites or overfull boxes; no additional visual pass for this subsection yet",
-    "limitations": "admissibility under the stated central elliptic CY boundary assumptions; no all-H3 coverage or all-parameter relative center/open/stack result; independent review and novelty unchecked"
+    "limitations": "Pointwise and fixed-order reduced-presentation relative results now proved; all-H3 coverage, arbitrary torsion-transverse deformations and intrinsic family-stack classification remain open"
+  },
+  "fixed_finite_order_relative_center_and_H3_open": {
+    "proof": "papers/sections/cubic_finite_order_relative.tex",
+    "assumptions": "Reduced finite-type characteristic0 base; graded PBW-flat presentation family from the finite-order CY theorem; smooth elliptic family; translation exact same orderN on all geometric fibers",
+    "ordinary_results": [
+      "constant-rank commutator kernels over reduced base; relative center generation/cubic and arbitrary base change including nilpotents",
+      "proper cubic coarse center; weighted root boundary Azumaya and full regular inertia representation; pseudo-reflection skew-group boundary models",
+      "projectivity of flat second diagonal syzygy detected by fiber via completed projective covers; proper projection of closed failure support gives open H3 base",
+      "relative affine diagonal projective resolution length<=2 and arbitrary base change; fpqc descent of the geometric fiber condition",
+      "entire integrated order4 base smooth hence reduced, so theorem applies to all its coefficients"
+    ],
+    "typesetting": "84-page full manuscript built without unresolved refs/cites or overfull boxes; new boundary and openness page67 inspected visually",
+    "limitations": "Not an all-intrinsic family-stack/descent theorem; excludes torsion-transverse nilpotent deformations; no claim that all H3 have central smooth elliptic boundary; proof not computer-formalized or independently reviewed",
+    "counterexample_retained": "[epsilon] over k[epsilon]/epsilon² has constant geometric fiber rank but center-kernel base change fails; reduced-base hypothesis used genuinely"
   }
 }
