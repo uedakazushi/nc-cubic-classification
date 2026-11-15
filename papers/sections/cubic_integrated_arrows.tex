@@ -1,0 +1,117 @@
+\subsection{積分した族の全幾何学的な矢}
+\label{subsec:integrated-full-arrows}
+$\mathcal T=\mathcal V^*\times\mathbb A^7_{a,\beta,D}$ と置き、
+$a=(A,B,C)$ とする。H3 を与える幾何学的点の部分集合を $\mathcal T_{H3}$ と書く。
+前節でこの集合の判定は一つの affine 環の有限大域次元に帰着しているが、
+全相対 H3 開性を仮定しない。
+
+\begin{theorem}[指定chartの全比較写像と中心値の有限線形計算]
+\label{thm:integrated-full-arrows}
+定理\ref{thm:beta-global-geometric-classification}と同じ群
+\[
+ \mathcal G=\{(M,a_0):[M]\in\Gamma_{216},\ a_0\in\mathbb G_m\}
+              /\{(rI,r):r\in\mathbb G_m\}
+\]
+を取る。$H_h=2xyz-h(x^3+y^3+z^3)/3$ とし、
+$H_h(MX)=cH_{h'}(X)$ と書く。以下の式は $\mathcal T$ 上の作用を定め、
+$\mathcal T_{H3}$ の全内在的 pointed 幾何学的群oidは
+\[
+ [\mathcal T_{H3}/\mathcal G]
+\]
+で与えられる。
+
+$Q=M^T\operatorname{diag}(a)M$、$q_o=(Q_{23},Q_{13},Q_{12})^T$ と置けば
+\begin{align*}
+ \gamma'&=\gamma\det M/c,&
+ v&=-2\gamma a_0q_o/c,& b&=Mv,\\
+ a'&=\frac{a_0}{\det M}
+ (Q_{11}+h'Q_{23},Q_{22}+h'Q_{13},Q_{33}+h'Q_{12})^T,\\
+ \beta'&=\frac{a_0^2}{c}M^T\beta
+       -\nabla H_{h'}(v)-\frac{4\gamma a_0}{c}Qv.
+\end{align*}
+対応する包絡同型は $t\mapsto a_0t,\ X\mapsto MX+bt$ である。
+特に $\gamma\ne0$ では平行移動を一般に省略できない。
+
+$D'$ は次の有限線形計算で全パラメータについて一意に決まる。
+中心切断の像を target 包絡の次数3商（次元20）へ写し、
+\begin{equation}\label{eq:integrated-D-linear-solve}
+ \phi(\mathcal G_{h,\gamma,a,\beta,D})
+   =u\,\mathcal G_{h',\gamma',a',\beta',0}+d_0t^3
+\end{equation}
+を解く。このとき $u\ne0$ で、$D'=d_0/u$ である。
+この計算は40語・21本の挿入関係からの商と二列の線形方程式だけを用い、
+単純表現や中心点を選ぶ必要はない。
+固定した包絡間の比較では $u$ は $D$ に依らず、
+$D'=a_0^3D/u+\text{constant}$ という affine 作用となる。
+\end{theorem}
+
+\begin{proof}
+$t$ の中心一次直線は一意であるから、全 graded 包絡同型は
+$t\mapsto a_0t,X\mapsto MX+bt$ と書ける。
+$t=0$ の AS3 三次トップは巡回ポテンシャルをスカラーまで決める。
+その可換化は滑らかな Hesse 三次 $H_h$ であり、線形同型は九つの flex を保つから、
+射影行列は既に認識した $\Gamma_{216}$ に属する。
+反対称巡回三次 $xyz-xzy$ の変換係数は $\det M$ なので
+$\gamma'=\gamma\det M/c$ を得る。
+$h\in\mathcal H$ はこの Hesse 比較群で保たれ、point curve の滑らかさも保存される。
+従って比較は $\mathcal V^*$ 内に留まる。
+
+中心 $t$ を係数とする三変数ポテンシャルは
+\[
+ \Phi_{h,\gamma}(X)+2\gamma t\,X^T\operatorname{diag}(a)X-t^2\beta^TX.
+\]
+反対称部分は $X\mapsto MX+bt$ に対して巡回商では平行移動の寄与を持たない。
+$v=M^{-1}b$ と書き、可換化した残りを展開すると二次項は
+\[
+ c\,v\cdot\nabla H_{h'}(X)+2\gamma a_0 X^TQX.
+\]
+混合二次の係数を零にする条件は
+$2c v+4\gamma a_0q_o=0$ であり、表示した唯一の $v$ を得る。
+対角係数を $2c\gamma'a'$ と比較すると $a'$ の式を得る。
+一次項の係数は
+$c\nabla H_{h'}(v)+4\gamma a_0Qv-a_0^2M^T\beta$ なので、$-c\beta'$ と比較すればよい。
+従って表示した代入はポテンシャルを定数 $t^3$ だけの差を除いて
+$c$ 倍の target ポテンシャルへ移し、実際に包絡同型を与える。
+逆向きにも二次関係の独立性と chain rule により同じ比較を強いられるため、
+これ以外の平行移動や包絡同型は存在しない。
+
+中心一次と低次数中心の認識から target の中心三次は
+$k\mathcal G_{\mathrm{target},0}\oplus kt^3$ である。
+従って \eqref{eq:integrated-D-linear-solve} は必ず解け、最高活動三次の非零性から $u\ne0$ である。
+これが中心切断の直線を保存するための必要十分条件と $D'$ を与える。
+二列は全パラメータで独立であるので、局所的な単元小行列式で得た解は一致して貼り合わさり、
+作用は正則となる。特定の行列式が零の点を除外していない。
+
+二つの比較の合成は $M$ の積、$a_0$ の積を持ち、標準形へ戻す平行移動は一意である。
+従って式は群の作用を定める。$\gamma=0$ と違って
+$\beta'$ に二次補正が入ることもこの合成則に含まれる。
+全変数を同じ $r$ 倍する $(rI,r)$ はパラメータを変えず、ちょうど次数スカラーを除く。
+H3 の pointed exact 同値は反Serre section環の同型、次いで二次包絡の同型へ一意に持ち上がるから、
+上で全ての幾何学的な矢を尽くした。
+
+\path{verify_cubic_integrated_arrows.py} は三つの Hessian 生成元について
+全ポテンシャルの恒等式と九組全ての生成元合成を
+$\mathbb Q(\zeta_3)(h,\gamma,a,\beta)$ 上で確認する。
+\path{verify_cubic_integrated_center_action.py} は二列線形計算を実装し、
+三つの生成元の厳密な有理数・三乗根体の control で全商恒等式を検証する。
+後者の有限 control を全係数への外挿には用いず、中心三次基底の証明を用いている。
+\end{proof}
+
+\begin{corollary}[慣性、一般次元、単冪比較]
+\label{cor:integrated-arrows-dimension}
+全中心切断表示の商 stack $[\mathcal T/\mathcal G]$ の一般次元は8で、一般慣性は自明である。
+H3 幾何学的部分の全慣性は上記の係数作用の stabilizer であり、全て有限である。
+この指定chartの包絡には非恒等な単冪 graded 自己同型は存在しない。
+ここで全 H3 相対部分が代数的開 substack であることや、全 H3 moduli の成分であることは主張しない。
+\end{corollary}
+\begin{proof}
+パラメータ空間は次元9、$\mathcal G$ は恒等成分 $\mathbb G_m$ と有限成分群を持つので一般次元は8である。
+残る torus の重みは $a,\beta,D$ に対して $1,2,3$ である。
+$a=\beta=D=0$ は分裂包絡の零中心値切断であり H3 ではない。
+従って H3 点では torus stabilizer は有限で、有限成分を加えても有限である。
+非自明な射影 $M$ は一般の $\beta$ に非スカラーの線形部として作用し、
+一般の $a$ の条件が torus の係数を既に固定するので、一般点を固定できない。
+射影 $M=1$ の場合にも一般の $a\ne0$ が残る torus を殺す。従って一般慣性は自明である。
+単冪自己同型の射影部分は有限群内で恒等となり、$t$ と $X$ のスカラーも1である。
+そのとき $Q$ は対角で $v=b=0$ となるので、自己同型全体が恒等である。
+\end{proof}

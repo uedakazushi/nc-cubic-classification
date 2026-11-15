@@ -1,0 +1,21 @@
+{
+  "version": "classification-v13",
+  "field": "QQ(zeta3)(h,gamma,A,B,C,beta_x,beta_y,beta_z)",
+  "full_potential_generator_identities": 3,
+  "universal_generator_compositions": 9,
+  "formulas": {
+    "top": "H_h(MX)=c H_hprime(X), gamma_prime=gamma det(M)/c",
+    "Q": "M^T diag(A,B,C) M",
+    "v": "-2 gamma a0/c*(Q23,Q13,Q12)",
+    "translation": "b=Mv",
+    "a_prime": "a0/det(M)*(Q11+hprime Q23,Q22+hprime Q13,Q33+hprime Q12)",
+    "beta_prime": "a0^2/c M^T beta-grad H_hprime(v)-4 gamma a0/c Qv",
+    "D_prime": "Unique two-column linear solve of the transformed central cubic against (G_target(D=0),t^3) in the degree3 quotient, divided by the nonzero first coefficient"
+  },
+  "t_scaling_weights": {
+    "a": 1,
+    "beta": 2,
+    "D": 3
+  },
+  "scope": "Universal envelope formulas and composition/translation laws; all geometric arrows in the stated smooth Hesse chart follow by the ordinary proof. Not full bad-D enumeration, relative intrinsic descent or global H3 coverage."
+}

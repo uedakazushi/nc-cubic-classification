@@ -1,0 +1,25 @@
+{
+  "version": "classification-v13",
+  "center_action_algorithm": "Project transformed source G to degree3 target quotient; uniquely solve [G_target(D=0),t^3]*(u,d)=phi(G_source); Dprime=d/u",
+  "finite_exact_controls": [
+    {
+      "generator": 0,
+      "u": "1",
+      "D_prime_for_D5": "10435/729"
+    },
+    {
+      "generator": 1,
+      "u": "CRootOf(zeta**2 + zeta + 1, 1)",
+      "D_prime_for_D5": "-5 - 5*CRootOf(zeta**2 + zeta + 1, 1)"
+    },
+    {
+      "generator": 2,
+      "u": "12851/15552 + 5291*CRootOf(zeta**2 + zeta + 1, 1)/7776",
+      "D_prime_for_D5": "544837055/1129101144 - 331688192*CRootOf(zeta**2 + zeta + 1, 1)/47045881"
+    }
+  ],
+  "control_field": "QQ(zeta3)",
+  "control_source": "h1,gamma1/2,a=(1,2,3),beta=(-1,2,3),D5",
+  "universal_envelope_checks_rerun": true,
+  "scope": "Three exact controls of a general finite linear algorithm; universality/completeness of D arrows is the ordinary center-basis proof, not finite extrapolation. No H3 admissibility of control D values asserted."
+}
