@@ -14,6 +14,9 @@
 
 ## 現在の重点：heart比較、まずcubic surface
 
+**RainsのZariski denseな共鳴への新しい結果**：simple rootの負Euler指数m<0で実在する既約根sheaf Mは、Rains heartで全反標準twistからHomが零、Ext¹の次元が-mとなりAZ amplenessに失敗。anticanonical heartでは反標準境界外のR/(g-1)の-m次元表現が導来切断の[-1] shiftとして現れる。負指数の共鳴だけで六点の楕円族にZariski稠密。反標準環のHilbert関数は一定で、導来非同値・qgr特異化は主張しない。**[証明原稿](papers/nc_del_pezzo_resonance_hearts.tex)**／[研究ノート](research/resonance_hearts.md)。
+
+
 一般の非可換del Pezzoに対する **Rains heart・VdB heart・AS heart・anticanonical heart** の四構成を比較する。dP1に限定せず、最初に次数3のcubic surfaceを扱う。heartの存在、faithfulなrealization、導来同値、t-exactness、構造対象・反Serre・境界・markingの保存と族の降下を区別する。
 
 [研究ノートと具体的着手](research/heart_comparison.md) ／ [証明付き原稿](papers/nc_del_pezzo_hearts.tex) ／ [共通枠組み](research/common_del_pezzo_framework.md) ／ [今回の検証範囲](research/heart_comparison_validation.json)

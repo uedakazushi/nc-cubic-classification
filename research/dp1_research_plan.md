@@ -8,6 +8,10 @@ quiverを分類対象に含めず、Ext有限・noetherianな非零abel圏、Ser
 
 特に、Rains型の数値的amplenessの共鳴条件と、導来圏の変化・homological singularityを厳密に区別する。公表に必要なのは仮定・同値関係・自然性・全射性を揃えた正確な定理と証明である。
 
+## dense resonanceでの確定結果（次数1も含む）
+
+`papers/nc_del_pezzo_resonance_hearts.tex`：Rainsのsimple-root既約sheaf存在条件の下、m=chi(e,M)<0の根sheaf MはRains heartで全tau-orbitからHom=0、Ext¹=-m、Ext²=0。従って反標準AZ ampleは失敗し、自然導来切断の像はanticanonical qgrの非零対象πN[-1]（境界外の次元-mアフィン表現）。m=-n(n≥1)を楕円曲線上の吹き上げ点移動で実現するdenseな一パラメータ族は次数1の一般位置blow-upにも適用する。m=0の古典的(-2)収縮とは異なり、ここから導来非同値・qgrの特異化は従わない。既存`papers/dp1_anticanonical_models.tex`が主張する全q導来同値の独立監査は未実施。一般の研究ノートは`research/resonance_hearts.md`。
+
 ## 現在有効な到達点と証明の所在
 
 - **内在的rank・section環**：`papers/nc_del_pezzo_degree1_moduli.tex` の`sec:intrinsic-rank`。Gabriel–Krull長さをrankとし、適切なample条件の下でgeneric quotientのsemisimplicity、rankの加法性、反標準環の整域性、切断の二次増大を証明している。次数3と同じ数値的な一般化は`research/common_del_pezzo_framework.md`参照。

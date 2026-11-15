@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-15",
+  "version": "resonance-hearts-v1",
+  "primary_sources": [
+    "Rains arXiv:1907.11301v1 Sec7 Cor7.23 Sec10 Cor10.16 Sec11 pp139-141",
+    "Rains arXiv:2107.13540v2 Sec4 pp33-35 Sec5 Prop5.1 Eq5.1"
+  ],
+  "manuscript": "papers/nc_del_pezzo_resonance_hearts.tex",
+  "claims": {
+    "proved_conditional": "Negative Euler index simple-root sheaf M disjoint from elliptic boundary: tau-fixed, Hom=Ext2=0, Ext1=-m, Rains AZ generation fails, g-localized nonzero -m dimensional affine representation in anticanonical qgr, natural derived section has shift [-1], density on smooth six-point family; ring Hilbert no jump; zero-index root absent for genuine smooth classical avatar.",
+    "primary_inputs": "Rains existence theorem for irreducible simple-root sheaves with determinant condition; boundary triangle and central g; Rains quotient Euler bound and Ext2 vanishing.",
+    "not_verified": "Old dP1 manuscript all-q derived equivalence and smoothness are not independently audited; no global derived non-equivalence or noncommutative singularity assertion.",
+    "mathematical_novelty": "Not established; primary results may imply some or all statements elsewhere."
+  },
+  "checks": {
+    "root_intersections_degree3_and1": "exact integer arithmetic tested",
+    "negative_index_module_dim_formula": "checked m=-1..-8 arithmetically",
+    "strict_original_script_execution": false,
+    "latex_compiled": false,
+    "pdf_reviewed": false,
+    "github_push": "pending verification"
+  },
+  "persistence": "GitHub main is canonical. If push successful, do not upload Library."
+}

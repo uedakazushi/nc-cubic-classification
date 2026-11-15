@@ -1,6 +1,12 @@
 # 非可換del Pezzo曲面のheart比較：現行研究ノート
 
-2026-11-15 / hearts-v1。最初に `00_research_plan.md` を読む。証明本文は `papers/nc_del_pezzo_hearts.tex`。対象は全次数の非可換del Pezzo曲面、最初の実行対象はcubic surface（次数3）。
+2026-11-15 / hearts-v9。最初に `00_research_plan.md` を読む。証明本文は `papers/nc_del_pezzo_hearts.tex`。対象は全次数の非可換del Pezzo曲面、最初の実行対象はcubic surface（次数3）。
+
+## 稠密なresonanceの正しいheart比較
+
+**負指数の実在根sheafに対する定理を証明済み**（本文`papers/nc_del_pezzo_resonance_hearts.tex`、補足`research/resonance_hearts.md`）。Rains既約根sheafのexistence/determinant条件を満たし m=chi(e,M)<0, Li^*M=0 なら、tau M≅M、Hom(e,tau^nM)=Ext²=0、dim Ext¹=-m。Rains heartの反標準AZ pairは非ample。qgrのanticanonical heartにはg可逆の非零πNがあり、N=⊕Ext¹、R/(g-1)の(-m)次元右加群、自然derived sectionの像はπN[-1]。よって自然比較はt-exactでない。負指数m=-nを実現するp3(n)の列だけでZariski dense。一方g中心正則とR/(g)のtwisted homogeneous coordinate ringからdim R_n=1+dn(n+1)/2が一定。これはnumeric resonanceからの単純な推測ではなく、Rains 2019 §§7,10–11と2022 §§4–5の既約sheaf存在・Euler下界・Ext²消滅・自然triangleの形式的帰結。
+
+genuine del Pezzo avatarではm=0のroot restrictionが自明でない（零指数共鳴は不在）。古典的weak dPの(-2)収縮のderived情報消失と区別。m>0でExt¹が消えるか、およびqgrのderived smoothnessは未解決。既存dP1原稿の全q導来同値は証明記載済みだが今回独立再監査しておらず、この結果の入力にしていない。
 
 ## 目標・達成基準
 

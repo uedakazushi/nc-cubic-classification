@@ -1,0 +1,328 @@
+\documentclass[11pt,a4paper]{ltjsarticle}
+\usepackage[margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs}
+\usepackage[unicode,hidelinks]{hyperref}
+\newtheorem{theorem}{定理}[section]
+\newtheorem{proposition}[theorem]{命題}
+\newtheorem{lemma}[theorem]{補題}
+\newtheorem{corollary}[theorem]{系}
+\theoremstyle{definition}\newtheorem{remark}[theorem]{注意}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\RHom}{RHom}
+\DeclareMathOperator{\Pic}{Pic}
+\DeclareMathOperator{\qgr}{qgr}
+\DeclareMathOperator{\coh}{coh}
+\DeclareMathOperator{\Proj}{Proj}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Ind}{Ind}
+\newcommand{\Db}{D^b}
+\title{Rains共鳴の稠密軌跡と反標準heart\\
+\large 負Euler指数の根sheaf・次数シフト・非可換アフィン表現}
+\author{研究原稿：一次資料の仮定と未検証の導来比較を区別する}
+\date{2026年11月15日 \quad resonance-hearts-v1}
+\begin{document}
+\maketitle
+\begin{abstract}
+滑らかな楕円反標準境界を持つRains型非可換del Pezzo曲面で，根の
+共鳴がZariski稠密な軌跡においてanticanonical heartに何を生じるかを調べる．
+負のEuler指数$m<0$で境界から離れた既約根sheaf $M$が存在するとき，
+Rains heart内では$\Hom(e,\tau^nM)=0$，$\Ext^1(e,\tau^nM)$は
+次元$-m$であり，構造対象の反標準orbitはArtin--Zhang ampleでない．
+反標準環の導来切断は$M$を$(-m)$次元のアフィン表現に対応する対象の
+$[-1]$ shiftへ送る．負指数の共鳴のみでもZariski稠密となる明示的な
+楕円曲線上の一パラメータ族を構成する．反標準環のHilbert関数は変化しない．
+これはRains heartとanticanonical heartのpointedな非一致を与えるが，
+導来圏の非同値・anticanonical heartの特異化を意味しない．
+指数零の古典的$(-2)$曲線の収縮と，指数非零の稠密共鳴を区別する．
+Rainsのsheaf存在定理，gluingと境界のtriangleを既知入力として明記する．
+次数1の既存原稿に書かれた広い導来同値定理の独立再検証は行っていない．
+\end{abstract}
+
+\section{共鳴の規約と入力の範囲}
+基礎体を$k=\mathbb C$とする．Rainsの意味のsmooth elliptic
+noncommutative del Pezzo $(\mathcal A_{\mathrm R},E)$に
+構造line bundle $e=\mathcal O_X$，Serre関手$\mathbb S$，
+$\theta=\mathbb S[-2]$，$\tau=\theta^{-1}$，
+境界制限$Li^*:\Db(\mathcal A_{\mathrm R})\to\Perf(E)$
+と右随伴$i_*$があり，
+\begin{equation}\label{eq:boundarytriangle}
+ \theta M\longrightarrow M\longrightarrow i_*Li^*M
+ \longrightarrow\theta M[1]
+\end{equation}
+は自然なtriangleである\cite[\S\S4--5]{RainsFiltered}．
+$e$はline bundleで$\theta,\tau$はRains heartにexactに作用する．
+さらに$R=\bigoplus_{n\ge0}\Hom(e,\tau^ne)$は
+次数1の中心元$g$を持ち，$R/(g)$は楕円曲線上のtwisted
+homogeneous coordinate ringとなる\cite[Proposition 5.1]{RainsFiltered}．
+以下，$\qgr R$の対象と有限生成次数付き加群を扱う場合には，
+当該$R$の右noetherian性と必要な$\chi$条件を仮定または確認した範囲に限る．
+
+古典的avatarを滑らかなgenuine del Pezzo曲面$S$，
+その滑らかな反標準曲線を$E$とし，
+$K_0(\mathcal A_{\mathrm R})\cong K_0(S)$を固定する．
+根$\alpha\in K_S^\perp$は$\alpha^2=-2$を満たす．
+$M$のrankは零，$c_1(M)=\alpha$，
+$m=\chi(e,M)$とする．
+gluingパラメータ$q\in\Pic^0(E)$の向きを
+\begin{equation}\label{eq:resonance}
+ Li^*M=0\quad\Longrightarrow\quad
+ \mathcal O_E(\alpha)\otimes q^{m}\simeq\mathcal O_E
+\end{equation}
+と規格化する．これは$K$群上のrestriction determinant
+の式である．Rainsの$q$を逆元とする規約では指数の符号も反転する．
+式\eqref{eq:resonance}だけではsheafの存在を保証しない．
+以下では，Rainsの既約根sheaf存在定理
+\cite[\S9, \S11, pp.~139--141]{RainsBirational}と
+\cite[\S4, pp.~33--35]{RainsFiltered}が適用され，
+$Li^*M=0$である\emph{既約な純一次元sheaf}が実在する共鳴を扱う．
+特に，固定したblowdownのsimple rootの共鳴を使えばよい．
+
+\begin{proposition}[共鳴による反標準環のHilbert関数の跳びはない]
+\label{prop:hilbert-no-jump}
+前節のRainsの環の仮定の下，$d=(-K_S)^2>0$とすると
+\[
+ \dim_k R_n=1+\frac d2 n(n+1)\qquad(n\ge0)
+\]
+であり，$q$の共鳴の有無に依存しない．
+特に非零指数の共鳴で生じる有限次元アフィン表現は，
+$R$のHilbert関数の跳びと同一視してはならない．
+\end{proposition}
+\begin{proof}
+$g$は正則中心元であり
+$R/(g)=B(E,L,\sigma)$で$\deg L=d$だから
+\[
+0\longrightarrow R_{n-1}\xrightarrow{\cdot g}R_n
+\longrightarrow B(E,L,\sigma)_n\longrightarrow0
+\]
+が成立する．$n\ge1$では楕円曲線上の正次数線束の
+切断数は$nd$である．$R_0=k$から帰納法で主張が従う．
+このgraded ringの恒等式はRains
+\cite[Proposition 5.1]{RainsFiltered}の仮定内での結果である．
+\end{proof}
+
+\section{負Euler指数でのheartの違い}
+\begin{theorem}[負指数共鳴のheart障害]\label{thm:negative}
+上記のRains型曲面で，$\alpha^2=-2$，$\alpha K_S=0$を満たす根の
+既約な純一次元sheaf $M$があり，
+$Li^*M=0$，$m=\chi(e,M)<0$とする．すると次が成立する．
+\begin{enumerate}
+\item $\tau M\simeq M$であり，全整数$n$について
+\[
+\Hom(e,\tau^nM)=0,\qquad
+\Ext^2(e,\tau^nM)=0,\qquad
+\dim_k\Ext^1(e,\tau^nM)=-m.
+\]
+\item Rains heartの$(e,\tau)$はArtin--Zhang ampleでない．
+\item $N=\bigoplus_{n\ge0}\Ext^1(e,\tau^nM)$は
+次数付き右$R$加群であり，$g$による次数上昇作用は同型である．
+$N$は有限生成$k[g]$加群で，各次数の次元は$-m$．
+従って$\pi N\in\qgr R$は非零で，境界$g=0$の外にある．
+\item $A=R/(g-1)$をdehomogenizationとすると，
+$V=(N[g^{-1}])_0$は$A$の有限次元右加群で，
+\[
+\dim_kV=-m.
+\]
+自然な導来切断が$M$で定義される範囲では
+\[
+\Phi(M):=\pi\mathbf R\Gamma_*(M)
+ \simeq(\pi N)[-1],\qquad
+\mathbf R\Gamma_*(M)_n=\RHom(e,\tau^nM).
+\]
+従って$\Phi$はRains heartからanticanonical heartへの
+$t$-exact functorになり得ない．
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+式\eqref{eq:boundarytriangle}と$Li^*M=0$から
+$\theta M\simeq M$，従って$\tau M\simeq M$．
+$e$はtorsion-free line bundleで$M$は純一次元既約である．
+非零の写像$e\to M$があれば，その像は純一次元の$M$の
+非零部分sheafである．Rainsの既約性により全射となる．
+しかしRains\cite[Corollary 10.16]{RainsBirational}は
+$e\to M$が全射で，$M\ne e$，$c_1(M)=\alpha$なら
+\[
+\chi(e,M)=\chi(M)\ge
+-\tfrac12\alpha\cdot(\alpha+K_S)=1
+\]
+を与え，$m<0$に矛盾する．よって$\Hom(e,M)=0$．
+$\tau M\simeq M$より全$n$でも同じ．
+Rains\cite[Corollary 7.23]{RainsBirational}は
+line bundleから一次元以下のsheafへの$\Ext^2$の消滅を与える．
+Eulerの定義から$\dim\Ext^1(e,M)=-m$となり，
+$\tau$による周期性で全$n$に成立する．
+
+AZの生成条件は，非零$M$に対して十分負の全$\tau$-twistの
+有限直和から$M$へ全射があることを要求する．
+これら全てからの$\Hom$が零なので矛盾する．
+
+中心次数1の$g$は，\eqref{eq:boundarytriangle}の自然変換に由来する．
+$M$上ではこの自然変換が同型なので，
+$\Ext^1(e,\tau^nM)\to\Ext^1(e,\tau^{n+1}M)$は全$n$で同型．
+したがって$N$は$k[g]$上次数0の有限次元空間から生成され，
+$\pi N\ne0$（有限次元次数付きtorsion加群ではない）．
+$g$の局所化により$N[g^{-1}]$は$A$-加群$V$に対応し，
+$\dim V=\dim \Ext^1(e,M)=-m$．
+$\RHom(e,\tau^nM)$はcohomological degree 1にのみ集中するので，
+$\pi\mathbf R\Gamma_*(M)$は$\pi N[-1]$である．
+\end{proof}
+
+\begin{corollary}[pointedなabel圏比較の非一致]
+\label{cor:not-pointed}
+定理\ref{thm:negative}が成立し，$R$が標準的なnoetherian
+$\qgr$を与え$(\pi R,(1))$がAZ-ampleであるとする．
+このとき$(\mathcal A_{\mathrm R},e,\tau)$と
+$(\qgr R,\pi R,(1))$の間に，$e$と$\tau$を保つabel圏同値はない．
+\end{corollary}
+\begin{proof}
+Artin--Zhang amplenessは標識付きabel圏同値で保たれる．
+右辺の標準pairはampleだが，左辺は定理によってampleでない．
+\end{proof}
+\begin{remark}
+対象$M$の$\Phi$による像が非零であることと，
+$\Phi$が全導来圏で同値であることは別の問題である．
+$\pi N[-1]$が得られたことから，非同値・非滑らかさは従わない．
+また$m>0$では$\dim\Hom(e,M)-\dim\Ext^1(e,M)=m$なので
+$\Hom(e,M)\ne0$は従うが$\Ext^1$消滅は従わない．
+正指数の全共鳴で$t$-exactかどうかは未解決である．
+\end{remark}
+
+\section{負指数の共鳴だけで稠密}
+\begin{theorem}[明示的なZariski稠密な非$t$-exact locus]
+\label{thm:dense-negative}
+滑らかな平面三次曲線$E\subset\mathbb P^2$，
+無限位数の$q\in\Pic^0(E)$を固定する．
+$p_1,p_2,p_4,p_5,p_6\in E$を十分一般に固定し，
+$L=\mathcal O_E(1)$と置く．各$n\ge1$に対し
+\[
+ \mathcal O_E(p_3(n))\simeq
+ L\otimes\mathcal O_E(-p_1-p_2)\otimes q^{-n}
+\]
+を満たす唯一の$p_3(n)\in E$を取る．
+すると有限個の例外を除いて六点は$\mathbb P^2$で一般位置であり，
+$S_n=\operatorname{Bl}_{p_1,p_2,p_3(n),p_4,p_5,p_6}\mathbb P^2$
+はgenuineな滑らかなcubic surfaceである．
+単純根$\alpha=h-e_1-e_2-e_3$に対し
+\[
+ \mathcal O_E(\alpha)=q^n,\qquad m=-n
+\]
+となる．Rainsの単純根sheaf存在定理がこれらの共鳴で適用されるなら，
+負指数の既約根sheaf$M_n$が存在し，
+定理\ref{thm:negative}のAZ失敗と$[-1]$ shiftが
+Zariski denseな点集合で起こる．
+\end{theorem}
+\begin{proof}
+$\Pic^1(E)\simeq E$だから$p_3(n)$は一意に存在する．
+$q$が無限位数ゆえ$p_3(n)$は相異なる．
+五つの固定点に対し，追加の一点が三点共線性や六点
+conic上条件を満たすのは有限個の点だけである．
+従って一般位置を失う$n$は有限個であり，
+$\{p_3(n):n\ge1\}$は曲線$E$のZariski稠密部分集合をなす．
+根の制限は$L(-p_1-p_2-p_3(n))=q^n$である．
+式\eqref{eq:resonance}に$m=-n$を代入し，
+Rainsの単純根sheaf存在結果を適用すると結論を得る．
+\end{proof}
+
+\begin{corollary}[負指数共鳴が全パラメータ空間で稠密]
+\label{cor:dense-total}
+滑らかな平面三次$E$，非torsionの$q\in\Pic^0(E)$，
+および他の五吹き上げ点をパラメータとして動かす
+六点配置の局所的な族において，定理\ref{thm:dense-negative}
+の負指数共鳴点の合併はZariski稠密である．
+従ってこのチャートのいかなる非空Zariski開部分にも，
+$\mathcal A_{\mathrm R}$で$(e,\tau)$がAZ-ampleでない点が存在する．
+\end{corollary}
+\begin{proof}
+各基底パラメータに対する$p_3$のファイバーは楕円曲線$E$であり，
+無限位数$q$を持つ基底点はZariski稠密である．
+それらの各ファイバーで定理の負指数列はZariski稠密なので，
+全空間の任意の非空開集合は適当なファイバーでこの列に交わる．
+基底全体のirreducibilityと$p_3$を動かす開写像性を用いる．
+\end{proof}
+\begin{remark}
+ここでいう稠密性は可算個の閉共鳴軌跡の\emph{合併}の
+Zariski稠密性であり，個々の共鳴軌跡が開集合であるとか，
+全共鳴点で同じheart変化が起こるという主張ではない．
+\end{remark}
+
+\begin{remark}[他の次数への同じ稠密性]
+$\mathbb P^2$の$r=3,\ldots,8$点blow-up（del Pezzo次数$d=9-r$）
+で，滑らかな平面三次$E$上の他の点を一般に固定し，
+$p_3(n)$を同じ式で動かせばよい．
+genuine del Pezzo条件を破る$p_3$の集合は，固定した他の点が
+十分一般なら$E$の有限集合である．
+根$\alpha=h-e_1-e_2-e_3$はどの次数でも
+$\alpha^2=-2$，$\alpha\cdot K=0$を満たすため，
+Rainsの単純根sheaf存在結果の適用範囲で負指数の稠密性は
+次数$1,\ldots,6$へ同様に及ぶ．これは全moduli成分への
+稠密性を主張するものではない．
+\end{remark}
+
+\section{零指数，弱avatar，導来同値の論理状態}
+\begin{proposition}[genuine del Pezzoでは零指数根共鳴がない]
+\label{prop:zero-index}
+$S$は滑らかなgenuine del Pezzoで$E\in|-K_S|$が滑らかとする．
+任意の根$\alpha^2=-2$，$H\alpha=0$について
+$\mathcal O_E(\alpha)\not\simeq\mathcal O_E$である．
+従って式\eqref{eq:resonance}で$m=0$の根共鳴は起こらない．
+\end{proposition}
+\begin{proof}
+$H=-K_S$がampleなので，有効で非零の$\pm\alpha$は存在せず
+$H^0(S,\mathcal O_S(\pm\alpha))=0$．
+$E\sim H$に対し$\chi(\alpha-H)=
+1+\frac12(\alpha-H)\cdot\alpha=0$，
+$H^0(\alpha-H)=0$，$H^2(\alpha-H)=H^0(-\alpha)^*=0$
+だから$H^1(\alpha-H)=0$．
+$0\to\mathcal O_S(\alpha-H)\to\mathcal O_S(\alpha)
+\to\mathcal O_E(\alpha)\to0$から
+$H^0(E,\mathcal O_E(\alpha))=0$となり，自明束ではない．
+\end{proof}
+\begin{remark}[古典的な零指数根壁との相違]
+弱del Pezzo $S$に実在する$(-2)$曲線$D$があり，
+反標準収縮$f:S\to X$がそれを収縮すると，
+$i_*\mathcal O_D(-1)$は反標準orbitに
+\emph{導来的にも}直交し$\mathbf Rf_*$で消える．
+これは零指数・弱avatarの現象であり，
+今回の負指数の稠密resonanceで$\Ext^1$が残る現象とは異なる．
+厳密な証明は\texttt{papers/sections/cubic\_corner\_root\_walls.tex}
+を参照．
+\end{remark}
+
+\begin{remark}[既存dP1原稿の検証状態]
+\texttt{papers/dp1\_anticanonical\_models.tex}は，
+genuine smooth del Pezzo，smooth elliptic boundaryの全$q$で
+$\Db(\mathcal A_{\mathrm R})\simeq\Db(\qgr R_q)$を証明したとする
+現行研究原稿を含む．しかし今回は同原稿の完全忠実性・
+本質的全射性を独立再監査していないので，
+この主張を本稿の定理\ref{thm:negative}と
+定理\ref{thm:dense-negative}の入力にしていない．
+その導来同値が正しければ，負指数稠密共鳴は
+\emph{導来同値を保ったままの稠密なheartの変更}となる．
+全ての共鳴・特異楕円境界・非局所自由gluingへの拡張は未解決である．
+\end{remark}
+
+\section{再現と今後の重点}
+負指数の代数的Euler計算，$E_6/E_8$の根格子，
+共鳴指数の有限テストは
+\texttt{computations/verify\_resonance\_hearts.py}で再現する．
+この計算はRainsの既約根sheaf存在や導来同値を
+コンピュータで証明するものではない．
+次は正指数での$\Ext^1$消滅判定，負指数の局所的な
+point-module/finite-dimensional representationの
+分類，および既存dP1原稿の導来比較の独立監査を行う．
+
+\begin{thebibliography}{9}
+\bibitem{RainsBirational}
+E.~M.~Rains, \emph{The birational geometry of noncommutative surfaces},
+arXiv:1907.11301v1, \S7 (Corollary 7.23),
+\S9, \S10 (Corollary 10.16), \S11 (pp.~139--141).
+\url{https://arxiv.org/abs/1907.11301}.
+\bibitem{RainsFiltered}
+E.~M.~Rains, \emph{Filtered deformations of elliptic algebras},
+arXiv:2107.13540v2 (2022), \S4 (pp.~33--35), \S5 (Proposition 5.1).
+\url{https://arxiv.org/abs/2107.13540}.
+\bibitem{AZ}
+M.~Artin, J.~J.~Zhang, \emph{Noncommutative projective schemes},
+Adv. Math. 109 (1994), 228--287.
+\end{thebibliography}
+\end{document}

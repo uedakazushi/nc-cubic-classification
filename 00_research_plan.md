@@ -29,7 +29,7 @@
 【優先課題】全14641 ambient成分上の正規三次incidenceの成分・同型群oid・曲面条件・境界・族と降下を決定し、その後intrinsic定義を弱める。GitHub mainを正本とし、GitHub push成功時はLibraryへの保存を行わない。PDFやZIPをGitで追跡せず、TeX・ノート・検算コードを追跡する。
 
 
-2026-11-15 / project-v23 / recognition-v6 / hearts-v8。最初に本書、`research/cubic_corner.md`、`papers/cubic_heart_corner.tex`を読む。比較の共通枠組みは`research/heart_comparison.md`と`papers/nc_del_pezzo_hearts.tex`、共通公理は`research/common_del_pezzo_framework.md`。次数別・三次三様体の研究はそれぞれの現行ノートから再開する。
+2026-11-15 / project-v24 / recognition-v6 / hearts-v9。最初に本書、`research/cubic_corner.md`、`papers/cubic_heart_corner.tex`を読む。比較の共通枠組みは`research/heart_comparison.md`と`papers/nc_del_pezzo_hearts.tex`、共通公理は`research/common_del_pezzo_framework.md`。次数別・三次三様体の研究はそれぞれの現行ノートから再開する。
 
 ## I. 恒常的な研究原則と保存許可
 
@@ -61,6 +61,14 @@
 
 **古典的根壁の導来障害（証明済み）**：11禁止divisorはE6の有効根（10種類の共線性、1種類のconic）に対応。各因子一般点で六点blow-up Sは弱del Pezzo3、(-2)曲線Eは反標準射 f:S→X によりA1点へ収縮される。F=i_*O_E(-1)は2-sphericalかつ全nでRHom(O_S(n(-K)),F)=0、Rf_*F=0。従ってblow-up側で反標準AZ ampleは失敗し、Db(coh S)≄Db(qgr R)=Db(coh X)。任意次数の弱dPで(-2)曲線があれば同じ障害がある。Q=[[1,1,1],[1,2,2],[1,3,4]]の一壁例でnodeのHessian det=-2304を厳密計算。詳細 `papers/sections/cubic_corner_root_walls.tex`、再現 `computations/verify_cubic_root_wall.py`。非可換Rains/VdB/AS heartの特殊化と11壁のAS locusとの交叉は未解決。導来同値を前提とするHRS tiltとの混同を避ける。
 
+### 稠密なRains共鳴でのanticanonical heartの変化（今回証明）
+
+Rainsのsimple-root既約sheaf存在結果を用い、smooth elliptic/genuine del Pezzo avatarの負Euler指数共鳴 `O_E(alpha)⊗q^m=O_E`, `m=chi(e,M)<0` を解析した。境界に制限して零となる既約一次元sheaf M はtau固定で、全 n に対しHom(e,tau^nM)=Ext²(e,tau^nM)=0、dim Ext¹(e,tau^nM)=-m。Homが非零なら既約性でO_X→Mは全射だが、Rains Cor10.16のroot quotient下界chi≥1に矛盾する。よって**Rains heartのAZ amplenessが実際に失敗**する。反標準環Rの中心正則一次元gはMに同型として作用するため、N=⊕Ext¹(e,tau^n M)は各次数-m、anticanonical heartの境界外で非零。R/(g-1)の-m次元表現を与え、自然導来切断はPhi(M)=πN[-1]。従って自然比較はt-exactでない。反標準環のHilbert値1+d n(n+1)/2は共鳴で跳ばない。
+
+楕円曲線Eでqを無限位数に固定し、p3(n)をO_E(p3(n))=O_E(1)(-p1-p2)⊗q^{-n}で動かすと、simple root h-e1-e2-e3のm=-n（n≥1）がgenuine滑らかなdel Pezzoを保ったままZariski dense。一般の6点配置パラメータでもファイバーごとに稠密で、次数1...6の適切なblow-up族にも及ぶ。標数零、適用できるRainsの既約sheaf存在とgluingの範囲での定理であり、全非可換del Pezzo成分の命題ではない。
+
+**重大な区別**：genuine Sではm=0の根共鳴は存在せず、古典的weak dPの(-2)曲線の反標準収縮（導来圏の非同値）と、負指数の稠密共鳴（有限次元表現として[-1]へ移る）は異なる。負指数の稠密性だけからanticanonical qgrの特異化・導来非同値は導けない。既存`papers/dp1_anticanonical_models.tex`は全qでの導来同値を証明記載するが、今回は独立再監査していない。本結果の入力ではない。新原稿`papers/nc_del_pezzo_resonance_hearts.tex`、再開ノート`research/resonance_hearts.md`、整数計算`computations/verify_resonance_hearts.py`を読む。
+
 ### HRSと一般heart判定
 
 既存`papers/nc_del_pezzo_hearts.tex`の振幅1比較は(T,U)=(ker R1δ_*,ker δ_*)、transported heart=<U[1],T>、t-exact iff U=0を与える。対象は導来的には消えずshiftされる。既存の豊富orbitによる一意性は高次Ext tail消滅を明示的に必要とする。
@@ -89,6 +97,8 @@ weakly markedは非零Ext有限noetherian Abel圏、Serre、tau=S^-1[2]のheart�
 
 ## IV. 優先順位と具体的な着手
 
+**Rains dense resonanceの次の優先問題**：正指数m>0で既約根sheafのExt¹(e,M)が消える条件を調べ、anticanonical qgrの境界外有限次元表現を分類する。既存dP1原稿の全q導来同値・smoothnessの証明を独立監査し、一般次数およびAS/VdB heartのgluingを接続する。負指数でのAZ failure/t-nonexactは解決済みとし、再計算を繰り返さない。
+
 1. **Cubicの構造対象と同値の照合**：AOUの実際のmutationでE0≃πFを検証し、AS corner同値と既知のqgr F比較を接続する。数値K0や境界restrictionだけで同定しない。
 2. **非可換AS locusと根壁**：古典的11根壁では反標準収縮が2-spherical対象を消し、導来非同値になることを確定した。次は非可換AS-regular potentialと各壁の交叉、Rains/VdB heartの特殊化、実在する核やpointednessを判定する。古典的障害を全非可換境界へ無条件には拡張しない。
 3. **VdB最後の段階**：同じ楕円・六点データでker δ_6*とR1δ_6*を実在root対象で計算する。pointednessと周期作用を確認後、単純対象のEuler符号判定を適用する。Rains raw反復と各段階section模型への置換も区別する。
@@ -103,6 +113,7 @@ weakly markedは非零Ext有限noetherian Abel圏、Serre、tau=S^-1[2]のheart�
     python3 computations/verify_cubic_corner_hilbert.py
     python3 computations/verify_cubic_root_wall.py
     python3 computations/verify_cubic_corner.py
+    python3 computations/verify_resonance_hearts.py
     latexmk papers/cubic_heart_corner.tex
 
 Python標準ライブラリで全有理数計算と有限体計算を再現する。証明書summaryは`computations/cubic_corner_certificate.json`、検証状態は`research/cubic_corner_validation.json`。追加した六点復元の完全な証明を含む原稿10ページをLuaLaTeXで組版し参照を確認した。一般cornerの証明、計算機による厳密rank証明、既知AS入力を分ける。独立査読・形式化・網羅的新規性調査は未実施。従来の研究の再現はその現行ノートを参照する。
