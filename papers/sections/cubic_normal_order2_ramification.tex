@@ -1,0 +1,166 @@
+\subsection{四つの悪い方向はconic pencilの退化と一致を表す}
+\label{subsec:normal-order2-ramification}
+平面座標を $[\xi:r:s]$ とし、二つのconicを
+\begin{align*}
+ \Gamma_h:;&-2(1+h^3)\xi r+3h^2r^2+\frac{h(h^3-8)}4s^2=0,\\
+ Q_{h,b,c}:;&L_2\xi^2-4(h^2b-c)\xi r+4hbr^2+L_1s^2=0,\\
+ &L_1=hc-2b,\qquad L_2=(h^3-2)b-3hc
+\end{align*}
+で定める。
+
+\begin{proposition}[許容集合のconic pencilによる解釈]
+\label{prop:normal-order2-conic-pencil}
+良い $h$ で $\Gamma_h$ は滑らかなconicであり、$Q_{h,b,c}$ はそれを含むpencilをなす。
+$\Delta_h(b,c)\ne0$ は、$Q_{h,b,c}$ が滑らかで $\Gamma_h$ と相異なることと同値である。
+このpencilの四つの禁止方向は、三つの相異なる特異conicと $\Gamma_h$ 自身である。
+全ての許容memberは $\Gamma_h$ と相異なる四点で横断的に交わる。
+\end{proposition}
+\begin{proof}
+対称行列の行列式はそれぞれ
+\[
+ -\frac{h(h^3-8)(1+h^3)^2}{4},\qquad
+ -4L_1(c^2+h^2bc+2hb^2)
+\]
+である。第一式は非零で、第二式の三つの射影根は既証の四因子分離から相異なる。
+$L_2=0$ なら $Q_{h,b,c}=\frac{4b}{3h}\Gamma_h$ であり、これがpencil中の一意な一致memberである。
+三つの相異なる特異memberを持つconic pencilのbase完全交叉は四つの被約点を持つ。
+実際、非被約base点があればその点で二つの勾配が従属し、
+あるmemberの行列核にその点が入る。
+その行列式のparameter微分も、もう一つのconicの値がbase点で零なことから消え、
+特異memberは重根となる。これは既に得た単根性に反する。
+したがってB\'ezoutにより四つの横断交点を得る。
+\end{proof}
+
+\begin{theorem}[generic quaternionの正確なBrauer分岐]
+\label{thm:normal-order2-Brauer-ramification}
+Clifford swap H3の中心scrollを、$p=[1:0:0]\in\Gamma_h$ での平面のblow-up
+$\mathbb F_1=\operatorname{Bl}_p\mathbb P^2$ と同定できる。
+そのgeneric quaternion Brauer classの分岐は正確に
+$\Gamma_h$ のstrict transformと $Q_{h,b,c}$ のpullbackの二曲線である。
+両者は滑らかな有理曲線で、相異なる四点で横断する。
+その合計の因子類は
+\[
+ (E+2F)+(2E+2F)=3E+4F,
+ \qquad
+ K_{\mathbb F_1}+\frac12(3E+4F)=-\frac12(E+2F)
+\]
+となる。
+この主張はgeneric Brauer classの分岐であり、表示orderの全局所極大性を仮定してはいない。
+\end{theorem}
+\begin{proof}
+標準scrollのparametrization
+$C_0=\lambda r^2,a_0=\lambda rs,B_0=\lambda s^2,D_0=\lambda\xi r$
+を使う。
+$T=0$ を表すhyperplane sectionは、前節の線型変換により正確に $\Gamma_h$ となる。
+さらに
+\[
+ A_0=\frac{-4hbC_0-L_1B_0+4(h^2b-c)D_0}{L_2}
+\]
+だから
+\[
+ D_0^2-A_0C_0
+ =\frac{\lambda^2r^2}{L_2}
+ \bigl(L_2\xi^2-4(h^2b-c)\xi r+4hbr^2+L_1s^2\bigr).
+\]
+$Q_{h,b,c}(p)=L_2\ne0$ なので第二曲線は $p$ を通らない。
+従って第一曲線の類は $2L-E=E+2F$、第二は $2L=2E+2F$ である。
+前命題が滑らかさと横断性を与える。
+
+generic偶Clifford内で $wt/C_0$ と $(uw-D_0)/C_0$ を取ると、両者は反交換し、二乗は
+\[
+ f=-T/C_0,\qquad g=(D_0^2-A_0C_0)/C_0^2
+\]
+となる。これが中心の関数体上のquaternion symbol $(f,g)$ である。
+$C_0$ のdivisorは $E+2F_0$、$D_0^2-A_0C_0$ のdivisorは
+$Q_{h,b,c}+2F_0$ である。ここで $F_0$ は $r=0$ のfiberである。
+従ってtame residueが非自明となり得るのは二曲線、$E$、$F_0$ だけである。
+$F_0$ では両付値が偶数なので分岐しない。
+$E$ での付値は $(-1,-2)$ であり、residueは
+\[
+ g/f^2=(D_0^2-A_0C_0)/T^2\bigm|_E=(D_0/T)^2
+\]
+という平方だから分岐しない。
+$\Gamma_h$ では $g$ の制限が四つの横断交点で単純零点を持ち、
+$Q_{h,b,c}$ では $f$ の制限が同じ四点で単純零点を持つ。
+従って両residueは非平方であり、正確にこの二曲線で分岐する。
+最後の因子類計算は $K_{\mathbb F_1}=-2E-3F$ から従う。
+\end{proof}
+
+このconic pencilは、明示四次判別式の各因子が何を排除するかを説明する。
+三因子は第二conicの特異化を、一因子は二つの分岐曲線の一致を排除する。
+全同型は前節の有限係数群oidを使い、任意のconic対をこの族の新しい対象として追加しない。
+
+\begin{theorem}[表示orderの局所自由性・極大性と全局所模型]
+\label{thm:normal-order2-maximal-local-models}
+Clifford swap H3に対応する $\mathbb F_1$ 上のorder $\Lambda=\widetilde{R^{(2)}}$ は、
+中心上局所自由階数4の極大orderである。
+閉点で中心を完備化すると、分岐曲線の外、滑らかな分岐点、二曲線の交点で、
+それぞれ次の型を持つ。
+\[
+\begin{array}{c|l}
+ \text{分岐外}&\operatorname{Mat}_2(k[[x,y]])\\
+ \text{分岐の滑らかな点}&k[[x,z]]\rtimes\mu_2,
+       \quad (x,z)\mapsto(x,-z)\\
+ \text{四つの交点}&k\langle\!\langle u,v\rangle\!\rangle/(uv+vu)
+\end{array}
+\]
+従って全ての完備局所orderは大域次元2である。
+ここで完備化後の極大性までは主張していない。
+\end{theorem}
+\begin{proof}
+中心scrollの標準五座標を $B_0,C_0,D_0,a_0,s_0$ とする。
+$C_0$ が単元なら $v=a_0w/C_0$、$B_0$ が単元なら $w=a_0v/B_0$ と消去できる。
+$D_0$ が単元なら $v=s_0w/(2D_0)$、$s_0$ が単元なら $w=2D_0v/s_0$ と消去できる。
+$a_0$ が単元なら $a_0^2=B_0C_0$ により最初の二場合に入る。
+これらはProj全体を覆う。
+各patchで三つの奇生成元によるClifford環から $R$ への全射を得る。
+両者は中心上一般階数8を持ち、Clifford環は自由階数8なので、
+整な中心上のtorsion-free性から全射の核は零である。
+偶部分を取り、中心の次数1元で次数を正規化すれば、$\Lambda$ は局所自由階数4となる。
+
+$C_0$ patchの三次元二次形式は
+\[
+ \begin{pmatrix}A_0&D_0&0\\D_0&C_0&0\\0&0&T\end{pmatrix}
+\]
+で、$B_0$ patchでは $C_0,D_0$ を $B_0,s_0/2$ に置き換える。
+他の二patchも同じ形である。
+前節のdiscriminant計算をこれらのpatchで比較すると、
+階数落ちは正確に二つの分岐曲線で起こり、一般分岐点では階数2、四交点では階数1となる。
+四交点は $C_0=0$ のdivisorを避けるから、そこで単元 $C_0$ を使って平方完成すると
+形式は既に $(C_0,A_0-D_0^2/C_0,T)$ に対角化される。
+後の二成分は横断する二曲線の局所parametersである。
+
+閉点の完備局所環では単元の平方根を取り、分岐外では形式を非退化標準形に直せるので
+偶Cliffordは行列環となる。
+滑らかな分岐点では形式 $(1,1,y)$ となり、偶Cliffordは
+反射 $z\mapsto-z$ による $k[[x,z]]\rtimes\mu_2$、$y=z^2$ と同型である。
+四交点では $(1,x,y)$ となり、偶Cliffordは
+$u^2=-x,v^2=-y,uv+vu=0$ の量子形式冪級数環になる。
+反射skew groupは位数2が可逆なため正則二次元形式円板と同じ大域次元を持つ。
+最後の量子形式冪級数環も、二次元正則形式円板の有限bicharacter twistとして大域次元2を持つ。
+
+極大性は中心の余次元1で確認する。
+分岐外ではAzumayaなので極大である。
+二分岐曲線の一般点では、先に計算した非平方residueに対応する
+不分岐二次DVR拡大 $\mathcal O_L$ と、二乗がuniformizerの元 $j$ により
+$\mathcal O_L\oplus j\mathcal O_L$ の巡回orderになる。
+これは分岐quaternion division algebraのvaluation極大orderである。
+$\Lambda$ は局所自由で反射的だから、全余次元1の極大性を交叉して大域的極大性を得る。
+閉点完備化で反射Iwahori型になることと、この大域的極大性を混同していない。
+\end{proof}
+
+\begin{corollary}[ramified対のFano次数]
+上記の分岐二曲線の和を $D$ とすると、
+$(\mathbb F_1,\tfrac12D)$ はklt log del Pezzo対であり、
+\[
+ -(K_{\mathbb F_1}+\tfrac12D)=\tfrac12(E+2F),\qquad
+ (K_{\mathbb F_1}+\tfrac12D)^2=\tfrac34.
+\]
+中心上のorder階数4を掛けると $4\cdot\tfrac34=3$ となり、
+$R$ の三次曲面Hilbert値と一致する。
+\end{corollary}
+\begin{proof}
+二曲線は滑らかで横断し、係数はともに $1/2<1$ なので対はkltである。
+$E+2F$ はcubic scrollのvery ample hyperplaneで、二乗は3である。
+前定理の因子類等式から主張を得る。
+\end{proof}

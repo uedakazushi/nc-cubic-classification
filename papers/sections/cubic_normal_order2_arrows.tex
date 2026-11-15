@@ -142,3 +142,38 @@ $hc-2b=0$ と $((h^3-2)b-3hc)=0$ は $h^3=8$ 以外で相異なる。
 $\mathcal P=D(\Delta)$ という表示は非被約底を含む任意底変更に適合する。
 H3 fiber条件は $\Delta$ の可逆性そのものなので、fpqc局所的である。
 これはこの表示族での相対許容条件であり、一般のintrinsic圏の族の効果的降下とは区別する。
+
+\begin{corollary}[表示族の代数的stackと次数スカラーrigidification]
+\label{cor:normal-order2-presentation-stack}
+$\mathcal P=D(\Delta)$ と前定理の全係数矢は、次数スカラーでrigidifyした後、
+有限対角を持つ分離Deligne--Mumford stackを与える。
+このstackは既約二次元で、一般慣性は $\mu_2\times\mu_2$ である。
+これは $\mathcal P$ の表示にfppf局所的に属するgraded代数族のstackを
+次数スカラーでrigidifyしたものであり、任意底変更とfpqc降下に適合する。
+全intrinsic Abel圏族との同一視はここでの結論に含めない。
+\end{corollary}
+\begin{proof}
+共通次数スカラーを割る前の矢は有限個の係数方程式で表される。
+active Clifford同型はHesseの全有限比較に属し、$\alpha$ と可換するものに制限される。
+従ってfppf局所的に、そのsourceは有限\'{e}taleな比較と二つのスカラーtorusの積となり滑らかである。
+各次数の有限局所自由加群と積をfpqc降下することで、
+これらの表示に局所的に属するgraded代数族の代数的stackを得る。
+共通次数スカラーは全対象で中央 $\mathbb G_m$ となるのでrigidifyできる。
+矢の座標では $a=1$ に規格化してこのrigidificationを表せる。
+sourceの残る相対次元は1なので、次元3の $\mathcal P$ から二次元のstackを得る。
+
+二つの表示間でactiveの射影比較は有限である。
+射影 $M$ を一つ固定すると、残るスケールの条件は
+非零な $\beta,\beta'$ に対する単元の平方根に限る。
+比較が存在する係数の条件は、二つの非零ベクトルの比例という閉条件であり、
+その上で平方根は有限\'{e}taleである。
+従って全isomorphism schemeは二対象の積上有限となる。
+これにより対角は有限であり、stabilizerも有限\'{e}taleとなるので
+rigidify後は分離Deligne--Mumford stackである。
+$\mathcal P$ は既約で、$h=b=c=1$ を含む非空開部分だから、商も既約である。
+一般慣性は既に計算した通りである。
+
+次数スカラーでrigidifyした族は、全graded部分を共通の次数線型束で捻ることも同一視する。
+そのためrigidify後の降下を、常に一つの大域的基底付きgraded環へ降下することと混同しない。
+ここでのstack化と底変更は表示族に関するものであり、一般のheart族の認識は別問題である。
+\end{proof}

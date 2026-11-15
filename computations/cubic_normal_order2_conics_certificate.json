@@ -1,0 +1,11 @@
+{
+  "version": "classification-v41",
+  "conic": "4*b*h*r**2 + q**2*(b*(h**3 - 2) - 3*c*h) - q*r*(4*b*h**2 - 4*c) + z**2*(-2*b + c*h)",
+  "fixed_conic_Gamma": "3*h**2*r**2 + h*z**2*(h**3 - 8)/4 + q*r*(-2*h**3 - 2)",
+  "conic_determinant": "-4*(hc-2b)*(c^2+h^2bc+2hb^2)",
+  "Gamma_determinant": "-h*(h^3-8)*(1+h^3)^2/4",
+  "coincidence_member": "L2=0 implies F=4b*Gamma/(3h)",
+  "Clifford_discriminant_on_scroll": "D^2-A*C=lambda^2*r^2*F/L2",
+  "generic_Brauer_symbol": "(-T/C, (D^2-A*C)/C^2)",
+  "scope": "Exact polynomial and rational identities. Four-point transversality and residue ramification follow in the ordinary proof."
+}

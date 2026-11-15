@@ -1,6 +1,6 @@
 {
   "date": "2026-11-15",
-  "version": "classification-v40",
+  "version": "classification-v43",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -37,7 +37,8 @@
     "papers/sections/cubic_normal_order3_coverage.tex",
     "papers/sections/cubic_normal_order2_arrows.tex",
     "papers/sections/cubic_four_window.tex",
-    "papers/sections/cubic_normal_order2_scroll.tex"
+    "papers/sections/cubic_normal_order2_scroll.tex",
+    "papers/sections/cubic_normal_order2_ramification.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -561,7 +562,23 @@
     "validator": "computations/verify_cubic_normal_order2_scroll.py",
     "result": "PASS exact h=b=c=1 centre2 dimension5, product rank12, all3 scroll minors, volume commutator, general coordinate conversion and rank8/even4 Hilbert ratios",
     "ordinary_theorem": "Full even centre is normal cubic scroll; PIdegree2, qgr is rank4 quaternion order on F1; tau squared is hyperplane twist",
-    "build": "LuaLaTeX105 pages successful; page88 visually inspected; final short proof refinement not yet rebuilt",
+    "build": "LuaLaTeX105 pages successful; page88 visually inspected; later final proof refinement included in v43 build",
     "limits": "No maximality or complete branch divisor claim; not full global H3 coverage"
+  },
+  "normal_order2_v41_v43": {
+    "proofs": [
+      "papers/sections/cubic_normal_order2_ramification.tex",
+      "papers/sections/cubic_normal_order2_arrows.tex"
+    ],
+    "validator": "computations/verify_cubic_normal_order2_conics.py",
+    "result": "PASS conic determinants, coincidence member, all-parameter Clifford discriminant factorization",
+    "ordinary_theorems": [
+      "Exact Brauer ramification is two smooth rational curves of classes E+2F and2E+2F meeting transversely4 times",
+      "Quaternion order is locally free rank4 and globally maximal; completed local models Mat2, reflection skew group, quantum plane; all gldim2",
+      "Presentation-family rigidification is separated irreducible DM2 with finite diagonal and generic inertia mu2xmu2",
+      "Ramified pair is klt log del Pezzo of degree3/4, rank-weighted degree3"
+    ],
+    "build": "LuaLaTeX108 pages; no undefined refs/cites or overfull boxes; pages87,91 visually inspected",
+    "limits": "Abstract intrinsic category-family comparison/global H3 components and missing-boundary coverage remain unproved"
   }
 }
