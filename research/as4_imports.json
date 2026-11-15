@@ -364,5 +364,13 @@
     "used_part": "FI2 explicit J_h+/- presentations only. No full-chart/CY coverage, AS4 sufficiency or isomorphism theorem imported.",
     "independent_proofs": "Both signs directly checked: universal anti-cyclic tensor; all-h nonzero centre3 rank20 and controlled denominators; endpoint h0 exact degree5 rank966/dimension58.",
     "validator": "computations/verify_cubic_as4_four_simple_boundary_J.py"
+  },
+  "four_simple_adjacent_L_v82": {
+    "commit": "a45f834f51a00c47443b51caf66abaf4629546b9",
+    "path": "research/proofs/CY_ZERO_COMMUTATORS_FOUR_SIMPLE_ADJACENT_SHARED_ZERO_CORNER_COMPLETE.tex",
+    "sha256": "2031a5030eb1ba7c0940b419f4309d8e624b6cd69257d040f356081b45f3d0a4",
+    "used_part": "AZ2 explicit two fixed L presentations only. No chart coverage, AS4 sufficient or all-isomorphism theorem imported.",
+    "independent_proofs": "Ore base/cross relation transport and scalar cube, CY top tensor, exact centre line; general pure-base skew-cone vertex infinite-self-Ext argument in manuscript.",
+    "validator": "computations/verify_cubic_as4_four_simple_adjacent_L.py"
   }
 }

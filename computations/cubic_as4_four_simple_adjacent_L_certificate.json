@@ -1,0 +1,78 @@
+{
+  "version": "classification-v82",
+  "source_commit": "as4 a45f834f51a00c47443b51caf66abaf4629546b9",
+  "source_presentation": "ADJACENT_SHARED_ZERO_CORNER_COMPLETE.tex AZ2 only",
+  "models": [
+    {
+      "eta": 1,
+      "normal_c_matrix": [
+        [
+          "0",
+          "0",
+          "-3 + sqrt(3)*I"
+        ],
+        [
+          "-1/4 - sqrt(3)*I/12",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "-1/2 + sqrt(3)*I/2",
+          "0"
+        ]
+      ],
+      "sigma_cube_scalar": "-1/2 + sqrt(3)*I/2",
+      "Ore_relation_transport": true,
+      "base_relation_stability": true,
+      "conditional_AS4_cyclic_top": true,
+      "centre3_dimension": 1,
+      "central_generator": {
+        "(0, 0, 0)": "24*sqrt(3)*I",
+        "(1, 1, 1)": "1",
+        "(1, 3, 1)": "1/2 - sqrt(3)*I/2",
+        "(1, 3, 3)": "1/2 - sqrt(3)*I/2",
+        "(3, 1, 1)": "1",
+        "(3, 3, 1)": "1",
+        "(3, 3, 3)": "1"
+      },
+      "factorisation_not_used": true
+    },
+    {
+      "eta": -1,
+      "normal_c_matrix": [
+        [
+          "0",
+          "3 - sqrt(3)*I",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "-1/2 - sqrt(3)*I/2"
+        ],
+        [
+          "1/4 + sqrt(3)*I/12",
+          "0",
+          "0"
+        ]
+      ],
+      "sigma_cube_scalar": "-1/2 - sqrt(3)*I/2",
+      "Ore_relation_transport": true,
+      "base_relation_stability": true,
+      "conditional_AS4_cyclic_top": true,
+      "centre3_dimension": 1,
+      "central_generator": {
+        "(0, 0, 0)": "-24*sqrt(3)*I",
+        "(1, 1, 1)": "1",
+        "(1, 3, 0)": "-3 - sqrt(3)*I",
+        "(1, 3, 3)": "1",
+        "(3, 3, 0)": "-3 - sqrt(3)*I",
+        "(3, 3, 3)": "1"
+      },
+      "factorisation_not_used": true
+    }
+  ],
+  "cone_Hilbert_reciprocal": "(1-z)^2/(1+z+z^2), non-polynomial",
+  "scope": "Finite exact inputs for both fixed L exclusions. The paper proves all central cubic cuts lie in the Ore base and its vertex has infinite self-Ext. No factorisation/admissibility inference from centre dimension alone, and no AS4 sufficiency/full coverage theorem imported."
+}

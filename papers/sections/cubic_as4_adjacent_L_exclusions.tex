@@ -1,0 +1,116 @@
+\subsection{skew coneの頂点障害と隣接支持の二固定表示}
+\label{subsec:cubic-as4-adjacent-L}
+ここでは中心三次が消えない表示を扱う。
+因子性や中心の次元だけからadmissibilityを推測せず、切断後のpoint対象の自己Extを調べる。
+
+\begin{lemma}[自己同型型Ore coneの頂点]\label{lem:cubic-skew-cone-vertex}
+$B=S[z;\sigma]$ は $\deg z=1$ の自己同型型Ore拡大で、
+noetherian quadratic Koszul AS4型14641とする。
+$0\ne G\in S_3\cap Z(B)$ が正則であるとし、
+$C=S/(G)$, $R=B/(G)=C[z;\bar\sigma]$ と置く。
+このとき $P=\pi k[z]\in\qgr R$ は無限高次の自己Extを持ち、$R$ はH3を与えない。
+\end{lemma}
+\begin{proof}
+$S\simeq B/(z)$ はnoetherianであり、Ore基底から
+$H_S(u)=(1-u)^{-3}$ となる。
+正規正則一次元 $z$ に対するRees lemmaは
+$\underline{\operatorname{Ext}}_S^j(k,S)=0$ ($j\ne3$) を与える。
+$B$ は左右 $S$ 自由であるから、$M=k\otimes_SB\simeq k[z]$ について
+\[
+ \underline{\operatorname{Ext}}_B^j(M,B)=0\quad(j\ne3).
+\]
+中心正則 $G$ のchange of ringsにより
+$\underline{\operatorname{Ext}}_R^j(M,R)=0$ ($j\ne2$) となる。
+$R$ はAS Gorenstein次元3・parameter 1なので、
+定理\ref{thm:h3-polynomial-ore-exclusion}と同じ局所双対とsection比較から
+\[
+ \operatorname{Ext}^j_{\qgr R}(\pi R(a),P)=0\ (j>0),\qquad
+ \operatorname{Hom}_{\qgr R}(\pi R(a),P)=k
+\]
+が全 $a$ で成り立つ。
+$z$ は中心でなくてよい。$M$ 上では $S_{\ge1}$ が零なので、
+$z$ 倍写像 $M\to M(1)$ は $R$ 線型であり、有限次元cokernelを持つ。
+従って $P\simeq P(1)$ となり、十分高次数のsection次元1から全shiftのHom値を得る。
+
+$C$ 上の $k$ の最小graded自由解消のBetti数を $\beta_n$ とする。
+$R$ は左 $C$ 自由なので、これを $-\otimes_CR$ で誘導すると $M$ の自由解消になる。
+$\qgr$ に移した各項は上の $P$ に対するHom-acyclicityを持つ。
+最小微分の係数は $C_{\ge1}$ に入り $P$ に零作用するから、
+first-quadrantのExt spectral sequenceによって
+\[
+ \dim\operatorname{Ext}^n_{\qgr R}(P,P)=\beta_n
+\]
+となる。
+一方、正則な $G$ とHilbert級数から
+\[
+ H_C(u)=\frac{1-u^3}{(1-u)^3},\qquad
+ \frac1{H_C(u)}=\frac{(1-u)^2}{1+u+u^2}
+\]
+を得る。後者は多項式でないので、$k$ の最小graded自由解消は有限長ではあり得ない。
+従って $\beta_n>0$ は全 $n$ で成立する。
+H3ではSerre作用 $\mathcal S=\tau^{-1}[2]$ により $n>2$ のExtが零になるため矛盾する。
+これはOre開集合のglobal dimensionを未証明のまま仮定する議論ではない。
+\end{proof}
+
+\begin{corollary}[非自明なscalar-cubeの排除]\label{cor:cubic-nontrivial-scalar-cube}
+上の自己同型型Ore包絡 $B=S[z;\sigma]$ がCYであり、$S$ は一次生成とする。
+$\sigma^3|_{S_1}=\zeta I$, $\zeta\ne1$ なら、$B$ はH3包絡にならない。
+\end{corollary}
+\begin{proof}
+H3を仮定すると、正則中心三次 $G$ が必要である。
+Ore基底で $G=\sum_{j=0}^3 f_{3-j}z^j$ と書く。
+$z$ との可換性から $\sigma(f_d)=f_d$、従って
+$(\zeta^d-1)f_d=0$ である。
+$\zeta\ne1$, $\zeta^2\ne1$, $\zeta^3\ne1$ なら $G$ は $kz^3$ に限られるが、
+$z^3v=\zeta vz^3$ により非零中心三次にはならない。
+$\zeta=-1$ なら $G=f_2z+\alpha z^3$ であり、一次式 $z$ と二次式の積になるため
+商は整域でない。
+最後に $\zeta$ が非自明三乗根なら $G=f_3+\alpha z^3$。
+$S_1$ との可換性を $z$ 次数ごとに比較すると $\alpha=0$ となる。
+補題\ref{lem:cubic-skew-cone-vertex}がこの純base切断を排除する。
+\end{proof}
+
+\begin{proposition}\label{prop:cubic-adjacent-L}
+\cite{AS4lowpinned}の隣接共有支持AZ2にある二表示 $L^\eta_\omega$、
+$\omega^2+\omega+1=0$, $\eta=\pm1$ は、どちらもH3包絡にならない。
+\end{proposition}
+\begin{proof}
+具体的な係数は
+\[
+\begin{gathered}
+ \lambda=\omega,\quad x_1=x_4=1,\quad
+ x_6=x_{17}=\eta(\omega+2)/6,\quad x_{11}=\eta(\omega+2)/12,\\
+ x_8=\eta(\omega+1)/4,\quad x_{15}=\eta/4,\quad
+ x_{13}=-1/12,\quad x_{19}=\omega/12
+\end{gathered}
+\]
+で、他の $x_j$ は零である。
+生成元 $c$ を除いた $a,b,d$ の三関係で定義される代数を $S$ とする。
+残る三関係は厳密に $cv=\sigma(v)c$ の形になり、順序 $(a,b,d)$ で
+\[
+ \sigma_+=\begin{pmatrix}
+ 0&0&2(\omega-1)\\-(\omega+2)/6&0&0\\0&\omega&0
+ \end{pmatrix},\qquad
+ \sigma_-=\begin{pmatrix}
+ 0&2(1-\omega)&0\\0&0&\omega^2\\(\omega+2)/6&0&0
+ \end{pmatrix}
+\]
+となる。これらが $S$ の関係空間を保つことと可逆性を直接確認したので、
+$L^\eta_\omega=S[c;\sigma_\eta]$ は実際のOre表示である。
+さらに
+\[
+ \sigma_+^3=\omega I,\qquad \sigma_-^3=\omega^2I.
+\]
+元の最高tensor $R A R^{\mathsf T}$ の非零反巡回性も数体上で独立に確認した。
+従ってAS4実現ならCYであり、系\ref{cor:cubic-nontrivial-scalar-cube}が両方を排除する。
+
+独立な中心行列計算では、両表示の中心三次は実際に各一次元である。
+従ってここは候補中心の消滅による排除ではない。
+全候補が $S_3$ に入ることと頂点の無限自己Extを用いており、
+三次元の因子性は仮定していない。
+\end{proof}
+
+Ore表示・三乗のscalar値・最高tensor・中心三次の一本性と明示生成元は
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}as4\_\allowbreak{}four\_\allowbreak{}simple\_\allowbreak{}adjacent\_\allowbreak{}L.py}
+で検算する。無限自己Extの結論は上の証明に依存し、有限計算そのものの出力と混同しない。
+AZ2の具体表示のみを参照し、全chart/CY被覆・AS4存在十分性・全同型は輸入していない。
