@@ -1,6 +1,6 @@
 {
   "date": "2026-11-15",
-  "version": "classification-v75",
+  "version": "classification-v76",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -863,5 +863,11 @@
     "certificate": "computations/cubic_as4_four_simple_p_certificate.json",
     "result": "All lambda=2 P presentations excluded, including all allowed closed r. Nonempty open of full P plane excluded. Full two-parameter exceptions remain open.",
     "execution": "SymPy with optional python-flint acceleration; all-parameter tensor and all-r projection/minor identities checked."
+  },
+  "four_simple_cocycles_v76": {
+    "status": "exact verification executed",
+    "validator": "computations/verify_cubic_as4_four_simple_cocycles.py",
+    "certificate": "computations/cubic_as4_four_simple_cocycles_certificate.json",
+    "result": "All standard Klein cocycles of explicit shared-zero O/H excluded. H cocycles have exceptional centre3 lines at lambda=-1/4,-3/4, both factored; ordinary H rank20 is not reused at these points. No arbitrary cocycle/twist or full CY coverage claimed."
   }
 }

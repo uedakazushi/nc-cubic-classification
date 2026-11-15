@@ -215,6 +215,63 @@ $\mathcal H$ ではその消滅、$\mathcal O$ では全切断の分解がH3整�
 二十個の三次characterと例外純三乗の中心性を厳密に検算する。
 全CY被覆、共有頂点係数非零の全領域、および任意cocycle/twistは未主張である。
 
+\begin{corollary}\label{cor:cubic-fs-shared-zero-cocycles}
+共有頂点係数零の列挙表示について、標準Klein cocycle後も
+$\mathcal O,\mathcal H^0,\mathcal H^1$ は全値でH3包絡から排除される。
+従ってFS4/FZ2/FZ4/FZ5の表示および標準cocycleに由来するH3は、
+既存のskew部分に含まれる。
+\end{corollary}
+\begin{proof}
+Klein群次数を $\deg(a,b,c,d)=(0,e_1,e_2,e_1+e_2)$、
+cocycleを $\chi((p,q),(r,s))=(-1)^{ps}$ とする。
+六関係の群次数は順に $e_1,e_2,e_1+e_2,e_1+e_2,e_2,e_1$。
+各二次語の係数に $\chi(\deg x,\deg y)^{-1}$ を掛けた関係行列を $R^\chi$ とする。
+最高tensorは
+\[
+ w^\chi=R^\chi A^\chi(R^\chi)^{\mathsf T},\qquad
+ A^\chi=A\operatorname{diag}(1,1,-1,-1,1,1)
+\]
+で与えられ、非零反巡回であることを全係数で独立確認した。
+これは群次数零の最高tensorをtwistしたものでもある。
+従ってこれらのAS4実現でも $\mu=I$ であり、H3切断には中心三次が必要である。
+
+$\mathcal O$ の六関係は、前命題の $(r,s,\kappa)$ を
+$(r,-s,\kappa)$ に替えるだけで同じPBW表示になる。
+この二つの新しい係数も $0,\pm1$ を避ける。
+前命題の二十単項式のcharacter議論は $rs\ne1$ を用いず、
+全中心三次を $kc^3$ または $kd^3$ の一方に制限する。
+ここでは $k$ は係数体を表す。二本が同時に現れることもない。
+従って $rs=1$ となる新しい境界を含め、全候補は分解する。
+
+$\mathcal H^\varepsilon$ のcocycle後も、三次・四次の商座標の分母は1であり、
+中心行列の選んだ20次minorは通常の場合と同じ
+\[
+ 16384\lambda^{12}(\lambda+1)^9(2\lambda+1)^4(4\lambda+1)(4\lambda+3)
+\]
+となる。しかし特殊値の中心を通常の場合から推測してはいけない。
+$\lambda=-1/2$ は両 $\varepsilon$ で階数20、
+$\lambda=-1/4,-3/4$ は階数19であり、正確に
+\[
+ Z((\mathcal H^\varepsilon)^\chi)_3=
+ \begin{cases}
+ k\,d(d^2-3c^2)&\lambda=-1/4,\\
+ k\,c(d^2-c^2/3)&\lambda=-3/4,\\
+ 0&\text{その他}
+ \end{cases}
+\]
+である。ここでは $c,d$ が可換であることを関係式から用いた。
+階数と表示された非零核ベクトルの両方を $\mathbb Q$ 上で確認した。
+どの残余切断も一次式と二次式に分解するため、H3の整域性に矛盾する。
+
+FS4の標準cocycleは命題\ref{prop:cubic-fs-sklyanin}で排除済みであり、
+FZ2のskew環のcocycleは再びskew環である。
+以上で列挙表示とその標準cocycle全体について主張を得る。
+任意の有限群cocycle、任意Zhang twist、全CY被覆は含めない。
+\end{proof}
+
+全値rank cover、二つの例外中心ベクトル、六関係の輸送と最高tensorは
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}as4\_\allowbreak{}four\_\allowbreak{}simple\_\allowbreak{}cocycles.py} で検算する。
+
 \begin{proposition}\label{prop:cubic-fs-p-slice}
 \cite{AS4lowpinned}の十二共有係数表示FT2--FT3を
 $\mathcal P^\eta_{\lambda,r}$ と書く。

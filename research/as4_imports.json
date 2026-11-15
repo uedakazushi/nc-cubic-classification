@@ -306,5 +306,12 @@
     "used_part": "FT2-FT3 explicit P presentation only, extended wherever its denominators are nonzero; full-shared-all-regular proof consulted for scope but no AS4 sufficiency, coverage or isomorphism theorem imported.",
     "independent_proofs": "Universal P anti-cyclic top tensor conditional AS4. Entire lambda=2 slice centre3 zero by two coprime exact maximal minor numerators, plus formal nonempty-open exclusion.",
     "validator": "computations/verify_cubic_as4_four_simple_p.py"
+  },
+  "four_simple_cocycles_v76": {
+    "commit": "a45f834f51a00c47443b51caf66abaf4629546b9",
+    "presentation_reference": "four_simple_presentations_v73, FZ4/FZ5 only",
+    "used_part": "Same explicit presentations; standard cocycles constructed and verified independently here. No full CY/projection coverage or AS4 sufficiency imported.",
+    "independent_proofs": "Universal cocycle top tensor with corrected pairing signs; exact H all-value rank and factored kernel cover; O six-relation transport and general PBW character obstruction.",
+    "validator": "computations/verify_cubic_as4_four_simple_cocycles.py"
   }
 }
