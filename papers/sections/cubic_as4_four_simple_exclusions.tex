@@ -1,0 +1,117 @@
+\subsection{四単純基点表示のSklyanin部分とskew部分}
+\label{subsec:cubic-as4-four-simple}
+四単純基点の全表示の被覆とは区別して、
+\cite{AS4lowpinned}の対角非零表示FS4と共有係数表示FZ2を扱う。
+参照commitは前節と同じであり、存在十分性・全同型・全CY被覆は輸入しない。
+生成元対の順序を $ab,ac,ad,bc,bd,cd$ とし、
+$U$ はその対称積の半分、$K$ は交換子とする。
+FS1--FS2の $A,B$ に対する六関係は $R=U+KB^{\mathsf T}A^{-1}$ である。
+
+\begin{proposition}\label{prop:cubic-fs-sklyanin}
+\[
+ \Omega=\{(\lambda,t):\lambda(\lambda+1)t(t-\lambda)(t-\lambda-1)\ne0\}
+\]
+上で
+\[
+ B=\operatorname{diag}\bigl(1,1,1,
+ (\lambda+1)(\lambda-t)/16,
+ \lambda(\lambda+1-t)/16,t/16\bigr)
+\]
+とした六関係の代数、およびその標準Klein cocycle twistは、
+どの値でもH3包絡にならない。
+\end{proposition}
+\begin{proof}
+六関係をそれぞれ非零定数倍し、生成元を対角変換すると標準Sklyanin表示となる。
+そのパラメータは
+\[
+ \alpha=1/t,\qquad \beta=\lambda/(t-\lambda-1),\qquad
+ \gamma=-(\lambda+1)/(t-\lambda),
+ \qquad\alpha+\beta+\gamma+\alpha\beta\gamma=0.
+\]
+具体的には標準表示の偶対の係数を1にする比は
+\[
+ \rho_1=-4/t,\quad \rho_2=4/(\lambda+1-t),\quad \rho_3=4/(\lambda-t).
+\]
+$u_0=1$, $u_1^2=(\rho_2\rho_3)^{-1}$,
+$u_2^2=(\rho_1\rho_3)^{-1}$, $u_3=\rho_3u_1u_2$ と選べばよい。
+全ての分母は $\Omega$ 上で非零であり、六関係の対応も可逆である。
+三曲線
+\[
+ t=1,\qquad t=-1,\qquad t=2\lambda+1
+\]
+の外では標準パラメータは全て $0,\pm1$ を避けるので、
+既証のproper Sklyaninと標準cocycleの排除を適用する。
+この三曲線は $\Omega$ 内では互いに素である。
+その上では $x_1,x_2,x_3$ の循環置換により
+$S(1,-1,s)$, $s\ne0,\pm1$ となる。
+退化した中央二次pencilにはproper部分の議論を適用せず、次の直接計算を用いる。
+
+$S(1,-1,s)$ の生成元を $a,b,c,d$ と書くと、最初の四関係は
+\[
+ ab=cd,\quad ba=-dc,\quad ac=-bd,\quad ca=db.
+\]
+残る二関係も用いると、非零二次元
+\[
+ N_1=a^2+d^2,\qquad N_2=b^2-c^2
+\]
+は正規で、そのnormalizerはそれぞれ
+\[
+ \nu_1=\operatorname{diag}(1,-1,-1,1),\qquad
+ \nu_2=\operatorname{diag}(-1,1,1,-1).
+\]
+八つの恒等式 $N_jv=\nu_j(v)N_j$ を三次関係moduleの線型結合として
+$\mathbb Q(s)$ 上で検算し、その係数の分母は $s,s-1,s+1$ の冪だけである。
+従って全許容値で成立する。六二次関係に平方項がないので $N_1,N_2\ne0$ である。
+整域を仮定すれば $N=N_1N_2\ne0$ であり、そのnormalizerは $-I$。
+よって奇数次数の中心は零となる。
+
+ここでCY性を存在定理から無条件に輸入する必要もない。
+元の六関係では $w=R A R^{\mathsf T}$ は非零反巡回四次tensorであることを
+全256係数で確認した。$U$ の独立性と $A$ の可逆性から非零である。
+Koszul AS4実現を仮定すると $w$ は最高Koszul線を張り、
+双対Frobenius pairingのNakayamaは一次上 $-I$、従って包絡の $\mu=I$ である。
+H3包絡は整域なので中心三次が必要となり、上の消滅に矛盾する。
+
+最後に標準Klein次数では $N_1,N_2$ の群次数は零であるから、
+二つのnormality恒等式とその積のnormalizerはcocycle後も変わらない。
+$w$ の群次数も零で、cocycle後の最高Frobenius pairingのNakayamaも変わらない。
+実際、最高次数へ対をなす二群次数は同じであり、
+積の二方向に同じcocycle係数が掛かる。
+従ってcocycle後のAS4実現でも $\mu=I$、整域なら奇数中心は零である。
+これで三曲線を含む全 $\Omega$ を排除した。
+退化境界の任意Zhang twistの排除はここでは主張しない。
+\end{proof}
+
+\begin{proposition}\label{prop:cubic-fs-shared-skew}
+同じ表示で $x_8=A_*,x_{11}=B_*,x_{15}=C_*$、他の $x_j=0$ とする
+共有係数表示FZ2は、その指定された全許容領域でskew多項式環である。
+従ってそのH3部分は既証のskew五型・31座標の分類に含まれる。
+\end{proposition}
+\begin{proof}
+直接の行列積は $R=U+K\operatorname{diag}(f_0,\ldots,f_5)$ を与え、
+\[
+ (f_0,\ldots,f_5)=\left(2C_*,\frac{2B_*}{\lambda},
+ -\frac{2A_*}{\lambda+1},-\frac{2(B_*-C_*)}{\lambda+1},
+ \frac{2(A_*-C_*)}{\lambda},2(A_*-B_*)\right).
+\]
+各関係は $(1/2+f_j)xy+(1/2-f_j)yx=0$。
+FZ2の条件は
+\[
+ A_*B_*+\lambda A_*C_*-(\lambda+1)B_*C_*
+ =\lambda(\lambda+1)/16
+\]
+および $\lambda\ne0,-1$ と
+\begin{align*}
+ &(1-16C_*^2)(\lambda^2-16B_*^2)((\lambda+1)^2-16A_*^2)\\
+ &\quad\cdot((\lambda+1)^2-16(B_*-C_*)^2)
+ (\lambda^2-16(A_*-C_*)^2)(1-16(A_*-B_*)^2)\ne0.
+\end{align*}
+後者は各 $1/2\pm f_j$ の非消滅そのものである。
+従って六対全てが可逆skew係数の関係となり、主張を得る。
+この認識にFZ2の全同型や全射影型被覆は不要である。
+\end{proof}
+
+六関係変換、最高tensor、境界normalityの全値証明書、
+およびskew行列の厳密検算は
+\texttt{verify\_cubic\_as4\_four\_simple.py} にある。
+四単純基点の他の共有係数・対角零境界はまだこの二命題で覆われない。

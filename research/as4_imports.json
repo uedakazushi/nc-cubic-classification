@@ -274,5 +274,21 @@
       "computations/verify_cubic_as4_ds211_remaining.py",
       "computations/verify_cubic_as4_ds211_v.py"
     ]
+  },
+  "four_simple_presentations_v73": {
+    "commit": "a45f834f51a00c47443b51caf66abaf4629546b9",
+    "presentations": [
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_FOUR_SIMPLE_DIAGONAL_OPEN_COMPLETE.tex",
+        "sha256": "6727f6f7b9fece016ae0cae7b4b05f2e90ea4e555f87e80843edf99e0076c279"
+      },
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_FOUR_SIMPLE_SHARED_ZERO_COMPLETE.tex",
+        "sha256": "7af55f9003b3a7104a70179d45f0d787080e923aa0f72282896086119ad6b56e"
+      }
+    ],
+    "used_part": "FS1-FS4 S and FZ2 Q explicit presentations only; no existence sufficiency, all-isomorphism or full CY coverage imported.",
+    "independent_proofs": "Exact six-relation Sklyanin transport; all-value normal parity identities at three boundary curves; cyclic top tensor conditional AS4, standard cocycle preservation; literal Q skew recognition.",
+    "validator": "computations/verify_cubic_as4_four_simple.py"
   }
 }

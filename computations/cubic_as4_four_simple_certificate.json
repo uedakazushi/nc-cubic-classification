@@ -1,0 +1,370 @@
+{
+  "version": "classification-v73",
+  "source_commit": "as4 a45f834f51a00c47443b51caf66abaf4629546b9",
+  "Sklyanin_parameters": [
+    "1/t",
+    "lambda/(-lambda + t - 1)",
+    "(-lambda - 1)/(-lambda + t)"
+  ],
+  "even_normalization_ratios": [
+    "-4/t",
+    "4/(lambda - t + 1)",
+    "4/(lambda - t)"
+  ],
+  "six_relation_matching": [
+    5,
+    0,
+    4,
+    1,
+    3,
+    2
+  ],
+  "parameter_boundaries": [
+    "-(t - 1)*(t + 1)/t**2",
+    "-(t - 1)*(-2*lambda + t - 1)/(-lambda + t - 1)**2",
+    "-(t + 1)*(-2*lambda + t - 1)/(-lambda + t)**2"
+  ],
+  "cyclic_top_tensor": true,
+  "top_Klein_degree_zero": true,
+  "S_1_minus1_z_normal_quadrics": [
+    {
+      "terms": {
+        "(0, 0)": "1",
+        "(3, 3)": "1"
+      },
+      "signs": [
+        1,
+        -1,
+        -1,
+        1
+      ]
+    },
+    {
+      "terms": {
+        "(1, 1)": "1",
+        "(2, 2)": "-1"
+      },
+      "signs": [
+        -1,
+        1,
+        1,
+        -1
+      ]
+    }
+  ],
+  "normality_witnesses": [
+    [
+      {
+        "row": 6,
+        "coefficient": "z/2"
+      },
+      {
+        "row": 7,
+        "coefficient": "-z/2"
+      },
+      {
+        "row": 14,
+        "coefficient": "-z/2"
+      },
+      {
+        "row": 15,
+        "coefficient": "z/2"
+      },
+      {
+        "row": 22,
+        "coefficient": "-1"
+      },
+      {
+        "row": 30,
+        "coefficient": "z/2"
+      },
+      {
+        "row": 31,
+        "coefficient": "z/2"
+      },
+      {
+        "row": 38,
+        "coefficient": "-z/2"
+      },
+      {
+        "row": 39,
+        "coefficient": "-z/2"
+      },
+      {
+        "row": 46,
+        "coefficient": "-1"
+      }
+    ],
+    [
+      {
+        "row": 0,
+        "coefficient": "-z/(z + 1)"
+      },
+      {
+        "row": 1,
+        "coefficient": "1/(z + 1)"
+      },
+      {
+        "row": 16,
+        "coefficient": "1/(z + 1)"
+      },
+      {
+        "row": 17,
+        "coefficient": "-z/(z + 1)"
+      },
+      {
+        "row": 21,
+        "coefficient": "1"
+      },
+      {
+        "row": 24,
+        "coefficient": "1/(z + 1)"
+      },
+      {
+        "row": 25,
+        "coefficient": "z/(z + 1)"
+      },
+      {
+        "row": 40,
+        "coefficient": "-1/(z + 1)"
+      },
+      {
+        "row": 41,
+        "coefficient": "-z/(z + 1)"
+      },
+      {
+        "row": 44,
+        "coefficient": "1"
+      }
+    ],
+    [
+      {
+        "row": 2,
+        "coefficient": "-z/(z - 1)"
+      },
+      {
+        "row": 3,
+        "coefficient": "-1/(z - 1)"
+      },
+      {
+        "row": 10,
+        "coefficient": "1/(z - 1)"
+      },
+      {
+        "row": 11,
+        "coefficient": "z/(z - 1)"
+      },
+      {
+        "row": 19,
+        "coefficient": "-1"
+      },
+      {
+        "row": 26,
+        "coefficient": "-1/(z - 1)"
+      },
+      {
+        "row": 27,
+        "coefficient": "z/(z - 1)"
+      },
+      {
+        "row": 34,
+        "coefficient": "-1/(z - 1)"
+      },
+      {
+        "row": 35,
+        "coefficient": "z/(z - 1)"
+      },
+      {
+        "row": 42,
+        "coefficient": "-1"
+      }
+    ],
+    [
+      {
+        "row": 4,
+        "coefficient": "-1/(z - 1)"
+      },
+      {
+        "row": 5,
+        "coefficient": "-z/(z - 1)"
+      },
+      {
+        "row": 8,
+        "coefficient": "-z/(z - 1)"
+      },
+      {
+        "row": 9,
+        "coefficient": "-z/(z - 1)"
+      },
+      {
+        "row": 28,
+        "coefficient": "-1/(z - 1)"
+      },
+      {
+        "row": 29,
+        "coefficient": "z/(z - 1)"
+      },
+      {
+        "row": 32,
+        "coefficient": "z/(z - 1)"
+      },
+      {
+        "row": 33,
+        "coefficient": "-z/(z - 1)"
+      }
+    ],
+    [
+      {
+        "row": 6,
+        "coefficient": "1/2"
+      },
+      {
+        "row": 7,
+        "coefficient": "1/2"
+      },
+      {
+        "row": 14,
+        "coefficient": "-1/2"
+      },
+      {
+        "row": 15,
+        "coefficient": "-1/2"
+      },
+      {
+        "row": 30,
+        "coefficient": "-1/2"
+      },
+      {
+        "row": 31,
+        "coefficient": "1/2"
+      },
+      {
+        "row": 38,
+        "coefficient": "1/2"
+      },
+      {
+        "row": 39,
+        "coefficient": "-1/2"
+      }
+    ],
+    [
+      {
+        "row": 0,
+        "coefficient": "-1/(z + 1)"
+      },
+      {
+        "row": 1,
+        "coefficient": "-1/(z + 1)"
+      },
+      {
+        "row": 16,
+        "coefficient": "-1/(z + 1)"
+      },
+      {
+        "row": 17,
+        "coefficient": "-1/(z + 1)"
+      },
+      {
+        "row": 24,
+        "coefficient": "-1/(z + 1)"
+      },
+      {
+        "row": 25,
+        "coefficient": "1/(z + 1)"
+      },
+      {
+        "row": 40,
+        "coefficient": "1/(z + 1)"
+      },
+      {
+        "row": 41,
+        "coefficient": "-1/(z + 1)"
+      }
+    ],
+    [
+      {
+        "row": 2,
+        "coefficient": "-1/(z - 1)"
+      },
+      {
+        "row": 3,
+        "coefficient": "-1/(z - 1)"
+      },
+      {
+        "row": 10,
+        "coefficient": "1/(z - 1)"
+      },
+      {
+        "row": 11,
+        "coefficient": "1/(z - 1)"
+      },
+      {
+        "row": 26,
+        "coefficient": "-1/(z - 1)"
+      },
+      {
+        "row": 27,
+        "coefficient": "1/(z - 1)"
+      },
+      {
+        "row": 34,
+        "coefficient": "-1/(z - 1)"
+      },
+      {
+        "row": 35,
+        "coefficient": "1/(z - 1)"
+      }
+    ],
+    [
+      {
+        "row": 4,
+        "coefficient": "-1/(z - 1)"
+      },
+      {
+        "row": 5,
+        "coefficient": "-1/(z - 1)"
+      },
+      {
+        "row": 8,
+        "coefficient": "-1/(z - 1)"
+      },
+      {
+        "row": 9,
+        "coefficient": "-z/(z - 1)"
+      },
+      {
+        "row": 13,
+        "coefficient": "-1"
+      },
+      {
+        "row": 28,
+        "coefficient": "-1/(z - 1)"
+      },
+      {
+        "row": 29,
+        "coefficient": "1/(z - 1)"
+      },
+      {
+        "row": 32,
+        "coefficient": "z/(z - 1)"
+      },
+      {
+        "row": 33,
+        "coefficient": "-1/(z - 1)"
+      },
+      {
+        "row": 36,
+        "coefficient": "1"
+      }
+    ]
+  ],
+  "Q_skew_diagonal": [
+    "2*C",
+    "2*B/lambda",
+    "-2*A/(lambda + 1)",
+    "(-2*B + 2*C)/(lambda + 1)",
+    "(2*A - 2*C)/lambda",
+    "2*A - 2*B"
+  ],
+  "scope": "Explicit FS4 S and Q presentation transport and boundary parity identities. No full four-simple or CY coverage theorem imported."
+}
