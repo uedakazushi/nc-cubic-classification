@@ -30,7 +30,7 @@
 
 **固定PI4包絡の完全判定**：h=1、gamma^4=2、alpha=(−2,−2,0)、beta=(1,1,2)のD切断族で、中心特異値は13個だが非H3値は平方因子のない次数6式 b(D)=(D−Dstar)*P4(D)*Q1(D)の根に限る。他のDのaffine切断は大域次元2。`papers/sections/cubic_order4_local_orders.tex` はgrの最大性、中心正則列とbalanced local dualityによる対称双対、DVR標準形の非分岐性、A1二重被覆の指標多重度を使う。小次元表現のnorm・二中心点への分配・次数6式は厳密検算済み。D直線のH3条件は主開集合D(b)で、任意底変更・fpqc降下に適合し、そのaffine族は相対対角の長さ2以下の射影分解を持つ。これは一固定包絡の判定で、全位数4族・全H3の被覆ではない。
 
-**楕円filtered deformationの全包絡認識（H3 classification-v25）**：滑らかな次数3楕円THCR（translation）の全filtered deformationについて、Rees環の二次包絡がnoetherian quadratic Koszul CY AS4で、一本の正則中心三次の商になることを証明した。AS4包絡を外部に仮定せず復元できる。非可換では境界が一意なので、intrinsic中央楕円H3の幾何学的群oidは有限gldim filtered deformationとfiltered同型に一致する。Hesse/Moore・対称線型係数・中心三次の単一線型核による有限候補atlasと全同型係数比較を得た。有限Nは中心McKay条件で全admissibilityを判定し、被約固定N族では相対中心とH3開性も証明済み。無限位数の全bad値、全intrinsic family stack・既約成分、中央境界を持たないH3被覆は未完成。次はj0対称potentialで旧中心式の分母を正則化し、現行有限incidence atlasを具体的な切断族へ展開する。
+**楕円filtered deformationの全包絡認識（H3 classification-v25）**：滑らかな次数3楕円THCR（translation）の全filtered deformationについて、Rees環の二次包絡がnoetherian quadratic Koszul CY AS4で、一本の正則中心三次の商になることを証明した。AS4包絡を外部に仮定せず復元できる。非可換では境界が一意なので、intrinsic中央楕円H3の幾何学的群oidは有限gldim filtered deformationとfiltered同型に一致する。Hesse/Moore・対称線型係数・中心三次の単一線型核による有限候補atlasと全同型係数比較を得た。有限Nは中心McKay条件で全admissibilityを判定し、被約固定N族では相対中心とH3開性も証明済み。無限位数の全bad値、全intrinsic family stack・既約成分、中央境界を持たないH3被覆は未完成。j0対称potential境界でも正則化した非分裂中央三次と無限位数の具体例を得た。三捩れ量子Weyl chartの全中心も求め、b=(1,1,1),lambda=0のD族では非H3四値を完全に判定した。次は全beta/lambdaのMcKay分配と、中央境界を持たないH3被覆を進める。
 
 既存の主要な構造結果を維持する：
 

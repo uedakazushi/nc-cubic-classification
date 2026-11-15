@@ -1,0 +1,19 @@
+{
+  "version": "classification-v27",
+  "parameters": "b1=b2=b3=1, lambda=0, q^2+q+1=0",
+  "center": "W^3-dW+XY(X+Y+D)+eD=0; d=1/(q-1), e=d^3, e^2=-1/27",
+  "critical_XY_branches": [
+    "(0,0)",
+    "(0,-D)",
+    "(-D,0)",
+    "(-D/3,-D/3)"
+  ],
+  "singular_values": {
+    "D^2+4e=0": "three A1 points, no characters, bad",
+    "D^2+9e=0": "one A1 point, exactly one character, McKay (1,2), good",
+    "D^2+36e=0": "one A1 point, no characters, bad"
+  },
+  "character_algebra": "x=y=z=s, s^2=-d; D=-3s^3",
+  "bad_polynomial": "(D^2+4e)(D^2+36e)",
+  "scope": "Exact critical elimination and character values; H3 conclusion uses the proved PI3 McKay-order theorem."
+}

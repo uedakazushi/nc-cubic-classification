@@ -1,0 +1,58 @@
+\subsection{対称potentialの $j=0$ 正規化境界にある無限位数例}
+\label{subsec:cubic-j0-boundary}
+ここでいう $j=0$ は対称三次potentialのHesse正規化を指す。
+非可換Sklyanin環のpoint schemeの $j$ と同一視しない。
+旧積分公式の $1+h^3$ は、この境界で包絡自体が退化することを意味しない。
+
+\begin{proposition}[極を除いた実際の中央切断]
+\label{prop:j0-nontorsion-cut}
+$h=-1,\gamma=2,A=1,B=C=0,\beta=0$ とする。中心元 $t$ を持つ包絡
+\[
+ B=\mathbb C\langle t,x,y,z\rangle/
+ (3yz-zy+x^2+8tx,\ 3zx-xz+y^2,\ 3xy-yx+z^2,\ [t,x],[t,y],[t,z])
+\]
+はnoetherian quadratic Koszul CY AS4であり、
+\[
+ 729G_0=13y^3-3yzx+13zyx+z^3-30tyz+6tzy-72t^2x
+\]
+は非零の正則中心三次である。
+$R_D=B/(G_0+Dt^3)$ は滑らかな楕円境界を持ち、
+そのtranslationは無限位数である。
+全ての $\mathbb Q$ 上超越的な $D\in\mathbb C$ について
+$(\operatorname{qgr}R_D,\pi R_D)$ は強いH3である。
+\end{proposition}
+\begin{proof}
+$t=0$ の三次元Sklyanin環は $(a,b,c)=(3,-1,1)$ に対応し、
+Moore行列の行列式は
+$3(x^3+y^3+z^3+9xyz)$ である。
+このHesse曲線は滑らかで、translation点は $(3:-1:1)$ である。
+対称線型係数のPBW条件と補題\ref{lem:sklyanin-central-PBW-CY}から
+$B$ の主張を得る。
+
+旧公式の $D=0$ 部分を $\Gamma_0$ と書き、
+$(1+h^3)\Gamma_0$ の係数を約分してから $h=-1$ に特殊化する。
+全係数の分母は $\gamma+1$ の冪と定数だけとなる。
+この手順は有限表示の局所的なPBW平坦族上で行える。
+中心交換子は稠密開集合 $h^3\ne-1$ で零なので、
+各次数の局所自由性により特殊fiberでも零である。
+指定点で得られる式が上記の $G_0$ である。
+検証器は独立に有理数上の次数4関係行列を使い、三交換子の零と
+$G_0\bmod t\ne0$ を確認する。
+Sklyanin環の中心三次核は一次元なので、この最高記号は
+$S\to B(E,\mathcal L,\rho)$ の正則生成元である。
+従って $t,G_0+Dt^3$ は正則列をなし、$R_D/(t)=B(E,\mathcal L,\rho)$ を得る。
+
+楕円曲線は5と13で良い還元を持つ。
+Moore行列の核を逐次取り、原点 $(1:-1:0)$ に初めて戻る回数を
+厳密に計算すると、それぞれ9と6である。
+もし標数0の点が有限位数 $m$ なら、良い還元で素数と互いに素な
+捩れ部分が単射になることから $m=9\cdot5^a=6\cdot13^b$ となる。
+これは不可能だから無限位数である。
+最後に命題\ref{prop:r13-all-transcendental-cuts}の中心局所化の証明を適用し、
+定理\ref{thm:normal-cubic-central-boundary-recognition}でH3を認識する。
+この例の全代数的 $D$ の判定はここでは結論しない。
+\end{proof}
+
+再現は \texttt{verify\_cubic\_j0\_boundary.py} による。
+証明書は正則化した全係数、三つの交換子、最高記号の非消滅、
+二つの良い還元における正確な位数を保持する。

@@ -1,6 +1,6 @@
 {
   "date": "2026-11-15",
-  "version": "classification-v25",
+  "version": "classification-v27",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -28,7 +28,9 @@
     "papers/sections/cubic_finite_order_relative.tex",
     "papers/sections/cubic_normal_central_boundary.tex",
     "papers/sections/cubic_central_elliptic_cy_envelope.tex",
-    "papers/sections/cubic_filtered_elliptic_recognition.tex"
+    "papers/sections/cubic_filtered_elliptic_recognition.tex",
+    "papers/sections/cubic_j0_boundary.tex",
+    "papers/sections/cubic_quantum3_center.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -439,5 +441,23 @@
     "exact_checks": "No new computation needed beyond existing universal cyclic/Moore/translation and BG obstruction identities; theorem proof ordinary, not machine-formalized",
     "typesetting": "90-page manuscript built without unresolved refs/cites or overfull boxes; no extra visual pass for this subsection yet",
     "limitations": "No classification of all infinite-order admissible cuts, global irreducible components, all intrinsic families/stack, or proof all H3 have this boundary; no independent referee/novelty audit"
+  },
+  "j0_boundary_v26": {
+    "validator": "computations/verify_cubic_j0_boundary.py",
+    "certificate": "computations/cubic_j0_boundary_certificate.json",
+    "result": "PASS exact rational central commutators and leading nonvanishing; exact good reduction orders 9 at5 and6 at13",
+    "proof": "papers/sections/cubic_j0_boundary.tex",
+    "limits": "All algebraic D admissibility and all gamma leading nonvanishing not claimed; whole H3 classification incomplete"
+  },
+  "quantum3_v27": {
+    "proof": "papers/sections/cubic_quantum3_center.tex",
+    "validators": [
+      "computations/verify_cubic_quantum3_center.py",
+      "computations/verify_cubic_quantum3_fixed_cuts.py"
+    ],
+    "result": "PASS PBW, all four central generators, full degree9 relation, six exact singular values and character loci",
+    "theorem": "b=(1,1,1),lambda=0: H3 iff (D^2+4e)(D^2+36e)!=0; e=-(2q+1)/9",
+    "limits": "Whole family all beta/lambda explicit elimination not performed; all H3 coverage incomplete",
+    "build": "LuaLaTeX 92 pages; no undefined references/citations or overfull boxes; page76 visually inspected"
   }
 }

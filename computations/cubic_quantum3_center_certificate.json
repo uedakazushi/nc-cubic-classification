@@ -1,0 +1,16 @@
+{
+  "version": "classification-v26",
+  "relations": "yz=q*zy+b1; zx=q*xz+b2; xy=q*yx+b3; q^2+q+1=0",
+  "PBW_overlap_zyx": true,
+  "central_generators": [
+    "X=x^3",
+    "Y=y^3",
+    "Z=z^3",
+    "Omega=xyz+(b1*x+q*b2*y+b3*z)/(q-1)"
+  ],
+  "d": "1/(q-1)=-(q+2)/3",
+  "e": "-(2*q+1)/9",
+  "center_relation": "Omega^3-d*b1*b2*b3*Omega-X*Y*Z-e*(b1^3*X+b2^3*Y+b3^3*Z)=0",
+  "checks": "All 12 generator commutators and exact degree9 center relation",
+  "scope": "Exact polynomial identities over Q(q)[b1,b2,b3]; exhaustion of center by filtered leading terms proved separately."
+}

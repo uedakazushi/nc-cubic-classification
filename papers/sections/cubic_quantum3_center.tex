@@ -1,0 +1,114 @@
+\subsection{三捩れtranslationの量子Weyl chartと全中心}
+\label{subsec:quantum3-center}
+\begin{proposition}[三捩れchartの明示的な全中心]
+\label{prop:quantum3-full-center}
+$q^2+q+1=0$ とし、
+\[
+ V= k\langle x,y,z\rangle/(yz-qzy-b_1,\ zx-qxz-b_2,\ xy-qyx-b_3)
+\]
+と置く。$d=(q-1)^{-1}=-(q+2)/3$、$e=-(2q+1)/9$ とすると、
+\[
+ X=x^3,\quad Y=y^3,\quad Z=z^3,\quad
+ W=xyz+d(b_1x+qb_2y+b_3z)
+\]
+は中心元であり、全中心は
+\[
+ Z(V)=k[X,Y,Z,W]/
+ \bigl(W^3-db_1b_2b_3W-XYZ-e(b_1^3X+b_2^3Y+b_3^3Z)\bigr).
+\]
+$\lambda^3\ne1$ のとき、中心切断
+\[
+ U_D=V/(X+Y+Z-3\lambda W+D)
+\]
+のassociated gradedは滑らかな楕円曲線の次数3 THCRで、translationは正確に位数3を持つ。
+さらに $Z(U_D)=Z(V)/(X+Y+Z-3\lambda W+D)$ である。
+従って全中心は表示済みの二方程式で与えられ、Rees環のH3性は中心McKay判定と同値である。
+\end{proposition}
+\begin{proof}
+順序 $x<y<z$ に対する書換えは
+$yx=q^2xy-q^2b_3$、$zx=qxz+b_2$、$zy=q^2yz-q^2b_1$ である。
+唯一の重なり $zyx$ の二還元は一致し、PBW基底は $x^iy^jz^k$ となる。
+上記四元の全生成元との交換子と表示された次数9恒等式は、
+$q^2+q+1$ で係数を還元して直接検証できる。
+
+最高次数の量子多項式環で、単項式 $x^iy^jz^k$ が中心である条件は
+$i\equiv j\equiv k\pmod3$ である。
+従ってその中心は $x^3,y^3,z^3,xyz$ で生成される。
+これら全てが $V$ の中心へ持ち上がっているから、
+最高項を逐次引くことにより全中心の生成を得る。
+関係を $W$ に関するmonic三次で割った剰余の最高項は、
+$X^aY^bZ^cW^r$、$r=0,1,2$ の相異なるPBW単項式になる。
+従って他の関係は存在しない。
+
+$S=\operatorname{gr}V$ の中心三次
+$g=x^3+y^3+z^3-3\lambda xyz$ は滑らかなHesse曲線を定める。
+三二次関係のgraphは $(x:y:z)\mapsto(x:qy:q^2z)$ であり、
+この曲線上では非零三捩れ点によるtranslationとなる。
+section環への写像は三二次関係と $g$ を殺し、
+Hilbert級数の一致により $S/(g)$ とTHCRは一致する。
+$g$ は整域 $S$ で正則なので、中央filtered元による商の最高記号は
+正確に $(g)$ となり、$\operatorname{gr}U_D=S/(g)$ を得る。
+中心の商との比較も証明する。$f=X+Y+Z-3\lambda W+D$ と置く。
+$fv$ が中心なら $f[v,a]=0$ と整域性から $v$ も中心だから、
+$Z(V)/(f)\hookrightarrow Z(U_D)$ である。
+$Z(S)/(g)\hookrightarrow Z(S/(g))$ も同じ議論で単射となる。
+前者のHilbert級数は $(1-s^3)/(1-s)^3$、ここで $s$ は次数3を表す。
+後者は $E/\langle\rho\rangle$ 上の次数3 section環なので同じ級数を持ち、両者は一致する。
+Rainsのfiltered中心定理により $\operatorname{gr}Z(U_D)=Z(S/(g))$ だから、
+最高項の帰納法で $Z(V)/(f)\to Z(U_D)$ は全射でもある。
+定理\ref{thm:all-filtered-elliptic-strong-envelope}と
+有限位数の認識・中心McKay判定を適用する。
+\end{proof}
+
+このchartでH3となるための局所条件は具体的には次の通りである。
+滑らかな中心点では自動的にAzumayaである。
+$A_1$ 点では二つの単純加群の次元が $(1,2)$、
+$A_2$ 点では三つの相異なる一次元単純加群が必要十分である。
+他の特異型はPI次数3の正則McKay表現を収容できず除外される。
+これは定理\ref{thm:finite-order-elliptic-admissibility}の
+$\sum r_\chi\dim\chi=3$ から従う。
+全 $b_i,\lambda,D$ の明示的な許容条件の消去と、
+各中心点の単純加群の分配の計算は残る。
+
+\begin{theorem}[固定三捩れ包絡の全切断判定]
+\label{thm:quantum3-fixed-all-cuts}
+前命題で $b_1=b_2=b_3=1,\lambda=0$ とする。
+$e=-(2q+1)/9$ と置くと、$G_D=x^3+y^3+z^3+Dt^3$ による
+全切断のうち強いH3となる必要十分条件は
+\[
+ (D^2+4e)(D^2+36e)\ne0
+\]
+である。$D^2+9e=0$ の二値では中心が $A_1$ 特異点を持つが、切断はH3である。
+従って非H3値は正確に四つである。
+\end{theorem}
+\begin{proof}
+中心式から $Z=-D-X-Y$ を消去すると
+\[
+ F=W^3-dW+XY(X+Y+D)+eD=0,\qquad d^3=e,\quad e^2=-1/27
+\]
+を得る。臨界条件は
+$3W^2=d$、$Y(2X+Y+D)=X(X+2Y+D)=0$ である。
+$D\ne0$ では $(X,Y)$ は
+$(0,0),(0,-D),(-D,0),(-D/3,-D/3)$ の四点に限る。
+初めの三点では $F=0$ の条件を消去すると $D^2+4e=0$、
+最後の一点では
+\[
+ (D^3+27eD)^2-108e=(D^2+9e)^2(D^2+36e)=0
+\]
+となる。$D=0$ は $W^2=d/3$ と $F=0$ を両立できず特異値でない。
+六つの値は相異なり非零である。
+各点のHessianは非退化である。実際、$W$ 方向は $6W\ne0$、
+$(X,Y)$ ブロックの行列式は初めの三点で $-D^2$、最後で $D^2/3$ である。
+従って初めの二値は各三つの $A_1$ 点を、残り四値は各一つの $A_1$ 点を持つ。
+
+一次元表現の方程式は $yz=zx=xy=-d$ なので、
+全て $x=y=z=s$、$s^2=-d$ に限る。
+中央切断は $D=-3s^3$ であり、対応する二つの値は $D^2+9e=0$ である。
+各値で一次元表現は正確に一つ、その中心点は
+$X=Y=Z=-D/3$ である。
+この $A_1$ 点ではPI次数3と正の多重度により
+McKay次元は $(1,2)$ となり、大域次元2を得る。
+他の四特異値では一次元表現が存在しない。
+$A_1$ 上の有限大域次元PI次数3対称orderには $(1,2)$ が必要だから、これらは非H3である。
+非特異中心の値はAzumayaなのでH3であり、全値の判定を尽くす。
+\end{proof}

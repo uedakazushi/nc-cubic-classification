@@ -141,3 +141,11 @@ point graph規約の訂正：p yz+q zy-h x²に対する行列は(-hx,qz,py)を�
 
 中心式再構成は完了。独立なDstar・character中心点の代入でF=gradF=0を確認し、Hessian rank2、核方向cubic0、形式Morseの最初の非零次数4。中心はA3である（quartic Schur補でも同じ係数）。非H3は既証のodd Ext1なので、Du Val中心だけを十分条件にしない。全中心式・全17評価・全係数空間は `cubic_order4_center_relation_certificate.json`、局所確認は `verify_cubic_order4_bad_center.py` とcertificate。
 次の消去計算に有用な厳密変換（作業用 /workspace/work/clifford_cubic/normalize_order4_center.py）：先頭Phiのcube係数はr1^3,r2^3,1、r1=(g-1)(g²-1)/2,r2=(g²-1)²/2。X_i=r_i Z_iで先頭はSigma X_i³+(7g²-13)X1X2X3。各pure square係数を消す一意のaffine shift後、全中心式はX1,X2に対称となることを計算で確認した。まだ原稿化・追跡validator化していないので次の作業で再検算する。u=X1+X2,v=X1-X2,z=X3とすると4F=f(u,z,D)+v²*(3u-(7g²-13)z-B)の形。全中心特異値をv=0枝と線形係数=0枝へ分けられる。前者は二変数cubicのcritical norm、後者は線上への制限cubicの判別式で計算できる見込み。これらの零点を即bad Dと同一視しない。
+
+### j0正規化境界での再開入口
+
+旧Gammaの極は(1+h³)Gammaを先に約分してh=-1へ特殊化すれば除ける。新中央パラメータD*t³は特殊化後に自由に足す。全係数と厳密例はcubic_j0_boundary_certificate.json。h=-1,gamma=2のtranslationは無限位数（良い還元位数9 mod5、6 mod13）。これはpotentialのj0でありpoint schemeのj0ではない。全gammaで最高記号が非零とはまだ主張していない。次は具体例の代数的D判定、またはMoore係数abc=0の三捩れchartで中心三次持上げを明示する。無限位数の全bad値の有限性・相対開性は既知の固定有限N定理から推論しない。
+
+### 三捩れ量子Weyl chartの全中心と固定切断（classification-v27）
+
+関係yz=qzy+b1,zx=qxz+b2,xy=qyx+b3（q²+q+1=0）ではX=x³,Y=y³,Z=z³,W=xyz+(b1x+q b2y+b3z)/(q−1)が全中心を生成する。d=1/(q−1),e=−(2q+1)/9としてW³−d b1b2b3W−XYZ−eΣbi³Xi=0。滑らかなHesse中央切断X+Y+Z−3lambda W+Dの中心は実際にこの中心環の商と一致する（最高記号中心とRainsで証明）。b=(1,1,1),lambda=0では全非H3値は(D²+4e)(D²+36e)=0の四つ。D²+9e=0の二値は中心A1だがMcKay(1,2)でH3。他の四値にはcharactersがなく非H3。証明はcubic_quantum3_center.tex、全中心式と臨界値の厳密検算は二つのquantum3検証器。次は全beta/lambdaのMcKay分配と判別式、または中央境界のないH3被覆を進める。
