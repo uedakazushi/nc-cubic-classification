@@ -1,6 +1,6 @@
 {
   "date": "2026-11-15",
-  "version": "classification-v13",
+  "version": "classification-v14",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -17,7 +17,8 @@
     "papers/sections/cubic_clifford_tangent.tex",
     "papers/sections/cubic_clifford_integration.tex",
     "papers/sections/cubic_integrated_envelope.tex",
-    "papers/sections/cubic_integrated_arrows.tex"
+    "papers/sections/cubic_integrated_arrows.tex",
+    "papers/sections/cubic_character_serre.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -122,9 +123,9 @@
     "dependencies": "Workspace-local TeX Live 2025 packages restored from the Utah historic mirror; no generated PDFs or caches tracked"
   },
   "pdf": {
-    "pages": 65,
-    "references": "No unresolved references/citations or overfull boxes in final log",
-    "layout": "All65 pages rendered; contact sheet and new detailed proof pages50–51 inspected"
+    "pages": 67,
+    "references": "No unresolved references/citations or overfull boxes in v14 final log",
+    "layout": "New v14 proof pages52–53 rendered and inspected; all-pages contact sheet not rerendered at this 15-minute checkpoint"
   },
   "limits": [
     "Not full intrinsic H3 coverage: other elliptic orders, nonsymmetric/non-CY central extensions, other low-commutator and resonant AS4 strata, ambient-direction deformations and global coverage remain",
@@ -135,7 +136,8 @@
     "The earlier split-pencil Lambda=C* theorem assumes low center Z(S)1=Z(S)2=0,Z(S)3=kg; it is not applied as a full-cubic-incidence classification when Z(S)2 is nonzero.",
     "The v9 quotient describes geometric objects and pointed arrows. The entire admissible set is given by a finite geometric criterion and contains a dense open; no unproved full relative intrinsic stack descent or global componenthood is asserted.",
     "v12 solves full graded flatness and AS4 recognition on V and gives actual H3 for transcendental central values plus finite bad-value existence on order4 branch. Full bad-D lists, all integrated-family geometric arrows, H3 relative openness/descent, components and global ambient coverage remain.",
-    "v13 solves all geometric arrows in the integrated gamma!=0 chart. It does not enumerate all bad D, prove H3 relative openness or intrinsic descent, identify global components or cover all ambient sectors. Finite center-action controls are not a universal parameter proof."
+    "v13 solves all geometric arrows in the integrated gamma!=0 chart. It does not enumerate all bad D, prove H3 relative openness or intrinsic descent, identify global components or cover all ambient sectors. Finite center-action controls are not a universal parameter proof.",
+    "v14 exhausts only the odd self-Ext1 obstruction on one-dimensional modules, not all non-H3 center values. Higher-dimensional representations or higher Ext can add bad values."
   ],
   "as4_import_manifest": "research/as4_imports.json",
   "commands_retained_from_v4": {
@@ -173,8 +175,8 @@
     "latexmk papers/weak_cubic_axioms.tex": "PASS: Japanese LuaLaTeX,50 pages; no unresolved references/citations or overfull boxes"
   },
   "commands_executed": {
-    "python3 computations/verify_cubic_integrated_center_action.py": "PASS: reruns full-parameter3 potential and9 composition identities; degree3 two-column center-action algorithm, three exact QQ(zeta3) controls; universal D completeness is ordinary center-basis proof",
-    "latexmk papers/weak_cubic_axioms.tex": "PASS: Japanese LuaLaTeX,65 pages; no unresolved references/citations or overfull boxes; all rendered, contact sheet and new proof inspected"
+    "python3 computations/verify_cubic_character_serre.py": "PASS: all-parameter3 cofactor/point-curve identities,3 rank1 span identities, exact length8 character CI and length2 critical scheme, reduced singleton central image and closed Dstar formula",
+    "latexmk papers/weak_cubic_axioms.tex": "PASS: Japanese LuaLaTeX,67 pages; no unresolved refs/cites or overfull boxes"
   },
   "commands_retained_from_v9": {
     "python3 computations/verify_cubic_clifford_beta.py": "PASS: all-parameter8x8 central volume and Schur determinant, character-coordinate Jacobian, universal12-variable Hessian/Yoneda identity, exact four-node nonsplit center and reduced8-point character scheme",
@@ -239,5 +241,14 @@
     "All geometric pointed H3 arrows on the specified integrated chart, including unique affine translation and nonlinear beta correction.",
     "D action given by a finite degree3 quotient linear solve, independent of choosing representations or center points.",
     "Full central-presentation quotient stack has generic dimension8 and trivial generic inertia; all H3 geometric inertia finite; no nonidentity unipotent graded automorphisms."
+  ],
+  "commands_retained_from_v13": {
+    "python3 computations/verify_cubic_integrated_center_action.py": "PASS: reruns full-parameter3 potential and9 composition identities; degree3 two-column center-action algorithm, three exact QQ(zeta3) controls; universal D completeness is ordinary center-basis proof",
+    "latexmk papers/weak_cubic_axioms.tex": "PASS: Japanese LuaLaTeX,65 pages; no unresolved references/citations or overfull boxes; all rendered, contact sheet and new proof inspected"
+  },
+  "new_v14_results": [
+    "Entire character odd-self-Ext1 obstruction on V*: rank2 kernel on point curve, or rank0; all ranks1/3 have even self-Ext1.",
+    "Fixed order4 envelope alpha=(-2,-2,0),beta=(1,1,2) has exactly one character-odd obstruction value Dstar; critical scheme length2 maps to reduced singleton.",
+    "Dstar definitely fails H3, pi is good for same envelope. Complete bad-D list remains unknown."
   ]
 }

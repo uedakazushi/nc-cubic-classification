@@ -1,0 +1,108 @@
+\subsection{一次元表現からの悪い中心値の完全なSerre障害}
+\label{subsec:character-serre-obstruction}
+ここでは全単純表現の分類に先立ち、一次元表現上の奇数自己 $\Ext^1$ 障害を全て判定する。
+これは悪い中心値の全一覧とは区別する。高次元単純表現や高次 $\Ext$ による追加障害は残る。
+
+$\xi=(X,Y,Z)$ が $B[t^{-1}]_0$ の character である条件は
+\[
+ 2YZ-hX^2+4\gamma AX-\beta_x=0,\quad\text{cyclic}
+\]
+である。$u_i=-h\xi_i+2\gamma a_i$ とし、Jacobian の半分を
+\[
+ M_\xi=\begin{pmatrix}u_x&Z&Y\\Z&u_y&X\\Y&X&u_z\end{pmatrix}
+\]
+と書く。$P_{\chi}$ が三次切断の character、すなわち
+$\mathcal G_{D}(\xi)=0$ を満たすものとする。
+
+\begin{proposition}[全係数のcharacter自己Ext判定]
+\label{prop:character-odd-ext}
+$(h,\gamma)\in\mathcal V^*$ とする。
+$\dim\Ext^1(P_\chi,P_\chi)$ は $\rank M_\xi=3,1,0$ の場合にそれぞれ $0,2,3$ である。
+階数2の場合、$n$ をその核の射影点とすると、自己 $\Ext^1$ の次元は
+\[
+ \begin{cases}1,&n\in E_{h,\gamma},\\0,&n\notin E_{h,\gamma}.
+ \end{cases}
+\]
+従って H3 の必要条件は、全 character について階数0の場合と
+「階数2かつ核が $E_{h,\gamma}$ 上」の場合を除くことである。
+この必要条件の十分性は主張しない。
+\end{proposition}
+\begin{proof}
+一次元加群の inner derivation は零だから、自己 $\Ext^1$ は
+character 方程式と中心切断の線形化の共通核である。
+$F$ を $\mathcal G_D$ の可換化とし、包絡の係数を固定して微分した後
+character へ代入した勾配を $c_\xi$ とすると、その次元は
+$\dim\ker(M_\xi,c_\xi^T)$ となる。
+
+$L=\gamma(1+h^3)(1+\gamma)^6$ とし、$N_i$ を $\operatorname{adj}M_\xi$ の第 $i$ 列、
+$m_i=(\operatorname{adj}M_\xi)_{ii}$ と置く。
+表示した中心元の全係数から、正確な恒等式
+\begin{equation}\label{eq:character-cofactor-identity}
+ m_i\,N_i^T(Lc_\xi)+E_{h,\gamma}(N_i)\equiv0\pmod{\det M_\xi}
+ \qquad(i=1,2,3)
+\end{equation}
+を得る。ここで
+\[
+ E_{h,\gamma}(l,m,n)=h(1-\gamma^2)(l^3+m^3+n^3)
+                     +(2+6\gamma^2-h^3)lmn.
+\]
+計算では character 条件を
+$a_i=(u_i+h\xi_i)/(2\gamma)$、
+$\beta_i=2\xi_j\xi_k+h\xi_i^2+2u_i\xi_i$ で消去している。
+この代入より前に $F$ を微分することが必要である。
+
+階数2なら対称階数1の adjugate は非零で、少なくとも一つの $m_i$ が非零である。
+その $N_i$ は核を張るので、\eqref{eq:character-cofactor-identity}より
+$c_\xi$ が核を殺す条件は正確に $E_{h,\gamma}(N_i)=0$ となる。
+これが階数2の場合の判定である。
+
+階数1では $M_\xi=kk^T$ とパラメータ化できる。
+同じ全係数式から $(Lc_\xi)_ik_j-(Lc_\xi)_jk_i=0$ を得るので、
+$c_\xi$ は $M_\xi$ の行空間に属し、共通核は二次元となる。
+階数0では $\xi=u=0$、従って $a=\beta=0$ で勾配も零だから次元3となる。
+階数3の主張は明らかである。
+
+これらの三つの余因子恒等式と階数1の三つの恒等式は
+\path{verify_cubic_character_serre.py} が全パラメータの有理式で検証する。
+$t$ が可逆な character の拡大と自己 $\Ext^1$ は affine chart と $\qgr$ で一致する。
+H3 なら $t$ による同一視でこの対象の Serre 関手は $[2]$ となり、
+自己 $\Ext^1$ 上の Serre trace は非退化交代形式となる。
+標数0では奇数次元が不可能なので、表示した二場合は H3 から除外される。
+\end{proof}
+
+\begin{proposition}[位数4の固定包絡での一つの明示的な悪い値]
+\label{prop:order4-character-bad-value}
+$h=1$、$\gamma^4=2$ とし
+\[
+ a=(1/(2\gamma),1/(2\gamma),0),\qquad\beta=(1,1,2)
+\]
+を固定する。この包絡について、一次元表現の奇数自己 $\Ext^1$ で検出される悪い中心値は正確に一つで、
+\[
+ D_*=\frac{2\gamma^4+10\gamma^3+21\gamma^2+19\gamma+13}{4(1+\gamma)^5}
+\]
+である。従って $D_*$ は H3 でない。一方、同じ包絡の $D=\pi$ は H3 である。
+$D\ne D_*$ の全値を H3 と結論するものではない。
+\end{proposition}
+\begin{proof}
+character 完全交叉は $\gamma$ に依らず
+\[
+ I=(2yz-(x-1)^2,\ 2zx-(y-1)^2,\ 2xy-z^2-2)
+\]
+で長さ8である。Jacobian 行列を $J$ とすると、厳密な Groebner 計算で
+\[
+ I+(\det J)=(x+y-2,\ (y-1)^2,\ z)
+\]
+となる。この critical character scheme は長さ2、台は $\chi=(1,1,0)$ の一点である。
+また $I$ と $J$ の全二次小行列式が生成するイデアルは単位イデアルなので、
+この点でも階数は正確に2、他の character では階数3である。
+$\ker M_\chi=(1:-1:0)$ は $E$ の flex 原点であり、前命題から自己 $\Ext^1$ は1次元となる。
+
+$F$ を表示した中心元の可換化とすると、全 $\gamma$ の恒等式として
+\[
+ F(\chi)=D-D_*,\qquad F-(D-D_*)\in I+(\det J)
+\]
+を検証できる。従って critical scheme の中心値への scheme-theoretic image も
+この一つの被約点である。これで character による奇数障害の全一覧を得る。
+係数は $\mathbb Q(\gamma)$ 上定義されるので、超越数 $\pi$ の admissibility は
+既出の超越的中心値の定理から従う。
+\end{proof}

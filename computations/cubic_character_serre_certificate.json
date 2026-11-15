@@ -1,0 +1,32 @@
+{
+  "version": "classification-v14",
+  "source": "cubic_clifford_integration_certificate.json",
+  "ring": "QQ[h,gamma,character_point,u,1/h,1/gamma,1/(1+h^3),1/(1+gamma)]",
+  "universal_principal_cofactor_identities": 3,
+  "cofactor_identity": "cof_ii*(adj(M)_i dot (gamma*(1+h^3)*(1+gamma)^6*dG))+E(adj(M)_i) is divisible by det(M)",
+  "cofactor_quotients": [
+    "(gamma - 1)*(gamma + 1)*(2*X**3*h - X**2*gamma**2*u + X**2*u + X*Y*h**2*w + X*Z*h**2*v - 2*X*h*v*w - Y*h**2*v**2 - Z*h**2*w**2 + gamma**2*u*v*w - u*v*w)/h",
+    "X*Y*gamma**2*h*w - X*Y*h*w - X*gamma**2*h*u**2 + X*h*u**2 - 3*Y**3*gamma**3 - 3*Y**3*gamma**2 - Y**3*gamma + Y**3*h**3 - Y**3 + Y**2*gamma*h**2*v + Y**2*h**2*v + Y*Z*gamma**2*h*u - Y*Z*h*u + 3*Y*gamma**3*u*w + 3*Y*gamma**2*u*w + Y*gamma*u*w - Y*h**3*u*w + Y*u*w - Z*gamma**2*h*w**2 + Z*h*w**2 - gamma*h**2*u*v*w - h**2*u*v*w",
+    "X*Z*gamma**2*h*v - X*Z*h*v - X*gamma**2*h*u**2 + X*h*u**2 + Y*Z*gamma**2*h*u - Y*Z*h*u - Y*gamma**2*h*v**2 + Y*h*v**2 + 3*Z**3*gamma**3 - 3*Z**3*gamma**2 + Z**3*gamma + Z**3*h**3 - Z**3 - Z**2*gamma*h**2*w + Z**2*h**2*w - 3*Z*gamma**3*u*v + 3*Z*gamma**2*u*v - Z*gamma*u*v - Z*h**3*u*v + Z*u*v + gamma*h**2*u*v*w - h**2*u*v*w"
+  ],
+  "rank1_row_span_identities": 3,
+  "odd_self_Ext1": "Rank M2 and its projective kernel lies on point cubic E, OR rank M0; ranks1/3 give even dimensions2/0",
+  "fixed_envelope": "h1,a=(1/(2gamma),1/(2gamma),0),beta=(1,1,2); alpha=(-2,-2,0)",
+  "character_scheme_length": 8,
+  "critical_character_scheme_length": 2,
+  "critical_character_support": [
+    1,
+    1,
+    0
+  ],
+  "critical_Groebner_basis": [
+    "x+y-2",
+    "(y-1)^2",
+    "z"
+  ],
+  "critical_center_scheme_image": "single reduced point D=Dstar",
+  "Dstar": "(2*gamma**4 + 10*gamma**3 + 21*gamma**2 + 19*gamma + 13)/(4*(gamma + 1)**5)",
+  "order4_specialization": "gamma^4=2; all parameters satisfy the recognized AS4 smooth leading locus",
+  "conclusion": "Dstar is definitely non-H3 by odd self-Ext1. It is the ONLY value detected by odd self-Ext1 on one-dimensional modules for this fixed envelope.",
+  "limits": "Not a complete list of bad center values: higher-dimensional modules or higher Ext may supply additional obstructions. No H3 assertion for the complement."
+}
