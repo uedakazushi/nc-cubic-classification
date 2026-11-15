@@ -380,5 +380,11 @@
     "used_part": "AB2/AB3 explicit T/S coefficient formulas only. No full-chart/CY coverage, AS4 sufficiency or all-isomorphism theorem imported; T away from -2 remains undecided here.",
     "independent_proofs": "Generic four-word relation matrix rank219 with presentation denominator zeta; all-closed rank bound and exact T_-2 equals S endpoint identities.",
     "validator": "computations/verify_cubic_as4_four_simple_adjacent_S.py"
+  },
+  "four_simple_adjacent_T_v84": {
+    "commit": "a45f834f51a00c47443b51caf66abaf4629546b9",
+    "source": "CY_ZERO_COMMUTATORS_FOUR_SIMPLE_ADJACENT_SHARED_BOUNDARY_REDUCTION.tex AB2/AB14",
+    "scope": "Explicit coefficients and candidate involution only; independently verified relation transport, CY top tensor and T_1 centre rank. No AS4 sufficiency, full chart coverage or all-isomorphism theorem imported.",
+    "validator": "computations/verify_cubic_as4_four_simple_adjacent_T.py"
   }
 }

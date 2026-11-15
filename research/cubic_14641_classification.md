@@ -321,3 +321,7 @@ V_h(h!=-1/16)のh!=0は平方根r²=−h、p=(4r−1)/(4r+1)で全被覆。a'=a+
 
 隣接AB3の全S_zetaとT_-2両符号を独立排除した（classification-v83）。Sの元の四次全語行列はQQ(zeta)上rank219、成分分母zetaのみなので全zeta!=0でdimB4>=37>35。T^eta_-2=S_(-eta i/4)は全六関係の文字どおりの一致で確認。一般商基底の特殊化ではなく、元の全語行列のrank上界を使用した。
 原稿cubic_as4_adjacent_S_exclusions.tex、検証verify_cubic_as4_four_simple_adjacent_S.pyを実行。AB2/AB3具体表示のみ参照し、Tのlambda!=-2、全CY/chart被覆、AS4十分性・全同型は未輸入。TのQQ(i)(lambda)による無準備なcentral_data消去は600秒上限で未完（数学的結論なし）。同じ計算を反復しない。次はSingular 4.4.1等の厳密多項式module計算で商射影を生成し、char0で全関係消滅・自由列identity・分母支持を独立検証する。有限体は必要なら探索だけに使い、標数零の証明としない。P全残余、非捩れqso3許容性、大域成分・抽象族降下も未完。
+
+
+隣接T直線のH3候補を有限集合まで縮小した（classification-v84）。T_1の元の関係でdim3=20,dim4=35,中心3階数20を厳密確認し、全パラメータの反巡回tensorからAS4実現のmu=idを確認。一般Hilbert値が違えばAS4点は有限、同じなら定階数開集合の中心核の半連続性で候補有限となる。全値AS4存在を仮定しない。有限集合の列挙は未完。AB14候補Pの全関係輸送と逆を独立確認し、f(lambda)=-lambda/(lambda+1)、detP=(lambda+1)^-4。E=lambda^4+2lambda^3+10lambda²+24lambda+16とE(f)の分子は互いに素。
+原稿cubic_as4_adjacent_S_exclusions.tex、検証verify_cubic_as4_four_simple_adjacent_T.py。T三次商射影は作業領域でQQ[lambda]上の実部/虚部恒等式を確認したが、証明データの移植は未完。四次はSingular 4.4.1のQQ(i)[lambda]多項式module GBで221本・異なるleading componentを取得し、三角再帰で商射影を復元中。GBだけを全特殊fiberの平坦性の証明としない。次は商射影の元関係消滅と自由列identityの独立検証、中心rankの全値cover。T全例外、P全残余、非捩れqso3許容性、全被覆・大域成分・抽象族降下は未完。

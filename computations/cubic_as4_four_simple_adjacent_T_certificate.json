@@ -1,0 +1,44 @@
+{
+  "version": "classification-v84",
+  "source_commit": "as4 a45f834f51a00c47443b51caf66abaf4629546b9",
+  "source_scope": "AB2 coefficients and AB14 candidate map; relation identities independently checked",
+  "conditional_AS4_nakayama": "identity via nonzero anti-cyclic top tensor",
+  "T_1": {
+    "degree3_dimension": 20,
+    "degree4_dimension": 35,
+    "centre3_rank": 20,
+    "minor_rows": [
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      20,
+      21,
+      22,
+      37
+    ],
+    "minor": "-9596875/280246616064 - 9771875*I/186831077376"
+  },
+  "involution": {
+    "parameter": "-lambda/(lambda + 1)",
+    "matrix": "Matrix([[1, 0, 0, 0], [0, 0, 0, -1/(lambda + 1)], [0, 0, -1/(lambda + 1)**2, 0], [0, -1/(lambda + 1), 0, 0]])",
+    "determinant": "(lambda + 1)**(-4)",
+    "inverse": "P(f(lambda))"
+  },
+  "quartic": "lambda**4 + 2*lambda**3 + 10*lambda**2 + 24*lambda + 16",
+  "quartic_and_transport_coprime": true,
+  "mathematical_consequence": "Only finitely many parameters in this T line can be H3 envelopes; finite set not enumerated. Proof uses presentation-rank dichotomy and kernel semicontinuity on the constant-rank open, not assumed all-fibre AS4 existence.",
+  "scope": "Not all-parameter T exclusion or all-H3 coverage; polynomial-module generic calculations are separate until independently replayed."
+}

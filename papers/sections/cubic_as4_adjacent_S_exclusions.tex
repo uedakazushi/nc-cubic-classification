@@ -44,3 +44,45 @@ $\mathbb Q(\zeta)$ 上の厳密計算による階数は219である。
 \texttt{verify\_\allowbreak{}cubic\_\allowbreak{}as4\_\allowbreak{}four\_\allowbreak{}simple\_\allowbreak{}adjacent\_\allowbreak{}S.py}
 で再現する。この結果は $T^\eta_\lambda$ の $\lambda\ne-2$ の判定を含めず、
 全chart/CY被覆・AS4十分性・全同型は輸入していない。
+
+\paragraph{残る隣接直線の有限性と二枚の座標.}
+AB2の表示 $T^\eta_\lambda$ は $\lambda\ne0,-1$ 上の有理的な関係族である。
+次の結果は全値の排除とは異なる。
+\begin{proposition}\label{prop:cubic-adjacent-T-finite}
+各符号について、$T^\eta_\lambda$ がH3包絡となり得るパラメータは有限個である。
+この有限集合の列挙はまだ行っていない。
+また $f(\lambda)=-\lambda/(\lambda+1)$ と置くと、
+$P=\operatorname{diag}(1,-1/(\lambda+1),-1/(\lambda+1)^2,-1/(\lambda+1))$
+と $b,d$ の交換の積は $T^+_\lambda\simeq T^+_{f(\lambda)}$ を与える。
+$\det P=(\lambda+1)^{-4}$, $P(f(\lambda))P(\lambda)=I$ である。
+\end{proposition}
+\begin{proof}
+全パラメータの最高tensorが非零かつ反巡回であることを直接確認する。
+従ってAS4実現では $\mu=1$ となり、H3の必要条件は非零の中心三次である。
+$\lambda=1$ の元の関係から計算した商の次元は
+$\dim B_3=20$, $\dim B_4=35$ であり、中心三次の交換子行列の階数は20である。
+
+三次・四次の一般関係階数がこの値より大きければ、
+14641型Hilbert値を持つ点は関係階数が落ちる真の閉集合に含まれる。
+直線の真の閉集合は有限である。
+両一般階数がこの値に等しければ、$\lambda=1$ を含む定階数開集合上で
+三次・四次商は階数20,35のベクトル束になる。
+そこでの交換子写像は $\lambda=1$ で単射なので一般にも単射である。
+その非単射閉集合と定階数開集合の補集合はともに有限である。
+以上は全値AS4性や一般商基底の無条件の特殊化を使わない。
+負符号は形式係数 $i\mapsto-i$（形式変数 $\lambda$ は固定）で同じ結論となる。
+
+最後の同型は $(P\otimes P)R_\lambda$ が
+$R_{f(\lambda)}$ の列空間に入ることと、表示した逆行列で確認する。
+特に三次商座標の候補分母に現れる四次式
+\[
+ E=\lambda^4+2\lambda^3+10\lambda^2+24\lambda+16
+\]
+と $E(f(\lambda))$ の分子は互いに素である。
+従ってこの四次式だけに由来する極は、移した座標では共通しない。
+これは四次商や中心階数の未検証な特殊化を正当化する主張ではない。
+\end{proof}
+有限入力の再現は
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}as4\_\allowbreak{}four\_\allowbreak{}simple\_\allowbreak{}adjacent\_\allowbreak{}T.py}
+による。有限性の証明は上記の階数の二場合分けに依存する。
+T全例外値の判定、全包絡被覆、全H3分類は引き続き未完である。
