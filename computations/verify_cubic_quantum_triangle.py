@@ -72,6 +72,15 @@ def permute(poly):
   for u,d in nf(v).items():out[u]=red(out.get(u,0)+c*d)
  return {w:c for w,c in out.items() if c!=0}
 assert not add(permute(O),O,-1)
-cert={'version':'classification-v44','q':'q^2+q+1=0','PBW_relations':'yz-qzy=x, zx-qxz=y, xy-qyx=z','central_generators':['X=x^3+q^2*x','Y=y^3+q^2*y','Z=z^3+q^2*z','Omega=xyz+(q-1)*(x^2+z^2)/3+(q+2)*y^2/3'],'full_center_relation':'Omega^3+f*Omega^2-X*Y*Z+e*(X^2+Y^2+Z^2)=0','constants':{'f':'(1-q)/3','e':'-(2q+1)/9','identities':['f^3=e','e^2=-1/27']},'cut_center':'XYZ-e*(X^2+Y^2+Z^2)+D^2*(D-f)=0','singular_D_values':{'0':'one A1, origin character','f':'one A1, no character','2f/3':'four A1, one character at each','-f/3':'four A1, no characters'},'centre_V_singularities':'five 3-fold ordinary nodes, at Omega0 and Omega=-2f/3','characters':'origin plus (epsilon_x,epsilon_y,epsilon_z)/(1-q), epsilon product1','PBW_zyx_diamond':True,'all_exact_identity_checks':True,'scope':'Exact PBW-normal-form central relation, all central commutators, singular-value factorization and character identities. H3, maximality and boundary orders require the ordinary proof.'}
+# All twelve signed cyclic symmetries act faithfully as even permutations of four nonzero characters.
+from itertools import product
+points=[v for v in product([1,-1],repeat=3) if v[0]*v[1]*v[2]==1];perms=[]
+for eps in points:
+ for shift in range(3):
+  pp=[points.index(tuple(eps[i]*v[(i+shift)%3] for i in range(3))) for v in points]
+  assert sum(pp[i]>pp[j] for i in range(4) for j in range(i+1,4))%2==0
+  perms.append(pp)
+assert len({tuple(p) for p in perms})==12
+cert={'version':'classification-v45','q':'q^2+q+1=0','PBW_relations':'yz-qzy=x, zx-qxz=y, xy-qyx=z','central_generators':['X=x^3+q^2*x','Y=y^3+q^2*y','Z=z^3+q^2*z','Omega=xyz+(q-1)*(x^2+z^2)/3+(q+2)*y^2/3'],'full_center_relation':'Omega^3+f*Omega^2-X*Y*Z+e*(X^2+Y^2+Z^2)=0','constants':{'f':'(1-q)/3','e':'-(2q+1)/9','identities':['f^3=e','e^2=-1/27']},'cut_center':'XYZ-e*(X^2+Y^2+Z^2)+D^2*(D-f)=0','singular_D_values':{'0':'one A1, origin character','f':'one A1, no character','2f/3':'four A1, one character at each','-f/3':'four A1, no characters'},'centre_V_singularities':'five 3-fold ordinary nodes, at Omega0 and Omega=-2f/3','characters':'origin plus (epsilon_x,epsilon_y,epsilon_z)/(1-q), epsilon product1','A4_character_permutations':perms,'PBW_zyx_diamond':True,'all_exact_identity_checks':True,'scope':'Exact PBW-normal-form central relation, all central commutators, singular-value factorization and character identities. H3, maximality and boundary orders require the ordinary proof.'}
 Path(__file__).with_name('cubic_quantum_triangle_certificate.json').write_text(json.dumps(cert,indent=2)+'\n')
 print('PASS exact quantum-so3 centre, four singular D values, five characters and cyclic Casimir')

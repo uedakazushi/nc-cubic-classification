@@ -76,6 +76,9 @@ $Z(B)$ は前補題の中心のRees環であり、中心関係は
 \]
 である。$B$ は $k[t,X_h,Y_h,Z_h]$ 上自由階数27で、中心上MCMである。
 正則中央 $G_D$ で割れば $R_D$ は対応する中心hypersurface上MCMとなる。
+重み付き中心hypersurfaceの $t=0$ の特異点は三つの座標軸上に限られ、
+$t\ne0$ では下記の孤立surface特異点と $\mathbb G_m$ の積だけである。
+従って全て余次元2以上であり、このhypersurfaceは正規である。
 その三次Veroneseを取ると、$\Lambda_D$ は $C_D$ 上の反射的orderとなる。
 以下のgeneric CSA比較と中心の正規性から、表示した中心が全中心であることも従う。
 
@@ -163,4 +166,60 @@ $R_D$ の中央一次直線も $kt$ に限られ、その商は三角形であ�
 非中央正規楕円境界なら、包絡CYのため位数2ではなく、位数3の量子Fermat包絡に限られる。
 それもskewなので矛盾する。
 従って許容対象は既出の正規一次楕円境界部分の外に実在する。
+\end{proof}
+
+\begin{theorem}[pencilの全intrinsic矢と相対表示stack]
+\label{thm:quantum-triangle-groupoid}
+$q$ を一つ固定する。
+許容な $D,D'$ の間のintrinsic pointed同型は $D=D'$ の場合に限る。
+全ての対象の慣性は
+\[
+ (\mu_2)^2\rtimes C_3\simeq\mathfrak A_4
+\]
+である。従ってこのpencilの幾何学的群oidと、表示族の次数スカラーrigidificationは
+\[
+ \operatorname{Spec}k[D,(D-f)^{-1},(3D+f)^{-1}]\times B\mathfrak A_4
+\]
+となる。任意の非被約底でも追加の同型はなく、H3 fiber条件と全同型functorは基底変更に適合する。
+全intrinsic圏族のstackや、この曲線の大域的成分性は結論しない。
+\end{theorem}
+\begin{proof}
+intrinsic矢は反標準環のgraded同型であり、同じ二次包絡 $B$ の自己同型へ持ち上がる。
+$Z(B)_1=kt$ だから $t\mapsto dt$、$X\mapsto MX+vt$、$d\ne0$ と書ける。
+先頭量子多項式環 $S$ のpoint graphは $\mathbb P^2$ 全体上の
+$\phi=\operatorname{diag}(1,q,q^2)$ である。
+従って $M\phi M^{-1}$ は $\phi$ の次数スカラー倍でなければならず、
+$M$ は対角行列と循環置換の積に限る。
+非対角の $tX$ 係数を比較すると $q\ne1$ により全ての平行移動 $v$ は零となる。
+循環置換を除き $x_i\mapsto a_i x_i$ とすれば、残る係数条件は
+\[
+ a_ya_z=da_x,\quad a_za_x=da_y,\quad a_xa_y=da_z.
+\]
+従って $a_i=d\epsilon_i$、$\epsilon_i^2=1$、$\epsilon_x\epsilon_y\epsilon_z=1$ である。
+全graded自己同型群は $\mathbb G_m\times((\mu_2)^2\rtimes C_3)$ となる。
+表示したCasimirは二符号変更と循環置換で厳密に不変だから、
+$G_D\mapsto d^3G_D$ であり $D$ は不変である。
+共通次数スカラーを除いて主張する群と同型類を得る。
+
+任意の基底でも $1,q,q^2$ の固有値差は単元なので、point graphの同じ係数比較が
+対角・循環置換の分解を与える。
+$\epsilon_i$ は有限\'{e}taleな二乗根、循環置換も有限定数群であり、
+nilpotentな追加矢はない。$D=D'$ も三次係数比較として底上で厳密に成り立つ。
+従って局所的にこの表示を持つ族のrigidify後のstackは表示した積となる。
+$R_D$ は次数ごとに平坦で、H3 fiber条件は二つの因子が単元であることと同値だから、
+任意底変更とfpqc局所性も従う。
+\end{proof}
+
+\begin{proposition}[中心の相対基底変更]
+上記の全 $D$ 直線上で、中心の形成は任意の基底変更に適合する。
+特に $R_D^{(3)}$ の相対全中心は表示したFricke cubicの斉次環である。
+\end{proposition}
+\begin{proof}
+各次数の自由 $k[D]$ 加群間の交換子行列を取る。
+各幾何学的fiberで全中心のHilbert級数は同じcubic級数だから、行列のrankは一定である。
+$k[D]$ は被約なので高すぎるminorは恒等的に零となり、
+最大rankのunit minorで局所化すれば核は直和因子となる。
+従ってその核と、既に構成した中央 $T,X_h,Y_h,Z_h$ の斉次環は一致し、
+非被約底への変更も含めて可換する。
+$R_D$ 自身についても重み $(1,3,3,3)$ の同じ議論を用いる。
 \end{proof}

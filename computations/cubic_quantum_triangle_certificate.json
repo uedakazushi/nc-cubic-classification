@@ -1,5 +1,5 @@
 {
-  "version": "classification-v44",
+  "version": "classification-v45",
   "q": "q^2+q+1=0",
   "PBW_relations": "yz-qzy=x, zx-qxz=y, xy-qyx=z",
   "central_generators": [
@@ -26,6 +26,80 @@
   },
   "centre_V_singularities": "five 3-fold ordinary nodes, at Omega0 and Omega=-2f/3",
   "characters": "origin plus (epsilon_x,epsilon_y,epsilon_z)/(1-q), epsilon product1",
+  "A4_character_permutations": [
+    [
+      0,
+      1,
+      2,
+      3
+    ],
+    [
+      0,
+      3,
+      1,
+      2
+    ],
+    [
+      0,
+      2,
+      3,
+      1
+    ],
+    [
+      1,
+      0,
+      3,
+      2
+    ],
+    [
+      1,
+      2,
+      0,
+      3
+    ],
+    [
+      1,
+      3,
+      2,
+      0
+    ],
+    [
+      2,
+      3,
+      0,
+      1
+    ],
+    [
+      2,
+      1,
+      3,
+      0
+    ],
+    [
+      2,
+      0,
+      1,
+      3
+    ],
+    [
+      3,
+      2,
+      1,
+      0
+    ],
+    [
+      3,
+      0,
+      2,
+      1
+    ],
+    [
+      3,
+      1,
+      0,
+      2
+    ]
+  ],
   "PBW_zyx_diamond": true,
   "all_exact_identity_checks": true,
   "scope": "Exact PBW-normal-form central relation, all central commutators, singular-value factorization and character identities. H3, maximality and boundary orders require the ordinary proof."
