@@ -1,0 +1,77 @@
+\documentclass[11pt,a4paper]{ltjsarticle}
+\usepackage[margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[haranoaji]{luatexja-preset}
+\usepackage[unicode,hidelinks]{hyperref}
+\setlength{\emergencystretch}{2em}
+\newtheorem{theorem}{定理}[section]
+\newtheorem{proposition}[theorem]{命題}
+\newtheorem{lemma}[theorem]{補題}
+\newtheorem{corollary}[theorem]{系}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{注意}
+\renewcommand{\proofname}{証明}
+\title{量子三角境界の固定包絡族を越える変形\\\large 四次元族の非成分性と七次元H3表示族}
+\author{研究ノート：既存のH3開性定理を明示して使用する}
+\date{2026年11月17日\quad triangle-component-v1}
+\begin{document}
+\maketitle
+\begin{abstract}
+原始三乗根の量子 $\mathfrak{so}_3$ 包絡を固定した中心三次切断の四次元族について、
+包絡を動かす三つの独立な係数を構成する。
+五つの中心三次元は全係数で持ち上がり、元の族の滑らかな楕円境界部分は
+七次元の既約H3表示stackの余次元3正則部分stackに含まれる。
+従って四次元族の閉包は全intrinsic pointed H3モジュライの既約成分ではない。
+この結論に全モジュライの代数性の新たな証明は含めず、
+七次元族のversal性・成分性も主張しない。
+\end{abstract}
+\section{使用する既存結果と対象}
+標数0の代数閉体 $k$ 上で考える。
+H3は現行主原稿の強い内在的非可換三次曲面
+$(\mathcal A,\mathcal O)$ を意味する。
+反Serre作用 $S^{-1}[2]$、Artin--Zhang豊富性、rank-one torsion-free exceptional構造対象、
+三次曲面のHilbert値、一次生成された反標準環の14641型二次包絡を要求する。
+同型は構造対象を保つexact同値であり、任意の導来同値ではない。
+以下の二定理は既存主原稿からの入力である。
+それらの全証明をこの抜粋で重複掲載せず、今回の新しい計算と区別する。
+
+\begin{theorem}[固定包絡の既存切断定理]\label{thm:quantum-triangle-full-H3}
+本ノートの $B_{\boldsymbol0}$ について、全中心三次直線のH3部分は
+非空開集合 $\mathcal U\subset\mathbb P^4$ であり、rigidifyした全幾何学的群oidは
+$[\mathcal U/\mathfrak A_4]$ となる。
+滑らかな中央楕円境界部分は $\mathcal U\cap\{\beta\gamma\delta\ne0\}$ である。
+\end{theorem}
+証明の所在：\par
+\noindent\path{papers/sections/cubic_quantum_triangle_full_cuts.tex}、\par
+\noindent\path{papers/sections/cubic_quantum_triangle_incidence.tex}。
+
+\begin{theorem}[固定有限位数の既存H3開性定理]\label{thm:finite-order-relative-H3-open}
+被約有限型底上の全次数PBW平坦な中央包絡・中心切断族を考える。
+中央正則一次境界が滑らかな楕円THCR族であり、境界translationが全幾何学的fiberで
+正確に同じ有限位数 $N$ を持つとき、H3条件は底のZariski開条件である。
+この表示族の条件は任意底変更とfpqc降下に適合する。
+\end{theorem}
+証明の所在：\path{papers/sections/cubic_finite_order_relative.tex}、同名ラベル。
+今回、仮定の適用範囲と原稿の論証を確認した。
+この入力の全依存定理を独立に再証明したわけではない。
+
+\section{新しい結果}
+\input{papers/sections/cubic_quantum_triangle_deformations.tex}
+
+\begin{thebibliography}{9}
+\bibitem{EGdelpezzo} P. Etingof, V. Ginzburg,
+\emph{Noncommutative del Pezzo surfaces and Calabi--Yau algebras},
+J. Eur. Math. Soc. 12 (2010), 1371--1416,
+\href{https://doi.org/10.4171/JEMS/235}{doi:10.4171/JEMS/235}.
+Proposition 7.3.1(ii), pp. 1404--1405; Theorem 3.3.2.
+\bibitem{LBS} L. Le Bruyn, S. P. Smith, M. Van den Bergh,
+\emph{Central extensions of three dimensional Artin--Schelter regular algebras},
+Math. Z. 222 (1996), 171--212, Theorem 2.6, Corollary 2.7.
+\bibitem{RRZ} M. Reyes, D. Rogalski, J. J. Zhang,
+\emph{Skew Calabi--Yau algebras and homological identities},
+Adv. Math. 264 (2014), 308--354, Lemma 1.5.
+\bibitem{HuangAWCentre} H.-W. Huang,
+\emph{Center of the universal Askey--Wilson algebra at roots of unity},
+\href{https://arxiv.org/abs/1509.08719}{arXiv:1509.08719}.
+関連文献。規約の完全比較と新規性の網羅調査は未了であり、必要な中心式は本文で直接検証する。
+\end{thebibliography}
+\end{document}
