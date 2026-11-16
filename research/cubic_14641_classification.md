@@ -625,3 +625,21 @@ a²!=4の既知Clifford swapへの座標対応と許容判定は、下記v114で
 verify_cubic_order2_normal_axis_admissibility.pyは六元関係、cover、正規化行列det、旧新四次判別式、全character消去、矢共変式と粗座標を標数零で独立検算PASS。H3十分性は既存Clifford定理への厳密還元、nodal全排除はv113局所構造証明、全矢は本文の自然性/係数比較に依存する。
 
 次の具体的着手：重複度(1,3)の残りrank2についてcross一本の両射影を解析し、共通量子平面の正規座標が存在する条件をKoszul最高tensorから導く。正規座標存在を一般に仮定してはいけない。量子q−1以外の非正規cross、可換/Jordan共通平面をまず区別し、Clifford以外のH3候補又は排除を得る。正三次元側・2+2・三/四中山固有値、CY全被覆・非捩れqso3・大域成分/相対降下も未解決。
+
+## (1,3)全域の共通平面はq=-1、負三平方は中心（classification-v115）
+
+追加の正規座標仮定なしで、共通平面T=(uw=-wu)、pの作用は両軸に逆符号、u²,w²,v²全て中心と証明した。原稿lem:h3-order2-global-cross-formsとthm:h3-order2-global-minus-one-plane。可換/Jordan共通平面も全域排除したため、v114末尾の「可換/Jordan未被覆」はこの新定理により解決済み。正規軸の一般存在や全H3判定まで済んだわけではない。
+
+最高tensorのA4部分はcyclic、偶flattening Hは対称rank4。pp行q0(W)、p²vW/p²v²成分零。外側四乗c=w_vvvv非零ならv平行移動でv³W0とし、cross行は平方kernelのq0/cross一本に入るのでcrossblockは非零rank1。cyclic両対角block一致からcrossはvell−lambda ellv,q0補正、lambda±1、vvW²はrank1 ell²となりv²=cprime ell²。
+
+四乗零ならv³W非零（零ならvv行pp行が比例し二平方投影rank2に反する）。vv行のcrossはn(vell+ellv)。pp/q0座標の対称Schur補完後rank2、crossblock不変、vv対角0のままなのでHcross=rk^t+kr^t,r=(ell,ell)。cyclic両対角一致からk_left=k_right。vvW²はell*s+s*ell、W平行移動でcrossを{v,ell}=0とし全v²W²成分を零にする。vell行からv²∈T2も得る。ここでcrossblockを最初からrank1と誤って仮定しないこと：四乗零の場合はrank2まであり、Schur/cyclicによる平行移動が必要。
+
+二元centralizer：量子q非±1の任意ellとJordan任意ellでT2 centralizer=k ell²。反可換二次は量子q±iのell座標軸で他軸平方の倍数だけ。q−1では任意ellのcentralizer=span(u²,w²)、反可換部分k uw。可換反可換0。これらは三係数の直接計算。
+
+四乗零：v²commellなので非±1量子/Jordanはv²∝ell²となり非零一次式平方零。可換ではf²−I,detf−1からfscalar±i、ell全B正規の重みW1,v−,p±iにGの反可換固有値−が現れずW1零。四乗非零：lambda−ならq2commell、非±1/Jordanではq2∝ell²をv平行移動して同じ平方零。可換ではell²正規、pだけ反転する正常化にmu固定三次（p奇数個）の固定元がなくW1零。lambda+ならq2antiell、q2零は可換v/ellと平方比例で一次因子化。量子q±i例外は[v,x]=t y²,v²=c x²からv y²=-y²v、Y=y²の正規化(x,y,v,p)=(-x,y,-v,-q p)にmu固定三次の固有値1が無くW1零。q−1ではq2=tuwがvとも反可換、pとも反可換し、全4生成元を反転する正規二次q2とGの可換性が次数3に反する。従って全域でq−1、lambda−だけ残る。
+
+負平方中心性：四乗零ならv²とell²がcentral T2に入り独立（比例なら平方零）、vは両者と可換するのでu²,w²とも可換。四乗非零ならq2とell²が独立（比例ならv移動で平方零）、vはq2とell²に可換。pはaxes squares固定なので全Bでu²,w²,v²中心。verify_cubic_order2_global_common_plane.pyはcyclicブロック、量子/Jordan centralizerと正規化符号を厳密検算PASS。Schur帰着と整域/正常G排除は本文の構造証明。
+
+残る二chart：A)四乗零,{v,ell}=0,v²=h(u²,w²)、hとell²独立。ellが量子軸ならv114で既に完全分類なので未被覆はellが両軸成分非零の場合。B)四乗非零,v²=c ell²,{v,ell}=q2(u²,w²)、q2とell²独立。この両chartのp²関係・W1・許容性が次の核心。
+
+未検証だが次に使う着想：負三生成元の三つの二次関係は全て対称で、負平方と交差反交換子が中心となるためClifford表示が期待される。S0の三元三関係quadratic dualは可換三二次式で、B整域はrank1対称関係を禁じるのでArtin complete intersectionを導ける可能性がある。B3のmu負成分dim11はS3とpvp一本で張られるためS3 dim10を強制し、負三生成元部分の三次関係の追加を除ける見込み。これでp²がTをcentralizeする条件をS0内で比較しp²全B中心を導く方策を試す。ただしS0全次数埋込み/AS3性、p²中心性はこの版ではまだ定理に含めない。

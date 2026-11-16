@@ -1,0 +1,15 @@
+{
+  "hypotheses": "all H3 envelopes with Nakayama multiplicities(1,3), no normal-coordinate assumption",
+  "result": "The canonical common AS2 plane is xy=-yx, and p acts on its axes by opposite signs. The two axis squares and the remaining negative-generator square are central in B.",
+  "top_reduction": [
+    "if w_vvvv=0, a W-translation makes {v,ell}=0 and v\u00b2 in T2",
+    "if w_vvvv!=0, a W-translation makes the v\u00b3W coefficients zero; cyclic rank-one mixed flattening gives v\u00b2=c*ell\u00b2 and vell-lambda*ellv=q2(W), lambda=+-1",
+    "all lambda=+1 cases and all common planes other than q=-1 are excluded by AS2 centralizers or incompatible normal-quadratic weights"
+  ],
+  "linear_algebra": "zero-fourth case cross block H=r*k^t+k*r^t; equality of cyclic diagonal blocks forces k_left=k_right, allowing the W-translation",
+  "remaining_charts": [
+    "zero fourth: {v,ell}=0, v\u00b2=h(x\u00b2,y\u00b2) independent of ell\u00b2",
+    "nonzero fourth: v\u00b2=c*ell\u00b2, {v,ell}=q2(x\u00b2,y\u00b2) independent of ell\u00b2"
+  ],
+  "scope": "Exact block-matrix, binary centralizer and sign/weight identities checked. The rank-four Schur reduction and global case analysis are structural proofs in the manuscript. These constraints do not prove a common axis is normal or complete H3 coverage/admissibility."
+}

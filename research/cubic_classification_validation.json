@@ -1205,5 +1205,12 @@
       "functorial intrinsic reconstruction of the quadratic envelope"
     ],
     "scope_limit": "This completes only the additional normal-common-quantum-coordinate sector. Non-normal-axis, commutative/Jordan and other spectral sectors, global componenthood and recognition/descent of arbitrary intrinsic category families remain incomplete."
+  },
+  "order2_global_minus_one_plane_v115": {
+    "status": "global top-rank/AS2/normalizer proof in manuscript; exact coefficient identities executed",
+    "validator": "computations/verify_cubic_order2_global_common_plane.py",
+    "certificate": "computations/cubic_order2_global_common_plane_certificate.json",
+    "result": "For every multiplicities(1,3) H3 envelope, the canonical common plane is uw=-wu and p acts by opposite signs. The two common axis squares and a suitable remaining negative-generator square are central. Commutative/Jordan and all other quantum common planes are excluded without a normal-coordinate hypothesis.",
+    "scope_limit": "Two explicit non-normal-axis cross charts remain. No full H3 coverage, p² centrality, genuine AS3 negative-subalgebra embedding or all-chart admissibility is inferred here."
   }
 }

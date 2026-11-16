@@ -2035,6 +2035,145 @@ $(a,\kappa)\mapsto(-a,-\kappa)$。
 \texttt{verify\_\allowbreak{}cubic\_\allowbreak{}order2\_\allowbreak{}normal\_\allowbreak{}axis\_\allowbreak{}admissibility.py}
 は既知包絡の六関係への完全代入、被覆と係数行列式、character判別式と矢の共変式を厳密検証する。
 
+\begin{lemma}[外側四乗による二つの全域cross標準形]
+\label{lem:h3-order2-global-cross-forms}
+重複度 $(1,3)$ のH3包絡で、共通AS2平面を $T=\langle W\rangle$、
+残る負生成元を $v$ とする。最高tensorの係数 $w_{vvvv}$ により次の二場合となる。
+\begin{enumerate}
+\item $w_{vvvv}=0$ なら、$v$ を $W$ だけ移動して、ある $0\ne\ell\in W$ に対し
+\[
+ v\ell+\ell v=0,\qquad v^2\in T_2
+\]
+とできる。
+\item $w_{vvvv}\ne0$ なら、$v$ を $W$ だけ移動して $v^3W$ 成分を零にでき、
+ある $\ell\ne0$, $c\ne0$, $\lambda\in\{1,-1\}$、$q_2\in T_2$ により
+\[
+ v^2=c\ell^2,\qquad v\ell-\lambda\ell v=q_2
+\]
+となる。
+\end{enumerate}
+ここでは $\ell$ が $T$ で正規であることも、$p$ の作用で保存されることも仮定しない。
+\end{lemma}
+\begin{proof}
+負三次元上の四次tensorは通常のcyclic tensorであり、偶flattening $H$ は対称で階数4。
+$p^2$ 行は $W^2$ 内の非退化関係 $q_0$ である。
+$pv,vp$ は奇関係に現れないため、$p^2vW,p^2v^2$ に対応する全成分も零である。
+平方投影の核は $q_0$ とcross一本からなり、その両cross射影は非零である。
+片方が零なら $v,p^2$ が $T$ の商体に入って既存の商体排除に反する。
+
+まず $w_{vvvv}\ne0$ とする。$v$ の $W$ 平行移動で二つの $v^3W$ 係数を零にする。
+すると全cross行は $p^2,v^2$ 成分を持たず、そのcross成分は同じ一本に入る。
+従ってcross--crossブロックは階数高々1である。
+これが零なら巡回式により $v^2W^2$ も零となり、$v^2$ 行が非零な純平方関係を与えて矛盾する。
+よってcross射影ベクトル $P$ と $m\ne0$ により $H_{\rm cross}=mPP^t$。
+cyclicityは $vW,vW$ と $Wv,Wv$ の対角ブロックを等しくするので、
+二つの射影は同じ直線 $k\ell$、相対係数は $\lambda^2=1$ となる。
+$P=(-\lambda\ell,\ell)$ と書けば、$v^2W^2$ 係数は $-\lambda m\ell\otimes\ell$。
+非零な $v^4$ 係数と合わせて表示した二平方関係を得る。
+
+次に $w_{vvvv}=0$ とする。$v^3W$ 成分は非零である。
+そうでなければ $v^2$ 行は $W^2$ の関係、従って $q_0$ の倍数となり、
+$p^2$ 行と従属する。$H$ の対称性から列も従属し、全二次関係の平方投影が二次元であることに反する。
+cyclicityから $v^2$ 行のcross成分は $n(v\ell+\ell v)$、$n\ne0$。
+従って唯一のcross射影は $r=(\ell,\ell)$ である。
+
+ここで階数4という条件も使う。
+$p^2$ と $q_0$ に非零に対応する $W^2$ 座標を一つ選んで対称Schur補完を取ると、
+残りの階数は2となる。$p^2$--crossブロックが零なのでcross--crossブロックは変わらず、
+$v^2$ 対角成分も零のまま、$v^2$--cross行は $nr$ のままである。
+従ってcross--crossブロックは $rk^t+kr^t$ という形に限る。
+$\ell=(1,0)$ の基底で $r=(1,0,1,0)$、$k=(a,b,c,d)$ と書くと、
+二つのcyclic対角ブロックの差は
+\[
+ \begin{pmatrix}2(a-c)&b-d\\b-d&0\end{pmatrix}.
+\]
+よって $k$ の両成分は等しい。
+巡回式により $v^2W^2$ 部分も $\ell s+s\ell$ の形となるので、
+$v$ を $W$ の適当な元 $s$ だけ移動して $v\ell+\ell v=0$ とできる。
+この基底では同じブロックが零となり、全 $v^2W^2$ 成分も消える。
+$v\ell$ 行は非零な $v^2$ 成分と $W^2$ 成分だけを持つため、$v^2\in T_2$ も従う。
+\end{proof}
+
+\begin{theorem}[負三次元側の共通平面は常に量子パラメータ $-1$]
+\label{thm:h3-order2-global-minus-one-plane}
+全ての重複度 $(1,3)$ のH3包絡で、共通平面は
+\[
+ T=k\langle u,w\rangle/(uw+wu)
+\]
+である。$p$ の作用は $pu=-up,pw=wp$ 又は両符号を交換したものとなる。
+さらに適切な残り負生成元 $v$ に対し、$u^2,w^2,v^2$ は全て $B$ の中心に入る。
+この主張には正規共通座標の追加仮定はない。
+\end{theorem}
+\begin{proof}
+まず二元AS2平面で使う次数2の事実を記す。
+量子平面 $xy=qyx$, $q\notin\{1,-1\}$ では、任意の非零一次元 $\ell$ に対し
+\[
+ \{h\in T_2:[h,\ell]=0\}=k\ell^2.
+\]
+$\ell$ が座標軸なら単項式の重み比較、そうでなければ $\ell=x+y$ として係数比較すればよい。
+後者の二方程式の $(x^2,y^2)$ minorは $-(q-1)^2(q+1)^2/q^4$ である。
+反可換な二次元 $h\ell=-\ell h$ が非零であるのは、$q=\pm\sqrt{-1}$、
+$\ell$ が量子座標軸、$h$ がもう一方の軸の平方の倍数の場合だけである。
+Jordan平面では任意の $\ell$ の二次centralizerは $k\ell^2$、反可換二次元は零。
+可換平面にも反可換二次元はない。
+$q=-1$ では任意の $\ell\ne0$ の二次centralizerは $\langle u^2,w^2\rangle$、
+反可換部分は $k\,uw$ である。
+これらはいずれも三個の二次基底での直接係数比較である。
+
+前補題の第一の場合、$v\ell=-\ell v$ と $v^2=h\in T_2$ より $[h,\ell]=0$。
+量子 $q\notin\{1,-1\}$ 又はJordanなら $h=c\ell^2$ となり、
+非零一次式 $v+s\ell$ の平方を零にできて整域性に反する。
+可換平面なら $f^2=-I$ と $\det f=-1$ より $f=\pm\sqrt{-1}\,I$。
+このとき $\ell$ は全 $B$ で正規で、その正規化の重みは
+$W$ 上1、$v$ 上 $-1$、$p$ 上 $\pm\sqrt{-1}$ となる。
+$\mu_B(G)=G$ の三次語は $p$ を奇数個含むので、この正規化の固有値は全て $\pm\sqrt{-1}$。
+しかし $G\ell=-\ell G$ は固有値 $-1$ を要求するため、非零 $G$ は存在しない。
+
+第二の場合、$v^2=c\ell^2$、$v\ell-\lambda\ell v=q_2$ とする。
+この二式から
+\[
+ q_2\ell=-\lambda\ell q_2
+\]
+を得る。$\lambda=-1$ で量子 $q\notin\{1,-1\}$ 又はJordanなら
+$q_2=t\ell^2$。$v$ を $v-t\ell/2$ へ変更すれば反可換となり、平方も $\ell^2$ の倍数なので再び整域性に反する。
+可換平面で $\lambda=-1$ なら $\ell^2$ は $W,v$ と可換し、$p$ とは反可換する正規二次元である。
+$G$ は $\mu_B(\ell^2)=\ell^2$ よりこれと可換しなければならないが、
+正規化は $p$ を奇数個含む三次元に $-1$ で作用するので矛盾する。
+
+$\lambda=1$ の場合、$q_2=0$ なら $v,\ell$ は可換し平方が比例するため、二つの非零一次式の積が零となる。
+可換/Jordan平面には非零の反可換 $q_2$ がない。
+量子 $q\notin\{1,-1\}$ に残るのは $q=\pm\sqrt{-1}$、$\ell=x$、$q_2=t y^2$、$t\ne0$ だけである。
+$[v^2,x]=0$ より $vy^2=-y^2v$ を得る。
+従って $Y=y^2$ は全 $B$ で正規で、その左正規化の重みは
+\[
+ (x,y,v,p)\longmapsto(-x,y,-v,-qp).
+\]
+$G$ は $Y$ と可換するはずだが、$p$ が奇数個の三次語の重みは全て $\pm\sqrt{-1}$ であり、固定元は零。
+最後に $q=-1$ で $\lambda=1$ なら $q_2=tuw\ne0$。
+$q_2=[v,\ell]$ と $v^2=c\ell^2$ より $q_2v=-vq_2$。
+また $q_2$ は $u,w$ と反可換し、$f(uw)=-uw$ より $p$ とも反可換する。
+従って正規化は全四生成元を符号反転し、全三次元で固有値 $-1$ となる。
+$G$ は $\mu_B(q_2)=q_2$ よりこれと可換するはずなので、やはり $G=0$ となる。
+以上から共通平面は $q=-1$ だけであり、第二の場合のcross符号も $\lambda=-1$ に限る。
+共通平面公式から $f^2=1$、$\det f=-1$ とhomological determinant条件により表示した対角作用を得る。
+
+中心性も両場合で従う。
+第一の場合 $v^2=h\in\langle u^2,w^2\rangle$、
+$\ell^2\in\langle u^2,w^2\rangle$ は一次独立である。
+比例すれば $v\ell=-\ell v$ と合わせて非零一次式の平方が零となるからである。
+$v$ は $v^2$ と $\ell^2$ の両方と可換するので $u^2,w^2$ と可換する。
+第二の場合 $q_2\in\langle u^2,w^2\rangle$ と $\ell^2$ は独立である。
+比例すれば $v$ を $\ell$ だけ移動して同じ平方零の矛盾を得る。
+$v$ は自分の平方と、$[v,q_2]=[v^2,\ell]=0$ より $q_2$ と可換するので、再び両軸平方と可換する。
+$p$ は両軸平方を固定し、$v^2$ もその線型結合なので、全三平方が $B$ で中心となる。
+\end{proof}
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}order2\_\allowbreak{}global\_\allowbreak{}common\_\allowbreak{}plane.py}
+はcyclicブロック、二元centralizerと正規化指標を厳密再生する。
+階数4のSchur帰着と全域の整域・正常三次排除は上の構造証明である。
+残る二領域は、外側四乗が零で $\ell$ が量子軸でない場合と、
+外側四乗が非零で $\{v,\ell\}=q_2(u^2,w^2)$ が $\ell^2$ と独立な場合である。
+全 $p^2$ 関係、正常三次、H3許容性をこれらの必要条件だけから結論しない。
+
 \begin{lemma}[単冪twist下の反標準三次関係の輸送]
 \label{lem:h3-unipotent-transport}
 $C$は左右noetherian quadratic Koszul AS4型14641で，$\mu_C$は半単純とする．
