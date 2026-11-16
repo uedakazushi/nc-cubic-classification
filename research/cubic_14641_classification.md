@@ -1313,3 +1313,13 @@ canonical負topQ0の(2,2)/mixed rank4全H3を、全Jordan型込みで曲がっ�
 証明cubic_order2_22_secant_main_open.tex。L=r5+r4+2r3s²+2r3t²−2r²s²+2r²t²+2rt²−r+2t²−1。73KBの明示polynomialXでCX=dIを直接検証するため、生成に使ったFLINT消去や多変数detを再実行する必要はない。全正自由三次32列の正常条件が元三次関係を消すことと正三次商次元10から、全開集合で正常核零。公開polyλはprimitive化済みで元288行を直接消すため、特殊値にもそのまま有効。
 
 次の具体作業：private mirror/tzero/lszero chartを、それぞれ(r,s,t)=(2,1,3/2),(2,1,0),(1/3,0,2/3)でpivotが非零になるsparse Markowitz順序から生成した。全て三変数B4dim35、全元annihilator検証/保存済み。各rawNFはsqnd_main_mirror_raw.pkl等、原稿用証明には未使用。mirror/tzero正常10minorと使用functionalsを計算中。最初の八λはmirror面でrank8/t0でrank4しか保証せず、実際の正常kernel rankをそこから推定しない。新chartのprimitive多項式λを少数選び、全元関係identityとnormal right inverseを公開して残余supportを減らす。s0は最初の八λだけでも一般rank10なので、s0をsampleに別minorを選べる。
+
+## 二座標曲面の全値排除（classification-v197）
+
+非退化secant正Pf/q1主chartの座標曲面s0,t0を全値排除。元288四次関係を消す追加多項式汎関数と正三次関係24×32行列から、局所化係数環でK=kerT3/正常行加群Fを比較。t0はK=F、s0は(t+1)K及び(rho²+1)KがFに所属。AS4最大rank開集合で核の底変更を使い正常核零。残るs0,t−1,rho±iは元関係でB4dim36、非AS4。未知は鏡共鳴rho²−2t−1=0とL0の二曲面だけ（a非零/真共鳴外）。全CY/三固有値以上/成分/相対降下は未完。
+
+証明cubic_order2_22_secant_coordinate_planes.tex。Singularのsyzygyは商環k[parameters,z]/(zU−1)上で計算する。行列積は商環で自動的に正規化されるとは限らず、R3*E及びR3*Nの零検査をreduce(ideal(product),std(ideal(0)))で行う。module==0は列数付き零表示と一致しない場合があるのでsize(reduce(module,...))==0で判定する。所属はt0でE⊂N、s0で(t+1)E,(r²+1)E⊂N。N⊂Eは元四次annihilatorから独立に確認。AS4正三次商10/maxrank22開集合でkerT3のfiberが全双対となるため、全閉値の正常核判定へ適用できる。
+
+再現にはSymPyとSingular。SINGULAR_BINで実行体を指定可。今回の環境は/workspace/work/cas/root/usr/bin/Singular、LD_LIBRARY_PATH=/workspace/work/cas/root/usr/lib/x86_64-linux-gnu、SINGULAR_PROCS_DIR=/workspace/work/cas/root/usr/lib/x86_64-linux-gnu/singular/MOD。native polynomial procedureの設定により既存CASを利用し、追加installはしていない。
+
+次の着手：鏡共鳴t=(r²−1)/2の既存29汎関数module計算ではAnn(K/F)のパラメータ支持はP10=Bm4*J6、Bm4=4s²+(r−1)(r+1)³、J6=4r²s²+(r+1)²(r²+1)²の二曲線へ縮む（私的計算、未公表の全所属certificate）。全35商汎関数をoriginal/t0/ls0三chartからprimitive多項式化したprivate JSONを生成済みで、追加による曲線support除去を調べる。最後のL0は二次曲面表示とmodule飽和で扱う。全35入力は大きいため最終証明に必要な生成元を選ぶ。現在の公開追加入力は21汎関数、全元関係を検証する。

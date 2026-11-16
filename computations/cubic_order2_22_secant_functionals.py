@@ -5,9 +5,12 @@ import sympy as S
 from sympy.polys.matrices import DomainMatrix
 from cubic_order2_22_secant_tools import relations
 RHO,SIGMA,TAU=S.symbols('r s t')
-def normal_matrix():
- r,s,t=RHO,SIGMA,TAU;P=S.QQ.poly_ring(r,s,t);entry=json.loads(Path(__file__).with_name('cubic_order2_22_secant_main_functionals_input.json').read_text());loc={'r':r,'s':s,'t':t}
- funcs=[{int(i):P.from_sympy(S.sympify(v,locals=loc)) for i,v in row.items()} for row in entry['functionals'].values()]
+def normal_matrix(input_names=None):
+ r,s,t=RHO,SIGMA,TAU;P=S.QQ.poly_ring(r,s,t);loc={'r':r,'s':s,'t':t}
+ names=input_names or ['cubic_order2_22_secant_main_functionals_input.json'];funcs=[]
+ for name in names:
+  entry=json.loads(Path(__file__).with_name(name).read_text())
+  funcs.extend([{int(i):P.from_sympy(S.sympify(v,locals=loc)) for i,v in row.items()} for row in entry['functionals'].values()])
  words=list(itertools.product(range(4),repeat=4));index={w:i for i,w in enumerate(words)}
  alpha=(r-1)/(r+1);R=relations(S.Matrix([[0,r],[r,0]]),[1-r*r-t*t-alpha*s*s,-t,alpha*s,s,t,1])
  RR=[{w:P.from_sympy(S.cancel(c*(r-1)*(r+1)**2)) for w,c in row.items()} for row in R]

@@ -1,0 +1,65 @@
+\subsection{二つの座標曲面を加群の全値計算で排除する}
+\begin{proposition}
+非退化正top・対称secant負top・正Pfaffianの $q=1$ 主chartでは、
+$s=0$ 又は $t=0$ の全域にH3対象は存在しない。
+従って未解決領域は $\rho^2-2t-1=0$ 又は $L=0$ に限られる。
+\end{proposition}
+\begin{proof}
+$a=0$ と $\delta=\rho^2+2t-1=0$ は既に全値排除済みなので、その外でよい。
+$A=(\rho+1)a$ とし、各座標曲面の係数環を
+\[
+ \begin{array}{c|c}
+ s=0&k[\rho,t,U_s^{-1}],\quad
+ U_s=\rho(\rho^2-1)(1-\rho^2-t^2)(\rho^2+2t-1)\\
+ t=0&k[\rho,s,U_t^{-1}],\quad
+ U_t=\rho(\rho^2-1)((\rho+1)^2+s^2)
+ \end{array}
+\]
+とする。これは正確に必要な $\rho(\rho^2-1)a\delta\ne0$ の条件である。
+
+元の六二次関係へ一次式を左右から掛け、正自由三次32語への24行の関係行列 $T_3$ を作る。
+その係数を列汎関数に作用させると、
+\[
+ K=\ker(T_3:C^{32}\longrightarrow C^{24})
+\]
+が三次関係を消す汎関数加群となる。
+一方、元の全四次関係を消す多項式汎関数を追加し、対応する正常行列の行が生成する部分加群を $F\subset K$ とする。
+前節の八汎関数に加える具体式は
+\[
+ \texttt{cubic\_order2\_22\_secant\_additional\_functionals\_input.json}
+\]
+に保持し、各々の全288元関係恒等式を直接検証する。
+
+局所化を $C=k[\ldots,z]/(zU-1)$ と表示して、標数0で加群標準基底を計算する。
+得られる厳密な所属関係は
+\[
+ \begin{array}{c|c}
+ t=0&K=F\\
+ s=0&(t+1)K\subset F,\quad(\rho^2+1)K\subset F
+ \end{array}
+\]
+である。生成元の変形では、上に示した局所化で単元となる因子だけを除く。
+商環での行列積は、局所化関係の標準形に落としてから零を判定する。
+
+これを幾何学的fiberへ送る理由を明記する。
+正三次関係行列のgeneric rankは22であり、AS4 fiberの正三次商次元は10である。
+従ってAS4 fiberは最大rank開集合に入り、そこで $K$ は局所自由な核で、
+底変更により実際の正三次商の全双対空間となる。
+正常三次は $F$ の全汎関数を消す。
+$t=0$ では $K=F$ なのでその三次類は零となる。
+$s=0$ でも $t+1$ 又は $\rho^2+1$ が非零のfiberでは同じ結論になる。
+
+残るのは $s=0,t=-1,\rho=\pm i$ の二点だけである。
+$\rho=i$ の元の関係を $\mathbb Q(i)$ 上で再消去すると
+\[
+ \dim B_3=20,\qquad\dim B_4=36
+\]
+となり、AS4の必要Hilbert値に反する。
+体の共役で他方も覆われる。
+これで両座標曲面の全値を排除した。
+
+\texttt{verify\_cubic\_order2\_22\_secant\_coordinate\_planes.py}
+はSymPyで全多項式汎関数恒等式と有限点を検証し、元関係から生成したSingular入力により
+上の核・所属関係を再計算する。実行時にSingular 4.4.1を用いた。
+非被約底を含む全intrinsic降下の証明や、残る二曲面の排除を主張するものではない。
+\end{proof}

@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "surfaces": [
+    {
+      "surface": "szero",
+      "localization_unit": "-r**7 - r**5*t**2 - 2*r**5*t + 3*r**5 - 2*r**3*t**3 + 2*r**3*t**2 + 4*r**3*t - 3*r**3 + 2*r*t**3 - r*t**2 - 2*r*t + r",
+      "checks": "(t+1)E and (rho2+1)E contained in normal row module",
+      "source_reconstructed_from": "all original quadratic relations and checked polynomial quartic annihilators"
+    },
+    {
+      "surface": "tzero",
+      "localization_unit": "r**5 + 2*r**4 + r**3*s**2 - 2*r**2 - r*s**2 - r",
+      "checks": "E=ker(R3), normal rows lie in E; E contained in N",
+      "source_reconstructed_from": "all original quadratic relations and checked polynomial quartic annihilators"
+    }
+  ],
+  "finite_remainder": "s0,t=-1,rho=+/-i: exact B3dim20/B4dim36, not AS4",
+  "mathematical_input": "on AS4 maximal-rank R3 locus, the kernel module specializes to the full positive cubic dual. Membership in the polynomial normal-row module forces all normal cubic classes zero. Unit factors a and delta were already excluded.",
+  "conclusion": "entire two coordinate planes s=0,t=0 have no H3; main residual support is mirror rho2-2t-1=0 or L=0",
+  "dependencies": [
+    "SymPy exact arithmetic",
+    "Singular standard-basis and syzygy algorithms; SINGULAR_BIN may specify executable"
+  ],
+  "not_claimed": [
+    "mirror or L surfaces",
+    "global H3 classification",
+    "intrinsic relative descent",
+    "independent peer review"
+  ]
+}
