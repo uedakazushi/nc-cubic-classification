@@ -599,3 +599,13 @@ Z(C)=Z0+Z0*g、g=pyv−L p/2+T y/2、g²=−detM。detMのYT²係数−1/4なの
 net判別三次は4detM|x0=(L+aY)(L−2Y)(L+2Y)−Y T²。Y1の三次判別式16(a²−4)²、無限遠点は常に滑らか、a=±2の二重根は普通node。これはnetの判別曲線の計算であって、boundary THCRとの同一視、H3許容性や全AS4存在証明を代替しない。verify_cubic_order2_normal_axis_clifford.pyで十overlap、volume/平方、全符号cocycle、判別式を全パラメータで厳密検算PASS。
 
 次の具体的着手：この三パラメータでH3十分性を、中心Clifford純volume商とprojective character完全交叉で判定する。既知smooth-boundary Clifford部分とのパラメータ対応を先に厳密確認し、a=±2のnodal判別と無限遠のcharacter点を勝手に除外しない。一般の正規座標存在、量子/Jordan/可換共通平面全体、他の中山スペクトル、大域群oid/相対降下は未完成。
+
+## nodal判別a=±2の全値非H3（classification-v113）
+
+原稿thm:h3-order2-normal-axis-nodal-exclusion。a=±2を全d,iで排除した。C/(g)へ有限cocycle輸送するとtailsの大域次元は有限群同変化/induction分裂で不変。最高Koszul Gamma次数(1,0,1)のcocycle指標がmuBを相殺するのでCはCY、中央三次商DのSerreは(-1)[2]。
+
+Y=y²の開集合A=(D[Y^-1])0ではr=xy^-1,s=py^-1,b=vy^-1−u/2,u=L/Y。rs=−sr,rb=−br,sb=bs,r²=z,s²=h,b²=F(z,h)=(h−a−dz)²/4−1−iz、u=h−a−dz,T/Y=−2sb。Aは中央k[z,h]上rank8自由。逆のskew Laurent模型x=ry,p=sy,v=(b+u/2)y、yは(r,s,b)->(r,−s,−b)で作用し全六関係/gを復元する。
+
+a=±2ではF(0,0)0。中央(z,h)完備化は特殊fiberがr²=s²=b²0の局所有限代数（radical四乗零）、唯一の単純k。一次関係がなくExt1(k,k)3。対応点x=p0,y1,v−a/2はシフト固定。有限中央orderの点Ext局所大域比較と完備化でExt_Ahat=Ext_qgrD、H3ならExt2self1,高次0。完備局所代数の最小自由解消はrank(1,3,1)となるが、Frac k[[z,h]]上ではAhat次元8、k消滅なのでEuler8(1−3+1)−8が矛盾。非可換Jacobianや奇数Ext1の未証明一般原理には依存しない。verify_cubic_order2_nodal_axis_obstruction.pyで全PBW/逆代入、節点の全係数接空間、特殊fiber四乗零、top符号を厳密検算PASS。
+
+次の具体的着手（未完）：a²!=4を既知Clifford swapへ明示座標対応し許容条件を全判定する。導出中の式：k=h_Hesse³、r²=k+1とするとa=(k²+20k−8)/(4r³)、a²−4=k(k−8)³/(16(k+1)³)。source h_Hesse,b,cからd=h_Hesse(k−8)[b(k−2)−3c h_Hesse]/(4r³)、i=h_Hesse(k−8)(2b−c h_Hesse)/(4r²)となる見込み。六関係への正確な代入とCI被約条件をまだ新検証器で確認していないので、これらの式を十分性定理としては未使用。projective character CIの直接式はpy=0,p²+a y²+2yv+d x²=0,v²−y²−i x²=0である。

@@ -1813,6 +1813,82 @@ $Y=1$ の二重被覆表示の判別式は $16(a^2-4)^2$ である。
 残る課題はこの三パラメータのH3条件と全intrinsic矢、既知smooth-boundary表示との照合、
 および追加の正規座標仮定を持たない領域の被覆である。
 
+\begin{theorem}[節点判別値の全パラメータ排除]
+\label{thm:h3-order2-normal-axis-nodal-exclusion}
+正常形\eqref{eq:h3-normal-axis-three-parameter}がH3包絡と切断を与えるなら
+$a^2\ne4$ である。特に $a=\pm2$ は $d,i$ の値によらず全て非H3である。
+\end{theorem}
+\begin{proof}
+前定理のcocycleで $D=C/(g)$ に移る。
+有限群の同変化とforgetful/inductionの分裂により、
+有限符号cocycle前後でtailsの大域次元は等しい。
+実際、標数0の有限群コホモロジーは正次数で消え、
+同変Extは通常のExtの不変部分、inductionの恒等summandは逆の不等式を与える。
+従ってH3なら $\qgr D$ もhomological dimension 2である。
+この $C$ はCY AS4である。最高Koszul成分の $\Gamma$ 次数は $(1,0,1)$ で、
+上のcocycleによる中山指標の変化は $p,y,v,x$ の順に $(1,-1,-1,-1)$。
+これは元の $\mu_B$ の指標を相殺する。
+最高次数は正規一次元商のKoszul解消に $x$ を加えても確認できる。
+従って中央正則三次 $g$ の商 $D$ は中山恒等、parameter 1であり、
+H3を仮定したこの有限大域次元のtailsでは $S_D=(-1)[2]$ となる。
+
+$Y=y^2$ を逆にした次数零chart $A=(D[Y^{-1}])_0$ を計算する。
+$y$ 自身も可逆なので
+\[
+ r=xy^{-1},\quad s=py^{-1},\quad
+ b=vy^{-1}-\frac u2,\qquad u=L/Y
+\]
+と置く。$z=r^2$, $h=s^2$ とすると、正確な表示は
+\begin{equation}\label{eq:h3-normal-axis-nodal-chart}
+ \begin{gathered}
+ rs=-sr,\quad rb=-br,\quad sb=bs,\quad r^2=z,\quad s^2=h,\\
+ b^2=F(z,h):=\frac{(h-a-dz)^2}{4}-1-iz,
+ \qquad u=h-a-dz,\quad T/Y=-2sb.
+ \end{gathered}
+\end{equation}
+ここで $z,h$ は中心であり、$A$ は $k[z,h]$ 上階数8で自由、基底は
+$r^e s^f b^j$ ($e,f,j\in\{0,1\}$)である。
+表示が単なる商でないことは、逆に
+\[
+ x=ry,\quad p=sy,\quad v=(b+u/2)y,\quad
+ y(r,s,b)y^{-1}=(r,-s,-b)
+\]
+で $C$ の六関係と $g=0$ を全て復元すれば分かる。
+したがって $D[Y^{-1}]=A[y,y^{-1};\eta]$、
+$\eta(r,s,b)=(r,-s,-b)$ である。
+
+以下 $a=\pm2$ とする。$F(0,0)=0$ なので
+$(z,h)$ で完備化した $\widehat A$ の特殊fiberでは $r^2=s^2=b^2=0$。
+上の交換式から正次数イデアルの四乗は零であり、このfiberの唯一の単純対象は $k$。
+従って $\widehat A$ は唯一の単純対象 $k$ を持つ完備局所代数である。
+$z=r^2,h=s^2$ を代入した表示には一次関係がないので、そのJacobson radical $J$ は
+\[
+ \dim_k J/J^2=3,\qquad \dim_k\Ext^1_{\widehat A}(k,k)=3
+\]
+を満たす。一方 $\widehat A$ は中心環 $k[[z,h]]$ 上階数8で自由である。
+
+この単純対象は、$x=p=0$, $y=1$, $v=-a/2$ という一定の文字作用を持つ
+$D$ の点加群のtails $P$ に対応する。従って $P(1)\simeq P$ である。
+$D^{(2)}$ は中心の有限型可換環上有限であり、点のsheaf Extは有限支持なので、
+local-to-global Ext spectral sequenceはこの点で退化する。
+さらに中心完備化は平坦で有限加群のExt形成と可換するので、
+\[
+ \Ext^n_{\widehat A}(k,k)\simeq\Ext^n_{\qgr D}(P,P).
+\]
+H3の仮定と上のSerre双対から、右辺は $n>2$ で零、$n=2$ で一次元となる。
+完備局所代数上の最小射影解消の各項は自由で、単純対象とのExtがその階数を与える。
+従って $k$ は階数 $(1,3,1)$ の長さ2の最小自由解消を持つはずである。
+これを $K=\operatorname{Frac}k[[z,h]]$ に張り替えると $k\otimes K=0$、
+$\dim_K(\widehat A\otimes K)=8$ なのでEuler次元は
+\[
+ 8(1-3+1)=-8\ne0.
+\]
+これは完全列に反する。ゆえに $a=\pm2$ ではH3は存在しない。
+\end{proof}
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}order2\_\allowbreak{}nodal\_\allowbreak{}axis\_\allowbreak{}obstruction.py}
+はchartの全PBW overlapと逆代入、節点値の接空間・特殊fiberの冪零性を厳密再生する。
+有限次数の検算で無限射影次元を推測せず、Serre双対と最小解消の階数矛盾を用いた。
+
 \begin{lemma}[単冪twist下の反標準三次関係の輸送]
 \label{lem:h3-unipotent-transport}
 $C$は左右noetherian quadratic Koszul AS4型14641で，$\mu_C$は半単純とする．

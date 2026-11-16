@@ -1,0 +1,34 @@
+{
+  "hypotheses": "normal-axis H3 necessary normal form, a=2 or a=-2, arbitrary d,i",
+  "chart": "A=(C/(g)[Y^-1])_0, Y=y\u00b2",
+  "generators": [
+    "r=x*y^-1",
+    "s=p*y^-1",
+    "b=v*y^-1-(L/Y)/2"
+  ],
+  "central_coordinates": [
+    "z=r\u00b2",
+    "h=s\u00b2",
+    "u=h-a-dz",
+    "w=-2sb"
+  ],
+  "relations": [
+    "rs=-sr",
+    "rb=-br",
+    "sb=bs",
+    "r\u00b2=z",
+    "s\u00b2=h",
+    "b\u00b2=(h-a-dz)\u00b2/4-1-i*z"
+  ],
+  "PBW_over_k_z_h": "free rank8, basis r^e*s^f*b^g, e,f,g in {0,1}",
+  "overlap_identities_checked": 10,
+  "cocycle_top_character_p_y_v_x": [
+    1,
+    -1,
+    -1,
+    -1
+  ],
+  "inverse": "x=r*y,p=s*y,v=(b+u/2)*y; y acts by eta(r,s,b)=(r,-s,-b)",
+  "local_obstruction": "At a=+-2, completion at z=h=0 is local with Ext1(k,k)=3. H3 Serre duality at its shift-fixed point would give Ext2(k,k)=1 and higher Ext=0. A minimal free resolution with ranks (1,3,1) contradicts Euler rank over Frac(k[[z,h]]), where A has dimension8.",
+  "scope": "All chart/PBW/inverse identities are checked exactly. The Serre, completion and minimal-resolution argument is a structural proof in the manuscript, not a finite-degree homological test."
+}
