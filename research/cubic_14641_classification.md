@@ -942,3 +942,16 @@ Dunit branchはKepsilonI、evenHの(yy,xy,xx,uv)minorD²、SchurはnegativeQのa
 verify_cubic_order2_22_tangent_boundary.py/certificateで二minor、Schur全係数constant matrix rank4、両epsilonのnormal covariance全八式を中心平方+三quadratic関係のdegree3 freeword行恒等式としてexact PASS。新規as4結果は輸入せず独立に境界を排除した。Zhang twistによるG正規化の変化を無視せず、この証明は両符号を直接扱う。
 
 次はsecant gdet−1全strata。allunitでKdet非零のSchur必要式は既存scratchのとおり、rank低下a/b/c/d0を別に保持する。tangentを再開せず、正常四次元Mで−muを実現できるか、又は四次annihilatorのexact minor coverで正常Gを排除する。全rank4/nonsemi/他スペクトルと全族降下は依然未完。
+
+
+## secant全退化境界の四graph被覆（classification-v148）
+
+**全体的なスペクトル制約（classification-v148）**：全(1,3)は幾何学的被覆・必要十分H3判定・全矢/慣性まで確定、全(3,1)は全Jordan型込みで空。半単純(2,2)/mixed rank2はpure mixed/二ruling/全tangentを排除しsecantのみ。secant gdet−1のKはdet−abcd、退化全境界をtorus尺度と同時交換で四固定graph（rank2二種/rank3二種）へ全被覆した。K可逆部分は別に残す。次は四境界のうちrank2二種の正規二次/四次障害を厳密検証し、全係数even Schur条件と正常Gを判定する。rank4三型、非半単純(2,2)、三固有値以上、全CY被覆、全成分/圏族降下は未完。
+
+原稿prop:h3-order2-22-secant-degenerate-strata。gen尺度はg(a,b,c,d)->g(r a,s b,c/s,d/r)、simultaneous x/y,u/v swapはa/d,b/c交換。K sparseのdet−abcd、rank=非零成分数。ad−bc−1から退化はzero2 diagonal/offdiag又はzero1の二軌道で、四固定gはdiag(1,-1),swap,[[0,1],[1,1]],[[1,0],[1,-1]]。verify_cubic_order2_22_secant_strata.py/certificate exact PASS。全境界AS4/H3排除はこの命題から主張しない。
+
+未検証の次の証明案（会話にだけ残さず保持）：rank2diag g=diag(1,-1)のpureUU rows xy/yx rank<=1から、(I)B=C0,ADunit、又は(II)A=D0,Bunit,C²=-B²に分かれる。IはSchurでQ_Vのa=c=f0,b(A+D)=e(A+D)=d(A²+D²)0、domain projectionVV>=3からb又はeunitでA=-D。uv=-A[x,y],vu=-D[x,y]よりuvanti、odd uy=-xu,vx=yvからN=uvが全生成元反転/μ固定、Gと可換反可換矛盾。IIはpositive yx=+-i xy、uv=-B y²,vu=-B x²。oddとassociativityでu/vはx²,y²を交換し、x²,y²は可換、M=x²y²はpositive反転/negative固定=−mu、muM+から同じ矛盾。
+
+rank2anti g=swapも未検証案：pureUU xx/yy rowsからB0かつA又はDunit、positivecomm。Schur(Aunit、交換で被覆)はnegativea+f0,b+e0,c=d0。domain projectionVV>=3よりbunit。evenからu²=v²=−(A x²+Cxy+D y²)、xy=a u²+b{u,v}。u²とxy/{u,v}が中心となる。AD0では一positive squareが中心でvx=-xuからux=-xvという余分なodd quadをdomain消去で得る。ADunitではX=sqrtA*x,Y=sqrtD*y,p=X+Y,q=X−Y,R=u+v,S=u−vの全四平方中心、oddは{R,q}=[S,p],{R,p}=[S,q]。W=[S,p],N=[S,q]はmu奇の二正規二次でnormalizers(-,+,+,-),(+,-,+,-)、積が−mu/mu固定なのでH3矛盾。これらの全係数Schur/normal-tableと必要被覆を次に検証し、未検証案を定理として引用しない。
+
+有用な反省：secant sample(s=3/4,t=5/4,A0,C=sqrt(-34)/3)のpositiveU³はexact rank8であり、purepositive quartic topの縮約をT(U)の三次関係と同一視してはならない。T(U) cubicAS3仮説は破棄、実際のB degree3 quotientで点検する。as4 mainHEAD75a32fea51b61d976c7d5b54b91adca7ea8b211cを照会したが、新規結果輸入は行っていない。

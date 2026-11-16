@@ -1,0 +1,39 @@
+\subsection{secant退化境界の四固定graph表示}
+\label{subsec:h3-order2-22-secant-strata}
+\begin{proposition}\label{prop:h3-order2-22-secant-degenerate-strata}
+半単純$(2,2)$・奇関係数2の残るsecant型について、
+$E=(xu,yv),F=(uy,vx)$、$g=\left(\begin{smallmatrix}a&b\\c&d\end{smallmatrix}\right)$、
+$ad-bc=-1$と書く。
+偶cross blockは
+\[
+ K=\begin{pmatrix}0&-d&0&0\\0&0&0&c\\-b&0&0&0\\0&0&a&0\end{pmatrix},
+ \qquad\det K=-abcd
+\]
+である。$K$が退化する全境界は、生成元の尺度変更と同時交換
+$(x,y,u,v)\mapsto(y,x,v,u)$を除き、次の四固定graphで被覆される。
+\[
+\begin{array}{c|c}
+ g&\operatorname{rank}K\\\hline
+ \begin{pmatrix}1&0\\0&-1\end{pmatrix}&2\\[2pt]
+ \begin{pmatrix}0&1\\1&0\end{pmatrix}&2\\[2pt]
+ \begin{pmatrix}0&1\\1&1\end{pmatrix}&3\\[2pt]
+ \begin{pmatrix}1&0\\1&-1\end{pmatrix}&3
+\end{array}
+\]
+これは必要graphの被覆であり、全係数AS4存在やH3性を主張しない。
+\end{proposition}
+\begin{proof}
+$K$は奇blockの巡回reshapeから得られる。
+$x,y,u,v$の尺度変更は独立な$r,s\ne0$により
+\[
+ (a,b,c,d)\longmapsto(ra,sb,c/s,d/r)
+\]
+を誘導する。同時交換は$a\leftrightarrow d,b\leftrightarrow c$となる。
+$ad-bc=-1$なので、零成分は二つ以下で、二つの場合は対角または反対角の対である。
+二対のいずれかが零なら残る積が$\pm1$なので、一つの尺度比で表の階数2形へ移せる。
+零成分が一つだけなら同時交換で$a=0$または$b=0$とし、
+二つの尺度比で残る三成分を表の階数3形へ正規化できる。
+$K$の非零成分は異なる行列行・列にあるため、その階数は非零成分数に等しい。
+\end{proof}
+\texttt{verify\_cubic\_order2\_22\_secant\_strata.py}は
+尺度作用、行列式と四表示の階数を厳密検証する。
