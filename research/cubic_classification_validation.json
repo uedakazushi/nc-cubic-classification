@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "version": "classification-v156",
+  "version": "classification-v157",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -1545,5 +1545,24 @@
     "certificate": "computations/cubic_order2_22_secant_ellzero_certificate.json",
     "proof": "papers/sections/cubic_order2_22_secant_open.tex",
     "scope": "ell=0曲線も全値H3排除。rho=-1/(C²+2)、(C²+1)(C²+2)unit上で19四次汎関数の2736恒等式と単一10minor 4(C²+1)^9(C²+2)^5を厳密再生。残るrank2必要曲面はrho(rho+1)C*ell*(2rho*ell²+rho+1)unit。全正常incidence/AS4十分性/相対降下は未完。二次簡約で偶四次行列を144x128から非零24x36へ縮約し、r,k二変数の分数体上で計算中。次は全曲面のrank10 minor被覆または非零正常核の閉locusを確定する。"
+  },
+  "order2_22_rank2_entire_empty_v157": {
+    "status": "PASS exact universal surface identities and whole rank2 proof",
+    "validator": "computations/verify_cubic_order2_22_secant_surface.py",
+    "input": "computations/cubic_order2_22_secant_surface_input.json",
+    "certificate": "computations/cubic_order2_22_secant_surface_certificate.json",
+    "proof": [
+      "papers/sections/cubic_order2_22_secant_open.tex",
+      "papers/sections/cubic_order2_22_rank2_unipotent.tex"
+    ],
+    "scope": "**全体的なスペクトル制約（classification-v157）**：全(1,3)は幾何学的被覆・必要十分H3判定・全矢/慣性まで確定、全(3,1)は全Jordan型込みで空。(2,2)のmixed rank2も全Jordan型込みで空と確定した。最後の可逆secant必要曲面は七多項式四次汎関数の1008恒等式と単一10minor −2ell^15*rho^20*(rho+1)^15*(2rho+1)^2により全値排除し、ell0/共鳴fibreも既存全値検証で覆う。従って(2,2)はmixed rank4のみが残る。次は正top三型（零・comm⊙平方・comm⊙非退化quad）と全Jordan型の必要表示・正常三次を調べる。三固有値以上、全CY被覆、全成分/圏族降下は未完。",
+    "identity_count": 1008,
+    "minor": "-2*ell^15*rho^20*(rho+1)^15*(2*rho+1)^2",
+    "not_claimed": [
+      "all H3 classification",
+      "AS4 nonexistence",
+      "rank4 exclusion",
+      "intrinsic family descent"
+    ]
   }
 }

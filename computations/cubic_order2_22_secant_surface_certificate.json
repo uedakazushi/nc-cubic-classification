@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "scope": "entire invertible secant necessary surface on r*(r+1)*l*(2*r+1)!=0",
+  "polynomial_functionals": 7,
+  "quartic_annihilator_identities": 1008,
+  "constraint_shape": [
+    14,
+    32
+  ],
+  "minor_size": [
+    10,
+    10
+  ],
+  "determinant_mod_surface": "-2*l**15*r**20*(r + 1)**15*(2*r + 1)**2",
+  "conclusion": "positive cubic centralizer of x,y is zero at every actual AS4 point of this open; l=0 and r=-1/2 separately excluded, hence the entire secant sector is H3-empty",
+  "not_claimed": [
+    "AS4 nonexistence",
+    "all H3 classification",
+    "mixed rank4 exclusion",
+    "family classification"
+  ]
+}

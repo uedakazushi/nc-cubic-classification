@@ -1003,7 +1003,7 @@ rho−1/2特殊fibreの全値正常核はv152でpublic証明書へ統合して�
 
 ## (2,2) mixed rank2の全Jordan型も半単純（classification-v153）
 
-**全体的なスペクトル制約（classification-v153）**：全(1,3)は幾何学的被覆・必要十分H3判定・全矢/慣性まで確定、全(3,1)は全Jordan型込みで空。(2,2)/mixed rank2でも全Jordan型を半単純へ帰着した。半単純AS4 domainのG非依存pencil被覆から、muを保つ単冪autoはpuremixed/simple-eigen stabilizer、secant二rank1点、tangent upper stabilizerと平方関係の各場合で恒等。元Bのmu_U四分根H=I+(mu_U−I)/4でC=B^H,muC=muB H^-4=muSsを作り、H∈AutCからHId。従って全rank2候補は非共鳴可逆secantのsmooth2dim必要曲面rho*C²+(2rho+1)(2rho*ell²+1)=0、rho(rho+1)(2rho+1)(2rho*ell²+rho+1)unitで被覆。全曲面正常G/AS4十分性は未分類。次は非共鳴conic chartと補sectionの正常incidence。mixed rank4三型/非半単純rank4、三固有値以上、全CY被覆、全成分/圏族降下は未完。
+**全体的なスペクトル制約（classification-v157）**：全(1,3)は幾何学的被覆・必要十分H3判定・全矢/慣性まで確定、全(3,1)は全Jordan型込みで空。(2,2)のmixed rank2も全Jordan型込みで空と確定した。最後の可逆secant必要曲面は七多項式四次汎関数の1008恒等式と単一10minor −2ell^15*rho^20*(rho+1)^15*(2rho+1)^2により全値排除し、ell0/共鳴fibreも既存全値検証で覆う。従って(2,2)はmixed rank4のみが残る。次は正top三型（零・comm⊙平方・comm⊙非退化quad）と全Jordan型の必要表示・正常三次を調べる。三固有値以上、全CY被覆、全成分/圏族降下は未完。
 
 原稿lem:h3-order2-22-rank2-unipotent-rigidity,thm:h3-order2-22-rank2-no-Jordan,cor:h3-order2-22-rank2-all-Jordan-coverage。必要pencil被覆/必要Schur正規化はG存在を使わずnoeth quadratic Koszul AS4 domainにも有効であることを明示。H commute muC unipotentならU/Vを保つ。puremixedはpI/qdiag(1,z),z−1,+-iの両lineをpointwise固定し、T^t q=q T^t、simple eigenでTdiagonalunipotentId。secant Eの二rankone点はconnected unipotent closureでpointwise固定、両U/VaxesよりHId。tangentはx/u固定,y->y+beta x,v->v+eta u。E/F uppermatP(beta+eta),Q(beta−eta)、gJ固定はbeta=eta0、gepsilonI固定はeta0。後者のdomain必要関係u²=alpha x²+delta y²,deltaunitとpositivecommから2delta beta xy+delta beta²x²0でbeta0。rulingはAS4domain外。全caseでHId。
 
@@ -1012,11 +1012,12 @@ rho−1/2特殊fibreの全値正常核はv152でpublic証明書へ統合して�
 verify_cubic_order2_22_rank2_unipotent.py/certificateが両tangent upper stabilizer、puremixed centralizer、square-invariance、二Jordanblockのfourth-root/−4 formulaをexact PASS。既存必要被覆のG非依存性とfinite rank1点への単冪作用は本文構造証明。これで(2,2) mixed rank2の非半単純残余はなく、mu1±のこの領域は全てv151–152の必要曲面へ。mixed rank4/Jordanと他スペクトルは依然未分類。
 
 
-## 可逆secantの現行残余（classification-v154）
+## 可逆secantの全値排除（classification-v157）
 
-mixed rank2の可逆secant必要曲面ではC=0も全値排除した。共鳴成分は既存証明、rho=-1/(2ell²)成分は19四次汎関数の2736恒等式と単一10minor 2048ell^16(2ell²−1)^4で全点を覆う。従って残る全Jordan型のH3候補はrho*C²+(2rho+1)(2rho*ell²+1)=0、rho(rho+1)C(2rho*ell²+rho+1)unitに限る。全曲面の正常三次incidence・AS4十分性・H3認識は未解決。可逆secantの実際のAS4包絡の全幾何学的graded矢は次数スカラー、mu、およびC->-Cの明示矢Phiで尽きる。q²=-rho/(rho+1)、Phi(x,y,u,v)=(q*y/rho,q*x,v,u/(rho+1))、Phi²=(-1/(rho+1))*mu。rho/ell不変、C非零H3の慣性は厳密にmu2。切断矢はG直線を保つもの。有限conic chartの補点はPhiでchart内へ移るので、一枚で幾何学的incidenceを計算できる。全曲面正常incidence・AS4/H3十分性・相対降下は未解決。
+**全体的なスペクトル制約（classification-v157）**：全(1,3)は幾何学的被覆・必要十分H3判定・全矢/慣性まで確定、全(3,1)は全Jordan型込みで空。(2,2)のmixed rank2も全Jordan型込みで空と確定した。最後の可逆secant必要曲面は七多項式四次汎関数の1008恒等式と単一10minor −2ell^15*rho^20*(rho+1)^15*(2rho+1)^2により全値排除し、ell0/共鳴fibreも既存全値検証で覆う。従って(2,2)はmixed rank4のみが残る。次は正top三型（零・comm⊙平方・comm⊙非退化quad）と全Jordan型の必要表示・正常三次を調べる。三固有値以上、全CY被覆、全成分/圏族降下は未完。
 
+検証器 verify_cubic_order2_22_secant_surface.py と39KB入力は七汎関数のみを保持し、1008多項式消滅恒等式と14x32交換子行列の単一10minorを再生する。曲面式Hを法にdet=−2ell^15*rho^20*(rho+1)^15*(2rho+1)^2。恒等式は整域の分数体で計算するが、元のminorは多項式なので全特殊値へ適用され、途中pivot零点を例外扱いしない。rho(rho+1)ell(2rho+1)unitで核次元22。ell0とrho−1/2は既存の全値証明を使い、C0排除は独立な整合検算として保持する。従って半単純rank2全空、単冪剛性/右twist−4により全Jordan型も空。
 
-## 可逆secantの正常incidence（classification-v156）
+可逆secantのgraded包絡矢Phiとrho/ell不変性は実際のAS4点に関する補助結果として保持するが、この領域にH3点の存在は主張しない。独立査読・新規性確認は未実施。追加のas4結果は輸入していない。
 
-ell=0曲線も全値H3排除。rho=-1/(C²+2)、(C²+1)(C²+2)unit上で19四次汎関数の2736恒等式と単一10minor 4(C²+1)^9(C²+2)^5を厳密再生。残るrank2必要曲面はrho(rho+1)C*ell*(2rho*ell²+rho+1)unit。全正常incidence/AS4十分性/相対降下は未完。二次簡約で偶四次行列を144x128から非零24x36へ縮約し、r,k二変数の分数体上で計算中。次は全曲面のrank10 minor被覆または非零正常核の閉locusを確定する。
+**次の核心（classification-v157）**：(2,2) mixed rank2へ戻らず、mixed rank4の正top三型ごとに必要表示と正常三次を調べる。非退化正quadの安定化群は単冪正平面作用を持たないため、この型のJordan消滅と負平面/混合関係への制約を最小の次課題とする。rank4全被覆、三固有値以上、全CY被覆と全intrinsic族降下・成分は未完。
