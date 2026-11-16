@@ -10,7 +10,7 @@
 
 **全体的なスペクトル制約（classification-v172）**：全(1,3)は幾何学的被覆・H3必要十分条件・全矢まで確定、全(3,1)は全Jordan型込みで空。(2,2) mixed rank2も全Jordan型込みで空。mixed rank4のcanonical正top P0全体は、退化境界と全Jordan型込みで固定非CY符号族へ完全に幾何学的認識、一般dim2/inertia mu2²。未知の(2,2)は正top非零のcomm⊙平方/comm⊙非退化quadの二型だけ。非退化型のJordanはなく、平方型の非半単純には正側Jordanが必要。三固有値以上、全CY被覆、全成分・intrinsic族降下は未完。
 
-**次の核心（classification-v173）**：正top非零へ出るClifford型B_h（正側可換/cross反交換/{u,v}=h2）の全包絡AS4/domain/mu++--と八次元正常核を証明。u²/v²係数独立chartではF1上のeven/odd Clifford sheafを復元し、飽和性と例外曲線二節点の非自明quaternionにより全商domain。H3 iff conic総空間smooth iff planequartic reduced/nodalかつ全余分nodeがrank1。h=xy,G=x³+y³+xu²+yv²は厳密Jacobian検算付き実H3例。全正top非零被覆・依存係数境界・全矢/相対降下は未完。 独立係数Clifford chartのH3判定と実例を確定した。次はこの族の全幾何学的矢と一般慣性、係数依存境界を判定し、Q0全体への必要被覆を調べる。正top非零全域・三固有値以上・全CY被覆・全成分/族降下は未完。
+**次の核心（classification-v175）**：曲がったClifford全切断・全幾何学的矢の分類に加え、全F∈GL2の逆行列normalizing Ore包絡B(F,h)を全hでAS4/domain/mu++--と認識した。F²非Idでは正常条件をF固有直線商へ移して全G因数分解、FId核はL*(uv-h/2)、reflectionも定数minor16で共通一次因子を強制。従ってこの全行列族のH3はF−IdのClifford族に尽きる。B_hは係数独立/conic平滑の必要十分条件、全矢、一般dim5/慣性mu2まで確定。 次は半単純Q0で純正二次関係がcommとなる全領域の必要被覆。odd線型atlasからq≠1負separatedは今回のB(F,h)へ。残りはq−1 eps+のswap cross、負Jordanの明示shear cross、両comm時の反対separated f*g=−Id。これらの正常核/因子を全係数で確認して必要被覆を閉じる。全非零正top・全CY・三固有値/成分/相対降下は未完。
 
 classification-v12 では、積分した族の全次数平坦性・noetherian quadratic Koszul CY AS4 認識を、明示的な開集合 V={h∈H, (1-gamma²)≠0, Delta≠0} 上で証明した。入力は Iyudu–Shkarin Theorem1.1/Corollary6.1、EG形式変形定理、および64個の三次持上げ恒等式・256個の四次巡回恒等式・単元小行列式 -p^6 を確認した LBS 中心拡大定理である。中心三次の関係類の非消滅も巡回商の二係数で全パラメータについて確認した。gamma≠0 では低次数中心が0,0,1、滑らかな楕円THCR境界となり、全中心値の H3 判定は正確に一つの affine 中心切断の有限大域次元へ帰着する。定義体上超越的な全 D は H3。位数4の枝 gamma^4=1+h^3 では固定包絡の悪い D は有限であり、h=1,gamma=2^(1/4),A=1,B=C=0,beta=(-1,0,0),D=pi は明示的な非Clifford H3 対象となる。悪い値の全一覧・全内在的群oid・H3相対開性・降下・全包絡被覆は未解決。
 

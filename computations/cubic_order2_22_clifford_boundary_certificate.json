@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "Ore_chart": {
+    "relations": [
+      "XY=YX",
+      "WX=-XW",
+      "WY=-YW"
+    ],
+    "reconstruction": [
+      "x=Xu",
+      "y=Yu",
+      "v=(W-h(X,Y)/2)u",
+      "u conjugates X,Y,W to their negatives"
+    ],
+    "six_envelope_relations": true,
+    "cut_identity": "G=-F*u^3, F=f3-aa*X+bb*X*(W^2-h2^2/4)"
+  },
+  "dependent_boundary_singularity": {
+    "point": "X=Y=0,W=cc",
+    "condition": "aa=bb*cc^2",
+    "F_and_all_three_derivatives": 0,
+    "other_chart": "exchange u,v if bb=0; zero coefficients already factor"
+  },
+  "geometric_conclusion": "all dependent-coefficient cuts are non-H3 by finite-group cocycle comparison with the singular commutative affine surface",
+  "not_claimed": [
+    "all positive-top envelopes",
+    "intrinsic relative descent"
+  ]
+}

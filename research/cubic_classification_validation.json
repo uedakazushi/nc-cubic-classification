@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "version": "classification-v173",
+  "version": "classification-v175",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -86,7 +86,8 @@
     "papers/sections/cubic_order2_22_curved_Jordan_projection.tex",
     "papers/sections/cubic_order2_22_curved_quarter.tex",
     "papers/sections/cubic_order2_22_Pzero_nondegenerate.tex",
-    "papers/sections/cubic_order2_22_clifford_curved.tex"
+    "papers/sections/cubic_order2_22_clifford_curved.tex",
+    "papers/sections/cubic_order2_22_clifford_matrix.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -1747,6 +1748,32 @@
       "full nonzero-positive-top coverage",
       "dependent coefficient cuts",
       "all geometric arrows",
+      "intrinsic relative descent"
+    ]
+  },
+  "order2_22_clifford_boundary_arrows_v174": {
+    "status": "PASS exact Ore reconstruction and universal boundary singularity; all geometric-arrow proof in manuscript",
+    "validator": "computations/verify_cubic_order2_22_clifford_boundary.py",
+    "certificate": "computations/cubic_order2_22_clifford_boundary_certificate.json",
+    "proof": "papers/sections/cubic_order2_22_clifford_curved.tex",
+    "scope": "Clifford型B_hの依存係数境界を全排除した。u²中心開集合を三変数skew/cocycle twistへ正確に復元し、依存係数なら対応可換affine曲面に必ず特異点が出る。従って既存独立chartのconic必要十分判定がB_h全体の全H3切断を尽くす。全pointed exact幾何学的矢はGL2U×((Gm)²⋊S2V)のh保存/三次直線保存式、次数Gm商。表示stack一般dim5/慣性mu2、h0は既知dim2/慣性mu2²。全非零正top被覆・成分性・intrinsic相対降下は未完。",
+    "not_claimed": [
+      "all nonzero-positive-top coverage",
+      "componenthood",
+      "intrinsic relative descent",
+      "independent peer review"
+    ]
+  },
+  "order2_22_clifford_matrix_v175": {
+    "status": "PASS universal GL2 PBW, identity kernel and reflection constant minors; noninvolution factor proof in manuscript",
+    "validator": "computations/verify_cubic_order2_22_clifford_matrix.py",
+    "certificate": "computations/cubic_order2_22_clifford_matrix_certificate.json",
+    "proof": "papers/sections/cubic_order2_22_clifford_matrix.tex",
+    "scope": "曲がったClifford全切断・全幾何学的矢の分類に加え、全F∈GL2の逆行列normalizing Ore包絡B(F,h)を全hでAS4/domain/mu++--と認識した。F²非Idでは正常条件をF固有直線商へ移して全G因数分解、FId核はL*(uv-h/2)、reflectionも定数minor16で共通一次因子を強制。従ってこの全行列族のH3はF−IdのClifford族に尽きる。B_hは係数独立/conic平滑の必要十分条件、全矢、一般dim5/慣性mu2まで確定。",
+    "not_claimed": [
+      "necessary envelope coverage",
+      "all nonzero-positive-top classification",
+      "componenthood",
       "intrinsic relative descent"
     ]
   }

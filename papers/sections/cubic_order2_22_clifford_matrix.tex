@@ -1,0 +1,59 @@
+\subsection{逆行列normalizing包絡の全curvature判定}
+\label{subsec:h3-order2-22-clifford-matrix}
+\begin{theorem}\label{thm:h3-order2-22-clifford-matrix}
+$F\in\mathrm{GL}(U)$、$D=\det F$、$h\in\operatorname{Sym}^2U$ とし、
+\[
+ B(F,h)=k\langle U,u,v\rangle/
+ ([x,y],\ uT-F(T)u,\ vT-F^{-1}(T)v,\ vu+Duv-Dh),\quad T\in U
+\]
+とする。全係数でnoetherian quadratic Koszul AS4 domainであり、実際の中山は $++--$。
+この全行列・全curvature族でH3切断を持つ包絡は $F=-I$ に限る。
+その全切断・必要十分条件・全幾何学的矢は前節の $B_h$ の分類に一致する。
+全rank4 graphの必要被覆はここでは主張しない。
+\end{theorem}
+\begin{proof}
+$T_0=k[x,y]$ に $u$ を $F$ で加え、さらに
+\[
+ \sigma|_{T_0}=F^{-1},\quad \sigma(u)=-Du,\quad
+ \delta|_{T_0}=0,\quad\delta(u)=Dh
+\]
+のOre変数 $v$ を加える。
+$\delta$ が $uT=F(T)u$ を保つのは $hT=Th$ そのものである。
+反復Oreの性質と四つのPBW overlapから主張した包絡性が従う。
+Ore中山公式で正側は $F F^{-1}=I$、$u$ 側は $(-D)^{-1}D=-1$、
+$v$ 側の先頭係数は $\det(F^{-1})(-D)=-1$。
+$u\mapsto tu,v\mapsto t^{-1}v$ が一次補正を排除するので、中山は表示通りである。
+
+正固有三次は十語 $f_3+A_1u^2+Luv+C_1v^2$ である。
+正側との可換性は $A_1(F^2(T)-T)=0$ と
+$C_1(F^{-2}(T)-T)=0$ を全 $T\in U$ に要求する。
+$F^2\ne I$ なら $A_1=C_1=0$。
+残る正常条件から、$u^2v$ と純正三次に $u$ を掛けた係数を比較して
+\[
+ F(L)=DL,\qquad (1+\operatorname{Sym}^3F)f_3=-D\,L F(h)
+\]
+を得る。$L=0$ なら $G$ は二元三次なので分解する。
+$L\ne0$ なら $F$ は $U/kL$ に恒等として作用する。
+上の第二式を $k[U]/(L)$ へ移すと $2f_3=0$、従って $L\mid f_3$。
+よって $G=L(\text{二次式}+uv)$ は分解し、商はdomainにならない。
+これは固有値や根の一般点だけの計算ではなく、全非involutionを同時に扱う。
+
+$F^2=I$ は $I,-I$ とreflectionの三型だけである。
+$F=I$ では全正常核は
+\[
+ G=L(uv-h/2),\qquad L\in U
+\]
+であり全て分解する。核の二列を直接検証でき、残る八列には定数minor256がある。
+reflectionは $F(x)=x,F(y)=-y$ とできる。
+$Gu+uG$ の $xu^3,xu^2v,xuv^2,x^3u$ 行は、
+正常候補から $xu^2,xuv,xv^2,x^3$ の四係数を消去する。
+この四列のminorは全 $h$ で16、残る六列はこの四行で零である。
+従って全 $G$ が $y$ を因子に持ち、やはりdomainにならない。
+$F=-I$ だけが残り、これは正確に前節の $B_h$ である。
+
+全行列についての四overlapと、二つの例外involutionの全係数minorは
+\[
+\texttt{verify\_cubic\_order2\_22\_clifford\_matrix.py}
+\]
+で元の簡約規則から再生する。全H3の被覆や独立査読はこの検算の射程ではない。
+\end{proof}

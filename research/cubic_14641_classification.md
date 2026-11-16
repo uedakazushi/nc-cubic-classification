@@ -1129,3 +1129,21 @@ rank2 cross補題：O=T Omega T^tの4次元交代像、L/N二射影rank>=3、ran
 証明：papers/sections/cubic_order2_22_clifford_curved.tex。検証器verify_cubic_order2_22_clifford_curved.pyは全係数四PBW overlap、八正常列零と補空間minor4、scroll determinant恒等式、実例の全射影Jacobianを厳密再生。新規性・独立査読は未確認。既存(1,3)定理を被覆として使用せず、共通局所Clifford補題とH3認識の証明を、今回再構成した束・飽和性・domainに適用した。
 
 独立係数Clifford chartのH3判定と実例を確定した。次はこの族の全幾何学的矢と一般慣性、係数依存境界を判定し、Q0全体への必要被覆を調べる。正top非零全域・三固有値以上・全CY被覆・全成分/族降下は未完。
+
+
+## 曲がったClifford全切断・全幾何学的矢（classification-v174）
+
+Clifford型B_hの依存係数境界を全排除した。u²中心開集合を三変数skew/cocycle twistへ正確に復元し、依存係数なら対応可換affine曲面に必ず特異点が出る。従って既存独立chartのconic必要十分判定がB_h全体の全H3切断を尽くす。全pointed exact幾何学的矢はGL2U×((Gm)²⋊S2V)のh保存/三次直線保存式、次数Gm商。表示stack一般dim5/慣性mu2、h0は既知dim2/慣性mu2²。全非零正top被覆・成分性・intrinsic相対降下は未完。
+
+新しい検証器verify_cubic_order2_22_clifford_boundary.pyは、X=x/u,Y=y/u,W=v/u+h(X,Y)/2とu反転の全六関係、およびG=-Fu³を非可換順序積で厳密確認。F=f3-alpha*X+beta*X*(W²-h²/4)は有限(Z2)² cocycle twistと可換曲面を比較でき、alpha=beta*c²なら(0,0,c)は全偏微分零。全幾何学的矢の証明と一般慣性計算は同じClifford節に統合。
+
+次はQ0かつ純正二次関係がcommとなる領域の必要被覆を進める。零top odd線型atlasは偶topの正側curvatureを足しても同じcross/Pfaffian式を持つ見込みで、負側separated一般F・反射・Jordan/両commの反対separatedに還元する。これは未証明の全被覆であり、まず各curved包絡の正常因子判定を個別に証明する。
+
+
+## 全逆行列normalizing包絡のClifford認識（classification-v175）
+
+曲がったClifford全切断・全幾何学的矢の分類に加え、全F∈GL2の逆行列normalizing Ore包絡B(F,h)を全hでAS4/domain/mu++--と認識した。F²非Idでは正常条件をF固有直線商へ移して全G因数分解、FId核はL*(uv-h/2)、reflectionも定数minor16で共通一次因子を強制。従ってこの全行列族のH3はF−IdのClifford族に尽きる。B_hは係数独立/conic平滑の必要十分条件、全矢、一般dim5/慣性mu2まで確定。
+
+B(F,h): positivecomm,u作用F/v逆作用,vu=-detF*uv+detF*h。F²neqIdではG=f3+Luv、FL=detF*L、(1+Sym³F)f3=-detF*L*Fh。Lneq0なら商U/kL上FIdで2f3=0、従ってLが共通因子。L0はbinarycubicfactor。FId核二列と補minor256、reflectionの非因子四列minor16（残る六列は指定四行零）をverify_cubic_order2_22_clifford_matrix.pyで検算。全Fの四PBW overlapも検算。
+
+次は半単純Q0で純正二次関係がcommとなる全領域の必要被覆。odd線型atlasからq≠1負separatedは今回のB(F,h)へ。残りはq−1 eps+のswap cross、負Jordanの明示shear cross、両comm時の反対separated f*g=−Id。これらの正常核/因子を全係数で確認して必要被覆を閉じる。全非零正top・全CY・三固有値/成分/相対降下は未完。

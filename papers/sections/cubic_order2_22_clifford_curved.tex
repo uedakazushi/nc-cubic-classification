@@ -145,3 +145,97 @@ $X=0,Y=1$ では $\partial_ZF_4=4$、従って唯一の特異点は $o$。
 \]
 新規性・独立査読は未確認であり、全正top非零対象の被覆・全矢・族降下はこの節では主張しない。
 \end{example}
+
+\begin{proposition}[依存係数境界は全て非H3]
+\label{prop:h3-order2-22-clifford-dependent}
+この包絡族でH3となる切断は必ず $\ell_2,\ell_3$ が独立である。
+従って定理\ref{thm:h3-order2-22-clifford-conic}は、$B_h$ 全体の全H3切断を尽くす。
+\end{proposition}
+\begin{proof}
+両係数が零なら $G$ は二元三次式なので分解し、商はdomainでない。
+それ以外の従属係数は、正側を取り直して
+$G=f_3+x(\alpha u^2+\beta v^2)$ と書ける。
+必要なら $u,v$ を交換して $\beta\ne0$ とする。
+H3であると仮定し、中心元 $u^2$ を逆転する。
+次数零chartで
+\[
+ X=xu^{-1},\quad Y=yu^{-1},\quad
+ W=vu^{-1}+\tfrac12h(X,Y)
+\]
+と置くと、正確に
+\[
+ XY=YX,\quad WX=-XW,\quad WY=-YW.
+\]
+\[
+ F=f_3(X,Y)-\alpha X+\beta X\bigl(W^2-h(X,Y)^2/4\bigr)=0
+\]
+となる。逆表示は $x=Xu,y=Yu,v=(W-h(X,Y)/2)u$、
+$u$ の共役は $X,Y,W$ 全てに負号であり、元の関係を復元する。
+特に $G=-Fu^3$ で、付加的な関係のないOre chartである。
+
+このchartは、同じ $F$ を持つ可換affine曲面の有限群cocycle twistである。
+実際 $\Gamma=(\mathbb Z/2)^2$、$\deg X=\deg Y=e,\deg W=f$ とし、
+$\alpha((i,j),(i',j'))=(-1)^{ji'}$ を用いる。
+$F$ は全体が次数 $e$ であり、順序を $X,Y,W$ とした各項のtwist係数は1。
+定理\ref{thm:noncy-sign-cubic}の有限同変化・誘導忘却の議論はaffine加群圏にも適用でき、
+両環の大域次元は等しい。
+
+$\beta c^2=\alpha$ を満たす $c$ を取ると、可換曲面の点 $(0,0,c)$ では
+$F=\partial_XF=\partial_YF=\partial_WF=0$。
+従って可換局所環は非正則で、その剰余体の射影次元は無限である。
+chartも無限大域次元となる。
+しかしH3なら中心開集合への制限もhomological dimension高々2であり、
+強次数付き局所化の次数零環としてのこのchartも高々2でなければならない。矛盾。
+全六二次関係の逆復元、$G=-Fu^3$、特異点の四恒等式は
+\[
+\texttt{verify\_cubic\_order2\_22\_clifford\_boundary.py}
+\]
+で全係数について再生できる。
+\end{proof}
+
+\begin{theorem}[曲がったClifford族の全幾何学的矢]
+\label{thm:h3-order2-22-clifford-arrows}
+全H3係数開集合を
+$\mathcal U\subset\mathbb A^3_h\times\mathbb P^7_G$ と書く。
+この族のpointed exact幾何学的群oidは
+\[
+ [\mathcal U/\overline{\mathcal H}](k),\qquad
+ \mathcal H=\mathrm{GL}(U)\times((\mathbb G_m)^2\rtimes S_2),\quad
+ \overline{\mathcal H}=\mathcal H/\mathbb G_{m,\mathrm{degree}}
+\]
+である。矢は $M\in\mathrm{GL}(U),\gamma,\delta\ne0$ による
+$U\mapsto MU'$ と、
+$(u,v)\mapsto(\gamma u',\delta v')$ 又は
+$(\gamma v',\delta u')$ のうち、
+\[
+ h(MU')=\gamma\delta h'(U'),\qquad G(MU',\gamma u',\delta v')\in k^*G'
+\]
+を満たすもの全て（交換時は二つの負変数も交換）で尽くされる。
+表示stackの一般次元は5、一般慣性は $\mu_2$。
+$h=0$ は既知の一般次元2・一般慣性 $(\mu_2)^2$ の符号部分族である。
+全intrinsic stackの成分性や非被約底上の全降下は主張しない。
+\end{theorem}
+\begin{proof}
+内在的反標準環と二次包絡の回復
+（命題\ref{prop:intrinsic-ring-isomorphisms}）により、全矢は包絡の次数付き同型から来る。
+中山は実際の $++--$ なので、その二つの固有空間を保つ。
+二次関係の $V\otimes V$ への射影は $k(uv+vu)$ であるから、
+負側の線型写像はこの非退化対称tensorの直線を保つ。
+二変数ではその群は対角変換と交換からなり、上の式が全関係保存の必要十分条件となる。
+三次関係についてはその直線を保つことが必要十分であり、次数スカラーだけを除く。
+これで特殊係数も削除せず全矢が確定する。
+
+係数独立は開条件、conic総空間のrelative singular incidenceは射影的なので、
+必要十分H3条件も開条件である。
+実例により $\mathcal U$ は非空で、既約な10次元係数空間の開部分。
+有効作用群の次元は $4+2-1=5$ だから一般次元は5。
+一般慣性を直接確認する。$\ell_2=x,\ell_3=y$、$abcd\ne0$ と規格化する。
+負側交換を含まない安定化では $M=\operatorname{diag}(m,n)$。
+$f_3(MU)=c_0f_3(U)$ の四係数から $m=n,c_0=m^3$ となり、
+切断の残る二係数から $\gamma^2=\delta^2=m^2$。
+$h\ne0$ なら $h(MU)=\gamma\delta h(U)$ は $\gamma\delta=m^2$ を強制する。
+従って次数スカラーを除けば恒等と $\mu_B$ の二つだけである。
+交換を含む安定化は、切断係数だけから既知の条件 $db^3=ac^3$ を必要とするので一般には存在しない。
+これらの一般条件と非空H3開集合は既約係数空間で交わるから、一般慣性は正確に $\mu_2$。
+$h=0$ の主張は定理\ref{thm:fixed-sign-classification}に一致する。
+\end{proof}

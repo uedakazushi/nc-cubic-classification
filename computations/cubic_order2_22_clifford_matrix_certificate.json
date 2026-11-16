@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "scope": "all F in GL2, commuting U, u acts F, v acts inverse F, vu=-detF*uv+detF*h2(U)",
+  "universal_PBW_overlaps": 4,
+  "F_identity": {
+    "normal_kernel": [
+      "x*(uv-h/2)",
+      "y*(uv-h/2)"
+    ],
+    "complement_minor": "256"
+  },
+  "F_reflection": {
+    "four_forbidden_columns": [
+      "x3",
+      "xu2",
+      "xuv",
+      "xv2"
+    ],
+    "minor": 16,
+    "remaining_candidates": "all divisible by negative F-eigenline y"
+  },
+  "F_noninvolution": "normal cubic=f3+Luv; F(L)=detF*L and (1+Sym3F)f3=-detF*L*F(h); quotient by L makes F identity, so f3 divisible by L. L=0 gives a binary cubic, also reducible.",
+  "conclusion": "all H3 cuts in this entire matrix/curvature family occur at F=-I and are exactly the recognized curved Clifford cuts",
+  "not_claimed": [
+    "all rank4 graphs",
+    "necessary envelope coverage",
+    "intrinsic relative descent"
+  ]
+}
