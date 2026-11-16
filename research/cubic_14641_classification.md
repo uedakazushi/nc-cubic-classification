@@ -1277,3 +1277,9 @@ canonical負topQ0の(2,2)/mixed rank4全H3を、全Jordan型込みで曲がっ�
 対称secant負topのrank2混合block境界を全二パラメータで排除。最高テンソルの像の四列はminor4c²で全c非零の関係基底となり、正常10minorが−32c5というLaurent単元。平方正topは既に全排除なので、両top非零のmixed4(2,2)に残る未知は非退化正top/対称secant負top/正Pfaffian/混合block可逆の必要quadricだけ。全CY/三固有値以上/成分/相対降下は未完。
 
 証明cubic_order2_22_secant_singular_cross.tex。rho1のatlas A=(-c,-c,0,b,c,c)を保持し、cを消す誤った正規化を用いない。交代8block Oの列0,1,2,4をCとし行0,1,2,4のminor4c²とC*T=Oを厳密検証。元六二次関係から四次商を消去すると一般次元35、正常32列に一つの10minor−32c5、実使用汎関数はc冪だけを分母とする。よって全値でrank10、AS4正三次次元10から正常核零。既存v149のrank2「奇関係」境界とは異なるため、新verifierをsecant_singular_crossと命名して区別。次はrho(rho²−1)!=0でalpha=(rho−1)/(rho+1)、A=(a,-t,alpha*s,s,t,q)、a*q+t²+alpha*s²=1−rho²。q!=0を正torusでq1とした三param chartと、q0の境界を保持して判定する。
+
+## 非退化secant二重零境界の全排除（classification-v192）
+
+非退化正top/対称secant負top/正Pfaffianのa=q=0二重零境界を全値排除。逆作用F/F^-1と負対称二次中心から補助次数±1の正常成分を消し、±3成分はtraceF1のx³,y³だけ。全pencilは(x+theta*y)(x²−theta F²(A2)+theta²y²)=x³+theta³y³で分解。x/y交換でq0,a非零をq非零へ移せるため、両top非零mixed4(2,2)の未知はq1の三param主chart一つだけ。全CY/三固有値以上/成分/相対降下は未完。
+
+証明cubic_order2_22_secant_doublezero.tex。負部分Tのu²,v²,{u,v}が中心、B2で独立。補助次数±1のxQ2/yQ2が正常ならQ2は−Fをintertwineし、対称二次中心のdomain cancellationでSym²FId⇒F±Id⇒rho0という矛盾。±3はF³−Idが必要でSL2/非scalarよりtraceF1に限る。共鳴正常pencilは全て明示normで分解。F(A2)=B2と逆作用は円錐曲線の多項式恒等式として検証、元三次関係で数体fiberのnormも検算。残余主chartのQQ(rho,s,t)による全四次商の一括rrefは4分超で未完のため中断、結果なし。次は構造的制約又は低パラメータsliceから残余を縮める。s0のQQ(rho,t)正常計算を開始中、未公表・未完。大きなrrefを無制限に反復しない。

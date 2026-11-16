@@ -1,0 +1,76 @@
+\subsection{非退化正topの二重零境界：逆作用と三次norm}
+\begin{proposition}
+非退化正top・対称secant負top・正Pfaffianの必要atlasで
+\[
+ A=(a,-t,\alpha s,s,t,q),\quad
+ aq+t^2+\alpha s^2=1-\rho^2,\quad
+ \alpha=\frac{\rho-1}{\rho+1},\quad\rho(\rho^2-1)\ne0
+\]
+とする。$a=q=0$ の全境界はH3にならない。
+残る点は全て $q=1$ の三パラメータchartへ座標変換できる。
+\end{proposition}
+\begin{proof}
+$V=(u,v)^t$ と書く。二重零境界の関係を直接解くと
+\[
+ Vx=xF(V),\quad Vy=yF^{-1}(V),\quad xy=A_2(V),\quad yx=B_2(V),
+\]
+\[
+ F=\begin{pmatrix}t/(\rho+1)&-s/(\rho+1)\\-s/(\rho+1)&-t/(\rho-1)\end{pmatrix},
+\quad A_2=-\frac{\rho+1}{2\rho}u^2-\frac{\rho-1}{2\rho}v^2,
+\quad B_2=\frac{\rho-1}{2\rho}u^2+\frac{\rho+1}{2\rho}v^2.
+\]
+円錐曲線の式から $\det F=1$、$F(A_2)=B_2$ である。
+ここで $F$ は負二平面への線型代入としても用いる。
+逆作用により $xy,yx$ は $u,v$ と可換する。
+この二つの二次式は $u^2,v^2$ を張るので、$u^2,v^2$ は負部分代数内で中心的である。
+さらに $uv+vu$ もそこで中心的である。
+これら三対称二次式は $B_2$ で一次独立である。元の偶関係の正射影がrank2なので純負二次関係がないためである。
+
+補助次数を $\deg_{\rm aux}x=1,\deg_{\rm aux}y=-1,\deg_{\rm aux}u=\deg_{\rm aux}v=0$ とする。
+全関係はこの次数を保つ。$\mu(G)=G$ である三次の補助次数は $3,1,-1,-3$ に限られ、
+関係を用いればその各成分は $kx^3,xT_2,yT_2,ky^3$ に属する。
+ここで $T$ は負部分代数である。
+正常条件も補助次数で分解される。
+
+$G=xQ_2(V)\ne0$ が正常なら、負一次式との反可換性から
+\[
+ Q_2(V)\,V=-F(V)Q_2(V)
+\]
+を得る。従って中心的な各対称二次式 $C$ について
+$C Q_2=F(C)Q_2$ となる。domain性と上の独立性から $\operatorname{Sym}^2F=I$、
+従って $F=\pm I$ でなければならない。
+しかし $F$ の二対角成分が同じ $\epsilon=\pm1$ なら
+$t=\epsilon(\rho+1)=-\epsilon(\rho-1)$、従って $\rho=0$ となり仮定に反する。
+$yT_2$ も同様に零である。
+
+残る $x^3,y^3$ の正常性には $F^3=-I$ が必要である。
+標数0でこの条件は半単純性を強制する。
+$F\in\operatorname{SL}_2$ と $F\ne-I$ より、これは $\operatorname{tr}F=1$ と同値である。
+共鳴以外では正常核零、共鳴では正確に $kx^3\oplus ky^3$ となる。
+後者の可換条件は $F^3(A_2)=A_2$ と $F(A_2)=B_2$ から従う。
+さらに全 $\theta$ で
+\[
+ (x+\theta y)\bigl(x^2-\theta F^2(A_2)+\theta^2y^2\bigr)
+   =x^3+\theta^3y^3.
+\]
+実際、二つの交差項は $yx^2=xF^2(A_2)$ と
+$xy^2=yF^{-1}(A_2)=yF^2(A_2)$ により消える。
+体は代数閉なので全正常pencilが一次因子を持ち、H3の商domain性を満たさない。
+
+最後に $x,y$ の交換と $u,v$ の $i$ 倍を同時に施すと
+\[
+ (\rho,a,q,s,t)\longmapsto(-\rho,-q,-a,\alpha s,t)
+\]
+となる。従って $q=0,a\ne0$ は $q\ne0$ へ移る。
+正二平面の対角torusで $q\ne0$ を $q=1$ とでき、唯一の残余は
+\[
+ A=(1-\rho^2-t^2-\alpha s^2,-t,\alpha s,s,t,1)
+\]
+の三パラメータchartである。
+
+検証器
+\texttt{verify\_cubic\_order2\_22\_secant\_doublezero.py}
+は円錐曲線上の行列恒等式、共鳴Cayley--Hamilton式、座標交換を厳密検証し、
+三次normの一つの数体fiberも元の全三次関係から再生する。
+全値証明は上の次数分解とdomain cancellationであり、有限標本からの外挿ではない。
+\end{proof}
