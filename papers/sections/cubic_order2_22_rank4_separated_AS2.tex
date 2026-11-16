@@ -1,0 +1,100 @@
+\subsection{二つのAS2平面のseparated graphの全H3部分}
+\label{subsec:h3-order2-22-rank4-separated-AS2}
+\begin{theorem}\label{thm:h3-order2-22-rank4-separated-AS2}
+$P=Q=0$の四次元graph候補で、正負の純二次関係が定める二つのAS2平面を考える。
+負平面の量子またはJordan標準基底$u,v$が、それぞれ正AS2平面$T$を
+自己同型$f,g$で正規化すると仮定する。
+中山半単純部分が$(+,+,-,-)$なら、このchartの全H3対象は、
+全Jordan型を含めて定理\ref{thm:fixed-sign-classification}の固定符号包絡の切断に一致する。
+全幾何学的pointed exact矢と慣性も、その既知分類に帰着する。
+負生成元を混合する一般graphや純mixed二本型を、このchartが覆うとは主張しない。
+\end{theorem}
+\begin{proof}
+正平面が可換なら、系\ref{cor:h3-order2-22-rank4-separated-all-Jordan}で全て処理済みである。
+以下、非可換正AS2平面の二標準形を調べる。
+
+まず$T=k\langle x,y\rangle/(xy-pyx)$、$p\ne1$とする。
+負平面が量子型$uv=qvu$なら、$fg=gf$であり、
+\[
+ \mu_B|_T=(fg)^{-1}\mu_T,\quad
+ \mu_B(u)=q\operatorname{hdet}(f)u,\quad
+ \mu_B(v)=q^{-1}\operatorname{hdet}(g)v
+\]
+である。
+$p\ne-1$では$T$のgraded自己同型は対角である。
+従ってこの$B$はskew多項式環であり、既存の全skew H3分類を適用できる。
+その唯一の非CY型の正固有平面は可換なので、$p\ne1$の現在の場合にはH3はない。
+これは正負平面が中山半単純部分の固有空間であり、graded同型で保存されることによる。
+
+$p=-1$では自己同型は対角または反対角である。
+$fg$の半単純部分は$\mu_T=-I$なので、$f,g$の片方だけが反対角の場合はない。
+両方対角なら同じskew分類で排除される。
+両方反対角なら$fg=-I$、$f^2=sI,g^2=tI$となり、実際の中山も半単純である。
+正三次の正常候補を
+\[
+ G=H_3+a u^2+buv+c v^2
+\]
+と書く。$H_3\in Z(T)_3=0$である。
+$a,c\in T_1$は、あるスカラー倍作用と恒等作用を絡め合わせねばならないが、
+反交換平面で両生成元に対してそうなる一次式は零である。
+例えば$z=\alpha x+\beta y$に対する$z\rho t=tz$の条件は
+\[
+ (\rho-1)\alpha=(\rho+1)\alpha
+ =(\rho-1)\beta=(\rho+1)\beta=0
+\]
+となる。
+また$b$は$x,y$の両方と反交換しなければならず、これも零である。
+従ってこの反対角分枝では正常核そのものが零である。
+
+同じ量子正平面で負平面がJordan型なら、結合則から$g=f$となる。
+この場合も$\mu_B|_T=f^{-2}\mu_T$、$\mu_B(u)=\operatorname{hdet}(f)u$である。
+$f^2$は対角またはスカラーなので、正固有値がともに1なら実際に$f^2=\mu_T$となる。
+$G$の$V$次数2部分で$v$次数が最大の一次係数$z$は
+\[
+ z\mu_T(t)=tz\qquad(t=x,y)
+\]
+を満たす必要がある。
+$p\ne1$の量子平面ではそのような一次式は零である。
+順に全係数が消えて$G\in Z(T)_3$となる。
+その非零元が存在する場合も、AS2平面の斉次元の一次因子分解により$G$は積となり、整域商を与えない。
+
+次にJordan正平面
+\[
+ T=k\langle x,y\rangle/(yx-xy-\kappa x^2),\qquad\kappa\ne0
+\]
+を考える。全graded自己同型は$x\mapsto a x,y\mapsto a y+b x$で、hdetは$a^2$である。
+負平面もJordan型なら$g=f$である。
+負固有値から$a^2=-1$となるが、正平面上の中山の半単純部分は$a^{-2}I=-I$となり、仮定に反する。
+
+負平面が量子型なら、$f,g$は可換な上三角自己同型で、
+$\mu_B|_T$は$x$を固定し$y\mapsto y+\eta x$とする単冪作用になる。
+$\mu_B(u)=-u,\mu_B(v)=-v$は厳密に成り立つ。
+$\eta\ne0$なら$\mu_B(G)=G$を使う。
+Jordan平面のこのshearで固定される次数$n$の元は$kx^n$だけである。
+実際、PBW表示の最高$y$次数を見ると、差の最高係数はその次数と$\eta x$の積となり、標数0で消えない。
+従って$H_3\in kx^3$、$a,b,c\in kx$で、$G$は$x$で割れる。
+
+$\eta=0$なら$G$は$T$と可換し、$H_3\in Z(T)_3=0$である。
+残る一次係数$z=\alpha x+\beta y$は、$x$をあるスカラー$\rho$倍する自己同型を絡め合わせる。
+$x$との比較だけで
+\[
+ (\rho-1)\beta=0,\qquad
+ (\rho-1)\alpha+\rho\kappa\beta=0
+\]
+となる。$\beta\ne0$は$\rho=1$と$\kappa\beta=0$を同時に強制するので不可能である。
+従って全一次係数は$x$の倍で、再び$G$は$x$で割れる。
+これで非可換正平面の全場合を排除した。
+
+残る可換正平面の固定符号包絡には既知の全H3判定・全矢を適用する。
+ここでは二AS2平面やseparated基底を新たな内在的標識にしていない。
+単にそのような基底を持つ対象の全H3部分を認識している。
+\end{proof}
+
+検証器は
+\[
+ \texttt{verify\_cubic\_order2\_22\_rank4\_separated\_AS2.py}
+\]
+である。反対角型の一次絡み合わせ、量子中山との一次絡み合わせ、
+全$\kappa$に対するJordan三次shear核を証明する定数minor 6を検算する。
+AS2自己同型の二標準形、全skew分類とOre中山公式は、本文中で明示した適用範囲で用いる。
+相対族の降下や、separated chartの全rank4内での成分性は未主張である。

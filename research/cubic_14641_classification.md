@@ -1045,3 +1045,10 @@ F²IはI/−I/反射の三択、正常核次元2/8/5。F²neqIではdet(F−DI)=
 as4 a3ddc8c55e65f336f707ebba5810b26d0698712eのREADME/plan/COVERAGE/CLAIMSを入口監査し、1049主張からmixed(2,2)/twisted tensor/double Oreを検索した。今回分枝を覆う主張は確認せず、新しい数学的輸入はゼロ。入口sha256と範囲はas4_imports.json。既存輸入commitは更新しない。
 
  さらに可換正平面separated chartの全Jordan型も閉じた。量子負平面でμU=(fg)^−1、fg単冪、負μは厳密に−1。fg≠IならG30零、u²/v²成分が非零ならf=g、そうでなければG=linear*uv。f=gでは±単冪の一次固有直線が全係数の共通因子となる。従って非半単純を含め、このchartのH3は既知符号包絡のみ。
+
+
+## 二AS2平面separated chartの全認識（classification-v162）
+
+二AS2平面のseparated graphを全Jordan型込みで幾何学的H3認識した。可換正平面はv161、非可換正量子平面は対角作用なら全skew分類で空、q−1反対角作用は正常核零、Jordan負平面でもmuTとの一次絡み合わせ零から純二元三次の因数分解で排除。Jordan正平面では中山単冪shearの固定核kx^n又は一次normalizer条件から全Gがxで割れ、Jordan/Jordanは固有値自体が矛盾。従ってこのchartの全H3は既知非CY符号包絡のみ。一般negative-generator mixing graph、純mixed二本型、非零topや全相対降下は未完。
+
+次の有望な還元（未検証）：P=Q=0ならK=a⊗b、a/b非退化二元AS2関係。cyclic mixed cross Bは−(a^t⊗b)flipなので可逆。rankO4からA,D可逆、従ってpairedpure型はこのlocusで消える。PfA=eps*det(a)det(b)。A#=PfA A^-1は六係数に線型なので、h*tau(A)+B^t A#B=0とPfA=hだけで必要topを有限表示できそうである。まず量子/量子・量子/Jordan・Jordan/Jordanの四標準形で六線型式を展開する。AS十分性を未検証のまま主張しない。

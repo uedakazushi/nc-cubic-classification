@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "scope": "separated graph of two AS2 planes, all Nakayama Jordan types with semisimple spectrum (+,+,-,-)",
+  "exact_checks": [
+    "q=-1 scalar-intertwiner degree1 kernel zero",
+    "quantum Nakayama-intertwiner degree1 kernel zero for p!=1",
+    "Jordan degree3 shear invariant kernel=k*x^3 via constant minor6",
+    "Jordan linear normalizer coefficients",
+    "Jordan/Jordan semisimple sign contradiction"
+  ],
+  "conclusion": "all H3 points in this separated AS2 chart are the known fixed non-CY sign-envelope cuts",
+  "proof": "papers/sections/cubic_order2_22_rank4_separated_AS2.tex",
+  "not_claimed": [
+    "all zero-top graph coverage",
+    "negative generator mixing",
+    "paired pure mixed branch",
+    "global or relative classification"
+  ]
+}
