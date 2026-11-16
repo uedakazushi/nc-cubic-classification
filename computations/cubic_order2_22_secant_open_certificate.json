@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "scope": "rational necessary invertible-secant presentation, semisimple (2,2), odd rank2",
+  "graph": [
+    [
+      "1",
+      "1"
+    ],
+    [
+      "r+1",
+      "r"
+    ]
+  ],
+  "surface_equation": "r*C^2+(2*r+1)*(2*r*l^2+1)=0",
+  "open_condition": "r*(r+1)*(2*r*l^2+r+1)!=0",
+  "exact_checks": [
+    "four universal cyclic Schur equations",
+    "positive determinant identity",
+    "rational point and conic chart",
+    "two singular nodes with nondegenerate quadratic part"
+  ],
+  "bad_nodes": [
+    {
+      "l": 1,
+      "even_B4": 20,
+      "odd_B4": 16,
+      "total_B4": 36
+    },
+    {
+      "l": -1,
+      "even_B4": 20,
+      "odd_B4": 16,
+      "total_B4": 36
+    }
+  ],
+  "conclusion": "both nodes lie outside AS4: dim B4=36 instead of35",
+  "not_claimed": [
+    "AS4 existence away from nodes",
+    "normal cubic exclusion everywhere",
+    "H3 admissibility",
+    "intrinsic moduli components or descent"
+  ]
+}

@@ -976,4 +976,15 @@ one-offdiagonal-zero g[[1,0],[1,-1]]ではpureyx q非零nondeg、AS2 Tがfactor 
 
 verify_cubic_order2_22_secant_rank3.py/certificateはcyclic二式、x倍新oddquadの自由環恒等式、AS2 Mobius商/非退化det、norm因子恒等式をexact PASS。分数環と曲線成長は本文構造証明。growth lemmaの一般曲線拡張に伴いverify_cubic_positive3_cone_exclusion.pyも今回再実行PASS。
 
-次はallunit secantの未公表必要正規形を確定：尺度でg=[[s,t],[t,s]],t²−s²1,s*tunit、purepositiveB1/D=-A、Schur conic s²C²+(2s²+1)(2A²+1)0、Pdet=−(2A²+s²+1)/s²unit。これを全係数検証し、二変数必要曲面上のW1を求める。s²=-1/2ではC0でA自由の共鳴曲線となるため別に保持。全AS4存在は未主張。
+可逆secantの必要正規形は次節v151で有理graphへ統合した。以前の対称graph(s,t)はrho=s²,ell=−A_old/s,C_new=C_oldによる四重被覆であり、係数体を増やすため計算の正本には使わない。
+
+
+## 残る可逆secantの有理二次元必要曲面（classification-v151）
+
+**全体的なスペクトル制約（classification-v151）**：全(1,3)は幾何学的被覆・必要十分H3判定・全矢/慣性まで確定、全(3,1)は全Jordan型込みで空。半単純(2,2)/mixed rank2は全退化境界を排除しK可逆secantだけ。この全領域を有理graph g=[[1,1],[rho+1,rho]]へ正規化し、rho*C²+(2rho+1)(2rho*ell²+1)=0、rho(rho+1)(2rho*ell²+rho+1)unitの二次元必要曲面で被覆。P(A,B,C,D)はA=-rho*ell,B1,Dell。曲面の特異点はrho−1/2,C0,ell±1の通常二重点二つだけで、両点はB4dim36によりAS4外。全曲面の正常Gは未分類、次はrho−1/2特殊曲線の全正常核を証明書化し、非共鳴conic chartへ進む。mixed rank4三型、非半単純、三固有値以上、全CY被覆、全成分/圏族降下は未完。
+
+原稿prop:h3-order2-22-secant-open-normalform,prop:h3-order2-22-secant-open-nodes。torusでa=b1、rho=ad,c=rho+1,d=rho。K=[[0,-rho,0,0],[0,0,0,rho+1],[-1,0,0,0],[0,0,1,0]]可逆、positiveBunitを1。Schur二式(1−C)(A+rhoD)=0,(rho+1)(1+C)(A+rhoD)0からA=-rhoD、Dell。残余H=rho*C²+(2rho+1)(2rho*ell²+1)0、rho*detP+(2rho*ell²+rho+1)=H恒等式。base ring UFD/generic conic rank3より必要曲面integral2dim。Jacobianはrho−1/2,C0,ell±1だけ、quadratic matrix det2。両表示をQQ上exact B4計算でeven20/odd16/total36としAS4排除。
+
+非共鳴conicにはell0=1/(2rho),C0=sqrt(-2)*(2rho+1)/(2rho)のrationalpoint。C=C0+k(ell−ell0)でh=−(2rho+1)(sqrt(-2)k+2)/(rho(k²+2(2rho+1)))、ell=ell0+h,C=C0+kh。finitek chartの補点(ell0,-C0)はinversechart、rho−1/2のC0特殊fibreは別に扱う。必要曲面の族/節はintrinsic H3成分やAS4十分性ではない。verify_cubic_order2_22_secant_open.py/certificateが全Schur/有理点chart/二特異点/両B4dim36をexact PASS。
+
+再開用の次計算：rho−1/2,C0はQQ係数、P(A=ell/2,B1,C0,Dell)と上K。private secant_resonant_rational.py は19polynomial quartic functional/2736 annihilation identitiesをPASS、12個の10minorのgcd ell^10*(2ell²−3)^5/32、すなわち正常核の残余値はell0とell²3/2の三つのみ。private secant_rational_exception.py/zero.py はこれらでevenB3dim10/B4even19odd16、full designatednormalizer kernel0をQQ(sqrt6)上exact確認（sqrt6/2のGalois反対根も含む）。次にこれをpublic input/verifier/TeXへ統合する。対称graphのANP4一変数実験は中断し、有理graph計算を正本とする。

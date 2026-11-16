@@ -1,0 +1,92 @@
+\subsection{残る可逆secantの有理係数二次元必要曲面}
+\label{subsec:h3-order2-22-secant-open}
+\begin{proposition}\label{prop:h3-order2-22-secant-open-normalform}
+半単純$(2,2)$・奇関係数2の全H3候補は、
+\[
+ \rho C^2+(2\rho+1)(2\rho\ell^2+1)=0,\qquad
+ \rho(\rho+1)(2\rho\ell^2+\rho+1)\ne0
+\]
+上の次の六関係で被覆される。
+\begin{gather*}
+ xu+uy+(\rho+1)vx=0,\qquad yv+uy+\rho vx=0,\\
+ -\rho\ell(xy-yx)+y^2-\rho uv=0,\\
+ -\rho\ell x^2+Cxy-yx+\ell y^2+(\rho+1)v^2=0,\\
+ \rho\ell x^2-xy-Cyx-\ell y^2-u^2=0,\\
+ x^2+\ell(xy-yx)+vu=0.
+\end{gather*}
+ここで$x,y$は正、$u,v$は負生成元である。
+この必要表示の全係数でAS4存在やH3性を主張しない。
+\end{proposition}
+\begin{proof}
+前節から$abcd\ne0$である。
+尺度作用で$a=b=1$とすると、$\rho=ad$により
+\[
+ g=\begin{pmatrix}1&1\\\rho+1&\rho\end{pmatrix},\quad
+ K=\begin{pmatrix}0&-\rho&0&0\\0&0&0&\rho+1\\-1&0&0&0\\0&0&1&0\end{pmatrix}.
+\]
+$K$が可逆なので、偶rank4から純正block $P(A,B,C,D)$も可逆であり、$B\ne0$である。
+正負平面の相対homothetyとtop尺度で$B=1$とする。
+Schur式$Q=K^tP^{-1}K$のcyclic条件のうち二つは、分母を払って
+\[
+ (1-C)(A+\rho D)=0,\qquad
+ (\rho+1)(1+C)(A+\rho D)=0
+\]
+である。従って$A=-\rho D$となる。
+$D=\ell$と置くと残る非自明条件が表示した曲面式であり、
+\[
+ \det P=4\rho\ell^2+1+C^2
+       =-\frac{2\rho\ell^2+\rho+1}{\rho}
+\]
+となる。
+奇graph二式と偶blockの先頭四行$[P\ K]$を書けば六関係を得る。
+平方根を係数として導入せず、有理係数の表示で必要領域を扱える。
+これは幾何学的対象の必要被覆であり、任意基底上の相対正規化や降下を主張しない。
+\end{proof}
+
+\begin{proposition}\label{prop:h3-order2-22-secant-open-nodes}
+上の必要パラメータ曲面は既約二次元で、その特異点は
+\[
+ (\rho,\ell,C)=(-1/2,1,0),\quad(-1/2,-1,0)
+\]
+の通常二重点二つだけである。
+どちらの表示も$\dim B_4=36$となり、AS4にはならない。
+従って全H3候補はこれら二点も除いた部分に限られる。
+\end{proposition}
+\begin{proof}
+基底環$k[\rho,\rho^{-1},(\rho+1)^{-1}]$はUFDである。
+一般の$\rho$上で曲面式の斉次化は階数3の二次式なので、
+$k(\rho)$上で絶対既約である。
+$C^2$係数$\rho$が単元なのでGaussの補題により全体も既約となる。
+
+曲面式を$H$と書く。
+$H_C=2\rho C$から特異点では$C=0$である。
+$H=H_\ell=0$と$\rho\ne0$から$2\rho+1=0$であり、
+さらに$H_\rho=0$から$\ell^2=1$を得る。
+二点は開条件を満たし、局所変数$(\rho+1/2,\ell\mp1,C)$で
+二次項の係数行列の行列式は2である。従って通常二重点である。
+
+各点の六関係から直接四次商を計算すると、正負成分の次元はそれぞれ20と16で、
+合計36となる。この計算は有理数上の厳密行基本変形であり、
+14641の次数4の所定次元35に反するので、両点を排除する。
+必要曲面の幾何と、実際のH3 moduliの成分性を同一視していない。
+\end{proof}
+
+計算上、$2\rho+1\ne0$の一般conicには有理点
+\[
+ \ell_0=\frac1{2\rho},\qquad
+ C_0=\frac{\sqrt{-2}(2\rho+1)}{2\rho}
+\]
+がある。
+$C=C_0+k(\ell-\ell_0)$により
+\[
+ h=-\frac{(2\rho+1)(\sqrt{-2}k+2)}{\rho(k^2+2(2\rho+1))},\qquad
+ (\ell,C)=(\ell_0+h,C_0+kh)
+\]
+という有理chartを得る。
+逆数chartと、$\rho=-1/2$で幾何学的に$C=0$となる特殊fibreは別に保持する。
+特に特殊fibreはschemeとして二重直線であり、一般chartだけで全候補を覆ったとはしない。
+
+\texttt{verify\_cubic\_order2\_22\_secant\_open.py}は
+全係数のSchur式・行列式、有理点とchart、特異点の二次項、
+および両点の四次商次元36を厳密検算する。
+全曲面での正常三次incidenceとAS4十分性は、まだ別の未解決問題である。

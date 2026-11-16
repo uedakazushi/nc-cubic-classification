@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "version": "classification-v150",
+  "version": "classification-v151",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -66,7 +66,8 @@
     "papers/sections/cubic_order2_22_rank2.tex",
     "papers/sections/cubic_order2_22_tangent_normalform.tex",
     "papers/sections/cubic_order2_22_rank4_top.tex",
-    "papers/sections/cubic_order2_22_secant_strata.tex"
+    "papers/sections/cubic_order2_22_secant_strata.tex",
+    "papers/sections/cubic_order2_22_secant_open.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -1495,5 +1496,12 @@
     ],
     "proof": "papers/sections/cubic_order2_22_secant_strata.tex, lem:h3-AS2-partial-root-growth and thm:h3-order2-22-secant-rank3-exclusion",
     "scope": "**全体的なスペクトル制約（classification-v150）**：全(1,3)は幾何学的被覆・必要十分H3判定・全矢/慣性まで確定、全(3,1)は全Jordan型込みで空。半単純(2,2)/mixed rank2は全pencilからpure mixed/二ruling/全tangent/secant K rank2を排除し、さらにsecant K rank3二表示もAS4整域自体から排除。one-diagonal-zeroはdomain二次消去と非退化Pのcyclic Schur二式が矛盾。one-offdiagonal-zeroはpositiveAS2 T、vx=yv,v²/uv∈T2から分数環二次拡大へ落ち、次数0は非自明P1対合のノルム全射により曲線体となるのでB GK<=2、14641に矛盾。従って残る半単純(2,2)/mixed rank2はK可逆secantのall abcdunit開部分のみ。mixed rank4三型、非半単純(2,2)、三固有値以上、全CY被覆、全成分/圏族降下は未完。"
+  },
+  "order2_22_secant_open_v151": {
+    "status": "PASS universal Schur/chart identities and exact exclusion of both nodal presentations",
+    "validator": "computations/verify_cubic_order2_22_secant_open.py",
+    "certificate": "computations/cubic_order2_22_secant_open_certificate.json",
+    "proof": "papers/sections/cubic_order2_22_secant_open.tex",
+    "scope": "**全体的なスペクトル制約（classification-v151）**：全(1,3)は幾何学的被覆・必要十分H3判定・全矢/慣性まで確定、全(3,1)は全Jordan型込みで空。半単純(2,2)/mixed rank2は全退化境界を排除しK可逆secantだけ。この全領域を有理graph g=[[1,1],[rho+1,rho]]へ正規化し、rho*C²+(2rho+1)(2rho*ell²+1)=0、rho(rho+1)(2rho*ell²+rho+1)unitの二次元必要曲面で被覆。P(A,B,C,D)はA=-rho*ell,B1,Dell。曲面の特異点はrho−1/2,C0,ell±1の通常二重点二つだけで、両点はB4dim36によりAS4外。全曲面の正常Gは未分類、次はrho−1/2特殊曲線の全正常核を証明書化し、非共鳴conic chartへ進む。mixed rank4三型、非半単純、三固有値以上、全CY被覆、全成分/圏族降下は未完。"
   }
 }
