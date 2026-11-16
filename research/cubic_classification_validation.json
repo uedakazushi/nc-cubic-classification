@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "version": "classification-v92",
+  "version": "classification-v133",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -1329,5 +1329,19 @@
     "certificate": "computations/cubic_positive3_commutative_plane_certificate.json",
     "proof": "papers/sections/cubic_positive3_global_cross.tex, thm:h3-positive3-commutative-plane-exclusion",
     "scope": "(3,1)gamma0かつmu半単純で可換共通平面も全排除。正常ell=uと補元tに対しv²=Au²+But+Ct²、C0は平方factor又は余分な[v,t]二次関係で矛盾、Cunitからv²=t²+Iu²へ正規化。B/uは正規一次商の線型Tor議論でKoszul AS3、muC=(t,v,-epsilon*z)。三次topから全商はv²=t²,zt=epsilon*tz,z²=alpha*(tv+vt)+beta*t²,alphaunitに限る。z尺度でalpha1。両epsilon±、全betaで45x10正常化行列に定数pivot10があり、誘導muB=(t,v,-z)正常三次は零。ゆえ元Gはuでfactorし非H3。残る半単純gamma0全候補はT=q−1,fdiag(i,-i)、[v,ell]0,v²∈span(x²,y²)でell²と独立。両軸平方がmu正常。"
+  },
+  "positive3_quantum_plane_v132": {
+    "status": "PASS universal positive top/Frobenius, antiW2 and both-chart full normalizer rank20 certificates",
+    "validator": "computations/verify_cubic_positive3_quantum_plane.py",
+    "certificate": "computations/cubic_positive3_quantum_plane_certificate.json",
+    "proof": "papers/sections/cubic_positive3_global_cross.tex, thm:h3-positive3-semisimple-gamma-zero-exclusion",
+    "scope": "正三次元半単純gamma0の残るq−1部分も全排除した。ell軸/非軸でv²をgx²+y²又はgx²+(g−1)y²に正規化。positive Sの明示三次topの両flattenrank3でF=E/(z*)がFrob、v125からS AS3がBへ埋まる。z²はS2でW反転するため二次反交換子核がspan(xy,[y,v])に限り、z²=Axy+B[y,v]。B0は全係数でdegree3dim21、Bunitを1へ尺度変更すると両二parameterchart全係数のdegree3/4商20/35、正常三次140x20は定数pivot20でkernel0。AS4存在を任意係数へ主張せず、必要候補被覆と正常核零だけで全H3排除。"
+  },
+  "positive3_Jordan_obstruction_v133": {
+    "status": "PASS universal D kernel and both-sign/all-parameter bad AS3 quotient dimension12; structural recognition proof",
+    "validator": "computations/verify_cubic_positive3_Jordan_obstruction.py",
+    "certificate": "computations/cubic_positive3_Jordan_obstruction_certificate.json",
+    "proof": "papers/sections/cubic_positive3_global_cross.tex, thm:h3-positive3-gamma-zero-exclusion",
+    "scope": "正三次元(3,1)gamma0領域を単冪込みで全排除。残るW Jordan2＋自明vではDy=x,Dv0、top v³x非零からvx=xv+d x²、x正常一次。偶B2D核はspan(x²,xv,vy−yv−dxy)。正常一次商C=B/xはKoszul AS3でmuC=(y,v,-epsilon z)、v²=c[v,y],zy=epsilon yz。三次topのpositive二元cyclic縮約が対称なのでc0、top正部分はAv³+By³だけ、残るz²=t y²。Cは二generator quadconeとv²0の自由積でHC=(1+s)/(1−2s)、degree3dim12とAS3値10が矛盾。全t/両epsilonの定数pivot15でdim12を厳密再生。従って(3,1)H3があるなら必ずgamma非零。"
   }
 }

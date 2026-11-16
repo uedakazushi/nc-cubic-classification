@@ -1,0 +1,65 @@
+{
+  "normalized_presentations": {
+    "common_relations": [
+      "xy=-yx",
+      "zx=i*xz",
+      "zy=-i*yz",
+      "z\u00b2=A*xy+B*[y,v]"
+    ],
+    "axis": [
+      "vx=xv",
+      "v\u00b2=g*x\u00b2+y\u00b2"
+    ],
+    "nonaxis": [
+      "[v,x+y]=0",
+      "v\u00b2=g*x\u00b2+(g-1)*y\u00b2"
+    ]
+  },
+  "positive_AS3_embedding_test": [
+    {
+      "axis": false,
+      "positive_top_flatten_ranks": [
+        3,
+        3
+      ],
+      "anti_common_plane_quadrics_dimension": 2
+    },
+    {
+      "axis": true,
+      "positive_top_flatten_ranks": [
+        3,
+        3
+      ],
+      "anti_common_plane_quadrics_dimension": 2
+    }
+  ],
+  "cases": [
+    {
+      "axis": false,
+      "commutator_coefficient": 0,
+      "degree3_dimension": 21
+    },
+    {
+      "axis": false,
+      "commutator_coefficient": 1,
+      "degree3_dimension": 20,
+      "degree4_dimension": 35,
+      "normalizer_constant_pivot_rank": 20
+    },
+    {
+      "axis": true,
+      "commutator_coefficient": 0,
+      "degree3_dimension": 21
+    },
+    {
+      "axis": true,
+      "commutator_coefficient": 1,
+      "degree3_dimension": 20,
+      "degree4_dimension": 35,
+      "normalizer_constant_pivot_rank": 20
+    }
+  ],
+  "normalization": "B=0 has degree3 dimension21, so cannot be14641; B!=0 scales to1 over algebraically closed k",
+  "conclusion": "All H3 candidates with Nakayama multiplicities(3,1), semisimple mu, and gamma=0 are excluded.",
+  "scope": "Universal constant Gaussian-rational pivots; no sampling or parameter division. Geometric chart normalization, the Frobenius-open AS3 embedding and coverage use manuscript proofs. Positive-W Jordan and gamma!=0 are not excluded."
+}

@@ -1,0 +1,25 @@
+{
+  "hypotheses": "H3 multiplicities(3,1), gamma=0, split positive-W Jordan2+trivial1 case",
+  "quadratic_D_kernel": [
+    "x\u00b2",
+    "xv",
+    "vy-yv-d*xy"
+  ],
+  "cross_relation": "vx=xv+d*x\u00b2; x is normal regular linear",
+  "quotient_by_x": "v\u00b2=c*[v,y], zy=epsilon*yz; AS3 binary cyclic top forces c=0 and z\u00b2=t*y\u00b2",
+  "bad_quotient_checks": [
+    {
+      "epsilon": 1,
+      "degree3_relation_constant_pivots": 15,
+      "degree3_dimension": 12
+    },
+    {
+      "epsilon": -1,
+      "degree3_relation_constant_pivots": 15,
+      "degree3_dimension": 12
+    }
+  ],
+  "free_product_Hilbert": "(1+q)/(1-2q), contradicting AS3 Hilbert(1-q)^-3 in degree3 (12 versus10)",
+  "conclusion": "No positive-W Jordan case at gamma0; combined with the semisimple result, the whole multiplicity(3,1) gamma0 sector is excluded.",
+  "scope": "Universal Jordan invariant matrix, symmetric-contraction constraint and both-sign degree3 quotient ranks checked. Normal-axis recognition and the AS3 quotient argument are structural proofs; gamma!=0 remains open."
+}

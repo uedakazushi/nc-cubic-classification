@@ -149,3 +149,168 @@ $z^2t$の係数もtop非退化性から非零なので、$t$での縮約は
 従ってH3正常三次$G$の$C_3$への像は零であり、$G=uQ$、$Q\in B_2$となる。
 両因子は非零正次数なので$B/(G)$は整域でなく、H3に反する。
 \end{proof}
+
+\begin{theorem}[正三次元半単純・$\gamma=0$部分の全排除]
+\label{thm:h3-positive3-semisimple-gamma-zero-exclusion}
+中山固有値の重複度$(3,1)$を持ち、中山作用が半単純で、
+共通平面式の$\gamma=0$であるH3は存在しない。
+この定理は正二平面上の非自明Jordan型、および$\gamma\ne0$を含まない。
+\end{theorem}
+\begin{proof}
+既出の排除により、残る共通平面は$T=(xy=-yx)$、
+$f=\operatorname{diag}(i,-i)$だけである。
+cross標準形は$[v,\ell]=0,v^2=gx^2+hy^2$であり、
+$v^2,\ell^2$は独立である。
+軸の尺度変更と必要なら交換により、$\ell=x$または$x+y$にできる。
+前者では$h\ne0$、後者では$g-h\ne0$である。
+$v$の尺度変更でそれぞれ
+\[
+ \begin{array}{ll}
+ \ell=x:&v^2=gx^2+y^2,\\
+ \ell=x+y:&v^2=gx^2+(g-1)y^2
+ \end{array}
+\]
+へ正規化する。
+
+まず正三元の生成する二次代数$S$が実際にAS3部分代数として埋まることを確認する。
+$F=B^!/(z^*)$は命題\ref{prop:h3-order2-dual-hyperplane}により
+Hilbert値$(1,3,3,1)$を持ち、$F^!$の三つの関係は
+$xy+yx,[v,\ell],v^2-gx^2-hy^2$だけである。
+軸の場合、この三関係の三次syzygyとして
+\[
+ vv x-vxv+xvv-gxxx-(xyy+yxy+yyx)
+\]
+を取れる。両flatteningは階数3であり、$F$の両最高対合は非退化である。
+非軸では$u=x+y,m=x-y$として
+\[
+ m^2=u^2,\quad[v,u]=0,\quad
+ v^2=\tfrac14\{u,m\}+(g-\tfrac12)u^2.
+\]
+$\alpha=1/4,\beta=g-1/2$と書くと、対応する三次syzygyは
+\[
+ \alpha mmm-\alpha(uum+umu+muu)-\beta uuu
+       +vvu-vuv+uvv
+\]
+である。これも両flatteningの階数は全$g$で3。
+従って両場合とも$F$はFrobeniusであり、同命題により$S=F^!$はKoszul AS3、
+自然写像$S\to B$は単射である。
+ここでの$S$の実際の中山作用は$W$を固定し$v$を反転するもので、CYとは仮定しない。
+
+残る偶関係は$z^2=L$、$L\in S_2$と書ける。
+$z^2$は$x,y$を反転するから$Lx=-xL,Ly=-yL$である。
+両$S$について、この二条件を満たす二次空間は正確に
+\[
+ \langle xy,\ [y,v]\rangle
+\]
+である。これは$S_2$六次元から$S_3\oplus S_3$への反交換子行列の階数4として、
+パラメータで割らずに計算できる。
+軸の場合は$x$との反交換で中央平方と$xv$を除き、$y$との反交換で
+$yv,vy$の係数和を零にすることでも直接確認できる。
+非軸の場合、$u^2=m^2$と$\{u,m\}$は中心で、$uv=vu$だから、
+$u,m$両方との反交換条件は
+$\langle [u,m],[m,v]\rangle$となり、同じ二次元空間に等しい。
+従って
+\[
+ z^2=c_0xy+c_1[y,v]
+\]
+となる。
+
+この二chartの全係数について、元の六二次関係から厳密な次数3・4消去を行う。
+$c_1=0$の場合、次数3の関係行列は有理Gaussian定数pivot43個を持ち、
+残りは全て零、従って$\dim B_3=64-43=21$である。
+これは14641値20に反するため、$c_1\ne0$である。
+$z$の尺度変更で$c_1=1$にすると、両chart、全$g,c_0$で
+次数3・4の関係行列はそれぞれ定数pivot44個、221個を持ち、
+正確な商基底の次元は20、35となる。
+この基底上で作用$(x,y,v,z)\mapsto(x,y,v,-z)$の四正常化式を課すと、
+140行20列行列には定数pivotが20個あり、正常三次核は零である。
+\texttt{verify\_cubic\_positive3\_quantum\_plane.py}は元の六関係から
+これら全商射影と全消去を再構成し、$g,c_0$による除算を一度も用いない。
+従って特殊値を含む全係数で非零H3正常三次は存在せず、矛盾を得る。
+この有限次数判定だけから各表示の全次数AS4存在を主張する必要はない。
+\end{proof}
+
+\begin{theorem}[正三次元の$\gamma=0$領域は全て排除される]
+\label{thm:h3-positive3-gamma-zero-exclusion}
+中山固有値の重複度$(3,1)$を持つH3では、共通平面式
+$q_0(W)+\gamma z^2=0$の$\gamma$は非零である。
+すなわち$\gamma=0$領域には単冪部分を含めてH3は存在しない。
+\end{theorem}
+\begin{proof}
+半単純の場合は前定理で排除済みである。
+系\ref{cor:h3-positive3-two-square-quotient}により、残るJordan型は
+$W$上の非自明blockと自明な$kv$の直和だけである。
+正二平面の基底を$x,y$とし、単冪部分の対数を
+$Dy=x,Dx=Dv=Dz=0$とする。
+共通平面と負生成元の関係は
+\[
+ yx=xy+\kappa x^2,\qquad
+ zx=\epsilon xz,\qquad zy=\epsilon yz+\beta xz,
+ \quad\epsilon^2=1
+\]
+と書ける。$\kappa=0$も許す。
+
+二平方投影の階数2により、topの$v^2$行は$z^2$行と独立である。
+実際、middle Frobenius flatteningの行・列の像はいずれも関係空間なので、
+両行が従属すれば関係の$v^2,z^2$係数射影も従属する。
+$v^4$成分は中山巡回式で零、$v^3y$成分は$D$不変性で零である。
+もし$v^3x$も零なら$v^2$行は$W^2$内の関係$q_0$の倍数となり、上の独立性に反する。
+従って$v^3x$係数は非零。
+$v,x$上の巡回式は通常のanti-cyclic式となるので、
+$v^2$行のcross部分は非零な$vx-xv$の倍数である。
+同じ行は$D$不変で、$T_2$の$D$核は$kx^2$なので、
+\[
+ vx=xv+d x^2
+\]
+を得る。この三つのcross式から$x$は正規正則一次元である。
+
+偶二次空間は、二平方とcross関係を消して
+\[
+ x^2,\ xy,\ y^2,\ xv,\ yv,\ vy
+\]
+を基底とする。その$D$核は正確に
+\[
+ \langle x^2,\ xv,\ vy-yv-dxy\rangle
+\]
+である。$Dv^2=0$なので、$v^2$はこの三つの線型結合となる。
+$C=B/(x)$へ移ると
+\[
+ v^2=c(vy-yv),\qquad zy=\epsilon yz
+\]
+が残る。
+正規一次商の線型Tor議論とAS Gorenstein双対性により$C$はKoszul AS3で、
+$H_C=(1-t)^{-3}$である。その実際の中山作用は
+\[
+ \mu_C(y,v,z)=(y,v,-\epsilon z).
+\]
+偶関係二本のうち純正二次関係は表示した$v^2-c[v,y]$だけで、
+残る一本は非零$z^2$係数を持つ。
+
+前定理の三生成元商と同じく、奇関係が$zy-\epsilon yz$一本なので
+三次topは元の$z$反転について偶で、$z^2v$成分も零となる。
+正二元上のtopはcyclic三次であり、$v$での非零縮約は対称二次式である。
+これが$v^2-c[v,y]$の倍数になるには$c=0$が必要である。
+さらに$v$縮約に$y^2$と$yv+vy$がないため、正二元のtopは
+$Av^3+By^3$だけとなる。
+$y$縮約と$z$縮約を合わせると、$C$の三関係は
+\[
+ v^2=0,\qquad zy=\epsilon yz,\qquad z^2=t y^2
+\]
+となる。
+これは$k\langle y,z\rangle/(zy-\epsilon yz,z^2-ty^2)$と
+$k[v]/(v^2)$の自由積である。
+前者のHilbert級数は$(1+s)/(1-s)$、後者は$1+s$なので、自由積の級数は
+\[
+ H_C(s)=\left(\frac{1-s}{1+s}+\frac1{1+s}-1\right)^{-1}
+       =\frac{1+s}{1-2s}.
+\]
+特に$\dim C_3=12$となり、AS3の値10に反する。
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}positive3\_\allowbreak{}Jordan\_\allowbreak{}obstruction.py}は
+両$\epsilon$、全$t$で次数3の関係行列の定数pivotが15個、
+商次元が$27-15=12$であることと、上の$D$核を独立に検証する。
+従ってJordanの場合も存在せず、結論を得る。
+\end{proof}
+
+この排除は共通平面式の$\gamma=0$に限る。
+$\gamma\ne0$では$W$はAS2平面と限らず、$x$の正規性もこの証明からは従わないため、
+残る正三次元領域を同じ議論で排除しない。

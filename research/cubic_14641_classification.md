@@ -799,3 +799,18 @@ H3係数locusはprojective conic bundleのrelative singular incidenceの像の�
 原稿thm:h3-positive3-commutative-plane-exclusion。C=hのt²係数が0でut係数非零なら[v,v²]=Bu[v,t]0、整域性で[v,t]0となるがR_evenは[u,t],[u,v],v²-hと非零z²係数の一本しかなく余分なpurepositivequadを許さない。u正常regularlinearなのでC3=B/uは0B(-1)->B->C3とTor leastoffdiagでKoszul、HS3、ASGor/FrobからAS3。偶関係dim2/odd1とpositive一次dim2によりtopの元muB反転指標は+（奇なら二positive縮約がodd1へ入りrank欠損）。topz²v0はuniqueoddzt関係から。positivecyclicbinarytopのv縮約はBm²+C(mv+vm)+Dv²、purepositivequad v²-t²一本なのでC0,B=-D,Dunit。t縮約でz²=alpha{t,v}+beta t²,alphaunit。全beta両epsilonの次数3/4商を元の三関係からconstantpivotで10/15基底、正常muB(t,v,z)=(t,v,-z)行列45x10 constantpivot10で全kernel0。verify_cubic_positive3_commutative_plane.py/certificateはsampleではなく全係数恒等式PASS。muCはepsilonで異なるので、この核をmuC自身のW1と混同しない。GimageC0ゆえG=uQ factor。
 
 残るq−1部分の次案（未証明）：ell軸又はell非軸に分ける。軸ell=xではvcommx,v²=gx²+hy²,hunit。双対F=E/(zeta)は明示Frob対合det∝hなのでv125でpositive AS3 SがBへ埋まる見込み。非軸はell=x+y,v²=gX+hY,h!=g、m=x−yでm²=ell²,{ell,m}=4/(g−h)v²−2(g+h)/(g−h)ell²、positive Sは上のepsilon+AS3商と同形でFrob top非退化が示せそう。S埋込み後、z²はWを反転するpositive二次なのでantiW2線型核からxyと[m,v]の二係数形に絞る。軸では正規xの重みで正常Gのzvz項が消え、Sの非零二次K=[y,v]がpositive全三元と反可換ゆえcentreS3零となってH3排除が見込まれる。非軸ではzvz項が残り得るので独立に検算する。これらは次の段階まで未証明扱い。
+
+
+## 正三次元半単純gamma0の量子平面も全排除（classification-v132）
+
+正三次元半単純gamma0の残るq−1部分も全排除した。ell軸/非軸でv²をgx²+y²又はgx²+(g−1)y²に正規化。positive Sの明示三次topの両flattenrank3でF=E/(z*)がFrob、v125からS AS3がBへ埋まる。z²はS2でW反転するため二次反交換子核がspan(xy,[y,v])に限り、z²=Axy+B[y,v]。B0は全係数でdegree3dim21、Bunitを1へ尺度変更すると両二parameterchart全係数のdegree3/4商20/35、正常三次140x20は定数pivot20でkernel0。AS4存在を任意係数へ主張せず、必要候補被覆と正常核零だけで全H3排除。
+
+原稿thm:h3-positive3-semisimple-gamma-zero-exclusion。軸hunitでh1、非軸g−hunitでh=g−1。F Hilbert(1,3,3,1)は普遍lemma。positive Sの明示top：軸はvvx−vxv+xvv−gxxx−(xyy+yxy+yyx)。非軸u=x+y,m=x−yはm²=u²,[v,u]0,v²=alpha{u,m}+beta u²,alpha1/4,beta g−1/2、top alpha m³−alpha(uum+umu+muu)−beta u³+vvu−vuv+uvv。両flattenrank3でFrob、S AS3実埋込み、muSはW固定v反転でCYとしない。S2 antiW kernelは両chart次元2、xy/[y,v]が基底。z²=Axy+B[y,v]、B0はR3 constantpivot43でdim21だから不可、Bunit zscaleで1。R3/R4 constantpivot44/221、正常系constantpivot20で全param核零。verify_cubic_positive3_quantum_plane.py/certificateが全商射影・S top/反交換子核・正常kernelを元の関係から厳密再生PASS。
+
+## 正三次元gamma0のJordanも排除、領域全体が空（classification-v133）
+
+正三次元(3,1)gamma0領域を単冪込みで全排除。残るW Jordan2＋自明vではDy=x,Dv0、top v³x非零からvx=xv+d x²、x正常一次。偶B2D核はspan(x²,xv,vy−yv−dxy)。正常一次商C=B/xはKoszul AS3でmuC=(y,v,-epsilon z)、v²=c[v,y],zy=epsilon yz。三次topのpositive二元cyclic縮約が対称なのでc0、top正部分はAv³+By³だけ、残るz²=t y²。Cは二generator quadconeとv²0の自由積でHC=(1+s)/(1−2s)、degree3dim12とAS3値10が矛盾。全t/両epsilonの定数pivot15でdim12を厳密再生。従って(3,1)H3があるなら必ずgamma非零。
+
+原稿thm:h3-positive3-gamma-zero-exclusion。v129で中山extension分裂、残りWJordanだけ。common f上三角epsilon²1、T yx=xy+kappa x²（kappa0可）。Dtop不変でv³y0、purev4はanti巡回0、二平方projectionrank2からvvrow/z²row独立なのでv³x!=0。v/x巡回からvvrowcross [v,x]、WWのD核x²よりvx=xv+d x²。x正規でB/xの線型Tor/Koszulとnormal ASGorでAS3、HS3、muC反転z符号−epsilon。B2even6基底x²,xy,y²,xv,yv,vyのDkernel3はx²,xv,vy−yv−dxy、ゆえmodx v²=ccomm。C oddR1/positiveV2でtopは元z反転偶、oddgraphzyがz²vを禁じ、purepositivebinarycyclicv縮約の対称性からc0。クロスcubiccoeff0でtop正二元部分v³/y³だけ、C三関係v²0,zy=epsilon yz,z²=t y²。自由積HS指数、又はdegree3原関係matrix定数pivot15/27でdim12、AS3dim10矛盾。verify_cubic_positive3_Jordan_obstruction.py/certificateでD核・対称縮約・両符号全tのdim12厳密PASS。
+
+次の具体的着手：残る(3,1)はgamma非零。q0(W)+gamma*z²関係のためWにAS2平面分類を直接適用しない。mu半単純fdiag(a,a^-1)ならS(W,z)はxy−a²yx+gamma z²,zx=a xz,zy=a^-1 yzの三generator AS3型、q0非零正常二次。補positivevを含む偶flattenrank4/平方projection/dual Frob開条件から全正常三次を絞る。gamma非零でのW部分代数への高次核、positive unipotent、H3認識はまだ未証明。
