@@ -657,3 +657,19 @@ c0ならr1=pu+up,r2=pw−wp,r3=uw+wu,q=p²−a u²−b w²の間にmu正の独�
 次の具体的着手：八係数テンプレートA={u,v}=aP+bX+cY,B={w,v}=dP+eX+fY,H=gX+hYと置き、(a,d)非零、puanti,pwcomm,uwantiを使う。全PXY中心性はテンプレートからも導ける見込み（[v,X]=[v,Y]0、[v,A]=[v,B]0からP係数非零で[v,P]0）。T={p,v}はp,u,vと可換、Tw+wT=2Bp、T²中心、Gcan=Tw−Bpは期待されるmu正常三次、Gcan²=B²P−T²Y。これらは次版でPBW/正常化/非零性・実際のmuを検証するまで未使用。
 
 未検証のPBW構成案：中心PXYとT上Clifford3(p,u,v)（puanti,pv+vp=T,uv+vu=A）を作り、wをsigma(p,u,v,T)=(p,−u,−v,−T)、delta(v)=B,delta(T)=2Bp,delta(p/u)=0のOre変数として加えw²=Yで割る。sigma²1,delta sigma+sigma delta0,delta²0が見込まれ、rank16のモデルとHS1/(1−t)^4を得る。実際のAS4/Nakayama符号条件を先に調べ、generic flatnessや明示正常三次だけでH3十分性としない。
+
+## 全(1,3)候補の八係数AS4軌跡・正常三次を完全判定（classification-v117）
+
+v116末尾のPBW案、実際の中山符号、正常三次非零/一意性、負三元Clifford全次数埋込みを解決した。全H3(1,3)候補包絡は八係数テンプレートpuanti,pwcomm,uwanti,A={u,v}=aP+bX+cY,B0={w,v}=dP+eX+fY,v²=H=gX+hY、(a,d)非同時零で被覆される。P/X/Y中心性はこのテンプレート自体からも導ける。原稿thm:h3-order2-eight-coefficient-AS4、cor:h3-order2-eight-unique-cubic。新規性は未確認であり、全係数のAS4 existenceとH3判定を区別する。
+
+Clifford–Ore模型：中心Z=k[P,X,Y]とT上Clifford3(p,u,v)、p²P,u²X,v²H,puanti,pv+vpT,uv+vuAを作る。sigma(p,u,v,T)=(p,-u,-v,-T)、delta(v)=B0,delta(T)=2B0p,delta(p/u)=0。全六Clifford関係に適合しsigma²1,delta sigma+sigma delta0,delta²0なのでw Ore拡大/(w²−Y)が元の全六関係の環と同型。Z[T]上左rank16、PBW p^i u^j v^k w^l、全係数HS(1−t)^−4、noetherian。Tは中央ではないがD=T²は中央、Z[D]上rank32自由。従ってPXYとDは実際に代数的独立。
+
+AS4完全条件：B1=bd−ae,C1=cd−af、Rscript=(d²h−a²g)²−(d² C1−a² B1)(B1 h−C1 g)。Rscript!=0 iff quadratic Koszul AS4、mu=(p,-u,-w,-v)。双対はQ/(PV,qP,qU,qW)、QはP/Wだけ反可換・他全可換のskew4、qP=P²+aUV+dWV,qU=U²+bUV+eWV+gV²,qW=W²+cUV+fWV+hV²。q三つはEbar=Q/(PV)で中央。P0の可換成分はV1としてU=dz,W=-azの二二次式d²z²+B1z+g,a²z²+C1z+hを持ち、そのresultantがRscript。Rscript0なら双対に非零射影点があり無限次元。
+
+Rscript非零ならEbarはk[U,W,V]とquantum3(U,W,P)のk[U,W]上fiber productで、S=k[qP,qU,qW]は多項式環。両三変数成分はS上free8、二変数交差成分はS/(qP)上free4。depth lemma/commutative Auslander–BuchsbaumでEbarはS上free、三qは正則列。Q Koszulから正規正則二次PV商もKoszul、さらに三q商もKoszul（順方向のみ）。Ebar ASGor3index2から三q商はFrob top4,HS(1+t)^4。双対でB AS4、NakayamaはFrob双対符号から(p,-u,-w,-v)。noethAS4/成長4の既出Levasseur適用でdomain。
+
+一次資料追加：A. Polishchuk–L. Positselski, Quadratic Algebras (AMS ULS37,2005), Chapter2 Cor6.3,p37を https://djvu.online/file/T1DOlccPNeqX0 の一次本文で確認した。Koszulから正規正則二次商への順方向を使う。直後のHeisenberg反例により「中央正則二次商がKoszulなら元もKoszul」は非可換一般には偽であり、これをこの族の証明には使わない。書誌も確認。as4から新たな包括定理は輸入していない。
+
+正常三次G=T w−B0 p、G²=B0²P−T²Y、GのTw係数1、mu正常化全式を全八係数で確認。AS4/domain locusでは全W1はmu固定なので候補基底Pp,Xp,Yp,Tu,Tv,Tw,puv,puw,pvwの9本。係数行列46行9列は定数pivot8、残余零、Tw自由係数のみでW1=kGを全域で証明。負三元Clifford基底u^i v^j w^kはPBWの一部、自由中央KはPXYの可逆線型変換なので全次数埋込みも従う。その双対は可換三二次完全交叉E/(P)、従ってCY AS3。verify_cubic_order2_central_template.pyが全Ore/Clifford恒等式、G/平方、双対直交、resultant、全係数W1 rank8を厳密検算PASS。Koszul・Frobenius・正則列は本文構造証明。
+
+次の具体的着手：この全八係数AS4主開集合のR=B/(G)がH3になる必要十分条件を求める。正常三次だけでH3としない。中央h0=pwはRで中心となり、Tも中心、h0²=PY,TY=B0 h0,T h0=B0 Pというscroll型中心式が期待される。Pchartでr=u p^-1,b=v p^-1−T/(2P)のrank4 Clifford模型r²=−X/P,b²=T²/(4P²)−H/P,{r,b}=−A/Pを調べ、全中心・各chart・完備局所gldim2/障害・rankとSerre/AZを判定する。これら中心/局所式は次の版で逆模型とともに検証するまで許容性定理に使わない。

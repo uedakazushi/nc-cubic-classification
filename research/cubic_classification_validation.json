@@ -1219,5 +1219,13 @@
     "certificate": "computations/cubic_order2_positive_square_certificate.json",
     "result": "All four generator squares are central in every multiplicities(1,3) H3 envelope; the two remaining negative anticommutators are central linear forms in the independent quadratics P=p²,X=u²,Y=w². This gives an eight-coefficient necessary template, with nonzero P-coefficient pair.",
     "scope_limit": "Full abstract-negative-subalgebra embedding, algebraic independence of central quadratics, all-coefficient AS4 existence and remaining H3 admissibility are not inferred from cubic injectivity."
+  },
+  "order2_eight_coefficient_AS4_v117": {
+    "status": "complete AS4 coefficient criterion and unique normal cubic for the global (1,3) candidate template; universal identities executed",
+    "validator": "computations/verify_cubic_order2_central_template.py",
+    "certificate": "computations/cubic_order2_central_template_certificate.json",
+    "result": "For (a,d)!=(0,0), the eight-coefficient template is flat noetherian with an explicit Clifford-Ore model; it is Koszul AS4 iff the displayed binary-quadratic resultant is nonzero. On that locus mu=(p,-u,-w,-v), W1=kG, G=Tw-B0p, G²=B0²P-T²Y. The negative subalgebra is a genuine CY AS3 and all central polynomial coordinates are established.",
+    "primary_source_checked": "Polishchuk–Positselski, Quadratic Algebras, Chapter2 Cor6.3 p37 (regular normal quadratic quotient preserves Koszulness, forward direction); RRZ normal quotient Nakayama formula",
+    "scope_limit": "This is complete candidate-envelope/normal-cubic coverage for multiplicities(1,3), not H3 admissibility. Smoothness/rank/Serre/AZ recognition of all quotients, full arrows, other spectra and global/relative classification remain."
   }
 }

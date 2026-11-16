@@ -1,0 +1,32 @@
+{
+  "template": [
+    "pu=-up",
+    "pw=wp",
+    "uw=-wu",
+    "uv+vu=aP+bX+cY",
+    "wv+vw=dP+eX+fY",
+    "v\u00b2=gX+hY"
+  ],
+  "central_definitions": [
+    "P=p\u00b2",
+    "X=u\u00b2",
+    "Y=w\u00b2"
+  ],
+  "parameter_hypothesis": "(a,d)!=(0,0)",
+  "PBW_model": "Clifford3(p,u,v) over k[P,X,Y,T], then w with sigma(p,u,v,T)=(p,-u,-v,-T), delta(v)=B,delta(T)=2Bp,delta(p/u)=0, w\u00b2=Y",
+  "clifford_overlaps_checked": 10,
+  "flatness": "free rank16 over k[P,X,Y,T] as a left module; T is not asserted central",
+  "central_polynomial_base": "k[P,X,Y,D=T\u00b2], free rank32",
+  "normal_cubic": "G=T*w-B*p, G\u00b2=B\u00b2P-T\u00b2Y, normalizer(p,u,w,v)=(p,-u,-w,-v)",
+  "normal_cubic_uniqueness": "nine mu-fixed PBW cubics, constant-pivot rank8, free coefficient T*w; W1(B)=kG on the AS4/domain locus",
+  "dual": "E=Q/(PV,qP,qU,qW), Q skew polynomial with PW=-WP and all other pairs commuting",
+  "dual_central_quadrics": [
+    "qP=P\u00b2+aUV+dWV",
+    "qU=U\u00b2+bUV+eWV+gV\u00b2",
+    "qW=W\u00b2+cUV+fWV+hV\u00b2"
+  ],
+  "AS4_open_resultant": "a**4*e**2*h - a**4*e*f*g + a**4*g**2 - 2*a**3*b*d*e*h + a**3*b*d*f*g + a**3*c*d*e*g + a**2*b**2*d**2*h - a**2*b*c*d**2*g - a**2*d**2*e*f*h + a**2*d**2*f**2*g - 2*a**2*d**2*g*h + a*b*d**3*f*h + a*c*d**3*e*h - 2*a*c*d**3*f*g - b*c*d**4*h + c**2*d**4*g + d**4*h**2",
+  "resultant_compact": "(d\u00b2h-a\u00b2g)\u00b2-[d\u00b2(cd-af)-a\u00b2(bd-ae)]*[(bd-ae)h-(cd-af)g]",
+  "AS4_criterion": "For (a,d)!=(0,0), the template is noetherian quadratic Koszul AS4 with mu=(p,-u,-w,-v) iff the displayed resultant is nonzero.",
+  "scope": "Universal Ore/Clifford, normalizer, uniqueness, square and dual identities checked. The AS4 criterion and Koszul/Frobenius argument use the structural proof in the manuscript; no H3 sufficiency follows from a normal cubic alone."
+}

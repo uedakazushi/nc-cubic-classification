@@ -2261,6 +2261,143 @@ $A,D$ も中心、$P,X,Y$ の一次独立性と表示した六関係が従う。
 はtrace、Clifford行列式、二つの全係数syzygyとその独立性を厳密再生する。
 全次数の $S_0$ 埋込みや新しい全係数の許容性は、この低次数単射性から推論しない。
 
+\begin{theorem}[八係数Clifford--Ore族とAS4軌跡の完全判定]
+\label{thm:h3-order2-eight-coefficient-AS4}
+$a,b,c,d,e,f,g,h\in k$、$(a,d)\ne(0,0)$ とし、$P=p^2,X=u^2,Y=w^2$ と略記して
+\begin{equation}\label{eq:h3-order2-eight-coefficient-family}
+ \begin{gathered}
+ pu=-up,\quad pw=wp,\quad uw=-wu,\\
+ uv+vu=A:=aP+bX+cY,\quad wv+vw=B_0:=dP+eX+fY,\\
+ v^2=H:=gX+hY
+ \end{gathered}
+\end{equation}
+で定める二次環を $\mathcal B$ とする。
+$P,X,Y$ は中心で代数的独立、$\mathcal B$ は全係数でnoetherianかつ
+$H_{\mathcal B}=(1-t)^{-4}$ である。
+\[
+ B_1=bd-ae,\quad C_1=cd-af,
+\]
+\begin{equation}\label{eq:h3-order2-eight-AS-resultant}
+ \Delta_{\mathrm{AS}}=(d^2h-a^2g)^2-(d^2C_1-a^2B_1)(B_1h-C_1g)
+\end{equation}
+と置くと、$\mathcal B$ がquadratic Koszul AS4である必要十分条件は $\Delta_{\mathrm{AS}}\ne0$。
+この場合は整域であり、その中山作用は
+\[
+ \mu_{\mathcal B}(p,u,w,v)=(p,-u,-w,-v)
+\]
+である。従って前定理と合わせ、全ての重複度 $(1,3)$ のH3候補包絡はこのAS4主開集合で被覆される。
+これは三次商のH3十分性や幾何学的重複の除去を意味しない。
+\end{theorem}
+\begin{proof}
+まず表示から $P$ は $u,w$ と可換する。
+$[v,u^2]=[A,u]=0$、$[v,w^2]=[B_0,w]=0$ より $X,Y$ も中心。
+さらに $[v,A]=[v^2,u]=0$、$[v,B_0]=[v^2,w]=0$ と $(a,d)\ne(0,0)$ から $[v,P]=0$。
+従って $P,X,Y,A,B_0,H$ は全て中心である。
+
+中心多項式環 $Z=k[P,X,Y]$ と変数 $T$ 上で、三変数Clifford環 $C$ を
+\[
+ p^2=P,\quad u^2=X,\quad v^2=H,\quad
+ pu+up=0,\quad pv+vp=T,\quad uv+vu=A
+\]
+で定める。$C$ は $Z[T]$ 上階数8で自由。
+その自己同型とskew導分を
+\[
+ \sigma(p,u,v,T)=(p,-u,-v,-T),\quad
+ \delta(p)=\delta(u)=0,\quad\delta(v)=B_0,\quad\delta(T)=2B_0p
+\]
+とする。全Clifford関係との整合性は直接確認でき、
+$\sigma^2=1$, $\delta\sigma+\sigma\delta=0$, $\delta^2=0$ である。
+従って $C[w;\sigma,\delta]/(w^2-Y)$ は左 $C$ 加群として自由階数2。
+逆に元の表示から $T=pv+vp$ は $p,u,v$ と可換し、
+$wT=-Tw+2B_0p$ となるので、これが正確に $\mathcal B$ である。
+このPBW表示により $Z[T]$ 上の左基底は $p^i u^j v^k w^l$ ($i,j,k,l\in\{0,1\}$)。
+これで $Z$ の埋込み、Hilbert級数、noetherian性が従う。
+また $D=T^2$ は中心であり、$Z[D]$ 上は階数32で自由である。
+
+AS4判定は二次双対で行う。双対生成元を $P^*,U^*,W^*,V^*$ とし、以下この段落では星を省く。
+$Q$ を $PW=-WP$、他の対は全て可換というskew多項式環とする。
+表示の直交補を取ると
+\[
+ \mathcal B^!=\overline E/(q_P,q_U,q_W),\qquad \overline E=Q/(PV),
+\]
+\[
+ q_P=P^2+aUV+dWV,\quad
+ q_U=U^2+bUV+eWV+gV^2,\quad
+ q_W=W^2+cUV+fWV+hV^2.
+\]
+この三二次元は $\overline E$ の中心に入る。
+
+$P=0$ の可換成分では、共通射影零点は $V\ne0$ を満たし、$V=1$ として
+\[
+ aU+dW=0,\quad U^2+bU+eW+g=0,\quad W^2+cU+fW+h=0.
+\]
+$U=dz,W=-az$ を代入した二式のresultantが正確に $\Delta_{\mathrm{AS}}$ である。
+$V=0$ に共通射影零点はないので、次数が落ちる場合にもこの判定に余分な根はない。
+従って $\Delta_{\mathrm{AS}}=0$ なら $\mathcal B^!/(P)$ は無限次元であり、Koszul AS4にはなれない。
+
+逆に $\Delta_{\mathrm{AS}}\ne0$ とする。$S=k[q_P,q_U,q_W]$ は多項式環である。
+実際 $V=0$ 成分では三元は $P^2,U^2,W^2$ へ移る。
+正確な $S$ 加群列
+\[
+ 0\longrightarrow\overline E\longrightarrow
+ k[U,W,V]\oplus k\langle U,W,P\rangle/(PW+WP,[P,U],[U,W])
+ \longrightarrow k[U,W]\longrightarrow0
+\]
+を使う。中央の第一項は $\Delta_{\mathrm{AS}}\ne0$ により、三二次式の可換完全交叉から $S$ 上自由階数8。
+第二項も $P^2,U^2,W^2$ 上自由階数8である。
+右項は $S/(q_P)$ 上自由階数4なのでdepthは2。
+depth lemmaと可換正則環 $S$ 上のAuslander--Buchsbaumにより、
+$\overline E$ は $S$ 上有限自由となり、三つの $q$ は正則列である。
+
+$Q$ はKoszul、$PV$ は正規正則二次元であり、
+正規正則二次元で割る\emph{順方向}のKoszul定理
+\cite[Chapter 2, Corollary 6.3]{PolishchukPositselski}により $\overline E$ はKoszul。
+同じ定理を中央正則列 $q_P,q_U,q_W$ に適用し、$\mathcal B^!$ はKoszulとなる。
+$Q/(PV)$ はAS Gorenstein次元3・parameter 2なので、その三中央二次元商は
+最高次数4のFrobenius環であり、Hilbert級数は $(1+t)^4$。
+Koszul双対により $\mathcal B$ はAS4となる。
+ここでは「中央二次元商がKoszulなら元もKoszul」という一般には誤りの逆向きは用いていない。
+
+$\mu_Q$ は $P,W$ を反転し、$PV$ の正規化は $W$ だけを反転する。
+RRZの正規商公式から $\mathcal B^!$ のFrobenius中山は $P$ だけを反転する。
+AS4のKoszul双対符号 $(-1)^5$ を合わせると表示した $\mu_{\mathcal B}$ を得る。
+noetherian AS正則性と成長次元4から、既出のLevasseur定理で整域性も従う。
+\end{proof}
+
+\begin{corollary}[全八係数の正常三次は一本]
+\label{cor:h3-order2-eight-unique-cubic}
+$\Delta_{\mathrm{AS}}\ne0$ では
+\[
+ W_1(\mathcal B)=kG,\qquad
+ G=(pv+vp)w-B_0p,\qquad G^2=B_0^2P-T^2Y.
+\]
+この $G$ は非零正規正則三次元である。
+また負三生成元の抽象Clifford環は全次数で $\mathcal B$ に埋め込まれ、
+その部分環はCY AS3である。
+\end{corollary}
+\begin{proof}
+Clifford--Ore基底で $G$ の $Tw$ 係数は1なので非零。
+中心平方と負反交換子の関係から、$G$ は $p$ と可換し $u,w,v$ と反可換する。
+同じ積計算で平方公式を得る。
+任意の $F\in W_1(\mathcal B)$ は整域性から $\mu(F)=F$。
+その三次成分のPBW基底は
+\[
+ Pp,Xp,Yp,Tu,Tv,Tw,puv,puw,pvw
+\]
+の九元である。四正常化式の係数行列は、全八係数で定数pivot八本、残余零となる。
+自由係数は $Tw$ のみであり、上の $G$ が全核を張る。
+
+負三生成元のClifford基底 $u^i v^j w^k$ は、上のPBW基底の部分集合として独立である。
+その自由な中央二次座標は、前定理の非零係数により $P,X,Y$ へ可逆に移るため、
+これで全次数埋込みを得る。
+この部分環の双対は $\mathcal B^!/(P)$、すなわち可換三変数の三二次完全交叉。
+$\Delta_{\mathrm{AS}}\ne0$ でArtin Koszul Frobeniusとなり、双対の部分環はCY AS3である。
+\end{proof}
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}order2\_\allowbreak{}central\_\allowbreak{}template.py}
+は全Clifford--Ore関係、正常三次と平方、二次双対の直交性、resultantと
+九列正常化行列の全係数rank8を独立に厳密確認する。
+まだ必要なのは、この全候補の三次商のH3許容性と全幾何学的矢である。
+
 \begin{lemma}[単冪twist下の反標準三次関係の輸送]
 \label{lem:h3-unipotent-transport}
 $C$は左右noetherian quadratic Koszul AS4型14641で，$\mu_C$は半単純とする．
