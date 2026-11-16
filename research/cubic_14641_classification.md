@@ -774,3 +774,12 @@ H3係数locusはprojective conic bundleのrelative singular incidenceの像の�
 正三次元(3,1)の指定対角normalizing chartを全係数・全aで排除した。非共鳴は先頭核零。a=-1は内部移動後vx=-xv+kappa*y²,vy=yv、商体退化排除からell0、x²/y²/v²中央、y正常mu、先頭核次元上界3と三独立候補でW1=y*span(x²,y²,v²)全てfactor。primitive6では全skew導分内部、ell/q2比較で全補正零、W1=ky³。AS4存在を任意補正係数へ主張しない。次は全normalizing chartのf/g平方根分類と残るq=-1反対角作用を調べ、gamma0の一平方投影領域を縮小する。
 
 原稿thm:h3-positive3-diagonal-full-exclusion。g-skew導分条件はa(1−a)e0=(1+a)d2=0、(1+a^-3)d0+(a−1)e1=0、(1+a^-1)d1+(a−a^-2)e2=0。内部二列(d0,e1)=(1−a,1+a^-3),(d1,e2)=(a^-2−a,1+a^-1)。a−1では導分核3/内部2で残りdx=kappa y²,dy0。v²/z²commxとqWcommxからell[v,x]0、ell非零ならv∈Q(T)かつz²も入るので新商体lemma矛盾。ell0でqWはz反転に不変、v²commz、x²/y²/v²中央。yはmu正常なので三次候補三本、先頭kernel3次元で全核。primitive6は導分核2=内部2。delta0の後、外平方x比較で(a−a²)ellx=(a^-1−a²)elly0、T+Tv独立は商体lemmaによるのでell0。qWnormalization f²はx比較ky²,y比較kx²を強制しqW0。verify_cubic_positive3_diagonal_resonance.pyは全導分式と内部、Phi6上非消滅/gcd、a−1正規形の中心二次全交換子を次数3イデアルのparameter-free pivotsで証明PASS。全chart外を被覆とはしない。
+
+
+## 正三次元の全normalizing chart排除と二平方商（classification-v129）
+
+正三次元(3,1)gamma0で全normalizing chartを単冪込みで排除した。PBW整列/14641比較からg∈Aut(T),g²=f²。g±fは先頭mu重複度2+2で除外、他は対角全排除またはq−1四元数反対角。後者の先頭140x20正常化行列にdet=-128+128iの固定20minorがあり、全補正でもW1=0。対角でmuW=idの非分裂extensionはDv=wからg(w)=w,2wv+d(w)=ell*w⇒v∈Q(T)で排除。従ってgamma0全H3候補はB/(W)=k<z,v>/(z²,v²)かつ中山extension分裂。残るJordan型は半単純またはW上Jordan2＋自明1。gamma非零は未被覆。
+
+原稿lem:h3-positive3-quaternion-chart,thm:h3-positive3-full-normalizing-chart,cor:h3-positive3-two-square-quotient。fの非自明Jordanならg²=f²の平方根は±f、fscalar±IのJordan平面でもg±f、これらは二段Ore先頭mu外側(-,-)で元の(+,-)と矛盾。g−fの場合の外側交換Zhangtwistはhdet1でmu不変。可換fscalarの反射gと量子fdiag(a,a^-1)のgdiag(a,-a^-1)はv128全対角排除、q−1の反対角g²−Iは尺度でvx=yv,vy=-xv,zx=i xz,zy=-i yz。r=v+z,s=v−z PBW全overlap一致、140x20正常化matrix固定20minor=-128+128i、全低重み補正除外。verify_cubic_positive3_antidiagonal.py/certificate厳密PASS。対角残りWµidではDv=w∈W、cross微分wt=g(t)w、t=wでg(w)=w、平方微分2wv+d(w)=ellw、v/h商体落ち矛盾でmu全体半単純。全normalizingchart空よりgamma0の一平方投影rank1はcross可逆なら全chart排除、退化なら商体lemmaで排除、rank0/一片平方は指数増大商。rank2だけ残り二平方商。非分裂Jordantensorの既存18恒等式を符号に依存せず適用するとzz/vv二列比例で平方像rank<=1となりrank2と矛盾、よってextension分裂。既存nonsplit_tensor/plane_matrices両検証を今回再実行PASS。全(3,1)被覆/排除としない。
+
+次の具体的案（未証明）：gamma0半単純で正三元制限topはanti-cyclic、v4係数は常に零。二平方projectionrank2からv3W非零、vvrowcrossは[v,ell]型。rank4 Schurと二cross対角blockの逆符号から、vをW移動し[v,ell]=0かつv²∈T2という正側cross標準形が得られる見込み。量子q!=+-1/Jordanはcentralizer(v²,ell)=k ell²でcommuting平方factorのため排除候補。T可換又はq−1が残り、positive normalaxisまたはnormalquadratic重みでW1を調べる。正側cross標準形はまだ検証前なので定理には使わない。

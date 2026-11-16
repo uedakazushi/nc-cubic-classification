@@ -1304,5 +1304,16 @@
     "certificate": "computations/cubic_positive3_diagonal_resonance_certificate.json",
     "proof": "papers/sections/cubic_positive3_diagonal_top.tex, thm:h3-positive3-diagonal-full-exclusion",
     "scope": "正三次元(3,1)の指定対角normalizing chartを全係数・全aで排除した。非共鳴は先頭核零。a=-1は内部移動後vx=-xv+kappa*y²,vy=yv、商体退化排除からell0、x²/y²/v²中央、y正常mu、先頭核次元上界3と三独立候補でW1=y*span(x²,y²,v²)全てfactor。primitive6では全skew導分内部、ell/q2比較で全補正零、W1=ky³。AS4存在を任意補正係数へ主張しない。次は全normalizing chartのf/g平方根分類と残るq=-1反対角作用を調べ、gamma0の一平方投影領域を縮小する。"
+  },
+  "positive3_full_normalizing_v129": {
+    "status": "PASS exact quaternion anti-diagonal top rank20; existing plane/Jordan validators rerun; global chart proof in manuscript",
+    "validator": "computations/verify_cubic_positive3_antidiagonal.py",
+    "certificate": "computations/cubic_positive3_antidiagonal_certificate.json",
+    "rechecked": [
+      "computations/verify_cubic_order2_nonsplit_tensor.py",
+      "computations/verify_cubic_order2_plane_matrices.py"
+    ],
+    "proof": "papers/sections/cubic_positive3_normalizing.tex",
+    "scope": "正三次元(3,1)gamma0で全normalizing chartを単冪込みで排除した。PBW整列/14641比較からg∈Aut(T),g²=f²。g±fは先頭mu重複度2+2で除外、他は対角全排除またはq−1四元数反対角。後者の先頭140x20正常化行列にdet=-128+128iの固定20minorがあり、全補正でもW1=0。対角でmuW=idの非分裂extensionはDv=wからg(w)=w,2wv+d(w)=ell*w⇒v∈Q(T)で排除。従ってgamma0全H3候補はB/(W)=k<z,v>/(z²,v²)かつ中山extension分裂。残るJordan型は半単純またはW上Jordan2＋自明1。gamma非零は未被覆。"
   }
 }

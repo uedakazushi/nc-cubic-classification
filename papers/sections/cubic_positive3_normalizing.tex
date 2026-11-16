@@ -1,0 +1,123 @@
+\subsection{正三次元側の全normalizing chartと二平方商}
+\label{subsec:h3-positive3-normalizing}
+\begin{lemma}\label{lem:h3-positive3-quaternion-chart}
+$i^2=-1$とする。次の先頭表示には、正常化作用
+$(x,y,v,z)\mapsto(x,y,v,-z)$を持つ非零三次は存在しない：
+\[
+ xy=-yx,\quad zx=ixz,\quad zy=-iyz,\quad
+ vx=yv,\quad vy=-xv,\quad v^2=z^2.
+\]
+$vx,vy$に任意の$W^2$項、外側平方に任意の$\ell(W)v+q_2(W)$を加えた
+14641包絡についても、同じ重み先頭作用を持つH3正常三次は存在しない。
+\end{lemma}
+\begin{proof}
+$r=v+z,s=v-z$と置く。$yx=-xy,sr=-rs$と、
+\begin{align*}
+ rx&=(ix+y)r/2+(-ix+y)s/2,\\
+ ry&=(-x-iy)r/2+(-x+iy)s/2,\\
+ sx&=(-ix+y)r/2+(ix+y)s/2,\\
+ sy&=(-x+iy)r/2+(-x-iy)s/2
+\end{align*}
+を用いると、四つの三次overlapは全て一致する。
+よって$x^ay^br^cs^d$はPBW基底で、Hilbert級数は$(1-t)^{-4}$。
+この基底上、正常化作用は$x,y$を固定し$r,s$を交換する。
+全三次20列と四つの正常化式からなる140行行列には、
+\texttt{cubic\_positive3\_antidiagonal\_certificate.json}の20行で
+行列式$-128+128i\ne0$の小行列がある。
+従って核は零である。
+補正を持つ環は重み$W:1,v,z:2$の先頭環への全射と14641 Hilbert値の比較により、
+このPBW環を先頭環に持つ。正常三次の非零先頭項が先頭核に入るため、補正後も存在しない。
+この議論は低い重みの中山Jordan成分も許す。
+\end{proof}
+
+\begin{theorem}\label{thm:h3-positive3-full-normalizing-chart}
+重複度$(3,1)$のH3包絡で、共通平面式の$\gamma=0$とする。
+負生成元を$z$、残る正生成元を$v$、共通AS2平面を$T=\langle W\rangle$とする。
+残る偶関係が可逆$g\in\mathrm{GL}(W)$により
+\[
+ vt=g(t)v+d(t)\quad(t\in W),\qquad
+ v^2-z^2=\ell(W)v+q_2(W)
+\]
+と書ける場合は存在しない。$d(t),q_2$は任意の二次式、$\ell$は任意の一次式でよく、
+中山作用の単冪部分を零と仮定しない。
+\end{theorem}
+\begin{proof}
+$zt=f(t)z$とする。$T$のordered monomialと外側の$r=v+z,s=v-z$を用い、
+基底側の交換、外側を基底の右へ動かす四式、および$sr=-rs+$低重み項で語を整列する。
+これらは重み付き順序を下げるので、四変数ordered monomialが全次数でspanする。
+14641 Hilbert値はこのspanの個数と等しく、従って全て独立である。
+三次overlapの比較から$g$は$T$の自己同型、$d$はそのskew derivation、
+さらに$g^2=f^2$となる。
+既存の共通平面公式は
+\[
+ \det f=\operatorname{hdet}_T f=1,\qquad
+ \mu_T=\mu_B|_W\circ f^2
+\]
+を与える。
+
+まず$g=\pm f$を除く。$g=f$の先頭環は
+$T[r;f][s;\sigma]$、$\sigma|_T=f,\sigma(r)=-r$である。
+二段Ore中山公式から、$W$上の中山は$\mu_B|_W$、外側の二固有値はともに$-1$となる。
+$g=-f$の場合も、外側交換involutionで右Zhang twistすると$g=f$型へ移り、
+そのhomological determinantは1、四乗は恒等なのでRRZのtwist公式で中山固有値は変わらない。
+従って両場合の先頭環の中山重複度は$(2,2)$である。
+実際のKoszul topの非零先頭項を先頭環の非退化topと比較すると
+$\operatorname{gr}\mu_B=\mu_{B_0}$となり、元の$(3,1)$に反する。
+
+残る平方根を分類する。$f$が非自明Jordan blockなら$g^2=f^2$から$g=\pm f$だけである。
+$f$がスカラーなら$f=\pm I$で、Jordan平面の自己同型では再び$g=\pm f$。
+可換平面では、残りの$g$は二つの異なる符号を持つ対角involutionとなる。
+$f$が相異なる固有値を持てば、第一行列型により
+\[
+ f=\operatorname{diag}(a,a^{-1}),\quad T=(xy=a^2yx).
+\]
+$T$の自己同型は対角、または$a^2=-1$の時だけ反対角である。
+対角で$g\ne\pm f$なら、軸の交換により
+$g=\operatorname{diag}(a,-a^{-1})$となる。
+可換平面の残りも$a=\pm1$のこの表示に含まれる。
+反対角なら$g^2=-I$で、軸の尺度変更により前補題の四元数型に一致する。
+これで平方根の全場合を扱った。
+
+対角の場合は$\mu_B|_W=I$である。正三次元加群の拡大が非分裂と仮定し、
+単冪部分の対数を$D$、$Dv=w\in W\setminus\{0\}$とする。
+$D|_W=Dz=0$なので、cross式の微分は$wt=g(t)w$を与える。
+$t=w$を代入して$g(w)=w$、また外側平方の微分は
+$wv+vw=\ell w$である。従って$2wv+d(w)=\ell w$となり$v\in Q(T)$。
+外側平方から$z^2\in Q(T)$も従い、補題\ref{lem:h3-positive3-rational-collapse}に反する。
+従ってこの拡大は分裂し、実際の中山作用は半単純である。
+定理\ref{thm:h3-positive3-diagonal-full-exclusion}により全対角場合を排除する。
+反対角の場合は前補題が単冪拡大を含めて直接排除する。
+\end{proof}
+
+\begin{corollary}\label{cor:h3-positive3-two-square-quotient}
+重複度$(3,1)$のH3包絡で共通平面式の$\gamma=0$なら
+\[
+ B/(W)=k\langle z,v\rangle/(z^2,v^2).
+\]
+さらに中山加群の列$0\to W\to U\to U/W\to0$は分裂する。
+従って残る正三次元Jordan型は半単純、または$W$上の非自明blockと自明一次元の直和だけである。
+$\gamma\ne0$はこの系の対象に含まない。
+\end{corollary}
+\begin{proof}
+偶二次関係は四本で、$W^2$との交わりは$kq_0$だけ。
+$W=0$での関係像は$kz^2\oplus kv^2$に入る。
+像が零、または片方の平方だけなら商の語は指数増大し、14641成長に反する。
+一本で両平方係数非零なら$v^2-z^2$へ尺度変更する。
+平方投影の核を$kq_0$で割った二次元空間の両cross射影が可逆なら、前定理で排除される。
+一方が退化すれば$v\ell=q(W)$または$\ell v=q(W)$となり、
+$v,z^2\in Q(T)$となって商体補題に反する。
+よって像は二次元であり、二平方商が得られる。
+
+非分裂中山拡大では、命題\ref{prop:h3-order2-nonsplit-plane-quotient}の
+$D$不変tensorに関する議論は固有値の符号に依存せず適用できる。
+すなわち$v^4,v^3W$成分は全て零となり、common-plane条件で$z^2vU$成分も零である。
+従ってtopの$z^2$列と$v^2$列はともに$W^2$内の二次関係であり、比例する。
+すると$B/(W)$で二平方の関係像は高々一次元となり、直前の二次元性に反する。
+よって拡大は分裂する。
+\end{proof}
+
+反対角の140行20列rank証明は
+\texttt{verify\_cubic\_positive3\_antidiagonal.py}で厳密再生する。
+非分裂tensorで用いる18個の有理係数恒等式は既存の
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}order2\_\allowbreak{}nonsplit\_\allowbreak{}tensor.py}を再実行した。
+これらは$\gamma=0$部分の還元であり、正三次元全体のH3排除ではない。

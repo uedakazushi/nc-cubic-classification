@@ -1,0 +1,42 @@
+{
+  "top_algebra": [
+    "xy=-yx",
+    "zx=i*xz",
+    "zy=-i*yz",
+    "vx=yv",
+    "vy=-xv",
+    "v\u00b2=z\u00b2"
+  ],
+  "PBW": "x^i*y^j*r^k*s^l, r=v+z,s=v-z; all four quadratic overlap ambiguities resolve",
+  "normalizer": "x->x,y->y,r->s,s->r",
+  "normal_cubic_matrix_shape": [
+    140,
+    20
+  ],
+  "rank": 20,
+  "nonzero_minor_rows": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    16,
+    17,
+    18,
+    19,
+    36,
+    45,
+    58
+  ],
+  "minor_determinant": "-128 + 128*I",
+  "filtered_consequence": "All lower-weight skew-derivation and outer-square corrections preserving the H3 normalizer have no normal cubic.",
+  "scope": "Exact PBW overlaps and a fixed full-rank Gaussian-rational minor; no coverage beyond the specified quaternion anti-diagonal chart."
+}
