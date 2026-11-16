@@ -1373,6 +1373,79 @@ $u=x-y$, $v=x+y$ の二平方の係数行列式は $h(8-h^3)/8\ne0$ である。
 は量子中山・反対角指標とこの正例の基底変更を厳密確認する。
 商体の有理関数と成長次元の議論は本文の証明であり、有限標本計算で代替しない。
 
+\begin{theorem}[負三次元側の中山作用は半単純]
+\label{thm:h3-order2-negative-three-semisimple}
+H3包絡の中山固有値の重複度が $(1,3)$ なら、その中山作用は半単純である。
+特に共通平面の第二行列標準形はこの重複度では存在しない。
+\end{theorem}
+\begin{proof}
+定理\ref{thm:h3-order2-two-square-quotient}により、残る非半単純の場合は
+$W$ に非自明Jordan blockを持つ分裂 $2+1$ 型だけである。
+第二標準形の基底を $W=\langle x,y\rangle$ とし、
+正直線を $kp$、残る負固有直線を $kv$ とする。
+中山作用の単冪部分の対数を尺度変更した導分 $D$ は
+\[
+ Dx=Dp=Dv=0,\qquad Dy=x
+\]
+である。自己同型群のJordan分解、または各次数での単冪作用の対数により
+$D$ は二次関係を保つ。共通平面と $p$ の関係は
+\[
+ yx=xy+\kappa x^2,\qquad px=a xp,\qquad
+ py=(a y+b x)p,\qquad a^2=-1
+\]
+である。$\kappa=0$ も許す。
+
+平方投影の核は二次元で、一方は平面関係、他方はcross関係である。
+このcross関係の $vW,Wv$ 射影は両方非零である。
+一方が零なら $v$ が $T$ の商体に入り、平方投影が全射なので
+$p^2$ も同じ商体に入って補題\ref{lem:h3-order2-rational-collapse}に反するからである。
+核を平面関係で割った一次元空間上の $D$ は零なので、
+cross関係の両一次係数は $\ker(D|_W)=kx$ に入る。
+平面の二次元次数成分で $D$ に消されるものは $kx^2$ だけであり、従って
+\[
+ vx=c xv+d x^2,\qquad c\ne0.
+\]
+特に $x$ は $B$ の正規一次元である。
+
+二平方関係を解いて $p^2,v^2$ を消去すると、偶二次成分の基底は
+\[
+ x^2,\ xy,\ y^2,\ xv,\ yv,\ vy
+\]
+である。実際、偶関係は四本で、平面関係、上のcross関係と、二平方を解く二本で尽くされる。
+$D$ の作用をこの基底で計算すると、その核は
+\[
+ \langle x^2,xv,Z\rangle,\qquad Z=vy-cyv-dxy
+\]
+となる。従って $D(p^2)=0$ より
+$p^2=Cx^2+MZ+Nxv$ と書ける。一方、$a^2=-1$ から $p^2x=-xp^2$。
+平面関係とcross関係だけで計算すれば
+\[
+ Zx=cxZ-\kappa cd x^3,
+\]
+従って $x$ を左から消去して
+\[
+ (1+c)M=(1+c)N=0,\qquad 2C+Nd-\kappa cdM=0
+\]
+を得る。ここでは $x^2,xv,Z$ の一次独立性を用いた。
+$c\ne-1$ なら $M=N=C=0$ となって $p^2=0$ に反する。
+従って $c=-1$ であり、$v$ を $v-dx/2$ に変更して $d=0$ とできる。
+この変更は $Dv=0$ と負固有直線の条件を保つ。
+
+この基底で $vx=-xv$、$Z=vy+yv$、$Zx=-xZ$ である。
+再び $D(v^2)=0$ から $v^2=C'x^2+M'Z+N'xv$ と書けるが、
+$v^2x=xv^2$ と上の反可換式を比べ、$x$ の正則性と二次成分の一次独立性を使うと
+$M'=N'=0$。従って $v^2=C'x^2$ である。
+代数閉体上で $s^2=-C'$ を選ぶと
+\[
+ (v+sx)^2=v^2+s^2x^2=0.
+\]
+$v+sx$ は非零一次元なので、これは整域性に反する。
+\end{proof}
+導分不変空間、$Zx$ と二つの平方の正規化に用いた全恒等式を
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}order2\_\allowbreak{}split\_\allowbreak{}jordan.py}
+が $\mathbb Q[c,d,\kappa]$ 上で厳密に再生する。
+全H3からこの表示への帰着と整域性による排除は上の構造証明である。
+
 \begin{lemma}[単冪twist下の反標準三次関係の輸送]
 \label{lem:h3-unipotent-transport}
 $C$は左右noetherian quadratic Koszul AS4型14641で，$\mu_C$は半単純とする．

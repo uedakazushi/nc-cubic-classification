@@ -1157,5 +1157,12 @@
     "certificate": "computations/cubic_order2_outer_square_reduction_certificate.json",
     "result": "Every multiplicities(1,3) H3 envelope has canonical quotient B/(W)=k<p,v>/(p²,v²). The negative three-dimensional Nakayama module splits over W, leaving only semisimple or split Jordan2+1. Degenerate cross projections at outer-square rank1 are excluded through rational division and finite-central growth, not omitted.",
     "scope_limit": "Remaining outer-square rank2 relations/cubics/admissibility, multiplicities3+1 and2+2, larger spectra and global/relative classification remain. The verifier checks identities/calibration, not the analytic field argument by finite sampling."
+  },
+  "order2_negative_three_semisimple_v109": {
+    "status": "global structural proof in manuscript; exact polynomial identities executed",
+    "validator": "computations/verify_cubic_order2_split_jordan.py",
+    "certificate": "computations/cubic_order2_split_jordan_certificate.json",
+    "result": "Every H3 envelope with Nakayama multiplicities(1,3) has semisimple Nakayama action. The remaining split Jordan2+1 forces a normal linear x and v²=C*x² with vx=-xv, contradicting the domain hypothesis.",
+    "scope_limit": "No full classification of the remaining semisimple rank-two square sector or other spectral multiplicities is asserted."
   }
 }

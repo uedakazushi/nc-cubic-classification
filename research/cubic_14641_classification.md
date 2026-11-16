@@ -552,4 +552,14 @@ nu=fのtrim先頭環は二段Ore T[u;f][w;sigma],sigma|T=f,sigma u=−u。hdet f
 
 verify_cubic_order2_outer_square_reduction.pyは量子中山・反対角hdetの行列恒等式と、既知Clifford swapをW0にした二平方係数minor=h(8−h³)/8を厳密確認。商体のrational不可能性、有限中心成長、全projection帰着は原稿の証明であり有限標本で証明したとしない。
 
-次の焦点：残るrank2平方領域ではeven relations kernelがq0とcross一本になり、p²,v²をそれぞれW²+vW+Wvで表せる。半単純muとsplit M1を分け、全Koszul/normalG条件から既知Clifford族への被覆又は新しい許容族を調べる。p²の中心性や負三生成元部分代数のAS3性はまだ未証明なので先に仮定しない。正三次元側、2+2、中山三/四固有値、全CY被覆・非捩れqso3正許容性、全成分/相対降下も未完。
+次の焦点：残るrank2平方領域ではeven relations kernelがq0とcross一本になり、p²,v²をそれぞれW²+vW+Wvで表せる。下記によりsplit M1も排除済みなので、半単純muの全Koszul/normalG条件から既知Clifford族への被覆又は新しい許容族を調べる。p²の中心性や負三生成元部分代数のAS3性はまだ未証明なので先に仮定しない。正三次元側、2+2、中山三/四固有値、全CY被覆・非捩れqso3正許容性、全成分/相対降下も未完。
+
+## 負三次元側の全Jordan型を排除（classification-v109）
+
+v108で残ったsplit M1も排除し、重複度(1,3)の全H3包絡でmu半単純と証明した。新たなAS4 atlasや有限標本に依存しない。原稿thm:h3-order2-negative-three-semisimple。
+
+分裂基底ではD=log(mu_unipotent)の尺度を取りDy=x,Dx=Dp=Dv=0、平面yx=xy+kappa x²、px=a xp,a²−1。平方投影kernelのcross一本はD不変なので両射影がkxに入り、vx=c xv+d x²,c非零。射影の片方零はv,p²が平面商体に入りv108で既排除。従ってxは全Bの正規一次元となる。偶B2の基底x²,xy,y²,xv,yv,vyでD核はx²,xv,Z=vy−c yv−d xyの三次元。p²=Cx²+MZ+Nxvとpxの平方からp²x=−xp²、Zx=c xZ−kappa c d x³を比べ、(1+c)M=(1+c)N=0,2C+Nd−kappa c d M=0。c≠−1ならp²0なのでc−1。v->v−dx/2でd0にできる。
+
+するとxv,Zはxと反可換するがv²はxと可換し、v²もD不変なのでv²=Cprime x²。s²=−Cprimeを取れば非零一次元v+sxの平方が零となって整域性に反する。kappa0（共通平面可換）も含む。verify_cubic_order2_split_jordan.pyは全導分核係数とZ/平方の恒等式をQ[c,d,kappa]上で再生しPASS、標本検査ではない。全域帰着・一次独立・整域矛盾は本文で証明。
+
+次の具体的着手：半単純M=Jでfに制約det f−1、mu_T=−f²があり、量子平面の対角f（q−a²）又はq−1での反対角fを調べる。ただし後者はdet/hdet条件で既に消える。量子q1はcommutativeでf²−I、Jordan平面でもmu_W−Iとmu_T=−f²を満たすfが存在し得るため除外せず、rank2平方とcross一本・正常三次の全整合を調べる。既知Cliffordのq−1,fdiag(−1,1)を正例として保持する。p²中心性・負三生成元部分AS3は依然仮定しない。
