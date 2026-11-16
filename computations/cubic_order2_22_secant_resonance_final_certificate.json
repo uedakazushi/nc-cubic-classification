@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "universal_functionals": "eight explicit polynomial quartic functionals annihilate ALL 288 original relation insertions identically in QQ[r,s,t]; no generic quotient basis or approximate root calculation",
+  "curves": [
+    {
+      "curve": "gaussian",
+      "minor_gcd": "s**3"
+    },
+    {
+      "curve": "sqrtminus3",
+      "minor_gcd": "s**5 + s**3*(2/3 - 2*sqrt(3)*I/3)"
+    }
+  ],
+  "finite_points": [
+    {
+      "point": "gaussian_zero",
+      "B3": 20,
+      "B4": 36,
+      "normal_rank": 8,
+      "exclusion": "not AS4: B4 dimension36"
+    },
+    {
+      "point": "sqrtminus3_finite",
+      "B3": 20,
+      "B4": 35,
+      "normal_rank": 8,
+      "exclusion": "whole normal pencil factors"
+    }
+  ],
+  "coverage": "Gaussian three-minor gcd constant*s3; sqrt(-3) gcd constant*s3*(s2+(2-2sqrt(-3))/3). Gaussian s0 has B4 dimension36 and is not AS4. sqrt(-3) s0 is excluded a0 boundary; remaining finite roots and all conjugates have B4 dimension35 and original normal rank8.",
+  "conclusion": "all remaining resonance curves have normal dimension<=2; universal factor pencil is the whole kernel. Together with prior cover, entire nondegenerate symmetric-secant positive-Pfaffian resonance has no H3.",
+  "remaining": [
+    "off-resonance q1 main with a!=0",
+    "global H3 classification",
+    "relative intrinsic descent",
+    "independent peer review"
+  ]
+}

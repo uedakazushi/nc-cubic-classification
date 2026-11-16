@@ -2030,5 +2030,15 @@
     "certificate": "computations/cubic_order2_22_secant_resonance_cover_certificate.json",
     "proof": "papers/sections/cubic_order2_22_secant_resonance_cover.tex",
     "scope": "非退化secant正Pfの全aq=0領域を排除。二重零環をOre基底Tの一般化Weyl代数として構成し全値domain/Hilbert14641を証明、一重零a0の補助次数先頭環と同定。正常核は非共鳴0/共鳴高々2、全値因子pencilで残りも排除。共鳴面は三追加minorとE,F4,J6 ideal=(s²,(rho+1)²)、一点(-3,0)の厳密再消去により例外rho²−9/E/Dを全て閉じ、残るのはrho²=-1,-3の二つの数体上一param曲線だけ。共鳴外aq非零主chart/全CY/三固有値以上/成分/相対降下は未完。"
+  },
+  "order2_22_secant_resonance_final_v195": {
+    "status": "PASS eight polynomial original-relation annihilators, both quadratic-field covers and all exact exceptional points/conjugates; no independent peer review",
+    "validator": "computations/verify_cubic_order2_22_secant_resonance_final.py",
+    "utility": "computations/cubic_order2_22_secant_functionals.py",
+    "input": "computations/cubic_order2_22_secant_resonance_final_input.json",
+    "functionals": "computations/cubic_order2_22_secant_main_functionals_input.json",
+    "certificate": "computations/cubic_order2_22_secant_resonance_final_certificate.json",
+    "proof": "papers/sections/cubic_order2_22_secant_resonance_final.tex",
+    "scope": "非退化正top/対称secant/正Pfaffianの共鳴面2t+rho²−1=0を全値排除。三変数の明示多項式四次汎関数8本が元288関係を消す恒等式を直接検証。残余rho²=-1,-3で正常8minor三本のgcdはs³、s³*(s²+(2−2sqrt−3)/3)。Gaussian s0はB4dim36で非AS4。残る有限点はQQ(sqrt3,i)で元関係再消去しB4dim35/正常rank8、全共役を覆う。全値因子pencilが全正常核となりH3なし。次はq1主chartのa非零/非共鳴領域。全CY/三固有値以上/成分/相対降下は未完。"
   }
 }

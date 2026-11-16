@@ -1297,3 +1297,11 @@ canonical負topQ0の(2,2)/mixed rank4全H3を、全Jordan型込みで曲がっ�
 非退化secant正Pfの全aq=0領域を排除。二重零環をOre基底Tの一般化Weyl代数として構成し全値domain/Hilbert14641を証明、一重零a0の補助次数先頭環と同定。正常核は非共鳴0/共鳴高々2、全値因子pencilで残りも排除。共鳴面は三追加minorとE,F4,J6 ideal=(s²,(rho+1)²)、一点(-3,0)の厳密再消去により例外rho²−9/E/Dを全て閉じ、残るのはrho²=-1,-3の二つの数体上一param曲線だけ。共鳴外aq非零主chart/全CY/三固有値以上/成分/相対降下は未完。
 
 証明cubic_order2_22_secant_resonance_cover.tex。T=k[u,z][v;sigma,delta], vu=-uv+z,vz=zv,degz2。任意GL2VがTを保ち、A2中心/非零。T[X±1;F^-1]にx=X,y=F(A2)X^-1を置くWeyl表示でBdoublezero≅T⊕ΣTx^n⊕Ty^n、Hilbert1/(1-h)^4/domain。a0,q1はauxdegx1/y−1/V0でqtermだけ2低いのでgrBへdoublezeroから全射、AS4Hilbert同値で同型。gr正常核単射から非共鳴zero、共鳴dim≤2、既存全値normpencilが全kernelを覆う。追加minor三本は単元除去後(r+3)E,s²F4,s²J6、ideal(E,F4,J6)=(s²,(r+1)²)。残余(-3,0)もfresh original R4でrank8。D0=a0既に排除なので共鳴残余はr²=-1,-3だけ。私的secant_res_two_curves.pyでQQ(i)(s)及びQQ(sqrt3,i)(s)上の正常rank8と一変数minor gcdを計算中、未完結果を分類として使わない。
+
+## 非退化secant共鳴面の全値排除（classification-v195）
+
+非退化正top/対称secant/正Pfaffianの共鳴面2t+rho²−1=0を全値排除。三変数の明示多項式四次汎関数8本が元288関係を消す恒等式を直接検証。残余rho²=-1,-3で正常8minor三本のgcdはs³、s³*(s²+(2−2sqrt−3)/3)。Gaussian s0はB4dim36で非AS4。残る有限点はQQ(sqrt3,i)で元関係再消去しB4dim35/正常rank8、全共役を覆う。全値因子pencilが全正常核となりH3なし。次はq1主chartのa非零/非共鳴領域。全CY/三固有値以上/成分/相対降下は未完。
+
+証明cubic_order2_22_secant_resonance_final.tex。私的FLINT rational-function sparse Markowitz eliminationで三変数B4dim35と全元関係annihilatorを取得。分母leading coefficientを1にする正規化で有理unit係数の巨大化を防ぎ、八つの汎関数だけを多項式化/primitive化して174KB JSONへ保存した。公開checkerは生成アルゴリズムを信頼するのでなく、六二次関係の全位置・全外語288行をその多項式汎関数が消すことを直接QQ[r,s,t]で検証する。両残余curveで行のs冪だけを除き三minor gcd cover。sqrt−3最後の点s=(1+r)/sqrt3は四次体QQ(sqrt3,i)の埋込みで全符号共役を覆いfresh正常rank8。
+
+次の具体計算：同じ八多項式汎関数の正常10minorを主chart全体で構成し、非共鳴に残る必要supportを減らす。私的fullnormalminorは定数unit*r^4*s³*t12*(r−1)^18*(r+1)^29*(r²−2t−1)²*(r²+2t−1)²*L、L=r5+r4+2r3s²+2r3t²−2r²s²+2r²t²+2rt²−r+2t²−1。元の選択汎関数の極はr²*s*t²*(r−1)^4*(r+1)^6だけ。これを公表するには公開polyλからminor/逆行列恒等式を再生し、分母/poleと別minorで偽の因子r²−2t−1/Lを除く。公開証明未完のためこのgeneric主chart結果を分類済みとして使わない。

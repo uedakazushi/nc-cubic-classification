@@ -42,7 +42,7 @@ Rains・VdB・AS・anticanonical heartの一般次数比較は [nc-dp-surface-he
 
 **全体的なスペクトル制約（classification-v186）**：全(1,3)は幾何学的被覆・H3必要十分条件・全矢まで確定、全(3,1)は全Jordan型込みで空。(2,2) mixed rank2も全Jordan型込みで空。mixed rank4のcanonical正top P0全体は、退化境界と全Jordan型込みで固定非CY符号族へ完全に幾何学的認識、一般dim2/inertia mu2²。canonical負topQ0は全Jordan型込みで曲がったClifford族に認識。未知の(2,2)はP,Qとも非零で、Pはcomm⊙平方/comm⊙非退化quadの二型。(2,2)/mixed rank4の全H3は実際に半単純。負tangent/非対称型も全排除され、非零Qの未知は対称secant型だけ。三固有値以上、全CY被覆、全成分・intrinsic族降下は未完。
 
-**次の核心（classification-v194）**：非退化secant正Pfの全aq=0領域を排除。二重零環をOre基底Tの一般化Weyl代数として構成し全値domain/Hilbert14641を証明、一重零a0の補助次数先頭環と同定。正常核は非共鳴0/共鳴高々2、全値因子pencilで残りも排除。共鳴面は三追加minorとE,F4,J6 ideal=(s²,(rho+1)²)、一点(-3,0)の厳密再消去により例外rho²−9/E/Dを全て閉じ、残るのはrho²=-1,-3の二つの数体上一param曲線だけ。共鳴外aq非零主chart/全CY/三固有値以上/成分/相対降下は未完。 次は二つの数体上一param曲線の正常rank8全値cover。
+**次の核心（classification-v195）**：非退化正top/対称secant/正Pfaffianの共鳴面2t+rho²−1=0を全値排除。三変数の明示多項式四次汎関数8本が元288関係を消す恒等式を直接検証。残余rho²=-1,-3で正常8minor三本のgcdはs³、s³*(s²+(2−2sqrt−3)/3)。Gaussian s0はB4dim36で非AS4。残る有限点はQQ(sqrt3,i)で元関係再消去しB4dim35/正常rank8、全共役を覆う。全値因子pencilが全正常核となりH3なし。次はq1主chartのa非零/非共鳴領域。全CY/三固有値以上/成分/相対降下は未完。
 
 既存の主要な構造結果を維持する：
 
