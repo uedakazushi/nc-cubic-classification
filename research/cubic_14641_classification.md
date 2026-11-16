@@ -1333,3 +1333,11 @@ canonical負topQ0の(2,2)/mixed rank4全H3を、全Jordan型込みで曲がっ�
 次の具体着手：Jmの二枝はs=±i(rho+1)(rho²+1)/(2rho), t=(rho²−1)/2。rho(rho²−1)(rho²+1)非零、rho²+1=0は既存s0排除へ。rho2,s15i/4,t3/2の元関係再消去ではB3dim20/B4dim35、正常rank9で真に正常核一本が残る。正一次因子の条件は(3theta+4i)^3=0、従ってこの点はx−4i*y/3を因子に持つ。この点からの推測beta=−2i*rho/(rho+1)は、native Gaussian有理関数体上でNL(beta)のkernelが零となり一般式として棄却した。次はthetaの6minor gcdをQQ(i)(rho)[theta]で計算し、正しい因子条件を導く。交点3rho²+1=0のrho=i/sqrt3,s=(sqrt3+i)/3,t−2/3もfresh四次商35/normalrank9を得た。正常核の全curve coverと実際のQ2を次に構成する。
 
 L0の非鏡領域はrho²+1=0ならs0なので排除済み。それ以外ではL上の真共鳴有理点t0=(1−rho²)/2,s0=i(rho+1)(rho²+1)/(2rho)から傾きk=(s−s0)/(t−t0)で有理paramを作れる。D=rho²(rho−1)k²+(rho+1)(rho²+1), E=(rho+1)−i*rho*k, Q=−D+2(rho²+1)E、t=(rho²−1)Q/(2D), s=s0+k*(rho²−1)(rho²+1)*E/D。非共鳴ではE,D非零で覆える見込み（全恒等式・被覆は未公表、検証してから使う）。元のLgeneric点rho3,s10i/3,t1はB3dim20/B4dim35/normalrank10で、L全体を正常核非零と推論しない。
+
+## 鏡共鳴面の全排除（classification-v199）
+
+鏡共鳴の最後のJm曲線の全正常切断を排除。両枝s=±i(rho+1)(rho²+1)/(2rho), t=(rho²−1)/2で、b=−2i*rho/(rho²−1), Q2=x²+b(rho²+1)(xy+yx)+b²y²+2rho²/(rho²−1)*(uv+vu)としG=(x+by)Q2。35明示多項式四次汎関数と一点B4dim35の上下界からgeneric商次元35、正常恒等式をAS4最大rank開集合へ延長。三normal9minor gcdと3rho²+1=0のfresh数体rank9で全正常核一本を保証し全cutに一次因子。鏡共鳴面全体が空、未知はL0の非鏡領域だけ。全CY/三固有値以上/成分/相対降下は未完。
+
+証明cubic_order2_22_secant_mirror_J.tex。正しいtheta条件は((rho²−1)theta+2i*rho)^3であり、一般betaの分母はrho+1でなくrho²−1。Q2係数は入力へ明示しQxx1なのでdomainで非零。35多項式quartic annihilatorの指定35自由語への対角minorが非零、rho2の厳密B4dim35からgeneric四次商35をrigorous上下界で得る。Gの正常commutatorを全部消すためgeneric正常、係数regularかつAS4最大rank余核局所自由で全AS4fiberへ延長。kernel上界normal9minor三本gcdはbaseunitと3rho²+1だけ、交点はQQ(sqrt3,i)上で元R4を再消去しrank9。この証明は全値cutのfactorであって単なるgeneric排除ではない。
+
+次は非鏡L0（a,s,t,delta_plus,delta_minus非零）。rho²+1=0ならLがrho²(rho−1)s²の定数倍でs0に入り既に排除。D=rho²+1−(rho²−1)z², Q=rho²+1−2(rho²+1)z+(rho²−1)z², H=Q+4zとして、t=(rho²−1)Q/(2D), s=i(rho+1)(rho²+1)H/(2rho D)という二param表示を次に厳密検証する。逆z=[2i*rho*s+(rho+1)(rho²+1)]/[(rho+1)(2t+rho²−1)]。a=(rho²−1)²*(Q²−2D²)/(4rho²D²)、delta_plus=2(rho²−1)(rho²+1)(1−z)/D、delta_minus=−2(rho²−1)z*((rho²−1)z−(rho²+1))/Dが候補恒等式。検証前に全被覆として使用しない。

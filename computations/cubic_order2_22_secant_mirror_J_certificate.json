@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "scope": "complete Jm=0 mirror curve, rho(rho2-1)(rho2+1)!=0, both signs s=+/-i(rho+1)(rho2+1)/(2rho)",
+  "generic_normal_identity": "G=(x-2i*rho/(rho2-1)*y)*Q2, six explicit Q coefficients; Qxx=1. All 35 independent quartic annihilators vanish on every normal commutator. Finite B4dim35 and 35 independent annihilators prove generic B4dim35. Maximal-rank quotient flatness extends normality to every AS4 fiber.",
+  "normal_rank_cover": "r**39 - r**38 - 23*r**37/3 + 23*r**36/3 + 70*r**35/3 - 70*r**34/3 - 94*r**33/3 + 94*r**32/3 + 5*r**31/3 - 5*r**30/3 + 53*r**29 - 53*r**28 - 68*r**27 + 68*r**26 + 20*r**25 - 20*r**24 + 31*r**23 - 31*r**22 - 35*r**21 + 35*r**20 + 38*r**19/3 - 38*r**18/3 + 2*r**17/3 - 2*r**16/3 - 5*r**15/3 + 5*r**14/3 + r**13/3 - r**12/3",
+  "finite_remainder": "3rho2+1=0: exact B3dim20/B4dim35/normal rank9 over QQ(sqrt3,i), all embeddings",
+  "conclusion": "normal dimension<=1 everywhere; in any AS4 domain G is nonzero and normal, so spans the whole kernel and has an actual linear factor. No H3 on either entire Jm branch. Combined with prior support, entire mirror surface is empty.",
+  "remaining": [
+    "nonmirror L=0 main surface",
+    "global H3 classification",
+    "intrinsic relative descent",
+    "independent peer review"
+  ]
+}
