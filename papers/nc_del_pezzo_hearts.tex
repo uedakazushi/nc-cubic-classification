@@ -37,7 +37,7 @@
 \title{非可換del Pezzo曲面の四つのheart\\
 \large VdB・Rains・反標準・Artin--Schelter構成の比較}
 \author{}
-\date{2026年11月16日\qquad 公表準備稿 hearts-v23}
+\date{2026年11月16日\qquad 公表準備稿 hearts-v24}
 \hypersetup{pdftitle={非可換del Pezzo曲面の四つのheart},pdfsubject={導来比較、HRS tilt、共鳴、反標準corner}}
 \begin{document}
 \maketitle
@@ -45,15 +45,16 @@
 非可換del Pezzo曲面のVdB，Rains，反標準，Artin--Schelterという四つのheartを，
 構造対象と自然な比較関手を指定して比較する．genuineな滑らかな楕円gluingでは
 反標準導来切断が導来同値を与え，heartの差は境界非交叉部分のHRS tiltに集中する．
-VdBの右加群規約と各blow-up・section-model関手を通る実際のrestrictionを追い，
-$L_1=\sigma^*L_0$に対してRainsのパラメータが$L=L_1$，$q=L_0L_1^{-1}$となることを示す．
-初期平面twistの指定は境界作用だけから残る九つの候補を一つに決める．
-この規格化におけるmutation後のdecupleを計算し，三つの楕円線束の非自明性で
-許容開集合を記述する．その上で構造対象を保つAOU型同値を構成し，
-標準noetherian三block表示ではそのt-exactnessを四交比の十一条件で判定する．
-境界非交叉heartは反標準Euler標数から認識でき，有限ADE型では負単純tiltにより回復される．
-整数倍点の族では整列した差から全有限次元単純加群の次元を求める．
-独立に選んだheartの無条件な一致，未変更の文献座標との同一視，相対heartの降下は主張しない．
+VdBの右加群規約で初期平面twistを運ぶと，Rainsの辞書は$L=L_1$，$q=L_0L_1^{-1}$となる．
+規格化したmutation列から得る楕円decupleについて，全27関係係数をtheta関数で表示し，
+構造頂点を除いたcornerが$L_0$に依存せず，$L_1$による元の六点の可換cornerに一致することを示す．
+これにより，係数比の十一条件を元の六点の共線・conic条件へ引き戻す．
+さらにampleな構造対象を含むvery strong helixからnoetherianなorbit代数を再構成する．
+その結果，規格化した共通領域ではAS heartと反標準heartが一致し，
+noetherian性と十一因子の非消滅は独立の追加条件でなく結論となる．
+一方，順序付きRains heartは実在単純根のEuler標数で選ばれ，
+整数倍点族では整列による単純tiltで同じ反標準heartへ移る．
+未変更の文献座標への同一視，任意のpotentialのnoetherian性，相対heartの降下は主張しない．
 \end{abstract}
 \tableofcontents
 
@@ -62,6 +63,7 @@ $L_1=\sigma^*L_0$に対してRainsのパラメータが$L=L_1$，$q=L_0L_1^{-1}$
 \input{papers/sections/four_hearts_boundary_data.tex}
 \input{papers/sections/four_hearts_as.tex}
 \input{papers/sections/four_hearts_corner_locus.tex}
+\input{papers/sections/four_hearts_elliptic_coefficients.tex}
 \input{papers/sections/four_hearts_canonical_comparison.tex}
 \input{papers/sections/four_hearts_examples.tex}
 
@@ -129,5 +131,13 @@ N.~Broomhead, R.~Coelho Sim\~oes, D.~Pauksztello, J.~Woolf,
 Adv. Math. \textbf{503} (2026), Part B, 111197;
 \href{https://arxiv.org/abs/2401.02947}{arXiv:2401.02947v3}.
 使用箇所：Theorem 2.7およびRemark 2.8（left/right tiltの有限長性）．
+\bibitem{EllipticCauchy}
+V.~Prokofev, A.~Zabrodin, \emph{Elliptic Cauchy matrices},
+\href{https://arxiv.org/abs/2305.02837}{arXiv:2305.02837v1} (2023).
+使用箇所：(1.7)，(2.1)（elliptic Cauchy行列と既知のFrobenius determinant）．
+\bibitem{PolishchukProj}
+A.~Polishchuk, \emph{Noncommutative Proj and coherent algebras},
+\href{https://arxiv.org/abs/math/0212182}{arXiv:math/0212182v4} (2004).
+使用箇所：Theorem 2.4とその証明（ample sequenceからのabel圏の再構成）．
 \end{thebibliography}
 \end{document}

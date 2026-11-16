@@ -1,6 +1,6 @@
 # 四つのheartの比較：研究方針
 
-2026-11-16 / hearts-v23。この一式から再開する場合は本書を最初に読む。現行論文は `papers/nc_del_pezzo_hearts.tex`、補足知識は `research/heart_comparison.md`、検証状態は `research/four_hearts_validation.json`。リポジトリ全体の目標は `00_research_plan.md` にあり、本書はheart比較に対象を限定する。
+2026-11-16 / hearts-v24。この一式から再開する場合は本書を最初に読む。現行論文は `papers/nc_del_pezzo_hearts.tex`、補足知識は `research/heart_comparison.md`、検証状態は `research/four_hearts_validation.json`。リポジトリ全体の目標は `00_research_plan.md` にあり、本書はheart比較に対象を限定する。
 
 ## 恒常的な研究原則と保存許可
 
@@ -16,42 +16,37 @@
 
 生成・証明点検・数値検算・組版・保存を別々の状態として報告する。配布前に必要ファイル、参照、組版、計算、ZIP整合性を確認する。
 
-## 最優先の目標：公表する論文の価値と正確性
+## 最優先の目標：公表価値を支える構造結果と正確性
 
-自然な比較関手と構造対象を明示し、先行研究と区別できる正確な中心結果を優先する。主張やページ数を増やすことを目的としない。現行稿は41ページ、主TeXと八つのsectionからなる。現在の中心は `four_hearts_boundary_data.tex` の右加群規約での辞書、正規化したmutation列、decupleの順逆復元である。
+現在の公表稿は46ページ、主TeXと九つのsectionからなる。最新の中心は `four_hearts_elliptic_coefficients.tex`。自然な比較関手、実際の楕円データ、構造対象を保ったheartの同定を優先し、例・ページ数を増やすこと自体を目標にしない。
 
-## 確定した正規化と到達点
+## 現在の到達点
 
-VdB (5.4)と§10の右加群規約を固定し、境界の正shiftをS+(M)=σ_*(M⊗L0)とする。負の平面twistの実際のrestrictionはU1=L0^−1、U2=(L0L1)^−1、L1=σ*L0。blow-upのβとsection-modelの境界同型を使って同じ境界同定で運ぶと、このtupleは最終Orlov collectionでも保たれる（lem:plane-negative-twists、prop:transported-tuple）。
+右加群規約での辞書L=L1、q=L0/L1と、明示したcohomological shiftを持つmutation列からのactual decupleを保持する。実際の三条件(U+)はO(D123)≠L0、O(D456)≠L1、O(D6)≠L0L1であり、印刷された別規約のtupleをそのまま代入しない。
 
-この指定構成のRains辞書は **q=L0/L1、L=L1** であり、可換avatarはL1による平面内の六点blow-upとなる（thm:right-dictionary）。VdBのσpiがL0一般位置という条件は、piがL1一般位置と同じである。full collectionのforward RHomと合成の境界比較により、構造対象・境界つきdg同値を得る。これだけからheartのt-exactnessは結論しない。境界作用だけで残っていたε∈E[3]の九候補は、初期平面twistをさらに固定するとε=Oに決まる。
+**全potentialの明示式**：x_b=p_b、y_c=p_(3+c)、X=Σx、Y=Σy、L_iのAbel和をell_iとする。u=X−ell0、t=ell1−Yと置けば、矢基底を選んでw_abc=theta(y_c−x_b+t_a)、(t0,t1,t2)=(u,t,0)。これは全27係数の解析的局所表示であり、基底・liftを変えた時のgaugeを明示する。次数2切断の三つの零点による直接証明を持つ。
 
-右mutationはR_F^-E=Cone(E→RHom(E,F)^*⊗F)[−1]、左はshiftなしのconeと定義する。AOUの隣接交換順を使うが、R6^-R7^-R8^-の後の末尾三対象に[1]を明示的に施す。境界で負次数2線束のcoevalution coneが逆線束[−1]になるためである。このsheaf-normalized列で得るdecupleは
+**元の六点の復元**：Q_bc=w2bc/w1bcはtheta(y_c−x_b)/theta(y_c−x_b+t)。L1埋込みの最後の三点を座標点にした最初の三点の座標行列PについてP~(entrywise inverse Q)^t。したがって構造頂点を除くcornerはL0に依存せず、一般位置では元の六点の可換三次曲面cornerに一致する。十一条件は新たな補助六点でなく、入力のL1六点の一般位置と同値となる。これはFrobenius公式そのものの新発見ではない。
 
-    (O, (L0L1)^−1(D6), L0^−1(D123);
-     O(p1), O(p2), O(p3); L0(−p4), L0(−p5), L0(−p6)).
+係数w1の九零条件は一つの前半点と二つの後半点のL1共線条件。Qの九minorは二つの前半点と一つの後半点の共線条件。det(entrywise inverse Q)は前半三点の共線、detQは六点conic。後半三点の共線は(U+)で既に除外される。w0はL0に依存し、零になってもcornerには影響しない。
 
-点が相異なるとき、そのadmissibilityは三条件 **O(D123)≠L0、O(D456)≠L1、O(D6)≠L0L1** と同値。固定E,σ,L0上では一般位置条件との共通部分は非空Zariski開である。そこではactual restriction条件(R)が成立し、このdecupleから構成したAS代数A+と指定Ψ+のpointed比較を得る。標準周期表示が右noetherianであれば、十一因子ΔはΨ+のt-exactnessを判定する。未変更の印刷decuple・同じラベルのAS代数への無条件な同一視はしていない。
+**noetherian性と標準heartの一致**：Hom有限noetherian・有限homological dimensionのheartにAZ-ampleなeがあり、eを含むfull very strong周期helixが導来圏内にあるとき、そのfoundation Tはheart内にあり、(T,s)もampleとなる。eのtwistからのd段の全射解消とdimension shiftingで全対象への高次Ext tailを消し、AZ再構成からorbit代数の右noetherian性とabel同値を得る。noetherian性のgraded idealによる証明も収めた。
 
-逆に(O,A0,B0;K1,K2,K3;C1,C2,C3)から、O(pi)=Ki、L0=K1K2K3/B0、O(p3+j)=L0/Cj、L1=O(D6)/(L0A0)、q=L0/L1を一意に復元する（prop:inverse-decuple）。平行移動σそのものは[3]のfiberの九選択を持つ。これはdecupleだけからσを復元する曖昧さであり、σを既に固定した前記εの選択とは異なる。全moduli stackの九対一同型とは主張しない。
+この命題を、規格化したpointed比較Psi+と既存の標準AS very strong helix実現に適用すると、VdB一般位置・(U+)の共通領域でB(W+)は右noetherianかつqgr A+≃qgr Fとなり、指定Psi+自体がt-exactとなる。したがってこの構成ではnoetherian性とDelta≠0を独立に追加しなくてよい。任意のfull strong collectionをvery strongと読み替えたり、任意potentialへ拡張したりしてはならない。
 
-整数倍点pi=Ni a、q=P_a、L1=O(3o)、L0=L1q、3b=aとすれば、従来の共鳴族はこの正規化した共通領域に入る。三条件の比はq^(N1+N2+N3−1)、q^(N4+N5+N6)、q^(ΣNi−1)で全て非自明。これは全対応potentialのnoetherian性やΔ非零を保証するものではない。
+整数倍点の共鳴族はこの領域に入るため、AS+と反標準heartは一致する。一方、順序付きRains heartは既存の整列定理でそのheartへ移る。例(1,3,2,5,7,11)では一回、全simple次元は(6,1,1,2,2,4)。720の埋め込まれたheartと抽象的abel非同値の分類は区別する。
 
-## 原典の印刷式との関係と保持する成果
+## 研究方針の更新理由と次の核心
 
-印刷されたtuple U1=L0^−2L1、U2=L0^−5L1³は別のshift S−(M)=L0⊗σ*Mの負twistから得られる。一方、S+の境界作用とそのtupleを同時に用いるとQ²=Q³=Oという不整合が出る。この検査と、原典全記号の正式な読み替え・訂正の確定は区別する。本稿は初期右加群規約と各transport、各cohomological shiftを明示して独立に構成したΨ+を扱う。著者による正式訂正の確認や未変更の印刷AS代数との同一視は未完了。
+従来の優先課題だった「actual decupleのpotential、十一因子の楕円表示、noetherian適用域」は上の共通領域で解決したので、未解決課題として反復しない。有限係数判定を元の幾何と結び付け、ASと反標準が一致する場所を仮定でなく構成から与えられたことが今回の進展である。
 
-十一条件の純代数定理、Rains単独のgenuine gluingの導来比較、全heartの差の局在、Euler chamberと整列結果、同じ六点から得る720個の埋め込まれたRains heartsは保持する。これら全証明を今回新たに独立再査読したという意味ではない。今回の共同領域の構成は旧成果との接続を与えるが、全パラメータ・全heart・相対familyの分類を意味しない。
+次の優先課題は、一般位置の外でなおactual decupleがadmissibleである壁を選び、純代数的なcornerの無限性と実際の圏の対象・tiltの関係を調べること。ただしVdBの導来比較やvery strong標準実現が失われた点へ定理を無条件に延長しない。まず一つの混合共線壁またはconic壁で、どの入力が残るかを確認する。
 
-## 次の着手と成功条件
+もう一つの優先課題は公表稿の再編成と独立点検である。theta関係式、元の六点、ample-helix再構成、共通領域のabel同値を主定理の論理順に置き、規約に関する長い監査部分と一般論の重複を整理する。ただし有効な証明や既存の共鳴結果を削除して軽量化しない。先行研究との比較はAOU §4/7/9、OUのvery strong helix、AZ/Polishchukの再構成を明示し、本研究の追加的な接続と区別する。
 
-最優先は **正規化した実際のdecupleからpotentialを作り、十一因子の楕円パラメータ式とnoetherian適用域を確定すること**。右規約での辞書、εの選択、三つのactual admissibility条件は解決済みなので再び未決定としない。原典の変更されていない各記号への翻訳は別の確認課題として残す。
+未変更の印刷AOU全記号への正式翻訳、Rains2025 monograph全文との網羅的新規性照合、外部独立査読、相対kernel・heart・marked descent、元のアフィン生成元の作用係数は引き続き未完了。
 
-逆decuple辞書を用い、一般位置と三条件の開集合上でどの係数chartに入るかを明示する。特に整数倍点例のAS+がΔ非零となるかは、三条件だけから推測せず別計算する。その後、比較kernelの相対perfectness、基底変更、標識・heartの降下へ進む。対象の同型・pointed dg同値・t-exactnessを分ける。
-
-Rains2025 monograph全文との網羅的新規性照合、外部独立査読、機械形式化、元の楕円生成元のアフィン表現係数は未完了。公表稿の主張は既知のVdB・AOU・Rainsの入力と追加的な正規化・辞書・heart選択の帰結を区別する。
-
-## 再現と検証
+## 再現と実施範囲
 
     python3 computations/verify_cubic_heart_numerics.py
     python3 computations/verify_four_hearts.py
@@ -59,8 +54,9 @@ Rains2025 monograph全文との網羅的新規性照合、外部独立査読、�
     python3 computations/verify_four_hearts_chambers.py
     python3 computations/verify_four_hearts_sorted.py
     python3 computations/verify_four_hearts_boundary.py
+    python3 computations/verify_four_hearts_elliptic.py
     latexmk -lualatex -outdir=build papers/nc_del_pezzo_hearts.tex
 
-Python標準ライブラリ、LuaLaTeX、LuaTeX-ja、tikz-cd、latexmkを使う。六コードを現行入力で実行した。境界コードは1587個のK0ベクトルに加え、325個のshift逆演算、符号付きrankを含むmutation列、[1]補正、逆decupleのround-trip、具体六点の720順序の三条件を検査する。実際の線束同型、full strong性、dg同値は計算の帰結ではなく本文と一次資料による。
+Python標準ライブラリ、LuaLaTeX、LuaTeX-ja、tikz-cd、latexmkを使う。新しいellipticコードはF_1009上のy²=x³−x+1でMiller関数からactual Hom切断を作り、関係を関数体で交差乗算して検査する。24の一般位置配置それぞれ三つのL0、および四種類の強制壁を扱い、計684組の関係式を厳密検算する。有限体の計算を非torsionの存在や複素幾何・noetherian性の証明と呼ばない。
 
-全文41ページ・109ラベル・13文献。全文組版・画像点検・清浄ディレクトリでの再現・遠隔保存をvalidationで分けて記す。GitHub保存成功時にLibraryへ別途アップロードしない。
+保持した六コードも現行入力で再実行した。全文組版・ページ画像の確認・清浄環境の再現・遠隔保存はvalidationで区別する。過去の全証明の今回の独立再監査や外部査読はしていない。GitHubが正本で、保存成功時にはLibraryへ別途アップロードしない。

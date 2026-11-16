@@ -214,7 +214,7 @@ VdBの最後のraw blow-upと同じRains表示については，系\ref{cor:four
 VdB--Rains & 同じblow-up・gluing・blow-down表示でabel同値 & 独立に選んだavatarのデータ対応\\
 Rains--反標準 & genuine smooth楕円gluingで導来同値，一回のHRS tilt & 任意nc曲面・特異境界への拡張\\
 VdB--section model & VdBの一般位置条件下で振幅1の導来同値 & raw blow-upとのheart一致\\
-AS--反標準 & 標準noetherian三次曲面型では十一条件で指定同値のt-exactnessを判定 & 全AS locusでの条件成立\\
+AS--反標準 & 規格化共通領域でnoetherian性と標準heartの一致を導出 & 任意potential・全AS locusへの拡張\\
 section model--AS & 実際のrestriction条件の下でpointed導来同値，反標準環も一致 & 全域での標準heartの一致\\
 四者の接続 & 同じ最終VdB表示では自然関手を同定，$\Delta\ne0$で単一tilt & 独立avatarの同定，相対降下\\
 \bottomrule
@@ -313,7 +313,7 @@ Picard格子での根の明示列挙とWeyl反射による列挙を照合する�
 具体的六点の全720順列について，停止回数が逆転数に等しく，全単純の次元が同じ整列公式となることを検査する．
 これらは格子の検算であり，Rainsの既知のsheaf存在結果を計算で証明するものではない．
 
-本稿は主TeXファイルと八つのsectionソースからなり，\texttt{latexmk -lualatex}で再生成できる．
+本稿は主TeXファイルと九つのsectionソースからなり，\texttt{latexmk -lualatex}で再生成できる．
 日本語LuaLaTeX，LuaTeX-ja，\texttt{tikz-cd}，Python~3を用いる．
 リポジトリrootでの主要コマンドは
 \begin{verbatim}
@@ -323,6 +323,7 @@ python3 computations/verify_four_hearts_corner.py
 python3 computations/verify_four_hearts_chambers.py
 python3 computations/verify_four_hearts_sorted.py
 python3 computations/verify_four_hearts_boundary.py
+python3 computations/verify_four_hearts_elliptic.py
 latexmk -lualatex papers/nc_del_pezzo_hearts.tex
 \end{verbatim}
 である．数値検算は，sheafの存在，derived type，導来完全忠実性，

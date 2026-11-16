@@ -330,7 +330,7 @@ $E^6$は既約なのでその有限和の補集合は非空開となる．
  \Psi_+(\pi F)=\OO_{\mathrm{AS},+}(0,0)
 \]
 はpointedであり，$F=R(e_{\mathrm{AS},+},s_{\mathrm{AS},+})$となる．
-標準周期表示が右noetherianなら，定理\ref{thm:AOUexactlocus}の十一条件は
+標準周期表示に対する右noetherian性を確認すれば，定理\ref{thm:AOUexactlocus}の十一条件は
 この\emph{実際のdecupleから作ったpotential}に対する$\Psi_+$のt-exactnessを判定する．
 \end{corollary}
 \begin{proof}
@@ -342,6 +342,8 @@ AOU \S7，Lemma 7.4とその直後のAS構成および\S9のtilting比較を使�
 前命題の第一・第三条件は条件\eqref{eq:two-nontrivial}を実際のrestrictionについて保証する．
 定理\ref{thm:AOU-pointed}，系\ref{cor:AOU-ring}と定理\ref{thm:AOUexactlocus}を適用する．
 これは印刷式(9.53)を変更せず代入したAS代数との同一視ではない．
+この構成での右noetherian性と十一条件の非消滅は，
+後の定理\ref{thm:normalized-abelian}で独立の追加仮定なしに導く．
 \end{proof}
 
 \begin{proposition}[decupleからの逆辞書]\label{prop:inverse-decuple}
@@ -404,6 +406,6 @@ $\sigma^*L_0=L_0P_{-3b}=L_1$である．$L_1$埋込みの三点共線は三つ�
 \end{proof}
 \begin{remark}
 この系は，整数倍点の共鳴例を実際の規格化したdecupleと接続する．
-対応する全potentialのnoetherian性や十一因子$\Delta$の非零性をこの計算から結論しない．
-それらを用いるheartの一致判定は，定理\ref{thm:AOUexactlocus}の仮定を別に確認して適用する．
+この三指数の計算だけでnoetherian性や十一因子$\Delta$の非零性を結論するわけではない．
+それらは後の第\ref{sec:ellipticcoefficients}節で，実際のpotentialとvery strong helixを用いて証明する．
 \end{remark}
