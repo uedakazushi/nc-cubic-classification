@@ -371,3 +371,16 @@ FZ2のQについてR=U+K diag(rho)、q=(2rho−1)/(2rho+1)を元の式から確�
 位数5は(a,c)=(1,3)/(2,1)、一次元側が正規一次元となりG=ell z²又はz²ellで分解。位数9は(0,3)/(3,1)で一次元側の純三乗。位数6はc2,a0/3で二生成元一二次関係の部分整域内の三次となり、全斉次二変数式の一次因子分解で排除。この二変数補題は可逆二次係数行列の等方方向からyx=qxy+kappa y²へ移し、yを逆にしたz=xy^-1でyz=(qz+kappa)yと書いて通常の一変数多項式の根へ還元する。Jordan q1も含む。
 
 従って全H3の二固有値中山の半単純部分は位数2/3のみ、固有値集合は{1,−1}又はmu3の相異なる二元（三組）の計四組。Jordan単冪部分・各重複度・存在十分性・許容性を完成とはしない。三/四固有値の層も残る。証明はcubic_as4_reductions.texのthm:h3-two-eigenvalue-refined。verify_cubic_two_eigenvalue_filter.pyは有限整数演算16組と12排除の重み型、二変数因数分解式の三次までの普遍多項式恒等式を実行確認する。成長/Frobenius/二重Hilbertの議論は原稿の証明であり、有限列挙だけで証明したとしない。新規の全as4被覆は不要。
+
+
+## 二固有値・位数3の構造帰着（classification-v91）
+
+比の位数3では二次tensorの三つの一般化固有値が相異なり、Rは純A²/混合AC/純C²へ分解する。BはN²gradedとなり、Koszul topも一次元なので二重斉次。v90の二重Hilbert補題により、固有値集合{1,rho}は重複度1+3、{omega,omega²}は2+2となる。Gの固定重みは純三次の二成分だけ。
+
+{1,rho}では固有値1の直線kzが正常化しmu_B(z)=z。混合三関係の両射影の核はaz又はzaという零因子になるため無く、B=S[z;sigma]、Sは三生成元noethquadraticKoszulAS3となる。AS3性は純S成分のKoszul解消と正常一次商のRees lemma。G=F+c z³、F!=0、sigma F=F、Fのnormalizerはmu_B^-1|S。c!=0ならsigma³=mu_B^-1|S。c0の一般normal cone障害はまだ別に検証する。
+
+{omega,omega²}ではG=F_A+F_C、両成分非零（片方だけなら二変数三次が分解）。二生成元一二次関係のdomainで、正常三次のnormalizerが唯一の固有値rho（原始三乗根）なら、その平面はq=rho^-1の量子平面、F=x²y、normalizer=rho Iに限る。可換型はnormalizerIdで不可能、Jordan型はF=p(z)y³とp(z)=rho p(z+1)の最高係数で不可能。量子型の単一固有値graded automorphismはスカラーであり、指標q^u=q^(u−3)=rhoからq³1,u1/2を得る。従ってこのH3候補ではmu_B自体がsemisimpleとなり、xy=omega yx,zt=omega²tz,G=x²y+z²tに規格化できる。
+
+Frobenius対合により四次topのAA/CCブロック係数は非零。巡回式が混合flatteningのオフ対角を二つの可逆binary relation行列のKronecker積へ移すので、その4×4ブロックは可逆。混合rank4からR11のAC/CA両射影が同型、従って全体は標準単項式x^i y^j z^k t^lのPBW基底を持つ。残る混合四関係は可逆4×4twisting matrixで表せるが、全係数・H3 admissibilityは未解決。
+
+原稿thm:h3-order3-two-blocks、検証verify_cubic_order3_two_eigenvalue_reduction.py。有限重み、Jordan最高係数、量子binary指標、混合ブロック行列式を実行確認。成長・Frobenius・AS3性・PBW比較は原稿の証明であり列挙だけで完成としない。次は2+2の場合の最高tensorを二量子平面を固定して10個の対称混合係数で表し、rank6、四Diamond、正常G条件の有限多項式系を解く。1+3の純base切断のnormal版cone障害、三固有値以上、零交換子CYの被覆監査、非捩れqso3許容性も残る。

@@ -198,6 +198,114 @@ $G$ は片方の部分代数の三次式だけからなるので、
 三種類以上の固有値を持つ層をこの定理で排除することも、
 残る単冪部分を自動的に零とすることもない。
 
+\begin{lemma}\label{lem:h3-binary-normalizer-mu3}
+二生成元・一二次関係の次数付き整域 $T$ に非零正規三次 $F$ があり、
+その正規化自己同型 $\theta|_{T_1}$ の固有値が原始三乗根 $\rho$ 一種類だけであるとする。
+座標と非零係数を取れば
+\[
+ T=k\langle x,y\rangle/(xy-\rho^{-1}yx),\qquad
+ F=x^2y,\qquad \theta=\rho I
+\]
+となる。
+\end{lemma}
+\begin{proof}
+補題\ref{lem:h3-binary-cubic-factors}の二変数表示を量子平面またはJordan平面に直す。
+可換平面では $F$ の正規化は恒等なので不可能である。
+Jordan平面 $yx=xy+y^2$ の次数付き自己同型は
+$x\mapsto ax+by$, $y\mapsto ay$ である。
+これは一般の二次元行列を関係へ代入して係数を比較すれば従う。
+$F=p(z)y^3$, $z=xy^{-1}$ と書くと
+$Fy=\rho yF$ は $p(z)=\rho p(z+1)$ となる。
+最高係数から $\rho=1$ となって矛盾する。
+
+量子平面 $xy=qyx$, $q\ne1$ の次数付き自己同型は対角または反対角である。
+実際、一般変換の関係の $x^2,y^2$ 係数は
+$(1-q)ac,(1-q)bd$ なので、可逆性と合わせればよい。
+反対角可逆行列は相異なる二固有値を持つため、$\theta=\rho I$ となる。
+PBW単項式 $x^uy^{3-u}$ の正規化指標は $x,y$ 上で
+$q^{u-3},q^u$ である。
+両方が $\rho$ となるには $q^3=1$ であり、$u$ は1または2の一つに限られる。
+必要なら $x,y$ を交換して $F=x^2y$, $q=\rho^{-1}$ とする。
+\end{proof}
+
+\begin{theorem}[二固有値・位数3の二構造]
+\label{thm:h3-order3-two-blocks}
+H3包絡の中山半単純部分が位数3で、固有値が二種類だけであるとする。
+次のいずれかに限られる。
+\begin{enumerate}
+\item 固有値集合が $\{1,\rho\}$、$\rho$ は原始三乗根なら、
+固有値1の一般化固有空間は直線 $kz$、$\rho$ の空間は三次元である。
+$z$ は正規正則で $\mu_B(z)=z$、
+\[
+ B=S[z;\sigma],\qquad G=F+c z^3,
+ \quad 0\ne F\in S_3,\quad \sigma(F)=F
+\]
+と書ける。$S$ は三生成元noetherian quadratic Koszul AS3であり、
+$F$ は $S$ 内でも正規正則、その正規化は $\mu_B^{-1}|_S$ である。
+$c\ne0$ の場合はさらに $\sigma^3=\mu_B^{-1}|_S$ が必要である。
+\item 固有値集合が $\{\omega,\omega^2\}$ なら、両重複度は二であり、
+$\mu_B$ 自体が半単純である。座標を取って
+\[
+ \begin{gathered}
+ \mu_B=\operatorname{diag}(\omega,\omega,\omega^2,\omega^2),\qquad
+ xy=\omega yx,\quad zt=\omega^2tz,\\
+ G=x^2y+z^2t
+ \end{gathered}
+\]
+となる。残る四関係は $\langle x,y\rangle$ と $\langle z,t\rangle$ の混合関係で、
+両順序の混合積の空間への射影は同型である。
+従って $x^iy^jz^kt^l$ は $B$ のPBW基底となる。
+\end{enumerate}
+これは残る関係係数のAS4存在・H3許容性の十分条件ではない。
+\end{theorem}
+\begin{proof}
+二固有値の比の位数は3なので、$V^{\otimes2}$ の三つの一般化固有値
+$\alpha^2,\alpha\beta,\beta^2$ は相異なる。
+$R$ はそれらの一般化固有空間に分解し、$B$ は二重次数を持つ。
+一次元のKoszul topも二重斉次となる。
+混合topの重みと補題\ref{lem:h3-bigraded-top-index}により、
+重複度は第一の場合 $1+3$、第二の場合 $2+2$ に限られる。
+三次の固定重みは両方とも純粋な三次二成分だけなので、$G=F_A+F_C$ と書ける。
+
+第一の場合、二重Hilbert式から混合関係は三本である。
+一次元側を $kz$ とすると、両射影の核に非零元があれば
+$a z=0$ または $z a=0$ となり、整域性に反する。
+従って混合関係は可逆な写像 $\sigma$ のgraphであり、$za=\sigma(a)z$ となる。
+純三変数部分代数を $S$ とすると、この書換えとHilbert式から実際に $B=S[z;\sigma]$ である。
+$S\simeq B/(z)$ はnoetherianである。
+二重次数付きKoszul解消の $z$ 次数零部分は $S$ 上の有限線型解消を与え、
+正規一次元に対するRees lemmaと合わせて $S$ はAS3となる。
+$\mu_B(z)=z$ なので $Gz=zG$、従って $\sigma(F)=F$ である。
+$F=0$ は純三乗切断となるため排除される。
+$Gv=\mu_B^{-1}(v)G$ の二重次数ごとの比較から $F$ の正規式を得る。
+$c\ne0$ なら $z^3$ の係数比較が $\sigma^3=\mu_B^{-1}|_S$ を与える。
+
+第二の場合、純粋な各二変数部分代数は一本の二次関係で定義される。
+二重次数が非負なので、混合関係から新しい純粋関係は生じない。
+$F_A,F_C$ の一方が零なら、他方は補題\ref{lem:h3-binary-cubic-factors}により分解するため、
+両方とも非零である。
+正規式を二重次数で分けると、それぞれの正規化は
+$\mu_B^{-1}$ の制限であり、その唯一の固有値は $\omega^2,\omega$ である。
+補題\ref{lem:h3-binary-normalizer-mu3}により二つの量子平面と表示した三次式を得る。
+特に各二変数空間上の中山作用はスカラーとなり、単冪部分は消える。
+
+最後に混合関係の射影を確認する。
+$w$ の純二次二ブロックは、Frobenius対合から非零定数倍の
+$(xy-\omega yx)\otimes(zt-\omega^2tz)$ である。
+巡回式により、混合flatteningの $AC$ から $CA$ へのブロックは、
+これら二つの可逆な $2\times2$ 係数行列のKronecker積に、
+非零スカラーと置換を施したものである。従って可逆である。
+逆方向も同様であり、混合flatteningの全階数は4なので、
+その像 $R_{1,1}$ の両射影は同型となる。
+これで混合積を常に $AC$ 順へ移せる。
+得られた標準単項式は全語を張り、その個数は $H_B=(1-u)^{-4}$ に一致するため基底となる。
+\end{proof}
+重み、Jordan二変数の最高係数比較、量子二変数の正常化指標、
+混合flatteningの可逆ブロックは
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}order3\_\allowbreak{}two\_\allowbreak{}eigenvalue\_\allowbreak{}reduction.py}
+で有限恒等式を独立に確認する。
+残る混合係数の分類や、第一の場合の $c=0$ の一般正規cone障害は別に扱う。
+
 \begin{lemma}[単冪twist下の反標準三次関係の輸送]
 \label{lem:h3-unipotent-transport}
 $C$は左右noetherian quadratic Koszul AS4型14641で，$\mu_C$は半単純とする．

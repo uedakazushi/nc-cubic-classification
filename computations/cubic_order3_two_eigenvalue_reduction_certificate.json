@@ -1,0 +1,109 @@
+{
+  "version": "classification-v91",
+  "scope": "Necessary structural normal forms for every strong H3 with two eigenvalues and semisimple Nakayama order3. No AS4 existence/admissibility assertion for the remaining mixed relation matrices.",
+  "weight_cases": [
+    {
+      "eigenvalue_exponents_mu90": [
+        0,
+        30
+      ],
+      "quadratic_weights": [
+        60,
+        30,
+        0
+      ],
+      "all_top_counts": [
+        1,
+        4
+      ],
+      "mixed_top_count": 1,
+      "multiplicities": [
+        1,
+        3
+      ],
+      "cubic_counts": [
+        0,
+        3
+      ]
+    },
+    {
+      "eigenvalue_exponents_mu90": [
+        0,
+        60
+      ],
+      "quadratic_weights": [
+        30,
+        60,
+        0
+      ],
+      "all_top_counts": [
+        1,
+        4
+      ],
+      "mixed_top_count": 1,
+      "multiplicities": [
+        1,
+        3
+      ],
+      "cubic_counts": [
+        0,
+        3
+      ]
+    },
+    {
+      "eigenvalue_exponents_mu90": [
+        30,
+        60
+      ],
+      "quadratic_weights": [
+        30,
+        0,
+        60
+      ],
+      "all_top_counts": [
+        2
+      ],
+      "mixed_top_count": 2,
+      "multiplicities": [
+        2,
+        2
+      ],
+      "cubic_counts": [
+        0,
+        3
+      ]
+    }
+  ],
+  "Jordan_binary_leading_comparisons": [
+    "-c0*rho + c0",
+    "-c1*rho + c1",
+    "-c2*rho + c2",
+    "-c3*rho + c3"
+  ],
+  "quantum_binary_normal_cubic_cases": [
+    {
+      "q_exponent_mu3": 1,
+      "normalizer_exponent_mu3": 1,
+      "x_exponent": 1
+    },
+    {
+      "q_exponent_mu3": 1,
+      "normalizer_exponent_mu3": 2,
+      "x_exponent": 2
+    },
+    {
+      "q_exponent_mu3": 2,
+      "normalizer_exponent_mu3": 1,
+      "x_exponent": 2
+    },
+    {
+      "q_exponent_mu3": 2,
+      "normalizer_exponent_mu3": 2,
+      "x_exponent": 1
+    }
+  ],
+  "mixed_flattening_offdiagonal_matrix": "Matrix([[0, 0, 0, w**2], [0, -w**4, 0, 0], [0, 0, -w, 0], [w**3, 0, 0, 0]])",
+  "mixed_flattening_determinant_mod_w2_w1": "-w",
+  "proof": "papers/sections/cubic_as4_reductions.tex thm:h3-order3-two-blocks",
+  "validation_limit": "Bigraded homological arguments, binary automorphism classification, Frobenius pairing and PBW dimension comparison are manuscript proofs; this script checks the finite weight and polynomial identities."
+}

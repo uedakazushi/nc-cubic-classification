@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "version": "classification-v90",
+  "version": "classification-v91",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -990,5 +990,11 @@
       "finite polynomial growth and domain",
       "bigraded Euler polynomial and binary homogeneous factorisation"
     ]
+  },
+  "order3_two_block_reduction_v91": {
+    "status": "structural proof in manuscript; finite weight and polynomial identities executed",
+    "validator": "computations/verify_cubic_order3_two_eigenvalue_reduction.py",
+    "certificate": "computations/cubic_order3_two_eigenvalue_reduction_certificate.json",
+    "result": "Every two-eigenvalue order3 H3 has either a normal-line AS3 Ore presentation of multiplicities1+3, or semisimple multiplicities2+2 with two opposite third-root quantum planes and fixed cubic x²y+z²t. The second case has invertible mixed projections and PBW basis. Remaining relation coefficients and admissibility are not classified."
   }
 }
