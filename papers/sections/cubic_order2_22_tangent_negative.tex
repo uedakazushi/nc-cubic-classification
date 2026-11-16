@@ -1,0 +1,116 @@
+\subsection{両top非零領域の第四乗排除と負tangent分枝}
+\label{subsec:h3-order2-22-tangent-negative}
+\begin{proposition}[rank-one負topは存在しない]
+\label{prop:h3-order2-22-negative-rank1-empty}
+$(2,2)$・mixed rank4のH3では、canonical負topの階数は0又は2である。
+\end{proposition}
+\begin{proof}
+$P=0$ は既知の符号認識に含まれるので $P\ne0$ とする。
+偶関係像を $W$、その非退化二次tensorを $\Lambda$ とすると、
+$P$ の階数2により正射影 $W\to U^{\otimes2}$ は単射である。
+$Q$ がrank1なら負射影もrank1である。
+実際、負射影rank2なら $W$ 上の非退化 $\Lambda$ の押し出しはrank2だからである。
+負cyclic quarticのrank1標準形は $u^4$ なので、この射影像は $ku^2$。
+従ってcross $K$ は $a(U)\otimes u^2$、$a\ne0$ と書け、
+$M=-(a^t\otimes u^2)\Pi$ の階数は高々2、像全体がdecomposable tensorのrulingである。
+
+奇交代像の二射影の階数はdomain性からともに3以上なので、
+Sylvester不等式より $\operatorname{rank}M\ge2$。
+階数2なら補題\ref{lem:h3-order2-22-Pzero-rank1-impossible}の一般的な交代像の論証により、
+純mixed直線が $\operatorname{im}M$ に含まれる。
+その全元が積であるためdomainに反する。従ってrank1負topはない。
+canonical untwistに対するこの構造障害は $G$ の輸送を要しない。
+\end{proof}
+
+$P,Q\ne0$ では、両射影は二次元関係像の同型となる。
+従って負cyclic quarticの二つの等方因子と、正topの二因子 $c_U,q_U$ を組み合わせた
+二本のcoupled関係で全偶関係を記述できる。
+負tangent型 $Q=u^2\odot(uv+vu)$ では、その二因子のrankが異なるので、
+二つの割当てを混同してはならない：
+\[
+ \mathrm{I}:\quad c_U+u^2=0,\quad q_U+uv+vu=0;
+ \qquad
+ \mathrm{II}:\quad c_U+uv+vu=0,\quad q_U+u^2=0.
+\]
+$q_U=x^2$ 又は $xy+yx$ に正規化し、負二軸の独立尺度で表示係数を1にできる。
+以下は半単純中山に関する結果であり、twistによる正常三次の輸送は行わない。
+
+\begin{proposition}[tangent必要atlasと割当てIの負Pfaffian完全排除]
+\label{prop:h3-order2-22-tangent-minus-empty}
+割当てIでは $\det M=-1$、$\operatorname{Pf}A=\epsilon=\pm1$ である。
+$A$ の六係数に対する全線型条件と残るPfaffian式は
+\[
+\begin{array}{c|c|c}
+ q_U,\epsilon&(z_0,z_1,z_2,z_3,z_4,z_5)&\text{残る式}\\\hline
+ x^2,+&(z_0,-z_5/2,z_2,z_3,0,z_5)&z_0z_5+z_2z_3=1\\
+ x^2,-&(-z_4/2,z_1,0,0,z_4,0)&z_1z_4=1\\
+ xy+yx,+&(z_0,(z_2-z_3)/2,z_2,z_3,0,z_5)&z_0z_5+z_2z_3=1\\
+ xy+yx,-&(0,z_1,-z_4/2,z_4/2,z_4,0)&z_4(4z_1+z_4)=4
+\end{array}
+\]
+である。このうち $\epsilon=-1$ の全領域には正常三次がなく、H3は存在しない。
+
+割当てII、$q_U=xy+yx$ にも $\det M=-1$ が成立し、その必要atlasは
+\[
+\begin{array}{c|c|c}
+ +&(z_0,z_1,-z_4/2,z_4/2,z_4,z_5)&z_0z_5-z_1z_4-z_4^2/4=1\\
+ -&(0,(z_2-z_3)/2,z_2,z_3,0,0)&z_2z_3=-1
+\end{array}
+\]
+となる。これはこの二行のH3判定ではない。
+割当てII、$q_U=x^2$ では $\operatorname{rank}M=2$ なので、この可逆graph atlasは適用しない。
+\end{proposition}
+\begin{proof}
+$a=c_U,b_1=u^2,b_2=uv+vu,h=q_U$ と書く。
+割当てIのcrossは
+\[
+ M=-(a^t\otimes b_2+h^t\otimes b_1)\Pi
+\]
+であり、両 $h$ で行列式は $-1$。
+交代blockのSchur条件は従来と同じ
+$\epsilon\tau(A)+M^tA^\#M=0$ である。
+六未知係数の線型消去と $\operatorname{Pf}A=\epsilon$ により表を得る。
+割当てIIは $b_1,b_2$ を交換した同じ計算である。
+平方型の割当てIIでは $\operatorname{im}M$ は
+$\langle xu,xv+yu\rangle$ のtangent pencilであり、rulingではない。
+従って前命題のruling禁止をこの境界に誤用しない。
+
+割当てI、平方型の負Pfaffianでは $z_4\ne0,z_1=z_4^{-1}$。
+関係を保つ対角変換
+\[
+ (x,y,u,v)\longmapsto(x,t^2y,tu,t^{-1}v)
+\]
+は正topの尺度 $t^2$ を除いて六係数へ重み
+$(t^{-2},t^2,1,1,t^{-2},t^2)$ で作用する。
+$t^2=z_4$ を選べば全点が $(-1/2,1,0,0,1,0)$ に移る。
+この一点で全64三次語及び256四次語に元の六二次関係を左右から掛けて消去すると、
+商次元は20,35、正三次から作る正常行列の階数は10である。
+全て有理数上の厳密消去なので、これと軌道被覆により全平方型負分枝が空となる。
+
+非退化型の負Pfaffianは $T=z_4\ne0$ により
+\[
+ (z_0,z_1,z_2,z_3,z_4,z_5)
+ =(0,T^{-1}-T/4,-T/2,T/2,T,0)
+\]
+と完全にparametrizeされる。
+元の四次関係空間の消去から35個の商線型汎関数を作る。
+それらの係数は全て $k[T,T^{-1}]$ に属し、元の288個の四次関係を全て消す恒等式を検証する。
+従って非零 $T$ の特殊化にも極なく適用できる。
+この汎関数を四つの正常式に掛け、正固有三次の自由32語を入力すると、
+零行を除き $64\times32$ の多項式行列 $N$ を得る。
+指定した三つの $10\times10$ minorのgcdは定数倍の $T^{10}$ である。
+従って全 $T\ne0$ で $\operatorname{rank}N\ge10$。
+
+AS4候補では正三次商の次元は10である。
+これは偶関係2・奇関係4及び14641 Koszul解消の同変次数計数からも従う。
+$N$ は三次関係を消し、正常三次を消すため、階数10は正常核が零であることを強制する。
+一般点の有理関数体階数だけで特殊値を捨てたのではなく、
+Laurent多項式汎関数の全係数恒等式と三minorの全値coverを用いた。
+
+再現には
+\[
+\texttt{verify\_cubic\_order2\_22\_tangent\_negative.py}
+\]
+と三minorの行列位置を持つ小JSONを用いる。
+AS4の全係数十分性、正Pfaffian分枝、逆割当てのH3条件、非半単純対象への輸送は主張しない。
+\end{proof}

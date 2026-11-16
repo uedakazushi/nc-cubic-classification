@@ -1156,3 +1156,14 @@ canonical負topQ0の(2,2)/mixed rank4全H3を、全Jordan型込みで曲がっ�
 証明はcubic_order2_22_Qzero_commutative.texとcubic_order2_22_Qzero_complete.tex。新検証器Qzero_commutativeはswap正常rank10 minor4、負Jordan非x列minor16、両comm反対separatedのSL2全PBW/二scalar minor16とgraph辞書を再生。Qzero_completeは正対称分枝の四localized ideal一致、負Jordan Sym² fixed determinant−8二つ、両comm Sym²の2I恒等式、正片側Jordan yx=xy+eta*x²の全eta固定核補minor6を再生。従来zero-top eps+全核零/odd atlas/単冪untwist/片側Jordan排除を仮定付きで適用。Gのtwist輸送は使わず、元BでmuG固定を課す。新規性・独立査読は未確認。
 
 次はcanonical正負top P,Qとも非零の残余。Pはcomm⊙q（q平方又は非退化）、Qはrank≤2 cyclic binaryquartic。まずQrank1がcross rank2 ruling障害でAS4domain外になるか確認し、rank2の三標準形と二本のcoupled even relationsから必要top/正常核を計算する。全CY/三固有値以上/成分/相対降下は未完。
+
+
+## 両top非零の負rank1排除・tangent負分枝（classification-v178）
+
+正負topとも非零の残余で、負top rank1をcrossのruling障害により全Jordan型のcanonical包絡から排除。負topはrank2三型に限定。tangent型は二つのisotropic-factor割当てを区別し、六つの可逆cross線型atlasと逆割当て平方型のrank2 cross境界を確定。第一割当て/負Pfaffianの全半単純領域は、平方型の一軌道正常核零と非退化型全Tneq0の三minor gcdT10により空。正Pfaffian、逆割当て、非半単純tangentは未完。
+
+証明/certificateはcubic_order2_22_tangent_negativeのTeX/Python/JSON。非退化負PfaffianのT-parametrizationは(0,T^-1-T/4,-T/2,T/2,T,0)。元の288四次関係を消す35汎関数はLaurent多項式（分母定数*T冪のみ）であり、全係数恒等式を検証。正自由三次32語への正常式は64x32、多項式三10minor gcdは定数*T10。AS4正三次次元10と合わせ全核零。平方負分枝はz4非零を保存torusで1に正規化するので厳密一点消去が全軌道を覆う。AS4全係数存在、正Pfaffian、逆割当て、非半単純正常G輸送は主張しない。
+
+次はtangent第一割当て正Pfaffian。残余torusでz5neq0は二パラメータmain chart、z5=0はz0=0/1の二一パラメータ境界へ被覆できる。平方型mainの一般quartic消去はNF分母Q*(P+Q)*((P+Q)²-2)、正常10minorは定数*P*(P+Q)^6*((P+Q)²-1)^3*((P+Q)²-2)^5（計算済み・公開certificate未整備）。従って次は有限本の例外直線を全係数で判定する。ランダムな高次数minorのGBは重すぎ中止し、この有限直線分解へ切替。全H3被覆/成分/相対降下は未完。
+
+私的再開計算：/workspace/work/order2_22_rank4/both_top/ にexplore.py,probe.py,ff.py,ff_main.pyと小pickle。これらに依存せず公開verifierは入力から再計算する。ff_mainは平方正main A=(1-PQ,-1/2,P,Q,0,1)。残余z5=0境界A=(epsilon,0,T,T^-1,0,0),epsilon0/1。nondeg正mainはA=(1-PQ,(P-Q)/2,P,Q,0,1)、同境界z1=(T-T^-1)/2。逆nondeg負はA=(0,(T+T^-1)/2,T,-T^-1,0,0)。
