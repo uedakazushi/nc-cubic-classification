@@ -1297,5 +1297,12 @@
     "certificate": "computations/cubic_positive3_diagonal_top_certificate.json",
     "proof": "papers/sections/cubic_positive3_diagonal_top.tex, thm:h3-positive3-diagonal-top",
     "scope": "(3,1)半単純対角normalizing chartの全先頭AS4族 xy=a²yx,zx=axz,zy=a^-1yz,vx=axv,vy=-a^-1yv,v²=z²の正常三次を完全計算：a³!=-1ならW1=0、a³=-1かつa!=-1ならky³、a=-1ならy*span(x²,y²,v²)。全先頭切断は因子化。重みW1/outer2の先頭環比較により、dx(W),dy(W),ell(W)v+q2(W)を任意に加えた14641/指定muの全変形もa³!=-1ではW1=0で排除。共鳴a³=-1の変形後因子化は未証明。次はa=-1とprimitive6のskew導分/平方補正を全係数で標準化し、正常三次とH3判定を求める。反対角/Jordan、gamma非零、Frobenius退化、(2,2)および三固有値以上は依然未被覆。"
+  },
+  "positive3_diagonal_resonance_v128": {
+    "status": "PASS universal derivation, primitive-sixth-root and centrality witnesses; complete specified-chart exclusion",
+    "validator": "computations/verify_cubic_positive3_diagonal_resonance.py",
+    "certificate": "computations/cubic_positive3_diagonal_resonance_certificate.json",
+    "proof": "papers/sections/cubic_positive3_diagonal_top.tex, thm:h3-positive3-diagonal-full-exclusion",
+    "scope": "正三次元(3,1)の指定対角normalizing chartを全係数・全aで排除した。非共鳴は先頭核零。a=-1は内部移動後vx=-xv+kappa*y²,vy=yv、商体退化排除からell0、x²/y²/v²中央、y正常mu、先頭核次元上界3と三独立候補でW1=y*span(x²,y²,v²)全てfactor。primitive6では全skew導分内部、ell/q2比較で全補正零、W1=ky³。AS4存在を任意補正係数へ主張しない。次は全normalizing chartのf/g平方根分類と残るq=-1反対角作用を調べ、gamma0の一平方投影領域を縮小する。"
   }
 }

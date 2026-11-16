@@ -767,3 +767,10 @@ H3係数locusはprojective conic bundleのrelative singular incidenceの像の�
 (3,1)半単純対角normalizing chartの全先頭AS4族 xy=a²yx,zx=axz,zy=a^-1yz,vx=axv,vy=-a^-1yv,v²=z²の正常三次を完全計算：a³!=-1ならW1=0、a³=-1かつa!=-1ならky³、a=-1ならy*span(x²,y²,v²)。全先頭切断は因子化。重みW1/outer2の先頭環比較により、dx(W),dy(W),ell(W)v+q2(W)を任意に加えた14641/指定muの全変形もa³!=-1ではW1=0で排除。共鳴a³=-1の変形後因子化は未証明。次はa=-1とprimitive6のskew導分/平方補正を全係数で標準化し、正常三次とH3判定を求める。反対角/Jordan、gamma非零、Frobenius退化、(2,2)および三固有値以上は依然未被覆。
 
 原稿thm:h3-positive3-diagonal-top。r=v+z,s=v−zでA=quantumplane−1、B0=A[x;sigma_x][y;sigma_y]、sigma_x(r/s)=a^-1(r/s)、sigma_y(r,s,x)=(-a s,-a r,a^-2 x)。noeth/PBW/domain/KoszulAS4。muA−、第一mu=(-a r,-a s,a^-2 x)、第二でr/s交換,x/y固定となり実際mu=(x,y,v,-z)。mu固定outerdegree0/1/2/3次元1/1/1/2で全三次11。W次数i/j、outer nなら正常化Gx=xG,Gy=yGはa^(n−2j)=1,(-1)^n a^(2i−n)=1。n1/n3は全gcd1で零、残るn0/2単項式はGv/Gzから(-1)^j a^(i−j)=1,a^(i−j)=-1、ゆえjodd。y³のgcd a³+1、x²y/yv²のgcd a+1、他gcd1。元来のgradeddegree固定で重み先頭環への全射とHS比較によりgrB=B0、正常Gの先頭もW1B0なので非共鳴変形全排除。共鳴先頭因子を変形後factorとしない。verify_cubic_positive3_diagonal_top.py/certificateでOre生成元三重積/六関係/固定11次元/全Laurentgcd/候補正常化を厳密検算PASS。
+
+
+## 正三次元対角normalizing chartの共鳴も全排除（classification-v128）
+
+正三次元(3,1)の指定対角normalizing chartを全係数・全aで排除した。非共鳴は先頭核零。a=-1は内部移動後vx=-xv+kappa*y²,vy=yv、商体退化排除からell0、x²/y²/v²中央、y正常mu、先頭核次元上界3と三独立候補でW1=y*span(x²,y²,v²)全てfactor。primitive6では全skew導分内部、ell/q2比較で全補正零、W1=ky³。AS4存在を任意補正係数へ主張しない。次は全normalizing chartのf/g平方根分類と残るq=-1反対角作用を調べ、gamma0の一平方投影領域を縮小する。
+
+原稿thm:h3-positive3-diagonal-full-exclusion。g-skew導分条件はa(1−a)e0=(1+a)d2=0、(1+a^-3)d0+(a−1)e1=0、(1+a^-1)d1+(a−a^-2)e2=0。内部二列(d0,e1)=(1−a,1+a^-3),(d1,e2)=(a^-2−a,1+a^-1)。a−1では導分核3/内部2で残りdx=kappa y²,dy0。v²/z²commxとqWcommxからell[v,x]0、ell非零ならv∈Q(T)かつz²も入るので新商体lemma矛盾。ell0でqWはz反転に不変、v²commz、x²/y²/v²中央。yはmu正常なので三次候補三本、先頭kernel3次元で全核。primitive6は導分核2=内部2。delta0の後、外平方x比較で(a−a²)ellx=(a^-1−a²)elly0、T+Tv独立は商体lemmaによるのでell0。qWnormalization f²はx比較ky²,y比較kx²を強制しqW0。verify_cubic_positive3_diagonal_resonance.pyは全導分式と内部、Phi6上非消滅/gcd、a−1正規形の中心二次全交換子を次数3イデアルのparameter-free pivotsで証明PASS。全chart外を被覆とはしない。
