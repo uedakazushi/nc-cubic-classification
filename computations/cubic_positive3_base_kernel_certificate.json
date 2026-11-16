@@ -1,0 +1,15 @@
+{
+  "localization": "S[z^-1]=A_q(c)[z^+-1;theta], q=a^-4,c=gamma*a^-3,theta(u,w)=(a*u,a^-1*w)",
+  "normal_element": "d=c+(q-1)uw=-a*Cprime/z\u00b2",
+  "generic_GWA": "A_q(c)[d^-1]=k[d^+-1](sigma,t),sigma(d)=q*d,t=(d-c)/(q-1)",
+  "GWA_root_resultant": "c*(Q-1)/(q-1)\u00b2, Q=q^n",
+  "root_of_unity_argument": "A_q(c)[d^-1] is Azumaya degree N over k[u^N,w^N,d^-N]; nonzero domain quotients would split over a function field of dimension<=1 by Tsen",
+  "kernel_dichotomy": "Every homogeneous completely prime kernel with z nonzero is0 or(Cprime); if a^4=1 it must be0.",
+  "cone_quotient": "S/(Cprime) is the even Veronese of a quantum plane, kappa=(a^4-1)/gamma, a^4!=1",
+  "cone_overlap_count": 4,
+  "primary_sources_checked": [
+    "V. Bavula, Generalized Weyl algebras and their global dimension, author lecture manuscript, Theorem2.1 (local source reread)",
+    "Stacks Project, Tag03RD, Theorem59.67.10 Tsen; Tag03RF, Lemma59.67.11 Br(k(C))=0; primary pages read 2026-11-16"
+  ],
+  "scope": "Exact localization/normalizer/GWA/resultant/oscillator and cone identities. All-order Azumaya and Tsen arguments are structural proofs in the manuscript, not finite sampling. This does not classify the extra positive generator or H3 admissibility."
+}

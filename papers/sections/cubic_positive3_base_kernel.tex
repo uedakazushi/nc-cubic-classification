@@ -1,0 +1,136 @@
+\subsection{対角基礎代数の原包絡への核は二通りだけである}
+\label{subsec:h3-positive3-base-kernel}
+\begin{lemma}\label{lem:h3-qweyl-domain-quotients}
+$A=k\langle u,w\rangle/(wu-quw-c)$、$c\ne0$とする。
+$q=1$なら$A$は単純である。
+$q\ne1$では$d=c+(q-1)uw$と置くと、
+任意の非零完全素イデアル$J$は$d$を含む。
+また、パラメータが1でない二変数量子torusは非零完全素イデアルを持たない。
+ここで完全素とは商が整域であることを意味する。
+\end{lemma}
+\begin{proof}
+$q=1$の単純性は、PBW多項式を$u,w$との交換子で順に微分して
+任意の非零イデアルに非零定数を作る通常のWeyl環の議論による。
+$q\ne1$では$du=qud,dw=q^{-1}wd$であり、$d$をOre局所化できる。
+
+$q$が無限位数なら、
+\[
+ A[d^{-1}]=k[d,d^{-1}](\sigma,t),\quad
+ \sigma(d)=qd,\quad t=(d-c)/(q-1),\quad X=w,Y=u
+\]
+という一次GWA表示を持つ。
+$k[d^{\pm1}]$には非零固有$\sigma$不変イデアルがなく、
+$\sigma$の正冪は恒等でない。
+$t,\sigma^nt$の零点も異なるので全$n>0$で互いに素である。
+Bavulaの単純性定理\cite[Theorem 2.1]{BavulaGWAOverview}の四条件が全て満たされ、
+$A[d^{-1}]$は単純となる。従って非零完全素$J$は$d$を含む。
+
+$q$が位数$N>1$の場合、PBWの最高項から
+\[
+ Z(A)=k[U,W],\qquad U=u^N,W=w^N
+\]
+で、$A$はこの中心上自由階数$N^2$である。
+\[
+ d^N=c^N+(-1)^{N-1}(q-1)^NUW
+\]
+は$u^Nw^N=\prod_{j=0}^{N-1}(q^{-j}d-c)/(q-1)^N$から従う。
+$A[d^{-1}]$は中心$R=k[U,W,(d^N)^{-1}]$上Azumaya階数$N^2$である。
+実際、閉中心点で$U\ne0$なら、$d$の相異なる$N$固有値と巡回可逆$u$を取り、
+$w=u^{-1}(d-c)/(q-1)$とすれば全行列環を得る。
+$W\ne0$も対称的である。
+$U=W=0$では
+\[
+ ue_j=e_{j+1},\qquad
+ we_j=c(1+q+\cdots+q^{j-1})e_{j-1},\quad0\le j<N
+\]
+を端で零とすればよい。全ての内部係数が非零なので、これも全行列環となる。
+各fiberの次元は$N^2$なのでこれらの表示は同型であり、Azumaya性が従う。
+
+もし非零完全素$J$が$d$を含まなければ、局所化後も非零で整域商を持つ。
+Azumaya代数の両側イデアルと中心イデアルの対応により、
+非零素イデアル$\mathfrak p\subset R$上のAzumaya商となる。
+$K=\operatorname{Frac}(R/\mathfrak p)$は超越次数1以下で、
+この商のgeneric fiberは次数$N$の中心的単純代数である。
+整域商を局所化した有限次元代数なのでdivisionであるはずだが、
+Tsenの定理による$\operatorname{Br}(K)=0$
+\cite[Tag 03RF]{StacksTsenBrauer}により$M_N(K)$へ分裂し矛盾する。
+超越次数0では$K=k$なので同じ結論である。
+従って$d\in J$である。
+
+量子torusのパラメータが無限位数なら、最少単項式数の元に交換子を施す通常の議論で単純。
+有限位数$M>1$なら、中心Laurent二変数環上Azumaya次数$M$である。
+閉fiberの同定はclock/shift行列により直接得られる。
+非零完全素商があれば中心の超越次数が1以下となり、同じTsenの議論に反する。
+\end{proof}
+
+\begin{theorem}\label{thm:h3-positive3-base-kernel-dichotomy}
+命題\ref{prop:h3-positive3-nonzero-gamma-base}の$S$から整域への次数付き準同型を考え、
+$z$の像は非零とする。その核$I$は
+\[
+ I=0\qquad\text{または}\qquad I=(C'),\quad C'=xy-a^{-2}yx
+\]
+に限られる。$a^4=1$では必ず$I=0$である。
+$a^4\ne1$の第二の場合、像は二変数量子平面の偶Veronese環である。
+従ってH3包絡への対角基礎写像にも、これ以外の高次核は存在しない。
+これは追加の正生成元$v$の関係やH3許容条件を分類したという意味ではない。
+\end{theorem}
+\begin{proof}
+$z$は$S$で正規であり、$I$は完全素なので$z$で飽和している。
+$u=xz^{-1},w=yz^{-1}$とすると、順逆の生成元対応により
+\[
+ S[z^{-1}]=A_q(c)[z,z^{-1};\theta],\quad
+ q=a^{-4},\quad c=\gamma a^{-3},\quad
+ \theta(u,w)=(au,a^{-1}w)
+\]
+である。ここで$A_q(c)$は前補題の量子Weyl環である。
+$z$の次数が1、$u,w$の次数が0なので、この局所化はstrongly $\mathbb Z$-graded。
+従って$I\ne0$なら次数零部分の核$J\subset A_q(c)$も非零で、完全素である。
+$a^4=1$なら$q=1$で量子Weyl環は単純なので、このような$I$はない。
+
+$a^4\ne1$では前補題から$d\in J$である。
+\[
+ d=c+(q-1)uw=-aC'z^{-2}
+\]
+なので$C'\in I$。
+$A_q(c)/(d)=k[u,u^{-1}]$であり、$z$を加えた商は
+$zu=auz$という二変数量子torusである。
+前補題によりこれには非零完全素イデアルがないので、
+$I$の局所化は正確に$(C')$の局所化である。
+
+最後に$S/(C')$を具体的に確認する。
+$\kappa=(a^4-1)/\gamma\ne0$とすると、その関係は
+\[
+ yx=a^2xy,\quad zx=axz,\quad yz=azy,\quad z^2=\kappa xy.
+\]
+$x^iz^jy^k$、$j\in\{0,1\}$がPBW基底となる。
+$\rho^2=a^{-1},\lambda^2=\rho\kappa$を取り、
+$st=\rho ts$を満たす量子平面内で
+\[
+ x=s^2,\quad y=t^2,\quad z=\lambda st
+\]
+と置けば、これら全関係を満たす。
+両者のHilbert級数は$(1+t)/(1-t)^2$なので、この対応は偶Veroneseとの同型である。
+特に$S/(C')$は整域であり、$(C')$は$z$で飽和している。
+局所化での等式を戻して$I=(C')$を得る。
+\end{proof}
+
+\begin{corollary}\label{cor:h3-positive3-base-survives-cut}
+H3の$\gamma\ne0$対角chartでは、基礎代数$S$の像は三次切断
+$B\to R=B/(G)$の後も単射的に保たれる。
+特に$G$は$B$内の三生成元部分代数$\langle x,y,z\rangle$に属さない。
+従って命題\ref{prop:h3-positive3-base-normal-cubics}の原始6乗根条件を
+全H3に対するパラメータ制約として適用しない。
+\end{corollary}
+\begin{proof}
+$B,R$は共に整域で、$z$の一次の像は非零である。
+従って$S\to B$と$S\to R$の核は前定理の二通りだけである。
+$G$は三次なので$B_2=R_2$であり、両核の二次部分は同じ。
+二つの可能な核はともにその二次部分で決まるから、両核は完全に等しい。
+従って$B$内の基礎像は$R$にも埋まり、非零$G$がその像に入ることはない。
+\end{proof}
+
+\texttt{verify\_cubic\_positive3\_base\_kernel.py}は
+量子Weyl局所化、$d$正常化、GWA式と全軌道に用いるresultant、
+根位数一般のoscillator漸化式、coneの四overlapとHilbert値を厳密検算する。
+有限位数全体のAzumaya性とTsenの適用は上の構造証明による。
+Bavulaの著者原稿Theorem 2.1とStacks Project Tags 03RD/03RFを一次資料で確認した。

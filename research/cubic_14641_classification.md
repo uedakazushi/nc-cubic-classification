@@ -830,3 +830,14 @@ gamma非零対角chartの抽象基礎Sで、指定正常化sigma(x,y,z)=(x,y,-z)
 原稿prop:h3-positive3-base-normal-cubics。sigma正常非零GはsigmaG=G、PBW evenz degree3六項。z weight a^(i−k)=-1、指数+-1/+-3からa³=-1。a−1はgamma1へzscale後、commx/yの六列matrix固定rows[3,7,10,12,18,25] minor18でkernel0。primitive6はa+1unitでx³/y³だけがphase許容、両者全正常式をPhi6剰余でzero確認。verify_cubic_positive3_base_normal_cubics.py/certificate厳密PASS。原H3GがSにある/基礎map単射の証明を欠くので全スペクトル共鳴制約へ拡張しない。
 
 gamma非零の次案（未証明）：f対角のW生成cubicCY TはC=xy−a²yx,Cprime=xy−a^-2yx二normalquadを持ち、genericcentreにCCprime degree4。残るpositive vがWをOre正規化するchartではv²∈T2+Wvとなるため、T2のnormalquadとg actionを分類してH3正常Gの核を絞る。vがWを正規化することは未証明で、未被覆chartを黙って除外しない。S->B高次核とGのS成分外項の検算も必要。
+
+
+## gamma非零対角基礎写像の全パラメータ核二分法（classification-v136）
+
+gamma非零f対角基礎Sからgraded domainへの写像（z像非零）の核を全aで完全判定：0又は(Cprime=xy−a^-2yx)のみ。a4=1は必ず単射。z局所degree0はqWeyl wu=q uw+c,q=a^-4,c=gamma a^-3,d=c+(q−1)uw=−a Cprime/z²。q∞はGWA単純性、qrootはd非零開でAzumaya次数N、非零整域商は中心curve上Brauer0/Tsenでsplitし矛盾、ゆえ非零kernelはd0。商はparameter aのquantumtorus、これも完全素非零idealを持たずkernel正確Cprime。S/Cprimeはquantumplane偶Veronesecone、PBWdomainで飽和確認。追加positive vやH3全許容性は未分類。
+
+原稿lem:h3-qweyl-domain-quotients,thm:h3-positive3-base-kernel-dichotomy。qWeyl dnormalはdu=q ud,dw=q^-1wd。q1は通常Weyl単純。q∞A[d^-1]はD=k[d±],sigma(d)=qd,t=(d−c)/(q−1),X=w,Y=uのGWA、Bavula作者原稿Theorem2.1を今回一次再読し4条件sigma-simple/no inner power/coprime all n/t regularを点検、resultant c(q^n−1)/(q−1)²。qrootNではZ(A)=k[uN,wN]、freeN²、dN=cN+(-1)^(N−1)(q−1)^N uNwN。dNunit開全closedfiberはuN!=0ならd相異eigen+巡回u、wN!=0対称、両0ならtruncated oscillatorでM_N、従ってAzumaya。完全素非零商は非零中心idealからtrdeg<=1field上division次数NになるがTsenBr0でM_Nにsplitして矛盾。量子torusも∞単純、rootMはcentreLaurent2上AzumayaMとTsenで非零完全素idealなし。S[z^-1]=A[z±;theta] stronglygraded、kernel非零ならJ=degree0nonzero completeprime、dJ⇒CprimeI。d0商はquantumtorusなので更なるkernelなし、S/CprimeのdomainとzsatでI正確(Cprime)。a4!=1coneはz²=(a4−1)/gamma xy、yx=a²xy,zx=a xz,yz=a zy、x=s²,y=t²,z=lambda st,st=rho ts,rho²a^-1,lambda²=rho(a4−1)/gammaでevenVeronese。
+
+一次資料：Bavula overview local /workspace/work/sources/bavula_gwa_overview.txt のTheorem2.1（GWA defining conventionYX=t,XY=sigma tも確認）。Stacks Project Tag03RD Theorem59.67.10（functionfield over algclosed of dimr isCr）とTag03RF Lemma59.67.11（curve functionfield Br0）を2026-11-16に原ページ確認、キャッシュ /workspace/work/sources/stacks_03RD.html,stacks_03RF.html。原稿にStacksTsenBrauer書誌を追加、Bavula書誌に2.1を追加。Azumaya全rootのmatrixfiber証明は本文で与え既存被覆定理を輸入しない。verify_cubic_positive3_base_kernel.py/certificateは局所/GWA/normalizer/resultant/oscillator recurrenceとcone4overlap/Hilbertを全係数厳密PASS、Tsen/Azumaya全位数は構造証明。
+
+重要な帰結cor:h3-positive3-base-survives-cut：同じSをH3のRdomainへ写す核も0/Cprimeの二択。B2=R2ゆえ二核のquadratic部分一致、両方二次生成なのでkernel完全一致。基礎像はcut後もRに単射、よってGは必ず基礎像の外にある。v135のprimitive6二平面は全H3の共鳴条件には使わない。これは根拠不明のG基礎所在を仮定する代わりに、実際にその所在を否定する。

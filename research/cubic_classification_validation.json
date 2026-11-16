@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "version": "classification-v135",
+  "version": "classification-v136",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -1357,5 +1357,17 @@
     "certificate": "computations/cubic_positive3_base_normal_cubics_certificate.json",
     "proof": "papers/sections/cubic_positive3_nonzero_gamma_base.tex, prop:h3-positive3-base-normal-cubics",
     "scope": "gamma非零対角chartの抽象基礎Sで、指定正常化sigma(x,y,z)=(x,y,-z)の三次全核を判定した。a²-a+1非零なら核0、aがprimitive6ならspan(x³,y³)。Sdomainよりsigma固定、PBW六候補のz重みがa³=-1を強制、a=-1は六交換子系の定数minor18で除外、primitive6で両cubeをPhi6剰余検証。このsigmaは一般にmuSではない。S->B単射とG∈imageSの両方が未証明なので、全(3,1)H3への共鳴条件とはまだしない。"
+  },
+  "positive3_base_kernel_v136": {
+    "status": "PASS exact localization/GWA/cone identities; structural all-order Azumaya and primary-checked Tsen proof",
+    "validator": "computations/verify_cubic_positive3_base_kernel.py",
+    "certificate": "computations/cubic_positive3_base_kernel_certificate.json",
+    "proof": "papers/sections/cubic_positive3_base_kernel.tex, thm:h3-positive3-base-kernel-dichotomy",
+    "primary_sources": [
+      "BavulaGWAOverview, Theorem2.1",
+      "https://stacks.math.columbia.edu/tag/03RD",
+      "https://stacks.math.columbia.edu/tag/03RF"
+    ],
+    "scope": "gamma非零f対角基礎Sからgraded domainへの写像（z像非零）の核を全aで完全判定：0又は(Cprime=xy−a^-2yx)のみ。a4=1は必ず単射。z局所degree0はqWeyl wu=q uw+c,q=a^-4,c=gamma a^-3,d=c+(q−1)uw=−a Cprime/z²。q∞はGWA単純性、qrootはd非零開でAzumaya次数N、非零整域商は中心curve上Brauer0/Tsenでsplitし矛盾、ゆえ非零kernelはd0。商はparameter aのquantumtorus、これも完全素非零idealを持たずkernel正確Cprime。S/Cprimeはquantumplane偶Veronesecone、PBWdomainで飽和確認。追加positive vやH3全許容性は未分類。 B/R両方domainと二次部分不変から基礎kernelはcut前後完全一致、基礎像はRにも埋まりGは必ずその外（cor:h3-positive3-base-survives-cut）。"
   }
 }
