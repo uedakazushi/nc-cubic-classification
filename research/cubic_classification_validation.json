@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "version": "classification-v148",
+  "version": "classification-v149",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -1478,5 +1478,12 @@
     "certificate": "computations/cubic_order2_22_secant_strata_certificate.json",
     "proof": "papers/sections/cubic_order2_22_secant_strata.tex",
     "scope": "**全体的なスペクトル制約（classification-v148）**：全(1,3)は幾何学的被覆・必要十分H3判定・全矢/慣性まで確定、全(3,1)は全Jordan型込みで空。半単純(2,2)/mixed rank2はpure mixed/二ruling/全tangentを排除しsecantのみ。secant gdet−1のKはdet−abcd、退化全境界をtorus尺度と同時交換で四固定graph（rank2二種/rank3二種）へ全被覆した。K可逆部分は別に残す。次は四境界のうちrank2二種の正規二次/四次障害を厳密検証し、全係数even Schur条件と正常Gを判定する。rank4三型、非半単純(2,2)、三固有値以上、全CY被覆、全成分/圏族降下は未完。"
+  },
+  "order2_22_secant_rank2_v149": {
+    "status": "PASS universal contraction/Schur, normal and square-interchange identities; both rank2 boundary H3 exclusions",
+    "validator": "computations/verify_cubic_order2_22_secant_rank2.py",
+    "certificate": "computations/cubic_order2_22_secant_rank2_certificate.json",
+    "proof": "papers/sections/cubic_order2_22_secant_strata.tex, thm:h3-order2-22-secant-rank2-exclusion",
+    "scope": "**全体的なスペクトル制約（classification-v149）**：全(1,3)は幾何学的被覆・必要十分H3判定・全矢/慣性まで確定、全(3,1)は全Jordan型込みで空。半単純(2,2)/mixed rank2はpure mixed/二ruling/全tangentに加え、secant K rank2の二固定graphも全排除。diag(1,-1)は純正縮約から二分枝、Schur/domainでuvが全生成元反転となる分枝と、q=+-iでM=x²y²が−mu正規化となる分枝で排除。swap graphはeven Schurからu²=v²、xy/{uv}中心。AD0は余分なodd quadでAS4外、ADunitは基底変更後の四平方中心と二paired正規二次式の積−muで排除。残るrank2候補はsecant K rank3二表示とK rank4開部分。mixed rank4三型、非半単純(2,2)、三固有値以上、全CY被覆、全成分/圏族降下は未完。"
   }
 }

@@ -950,8 +950,17 @@ verify_cubic_order2_22_tangent_boundary.py/certificateで二minor、Schur全係�
 
 原稿prop:h3-order2-22-secant-degenerate-strata。gen尺度はg(a,b,c,d)->g(r a,s b,c/s,d/r)、simultaneous x/y,u/v swapはa/d,b/c交換。K sparseのdet−abcd、rank=非零成分数。ad−bc−1から退化はzero2 diagonal/offdiag又はzero1の二軌道で、四固定gはdiag(1,-1),swap,[[0,1],[1,1]],[[1,0],[1,-1]]。verify_cubic_order2_22_secant_strata.py/certificate exact PASS。全境界AS4/H3排除はこの命題から主張しない。
 
-未検証の次の証明案（会話にだけ残さず保持）：rank2diag g=diag(1,-1)のpureUU rows xy/yx rank<=1から、(I)B=C0,ADunit、又は(II)A=D0,Bunit,C²=-B²に分かれる。IはSchurでQ_Vのa=c=f0,b(A+D)=e(A+D)=d(A²+D²)0、domain projectionVV>=3からb又はeunitでA=-D。uv=-A[x,y],vu=-D[x,y]よりuvanti、odd uy=-xu,vx=yvからN=uvが全生成元反転/μ固定、Gと可換反可換矛盾。IIはpositive yx=+-i xy、uv=-B y²,vu=-B x²。oddとassociativityでu/vはx²,y²を交換し、x²,y²は可換、M=x²y²はpositive反転/negative固定=−mu、muM+から同じ矛盾。
-
-rank2anti g=swapも未検証案：pureUU xx/yy rowsからB0かつA又はDunit、positivecomm。Schur(Aunit、交換で被覆)はnegativea+f0,b+e0,c=d0。domain projectionVV>=3よりbunit。evenからu²=v²=−(A x²+Cxy+D y²)、xy=a u²+b{u,v}。u²とxy/{u,v}が中心となる。AD0では一positive squareが中心でvx=-xuからux=-xvという余分なodd quadをdomain消去で得る。ADunitではX=sqrtA*x,Y=sqrtD*y,p=X+Y,q=X−Y,R=u+v,S=u−vの全四平方中心、oddは{R,q}=[S,p],{R,p}=[S,q]。W=[S,p],N=[S,q]はmu奇の二正規二次でnormalizers(-,+,+,-),(+,-,+,-)、積が−mu/mu固定なのでH3矛盾。これらの全係数Schur/normal-tableと必要被覆を次に検証し、未検証案を定理として引用しない。
+rank2二境界の証明案はv149で全係数検証・原稿統合を完了した。以下の現行定理と証明書を参照し、未検証案を別に再実行しない。
 
 有用な反省：secant sample(s=3/4,t=5/4,A0,C=sqrt(-34)/3)のpositiveU³はexact rank8であり、purepositive quartic topの縮約をT(U)の三次関係と同一視してはならない。T(U) cubicAS3仮説は破棄、実際のB degree3 quotientで点検する。as4 mainHEAD75a32fea51b61d976c7d5b54b91adca7ea8b211cを照会したが、新規結果輸入は行っていない。
+
+
+## secant K rank2の二境界も全排除（classification-v149）
+
+**全体的なスペクトル制約（classification-v149）**：全(1,3)は幾何学的被覆・必要十分H3判定・全矢/慣性まで確定、全(3,1)は全Jordan型込みで空。半単純(2,2)/mixed rank2はpure mixed/二ruling/全tangentに加え、secant K rank2の二固定graphも全排除。diag(1,-1)は純正縮約から二分枝、Schur/domainでuvが全生成元反転となる分枝と、q=+-iでM=x²y²が−mu正規化となる分枝で排除。swap graphはeven Schurからu²=v²、xy/{uv}中心。AD0は余分なodd quadでAS4外、ADunitは基底変更後の四平方中心と二paired正規二次式の積−muで排除。残るrank2候補はsecant K rank3二表示とK rank4開部分。mixed rank4三型、非半単純(2,2)、三固有値以上、全CY被覆、全成分/圏族降下は未完。
+
+原稿lem:h3-order2-fixed-normal-obstruction,thm:h3-order2-22-secant-rank2-exclusion。mu固定の非零正規元Mが全生成元反転又は−muを正規化すれば、Gと可換/反可換して矛盾。diag graphのpureUU xy/yx rowsはAB=AC=DB=DC=B²+C²0を強制し、domainからB=C0/ADunitかA=D0/Bunit/C²=-B²。前者のSchurはnegativea=c=f0,b(A+D)=e(A+D)=d(A²+D²)0。domain negativeprojection>=3はb又はeunitを強制しA=-D/d0、uv=-vu、N=uvは全4gen反転かつmu固定。後者はpositive yx=zeta xy,zeta²−1、uv=-B y²,vu=-B x²、odd/associativityでu/vがx²,y²を交換。x²y²はpositive反転/negative固定=−muかつmu固定。両方H3排除。
+
+swap graphはpureUU xx/yy 2minor−B²からB0、A/D両0はprojection<=2でdomain外。Aunitを交換で覆い、Schurはnegativec=d0,f=-a,e=-b、domainからbunit。u²=v²=-Q(U)が中心、xy=a u²+b{uv}よりxy/{uv}も中心、A x²+D y²中心。AD0はx²central等から新odd ux+xv0をdomain消去で得てB2矛盾。ADunitでp=sqrtA*x+sqrtD*y,q=sqrtA*x−sqrtD*y,r=u+v,s=u−vの全4平方中心、odd {r,q}=[s,p],{r,p}=[s,q]。W=[s,p],N=[s,q]はmu奇正規二次、normalizers(-,+,+,-),(+,-,+,-)、積mu固定/-mu正規化で排除。
+
+verify_cubic_order2_22_secant_rank2.py/certificateは全係数の縮約ideal/両Schur条件、diag uv全反可換式、四平方交換式、swap pairednormalquad全八covarianceをexact PASS。有限標本や全AS4存在を入力にしない。次はsecant K rank3二固定graphのpureUU一行とpureVV一行から必要Schur領域を分け、B2整域性又は正規二次/四次障害を求める。K rank4開部分は別に残す。

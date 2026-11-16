@@ -37,3 +37,127 @@ $K$の非零成分は異なる行列行・列にあるため、その階数は�
 \end{proof}
 \texttt{verify\_cubic\_order2\_22\_secant\_strata.py}は
 尺度作用、行列式と四表示の階数を厳密検証する。
+
+\begin{lemma}\label{lem:h3-order2-fixed-normal-obstruction}
+半単純中山$\mu$が固有値$\pm1$を持つH3包絡に、非零斉次元$M$があり、
+$\mu(M)=M$、その正規化作用が$B_1$上で$-I$または$-\mu$なら矛盾する。
+\end{lemma}
+\begin{proof}
+$G M=\mu^{-1}(M)G=MG$である。
+一方$\mu(G)=G,\deg G=3$なので、どちらの正規化作用も$G$を$-G$へ送る。
+従って$MG=-GM$であり、標数0と整域性に反する。
+\end{proof}
+
+\begin{theorem}\label{thm:h3-order2-22-secant-rank2-exclusion}
+secant型の偶cross blockが階数2となる二境界は、全てH3から排除される。
+従って半単純$(2,2)$・奇関係数2の残りは、secant型の階数3二表示と階数4開部分である。
+\end{theorem}
+\begin{proof}
+まず$g=\operatorname{diag}(1,-1)$とする。
+奇関係と偶cross blockは
+\[
+ uy=-xu,\quad vx=yv,\qquad
+ K=\begin{pmatrix}0&1&0&0\\0&0&0&0\\0&0&0&0\\0&0&1&0\end{pmatrix}.
+\]
+純正topの$xy,yx$行は純正二次関係なので、そのspanは高々一次元である。
+係数行列
+\[
+ \begin{pmatrix}A&C&-B&D\\-A&-B&-C&-D\end{pmatrix}
+\]
+の二minorから
+\[
+ AB=AC=DB=DC=B^2+C^2=0
+\]
+となる。rank-one tensorも禁じられるため、可能性は
+\[
+ \text{I}:B=C=0,\ AD\ne0,\qquad
+ \text{II}:A=D=0,\ B\ne0,\ C^2=-B^2
+\]
+だけである。全係数零の場合は$U^2$射影が二次元以下となり、純負関係が二次元以上になって排除される。
+
+Iの場合、負cyclic blockを前節と同じ$a_0,\ldots,f_0$で書く。
+添字$(xx,xy,yy,uv)$の主minorは$D^2$であり、偶rank4のSchur条件は
+\[
+ a_0=c_0=f_0=0,\quad
+ b_0(A+D)=e_0(A+D)=0,\quad d_0(A^2+D^2)=0.
+\]
+$b_0=e_0=0$なら負射影が二次元以下なので、少なくとも一方は非零である。
+従って$A=-D$、さらに$d_0=0$となる。
+$xx,yy$行から
+\[
+ uv=-A(xy-yx),\qquad vu=-D(xy-yx)
+\]
+を得るので$uv=-vu$である。
+$M=uv\ne0$とすると、奇関係から
+$Mx=u(vx)=uyv=-xuv$、また$My=-vuy=vxu=yvu=-yM$となる。
+$uv=-vu$より$M$は$u,v$とも反可換する。
+従って$M$は全生成元反転で正規化し、$\mu(M)=M$なので前補題で排除される。
+
+IIの場合、$\zeta=C/B$と置けば$\zeta^2=-1$で
+\[
+ yx=\zeta xy,\qquad uv=-By^2,\qquad vu=-Bx^2.
+\]
+奇関係と積の結合則から
+\[
+ ux^2=y^2u,\quad uy^2=x^2u,\quad
+ vx^2=y^2v,\quad vy^2=x^2v
+\]
+が従う。
+$x^2,y^2$は可換なので$M=x^2y^2$は$u,v$と可換する。
+一方$\zeta^2=-1$から$M$は$x,y$と反可換する。
+よって$M$の正規化作用は$-\mu$、$\mu(M)=M$となり、再び前補題で排除される。
+
+次に$g=\left(\begin{smallmatrix}0&1\\1&0\end{smallmatrix}\right)$を扱う。
+奇関係は$vx=-xu,uy=-yv$であり、
+\[
+ K=\begin{pmatrix}0&0&0&0\\0&0&0&1\\-1&0&0&0\\0&0&0&0\end{pmatrix}.
+\]
+純正$xx,yy$行の二minor$-B^2$から$B=0$となる。
+$A=D=0$では$U^2$射影が二次元以下なので、少なくとも一方が非零であり、
+同時交換により$A\ne0$としてよい。
+既に$xy-yx=0$が純正関係に入る。
+添字$(xx,xy,yx,u^2)$の主minorは$A^2$であり、Schur条件は
+\[
+ c_0=d_0=0,\quad f_0=-a_0,\quad e_0=-b_0.
+\]
+負射影の次元から$b_0\ne0$である。
+偶関係を整理すると
+\[
+ u^2=v^2=-(Ax^2+Cxy+Dy^2),\qquad
+ xy=a_0u^2+b_0(uv+vu).
+\]
+$u^2=v^2$は正可換平面の元でもあるので中心となる。
+$uv+vu$は$u,v$と可換し、第二式から$xy$も中心、従って$uv+vu$も中心である。
+さらに$Ax^2+Dy^2$は中心となる。
+
+$AD=0$なら、交換を除き$D=0,A\ne0$であり、$x^2$は中心である。
+$vx=-xu$へこの中心性を使って$x$を消去すると$ux=-xv$となる。
+これは元の二本にない独立な奇二次関係なので、AS4の関係数に反する。
+従って$AD\ne0$である。
+$X=\sqrt A\,x,Y=\sqrt D\,y$とし、
+\[
+ p=X+Y,\quad q=X-Y,\quad r=u+v,\quad s=u-v
+\]
+と置くと、四つの平方が全て中心である。
+実際$p^2,q^2$は$Ax^2+Dy^2$と$xy$の線型結合、
+$r^2,s^2$は$u^2$と$uv+vu$の線型結合である。
+奇関係は
+\[
+ \{r,q\}=[s,p],\qquad \{r,p\}=[s,q]
+\]
+となる。
+$W=[s,p]=\{r,q\},N=[s,q]=\{r,p\}$を取れば、中心平方から、
+$(p,q,r,s)$に対する正規化作用はそれぞれ
+\[
+ (-1,1,1,-1),\qquad (1,-1,1,-1)
+\]
+である。
+どちらも奇二次関係の一方の片側であり、他方の$r$を含む項を消さずに関係へ入れないので、$B_2$で非零である。
+$\mu(W)=-W,\mu(N)=-N$なので、$M=WN\ne0$は$\mu$固定かつ$-\mu$正規化となる。
+前補題で最後の分枝も排除される。
+\end{proof}
+
+\texttt{verify\_cubic\_order2\_22\_secant\_rank2.py}は
+純正縮約イデアル、両graphの全係数Schur条件、$uv$の全反可換式、
+量子平面分枝の平方交換式と、最後の二正規二次式の全共変式を厳密検証する。
+必要表示の存在十分性は使わず、整域性と正規三次の必要条件から排除している。

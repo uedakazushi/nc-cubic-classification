@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "scope": "both rank-two even-cross-block secant boundary graphs, semisimple (2,2), odd relation rank2",
+  "checks": [
+    "diagonal pure-U contraction ideal",
+    "diagonal first-branch universal Schur equations",
+    "antidiagonal universal Schur equations",
+    "diagonal normal uv and square-interchange identities",
+    "antidiagonal paired normal-quadratic covariance"
+  ],
+  "structural_inputs": [
+    "domain forbids two independent pure binary quadrics",
+    "rank projection bounds",
+    "central-square recognition and domain cancellation"
+  ],
+  "conclusion": "both rank2 secant boundary graphs have no H3 candidates; only rank3 and rank4 secant strata remain"
+}
