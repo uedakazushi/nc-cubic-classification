@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "scope": "Jordan canonical bases, all monic H3 candidates; structural coverage and Ore arguments in paper",
+  "checks": {
+    "CY_Jordan_reflection_derivation_ranks": [
+      3,
+      3
+    ],
+    "CY_Jordan_centralizer_ranks": [
+      2,
+      3
+    ],
+    "unipotent_square_normalizer": "(d-b)*(d+kappa)=0 identically",
+    "root_AS3_top": "one-dimensional, Nakayama signs (x,v,z)=(+,-,-)"
+  },
+  "additional_required_validator": "verify_cubic_order2_nonsplit_tensor.py",
+  "not_claimed": [
+    "complete H3 classification",
+    "relative intrinsic families"
+  ]
+}

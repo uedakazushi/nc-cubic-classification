@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "version": "classification-v140",
+  "version": "classification-v141",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -61,7 +61,8 @@
     "papers/sections/cubic_as4_adjacent_L_exclusions.tex",
     "papers/sections/cubic_as4_adjacent_S_exclusions.tex",
     "papers/sections/cubic_positive3_monic_coverage.tex",
-    "papers/sections/cubic_positive3_diagonal_monic.tex"
+    "papers/sections/cubic_positive3_diagonal_monic.tex",
+    "papers/sections/cubic_positive3_Jordan_monic.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -1403,5 +1404,15 @@
     "certificate": "computations/cubic_positive3_diagonal_monic_certificate.json",
     "proof": "papers/sections/cubic_positive3_diagonal_monic.tex",
     "scope": "**全体的なスペクトル制約（classification-v140）**：全(1,3)は被覆・必要十分H3判定・全矢・DM4表示stack・慣性まで確定。全(3,1)はgamma0/cone枝に加え、対角canonical AS3基礎の全aも排除。v139の全monic正規化被覆上でmu vの非分裂成分を二次自由性により排除、top vv縮約からg固定一次元Lを得る。Tの二次centralizerはalpha=a²+a^-2!=2でkL²、alpha2でkL²+k[x,y]。inner deltaは平方差factor、Heisenberg残余は通常Ore中山で排除。平方完成後g delta+delta g0で非innerが残るのはc=+-i,alpha0だけだが、N=x²y²が全positive反転/z固定の正規元となりH3 Gと可換かつ反可換して矛盾。c−1反射と軸swapは全alphaでinnerのみ、定数pivotと一変数unit coefficient idealsで特殊値込み検証。次は残るJordan canonical AS3基礎のmonic拡大を、W中山Jordan型込みで判定する。(2,2)、三固有値以上、全CY被覆、全成分/圏族降下は未完。"
+  },
+  "positive3_Jordan_monic_v141": {
+    "status": "PASS exact reflection/centralizer/root-AS3 tensor certificates and 18 invariant-tensor identities; structural whole (3,1) exclusion",
+    "validator": "computations/verify_cubic_positive3_Jordan_monic.py",
+    "certificate": "computations/cubic_positive3_Jordan_monic_certificate.json",
+    "rechecked": [
+      "computations/verify_cubic_order2_nonsplit_tensor.py"
+    ],
+    "proof": "papers/sections/cubic_positive3_Jordan_monic.tex",
+    "scope": "**全体的なスペクトル制約（classification-v141）**：全(1,3)は被覆・必要十分H3判定・全矢・DM4表示stack・慣性まで確定。全(3,1)は正部分の全Jordan型を含めて空と証明した。gamma0とcone枝、対角canonical AS3基礎の全aに続き、残るJordan基礎も全monic被覆上で排除。非分裂拡大は18個のD invariant quartic恒等式でv4/v3W0となり、W²rel0とvvrow非退化に矛盾。分裂後gはmuWと可換し共通固定線を持つ。muW Jordanならg unipotentで平方完成後delta0。muW semi/fJordanならAutT三角e²=c²、反射のskew derivationはinnerのみ。純根はq~C又はCprime、v²=lambda*z²+rho*x²に限り、通常Ore-y表示のmu v−が正固有値と矛盾。次は残る(2,2)のmixed relation rank2/4と、三固有値以上の正常三次incidenceを縮小する。単一固有値/CY全被覆、全成分/圏族降下も未完で、完全分類とは呼ばない。"
   }
 }

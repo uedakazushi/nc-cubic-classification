@@ -1,0 +1,126 @@
+\subsection{Jordan基礎の排除と重複度$(3,1)$の消滅}
+\label{subsec:h3-positive3-Jordan-monic}
+\begin{lemma}\label{lem:h3-positive3-AS3-split}
+残る$(3,1)$候補で中山加群$0\to W\to U\to U/W\to0$は分裂する。
+補元を$\mu_B(v)=v$となるように選べば、monic表示の$g$は$\mu_B|_W$と可換し、
+ある$0\ne L\in W$について$g(L)=L$、$\mu_B(L)=L$となる。
+\end{lemma}
+\begin{proof}
+非分裂の場合、正部分の中山対数は、基底変更で
+$Dv=x,DW=0$または$Dv=y,Dy=x,Dx=0$である。
+既出の18個の有理係数tensor恒等式
+（命題\ref{prop:h3-order2-nonsplit-plane-quotient}）は、
+$D$不変四次tensorの$v^4,v^3W$成分が全て零であることを与える。
+この議論は純正成分に適用でき、負生成元$z$を混ぜない。
+また$vvzz$成分は、$zv$を含む巡回語が零であることから零である。
+従ってtopの$vv$縮約は純粋に$W^2$内の関係となる。
+しかし$W^2$に二次関係はないので零となり、
+monicな$v^2$関係とmiddle Frobenius非退化性に反する。
+従って拡大は分裂する。
+
+cross式へ$\mu_B$を作用させ、$T+Tv$の係数を比較すれば
+$g\mu_B|_W=\mu_B|_W g$である。
+分裂後も$vv$縮約は非零で、$vv,vz,zv,zz$係数は零である。
+従ってcrossは非零であり、$v$を巡回させるanti-cyclic式から$[v,L]$の形になる。
+その$Tv$係数は$g(L)-L$だから$g(L)=L$である。
+さらにtopの中山不変性によりこのcrossも不変なので$\mu_B(L)=L$となる。
+\end{proof}
+
+\begin{theorem}\label{thm:h3-positive3-Jordan-base-exclusion}
+Jordan標準基礎$S_J$を持つ$(3,1)$H3候補は存在しない。
+これは共通二平面上の中山が非自明Jordanである場合も含む。
+\end{theorem}
+\begin{proof}
+$b=\epsilon\beta$、$D=[y,x]$、$\eta=\kappa-b$、$\xi=\kappa b$と置くと
+\[
+ [D,x]=0,\qquad [y,D]=2\eta xD+2\xi x^3,\qquad
+ C=D-\kappa x^2=\gamma z^2.
+\]
+共通平面の行列標準形は二種である。
+中山が$W$上恒等で$f$が非自明Jordanなら$\kappa=b\ne0$、従って$\eta=0$である。
+中山が非自明Jordanなら、尺度を取って$\kappa=1+b$、従って$\eta=1$である。
+前者で$b=0$となるスカラー$f$の場合は既に対角基礎に含まれる。
+
+まず$W$上の中山が非自明Jordanの場合を扱う。
+前補題から$g$はそのJordan行列と可換し、固定方向$x$を点ごとに固定する。
+従って$g(x)=x,g(y)=y+dx$である。
+$g+1$は可逆なので$v$を移動して$\ell=0$にする。
+この移動は中山固定方向で取れる。実際、$v^2=\ell v+q$の中山不変性から
+$\ell$は固定方向にあり、$(g+1)^{-1}$も中山と可換する。
+平方互換式は$g\delta+\delta g=0$で、その作用の全固有値は2だから$\delta=0$である。
+
+次に$\eta=0,\kappa=b\ne0$の場合を扱う。
+三次関係の可換化は非零な$x^3$の直線なので、任意の自己同型は
+$g(x)=cx,g(y)=ey+dx$と書ける。
+$[y,D]=2\kappa^2x^3$を保つ条件は$e^2=c^2$である。
+前補題の固定一次元があるため、$y$の$x$移動を除いて、
+$g$は単冪型$(x,y+dx)$または二反射$(x,-y),(-x,y)$のいずれかとなる。
+単冪型は先ほどと同様に平方完成で$\delta=0$へ帰着する。
+反射型では$\ell$の正固有成分を消した後、二次自由基底で平方互換を比較すると$\ell=0$となる。
+$\kappa$の尺度を1に正規化すると、残るskew derivationはそれぞれ
+\[
+ (\delta x,\delta y)=t(yx-xy,2y^2),\qquad
+ (\delta x,\delta y)=t(2x^2,xy-yx)
+\]
+だけで、いずれもinnerである。
+この主張は元の二三次関係にskew derivationを施した18行4列の行列の階数3で検証する。
+従って$v$を移動して$\delta=0$、一次正規元がないことから再び$\ell=0$となる。
+
+以上より全候補は純粋な根表示$vt=g(t)v,v^2=q$に帰着する。
+$\eta=0$の二反射について、$g$の固定方向が$y$なら二次centralizerは$ky^2$だけで、
+平方差の因子化に反する。
+固定方向が$x$ならcentralizerは$kx^2+kD$であるが、$g(q)=q$かつ$g(D)=-D$なので
+$q\in kx^2$となり同じ矛盾を得る。
+ここでcentralizerの主張は二つの三次関係の次数3縮約から直接従う。
+$x$以外の方向は$y$の$x$移動で$y$へ移せる。
+
+残る場合は$g(x)=x,g(y)=y+dx$である。
+$q=v^2$は$x$と可換するので$q=A x^2+B D$と書ける。
+$B=0$は平方差に反するため$B\ne0$である。
+$qy=g^2(y)q$の係数を比較すると
+\[
+ A=-B(\eta+d),\qquad d^2+\eta d-\xi=(d-b)(d+\kappa)=0.
+\]
+従って$q$は$C=D-\kappa x^2$または$C'=D+b x^2$の非零倍数である。
+特に$x$は$v$と可換し、
+\[
+ v^2=\lambda z^2+\rho x^2,\qquad\lambda\ne0
+\]
+となる。
+$\epsilon=-1$なら中山の半単純部分$H$、すなわち$z$だけの符号反転でZhang twistする。
+$\operatorname{hdet}H=1,H^4=1$なので実際の中山は不変であり、$x$は$z$とも可換するようになる。
+従って両符号とも$\epsilon=1$の場合と同じ矛盾へ帰着できる。
+
+$A=\langle x,v,z\rangle$は$x$が中心で
+$v^2-\lambda z^2=\rho x^2$という二次AS3である。
+実際$r=v+\sqrt\lambda z,s=v-\sqrt\lambda z$とすれば
+$rx=xr,sx=xs,rs+sr=2\rho x^2$の二段Ore表示となる。
+その中山作用は$(x,v,z)\mapsto(x,-v,-z)$である。
+元の六関係を並べ直すと$B=A[y;\partial]$という通常の微分Ore拡大になる。
+$\epsilon=1$の場合、その微分は
+\[
+ \partial x=\kappa x^2+\gamma z^2,\quad
+ \partial v=-dxv,\quad \partial z=-b xz
+\]
+であり、twist後も同形である。
+これらが$A$の関係を保つことは上の$d$の二次方程式と同値である。
+このOre表示のPBW級数は$H_B$と一致するので余分な核はない。
+Ore中山公式から$\mu_B|_A=\mu_A$となり、$\mu_B(v)=-v$が必要になる。
+ところが前補題で$v$は正固有元であり、これは矛盾である。
+\end{proof}
+
+\begin{corollary}[正三次元・負一次元の領域は空]
+\label{cor:h3-positive3-total-exclusion}
+H3包絡の中山作用が固有値$+1,-1$を重複度$(3,1)$で持つことはない。
+正部分の全Jordan型を含めた主張である。
+\end{corollary}
+\begin{proof}
+$\gamma=0$は定理\ref{thm:h3-positive3-gamma-zero-exclusion}で排除済みである。
+$\gamma\ne0$では全基礎被覆定理、円錐排除、対角基礎排除と本定理を適用する。
+\end{proof}
+
+\texttt{verify\_cubic\_positive3\_Jordan\_monic.py}は両反射のskew derivation階数、
+centralizer階数、全$\kappa,b$の平方正規化方程式と、根AS3の最高tensor・中山符号を厳密検証する。
+非分裂tensorの18個の恒等式も再実行した。
+この消滅定理は$(3,1)$領域のものであり、$(2,2)$や三固有値以上、
+全CY領域、内在的圏族の降下を解決したという意味ではない。
