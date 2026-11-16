@@ -1097,3 +1097,10 @@ A=SU⊗E+E⊗SV、PfA=detSU−detSV。可換側GL2のnormalized congruenceで非
 原始6乗根curved候補G=A x³+B y³も全alpha/betaで非整域と判定した。u/x逆転chartはk[C,V]上のorder6 GWA、a0=C−delta−gammaV²、3norm P=C³−delta³−gamma³V6−3delta gamma C V²。cutをX6=r³Pへ直し、sigma²の3normもPであるためZ=(r a0)^−1 X²がZ³1。monic6基底上でZ−1とZ²+Z+1がともに非零かつ零積なのでdomain仮定に矛盾する。従って対角curved全chartのH3は零tail/F−Iの既知signのみ。全非零toprank4の完成ではない。
 
 局所化前後のbase単射はGWAのLaurent/monic6基底で証明する。K=k(C,V)へは非零係数のsigma6normという中心元を逆転して移る。r³=−B/A、X6=r³P。sigma³a0=a0によりsigma²norm3=P、Z³1。Lの係数field上の支持{0,2}/{0,2,4}が両因子の非零を保証する。次数2の部分crossed productだけを見てRのdomainを予想するのは誤りであり、実際の3normが全候補を排除した。頂点Extやaffineglを調べる必要はこの候補ではなくなった。次は非対角F=±Jのcurved chart：positive shear invariantsのU次数filtrationでGが共通一次因子を持ちそうである（未証明）。
+
+
+## 曲がった量子対角chartの全H3認識（classification-v170）
+
+正射影量子二次式を許す全二パラメータcurved対角包絡xy−p yx=alpha*u²+beta*v²、uv−、u作用diag(r,r^-1)、v作用diag(p/r,r/p)を全係数AS4/noeth/Koszul/domain・mu++--と認識し、H3はp1,r−1,alpha/beta0の既知signのみと判定。十語の二normalizer weightイデアルから例外はp1r±1とp³1/r³−1の九根のみ。九根でcurvature制約を全判定し、GWAのperiod3a0/monic6商で三次norm零因子を構成して全非sign候補を排除した。
+
+一般norm補題：K可換field、sigma6Id、a0!=0/sigma³a0=a0、P=a0*sigmaa0*sigma²a0、rho≠0 fixedならL=K[X±;sigma]/(X6−rho³P)にはZ=(rho a0)^−1X²,Z³1の零因子。sigmaの最小位数は問わない。全根p³1,r³−1ではdehom t=p r²,c=−p/r²、XY−tYX=r alpha−r beta V²。delta(t−1)=r alpha、gamma(c^-2−t)=r betaを選べることが三次centralizer方程式の全条件。次はF=±Jordanのcurved comm射影をU次数filtration/shear固定核で因数分解へ帰着する。

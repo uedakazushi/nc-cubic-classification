@@ -1,0 +1,78 @@
+{
+  "status": "PASS",
+  "scope": "all p,r nonzero, all alpha,beta in the curved diagonal quantum chart",
+  "universal_PBW_overlaps": 4,
+  "localized_support_ideal_equalities": 10,
+  "complete_root_cases": [
+    {
+      "p": "1",
+      "r": "-1",
+      "alpha_forced_zero": true,
+      "beta_forced_zero": true,
+      "cubic_norm_obstruction": "Z^3=1 in monic6 basis"
+    },
+    {
+      "p": "1",
+      "r": "1/2 + sqrt(3)*I/2",
+      "alpha_forced_zero": false,
+      "beta_forced_zero": false,
+      "cubic_norm_obstruction": "Z^3=1 in monic6 basis"
+    },
+    {
+      "p": "1",
+      "r": "1/2 - sqrt(3)*I/2",
+      "alpha_forced_zero": false,
+      "beta_forced_zero": false,
+      "cubic_norm_obstruction": "Z^3=1 in monic6 basis"
+    },
+    {
+      "p": "-1/2 + sqrt(3)*I/2",
+      "r": "-1",
+      "alpha_forced_zero": false,
+      "beta_forced_zero": true,
+      "cubic_norm_obstruction": "Z^3=1 in monic6 basis"
+    },
+    {
+      "p": "-1/2 + sqrt(3)*I/2",
+      "r": "1/2 + sqrt(3)*I/2",
+      "alpha_forced_zero": false,
+      "beta_forced_zero": false,
+      "cubic_norm_obstruction": "Z^3=1 in monic6 basis"
+    },
+    {
+      "p": "-1/2 + sqrt(3)*I/2",
+      "r": "1/2 - sqrt(3)*I/2",
+      "alpha_forced_zero": true,
+      "beta_forced_zero": false,
+      "cubic_norm_obstruction": "Z^3=1 in monic6 basis"
+    },
+    {
+      "p": "-1/2 - sqrt(3)*I/2",
+      "r": "-1",
+      "alpha_forced_zero": false,
+      "beta_forced_zero": true,
+      "cubic_norm_obstruction": "Z^3=1 in monic6 basis"
+    },
+    {
+      "p": "-1/2 - sqrt(3)*I/2",
+      "r": "1/2 + sqrt(3)*I/2",
+      "alpha_forced_zero": true,
+      "beta_forced_zero": false,
+      "cubic_norm_obstruction": "Z^3=1 in monic6 basis"
+    },
+    {
+      "p": "-1/2 - sqrt(3)*I/2",
+      "r": "1/2 - sqrt(3)*I/2",
+      "alpha_forced_zero": false,
+      "beta_forced_zero": false,
+      "cubic_norm_obstruction": "Z^3=1 in monic6 basis"
+    }
+  ],
+  "conclusion": "all possible non-sign cuts either factor immediately or acquire explicit cubic norm zero divisors; the only H3 part is the known fixed sign family at p=1,r=-1,alpha=beta=0",
+  "proof": "papers/sections/cubic_order2_22_curved_quantum_diagonal.tex",
+  "not_claimed": [
+    "all nonzero-top rank4 graphs",
+    "non-diagonal normalizing matrices",
+    "relative descent"
+  ]
+}

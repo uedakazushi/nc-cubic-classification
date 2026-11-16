@@ -40,7 +40,7 @@ Rains・VdB・AS・anticanonical heartの一般次数比較は [nc-dp-surface-he
 
 **全体的なスペクトル制約（classification-v167）**：全(1,3)は幾何学的被覆・H3必要十分条件・全矢まで確定、全(3,1)は全Jordan型込みで空。(2,2) mixed rank2も全Jordan型込みで空。mixed rank4のcanonical零top(P=Q=0)は全Jordan型込みで固定非CY符号族へ完全に幾何学的認識し、一般次元2/慣性mu2²。非零正topでは片側負Jordanを排除、非退化正topなら全Jordan消滅。残る核心はP又はQ非零のrank4、平方正topの正側Jordan、三固有値以上、全CY被覆と全intrinsic族降下・成分。
 
-**次の核心（classification-v169）**：原始6乗根curved候補G=A x³+B y³も全alpha/betaで非整域と判定した。u/x逆転chartはk[C,V]上のorder6 GWA、a0=C−delta−gammaV²、3norm P=C³−delta³−gamma³V6−3delta gamma C V²。cutをX6=r³Pへ直し、sigma²の3normもPであるためZ=(r a0)^−1 X²がZ³1。monic6基底上でZ−1とZ²+Z+1がともに非零かつ零積なのでdomain仮定に矛盾する。従って対角curved全chartのH3は零tail/F−Iの既知signのみ。全非零toprank4の完成ではない。 次は曲がった正comm関係を保つ非対角F∈SL2（単冪±Jordan）のPBW/Nakayamaと正常三次を調べ、対角族から全normalizing SL2 chartへ拡張する。一般mixed graph、非零正top、平方正topJordan等は残る。
+**次の核心（classification-v170）**：正射影量子二次式を許す全二パラメータcurved対角包絡xy−p yx=alpha*u²+beta*v²、uv−、u作用diag(r,r^-1)、v作用diag(p/r,r/p)を全係数AS4/noeth/Koszul/domain・mu++--と認識し、H3はp1,r−1,alpha/beta0の既知signのみと判定。十語の二normalizer weightイデアルから例外はp1r±1とp³1/r³−1の九根のみ。九根でcurvature制約を全判定し、GWAのperiod3a0/monic6商で三次norm零因子を構成して全非sign候補を排除した。 次は非対角F∈SL2のcurved comm射影で、±JordanとcurvatureのPBW/Frobenius top・正常核を判定する。一般nonzero-top rank4や退化正射影、全CY/三固有値/族降下は未完。
 
 既存の主要な構造結果を維持する：
 

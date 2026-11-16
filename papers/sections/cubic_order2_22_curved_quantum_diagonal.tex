@@ -1,0 +1,108 @@
+\subsection{量子正射影を持つ全対角curved chartの認識}
+\label{subsec:h3-order2-22-curved-quantum-diagonal}
+\begin{lemma}[三次normが与える六項Laurent商の零因子]
+\label{lem:h3-cubic-norm-six-term-obstruction}
+$K$を可換体、$\sigma^6=1$、$0\ne a\in K$を$\sigma^3(a)=a$を満たす元とし、
+$P=a\sigma(a)\sigma^2(a)$、$0\ne\rho\in K^\sigma$とする。
+このとき
+\[
+ L=K[X,X^{-1};\sigma]/(X^6-\rho^3P)
+\]
+は整域でない。
+\end{lemma}
+\begin{proof}
+$P$は非零かつ$\sigma$不変なので、$L$は$K$上$1,X,\ldots,X^5$を基底に持つ。
+$\sigma^3(a)=a$から$a\sigma^2(a)\sigma^4(a)=P$である。
+従って$Z=(\rho a)^{-1}X^2$は$Z^3=1$を満たす。
+$(Z-1)(Z^2+Z+1)=0$の両因子は、基底次数$\{0,2\}$と$\{0,2,4\}$に非零係数を持つので非零である。
+$\sigma$の最小位数が6である必要はない。
+\end{proof}
+
+\begin{theorem}\label{thm:h3-order2-22-curved-quantum-diagonal}
+$p,r\in k^*$、$\alpha,\beta\in k$について、全六関係を
+\begin{gather*}
+ xy-pyx=\alpha u^2+\beta v^2,\qquad uv=-vu,\\
+ ux=r xu,\quad uy=r^{-1}yu,\qquad
+ vx=(p/r)xv,\quad vy=(r/p)yv
+\end{gather*}
+とする。
+全係数で包絡はnoetherian quadratic Koszul AS4整域、$\mu=(+,+,-,-)$である。
+この全chartのH3部分は、$p=1,r=-1,\alpha=\beta=0$の固定非CY符号族に一致する。
+従って全H3切断と幾何学的矢は既知の符号分類となる。
+\end{theorem}
+\begin{proof}
+負平面$T=(uv=-vu)$の上で$x$を
+$\sigma_x(u)=r^{-1}u,\sigma_x(v)=(r/p)v$により加え、
+次に
+\[
+ \sigma_y(u)=ru,\quad\sigma_y(v)=(p/r)v,\quad\sigma_y(x)=p^{-1}x,
+ \qquad\delta_y(x)=-p^{-1}(\alpha u^2+\beta v^2),\quad\delta_y(T)=0
+\]
+とするOre拡大を取ればよい。
+$u^2,v^2$は$T$の中心なのでskew derivation条件が成り立つ。
+全四三次overlapが恒等的に消え、PBW基底とKoszul性を得る。
+二回のOre中山公式と$x\mapsto t x,y\mapsto t^{-1}y$のtorusから、前節同様$\mu=(+,+,-,-)$となる。
+
+正三次PBW語に対する$u,v$の正常化作用は同時に対角である。
+$x,y$の個数の差を$n$とすると、その二weightは
+\[
+ (-1)^{\#v}r^n,\qquad(-1)^{\#u}(p/r)^n
+\]
+である。両方が$-1$となる条件を十語について全て解く。
+$x^3,y^3$には$p^3=1,r^3=-1$が必要であり、
+他の正三次語は$(p,r)=(1,-1)$または$(1,1)$でしか現れない。
+これら二点は前節のWeyl中央化計算で全$\alpha,\beta$を判定済みであり、
+H3が残るのは固定符号族だけである。
+従って残る候補は$G=A x^3+B y^3$、$AB\ne0$の場合に限る。
+一方の係数が零なら純三乗で整域商にならない。
+
+$p^3=1,r^3=-1$の九通りを考える。
+$x^3,y^3$が正平面と可換するには
+\[
+ \alpha=0\quad\text{if }pr^2=1,\qquad
+ \beta=0\quad\text{if }r^2=1
+\]
+が必要である。
+実際、$[y,x^3]$の$u^2,v^2$係数はそれぞれ非零単元倍を除いて
+\[
+ \alpha(1+pr^2+(pr^2)^2),\qquad
+ \beta(1+r^2+r^4)
+\]
+であり、$[x,y^3]$も同じ条件を与える。
+
+$R=B/(G)$が整域だと仮定し、前節同様に$u$と$x$を逆転して次数零部分を取る。
+$X=xu^{-1},Y=yu^{-1},V=vu^{-1}$について
+\[
+ VX=cXV,\quad VY=c^{-1}YV,\quad
+ XY-tYX=r\alpha-r\beta V^2,
+ \qquad t=pr^2,\quad c=-p/r^2
+\]
+となる。$t^3=1,c^3=-1$である。
+上の必要条件により、常にスカラー$\delta,\gamma$を
+\[
+ (t-1)\delta=r\alpha,\qquad(c^{-2}-t)\gamma=r\beta
+\]
+と選べる。
+係数が零の式では右辺も零であり、対応する未知量を零に取ればよい。
+$C=YX+\delta+\gamma V^2$と置くと、一般化Weyl表示
+\[
+ \sigma(C)=tC,\quad\sigma(V)=c^{-1}V,\quad
+ a=C-\delta-\gamma V^2,\qquad YX=a,\quad XY=\sigma(a)
+\]
+を得る。$\sigma^6=1$で$\sigma^3(a)=a$である。
+$P=a\sigma(a)\sigma^2(a)$は$C^3$を先頭に持つので、全係数で非零である。
+切断は$X^6=\rho^3P$、$\rho^3=-B/A$となる。
+可換基底の単射と局所化は、前節のLaurent・monic六項基底の証明と同じである。
+補題\ref{lem:h3-cubic-norm-six-term-obstruction}の零因子により整域の仮定に矛盾する。
+この議論は九根の場合全てと、$\delta,\gamma$の零値も含む。
+従って候補を全て排除し、主張を得る。
+\end{proof}
+
+検証器は
+\[
+ \texttt{verify\_cubic\_order2\_22\_curved\_quantum\_diagonal.py}
+\]
+である。全係数PBW、十語の局所化weightイデアルの一致、
+九通りの完全な根の組合せでのcurvature条件・GWA係数・三次normを再生する。
+根の組合せを一般点の有限標本として用いているわけではなく、正常方程式が許す全根を尽くしている。
+非対角normalizing行列や一般mixed graphは、この定理に含めない。
