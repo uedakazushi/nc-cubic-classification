@@ -399,5 +399,12 @@
     "source": "CY_ZERO_COMMUTATORS_FOUR_SIMPLE_FULL_SHARED_INVERTIBLE_REDUCTION.tex FT2/FT3 explicit formulas only",
     "validator": "computations/verify_cubic_as4_P_projections.py",
     "scope": "Independent entire two-parameter word-quotient identities. No all-fibre AS4 sufficiency, chart coverage or all-isomorphism theorem imported."
+  },
+  "four_simple_P_all_v88": {
+    "commit": "a45f834f51a00c47443b51caf66abaf4629546b9",
+    "source": "CY_ZERO_COMMUTATORS_FOUR_SIMPLE_FULL_SHARED_INVERTIBLE_REDUCTION.tex FT2/FT3 formulas and FT4 candidate reflection only",
+    "proof": "papers/sections/cubic_as4_four_simple_exclusions.tex thm:cubic-full-P-excluded",
+    "validator": "computations/verify_cubic_as4_P_centre_lift.py",
+    "scope": "All explicit P excluded by independent word-quotient and polynomial centre-lift replay, literal monomial reflection and all-r special-line checks. No full chart/CY coverage, AS4 existence sufficiency or all-isomorphism theorem imported."
   }
 }

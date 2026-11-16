@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Generate the realified primitive P central-cubic module for Singular.
 Usage: python computations/generate_cubic_as4_P_centre_input.py work/prefix
+Optional final argument -1,0,1 specializes lambda=-1/2+i*index.
 Then Singular -q work/prefix.sing > work/prefix.log
 Generation alone is not an all-parameter rank assertion.
 """
@@ -41,6 +42,17 @@ for c in range(140):
  scales[c]=str(G.to_sympy(h))
  for j,e in column.items():scaled[j,c]=e
 print('PRIMITIVE',time.time()-t,flush=True)
+# Optional special index gives lambda=-1/2+i*index before realification.
+special=int(sys.argv[2]) if len(sys.argv)>2 else None
+if special is not None:
+ assert special in [-1,0,1]
+ value=S.QQ_I(-S.Rational(1,2),special)
+ numeric={}
+ for ij,e in scaled.items():
+  coeff={}
+  for (a,b),c in e.to_dict().items():coeff[0,b]=coeff.get((0,b),S.QQ_I.zero)+c*value**a
+  numeric[ij]=G.ring.from_dict(coeff)
+ scaled=numeric
 cache={}
 def rat(x):
  x=S.Rational(x);return '(number('+str(x.p)+')/number('+str(x.q)+'))'
@@ -57,7 +69,7 @@ def fmt(e,imag=False):
    ss.append(s)
   cache[key]='('+'+'.join(ss)+')' if ss else '0'
  return cache[key]
-out=['ring base=(0,l),(r),(c,dp);','option(redSB);short=0;','matrix A[40][280];']
+out=[('ring base=(0,l),(r),(c,dp);' if special is None else 'ring base=0,(r),(c,dp);'),'option(redSB);short=0;','matrix A[40][280];']
 for (j,c),e in scaled.items():
  ar,ai=fmt(e),fmt(e,True)
  if ar!='0':out.append(f'A[{2*j+1},{2*c+1}]={ar};');out.append(f'A[{2*j+2},{2*c+2}]={ar};')

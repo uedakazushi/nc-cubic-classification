@@ -1,0 +1,134 @@
+{
+  "version": "classification-v88",
+  "source_commit": "as4 a45f834f51a00c47443b51caf66abaf4629546b9",
+  "scope": "Every explicit FT2/FT3 P_lambda,r+/- excluded conditional AS4; no full CY/chart coverage or AS4 sufficiency imported.",
+  "status": "Independent exact polynomial lift replay executed",
+  "dependencies": "SymPy and python-flint; Singular needed only to regenerate logs. Large generated logs are untracked and reproducible from the source-domain input generator.",
+  "generic_vertical_factors": [
+    [
+      "0",
+      "1"
+    ],
+    [
+      "-1/8",
+      "-1/4",
+      "1/4",
+      "3/2",
+      "1"
+    ],
+    [
+      "1/2",
+      "1",
+      "1"
+    ],
+    [
+      "1",
+      "1"
+    ],
+    [
+      "3/2",
+      "1"
+    ],
+    [
+      "1/4",
+      "3/4",
+      "1"
+    ],
+    [
+      "-1/2",
+      "0",
+      "1"
+    ],
+    [
+      "-1/16",
+      "3/8",
+      "55/16",
+      "411/32",
+      "49/2",
+      "217/8",
+      "67/4",
+      "6",
+      "1"
+    ],
+    [
+      "1/2",
+      "1"
+    ],
+    [
+      "-1/28",
+      "0",
+      "27/56",
+      "97/56",
+      "41/14",
+      "18/7",
+      "1"
+    ],
+    [
+      "5/4",
+      "1",
+      "1"
+    ]
+  ],
+  "generic_polynomial_degree": 30,
+  "reflection_gcd_coefficients": [
+    "0",
+    "5/16",
+    "29/16",
+    "37/8",
+    "55/8",
+    "25/4",
+    "7/2",
+    "1"
+  ],
+  "remaining_vertical_values": [
+    "-1/2",
+    "-1/2+i",
+    "-1/2-i"
+  ],
+  "reflection": {
+    "lambda_prime": "-l - 1",
+    "r_prime": "(2*l**2 + 2*l - r*(l + 1)**2 + 1)/l**2",
+    "diagonal_before_ab_swap": [
+      "1",
+      "-1/64",
+      "I*l/(8*l + 8)",
+      "-I*(l + 1)/(8*l)"
+    ],
+    "determinant": "1/4096"
+  },
+  "lift_checks": [
+    {
+      "case": "generic vertical cover",
+      "raw_sha256": "28e23de1e4841a72dc38ba783da0ec31d313cb68595472b75a9bea4d4a9c956b",
+      "N_nonzero_entries": 62,
+      "X_nonzero_entries": 2156,
+      "polynomial_identity": "C0*X=N over QQ[l,r]",
+      "triangular_pivots": 40
+    },
+    {
+      "case": "lambda=-1/2+(0)i",
+      "raw_sha256": "f175bdecf7de9d7d8088f11356e8aba313fea60c6a22fabaa9360e0cd43ac4b8",
+      "N_nonzero_entries": 72,
+      "X_nonzero_entries": 1946,
+      "polynomial_identity": "C0*X=N over QQ[l,r]",
+      "triangular_pivots": 40
+    },
+    {
+      "case": "lambda=-1/2+(1)i",
+      "raw_sha256": "81bb6a016315daf2a922a1f7fa5fcf035f624aa7e2658356de3c3c1fa2797746",
+      "N_nonzero_entries": 74,
+      "X_nonzero_entries": 1749,
+      "polynomial_identity": "C0*X=N over QQ[l,r]",
+      "triangular_pivots": 40
+    },
+    {
+      "case": "lambda=-1/2+(-1)i",
+      "raw_sha256": "e8691081826a922531b7cdd53625d208c0c17265bc472ce4639025630382f624",
+      "N_nonzero_entries": 74,
+      "X_nonzero_entries": 1847,
+      "polynomial_identity": "C0*X=N over QQ[l,r]",
+      "triangular_pivots": 40
+    }
+  ],
+  "proof": "papers/sections/cubic_as4_four_simple_exclusions.tex"
+}

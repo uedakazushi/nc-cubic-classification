@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-15",
-  "version": "classification-v87",
+  "date": "2026-11-16",
+  "version": "classification-v88",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -962,7 +962,14 @@
       "computations/cubic_as4_P_projection_degree3.json",
       "computations/cubic_as4_P_projection_degree4.json"
     ],
-    "result": "Entire two-parameter P degree3/4 coordinates independently verified, denominator support lambda,lambda+1,r-1,a with a=2lambda²+2lambda+1. All source-domain AS4 fibres have these quotient bases. All-parameter central rank is a separate pending certificate.",
+    "result": "Entire two-parameter P word quotients independently verified. The all-parameter centre exclusion is completed in v88.",
     "generator": "computations/generate_cubic_as4_P_centre_input.py"
+  },
+  "four_simple_P_all_v88": {
+    "status": "independent exact polynomial replay executed, including complete regeneration by the committed input generator and Singular 4.4.1",
+    "validator": "computations/verify_cubic_as4_P_centre_lift.py",
+    "certificate": "computations/cubic_as4_P_full_certificate.json",
+    "result": "All explicit FT2/FT3 P_lambda,r+/- excluded. Polynomial realified rank40 identity, degree30 vertical exceptional polynomial, literal lambda reflection, gcd reduction to three lines and independent complete special-line rank40 identities. No all-fibre AS4 sufficiency or full CY/chart coverage imported.",
+    "large_outputs": "Generated logs are untracked; regenerate from the committed input generator and independently replay with python-flint."
   }
 }

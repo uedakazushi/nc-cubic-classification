@@ -336,6 +336,16 @@ AB2のT_lambda両符号を全lambda!=0,-1で排除した。lambda=-2はS_zetaと
 これでAB2/AB3の隣接共有境界の列挙表示は全排除。次はFT3のP全二パラメータ残余。Pはlambda2の全rと非空開集合のみ排除済み。非捩れqso3許容性、全包絡被覆・大域成分・抽象族降下も未完であり、全H3完全分類とはしない。
 
 
-十二共有Pの全二変数商射影を厳密に構成・独立再生した（classification-v87）。D3=lambda^4(lambda+1)²(r−1)²、D4=lambda^7(lambda+1)³(r−1)³a、a=2lambda²+2lambda+1。全分母は元のFT2領域で非零。元の三次・四次の全語関係消滅と自由列identityをQQ[lambda,r]の実部/虚部恒等式でSymPy検証し、さらにFLINT有理多変数多項式の直接積でも再確認した。従って元の領域のAS4実現では同じ語が商基底になるが、AS4十分性は輸入しない。再現verify_cubic_as4_P_projections.py 3 4、構造化JSON二点、exact_polynomial_complex_product.py。
-Gaussian分数体を避けるため各語の実/虚座標を隣接させ、Singularの係数体QQ(lambda,r)でrealificationを消去した。三次・四次とも短時間で完了し、QQ(lambda)[r]の無準備な元関係module GB（180秒未完）を反復しない。出力を巨大な式文字列から単項式係数列へ変更して再生を高速化した。全二変数のprimitive中心行列をgenerate_cubic_as4_P_centre_input.pyで再生成できる。
-中心側はQQ(lambda)[r]の40×280 realified primitive moduleについてliftstdが40本の三角基底を生成し、生成CAS自身によるA*X=N検証も成功した。対角は1、lambda、2lambda²、r−1、(r−1)²又はlambda(r−1)だけである。出力64MBは作業領域のみ。文字列上で除算記号はないが、特殊lambdaへの全値結論の前に、全係数の多項式性と恒等式を別の厳密再生で照合する。未検証の全P排除をこの段階で確定扱いしない。次は巨大証明書の単項式AST再生又は局所化による小さい証明書の構成。非捩れqso3許容性・全包絡被覆・大域成分・抽象族降下は未完。
+## 十二共有P全二パラメータの排除（classification-v88）
+
+FT2/FT3の全P_lambda,r両符号を排除した。全二変数商射影のD3=lambda^4(lambda+1)²(r−1)²、D4=lambda^7(lambda+1)³(r−1)³a、a=2lambda²+2lambda+1。全分母はFT2領域で非零。元の全語関係消滅と自由列identityはQQ[lambda,r]の実部/虚部でSymPyとFLINTの厳密多項式積により独立検証済み。AS4実現の商基底としてのみ用い、全値AS4存在を輸入しない。
+
+20三次語の転置交換子行列からD4の約数の列因子を除き、40×280のrealificationを作る。独立検証した多項式AX=Nでは40三角pivotを持つ。r−1の因子を除く垂直例外の被約積g(lambda)は次数30、11既約因子であり、明示式は原稿とcubic_as4_P_full_certificate.json。通常stdの基底と係数追跡liftstdの基底の正規化は異なる。通常基底の対角がlambda,r−1のみでも追跡付き基底は余分なlambda因子を持つため、それを捨てずgへ全て含めた。この点を無検証で特殊化しない。
+
+次数付き同型lambda'=-lambda−1, r'={a−(lambda+1)²r}/lambda², eta'=etaを全六関係で確認。生成元はdiag(1,−1/64,i lambda/[8(lambda+1)],−i(lambda+1)/(8lambda))P_(ab)、det=1/4096。FT2のd,e,f,r−1はそれぞれq²/lambda², q/lambda,−q²/lambda²,−q²/lambda²倍に移り領域を保つ。gcd(g(lambda),g(−lambda−1))はlambda(lambda+1)a(2lambda+1)(4lambda²+4lambda+5)の定数倍。従って元の領域では三直線lambda=−1/2,−1/2±iだけ残る。先に複素行列を特殊化してからrealifyしたQQ[r]上の三証明書を別々に作り、全r!=1で40三角pivotとAX=Nを独立検証した。両符号は形式変数を固定した係数共役で覆う。
+
+再現verify_cubic_as4_P_projections.py 3 4、verify_cubic_as4_P_centre_lift.py。入力はgenerate_cubic_as4_P_centre_input.py。中心検証にはpython-flintを要し、再生成にはSingular 4.4.1互換CLIも要する。巨大な出力（一般lift約64MB）は作業領域のみとし、Gitには元の商データ、生成器、独立多項式再生器、係数gと全チェックのSHAを持つ小さい記録を保存する。生成時のSingular内A*X=Nだけで終わらず、元のP商座標から行列を組み直しFLINTのQQ[lambda,r]積で全残差零を確認した。単なる数値標本や有限体検査ではない。
+
+生成法の要点：Gaussian分数体でなく各語実/虚を隣接させたQQ(lambda,r)消去で三次・四次商を取得。元のQQ(lambda)[r]関係module GBの未完計算を反復しない。証明データは単項式係数列として保持し、巨大式のSymPy再展開を避ける。局所化した三変数moduleによる別法は180秒で未完、結果不使用。
+
+これで現在参照した四単純基点の共有係数境界の全列挙表示はPも含めて判定できたが、上流の全chart/CY被覆はまだ輸入していない。次はこの列挙と全H3包絡の関係を監査し、未被覆領域を特定する。非捩れqso3の正のadmissibility、全包絡被覆、大域成分・交叉、抽象族降下も引き続き未完。

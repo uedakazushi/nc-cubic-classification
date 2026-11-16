@@ -372,3 +372,92 @@ $\lambda(\lambda+1)(r-1)adef\ne0$ である。
 SymPyによる厳密検証に加え、任意導入のFLINT多変数有理係数多項式でも
 同じ恒等式を直接検証できる。有限体の標本検査ではない。
 中心行列の全パラメータ階数は、この商座標の存在だけからは結論しない。
+
+\begin{theorem}\label{thm:cubic-full-P-excluded}
+FT2--FT3の十二共有族 $\mathcal P^\eta_{\lambda,r}$ は、
+元のパラメータ領域の全値・両符号でH3包絡にならない。
+この結果は全CY/全AS4の被覆を主張しない。
+\end{theorem}
+\begin{proof}
+上で独立検証した全二変数の最高反巡回tensorより、AS4実現では $\mu=1$ である。
+従って非零中心三次の存在がH3の必要条件となる。
+$D_3,D_4$ は元のFT2領域で非零であるから、
+検証済みの商座標をこの領域の任意のAS4実現で使用できる。
+三次基底20語の交換子写像の転置について $D_4$ を払い、
+各列から $D_4$ の約数である共通因子のみを除く。
+この $20\times140$ 複素多項式行列を $C$ とし、その実化を
+\[
+ A=\begin{pmatrix}\operatorname{Re}C&-\operatorname{Im}C\\
+ \operatorname{Im}C&\operatorname{Re}C\end{pmatrix}
+\]
+と書く。実際の記録では各実部・虚部を隣接させている。
+形式係数 $i$ の共役だけを取っており、形式変数 $\lambda,r$ は固定する。
+固定の可逆行列で $A$ を $C$ とその係数共役の直和へ移せるので、
+$\operatorname{rank}A=40$ なら $\operatorname{rank}C=20$ である。
+これはパラメータの値が複素数でも成立する。
+
+独立な多項式証明書は
+\[
+ AX=N,\qquad X\in\operatorname{Mat}_{280\times40}(\mathbb Q[\lambda,r]),
+ \quad N\in\operatorname{Mat}_{40\times40}(\mathbb Q[\lambda,r])
+\]
+である。$N$ は先頭行が相異なる三角行列であり、
+全対角成分から $r-1$ の冪を除いた因子の被約な積を $g(\lambda)$ とすると、
+非零定数倍を除いて
+\[
+ g=\lambda(\lambda+1)a(2\lambda+1)(4\lambda^2+4\lambda+5)
+ (2\lambda+3)(4\lambda^2+3\lambda+1)(2\lambda^2-1)f_4 f_6 f_8,
+\]
+\begin{align*}
+ f_4={}&8\lambda^4+12\lambda^3+2\lambda^2-2\lambda-1,\\
+ f_6={}&56\lambda^6+144\lambda^5+164\lambda^4+97\lambda^3+27\lambda^2-2,\\
+ f_8={}&32\lambda^8+192\lambda^7+536\lambda^6+868\lambda^5\\
+       &+784\lambda^4+411\lambda^3+110\lambda^2+12\lambda-2.
+\end{align*}
+従って $g(\lambda)\ne0$, $r\ne1$ では $A$ の階数は40であり、
+中心三次は零である。
+ここでは通常の標準基底の正規化と、係数を追跡した基底の正規化を同一視しない。
+後者の余分な $\lambda$ 因子も上の $g$ に全て含めている。
+
+例外の大部分は次の文字どおりの次数付き同型で除く：
+\[
+ \lambda'=-\lambda-1,\qquad
+ r'=\frac{a-(\lambda+1)^2r}{\lambda^2},\qquad \eta'=\eta.
+\]
+正符号の生成元変換は
+\[
+ P=\operatorname{diag}\left(1,-\frac1{64},
+ \frac{i\lambda}{8(\lambda+1)},-\frac{i(\lambda+1)}{8\lambda}\right)P_{(ab)}.
+\]
+六関係の輸送を独立に確認し、$\det P=1/4096$ である。
+さらに
+\[
+ r'-1=-\frac{(\lambda+1)^2}{\lambda^2}(r-1),\quad
+ d'=\frac{(\lambda+1)^2}{\lambda^2}d,\quad
+ e'=\frac{\lambda+1}{\lambda}e,\quad
+ f'=-\frac{(\lambda+1)^2}{\lambda^2}f
+\]
+なので元の領域を保つ。厳密な多項式gcdは
+\[
+ \gcd\bigl(g(\lambda),g(-\lambda-1)\bigr)
+ \doteq\lambda(\lambda+1)a(2\lambda+1)(4\lambda^2+4\lambda+5)
+\]
+である。元から除外される $\lambda(\lambda+1)a=0$ を除けば、
+残るのは $\lambda=-1/2,-1/2\pm i$ の三直線だけである。
+
+これら三値では、$C$ を先に特殊化してから実化し、
+$\mathbb Q[r]$ 上の別々の多項式恒等式 $A_*X_*=N_*$ を構成した。
+各 $N_*$ は40本の三角pivotを持ち、その零点支持は $r-1$ のみである。
+全恒等式を元の商座標から独立に再生したので、三直線の全 $r\ne1$ でも
+中心三次は零となる。負符号は証明書全体の形式係数共役による。
+これで全領域の必要条件に矛盾する。
+\end{proof}
+
+再現は
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}as4\_\allowbreak{}P\_\allowbreak{}centre\_\allowbreak{}lift.py}。
+SymPyとpython-flintを要し、再生成時にSingular 4.4.1互換のCLIを使う。
+生成された巨大な乗数行列は作業領域に置き、Gitでは商証明データ・入力生成器・
+独立検証器・小さい検証記録を保持する。
+検証器は生成出力の全係数を多項式として読み直し、$AX=N$ を
+FLINTの厳密な有理多変数多項式演算で再確認する。
+従って生成CASのGr\"obner基底の正しさや、一般点の平坦性を仮定しない。
