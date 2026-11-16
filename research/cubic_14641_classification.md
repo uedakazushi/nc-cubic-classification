@@ -929,3 +929,16 @@ secant all-unit chartの再開用未公表計算：g=[[a,b],[c,d]],ad−bc=-1,ab
 再現：python computations/verify_cubic_order2_22_tangent_exclusion.py。入力 computations/cubic_order2_22_tangent_annihilator_input.json、出力certificate同prefix。python-flint高速backend（PYTHONPATH=/workspace/work/python-deps SYMPY_GROUND_TYPES=flint）で今回PASS、通常SymPy backendでも今回再実行PASS。汎関数の構成に使ったh-rootのfield linear algebraやgeneric rrefを信頼入力にはせず、全33functionalと九minorを元の六関係から直接点検する。全AS4存在や全H3被覆をこの排除から主張しない。
 
 次の具体的着手：tangent c0ではg upper/ad1、K=[[-b,d,a,0],[a,0,0,0],[-d,0,0,0],[0,0,0,0]] rank2。purepositive rowyy=(B,D,-D,0)とd*rowxy+a*rowyxがpureUU関係で、そのspan<=1/rankone禁止を使ってeven rank4を分岐する。これらから共通positive AS2平面又は正規一次方向を得られるか検証する。secant allunit Schur式は既存の未公表scratch必要条件だけであり、全rank strataを残す。全rank4/nonsemi/他スペクトルは未解決。
+
+
+## tangent退化境界も排除、rank2はsecantのみ（classification-v147）
+
+**全体的なスペクトル制約（classification-v147）**：全(1,3)は被覆・必要十分H3判定・全矢・DM4表示stack・慣性まで確定。全(3,1)は全Jordan型込みで空。半単純(2,2)/mixed rank2はpure mixed/二ruling/全tangentを排除し、secantだけが残る。tangent K可逆は33functional/九minor gcd D^12で全値排除。c0境界はyy縮約q=(B,D,-D,0)が零ならdomain消去で余分なodd quadを強制しAS4外、非零ならg=epsilon I,B0、Schurからxycomm/uvantiと二平方式へ。四平方が中央となり、W=yu+epsilon*uy,N=yv−epsilon*vyの積は−mu正規化かつmu固定、正常Gと可換/反可換してH3排除。mixed rank4は正top三型へ被覆。次はsecant全rank strataの正常三次を判定し、rank4三型を扱う。非半単純(2,2)、三固有値以上、単一固有値/CY全被覆、全成分/圏族降下は未完。
+
+原稿thm:h3-order2-22-tangent-total-exclusion。c0/ad1のpureUU rows q=(B,D,-D,0),r=(A(d−a),dC−aB,−dB−aC,D(d−a))のspan<=1/rankone禁止を使う。qnonzeroはDunit、minorD²(d−a)と−2aBDからa=d=epsilon±1/B0、vのu移動でgraphb0。q0はB=D0で、C0だとA(d−a)xx purequadからA(d−a)0、evenUUprojection<=2でpureVVquad>=2のdomain矛盾。Cunitならu²=−a^-1*x(Ax+Cy),ux=−a^-1xu、uとu²可換からxをdomain消去しuy+a yu+(A/C)(a−a^-1)xu0というv無しodd quadを得るが、元odd2本の片方はxv係数unitなので新関係、AS4外。
+
+Dunit branchはKepsilonI、evenHの(yy,xy,xx,uv)minorD²、SchurはnegativeQのa0=c0=d0=f0=0。negativeprojection>=3からe0unit、uv+vu0。positivecommとu²=−epsilon(Ax²+Cxy+Dy²),v²=−epsilon/e0*x²−b0/e0*u²、yshiftC0で必要表示。xu=−epsilon ux、xv−epsilon vx=−(yu+epsilon uy)、uvanti、u²=alpha x²+delta y²,v²=beta x²+gamma y²,delta*(alpha gamma−beta delta)unit。x²centralはxT=−epsilon Txより、u²centralはpositivecommとuvantiより、deltaunitでy²central、v²もcentral。W=yu+epsilon uy,N=yv−epsilon vyはB2非零、normalizersそれぞれ(-epsilon,epsilon,epsilon,-epsilon),(epsilon,-epsilon,epsilon,-epsilon)、双方mu eigen−なのでM=WNはmu固定かつnormalizer−mu。GはMと可換、Mはdegree3/muGfixedからGと反可換し矛盾。
+
+verify_cubic_order2_22_tangent_boundary.py/certificateで二minor、Schur全係数constant matrix rank4、両epsilonのnormal covariance全八式を中心平方+三quadratic関係のdegree3 freeword行恒等式としてexact PASS。新規as4結果は輸入せず独立に境界を排除した。Zhang twistによるG正規化の変化を無視せず、この証明は両符号を直接扱う。
+
+次はsecant gdet−1全strata。allunitでKdet非零のSchur必要式は既存scratchのとおり、rank低下a/b/c/d0を別に保持する。tangentを再開せず、正常四次元Mで−muを実現できるか、又は四次annihilatorのexact minor coverで正常Gを排除する。全rank4/nonsemi/他スペクトルと全族降下は依然未完。

@@ -104,3 +104,100 @@ $h(D)=10D^6-D^4-4D^2-1$の零点で不足する14個を補って構成した。
 \texttt{verify\_cubic\_order2\_22\_tangent\_exclusion.py}が恒等式・行列式・最大公約因子を再生する。
 有理数の定数分母も入力に保持し、多項式化による係数の脱落を防いでいる。
 この結果の後もtangentの退化cross境界$c=0$、secant型、非半単純型は残る。
+
+\begin{theorem}[退化境界と全tangent型の排除]
+\label{thm:h3-order2-22-tangent-total-exclusion}
+半単純$(2,2)$・奇関係数2のtangent型は、退化cross境界も含めて全てH3から排除される。
+従ってこの領域の残る候補はsecant型だけである。
+\end{theorem}
+\begin{proof}
+可逆部分は前定理で済んだので、$c=0$、$ad=1$とする。
+純正topを$P(A,B,C,D)$と書く。
+$y^2$行と、$d$倍の$xy$行に$a$倍の$yx$行を加えた行は、純正二次関係であり、
+その係数は
+\[
+ q=(B,D,-D,0),\quad
+ r=(A(d-a),dC-aB,-dB-aC,D(d-a))
+\]
+である。整域性からそのspanは高々一次元で、非零rank-one tensorを含めない。
+$q\ne0$なら$D\ne0$である。二つのminor
+$D^2(d-a)$と、$d=a$での$-2aBD$から$d=a=\epsilon=\pm1,B=0$となる。
+$v$を$u$で移動してgraphの上右係数$b$を消せる。
+
+まず$q=0$、すなわち$B=D=0$の場合を排除する。
+同じ移動で$b=0$とする。
+$C=0$なら$r=A(d-a)x^2$なので$A(d-a)=0$が必要である。
+$A=0$でも$d=a$でも、偶関係空間の$U^2$射影は高々二次元となる。
+従って四次元の偶関係の核は$V^2$内に二次元以上となり、整域性に反する。
+よって$C\ne0$である。
+$xy$行から
+\[
+ u^2=-a^{-1}x(Ax+Cy),\qquad ux=-a^{-1}xu
+\]
+を得る。$uu^2=u^2u$へ代入し、整域で$x$を消去すると
+\[
+ uy+a yu+(A/C)(a-a^{-1})xu=0
+\]
+となる。これは$v$を含まない新しい奇二次関係である。
+元の奇関係は$xu+a ux$と、$xv$係数1を持つtangent関係の二本だけなので、
+この新関係はそのspanに入らない。これは$B_2$の関係数に反する。
+従って$q=0$の場合はAS4整域自体が存在しない。
+
+残る$D\ne0$、$g=\epsilon I$を扱う。
+$\epsilon=1$で偶middle blockの添字$(yy,xy,xx,uv)$の主minorは$D^2$である。
+この四行に対するSchur条件は、純負cyclic block
+\[
+ Q=\begin{pmatrix}
+ a_0&b_0&b_0&c_0\\b_0&d_0&c_0&e_0\\b_0&c_0&d_0&e_0\\c_0&e_0&e_0&f_0
+ \end{pmatrix}
+\]
+について$a_0=c_0=d_0=f_0=0$と同値である。
+$\epsilon=-1$ではcross blockの符号を変える合同変換となるので同じ条件である。
+$e_0=0$なら$V^2$射影が高々二次元となり、再び純正関係が二次元以上となる。
+従って$e_0\ne0$であり、$v^2$行から$uv+vu=0$を得る。
+既知の純正関係から$xy=yx$である。
+残る偶関係は
+\[
+ u^2=-\epsilon(Ax^2+Cxy+Dy^2),\qquad
+ v^2=-\epsilon e_0^{-1}x^2-(b_0/e_0)u^2.
+\]
+$y$の$x$移動で$C=0$にできる。この移動は$x u+\epsilon ux=0$により奇関係を変えない。
+従って、ある係数$\alpha,\delta,\beta,\gamma$により
+\begin{gather*}
+ xy=yx,\quad xu=-\epsilon ux,\quad uv=-vu,\\
+ xv-\epsilon vx=-(yu+\epsilon uy),\\
+ u^2=\alpha x^2+\delta y^2,\quad
+ v^2=\beta x^2+\gamma y^2,\qquad
+ \delta(\alpha\gamma-\beta\delta)\ne0
+\end{gather*}
+という必要表示になる。
+
+この表示では四生成元の平方が全て中心である。
+実際、$T=yu+\epsilon uy$について$xT=-\epsilon Tx$なので、奇関係から$x^2v=vx^2$となる。
+これで$x^2$は中心である。
+$u^2$は正可換平面の二次式であり、$uv=-vu$も使えば全生成元と可換する。
+$\delta\ne0$から$y^2$も中心となり、最後に$v^2$も中心となる。
+
+二つの非零二次式
+\[
+ W=yu+\epsilon uy=-(xv-\epsilon vx),\qquad N=yv-\epsilon vy
+\]
+を取る。$N$の二語は元の奇関係に現れず、$W$は$xv$語を消すことなく奇関係に入れないので、
+どちらも$B_2$で非零である。
+中心平方と上の関係から、その正規化作用は
+\[
+ \sigma_W=(-\epsilon,\epsilon,\epsilon,-\epsilon),\qquad
+ \sigma_N=(\epsilon,-\epsilon,\epsilon,-\epsilon)
+\]
+となる。例えば$W$の$y,u$に対する式は中心平方から、$x,v$に対する式はもう一つの表示から従い、
+$N$の$x,u$に対する式はこれらを代入して得る。
+従って$M=WN\ne0$の正規化作用は$-\mu_B$である。
+一方$\mu_B(W)=-W,\mu_B(N)=-N$なので$\mu_B(M)=M$である。
+H3の$G$は$GM=MG$を満たすが、$M$の正規化式と$\mu_B(G)=G$、$\deg G=3$から
+$MG=-GM$でもある。これは整域性と標数0に反する。
+\end{proof}
+
+\texttt{verify\_cubic\_order2\_22\_tangent\_boundary.py}は
+境界の二minor、全係数のSchur条件、および両符号の二つの正規二次式の全共変式を厳密検証する。
+最後の共変式は、中心平方と必要な三二次関係による三次自由語空間の行恒等式として再生する。
+今回の境界排除は独立な証明であり、as4から新しい被覆定理を輸入していない。

@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "scope": "entire degenerate tangent boundary, semisimple (2,2), odd rank2",
+  "checks": [
+    "boundary contraction minors",
+    "rank4 Schur equations force aa=cc=dd=ff=0",
+    "both-sign normal-quadratic covariance identities under central squares"
+  ],
+  "normal_quadratics": [
+    {
+      "epsilon": 1,
+      "W_normalizer": [
+        -1,
+        1,
+        1,
+        -1
+      ],
+      "N_normalizer": [
+        1,
+        -1,
+        1,
+        -1
+      ],
+      "product_normalizer": [
+        -1,
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "epsilon": -1,
+      "W_normalizer": [
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "N_normalizer": [
+        -1,
+        1,
+        -1,
+        1
+      ],
+      "product_normalizer": [
+        -1,
+        -1,
+        1,
+        1
+      ]
+    }
+  ],
+  "structural_steps": [
+    "D=0 branch forces extra independent quadratic relation after domain cancellation",
+    "D!=0 branch has central squares and two nonzero mu-odd normal quadratics",
+    "their product implements -mu and contradicts a designated normal cubic"
+  ],
+  "conclusion": "whole tangent pencil has no H3 candidates, using the previous full-rank exclusion"
+}
