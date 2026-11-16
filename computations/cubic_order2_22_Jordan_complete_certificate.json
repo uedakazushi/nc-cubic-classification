@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "scope": "all canonical P,Q nonzero (2,2) mixed-rank4 H3, both full-graph and rank3 projection alternatives",
+  "full_graph_H_intertwiner": "[[A,B],[0,A]], A invertible",
+  "invertibility_identities": [
+    "det(graph)=det(A)^2",
+    "det(A tensor A)=det(A)^4"
+  ],
+  "positive_cubic_basis": [
+    "y3",
+    "xy2",
+    "y*V2[4]",
+    "x*V2[4]"
+  ],
+  "four_fixed_kernel_minors": "6*((A tensor A)*b)_j; b!=0 so at least one is nonzero",
+  "fixed_kernel": "x*V2",
+  "unipotent_power": "ker(H4-I)=ker(H-I); exact multiplier determinant 4^10",
+  "original_cut": "mu(G)=G implies H(G)=G in the same graded vector space; x*_B B2=x*C2, so original G factors",
+  "conclusion": "no nonsemisimple H3 when P,Q are both nonzero; with P0/Q0 recognition, the entire mixed-rank4 (2,2) H3 sector has semisimple Nakayama",
+  "not_claimed": [
+    "classification of remaining semisimple top types",
+    "intrinsic relative descent",
+    "global H3 classification",
+    "independent peer review"
+  ]
+}

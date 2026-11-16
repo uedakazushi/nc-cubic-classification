@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "version": "classification-v183",
+  "version": "classification-v185",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -95,7 +95,9 @@
     "papers/sections/cubic_order2_22_tangent_Jordan.tex",
     "papers/sections/cubic_order2_22_tangent_reverse_minus.tex",
     "papers/sections/cubic_order2_22_reverse_resonant.tex",
-    "papers/sections/cubic_order2_22_reverse_plus_cover.tex"
+    "papers/sections/cubic_order2_22_reverse_plus_cover.tex",
+    "papers/sections/cubic_order2_22_tangent_rank2.tex",
+    "papers/sections/cubic_order2_22_Jordan_complete.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -1895,6 +1897,33 @@
       "reverse square rank2-cross boundary",
       "other negative rank2 types",
       "global H3 classification",
+      "intrinsic relative descent"
+    ]
+  },
+  "order2_22_negative_tangent_complete_v184": {
+    "status": "PASS exact Pfaffian ideal, polynomial relation-image identities, full normal cover and three points; structural all-Jordan exclusion",
+    "validator": "computations/verify_cubic_order2_22_tangent_rank2.py",
+    "certificate": "computations/cubic_order2_22_tangent_rank2_certificate.json",
+    "input": "computations/cubic_order2_22_tangent_rank2_input.json",
+    "proof": "papers/sections/cubic_order2_22_tangent_rank2.tex",
+    "scope": "負tangent型の最後の逆平方/rank2 cross境界を全値排除。非零Q rank2は負unipotentを許さず、rank3奇射影の正片側Jordanも純UV不変線が積になるためdomain外。半単純境界は純UV線正規化からA=(a,a,0,b,c,c)、六Pfaffian ideal(b²,bc)、幾何点b0/cunit/保存torus c1へ還元。正常汎関数の極a±1、二10minor gcda、三例外a0/±1も元関係で核零。従ってcanonical負tangent Qは全Jordan型込みで完全に空。",
+    "not_claimed": [
+      "nonreduced base b=0",
+      "other negative rank2 types",
+      "global H3 classification",
+      "intrinsic relative descent"
+    ]
+  },
+  "order2_22_all_Jordan_complete_v185": {
+    "status": "PASS full commutant ideal, four triangular rank6 minor charts and exact unipotent power identity; no independent peer review claim",
+    "validator": "computations/verify_cubic_order2_22_Jordan_complete.py",
+    "certificate": "computations/cubic_order2_22_Jordan_complete_certificate.json",
+    "proof": "papers/sections/cubic_order2_22_Jordan_complete.tex",
+    "scope": "(2,2)/mixed rank4全H3の中山半単純性を証明。P0/Q0認識に加え、P,Q非零では負Jordanなし。非full graphは純mixed不変直線の積障害、full graphはH同変graph[[A,B],[0,A]]とx²=b(V)neq0から三次基底y³,xy²,yV²,xV²を用い、固定核がxV²に限られる。四rank6 minor=6*((A⊗A)b)_jが全chartを覆い、muG固定と同一ベクトル空間のuntwistで元Gにも一次因子。全未知は半単純、非零負topは対称secant/非対称の二型に縮小。",
+    "not_claimed": [
+      "remaining semisimple top classification",
+      "global H3 classification",
+      "componenthood",
       "intrinsic relative descent"
     ]
   }

@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "scope": "entire reverse-tangent square-positive-top rank2-cross boundary, all Jordan types",
+  "unipotent_negative_top": "fixed cyclic Q has determinant -3*z3^4/16; rank<=2 forces Q=a*u4, so nonzero rank2 Q admits no negative Jordan part",
+  "one_sided_positive_Jordan": "the pure UV relation line would lie in x tensor V and be a product, contradicting domain",
+  "geometric_necessary_atlas": "A=(a,a,0,b,c,c), all 6-Pfaffian ideal=(b2,bc); b=0 over geometric fields, projected rank forces c!=0, residual torus makes c=1",
+  "normal_family": "six explicit quadratic relations rel(a), no AS4 sufficiency assumption",
+  "quartic_annihilator_poles": "only a=+/-1",
+  "two_rank10_minor_gcd": "constant*a",
+  "exceptional_values": [
+    {
+      "a": 0,
+      "B3": 20,
+      "B4": 35,
+      "normal_functional_rank": 10
+    },
+    {
+      "a": 1,
+      "B3": 20,
+      "B4": 35,
+      "normal_functional_rank": 10
+    },
+    {
+      "a": -1,
+      "B3": 20,
+      "B4": 35,
+      "normal_functional_rank": 10
+    }
+  ],
+  "conclusion": "no H3 on this last boundary; combined with previous results the entire negative tangent top type is empty",
+  "not_claimed": [
+    "relative nonreduced scheme b=0",
+    "negative secant or nonsymmetric rank2 types",
+    "global H3 classification",
+    "intrinsic relative descent",
+    "independent peer review"
+  ]
+}

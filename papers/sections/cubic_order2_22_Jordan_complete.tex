@@ -1,0 +1,67 @@
+\subsection{混合階数4の全非半単純候補を排除する}
+\begin{theorem}\label{thm:h3-order2-22-rank4-all-Jordan-empty}
+$(2,2)$・mixed rank4の全H3対象では、実際の中山自己同型は半単純である。
+この主張は残る対称secant・非対称負topの全H3被覆を完成させるものではない。
+\end{theorem}
+\begin{proof}
+canonical $P=0$ 又は $Q=0$ の全認識では既に半単純性を得たので、$P,Q\ne0$ とする。
+$C=B^H$、$H=\mu_u^{1/4}$ を取る。
+補題\ref{lem:h3-order2-22-nonzero-negative-unipotent}により $H|_V=I$。
+奇関係像の二射影がrank3なら同補題で $H|_U=I$ でもある。
+残るfull graphの場合を考える。
+非退化正topにはJordan部分がないので、非半単純なら
+$P=c_U\odot x^2$、$H(x)=x,H(y)=y+x$ とできる。
+
+$P,Q$ の階数はともに2なので、偶関係像の正負二射影はいずれも同型である。
+従って二つの偶関係は正確に
+\[
+ xy-yx=a_0(V),\qquad x^2=b_0(V),\qquad b_0\ne0
+\]
+と書ける。負二次tensorへの純関係はなく、$V^{\otimes2}$ は二次商に単射である。
+$H$ に同変なfull graphのmixed関係は、ある二行列 $A,B$ により
+\[
+ Vx=xA(V),\qquad Vy=yA(V)+xB(V)
+\]
+と書ける。これはJordan blockの全可換化行列が
+$\left(\begin{smallmatrix}A&B\\0&A\end{smallmatrix}\right)$ となることそのものであり、
+full graphにより $A$ は可逆である。
+
+正固有三次空間の基底は
+\[
+ y^3,\ xy^2,\ yV^{\otimes2},\ xV^{\otimes2}
+\]
+の計十語で取れる。
+実際、偶関係で $x^2,yx$ を置換し、mixed graphで負変数を右へ移せばこの十語が全てを張り、
+14641 Koszul解消の同変次数計数により次元は10なので、これらが基底である。
+$N=H-I$ の作用は、負二次語の順序を保ったまま、
+\[
+\begin{aligned}
+ N(y^3)&=3xy^2+\text{正側一次・負側二次の項},\\
+ N(xy^2)&=2b_0y+x(b_0-a_0),\\
+ N(yq(V))&=xq(V),\qquad N(xq(V))=0
+\end{aligned}
+\]
+となる。第二式の $yV^{\otimes2}$ 成分は $2(A\otimes A)b_0$ であり非零である。
+従って固定ベクトルの $y^3$ 係数、次いで $xy^2$ 係数、最後に $yV^{\otimes2}$ の四係数を順に消すと、
+\[
+ \ker(H-I)|_{C_{3,+}}=xV^{\otimes2}\subset xC_2
+\]
+となる。特別係数の欠落はない：$A$ が可逆かつ $b_0\ne0$ なので、
+四つの成分 $((A\otimes A)b_0)_j$ のうち少なくとも一つは非零であり、
+対応する六次minorはその6倍である。
+
+ここから元の $B$ の切断を排除する。
+$\mu_B(G)=G$ は、Jordan分解により $G$ が正半単純固有空間に属し、$H^4(G)=G$ を意味する。
+標数0の単冪作用では $H^4$ と $H$ の固定核は同じである。
+右twistは次数付きベクトル空間を変えないため、上の包含から $G\in xC_2$。
+元の積では $B=C^{H^{-1}}$、$x*_B B_2=xC_2$ なので、$G$ は元の $B$ でも一次因子を持つ。
+これは $B/(G)$ のdomain性に反する。
+この過程で $G$ をnormal cutとしてtwist後へ輸送する仮定は使っていない。
+
+可換化行列の全線型ideal、二つの可逆性行列式、四chartの固定核minor、
+$H^4-I=(H-I)(4I+6N+4N^2+N^3)$ の可逆性は
+\[
+\texttt{verify\_cubic\_order2\_22\_Jordan\_complete.py}
+\]
+で厳密再生する。以上でfull graphとrank3二射影の両方を覆った。
+\end{proof}

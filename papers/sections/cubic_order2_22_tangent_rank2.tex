@@ -1,0 +1,95 @@
+\subsection{最後のrank2 cross境界を閉じ、負tangent型を全排除する}
+\begin{lemma}[非零負topの単冪rigidity]
+\label{lem:h3-order2-22-nonzero-negative-unipotent}
+$(2,2)$・mixed rank4のH3で、canonical負top $Q\ne0$ とする。
+canonical単冪自己同型 $H=\mu_u^{1/4}$ の負側制限は恒等である。
+さらに奇関係像の二射影がrank3なら、正側制限も恒等であり、中山は半単純となる。
+\end{lemma}
+\begin{proof}
+非自明な負側単冪を $J$ に取り直す。
+一般cyclic負middle
+\[
+ Q=\begin{pmatrix}a&b&b&c\\b&d&c&e\\b&c&d&e\\c&e&e&f\end{pmatrix}
+\]
+に対する $(J\otimes J)Q(J\otimes J)^t=Q$ の全解は
+\[
+ (a,b,c,d,e,f)=(a,0,-d/2,d,0,0)
+\]
+で、行列式は $-3d^4/16$。
+$\operatorname{rank}Q\le2$ により $d=0$、従って $Q=au^4$ はrank高々1。
+非零rank1負topは既に全排除済みなので矛盾し、$H|_V=I$ である。
+
+奇射影がrank3なら、関係空間と $U\otimes V$ の交わりは一本の直線である。
+$H|_U$ が非自明なら、その直線は $J\otimes I$ の不変直線、従って固定直線となる。
+しかし $\ker(J\otimes I-I)=kx\otimes V$ の全元は一次式の積である。
+この純mixed関係はcanonical包絡のdomain性に反する。
+よって $H|_U=I$ でもある。
+この証明は包絡の単冪自己同型とdomain性だけを使い、$G$ をtwistで輸送しない。
+\end{proof}
+
+\begin{theorem}\label{thm:h3-order2-22-negative-tangent-empty}
+$(2,2)$・mixed rank4の全H3について、canonical負topのtangent型
+$Q=u^2\odot(uv+vu)$ は、全Jordan型込みで存在しない。
+従って非零負topに残る未知型は、対称secantと非対称型の二つだけである。
+\end{theorem}
+\begin{proof}
+既に排除した第一割当てと逆非退化型を除くと、偶二関係は
+\[
+ [x,y]+uv+vu=0,\qquad x^2+u^2=0
+\]
+だけである。そのcrossは、行順 $xu,xv,yu,yv$、列順 $ux,uy,vx,vy$ で
+\[
+ M=\begin{pmatrix}0&1&-1&0\\-1&0&0&0\\-1&0&0&0\\0&0&0&0\end{pmatrix},
+ \qquad\operatorname{im}M=\langle xu,xv+yu\rangle
+\]
+となりrank2である。
+domain性により奇関係像の両射影のrankは3以上。
+一方がrank4ならcross rankも3以上となるため、両方rank3である。
+前補題により中山は半単純となり、これ以降は元の包絡で正常核を扱える。
+
+奇交代像を $W$、非退化交代形式を $\omega$、二射影を $L,N$ とする。
+$\ker N=kp$、$\ker L=km$ はそれぞれ純mixed直線である。
+$\operatorname{rank}M=2$ は $\ker L\subset(\ker N)^{\perp_\omega}$ を意味するので、
+$p$ は $\operatorname{im}M$ と $\operatorname{im}A$ の両方に入る。
+$\operatorname{im}M$ の唯一の積直線は $kxu$ なので、domain性から
+\[
+ p=xv+yu+\lambda xu
+\]
+とできる。正側shearで $\lambda=0$ に正規化しても偶関係は変わらない。
+$A=L\omega^{-1}L^t$ のrankは2であり、その像が $p$ を含むため $A=p\wedge r$。
+従って六係数は
+\[
+ (z_0,z_1,z_2,z_3,z_4,z_5)=(a,a,0,b,c,c)
+\]
+と書ける。$D=\tau(A)$ と固定 $M$ から作る $8\times8$ 奇行列の全六次Pfaffian idealは
+\[
+ (b^2,bc).
+\]
+幾何学的点では $b=0$ であり、射影rank3は $c\ne0$ を要求する。
+保存torus $(x,y,u,v)\mapsto(x,sy,u,sv)$ は $c\mapsto s^2c$ なので $c=1$ とできる。
+この操作で全幾何学的候補が一パラメータ $a\in k$ に還元される。
+非被約底上でも $b=0$ と結論しているのではない。
+
+奇関係像は、全 $a$ で単位minorを持つ次の四式と正確に等しい：
+\[
+ xv+yu=0,\qquad uy-vx=0,\qquad
+ ux+a xu-yv=0,\qquad xu+a ux+vy=0.
+\]
+これと二つの偶関係を元の六二次関係として四次商汎関数を計算する。
+全汎関数の極は $a=\pm1$ のみ。
+正自由三次32語に正常式を掛けた多項式行列は $58\times32$ で、
+指定二つの $10\times10$ minorのgcdは定数倍の $a$ である。
+従って全 $a\notin\{0,1,-1\}$ で正常核は零となる。
+三例外 $a=0,1,-1$ も元の関係から再消去し、三次・四次商次元20,35、
+正常汎関数行列rank10を厳密に確認する。
+AS4候補の正三次次元は10なので、この三点でも正常核は零である。
+これで最後のrank2 cross境界を全値排除した。
+
+再現器
+\[
+\texttt{verify\_cubic\_order2\_22\_tangent\_rank2.py}
+\]
+は単冪固定 $Q$ の行列式、固定mixed tensorの積性、全Pfaffian ideal、
+全 $a$ に対する関係像の単位minorと多項式生成恒等式、二正常minorと三例外を検証する。
+全H3被覆・secant/非対称型の判定や相対降下は、この負tangent型の完全排除とは別に残る。
+\end{proof}

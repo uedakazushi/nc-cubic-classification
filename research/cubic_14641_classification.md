@@ -1212,3 +1212,18 @@ canonical負topQ0の(2,2)/mixed rank4全H3を、全Jordan型込みで曲がっ�
 証明cubic_order2_22_reverse_plus_cover.tex。検証器は二param全元関係の商汎関数の極因子、指定10minor（行毎分母を除きQQ[B,C]の多項式行列式で再検証）、八曲線それぞれ二minorと全極の平方因子除去多項式、有限因子の点集合への写像を剰余零で検証。curve群はC0,C−1,B±1,2B+C0,2BC+C²+1,4BC+C²+3,4BC+C²+4。有限実行は12有理点とQQ(sqrt2)/QQ(sqrt3)代表、全て正常核零ただし(1,−1)だけdim1で指定因子。計算はPYTHONPATH=/workspace/work/python-deps SYMPY_GROUND_TYPES=flint環境でexact実行、独立査読は未確認。正常核zeroの有限標本を全値へ外挿せず、全係数恒等式・例外cover・個別点を区別した。
 
 次は残る逆平方型：[x,y]+uv+vu=0,x²+u²=0。cross M rank2、imM=span(xu,xv+yu)、奇関係二射影rank3,3。純UV/VU各一本は非分解tensorでなければならない。正側shearで純UVをxv+yuへ正規化し、奇交代top rank4とD=tauAの必要atlasを求める。まず非半単純候補を縮小：非零Q rank2のabelianized binaryquarticは第四乗でないので負unipotent不可、正片側JordanもH固定純UV線がxVの積線になりdomain外となる見込み（未公開証明）。負secant/非対称型、全CY/三固有値以上/成分/相対降下も未完。
+
+
+## 負tangent型の全排除（classification-v184）
+
+負tangent型の最後の逆平方/rank2 cross境界を全値排除。非零Q rank2は負unipotentを許さず、rank3奇射影の正片側Jordanも純UV不変線が積になるためdomain外。半単純境界は純UV線正規化からA=(a,a,0,b,c,c)、六Pfaffian ideal(b²,bc)、幾何点b0/cunit/保存torus c1へ還元。正常汎関数の極a±1、二10minor gcda、三例外a0/±1も元関係で核零。従ってcanonical負tangent Qは全Jordan型込みで完全に空。
+
+証明cubic_order2_22_tangent_rank2.tex、verifierは同stem。必要atlasは純UV p∈imM∩imAとrank2Aからp wedge rに書く。b²0は幾何点でb0であり、非被約底上の消滅は主張しない。A正規化後の四関係とO全列の一致は単位minor/多項式生成恒等式で全aに確認し、generic rankだけで特殊値を被覆したのではない。
+
+## mixed rank4全Jordan部分の消滅（classification-v185）
+
+(2,2)/mixed rank4全H3の中山半単純性を証明。P0/Q0認識に加え、P,Q非零では負Jordanなし。非full graphは純mixed不変直線の積障害、full graphはH同変graph[[A,B],[0,A]]とx²=b(V)neq0から三次基底y³,xy²,yV²,xV²を用い、固定核がxV²に限られる。四rank6 minor=6*((A⊗A)b)_jが全chartを覆い、muG固定と同一ベクトル空間のuntwistで元Gにも一次因子。全未知は半単純、非零負topは対称secant/非対称の二型に縮小。
+
+証明cubic_order2_22_Jordan_complete.tex。Q非零単冪固定cyclicQの一般解det=−3d⁴/16なのでrank≤2ではrank≤1となりrank1禁止に反する。full graphのH可換化idealとdetA²、det(A⊗A)=detA⁴、三次固定作用の四6minorとH4固定核一致を検証。C3正基底のspanningはx²/yx置換とmixed graphから、independenceはAS4正三次次元10から。N(xy²)=2b*y+x(b−a)のyV²成分が2(A⊗A)bneq0なので固定GはxV²。元BでmuG固定からH固定へ移すだけでnormal cutのtwist輸送はしない。新規性/独立査読未確認。
+
+次は二つの負rank2型のcoupled even atlas。対称secantはb1=u²+v²,b2=u²−v²、非対称はb1=uv+i*vu,b2=uv−i*vu。各R1=cU+b1,R2=qU+b2。qU平方は相対係数を全正規化できる見込み、qU非退化はrho*(xy+yx)の残余係数rho≠0を保持する必要。secant Mは平方det−1、非退化det−(1−rho²)²、rho±1はrank2境界になる見込み（未公表計算）。まず全M/Pfaffian線型atlasを求め、可逆graphとrank2境界を区別する。全CY/三固有値以上/成分/相対降下は未完。
