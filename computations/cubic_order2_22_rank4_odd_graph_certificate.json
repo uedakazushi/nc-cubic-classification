@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "scope": "semisimple (2,2), odd relation dimension4",
+  "identities": [
+    "Pf(D)=-Pf(A) under cyclic partial transpose",
+    "Pf(B^t J B)=det(B)",
+    "full graph determinant=-1",
+    "rank3 symplectic projection has skew rank2",
+    "conditional double Ore degree3 basis count20"
+  ],
+  "proof": "papers/sections/cubic_order2_22_rank4_odd_graph.tex",
+  "not_claimed": [
+    "all graph parameters AS4",
+    "double Ore coverage for rank1 positive projection",
+    "paired-pure-mixed classification",
+    "H3 admissibility"
+  ]
+}

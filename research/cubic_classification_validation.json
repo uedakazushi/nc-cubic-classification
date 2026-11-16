@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "version": "classification-v159",
+  "version": "classification-v160",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -70,7 +70,8 @@
     "papers/sections/cubic_order2_22_secant_open.tex",
     "papers/sections/cubic_order2_22_rank2_unipotent.tex",
     "papers/sections/cubic_order2_22_rank4_Jordan.tex",
-    "papers/sections/cubic_order2_22_rank4_negative_top.tex"
+    "papers/sections/cubic_order2_22_rank4_negative_top.tex",
+    "papers/sections/cubic_order2_22_rank4_odd_graph.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -1586,5 +1587,12 @@
     "certificate": "computations/cubic_order2_22_rank4_negative_top_certificate.json",
     "proof": "papers/sections/cubic_order2_22_rank4_negative_top.tex",
     "scope": "半単純(2,2) mixed rank4の負cyclic二元topはrank<=2なので、零・第四乗・対称secant(u4+v4)・対称tangent(symu3v)・非対称(uvuv+vuvu)の五形で全被覆した。対称/交代分解とapolar二次核の二根/重根で証明。正top零なら第四乗は整域性で排除、Q零では偶関係が純正/純負非退化quad二本へ分裂、Qrank2では純負AS2平面が一本現れ、対称二型はq−1、非対称型はq±iに限る。混合奇関係と正常三次・admissibilityは未判定。"
+  },
+  "order2_22_rank4_odd_graph_v160": {
+    "status": "PASS exact tensor identities and structural graph/PBW proof",
+    "validator": "computations/verify_cubic_order2_22_rank4_odd_graph.py",
+    "certificate": "computations/cubic_order2_22_rank4_odd_graph_certificate.json",
+    "proof": "papers/sections/cubic_order2_22_rank4_odd_graph.tex",
+    "scope": "半単純(2,2) mixed rank4の奇関係は、可逆四次元graph(det=-1)か、純UV/VU非退化関係を一本ずつ持つ両射影rank3型の二択で全被覆。部分転置PfD=-PfAと四次元交代像・整域性で証明。正top零のgraph型では、正二次射影が非退化なら負AS2平面上のPBW double Ore表示へ認識。負top零ではこの条件は自動かつtail0、負rank2ではbase q−1又はq±i。退化正射影は別分枝として保持し、全graphやpairedpureを既知doubleOre分類で覆ったと主張しない。"
   }
 }

@@ -1,0 +1,86 @@
+\subsection{奇関係四次元のgraph・純mixed二分法}
+\label{subsec:h3-order2-22-rank4-odd-graph}
+\begin{proposition}\label{prop:h3-order2-22-rank4-odd-dichotomy}
+半単純$(2,2)$・奇関係数4のAS4整域では、奇関係空間$W$は次の二型で漏れなく被覆される。
+\begin{enumerate}
+\item 両射影$W\to U\otimes V,V\otimes U$は同型であり、
+$W$は可逆な四次元graph $T:U\otimes V\to V\otimes U$である。
+辞書式順序の基底に関して$\det T=-1$である。
+\item 両射影は階数3で、純$UV$関係と純$VU$関係を一本ずつ持つ。
+その係数行列はともに非退化である。
+残る二関係は、それら二直線で割った二次元射影像の間の可逆graphとなる。
+\end{enumerate}
+特に一方向の射影だけが退化する場合や、階数2以下の射影はない。
+\end{proposition}
+\begin{proof}
+奇middleを
+\[
+ O=\begin{pmatrix}A&B\\-B^t&D\end{pmatrix},\qquad
+ D_{ji,lk}=A_{il,kj}
+\]
+と書く。$A,D$は交代四次行列で、$O$の階数は4である。
+部分転置は可逆で、$\operatorname{Pf}D=-\operatorname{Pf}A$を満たす。
+整域性により純$UV$関係空間の次元は高々1である。
+実際、二次元の行列pencilは代数閉体上でrank-one行列を含み、一次式二つの積を関係にしてしまう。
+純$VU$についても同じで、両射影の階数は3以上である。
+
+$O$は四次元像$W$上の非退化交代形式から得られる。
+射影の階数が4なら、その主blockは階数4である。
+射影の階数が3なら、四次元交代空間の超平面への射影なので主blockは階数2となる。
+従って$A,D$はともに階数2以上であり、Pfaffian恒等式から、
+両方階数4か両方階数2かのいずれかである。
+これで射影階数の二分法を得る。
+
+前者ではSchur式から
+\[
+ D=-B^tA^{-1}B,\qquad T=-B^tA^{-1}.
+\]
+Pfaffianの合同変換公式より
+\[
+ \operatorname{Pf}D=\frac{\det B}{\operatorname{Pf}A}
+ =-\operatorname{Pf}A,
+ \qquad \det T=\frac{\det B}{\det A}=-1.
+\]
+従って$B,T$は可逆である。
+後者の射影核は一本ずつで、各純mixed関係がrank-oneでないことも整域性による。
+両核の直和で割れば二次元の両射影が同型となり、残るgraphを得る。
+\end{proof}
+
+\begin{proposition}[零正topの非退化graph chartはdouble Ore表示を持つ]
+\label{prop:h3-order2-22-rank4-double-Ore}
+前命題の四次元graph型で$P=0$とする。
+偶関係の正射影を生成する二次式が非退化なら、
+負側AS2平面$T=k\langle u,v\rangle/(r_V)$の上で、包絡は
+\begin{gather*}
+ x_i t=\sum_{j=1}^2\sigma_{ij}(t)x_j\quad(t=u,v),\\
+ yx=p_{12}xy+p_{11}x^2+\tau_0(u,v),\qquad p_{12}\ne0
+\end{gather*}
+というdouble Ore表示を持つ。
+ここで$(x_1,x_2)=(x,y)$、$\sigma_{ij}(t)\in T_1$で、
+標準語$T x^iy^j$は全次数で基底となる。
+負topが零なら、この正射影の非退化条件は自動的に満たされ、$\tau_0=0$である。
+負top階数2では$T$は$q=-1$または$q=\pm i$の量子平面である。
+正射影がrank-oneの場合は、この命題の被覆に含めない。
+\end{proposition}
+\begin{proof}
+系\ref{cor:h3-order2-22-rank4-zero-positive}により、
+偶関係は純負二次式$r_V$と、正二次式$a(x,y)$に負二次式を加えたものとなる。
+$r_V$は非退化で$T$はAS2平面として単射である。
+$a$が非退化なので、正基底を選んで後者を表示したmonicな$yx$関係にできる。
+四次元graphを$UV$について解けば表示した四つのmixed関係を得る。
+
+これら六関係の簡約は、負語を左へ、正語を$x^iy^j$へ動かす。
+負二次tailは正次数を下げるので停止し、三次標準語は20個である。
+AS4の実際の三次次元が20なので全三次ambiguityは零へ簡約される。
+二次簡約の全overlapを尽くしているのでDiamond lemmaにより全次数のPBW基底を得る。
+この表示をdouble Ore表示と呼んでおり、任意の$\sigma,\tau_0$に対する存在十分性を仮定していない。
+最後の二つの記述は、前節の負top三型の純負関係から従う。
+退化$a$ではこの20標準語による認識を使えないので、別分枝として残す。
+\end{proof}
+
+検証器は
+\[
+ \texttt{verify\_cubic\_order2\_22\_rank4\_odd\_graph.py}
+\]
+であり、部分転置Pfaffian、合同変換公式、graph行列式と三次標準語数を厳密検算する。
+奇graph型の全係数分類、純mixed二本型と正射影退化分枝、正常三次は依然未解決である。

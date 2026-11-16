@@ -10,7 +10,7 @@
 
 **全体的なスペクトル制約（classification-v157）**：全(1,3)は幾何学的被覆・必要十分H3判定・全矢/慣性まで確定、全(3,1)は全Jordan型込みで空。(2,2)のmixed rank2も全Jordan型込みで空と確定した。最後の可逆secant必要曲面は七多項式四次汎関数の1008恒等式と単一10minor −2ell^15*rho^20*(rho+1)^15*(2rho+1)^2により全値排除し、ell0/共鳴fibreも既存全値検証で覆う。従って(2,2)はmixed rank4のみが残る。次は正top三型（零・comm⊙平方・comm⊙非退化quad）と全Jordan型の必要表示・正常三次を調べる。三固有値以上、全CY被覆、全成分/圏族降下は未完。
 
-**次の核心（classification-v159）**：半単純(2,2) mixed rank4の負cyclic二元topはrank<=2なので、零・第四乗・対称secant(u4+v4)・対称tangent(symu3v)・非対称(uvuv+vuvu)の五形で全被覆した。対称/交代分解とapolar二次核の二根/重根で証明。正top零なら第四乗は整域性で排除、Q零では偶関係が純正/純負非退化quad二本へ分裂、Qrank2では純負AS2平面が一本現れ、対称二型はq−1、非対称型はq±iに限る。混合奇関係と正常三次・admissibilityは未判定。 非退化正topのJordanは排除済み。次は正top零かつ負rank2のAS2平面を起点に混合四関係を認識し、正常三次を判定する。平方正topの正側Jordan、零topのJordan、全CY被覆・三固有値以上・族降下も残る。
+**次の核心（classification-v160）**：半単純(2,2) mixed rank4の奇関係は、可逆四次元graph(det=-1)か、純UV/VU非退化関係を一本ずつ持つ両射影rank3型の二択で全被覆。部分転置PfD=-PfAと四次元交代像・整域性で証明。正top零のgraph型では、正二次射影が非退化なら負AS2平面上のPBW double Ore表示へ認識。負top零ではこの条件は自動かつtail0、負rank2ではbase q−1又はq±i。退化正射影は別分枝として保持し、全graphやpairedpureを既知doubleOre分類で覆ったと主張しない。 次はP=Q=0の二AS2平面の斉次twisted tensor graphで、実際のNakと正常三次を求める。負rank2の非零tail、純mixed二本型、退化正射影とJordan残余も未解決。
 
 classification-v12 では、積分した族の全次数平坦性・noetherian quadratic Koszul CY AS4 認識を、明示的な開集合 V={h∈H, (1-gamma²)≠0, Delta≠0} 上で証明した。入力は Iyudu–Shkarin Theorem1.1/Corollary6.1、EG形式変形定理、および64個の三次持上げ恒等式・256個の四次巡回恒等式・単元小行列式 -p^6 を確認した LBS 中心拡大定理である。中心三次の関係類の非消滅も巡回商の二係数で全パラメータについて確認した。gamma≠0 では低次数中心が0,0,1、滑らかな楕円THCR境界となり、全中心値の H3 判定は正確に一つの affine 中心切断の有限大域次元へ帰着する。定義体上超越的な全 D は H3。位数4の枝 gamma^4=1+h^3 では固定包絡の悪い D は有限であり、h=1,gamma=2^(1/4),A=1,B=C=0,beta=(-1,0,0),D=pi は明示的な非Clifford H3 対象となる。悪い値の全一覧・全内在的群oid・H3相対開性・降下・全包絡被覆は未解決。
 

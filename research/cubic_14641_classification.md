@@ -1027,3 +1027,10 @@ verify_cubic_order2_22_rank2_unipotent.py/certificateが両tangent upper stabili
 半単純(2,2) mixed rank4の負cyclic二元topはrank<=2なので、零・第四乗・対称secant(u4+v4)・対称tangent(symu3v)・非対称(uvuv+vuvu)の五形で全被覆した。対称/交代分解とapolar二次核の二根/重根で証明。正top零なら第四乗は整域性で排除、Q零では偶関係が純正/純負非退化quad二本へ分裂、Qrank2では純負AS2平面が一本現れ、対称二型はq−1、非対称型はq±iに限る。混合奇関係と正常三次・admissibilityは未判定。
 
 証明は cubic_order2_22_rank4_negative_top.tex。五形のrankと対称/交代分解をverify_cubic_order2_22_rank4_negative_top.pyで検証。P0でevenmiddleをr1⊙r2と分解し、P0から片方を純負関係に取る。Q1なら純負関係が平方で矛盾。Q2の二因子u²±iv²、u²/uv+vu、uv±ivuを読み、非退化二元関係の因数分解からAS2埋込みを得る。次はこの負平面に対するmixed四関係と正常Gを認識する。
+
+
+## rank4奇graphの全二分法（classification-v160）
+
+半単純(2,2) mixed rank4の奇関係は、可逆四次元graph(det=-1)か、純UV/VU非退化関係を一本ずつ持つ両射影rank3型の二択で全被覆。部分転置PfD=-PfAと四次元交代像・整域性で証明。正top零のgraph型では、正二次射影が非退化なら負AS2平面上のPBW double Ore表示へ認識。負top零ではこの条件は自動かつtail0、負rank2ではbase q−1又はq±i。退化正射影は別分枝として保持し、全graphやpairedpureを既知doubleOre分類で覆ったと主張しない。
+
+O=[[A,B],[-B^t,D]]、rankO4、DはAのcyclic部分転置。純UV/VU関係空間はdomainよりdim<=1、従って両射影rank>=3。射影rank4なら主交代block rank4、rank3ならrank2。Pf恒等式より両射影は同時に4又は3。fullgraphはD=-B^t A^-1B、detB=-PfA²、detgraph=-1。P0graphと非退化正射影では6quadのmonic簡約が三次20語を持ち、実際のdimB3=20から全三次overlap0、DiamondでPBW。退化正射影のrank1行列は積又は平方であり、この認識に含めない。次は最小tail0 chartから正常三次を計算する。
