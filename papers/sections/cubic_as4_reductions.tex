@@ -505,19 +505,14 @@ $Fv-a^6vF$ ($v=x,y,z$) の四次商への写像は階数3であり、
 ここで扱ったのは全H3からこの表示への必要帰着と指定正規三次であり、
 三次元表示の新規性を主張するものではない。
 
-\begin{corollary}[有限候補の条件付き幾何学的慣性]
+\begin{corollary}[排除候補の射影安定化群]
 \label{cor:h3-order3-candidate-inertia}
-命題\ref{prop:h3-order3-Ore-distinct}の候補がH3を与えるなら、
-その内在的pointed自己同型群は $\mu_9$ である。
-$\rho=\omega$ と $\rho=\omega^2$ の候補の間に幾何学的pointed同値はない。
-従って二固有値・位数3部分の幾何学的群oidは、
-二つの $B\mu_9$ のうち許容されるものの非交和である。
-どちらが許容されるか、また抽象族の相対降下はここでは未判定である。
+命題\ref{prop:h3-order3-Ore-distinct}の候補表示において、
+$S_1$ と $kt$ を保ち、$S_1$ 上で $\sigma$ と可換するgraded座標変換に関する
+$[F_0+t^3]$ の射影安定化群は $\mu_9$ である。
+後の定理で候補自体を全排除するので、これは実在H3の慣性の主張ではない。
 \end{corollary}
 \begin{proof}
-H3の二次包絡と中山作用は内在的に復元される。
-全graded自己同型は $\mu_B$ と可換するので $S_1$ と $kt$ を保存し、
-$t$ の正規式から $S$ 上では $\sigma$ と可換する。
 $\sigma$ の三固有値は相異なるため、$x,y,z$ 上の作用は対角である。
 関係の全係数が非零なので、その対角成分は
 \[
@@ -531,13 +526,12 @@ $[F_0+t^3]$ の安定化群は $e^3=d^3r$ を満たす。
 \[
  (x,y,z,t)\longmapsto(x,e^3y,e^6z,et),\qquad e^9=1
 \]
-である。H3のpointed矢の復元により、これは内在的慣性と一致する。
-異なる $\rho$ では中山作用の固有値集合が異なるため同値にならない。
+である。
 \end{proof}
 
 \begin{lemma}[有限候補の正規Ore開集合]
 \label{lem:h3-order3-candidate-affine}
-上の候補 $R=S[t;\sigma]/(F_0+t^3)$ がH3を与えると仮定する。
+上の候補 $R=S[t;\sigma]/(F_0+t^3)$ について $S$ が整域であると仮定する。
 $D=S^{\sigma^{-1}}$ を右Zhang twistとすると
 \[
  R[t^{-1}]_0\simeq D/(C+1),\qquad C\in Z(D)_3.
@@ -568,6 +562,51 @@ $F_0$ の正規化は $\sigma^3$、$\sigma(F_0)=F_0$ であるから、twist内�
 二次関係の逆代入と $C$ の全三交換子も元の四次商で厳密検証できる。
 最後の中山式は $\operatorname{hdet}\sigma=1$、AS index 3と右twist公式から
 $\mu_D=\mu_S\sigma^3=\sigma$ となる。
+\end{proof}
+
+\begin{theorem}[二固有値・位数3領域の全排除]
+\label{thm:h3-order3-two-eigenvalues-excluded}
+H3包絡の中山作用が丁度二種類の固有値を持つなら、その集合は
+$\{1,-1\}$ に限られる。特に二固有値・位数3領域は空である。
+\end{theorem}
+\begin{proof}
+これまでの帰着により、位数3の残余は
+命題\ref{prop:h3-order3-Ore-distinct}の二つの明示候補だけである。
+その三次 $F_0+t^3$ の因子を構成する。
+\[
+\begin{gathered}
+ d=a^5-a^4-a^2-2a,\quad e=a^5-a^4+2a^2+a,\\
+ h=a^5-a^4+a^3-a+1,\quad k=a^5+a,\\
+ Q(U)=U^2-(hd+k)U+h,\qquad X(U)=1-(d+e)U,\\
+ W(U)=(a^4+a)X(U)+(a^5-a^3-a-1)U^2
+\end{gathered}
+\]
+と置く。$\mathbb Q[a]/(a^6+a^3+1)$ 上で
+\[
+ \gcd(Q,X)=\gcd(Q,W)=1
+\]
+である。代数閉体上で $Q(u)=0$ を選び、$b^3=X(u)$、$c=u/b$ と置く。
+$X(u),W(u)\ne0$ なので $b\ne0$、$\lambda=bW(u)/X(u)\ne0$ である。
+$\ell=x+by+cz$ に対し、元の三つの二次関係だけから
+\[
+ \sigma^2(\ell)\sigma(\ell)\ell=\lambda F_0
+\]
+を得る。恒等式の検証では $c=U/b$ を代入して $b^3$ を掛け、
+$b^3=X(U)$ と $Q(U)=0$ で全三次商座標の残差を零にする。
+上の二つのgcdとこの全係数恒等式を
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}order3\_\allowbreak{}Ore\_\allowbreak{}distinct.py}
+で厳密に再生できる。候補のAS3存在や有限標本を入力にしない。
+
+$s^3\lambda=-1$ を選び $L=s\ell$ と置けば、Ore則により
+\[
+ F_0+t^3=
+ (t^2+\sigma^2(L)t+\sigma^2(L)\sigma(L))(t-L).
+\]
+実際、$t^2,t$ の係数はそれぞれ相殺し、定数項は
+$-\sigma^2(L)\sigma(L)L=F_0$ である。
+二因子の $t$ 最高係数は1であり非零、商へ移しても次数2と1なので消えない。
+従って候補は全て非整域となり、H3ではない。
+定理\ref{thm:h3-two-eigenvalue-refined}と合わせれば結論を得る。
 \end{proof}
 
 \begin{lemma}[単冪twist下の反標準三次関係の輸送]

@@ -414,7 +414,6 @@ B=S[t;sigma], G=F+t³の帰着において、sigmaの単一固有値bは不可�
 
 これにより各rhoにつき三固有値sigmaのH3候補はS[t;sigma]/(F0+t³)一対象以下。Sの全次数AS3性、noetherian/domain、切断のH3許容性はまだ未証明。三次/四次Hilbert一致だけから十分性を言わない。原稿prop:h3-order3-Ore-distinct。sigma二固有値も次の議論で排除した。次はこの有限候補の許容性又は排除を判定する。全体のmu_B三固有値以上とは別のbase自己同型sigmaの固有値分類であり、両者を混同しない。
 
-作業中の参考観察（定理に使用しない）：上模型のpoint行列detは−a³(x³+y³+z³)。五/六次Hilbert値も21/28と厳密計算で一致したが、これを正則性の証明とはしない。F0の81個の根の単位係数一次因子・Ore norm探索は空であったが、網羅的因子排除ではない。この有限探索から整域性やH3を結論しない。
 
 同命題でsigma二固有値も全排除した。比が原始三乗根なのでSは二重graded、hdet_S sigma=1からtopの型は2+1、正の再次数付けの三位Hilbert極から重複度も2+1。S=T[u;nu]、TはAS2整域。二次元側sigma_Uの固有値b、u上cについてb²c=1、b³=c³=rho^-1。固定三次はF=f2u。sigma_U(f2)=c^-1 f2とnu(f2)=rho f2、正規商公式mu_T=sigma_U^-2 nuからmu_T(f2)=c^-1 f2!=f2を得る。可換/Jordan平面はmu_Tが二次空間でunipotentなので不可能。量子平面なら単一固有値のsigma_Uはscalar、nuも対角で全Bがskewになるが、tx=bxtのbは原始九乗根となり既証skew37必要条件に反する。Jordan型を除外せずに含めた議論である。
 
@@ -423,8 +422,16 @@ hdet_S sigma=1は追加仮定ではない。BのKoszul双対の(3,0)と(0,1)のF
 
 ## 有限位数3候補の条件付き慣性とaffine表示（classification-v95）
 
-候補がH3なら、mu_Bの固有空間から全graded自己同型はSとktを保ち、sigmaと可換するのでS上対角。関係から対角はd(1,r,r²), r³1、t上e。F0はd³r倍、t³はe³倍なのでG直線安定条件e³=d³r。grading scalarで割るとr=e³,e9=1、内在的慣性mu9（x,y,z,tに重み0,3,6,1）。二つのrhoは中山固有値集合が違い同値でない。従って二固有値・位数3の幾何学的群oidは二つのBmu9のうち許容されるものの非交和。どちらが実在するか・抽象族の相対降下は未判定。対角指標行列のSmith(1,1,9)と全関係/Gの重みを既存検証器で厳密確認した。
+候補がH3なら、mu_Bの固有空間から全graded自己同型はSとktを保ち、sigmaと可換するのでS上対角。関係から対角はd(1,r,r²), r³1、t上e。F0はd³r倍、t³はe³倍なのでG直線安定条件e³=d³r。grading scalarで割るとr=e³,e9=1、内在的慣性mu9（x,y,z,tに重み0,3,6,1）。二つのrhoは中山固有値集合が違い同値でない。従って二固有値・位数3の幾何学的群oidは二つのBmu9のうち許容されるものの非交和。これらは次の普遍Ore normで全排除されるため実在H3の慣性ではなく、表示候補の射影安定化群の計算として保持する。対角指標行列のSmith(1,1,9)と全関係/Gの重みを既存検証器で厳密確認した。
 
-正規t開集合はD=S^(sigma^-1)、右twist積f*g=f sigma^-deg(f)(g)を使い、R[t^-1]0=D/(C+1)。Dの三関係はuv+a8vu+aw²、a7u²+vw+a²wv、a4v²+wu+a5uw、すなわちSのa->a4版。F0=c1y²z+c2yzy+c3zy²+z²xならC=a³c1v²w+c2vwv+a6c3wv²+a³w²u。F0のnormalizer=sigma³とsigma F0=F0からCは中心であり、三交換子をDの元関係の四次商で全係数零と検証した。ただしmu_D=sigma!=Idであり、CY用認識定理をこの表示へ適用しない。次はA=D/(C+1)のglと無限遠の局所order解析。
+正規t開集合はD=S^(sigma^-1)、右twist積f*g=f sigma^-deg(f)(g)を使い、R[t^-1]0=D/(C+1)。Dの三関係はuv+a8vu+aw²、a7u²+vw+a²wv、a4v²+wu+a5uw、すなわちSのa->a4版。F0=c1y²z+c2yzy+c3zy²+z²xならC=a³c1v²w+c2vwv+a6c3wv²+a³w²u。F0のnormalizer=sigma³とsigma F0=F0からCは中心であり、三交換子をDの元関係の四次商で全係数零と検証した。ただしmu_D=sigma!=Idであり、CY用認識定理をこの表示へ適用しない。これも後の全排除候補の代数的な開集合表示であり、このaffineのglをH3分類の残課題とはしない。
 
 古典型との同定：Le Bruyn–Smith–Van den Bergh, Central extensions of three dimensional Artin–Schelter regular algebras, Math.Z.222(1996), p.186のType E三関係をPDF画像で確認し、zeta9=a²、(X1,X2,X3)=(x,z,a³y)で三関係が(a r1,a r3,a7 r2)に一致することを元の係数から厳密検証した。AS3表示自体は古典的であり新規性を主張しない。全H3からの帰着と正常三次/候補許容性は別の課題。Type Eの中心・PI次数・局所orderの定理をこの式一致だけから輸入しない。恒久出典URL https://sites.math.washington.edu/~smith/Research/Central-extns.pdf 。
+
+## 全二固有値・位数3領域の排除（classification-v96）
+
+位数3の最後のType E候補にも明示的な普遍Ore norm因子が存在する。d=a5−a4−a²−2a,e=a5−a4+2a²+a,h=a5−a4+a³−a+1,k=a5+a、Q(U)=U²−(hd+k)U+h、X(U)=1−(d+e)U、W(U)=(a4+a)X+(a5−a³−a−1)U²と置く。QQ[a]/Phi9上でgcd(Q,X)=gcd(Q,W)=1。Q(u)=0,b³=X(u),c=u/bとするとell=x+by+czのnorm sigma²(ell)sigma(ell)ell=[bW(u)/X(u)]F0。この非零係数をlambdaと書き、s³lambda=−1,L=s ellとすればF0+t³=(t²+sigma²(L)t+sigma²(L)sigma(L))(t−L)。次数2/1の二因子は商で非零なのでnondomain。
+
+元のS二次関係の全三次商で、c=U/bを代入しb³を掛け、b³=X(U),Q(U)=0により全10座標の残差零をSymPy厳密再生した。gcdも同じ数体のEuclid計算で確認。Singularが発見した二変数norm理想は最終証明の依存ではなく、公開検証器は補助二次方程式と全座標恒等式のみから再生する。AS3存在/PI/有限中心性/局所order/同型十分性を入力にしない。原稿thm:h3-order3-two-eigenvalues-excluded、verify_cubic_order3_Ore_distinct.py、同証明書のOre_norm_exclusion節。
+
+これで全H3二固有値中山は{1,−1}だけに限る。二固有値位数3の幾何学的領域は空なので、候補に対して求めたmu9やaffine表示から実在成分を主張しない。次は位数2の全重複度/Jordan/正規三次の分類、又は中山三固有値以上を絞る。単一固有値1の単冪層、零交換子CY必要被覆、非捩れqso3正admissibility、全大域成分と相対降下も未完。

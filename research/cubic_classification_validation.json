@@ -1028,8 +1028,20 @@
     "status": "conditional geometric proof in manuscript; exact Smith and centrality identities executed",
     "validator": "computations/verify_cubic_order3_Ore_distinct.py",
     "certificate": "computations/cubic_order3_Ore_distinct_certificate.json",
-    "result": "If admissible, each finite order-three candidate has intrinsic inertia mu9, with weights(0,3,6,1). Its normal Ore affine chart is the central cubic C+1 quotient of S_(a^4).",
-    "scope_limit": "Neither candidate H3 admissibility nor affine finite global dimension, AS3 existence or relative stack descent asserted.",
+    "result": "Algebraic stabilizer mu9 and normal Ore affine chart of the finite candidate presentations. These candidates are subsequently all excluded by v96; this is not inertia of actual H3 objects.",
+    "scope_limit": "Candidate computations retained. No surviving order-three two-eigenvalue object, or affine finite-global-dimension claim.",
     "primary_presentation_check": "LBS (1996) p.186 Type E: zeta9=a², (X1,X2,X3)=(x,z,a³y); all three transformed relations checked exactly. No new PI-degree or centre theorem imported."
+  },
+  "two_eigenvalue_order3_exclusion_v96": {
+    "status": "exact universal characteristic-zero norm and nonvanishing identities executed; global proof in manuscript",
+    "validator": "computations/verify_cubic_order3_Ore_distinct.py",
+    "certificate": "computations/cubic_order3_Ore_distinct_certificate.json",
+    "result": "All global two-eigenvalue order-three H3 envelopes excluded. Remaining Type E cubic is explicitly quadratic times linear using a universal quadratic parameter and cube root. Every H3 envelope with exactly two Nakayama eigenvalues therefore has eigenvalue set {1,-1}.",
+    "independent_checks": [
+      "gcd(Q,X)=gcd(Q,W)=1 in QQ[a]/Phi9[U]",
+      "every cubic quotient coordinate of the universal Ore norm after clearing b^3",
+      "no reliance on discovery Groebner output or AS3 existence sufficiency"
+    ],
+    "scope_limit": "Order-two Jordan/multiplicities/admissibility, unipotent and three/four-eigenvalue sectors, full components and relative descent remain."
   }
 }

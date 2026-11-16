@@ -6,6 +6,7 @@ from pathlib import Path
 import sympy as S
 from sympy.polys.matrices import DomainMatrix
 from sympy.matrices.normalforms import smith_normal_form
+from sympy.polys.rings import ring
 
 
 def main():
@@ -108,6 +109,43 @@ def main():
         assert sum((vector[i]*C[i].get(col,K.zero) for i in range(4)),K.zero)==K.zero
     # All four cubic normal-form coefficients are nonzero.
     assert all(vector)
+    # Universal Ore norm identity over a quadratic algebraic parameter.
+    # This proves non-domain of the remaining cubic cuts, without AS3 sufficiency.
+    PU,U=ring('U',K)
+    d=a**5-a**4-a**2-2*a
+    e=a**5-a**4+2*a**2+a
+    h=a**5-a**4+a**3-a+1
+    j=a**4+a**2
+    k=a**5+a
+    qU=U**2-(h*d+k)*U+h
+    xU=1-(d+e)*U
+    wU=(a**4+a)*xU+(a**5-a**3-a-1)*U**2
+    assert h*e+j==k
+    assert not (U**3-d*(d+e)*U**2+(2*d+e)*U-1).rem(qU)
+    assert qU.gcd(xU)==PU.one and qU.gcd(wU)==PU.one
+    assert qU.gcd(qU.diff(U))==PU.one and h
+    PB,b,c=ring('b,c',K)
+    coeff=[PB.one,b,c]
+    norm=[PB.zero for _ in basis3]
+    for word in itertools.product(range(3),repeat=3):
+        i,jj,kk=word
+        co=coeff[i]*coeff[jj]*coeff[kk]*sigma[i]**2*sigma[jj]
+        for ix,vv in p3(word).items():
+            norm[ix]+=co*vv
+    fvector=[K.zero]*len(basis3)
+    for word,co in zip(candidates,vector):
+        fvector[basis3.index(word)]=co
+    # Substitute c=U/b, b^3=X(U), Q(U)=0 after clearing b^3.
+    for f,target in zip(norm,fvector):
+        residues=[PU.zero,PU.zero,PU.zero]
+        for (ib,ic),co in f.terms():
+            power=3+ib-ic
+            assert power>=0
+            residues[power%3]+=co*U**ic*xU**(power//3)
+        residues[1]-=wU*target
+        assert all(not f.rem(qU) for f in residues)
+    # Ore expansion (t²+sigma²(L)t+sigma²(L)sigma(L))(t-L)
+    # has coefficients 1,0,0,-sigma²(L)sigma(L)L by direct multiplication.
     inertia_matrix=S.Matrix([[1,-2,0],[1,1,0],[-2,1,0],[2,1,-3]])
     snf=smith_normal_form(inertia_matrix,domain=S.ZZ)
     assert [abs(snf[i,i]) for i in range(3)]==[1,1,9]
@@ -135,6 +173,7 @@ def main():
         assert not any(residual)
     data={
         'field':'QQ[a]/(a^6+a^3+1)',
+        'final_H3_result':'All two-eigenvalue order-three H3 excluded; only {1,-1} can remain among exactly two Nakayama eigenvalues.',
         'sigma_exponents':[8,2,5],
         'classical_Type_E_source':'Le Bruyn-Smith-Van den Bergh (1996), page186',
         'classical_Type_E_map':'zeta9=a^2; (X1,X2,X3)=(x,z,a^3*y); (f1,f2,f3)=(a*r1,a*r3,a^7*r2)',
@@ -144,6 +183,19 @@ def main():
         'sigma_fixed_cubic_dimension':4,
         'normality_map_rank':3,
         'normal_cubic_dimension':1,
+        'Ore_norm_exclusion':{
+            'd':'a^5-a^4-a^2-2*a',
+            'e':'a^5-a^4+2*a^2+a',
+            'h':'a^5-a^4+a^3-a+1',
+            'k':'a^5+a',
+            'Q':'U^2-(h*d+k)*U+h',
+            'X':'1-(d+e)*U',
+            'W':'(a^4+a)*X+(a^5-a^3-a-1)*U^2',
+            'parameters':'Q(u)=0; b^3=X(u); c=u/b; ell=x+b*y+c*z',
+            'identity':'sigma^2(ell)*sigma(ell)*ell = b*W(u)/X(u)*F0',
+            'nonzero':'gcd(Q,X)=gcd(Q,W)=1',
+            'conclusion':'Scale ell to L with norm(L)=-F0; then t^3+F0=(t^2+sigma^2(L)*t+sigma^2(L)*sigma(L))*(t-L). No H3 candidate survives.'
+        },
         'two_eigenvalue_weight_cases_mu9':two_weight_cases,
         'Jordan_plane_Nakayama_eigenvalues':[1,1],
         'projective_candidate_inertia_Smith_diagonal':[1,1,9],
@@ -159,7 +211,7 @@ def main():
         assert json.loads(path.read_text())==data
     else:
         path.write_text(json.dumps(data,indent=2)+'\n')
-    print('PASS exact quadratic/cubic/quartic quotients, twisted top slices, invariant normal cubic line')
+    print('PASS exact quotients, top slices, cubic line, universal Ore norm factorisation, inertia and affine chart')
 
 
 if __name__=='__main__':

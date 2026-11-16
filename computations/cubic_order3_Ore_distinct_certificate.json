@@ -5,6 +5,8 @@
     2,
     5
   ],
+  "classical_Type_E_source": "Le Bruyn-Smith-Van den Bergh (1996), page186",
+  "classical_Type_E_map": "zeta9=a^2; (X1,X2,X3)=(x,z,a^3*y); (f1,f2,f3)=(a*r1,a*r3,a^7*r2)",
   "mu_S_exponents": [
     2,
     5,
@@ -19,6 +21,19 @@
   "sigma_fixed_cubic_dimension": 4,
   "normality_map_rank": 3,
   "normal_cubic_dimension": 1,
+  "Ore_norm_exclusion": {
+    "d": "a^5-a^4-a^2-2*a",
+    "e": "a^5-a^4+2*a^2+a",
+    "h": "a^5-a^4+a^3-a+1",
+    "k": "a^5+a",
+    "Q": "U^2-(h*d+k)*U+h",
+    "X": "1-(d+e)*U",
+    "W": "(a^4+a)*X+(a^5-a^3-a-1)*U^2",
+    "parameters": "Q(u)=0; b^3=X(u); c=u/b; ell=x+b*y+c*z",
+    "identity": "sigma^2(ell)*sigma(ell)*ell = b*W(u)/X(u)*F0",
+    "nonzero": "gcd(Q,X)=gcd(Q,W)=1",
+    "conclusion": "Scale ell to L with norm(L)=-F0; then t^3+F0=(t^2+sigma^2(L)*t+sigma^2(L)*sigma(L))*(t-L). No H3 candidate survives."
+  },
   "two_eigenvalue_weight_cases_mu9": [
     [
       3,
@@ -55,19 +70,6 @@
     1,
     1
   ],
-  "F_words": [
-    "yyz",
-    "yzy",
-    "zyy",
-    "zzx"
-  ],
-  "F_coefficients": [
-    "-a^4+a-2",
-    "-a^5+2*a^4-2*a^3+a-1",
-    "a^3-a+2",
-    "1"
-  ],
-  "scope": "Necessary model only. No all-degree AS3/noetherian/domain/H3 sufficiency assertion.",
   "projective_candidate_inertia_Smith_diagonal": [
     1,
     1,
@@ -86,6 +88,18 @@
     "a^6",
     "a^3"
   ],
-  "classical_Type_E_source": "Le Bruyn-Smith-Van den Bergh (1996), page186",
-  "classical_Type_E_map": "zeta9=a^2; (X1,X2,X3)=(x,z,a^3*y); (f1,f2,f3)=(a*r1,a*r3,a^7*r2)"
+  "F_words": [
+    "yyz",
+    "yzy",
+    "zyy",
+    "zzx"
+  ],
+  "F_coefficients": [
+    "-a^4+a-2",
+    "-a^5+2*a^4-2*a^3+a-1",
+    "a^3-a+2",
+    "1"
+  ],
+  "scope": "Necessary model only. No all-degree AS3/noetherian/domain/H3 sufficiency assertion.",
+  "final_H3_result": "All two-eigenvalue order-three H3 excluded; only {1,-1} can remain among exactly two Nakayama eigenvalues."
 }
