@@ -1136,5 +1136,19 @@
     "top_certificate": "computations/cubic_order2_antidiagonal_top_certificate.json",
     "result": "Entire anti-diagonal involution normalizing chart excluded, including arbitrary quadratic cross derivations and outer linear/quadratic base terms. Reduced three-parameter family has W1 zero by20 constant pivots.",
     "scope_limit": "No coverage of degenerate cross projections, general second common-plane form or all order-two envelopes claimed."
+  },
+  "order2_full_normalizing_chart_exclusion_v107": {
+    "status": "structural square-root and filtered-top proof in manuscript; relies on previously executed validators, no new CAS claimed",
+    "proof": "papers/sections/cubic_as4_reductions.tex, theorem h3-order2-full-normalizing-chart",
+    "result": "In multiplicities(1,3), every invertible normalizing chart over the canonical common AS2 plane is excluded, including both common-plane Jordan forms and arbitrary skew derivations/outer linear terms. Remaining nu=+/-f branches have leading Nakayama multiplicities2+2, incompatible with1+3.",
+    "dependencies": [
+      "common-plane matrix forms v99",
+      "diagonal chart v105",
+      "anti-diagonal chart v106",
+      "LWW Ore restriction formula",
+      "RRZ homological determinant and Zhang twist formulas",
+      "initial top tensor and filtered Nakayama spectrum"
+    ],
+    "scope_limit": "Degenerate cross projections and outer-square projection rank2, including known admissible Clifford objects, remain outside this chart; full order-two and global H3 coverage incomplete."
   }
 }

@@ -1227,6 +1227,73 @@ AS4という必要仮定の下で、これが実際の中山作用である。
 全値rank20を独立再生する。ここでもパラメータで割っていない。
 \end{proof}
 
+\begin{theorem}[重複度 $(1,3)$ のnormalizing chartは空]
+\label{thm:h3-order2-full-normalizing-chart}
+中山固有値の重複度が $(1,3)$ のH3包絡で、正固有直線を $kp$、
+共通負二平面を $W$、残る負生成元を $v$ とする。
+残る偶関係が、可逆な $\nu\in\mathrm{GL}(W)$ により
+\[
+ vt=\nu(t)v+d(t)\quad(t\in W),\qquad
+ v^2-p^2=\ell(W)v+q_2(W)
+\]
+と書ける場合は存在しない。$d(t),q_2$ は任意の二次式、$\ell$ は任意の一次式でよく、
+中山のJordan成分を零と仮定しない。
+この定理はcross射影が退化する部分や外側二乗投影rank2を覆わない。
+\end{theorem}
+\begin{proof}
+負二平面はAS2平面 $T$ を生成する。$pt=f(t)p$ とし、
+命題\ref{prop:h3-order2-plane-matrices}を用いると
+\[
+ \det f=-1,\quad \operatorname{hdet}_T f=-1,\quad
+ \mu_T=\mu_B|_W\circ f^2.
+\]
+ordered monomialのspanと14641 Hilbert値の比較によりPBWであり、
+$v$ の作用は $T$ の自己同型 $\nu$ とskew derivationである。
+外側二乗を $T$ と比較した最高係数から $\nu^2=f^2$ を得る。
+
+二次元の平方根を分類する。
+$f$ が非自明Jordan blockなら $f^2$ も非自明Jordanで、$\nu^2=f^2$ は $\nu=\pm f$ を強制する。
+$f$ がスカラーなら $f=\pm iI$。
+この場合 $T$ は可換平面又はJordan平面であり、後者では自己同型の形から再び $\nu=\pm f$。
+可換平面では $\nu=\pm f$ 又は相異なる二固有値 $i,-i$ の対角作用である。
+最後に $f$ が相異なる二固有値を持てば、第一行列型で
+$f=\operatorname{diag}(a,-a^{-1})$、$T=(xy=-a^2yx)$ とできる。
+量子平面の自己同型は対角、又はパラメータ $-1$ のときだけ反対角である。
+$\nu^2=f^2$ を合わせると、$\nu=\pm f$、
+定理\ref{thm:h3-order2-diagonal-normalizing-chart}の対角作用、
+又は定理\ref{thm:h3-order2-antidiagonal-normalizing-chart}の反対角involutionに限られる。
+後二者は全係数で排除済みである。
+
+$\nu=\pm f$ を扱うため、$W$ の重みを1、$p,v$ の重みを2とする。
+PBW先頭環 $B_0$ は導分・$\ell$・$q_2$ を消した表示である。
+$\nu=f$ なら外側を線型変換して
+\[
+ B_0=T[u;f][w;\sigma],\qquad \sigma|_T=f,\quad\sigma(u)=-u
+\]
+と書ける。二段Oreの中山公式と $\operatorname{hdet}\mu=1$ により、
+$W$ 上の中山は $\mu_T f^{-2}=\mu_B|_W$、外側の二成分はともに $+1$ である。
+ここで $\operatorname{hdet}_T f=-1$ が第一の外側成分の符号を決める。
+具体的には第一拡大の中山は $u$ を $-u$ へ送り、第二拡大の $\sigma(u)=-u$ がこれを $+u$ に変える。
+最後の $w$ の符号も $\operatorname{hdet}\mu=1$ で $+1$ となる。
+従って $B_0$ の中山固有値の重複度は $(2,2)$ である。
+
+$\nu=-f$ なら $u=(p+v)/2,w=(p-v)/2$ に対して
+$ut=f(t)w,wt=f(t)u,uw+wu=0$。
+$H$ を $u,w$ の交換、$T$ 上恒等とするinvolutionとすると、右Zhang twist $B_0^H$ は
+両外側成分が $f$ で正規化し、外側関係が $u^2+w^2=0$ の環となる。
+外側の基底変更でこれも上の二段Ore表示に移る。
+$H$ は二重Koszul topの $T$ 成分と外側二次成分を共に固定するのでhomological determinantは1である。
+AS index4と $H^2=1$ によるtwist公式\cite[Theorem 0.3]{RRZ}から
+中山の一次作用は変わらない。従ってここでも重複度は $(2,2)$。
+
+最後に実際の中山作用は $W$ を保ち、$p$ を固定し、$v$ を $-v+W$ へ送るので重みfiltrationを保つ。
+実際の非零最高Koszul tensorの先頭項は $W_4(B_0)$ に入り、この一次元空間を張る。
+中山巡回式の先頭項を取れば、$B_0$ のFrobenius非退化性により
+$\operatorname{gr}\mu_B=\mu_{B_0}$ となる。
+filtrationを保つ作用の固有値重複度は随伴作用と同じなので、
+実際の重複度 $(1,3)$ に反する。
+\end{proof}
+
 \begin{lemma}[単冪twist下の反標準三次関係の輸送]
 \label{lem:h3-unipotent-transport}
 $C$は左右noetherian quadratic Koszul AS4型14641で，$\mu_C$は半単純とする．

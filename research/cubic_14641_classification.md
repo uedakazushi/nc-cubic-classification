@@ -531,3 +531,13 @@ T=(xy=-yx)、p x=-xp,p y=yp、v x=lambda yv+d_x,v y=eta xv+d_y、v²−p²=ell v
 この三パラメータ表示の74項多項式最高tensorは全隣接関係に入り、固定係数w_yxwu1、mu=(-x,-y,p,-v)の巡回式を全値で満たす。AS4なら実際のmuを決定する。140x20正常化行列は定数pivot20段、全パラメータで核零。verify_cubic_order2_antidiagonal_chart.pyが全PBW、tensor/flattening4,6,4、導分、全正常化rank20を独立再生。三パラメータ分母は一切ない。原稿thm:h3-order2-antidiagonal-normalizing-chart。
 
 次の統合：残るnormalizing chartではnu²=f²、hdet_T f=−1。nu=+-fのtrim先頭環は二段Ore（又はinvolution Zhang twist）となりmuの正固有値が二本出て重複度(1,3)に合わない可能性がある。このスペクトルのfiltered保存と二次元平方根分類を証明してから、対角・反対角排除と統合する。cross射影がgraphでない退化部分や外側二乗rank2のClifford正例は未被覆として保持する。
+
+## 負三次元側の可逆normalizing chart全体の排除（classification-v107）
+
+重複度(1,3)、共通AS2平面T=<W>、pの作用fに加え、残り負生成元vがTを可逆nuと二次skew derivationでnormalizingし、外側がv²−p²=ell v+q2となるchartは全排除した。Jordanを零と仮定しない。PBW比較からnu∈AutT、nu²=f²。共通平面の行列式/中山式によりdet f=hdet_T f=−1、mu_T=mu_W f²。
+
+二次元平方根分類：f非自明Jordanならnu=+-f。fscalar+-iならTはcomm/Jordan、Jordanではnu=+-f、commでは更にdiag(i,−i)があり既排除対角chart。f相異なる二値なら第一M=J型、fdiag(a,−a^-1)、T量子q−a²。量子自己同型の対角/反対角分類とnu²=f²からnu=+-f、既排除対角normalizer、q−1の既排除反対角involutionの三場合だけ。第二M1型もscalar/Jordanなのでnu=+-fへ入る。
+
+nu=fのtrim先頭環は二段Ore T[u;f][w;sigma],sigma|T=f,sigma u=−u。hdet f−1とRRZ hdet(mu)1/LWW制限公式からmu|W=mu_T f^-2=mu_W（負二値）、mu u=mu w=+1。nu−fならu,w交換Hの右Zhangtwistが同じ二段Oreに移り、Hhdet1,H²1,index4なのでmu一次作用不変。どちらも先頭中山の重複度2+2。実際のmuはW保存、p固定、v->−v+Wなので重みW1,p/v2を保存する。実際の最高tensorの先頭項はAS4先頭環の一次元W4を張り、その巡回式からgr mu=mu_grB。よって実際の重複度1+3に反して排除される。この先頭tensor比較は未証明の一般Nakayama変形不変性を仮定しない。
+
+原稿thm:h3-order2-full-normalizing-chart。対角/反対角の全係数排除はv105/v106の既実行検証に依存し、平方根/先頭スペクトル統合は本文の構造証明、新規CAS実行を主張しない。外側二乗rank1でcrossの両射影がgraph同型となる通常領域が消え、非分裂Jordanのv100量子平面商領域も、残りcross射影が退化する場合へ縮小する。既知Clifford正例の外側二乗rank2は被覆していない。次はこのrank1射影退化とrank2外側領域を分けて全関係・W1・許容性を判定する。
