@@ -1,0 +1,66 @@
+\subsection{最後のL開集合の正常核消滅とmixed rank4領域の閉鎖}
+\label{subsec:h3-order2-22-L-complete}
+\begin{theorem}\label{thm:h3-order2-22-L-complete}
+前節の $D(U)$ 全体で、AS4包絡の中山逆作用に関する正常三次核は零である。
+従って $(2,2)$・mixed rank4でcanonicalな二つの純top $P,Q$ がともに非零のH3対象は存在しない。
+このmixed rank4領域の全H3は、全Jordan型込みで曲がったClifford族 $B_h$ の既分類切断に一致する。
+全幾何学的矢とadmissibilityは既存の曲がったClifford定理で与えられる。
+これは他の中山スペクトル、全成分、相対intrinsic降下を含む全H3分類の完成ではない。
+\end{theorem}
+\begin{proof}
+まず最後の開集合上の計算を元関係から説明する。
+$S=\mathbb Q(i)[\rho,z]$、$i^2=-1$ とする。
+正自由三次32語に対する二次関係の左右挿入を行列 $R_3$ とし、
+公開29個の多項式四次汎関数から正常条件の行ベクトルを作る。
+前節の代入の分母を各行で払い、$U$ の因子だけを除いて重複を除くと、
+\[
+ R_3:S^{32}\longrightarrow S^{24},\qquad N:S^{44}\longrightarrow S^{32},
+ \qquad R_3N=0
+\]
+を得る。全て元の六つの二次関係の挿入であり、
+29個の汎関数は各々、元の四次関係288本を多項式恒等式として消すことを先に検証する。
+従って $N$ の列は実際の正常条件であって、任意に選んだ商基底の極を持たない。
+
+$K=\ker R_3$ を多項式環上で求めると15生成元を得る。
+その関係の非零定数成分を使って冗長生成元を五つ除去し、
+\[
+ E:S^{10}\xrightarrow{\sim}K,\qquad\ker E=0
+\]
+を得る。各除去は係数体の単元を用いるため、特定のパラメータの非零性を追加していない。
+\texttt{build\_cubic\_order2\_22\_secant\_L\_module.py --method free}
+は元行列からこの計算と自由性確認を再生し、$E,N$ をASCII形式で出力する。
+
+次に $ET=N$ を解く。
+\texttt{solve\_cubic\_order2\_22\_secant\_L\_coordinates.py}
+は係数体 $\mathbb Q(i)(\rho,z)$ で解いた座標が全て多項式であることを確認し、
+全 $32\times44$ 成分で $ET=N$ を厳密再検証する。
+最後に \texttt{verify\_cubic\_order2\_22\_secant\_L\_saturation.py}
+は $T$ の各行・各列から $U$ 上の単元因子だけを除き、
+単元pivotで余核を順に縮約する。
+pivotは定数倍と $i$ の因子を除けば、$\rho,D,Q$ のみである。
+各pivot $v$ の単元性は、$v\overline v$ が $U$ の既知因子の積と非零定数に分解することを
+多項式恒等式で確認する。
+10回のpivotで残る行数は零になる。従って
+\[
+ \operatorname{coker}\bigl(T:S[U^{-1}]^{44}\to S[U^{-1}]^{10}\bigr)=0,
+ \qquad \operatorname{im}N[U^{-1}]=K[U^{-1}].
+\]
+巨大な生成行列をGitに収録せず、公開入力・三つの再生器と小さい単元pivot証明書を保持する。
+全三段階を実行して確認した。
+
+AS4点での特殊化も確認する。
+この中山作用で一次の正負次数は各2、二次関係の正負次数は2と4である。
+Koszul双対性の同変Hilbert恒等式から三次のtraceは零、従って正三次の次元は10である。
+よって $R_3$ のrankは22である。
+多項式環上でもrankは22なので、この最大rankの開集合では核の形成は底変更に適合する。
+従って任意のAS4点の正三次双対は $K$ のfiberであり、正常条件の行がその全体を張る。
+これらの条件を全て満たす正三次 $G$ は零に限られる。
+H3の $G$ は中山作用で固定されるため正三次に属し、矛盾する。
+
+既存の全Jordan消滅、非対称負top、tangent負top、負Pfaffian、square正top、
+特異mixed block、$aq=0$、真共鳴、座標平面、鏡共鳴の各完全排除と、
+主chartの多項式逆行列により、$P,Q\ne0$ の全候補は前節の $D(U)$ へ既に帰着している。
+これで両top非零領域が閉じる。
+$P=0$ は既知符号族へ、$Q=0$ は全Jordan型込みで $B_h$ へ認識済みである。
+符号族は $h=0$ の部分族なので、主張したmixed rank4全体の結論を得る。
+\end{proof}

@@ -1,0 +1,87 @@
+\subsection{二次包絡の三次平坦性を支配する四係数}
+\label{sec:quadratic-four-obstructions}
+前節の再構成に残る条件のうち、三次の条件を有限行列として分離できる。
+以下では全次数平坦性を三次平坦性から無条件に推論しない。
+
+\begin{proposition}\label{prop:four-cubic-obstructions}
+$A$ を剰余体 $k$ を持つ可換局所Artin環とし、$R_A$ を
+定理\ref{thm:artin-section-ring}の平坦な切断環とする。
+$V=R_{A,1}$、$I_n=\ker(V^{\otimes n}\to R_{A,n})$、
+$B_A=T_A(V)/(I_2)$ と置く。
+特殊fiberは $R_0=B_0/(G_0)$ で、$B_0$ は14641型Koszul AS4、
+$G_0$ は正則三次元とする。
+このとき、基底の選択後、四つの係数 $o_1,\ldots,o_4\in\mathfrak m_A$ があり、
+\[
+ (B_A)_3\simeq A^{19}\oplus A/(o_1,\ldots,o_4).
+\]
+従って $(B_A)_3$ が $A$-flatであることと、四係数が全て零であることは同値である。
+イデアル $(o_1,\ldots,o_4)$ は基底によらず
+\[
+ \operatorname{Fitt}_0\bigl(I_3/(V I_2+I_2V)\bigr)
+\]
+である。特にこの障害イデアルの形成は、この有限表示の任意の底変更と両立する。
+\end{proposition}
+\begin{proof}
+$V,I_2,I_3$ はそれぞれrank $4,6,45$ の有限自由加群である。
+二次関係挿入写像
+\[
+ d:(V\otimes I_2)\oplus(I_2\otimes V)\longrightarrow I_3
+\]
+は $45\times48$ 行列で表示される。
+特殊fiberで像の次元は $64-\dim(B_0)_3=44$ である。
+従ってある $44\times44$ 小行列式は単元であり、可逆な行・列操作で
+\[
+ d\ \sim\
+ \begin{pmatrix}I_{44}&0\\0&(o_1\ o_2\ o_3\ o_4)\end{pmatrix}
+\]
+とできる。剰余体上のrankが44なので $o_i\in\mathfrak m_A$ である。
+これは $I_3/\operatorname{im}d\simeq A/(o_1,\ldots,o_4)$ とFittingイデアルの式を与える。
+$R_{A,3}\simeq A^{19}$ なので
+\[
+ 0\longrightarrow I_3/\operatorname{im}d\longrightarrow(B_A)_3
+ \longrightarrow R_{A,3}\longrightarrow0
+\]
+は $A$-加群として分裂する。
+最後に、局所Artin環上の有限flat加群は自由であり、
+$A/J$ がflatならその剰余体上のrankは1なので $A/J\simeq A$、従って $J=0$ である。
+逆向きは明らかである。
+\end{proof}
+
+\begin{lemma}[全次数平坦性の後の三次核]\label{lem:flat-envelope-principal}
+上の設定で、さらに $B_A$ が次数別に $A$-flatであると仮定する。
+$g\in\ker(B_A\to R_A)_3$ を $G_0$ の持上げとすると、
+\[
+ \ker(B_A\to R_A)=B_Ag=gB_A
+\]
+であり、$g$ は左右正則正規である。
+従って全次数平坦性が得られた後には、三次核の正則正規主イデアル性を
+別の無限個の方程式として課す必要はない。
+\end{lemma}
+\begin{proof}
+$K_n=\ker((B_A)_n\to R_{A,n})$ と置く。
+両辺が有限自由で右辺への写像は全射なので $K_n$ も有限自由で、底変更に適合する。
+そのrankは $\dim(B_0)_n-\dim(R_0)_n=\dim(B_0)_{n-3}$ である。
+左右の乗法写像
+\[
+ (B_A)_{n-3}\xrightarrow{\ b\mapsto bg\ } K_n,
+ \qquad
+ (B_A)_{n-3}\xrightarrow{\ b\mapsto gb\ } K_n
+\]
+は特殊fiberで $G_0$ の正則性と正規性によって同型である。
+同rank有限自由加群間の写像なので、行列式が単元となり双方とも同型である。
+全次数でこれを適用すれば主張を得る。
+\end{proof}
+
+\begin{remark}[一次の実行済み検証と残る条件]
+三乗根の量子so3点では、$t$ を中央変数とする四生成元の斉次表示を使う。
+基本語を $x^ay^bz^ct^d$ とした六つの二次書換えの三次曖昧語は
+$zyx,tyx,tzx,tzy$ の四つである。
+\texttt{verify\_cubic\_obstruction.py} は、次数1--3の20個の巡回potential方向を斉次化し、
+各方向について四つの一次重なりを $\mathbb Q(q)$、$q^2+q+1=0$ 上で計算する。
+80個全てが零となることを厳密検証した。
+これはこの20方向で三次障害の一次項が零であることを示す。
+全次数平坦性、高次の障害消滅、全intrinsic変形のこの表示による被覆は、
+この有限計算からは結論しない。
+命題\ref{prop:four-cubic-obstructions}と補題\ref{lem:flat-envelope-principal}自体は通常の証明であり、
+有限標本で置き換えていない。
+\end{remark}

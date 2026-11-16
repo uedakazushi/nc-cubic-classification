@@ -1342,16 +1342,21 @@ L0の非鏡領域はrho²+1=0ならs0なので排除済み。それ以外ではL
 
 次は非鏡L0（a,s,t,delta_plus,delta_minus非零）。rho²+1=0ならLがrho²(rho−1)s²の定数倍でs0に入り既に排除。D=rho²+1−(rho²−1)z², Q=rho²+1−2(rho²+1)z+(rho²−1)z², H=Q+4zとして、t=(rho²−1)Q/(2D), s=i(rho+1)(rho²+1)H/(2rho D)という二param表示を次に厳密検証する。逆z=[2i*rho*s+(rho+1)(rho²+1)]/[(rho+1)(2t+rho²−1)]。a=(rho²−1)²*(Q²−2D²)/(4rho²D²)、delta_plus=2(rho²−1)(rho²+1)(1−z)/D、delta_minus=−2(rho²−1)z*((rho²−1)z−(rho²+1))/Dが候補恒等式。検証前に全被覆として使用しない。
 
-## 最後のL開集合の有理被覆と加群問題（classification-v200）
+## 両top非零の完全排除とmixed rank4領域の認識（classification-v202）
 
-最後のL0非鏡開集合を漏れなく有理二paramで表示し、正則な逆写像と全分母条件を厳密検証。p=rho²−1,c=rho²+1,D=c−p*z²,Q=c−2c*z+p*z²,H=Q+4z,F=p*z−c,A=Q²−2D²、U=rho*p*c*D*z*(z−1)*F*A*Q*H。t=pQ/(2D),s=i(rho+1)cH/(2rhoD),a=p²A/(4rho²D²)。この表示だけでH3排除は主張しない。公開入力だけから正常行加群の飽和問題を再生成するportable builderを保存。最終飽和判定は未完。全CY/三固有値以上/成分/相対降下も未完。
+(2,2)/mixed rank4の全H3は、全Jordan型込みで既分類の曲がったClifford族B_hに一致する。新しく閉じたのはP,Qとも非零の最後のL0非鏡開集合であり、ここでは正常三次核が零。P0は既知符号族、Q0はB_h、符号族はh0部分族。全切断のadmissibility、全幾何学的矢、一般dim5/慣性mu2は既存の曲がったClifford定理を使う。他スペクトル・全CY被覆・全成分・intrinsic相対降下は未完成。
 
-証明cubic_order2_22_secant_L_parameter.tex。inverse z=[2i*rho*s+(rho+1)(rho²+1)]/[(rho+1)delta_plus]。v=(rho+1)(t−1)−i*rho*sについてL modv=(rho+1)*delta_plus²、D(inverse)=4pcv/[(rho+1)delta_plus²] modLなので、v,Dの単元性と全非鏡残余の被覆を保証する。rho²+1=0のLはs0へ帰着する。全有理恒等式は公開checker実行済み。
+証明は `papers/sections/cubic_order2_22_secant_L_complete.tex`。前節までの全排除と主chart逆行列により両top非零全候補がL非鏡開集合へ帰着していることを使用する。最後の底はp=rho²−1,c=rho²+1,D=c−p*z²,Q=c−2c*z+p*z²,H=Q+4z,F=p*z−c,A=Q²−2D²、U=rho*p*c*D*z*(z−1)*F*A*Q*H。t=pQ/(2D),s=i(rho+1)cH/(2rhoD),a=p²A/(4rho²D²)。正則逆写像と分母の全値被覆は `verify_cubic_order2_22_secant_L_parameter.py` により検証済み。
 
-再開用計算：`PYTHONPATH=<python-flint installation> python computations/build_cubic_order2_22_secant_L_module.py --output /tmp/L.sing --method direct`、続けて`Singular -q /tmp/L.sing`。presentation法は`--method presentation`。生成器は公開29汎関数の全288元関係を検証してから、param代入の分母をrowごとに明示的単元で払い、U因子だけを除く。出力は約5.3MBだがGitには追跡せず再生成する。portable生成実行済み、生成行のR3*N=0もSingularで確認。
+公開29四次汎関数の各288元関係annihilator恒等式を検証し、正三次32自由語に対する24×32関係行列R3と32×44正常行Nを作る。QQ(i)[rho,z]上のkernelは15生成元から非零定数を持つ5関係で自由rank10のEへ縮約され、syz(E)=0。座標Tは全て多項式で、全32×44成分のET=Nを厳密確認。TのU単元因子だけを行・列から除き、単元pivot10回で行が零本となる。非定数pivotは定数/iを除きrho,D,Qだけ。各Gaussian normの単元因子分解も再検証する。従って正常行加群は全kernelに等しい。AS4点で正三次次元10、R3rank22が最大なのでkernelの底変更が成立し、正常三次は零。
 
-未完計算の正確な状態：局所化商環内の直接syzと大きいambientでのquotient/liftは重かったため中断。QQ(i)[rho,z]上のpolynomial kernelの15生成元・5関係から、関係に現れる非零定数（係数体の単元）を使って冗長生成元を順に除去した。10生成元となり、そのsyzが零であることをSingular 4.4.1で確認した。従ってこの**多項式環上の核は自由rank10**。`--method free`はこの確認と、32×10の核E、32×44の正常行NのASCII exportまで実行する。Singularのalgebraic minpolyのdump不具合を避け、文字列形式で係数体を保持する。公開builderからの再生成とexportを実行済み。
+再生手順（SymPy、python-flint、Singularが必要。生成する巨大入力/pickleはGitへ追跡しない）：
+```sh
+python computations/build_cubic_order2_22_secant_L_module.py --output /tmp/L.sing --method free
+Singular -q /tmp/L.sing
+python computations/solve_cubic_order2_22_secant_L_coordinates.py --prefix /tmp/L.sing
+python computations/verify_cubic_order2_22_secant_L_saturation.py --prefix /tmp/L.sing --certificate /tmp/L-certificate.json
+```
+全三段階を公開コードから実行してPASS。小証明書は `computations/cubic_order2_22_secant_L_saturation_certificate.json`。ASCII exportはSingular 4.4.1のalgebraic minpoly dump不具合を避ける。旧direct/presentationの巨大Ann/lift計算は証明に不要。B0追加汎関数も不要となった。
 
-`python computations/solve_cubic_order2_22_secant_L_coordinates.py --prefix /tmp/L.sing`は、free法の二つのexportからQQ(i)(rho,z)で座標を解き、座標Tが全て多項式であることと**全32×44成分のET=N**を厳密検証する。途中pivotは再開資料として保存する。私的先行実行と公開版の独立再生成で、いずれも全恒等式PASS。これはN⊂Kを具体化し商を10次元ambientに移す計算であり、逆包含やH3排除の証明ではない。生成される巨大な座標入力・pickleはGitに追跡しない。AnnのU飽和の単位性は未証明。次はTの行列に対しUの単元因子を除去し、単元pivotで縮約してから小さい余核の飽和を判定する。有限三点でTのrank10を確認したが、これは全底でのrank証明ではない。
-
-必要ならB=(rho−1)s²+(rho+1)t²=0のbasis artifactを埋める。各既存四次商chartで全35汎関数の共通分母にB因子が現れるため、このcurveで制約が不足する可能性がある。rho=3/5,s2,t1（B0）のpointでB4dim35を確認し、そのpointでpivotが非零となる新Markowitz chartをprivateに生成、全元annihilator/B4dim35まで保存済み。選択正常10rowsは[26,61,24,19,8,9,6,21,55,59]、対応quartic functional idsは{6,8,9,19,20,21,24,26}。未公表でありこれを排除証明として使わない。
+次の最優先は共有方針の量子三次成分における全Artin底の相対二次包絡。一般H3分類では三固有値以上とCY残余の被覆も未完成である。

@@ -2083,7 +2083,7 @@
     "scope": "最後のL0非鏡開集合を漏れなく有理二paramで表示し、正則な逆写像と全分母条件を厳密検証。p=rho²−1,c=rho²+1,D=c−p*z²,Q=c−2c*z+p*z²,H=Q+4z,F=p*z−c,A=Q²−2D²、U=rho*p*c*D*z*(z−1)*F*A*Q*H。t=pQ/(2D),s=i(rho+1)cH/(2rhoD),a=p²A/(4rho²D²)。この表示だけでH3排除は主張しない。公開入力だけから正常行加群の飽和問題を再生成するportable builderを保存。最終飽和判定は未完。全CY/三固有値以上/成分/相対降下も未完。"
   },
   "order2_22_secant_L_free_kernel_v201": {
-    "status": "free kernel and ASCII export reproduced; saturation unfinished",
+    "status": "PASS; followed by completed localized unit elimination in v202",
     "builder": "computations/build_cubic_order2_22_secant_L_module.py --method free",
     "coordinate_solver": "computations/solve_cubic_order2_22_secant_L_coordinates.py",
     "arithmetic": "computations/cubic_gaussian_rational_function.py",
@@ -2098,6 +2098,23 @@
       "localized module equality",
       "entire L-open exclusion",
       "complete H3 classification"
+    ]
+  },
+  "order2_22_secant_L_saturation_v202": {
+    "status": "PASS: public exact replay complete",
+    "validator": "computations/verify_cubic_order2_22_secant_L_saturation.py",
+    "certificate": "computations/cubic_order2_22_secant_L_saturation_certificate.json",
+    "proof": "papers/sections/cubic_order2_22_secant_L_complete.tex",
+    "checks": [
+      "public free kernel E rank10, syz(E)=0",
+      "all coordinates polynomial; full E*T=N identity",
+      "10 localized unit pivots; zero remaining rows",
+      "all pivot Gaussian norms factor into U units"
+    ],
+    "conclusion": "both-top-nonzero mixed4 (2,2) H3 empty; entire mixed4 (2,2) recognized as curved Clifford using prior Pzero/Qzero results",
+    "not_claimed": [
+      "global H3 classification",
+      "all components or intrinsic family descent"
     ]
   }
 }

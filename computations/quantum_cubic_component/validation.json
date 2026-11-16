@@ -1,10 +1,10 @@
 {
   "date": "2026-11-17",
-  "version": "triangle-component-v3",
+  "version": "triangle-component-v4",
   "status": "PASS",
-  "python": "3.13.5",
+  "python": "3.12.14",
   "sympy": "1.14.0",
-  "networkx": "3.6.1",
+  "networkx": "3.7",
   "completed": [
     {
       "script": "verify_envelope_family.py",
@@ -24,6 +24,10 @@
     },
     {
       "script": "verify_integrated_lift.py",
+      "status": "PASS"
+    },
+    {
+      "script": "verify_cubic_obstruction.py",
       "status": "PASS"
     }
   ],

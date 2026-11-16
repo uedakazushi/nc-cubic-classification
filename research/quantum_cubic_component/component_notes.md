@@ -130,3 +130,10 @@ I2の六基底とI3の三次生成元を持ち上げ、各次数のI_n/J_nへNak
 残る障害：この証明は二次包絡B_Aのflat性・AS4性を含まない。
 三次関係の両側イデアル生成と正則正規な左右主イデアル生成を区別する。
 主張の状態を強めるには三次syzygyと高次Koszul複体の持上げを実証する必要がある。
+
+
+## 9. 二次包絡の四係数障害と平坦性後の正規性
+
+`papers/sections/quantum_cubic_quadratic_obstruction.tex` に通常の証明を置く。R_A flatならI2rank6,I3rank45。六二次関係の左右挿入45×48行列は特殊fiberでrank44なので単元44minorがあり、Schur補行は1×4の(o1,o2,o3,o4)。従ってB_A,3 = A^19 ⊕ A/(o_i)、三次flat性は四係数零と同値。障害idealはFitt0(I3/(VI2+I2V))なので基底非依存・底変更に適合する。全次数flat性を別途仮定すると、B_A→R_Aの核の各次数は自由でrank B0,n−3、G0の持上げによる左右乗法は特殊fiberで同型、従って全次数で同型。三次核は自動的に左右正則正規主イデアルとなる。
+
+量子so3点の四変数斉次表示の曖昧語zyx,tyx,tzx,tzyについて、20巡回potential方向それぞれの一次overlapをQ(q),q²+q+1=0上で全80件計算し零を確認した。`verify_cubic_obstruction.py` と小証明書に再生。これは指定方向での三次障害の一次項の消滅であり、全intrinsic変形、高次障害、全次数flat性をこの有限検算だけから結論しない。成分研究の次の核心は、この四係数の全Artin底での消滅と高次Koszul認識である。
