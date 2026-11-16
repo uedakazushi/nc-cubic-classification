@@ -1,0 +1,28 @@
+{
+  "source": "known Clifford swap h,b,c; h!=0,h\u00b3!=-1,8",
+  "cover": [
+    "k=h\u00b3,r\u00b2=k+1",
+    "a=(k\u00b2+20k-8)/(4r\u00b3)",
+    "d=h(k-8)(b(k-2)-3ch)/(4r\u00b3)",
+    "i=h(k-8)(2b-ch)/(4r\u00b2)"
+  ],
+  "coordinate_change": [
+    "p_old=R*p, R\u00b2=16r\u00b3/[h\u00b2(k-8)\u00b2]",
+    "U_old=4r*v/[h(k-8)]+2(k-2)y/[h(k-8)]",
+    "X_old=(U_old+p_old)/2,Y_old=(U_old-p_old)/2,Z_old=y-h*U_old/2,t=x"
+  ],
+  "six_source_relations_checked": 6,
+  "discriminant_identity": "a\u00b2-4=k(k-8)\u00b3/[16(k+1)\u00b3]",
+  "cover_surjectivity": "The quartic in k has no roots k=0,8,-1 when a\u00b2!=4; the (b,c)->(d,i) matrix is invertible on this cover.",
+  "relative_cover": "r^4-4*a*r^3+18*r\u00b2-27=0 has discriminant -5038848*(a\u00b2-4)\u00b2, a finite etale cover on the stated open; h\u00b3=r\u00b2-1 and R\u00b2 are then unit-root etale covers.",
+  "character_CI": [
+    "p*y=0",
+    "p\u00b2+a*y\u00b2+2*y*v+d*x\u00b2=0",
+    "v\u00b2-y\u00b2-i*x\u00b2=0"
+  ],
+  "character_reduced_criterion": "d*i*(a\u00b2-4)*(d\u00b2-a*d*i+i\u00b2)!=0",
+  "old_new_bad_discriminants": "d*i*(d\u00b2-a*d*i+i\u00b2)=-h^6*(k-8)^6*Delta_h(b,c)/(1024*r^13)",
+  "H3_criterion": "(a\u00b2-4)*d*i*(d\u00b2-a*d*i+i\u00b2)!=0, using the nodal obstruction and the known Clifford-swap H3 criterion",
+  "geometric_arrow_action": "(lambda,zeta) in Gm x mu4: (a,d,i)->(zeta\u00b2*a,zeta\u00b2*lambda\u00b2*d,lambda\u00b2*i)",
+  "scope": "Six defining relations, covering identities, character discriminants and action covariance checked exactly. Geometric surjectivity, H3 recognition and completeness of arrows are structural proofs in the manuscript."
+}

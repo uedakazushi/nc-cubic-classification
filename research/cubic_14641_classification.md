@@ -608,4 +608,20 @@ Y=y²の開集合A=(D[Y^-1])0ではr=xy^-1,s=py^-1,b=vy^-1−u/2,u=L/Y。rs=−s
 
 a=±2ではF(0,0)0。中央(z,h)完備化は特殊fiberがr²=s²=b²0の局所有限代数（radical四乗零）、唯一の単純k。一次関係がなくExt1(k,k)3。対応点x=p0,y1,v−a/2はシフト固定。有限中央orderの点Ext局所大域比較と完備化でExt_Ahat=Ext_qgrD、H3ならExt2self1,高次0。完備局所代数の最小自由解消はrank(1,3,1)となるが、Frac k[[z,h]]上ではAhat次元8、k消滅なのでEuler8(1−3+1)−8が矛盾。非可換Jacobianや奇数Ext1の未証明一般原理には依存しない。verify_cubic_order2_nodal_axis_obstruction.pyで全PBW/逆代入、節点の全係数接空間、特殊fiber四乗零、top符号を厳密検算PASS。
 
-次の具体的着手（未完）：a²!=4を既知Clifford swapへ明示座標対応し許容条件を全判定する。導出中の式：k=h_Hesse³、r²=k+1とするとa=(k²+20k−8)/(4r³)、a²−4=k(k−8)³/(16(k+1)³)。source h_Hesse,b,cからd=h_Hesse(k−8)[b(k−2)−3c h_Hesse]/(4r³)、i=h_Hesse(k−8)(2b−c h_Hesse)/(4r²)となる見込み。六関係への正確な代入とCI被約条件をまだ新検証器で確認していないので、これらの式を十分性定理としては未使用。projective character CIの直接式はpy=0,p²+a y²+2yv+d x²=0,v²−y²−i x²=0である。
+a²!=4の既知Clifford swapへの座標対応と許容判定は、下記v114で六関係・判別式の完全恒等式として検証済み。nodal排除はその被覆外のa=±2を補完する独立な局所証明である。
+
+## 正規共通量子座標領域の完全H3判定・全矢（classification-v114）
+
+この追加仮定付き領域の全H3対象は、正常形xp/xy/xv反可換,py=yp,v²=y²+i x²,p²=a y²+{y,v}+d x²、G=[py,v]、U={(a²−4)di(d²−adi+i²)!=0}で被覆される。原稿thm:h3-order2-normal-axis-complete-admissibility。全H3被覆ではなく、正規共通量子座標を持つ領域の完全必要十分条件である。
+
+明示Clifford cover：k=h³,r²=k+1、a=(k²+20k−8)/(4r³)、d=h(k−8)[b(k−2)−3ch]/(4r³)、i=h(k−8)(2b−ch)/(4r²)。p_old=R*p,R²=16r³/[h²(k−8)²]、U_old=4r*v/[h(k−8)]+2(k−2)y/[h(k−8)]、X_old=(U_old+p_old)/2,Y_old=(U_old−p_old)/2,Z_old=y−hU_old/2,t=x。既知Clifford swap六関係に完全代入し零を検証。a²−4=k(k−8)³/[16(k+1)³]、a²!=4の全点でquartic coverの根はk0,8,−1を避け、b,c->d,i行列は可逆。従って既存thm:normal-order2-clifford-cutsの仮定h非0,h³非−1,8を漏れなく満たす。
+
+中央cocycleも保つ座標変換なのでcharacter CIはpy0,p²+a y²+2yv+d x²0,v²−y²−i x²0へ移る。di0はJacobian退化。di非0ではy0枝が4点、p0枝はy1でa+2u+dz²0,u²−1−iz²0。消去二次Q=du²+2iu+ai−dの判別式4(d²−adi+i²)、z0はa²4だけ。よってreduced iffdi(d²−adi+i²)非0。既存四次判別との直接式di(d²−adi+i²)=−h6(k−8)6*Delta_h(b,c)/(1024r13)も検証し、適用範囲を二重確認した。これは可換character CIのJacobian計算であって一般NC Jacobian原理ではない。
+
+全矢：共通次数スカラーを除き(lambda,zeta)∈Gm×mu4が(a,d,i)->(zeta²a,zeta²lambda²d,lambda²i)で作用。生成元x->lambda x',p->zeta p',y->y',v->zeta²v'。mu正直線p、共通W、fの異なる固有直線x/y、theta_xの固有空間から全矢は対角＋vへのy平行移動に限る。v²の独立な{y,v}係数が移動を零にし、平方比較で全矢が尽くされる。di非0により全点でlambda²=zeta²1、一様慣性mu2²（従来genericの主張をこの正常形で強化）。原稿thm:h3-order2-normal-axis-full-arrows。
+
+粗空間はrho=ai/d,sigma=(d/i)²、sigma非0,(rho²sigma−4)(1+(1−rho)sigma)非0という滑らかな既約2次元開曲面。表示族のrigidified stack[U/(Gm×mu4)]はこの粗空間上mu2²-gerbe。中立とは主張しない。単位minorと符号固有直和により全係数矢は非被約底にも適合し、表示族の許容主開条件・fpqc降下を得る。一般intrinsic Abel圏族との同一視や全モジュライの成分性は未解決のまま。
+
+verify_cubic_order2_normal_axis_admissibility.pyは六元関係、cover、正規化行列det、旧新四次判別式、全character消去、矢共変式と粗座標を標数零で独立検算PASS。H3十分性は既存Clifford定理への厳密還元、nodal全排除はv113局所構造証明、全矢は本文の自然性/係数比較に依存する。
+
+次の具体的着手：重複度(1,3)の残りrank2についてcross一本の両射影を解析し、共通量子平面の正規座標が存在する条件をKoszul最高tensorから導く。正規座標存在を一般に仮定してはいけない。量子q−1以外の非正規cross、可換/Jordan共通平面をまず区別し、Clifford以外のH3候補又は排除を得る。正三次元側・2+2・三/四中山固有値、CY全被覆・非捩れqso3・大域成分/相対降下も未解決。

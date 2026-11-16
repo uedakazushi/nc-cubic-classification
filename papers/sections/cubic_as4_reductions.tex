@@ -1889,6 +1889,152 @@ $\dim_K(\widehat A\otimes K)=8$ なのでEuler次元は
 はchartの全PBW overlapと逆代入、節点値の接空間・特殊fiberの冪零性を厳密再生する。
 有限次数の検算で無限射影次元を推測せず、Serre双対と最小解消の階数矛盾を用いた。
 
+\begin{theorem}[正規共通量子座標領域の全H3判定]
+\label{thm:h3-order2-normal-axis-complete-admissibility}
+正常形\eqref{eq:h3-normal-axis-three-parameter}の三次商 $R=B/([py,v])$ がH3となる
+必要十分条件は
+\begin{equation}\label{eq:h3-normal-axis-admissible-open}
+ (a^2-4)di\bigl(d^2-adi+i^2\bigr)\ne0.
+\end{equation}
+従って、重複度 $(1,3)$ で共通非可換量子平面の座標一つが包絡全体で正規となるH3対象は、
+この主開集合 $\mathcal U$ で漏れなく被覆される。
+追加の正規座標仮定を持たないH3の被覆はこの定理に含めない。
+\end{theorem}
+\begin{proof}
+前定理により $a=\pm2$ は全て非H3なので、$a^2\ne4$ とする。
+この領域の全正常形を、定理\ref{thm:normal-order2-clifford-cuts}の既知Clifford swapへ
+明示的に移す。そちらの係数を $h,b_0,c_0$ とし、$k=h^3$、$r^2=k+1$ と置くと
+\begin{align*}
+ a&=\frac{k^2+20k-8}{4r^3},\\
+ d&=\frac{h(k-8)}{4r^3}\bigl(b_0(k-2)-3c_0h\bigr),\\
+ i&=\frac{h(k-8)}{4r^2}(2b_0-c_0h).
+\end{align*}
+実際 $R_0^2=16r^3/(h^2(k-8)^2)$ を選び、旧生成元を
+\[
+ P_0=R_0p,\qquad U_0=\frac{4r}{h(k-8)}v+\frac{2(k-2)}{h(k-8)}y,
+\]
+\[
+ X_0=(U_0+P_0)/2,\quad Y_0=(U_0-P_0)/2,\quad
+ Z_0=y-hU_0/2,\quad t=x
+\]
+とすると、既知の六つのClifford swap関係を全て満たす。
+この線型変換は可逆であり、両辺のHilbert級数が $(1-t)^{-4}$ なので包絡の同型となる。
+正常三次もそれぞれの一意の核を張るため、その商も同型である。
+
+この表示は全ての $a^2\ne4$ を覆う。実際
+\[
+ (k^2+20k-8)^2-16a^2(k+1)^3=0
+\]
+は $k$ のモニック四次方程式であり、$k=0,8,-1$ は $a^2\ne4$ の下で根にならない。
+任意の根から $h^3=k$、$r^2=k+1$ を取り、$r$ の符号で上の $a$ の符号を合わせればよい。
+恒等式
+\[
+ a^2-4=\frac{k(k-8)^3}{16(k+1)^3}
+\]
+も成り立つ。さらに $(b_0,c_0)\mapsto(d,i)$ の係数行列の行列式は
+\[
+ \left(\frac{h(k-8)}{4r^3}\right)^2hr(8-k)\ne0
+\]
+なので、全ての $d,i$ が得られる。
+従って $h\ne0,h^3\ne-1,8$ という既知定理の仮定を全て満たす。
+相対的にも、$k=r^2-1$ を代入したモニック四次
+\[
+ r^4-4ar^3+18r^2-27=0
+\]
+の判別式は $-5038848(a^2-4)^2$ なので、この開集合上で有限\'{e}tale被覆を与える。
+その上で $h,R_0$ の単元の根を取ることも有限\'{e}taleである。
+
+この変換は $p$ 偶奇と $x$ 偶奇を保つため、中央化したClifford環の間にも同じ変換を与える。
+既知定理のcharacter完全交叉は、$x=1$ における
+\[
+ py=0,\quad p^2+a y^2+2yv+d=0,\quad v^2-y^2-i=0
+\]
+へ移る。これは全パラメータで長さ8であり、その被約性を判定すればよい。
+$d=0$ なら $p=y=0$ の点で第一式の全微分が零、
+$i=0$ なら $y=v=0$ の点で第三式の全微分が零となるため、被約でない。
+$di\ne0$ なら、$y=0$ の枝は $p^2=-d,v^2=i$ の相異なる四点である。
+他の $p=0$ の枝は $y\ne0$ なので、射影比 $u=v/y$, $z=x/y$ を取ると
+\[
+ a+2u+dz^2=0,\quad u^2-1-iz^2=0.
+\]
+消去した二次式は $du^2+2iu+ai-d$ で、その判別式は
+$4(d^2-adi+i^2)$。
+$z=0$ は $a^2=4$ を強制するので、今の領域では起こらない。
+従って残る四点の被約性は正確に $d^2-adi+i^2\ne0$ である。
+ここで用いたJacobianは通常の可換character完全交叉の判定であり、
+非可換環に一般のJacobian十分条件を仮定していない。
+既知Clifford判定により、これがH3必要十分条件となる。
+既存の四次判別式 $\Delta_h(b_0,c_0)$ との直接の恒等式も
+\[
+ di(d^2-adi+i^2)
+ =-\frac{h^6(k-8)^6}{1024r^{13}}\,\Delta_h(b_0,c_0)
+\]
+であり、この被覆上で全ての比例係数は単元である。
+\end{proof}
+
+\begin{theorem}[正常形の全幾何学的矢と一様慣性]
+\label{thm:h3-order2-normal-axis-full-arrows}
+$\mathcal U$ の全intrinsic pointed矢は、共通次数スカラーを除くと
+$(\lambda,\zeta)\in\mathbb G_m\times\mu_4$ による
+\[
+ (a,d,i)\longmapsto(\zeta^2a,\zeta^2\lambda^2d,\lambda^2i)
+\]
+で尽くされる。対応する生成元写像は
+\[
+ x\mapsto\lambda x',\quad p\mapsto\zeta p',\quad
+ y\mapsto y',\quad v\mapsto\zeta^2v'.
+\]
+全ての幾何学的点の慣性は $\mu_2\times\mu_2$ である。
+粗モジュライの明示座標を
+\[
+ \rho=ai/d,\qquad\sigma=(d/i)^2
+\]
+とすると、粗空間は滑らかな既約二次元曲面
+\[
+ \left\{(\rho,\sigma)\in\mathbb A^1\times\mathbb G_m:
+ (\rho^2\sigma-4)\bigl(1+(1-\rho)\sigma\bigr)\ne0\right\}
+\]
+である。これは全intrinsicモジュライでの成分性を意味しない。
+\end{theorem}
+\begin{proof}
+反標準環と二次包絡の関手的復元により、全矢は包絡のgraded同型へ持ち上がる。
+中山正直線 $kp$ と共通二平面 $W$ は自然であり、$f$ の異なる二固有直線が $kx,ky$ を区別する。
+$x$ の正規化は $W$ と残る負空間を区別するため、一般の矢は
+\[
+ x\mapsto r x',\quad p\mapsto s p',\quad y\mapsto t y',\quad
+ v\mapsto u v'+w y'
+\]
+に限る。平方 $v^2=y^2+i x^2$ の像の $y'v'+v'y'$ 係数から $uw=0$、従って $w=0$。
+残る平方係数の比較は
+\[
+ u^2=t^2,\quad s^2=tu,\quad
+ s^2a'=at^2,\quad s^2d'=dr^2,\quad u^2i'=ir^2.
+\]
+共通の $t$ を除き $\lambda=r/t$, $\zeta=s/t$ とすれば、
+$u/t=\zeta^2$, $\zeta^4=1$ となって表示した全矢を得る。
+逆にこれらは全六関係と一意の三次核を保つ。
+$di\ne0$ なので安定化条件は $\lambda^2=\zeta^2=1$ に限り、慣性は全点で同じである。
+
+$i$ を相対スケールで除き $\kappa=d/i\ne0$ とすると、残る有効作用は
+$(a,\kappa)\mapsto(-a,-\kappa)$。
+その不変式環は $k[\rho,\sigma,\sigma^{-1}]$ であり、
+許容条件は表示した二因子の非消滅へ移る。
+\end{proof}
+有限局所自由なこの表示族については、同じ係数比較が非被約底を含む任意の基底上でも成り立つ。
+実際、$\mu_B,f,\theta_x$ の符号固有直和は自然で、二次係数の独立性にはClifford基底によるunit minorがある。
+従って $uw=0$ からの $w=0$ もnilpotentな追加矢を残さない。
+この表示族を次数スカラーでrigidifyした商stackは
+\[
+ [\mathcal U/(\mathbb G_m\times\mu_4)]
+\]
+であり、上の粗曲面上の $\mu_2^2$-gerbeとなる。
+許容条件は主開条件なので任意底変更・fpqc降下に適合する。
+ここでのstackはこの表示にfppf局所的に属するgraded代数族のものであり、
+一般のintrinsic Abel圏族の認識・効果的降下を解決したとはしない。
+
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}order2\_\allowbreak{}normal\_\allowbreak{}axis\_\allowbreak{}admissibility.py}
+は既知包絡の六関係への完全代入、被覆と係数行列式、character判別式と矢の共変式を厳密検証する。
+
 \begin{lemma}[単冪twist下の反標準三次関係の輸送]
 \label{lem:h3-unipotent-transport}
 $C$は左右noetherian quadratic Koszul AS4型14641で，$\mu_C$は半単純とする．

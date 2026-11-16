@@ -1192,5 +1192,18 @@
     "certificate": "computations/cubic_order2_nodal_axis_obstruction_certificate.json",
     "result": "The normal-axis necessary family has no H3 objects at a=2 or a=-2 for any d,i. The shift-fixed point has a rank-eight central-finite completed local algebra with Ext1=3, contradicting the ranks (1,3,1) forced by finite homological dimension and Serre duality.",
     "scope_limit": "The remaining a²!=4 admissibility and all intrinsic arrows are not yet proved here. No general noncommutative Jacobian criterion is asserted."
+  },
+  "order2_normal_axis_complete_sector_v114": {
+    "status": "complete object/admissibility and geometric-arrow theorem for the additional normal-common-quantum-coordinate sector; exact identities executed",
+    "validator": "computations/verify_cubic_order2_normal_axis_admissibility.py",
+    "certificate": "computations/cubic_order2_normal_axis_admissibility_certificate.json",
+    "result": "H3 iff (a²-4)*d*i*(d²-a*d*i+i²)!=0. Explicit six-relation cover by known Clifford swap proves sufficiency; the nodal local obstruction completes necessity. All projective graded/intrinsic geometric arrows are Gm x mu4 with the stated action; inertia is mu2² at every point and the coarse moduli surface is an explicit smooth irreducible open surface.",
+    "dependencies": [
+      "normal-form theorem v112",
+      "nodal local Serre obstruction v113",
+      "existing normal-order2 Clifford H3 recognition and character criterion",
+      "functorial intrinsic reconstruction of the quadratic envelope"
+    ],
+    "scope_limit": "This completes only the additional normal-common-quantum-coordinate sector. Non-normal-axis, commutative/Jordan and other spectral sectors, global componenthood and recognition/descent of arbitrary intrinsic category families remain incomplete."
   }
 }
