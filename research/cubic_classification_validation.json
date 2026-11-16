@@ -2056,5 +2056,13 @@
     "certificate": "computations/cubic_order2_22_secant_coordinate_planes_certificate.json",
     "proof": "papers/sections/cubic_order2_22_secant_coordinate_planes.tex",
     "scope": "非退化secant正Pf/q1主chartの座標曲面s0,t0を全値排除。元288四次関係を消す追加多項式汎関数と正三次関係24×32行列から、局所化係数環でK=kerT3/正常行加群Fを比較。t0はK=F、s0は(t+1)K及び(rho²+1)KがFに所属。AS4最大rank開集合で核の底変更を使い正常核零。残るs0,t−1,rho±iは元関係でB4dim36、非AS4。未知は鏡共鳴rho²−2t−1=0とL0の二曲面だけ（a非零/真共鳴外）。全CY/三固有値以上/成分/相対降下は未完。"
+  },
+  "order2_22_secant_mirror_support_v198": {
+    "status": "PASS localized module inclusion, complete Bm rational-curve annihilators and normal minor, exact Jm/L identities; no independent peer review",
+    "validator": "computations/verify_cubic_order2_22_secant_mirror_support.py",
+    "input": "computations/cubic_order2_22_secant_mirror_B_input.json",
+    "certificate": "computations/cubic_order2_22_secant_mirror_support_certificate.json",
+    "proof": "papers/sections/cubic_order2_22_secant_mirror_support.tex",
+    "scope": "鏡共鳴t=(rho²−1)/2でBm*Jm*K⊂正常行加群Fを局所化加群として検証。Bm=4s²+(rho−1)(rho+1)³は全有理param rho=(1−w²)/(1+w²),s=2w/(1+w²)²で覆い、正常10minorが単元以外にw4−w²+1だけを零点に持つ。その残余はJm=16(w4−w²+1)/(1+w²)^4=0なので、鏡共鳴の全候補はJm0へ。L|mirror=(rho−1)Jm/2により、両top非零mixed4(2,2)の全未解決候補が一曲面L0へ縮んだ。全CY/三固有値以上/成分/相対降下は未完。"
   }
 }

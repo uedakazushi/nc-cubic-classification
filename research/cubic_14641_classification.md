@@ -1323,3 +1323,13 @@ canonical負topQ0の(2,2)/mixed rank4全H3を、全Jordan型込みで曲がっ�
 再現にはSymPyとSingular。SINGULAR_BINで実行体を指定可。今回の環境は/workspace/work/cas/root/usr/bin/Singular、LD_LIBRARY_PATH=/workspace/work/cas/root/usr/lib/x86_64-linux-gnu、SINGULAR_PROCS_DIR=/workspace/work/cas/root/usr/lib/x86_64-linux-gnu/singular/MOD。native polynomial procedureの設定により既存CASを利用し、追加installはしていない。
 
 次の着手：鏡共鳴t=(r²−1)/2の既存29汎関数module計算ではAnn(K/F)のパラメータ支持はP10=Bm4*J6、Bm4=4s²+(r−1)(r+1)³、J6=4r²s²+(r+1)²(r²+1)²の二曲線へ縮む（私的計算、未公表の全所属certificate）。全35商汎関数をoriginal/t0/ls0三chartからprimitive多項式化したprivate JSONを生成済みで、追加による曲線support除去を調べる。最後のL0は二次曲面表示とmodule飽和で扱う。全35入力は大きいため最終証明に必要な生成元を選ぶ。現在の公開追加入力は21汎関数、全元関係を検証する。
+
+## 鏡共鳴の縮小と唯一の残余L曲面（classification-v198）
+
+鏡共鳴t=(rho²−1)/2でBm*Jm*K⊂正常行加群Fを局所化加群として検証。Bm=4s²+(rho−1)(rho+1)³は全有理param rho=(1−w²)/(1+w²),s=2w/(1+w²)²で覆い、正常10minorが単元以外にw4−w²+1だけを零点に持つ。その残余はJm=16(w4−w²+1)/(1+w²)^4=0なので、鏡共鳴の全候補はJm0へ。L|mirror=(rho−1)Jm/2により、両top非零mixed4(2,2)の全未解決候補が一曲面L0へ縮んだ。全CY/三固有値以上/成分/相対降下は未完。
+
+証明cubic_order2_22_secant_mirror_support.tex。K=kerT3のsyzygyと正常行Fで(Bm*Jm)K⊂Fを直接Singularで検証し、Annの巨大な標準基底を再現する必要をなくした。Bm曲線の有理paramは逆w=2s/(rho+1)²、w(w²−1)(w²+1)非零。私的nativeFLINT一変数四次消去でB4dim35/全元annihilatorを得て、必要な多項式汎関数だけを小JSONへ保持。公開checkerはその全288恒等式とnormal10minorの全根因子をQQ[w]で再生する。残余w4−w²1=0は3rho²+1=0でありJm曲線との交点なので、独立に排除済みとは扱わずJmへ含める。
+
+次の具体着手：Jmの二枝はs=±i(rho+1)(rho²+1)/(2rho), t=(rho²−1)/2。rho(rho²−1)(rho²+1)非零、rho²+1=0は既存s0排除へ。rho2,s15i/4,t3/2の元関係再消去ではB3dim20/B4dim35、正常rank9で真に正常核一本が残る。正一次因子の条件は(3theta+4i)^3=0、従ってこの点はx−4i*y/3を因子に持つ。この点からの推測beta=−2i*rho/(rho+1)は、native Gaussian有理関数体上でNL(beta)のkernelが零となり一般式として棄却した。次はthetaの6minor gcdをQQ(i)(rho)[theta]で計算し、正しい因子条件を導く。交点3rho²+1=0のrho=i/sqrt3,s=(sqrt3+i)/3,t−2/3もfresh四次商35/normalrank9を得た。正常核の全curve coverと実際のQ2を次に構成する。
+
+L0の非鏡領域はrho²+1=0ならs0なので排除済み。それ以外ではL上の真共鳴有理点t0=(1−rho²)/2,s0=i(rho+1)(rho²+1)/(2rho)から傾きk=(s−s0)/(t−t0)で有理paramを作れる。D=rho²(rho−1)k²+(rho+1)(rho²+1), E=(rho+1)−i*rho*k, Q=−D+2(rho²+1)E、t=(rho²−1)Q/(2D), s=s0+k*(rho²−1)(rho²+1)*E/D。非共鳴ではE,D非零で覆える見込み（全恒等式・被覆は未公表、検証してから使う）。元のLgeneric点rho3,s10i/3,t1はB3dim20/B4dim35/normalrank10で、L全体を正常核非零と推論しない。

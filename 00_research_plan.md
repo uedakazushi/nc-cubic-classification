@@ -42,7 +42,7 @@ Rains・VdB・AS・anticanonical heartの一般次数比較は [nc-dp-surface-he
 
 **全体的なスペクトル制約（classification-v186）**：全(1,3)は幾何学的被覆・H3必要十分条件・全矢まで確定、全(3,1)は全Jordan型込みで空。(2,2) mixed rank2も全Jordan型込みで空。mixed rank4のcanonical正top P0全体は、退化境界と全Jordan型込みで固定非CY符号族へ完全に幾何学的認識、一般dim2/inertia mu2²。canonical負topQ0は全Jordan型込みで曲がったClifford族に認識。未知の(2,2)はP,Qとも非零で、Pはcomm⊙平方/comm⊙非退化quadの二型。(2,2)/mixed rank4の全H3は実際に半単純。負tangent/非対称型も全排除され、非零Qの未知は対称secant型だけ。三固有値以上、全CY被覆、全成分・intrinsic族降下は未完。
 
-**次の核心（classification-v197）**：非退化secant正Pf/q1主chartの座標曲面s0,t0を全値排除。元288四次関係を消す追加多項式汎関数と正三次関係24×32行列から、局所化係数環でK=kerT3/正常行加群Fを比較。t0はK=F、s0は(t+1)K及び(rho²+1)KがFに所属。AS4最大rank開集合で核の底変更を使い正常核零。残るs0,t−1,rho±iは元関係でB4dim36、非AS4。未知は鏡共鳴rho²−2t−1=0とL0の二曲面だけ（a非零/真共鳴外）。全CY/三固有値以上/成分/相対降下は未完。 次は二曲面の正常行加群を追加汎関数で飽和させる。
+**次の核心（classification-v198）**：鏡共鳴t=(rho²−1)/2でBm*Jm*K⊂正常行加群Fを局所化加群として検証。Bm=4s²+(rho−1)(rho+1)³は全有理param rho=(1−w²)/(1+w²),s=2w/(1+w²)²で覆い、正常10minorが単元以外にw4−w²+1だけを零点に持つ。その残余はJm=16(w4−w²+1)/(1+w²)^4=0なので、鏡共鳴の全候補はJm0へ。L|mirror=(rho−1)Jm/2により、両top非零mixed4(2,2)の全未解決候補が一曲面L0へ縮んだ。全CY/三固有値以上/成分/相対降下は未完。 次はJm鏡曲線の正常一次元核の因子分解と、L0の非鏡領域の全値正常判定。
 
 既存の主要な構造結果を維持する：
 

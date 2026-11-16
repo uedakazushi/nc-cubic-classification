@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "mirror_support": "localized exact module inclusion Bm4*J6*ker(R3) subset normal-row module",
+  "Bm4_curve": "complete rational parameter rho=(1-w2)/(1+w2), s=2w/(1+w2)2, t=-2w2/(1+w2)2; parameter w(w2-1)(w2+1)!=0; polynomial original-relation annihilators and normal10minor exclude w4-w2+1!=0",
+  "Bm4_exception": "all remaining w4-w2+1 roots lie on J6=0 by exact rational identity",
+  "conclusion": "mirror candidates lie on J6=0 and hence L=0. Together with coordinate-plane and open exclusions, all remaining both-top-nonzero mixed4 (2,2) H3 candidates lie on the single L=0 surface.",
+  "remaining": [
+    "normal cuts on J6 mirror curve",
+    "nonmirror L=0 surface",
+    "global H3 classification",
+    "relative intrinsic descent",
+    "independent peer review"
+  ]
+}
