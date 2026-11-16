@@ -1532,6 +1532,153 @@ H3のSerre作用は $S=(-1)[2]$ であり、$P_i(-1)\simeq P_{i+1}$
 この条件だけで $n=1$、形式的局所環の正則性、又はH3十分性を結論しない。
 今後の候補の点対上で四つのExtを計算する際の、全域的な必要条件である。
 
+\begin{lemma}[AS2の非正規一次元の二次正規化]
+\label{lem:h3-binary-nonnormal-quadratic-normalizer}
+量子平面又はJordan平面 $U$ において、$y\in U_1$ は非正規とする。
+$0\ne h\in U_2$ と $\lambda\in k^\times$ が
+$hy=\lambda yh$ を満たすなら $\lambda\in\{1,-1\}$ である。
+\end{lemma}
+\begin{proof}
+量子平面 $uv=\rho vu$ では、非正規な $y$ は両座標係数が非零なので
+尺度変更で $y=u+v$ とできる。
+$h=A u^2+Buv+C v^2$ と書く。
+$\lambda\ne1$ なら $u^3,v^3$ 係数から $A=C=0$。
+残る係数は $B(\rho^{-1}-\lambda)=B(1-\lambda\rho^{-1})=0$ なので、
+$B\ne0$ より $\lambda^2=1$ である。
+Jordan平面では非正規な $y$ を $u$ と取り、
+$vu=uv+\kappa v^2$ とできる。
+$hu-\lambda uh$ の $u^3,u^2v,uv^2$ 係数行列は対角成分 $1-\lambda$ の三角行列。
+従って $\lambda\ne1$ なら $h=0$ となる。
+可換平面では非正規な一次元は存在しない。
+\end{proof}
+
+\begin{theorem}[共通量子座標が正規な領域はパラメータ $-1$ に限る]
+\label{thm:h3-order2-normal-quantum-axis}
+重複度 $(1,3)$ のH3包絡で、共通平面が $T=k\langle x,y\rangle/(xy-qyx)$、
+$q\ne1$ とする。量子座標の少なくとも一つが $B$ 全体で正規なら、$q=-1$ である。
+このとき正生成元 $p$ の $W$ 上の作用 $f$ はinvolutionとなる。
+さらに $v$ を $W$ だけ移動して $vx=-xv$ とでき、$x$ の正規化自己同型もinvolutionである。
+実際には $px=-xp$ に限り、$x$ は残りの三生成元全てと反可換、$x^2$ は中心となる。
+座標の正規性はこの定理の追加仮定であり、一般のrank2領域で証明済みとはしない。
+\end{theorem}
+\begin{proof}
+必要なら座標を交換して $x$ が正規とする。
+既存の共通平面公式から
+\[
+ px=a xp,\quad py=-a^{-1}yp,\quad a^2=-q.
+\]
+$q=-1$ の反対角作用は通常の行列式とhomological determinantの符号が逆なので、
+この場合を含めて作用は表示した対角形である。
+正規化自己同型を $bx=x\theta(b)$ とすると
+\[
+ \theta(x)=x,\quad\theta(y)=q^{-1}y,\quad\theta(p)=ap,\quad
+ \theta(v)=cv+dx+ey,\qquad c\ne0.
+\]
+ここで $\mu_B(x)=-x$ より $\theta$ は $\mu_B$ と可換し、正負固有空間を保つ。
+
+$\theta$ の単冪部分の対数 $D$ は $W$ と $p$ を殺し、$Dv=\ell\in W$ と書ける。
+二平方の全射影により $v^2$ は $W^2+vW+Wv$ の元として書けるので、
+その式に $D^2$ を作用させれば右辺は零、左辺は $2\ell^2$ となる。
+整域性より $\ell=0$。従って $\theta$ は半単純であり、
+$v$ を $W$ だけ移動して $vx=cxv$ とできる。
+偶二次成分の基底と $\theta$ の重みは
+\[
+\begin{array}{c|cccccc}
+ &x^2&xy&y^2&xv&yv&vy\\\hline
+ \theta&1&q^{-1}&q^{-2}&c&cq^{-1}&cq^{-1}
+\end{array}
+\]
+である。$p^2$ の重みは $-q$、$v^2$ の重みは $c^2$ となる。
+
+以下 $q\ne-1$ と仮定して矛盾を導く。
+$T_2$ 上の $f$ の固有値は $-q,-1,-q^{-1}$ で、固定元は零である。
+従って $p^2\in T_2$ は $pp^2=p^2p$ に反し、$p^2$ は必ず $v$ を含む。
+重み表から $c=-q$ 又は $c=-q^2$ である。
+$v^2\ne0$ の重み条件と合わせると
+\[
+ (q+c)(q^2+c)=0,\qquad
+ (c^2-1)(qc^2-1)(q^2c^2-1)(c-1)(qc-1)=0.
+\]
+$c$ のresultantは
+\begin{align*}
+ &(q-1)^6(q+1)^6(q^2+1)^4(q^2-q+1)^2\\
+ &\hspace{18mm}\cdot(q^2+q+1)^2(q^4+q^3+q^2+q+1).
+\end{align*}
+従って残る $q$ の位数は $3,4,5,6$ だけである。
+各原始根上で重み表を比較すると、次の八場合に尽きる。
+表の欄はそれぞれの平方が入る線型空間である。
+\[
+\begin{array}{c|c|c|c}
+ \operatorname{ord}(q)&c&p^2&v^2\\\hline
+ 3&-q&\langle xv\rangle&\langle xy\rangle\\
+ 3&-q^2&\langle yv,vy\rangle&\langle y^2\rangle\\
+ 4&-q&\langle xy,xv\rangle&\langle y^2,yv,vy\rangle\\
+ 4&1&\langle xy,yv,vy\rangle&\langle x^2,xv\rangle\\
+ 5&-q&\langle xv\rangle&0\\
+ 5&-q^2&\langle yv,vy\rangle&\langle xy\rangle\\
+ 6&-q&\langle y^2,xv\rangle&0\\
+ 6&-q^2&\langle y^2,yv,vy\rangle&\langle y^2,yv,vy\rangle
+\end{array}
+\]
+位数5と6の $v^2=0$ の行は整域性に反する。
+位数3と4の $c=-q$ の行では $p^2=xL$、$L$ は $v$ 係数が非零の一次式となる。
+$pp^2=p^2p$ と $px=axp$ から $apL=Lp$ となるが、
+これは $pv,vp$ 成分が非零の奇二次関係であり、奇関係が $pW+Wp$ に入ることに反する。
+
+位数4の $c=1$ の行では $vx=xv$ かつ $v^2=Cx^2+Nxv$。
+この可換二変数の二次式は代数閉体上で一次式の積に分解し、整域性に反する。
+位数5の残る行では $v^2=Axy$、$A\ne0$。
+$v$ が自分の平方と可換することから、$x$ を消去して $cvy=yv$ を得る。
+しかしこれは既存の平面関係、$vx=cxv$、二平方関係から独立な二次関係であり、
+偶関係が四本であることに反する。
+
+最後に位数3又は6の $c=-q^2$ の行を考える。
+$y,v$ は $v^2=A y^2+Eyv+Fvy$ という二次関係を満たす。
+その係数行列が退化すれば一次式の積が零となるので、非退化である。
+補題\ref{lem:h3-binary-cubic-factors}と同じ全次数の因子分解により、
+$y,v$ の生成する部分代数 $U$ は真正のAS2平面となる。
+その唯一の二次関係は $v^2$ 係数が非零なので、$y$ は $U$ で非正規である。
+一方 $0\ne p^2\in U_2$ かつ
+\[
+ p^2y=-q^{-1}yp^2,\qquad -q^{-1}\notin\{1,-1\}.
+\]
+これは補題\ref{lem:h3-binary-nonnormal-quadratic-normalizer}に反する。
+全ての場合が消え、$q=-1$ が従う。そのとき $a^2=1$ なので $f^2=1$。
+
+$q=-1$ における同じ重み比較から、$c\ne\pm1$ なら $c=\pm i$、
+$v^2\in kxy$ となる。上と同様 $cvy=yv$ という追加関係を生むので不可能。
+最後に $c=1$ と仮定すると
+\[
+ p^2,v^2\in\langle x^2,y^2,xv\rangle.
+\]
+$x$ が正規正則一次元なので $S=B/(x)$ のHilbert級数は $(1-t)^{-3}$。
+一方、その全二次表示は三生成元 $p,y,v$ と
+\[
+ r_1=py-\epsilon yp,\quad r_2=p^2-Ay^2,\quad r_3=v^2-Cy^2,
+ \qquad\epsilon=-a\in\{1,-1\}
+\]
+となる。三次関係空間を張る18列には、全ての $A,C$ について独立な二つの恒等式
+\begin{align*}
+ &p r_2-r_2p+A(r_1y+\epsilon yr_1)=0,\\
+ &r_2y-yr_2-pr_1-\epsilon r_1p=0
+\end{align*}
+がある。従ってその階数は高々16、$\dim S_3\ge27-16=11$ となり、
+Hilbert級数の要求する10に反する。よって $c=-1$ に限り、$\theta^2=1$ も従う。
+
+もし $a=1$ なら $\sigma=\mu_B\theta$ は $x$ だけを符号反転し、他の三生成元を固定する。
+H3三次は $\mu_B(G)=G$、$Gx=-xG$ より $\theta(G)=-G$ を満たすので、
+$\sigma(G)=-G$ である。符号作用で平均した自由環の斉次liftを取れば、
+$G$ は $x$ を奇数個含む語だけで表示できる。
+$x$ の正規性により全ての項を左から $x$ で割れて $G=xH$、$H\in B_2$。
+これは $B/(G)$ の整域性に反する。従って $a=-1$ である。
+この場合 $x$ は $p,y,v$ の全てと反可換し、$x^2$ は中心となる。
+\end{proof}
+resultant、原始根の全八行の重み空間とAS2正規化の係数恒等式は
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}order2\_\allowbreak{}normal\_\allowbreak{}axis.py}
+が標数零で厳密確認する。$q=-1,c=1$ の商の三次階数上界も、
+全係数で定数pivot15本と残余一列への消去により再生する。
+座標正規性への全域帰着や、残る $q=-1$ のH3十分性はこの検証の結論ではない。
+
 \begin{lemma}[単冪twist下の反標準三次関係の輸送]
 \label{lem:h3-unipotent-transport}
 $C$は左右noetherian quadratic Koszul AS4型14641で，$\mu_C$は半単純とする．

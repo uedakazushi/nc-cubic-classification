@@ -1171,5 +1171,12 @@
     "certificate": "computations/cubic_order2_boundary_cycle_certificate.json",
     "result": "For every multiplicities(1,3) H3 envelope, W1(B) is contained in (W). The quotient R/(W) yields a canonical unordered point pair exchanged by shift. The Hom matrix is I, Ext2 is the swap matrix and Ext1 has four equal finite dimensions.",
     "scope_limit": "Higher Ext in qgrR is not computed in qgrA. The common Ext1 dimension, formal local models and full remaining-sector admissibility are not determined."
+  },
+  "order2_normal_quantum_axis_v111": {
+    "status": "conditional structural theorem in manuscript; exact resultant, cyclotomic support and binary identities executed",
+    "validator": "computations/verify_cubic_order2_normal_axis.py",
+    "certificate": "computations/cubic_order2_normal_axis_certificate.json",
+    "result": "If a quantum coordinate x of the common noncommutative quantum plane is normal in the entire multiplicities(1,3) H3 envelope, then q=-1 and, after translation of v, x anticommutes with p,y,v. Thus x² is central. The p-action and x-normalizer are involutions. Other root cases, c=1 and the p-commuting branch are excluded.",
+    "scope_limit": "Normality of a common coordinate is an additional hypothesis. Non-normal-coordinate charts, commutative/Jordan common planes and the surviving q=-1 relations/admissibility remain."
   }
 }

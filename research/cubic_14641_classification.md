@@ -571,3 +571,17 @@ v108で残ったsplit M1も排除し、重複度(1,3)の全H3包絡でmu半単�
 H3のS=(-1)[2]からExt^r(Pi,Pj)=Ext^(2−r)(Pj,P_(i+1))*。Homは単位行列、Ext2は交換行列、Ext1は四成分全て同じ整数n>=0、Eulerは全成分1−n、高次Ext0。原稿cor:h3-order2-cycle-ext。この必要条件だけでn1や局所H3十分性を主張しない。verify_cubic_order2_boundary_cycle.pyは忠実行列p=sE12,v=sE21、中央自由基底det−s4、次数零冪等元、シフト交換と正常三次の商消滅を厳密検算、PASS。圏同値とSerre/Extは本文構造証明。
 
 次の焦点：半単純rank2のcross一本と二平方の全係数を、この二周期点対上の自己/交差Extと対照する。W一次近傍でGが消える場合の障害は有力だが、非可換Jacobian判定、n=1、負三生成元部分代数のAS3性、p²中心性はいずれも未証明。先に仮定して全被覆を縮めてはいけない。全係数の形式的近傍又は小次数Koszul計算で必要条件を得て、既知Clifford正例と照合する。
+
+## 正規な共通量子座標を持つ領域のパラメータ（classification-v111）
+
+追加仮定：共通平面T=(xy=qyx),q非1の量子座標xが全Bで正規。このときq=-1,f²1を証明。全域の座標正規性・q=-1十分性は未証明のまま保持する。原稿thm:h3-order2-normal-quantum-axis。
+
+正規化theta_xはW上(1,q^-1)、p上a,a²−q、残りv上c v+d x+e y。thetaの単冪対数DはW,pを殺しDv=ell∈W。v²のrank2平方表示にD²を作用させると右辺0、左辺2ell²なのでell0。従ってthetaは半単純でvをWだけ移動しvx=c xvとできる。偶B2基底x²,xy,y²,xv,yv,vyのtheta重み1,q^-1,q^-2,c,cq^-1,cq^-1、p²重み−q,v²重みc²。q非−1ならf|T2固有値−q,−1,−q^-1に1が無いのでp²∉T2。ゆえにv成分の重みからc=-q又は-q²。v²の重み条件とのresultantは(q−1)^6(q+1)^6(q²+1)^4(q²−q+1)^2(q²+q+1)^2*Phi5(q)となり、残るqは原始3,4,5,6乗根のみ。
+
+全八行のsupportは原稿とJSONに固定。位数5/6のc=-qはv²0。位数3/4のc=-qはp²=xL,Lにv係数非零なのでpp²=p²pから新しいpv/vp奇二次関係が出て関係数に反する。位数4のc1はvx=xv,v²∈span(x²,xv)で可換二次式が一次分解。位数5のc=-q²はv²=Axy非零からcvy=yvという独立な追加二次関係が出る。位数3/6のc=-q²はp²∈U2、U=<y,v>がv²係数非零の唯一の非退化二次関係を持つ真正AS2平面となり、yは非正規。p²y=-q^-1 y p²の倍率は±1外なので二元平面補題に反する。
+
+新補題lem:h3-binary-nonnormal-quadratic-normalizer：量子/Jordan AS2で非正規一次元yが非零二次hによりhy=lambda yhと正常化されるならlambda∈{±1}。量子でy=u+v、lambda非1のu³,v³係数でh=Buv、残り二係数からlambda²1。Jordanでy=u、三角係数行列det(1−lambda)^3。verify_cubic_order2_normal_axis.pyがresultant、全八行のcyclotomic完全剰余、二元補題係数を標数零で厳密検算PASS。構造帰着と整域排除は本文で証明。
+
+さらにq=-1でもc!=±1はc=±i,v²=Axyから追加二次関係で排除。c1はB/(x)の三次次元>=11が正規一次元商のHilbert次元10に反するため排除：py=epsilon yp,p²=Ay²,v²=Cy²の18列に独立な二つの全係数syzygyを明記し、検証器も定数pivot15と残余一列を再生した。従ってc−1。a1ならmu*theta_xがxのみ符号反転しGを−Gに送るので、Gは奇数個xを含む語の和、正規性でG=xHに因子分解してR整域性に反する。従ってa−1、xは残り三生成元全てと反可換しx²中心となる。正常共通座標が二本あることも不可能（他軸はa1だから）。
+
+次：このx反可換・x²中心領域について全関係を既知Clifford型又は新候補へ還元する。同時に共通量子座標が全Bで正規でない場合、可換/Jordan共通平面のrank2を未被覆として保持する。全H3の半単純化や正常化をこの追加仮定付き定理から推論しない。
