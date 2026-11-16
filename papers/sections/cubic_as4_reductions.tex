@@ -304,7 +304,89 @@ $(xy-\omega yx)\otimes(zt-\omega^2tz)$ である。
 混合flatteningの可逆ブロックは
 \texttt{verify\_\allowbreak{}cubic\_\allowbreak{}order3\_\allowbreak{}two\_\allowbreak{}eigenvalue\_\allowbreak{}reduction.py}
 で有限恒等式を独立に確認する。
-残る混合係数の分類や、第一の場合の $c=0$ の一般正規cone障害は別に扱う。
+混合係数の必要系は次の定理で全て判定する。第一の場合の $c=0$ の一般正規cone障害は別に扱う。
+
+\begin{theorem}[二つの非自明三乗根固有値の全排除]
+\label{thm:h3-order3-two-nontrivial-excluded}
+H3包絡の中山固有値集合は $\{\omega,\omega^2\}$ にならない。
+従って二固有値の場合に残る集合は
+$\{1,-1\},\{1,\omega\},\{1,\omega^2\}$ の三つだけである。
+\end{theorem}
+\begin{proof}
+定理\ref{thm:h3-order3-two-blocks}の第二の場合を仮定する。
+$A=\langle x,y\rangle$, $C=\langle z,t\rangle$ とし、
+$w$ の $AA\,CC$ 成分を $(xy-\omega yx)\otimes(zt-\omega^2tz)$ に規格化する。
+その係数はFrobenius対合により非零なので、この規格化は可能である。
+巡回式で非交互の語の係数が全て決まり、交互部分は
+$AC=(xz,xt,yz,yt)$ 順の対称行列
+\[
+ H=\begin{pmatrix}
+ h_0&h_1&h_2&h_3\\h_1&h_4&h_5&h_6\\
+ h_2&h_5&h_7&h_8\\h_3&h_6&h_8&h_9
+ \end{pmatrix}
+\]
+だけで記述される。対称性は二回の巡回による指標が $\omega\omega^2=1$ であるためである。
+混合flatteningのオフ対角は可逆なので、
+階数4条件は16個のSchur成分の消滅である。
+さらに四つの重なり $zyx,tyx,tzx,tzy$ のPBW条件と、
+\[
+ (z^2t)a=\omega^2a(z^2t)\ (a=x,y),\qquad
+ (x^2y)c=\omega c(x^2y)\ (c=z,t)
+\]
+を正規順序化する。零と重複を除くと68個の必要多項式 $I_i$ を得る。
+
+保存した多項式証明書は $I X=\Gamma$ という30個の恒等式であり、
+元の68式を再生成して全て独立に検証した。
+従ってGr\"obner基底の正しさを仮定せず、$I=0$ から $\Gamma=0$ が従う。
+これらの式の一つは
+\[
+ (h_5-\omega^2)(3h_5-\omega-2)=0
+\]
+である。
+第一の根では $h_3=-\omega^2$, $h_5=\omega^2$、他の係数は全て零となる。
+これはskew係数
+\[
+ (q_{xy},q_{xz},q_{xt},q_{yz},q_{yt},q_{zt})
+ =(\omega,\omega,\omega^2,\omega^2,1,\omega^2)
+\]
+の環である。定理\ref{thm:skew-finite-37}の必要リストでは、
+三乗根のskew H3包絡は全てCYであるから、この非CY包絡は排除される。
+
+第二の根では、$p,q\ne0$ を用いて全解が
+\[
+\begin{gathered}
+ h_0=2(\omega+2)pq,\quad h_1=p,\quad h_2=q,\quad
+ h_3=-(2\omega+1)/3,\quad h_5=(\omega+2)/3,\\
+ h_4=(\omega-1)p/(3q),\quad h_7=(\omega-1)q/(3p),\\
+ h_6=-\omega/(3q),\quad h_8=-\omega/(3p),\quad
+ h_9=(2\omega+1)/(9pq)
+\end{gathered}
+\]
+となる。必要性には、$h_0h_9=2\omega/3$、
+$h_1h_8=h_2h_6=-\omega/3$、
+$6h_1h_2+(\omega-1)h_0=0$ と、
+$2h_1^2+h_0h_4=2h_2^2+h_0h_7=0$ を使う。
+逆代入も68式を全て満たす。
+$u^3=q/p$ を選び、$\operatorname{diag}(u,up,1,q)$ で生成元を変えると、
+$G$ の直線を保ったまま $p=q=1$ となる。
+従ってこの枝では一つの候補だけを調べればよい。
+
+この候補で $\tau^3=\omega$ を選ぶと、次の文字どおりの積恒等式が成立する：
+\[
+\begin{aligned}
+ \tau(x^2y+z^2t)=(x+\tau z)\bigl[&\tau xy+zt\\
+ &+\tau^2\{\omega^2xz-\tfrac{2\omega+1}{3}(xt+yz)-\tfrac13yt\}\bigr].
+\end{aligned}
+\]
+三次の全PBW係数を $\omega^2+\omega+1=0$, $\tau^3=\omega$ のもとで独立に確認した。
+両因子は次数1と2の非零元であり、$B/(G)$ は整域でない。
+これで第二の枝も全て排除される。
+この排除には候補のAS4存在十分性を示す必要はない。
+\end{proof}
+全68式、30個の多項式所属恒等式、二枝のパラメータ化、尺度変更、因子式は
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}order3\_\allowbreak{}two\_\allowbreak{}block\_\allowbreak{}incidence.py}
+と小さいJSON証明書で再現する。
+生成にはSingular 4.4.1を用いたが、保存した証明書の再生はSymPyだけで行える。
 
 \begin{lemma}[単冪twist下の反標準三次関係の輸送]
 \label{lem:h3-unipotent-transport}

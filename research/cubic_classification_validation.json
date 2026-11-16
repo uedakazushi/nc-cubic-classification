@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "version": "classification-v91",
+  "version": "classification-v92",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -996,5 +996,19 @@
     "validator": "computations/verify_cubic_order3_two_eigenvalue_reduction.py",
     "certificate": "computations/cubic_order3_two_eigenvalue_reduction_certificate.json",
     "result": "Every two-eigenvalue order3 H3 has either a normal-line AS3 Ore presentation of multiplicities1+3, or semisimple multiplicities2+2 with two opposite third-root quantum planes and fixed cubic x²y+z²t. The second case has invertible mixed projections and PBW basis. Remaining relation coefficients and admissibility are not classified."
+  },
+  "order3_two_nontrivial_exclusion_v92": {
+    "status": "exact independent polynomial replay executed; global structural reduction in manuscript",
+    "validator": "computations/verify_cubic_order3_two_block_incidence.py",
+    "certificate": "computations/cubic_order3_two_block_incidence_certificate.json",
+    "result": "All strong H3 envelopes with Nakayama eigenvalue set {omega,omega²} excluded. Every 2+2 mixed relation matrix reduces to a forbidden skew point or a unique non-skew torus orbit with explicitly factorable cubic. The two-eigenvalue order3 sector now has only normal-line multiplicities1+3 remaining.",
+    "independent_checks": [
+      "regenerated 68 necessary polynomials",
+      "all 30 I*X=Gamma identities",
+      "two branch consequences",
+      "all-parameter torus normalization",
+      "explicit linear times quadratic identity modulo tau³=omega"
+    ],
+    "scope_limit": "No claim that all necessary incidence candidates are AS4, and no full three/four-eigenvalue or all-H3 coverage."
   }
 }

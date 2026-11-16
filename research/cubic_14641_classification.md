@@ -383,4 +383,17 @@ FZ2のQについてR=U+K diag(rho)、q=(2rho−1)/(2rho+1)を元の式から確�
 
 Frobenius対合により四次topのAA/CCブロック係数は非零。巡回式が混合flatteningのオフ対角を二つの可逆binary relation行列のKronecker積へ移すので、その4×4ブロックは可逆。混合rank4からR11のAC/CA両射影が同型、従って全体は標準単項式x^i y^j z^k t^lのPBW基底を持つ。残る混合四関係は可逆4×4twisting matrixで表せるが、全係数・H3 admissibilityは未解決。
 
-原稿thm:h3-order3-two-blocks、検証verify_cubic_order3_two_eigenvalue_reduction.py。有限重み、Jordan最高係数、量子binary指標、混合ブロック行列式を実行確認。成長・Frobenius・AS3性・PBW比較は原稿の証明であり列挙だけで完成としない。次は2+2の場合の最高tensorを二量子平面を固定して10個の対称混合係数で表し、rank6、四Diamond、正常G条件の有限多項式系を解く。1+3の純base切断のnormal版cone障害、三固有値以上、零交換子CYの被覆監査、非捩れqso3許容性も残る。
+原稿thm:h3-order3-two-blocks、検証verify_cubic_order3_two_eigenvalue_reduction.py。有限重み、Jordan最高係数、量子binary指標、混合ブロック行列式を実行確認。成長・Frobenius・AS3性・PBW比較は原稿の証明であり列挙だけで完成としない。2+2の最高tensorと混合係数の全判定は後述classification-v92で完了した。1+3の純base切断のnormal版cone障害、三固有値以上、零交換子CYの被覆監査、非捩れqso3許容性も残る。
+
+
+## 二非自明三乗根固有値の全排除（classification-v92）
+
+全H3で中山固有値集合{omega,omega²}は不可能と証明した。v91の2+2帰着から、xy=omega yx,zt=omega²tz,G=x²y+z²t、mu_Bはsemisimple、混合四関係はPBWgraph。最高tensorのAA/CC係数をr_A tensor r_Cへ規格化し、残る交互成分をAC=(xz,xt,yz,yt)順の対称4×4行列H（十係数h0..h9）で全表示した。
+
+rank6のSchur16式、四Diamond（zyx,tyx,tzx,tzy）の24式、正規Gの32式から零・重複を除く68必要式Iを再生成。Singular4.4.1で発見した30式Gammaについて68×30の乗数Xを保存し、SymPyでI X=Gammaを元の係数から独立再生した（証明書約49KB、Singularなしでも再生可）。Gammaから(h5−omega²)(3h5−omega−2)=0を得る。
+
+第一枝はh3=−omega²,h5=omega²以外零。skew係数(omega,omega,omega²,omega²,1,omega²)となり、既証skew H3必要リストの三乗根行が全てCYであることに反して排除。第二枝はp=h1,q=h2非零、h0=2(omega+2)pq,h3=−(2omega+1)/3,h4=(omega−1)p/(3q),h5=(omega+2)/3,h6=−omega/(3q),h7=(omega−1)q/(3p),h8=−omega/(3p),h9=(2omega+1)/(9pq)。元I/Gammaへの全逆代入を検証。u³=q/pを取りdiag(u,up,1,q)でG直線を保ってp=q1へ移るので、全域は一つの候補軌道。
+
+標準候補ではtau³=omegaとして、tau G=(x+tau z)[tau xy+zt+tau²{omega²xz−(2omega+1)(xt+yz)/3−yt/3}]という非可換積恒等式をPBW全係数で独立検証。次数1/2の非零因子から商はnondomain、従って全枝でH3を排除する。候補自体のAS4十分性・noetherian存在は不要。
+
+原稿thm:h3-order3-two-nontrivial-excluded、再現verify_cubic_order3_two_block_incidence.pyとcubic_order3_two_block_incidence_certificate.json。全H3二固有値の残る集合は{1,−1},{1,omega},{1,omega²}の三つ。位数3は正常一次元AS3 Ore表示の重複度1+3だけが残る。次はその純base切断c0の正常版cone障害を確定し、c!=0でsigma³=mu_B^-1となる三次元AS3/正常三次を分類する。位数2Jordan/全admissibility、三種類以上の中山固有値、CY零交換子の必要被覆監査、非捩れqso3許容性、大域成分・相対降下は未完。
