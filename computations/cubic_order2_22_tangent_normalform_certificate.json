@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "scope": "semisimple (2,2), odd rank2, tangent graph, invertible even cross block only",
+  "exact_checks": [
+    "det(K)=-c^4",
+    "four universal cyclic Schur equations",
+    "independent upper-triangular pencil stabilizers normalize g to [[0,-1],[1,0]]",
+    "D nonzero and det(P)=-(1+2D^2)"
+  ],
+  "normalizer_status": "not settled by this verifier; no all-parameter exclusion asserted",
+  "not_claimed": [
+    "AS4 existence",
+    "H3 admissibility",
+    "tangent c=0 boundary",
+    "secant chart"
+  ]
+}

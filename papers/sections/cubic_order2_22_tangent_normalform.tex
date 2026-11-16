@@ -1,0 +1,59 @@
+\subsection{可逆cross blockを持つtangent型の一変数必要表示}
+\label{subsec:h3-order2-22-tangent-normalform}
+\begin{proposition}\label{prop:h3-order2-22-tangent-normalform}
+半単純$(2,2)$・奇関係数2のtangent型で、偶cross block $K$が可逆とする。
+この全領域は、$D(1+2D^2)\ne0$、$A=(1+D^2)/(2D)$の一変数必要表示
+\begin{gather*}
+ xu+uy-vx=0,\qquad xv+yu-ux=0,\\
+ A(xy-yx)+y^2+u^2-v^2=0,\\
+ Ax^2-yx+Dy^2-uv=0,\\
+ -Ax^2-xy-Dy^2+vu=0,\\
+ x^2+D(xy-yx)+u^2=0
+\end{gather*}
+で被覆される。ここで$x,y$は正、$u,v$は負生成元である。
+この表示の全係数でAS4性やH3性を主張しない。
+\end{proposition}
+\begin{proof}
+前節のtangent基底で$g=\left(\begin{smallmatrix}a&b\\c&d\end{smallmatrix}\right)$、
+$ad-bc=1$とする。
+混合topから偶cross blockは
+\[
+ K=\begin{pmatrix}-b&d&a&-c\\a&-c&0&0\\-d&0&c&0\\c&0&0&0\end{pmatrix},
+ \qquad\det K=-c^4
+\]
+となる。従って$c\ne0$である。
+$tangent$ pencilを保つ生成元変更は、その二基底に
+\[
+ E\mapsto E\begin{pmatrix}1&p\\0&r\end{pmatrix},\qquad
+ F\mapsto F\begin{pmatrix}1&q\\0&r\end{pmatrix}
+\]
+という独立な$p,q$と共通の$r\ne0$の作用を誘導する。
+実際、$x\mapsto\alpha x,y\mapsto\beta x+\delta y$、
+$u\mapsto\gamma u,v\mapsto\eta u+\zeta v$で
+$\delta/\alpha=\zeta/\gamma=r$とすれば、
+$p=\beta/\alpha+\eta/\gamma,q=\beta/\alpha-\eta/\gamma$である。
+そのgraph作用は$g\mapsto F_g gE_g^{-1}$であり、
+$p=d/c,q=-a/c,r=1/c$により
+$g=\left(\begin{smallmatrix}0&-1\\1&0\end{smallmatrix}\right)$へ正規化できる。
+
+$K$可逆から純正quartic行列$P(A,B,C,D)$も可逆であり、$B\ne0$である。
+相対homothetyとtop尺度で$B=1$とする。
+$Q=K^tP^{-1}K$の四cyclic条件を分母を払って書くと、
+$X=-Cc+D(a-d)$に対して、そのうち二つは
+\[
+ 2BDcX=0,\qquad -2B(Bc+D(a+d))X=0.
+\]
+$Bc\ne0$なので$X=0$が従う。
+残る条件は
+\[
+ -4ADc^2+2B^2c^2+C^2c^2+2D^2(ad-bc)=0.
+\]
+正規化した$g$では$C=0$、$4AD=2+2D^2$となり、$D\ne0$である。
+さらに$\det P=-(1+2D^2)$なので表示した開条件が必要となる。
+奇graph二式と偶blockの先頭四行$[P\ K]$を並べれば、主張した六関係を得る。
+\end{proof}
+
+\texttt{verify\_cubic\_order2\_22\_tangent\_normalform.py}は
+全係数のcross行列式、四Schur条件、pencil安定化作用と一変数の行列式を厳密検算する。
+$K$が退化する$c=0$境界は別に残り、この命題の正規化で除外しない。
+指定正常三次と全AS4条件の判定も別問題である。

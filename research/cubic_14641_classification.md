@@ -898,3 +898,12 @@ gamma非零の残るJordan基礎S_J(yx=xy+kappa*x²+gamma*z²,zx=epsilon*xz,zy=e
 原稿thm:h3-order2-22-ruling-exclusion。任意binary planeのpurequadratic関係はdomainならdim<=1かつrankone禁止。U-rulingはmixedtop正文字が全x0でK一行、P(A,B,C,D)のxy/yx/yy三行がpure正関係なのでrank<=1。その2minor idealはB²,C²,D²を含み、残るrow AxxはrankoneゆえA0。Uprojection<=1からpureVV kernel>=3で矛盾。V-rulingはmixed負文字全z0でK一列、cyclicQのuv/vu/vv三行N=[[b,d,c,e],[b,c,d,e],[c,e,e,f]]がpure負関係rank<=1。2minor idealを各行の2x2係数detで飽和すると全てideal1、従って各行rankone又は0、domainから全0。VVprojection<=1からpureUU kernel>=3で矛盾。verify_cubic_order2_22_ruling_exclusion.py/certificateで全係数GB/3saturation exact PASS。secant/tangent、nonsemi、mixedrank4は未解決。
 
 secant all-unit chartの再開用未公表計算：g=[[a,b],[c,d]],ad−bc=-1,abcdunit。Kの非零はxx->uv:-d,xy->vv:c,yx->uu:-b,yy->vu:a。K可逆でP可逆、Schur negativecyclicはAa+Dd0および2AD(ad+bc)−B²(ad+bc)−C²ad0を強制。gen尺度でa=d=s,b=c=t,t²−s²1、B1とするとD=-A、s²C²+(2s²+1)(2A²+1)=0、detP=−(2A²+s²+1)/s²非零。これらはscratchのsymbolic恒等式で確認した必要条件で、全AS4/正常三次・境界abcd0の証明は未了。次にこのchartのnormalizerを厳密検算し、rankK低下境界を別に保持する。scratch /workspace/work/order2_22/secant.py、未公表式を全H3結論に使わない。
+
+
+## 可逆tangentの一変数必要表示（classification-v144）
+
+**全体的なスペクトル制約（classification-v144）**：全(1,3)は被覆・必要十分H3判定・全矢・DM4表示stack・慣性まで確定。全(3,1)は正部分の全Jordan型を含めて空。半単純(2,2)/mixed rank2はpure mixedと二rulingを排除し、secant/tangent二graph型だけに縮小。さらにtangentのeven crossblock可逆部分は全係数のpencil安定化作用でg=[[0,-1],[1,0]]へ正規化でき、even Schur条件からC0,B1,A=(1+D²)/(2D),D(1+2D²)unitの一変数六関係へ全被覆。正常三次の全D判定はまだ未解決。次はこの一変数族の正常核を厳密判定し、tangent c0境界とsecant全rank strataを残さず扱う。非半単純(2,2)、mixed rank4、三固有値以上、単一固有値/CY全被覆、全成分/圏族降下も未完。
+
+原稿prop:h3-order2-22-tangent-normalform。graphg=[[a,b],[c,d]],det1のevenK=[[-b,d,a,-c],[a,-c,0,0],[-d,0,c,0],[c,0,0,0]],detK=−c4。E/F tangent pencilのgenerator stabilizerはP=[[1,p],[0,r]],Q=[[1,q],[0,r]]、p/q独立でg->QgP^-1、p=d/c,q=−a/c,r=1/cがgcanonicalJへ。Schur負cyclicはX=−Cc+D(a−d)に対し2BDcX0と−2B(Bc+D(a+d))X0なのでBcunitからX0。残余−4ADc²+2B²c²+C²c²+2D²(ad−bc)0。gcanonical/B1でC0,4AD=2+2D²、DunitかつdetP=−(1+2D²)unit。六関係は本文、verify_cubic_order2_22_tangent_normalform.py/certificateが全恒等式PASS。任意D AS4存在/正常三次/H3性は未主張。
+
+再開用計算状況：scratch /workspace/work/order2_22/pid_tangent.py は係数環Q[D,D^-1,(1+2D²)^-1]上のunit row/column gcd操作を追跡する実験。次数3で44pivot/商20、次数4で221pivot/商35までは到達したが、全projectionの再生が式膨張で遅く、中断したため正常核全値certificateはない。tangent_ff.py のfraction-free代替も次数4で遅く中断。現在はGがmu固定なのでeven parityだけを用いる tangent_even_ff.py を実行中であり、未完を完了と扱わない。高速化用python-flintは /workspace/work/python-deps に局所導入したが、公表済み恒等式verifierの必須依存ではない。正二次式だけのscalar-sign正常元探索はgeneric fieldで核0だが全族排除に利用しない。secant共鳴s²=-1/2のPID実験も中断しており未証明。次は一変数exact normalizerの計算方法を改善し、未完実験を成功と誤認しない。
