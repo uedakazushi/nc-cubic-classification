@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "scope": "canonical Q=0 completion beyond pure-positive commutative semisimple branch",
+  "symmetric_positive_quantum_chart": {
+    "four_localized_ideal_equalities": true,
+    "possible_parameters": "q2=-1; r2=1 gives common factor x, r2=-1 gives common factor y",
+    "pure_cubic_and_Uuv_columns": "centralizer U zero"
+  },
+  "negative_Jordan_symmetric_square_fixed_minors": [
+    -8,
+    -8
+  ],
+  "both_commutative_projection": "Sf*(Sg+I)-(Sf-I)=2I on Pf=1; thus simultaneous fixed/anti-fixed quadratic kernel zero",
+  "positive_only_Jordan": {
+    "universal_relation": "yx=xy+eta*x2",
+    "fixed_cubic_basis": [
+      "x3",
+      "xu2",
+      "xuv",
+      "xv2"
+    ],
+    "constant_complement_minor": 6
+  },
+  "dependencies": [
+    "rank1-cross domain obstruction",
+    "six-linear odd atlas",
+    "zero-top epsilon+ exact normal exclusions",
+    "canonical right Zhang untwist",
+    "one-sided Jordan exclusion"
+  ],
+  "conclusion": "all canonical Qzero H3 in mixed-rank4 (2,2), including all Jordan types, are curved Clifford cuts",
+  "not_claimed": [
+    "Q nonzero positive-top nonzero coverage",
+    "global H3 classification",
+    "componenthood",
+    "intrinsic relative descent"
+  ]
+}

@@ -1147,3 +1147,12 @@ Clifford型B_hの依存係数境界を全排除した。u²中心開集合を三
 B(F,h): positivecomm,u作用F/v逆作用,vu=-detF*uv+detF*h。F²neqIdではG=f3+Luv、FL=detF*L、(1+Sym³F)f3=-detF*L*Fh。Lneq0なら商U/kL上FIdで2f3=0、従ってLが共通因子。L0はbinarycubicfactor。FId核二列と補minor256、reflectionの非因子四列minor16（残る六列は指定四行零）をverify_cubic_order2_22_clifford_matrix.pyで検算。全Fの四PBW overlapも検算。
 
 次は半単純Q0で純正二次関係がcommとなる全領域の必要被覆。odd線型atlasからq≠1負separatedは今回のB(F,h)へ。残りはq−1 eps+のswap cross、負Jordanの明示shear cross、両comm時の反対separated f*g=−Id。これらの正常核/因子を全係数で確認して必要被覆を閉じる。全非零正top・全CY・三固有値/成分/相対降下は未完。
+
+
+## canonical負top零の完全な幾何学的認識（classification-v177）
+
+canonical負topQ0の(2,2)/mixed rank4全H3を、全Jordan型込みで曲がったClifford族B_hに幾何学的認識した。半単純pure-positivecommの全odd atlasを一般F/swap/Jordan/両comm反対separatedへ必要被覆。pure-positive symmetric枝はp−1全atlasで正常核零又は一次因子。非半単純は非退化P/両JordanPf0/負片側/正片側固定核minor6で全排除。全切断は係数独立/conic平滑、全幾何学的矢、一般dim5/慣性mu2、h0符号部分族まで確定。
+
+証明はcubic_order2_22_Qzero_commutative.texとcubic_order2_22_Qzero_complete.tex。新検証器Qzero_commutativeはswap正常rank10 minor4、負Jordan非x列minor16、両comm反対separatedのSL2全PBW/二scalar minor16とgraph辞書を再生。Qzero_completeは正対称分枝の四localized ideal一致、負Jordan Sym² fixed determinant−8二つ、両comm Sym²の2I恒等式、正片側Jordan yx=xy+eta*x²の全eta固定核補minor6を再生。従来zero-top eps+全核零/odd atlas/単冪untwist/片側Jordan排除を仮定付きで適用。Gのtwist輸送は使わず、元BでmuG固定を課す。新規性・独立査読は未確認。
+
+次はcanonical正負top P,Qとも非零の残余。Pはcomm⊙q（q平方又は非退化）、Qはrank≤2 cyclic binaryquartic。まずQrank1がcross rank2 ruling障害でAS4domain外になるか確認し、rank2の三標準形と二本のcoupled even relationsから必要top/正常核を計算する。全CY/三固有値以上/成分/相対降下は未完。

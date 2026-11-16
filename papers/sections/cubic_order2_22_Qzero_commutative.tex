@@ -1,0 +1,88 @@
+\subsection{負top零・純正可換関係領域の必要被覆}
+\label{subsec:h3-order2-22-Qzero-commutative}
+\begin{theorem}\label{thm:h3-order2-22-Qzero-commutative}
+中山が半単純 $++--$、mixed rank4、canonical負top $Q=0$ のH3包絡を考える。
+さらに純正二次関係が $k(xy-yx)$ であると仮定する。
+この全領域のH3対象は前節の曲がったClifford族 $B_h$ に幾何学的に認識される。
+従って全切断の必要十分判定と全幾何学的矢も前節の分類に一致する。
+純正対称関係のもう一つの領域、非半単純中山、$Q\ne0$ はこの定理に含めない。
+\end{theorem}
+\begin{proof}
+まず必要被覆を確認する。domainの純正又は純負二次関係は高々一本である。
+二次元の二変数tensor pencilは代数閉体上必ずrank1行列を含み、積関係を与えるからである。
+偶middleの階数は2、負blockは零なので、その関係像の負射影は等方部分空間で次元高々1。
+これが零なら偶関係二本が純正となりdomainに反するので、正確に1である。
+純正直線を $a=xy-yx$、他の関係を $b(V)-c(U)$ とする。
+偶middleは尺度と $c$ の取り直し後 $a\odot(c+b)$ であり、
+正topのanti-cyclic性から $c$ は対称である。
+従って関係は $[x,y]=0,b(V)=h(U)$ と書ける。
+
+$b$ がrank1なら cross $M=-(a^t\otimes b)\Pi$ はrank2で、像全体がrank1 mixed tensorのrulingになる。
+補題\ref{lem:h3-order2-22-Pzero-rank1-impossible}の交代像の論証は正負を入れ替えても成立し、
+純mixed直線をこのrulingへ入れるので積関係を強制する。
+従って $b$ は非退化、$M$ は可逆で、奇関係は全graphとなる。
+正top $P$ の追加は $M,A,\tau(A)$ を変えないから、
+命題\ref{prop:h3-order2-22-rank4-zero-top-atlas}の六線型atlasがそのまま適用される。
+ここで $a=L(1)$、$b=L(q)$ 又は $J$ である。
+以下で全閉係数を覆う。
+
+$b=L(q),q\ne1,\epsilon=-1$ では $z_1=z_4=0$。
+既出のgraph辞書は負変数が正側をそれぞれ $F,F^{-1}$ でnormalizeし、
+$\det F=-q^{-1}$ であることを与える。
+curvature $h$ は偶関係にしか入らないので、包絡は正確に $B(F,h)$。
+定理\ref{thm:h3-order2-22-clifford-matrix}より、H3は $F=-I$、すなわち $B_h$ だけ。
+
+同じ量子型の $\epsilon=1$ では $q=-1$ に限り、尺度により
+$A$ の六係数は $(0,1,0,0,1,0)$ となる。
+四mixed関係は
+\[
+ ux=-xv,\quad uy=-yv,\quad vx=-xu,\quad vy=-yu.
+\]
+$vu=-uv+h(U)$ を加えた全係数PBW正常行列には定数 $10\times10$ minor 4があり、
+正常核は零である。従ってこの全chartは空。
+
+$b=L(1),\epsilon=1$ は六線型式と非零Pfaffianに矛盾する。
+$\epsilon=-1$ の両可換型では既出の対称二式分解により
+\[
+ \det S_U-\det S_V=-1.
+\]
+$S_V$ 非退化なら負側の自由な $\mathrm{GL}_2$ でcross型へ移して $z_1=z_4=0$ とでき、
+上と同じ $B(F,h)$ に帰着する。
+それ以外は $S_U$ が非退化なので正側を取り直して $z_0=z_5=0$ とできる。
+このとき正変数 $x,y$ が負側を $f,g$ でnormalizeし、直接の辞書は
+\[
+ f=\begin{pmatrix}z_2&-z_1\\z_4&-z_3\end{pmatrix},\quad
+ g=\begin{pmatrix}z_3&-z_1\\z_4&-z_2\end{pmatrix},\qquad
+ fg=-I,\quad\det f=\det g=1
+\]
+となる。負射影の関係は $[u,v]=h(U)$。
+正常候補の最高負次数を比較する。
+$xq_2(V)$ が現れるなら、$Gu+uG,Gv+vG$ の負次数3部分は
+$q_2(V)(T+f(T))=0$ ($T\in V$) を要求するので $f=-I$。
+$yq_2(V)$ も同様に $g=-I$ を要求する。
+どちらも $-I$ でなければ $G$ は二元三次で分解する。
+$f=-I,g=I$ のときは全負次数2項に $x$ が付き、
+正常条件の残る非 $x$ 列 $y^3,yu^2,yuv,yv^2$ は定数minor16で全て消える。
+従って $x\mid G$。$f=I,g=-I$ は交換により $y\mid G$。
+これで両可換型も全係数で空である。
+
+最後に $b=J$。$\epsilon=1$ は $p=1$ と非零Pfaffianに矛盾する。
+$\epsilon=-1$ では $\det S_U=-1$ なので、正側をcross型へ移し、
+$z_0=z_5=z_4=0,z_2=-z_3=\pm1,z_1=k$ とできる。
+正側交換で二つの符号は同じchartとなり、そのmixed関係は
+\[
+ ux=-xu,\quad uy=yu,\quad
+ vx=(k+1)xu-xv,\quad vy=(k-1)yu+yv.
+\]
+$vu=uv+u^2+h(U)$ に対し、正常式の非 $x$ 四列
+$y^3,yu^2,yuv,yv^2$ は全 $k,h$ で定数minor16により消える。
+従って全 $G$ は $x$ を因子に持ち、商はdomainでない。
+
+以上は八chartの $p=1$ の全特殊値を保った必要被覆である。
+残った $B_h$ のH3十分性と全矢は既に前節で証明済み。
+追加したswap/Jordan/反対separatedの全係数overlap、辞書、指定minorは
+\[
+\texttt{verify\_cubic\_order2\_22\_Qzero\_commutative.py}
+\]
+で厳密再生する。有限標本からの全係数外挿は使わない。
+\end{proof}

@@ -1,0 +1,112 @@
+\subsection{canonical負top零領域の全Jordan型込みの認識}
+\label{subsec:h3-order2-22-Qzero-complete}
+\begin{theorem}\label{thm:h3-order2-22-Qzero-complete}
+$(2,2)$・mixed rank4の全H3対象のうち、canonical単冪untwist後の負topが $Q=0$ となるものは、
+全Jordan型込みで前述の曲がったClifford族 $B_h$ のH3切断にちょうど一致する。
+従ってこの領域の全切断は係数独立とconic総空間の平滑性で判定され、
+全幾何学的矢は定理\ref{thm:h3-order2-22-clifford-arrows}で与えられる。
+一般次元は5、一般慣性は $\mu_2$、$h=0$ に既知の符号部分族を含む。
+残る $(2,2)$・mixed rank4の未知部分は、canonical $P,Q$ がともに非零の領域である。
+\end{theorem}
+\begin{proof}
+$P=0$ の場合は既知の全認識で符号族となる。
+$P\ne0$ とし、まず中山が半単純の場合を扱う。
+前節の偶middleの等方性の論証により、偶関係は
+$a(U),b(V)-c(U)$、偶topは $a\odot(c+b)$ と書ける。
+正topは既知の $P=c_U\odot q_U$（$c_U=xy-yx$、$q_U$ は非零対称式）である。
+階数2対称tensorの二つの線型因子の一意性から、純正関係 $a$ は $c_U$ 又は $q_U$。
+前者は前節で全分類した。
+後者はdomain性から非退化であり、正側を取り直して
+\[
+ a=xy+yx,\qquad b(V)=\kappa xy
+\]
+とできる。負射影 $b$ も同じrank2 ruling障害により非退化である。
+従って六線型atlasの $p=-1$ を全て調べればよい。
+
+$\epsilon=1$ の量子・量子全chart及び量子・Jordan特殊点の正常核は、
+零topで既に定数minor又は全値minor coverにより零と分かっている。
+負次数filtrationに関して $b(V)=\kappa xy$ の右辺は低次数なので、
+この零核は全curvatureにも適用できる。
+正確には零tail包絡は四overlapが解消しPBW、そこから $\operatorname{gr}B$ へ全射がある。
+両者のAS4 Hilbert値が等しいため同型である。
+正常式の最高負次数を取れば零tailの正常核へ入るから、元の核も零となる。
+三次だけのgeneric rankを外挿してはいない。
+
+$\epsilon=-1$、$b=L(q),q\ne1$ では $z_0=z_5=z_1=z_4=0$。
+負変数の正側への作用は
+\[
+ F=\operatorname{diag}(r,-q^{-1}/r),\qquad
+ G=\operatorname{diag}(-1/r,qr).
+\]
+正側 $T=k\langle x,y\rangle/(xy+yx)$ の奇中心は零。
+正常式の正側可換条件で、純正三次係数と $Uuv$ 係数は全て零となる。
+残る $Uu^2,Uv^2$ に対する同じ条件は、局所化した係数idealとして正確に
+\[
+ \begin{array}{c|c}
+ xu^2,xv^2&q^2+1=0,\ r^2-1=0\\
+ yu^2,yv^2&q^2+1=0,\ r^2+1=0
+ \end{array}
+\]
+を与える。二つの行は互いに素なので、全候補は共通因子 $x$ 又は $y$ を持つ。
+この条件は $\kappa$ に依存せず、全商が非domainである。
+
+$b=L(1),\epsilon=-1$ では $z_0=z_5=0$ なので、正側二軸が負側を $f,g$ でnormalizeする。
+その辞書は
+\[
+ f=\begin{pmatrix}z_2&-z_1\\z_4&-z_3\end{pmatrix},\quad
+ g=\begin{pmatrix}-z_3&z_1\\-z_4&z_2\end{pmatrix},\qquad
+ fg=-I,\quad \det f=\det g=-1.
+\]
+正常候補の最高負次数を $xA_2(V)+yB_2(V)$ とする。
+正側可換条件は、$A_2$ に対して $\operatorname{Sym}^2f$ 固定かつ
+$\operatorname{Sym}^2g$ 反固定、$B_2$ に対してその逆を要求する。
+両作用の積は恒等なので、いずれの共通核も零。
+従って負次数2項はなく、純正三次も奇中心零により消える。
+
+$b=J,\epsilon=-1$ でも $z_0=z_5=z_4=0,z_2=-z_3=z,z^2=-1$。
+正側二軸が負側をnormalizeし、その行列は
+\[
+ f=\begin{pmatrix}-z&k+z\\0&-z\end{pmatrix},\qquad
+ g=\begin{pmatrix}-z&-k+z\\0&-z\end{pmatrix}.
+\]
+$\det(\operatorname{Sym}^2 f-I)=\det(\operatorname{Sym}^2 g-I)=-8$ なので、
+同じ正側可換条件から負次数2項は全て零、純正三次も零となる。
+これで半単純・純正対称関係の全領域を排除した。
+
+最後に非半単純中山を扱う。
+右Zhang twist $C=B^{H}$、$H=\mu_u^{1/4}$ により中山を半単純化する。
+$Q=0$ はこの操作で保たれるが、$G$ の輸送やH3のtwist不変性は使わない。
+$C$ の偶関係の上の必要構造だけを使用する。
+$P\ne0$ で純正関係が対称なら $q_U$ は非退化だから、
+定理\ref{thm:h3-order2-22-rank4-one-sided-Jordan}によりJordan部分はない。
+従って非半単純候補では $C$ の純正関係はcommであり、負射影は非退化、奇関係は全graphである。
+
+正負両側の非自明単冪は存在しない。
+実際、topの交代block $A$ は可逆である一方、二つのJordan単冪の積作用による不変式
+$(J\otimes J)A(J\otimes J)^t=A$ は
+$A$ の六係数を $(z_0,z_1,0,0,0,0)$ に制限し、Pfaffianを零にする。
+これは定理\ref{thm:h3-order2-22-rank4-zero-top-no-Jordan}の証明の同じ交代block計算であり、
+正top $P$ の値を使用していない。
+負側のみの単冪は既知の片側Jordan排除に反する。
+
+残る正側のみの単冪では、元の $B$ の純正AS2はcommの逆twistで得られるJordan平面である。
+全graphと負AS2射影のmonic表示、AS4の三次次元20から、
+正三次のPBW空間は $T_3\oplus T_1\langle u^2,uv,v^2\rangle$ となる。
+$\mu(G)=G$ を元の $B$ で直接課す。
+正側shearを $x\mapsto x,y\mapsto y+x$ とし、負側は $-I$ なので、
+その固定三次は
+\[
+ kx^3+kxu^2+kxuv+kxv^2
+\]
+だけである。関係 $yx=xy+\eta x^2$ の全 $\eta$ で補空間minorは6である。
+従って $G$ は共通因子 $x$ を持ち、商domainに反する。
+これで全Jordan型が消え、半単純の場合に認識した $B_h$ だけが残る。
+
+四つの局所化ideal、負Jordanの二つの $-8$ minor、両可換型の $2I$ 恒等式、
+正側Jordan固定核の全 $\eta$ minor6は
+\[
+\texttt{verify\_cubic\_order2\_22\_Qzero\_complete.py}
+\]
+で厳密再生する。必要被覆と局所H3認識は本文の証明を合わせて用い、
+これを全H3の完全分類とは呼ばない。
+\end{proof}

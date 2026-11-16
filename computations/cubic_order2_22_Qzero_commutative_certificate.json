@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "scope": "remaining semisimple Q=0 pure-positive-commutator charts",
+  "swap": {
+    "PBW": 4,
+    "normal_rank10_minor": "4"
+  },
+  "negative_Jordan": {
+    "PBW": 4,
+    "non_x_factor_minor": 16,
+    "all_other_columns_on_chosen_rows": 0
+  },
+  "both_commutative_opposite": {
+    "universal_SL2_PBW": 4,
+    "f_not_scalar": "top V-degree forces all UV2 coefficients zero; remaining binary cubic factors",
+    "scalar_f_plus_or_minus_I_minors": [
+      16,
+      16
+    ]
+  },
+  "not_claimed": [
+    "pure-positive symmetric relation branch",
+    "nonsemisimple coverage",
+    "all H3 classification"
+  ]
+}
