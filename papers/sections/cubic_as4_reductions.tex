@@ -983,6 +983,84 @@ $s$ の四つの交換子と八乗根の基準核は
 で厳密再生する。
 \end{proof}
 
+\begin{lemma}[共鳴するskew derivation]
+\label{lem:h3-order2-skew-derivation-resonance}
+$T_a=k\langle x,y\rangle/(xy+a^2yx)$、
+$\nu(x)=ax$, $\nu(y)=a^{-1}y$ とする。
+次数1の $\nu$-skew derivationは、$a\ne-1$ なら全て
+$\delta_\ell(t)=\ell t-\nu(t)\ell$、$\ell\in(T_a)_1$ である。
+$a=-1$ では内部derivationを除き
+\[
+ (\delta(x),\delta(y))=(y^2,0),\quad(0,x^2)
+\]
+の二本が残る。
+\end{lemma}
+\begin{proof}
+$\delta(x)=d_0x^2+d_1xy+d_2y^2$、
+$\delta(y)=e_0x^2+e_1xy+e_2y^2$ と置く。
+関係を微分してPBW三次係数を比較すると
+\[
+\begin{gathered}
+ a(1+a)e_0=(1+a)d_2=0,\\
+ (a-1)e_1+(1+a^{-3})d_0=0,\quad
+ (a+a^{-2})e_2+(1-a^{-1})d_1=0.
+\end{gathered}
+\]
+内部derivationの二列は、それぞれ $(d_0,e_1)=(1-a,1+a^{-3})$ と
+$(d_1,e_2)=(-a^{-2}-a,1-a^{-1})$。
+各列の二係数は同時に零にならないので、結論を得る。
+\end{proof}
+
+\begin{theorem}[共鳴する四パラメータ正規三次候補族]
+\label{thm:h3-order2-resonant-family}
+任意の $\alpha,\beta,\gamma,\delta\in k$ に対し
+\[
+\begin{gathered}
+ xy+yx=0,\quad px+xp=0,\quad py-yp=0,\\
+ vx+xv=\alpha y^2,\quad vy+yv=\beta x^2,\quad
+ v^2-p^2=\gamma x^2+\delta y^2
+\end{gathered}
+\]
+で定義される $B$ はnoetherian quadratic Koszul AS4型14641の整域である。
+その中山作用と全 $W_1$ は
+\[
+ \mu_B=(-x,-y,p,-v),\qquad
+ W_1(B)=kG,\quad G=\beta x^2p-y(pv+vp)
+\]
+である。$G$ は全パラメータで非零正規正則。
+$R=B/(G)$ はAS Gorenstein次元3・parameter1で $\mu_R=1$ を満たす。
+$\beta=0$ の切断は非整域でありH3でない。
+$\beta\ne0$ の整域性・H3許容性はここでは結論しない。
+\end{theorem}
+\begin{proof}
+$u=(p+v)/2$, $w=(p-v)/2$ と置くと、六関係は
+\[
+\begin{gathered}
+ yx=-xy,\quad ux=-xu+\alpha y^2/2,\quad
+ wx=-xw-\alpha y^2/2,\\
+ uy=yw+\beta x^2/2,\quad wy=yu-\beta x^2/2,\quad
+ wu=-uw-(\gamma x^2+\delta y^2)/2.
+\end{gathered}
+\]
+四つの二次重なりを全係数で確認すると、$x^iy^ju^kw^l$ がPBW基底となる。
+重み $(1,1,2,2)$ の随伴次数環は先の $a=-1$ の単項Ore環なので、
+filtered transferからnoetherianかつ整域である。
+二次PBWによりKoszulであり、双対Hilbert値は $(1,4,6,4,1)$。
+保存した54項の多項式四次tensorは全隣接二次関係に属し、
+係数 $w_{yxwu}=1$、三flatteningの階数は全値で $4,6,4$ である。
+従って双対の最高対合は全次数で非退化、Frobenius性からAS4となる。
+このtensorの巡回式が指定した中山作用を与える。
+
+その正常化行列140行20列には、有理定数だけをpivotとする19段の消去があり、
+全パラメータでrank19である。
+上の $G$ は全残差を零にし、その $yu^2$ 係数は $-2$ なので、全値で核を張る。
+これらの消去ではパラメータで割らない。
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}order2\_\allowbreak{}resonant\_\allowbreak{}family.py}
+と54項証明書で、PBW、三つの最高対合、巡回式、全正常化式を独立再生する。
+整域内の $G\ne0$ は正則であり、正常商の中山公式から $\mu_R=1$、parameterは $4-3=1$。
+$\beta=0$ なら $G=-y(pv+vp)$ は非零一次式と二次式の積なので非整域となる。
+\end{proof}
+
 \begin{lemma}[単冪twist下の反標準三次関係の輸送]
 \label{lem:h3-unipotent-transport}
 $C$は左右noetherian quadratic Koszul AS4型14641で，$\mu_C$は半単純とする．

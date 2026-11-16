@@ -491,3 +491,15 @@ H3を仮定する場合のmuは変形前の(-x,-y,w,u)のまま。本文では�
 a1ではGx=−xGがy奇数を強制し全Gがy因子。a−1ではx次数偶数、y偶奇にGを分解。p=u+w,v=u−w,X=x²,Y=y²を取るとX,Y中心、p²−v²=2(AX+BY)、s=pv+vp=2(u²−w²)はC=<p,v,X,Y>の中心。y偶数部G_evenはCに入りsと可換するが、正常化mu(s)=−sから反交換もするので、domain/char0によりG_even0。全Gはy奇数でy因子を持ち非整域。
 
 八乗根CxyではPBW基底上のW1行列はC多項式、C0でrank20、全C非零がu,w同時尺度変更の一軌道なので全値W1零。PBW全族が確認されているため、局所化や特殊化の根拠無しに一般点計算を全値へ広げた議論ではない。verify_cubic_order2_Ore_base_deformations.pyは全正常化条件gcd、任意A,B/CのDiamond、sの四交換子、八乗根基準核を再生する。原稿thm:h3-order2-Ore-base-deformations。全cross導分やbase--outer線型係数の被覆は残る。
+
+## 共鳴cross導分と四パラメータ実AS4候補族（classification-v103）
+
+T_a=(xy+a²yx)、nu=(a x,a^-1 y)の次数1skew derivationはa!=−1なら全て内部。a−1ではmod内部にdelta(x)=y²とdelta(y)=x²の二本だけ。係数比較は本文lem:h3-order2-skew-derivation-resonanceの四式、内部二列の各gcdは1。これは全cross表示の被覆ではなく、指定した対角normalizing chartの導分の完全判定。
+
+共鳴でB_(alpha,beta,gamma,delta)=(xy+yx,px+xp,py−yp,vx+xv−alpha y²,vy+yv−beta x²,v²−p²−gamma x²−delta y²)を得る。全四パラメータでnoetherian quadratic Koszul AS4整域。u=(p+v)/2,w=(p−v)/2のPBWと重み(1,1,2,2)grが前a−1単項Oreなのでnoetherian/domain。54項polynomial最高tensorの三隣接関係射影零、固定係数w_yxwu1、flatteningrank4,6,4を有理定数pivotだけで全値再生しFrobenius/AS4とmu=(-x,-y,p,-v)を確定した。
+
+140x20正常化行列も全係数で有理定数だけの19pivot消去があり、全値W1はG=beta x²p−y(pv+vp)の一本。Gのyu²係数−2は全値非零で、Bdomainより正常正則。R=B/GはASGor3index1、mu_Rid。beta0はGのy因子で非整域。beta!=0のdomainとH3許容性は未判定。verify_cubic_order2_resonant_family.pyと54項cubic_order2_resonant_top_certificate.jsonがPBW・最高pairing・中山・全W1rankを独立再生。原稿thm:h3-order2-resonant-family。これは新たな候補族であり、新規性やH3実在は未確認。
+
+次のdomain/局所order計画（以下は未検証の作業仮説、まだ定理の入力でない）：X=x²,Y=y²,P=p²,s=pv+vpについてX,Y,P,s²がB中心で、G²=beta²X²P−Ys²と予想。Bがk[X,Y,P,s²]上32自由であればbeta!=0でG modYが正則、よってY正則R。Y開集合の次数零環はk[z,r]上二生成元Clifford、a²=−z、b²=beta²z²/4−r²−gamma z−delta、ab+ba=−alphaを予想（z=X/Y,r=py/Y,b=v y^-1−beta z/2）。これを元の関係から全係数で確認し、quaternion residueでdomain、centre cubic scroll F1とbranch cubic+fiberで全H3許容性へ進む。
+
+さらに未検証の有望な中心像：Rでh=pyとsが中心となり、h²=PY,Ys=betaXh,hs=betaXPのcubic scrollを張る。負Cliffordvolume g=xyv+(alpha/2)y³−(beta/2)x³も中心でg²=(alpha²/4)Y³+(beta²/4)X³−XY(P+gammaX+deltaY)を予想。scrollにおけるramificationはplane cubicのpullback Eと一本のfiber、E affineはz r²−beta²z³/4+gamma z²+delta z−alpha²/4=0。alpha,beta非零でE smoothならH3の可能性があるが、最大order性・全局所global dimension・忠実rank・AZ認識を未証明のまま結論しない。

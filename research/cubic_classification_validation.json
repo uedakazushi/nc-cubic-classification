@@ -1086,5 +1086,20 @@
     "result": "All P=A*x²+C*xy+B*y² deformations of the explicit involution Ore family excluded. Domain forces square terms only at a=+/-1 and xy only at eighth roots. Sign cuts factor by y; eighth-root cuts have W1 zero for all C by polynomial PBW and a single nonzero scaling orbit.",
     "scope_limit": "No coverage of general cross derivations/base--outer linear terms; AS4 sufficiency is not required. Actual Nakayama under H3 is verified by nonzero polynomial top tensors at all parameter values.",
     "top_certificate": "computations/cubic_order2_Ore_base_top_certificate.json"
+  },
+  "order2_resonant_AS4_candidate_v103": {
+    "status": "universal polynomial identities and constant-pivot ranks executed; AS4 construction proof in manuscript",
+    "validator": "computations/verify_cubic_order2_resonant_family.py",
+    "certificate": "computations/cubic_order2_resonant_family_certificate.json",
+    "top_certificate": "computations/cubic_order2_resonant_top_certificate.json",
+    "result": "Actual four-parameter noetherian Koszul AS4 domains constructed at the skew-derivation resonance. All W1 are one line G=beta*x²*p-y*(p*v+v*p); beta=0 excluded. R has normal cubic numerical/AS-Gorenstein data, not yet H3 recognition.",
+    "independent_checks": [
+      "PBW four overlaps",
+      "54-term top adjacent membership and twisted cyclic identity",
+      "constant-pivot top ranks4,6,4",
+      "constant-pivot normality rank19 and kernel identity",
+      "all skew derivations inner except the two-dimensional resonance at a=-1"
+    ],
+    "scope_limit": "Domain and H3 admissibility of the beta!=0 cut, centre/order formulas and moduli not yet established."
   }
 }
