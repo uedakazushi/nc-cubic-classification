@@ -1,0 +1,70 @@
+\subsection{負tangent逆割当ての負Pfaffianも空}
+\begin{lemma}[逆normalizerの奇次数中央化障害]
+\label{lem:h3-order2-22-odd-determinant-centralizer}
+整域 $B$ が $x,y,U=ku+kv$ で生成され、負二次tensorに純関係がなく、次の六二次関係による表示を持つとする：
+\[
+ Tx=xf(T),\quad Ty=yg(T),\quad fg=I,\quad\det f=-1,
+ \qquad xy=a(U),\quad yx=b(U)
+\]
+
+さらに $u^2,uv+vu$ が $a,b$ の張る空間に属するとする。
+このとき $x,y$ の個数が奇数の三次式で、全 $u,v$ と反交換するものは零である。
+\end{lemma}
+\begin{proof}
+$fg=gf=I$ により $xy,yx$ は負生成元と可換なので、
+$u^2,uv+vu$ は負部分代数内で中心となる。
+$[uv+vu,v]=[u,v^2]$ だから $v^2$ も負部分代数で中心である。
+従って $Z_2=\langle u^2,uv+vu,v^2\rangle$ は中心二次式の三次元空間。
+負二次tensorに純関係がないので、この空間は $B_2$ に単射である。
+
+補助次数 $\deg x=1,\deg y=-1,\deg U=0$ は全関係で保たれる。
+三次式の該当部分の補助次数は $n=\pm1,\pm3$ だけであり、
+積 $xy,yx$ を二次負式へ置換し、負生成元を右へ移すことで、
+各成分は $x^nt$ ($n>0$) 又は $y^{-n}t$ ($n<0$)、$t$ は負部分代数の元、と書ける。
+$G$ が全負生成元と反交換すれば $Z_2$ と可換する。
+$n>0$ の各成分では
+\[
+ 0=[G_n,z]=x^nt\bigl(z-f^n(z)\bigr),\qquad z\in Z_2
+\]
+となる。$n$ は奇数なので $\det(f^n)=-1$。
+二変数の対称二乗作用を恒等にする線型写像は $\pm I$ だけで、いずれも行列式1。
+従ってある $z\in Z_2$ に対して $z-f^n(z)\ne0$。
+整域性により $t=0$、すなわち $G_n=0$。
+$n<0$ も $g=f^{-1}$ に同じ議論を適用できる。
+
+a prioriに負部分代数の全高次関係やGWAの完全PBW表示を仮定せず、
+負二次式の単射と包絡のdomain性だけを使用した。
+\end{proof}
+
+\begin{theorem}\label{thm:h3-order2-22-tangent-reverse-minus-empty}
+負tangent逆割当て $c_U+uv+vu=0,q_U+u^2=0$、非退化正top、負Pfaffianの
+全領域にはH3対象が存在しない。
+\end{theorem}
+\begin{proof}
+$q_U=xy+yx$ とし、必要atlasを
+\[
+ (z_0,z_1,z_2,z_3,z_4,z_5)
+ =(0,(T+T^{-1})/2,T,-T^{-1},0,0),\quad T\ne0
+\]
+と書く。正側二軸の負側へのnormalizerは
+\[
+ f=\begin{pmatrix}-T&(T-T^{-1})/2\\0&T^{-1}\end{pmatrix},\qquad
+ g=\begin{pmatrix}-T^{-1}&(T-T^{-1})/2\\0&T\end{pmatrix}.
+\]
+$fg=I,\det f=\det g=-1$、偶関係は
+\[
+ xy=-\tfrac12(u^2+uv+vu),\qquad
+ yx=-\tfrac12(u^2-uv-vu)
+\]
+を与える。負二次式への純関係は存在しない。
+従って前補題が全 $T\ne0$ に適用される。
+正常三次は $\mu(G)=G$ により正側個数が奇数であり、負側と反交換するので零となる。
+非退化正topにJordan部分がないことも既知であり、全必要対象を排除した。
+
+全 $T$ に対するgraph辞書、$fg=I$、二つの二次tensor恒等式と
+$\operatorname{Sym}^2F=I,\det F=-1$ の矛盾idealは
+\[
+\texttt{verify\_cubic\_order2\_22\_tangent\_reverse\_minus.py}
+\]
+で厳密再生する。正Pfaffianと平方型rank2 cross境界は未解決のまま残す。
+\end{proof}

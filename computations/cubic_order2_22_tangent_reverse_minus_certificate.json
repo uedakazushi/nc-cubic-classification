@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "scope": "entire reverse tangent nondegenerate positive-top minus-Pfaffian stratum, all nonzero T",
+  "exact_graph_dictionary": true,
+  "normalizers": {
+    "f": [
+      "-T",
+      "T/2 - 1/(2*T)",
+      "0",
+      "1/T"
+    ],
+    "g": [
+      "-1/T",
+      "T/2 - 1/(2*T)",
+      "0",
+      "T"
+    ],
+    "fg": "I",
+    "determinants": [
+      -1,
+      -1
+    ]
+  },
+  "quadratic_products": [
+    "xy=-(u2+uv+vu)/2",
+    "yx=-(u2-uv-vu)/2"
+  ],
+  "free_tensor_identities": [
+    "f(xy quadratic)=yx quadratic",
+    "g(yx quadratic)=xy quadratic"
+  ],
+  "central_negative_quadratics": [
+    "u2",
+    "uv+vu",
+    "v2"
+  ],
+  "odd_auxiliary_degree_obstruction": "every odd power of f has determinant -1, so cannot fix all Sym2(V); quadratic negative tensors embed, and domain forces each odd-degree normal component zero",
+  "conclusion": "no normal positive cubic, hence no H3 on this whole stratum",
+  "not_claimed": [
+    "reverse plus-Pfaffian stratum",
+    "reverse square rank2-cross boundary",
+    "other negative rank2 types",
+    "global H3 classification",
+    "intrinsic relative descent",
+    "independent peer review"
+  ]
+}

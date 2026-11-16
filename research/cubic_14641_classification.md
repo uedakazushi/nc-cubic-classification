@@ -1185,3 +1185,12 @@ canonical負topQ0の(2,2)/mixed rank4全H3を、全Jordan型込みで曲がっ�
 証明cubic_order2_22_tangent_Jordan.tex。公開verifierは元の六二次関係の全三次商でH作用を計算し、負Pf代表(-1/2,1,0,0,1,0)と正Pf四代表(e,0,epsilon,epsilon,0,0),e0/1,epsilon±1の各4/6/6包含を検証。固定核の包含はshear非零parameterに不変で、保存torusはkxを保つ。muB(G)=G⇒H4G=G⇒HG=G、B=C^(H^-1)のx*B2=xC2で因子を戻す。正常Gの輸送を仮定しない点が重要。
 
 次はtangent逆割当てcU+uv+vu,qU+u²。非退化qUは全Jordanなし/M可逆で二Pfaffian atlas、負分枝はA=(0,(T+T^-1)/2,T,-T^-1,0,0),Tneq0。平方型はcross rank2/tangent pencilで可逆graph法を使えず、奇投影はrank3,3の境界が残る。まず逆非退化負Pfaffianの正常核を全Tで判定し、Ore還元又はLaurent汎関数minor coverを探す。負secant/非対称型、三固有値以上、全CY/成分/相対降下は未完。
+
+
+## tangent逆非退化の負Pfaffian全排除（classification-v181）
+
+負tangent逆割当て/非退化正top/負Pfaffianを全Tneq0で排除。全graphは正x/yが負Vをf,gでnormalizeしfgId,detf=detg−1。xy,yxがu²/uv+vuを張るので負側Sym²Vが中心。補助x−y次数の奇成分に対しfの奇冪はdet−1でSym²を恒等にできず、包絡domain性と負二次式単射から正常三次が全て零。GWAの全高次被覆や有限標本外挿を使わない。
+
+証明cubic_order2_22_tangent_reverse_minus.tex、検証器は同stemのPython。行列f=[[-T,(T-T^-1)/2],[0,T^-1]],g=[[-T^-1,(T-T^-1)/2],[0,T]]。fgId/det−1と自由負tensor上のf(a)=b,g(b)=a、Sym²FId+detF−1の矛盾idealを検証。補助Z次数は全六二次関係の斉次性から得られ、奇三次成分はx^n*t/y^-n*tへspanningできる。負高次環の普遍PBW性を仮定せず負二次式の単射だけを用いる。
+
+次はtangent逆割当て正Pfaffian。非退化正topのatlasはA=(z0,z1,-z4/2,z4/2,z4,z5), z0z5-z1z4-z4²/4=1。z0=z5=0ではx/y opposite-normalizing,fgId,detf1、正常奇成分はSym²fの有限奇位数共鳴に限る見込み。逆平方型はcross rank2 tangent pencilで別境界。負secant/非対称型、全CY/三固有値/成分/相対降下も未完。
