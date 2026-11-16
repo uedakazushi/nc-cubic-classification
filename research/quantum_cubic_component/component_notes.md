@@ -155,3 +155,15 @@ I2の六基底とI3の三次生成元を持ち上げ、各次数のI_n/J_nへNak
 
 従って8変数m³=0の同時potential・中央三次族が構成され、全Artin包絡定理から包絡も三次商も全次数flat。証明は `prop:eight-second-order`、八方向と二次補正の小証明書は `second_order_incidence_certificate.json`。二次jetの存在を全次数形式積分、H3相対認識、全intrinsic被覆や成分の完成としない。
 次は、低次jetを無制限に増やすだけでなく、中央三次incidenceの特異点を解消する明示的chartを構成する。generic中心三次のRains式の三捩れ極限を、cut先頭係数と横断パラメータの多変数族へ拡張する方針が有望。EG Theorem3.4.4/3.4.5はgeneric仮定を持ち、三捩れ点の全intrinsic被覆へ無条件に適用しない。
+
+
+## 12. 八変数同時形式族と表示incidenceの形式的滑らかさ
+
+証明は `papers/sections/quantum_cubic_multivariate_formal_chart.tex`。EG arXiv0709.3593v4 Appendix9.1 p35のY一次係数内のQ³*b2は余分なb2を除きQ³へ修正する必要がある。PDF原本画像も確認した。`verify_rains_central_formula.py` は修正式を全係数QQ(Q,T)[a1,b1,c1,a2,b2,c2]上で元関係102挿入・三交換子により独立検証。印刷式との差−TQ³b2(b2−1)Yが非中央であることも全係数で確認。従来のb2=0特殊化は影響を受けない。
+
+p=1+kappa*lambda、Q=q0/p,T=−3lambda*eta*zeta/p、a1=−eta*zeta/p,b1=−zeta/(eta*p),c1=−eta/(zeta*p)、a2=−eta*zeta*a/p,b2=−zeta*b/p,c2=−eta*c/p、X=x,Y=eta*y,Z=zeta*zを代入する。potentialはp xyz−q0 xzy+lambda(x³+eta³y³+zeta³z³)−(x²+y²+z²)/2−ax−by−cz。修正Rains式の正規形をNとすると、非定数係数は全てlambda²で割れ、N_x³/lambda²のlambda0値は9eta²zeta²(1+q0)で単元。**G=(N−N_constant)/N_x³+D** は共通lambda²を除いて正則な明示的有理式である。
+`verify_central_multivariate_lift.py` は各低次係数単項式で(Q−q0,T)の0,1jetが零であること、二次の全先頭式を検証し、G0=kappa*Omega(a,b,c)+X+eta³Y+zeta³Z+Dを得る。単なるjetの外挿ではなく、一般中心恒等式と厳密なイデアル二乗所属により全次数同時形式持上げとなる。全Artin包絡定理により包絡・商はflat。
+
+eta0³2,zeta0³3,kappa0=2,D0=5で、七既知方向に加えlambda方向potentialがx³+2y³+3z³+2xyzとなり既存の横断方向に一致する。14座標方向を加えた形式22変数写像はincidenceの接空間上同型。embedding dimension22の完備局所環への冪級数環全射と、形式22変数族への写像の合成が形式自己同型となるので、incidence自体が形式smooth22次元である。恒等近傍の14次元gaugeを除いた形式sliceは8変数。有限の特殊fiber自己同型を含む全群oid、全intrinsic変形の被覆とは別である。
+
+次の核心は相対qgrのH3認識：この全次数flat・相対AS4・中央正則三次商の形式族が、smooth proper enhancement、heart、逆Serre、相対exceptional構造対象とAZ列を持つことを証明する。その後、既存の全Artin単射性とHH2dim8/HH3zeroを使い、全intrinsic形式変形への被覆を比較する。単に表示incidenceがsmooth8であるだけでは大域H3成分の決定ではない。

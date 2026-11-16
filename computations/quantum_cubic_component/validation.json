@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "version": "triangle-component-v6",
+  "version": "triangle-component-v7",
   "status": "PASS",
   "python": "3.12.14",
   "sympy": "1.14.0",
@@ -36,6 +36,14 @@
     },
     {
       "script": "verify_second_order_incidence.py",
+      "status": "PASS"
+    },
+    {
+      "script": "verify_rains_central_formula.py",
+      "status": "PASS"
+    },
+    {
+      "script": "verify_central_multivariate_lift.py",
       "status": "PASS"
     }
   ],

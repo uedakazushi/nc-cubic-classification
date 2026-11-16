@@ -485,10 +485,12 @@ $D=5$ と固定した一般 $u$ のH3性をこの計算だけで主張しない�
 Rainsの $E_6$ 型幾何学と比較する際には、
 固定した楕円境界のfiltered deformationの六次元と、境界曲線・平行移動の二次元を区別する。
 期待される重み付き射影表示やWeyl商を、そのまま全H3の同値と断定しない。
-次に最優先で行うことは、相対反標準環の二次包絡がAS4となることとH3族の相対実現であり、
+指定potential chartでの全Artin包絡認識と八変数の同時中心切断は後節で解決する。
+次に最優先で行うことは、全intrinsic形式変形との比較とH3族の相対実現であり、
 その後、閉包の境界を有限な認識条件へ落とすことである。
 
 \input{papers/sections/quantum_cubic_artin_reconstruction.tex}
+\input{papers/sections/quantum_cubic_multivariate_formal_chart.tex}
 
 \section{再現と検証範囲}
 全コードはPython 3、SymPy、NetworkXを使用し、各コードと同じ場所へ小さいJSON証明書を再生成する。
@@ -498,12 +500,17 @@ Rainsの $E_6$ 型幾何学と比較する際には、
 \path{verify_normal_form.py}&全係数正常形、局所指標：PASS\\
 \path{verify_smooth_witness.py}&標数0の特異点ideal $(1)$：PASS\\
 \path{verify_tangent_quotient.py}&核22、座標方向14、商8：PASS\\
-\path{verify_integrated_lift.py}&有理係数の全次数中心式：PASS\\\bottomrule
+\path{verify_integrated_lift.py}&有理係数の全次数中心式：PASS\\
+\path{verify_cubic_obstruction.py}&全80一次重なり：PASS\\
+\path{verify_universal_cubic_syzygies.py}&全四syzygy、三次rank44：PASS\\
+\path{verify_second_order_incidence.py}&八方向同時二次補正：PASS\\
+\path{verify_rains_central_formula.py}&修正中心式の全係数恒等式：PASS\\
+\path{verify_central_multivariate_lift.py}&八変数正則化・全先頭式：PASS\\\bottomrule
 \end{tabular}\end{center}
 有限体の標本による外挿はしていない。
 H3開性・相対圏の再構成・局所order認識は、計算証明書と通常の数学的証明を区別して記載した。
 全原稿の独立査読、Lean形式化、新規性の網羅調査は未実施である。
-本稿単独のLuaLaTeX組版と新規検証器を確認し、既存の巨大な分類原稿全体は再組版していない。
+本稿のLuaLaTeX組版と上記検証器を確認した。既存の全分類成果の独立再監査とは区別する。
 
 \begin{thebibliography}{99}
 \bibitem{DeDekenLowen} O. De Deken, W. Lowen,

@@ -2154,5 +2154,32 @@
       "all intrinsic coverage",
       "global component classification"
     ]
+  },
+  "quantum_component_multivariate_formal_chart_v205": {
+    "status": "ordinary proof and exact all-coefficient validation completed; typeset",
+    "proof": "papers/sections/quantum_cubic_multivariate_formal_chart.tex",
+    "validators": [
+      "computations/quantum_cubic_component/verify_rains_central_formula.py",
+      "computations/quantum_cubic_component/verify_central_multivariate_lift.py"
+    ],
+    "certificates": [
+      "computations/quantum_cubic_component/rains_central_formula_certificate.json",
+      "computations/quantum_cubic_component/central_multivariate_lift_certificate.json"
+    ],
+    "results": [
+      "printed arXiv v4 repeated b2 corrected and generic original relations checked",
+      "all 102 relation insertions and 3 central commutators vanish identically",
+      "normal-form denominators units at q3,t0",
+      "all nonconstant coefficients belong to (Q-q0,T)^2",
+      "normalized leading formula kappa*Omega+X+eta^3*Y+zeta^3*Z",
+      "eight-variable simultaneous formal flat envelope and central quotient",
+      "presentation incidence formally smooth22, identity-gauge slice smooth8"
+    ],
+    "not_claimed": [
+      "relative H3 recognition of whole formal family",
+      "all intrinsic formal deformation coverage",
+      "global H3 algebraic stack",
+      "complete component and boundary classification"
+    ]
   }
 }
