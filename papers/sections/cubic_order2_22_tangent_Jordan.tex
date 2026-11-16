@@ -1,0 +1,61 @@
+\subsection{負tangent第一割当ての全Jordan型を閉じる}
+\begin{theorem}\label{thm:h3-order2-22-tangent-first-all-empty}
+canonical負tangent第一割当て
+$c_U+u^2=0,q_U+uv+vu=0$ の全H3候補は、全Jordan型を含めて空である。
+逆割当て、及び負secant・非対称型の残余はこの定理に含めない。
+\end{theorem}
+\begin{proof}
+半単純の場合は前定理で排除した。
+非退化 $q_U$ にはJordan部分がないので、$q_U=x^2$ の場合だけが残る。
+canonical untwist $C=B^H$、$H=\mu_u^{1/4}$ を取る。
+$M$ が可逆で $A$ も可逆なので、正負両Jordanは交代block不変式のPfaffian零に反する。
+負側だけのJordanは既知の片側排除に反する。
+従って $H|_V=I$、正側だけが非自明で、$x$ を固定し $y\mapsto y+cx$ ($c\ne0$) とする。
+$H$ の非零parameterを変えても固定核は同じなので、$c=1$ のshearを用いてよい。
+
+$A$ の不変式
+\[
+ (J\otimes I)A(J\otimes I)^t=A
+\]
+は正確に $z_5=0,z_2=z_3$ を要求する。
+平方型負Pfaffianは前述の一軌道であり、その代表は
+$(-1/2,1,0,0,1,0)$。
+平方型正Pfaffianは
+\[
+ (z_0,0,\epsilon,\epsilon,0,0),\qquad\epsilon=\pm1
+\]
+であり、保存torusにより $z_0=0$ 又は1へ移る。
+従って必要被覆は計五軌道である。
+このtorusは $kx$ を保存し、shearのparameterを非零倍にしか変えない。
+
+五代表の元の二次関係から三次商を厳密消去し、正固有三次の十次元空間で $H$ の作用を計算する。
+各代表について
+\[
+ \dim\ker(H-I)=4,\qquad\dim(xC_2)_+=6,\qquad
+ \dim\bigl((xC_2)_++\ker(H-I)\bigr)=6
+\]
+となる。従って全代表で $\ker(H-I)\subset xC_2$。
+計算は三次の全64語と元の全三次関係に対する有理数上の商空間計算であり、
+PBW単項式が特別な境界でも基底となるという仮定を使わない。
+五軌道の被覆により、全非半単純候補で同じ包含が成立する。
+
+ここから元の $B$ で因子を得る点を明記する。
+$G$ をnormal cutとして $C$ に輸送してはいない。
+右Zhang twistは次数付きベクトル空間を変えず、正固有三次上では
+$\mu_B=H^4$ である。
+したがって元の必要条件 $\mu_B(G)=G$ は、単冪作用の標数0性により $H(G)=G$ を意味する。
+上の包含から、同じベクトル $G$ は $xC_2$ に属する。
+一方 $B=C^{H^{-1}}$ の右積では
+\[
+ x*_B a=x\,H^{-1}(a),\qquad x*_B B_2=xC_2
+\]
+なので、元の $B$ においても $G=x*_B a$ と分解する。
+一次・二次の両因子は三次関係による商でも非零だから、$B/(G)$ はdomainでない。
+これで最後の正片側Jordanも全て排除した。
+
+交代block不変式と五代表の固定核・左因子空間の全包含は
+\[
+\texttt{verify\_cubic\_order2\_22\_tangent\_Jordan.py}
+\]
+で再生する。正常三次のtwist不変性を仮定せず、固定\emph{ベクトル空間}と元の積を使う証明である。
+\end{proof}

@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "scope": "entire semisimple tangent first-assignment plus-Pfaffian stratum, square and nondegenerate positive top",
+  "universal_SL2_PBW_overlaps": {
+    "square": 4,
+    "nondegenerate": 4
+  },
+  "Ore_description": {
+    "base": "[x,y]=-u2, uU=F(U)u",
+    "sigma": "F^-1 on U, -1 on u",
+    "delta": [
+      "delta(x)=-(t/2)*x*u",
+      "delta(y)=r*x*u+(t/2)*y*u",
+      "delta(u)=-x2"
+    ],
+    "associated_graded_v": "known curved SL2 chart alpha=-1,beta=0"
+  },
+  "non_diagonal_associated_graded_kernels": [
+    {
+      "F": "J",
+      "normal_rows": [
+        7,
+        13,
+        23,
+        30,
+        31,
+        32,
+        42,
+        44,
+        65,
+        66
+      ],
+      "determinant": "36"
+    },
+    {
+      "F": "-J",
+      "normal_rows": [
+        7,
+        13,
+        23,
+        30,
+        31,
+        32,
+        42,
+        44,
+        65,
+        66
+      ],
+      "determinant": "36"
+    }
+  ],
+  "semisimple_associated_graded": "normal kernel zero except traceF=1 primitive-sixth eigenvalues; that kernel is pure U3 and has v-degree zero",
+  "remaining_cut_obstruction": "all actual G lie in three-generator Ore base; its primitive6 cut is non-domain by the existing exact period3 norm lemma, and it embeds in B/(G) by the monic v-basis",
+  "conclusion": "no H3 in this entire plus stratum, including every torus boundary and resonance",
+  "not_claimed": [
+    "reverse tangent assignment",
+    "nonsemisimple transport",
+    "global H3 classification",
+    "independent peer review"
+  ]
+}

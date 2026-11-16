@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "version": "classification-v178",
+  "version": "classification-v180",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -90,7 +90,9 @@
     "papers/sections/cubic_order2_22_clifford_matrix.tex",
     "papers/sections/cubic_order2_22_Qzero_commutative.tex",
     "papers/sections/cubic_order2_22_Qzero_complete.tex",
-    "papers/sections/cubic_order2_22_tangent_negative.tex"
+    "papers/sections/cubic_order2_22_tangent_negative.tex",
+    "papers/sections/cubic_order2_22_tangent_plus_Ore.tex",
+    "papers/sections/cubic_order2_22_tangent_Jordan.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -1815,6 +1817,34 @@
       "nonsemisimple tangent transport",
       "all P,Q nonzero H3",
       "intrinsic relative descent"
+    ]
+  },
+  "order2_22_tangent_first_semisimple_v179": {
+    "status": "PASS both universal SL2 Ore PBW charts, two Jordan normal minors and structural norm exclusion; independent peer review not claimed",
+    "validator": "computations/verify_cubic_order2_22_tangent_plus_Ore.py",
+    "certificate": "computations/cubic_order2_22_tangent_plus_Ore_certificate.json",
+    "proof": "papers/sections/cubic_order2_22_tangent_plus_Ore.tex",
+    "scope": "負tangent第一割当てcU+u²,qU+uv+vuの全半単純H3を両Pfaffian・全境界込みで排除。正Pfaffianは全FSL2のS(F)[v;sigma,delta]へ必要被覆し、v-filtration grの非零片側curvature正常核を全Fで判定。±Jordan核は定数minor36で零に強化。traceF1のprimitive6共鳴だけ二次元正常核が残るが全Gは三生成元S内、既存三次norm零因子がmonic v商へ埋まるため全非domain。非退化qUはJordanなしなので全Jordan型込みで空。",
+    "not_claimed": [
+      "square positive nonsemisimple tangent transport",
+      "reverse tangent assignment",
+      "other negative rank2 types",
+      "global H3 classification",
+      "intrinsic relative descent"
+    ]
+  },
+  "order2_22_tangent_first_all_Jordan_v180": {
+    "status": "PASS A-invariant equations and all five exact fixed-kernel/left-factor inclusions; complete structural all-Jordan proof in manuscript",
+    "validator": "computations/verify_cubic_order2_22_tangent_Jordan.py",
+    "certificate": "computations/cubic_order2_22_tangent_Jordan_certificate.json",
+    "proof": "papers/sections/cubic_order2_22_tangent_Jordan.tex",
+    "scope": "負tangent第一割当てcU+u²,qU+uv+vuを全Jordan型込みで完全排除。半単純は全SL2 Ore表示/gr正常核とprimitive6三次norm。非半単純平方型はH_UJ/H_VIdのA不変式z5=0,z2=z3から五canonical軌道へ必要被覆し、全軌道でH固定三次4次元が左因子xC2（6次元）へ入ることを厳密計算。muG固定と右twistの同一ベクトル空間/x*B2=xC2により元Bでも一次因子。Gのnormal cutとしてのtwist輸送は使わない。",
+    "not_claimed": [
+      "reverse tangent assignment",
+      "other negative rank2 types",
+      "global H3 classification",
+      "intrinsic relative descent",
+      "independent peer review"
     ]
   }
 }

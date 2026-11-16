@@ -1,0 +1,89 @@
+\subsection{負tangent第一割当ての全正Pfaffian分枝も空}
+\label{subsec:h3-order2-22-tangent-plus-Ore}
+\begin{lemma}[非零片側curvatureの強化された正常核]
+\label{lem:h3-order2-22-curved-graded-zero}
+$F\in\mathrm{SL}_2$、$\alpha\ne0$ とし、既知curved SL2包絡
+\[
+ B_0(F)=k\langle x,y,u,v\rangle/
+ ([x,y]-\alpha u^2,\ uU-F(U)u,\ vU-F^{-1}(U)v,\ uv+vu)
+\]
+を考える。
+$++--$ の正常三次核は、$\operatorname{tr}F=1$ の場合を除いて零である。
+$\operatorname{tr}F=1$ では、$F$ の固有座標で $kx^3+ky^3$ に等しく、特に負変数 $v$ を含まない。
+\end{lemma}
+\begin{proof}
+$F$ が対角化可能なら命題\ref{prop:h3-order2-22-curved-diagonal}の全係数正常核判定である。
+$\alpha\ne0$ なので $F=\pm I$ のWeyl中央化核も零となる。
+残る固有値は $\lambda^2-\lambda+1=0$ だけで、正常核は表示した二次元。
+非対角型 $F=\pm J$ は $u$ の尺度で $\alpha=-1$ に正規化できる。
+この二点のPBW正常行列にはそれぞれ非零な定数 $10\times10$ minorがあり、核は零である。
+前の全SL2判定では一次因子までしか使わなかったこの二点を、ここでは正常核零まで強化した。
+\end{proof}
+
+\begin{theorem}\label{thm:h3-order2-22-tangent-first-semisimple-empty}
+負tangent第一割当て
+\[
+ [x,y]+u^2=0,\qquad q_U+uv+vu=0,\qquad
+ q_U=x^2\ \text{又は}\ xy+yx
+\]
+の全半単純中山H3候補は、両Pfaffian分枝・全退化係数込みで空である。
+$q_U$ が非退化の場合は中山のJordan部分も既に排除されているので、全Jordan型込みで空である。
+平方型の非半単純対象や、tangent逆割当てをこの定理に含めない。
+\end{theorem}
+\begin{proof}
+負Pfaffianは前節で全値排除済みなので、正Pfaffianを扱う。
+全atlasの係数から
+\[
+ F=\begin{pmatrix}-z_2&z_0\\-z_5&-z_3\end{pmatrix}\in\mathrm{SL}_2
+\]
+を作ると、この $F$ は全 $\mathrm{SL}_2$ を走る。
+三生成元部分を
+\[
+ S(F)=k\langle U,u\rangle/([x,y]+u^2,\ uU-F(U)u)
+\]
+と書けば、包絡は $B=S(F)[v;\sigma,\delta]$ であり、
+$\sigma|_U=F^{-1},\sigma(u)=-u$。
+$F=\left(\begin{smallmatrix}r&s\\t&w\end{smallmatrix}\right)$ に対する微分は、平方型では
+\[
+ \delta(x)=-\tfrac t2xu,\quad \delta(y)=rxu+\tfrac t2yu,\quad \delta(u)=-x^2;
+\]
+非退化型では
+\[
+ \delta(x)=-\tfrac{r+w}{2}xu-tyu,\quad
+ \delta(y)=sxu+\tfrac{r+w}{2}yu,\quad \delta(u)=-(xy+yx).
+\]
+この表示は $z_5=0$ 等の境界を除去せず成立する。
+全 $\det F=1$ で各四つのoverlapが解消することも検証する。
+$v$ 次数filtrationのassociated gradedは、補題の $B_0(F)$、$\alpha=-1$ そのものである。
+
+元の非零正常三次 $G$ があれば、その $v$ 最高次数項は $B_0(F)$ の正常核に入る。
+補題より $\operatorname{tr}F=1$ に限り、しかも最高 $v$ 次数は0。
+従って $G$ 自身が $S(F)$ に属し、固有座標では $G=Ax^3+By^3$ である。
+ここで残った正常核を零と取り違えてはいけない。
+$AB=0$ なら既に一次因子を持つ。
+$AB\ne0$ では定理\ref{thm:h3-order2-22-primitive6-nondomain}の三次norm構成が
+三生成元部分 $S(F)/(G)$ 自身に適用され、零因子を与える。
+同定理の $\beta=0$ の場合、構成に負変数 $v$ は不要であり、
+$u$ と一方の固有座標を逆転したGWAで
+$\sigma^3a_0=a_0$ と $X^6=\rho^3\operatorname{Norm}_3(a_0)$ から
+$Z=(\rho a_0)^{-1}X^2$、$Z^3=1$ を得る。
+monic六基底により $Z-1,Z^2+Z+1$ はともに非零である。
+従ってこの三生成元商はdomainでない。
+
+$Gv+vG=0$ をOre表示で比較すると $\sigma(G)=-G,\delta(G)=0$。
+従って
+\[
+ B/(G)=(S(F)/(G))[v;\bar\sigma,\bar\delta]
+\]
+はmonic $v$ 基底を持ち、$S(F)/(G)$ が単射で入る。
+その零因子は消えないため、全 $B/(G)$ も非domainでH3に反する。
+これはtwist不変性やfiltered domain性の逆推論を用いない。
+最後の全Jordan型の主張は非退化正topのJordan排除定理による。
+\end{proof}
+
+全SL2の二組のPBW恒等式と associated graded の二つのJordan正常minorは
+\[
+\texttt{verify\_cubic\_order2\_22\_tangent\_plus\_Ore.py}
+\]
+で再生する。二パラメータ一般点のminorだけでは見落とす $\operatorname{tr}F=1$ の二次元正常核を、
+この証明では三生成元商の非整域性によって全て排除している。

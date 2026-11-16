@@ -1,0 +1,91 @@
+{
+  "status": "PASS",
+  "scope": "all positive-only Jordan canonical envelopes in tangent first-assignment",
+  "A_invariance": "z5=0,z2=z3",
+  "complete_orbits": [
+    {
+      "orbit": "minus",
+      "A_coefficients": [
+        "-1/2",
+        "1",
+        "0",
+        "0",
+        "1",
+        "0"
+      ],
+      "positive_B3_dimension": 10,
+      "H_fixed_dimension": 4,
+      "left_xB2_dimension": 6,
+      "left_xB2_plus_fixed_dimension": 6
+    },
+    {
+      "orbit": "plus_(1, 0)",
+      "A_coefficients": [
+        "0",
+        "0",
+        "1",
+        "1",
+        "0",
+        "0"
+      ],
+      "positive_B3_dimension": 10,
+      "H_fixed_dimension": 4,
+      "left_xB2_dimension": 6,
+      "left_xB2_plus_fixed_dimension": 6
+    },
+    {
+      "orbit": "plus_(1, 1)",
+      "A_coefficients": [
+        "1",
+        "0",
+        "1",
+        "1",
+        "0",
+        "0"
+      ],
+      "positive_B3_dimension": 10,
+      "H_fixed_dimension": 4,
+      "left_xB2_dimension": 6,
+      "left_xB2_plus_fixed_dimension": 6
+    },
+    {
+      "orbit": "plus_(-1, 0)",
+      "A_coefficients": [
+        "0",
+        "0",
+        "-1",
+        "-1",
+        "0",
+        "0"
+      ],
+      "positive_B3_dimension": 10,
+      "H_fixed_dimension": 4,
+      "left_xB2_dimension": 6,
+      "left_xB2_plus_fixed_dimension": 6
+    },
+    {
+      "orbit": "plus_(-1, 1)",
+      "A_coefficients": [
+        "1",
+        "0",
+        "-1",
+        "-1",
+        "0",
+        "0"
+      ],
+      "positive_B3_dimension": 10,
+      "H_fixed_dimension": 4,
+      "left_xB2_dimension": 6,
+      "left_xB2_plus_fixed_dimension": 6
+    }
+  ],
+  "untwist_argument": "mu(G)=G implies H(G)=G. B=C^(H^-1) has the same vectors and x*B2=x*C2, so the fixed-subspace inclusion gives an actual left factor in B. G is not transported as a normal cut.",
+  "conclusion": "combined with semisimple and negative-only/both-Jordan exclusions, the entire first tangent assignment has no H3",
+  "not_claimed": [
+    "reverse tangent assignment",
+    "other nonzero negative rank2 types",
+    "global H3 classification",
+    "intrinsic relative descent",
+    "independent peer review"
+  ]
+}

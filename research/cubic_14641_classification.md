@@ -1167,3 +1167,21 @@ canonical負topQ0の(2,2)/mixed rank4全H3を、全Jordan型込みで曲がっ�
 次はtangent第一割当て正Pfaffian。残余torusでz5neq0は二パラメータmain chart、z5=0はz0=0/1の二一パラメータ境界へ被覆できる。平方型mainの一般quartic消去はNF分母Q*(P+Q)*((P+Q)²-2)、正常10minorは定数*P*(P+Q)^6*((P+Q)²-1)^3*((P+Q)²-2)^5（計算済み・公開certificate未整備）。従って次は有限本の例外直線を全係数で判定する。ランダムな高次数minorのGBは重すぎ中止し、この有限直線分解へ切替。全H3被覆/成分/相対降下は未完。
 
 私的再開計算：/workspace/work/order2_22_rank4/both_top/ にexplore.py,probe.py,ff.py,ff_main.pyと小pickle。これらに依存せず公開verifierは入力から再計算する。ff_mainは平方正main A=(1-PQ,-1/2,P,Q,0,1)。残余z5=0境界A=(epsilon,0,T,T^-1,0,0),epsilon0/1。nondeg正mainはA=(1-PQ,(P-Q)/2,P,Q,0,1)、同境界z1=(T-T^-1)/2。逆nondeg負はA=(0,(T+T^-1)/2,T,-T^-1,0,0)。
+
+
+## tangent第一割当ての全半単純排除（classification-v179）
+
+負tangent第一割当てcU+u²,qU+uv+vuの全半単純H3を両Pfaffian・全境界込みで排除。正Pfaffianは全FSL2のS(F)[v;sigma,delta]へ必要被覆し、v-filtration grの非零片側curvature正常核を全Fで判定。±Jordan核は定数minor36で零に強化。traceF1のprimitive6共鳴だけ二次元正常核が残るが全Gは三生成元S内、既存三次norm零因子がmonic v商へ埋まるため全非domain。非退化qUはJordanなしなので全Jordan型込みで空。
+
+証明はcubic_order2_22_tangent_plus_Ore.tex。verify_cubic_order2_22_tangent_plus_Ore.pyはqU平方/非退化の二つの全SL2 Ore表示について計8overlap、grの±Jordan二正常10minor36を厳密検証。既存curved_diagonalとprimitive6_nondomainのbeta0を適用。グラフF=[[-z2,z0],[-z5,-z3]]、detF1、grで正常Gがv次数0なら元GもS(F)内。Gv+vGからsigmaG=-G,deltaG0となりS/(G)がB/(G)へ埋まる。従ってfiltered domain性の逆推論やGのtwist輸送は不要。以前の二param main/例外直線計算はこの構造証明に置き換わり、再実行不要。
+
+次はtangent第一割当て平方型の非半単純残余と逆割当て。M可逆の両JordanはPf0、負片側は既知排除。正片側H_U=J,H_VIdのA不変式はz5=0,z2=z3。平方正Pfaffianはz2=z3=±1,z0=0/1へ、平方負は既存一点軌道へ。Gはtwist輸送せず、canonical C3のH固定核がx*C2に入るかを厳密計算し、元BのmuG固定から一次因子を得る方策。逆割当て非退化の二atlas、平方のrank2 tangent cross、負secant/非対称型は未完。全H3/成分/相対降下も未完。
+
+
+## tangent第一割当ての全Jordan型完全排除（classification-v180）
+
+負tangent第一割当てcU+u²,qU+uv+vuを全Jordan型込みで完全排除。半単純は全SL2 Ore表示/gr正常核とprimitive6三次norm。非半単純平方型はH_UJ/H_VIdのA不変式z5=0,z2=z3から五canonical軌道へ必要被覆し、全軌道でH固定三次4次元が左因子xC2（6次元）へ入ることを厳密計算。muG固定と右twistの同一ベクトル空間/x*B2=xC2により元Bでも一次因子。Gのnormal cutとしてのtwist輸送は使わない。
+
+証明cubic_order2_22_tangent_Jordan.tex。公開verifierは元の六二次関係の全三次商でH作用を計算し、負Pf代表(-1/2,1,0,0,1,0)と正Pf四代表(e,0,epsilon,epsilon,0,0),e0/1,epsilon±1の各4/6/6包含を検証。固定核の包含はshear非零parameterに不変で、保存torusはkxを保つ。muB(G)=G⇒H4G=G⇒HG=G、B=C^(H^-1)のx*B2=xC2で因子を戻す。正常Gの輸送を仮定しない点が重要。
+
+次はtangent逆割当てcU+uv+vu,qU+u²。非退化qUは全Jordanなし/M可逆で二Pfaffian atlas、負分枝はA=(0,(T+T^-1)/2,T,-T^-1,0,0),Tneq0。平方型はcross rank2/tangent pencilで可逆graph法を使えず、奇投影はrank3,3の境界が残る。まず逆非退化負Pfaffianの正常核を全Tで判定し、Ore還元又はLaurent汎関数minor coverを探す。負secant/非対称型、三固有値以上、全CY/成分/相対降下は未完。

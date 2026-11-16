@@ -40,7 +40,7 @@ Rains・VdB・AS・anticanonical heartの一般次数比較は [nc-dp-surface-he
 
 **全体的なスペクトル制約（classification-v177）**：全(1,3)は幾何学的被覆・H3必要十分条件・全矢まで確定、全(3,1)は全Jordan型込みで空。(2,2) mixed rank2も全Jordan型込みで空。mixed rank4のcanonical正top P0全体は、退化境界と全Jordan型込みで固定非CY符号族へ完全に幾何学的認識、一般dim2/inertia mu2²。canonical負topQ0は全Jordan型込みで曲がったClifford族に認識。未知の(2,2)はP,Qとも非零で、Pはcomm⊙平方/comm⊙非退化quadの二型。非退化型のJordanはなく、平方型の非半単純には正側Jordanが必要。三固有値以上、全CY被覆、全成分・intrinsic族降下は未完。
 
-**次の核心（classification-v178）**：正負topとも非零の残余で、負top rank1をcrossのruling障害により全Jordan型のcanonical包絡から排除。負topはrank2三型に限定。tangent型は二つのisotropic-factor割当てを区別し、六つの可逆cross線型atlasと逆割当て平方型のrank2 cross境界を確定。第一割当て/負Pfaffianの全半単純領域は、平方型の一軌道正常核零と非退化型全Tneq0の三minor gcdT10により空。正Pfaffian、逆割当て、非半単純tangentは未完。 次はtangent第一割当て正Pfaffian。残余torusでz5neq0は二パラメータmain chart、z5=0はz0=0/1の二一パラメータ境界へ被覆できる。平方型mainの一般quartic消去はNF分母Q*(P+Q)*((P+Q)²-2)、正常10minorは定数*P*(P+Q)^6*((P+Q)²-1)^3*((P+Q)²-2)^5（計算済み・公開certificate未整備）。従って次は有限本の例外直線を全係数で判定する。ランダムな高次数minorのGBは重すぎ中止し、この有限直線分解へ切替。全H3被覆/成分/相対降下は未完。
+**次の核心（classification-v180）**：負tangent第一割当てcU+u²,qU+uv+vuを全Jordan型込みで完全排除。半単純は全SL2 Ore表示/gr正常核とprimitive6三次norm。非半単純平方型はH_UJ/H_VIdのA不変式z5=0,z2=z3から五canonical軌道へ必要被覆し、全軌道でH固定三次4次元が左因子xC2（6次元）へ入ることを厳密計算。muG固定と右twistの同一ベクトル空間/x*B2=xC2により元Bでも一次因子。Gのnormal cutとしてのtwist輸送は使わない。 次はtangent逆割当てcU+uv+vu,qU+u²。非退化qUは全Jordanなし/M可逆で二Pfaffian atlas、負分枝はA=(0,(T+T^-1)/2,T,-T^-1,0,0),Tneq0。平方型はcross rank2/tangent pencilで可逆graph法を使えず、奇投影はrank3,3の境界が残る。まず逆非退化負Pfaffianの正常核を全Tで判定し、Ore還元又はLaurent汎関数minor coverを探す。負secant/非対称型、三固有値以上、全CY/成分/相対降下は未完。
 
 既存の主要な構造結果を維持する：
 
