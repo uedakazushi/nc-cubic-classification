@@ -2181,5 +2181,31 @@
       "global H3 algebraic stack",
       "complete component and boundary classification"
     ]
+  },
+  "quantum_component_intrinsic_formal_eight_v206": {
+    "status": "ordinary proofs added; rigidity ranks exact PASS; typesetting checked",
+    "proof": "papers/sections/quantum_cubic_artin_enhancement.tex",
+    "scope": "entire Artin formal neighborhood of the specified smooth-center H3 point, with identity special-fiber markings",
+    "inputs": [
+      "previous smooth-center/elliptic-branch local order recognition",
+      "HH1=0, HH2 dimension8, HH3=0",
+      "DDL Theorem4.5 and Propositions4.4/4.6/5.5/5.8/5.9, primary pp495-500 checked",
+      "perfect-object lifting uniqueness via Ext1, LowenObject"
+    ],
+    "validator": "computations/quantum_cubic_component/verify_potential_recovery.py",
+    "certificate": "computations/quantum_cubic_component/potential_recovery_certificate.json",
+    "results": [
+      "flat Abel qgr and smooth proper enhancement",
+      "relative Serre rigidity tau=(1)",
+      "canonical section ring recognized as constructed R_A",
+      "potential and central line recovery",
+      "all Artin pointed Abel/H3 formal classes given by eight-variable family"
+    ],
+    "not_claimed": [
+      "global H3 classification",
+      "algebraic H3 open-family effectiveness",
+      "algebraic stack construction",
+      "all finite inertia and global component boundaries"
+    ]
   }
 }

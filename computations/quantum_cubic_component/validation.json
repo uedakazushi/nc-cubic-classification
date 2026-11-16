@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "version": "triangle-component-v7",
+  "version": "triangle-component-v8",
   "status": "PASS",
   "python": "3.12.14",
   "sympy": "1.14.0",
@@ -44,6 +44,10 @@
     },
     {
       "script": "verify_central_multivariate_lift.py",
+      "status": "PASS"
+    },
+    {
+      "script": "verify_potential_recovery.py",
       "status": "PASS"
     }
   ],

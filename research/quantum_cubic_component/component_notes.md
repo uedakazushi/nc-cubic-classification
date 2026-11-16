@@ -167,3 +167,16 @@ p=1+kappa*lambda、Q=q0/p,T=−3lambda*eta*zeta/p、a1=−eta*zeta/p,b1=−zeta/
 eta0³2,zeta0³3,kappa0=2,D0=5で、七既知方向に加えlambda方向potentialがx³+2y³+3z³+2xyzとなり既存の横断方向に一致する。14座標方向を加えた形式22変数写像はincidenceの接空間上同型。embedding dimension22の完備局所環への冪級数環全射と、形式22変数族への写像の合成が形式自己同型となるので、incidence自体が形式smooth22次元である。恒等近傍の14次元gaugeを除いた形式sliceは8変数。有限の特殊fiber自己同型を含む全群oid、全intrinsic変形の被覆とは別である。
 
 次の核心は相対qgrのH3認識：この全次数flat・相対AS4・中央正則三次商の形式族が、smooth proper enhancement、heart、逆Serre、相対exceptional構造対象とAZ列を持つことを証明する。その後、既存の全Artin単射性とHH2dim8/HH3zeroを使い、全intrinsic形式変形への被覆を比較する。単に表示incidenceがsmooth8であるだけでは大域H3成分の決定ではない。
+
+
+## 13. qgr enhancement・逆Serre認識と一形式近傍の全Artin分類
+
+`papers/sections/quantum_cubic_artin_enhancement.tex` に通常の証明を追加した。特殊fiberのcompact圏がsmooth properであることは既存の滑らかな中心・楕円分岐order同定を仮定する。De Deken–Lowen原論文（doi10.4171/JNCG/83）Prop4.4/Thm4.5/Prop4.6およびProp5.5/5.8/5.9をpp495–500で今回確認した。後二つは一般のGrothendieck圏変形に関する命題で、geometric helixを必要としない。flat graded R_Aの付随Z代数からflat Abel変形QGrR_Aを得、ample列O(i)のflat持上げはcompactに生成する。特殊fiberの有限generatorがこの列の有限部分の厚い閉包に入ることから有限直和generatorを持ち上げる。derived Homのfiberは元の有限次元Hom、Artin最小複体によりA-perfect。dgEndのsmooth性は「derived fiberがcompactならcompact」の有限A-filtrationによる補題を対角へ適用して従う。任意のAbel変形でも同じ議論が適用でき、既存Artin単射性のenhancement仮定を満たす。
+
+HH1=0により恒等自己同値の可逆bimodule持上げは対角と同型である。相対Serreの底変更と次数シフトTを比べるとtau_A*T_A^-1がこの状況にあり、tau_A≅T_A。従ってheart保存と反標準環R_Aのgraded認識を得る。構造対象の相対exceptionalityはperfect Homと特殊fiberk0から、AZ ampleはtails構成から、二次包絡はQ(R_A)=B_Aから従う。rank-one/TFは幾何学的fiber条件、非正則Artin底上の絶対大域次元や整域性の主張ではない。Zhang twistのH3不変性を使っていない。
+
+`verify_potential_recovery.py` で20巡回potentialの勾配を関係商へ写す30×20行列rank19、kernel kPhi0、中央一次40×4行列rank3/kernel ktを確認。小拡大帰納によりpotentialは関係空間から単元倍まで一意、中央一次直線はAtだけ。pointed Abel同値はcanonicalRをgradedに保存するので、表示incidenceの同型はaffine座標と二スカラーのgaugeへ戻る。
+
+この点の表示形式8変数族→Abel→dgの写像は全Artin底で同型類上単射。HH2dim8,HH3zeroの無障害miniversal底への接写像は次元から同型。形式逆写像定理で8変数族自体がversalとなり、全dg/pointed Abel変形を実現する。単射性からパラメータも一意。**選んだH3点の全Artin形式近傍の分類**はこれで得る（`thm:intrinsic-formal-eight`）。前提の局所order同定・HH計算・対象持上げ・DDLを明記する。全H3の大域分類、相対stack代数性、成分閉包、全境界と有限慣性の分類ではない。
+
+次は形式近傍の結果を代数的H3開族へ移す。明示8変数有理係数族はあるが、形式smooth性からH3性のZariski開性を無条件に推論しない。相対有限generatorのdg模型と対角perfect性の代数化、または非可換Projの有限表示smoothness criterionを検証する。Artin代数化を適用するなら変形functorの有限提示・効果性の仮定を個別に確認する。大域境界はその後の別課題。

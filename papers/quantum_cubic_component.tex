@@ -491,6 +491,7 @@ Rainsの $E_6$ 型幾何学と比較する際には、
 
 \input{papers/sections/quantum_cubic_artin_reconstruction.tex}
 \input{papers/sections/quantum_cubic_multivariate_formal_chart.tex}
+\input{papers/sections/quantum_cubic_artin_enhancement.tex}
 
 \section{再現と検証範囲}
 全コードはPython 3、SymPy、NetworkXを使用し、各コードと同じ場所へ小さいJSON証明書を再生成する。
@@ -505,7 +506,8 @@ Rainsの $E_6$ 型幾何学と比較する際には、
 \path{verify_universal_cubic_syzygies.py}&全四syzygy、三次rank44：PASS\\
 \path{verify_second_order_incidence.py}&八方向同時二次補正：PASS\\
 \path{verify_rains_central_formula.py}&修正中心式の全係数恒等式：PASS\\
-\path{verify_central_multivariate_lift.py}&八変数正則化・全先頭式：PASS\\\bottomrule
+\path{verify_central_multivariate_lift.py}&八変数正則化・全先頭式：PASS\\
+\path{verify_potential_recovery.py}&potential rank19、中心直線rank3：PASS\\\bottomrule
 \end{tabular}\end{center}
 有限体の標本による外挿はしていない。
 H3開性・相対圏の再構成・局所order認識は、計算証明書と通常の数学的証明を区別して記載した。

@@ -1,6 +1,6 @@
 # 研究方針：量子三次曲面を含む既約成分の完全決定
 
-2026-11-17 / triangle-component-v7。**再開時は本書を最初に読む。**
+2026-11-17 / triangle-component-v8。**再開時は本書を最初に読む。**
 この一式は `nc-cubic-moduli` の成分研究に必要な現行成果を集約したもので、旧bundleを必要としない。
 パスはリポジトリrootからの相対パスで記す。本体は `papers/quantum_cubic_component.tex`、補足は `research/quantum_cubic_component/component_notes.md`。
 
@@ -51,9 +51,9 @@
 
 ## IV. 次の課題と具体的な着手
 
-**第一優先：八変数形式族の相対H3認識と全intrinsic形式変形への比較。**
+**第一優先：八変数形式近傍の代数的H3開族への効果性と相対代数化。**
 指定potential chartの全Artin二次包絡のflat性・相対Koszul14641は解決した。修正Rains中心式の多変数正則化により、8変数同時の中央三次持上げとflat商を全次数で構成した（`thm:eight-formal-central-lift`）。一次8方向と14座標方向が全接空間を張るため、表示incidenceは形式smooth22次元、恒等gauge商は形式smooth8次元（`thm:formal-potential-incidence-smooth`）。
-全intrinsic/Abel/dg変形との同一視はまだしていない。次はflat商のqgrからsmooth proper enhancement・相対Serre・heart保存・相対exceptional対象とAZ列を認識し、全Artin比較とHH2dim8/HH3zeroへ接続する。有限特殊fiber自己同型と全大域境界も別問題である。
+qgrのsmooth proper enhancement・HH1zeroによるtau=(1)剛性・反標準環とpotentialの回復を証明した。既存の局所order同定/HH入力の下で、この点の全Artin形式変形は8変数族で分類される（`thm:intrinsic-formal-eight`）。次は有限generatorと対角perfect性の代数化、または有限提示の非可換Proj smoothness判定により代数的H3開族を認識する。形式smooth性だけからH3のZariski開性を推論しない。有限特殊fiber自己同型と全大域境界も別問題である。
 
 **第二優先：8次元一般表示族の代数化とH3開部分。**
 Hesse曲線と平行移動点の相対二次元底、対称低次ポテンシャル、中央三次線を使う有限提示incidenceを構成する。
@@ -74,7 +74,7 @@ python3 computations/quantum_cubic_component/verify_all.py
 latexmk -lualatex papers/quantum_cubic_component.tex
 ```
 コードと小証明書は同じ専用ディレクトリに置き、統合結果はその `validation.json` に再生成する。
-通常の証明であるArtin再構成を計算PASSと同一視しない。既存10検証器は厳密演算で再実行した。
+通常の証明であるArtin再構成を計算PASSと同一視しない。既存11検証器は厳密演算で再実行した。
 今回の独立原稿をLuaLaTeXで組版する。巨大な既存H3原稿全体の再組版・網羅再検証・独立査読は対象外。
 Git追跡対象は現行TeX・Markdown・Python・小JSONのみ。PDF・ZIP・中間物・cacheは含めない。
 生成・検証結果はコードと文書に、GitHub refの到達確認は保存時の応答に分けて記載する。
