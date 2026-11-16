@@ -1238,3 +1238,12 @@ canonical負topQ0の(2,2)/mixed rank4全H3を、全Jordan型込みで曲がっ�
 次は唯一残る非零負top、対称secant。b1=u²+v²,b2=u²−v²、R1=cU+b1,R2=qU+b2。平方qU=x²の負Pf枝はA=(-s,t,s,s,t,0),t²−s²1、s=(w-w^-1)/2,t=(w+w^-1)/2で全wneq0へ一param化し正常核計算中。正Pf平方枝はA=(z0,-z4,-z3+z5,z3,z4,z5),z0z5−z3²+z3z5+z4²=1。非退化qU=rho*(xy+yx)ではrho≠0,±1の二Pf線型atlasとrho±1 rank2 secant boundaryを分ける。相対rhoや境界cを勝手に尺度で除去しない。全CY/三固有値/成分/相対降下も未完。
 
 私的secant atlas計算（未公開）：rho≠0,±1でalpha=(rho−1)/(rho+1)。正Pf A=(z0,-z4,alpha*z3,z3,z4,z5),Pf式z0z5+z4²+alpha*z3²=1−rho²。負Pf A=(0,z4,-alpha*z3,z3,z4,0),z4²+alpha*z3²=1−rho²。rho1 rank2/p=xv+yu正規化ではA=(a,a,0,b,c,c)、全Pf ideal(a²−c²,ac+c²)⇒幾何a=−c,cneq0。p正規化後は一般にcを尺度で1にできないので、b,c二paramを保持する。
+
+
+## 対称secantの全負Pfaffian排除（classification-v187）
+
+唯一残る対称secant負topの全必要odd atlasを確定し、二つの可逆cross負Pfaffian分枝を全値排除。平方負枝はconic t²−s²1のw=t+s!=0 parametrization、全quartic汎関数がLaurent係数で四正常10minor gcd定数*w13。非退化負枝は全conic上のopposite normalizer fgId/det−1、xy/yxがu²/v²を張り負Sym²全体が中心となるため奇補助次数中心作用で核零。正Pf二枝とrho±1 rank2secant境界の必要atlasを保持し、境界b,cは勝手に尺度除去しない。
+
+証明cubic_order2_22_secant_negative.tex、同stemの公開verifierは四つの閉/局所化linear ideal一致、rank2 Pfaffian ideal、非退化conicのfgId/det−1とxy/yx二次係数det−1/rho、平方全wneq0の元quartic関係汎関数と四minor gcdw13を厳密確認。Gaussian値でのrankはminor位置の設計にだけ使い、最終公開証明はQQ[w]多項式恒等式と全値gcdで完結。新規性/独立査読は未確認。
+
+次は平方正Pfaffian。yshearでz5=q!=0 chartはA=((1−t²)/q,−t,q,0,t,q)の二paramへ還元。私的secant_square_general.pyで元三次/四次商と正常10minorを計算中（未公表・全値被覆未証明）。z5=0はz4²−z3²1、z3!=0ならshearでz00、z3=0ならz4±1/z0任意の境界を別に保持。非退化正Pfはrho非zero/±1と三係数quadric、rank2境界はA=(-c,-c,0,b,c,c),c!=0。全CY/三固有値以上/成分/相対降下は未完。

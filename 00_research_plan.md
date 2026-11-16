@@ -40,7 +40,7 @@ Rains・VdB・AS・anticanonical heartの一般次数比較は [nc-dp-surface-he
 
 **全体的なスペクトル制約（classification-v186）**：全(1,3)は幾何学的被覆・H3必要十分条件・全矢まで確定、全(3,1)は全Jordan型込みで空。(2,2) mixed rank2も全Jordan型込みで空。mixed rank4のcanonical正top P0全体は、退化境界と全Jordan型込みで固定非CY符号族へ完全に幾何学的認識、一般dim2/inertia mu2²。canonical負topQ0は全Jordan型込みで曲がったClifford族に認識。未知の(2,2)はP,Qとも非零で、Pはcomm⊙平方/comm⊙非退化quadの二型。(2,2)/mixed rank4の全H3は実際に半単純。負tangent/非対称型も全排除され、非零Qの未知は対称secant型だけ。三固有値以上、全CY被覆、全成分・intrinsic族降下は未完。
 
-**次の核心（classification-v186）**：非対称負top Q=uv⊗uv+vu⊗vuを全正top/全Jordan/全cross境界込みで完全排除。二つの等方因子uv±i*vuの割当ては負軸交換で同値。全可逆crossの閉/局所化六線型atlasで正Pf枝はA0矛盾、負Pf枝はuの正側作用F²=−iIdへ正規化。uv,vu正二次式とF(b)=aからu²v=−vu²、u4はUと反交換/Vと可換、正常三次がu4と可換かつ反交換となり零。rho±1のrank2 crossもPfaffian ideal(a²,ac,b,c²)で幾何A0となりdomain射影rankに反する。 次は唯一残る非零負top、対称secant。b1=u²+v²,b2=u²−v²、R1=cU+b1,R2=qU+b2。平方qU=x²の負Pf枝はA=(-s,t,s,s,t,0),t²−s²1、s=(w-w^-1)/2,t=(w+w^-1)/2で全wneq0へ一param化し正常核計算中。正Pf平方枝はA=(z0,-z4,-z3+z5,z3,z4,z5),z0z5−z3²+z3z5+z4²=1。非退化qU=rho*(xy+yx)ではrho≠0,±1の二Pf線型atlasとrho±1 rank2 secant boundaryを分ける。相対rhoや境界cを勝手に尺度で除去しない。全CY/三固有値/成分/相対降下も未完。
+**次の核心（classification-v187）**：唯一残る対称secant負topの全必要odd atlasを確定し、二つの可逆cross負Pfaffian分枝を全値排除。平方負枝はconic t²−s²1のw=t+s!=0 parametrization、全quartic汎関数がLaurent係数で四正常10minor gcd定数*w13。非退化負枝は全conic上のopposite normalizer fgId/det−1、xy/yxがu²/v²を張り負Sym²全体が中心となるため奇補助次数中心作用で核零。正Pf二枝とrho±1 rank2secant境界の必要atlasを保持し、境界b,cは勝手に尺度除去しない。 次は平方正Pfaffian。yshearでz5=q!=0 chartはA=((1−t²)/q,−t,q,0,t,q)の二paramへ還元。私的secant_square_general.pyで元三次/四次商と正常10minorを計算中（未公表・全値被覆未証明）。z5=0はz4²−z3²1、z3!=0ならshearでz00、z3=0ならz4±1/z0任意の境界を別に保持。非退化正Pfはrho非zero/±1と三係数quadric、rank2境界はA=(-c,-c,0,b,c,c),c!=0。全CY/三固有値以上/成分/相対降下は未完。
 
 既存の主要な構造結果を維持する：
 

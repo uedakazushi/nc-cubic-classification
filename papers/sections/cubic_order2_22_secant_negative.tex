@@ -1,0 +1,93 @@
+\subsection{対称secant負topの必要atlasと全負Pfaffian排除}
+\begin{proposition}\label{prop:h3-order2-22-secant-necessary-atlas}
+両top非零の未知H3包絡は半単純であり、負topは対称secant型に限られる。
+その負等方因子を $b_1=u^2+v^2,b_2=u^2-v^2$ としてよい。
+二因子の割当ては $v\mapsto iv$ で交換できるので、偶関係は
+\[
+ c_U+b_1=0,\qquad h_U+b_2=0,\qquad
+ h_U=x^2\quad\text{又は}\quad \rho(xy+yx),\quad\rho\ne0
+\]
+の一方となる。可逆crossの場合の全必要odd atlasは、$\alpha=(\rho-1)/(\rho+1)$ として
+\[
+\begin{array}{c|c|c}
+ h_U,\epsilon&(z_0,z_1,z_2,z_3,z_4,z_5)&\text{Pfaffian式}\\\hline
+ x^2,+&(z_0,-t,-s+q,s,t,q)&z_0q-s^2+sq+t^2=1\\
+ x^2,-&(-s,t,s,s,t,0)&t^2-s^2=1\\
+ \rho(xy+yx),+&(z_0,-t,\alpha s,s,t,z_5)&z_0z_5+t^2+\alpha s^2=1-\rho^2\\
+ \rho(xy+yx),-&(0,t,-\alpha s,s,t,0)&t^2+\alpha s^2=1-\rho^2
+\end{array}
+\]
+となる。非退化型はここでは $\rho\ne0,\pm1$。
+$\det M$ は平方型で $-1$、非退化型で $-(1-\rho^2)^2$ である。
+$\rho=\pm1$ のrank2 crossは同値な一領域であり、純UV線の正規化後、
+必要odd atlasは
+\[
+ (z_0,z_1,z_2,z_3,z_4,z_5)=(-c,-c,0,b,c,c),\qquad c\ne0.
+\]
+この最後の二パラメータを、追加の根拠なく尺度で一つに減らしてはいない。
+全atlasのAS4十分性は主張しない。
+\end{proposition}
+\begin{proof}
+負topは $u^4-v^4$ 形へ同値に取り直せ、その二等方因子は表示した $b_1,b_2$。
+正top $c_U\odot q_U$ と偶middle階数2の二射影から二本のcoupled関係を得る。
+平方型では正側二軸の尺度で相対係数を除去でき、非退化型では相対係数 $\rho$ を残す。
+$\operatorname{Pf}A=\epsilon$ 又は $\epsilon(1-\rho^2)$ とし、
+$\operatorname{Pf}A\,\tau(A)+M^tA^\#M=0$ を解けば表となる。
+非退化型では $\rho(\rho^2-1)$ を単元とした全多項式ideal一致を検証する。
+
+$\rho=-1$ は正側交換と負側一様 $i$ 倍で $\rho=1$ に移る。
+後者では $\operatorname{im}M=\langle xv,yu\rangle$。
+非分解な純UV直線を保存対角変換で $xv+yu$ に取れば、
+従来のrank2交代像の論証により $A$ は $(a,a,0,b,c,c)$ と書ける。
+全六次Pfaffian idealは $(a^2-c^2,ac+c^2)$ なので、幾何学的点では $a=-c$。
+射影rank3により $c\ne0$ が必要となる。
+ここではrank2境界のH3判定を行っていない。
+\end{proof}
+
+\begin{theorem}\label{thm:h3-order2-22-secant-negative-empty}
+前命題の二つの可逆cross負Pfaffian分枝には、全係数でH3が存在しない。
+対称secant型に残る未知は、二つの正Pfaffian分枝とrank2 cross境界だけである。
+\end{theorem}
+\begin{proof}
+平方型の負Pfaffianは $t^2-s^2=1$。
+$w=t+s\ne0$ によって
+\[
+ s=(w-w^{-1})/2,\qquad t=(w+w^{-1})/2
+\]
+と全体をparametrizeできる。
+元の六二次関係の四次商汎関数は、全て $k[w,w^{-1}]$ 係数を持つ。
+元の全四次関係を消す恒等式を検証し、正自由三次32語への正常式から多項式行列を作る。
+指定した四つの $10\times10$ minorのgcdは定数倍の $w^{13}$ である。
+従って全 $w\ne0$ で正常汎関数行列rankは少なくとも10。
+AS4候補の正三次商次元は10なので、全正常三次は零となる。
+$w=\pm1,\pm i$ 等の特殊値もgcdの全値coverに含まれ、標本rankの外挿を使っていない。
+
+非退化型の負Pfaffianでは、正側二軸が負側を
+\[
+ f=\begin{pmatrix}-t/(\rho+1)&s/(\rho+1)\\-s/(\rho+1)&-t/(\rho-1)\end{pmatrix},\qquad
+ g=\begin{pmatrix}t/(\rho-1)&s/(\rho+1)\\-s/(\rho+1)&t/(\rho+1)\end{pmatrix}
+\]
+でnormalizeする。表のconic式上で正確に $fg=I,\det f=\det g=-1$。
+また偶関係より
+\[
+ xy=-\frac{\rho+1}{2\rho}u^2-\frac{\rho-1}{2\rho}v^2,\qquad
+ yx=\frac{\rho-1}{2\rho}u^2+\frac{\rho+1}{2\rho}v^2.
+\]
+二つの二次式の係数行列式は $-1/\rho\ne0$。
+$fg=I$ によって $xy,yx$ が負部分代数で中心となるため、$u^2,v^2$ は中心となり、
+$[uv+vu,u]=[v,u^2]$、$[uv+vu,v]=[u,v^2]$ から $uv+vu$ も中心となる。
+従って負二次中心は全 $\operatorname{Sym}^2V$ を含む。
+
+補助次数 $\deg x=1,\deg y=-1,\deg V=0$ とdomain性を使う
+補題\ref{lem:h3-order2-22-odd-determinant-centralizer}の証明後半が、そのまま適用できる。
+正常正三次の奇補助次数成分は、行列式 $-1$ の奇冪による負二次中心の作用を恒等にしなければならず、
+それは不可能である。従ってこの全conic領域でも正常三次核は零。
+
+検証器
+\[
+\texttt{verify\_cubic\_order2\_22\_secant\_negative.py}
+\]
+は四つの閉・局所化odd ideal、rank2境界の全Pfaffian ideal、conic上のnormalizer恒等式、
+二次中心の係数行列式と、全 $w\ne0$ のLaurent汎関数・四minor gcdを再生する。
+正Pfaffianやrank2 secant境界の判定、全H3分類・族降下は未完である。
+\end{proof}

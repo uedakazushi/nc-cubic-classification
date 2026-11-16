@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "scope": "symmetric secant necessary odd atlases and both invertible negative-Pfaffian H3 exclusions",
+  "uniform_atlases": "four exact closed/localized polynomial ideal equalities, r(r2-1) invertible in nondegenerate case",
+  "square_negative_branch": {
+    "parameter": "w=t+s !=0, s=(w-w^-1)/2,t=(w+w^-1)/2",
+    "quartic_functional_poles": "only w=0",
+    "rank10_minors": 4,
+    "gcd": "constant*w13",
+    "conclusion": "normal kernel zero for all nonzero w"
+  },
+  "nondeg_negative_branch": {
+    "conic": "t2+(r-1)/(r+1)*s2=1-r2",
+    "normalizers": "fg=I, det f=det g=-1",
+    "central_negative_quadratics": "u2,v2 span xy,yx and are central in negative subalgebra; hence uv+vu central too",
+    "conclusion": "odd auxiliary-degree centralizer obstruction gives normal kernel zero"
+  },
+  "singular_r_plus_minus_one_necessary_atlas": "after pure UV line xv+yu normalization, A=(a,a,0,b,c,c), Pfaffian ideal=(a2-c2,ac+c2); geometric a=-c, domain projection forces c!=0; retain b,c parameters",
+  "not_claimed": [
+    "positive-Pfaffian secant H3 classification",
+    "rank2 secant boundary exclusion",
+    "global H3 classification",
+    "intrinsic relative descent",
+    "independent peer review"
+  ]
+}
