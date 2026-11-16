@@ -2014,5 +2014,13 @@
     "certificate": "computations/cubic_order2_22_secant_doublezero_certificate.json",
     "proof": "papers/sections/cubic_order2_22_secant_doublezero.tex",
     "scope": "非退化正top/対称secant負top/正Pfaffianのa=q=0二重零境界を全値排除。逆作用F/F^-1と負対称二次中心から補助次数±1の正常成分を消し、±3成分はtraceF1のx³,y³だけ。全pencilは(x+theta*y)(x²−theta F²(A2)+theta²y²)=x³+theta³y³で分解。x/y交換でq0,a非零をq非零へ移せるため、両top非零mixed4(2,2)の未知はq1の三param主chart一つだけ。全CY/三固有値以上/成分/相対降下は未完。"
+  },
+  "order2_22_secant_nondegenerate_resonance_v193": {
+    "status": "PASS universal polynomial factor family, coefficient unit ideal, generic exact identities and open rank8 cover; no full resonance exclusion or independent peer review",
+    "validator": "computations/verify_cubic_order2_22_secant_nondegenerate_resonance.py",
+    "input": "computations/cubic_order2_22_secant_nondegenerate_resonance_input.json",
+    "certificate": "computations/cubic_order2_22_secant_nondegenerate_resonance_certificate.json",
+    "proof": "papers/sections/cubic_order2_22_secant_nondegenerate_resonance.tex",
+    "scope": "非退化正top/対称secant/正Pfaffian/q1主chartの共鳴面2t+rho²−1=0に、全AS4domain fiberで全て分解する正常pencilを構成。明示多項式Q2の係数ideal単元、generic正常恒等式と像rank2を最大rank三次/四次商の局所自由性で全AS4fiberへ延長し、domainと次数により像rank2を保証。正常8minorと使用汎関数の極から(rho²+1)(rho²+3)(rho²−9)D E非零の全開集合では正常核全体がそのpencil、H3なし。例外曲線と共鳴外は未完。"
   }
 }

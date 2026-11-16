@@ -1283,3 +1283,11 @@ canonical負topQ0の(2,2)/mixed rank4全H3を、全Jordan型込みで曲がっ�
 非退化正top/対称secant負top/正Pfaffianのa=q=0二重零境界を全値排除。逆作用F/F^-1と負対称二次中心から補助次数±1の正常成分を消し、±3成分はtraceF1のx³,y³だけ。全pencilは(x+theta*y)(x²−theta F²(A2)+theta²y²)=x³+theta³y³で分解。x/y交換でq0,a非零をq非零へ移せるため、両top非零mixed4(2,2)の未知はq1の三param主chart一つだけ。全CY/三固有値以上/成分/相対降下は未完。
 
 証明cubic_order2_22_secant_doublezero.tex。負部分Tのu²,v²,{u,v}が中心、B2で独立。補助次数±1のxQ2/yQ2が正常ならQ2は−Fをintertwineし、対称二次中心のdomain cancellationでSym²FId⇒F±Id⇒rho0という矛盾。±3はF³−Idが必要でSL2/非scalarよりtraceF1に限る。共鳴正常pencilは全て明示normで分解。F(A2)=B2と逆作用は円錐曲線の多項式恒等式として検証、元三次関係で数体fiberのnormも検算。残余主chartのQQ(rho,s,t)による全四次商の一括rrefは4分超で未完のため中断、結果なし。次は構造的制約又は低パラメータsliceから残余を縮める。s0のQQ(rho,t)正常計算を開始中、未公表・未完。大きなrrefを無制限に反復しない。
+
+## 非退化secant共鳴面の全値因子pencil（classification-v193）
+
+非退化正top/対称secant/正Pfaffian/q1主chartの共鳴面2t+rho²−1=0に、全AS4domain fiberで全て分解する正常pencilを構成。明示多項式Q2の係数ideal単元、generic正常恒等式と像rank2を最大rank三次/四次商の局所自由性で全AS4fiberへ延長し、domainと次数により像rank2を保証。正常8minorと使用汎関数の極から(rho²+1)(rho²+3)(rho²−9)D E非零の全開集合では正常核全体がそのpencil、H3なし。例外曲線と共鳴外は未完。
+
+証明cubic_order2_22_secant_nondegenerate_resonance.tex。D=r4+2r3+4r²+6r+4s²+3、E=r6+4r5+7r4+8r3+4r²s²+7r²+12rs²+4r+1。因子六係数は最小JSON入力へ保持。係数ideal＋z*r*(r²−1)−1のGroebner基底1。generic商B3dim20/B4dim35の最大rank開集合は全AS4fiberを含み、その局所自由余核で正常恒等式と3次外積零が延長する。domainならQ2のz共通因子を除いた積が常に非零で、像rank1以下は正次数scalar polynomialの零点で矛盾。従って全fiberで分解pencil2を得る。正常核の次元jumpは別問題なので例外曲線を未解決として残す。
+
+次の具体作業：正常8minorのr±3/Eの余分な因子を別minorで除き、残余曲線r²=-1,-3,D0等の正常核を個別判定する。主chart三変数のSymPy通常rref/分母払FF、私的native FLINT有理関数消去は、それぞれ数分で未完のため中断。後者はforward200行/rank184まで進んだが最終商・annihilator検証に達しておらず数学的結果として用いない。反復せず列順序/低パラメータ制約/構造的normalizerへ切り替える。s0の二変数商Nは私的保存されたが公開証明は未完。
