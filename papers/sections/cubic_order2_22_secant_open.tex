@@ -90,3 +90,47 @@ $C=C_0+k(\ell-\ell_0)$により
 全係数のSchur式・行列式、有理点とchart、特異点の二次項、
 および両点の四次商次元36を厳密検算する。
 全曲面での正常三次incidenceとAS4十分性は、まだ別の未解決問題である。
+
+\begin{theorem}[共鳴特殊fibreの全値排除]
+\label{thm:h3-order2-22-secant-resonant-exclusion}
+必要曲面の$\rho=-1/2$となる幾何学的特殊fibreには、H3対象は存在しない。
+従って残る候補は
+\[
+ \rho(\rho+1)(2\rho+1)(2\rho\ell^2+\rho+1)\ne0
+\]
+となる、滑らかな二次元必要曲面の部分に限られる。
+これは必要表示の領域であり、全係数のAS4存在やH3 moduliの成分性を主張しない。
+\end{theorem}
+\begin{proof}
+特殊fibreでは$C=0$である。
+その六関係は有理係数を持ち、純正topとcross blockは
+\[
+ P=P(\ell/2,1,0,\ell),\qquad
+ K=\begin{pmatrix}0&1/2&0&0\\0&0&0&1/2\\-1&0&0&0\\0&0&1&0\end{pmatrix}
+\]
+となる。
+$\mathbb Q[\ell]$上の19個の明示四次汎関数を取り、全偶四次関係を消す
+2,736本の恒等式を検証する。
+これを正三次自由語32個の$x,y$交換子へ適用した$38\times32$行列について、
+指定した12個の$10\times10$ minorのmonic最大公約因子は
+\[
+ \ell^{10}(\ell^2-3/2)^5
+\]
+である。
+従って$\ell=0$および$2\ell^2=3$以外で階数10以上となる。
+指定AS4の正三次部分の次元は10なので、
+定理\ref{thm:h3-order2-22-tangent-fullrank-exclusion}と同じ核次元22の議論により、
+この開集合で$x,y$と可換する非零元$F\in B_3^+$は存在せず、正常$G$も存在しない。
+
+残る値は三つ全てを調べる。
+$\ell=0$と$\ell=\sqrt6/2$で、元の六関係から三次・四次商を厳密構成すると、
+正三次部分は10次元、四次の正負部分は19次元と16次元である。
+$Gx-xG,Gy-yG,Gu+uG,Gv+vG$の全線型写像は、どちらも階数10で核零となる。
+後者の計算は$\mathbb Q(\sqrt6)$上で行うので、反対の共役根$-\sqrt6/2$も同時に覆う。
+これでminorの全零点を尽くしており、特殊値の未処理部分はない。
+\end{proof}
+
+\texttt{cubic\_order2\_22\_secant\_resonant\_input.json}が19汎関数と12minorの全入力を持ち、
+\texttt{verify\_cubic\_order2\_22\_secant\_resonant.py}が全恒等式、最大公約因子、
+三つの残余値の全正常核を再生する。
+一般点や有限標本を全値の判定に代用していない。

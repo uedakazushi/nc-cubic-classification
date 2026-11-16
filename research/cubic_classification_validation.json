@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "version": "classification-v151",
+  "version": "classification-v152",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -1503,5 +1503,13 @@
     "certificate": "computations/cubic_order2_22_secant_open_certificate.json",
     "proof": "papers/sections/cubic_order2_22_secant_open.tex",
     "scope": "**全体的なスペクトル制約（classification-v151）**：全(1,3)は幾何学的被覆・必要十分H3判定・全矢/慣性まで確定、全(3,1)は全Jordan型込みで空。半単純(2,2)/mixed rank2は全退化境界を排除しK可逆secantだけ。この全領域を有理graph g=[[1,1],[rho+1,rho]]へ正規化し、rho*C²+(2rho+1)(2rho*ell²+1)=0、rho(rho+1)(2rho*ell²+rho+1)unitの二次元必要曲面で被覆。P(A,B,C,D)はA=-rho*ell,B1,Dell。曲面の特異点はrho−1/2,C0,ell±1の通常二重点二つだけで、両点はB4dim36によりAS4外。全曲面の正常Gは未分類、次はrho−1/2特殊曲線の全正常核を証明書化し、非共鳴conic chartへ進む。mixed rank4三型、非半単純、三固有値以上、全CY被覆、全成分/圏族降下は未完。"
+  },
+  "order2_22_secant_resonant_v152": {
+    "status": "PASS 2736 identities, twelve exact polynomial minors, and all three residual normalizer kernels; entire resonant fiber excluded",
+    "validator": "computations/verify_cubic_order2_22_secant_resonant.py",
+    "input": "computations/cubic_order2_22_secant_resonant_input.json",
+    "certificate": "computations/cubic_order2_22_secant_resonant_certificate.json",
+    "proof": "papers/sections/cubic_order2_22_secant_open.tex, thm:h3-order2-22-secant-resonant-exclusion",
+    "scope": "**全体的なスペクトル制約（classification-v152）**：全(1,3)は幾何学的被覆・必要十分H3判定・全矢/慣性まで確定、全(3,1)は全Jordan型込みで空。半単純(2,2)/mixed rank2は全境界を排除し、可逆secantの有理必要曲面rho*C²+(2rho+1)(2rho*ell²+1)=0へ被覆。二nodesはB4dim36でAS4外、さらにrho−1/2特殊曲線も全値H3排除。19functional/2736恒等式と12minorのgcd ell^10*(ell²−3/2)^5で三値まで絞り、ell0/+-sqrt6/2のfull normalizer rank10をexact検算。残る候補はrho(rho+1)(2rho+1)(2rho*ell²+rho+1)unitの滑らかな二次元必要曲面。全曲面正常G/AS4十分性は未分類。次は非共鳴conic chartの正常incidenceと、(2,2)rank2の単冪持上げの消滅を判定する。rank4三型、非半単純rank4、三固有値以上、全CY被覆、全成分/圏族降下は未完。"
   }
 }

@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "scope": "entire geometric resonant fiber rho=-1/2, C=0, in the necessary secant surface",
+  "annihilator_identities": 2736,
+  "polynomial_functionals": 19,
+  "minor_count": 12,
+  "minor_degrees": [
+    26,
+    37,
+    41,
+    37,
+    41,
+    37,
+    38,
+    40,
+    46,
+    35,
+    32,
+    37
+  ],
+  "monic_minor_gcd": "L^10*(L^2-3/2)^5",
+  "all_minor_exceptions": [
+    {
+      "parameter": "0",
+      "positive_B3": 10,
+      "even_B4": 19,
+      "odd_B4": 16,
+      "designated_normalizer_rank": 10,
+      "geometric_values_covered": 1
+    },
+    {
+      "parameter": "sqrt(6)/2",
+      "positive_B3": 10,
+      "even_B4": 19,
+      "odd_B4": 16,
+      "designated_normalizer_rank": 10,
+      "geometric_values_covered": 2
+    }
+  ],
+  "conclusion": "no H3 point anywhere on the resonant fiber; finite exceptional set completely checked over Q(sqrt6)",
+  "not_claimed": [
+    "nonresonant surface normalizers",
+    "AS4 existence elsewhere",
+    "relative intrinsic families"
+  ]
+}

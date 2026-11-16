@@ -987,4 +987,15 @@ verify_cubic_order2_22_secant_rank3.py/certificateはcyclic二式、x倍新oddqu
 
 非共鳴conicにはell0=1/(2rho),C0=sqrt(-2)*(2rho+1)/(2rho)のrationalpoint。C=C0+k(ell−ell0)でh=−(2rho+1)(sqrt(-2)k+2)/(rho(k²+2(2rho+1)))、ell=ell0+h,C=C0+kh。finitek chartの補点(ell0,-C0)はinversechart、rho−1/2のC0特殊fibreは別に扱う。必要曲面の族/節はintrinsic H3成分やAS4十分性ではない。verify_cubic_order2_22_secant_open.py/certificateが全Schur/有理点chart/二特異点/両B4dim36をexact PASS。
 
-再開用の次計算：rho−1/2,C0はQQ係数、P(A=ell/2,B1,C0,Dell)と上K。private secant_resonant_rational.py は19polynomial quartic functional/2736 annihilation identitiesをPASS、12個の10minorのgcd ell^10*(2ell²−3)^5/32、すなわち正常核の残余値はell0とell²3/2の三つのみ。private secant_rational_exception.py/zero.py はこれらでevenB3dim10/B4even19odd16、full designatednormalizer kernel0をQQ(sqrt6)上exact確認（sqrt6/2のGalois反対根も含む）。次にこれをpublic input/verifier/TeXへ統合する。対称graphのANP4一変数実験は中断し、有理graph計算を正本とする。
+rho−1/2特殊fibreの全値正常核はv152でpublic証明書へ統合して排除済み。private ANP4実験へ戻らず、下記の有理係数verifierを正本とする。
+
+
+## rho−1/2共鳴曲線の全値排除（classification-v152）
+
+**全体的なスペクトル制約（classification-v152）**：全(1,3)は幾何学的被覆・必要十分H3判定・全矢/慣性まで確定、全(3,1)は全Jordan型込みで空。半単純(2,2)/mixed rank2は全境界を排除し、可逆secantの有理必要曲面rho*C²+(2rho+1)(2rho*ell²+1)=0へ被覆。二nodesはB4dim36でAS4外、さらにrho−1/2特殊曲線も全値H3排除。19functional/2736恒等式と12minorのgcd ell^10*(ell²−3/2)^5で三値まで絞り、ell0/+-sqrt6/2のfull normalizer rank10をexact検算。残る候補はrho(rho+1)(2rho+1)(2rho*ell²+rho+1)unitの滑らかな二次元必要曲面。全曲面正常G/AS4十分性は未分類。次は非共鳴conic chartの正常incidenceと、(2,2)rank2の単冪持上げの消滅を判定する。rank4三型、非半単純rank4、三固有値以上、全CY被覆、全成分/圏族降下は未完。
+
+原稿thm:h3-order2-22-secant-resonant-exclusion。P(ell/2,1,0,ell),K有理、odd xu+uy+vx/2,yv+uy−vx/2。input JSONにQ[ell]上19quartic functionalと12maximalminor位置。全144 even quartic relationsへの2736 annihilation identities PASS、38x32 x/y commutator matrixの12 ten-minor gcd monic ell^10*(ell²−3/2)^5（degrees26,37,41,37,41,37,38,40,46,35,32,37）。したがってell0とell²3/2以外rank>=10、H3positiveB3dim10から正三次centralizer0。全残余三値をQQ(sqrt6)上exact検証：ell0とsqrt6/2でevenB3 10,evenB4 19,oddB4 16、full designatednormalizer rank10、negativeconjugateもfield embeddingで同時被覆。有限標本ではなくminor全零点を完全に処理。
+
+再現python computations/verify_cubic_order2_22_secant_resonant.py、入力cubic_order2_22_secant_resonant_input.json、同prefixcertificate。今回通常SymPy backendでPASS。rho特殊fibre全点を排除したので残る必要曲面はsmooth nonresonantconic部分、AS4十分性/H3認識と全正常核は未解決。
+
+次の具体的補題案：mu semisimple (+,+,-,-),oddR2のnoethAS4domain Cに非自明unipotent autoがないことを示せる見通し。secant E pencilは二rank1点を持ち、unipotentは両U/Vaxes固定でId。puremixedはpI/qdiag(1,r),r=-1,+-iの同時stabilizerがtorusでId。tangent fullrank gJはunipotent upper P/Q stabilizerからp=q0。tangent degenerate g=epsilonI/Dunitはnegative shear0、positive y->y+beta xだけ残るがu²=alpha x²+delta y²,deltaunitからbeta0。ruling/noethAS4domain外等は既証明。これをGを使わない必要被覆として厳密に確認し、mu_Uの四分根でC=B^H,muC=muB H^-4=muSsを作ればH∈AutC unipotent、HIdより元muもsemiとなる。現在は未証明案として保持し、次にstabilizer恒等式とuntwist適用を検証する。右twistの指数は必ず−4であり+4へ取り違えない。
