@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "scope": "semisimple Nakayama (+,+,-,-), odd relation dimension4",
+  "exact_checks": [
+    "the 3x3 minor ideal contains B^3",
+    "B=0 makes every 3x3 minor zero",
+    "P=commutator tensor symmetric_quadric plus its transpose"
+  ],
+  "structural_conclusion": "positive pure top is zero, commutator times rank1 symmetric quadric, or commutator times rank2 symmetric quadric, up to GL2 and scale",
+  "not_claimed": [
+    "whole envelope classification",
+    "normal cubic exclusion",
+    "nonsemisimple sector",
+    "H3 admissibility"
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "version": "classification-v144",
+  "version": "classification-v145",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -64,7 +64,8 @@
     "papers/sections/cubic_positive3_diagonal_monic.tex",
     "papers/sections/cubic_positive3_Jordan_monic.tex",
     "papers/sections/cubic_order2_22_rank2.tex",
-    "papers/sections/cubic_order2_22_tangent_normalform.tex"
+    "papers/sections/cubic_order2_22_tangent_normalform.tex",
+    "papers/sections/cubic_order2_22_rank4_top.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -1443,5 +1444,12 @@
     "certificate": "computations/cubic_order2_22_tangent_normalform_certificate.json",
     "proof": "papers/sections/cubic_order2_22_tangent_normalform.tex",
     "scope": "**全体的なスペクトル制約（classification-v144）**：全(1,3)は被覆・必要十分H3判定・全矢・DM4表示stack・慣性まで確定。全(3,1)は正部分の全Jordan型を含めて空。半単純(2,2)/mixed rank2はpure mixedと二rulingを排除し、secant/tangent二graph型だけに縮小。さらにtangentのeven crossblock可逆部分は全係数のpencil安定化作用でg=[[0,-1],[1,0]]へ正規化でき、even Schur条件からC0,B1,A=(1+D²)/(2D),D(1+2D²)unitの一変数六関係へ全被覆。正常三次の全D判定はまだ未解決。次はこの一変数族の正常核を厳密判定し、tangent c0境界とsecant全rank strataを残さず扱う。非半単純(2,2)、mixed rank4、三固有値以上、単一固有値/CY全被覆、全成分/圏族降下も未完。"
+  },
+  "order2_22_rank4_top_v145": {
+    "status": "PASS universal minor ideal and outer-sum identity; necessary positive-top trichotomy",
+    "validator": "computations/verify_cubic_order2_22_rank4_top.py",
+    "certificate": "computations/cubic_order2_22_rank4_top_certificate.json",
+    "proof": "papers/sections/cubic_order2_22_rank4_top.tex",
+    "scope": "**全体的なスペクトル制約（classification-v145）**：全(1,3)は被覆・必要十分H3判定・全矢・DM4表示stack・慣性まで確定。全(3,1)は正部分の全Jordan型を含めて空。半単純(2,2)/mixed rank2はpure mixedと二rulingを排除し、secant/tangentのみ。tangent K可逆部分はD(1+2D²)unit,A=(1+D²)/(2D)の一変数必要表示へ全被覆。指定正常三次はgeneric fieldで核0だが全D判定は未完。mixed rank4の半単純領域では偶top rank2により正二元anti-cyclic quarticのB係数が零となり、純正topはcommutator⊙対称二次式に限る。従ってGL2と尺度で零/平方型/非退化型の三種へ被覆。次はtangent一変数族の全値正常核を多項式汎関数で検証し、c0境界/secant全rank strata/rank4三型を判定する。非半単純(2,2)、三固有値以上、単一固有値/CY全被覆、全成分/圏族降下は未完。"
   }
 }

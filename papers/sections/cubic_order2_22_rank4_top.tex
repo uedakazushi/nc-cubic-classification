@@ -1,0 +1,37 @@
+\subsection{混合関係数4における正二元topの三分法}
+\label{subsec:h3-order2-22-rank4-top}
+\begin{proposition}\label{prop:h3-order2-22-rank4-positive-top}
+中山が半単純で重複度$(2,2)$、奇二次関係が四次元なら、
+純正四次topのmiddle行列は
+\[
+ P=c_U q^t+q c_U^t,\qquad
+ c_U=\begin{pmatrix}0\\1\\-1\\0\end{pmatrix},\qquad
+ q=\begin{pmatrix}A\\C/2\\C/2\\D\end{pmatrix}
+\]
+の形に限られる。
+従って正二平面の基底変更とtop尺度を除き、純正topは
+零、$c_U\mathbin{\odot}x^2$、または
+$c_U\mathbin{\odot}(xy+yx)$の三種で被覆される。
+非零の場合、偶関係空間から$U^{\otimes2}$への射影は二次元で、
+その像はcommutatorと対称二次式$q$の張る平面である。
+\end{proposition}
+\begin{proof}
+偶関係数は2なので、最高Frobenius middle blockの偶部分は階数2である。
+従ってその純正主blockも階数2以下である。
+anti-cyclicな正二元四次tensorの一般行列は
+\[
+ P(A,B,C,D)=\begin{pmatrix}
+ 0&A&-A&B\\A&C&-B&D\\-A&-B&-C&-D\\B&D&-D&0
+ \end{pmatrix}.
+\]
+その三次minorイデアルは$B^3$を含み、従って$B=0$が必要である。
+逆に$B=0$なら、表示した$c_Uq^t+qc_U^t$となり階数は高々2である。
+$q\ne0$なら対称式$q$と交代式$c_U$は独立で、階数はちょうど2である。
+従って偶関係の$U^2$射影も二次元で、その像は表示した二平面となる。
+標数0の代数閉体上の二変数対称式は、階数1なら平方、階数2なら$xy+yx$へ移せるため、三分法を得る。
+これは必要topの分類であり、残る負block・mixed graph・全三次incidenceを解いたことにはならない。
+\end{proof}
+
+\texttt{verify\_cubic\_order2\_22\_rank4\_top.py}は
+三次minorイデアル、全係数での外積和表示、およびその逆方向の階数上限を厳密検証する。
+非零の全値階数2と対称式の二標準形は本文の線型代数証明による。
