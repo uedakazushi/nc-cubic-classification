@@ -455,3 +455,13 @@ gamma0ならWの生成するTは一本の非退化二次関係を持つ量子/Jo
 gamma非零ならq0(W)=−gamma z²はT内の非零正規正則二次で、q0 w=f²(w)q0、f(q0)=q0。fはT上の自己同型：z h(W)=f(h)zとzの正則性からf,f^-1が全関係を保存する。この場合TのAS3性や関係が二つの正常化三次で尽きることは未証明。Tは普遍二生成元三次表示（q0 w−f²(w)q0）からの商である、という必要条件だけを用いる。原稿cor:h3-order2-plane-quadric。新規CAS実行を主張しないホモロジー/tensor/整域性の証明。
 
 次の具体的着手：三次元側が負の全gamma0を量子/Jordan平面の自動同型f（det−1）で分け、残り一次元との偶四関係とW1を求める。三次元側が正のgamma非零は正規二次を持つ二生成元三次表示と比較する。部分代数がOre AS3であることやAS4十分性を先に仮定しない。2+2の混合rank2/4、mu固有値三種類以上も別に残る。
+
+## 共通二平面の二行列標準形（classification-v99）
+
+混合関係の基底r_i=z w_i−f(w_i)zで奇flattening=P M P^t、P=(-F;I)と書く。先頭zとWの巡回式を別々に使うとFMF^t=epsilon M、mu_W=−epsilon M^tM^-1、二次q0の係数行列は非零尺度を除きQ=MF^tとなる。これはdet Fだけより強い制約。mu_Wの唯一の固有値epsilonからM^tM^-1の特性式(X+1)²、すなわち対称部分rank<=1を得る。交代部分は非零なので、基底/尺度でM0=J又はM1=J+diag(1,0)の二型。
+
+M0ではmu_W=epsilon I、F任意det F=epsilon。M1ではmu_W=epsilon[[1,2],[0,1]]、F=[[alpha,beta],[0,alpha]],alpha²epsilon、Q=[[alpha+beta,alpha],[-alpha,0]]。全型でmu_WとFは可換、FQF^t=epsilon Q。gamma0の実際の量子/Jordan平面T_Wの中山作用はmu_TW=mu_W f²。gamma非零の部分代数をAS2と誤認しない。残り三次元ブロックの第三生成元へのJordan拡大や偶関係・正常三次は未分類。
+
+数体不要のSymPy厳密恒等式verify_cubic_order2_plane_matrices.pyで一般J相似式、対称部分detとtraceの同値、alpha=+-1,+-iの全beta式、mu_TW式を再生した。既知Clifford swapはu=x−y,w=z+h(x+y)/2,s=tで、正固有直線ku、W=<s,w>、us=−su,uw=wu,sw=−wsを元の六関係の線型結合として確認。従ってepsilon−、M0、F=diag(−1,1)、量子q−1であり、既知正例を排除していない。新たな一般FのH3許容性をこの照合から推論しない。原稿prop:h3-order2-plane-matrices。
+
+次は三次元側が負、M0でFの共役標準形を取り、既知Clifford F=diag(−1,1)以外の全係数を正常三次incidenceで判定する。M1および残り生成元のJordan拡大も漏らさない。普遍三次元部分代数のAS正則性や偶関係のPBWを未証明のまま仮定しない。

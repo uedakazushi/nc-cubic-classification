@@ -1056,5 +1056,12 @@
     "proof": "papers/sections/cubic_as4_reductions.tex, corollary h3-order2-plane-quadric",
     "result": "Every 3+1/1+3 order-two sector has q0(W)+gamma*z² with nondegenerate binary q0. If the three-dimensional eigenvalue is negative then gamma=0 and W generates a genuine quantum/Jordan plane. If gamma!=0, q0 is nonzero normal regular with normalizer f² and f(q0)=q0. All Jordan parts included.",
     "scope_limit": "No AS3 existence or completeness of higher relations of the two-generator subalgebra when gamma!=0; no full order-two cubic incidence/admissibility."
+  },
+  "order2_common_plane_matrix_forms_v99": {
+    "status": "global structural proof in manuscript; general symbolic matrix identities and exact positive-example calibration executed",
+    "validator": "computations/verify_cubic_order2_plane_matrices.py",
+    "certificate": "computations/cubic_order2_plane_matrices_certificate.json",
+    "result": "Common-plane data have exactly alternating M=J or nonalternating M=J+diag(1,0) forms. mu_W=-epsilon*M^t*M^-1, Q=M*F^t, F*M*F^t=epsilon*M. The second form has F=[[alpha,beta],[0,alpha]], alpha²=epsilon. Known admissible Clifford swap lies in the first form with F=diag(-1,1).",
+    "scope_limit": "Only common-plane data, not all three-dimensional Jordan extensions, ambient even relations, normal cubic incidence or general H3 admissibility."
   }
 }

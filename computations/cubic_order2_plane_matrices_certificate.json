@@ -1,0 +1,64 @@
+{
+  "alternating_form": "M=J; T=epsilon*I; det(F)=epsilon; Q=J*F^t",
+  "nonalternating_forms": [
+    {
+      "alpha": "1",
+      "epsilon": "1",
+      "Q": [
+        [
+          "beta + 1",
+          "1"
+        ],
+        [
+          "-1",
+          "0"
+        ]
+      ]
+    },
+    {
+      "alpha": "-1",
+      "epsilon": "1",
+      "Q": [
+        [
+          "beta - 1",
+          "-1"
+        ],
+        [
+          "1",
+          "0"
+        ]
+      ]
+    },
+    {
+      "alpha": "I",
+      "epsilon": "-1",
+      "Q": [
+        [
+          "beta + I",
+          "I"
+        ],
+        [
+          "-I",
+          "0"
+        ]
+      ]
+    },
+    {
+      "alpha": "-I",
+      "epsilon": "-1",
+      "Q": [
+        [
+          "beta - I",
+          "-I"
+        ],
+        [
+          "I",
+          "0"
+        ]
+      ]
+    }
+  ],
+  "general_identity": "(trace(M^t*M^-1)+2)*det(M)=4*det((M+M^t)/2)",
+  "Clifford_swap_calibration": "u=x-y, w=z+h(x+y)/2, s=t; W=<s,w>; u*s=-s*u, u*w=w*u, s*w=-w*s; F=diag(-1,1), epsilon=-1",
+  "scope": "Necessary common-plane forms, not complete ambient relations or H3 classification."
+}

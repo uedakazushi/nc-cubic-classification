@@ -726,6 +726,84 @@ $z$ は $T$ を $f$ で正規化するので、$z^2w=f^2(w)z^2$ より正規式�
 また $zq_0=q_0z$ から $f(q_0)=q_0$ となる。
 \end{proof}
 
+\begin{proposition}[共通二平面上の中山作用の二標準形]
+\label{prop:h3-order2-plane-matrices}
+上の一次元・三次元分解で、$W$ の基底を取り、$f$ の行列を $F$、
+$\mu_B|_W$ の行列を $T$ とする。
+四次topの尺度も取れば、ある行列 $M$ により
+\[
+ FMF^t=\varepsilon M,\qquad
+ T=-\varepsilon M^tM^{-1},\qquad
+ Q=MF^t
+\]
+と書ける。ここで二次関係は $q_0(W)+\gamma z^2$、
+$q_0$ の係数行列は非零尺度を除き $Q$ である。
+可能な $(M,T,F)$ は次の二型に限られる。
+\[
+\begin{array}{c|c|c}
+M&T&F\\\hline
+\begin{pmatrix}0&1\\-1&0\end{pmatrix}
+ &\varepsilon I&\det F=\varepsilon\\[2pt]
+\begin{pmatrix}1&1\\-1&0\end{pmatrix}
+ &\varepsilon\begin{pmatrix}1&2\\0&1\end{pmatrix}
+ &\begin{pmatrix}\alpha&\beta\\0&\alpha\end{pmatrix},\quad
+   \alpha^2=\varepsilon
+\end{array}
+\]
+後者では $Q=\begin{pmatrix}\alpha+\beta&\alpha\\-\alpha&0\end{pmatrix}$。
+常に $TF=FT$、$FQF^t=\varepsilon Q$ である。
+$\gamma=0$ の場合の実際の二生成元平面 $T_W=\langle W\rangle$ については
+\[
+ \mu_{T_W}=\mu_B|_W\circ f^2
+\]
+となる。$\gamma\ne0$ の場合に $T_W$ がAS2であるとは主張しない。
+\end{proposition}
+\begin{proof}
+奇関係の基底を $zw_i-f(w_i)z$ とすると、奇flatteningの基底行列は
+$P=\binom{-F}{I}$ なので、その四ブロックは
+$FMF^t,-FM,-MF^t,M$ である。
+巡回式は $FMF^t=\varepsilon M$ を与える。
+ブロック $w_{z w_i z w_j}$ と $w_{w_i z w_j z}$ のもう一つの巡回式は
+$T M=-\varepsilon M^t$ を与える。
+さらに $zz$ 行の $W^2$ 係数は $-\varepsilon MF^t$ なので、
+関係自体の尺度を吸収して $Q=MF^t$ としてよい。
+
+$T$ の唯一の固有値は $\varepsilon$ だから、
+$M^tM^{-1}$ の特性多項式は $(X+1)^2$。
+$M$ の対称部分を $S=(M+M^t)/2$ とすると、このtrace条件は $\det S=0$ と同値である。
+交代部分は非零なので、基底と尺度により $M=J+S$、
+$J=\begin{pmatrix}0&1\\-1&0\end{pmatrix}$ とできる。
+$S=0$ またはrank-one対称形式の二場合があり、後者は
+交代形式を保つ基底変更で $S=\operatorname{diag}(1,0)$ にできる。
+第一型は通常の二次元交代形式の相似群である。
+第二型では対称部分から $F$ の第一列は $(\alpha,0)^t$、
+$\alpha^2=\varepsilon$、交代部分から $\det F=\varepsilon$ となり、表を得る。
+
+形式の相似変換はその非対称性作用と可換するので $TF=FT$。
+また $FQF^t=FMF^tF^t=\varepsilon Q$。
+$\gamma=0$ なら $T_W$ は前系のAS2平面であり、その二次関係の行列公式から
+\[
+ \mu_{T_W}=-Q^tQ^{-1}
+ =-FM^tF^{-t}M^{-1}=TF^2
+\]
+となる。
+\end{proof}
+
+既知の非CY Clifford swap例はこの帰着と整合する。
+定理\ref{thm:normal-order2-clifford-cuts}の生成元に対し
+\[
+ u=x-y,\qquad w=z+\frac h2(x+y),\qquad s=t
+\]
+と置くと、中山正固有直線は $ku$、共通二平面は $W=\langle s,w\rangle$ であり、
+\[
+ us=-su,\qquad uw=wu,\qquad sw=-ws.
+\]
+従って第一標準形の $\varepsilon=-1$、$F=\operatorname{diag}(-1,1)$、
+量子平面パラメータ $-1$ の実在部分に当たる。
+行列恒等式と元の六関係からのこの基底変更は
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}order2\_\allowbreak{}plane\_\allowbreak{}matrices.py}
+で厳密に確認する。一般の第二標準形や他の $F$ をこの例だけで許容としない。
+
 \begin{lemma}[単冪twist下の反標準三次関係の輸送]
 \label{lem:h3-unipotent-transport}
 $C$は左右noetherian quadratic Koszul AS4型14641で，$\mu_C$は半単純とする．
