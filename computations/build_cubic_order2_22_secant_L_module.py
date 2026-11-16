@@ -1,7 +1,7 @@
 """Build the exact nonmirror-L normal-module experiment; no classification is asserted until the emitted checks pass. Requires python-flint and SymPy."""
 import argparse,itertools,sympy as S
 from pathlib import Path
-parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--output',required=True);parser.add_argument('--method',choices=['direct','presentation'],default='direct');args=parser.parse_args()
+parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--output',required=True);parser.add_argument('--method',choices=['direct','presentation','free'],default='direct');args=parser.parse_args()
 from cubic_order2_22_secant_functionals import normal_matrix,RHO,SIGMA,TAU
 from cubic_order2_22_secant_tools import relations
 from flint import fmpq,fmpq_mpoly_ctx
@@ -54,7 +54,48 @@ source+=matrix('Nall',32,len(NN),{j:{a:row[j] for a,row in enumerate(NN) if j in
 source+='matrix CK=R3*Nall;\nif(size(ideal(CK))!=0){print("FAILED NORMAL ROW CONTAINMENT");quit;}\nprint("NORMAL ROW CONTAINMENT PASS");\nmodule E=syz(R3);\nprint("POLYNOMIAL KERNEL DONE");\nprint(size(E));\n'
 if args.method=='direct':
  source+='module NN=Nall;\nmodule GN=std(NN);\nprint("NORMAL MODULE STANDARD BASIS DONE");\nideal Ann=quotient(GN,E);\nmodule TestBasis=E;\nmodule TestModule=GN;\n'
-else:
+elif args.method=='presentation':
  source+='module ES=syz(E);\nmatrix T=lift(E,Nall);\nmatrix Check=E*T-Nall;\nif(size(ideal(Check))!=0){print("FAILED COORDINATE LIFT");quit;}\nmodule Pres=ES,T;\nmodule GP=std(Pres);\nmodule FF=freemodule(ncols(E));\nideal Ann=quotient(GP,FF);\nmodule TestBasis=FF;\nmodule TestModule=GP;\n'
-source+='ideal JJ=std(Ann);\nprint("ANNIHILATOR DONE");\nprint(dim(JJ));\nint step=0;\nideal Next;\nwhile(reduce(1,JJ)!=0)\n{\n Next=std(quotient(JJ,ideal(U)));\n step=step+1;\n print("SATURATION STEP "+string(step));\n if(size(reduce(Next,JJ))==0){break;}\n JJ=Next;\n}\nif(reduce(1,JJ)==0)\n{\n module Test=U^step*TestBasis;\n module Remainder=reduce(Test,TestModule);\n if(size(Remainder)!=0){print("FAILED FINAL MEMBERSHIP");quit;}\n print("LOCALIZED NORMAL MODULE EQUALITY VERIFIED");\n}\nelse{print("UNRESOLVED SUPPORT");print(JJ);}\nquit;\n'
+else:
+ source+=r"""
+int j,a,b,dropj,keep;
+poly cc;
+while(size(E)>10)
+{
+ for(j=1;j<=size(E);j++){E[j]=E[j]/leadcoef(E[j]);}
+ module Rel=syz(E);
+ matrix RM=Rel;
+ dropj=0;
+ for(a=1;a<=nrows(RM);a++)
+ {
+  for(b=1;b<=ncols(RM);b++)
+  {
+   cc=RM[a,b];
+   if(cc!=0 && deg(cc)==0){dropj=a;break;}
+  }
+  if(dropj!=0){break;}
+ }
+ if(dropj==0){print("NO CONSTANT UNIT RELATION");quit;}
+ module NewE;
+ keep=0;
+ for(j=1;j<=size(E);j++){if(j!=dropj){keep=keep+1;NewE[keep]=E[j];}}
+ E=NewE;
+ kill NewE;kill Rel;kill RM;
+ print("PRUNED KERNEL SIZE");print(size(E));
+}
+module ES=syz(E);
+if(size(E)!=10 || size(ES)!=0){print("FAILED FREE KERNEL");quit;}
+print("FREE RANK TEN KERNEL VERIFIED");
+short=0;
+"""
+ # ASCII exports avoid Singular 4.4.1 dump's algebraic-minpoly serialization bug.
+ prefix=str(Path(args.output).resolve())
+ source+='matrix Emat=E;\n'
+ for name,rows,cols in [('Emat',32,10),('Nall',32,len(NN))]:
+  dest=prefix+'.'+('E' if name=='Emat' else name)+'.txt'
+  source+='link Out="ASCII:w '+dest.replace('\\','/').replace('"','')+'";\nopen(Out);\n'
+  source+=f'for(a=1;a<={rows};a++){{for(b=1;b<={cols};b++){{write(Out,string({name}[a,b]));}}}}\nclose(Out);kill Out;\n'
+ source+='print("FREE KERNEL ASCII EXPORT PASS");\nquit;\n'
+if args.method!='free':
+ source+='ideal JJ=std(Ann);\nprint("ANNIHILATOR DONE");\nprint(dim(JJ));\nint step=0;\nideal Next;\nwhile(reduce(1,JJ)!=0)\n{\n Next=std(quotient(JJ,ideal(U)));\n step=step+1;\n print("SATURATION STEP "+string(step));\n if(size(reduce(Next,JJ))==0){break;}\n JJ=Next;\n}\nif(reduce(1,JJ)==0)\n{\n module Test=U^step*TestBasis;\n module Remainder=reduce(Test,TestModule);\n if(size(Remainder)!=0){print("FAILED FINAL MEMBERSHIP");quit;}\n print("LOCALIZED NORMAL MODULE EQUALITY VERIFIED");\n}\nelse{print("UNRESOLVED SUPPORT");print(JJ);}\nquit;\n'
 Path(args.output).write_text(source);print('source saved',len(source),'method',args.method,flush=True)

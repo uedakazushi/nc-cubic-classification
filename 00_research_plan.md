@@ -73,9 +73,9 @@ R_Aの平坦性だけからQ(R_A)の平坦性を推論しない。その後、�
 - proper Sklyanin、Stafford、指定Pym chart、指定as4具体表示の排除を保持する。全AS4の被覆を仮定しない。外部入力は `research/as4_imports.json` の固定SHAと規約を用いる。
 - スペクトル(1,3)は幾何学的分類、(3,1)と(2,2) mixed rank2は全Jordan型込みで排除。mixed rank4のP=0,Q=0は既知族へ認識。両top非零の残余は詳細分類ノートの現行frontierを読む。
 
-確認時の分類frontierは **classification-v200**。最後のL0非鏡開集合の有理二パラメータ表示と正則逆写像・分母条件を検証済みで、portableな正常行加群builderがある。
+確認時の分類frontierは **classification-v201**。最後のL0非鏡開集合の有理二パラメータ表示と正則逆写像・分母条件を検証済みで、portableな正常行加群builderがある。
 最終飽和判定は未完であり、この有理表示だけからH3排除を結論しない。
-次はkernel/正常行加群商のAnnを指定分母Uで飽和するか、B=0で正則な汎関数を追加する。
+多項式環上の核を定数単元関係で自由rank10へ縮約し、公開生成器の再生・syz零・ASCII exportを確認した。座標行列Tの全32×44成分のET=Nも公開solverで厳密確認済み。残る計算は単元pivot縮約後の余核のU飽和である。
 具体式・入力・未完箇所は `research/cubic_14641_classification.md` と `research/cubic_classification_validation.json` に保持する。
 全CY被覆、三固有値以上、全成分とintrinsic族降下も未完成である。
 

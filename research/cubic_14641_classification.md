@@ -1350,6 +1350,8 @@ L0の非鏡領域はrho²+1=0ならs0なので排除済み。それ以外ではL
 
 再開用計算：`PYTHONPATH=<python-flint installation> python computations/build_cubic_order2_22_secant_L_module.py --output /tmp/L.sing --method direct`、続けて`Singular -q /tmp/L.sing`。presentation法は`--method presentation`。生成器は公開29汎関数の全288元関係を検証してから、param代入の分母をrowごとに明示的単元で払い、U因子だけを除く。出力は約5.3MBだがGitには追跡せず再生成する。portable生成実行済み、生成行のR3*N=0もSingularで確認。
 
-未完計算の正確な状態：局所化商環内の直接syzは重かったため中断。核は局所化と可換なのでQQ(i)[rho,z]のpolynomial kernelへ切り替え、15生成元/その5関係を得た。direct法では正常moduleの標準基底まで完了、Ann=quotient(N,K)計算中。presentation法ではK座標へのlift計算中。AnnのU飽和が単位idealになることはまだ証明していない。builderはその最後にU^m倍の所属も直接再検証する。
+未完計算の正確な状態：局所化商環内の直接syzと大きいambientでのquotient/liftは重かったため中断。QQ(i)[rho,z]上のpolynomial kernelの15生成元・5関係から、関係に現れる非零定数（係数体の単元）を使って冗長生成元を順に除去した。10生成元となり、そのsyzが零であることをSingular 4.4.1で確認した。従ってこの**多項式環上の核は自由rank10**。`--method free`はこの確認と、32×10の核E、32×44の正常行NのASCII exportまで実行する。Singularのalgebraic minpolyのdump不具合を避け、文字列形式で係数体を保持する。公開builderからの再生成とexportを実行済み。
+
+`python computations/solve_cubic_order2_22_secant_L_coordinates.py --prefix /tmp/L.sing`は、free法の二つのexportからQQ(i)(rho,z)で座標を解き、座標Tが全て多項式であることと**全32×44成分のET=N**を厳密検証する。途中pivotは再開資料として保存する。私的先行実行と公開版の独立再生成で、いずれも全恒等式PASS。これはN⊂Kを具体化し商を10次元ambientに移す計算であり、逆包含やH3排除の証明ではない。生成される巨大な座標入力・pickleはGitに追跡しない。AnnのU飽和の単位性は未証明。次はTの行列に対しUの単元因子を除去し、単元pivotで縮約してから小さい余核の飽和を判定する。有限三点でTのrank10を確認したが、これは全底でのrank証明ではない。
 
 必要ならB=(rho−1)s²+(rho+1)t²=0のbasis artifactを埋める。各既存四次商chartで全35汎関数の共通分母にB因子が現れるため、このcurveで制約が不足する可能性がある。rho=3/5,s2,t1（B0）のpointでB4dim35を確認し、そのpointでpivotが非零となる新Markowitz chartをprivateに生成、全元annihilator/B4dim35まで保存済み。選択正常10rowsは[26,61,24,19,8,9,6,21,55,59]、対応quartic functional idsは{6,8,9,19,20,21,24,26}。未公表でありこれを排除証明として使わない。
