@@ -51,3 +51,12 @@ def polynomial_rows(N,variable):
   row=[S.cancel(c) for c in N[i,:]];den=S.lcm([S.denom(c) for c in row]);row=[S.cancel(c*den) for c in row]
   if any(row):rows.append(row)
  return S.Matrix(rows)
+
+def normal_free(R,K):
+ """Normal equations on all 32 positive cubic words, with verified quartic annihilators."""
+ words,index,free,nf=quotient(R,4,K);E=[w for w in itertools.product(range(4),repeat=3) if sum(v>=2 for v in w)%2==0];N=S.zeros(4*len(free),32)
+ for j,word in enumerate(E):
+  for g in range(4):
+   for raw,c in [(word+(g,),1),((g,)+word,-1 if g<2 else 1)]:
+    for row,d in nf[index[raw]].items():N[g*len(free)+row,j]+=c*K.to_sympy(d)
+ return N.applyfunc(S.cancel),nf,len(free)

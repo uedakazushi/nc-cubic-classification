@@ -1258,3 +1258,12 @@ canonical負topQ0の(2,2)/mixed rank4全H3を、全Jordan型込みで曲がっ�
 次は同じ平方正Pf主chartの共鳴外。A=((1−t²)/q,−t,q,0,t,q),qneq0。私的全二param消去はNF3分母2q²t、全NF4分母に複雑curveも出るが、正常minorに使う7汎関数(j=4,5,6,9,13,14,19)の極はq*t*(t²−1)*(q²−4t²+2)だけ。単一正常10minor=(2t−1)^4(2t+1)^4(2t²−1)/(16*q*t³*(t²−1)²*(q²−4t²+2)²)。genus2らしき全NF分母はこの7関数に不要なので扱わない。選択7関数全normalizer 28行でt=−1/2,±1/sqrt2の代替minorを探す計算中。残るF=q²−4t²+2=0はw=2t+qでt=(w+2/w)/4,q=(w−2/w)/2の有理一param。t0/±1各直線とq0境界、非退化正Pf、rank2secantも未完。全CY/三固有値/成分/相対降下未完。
 
 私的巨大generic左逆行列計算は出力を得ず終了したため再実行不要。7つの選択四次汎関数だけを使うことで不要な高次分母を既に除外できる。私的secant_square_general.pklのN/nf3/nf4はSymPy式へ変換して保存済み（native QQ(q,t) FracElementをpickleするとring内部辞書変更例外が出たため）。公開のsecant_toolsからmain式で再生成可能。
+
+
+## 平方secant正Pf主chartの全値排除（classification-v189）
+
+平方正top/対称secant負top/正Pfaffianの全z5neq0主chartを全値排除。選択六四次関数の極q*t*(t²−1)*(q²−4t²+2)のみ、正常10minorは−(2t−1)³(2t+1)³/[16q t³(t²−1)(q²−4t²+2)²]。五有理曲線を二minorで被覆、Gaussian有限点ではt0核零/t−1/2唯一正常三次もx+2yを因子に持つ。残るconicの12次既約例外P(w)は厳密12次数体で元288四次関係を消去しrank10、全共役を同時に排除。t1/2全pencilは既存因子化と接合。
+
+証明cubic_order2_22_secant_square_main.tex。verifierは共通secant_tools.normal_freeで全32自由正三次の正常式を作り、三次のgeneric座標基底を特殊値へ仮定しない。五curveの実際に使うquartic functionの極と二minor gcdの合併を調べ、定義域外と既知t1/2を除く残余因子をGaussian点、既知t0曲線、12次既約Pへ剰余零で写す。P=w12−12w10+28w8+96w6+112w4−192w2+64。QQ[alpha]/P上のR係数をQQ(w)の分子/分母からnative ANPで評価し、SymPy式へ12次根を大量展開せず256語商を消去、B4dim35/normalrank10を全元関係annihilator恒等式付きで検証。実行はoptional Flint exact ground environment、近似根計算なし。Gaussian唯一cutは(x+2y)*(-x²/2+xy+yx+2y²−i(uv+vu))、共役も同じ左因子。新規性/独立査読未確認。
+
+次は平方正Pfのz5=0境界。A=(a,−t,−s,s,t,0),t²−s²1。s!=0ではyshearでa0、w=t+s!=0の有理一param(s=(w-w^-1)/2,t=(w+w^-1)/2)、w±1は除く。s0ではt±1/a任意の二直線を別に保持する。全値正常kernelをまず個別に計算し、共鳴や孤立正常cutが残れば因子incidenceを判定する。非退化正top正Pfの3param quadric、rank2secantのb,c!=0境界は未完。全CY/三固有値以上/全成分/相対降下も未完。
