@@ -1,16 +1,18 @@
 \subsection{円錐基礎枝の排除と標準AS3部分代数}
 \label{subsec:h3-positive3-cone-exclusion}
 \begin{lemma}\label{lem:h3-curve-graded-division-growth}
-$K=k(u)$、$\sigma\in\operatorname{Aut}_kK$とする。
+$K$を滑らかな射影曲線$C$の関数体、$\sigma\in\operatorname{Aut}_kK$とする。
 次数1の有限個の斉次元で生成される
 $K[h,h^{-1};\sigma]$の部分代数はGK次元2以下である。
 従って円錐基礎$S/(C')$の場合、残る正生成元$v$が共通量子平面$T=\langle W\rangle$の
 斉次商体に入るH3包絡は存在しない。
 \end{lemma}
 \begin{proof}
-各生成元を$f_i(u)h$と書き、その全極を支配する有効因子$D$を$\mathbb P^1$上に取る。
+各生成元を$f_i h$と書き、その全極を支配する有効因子$D$を$C$上に取る。
 長さ$n$の語の係数の極は$D_n=\sum_{j=0}^{n-1}\sigma^jD$で抑えられる。
-$\deg D_n=n\deg D$なので、係数空間の次元は$O(n)$、累積成長は$O(n^2)$である。
+$\deg D_n=n\deg D$である。完全曲線上の列$0\to\mathcal O_C\to\mathcal O_C(D_n)\to\mathcal Q\to0$と
+$\operatorname{length}\mathcal Q=\deg D_n$から$h^0(\mathcal O_C(D_n))\le1+\deg D_n$であり、
+係数空間の次元は$O(n)$、累積成長は$O(n^2)$である。
 円錐基礎の斉次商環は、前の量子torus表示から
 $k(u)[z,z^{-1};u\mapsto au]$に等しい。
 もし$v\in Q_{\mathrm{gr}}(T)$なら包絡の四生成元が全てこの斉次商環に入り、

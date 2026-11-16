@@ -161,3 +161,118 @@ $\mu(W)=-W,\mu(N)=-N$なので、$M=WN\ne0$は$\mu$固定かつ$-\mu$正規化�
 純正縮約イデアル、両graphの全係数Schur条件、$uv$の全反可換式、
 量子平面分枝の平方交換式と、最後の二正規二次式の全共変式を厳密検証する。
 必要表示の存在十分性は使わず、整域性と正規三次の必要条件から排除している。
+
+\begin{lemma}[AS2平面上の部分正規化平方根の成長障害]
+\label{lem:h3-AS2-partial-root-growth}
+$T=\langle x,y\rangle$を二生成元quadratic AS2整域とし、
+$B$を$T$と次数1の$u,v$で生成されるnoetherian次数付き整域とする。
+\[
+ vx=yv,\qquad 0\ne v^2\in T_2,\qquad 0\ne uv\in T_2
+\]
+なら$\operatorname{GKdim}B\le2$である。
+\end{lemma}
+\begin{proof}
+$D=Q_{\mathrm{gr}}(T)$と置く。
+非退化二次関係の係数を$q_{ij}$、$t=yx^{-1}$とすれば
+\[
+ D=k(t)[x,x^{-1};\sigma],\qquad
+ \sigma(t)=-\frac{q_{00}+q_{10}t}{q_{01}+q_{11}t}.
+\]
+行列式$q_{00}q_{11}-q_{01}q_{10}\ne0$なので、これは$\mathbb P^1$の自己同型である。
+$K=D_0=k(t)$と書く。
+$Q=v^2\in D_2^\times$とし、$f=\operatorname{Ad}_v$と置く。
+$f(x)=y$、また$v^2x=vyv$から
+\[
+ f(y)=QxQ^{-1}\in D.
+\]
+従って$f(D)\subset D$であり、$f^2=\operatorname{Ad}_Q$より実際には$f(D)=D$である。
+
+$E=D+Dv$は積で閉じる次数付き環で、$v^{-1}\in E$でもある。
+$w=vx^{-1}$と置くと
+\[
+ E_0=K+Kw,\quad w a=\phi(a)w,\quad w^2=h\in K^\times.
+\]
+$\alpha=f|_K$は$\sigma$と可換する。実際、$f(x)=y=tx$の$K$上の共役作用も$\sigma$である。
+また$Q$の次数は2なので$\alpha^2=\sigma^2$である。
+従って$\phi=\alpha\sigma^{-1}$は対合であり、$\phi(h)=h$である。
+
+$\phi\ne1$なら、座標を取り替えて$\phi(z)=-z$とできる。
+$K^\phi=k(z^2)$で、任意の$h\in(K^\phi)^\times$はノルム$r\phi(r)$となる。
+実際、代数閉体上で有理式を一次因子へ分解し、
+\[
+ (z-b)\phi(z-b)=b^2-z^2
+\]
+と定数の平方根を使えばよい。
+すると$(r^{-1}w)^2=1$となるが、$r^{-1}w\notin K$なので
+$r^{-1}w\pm1$はいずれも非零で、その積が零となり整域性に反する。
+従って$\phi=1$である。
+$E_0=L$は$K$上二次以下の可換有限拡大体となる。
+$x$による共役は$L$を保ち、$E=L[x,x^{-1};\theta]$である。
+$uv\in T_2$より$u=(uv)v^{-1}\in E$なので$B\subset E$である。
+$L$は曲線関数体であるため、補題\ref{lem:h3-curve-graded-division-growth}から
+次数1有限生成部分代数$B$のGK次元は2以下となる。
+\end{proof}
+
+\begin{theorem}\label{thm:h3-order2-22-secant-rank3-exclusion}
+secant型の偶cross blockが階数3となる二固定graphは、
+noetherian AS4整域を与えない。従ってH3ではない。
+\end{theorem}
+\begin{proof}
+まず$g=\left(\begin{smallmatrix}0&1\\1&1\end{smallmatrix}\right)$とする。
+$y^2$行は純正関係$(B,D,-D,0)$である。
+$D=0$なら整域性から$B=0$であり、偶$xy$行と奇関係は
+\[
+ v^2=-x(Ax+Cy),\quad vx=-xu,\quad uy+yv+vx=0
+\]
+となる。
+$v$と$v^2$の可換式に代入し、左の$x$を消去すると
+\[
+ A(ux+xv)+Cxu=0
+\]
+を得る。$A\ne0$なら元の奇二本にない独立な二次関係、
+$A=0,C\ne0$なら積$xu=0$となる。
+$A=C=0$でも$v^2=0$なので、全て整域性またはAS4関係数に反する。
+
+従って$D\ne0$である。$B=0$なら純正関係は$xy=yx$となり、
+$xx$行から$uv=0$となるため、$B\ne0$でもある。
+$K^t$の行空間は$xx,xy,yx$を張り、純正$xy$行は$y^2$係数$D$を持つ。
+従って偶関係の$U^2$射影は四次元である。
+middle Frobenius行列を$M$、この射影の基底行列を$Z$とすると、
+純正blockは$P=ZMZ^t$で$Z,M$とも可逆なので、$P$も可逆である。
+Schur式$Q=K^tP^{-1}K$の負cyclic条件のうち二つは、分母を払えば
+\[
+ BD(B-C)=0,\qquad BD(B+C)=0
+\]
+となる。その和は$2B^2D=0$であり、矛盾する。
+
+次に$g=\left(\begin{smallmatrix}1&0\\1&-1\end{smallmatrix}\right)$とする。
+$yx$行は純正関係
+\[
+ Ax^2+Bxy+Cyx+Dy^2=0
+\]
+である。零なら偶$xy$行が$v^2=0$となり、非零rank1なら一次式の積となるので、
+係数行列は可逆である。
+従って$T=\langle x,y\rangle$はAS2平面であり、
+補題\ref{lem:h3-binary-cubic-factors}により$T$から$B$への高次核もない。
+他の関係は
+\[
+ vx=yv,\quad
+ v^2=-Ax^2-Cxy+Byx-Dy^2\in T_2,\quad
+ uv=-A(xy-yx)-By^2\in T_2
+\]
+を与える。
+これらの平方・積は整域性から非零なので、前補題により$\operatorname{GKdim}B\le2$となる。
+これは14641のGK次元4に反する。
+\end{proof}
+
+\begin{corollary}\label{cor:h3-order2-22-only-invertible-secant}
+半単純$(2,2)$・奇関係数2の全H3候補は、secant型で$abcd\ne0$となる部分に限られる。
+\end{corollary}
+\begin{proof}
+全pencil被覆、pure mixed・ruling・tangent排除、secantの階数2排除と本定理を合わせる。
+\end{proof}
+
+\texttt{verify\_cubic\_order2\_22\_secant\_rank3.py}は
+矛盾する二つのcyclic Schur式、余分な奇二次式を生む自由環恒等式、
+AS2のM\"obius商表示とノルム因子恒等式を厳密検証する。
+分数環の二次拡大が曲線斉次商環へ落ちることと成長障害は、本文の構造証明である。

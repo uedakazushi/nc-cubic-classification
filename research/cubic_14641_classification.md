@@ -964,3 +964,16 @@ rank2二境界の証明案はv149で全係数検証・原稿統合を完了し�
 swap graphはpureUU xx/yy 2minor−B²からB0、A/D両0はprojection<=2でdomain外。Aunitを交換で覆い、Schurはnegativec=d0,f=-a,e=-b、domainからbunit。u²=v²=-Q(U)が中心、xy=a u²+b{uv}よりxy/{uv}も中心、A x²+D y²中心。AD0はx²central等から新odd ux+xv0をdomain消去で得てB2矛盾。ADunitでp=sqrtA*x+sqrtD*y,q=sqrtA*x−sqrtD*y,r=u+v,s=u−vの全4平方中心、odd {r,q}=[s,p],{r,p}=[s,q]。W=[s,p],N=[s,q]はmu奇正規二次、normalizers(-,+,+,-),(+,-,+,-)、積mu固定/-mu正規化で排除。
 
 verify_cubic_order2_22_secant_rank2.py/certificateは全係数の縮約ideal/両Schur条件、diag uv全反可換式、四平方交換式、swap pairednormalquad全八covarianceをexact PASS。有限標本や全AS4存在を入力にしない。次はsecant K rank3二固定graphのpureUU一行とpureVV一行から必要Schur領域を分け、B2整域性又は正規二次/四次障害を求める。K rank4開部分は別に残す。
+
+
+## secant K rank3も全排除、rank2候補は可逆secantだけ（classification-v150）
+
+**全体的なスペクトル制約（classification-v150）**：全(1,3)は幾何学的被覆・必要十分H3判定・全矢/慣性まで確定、全(3,1)は全Jordan型込みで空。半単純(2,2)/mixed rank2は全pencilからpure mixed/二ruling/全tangent/secant K rank2を排除し、さらにsecant K rank3二表示もAS4整域自体から排除。one-diagonal-zeroはdomain二次消去と非退化Pのcyclic Schur二式が矛盾。one-offdiagonal-zeroはpositiveAS2 T、vx=yv,v²/uv∈T2から分数環二次拡大へ落ち、次数0は非自明P1対合のノルム全射により曲線体となるのでB GK<=2、14641に矛盾。従って残る半単純(2,2)/mixed rank2はK可逆secantのall abcdunit開部分のみ。mixed rank4三型、非半単純(2,2)、三固有値以上、全CY被覆、全成分/圏族降下は未完。
+
+原稿lem:h3-AS2-partial-root-growth,thm:h3-order2-22-secant-rank3-exclusion,cor:h3-order2-22-only-invertible-secant。one-diagonal-zero g[[0,1],[1,1]]のpureyy rowは(B,D,-D,0)。D0はdomainB0、v²=-x(Ax+Cy),vx=-xu,uy+yv+vx0からvとv²可換を使いx消去でA(ux+xv)+Cxu0。Aunitは独立odd quad、A0/Cunitはproduct0、A=C0はv²0。DunitならB0はuv0を強制、ゆえBunit。K^tはxx/xy/yx、Pxy行DyyからevenprojectionUU full4でP可逆。negativecyclicSchur二式BD(B−C)=BD(B+C)0が矛盾。
+
+one-offdiagonal-zero g[[1,0],[1,-1]]ではpureyx q非零nondeg、AS2 Tがfactor lemmaでBへ単射、vx=yv,v²,uv∈T2非零。D=QgrT=K[x±;sigma],K=k(t)。f=Ad_vはf x=y,f y=QxQ^-1,Q=v²でDへ入り、f² innerQなのでfD=D。E=D+Dv、w=vx^-1、E0=K+Kw、phi=f_K sigma^-1は対合、w²h∈Kphi。phi非自明ならPGL2座標phi z=-z、algclosed factorizationとNorm(z-b)=b²-z²からh=Normr、(r^-1w)²1でdomain矛盾。phiidならE0=L曲線体有限拡大K、E=L[x±;theta]、u=(uv)v^-1も入りB全体がcurve graded Laurent内。一般曲線へ拡張したgrowth lemma（極因子の線形成長、h0<=deg+1）でGK<=2。Tsenの新規引用は不要、二次ノルムを初等的に証明。
+
+verify_cubic_order2_22_secant_rank3.py/certificateはcyclic二式、x倍新oddquadの自由環恒等式、AS2 Mobius商/非退化det、norm因子恒等式をexact PASS。分数環と曲線成長は本文構造証明。growth lemmaの一般曲線拡張に伴いverify_cubic_positive3_cone_exclusion.pyも今回再実行PASS。
+
+次はallunit secantの未公表必要正規形を確定：尺度でg=[[s,t],[t,s]],t²−s²1,s*tunit、purepositiveB1/D=-A、Schur conic s²C²+(2s²+1)(2A²+1)0、Pdet=−(2A²+s²+1)/s²unit。これを全係数検証し、二変数必要曲面上のW1を求める。s²=-1/2ではC0でA自由の共鳴曲線となるため別に保持。全AS4存在は未主張。

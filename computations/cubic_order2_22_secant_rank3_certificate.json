@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "scope": "both rank-three degenerate secant graphs in semisimple (2,2), odd rank2",
+  "exact_checks": [
+    "two incompatible cyclic Schur conditions in the one-diagonal-zero graph",
+    "free-algebra identity producing an extra odd quadratic after domain cancellation",
+    "Mobius quotient of any AS2 plane",
+    "quadratic norm factor identity over an algebraically closed field"
+  ],
+  "structural_proofs": [
+    "nondegenerate binary plane injects into the ambient domain",
+    "partial normalizing square root gives a quadratic degree-zero crossed algebra",
+    "nontrivial rational-field involution has surjective norm and cannot give a domain crossed algebra",
+    "curve-graded-division growth is at most2"
+  ],
+  "conclusion": "neither rank-three boundary graph admits a noetherian AS4 domain; in particular no H3; only the invertible secant cross block remains"
+}
