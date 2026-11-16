@@ -685,3 +685,15 @@ Pchart S=k[kappa,t,z]/(kappa*t−d−e z−f kappa²)、kappa=J/P,t=T/P,z=X/P。
 次の具体的着手（未検証の局所障害案）：e0,d!=0の錐頂点をX=u²chartで調べる。S=p u^-1,W=w u^-1,V=v u^-1とすると中心P/X=-S²,Y/X=-W²、alpha=b−aS²−cW²、beta=−dS²−fW²、V²−alpha V+g−hW²0、SW=WS、{W,V}=alpha W−beta。tau=T/X=alpha S−{S,V}が中央、Gはtau W=beta S。頂点ではV²−bV+g0。b²−4g!=0なら二単純点がshiftで交換され、一次extension計算はExt1自己1・交差2となる見込みでSerre必要条件の全四成分同次元に反する。重根なら唯一単純のExt1が3、shift固定からExt2self1,高次0と合わせ最小自由解消Euler順位矛盾が見込まれる。正確なXchart逆表示とinfinitesimal extension線型計算を次に検証するまで、e0全域排除は定理に含めない。
 
 F1側の次案（未検証）：Rでは全pair anticommutatorsが中央なので四生成元Clifford形式行列[[P,0,J,T/2],[0,X,0,A/2],[J,0,Y,B0/2],[T/2,A/2,B0/2,H]]を取れる。scroll三minorからp/w方向のkernelは(-J,0,P,0),(-Y,0,J,0),(-B0,0,T,0)が生成する線直和となるはずで、quotient rank3 bundleのeven Clifford orderとして全chartを記述できる見込み。conic bundleの平滑性・rank低下とgeneric divisionを調べるが、未証明のNC JacobianやH3 opennessには依存しない。
+
+## 錐中心e=0の全値排除、全(1,3)H3はF1上order（classification-v119）
+
+原稿thm:h3-order2-eight-cone-exclusion。d=e0はfactor既排除。e0,d!=0の錐頂点Xunitで正確なchartを作り全値非H3と証明。S=p u^-1,W=w u^-1,Z=v u^-1−alpha/2、中央pi=P/X,gamma=Y/X,j=J/X,tau=T/X、alpha=a*pi+b+c*gamma,beta=d*pi+f*gamma,H=g+h*gamma。S²−pi,W²−gamma,SW=WS=−j,{S,Z}=−tau,{W,Z}=−beta,Z²=alpha²/4−H、tau W=beta S。三変数Clifford環をSW+j,tau W−beta Sで割り、uがS/W/Zを全部反転するskew Laurent拡大で元の全六関係/Gを復元するのでexact表示。
+
+頂点fiberはS²=W²=SW=WS0,{S,Z}={W,Z}0,Z²=b²/4−g。二根q!=0ではZ±qの二単純をshiftが交換。一次拡大は七変数（S/W/Zと四中央座標）で正確に計算：pi/gamma/jの一次成分零,tau=−(zi+zj)s,(zi+zj)w=(zi+zj)z0。自己はsだけ自由、crossはs/w/z自由からinner1を引くためExt1行列[[1,2],[2,1]]。H3 Serre(-1)[2]はshift交換二点の四成分を同次元にするので矛盾。これらの点加群はu作用1、v作用b/2±qを交互に取り、定数文字とはしない。
+
+重根では唯一の単純k、fiber radical三乗零、Ext1self3、shift固定。H3ならExt2self1高次0で完備局所代数の最小自由解消rank(1,3,1)。中心完備k[[s,t]]^mu3(1,1)はdomain、generic order dim4でEuler4(1−3+1)−4が矛盾。従って全e0排除、全H3(1,3)でe!=0かつ中心F1。verify_cubic_order2_cone_obstruction.pyはinverse Clifford chart、七変数一次extension全系をqだけの単元pivotで全係数消去し自己1/cross2/重根3とradical冪零性を独立検算PASS。局所大域比較とSerre/Eulerは本文構造証明。
+
+次の具体的着手（まだ未検証）：eunitでscroll標準座標Y=lambda*s²,J=lambda*s*t,P=lambda*t²,B0=mu*s,T=mu*tを使う。中心F1のkernel線は(-J,0,P,0),(-Y,0,J,0),(-B0,0,T,0)、quotient rank3 bundleはE=O(F)+O+O、q値線束L=O(E_exceptional+2F)。三変数quadric matrixは[[lambda,0,mu/2],[0,X,A/2],[mu/2,A/2,H]]、X=(mu*s−lambda(d t²+f s²))/e、A=a lambda t²+bX+c lambda s²,H=gX+h lambda s²。全R2 sheafがこのeven Clifford orderか、exact kernel quotientで証明する。lambda0のexceptional curveではmu単元、detはXの一次成分でs0の一地点だけ単純零なので、その近傍は常に局所gl2となる見込み。
+
+その後の方針（未証明）：rank3 conic bundle総空間のsmoothnessが、rank2 fibreではdiscriminant smooth、rank1 fibreでは二中心線型係数のbasepoint-free pencil/nodeに等しく、Clifford order gl2と同値になる可能性。Pchartのnormal formとSerre pairingで必要性、formal congruenceで十分性を検証する。generic divisionはsmooth plane quartic discriminant上のQ_X=(plane coordinate A*C−d B²−f A²)/eがdouble lineでないことから残余二重被覆の非自明性を示せそう。nodeがある場合はformal quantum planeのBrauer residueで示す案。未証明のconic-bundle smoothness=>H3をこの版では使わない。

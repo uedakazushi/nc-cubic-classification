@@ -1,0 +1,48 @@
+{
+  "hypotheses": "eight-coefficient H3 candidate, e=0,d!=0; central cubic-cone vertex",
+  "result": "No H3 quotient exists in this cone-center locus; hence every H3 object of the (1,3) sector has e!=0 and center F1.",
+  "u_chart": [
+    "S=p*u^-1,W=w*u^-1,Z=v*u^-1-alpha/2",
+    "central pi=P/X,gamma=Y/X,J=pw/X,tau=T/X",
+    "alpha=a*pi+b+c*gamma,beta=d*pi+f*gamma,H=g+h*gamma",
+    "S\u00b2=-pi,W\u00b2=-gamma,SW=WS=-J",
+    "{S,Z}=-tau,{W,Z}=-beta,Z\u00b2=alpha\u00b2/4-H,tau*W=beta*S"
+  ],
+  "shift": "conjugation by u negates S,W,Z and fixes the central coefficients",
+  "vertex_simple_roots": "Z\u00b2=b\u00b2/4-g; two simples exchanged by shift if b\u00b2!=4g, one shift-fixed simple if b\u00b2=4g",
+  "exact_Ext1_linearizations": [
+    {
+      "case": "self+",
+      "derivations": 1,
+      "inner_derivations": 0,
+      "Ext1": 1
+    },
+    {
+      "case": "self-",
+      "derivations": 1,
+      "inner_derivations": 0,
+      "Ext1": 1
+    },
+    {
+      "case": "cross+",
+      "derivations": 3,
+      "inner_derivations": 1,
+      "Ext1": 2
+    },
+    {
+      "case": "cross-",
+      "derivations": 3,
+      "inner_derivations": 1,
+      "Ext1": 2
+    },
+    {
+      "case": "double",
+      "derivations": 3,
+      "inner_derivations": 0,
+      "Ext1": 3
+    }
+  ],
+  "distinct_root_obstruction": "Ext1 matrix [[1,2],[2,1]] contradicts H3 Serre duality, which forces its four entries to have equal dimension for a shift-exchanged pair.",
+  "double_root_obstruction": "Ext1=3, Ext2=1 and higher Ext=0 would force a minimal free resolution of ranks (1,3,1); generic central rank4 contradicts Euler rank.",
+  "scope": "Inverse-generator identities and all-parameter infinitesimal extension systems checked exactly. Local-global comparison, Serre duality and the minimal-resolution argument are proved structurally in the manuscript."
+}
