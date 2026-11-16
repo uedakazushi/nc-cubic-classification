@@ -1083,3 +1083,10 @@ canonical半単純untwistがP=Q=0のH3では中山の全Jordan部分が消滅す
 canonical零top(P=Q=0) mixed rank4領域の全H3を、全Jordan型・全幾何学的矢込みで既知非CY符号包絡へ認識した。v166全Jordan消滅の後、QQ eps+全排除、QQ eps−のseparated二型と両comm時の二対称式の非退化軸変換、QJ/JQ eps−の同様の軸変換、QJ/JQ eps+の特殊二点正常minor−16/−36、JJ両符号top不存在で八chartを完全被覆。全切断G=f3(U)+ell2(U)u²+ell3(U)v²、H3条件/全矢は固定sign定理へ接合。一般次元2/慣性mu2²。全H3や成分/族降下の完成ではない。
 
 A=SU⊗E+E⊗SV、PfA=detSU−detSV。可換側GL2のnormalized congruenceで非退化対称式をcrossへ移し、全特殊係数をseparatedへ被覆。量子/Jordan正符号特殊点の四overlapと正常minor−16/−36はzero_top_coverage検証器で再生。次はP又はQ非零領域。最小課題として符号graphの曲がった偶関係[x,y]=alpha*u²+beta*v²、uv=-vu、crossantiを調べる。u²/v²/uvの偶Clifford係数上のWeyl関係から、alpha/beta非零なら正三次のx/y中央化核が零となりそうである（未検証）。
+
+
+## 曲がった対角rank4包絡の正常核（classification-v168）
+
+非零負topへ出る対角curved包絡[x,y]=alpha*u²+beta*v²、uv=-vu、u作用diag(lambda,lambda^-1)、v逆作用を全値でAS4/noeth/Koszul/domain・mu++--と認識した。全正常正三次核も判定。lambda±1の非零curvatureはWeyl中央化核零、lambda1零tailはfactor、lambda−1零tailは既知sign。新候補は原始6乗根lambda²−lambda+1=0のG=A x³+B y³、AB非零・tail非零だけで、正常核は全alpha/betaで厳密に2次元。商は正規正則AS-Gorenstein/μRIdだが、商domainとH3許容性は未判定。
+
+lambda原始6乗根でu逆転、X=x/u,Y=y/u,V=v/uと置くと、VX=lambda*XV,VY=lambda^-1*YV、XY−lambda²YX=lambda*alpha−lambda*beta*V²、切断A X³+B Y³=0となる見込み（未公開検証）。alpha0なら補助次数でAS3三次hypersurface coneとなり逆Hilbert非多項式→gl∞の頂点障害が使えそうである。beta0も対称。非零時はC=YX+delta+gamma V²、omega=lambda²、delta=lambda*alpha/(omega−1)、gamma=lambda*beta/(omega^-1−omega)でX C=omega C X、Y C=omega^-1 C YのGWA基底へ。3norm P=C³−delta³−gamma³ V6−3delta gamma C V²と見込む。cutでX³/Y³比を固定し、V↦−Vの二次crossed productからnormが非squareならdomainを示せそうだが、まだ採用しない。affinegl2は有限PI GWAの全閉局所模型の判定が必要。

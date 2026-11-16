@@ -1,0 +1,85 @@
+\subsection{非零負topへ出る対角curved chartと原始6乗根候補}
+\label{subsec:h3-order2-22-curved-diagonal}
+\begin{proposition}\label{prop:h3-order2-22-curved-diagonal}
+$\lambda\in k^*$、$\alpha,\beta\in k$とし、$B_{\lambda,\alpha,\beta}$を
+\begin{gather*}
+ xy-yx=\alpha u^2+\beta v^2,\qquad uv=-vu,\\
+ ux=\lambda xu,\quad uy=\lambda^{-1}yu,\quad
+ vx=\lambda^{-1}xv,\quad vy=\lambda yv
+\end{gather*}
+で定める。全パラメータでこれはnoetherian quadratic Koszul AS4型14641の整域であり、
+中山は$\mu=(+,+,-,-)$である。
+H3に必要な正三次正常核は次の通りである。
+\[
+\begin{array}{c|c}
+\text{条件}&W_1(B)\cap B_3^+\\\hline
+\lambda=1,\ \alpha=\beta=0&\langle xuv,yuv\rangle\\
+\lambda=-1,\ \alpha=\beta=0&k[x,y]_3+\langle x,y\rangle u^2+\langle x,y\rangle v^2\\
+\lambda=\pm1,\ (\alpha,\beta)\ne(0,0)&0\\
+\lambda^2-\lambda+1=0&\langle x^3,y^3\rangle\\
+\text{その他}&0
+\end{array}
+\]
+従ってこの全chartのH3は、既知符号包絡の切断、または原始6乗根$\lambda$について
+\[
+ G=A x^3+B y^3,\qquad AB\ne0,\quad(\alpha,\beta)\ne(0,0)
+\]
+の候補に限られる。後者のH3十分性や商の整域性は、この命題では主張しない。
+\end{proposition}
+\begin{proof}
+$T=k\langle u,v\rangle/(uv+vu)$と置く。
+まず$S=T[x;\sigma_x]$、$\sigma_x(u)=\lambda^{-1}u,\sigma_x(v)=\lambda v$とする。
+次に
+\[
+ \sigma_y(u)=\lambda u,\quad\sigma_y(v)=\lambda^{-1}v,\quad\sigma_y(x)=x,
+ \qquad\delta_y(u)=\delta_y(v)=0,\quad
+ \delta_y(x)=-\alpha u^2-\beta v^2
+\]
+と置く。
+$u^2,v^2$が$T$の中心なので、$\delta_y$は$S$の関係を保つ$\sigma_y$-derivationである。
+従って$B=S[y;\sigma_y,\delta_y]$となり、noetherian・整域性・AS4性を得る。
+正負AS2簡約と四mixed簡約の全四三次overlapも消える。
+正次数を先に比べるmonomial順序により停止し、$x^iy^ju^kv^l$がPBW基底となるのでKoszulである。
+
+Ore中山公式から$\mu(u)=-u,\mu(v)=-v,\mu(x)=x$と
+$\mu(y)=y+b$、$b\in S_1$を得る。
+$\sigma_y$のhdetは1である。
+さらに$x\mapsto r x,y\mapsto r^{-1}y,u\mapsto u,v\mapsto v$は全$r\in k^*$で自己同型である。
+中山はこのtorusと可換するが、$S_1$には$y$と同じweightを持つ元がないので$b=0$である。
+
+$u$の正常化作用は$x,y,u,v$をそれぞれ
+$\lambda x,\lambda^{-1}y,u,-v$へ移す。
+正三次PBW語への作用は対角で、その$-1$固有空間が正常候補を含む。
+十語のweightを比べると、非零候補があるのは
+\[
+ (\lambda-1)(\lambda+1)(\lambda^2-\lambda+1)=0
+\]
+の場合だけである。
+原始6乗根では$-1$固有空間は厳密に$\langle x^3,y^3\rangle$である。
+$1+\lambda^2+\lambda^4=0$から、$[x,y^3]=[y,x^3]=0$となる。
+他の負正常方程式も$\lambda^3=-1$から従うので、この二次元空間全てが残る。
+
+$\lambda=\pm1$では
+\[
+ C_+=k[u^2,v^2,uv]
+\]
+は可換整域で、$x,y$と可換する。
+$h=\alpha u^2+\beta v^2$はその中心元であり、$h\ne0$なら正部分は$C_+$上のWeyl関係$[x,y]=h$を持つ。
+PBW表示に対して$[x,-]=h\partial_y$、$[y,-]=-h\partial_x$となる。
+標数0と$h$の正則性から、共通中央化部分は$C_+$だけである。
+$C_+$は偶数次数しか持たないので正三次中央化部分は零となる。
+$h=0$での二行は、対角weight比較または既知の符号包絡の正常核から得られる。
+
+$\lambda=1,h=0$の全候補は積であり、$\lambda=-1,h=0$だけが既知符号族を与える。
+原始6乗根でも$h=0$なら正平面が可換なので全$G$が因数分解する。
+$A=0$または$B=0$なら純三乗であり、整域商を与えない。
+これで表示した必要候補を得る。
+\end{proof}
+
+原始6乗根の非零$G$は正規正則で、商はAS Gorenstein次元3・parameter 1、$\mu_R=1$となる。
+これはH3認識の一部だけであり、$R$の整域性と商圏の有限大域次元は別に判定する。
+検証器は
+\[
+ \texttt{verify\_cubic\_order2\_22\_curved\_diagonal.py}
+\]
+で、全係数の四PBW overlap、40本のWeyl微分恒等式、正常化weightと原始6乗根の全正常方程式を再生する。

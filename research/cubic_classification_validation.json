@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "version": "classification-v167",
+  "version": "classification-v168",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -78,7 +78,8 @@
     "papers/sections/cubic_order2_22_rank4_zero_top_QQ_plus.tex",
     "papers/sections/cubic_order2_22_rank4_opposite_separated.tex",
     "papers/sections/cubic_order2_22_rank4_zero_top_unipotent.tex",
-    "papers/sections/cubic_order2_22_rank4_zero_top_classification.tex"
+    "papers/sections/cubic_order2_22_rank4_zero_top_classification.tex",
+    "papers/sections/cubic_order2_22_curved_diagonal.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -1669,6 +1670,18 @@
       "nonzero-top rank4 coverage",
       "componenthood",
       "intrinsic family descent"
+    ]
+  },
+  "order2_22_curved_diagonal_v168": {
+    "status": "PASS four universal PBW overlaps, 40 Weyl identities and full normal spectral computation",
+    "validator": "computations/verify_cubic_order2_22_curved_diagonal.py",
+    "certificate": "computations/cubic_order2_22_curved_diagonal_certificate.json",
+    "proof": "papers/sections/cubic_order2_22_curved_diagonal.tex",
+    "scope": "非零負topへ出る対角curved包絡[x,y]=alpha*u²+beta*v²、uv=-vu、u作用diag(lambda,lambda^-1)、v逆作用を全値でAS4/noeth/Koszul/domain・mu++--と認識した。全正常正三次核も判定。lambda±1の非零curvatureはWeyl中央化核零、lambda1零tailはfactor、lambda−1零tailは既知sign。新候補は原始6乗根lambda²−lambda+1=0のG=A x³+B y³、AB非零・tail非零だけで、正常核は全alpha/betaで厳密に2次元。商は正規正則AS-Gorenstein/μRIdだが、商domainとH3許容性は未判定。",
+    "not_claimed": [
+      "primitive6 quotient domain",
+      "H3 admissibility of primitive6 cuts",
+      "new global component"
     ]
   }
 }
