@@ -51,11 +51,11 @@ Cubic cornerでは四交比の11 determinant条件が有限性に必要十分で
 | H3の公理・認識・全切断の部分分類 | [weak_cubic_axioms.tex](papers/weak_cubic_axioms.tex)、[分類ノート](research/cubic_14641_classification.md) |
 | 次数3のambient・R13・形式比較 | [cubic_surface_ambient_moduli.tex](papers/cubic_surface_ambient_moduli.tex)、[R13](research/r13_generic_moduli.md) |
 | 量子FermatのOU AS障害 | [quantum_fermat_not_as_surface.tex](papers/quantum_fermat_not_as_surface.tex) |
-| 次数1のrank・weighted sextic・候補族 | [nc_del_pezzo_degree1_moduli.tex](papers/nc_del_pezzo_degree1_moduli.tex)、[dP1方針](research/dp1_research_plan.md) |
-| 次数1の反標準モデル・導来比較 | [dp1_anticanonical_models.tex](papers/dp1_anticanonical_models.tex)、[再現](research/dp1_reproduction.md) |
+| 次数1のrank・weighted sextic・候補族（移管済み） | [nc-dp1-moduli](https://github.com/uedakazushi/nc-dp1-moduli) |
+| 次数1の反標準モデル・導来比較（移管済み） | [nc-dp1-moduli](https://github.com/uedakazushi/nc-dp1-moduli) |
 | 三次三様体と非可換P4（移管済み） | [独立研究リポジトリ](https://github.com/uedakazushi/nc-cubic-threefold-moduli) |
 
-量子FermatはHH_{−1}=HH_1=2、HH_0=5によりOU AS型でなく、intrinsic対象全体をOU/AOUの商と同一視できない。次数1の10次元dg候補族と全intrinsic abelian成分性は別問題。三次三様体の形式ambient37、中心対41、一般PGL商13/17、忘却fiber4等の結果とその証明・計算は[独立リポジトリ](https://github.com/uedakazushi/nc-cubic-threefold-moduli)へ移管した。
+量子FermatはHH_{−1}=HH_1=2、HH_0=5によりOU AS型でなく、intrinsic対象全体をOU/AOUの商と同一視できない。次数1の10次元dg候補族と全intrinsic abelian成分性の問題は[独立研究](https://github.com/uedakazushi/nc-dp1-moduli)へ移管した。三次三様体の形式ambient37、中心対41、一般PGL商13/17、忘却fiber4等の結果とその証明・計算は[独立リポジトリ](https://github.com/uedakazushi/nc-cubic-threefold-moduli)へ移管した。
 
 ## 手動再現
 
@@ -65,4 +65,4 @@ Cubic cornerでは四交比の11 determinant条件が有限性に必要十分で
     latexmk papers/nc_del_pezzo_hearts.tex
     latexmk papers/weak_cubic_axioms.tex
 
-旧共鳴・corner・H3・次数1の検算と依存関係は各現行研究ノート・validation・再現手順を参照する。三次三様体は独立リポジトリを参照する。Python3（必要箇所はSymPy）、日本語LuaLaTeX・LuaTeX-ja・latexmkを使用する。PDF/SyncTeX/ログは `.latexmkrc` の出力先へ再生成し、Gitでは追跡しない。実行済みの検証と、原稿に証明があるだけの事項を区別する。
+旧共鳴・corner・H3の検算と依存関係は各現行研究ノート・validation・再現手順を参照する。次数1は独立リポジトリの記録を参照する。三次三様体は独立リポジトリを参照する。Python3（必要箇所はSymPy）、日本語LuaLaTeX・LuaTeX-ja・latexmkを使用する。PDF/SyncTeX/ログは `.latexmkrc` の出力先へ再生成し、Gitでは追跡しない。実行済みの検証と、原稿に証明があるだけの事項を区別する。

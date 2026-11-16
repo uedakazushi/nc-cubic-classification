@@ -4,7 +4,7 @@
 
 ## 1. 現在の到達点と再開の核心
 
-**指定genuine楕円gluingの導来比較は点検済みの入力となった。** 滑らかな可換genuine del Pezzo S、滑らかなE∈|−K_S|、q∈Pic0(E)からのRains gluingに対し、自然なΦ=πRΓ*はDb(Rains heart)≃Db(qgr R)。これは既存 `dp1_anticanonical_models.tex` の主張であり、今回orbitのInd生成、境界traceの非零性、有限/無限位数双方の環の有限性、source飽和性を一次資料と照合した。独立の外部査読や機械形式化とは区別する。
+**指定genuine楕円gluingの導来比較は点検済みの入力となった。** 滑らかな可換genuine del Pezzo S、滑らかなE∈|−K_S|、q∈Pic0(E)からのRains gluingに対し、自然なΦ=πRΓ*はDb(Rains heart)≃Db(qgr R)。これは[次数1の反標準モデル原稿](https://github.com/uedakazushi/nc-dp1-moduli/blob/main/papers/dp1_anticanonical_models.tex) の主張であり、今回orbitのInd生成、境界traceの非零性、有限/無限位数双方の環の有限性、source飽和性を一次資料と照合した。独立の外部査読や機械形式化とは区別する。
 
 **全heartの比較**：この範囲で全Rains heart上のΦの振幅は[0,1]。T=ker H1Φ、F=ker H0Φはtorsion pairで、反標準heartを戻すと〈F[1],T〉となる。q非torsionなら境界外Serre部分圏Zにも制限し、T∩Z=ker Ext1(e,−)、F∩Z=ker Hom(e,−)。全任意nc del Pezzo、weak avatar、特異境界や非局所自由gluingに拡張したわけではない。
 

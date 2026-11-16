@@ -81,7 +81,7 @@ Cubic cornerの主原稿は `papers/cubic_heart_corner.tex`、ノートは `rese
 
 量子Fermatはintrinsic H3の例だがOU AS型ではない。`papers/quantum_fermat_not_as_surface.tex` は離散torsion付きFermat商stackからHH_{−1}=HH_1=2、HH_0=5を計算する。ambientはPym L1111とL112の交点で、全対象がR13に入るという主張を排除する。曲面圏のOU障害とambient成分帰属は別問題。`papers/cubic_surface_ambient_moduli.tex`、`research/r13_generic_moduli.md` にR13の8→7、Poisson持上げ、中心incidence、Hessian商、AOU形式比較などの詳細を保持する。
 
-次数1は `papers/nc_del_pezzo_degree1_moduli.tex`、`papers/dp1_anticanonical_models.tex`、`research/dp1_research_plan.md`。内在的rank、条件付きweighted sextic認識、10次元dg候補族、KS、補助A∞表示成分、avatar復元を保持する。全intrinsic abelian成分性と特異/非局所自由境界は未完成。genuine smooth楕円gluingの全q導来比較は今回その証明と主要引用を点検したが、他の次数1の主張を一括して再検証したわけではない。
+次数1の内在的モジュライ、10次元dg変形候補族、weighted sextic、反標準モデルと楕円gluingの主原稿・研究ノート・再現手順は [独立リポジトリ](https://github.com/uedakazushi/nc-dp1-moduli) に移管した。H3・Rains共鳴・heart比較で次数1固有の結果が必要な場合、移管先の正本を固定commitで参照する。共通する一般次数のRains共鳴と四つのheartの原稿は引き続き本リポジトリに保持する。
 
 三次三様体と非可換P^4のモジュライ（相対Z-algebra、41次元中心対、17次元形式モデル、period-forgetting等）は[独立リポジトリ](https://github.com/uedakazushi/nc-cubic-threefold-moduli)に主原稿・全証明節・現在有効な研究ノート・検算コード・検証記録を移管した。H3の分類が必要とする場合にのみ、外部の特定commitの結果を引用する。
 
