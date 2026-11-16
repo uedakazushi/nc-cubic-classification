@@ -1010,3 +1010,8 @@ rho−1/2特殊fibreの全値正常核はv152でpublic証明書へ統合して�
 元Bでmu=muSs muU、blocks2+2なのでN=muU−I,N²0。H=I+N/4は整数nでI+nN=muU^nのrelation保存がpolynomialnとして全nへ延長されautoB、H4muU。右twist C=B^Hはnoeth/Koszul/AS4/domainを保存しmuC=muB H^-4=muSs、oddRdim2もid⊗H^-1で保存。HはC autoかつmuCと可換unipotentなのでrigidityからHId、muUsemi消滅。G輸送/右twist後のH3性は使わない。RRZ既存右twist公式を明示し新規as4被覆は輸入しない。
 
 verify_cubic_order2_22_rank2_unipotent.py/certificateが両tangent upper stabilizer、puremixed centralizer、square-invariance、二Jordanblockのfourth-root/−4 formulaをexact PASS。既存必要被覆のG非依存性とfinite rank1点への単冪作用は本文構造証明。これで(2,2) mixed rank2の非半単純残余はなく、mu1±のこの領域は全てv151–152の必要曲面へ。mixed rank4/Jordanと他スペクトルは依然未分類。
+
+
+## 可逆secantの現行残余（classification-v154）
+
+mixed rank2の可逆secant必要曲面ではC=0も全値排除した。共鳴成分は既存証明、rho=-1/(2ell²)成分は19四次汎関数の2736恒等式と単一10minor 2048ell^16(2ell²−1)^4で全点を覆う。従って残る全Jordan型のH3候補はrho*C²+(2rho+1)(2rho*ell²+1)=0、rho(rho+1)C(2rho*ell²+rho+1)unitに限る。全曲面の正常三次incidence・AS4十分性・H3認識は未解決。次はC符号反転の明示矢と残る二変数incidenceを判定する。

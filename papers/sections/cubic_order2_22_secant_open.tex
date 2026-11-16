@@ -134,3 +134,38 @@ $Gx-xG,Gy-yG,Gu+uG,Gv+vG$の全線型写像は、どちらも階数10で核零�
 \texttt{verify\_cubic\_order2\_22\_secant\_resonant.py}が全恒等式、最大公約因子、
 三つの残余値の全正常核を再生する。
 一般点や有限標本を全値の判定に代用していない。
+
+\begin{theorem}[$C=0$部分の全値排除]
+\label{thm:h3-order2-22-secant-Czero}
+可逆secant必要曲面の$C=0$部分にはH3対象は存在しない。
+従ってmixed rank2の全H3候補は
+\[
+ \rho C^2+(2\rho+1)(2\rho\ell^2+1)=0,\qquad
+ \rho(\rho+1)C(2\rho\ell^2+\rho+1)\ne0
+\]
+で被覆される。これは依然として必要条件である。
+\end{theorem}
+\begin{proof}
+$C=0$では$(2\rho+1)(2\rho\ell^2+1)=0$である。
+第一成分は定理\ref{thm:h3-order2-22-secant-resonant-exclusion}で排除済みである。
+第二成分では$\rho=-1/(2\ell^2)$であり、
+$\ell(2\ell^2-1)\ne0$となる。
+六関係に単元$2\ell^2$を掛け、$\mathbb Q[\ell]$上の19個の四次汎関数を取る。
+全偶四次関係を消す2,736本の多項式恒等式を検証した上で、
+$x,y$交換子の$38\times32$行列を作る。
+指定した一つの$10\times10$ minorは
+\[
+ 2048\ell^{16}(2\ell^2-1)^4
+\]
+であり、この成分の全点で非零である。
+従って交換子行列の階数は10以上である。
+AS4の正三次部分が10次元であることから、自由正三次空間の関係部分は22次元で、
+交換子行列の核に含まれる。その核の次元は高々22なので両者は一致する。
+従って$x,y$と可換する正三次元は零であり、必要な正常$G$は存在しない。
+minorの零点は全て既に除いた$\ell(2\ell^2-1)=0$上にあり、残余値はない。
+\end{proof}
+
+入力は\texttt{cubic\_order2\_22\_secant\_Czero\_input.json}、
+検証器は\texttt{verify\_cubic\_order2\_22\_secant\_Czero.py}である。
+これらにより、
+19汎関数の全恒等式とこの一つのminorを再生できる。

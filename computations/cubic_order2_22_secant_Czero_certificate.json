@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "scope": "entire branch C=0, rho=-1/(2*L^2) of the necessary secant surface",
+  "polynomial_functionals": 19,
+  "quartic_annihilator_identities": 2736,
+  "normal_constraint_shape": [
+    38,
+    32
+  ],
+  "minor_size": [
+    10,
+    10
+  ],
+  "minor_degree": 24,
+  "monic_minor": "L^16*(L^2-1/2)^4",
+  "open_condition": "L*(2*L^2-1)!=0",
+  "residual_values_in_domain": [],
+  "conclusion": "no H3 on this whole branch; combined with the resonant-fiber theorem, no H3 anywhere with C=0",
+  "not_claimed": [
+    "normal cubic classification off C=0",
+    "AS4 existence elsewhere",
+    "relative intrinsic family recognition"
+  ]
+}

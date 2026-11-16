@@ -10,7 +10,7 @@
 
 **全体的なスペクトル制約（classification-v153）**：全(1,3)は幾何学的被覆・必要十分H3判定・全矢/慣性まで確定、全(3,1)は全Jordan型込みで空。(2,2)/mixed rank2でも全Jordan型を半単純へ帰着した。半単純AS4 domainのG非依存pencil被覆から、muを保つ単冪autoはpuremixed/simple-eigen stabilizer、secant二rank1点、tangent upper stabilizerと平方関係の各場合で恒等。元Bのmu_U四分根H=I+(mu_U−I)/4でC=B^H,muC=muB H^-4=muSsを作り、H∈AutCからHId。従って全rank2候補は非共鳴可逆secantのsmooth2dim必要曲面rho*C²+(2rho+1)(2rho*ell²+1)=0、rho(rho+1)(2rho+1)(2rho*ell²+rho+1)unitで被覆。全曲面正常G/AS4十分性は未分類。次は非共鳴conic chartと補sectionの正常incidence。mixed rank4三型/非半単純rank4、三固有値以上、全CY被覆、全成分/圏族降下は未完。
 
-**次の核心**：(2,2)/mixed rank2の全Jordan型は半単純化済みで、非共鳴可逆secantの滑らかな二次元必要曲面だけが残る。rhoとconicパラメータkの二変数chart、および逆数chartの補sectionで正常三次incidenceを判定する。共鳴fibre/退化境界/単冪持上げへ戻らない。mixed rank4の正top三型とJordan型、三固有値以上、全intrinsic family降下・成分/交叉/閉包も残る。
+**次の核心（classification-v154）**：mixed rank2の可逆secant必要曲面ではC=0も全値排除した。共鳴成分は既存証明、rho=-1/(2ell²)成分は19四次汎関数の2736恒等式と単一10minor 2048ell^16(2ell²−1)^4で全点を覆う。従って残る全Jordan型のH3候補はrho*C²+(2rho+1)(2rho*ell²+1)=0、rho(rho+1)C(2rho*ell²+rho+1)unitに限る。全曲面の正常三次incidence・AS4十分性・H3認識は未解決。次はC符号反転の明示矢と残る二変数incidenceを判定する。
 
 classification-v12 では、積分した族の全次数平坦性・noetherian quadratic Koszul CY AS4 認識を、明示的な開集合 V={h∈H, (1-gamma²)≠0, Delta≠0} 上で証明した。入力は Iyudu–Shkarin Theorem1.1/Corollary6.1、EG形式変形定理、および64個の三次持上げ恒等式・256個の四次巡回恒等式・単元小行列式 -p^6 を確認した LBS 中心拡大定理である。中心三次の関係類の非消滅も巡回商の二係数で全パラメータについて確認した。gamma≠0 では低次数中心が0,0,1、滑らかな楕円THCR境界となり、全中心値の H3 判定は正確に一つの affine 中心切断の有限大域次元へ帰着する。定義体上超越的な全 D は H3。位数4の枝 gamma^4=1+h^3 では固定包絡の悪い D は有限であり、h=1,gamma=2^(1/4),A=1,B=C=0,beta=(-1,0,0),D=pi は明示的な非Clifford H3 対象となる。悪い値の全一覧・全内在的群oid・H3相対開性・降下・全包絡被覆は未解決。
 
