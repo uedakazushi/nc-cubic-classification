@@ -40,7 +40,7 @@ Rains・VdB・AS・anticanonical heartの一般次数比較は [nc-dp-surface-he
 
 **全体的なスペクトル制約（classification-v177）**：全(1,3)は幾何学的被覆・H3必要十分条件・全矢まで確定、全(3,1)は全Jordan型込みで空。(2,2) mixed rank2も全Jordan型込みで空。mixed rank4のcanonical正top P0全体は、退化境界と全Jordan型込みで固定非CY符号族へ完全に幾何学的認識、一般dim2/inertia mu2²。canonical負topQ0は全Jordan型込みで曲がったClifford族に認識。未知の(2,2)はP,Qとも非零で、Pはcomm⊙平方/comm⊙非退化quadの二型。非退化型のJordanはなく、平方型の非半単純には正側Jordanが必要。三固有値以上、全CY被覆、全成分・intrinsic族降下は未完。
 
-**次の核心（classification-v182）**：逆tangent正Pfaffian/非退化正topの共鳴z4=1を全z0,z5境界込みで排除。z5neq0はbeta一param、D=(beta−1)(beta+1)(2beta+1)(4beta+5)非零で正常核2次元、二8minor gcdD²。明示ell*Q2因子identityが正常pencilへ非定数写像を与え、projective比例incidenceのproper閉像から全Dopenのpencilを因数分解。四D例外も元関係でrank8/因子像span2を再検算。軸交換で片零境界を覆い、二重零点はell³−theta*C*ell=x³+theta³y³で全因子化。全正常核零ではなく全cut非domainによる排除。 次は逆tangent正Pfaffianの共鳴外z4neq1。z5neq0 mainはA=(1+beta*t+t²/4,beta,-t/2,t/2,t,1)の二param。私的reverse_general.pyで元三次/四次商汎関数と正常rank10を計算中（未公表・全値rankcover未証明）。消去分母と単一minor因子を調べ、必要なら有限例外曲線へ分解する。z5=0は軸交換でz0neq0をmainへ、二重零はopposite-normalizerの奇次数中心作用で直接判定できる見込み。逆平方rank2 tangent cross、負secant/非対称型、全CY/三固有値/成分/相対降下は未完。
+**次の核心（classification-v183）**：逆tangent非退化正topの全正Pfaffianを全値coverで排除。二param正常10minor分子(t−1)²(t+1)²、分母全因子の八例外曲線を新たな商汎関数/二minorで被覆、残り12有理点と二組の二次体共役を厳密再消去。唯一の正常一次元点(beta,t)=(1,−1)も(x−2y)*((x−2y)²+4v²)に分解。t1共鳴は既存全pencil因数分解、二重零境界はodd補助次数とf³−Idのlocalized idealでt1へ。これで負tangent型の未知は逆割当て/平方正topのrank2 tangent crossだけ。 次は残る逆平方型：[x,y]+uv+vu=0,x²+u²=0。cross M rank2、imM=span(xu,xv+yu)、奇関係二射影rank3,3。純UV/VU各一本は非分解tensorでなければならない。正側shearで純UVをxv+yuへ正規化し、奇交代top rank4とD=tauAの必要atlasを求める。まず非半単純候補を縮小：非零Q rank2のabelianized binaryquarticは第四乗でないので負unipotent不可、正片側JordanもH固定純UV線がxVの積線になりdomain外となる見込み（未公開証明）。負secant/非対称型、全CY/三固有値以上/成分/相対降下も未完。
 
 既存の主要な構造結果を維持する：
 

@@ -1203,3 +1203,12 @@ canonical負topQ0の(2,2)/mixed rank4全H3を、全Jordan型込みで曲がっ�
 証明cubic_order2_22_reverse_resonant.tex。公開verifierは元関係の商座標、D外だけに極を持つこと、正常基底二列、二8minor gcdD²、六係数quadratic因子identityを検証。proper incidenceはell,q,c三射影変数に対するL(ell)qとWcのwedge比例式で定義する（直接等式はmultihomogeneousでないので使わない）。形式上零積も許すが、仮定H3の包絡domain性と正二次基底の単射が零積を除く。B3の全係数平坦性を仮定せず、商汎関数rankとH3のHilbert値により当該点で座標を同定。四例外はbeta1/−1/−1/2/−5/4のexact point。二重零点のC=−3u²/4−v²は負中心かつf固定でありnormidentityを全語で検証。新規性/独立査読未確認。
 
 次は逆tangent正Pfaffianの共鳴外z4neq1。z5neq0 mainはA=(1+beta*t+t²/4,beta,-t/2,t/2,t,1)の二param。私的reverse_general.pyで元三次/四次商汎関数と正常rank10を計算中（未公表・全値rankcover未証明）。消去分母と単一minor因子を調べ、必要なら有限例外曲線へ分解する。z5=0は軸交換でz0neq0をmainへ、二重零はopposite-normalizerの奇次数中心作用で直接判定できる見込み。逆平方rank2 tangent cross、負secant/非対称型、全CY/三固有値/成分/相対降下は未完。
+
+
+## 逆tangent非退化全分枝の全値排除（classification-v183）
+
+逆tangent非退化正topの全正Pfaffianを全値coverで排除。二param正常10minor分子(t−1)²(t+1)²、分母全因子の八例外曲線を新たな商汎関数/二minorで被覆、残り12有理点と二組の二次体共役を厳密再消去。唯一の正常一次元点(beta,t)=(1,−1)も(x−2y)*((x−2y)²+4v²)に分解。t1共鳴は既存全pencil因数分解、二重零境界はodd補助次数とf³−Idのlocalized idealでt1へ。これで負tangent型の未知は逆割当て/平方正topのrank2 tangent crossだけ。
+
+証明cubic_order2_22_reverse_plus_cover.tex。検証器は二param全元関係の商汎関数の極因子、指定10minor（行毎分母を除きQQ[B,C]の多項式行列式で再検証）、八曲線それぞれ二minorと全極の平方因子除去多項式、有限因子の点集合への写像を剰余零で検証。curve群はC0,C−1,B±1,2B+C0,2BC+C²+1,4BC+C²+3,4BC+C²+4。有限実行は12有理点とQQ(sqrt2)/QQ(sqrt3)代表、全て正常核零ただし(1,−1)だけdim1で指定因子。計算はPYTHONPATH=/workspace/work/python-deps SYMPY_GROUND_TYPES=flint環境でexact実行、独立査読は未確認。正常核zeroの有限標本を全値へ外挿せず、全係数恒等式・例外cover・個別点を区別した。
+
+次は残る逆平方型：[x,y]+uv+vu=0,x²+u²=0。cross M rank2、imM=span(xu,xv+yu)、奇関係二射影rank3,3。純UV/VU各一本は非分解tensorでなければならない。正側shearで純UVをxv+yuへ正規化し、奇交代top rank4とD=tauAの必要atlasを求める。まず非半単純候補を縮小：非零Q rank2のabelianized binaryquarticは第四乗でないので負unipotent不可、正片側JordanもH固定純UV線がxVの積線になりdomain外となる見込み（未公開証明）。負secant/非対称型、全CY/三固有値以上/成分/相対降下も未完。

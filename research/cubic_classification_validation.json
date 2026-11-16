@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "version": "classification-v182",
+  "version": "classification-v183",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -94,7 +94,8 @@
     "papers/sections/cubic_order2_22_tangent_plus_Ore.tex",
     "papers/sections/cubic_order2_22_tangent_Jordan.tex",
     "papers/sections/cubic_order2_22_tangent_reverse_minus.tex",
-    "papers/sections/cubic_order2_22_reverse_resonant.tex"
+    "papers/sections/cubic_order2_22_reverse_resonant.tex",
+    "papers/sections/cubic_order2_22_reverse_plus_cover.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -1876,6 +1877,21 @@
     "scope": "逆tangent正Pfaffian/非退化正topの共鳴z4=1を全z0,z5境界込みで排除。z5neq0はbeta一param、D=(beta−1)(beta+1)(2beta+1)(4beta+5)非零で正常核2次元、二8minor gcdD²。明示ell*Q2因子identityが正常pencilへ非定数写像を与え、projective比例incidenceのproper閉像から全Dopenのpencilを因数分解。四D例外も元関係でrank8/因子像span2を再検算。軸交換で片零境界を覆い、二重零点はell³−theta*C*ell=x³+theta³y³で全因子化。全正常核零ではなく全cut非domainによる排除。",
     "not_claimed": [
       "reverse plus away from resonance",
+      "reverse square rank2-cross boundary",
+      "other negative rank2 types",
+      "global H3 classification",
+      "intrinsic relative descent"
+    ]
+  },
+  "order2_22_reverse_plus_complete_v183": {
+    "status": "PASS exact universal polynomial determinant, eight curve covers, finite rational/quadratic fields and isolated factor; independent peer review not claimed",
+    "validator": "computations/verify_cubic_order2_22_reverse_plus_cover.py",
+    "certificate": "computations/cubic_order2_22_reverse_plus_cover_certificate.json",
+    "input": "computations/cubic_order2_22_reverse_plus_cover_input.json",
+    "proof": "papers/sections/cubic_order2_22_reverse_plus_cover.tex",
+    "scope": "逆tangent非退化正topの全正Pfaffianを全値coverで排除。二param正常10minor分子(t−1)²(t+1)²、分母全因子の八例外曲線を新たな商汎関数/二minorで被覆、残り12有理点と二組の二次体共役を厳密再消去。唯一の正常一次元点(beta,t)=(1,−1)も(x−2y)*((x−2y)²+4v²)に分解。t1共鳴は既存全pencil因数分解、二重零境界はodd補助次数とf³−Idのlocalized idealでt1へ。これで負tangent型の未知は逆割当て/平方正topのrank2 tangent crossだけ。",
+    "execution": "SymPy exact QQ/QQ(t)/QQ(B,C), optional python-flint ground types",
+    "not_claimed": [
       "reverse square rank2-cross boundary",
       "other negative rank2 types",
       "global H3 classification",
