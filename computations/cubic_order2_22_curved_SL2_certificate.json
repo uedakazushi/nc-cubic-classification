@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "scope": "all F in SL2, [x,y]=alpha*u^2+beta*v^2, uv=-vu, u acts F and v inverse",
+  "universal_PBW_overlaps": 4,
+  "cyclic_top_deformation_rank2_minor": -1,
+  "non_diagonal_cases": [
+    {
+      "F": "J",
+      "shear_fixed_E_basis": [
+        "x^3",
+        "x*u^2",
+        "x*v^2"
+      ],
+      "fixed_kernel_minor": 6,
+      "normal_candidate_factor": "x*u*v"
+    },
+    {
+      "F": "-J",
+      "shear_fixed_E_basis": [
+        "x^3",
+        "x*u^2",
+        "x*v^2"
+      ],
+      "fixed_kernel_minor": 6,
+      "normal_candidate_factor": "x*(c*x^2+d*u^2+e*v^2)"
+    }
+  ],
+  "conclusion": "all non-diagonal candidates factor; diagonal cases already classified, so only the known zero-curvature sign family gives H3",
+  "proof": "papers/sections/cubic_order2_22_curved_SL2.tex",
+  "not_claimed": [
+    "all nonzero-top rank4 graphs",
+    "general non-inverse normalizing matrices",
+    "relative descent"
+  ]
+}

@@ -40,7 +40,7 @@ Rains・VdB・AS・anticanonical heartの一般次数比較は [nc-dp-surface-he
 
 **全体的なスペクトル制約（classification-v167）**：全(1,3)は幾何学的被覆・H3必要十分条件・全矢まで確定、全(3,1)は全Jordan型込みで空。(2,2) mixed rank2も全Jordan型込みで空。mixed rank4のcanonical零top(P=Q=0)は全Jordan型込みで固定非CY符号族へ完全に幾何学的認識し、一般次元2/慣性mu2²。非零正topでは片側負Jordanを排除、非退化正topなら全Jordan消滅。残る核心はP又はQ非零のrank4、平方正topの正側Jordan、三固有値以上、全CY被覆と全intrinsic族降下・成分。
 
-**次の核心（classification-v170）**：正射影量子二次式を許す全二パラメータcurved対角包絡xy−p yx=alpha*u²+beta*v²、uv−、u作用diag(r,r^-1)、v作用diag(p/r,r/p)を全係数AS4/noeth/Koszul/domain・mu++--と認識し、H3はp1,r−1,alpha/beta0の既知signのみと判定。十語の二normalizer weightイデアルから例外はp1r±1とp³1/r³−1の九根のみ。九根でcurvature制約を全判定し、GWAのperiod3a0/monic6商で三次norm零因子を構成して全非sign候補を排除した。 次は非対角F∈SL2のcurved comm射影で、±JordanとcurvatureのPBW/Frobenius top・正常核を判定する。一般nonzero-top rank4や退化正射影、全CY/三固有値/族降下は未完。
+**次の核心（classification-v171）**：全F∈SL2のcurved normalizing包絡[x,y]=alpha*u²+beta*v²、uv−、u作用F/v逆作用を、非対角±Jordan込みでH3認識した。全閉detF1で4PBW overlap、curvatureを純負cyclic quarticで加えるKoszul-Frobenius topからmu++--。非対角±Jの正三次shear核は全alpha/betaで定数minor6、必要Gはxuv又はx*(c x²+d u²+e v²)に限り因数分解。対角は既証3norm排除へ接合し、H3はF−I/零curvatureの既知signのみ。 次はP0/Q非零で正二次射影非退化の全chartを、filtered零top排除・Jordan正射影・q±i負平面のweight判定で覆う。退化正射影と非零正topは別に残す。
 
 既存の主要な構造結果を維持する：
 

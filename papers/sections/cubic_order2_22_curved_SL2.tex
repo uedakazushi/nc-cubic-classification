@@ -1,0 +1,78 @@
+\subsection{全SL2 normalizing行列のcurved chart}
+\label{subsec:h3-order2-22-curved-SL2}
+\begin{theorem}\label{thm:h3-order2-22-curved-SL2}
+$F\in\operatorname{SL}(U)$、$U=\langle x,y\rangle$とし、全六関係を
+\[
+ xy-yx=\alpha u^2+\beta v^2,\quad uv=-vu,\qquad
+ ut=F(t)u,\quad vt=F^{-1}(t)v\quad(t=x,y)
+\]
+とする。
+全係数でこれはnoetherian quadratic Koszul AS4整域、$\mu=(+,+,-,-)$である。
+この全chartのH3部分は$F=-I,\alpha=\beta=0$の固定符号族だけであり、
+全幾何学的矢も既知の符号分類へ帰着する。
+\end{theorem}
+\begin{proof}
+一般$2\times2$行列について$\det F=1$だけを用い、全四三次overlapが消えることを確認する。
+正次数を先に比較するmonomial順序で停止し、PBW・Koszul性を得る。
+正基底変更で$F$は対角、または$\epsilon J$、$\epsilon=\pm1$、
+$J(x)=x,J(y)=y+x$へ移る。
+対角型は前節のOre表示を持つ。
+$F=\epsilon J$の場合も、負量子平面$T=(uv=-vu)$の上で
+\[
+ S=T[x;\tau],\quad\tau(u)=\epsilon u,\tau(v)=\epsilon v,
+ \qquad B=S[y;\sigma,\delta]
+\]
+と書ける。ここで
+\[
+ \sigma(u)=\epsilon u,\ \sigma(v)=\epsilon v,\ \sigma(x)=x,\qquad
+ \delta(u)=-xu,\ \delta(v)=xv,\ \delta(x)=-\alpha u^2-\beta v^2
+\]
+である。関係保存は直接確認でき、二回のOre拡大からnoetherian・整域性・AS4性を得る。
+
+中山がcurvatureを加えても変わらないことを、Koszul topで確認する。
+零curvatureの$B(F)$は既にAS4・$\mu=(+,+,-,-)$と分かっている。
+そのtopを、正commutatorを$a$、負anticommutatorを$b$として、
+偶middleが$a\mathbin{\odot}b$となるよう正規化する。
+$h=\alpha u^2+\beta v^2$を加えると、偶middleを
+\[
+ (a-h)\mathbin{\odot}b
+\]
+へ変えればよく、奇middleは変わらない。
+負主block $-h\mathbin{\odot}b$はcyclicなので、同じ中山のtwisted cyclic tensorが得られる。
+偶階数は2、奇階数は4のままで、一対三flatteningも非退化である。
+PBW・Koszulから双対Hilbert値は$14641$であり、このtensorが完全なFrobenius対合を与える。
+従って中山は元の$(+,+,-,-)$に等しい。
+ここでは符号自己同型が逆写像と同じなので、右左規約による反転も結論を変えない。
+
+対角型の全H3は前節までに認識済みである。
+非対角二型を考え、正三次空間を
+\[
+ E=\langle x^3,x^2y,xy^2,y^3,xu^2,yu^2,xv^2,yv^2\rangle,
+ \qquad E'=\langle xuv,yuv\rangle
+\]
+に分ける。
+正shear $J$は負変数を固定して$B$の自己同型となる。
+$E$はその作用で不変で、正次数filtrationの随伴次数上では
+$\operatorname{Sym}^3J\oplus J\oplus J$となる。
+従って固定核は高々3次元である。
+実際に$x^3,xu^2,xv^2$は固定されるので
+\[
+ E^J=\langle x^3,xu^2,xv^2\rangle
+\]
+である。この等式は全curvatureで、$J-I$の定数minor 6によっても検証できる。
+また$E'$の固定核は$\langle xuv\rangle$である。
+
+$u$の正常化作用は$E$上で$\epsilon J$、$E'$上で$-\epsilon J$である。
+$Gu=-uG$が必要なので、$\epsilon=1$では$G\in\langle xuv\rangle$、
+$\epsilon=-1$では$G\in\langle x^3,xu^2,xv^2\rangle$に限られる。
+いずれも$x$を一次因子に持ち、整域商を与えない。
+これで全非対角型も排除し、既知符号族だけが残る。
+\end{proof}
+
+検証器は
+\[
+ \texttt{verify\_cubic\_order2\_22\_curved\_SL2.py}
+\]
+である。$\det F=1$の多項式イデアルを法とした全PBW overlap、
+cyclic負topと偶階数の定数minor、両Jordan型でのshear核の定数minor 6を再生する。
+一般の非逆行列対や、退化した正二次射影を覆うとは主張していない。

@@ -1104,3 +1104,10 @@ A=SU⊗E+E⊗SV、PfA=detSU−detSV。可換側GL2のnormalized congruenceで非
 正射影量子二次式を許す全二パラメータcurved対角包絡xy−p yx=alpha*u²+beta*v²、uv−、u作用diag(r,r^-1)、v作用diag(p/r,r/p)を全係数AS4/noeth/Koszul/domain・mu++--と認識し、H3はp1,r−1,alpha/beta0の既知signのみと判定。十語の二normalizer weightイデアルから例外はp1r±1とp³1/r³−1の九根のみ。九根でcurvature制約を全判定し、GWAのperiod3a0/monic6商で三次norm零因子を構成して全非sign候補を排除した。
 
 一般norm補題：K可換field、sigma6Id、a0!=0/sigma³a0=a0、P=a0*sigmaa0*sigma²a0、rho≠0 fixedならL=K[X±;sigma]/(X6−rho³P)にはZ=(rho a0)^−1X²,Z³1の零因子。sigmaの最小位数は問わない。全根p³1,r³−1ではdehom t=p r²,c=−p/r²、XY−tYX=r alpha−r beta V²。delta(t−1)=r alpha、gamma(c^-2−t)=r betaを選べることが三次centralizer方程式の全条件。次はF=±Jordanのcurved comm射影をU次数filtration/shear固定核で因数分解へ帰着する。
+
+
+## 全SL2 curved normalizing chart（classification-v171）
+
+全F∈SL2のcurved normalizing包絡[x,y]=alpha*u²+beta*v²、uv−、u作用F/v逆作用を、非対角±Jordan込みでH3認識した。全閉detF1で4PBW overlap、curvatureを純負cyclic quarticで加えるKoszul-Frobenius topからmu++--。非対角±Jの正三次shear核は全alpha/betaで定数minor6、必要Gはxuv又はx*(c x²+d u²+e v²)に限り因数分解。対角は既証3norm排除へ接合し、H3はF−I/零curvatureの既知signのみ。
+
+次の有力な全被覆（未採用）：P0/Qrank2/正射影a非退化ではevenR=span(b_V,a_U−c_V)、K=a⊗b、M可逆でodd fullgraph、同じ8零topatlasを持つ。aをAS2標準形へ、bはq−1又はq±i。U次数filtrationでtail cを落としたB0に正常核零ならBにも正常Gなし。eps+各chartは既存constant-minorでこの方法が使える。eps−q−1ではpositive quantumは対角p/r又はp1 fullSL2、positive Jordanはfg=muT=非自明shearからnormalGが一次因子。q±iはweight十語がpurecube又は明示一次因子を強制し、重根Fでは固有値a4−1からnormaluに−1固有空間なし。これを全値検証・本文へ移す。canonicalC QnonzeroではpureV b非commなのでH_V単冪Id、残るpositive-only µJordanはU次数filtrationのshear固定核からG factorになりそうである。
