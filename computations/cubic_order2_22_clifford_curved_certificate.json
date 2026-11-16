@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "scope": "B_h: commuting positive generators, anticommuting cross, uv+vu=h2(U); independent linear coefficients of u2,v2",
+  "universal_PBW_overlaps": 4,
+  "positive_cubic_dimension": 10,
+  "normal_basis": [
+    "x3",
+    "x2y",
+    "xy2",
+    "y3",
+    "xu2",
+    "yu2",
+    "xv2",
+    "yv2"
+  ],
+  "complement_minor": "4",
+  "quartic_identity": "F4(lambda*s,lambda*t,mu)=4*lambda*det(q)",
+  "exceptional_residual_discriminant": "-mu^2*s*t",
+  "example_quartic": "-4*X**3*Z + 3*X**2*Y**2 - 4*X*Y*Z**2 + 4*Y**3*Z",
+  "example_singularities": "only [0:0:1], ordinary node",
+  "not_claimed": [
+    "full nonzero-positive-top coverage",
+    "dependent linear-coefficient cuts",
+    "global intrinsic family descent",
+    "independent peer review"
+  ]
+}

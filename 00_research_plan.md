@@ -40,7 +40,7 @@ Rains・VdB・AS・anticanonical heartの一般次数比較は [nc-dp-surface-he
 
 **全体的なスペクトル制約（classification-v172）**：全(1,3)は幾何学的被覆・H3必要十分条件・全矢まで確定、全(3,1)は全Jordan型込みで空。(2,2) mixed rank2も全Jordan型込みで空。mixed rank4のcanonical正top P0全体は、退化境界と全Jordan型込みで固定非CY符号族へ完全に幾何学的認識、一般dim2/inertia mu2²。未知の(2,2)は正top非零のcomm⊙平方/comm⊙非退化quadの二型だけ。非退化型のJordanはなく、平方型の非半単純には正側Jordanが必要。三固有値以上、全CY被覆、全成分・intrinsic族降下は未完。
 
-**次の核心（classification-v172）**：canonical正top P=0の(2,2)/mixed rank4全H3を、全Jordan型・全幾何学的矢込みで既知非CY符号族に認識した。P0の正二次射影がrank1ならcross M rank2/rulingとなり、奇交代4像の純UV直線がimMに入って積関係を強制するためAS4domain外。正射影は自動非退化。Q0は既知zero-top認識、Q非零では負base q−1/±i、H_V単冪Id/正側shear固定G因子で全Jordan消滅。eps+はfiltered正常核零、eps−は対角量子/全SL2/Jordan正射影/四乗根weightを全被覆し非零Qを全排除。全H3は既知sign、一般dim2/inertia mu2²。 次は正top非零に進む。まず負top Q0のClifford型anticommutator変形と既存normal Clifford swap分類の重なりを確認し、必要十分H3条件を統一する。全H3/CY/三固有値/族降下は未完。
+**次の核心（classification-v173）**：正top非零へ出るClifford型B_h（正側可換/cross反交換/{u,v}=h2）の全包絡AS4/domain/mu++--と八次元正常核を証明。u²/v²係数独立chartではF1上のeven/odd Clifford sheafを復元し、飽和性と例外曲線二節点の非自明quaternionにより全商domain。H3 iff conic総空間smooth iff planequartic reduced/nodalかつ全余分nodeがrank1。h=xy,G=x³+y³+xu²+yv²は厳密Jacobian検算付き実H3例。全正top非零被覆・依存係数境界・全矢/相対降下は未完。 独立係数Clifford chartのH3判定と実例を確定した。次はこの族の全幾何学的矢と一般慣性、係数依存境界を判定し、Q0全体への必要被覆を調べる。正top非零全域・三固有値以上・全CY被覆・全成分/族降下は未完。
 
 既存の主要な構造結果を維持する：
 

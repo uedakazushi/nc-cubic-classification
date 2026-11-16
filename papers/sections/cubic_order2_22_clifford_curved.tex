@@ -1,0 +1,147 @@
+\subsection{正top非零の曲がったClifford族とconic判定}
+\label{subsec:h3-order2-22-clifford-curved}
+以下は全正top非零領域の被覆ではなく、明示的な一族の認識である。
+$U=kx+ky$、$V=ku+kv$ とし、任意の二元二次式 $h\in\operatorname{Sym}^2U$ に対して
+\[
+ B_h=k\langle x,y,u,v\rangle/
+ ([x,y],\{x,u\},\{y,u\},\{x,v\},\{y,v\},\{u,v\}-h)
+\]
+と置く。$h=0$ は既知の非CY符号包絡である。
+
+\begin{proposition}[包絡と正常三次の全核]
+\label{prop:h3-order2-22-clifford-normal}
+全 $h$ で $B_h$ はnoetherian quadratic Koszul AS4 domainであり、
+$\mu_{B_h}|_U=1,\mu_{B_h}|_V=-1$。
+$\mu(G)=G$、$Gz=\mu^{-1}(z)G$ を満たす三次式はちょうど
+\[
+ G=f_3(x,y)+\ell_2(x,y)u^2+\ell_3(x,y)v^2
+ \quad(f_3\in\operatorname{Sym}^3U,\ \ell_i\in U)
+\]
+の八次元空間である。
+\end{proposition}
+\begin{proof}
+$k[x,y][u;-1]$ に、$\sigma(x,y,u)=(-x,-y,-u)$、
+$\delta(x)=\delta(y)=0,\delta(u)=h$ のOre変数 $v$ を加える。
+$h$ が正側の偶次数なので $\delta$ は関係を保つ。
+従って反復Ore拡大のdomain/noetherian/AS正則性が適用できる。
+順序 $x<y<u<v$ の四つの三次overlapは全係数で解消し、
+PBW基底 $x^iy^ju^kv^l$ とKoszul性を得る。
+Ore中山公式を二回用いると $U$ 上は恒等、$u$ 上は負号である。
+$v$ の像は $-v+b$ ($b\in kx+ky+ku$) と書けるが、
+自己同型 $u\mapsto tu,v\mapsto t^{-1}v$ との可換性が $b=0$ を強制する。
+
+正固有三次は表示した八語と $xuv,yuv$ の計十語。
+前八語は直接全normalizer式を満たす。
+後二語の $u$ との反交換子の $xu^2v,yu^2v$ 係数はともに $-2$ であり、
+その $2\times2$ minorは4。他の八列は零なので全核が確定する。
+\end{proof}
+
+以下では $\ell_2,\ell_3$ が独立である開集合を扱う。
+正側の座標を取り直して
+\[
+ G=f_3+xu^2+yv^2,\qquad
+ f_3=ax^3+bx^2y+cxy^2+dy^3=xf_2+yg_2,
+ \quad f_2=ax^2+bxy+cy^2,\quad g_2=dy^2
+\]
+とする。$G\ne0$ は上のdomainで正則である。
+
+\begin{theorem}[独立係数chartのH3必要十分条件]
+\label{thm:h3-order2-22-clifford-conic}
+$S=\mathbb F_1$、$\mathcal V=\OO(F)\oplus\OO\oplus\OO$、
+$L=\OO(E+2F)$ とし、$\lambda,\mu,s,t$ の束次数をそれぞれ
+$E,E+F,F,F$ とする。次の $L$ 値形式を考える：
+\[
+ q=\begin{pmatrix}\lambda&0&0\\0&A&h_S/2\\0&h_S/2&B\end{pmatrix},\qquad
+ A=-\mu t-\lambda f_2(s,t),\quad B=\mu s-\lambda g_2(s,t),\quad
+ h_S=\lambda h(s,t).
+\]
+$R=B_h/(G)$ は常にdomainであり、そのeven/odd sheafは
+$\mathcal C_0(q),\mathcal C_1(q)$ である。
+さらに次の三条件は同値である：
+\begin{enumerate}
+\item $R$ はH3を定める。
+\item $q$ のconic bundle総空間が滑らかである。
+\item 平面四次式
+\[
+ F_4=4(-YZ-f_2(X,Y))(XZ-g_2(X,Y))-h(X,Y)^2
+\]
+は被約で通常node以外の特異点を持たず、$o=[0:0:1]$ 以外の全特異点で
+$-YZ-f_2=XZ-g_2=h=0$ が成立する。
+\end{enumerate}
+$o$ は常に通常nodeで、その二枝は例外曲線上の二つの良いrank-one点に分離する。
+\end{theorem}
+\begin{proof}
+$P=x^2,Q=xy,T=y^2,A_0=u^2,B_0=v^2$ は中心である。
+$U_0=A_0+f_2(P,Q,T),V_0=B_0+g_2(P,Q,T)$ とすると
+$G=xU_0+yV_0$。
+従って中心から作用するscroll環は
+\[
+ C=k[P,Q,T,U_0,V_0]/(Q^2-PT,PU_0+QV_0,QU_0+TV_0).
+\]
+その標準表示は $P=\lambda s^2,Q=\lambda st,T=\lambda t^2,
+U_0=-\mu t,V_0=\mu s$ であり、$\operatorname{Proj}C=S$。
+四変数Clifford行列は正側block
+$\left(\begin{smallmatrix}P&Q\\Q&T\end{smallmatrix}\right)$ と負側block
+$\left(\begin{smallmatrix}A_0&h/2\\h/2&B_0\end{smallmatrix}\right)$ の直和である。
+正側radical $(-t,s)$ を除き $x=s\ell,y=t\ell$ と書けば正確に $q$ が得られる。
+このradicalの線型関係は $Qx-Py=0,Tx-Qy=0,U_0x+V_0y=0$ で、
+全て $R$ で成立する。逆の局所Clifford表示からも元の六二次関係と $G$ が復元される。
+従って局所表示は互いに逆であり、even/odd sheafの同定を得る。
+これは $C$ の作用が忠実であることも示す：kernelのsheafは零、
+一方 $C$ はdomainで有限長の非零斉次idealを持たない。
+
+頂点の問題を分離する。$B_h$ は中心多項式環
+$Z=k[x^2,y^2,u^2,v^2]$ 上、四指数の偶奇による自由基底16個を持つ。
+$G$ 倍による自由解消と $G$ の正則性から $R$ は $Z$ 上深さ3。
+$C$ は $Z$ の像上有限で $Q^2=PT$、両irrelevant idealのradicalは同じだから、
+even/odd部分の局所コホモロジーは次数0,1,2で零である。
+従って両部分は上の局所自由Clifford sheafの飽和section moduleであり、
+特に $C$ 上torsion-freeである。
+
+$q$ は $\lambda\ne0$ で非零、$E=(\lambda=0)$ 上も
+$A=-\mu t,B=\mu s$ が同時零にならず、rank0点はない。
+判別は $\lambda(AB-h_S^2/4)$。
+$E$ 上の後因子は $-\mu^2st$ なので、二地点 $s=0,t=0$ で $E$ と横断する。
+例えば $t=0$ で $B$ は単位、単位方向を除いた形式は
+$\operatorname{diag}(\lambda,A-h_S^2/(4B))$ で、両成分は正則parameterである。
+局所even Clifford代数は完備量子平面、そのquaternionは
+$(\lambda,A-h_S^2/(4B))$。
+後者の $\lambda=0$ residueはもう一方のparameterの平方類で非自明である。
+従ってglobal generic quaternionもdivisionである。
+飽和性によるtorsion-free性と正則なodd方向でのskew Laurent表示から、
+定理\ref{thm:h3-order2-global-conic-bundle}のdomain論証と同様に $R$ はdomainとなる。
+ここでは同定理の $(1,3)$ 被覆を使用せず、上で個別に再構成した表示を用いた。
+
+基礎束は
+$\mathcal C_0=\OO\oplus\OO(-E-F)^{\oplus2}\oplus\OO(-E-2F)$。
+従って構造対象は例外的である。正規商のAS Gorenstein parameterは1、
+中山は恒等であり、有限中心、飽和性、PBW/Hilbert値とgeneric divisionが揃った。
+系\ref{cor:h3-order2-conic-recognition}の証明をこの表示に適用すると、
+残るH3条件は全局所orderの大域次元2にちょうど一致する。
+rank3はAzumaya、rank2は判別の滑らかさ、rank1は
+補題\ref{lem:h3-order2-local-conic-criterion}の横断node条件である。
+従って(1)と(2)は同値。
+
+吹き下ろし $(X,Y,Z)=(\lambda s,\lambda t,\mu)$ に対して
+$F_4(\lambda s,\lambda t,\mu)=4\lambda\det q$。
+$o$ での二次部分は $-4XY$ なので通常nodeである。
+判別因子は $E$ と四次曲線のstrict transformの和で、類は $3E+4F$。
+$E$ のgeneric点は滑らかなrank2判別、二交点は上で確認した良いrank1点である。
+$E$ の外では $\lambda$ は単位なのでrank1は正確に $A=B=h_S=0$。
+従って局所判定により(2)と(3)も同値となる。
+\end{proof}
+
+\begin{example}[非零Clifford curvatureのH3]
+$h=xy$、$G=x^3+y^3+xu^2+yv^2$ とすると
+\[
+ F_4=-4XYZ^2+4Y^3Z-4X^3Z+3X^2Y^2.
+\]
+$X=1$ chartの $F_4,\partial_YF_4,\partial_ZF_4$ のGroebner基底は $\{1\}$。
+$X=0,Y=1$ では $\partial_ZF_4=4$、従って唯一の特異点は $o$。
+上の定理により実際にH3を得る。全係数PBW、正常核minor4、
+四次恒等式とこのJacobian判定は次の検証器で厳密再生する：
+\[
+\texttt{verify\_cubic\_order2\_22\_clifford\_curved.py}.
+\]
+新規性・独立査読は未確認であり、全正top非零対象の被覆・全矢・族降下はこの節では主張しない。
+\end{example}

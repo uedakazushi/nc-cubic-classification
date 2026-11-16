@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "version": "classification-v172",
+  "version": "classification-v173",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -85,7 +85,8 @@
     "papers/sections/cubic_order2_22_curved_SL2.tex",
     "papers/sections/cubic_order2_22_curved_Jordan_projection.tex",
     "papers/sections/cubic_order2_22_curved_quarter.tex",
-    "papers/sections/cubic_order2_22_Pzero_nondegenerate.tex"
+    "papers/sections/cubic_order2_22_Pzero_nondegenerate.tex",
+    "papers/sections/cubic_order2_22_clifford_curved.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -1734,6 +1735,19 @@
       "global H3 completeness",
       "componenthood",
       "relative nonreduced-base descent"
+    ]
+  },
+  "order2_22_clifford_curved_v173": {
+    "status": "PASS universal symbolic identities and nodal example; mathematical reconstruction proof in manuscript, independent peer review not claimed",
+    "validator": "computations/verify_cubic_order2_22_clifford_curved.py",
+    "certificate": "computations/cubic_order2_22_clifford_curved_certificate.json",
+    "proof": "papers/sections/cubic_order2_22_clifford_curved.tex",
+    "scope": "正top非零へ出るClifford型B_h（正側可換/cross反交換/{u,v}=h2）の全包絡AS4/domain/mu++--と八次元正常核を証明。u²/v²係数独立chartではF1上のeven/odd Clifford sheafを復元し、飽和性と例外曲線二節点の非自明quaternionにより全商domain。H3 iff conic総空間smooth iff planequartic reduced/nodalかつ全余分nodeがrank1。h=xy,G=x³+y³+xu²+yv²は厳密Jacobian検算付き実H3例。全正top非零被覆・依存係数境界・全矢/相対降下は未完。",
+    "not_claimed": [
+      "full nonzero-positive-top coverage",
+      "dependent coefficient cuts",
+      "all geometric arrows",
+      "intrinsic relative descent"
     ]
   }
 }

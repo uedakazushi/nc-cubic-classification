@@ -1120,3 +1120,12 @@ canonical正top P=0の(2,2)/mixed rank4全H3を、全Jordan型・全幾何学的
 rank2 cross補題：O=T Omega T^tの4次元交代像、L/N二射影rank>=3、rankM2なら両射影rank3。ell=kerNは等方直線なので純UV線Lell⊂L(ell perp)=imM。正projection rank1ならM=−(a^t⊗b)flipの像は固定正因子rulingで、純UV関係が積になる。従ってrank1境界も存在せずP0の非退化仮定は不要。標準3x3 minor det=z3 PfOmegaとPfOmega*e1=z5 col1−z4 col2が有限検算。
 
 全非零Qの被覆ではcyclic cはq−1ならsquares、q±iならuv+qvu。正projection quantum p≠1はF/G対角、p1はdetF=−q^-1の全行列、JordanはF反復eig a²=−q^-1。q−1は既存curved quantum diagonal/fullSL2/shear384、q±iは10weight/28disjoint/primitive8 no−eig。全パラメータの境界を保つ。次はP非zero、まずQ0のClifford型{u,v}=quadratic(U)とcrossantiを、既存Clifford swap結果との重なりを確認して認識する。全rank4正top非零の被覆は未完。
+
+
+## 正top非零Clifford chartのH3判定（classification-v173）
+
+正top非零へ出るClifford型B_h（正側可換/cross反交換/{u,v}=h2）の全包絡AS4/domain/mu++--と八次元正常核を証明。u²/v²係数独立chartではF1上のeven/odd Clifford sheafを復元し、飽和性と例外曲線二節点の非自明quaternionにより全商domain。H3 iff conic総空間smooth iff planequartic reduced/nodalかつ全余分nodeがrank1。h=xy,G=x³+y³+xu²+yv²は厳密Jacobian検算付き実H3例。全正top非零被覆・依存係数境界・全矢/相対降下は未完。
+
+証明：papers/sections/cubic_order2_22_clifford_curved.tex。検証器verify_cubic_order2_22_clifford_curved.pyは全係数四PBW overlap、八正常列零と補空間minor4、scroll determinant恒等式、実例の全射影Jacobianを厳密再生。新規性・独立査読は未確認。既存(1,3)定理を被覆として使用せず、共通局所Clifford補題とH3認識の証明を、今回再構成した束・飽和性・domainに適用した。
+
+独立係数Clifford chartのH3判定と実例を確定した。次はこの族の全幾何学的矢と一般慣性、係数依存境界を判定し、Q0全体への必要被覆を調べる。正top非零全域・三固有値以上・全CY被覆・全成分/族降下は未完。
