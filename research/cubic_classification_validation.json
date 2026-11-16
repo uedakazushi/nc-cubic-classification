@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "version": "classification-v163",
+  "version": "classification-v164",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -74,7 +74,8 @@
     "papers/sections/cubic_order2_22_rank4_odd_graph.tex",
     "papers/sections/cubic_order2_22_rank4_separated_commutative.tex",
     "papers/sections/cubic_order2_22_rank4_separated_AS2.tex",
-    "papers/sections/cubic_order2_22_rank4_zero_top_atlas.tex"
+    "papers/sections/cubic_order2_22_rank4_zero_top_atlas.tex",
+    "papers/sections/cubic_order2_22_rank4_zero_top_QQ_plus.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -1624,5 +1625,12 @@
     "certificate": "computations/cubic_order2_22_rank4_zero_top_atlas_certificate.json",
     "proof": "papers/sections/cubic_order2_22_rank4_zero_top_atlas.tex",
     "scope": "半単純(2,2) mixed rank4のP=Q=0領域で、K=vec(a)vec(b)^t、a/bは非退化AS2関係、cross M=−(a^t⊗b)flipで可逆。従って全奇関係はfullgraph、pairedpure分枝なし。PfA=h=eps*det(a)det(b)、A#=PfA A^-1線型よりh*tau(A)+M^t A#M=0の六線型必要atlasを得た。QQ/QJ/JQ/JJ両符号八chartの局所化多項式イデアル一致を検証し、p/q±1特殊値を全保持。半単純JJ両分枝はPf0で不存在。全AS4十分性・全H3被覆・全非半単純は未主張。"
+  },
+  "order2_22_rank4_zero_top_QQ_plus_v164": {
+    "status": "PASS all three PBW charts and four exact minors",
+    "validator": "computations/verify_cubic_order2_22_rank4_zero_top_QQ_plus.py",
+    "certificate": "computations/cubic_order2_22_rank4_zero_top_QQ_plus_certificate.json",
+    "proof": "papers/sections/cubic_order2_22_rank4_zero_top_QQ_plus.tex",
+    "scope": "零top QQ atlasのeps+全分枝をH3排除した。線型式/Pf非零からp−1又はq−1。二つの片側chartと交点SL2四係数を対角二torus/軸交換で正規化した全t chartで被覆。三chartの12PBW overlap全恒等0、正正常行列の四10minorは−8(t+1)²/t9、8(t−1)²/t9、1、−4。Bezoutで第一chartの全t非零を覆い、他chartは定数minor。交点の非分離族t0/t−1含む全境界を処理した。eps−とQJ/JQ、元非半単純への輸送は未完。"
   }
 }

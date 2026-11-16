@@ -1,0 +1,74 @@
+\subsection{零top量子・量子atlasの正Pfaffian分枝は全て空}
+\label{subsec:h3-order2-22-rank4-zero-top-QQ-plus}
+\begin{theorem}\label{thm:h3-order2-22-rank4-zero-top-QQ-plus-empty}
+前節の量子・量子零top atlasで$\epsilon=1$となる全領域には、H3対象は存在しない。
+$p=-1,q=-1$の交点と、その非分離graph・全退化境界も含む。
+\end{theorem}
+\begin{proof}
+線型式は$z_2=z_3=0$と
+\[
+ (p+1)z_0=(p+1)z_5=(q+1)z_1=(q+1)z_4=0
+\]
+を与え、Pfaffian式は$z_0z_5-z_1z_4=pq\ne0$である。
+従って$p=-1$または$q=-1$が必要である。
+
+$p=-1,q\ne-1$なら$z_1=z_4=0$であり、対角尺度で
+\[
+ (p,q)=(-1,t),\qquad(z_0,z_1,z_2,z_3,z_4,z_5)=(1,0,0,0,0,-t)
+\]
+にできる。$t\ne0$の全点を調べる。
+$q=-1,p\ne-1$も同様に
+\[
+ (p,q)=(t,-1),\qquad(z_0,z_1,z_2,z_3,z_4,z_5)=(0,1,0,0,t,0)
+\]
+となる。
+
+$p=q=-1$では、独立な二対角尺度が
+\[
+ (z_0,z_5,z_1,z_4)\longmapsto
+ (r z_0,z_5/r,s z_1,z_4/s)
+\]
+と作用する。
+正・負軸交換により$z_0,z_5$の組、$z_1,z_4$の組の各非零成分を先頭へ移せる。
+両組が非零なら$z_0=z_1=1$とし
+\[
+ (z_0,z_1,z_2,z_3,z_4,z_5)=(1,1,0,0,t,t+1)
+\]
+を得る。このchartは全$t\in k$を含む。
+片組が零の場合は、既述の最初の二chartの$t=-1$に一致する。
+これで全対象を覆った。
+
+各chartで$UV$と$VU$のgraphを解き、
+$yx=p^{-1}xy,vu=q^{-1}uv$と四mixed関係を簡約規則にする。
+degree lex順序$v>u>y>x$で停止し、全四つの三次overlapは恒等的に消える。
+従って$x^iy^ju^kv^l$が全次数でPBW基底である。
+特に正三次は10次元で、
+$Gx-xG,Gy-yG,Gu+uG,Gv+vG$を基底上でそのまま計算できる。
+
+第一chartには二つの$10\times10$ minor
+\[
+ -\frac{8(t+1)^2}{t^9},\qquad\frac{8(t-1)^2}{t^9}
+\]
+がある。
+\[
+ \frac{2-t}{4}(t+1)^2+\frac{t+2}{4}(t-1)^2=1
+\]
+なので、$t\ne0$の全値で少なくとも一つは非零となる。
+第二chartでは指定minorが恒等的に1である。
+交点の第三chartでは指定minorが恒等的に$-4$である。
+従って全chartで正常行列の階数は10、核は零であり、必要な非零$G$は存在しない。
+途中で有限標本の階数を全パラメータへ外挿しておらず、特殊値の未処理部分もない。
+\end{proof}
+
+第三chartの四mixed簡約は具体的に
+\begin{gather*}
+ ux=-t xv-(t+1)yu,\qquad uy=-xu+t yv,\\
+ vx=-xu+(t+1)yv,\qquad vy=xv+yu
+\end{gather*}
+である。この非分離全族も、定数minorによって一括排除している。
+検証器は
+\[
+ \texttt{verify\_cubic\_order2\_22\_rank4\_zero\_top\_QQ\_plus.py}
+\]
+で、三chartの計12overlapと指定四minor、Bezout恒等式を元の係数から再生する。
+$\epsilon=-1$、量子・Jordan、非半単純包絡への輸送は、この定理とは別の残課題である。

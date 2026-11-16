@@ -1056,4 +1056,9 @@ as4 a3ddc8c55e65f336f707ebba5810b26d0698712eのREADME/plan/COVERAGE/CLAIMSを入
 
 ## 零top atlasの次の具体的計算
 
-QQ p=q−1,eps+ではz2=z3=0、z0z5−z1z4=1。二対角torusとU/V軸交換で、両組成分が非零ならz0=z1=1,z4=t,z5=t+1へ正規化できる。私的検算exceptional_QQ.pyでは四PBW overlap全恒等0、54x10正常行列の指定minorが定数−4と判明（公開検証器へ移すまで分類主張として未採用）。片組が零の境界は二方向separated。QQ p=q1 eps−はΛ²(U⊗V)=Sym²U⊗Λ²V + Λ²U⊗Sym²Vの二対称式へ分かれ、Pfneq0なら少なくとも一方非退化。GL2でその対称式をcrossへ移し、一方向separatedへ還元できそうである（未検証）。opposite-separatedも負comm/Jordanとq−1反対角を因子/centreで排除できそうだが、完全な変換と全Jordan輸送は未証明。これらを済ませる前にP=Q0全H3を既知符号だけと結論しない。
+QQ p=q−1,eps+ではz2=z3=0、z0z5−z1z4=1。二対角torusとU/V軸交換で、両組成分が非零ならz0=z1=1,z4=t,z5=t+1へ正規化できる。公開verify_cubic_order2_22_rank4_zero_top_QQ_plus.pyで四PBW overlap全恒等0、54x10正常行列の指定minor定数−4を再生済み。QQ eps+全分枝は三chart/四minorで排除した。片組が零の境界は二方向separated。QQ p=q1 eps−はΛ²(U⊗V)=Sym²U⊗Λ²V + Λ²U⊗Sym²Vの二対称式へ分かれ、Pfneq0なら少なくとも一方非退化。GL2でその対称式をcrossへ移し、一方向separatedへ還元できそうである（未検証）。opposite-separatedも負comm/Jordanとq−1反対角を因子/centreで排除できそうだが、完全な変換と全Jordan輸送は未証明。これらを済ませる前にP=Q0全H3を既知符号だけと結論しない。
+
+
+## QQ正Pfaffian分枝の全排除（classification-v164）
+
+零top QQ atlasのeps+全分枝をH3排除した。線型式/Pf非零からp−1又はq−1。二つの片側chartと交点SL2四係数を対角二torus/軸交換で正規化した全t chartで被覆。三chartの12PBW overlap全恒等0、正正常行列の四10minorは−8(t+1)²/t9、8(t−1)²/t9、1、−4。Bezoutで第一chartの全t非零を覆い、他chartは定数minor。交点の非分離族t0/t−1含む全境界を処理した。eps−とQJ/JQ、元非半単純への輸送は未完。

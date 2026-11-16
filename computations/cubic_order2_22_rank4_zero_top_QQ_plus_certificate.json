@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "scope": "entire QQ epsilon=+ semisimple zero-top branch, including all parameter/boundary values",
+  "charts": [
+    {
+      "chart": "p_minus_one",
+      "PBW_overlaps": 4,
+      "normal_rows": 34,
+      "normal_columns": 10,
+      "exact_minors": [
+        "-8*(t + 1)**2/t**9",
+        "8*(t - 1)**2/t**9"
+      ]
+    },
+    {
+      "chart": "q_minus_one",
+      "PBW_overlaps": 4,
+      "normal_rows": 50,
+      "normal_columns": 10,
+      "exact_minors": [
+        "1"
+      ]
+    },
+    {
+      "chart": "both_minus_one",
+      "PBW_overlaps": 4,
+      "normal_rows": 54,
+      "normal_columns": 10,
+      "exact_minors": [
+        "-4"
+      ]
+    }
+  ],
+  "cover": "linear atlas forces p=-1 or q=-1; at p=q=-1 torus and axis swaps cover by z0=z1=1,z4=t,z5=t+1, or the two one-pair-zero charts",
+  "conclusion": "designated positive normal cubic kernel zero on every chart; no H3 in this whole branch",
+  "not_claimed": [
+    "QQ epsilon=- classification",
+    "all zero-top H3 classification",
+    "nonsemisimple branch transport",
+    "AS4 recognition beyond what is needed for exclusion"
+  ]
+}
