@@ -541,3 +541,15 @@ T=(xy=-yx)、p x=-xp,p y=yp、v x=lambda yv+d_x,v y=eta xv+d_y、v²−p²=ell v
 nu=fのtrim先頭環は二段Ore T[u;f][w;sigma],sigma|T=f,sigma u=−u。hdet f−1とRRZ hdet(mu)1/LWW制限公式からmu|W=mu_T f^-2=mu_W（負二値）、mu u=mu w=+1。nu−fならu,w交換Hの右Zhangtwistが同じ二段Oreに移り、Hhdet1,H²1,index4なのでmu一次作用不変。どちらも先頭中山の重複度2+2。実際のmuはW保存、p固定、v->−v+Wなので重みW1,p/v2を保存する。実際の最高tensorの先頭項はAS4先頭環の一次元W4を張り、その巡回式からgr mu=mu_grB。よって実際の重複度1+3に反して排除される。この先頭tensor比較は未証明の一般Nakayama変形不変性を仮定しない。
 
 原稿thm:h3-order2-full-normalizing-chart。対角/反対角の全係数排除はv105/v106の既実行検証に依存し、平方根/先頭スペクトル統合は本文の構造証明、新規CAS実行を主張しない。外側二乗rank1でcrossの両射影がgraph同型となる通常領域が消え、非分裂Jordanのv100量子平面商領域も、残りcross射影が退化する場合へ縮小する。既知Clifford正例の外側二乗rank2は被覆していない。次はこのrank1射影退化とrank2外側領域を分けて全関係・W1・許容性を判定する。
+
+## 全負三次元側は二平方商を持ちJordan拡大は分裂（classification-v108）
+
+重複度(1,3)のH3包絡の全域でB/(W)=k<p,v>/(p²,v²)を確定し、負三次元中山加群のWへの拡大も分裂と証明した。従ってmu負側はsemisimple又はW上Jordan2+残り固有直線の2+1だけで、非分裂/Jordan3が全て消えた。普通のcross graphだけでなく射影が退化する場合も扱った全域必要条件である。
+
+核心はp²とvが共通AS2平面Tのgraded商体へ入ることの排除。commTならf²=mu_W^-1は非恒等だが内作用は恒等。JordanTならhdet f−1からf²(y)=−y、p²=r(z)y²,z=xy^-1の正常化がr(z)=−r(z+1)を要求しrational最高項で不可能。量子Tではdet f=hdet f−1がq−1反対角を排除し、mu_W−Iからfdiag(a,−a^-1),a²−q。q無限位数ならr(q^-1z)=−q r(z)、零極の有限性でr単項式、q^(m+1)=−1が矛盾。q有限位数ならf有限、D=Q(T)は二変数中心不変体F上有限次元。v∈D,p²∈DならB⊂D+DpがF上有限次元、有限構造定数を含む可換係数環で語の成長を抑えるとGKdimB<=2となり4に反する。Weyl商体一般のGK次元へ誤って適用せず、有限中心量子の場合だけこの成長比較を使う。原稿lem:h3-order2-rational-collapse。
+
+偶四関係をW0へ射影すると像はp²,v²の空間。rank0/片平方rank1は指数成長。両平方rank1ならkernelをkq0で割ったcross二次元空間の両射影がfullならv107全normalizing排除、どちらか退化ならv ell=q(W)又はell v=q(W)からvがT商体に入り、外側平方関係からp²も商体に入って上補題に反する。従ってrank2に限る。v100非分裂なら商が量子平面であることとHilbertが異なるため分裂も従う。原稿thm:h3-order2-two-square-quotient。
+
+verify_cubic_order2_outer_square_reduction.pyは量子中山・反対角hdetの行列恒等式と、既知Clifford swapをW0にした二平方係数minor=h(8−h³)/8を厳密確認。商体のrational不可能性、有限中心成長、全projection帰着は原稿の証明であり有限標本で証明したとしない。
+
+次の焦点：残るrank2平方領域ではeven relations kernelがq0とcross一本になり、p²,v²をそれぞれW²+vW+Wvで表せる。半単純muとsplit M1を分け、全Koszul/normalG条件から既知Clifford族への被覆又は新しい許容族を調べる。p²の中心性や負三生成元部分代数のAS3性はまだ未証明なので先に仮定しない。正三次元側、2+2、中山三/四固有値、全CY被覆・非捩れqso3正許容性、全成分/相対降下も未完。

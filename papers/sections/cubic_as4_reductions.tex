@@ -1294,6 +1294,85 @@ filtrationを保つ作用の固有値重複度は随伴作用と同じなので�
 実際の重複度 $(1,3)$ に反する。
 \end{proof}
 
+\begin{lemma}[共通平面の商体への退化は起こらない]
+\label{lem:h3-order2-rational-collapse}
+重複度 $(1,3)$ のH3包絡において、共通平面の生成するAS2平面を $T$、
+正生成元を $p$、残る負生成元を $v$ とする。
+$T$ のgraded商体内に $v$ が次数1、$p^2$ が次数2の元として入ることはない。
+\end{lemma}
+\begin{proof}
+$B$ はnoetherian整域なので、その商体内に $T$ の商体を埋め込める。
+$pt=f(t)p$ より、$h=p^2$ は $ht=f^2(t)h$ を満たす非零斉次次数2元となる。
+前の行列式から $\operatorname{hdet}_T f=\det f=-1$、
+$\mu_T=\mu_W f^2$、$\mu_W$ の固有値は $-1$ のみである。
+
+$T$ が可換なら内作用は恒等だが、$f^2=\mu_W^{-1}$ は恒等でなく矛盾する。
+Jordan平面 $yx=xy+y^2$ なら $f(y)=\lambda y$、
+$\lambda^2=\operatorname{hdet}f=-1$ である。
+$z=xy^{-1}$ として $yz=(z+1)y$、$h=r(z)y^2$、$r\in k(z)^\times$ と書くと、
+$hy=-yh$ は $r(z)=-r(z+1)$ を要求する。
+有理関数の無限遠での最高項を比べれば不可能である。
+
+量子平面 $xy=qyx$, $q\ne1$ では、単一固有値を持つ $\mu_W$ は $-I$。
+$q=-1$ の反対角自己同型は通常の行列式とhomological determinantが逆符号なので、
+$\det f=\operatorname{hdet}f=-1$ を満たさない。
+従って $f=\operatorname{diag}(a,-a^{-1})$、$a^2=-q$ であり、
+$f^2(y)=-q^{-1}y$ である。
+$q$ が無限位数なら、$yz=q^{-1}zy$、$h=r(z)y^2$ として
+\[
+ r(q^{-1}z)=-q\,r(z)
+\]
+を得る。零と極の有限性から $r$ の零極は $0,\infty$ だけとなり、
+$r=cz^m$ である。すると $q^{m+1}=-1$ となって無限位数に反する。
+
+$q$ が有限位数なら $f$ も有限位数であり、$D=Q(T)$ は二変数有理中心上有限次元である。
+その中心の $f$ 不変体を $F$ とすると、$\operatorname{trdeg}F=2$ かつ $D$ は $F$ 上有限次元。
+$v\in D$, $p^2\in D$, $pd=f(d)p$ なので、$B$ は $D+Dp$ に含まれる。
+これは中心体 $F$ 上有限次元の代数である。
+有限個の構造定数と $B$ の生成元の係数を含む可換有限生成部分環を $F$ 内に取れば、
+$B$ の長さ $n$ の語の係数はその部分環で次数 $O(n)$ に収まる。
+従って $\operatorname{GKdim}B\le2$ であり、14641の成長次元4に反する。
+\end{proof}
+
+\begin{theorem}[負三次元側の二平方商とJordan分裂]
+\label{thm:h3-order2-two-square-quotient}
+全ての重複度 $(1,3)$ のH3包絡について、正直線 $kp$、共通負二平面 $W$、
+残る負生成元 $v$ を取ると
+\[
+ B/(W)=k\langle p,v\rangle/(p^2,v^2)
+\]
+である。さらに $W$ への負三次元中山加群の拡大は分裂する。
+従って負三次元部分のJordan型は、半単純型又は $W$ に非自明blockを持つ分裂 $2+1$ 型だけである。
+\end{theorem}
+\begin{proof}
+偶二次関係は四本で、$W^{\otimes2}$ との交わりはちょうど $kq_0$。
+$W=0$ とした関係の像は $kp^2\oplus kv^2$ に含まれる。
+像が零なら二生成元自由環、像が一本で片方の平方だけなら
+一平方を禁じる語の指数成長を持つので、いずれも不可能。
+
+像が一本で両平方係数非零と仮定し、$p$ を尺度変更して
+$v^2-p^2$ にbase--outer項とbase二次項を加えた関係とする。
+平方投影の核を $kq_0$ で割った二次元空間を $K$ とする。
+両cross射影 $K\to vW,Wv$ が同型なら、
+定理\ref{thm:h3-order2-full-normalizing-chart}の全排除chartに入る。
+一方の射影が退化すれば、その核には
+$v\ell=q(W)$ 又は $\ell v=q(W)$、$0\ne\ell\in W$ という関係がある。
+従って $v$ は $T$ の斉次商体に入り、外側二乗関係から $p^2$ も同じ商体に入る。
+これは補題\ref{lem:h3-order2-rational-collapse}に反する。
+よって平方像は二次元であり、商は表示した二平方商となる。
+
+もし中山加群の $W$ への拡大が非分裂なら、
+命題\ref{prop:h3-order2-nonsplit-plane-quotient}は同じ商をパラメータ $-1$ の量子平面とする。
+そのHilbert級数 $(1-t)^{-2}$ は二平方商の $(1+t)/(1-t)$ と異なるため矛盾する。
+従って分裂し、共通平面の二標準形から述べたJordan型を得る。
+\end{proof}
+既知Clifford swap例では $W=\langle t,z+h(x+y)/2\rangle$ を零とすると、
+$u=x-y$, $v=x+y$ の二平方の係数行列式は $h(8-h^3)/8\ne0$ である。
+従って同例も正確にこの二平方商を持つ。
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}order2\_\allowbreak{}outer\_\allowbreak{}square\_\allowbreak{}reduction.py}
+は量子中山・反対角指標とこの正例の基底変更を厳密確認する。
+商体の有理関数と成長次元の議論は本文の証明であり、有限標本計算で代替しない。
+
 \begin{lemma}[単冪twist下の反標準三次関係の輸送]
 \label{lem:h3-unipotent-transport}
 $C$は左右noetherian quadratic Koszul AS4型14641で，$\mu_C$は半単純とする．

@@ -1150,5 +1150,12 @@
       "initial top tensor and filtered Nakayama spectrum"
     ],
     "scope_limit": "Degenerate cross projections and outer-square projection rank2, including known admissible Clifford objects, remain outside this chart; full order-two and global H3 coverage incomplete."
+  },
+  "order2_global_two_square_and_split_v108": {
+    "status": "global rational-division/growth proof in manuscript; exact matrix identities and positive-family calibration executed",
+    "validator": "computations/verify_cubic_order2_outer_square_reduction.py",
+    "certificate": "computations/cubic_order2_outer_square_reduction_certificate.json",
+    "result": "Every multiplicities(1,3) H3 envelope has canonical quotient B/(W)=k<p,v>/(p²,v²). The negative three-dimensional Nakayama module splits over W, leaving only semisimple or split Jordan2+1. Degenerate cross projections at outer-square rank1 are excluded through rational division and finite-central growth, not omitted.",
+    "scope_limit": "Remaining outer-square rank2 relations/cubics/admissibility, multiplicities3+1 and2+2, larger spectra and global/relative classification remain. The verifier checks identities/calibration, not the analytic field argument by finite sampling."
   }
 }
