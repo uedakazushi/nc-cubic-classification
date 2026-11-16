@@ -1,0 +1,44 @@
+{
+  "family": "T3[y;sigma], T3=(u*x=a*x*u,w*x=a*x*w,u*w=-w*u); sigma(x)=-a^-2*x,sigma(u)=-a*w,sigma(w)=-a*u",
+  "Nakayama": "mu(x)=-x,mu(y)=-y,mu(u)=w,mu(w)=u",
+  "x_filter_exception_orders": [
+    1,
+    2,
+    3,
+    4,
+    6,
+    8
+  ],
+  "finite_W1": [
+    {
+      "primitive_order": 1,
+      "dimension_W1": 1
+    },
+    {
+      "primitive_order": 2,
+      "dimension_W1": 1
+    },
+    {
+      "primitive_order": 3,
+      "dimension_W1": 0
+    },
+    {
+      "primitive_order": 4,
+      "dimension_W1": 0
+    },
+    {
+      "primitive_order": 6,
+      "dimension_W1": 0
+    },
+    {
+      "primitive_order": 8,
+      "dimension_W1": 0
+    }
+  ],
+  "nonzero_W1": {
+    "a=1": "span(u*w*y)",
+    "a=-1": "span((w^2-u^2)*y)"
+  },
+  "result": "Every envelope in this explicit all-parameter monomial Ore family excluded: W1 zero or every cubic factors by y.",
+  "scope": "This is one explicit trimmed Ore family, not coverage of all common-plane or nontrimmed double Ore data."
+}

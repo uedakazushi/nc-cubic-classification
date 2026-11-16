@@ -473,3 +473,11 @@ M0ではmu_W=epsilon I、F任意det F=epsilon。M1ではmu_W=epsilon[[1,2],[0,1]
 奇関係の像Wと巡回性から、四次topでzを含む項はW²z²だけ。負側gamma0とv3/v4消滅によりzz列はq0(W)、vv列もW²関係。domainによりR2∩W²は一本以下なので両列比例、B/(W)の二次関係はz²,v²間の一本。片方の係数が零なら平方一つを禁じる二文字語のFibonacci指数成長がBの多項式成長に反する。従ってB/(W)=k<z,v>/(v²+lambda z²),lambda!=0、基底変更でq−1量子平面。原稿prop:h3-order2-nonsplit-plane-quotient。
 
 これはdouble Ore表示や全PBWの十分条件ではない。残る二つのcross偶関係がWv/vWのgraphをなすことは別に判定すべきであり、q0(W)+ell(W)vのような混合base項を無視してprojection単射をdomainだけから主張しない。次は外側二次が一本のこのchartでcross射影のrank2通常部分とrank1退化部分を分け、全偶係数・W1を計算する。既知正例のClifford swapはWへの拡大が分裂しており、この非分裂結論の対象と混同しない。
+
+## 単項Ore一パラメータ族の全W1と排除（classification-v101）
+
+共通平面第一型の具体族B_aをux=a xu,wx=a xw,uw=−wu,yx=−a^-2xy,yu=−a wy,yw=−a uyで定義（a!=0）。量子三平面T3[x,u,w]の自動同型Ore拡大で全aにAS4。一次資料Liu–Wang–Wu1205.0893v1 Theorem3.3を再確認：mu_B|T= sigma^-1 mu_T。mu_T=(a^-2x,−au,−aw)、よってmu_B=(-x,w,u,−y)。y成分の符号はy次数トーラスとhdet mu1、三平面topの指標−1から決定し、Theorem3.3だけから未記載のhdet公式を推測していない。
+
+PBW x^i u^j w^k y^lでGx=−xGの指標は(−1)^l a^(j+k−2l)=−1。恒等的に許される三次はu²y,uwy,w²yだけで、他の列を許すaの位数は1,2,3,4,6,8（合計12根）。集合外ではGu=wGの三係数が−a−1/−a+1となってW1零。全六円分体で140x20行列を元のPBW積から厳密再生成し、a1はkuwy、a−1はk(w²−u²)y、他の位数は核零。両非零核もyを因子に持ち全切断nondomain。従ってこの全一パラメータ族を排除した。検証verify_cubic_order2_trimmed_Ore.pyは一般QQ(a)核、全例外核、64生成元三重積の整合、三平面top指標も厳密再生する。
+
+正固有生成元はu+w、W=<x,y>、f=diag(a,−a^-1)、量子平面q=−a²。これは指定した単項/trimmed部分の一具体族であり、全trimmed double Oreやbase二次項・cross導分付きの表示を被覆したとしない。既知Clifford正例はこの族ではなく、除外と矛盾しない。原稿thm:h3-order2-monomial-Ore-excluded。次は係数付き外側二次/cross偶関係の残余、第二行列型と残るJordan拡大、2+2層を扱う。

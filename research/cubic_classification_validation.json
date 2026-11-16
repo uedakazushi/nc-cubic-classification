@@ -1070,5 +1070,13 @@
     "certificate": "computations/cubic_order2_nonsplit_tensor_certificate.json",
     "result": "In multiplicities(1,3), if the three-dimensional unipotent module is a nonsplit extension of the canonical common plane W, invariant quartic tensors have no v³W/v⁴ terms. Frobenius/domain and growth then force B/(W) to be a parameter -1 quantum plane.",
     "scope_limit": "No double Ore or full cross-projection/PBW conclusion; even relations, normal cubics and H3 admissibility remain."
+  },
+  "order2_monomial_Ore_exclusion_v101": {
+    "status": "all-parameter proof and exact generic/exceptional computations executed; primary Ore theorem checked",
+    "validator": "computations/verify_cubic_order2_trimmed_Ore.py",
+    "certificate": "computations/cubic_order2_trimmed_Ore_certificate.json",
+    "result": "All B_a in the explicit monomial quantum-three-space Ore family excluded. W1 only nonzero at a=1,-1, where all cubics factor by y. All exceptional orders1,2,3,4,6,8 independently recomputed.",
+    "primary_source": "Liu-Wang-Wu arXiv:1205.0893v1 Theorem3.3: restriction formula; y character independently from hdet/top.",
+    "scope_limit": "No coverage of general trimmed/nontrimmed double Ore or all common-plane even relations; no full order-two classification."
   }
 }

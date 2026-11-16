@@ -852,6 +852,69 @@ $k\langle z,v\rangle/(z^2)$ または $k\langle z,v\rangle/(v^2)$ となる。
 代数閉体上の基底変更で $xy+yx$ に移る。
 \end{proof}
 
+\begin{theorem}[共通二平面から出る一パラメータ単項Ore族の全排除]
+\label{thm:h3-order2-monomial-Ore-excluded}
+$a\in k^\times$ とし、次の六関係で定義される環を $B_a$ とする。
+\[
+\begin{gathered}
+ ux=axu,\quad wx=axw,\quad uw=-wu,\\
+ yx=-a^{-2}xy,\quad yu=-awy,\quad yw=-auy.
+\end{gathered}
+\]
+これは全 $a$ でnoetherian quadratic Koszul AS4型14641であり、
+\[
+ \mu_{B_a}(x)=-x,\quad \mu_{B_a}(y)=-y,\quad
+ \mu_{B_a}(u)=w,\quad\mu_{B_a}(w)=u.
+\]
+その $W_1(B_a)$ は
+\[
+ W_1(B_a)=
+ \begin{cases}
+  k\,uwy,&a=1,\\
+  k\,(w^2-u^2)y,&a=-1,\\
+  0,&a\ne\pm1.
+ \end{cases}
+\]
+従ってこの族の全包絡はH3から除外される。
+これは一般の係数付き偶関係や全double Ore拡大の被覆定理ではない。
+\end{theorem}
+\begin{proof}
+$T_3=k\langle x,u,w\rangle/(ux-axu,wx-axw,uw+wu)$ とすると
+$B_a=T_3[y;\sigma]$、
+$\sigma(x)=-a^{-2}x$, $\sigma(u)=-aw$, $\sigma(w)=-au$ である。
+従ってPBW基底は $x^iu^jw^ky^l$、Hilbert級数は $(1-t)^{-4}$。
+量子三平面の正則性と自己同型型Ore拡大
+\cite[Theorem 3.3]{LWWOre}、二次PBWから表示したAS4性を得る。
+$\mu_{T_3}=(a^{-2}x,-au,-aw)$ なので、同定理は
+$\mu_{B_a}|_{T_3}=\sigma^{-1}\mu_{T_3}=(-x,w,u)$ を与える。
+$y$ 次数のトーラス作用により $\mu_{B_a}(y)=cy$。
+$(-x,w,u)$ は $T_3$ の最高Koszul tensorを $-1$ 倍するので、
+$\operatorname{hdet}_{B_a}\mu_{B_a}=1$ から $c=-1$ となる。
+
+PBW三次単項式 $m=x^iu^jw^ky^l$ に対し
+\[
+ mx=(-1)^l a^{j+k-2l}xm.
+\]
+従って $Gx=-xG$ は、各非零係数について
+$(-1)^l a^{j+k-2l}=-1$ を要求する。
+恒等的にこの条件を満たす三次は $u^2y,uwy,w^2y$ の三本だけである。
+その他の三次が現れ得る $a$ の位数は $1,2,3,4,6,8$ のどれかである。
+この有限集合の外では $G=q_2(u,w)y$ に限られ、$Gu=wG$ から
+二乗項の係数には $-a-1$、$uw$ 項には $-a+1$ が掛かるので全て零となる。
+
+残る六位数は各円分体 $\mathbb Q(\zeta_N)$ 上で、元のPBW積から
+140行20列の正常化行列を再生成して厳密に核を求める。
+位数3,4,6,8では核は零、$a=1,-1$ では上記の一本である。
+各円分体の全埋込みにより全原始根を覆う。
+この有限根分類、全核、最高tensorの指標とPBW積は
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}order2\_\allowbreak{}trimmed\_\allowbreak{}Ore.py}
+で再現する。一般点だけの計算から特殊値を除外してはいない。
+二本の非零核はいずれも非零二次式と $y$ の積なので、切断は非整域である。
+\end{proof}
+この族では正固有直線は $k(u+w)$、共通二平面は $\langle x,y\rangle$。
+その上の $f$ は $\operatorname{diag}(a,-a^{-1})$、
+二生成元平面のパラメータは $-a^2$ なので、第一行列標準形の具体的な全値chartとなる。
+
 \begin{lemma}[単冪twist下の反標準三次関係の輸送]
 \label{lem:h3-unipotent-transport}
 $C$は左右noetherian quadratic Koszul AS4型14641で，$\mu_C$は半単純とする．
