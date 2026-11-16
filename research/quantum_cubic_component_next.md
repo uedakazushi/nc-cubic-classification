@@ -1,34 +1,16 @@
-# 量子三次曲面の既約成分：研究再開メモ
+# 量子三次曲面の成分研究：現行資料への入口
 
-2026-11-17。これは未完成の研究ノートであり、完全な既約成分定理ではない。
+2026-11-17 / triangle-component-v3。
 
-## 目標
-固定量子 so3 包絡の4次元切断族を含む intrinsic pointed H3 モジュライの既約成分を、一般点・次元・全群oid・境界・交叉まで決定する。
+原稿全文・検証コード・証明書はリポジトリに統合されている。旧bundleの取得は再開の前提ではない。
+最初にrootの `00_research_plan.md`、次に [成分研究方針](quantum_cubic_component/00_research_plan.md) を読む。
 
-## 確認済みの出発点
-- `papers/sections/cubic_quantum_triangle_deformations.tex` に、固定包絡4次元族の稠密な楕円境界部分を含む7次元H3表示族を記載。
-- `research/quantum_triangle_component.md` にその証明・仮定・検証範囲。
-- 全intrinsic H3 stackの代数性、相対降下、7次元族の成分性は未証明。
+公表原稿は [quantum_cubic_component.tex](../papers/quantum_cubic_component.tex)、
+研究ノートは [component_notes.md](quantum_cubic_component/component_notes.md)、
+検証は [verify_all.py](../computations/quantum_cubic_component/verify_all.py)。
 
-## 新しい研究の候補（独立監査待ち）
-前回の研究で作成した2026-11-17版bundleには、以下の計算・論証がある。**このメモ自体は、それらの証明書をGitHubに移したものではなく、再検証完了を意味しない。**
-1. 滑らかな中心三次曲面と滑らかな反標準分岐楕円曲線の一般点で、orderのHochschild計算から `HH^2` の次元8、`HH^3=0` を得るという主張。
-2. 3-torsionの中央楕円境界を保つPBW表示を正規化し、7次元族で被覆するという主張。
-3. 3-torsionを離れる横断1方向の中心三次切断の形式積分。
-4. 明示ポテンシャルと中心切断の一次incidenceで、40変数、105方程式、階数18、座標変更14方向、商次元8という計算報告。
+現在の成果は、7次元の固定位数3開正常形、三捩れを離れる中心三次の積分、一般点のHH^2=8・HH^3=0、
+適合したenhanced Abel変形の全Artin底での同型類上の単射性、相対反標準環の平坦な六二次・一三次表示。
+全H3の相対代数性、二次包絡のAS4認識、全境界被覆は未完成であり、8次元成分の完全決定とは呼ばない。
 
-## 必ず検証すべき論理的障害
-- orderのHochschild sheafと非自明なBrauer/慣性作用の正確な対応。局所模型の `HH` から大域の `HH^2` を得る際の仮定。
-- `HH^3=0` が制御する圏の形式変形と、heart・構造対象・AS4二次包絡を保つintrinsic H3変形との違い。
-- 3-torsionを横断する一般繊維でのH3 admissibility。PBW/CY性や中心元の存在のみからH3を推論しない。
-- 8次元表示族の一般点での全同型と無限小自己同型、形式versal性。
-- 4次元固定包絡族を含む成分の大域閉包・全境界・交叉。一般点の次元だけで大域的完全分類を主張しない。
-
-## 最優先の具体的作業
-1. 前回bundleの `papers/quantum_cubic_component.tex`、`research/component_notes.md`、`computations/` のコードと証明書を現行GitHub正本に統合する（既存の主原稿を上書きしない）。
-2. 計算コードを再実行し、各主張の入力・出力・仮定を監査する。
-3. 8次元の形式変形と全intrinsic H3モジュライの相対再構成・降下を証明する。
-4. 全境界と群oidを決定し、完全な成分定理として論文化する。
-
-## 保存と再現性
-GitHub mainを正本とし、PDFは追跡せずLuaLaTeXソースと必要な検証コードを保持する。このメモは今回の研究継続に必要な優先順位を記録するもので、以前の研究bundleの全内容を代替するものではない。
+次は二次包絡のsyzygyと相対Koszul複体を調べる。具体的な着手方法・仮定・証明ラベルは上記方針とノートに集約する。
