@@ -515,3 +515,11 @@ P開集合の次数零環はS=k[r,t]上rank4Clifford A：r=yp^-1=h/P,t=s/P,a=xp^
 verify_cubic_order2_resonant_obstruction.pyは全中心交換子・scroll関係・G²式、順逆chart六関係とG、完備化の平方完成とfの一次項零を厳密再生。無限pd/Extと点支持比較は本文のホモロジー証明であり、計算だけが全証明としない。原稿thm:h3-order2-resonant-excluded。局所orderの最大性や全中心被覆の未証明仮定を用いない。beta非零でのRdomainの独立判定やaffineYchartが良いかどうかを待たず、固定点一つで全H3を排除した。
 
 次は第一行列型の残るbase--outer線型項とcross正規化chart（量子/Jordan/反対角を区別）、第二行列型および非分裂Jordanのcross射影退化部分。2+2や中山三/四固有値、全CY必要被覆、非捩れqso3正admissibility、全大域成分/相対降下も残る。
+
+## 対角normalizing chart全cross係数の排除（classification-v105）
+
+全六関係をT_a=(xy+a²yx)、p x=a xp,p y=−a^-1yp、v x=a xv+d_x,v y=a^-1yv+d_y、v²−p²=ell(W)v+q2(W)と書けるH3は存在しない。d_x,d_y,q2任意二次、ell任意一次を含む。H3domainからT_a忠実、dはnu-skew derivation。u=(p+v)/2,w=(p−v)/2で全語のordered monomial spanを得て、14641 Hilbert値との比較でPBWになるからT+Tvの係数比較が正当。
+
+vを一次式だけずらして、a!=−1ではd0、a−1ではd(x)=alpha y²,d(y)=beta x²。後者はd nu+nu d0,d²0なので全aで(v²−p²)t=nu²(t)(v²−p²)。外側関係のv係数比較によりell t=nu(t)ell、内部derivation d_ell0。前補題の内部写像は全aで単射だからell0。残りq2はnu²正常化、a!=−1は全base二次変形の既排除族、a−1は四パラメータ共鳴の既排除族。vの対角係数を双方逆符号にしたchartもW交換とa->−a^-1で同じ結論。
+
+新たなCASを仮装しない構造的な帰着。dの分類/gcdはv103、一般base変形はv102、共鳴全値はv104の再生器と証明へ依存する。原稿thm:h3-order2-diagonal-normalizing-chart。反対角normalizer、非対角f/Jordan平面、cross射影がgraphでない退化部分、外側二乗投影rank2の既知Clifford正例はこの定理の被覆ではない。次はこれらを区別して扱う。

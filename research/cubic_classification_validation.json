@@ -1117,5 +1117,16 @@
       "point-supported Ext local-to-global and completion"
     ],
     "scope_limit": "This excludes the explicit resonant family, not all involution mixed/cross coefficient charts. No R-domain or maximal-order theorem is required."
+  },
+  "order2_diagonal_normalizing_chart_exclusion_v105": {
+    "status": "structural reduction in manuscript; relies on previously executed exact validators, no new CAS claimed",
+    "proof": "papers/sections/cubic_as4_reductions.tex, theorem h3-order2-diagonal-normalizing-chart",
+    "result": "All H3 envelopes in the specified diagonal normalizing chart excluded, including arbitrary quadratic cross skew derivations, outer linear base term and quadratic base term. Inner shift and coefficient comparison reduce every member to the already excluded base or resonant families.",
+    "dependencies": [
+      "skew derivation resonance v103",
+      "base deformation exclusion v102",
+      "fixed resonant obstruction v104"
+    ],
+    "scope_limit": "No coverage of anti-diagonal/Jordan actions, degenerate cross projections, or outer-square projection rank2."
   }
 }

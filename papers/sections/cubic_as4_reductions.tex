@@ -1141,6 +1141,49 @@ H3の大域次元2に反するので、全 $\beta\ne0$ も排除される。
 明示した完備局所環と点支持Ext比較による。
 \end{proof}
 
+\begin{theorem}[対角normalizing chartの全係数排除]
+\label{thm:h3-order2-diagonal-normalizing-chart}
+$a\ne0$ とし、二次包絡の全六関係が
+\[
+\begin{gathered}
+ xy+a^2yx=0,\quad px=axp,\quad py=-a^{-1}yp,\\
+ vx=axv+d_x(x,y),\quad vy=a^{-1}yv+d_y(x,y),\\
+ v^2-p^2=\ell(x,y)v+q_2(x,y)
+\end{gathered}
+\]
+で与えられるH3は存在しない。
+ここで $d_x,d_y,q_2$ は任意の二次式、$\ell$ は任意の一次式である。
+$v$ の二つの対角係数を同時に逆符号にした場合も同様である。
+これは反対角normalizing作用やcross射影の退化部分を含む被覆ではない。
+\end{theorem}
+\begin{proof}
+H3を仮定する。整域性により $T_a$ は忠実であり、$v$ のcross項は
+$\nu=(ax,a^{-1}y)$ に関するskew derivation $d$ となる。
+$u=(p+v)/2,w=(p-v)/2$ による書換えは全語を
+$x^iy^ju^kw^l$ で張る。H3の14641 Hilbert級数と個数が一致するため、これらは基底である。
+特に $T_a+T_av$ の二成分は独立に比較できる。
+
+補題\ref{lem:h3-order2-skew-derivation-resonance}に従い $v$ を $v-t$、$t\in(T_a)_1$ へ移すと、
+$a\ne-1$ では $d=0$、$a=-1$ では
+$d(x)=\alpha y^2,d(y)=\beta x^2$ とできる。
+外側の関係は依然として $v^2-p^2=\ell v+q_2$ の形である。
+前者では直接、後者では $d\nu+\nu d=0$, $d^2=0$ により
+\[
+ (v^2-p^2)t=\nu^2(t)(v^2-p^2)\qquad(t\in T_a)
+\]
+となる。右辺の表示と $T_a+T_av$ を比較すると
+$\ell\nu(t)=\nu^2(t)\ell$、すなわち
+$\ell t=\nu(t)\ell$ を得る。
+これは内部derivation $d_\ell=0$ だが、前補題の内部二列は全 $a$ で一次独立なので $\ell=0$。
+
+$a\ne-1$ なら残る条件は $q_2t=\nu^2(t)q_2$ であり、
+$u,w$ 表示は定理\ref{thm:h3-order2-Ore-base-deformations}の族そのものである。
+$a=-1$ なら $q_2$ は量子平面 $xy=-yx$ の中心二次、従って
+$q_2=\gamma x^2+\delta y^2$。
+これは定理\ref{thm:h3-order2-resonant-excluded}で全排除した族となる。
+逆符号の対角作用は $x,y$ を交換し $a$ を $-a^{-1}$ へ置き換えて同じ表示に移る。
+\end{proof}
+
 \begin{lemma}[単冪twist下の反標準三次関係の輸送]
 \label{lem:h3-unipotent-transport}
 $C$は左右noetherian quadratic Koszul AS4型14641で，$\mu_C$は半単純とする．
