@@ -1,4 +1,4 @@
-# 内在的非可換del Pezzo曲面と三次三様体のモジュライ
+# 内在的非可換del Pezzo曲面のモジュライとH3分類
 
 2026-11-16。GitHub mainが現行ソースの正本。最初に [研究方針](00_research_plan.md) を読む。逐次研究・約15分checkpoint・通常のmain保存については [AGENTS.md](AGENTS.md) に従う。GitHub Actions、force push、不要なPRを使わず、PDF・ZIP・中間生成物は追跡しない。GitHub保存成功時はLibraryに保存しない。
 
@@ -53,9 +53,9 @@ Cubic cornerでは四交比の11 determinant条件が有限性に必要十分で
 | 量子FermatのOU AS障害 | [quantum_fermat_not_as_surface.tex](papers/quantum_fermat_not_as_surface.tex) |
 | 次数1のrank・weighted sextic・候補族 | [nc_del_pezzo_degree1_moduli.tex](papers/nc_del_pezzo_degree1_moduli.tex)、[dP1方針](research/dp1_research_plan.md) |
 | 次数1の反標準モデル・導来比較 | [dp1_anticanonical_models.tex](papers/dp1_anticanonical_models.tex)、[再現](research/dp1_reproduction.md) |
-| 三次三様体と非可換P4 | [nc_cubic_threefold_moduli.tex](papers/nc_cubic_threefold_moduli.tex)、[研究ノート](notes/research_notes.md) |
+| 三次三様体と非可換P4（移管済み） | [独立研究リポジトリ](https://github.com/uedakazushi/nc-cubic-threefold-moduli) |
 
-量子FermatはHH_{−1}=HH_1=2、HH_0=5によりOU AS型でなく、intrinsic対象全体をOU/AOUの商と同一視できない。次数1の10次元dg候補族と全intrinsic abelian成分性は別問題。三次三様体の形式ambient37、中心対41、一般PGL商13/17、忘却fiber4という結果と、全大域stackの代数性・成分性も区別する。既存の全文・証明・必要計算は現行原稿に保持する。
+量子FermatはHH_{−1}=HH_1=2、HH_0=5によりOU AS型でなく、intrinsic対象全体をOU/AOUの商と同一視できない。次数1の10次元dg候補族と全intrinsic abelian成分性は別問題。三次三様体の形式ambient37、中心対41、一般PGL商13/17、忘却fiber4等の結果とその証明・計算は[独立リポジトリ](https://github.com/uedakazushi/nc-cubic-threefold-moduli)へ移管した。
 
 ## 手動再現
 
@@ -65,4 +65,4 @@ Cubic cornerでは四交比の11 determinant条件が有限性に必要十分で
     latexmk papers/nc_del_pezzo_hearts.tex
     latexmk papers/weak_cubic_axioms.tex
 
-旧共鳴・corner・H3・次数1・三次三様体の検算と依存関係は、それぞれの現行研究ノート・validation・再現手順を参照する。Python3（必要箇所はSymPy）、日本語LuaLaTeX・LuaTeX-ja・latexmkを使用する。PDF/SyncTeX/ログは `.latexmkrc` の出力先へ再生成し、Gitでは追跡しない。実行済みの検証と、原稿に証明があるだけの事項を区別する。
+旧共鳴・corner・H3・次数1の検算と依存関係は各現行研究ノート・validation・再現手順を参照する。三次三様体は独立リポジトリを参照する。Python3（必要箇所はSymPy）、日本語LuaLaTeX・LuaTeX-ja・latexmkを使用する。PDF/SyncTeX/ログは `.latexmkrc` の出力先へ再生成し、Gitでは追跡しない。実行済みの検証と、原稿に証明があるだけの事項を区別する。

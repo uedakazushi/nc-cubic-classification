@@ -16,7 +16,7 @@
 
 **研究の実行中、約15分ごと（前回の正常な保存・pushからの経過時間を目安）にcheckpointを設ける。30分ではなく15分である。** 個々の計算の安全な中断点を尊重しつつ、時間が来たら数学的内容の保全を優先する。
 
-1. 編集途中の数学を整理する。定理・仮定・証明の所在・未証明部分を整合させ、現在の研究方針、研究ノート、該当する日本語LuaLaTeX論文・計算資産へ**現行の正しい状態**を反映する。途中の着想も再開に必要で価値があれば、`notes/research_notes.md` または該当する研究ノートに**未検証**と明記して残す。
+1. 編集途中の数学を整理する。定理・仮定・証明の所在・未証明部分を整合させ、現在の研究方針、研究ノート、該当する日本語LuaLaTeX論文・計算資産へ**現行の正しい状態**を反映する。途中の着想も再開に必要で価値があれば、`research/cubic_14641_classification.md` または該当する研究ノートに**未検証**と明記して残す。
 2. 実行可能で関連する小規模な検算を行い、実行したものと未実行のものを区別する。時間のかかる全文組版・網羅検算を15分ごとに強制しない。完了した大きな数学的区切りでは、必要な組版・検算を確実に実施する。
 3. 変更が存在する場合、`git status` / `git diff` を確認して意味のあるcommitを作成し、**`main` に通常のfast-forwardでpush**する。`main` が他の更新で進んでいたらfetchし、変更を読んで両立する形にrebaseしてからpushする。force push、PR、GitHub Actionsは使わない。
 4. push後にリモート`main`のSHAを取得し、保存したcommitの到達を確認する。**ローカル生成、検証、commit、リモートpush成功は別の状態として扱う。** 変更がない場合は空commitを作らず、次の15分に向けて研究を継続する。
@@ -30,7 +30,7 @@
 開始時に次の順で現在の正本を読み、**古い会話・古いZIPを復元することを前提にしない**。
 
 1. `00_research_plan.md`（最初に読む）、本`AGENTS.md`、`research/cubic_14641_codex_plan.md`。
-2. `research/cubic_14641_classification.md`、`research/cubic_classification_validation.json` と `notes/research_notes.md` の該当部分。
+2. `research/cubic_14641_classification.md`、`research/cubic_classification_validation.json` と各現行研究ノートの該当部分。
 3. 中心論文 `papers/weak_cubic_axioms.tex` と、取り組む問題に必要な `papers/sections/*.tex`・計算コード。
 4. 必要に応じ他の現行論文・ノートを読む。再開に必要な新しい証明、文献情報、再現手順は**現行原稿とノートへ統合**し、会話のみに残さない。
 
@@ -73,14 +73,14 @@
 
 **1-periodic graded algebra、Zhang twist、4-periodic AS-regular Z-algebra、qgrの同値は区別する。** 非1周期的なZ-algebraの存在だけから本研究のintrinsic H3対象が得られると主張しない。逆に、graded AS4の部分分類だけで全Z-algebraが覆われると推論しない。Nakayama規約・右左作用・Gorenstein parameterも照合する。
 
-既存のheart/corner、Rains/VdB/AS/anticanonical heart比較、del Pezzo次数1、量子FermatのOU障害、三次三様体、Poisson側の成果を**削除・劣化させない**。それらの証明は既存の `papers/`、`papers/sections/`、`research/` と `notes/` に保持する。H3主目標に直接関係しない研究を漫然と並行着手して最優先問題を遅らせない。必要時のみ関連する成果を照合する。
+既存のheart/corner、Rains/VdB/AS/anticanonical heart比較、del Pezzo次数1、量子FermatのOU障害、Poisson側の成果を**削除・劣化させない**。それらの証明は現行の `papers/`、`papers/sections/`、`research/` に保持する。非可換三次三様体・P^4の成果は https://github.com/uedakazushi/nc-cubic-threefold-moduli へ移管済みであり、その成果は移管先を正本として参照する。H3主目標に直接関係しない研究を漫然と並行着手して最優先問題を遅らせない。必要時のみ関連する成果を照合する。
 
 ## 6. 正確性・原稿・再現性
 
 - 既知文献の定理と本研究の貢献、証明が原稿にあることと**今回実際に独立検証したこと**、symbolic exact computationと有限標本計算、条件付き定理・未証明の予想を明確に区別する。一次資料を確認せず文献の仮定や書誌を推測で補完しない。新規性未確認ならそのまま明記する。
 - 大きな結果の前提・依存する補題・証明箇所・未解決箇所を相互に一致させる。誤りが見つかったら、依存する主張・概要・研究方針を同時に訂正し、再発防止に役立つ反例だけをノートに残す。
 - 論文は原則**日本語LuaLaTeX**。現行の成果を理解しやすい順序に構成し、版ごとの追記を蓄積しない。正しい数学的内容や必要な証明を軽量化のために削除しない。
-- `00_research_plan.md` は再開用の簡潔な現在方針、`notes/research_notes.md` 等は論文外で必要な知識を保持する現行ノート。作業日誌・過去版・会話の複製を積み重ねない。再開に必要な未解決課題と着手方法を必ず明記する。
+- `00_research_plan.md` は再開用の簡潔な現在方針、`research/cubic_14641_classification.md` 等は論文外で必要な知識を保持する現行ノート。作業日誌・過去版・会話の複製を積み重ねない。再開に必要な未解決課題と着手方法を必ず明記する。
 - 証明を支える計算コード、最小限の入力・JSON証明書、再現手順を保持する。検証器の成功が数学全体の証明を代替するとは主張しない。未実行の検算を実行済みと報告しない。
 - `main` を正本とし、Git追跡は原則TeX・Markdown・必要なコード・入力・certificateに限定する。PDF・ZIP・TeX中間生成物・cache・バックアップ・変更履歴を追跡しない。latexmk設定を保ち、GitHub Actions・PR・force pushを使わない。
 - GitHubへのpushが成功した場合、Library保存を行わない。push失敗時のみ緊急避難としてLibrary保存を行う。Library上の旧ファイルを勝手に削除しない。

@@ -83,7 +83,7 @@ Cubic cornerの主原稿は `papers/cubic_heart_corner.tex`、ノートは `rese
 
 次数1は `papers/nc_del_pezzo_degree1_moduli.tex`、`papers/dp1_anticanonical_models.tex`、`research/dp1_research_plan.md`。内在的rank、条件付きweighted sextic認識、10次元dg候補族、KS、補助A∞表示成分、avatar復元を保持する。全intrinsic abelian成分性と特異/非局所自由境界は未完成。genuine smooth楕円gluingの全q導来比較は今回その証明と主要引用を点検したが、他の次数1の主張を一括して再検証したわけではない。
 
-三次三様体は `papers/nc_cubic_threefold_moduli.tex`、`notes/research_notes.md` と各sectionに保持する。相対Z-algebra fpqc stack、二次包絡と正規三次incidence、有限窓、周期忘却、形式成分を扱う。Rat(1,1,3)の非射影化Poisson/形式ambient37、中心対41、一般PGL商13/17、忘却fiber4と、全大域stackの代数性・成分性を区別する。可換cubic点の局所次元17・接空間20・ambient接写像の核10像10は一般fiber4と別。17係数slice、分離型余次元15、可換cubic忘却核7、混合中心、相対Picard、偶数Veronese等の既存全文・証明・計算を維持する。
+三次三様体と非可換P^4のモジュライ（相対Z-algebra、41次元中心対、17次元形式モデル、period-forgetting等）は[独立リポジトリ](https://github.com/uedakazushi/nc-cubic-threefold-moduli)に主原稿・全証明節・現在有効な研究ノート・検算コード・検証記録を移管した。H3の分類が必要とする場合にのみ、外部の特定commitの結果を引用する。
 
 ## VII. 再現と検証状態
 
