@@ -1,0 +1,99 @@
+\subsection{原始6乗根候補の三次normによる非整域性}
+\label{subsec:h3-order2-22-primitive6-nondomain}
+\begin{theorem}\label{thm:h3-order2-22-primitive6-nondomain}
+前節の$\lambda^2-\lambda+1=0$について、$AB\ne0$なら
+\[
+ R=B_{\lambda,\alpha,\beta}/(A x^3+B y^3)
+\]
+は全$\alpha,\beta$で整域ではない。
+従って対角curved chart全体のH3部分は、$\lambda=-1,\alpha=\beta=0$の既知符号族だけである。
+\end{theorem}
+\begin{proof}
+$R$が整域だと仮定して矛盾を導く。
+$u^6,x^6$は中心であり、$u,x^3$は$R$内で非零である。
+従ってそれらを逆転した環も整域となる。
+まず$u$を逆転した次数零部分に
+\[
+ X=xu^{-1},\qquad Y=yu^{-1},\qquad V=vu^{-1},\qquad\omega=\lambda^2
+\]
+を取る。元の六関係から厳密に
+\begin{gather*}
+ VX=\lambda XV,\quad VY=\lambda^{-1}YV,\\
+ XY-\omega YX=\lambda\alpha-\lambda\beta V^2,\qquad
+ A X^3+B Y^3=0
+\end{gather*}
+を得る。
+最後の式では$x^3u^{-3}=-X^3,y^3u^{-3}=-Y^3$を使った。
+
+\[
+ \delta=\frac{\lambda\alpha}{\omega-1}
+       =\frac{1-2\lambda}{3}\alpha,\qquad
+ \gamma=\frac{\lambda\beta}{\omega^{-1}-\omega}
+       =\frac{\lambda-2}{3}\beta,
+ \qquad C=YX+\delta+\gamma V^2
+\]
+と置くと
+\[
+ VC=CV,\qquad XC=\omega CX,\qquad YC=\omega^{-1}CY.
+\]
+切断前の$u$-chartは、可換基底$k[C,V]$の一般化Weyl代数である。
+具体的には
+\[
+ \sigma(C)=\omega C,\quad\sigma(V)=\lambda^{-1}V,\qquad
+ a_0=C-\delta-\gamma V^2,
+\]
+\[
+ YX=a_0,\quad XY=\sigma(a_0),\quad
+ Xf=\sigma(f)X,\quad Yf=\sigma^{-1}(f)Y
+\]
+となる。
+$C,V$の代数的独立性とこの表示の単射性は、元のPBW基底における
+$C^iV^j$の最高$x,y$次数と、$X$逆転後のLaurent標準語で確認できる。
+
+$\sigma^6=1$、$\sigma^3(a_0)=a_0$であり、三次normは
+\[
+ P=\prod_{j=0}^2\sigma^j(a_0)
+  =C^3-\delta^3-\gamma^3V^6-3\delta\gamma CV^2.
+\]
+これは非零かつ$\sigma$不変である。
+$X$を逆転すれば$Y=a_0X^{-1}$、$Y^3=PX^{-3}$となる。
+$r^3=-B/A$を選ぶと、切断関係は厳密に
+\[
+ X^6=r^3P
+\]
+へ移る。
+このmonic関係のLaurent商は$k[C,V,P^{-1}]$上で
+$1,X,\ldots,X^5$を基底に持つので、可換基底は切断後も単射である。
+可換基底の非零元の$\sigma$-normは中心であり、それらを逆転して
+$K=k(C,V)$へ移れる。整域の仮定の下ではこの局所化も整域でなければならない。
+得られる環は
+\[
+ L=K[X,X^{-1};\sigma]/(X^6-r^3P)
+\]
+で、$K$上6次元の同じmonic基底を持つ。
+
+ところが、$\sigma^2$による三次normも
+\[
+ a_0\sigma^2(a_0)\sigma^4(a_0)=P
+\]
+である。従って
+\[
+ Z=(r a_0)^{-1}X^2\in L
+\]
+と置くと$Z^3=1$であり、
+\[
+ (Z-1)(Z^2+Z+1)=0.
+\]
+両因子は非零である。
+実際、第一因子はmonic基底の次数0と2、第二因子は次数0と2と4に非零係数を持つ。
+よって$L$は整域ではなく、矛盾する。
+この議論は$\delta$や$\gamma$の非零性を仮定せず、全$\alpha,\beta$を同時に覆う。
+\end{proof}
+
+検証器は
+\[
+ \texttt{verify\_cubic\_order2\_22\_primitive6\_nondomain.py}
+\]
+である。Laurent語からのdehomogenization、一般化Weyl関係、二つの三次norm、
+6基底の乗法と二つの非零因子の零積を厳密再生する。
+三次normが実際の非零因子の零積を与えることが排除の核心である。

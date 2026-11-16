@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "version": "classification-v168",
+  "version": "classification-v169",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -79,7 +79,8 @@
     "papers/sections/cubic_order2_22_rank4_opposite_separated.tex",
     "papers/sections/cubic_order2_22_rank4_zero_top_unipotent.tex",
     "papers/sections/cubic_order2_22_rank4_zero_top_classification.tex",
-    "papers/sections/cubic_order2_22_curved_diagonal.tex"
+    "papers/sections/cubic_order2_22_curved_diagonal.tex",
+    "papers/sections/cubic_order2_22_primitive6_nondomain.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -1683,5 +1684,12 @@
       "H3 admissibility of primitive6 cuts",
       "new global component"
     ]
+  },
+  "order2_22_primitive6_nondomain_v169": {
+    "status": "PASS exact Laurent/GWA/norm identities and explicit nonzero zero-divisor factors",
+    "validator": "computations/verify_cubic_order2_22_primitive6_nondomain.py",
+    "certificate": "computations/cubic_order2_22_primitive6_nondomain_certificate.json",
+    "proof": "papers/sections/cubic_order2_22_primitive6_nondomain.tex",
+    "scope": "原始6乗根curved候補G=A x³+B y³も全alpha/betaで非整域と判定した。u/x逆転chartはk[C,V]上のorder6 GWA、a0=C−delta−gammaV²、3norm P=C³−delta³−gamma³V6−3delta gamma C V²。cutをX6=r³Pへ直し、sigma²の3normもPであるためZ=(r a0)^−1 X²がZ³1。monic6基底上でZ−1とZ²+Z+1がともに非零かつ零積なのでdomain仮定に矛盾する。従って対角curved全chartのH3は零tail/F−Iの既知signのみ。全非零toprank4の完成ではない。"
   }
 }

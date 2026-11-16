@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "scope": "every primitive6 cut A*x^3+B*y^3 with A*B!=0, all alpha,beta",
+  "dehomogenization": [
+    "VX=lambda*XV",
+    "VY=lambda^-1*YV",
+    "XY-lambda^2*YX=lambda*alpha-lambda*beta*V^2"
+  ],
+  "GWA_base": "k[C,V], sigma(C)=lambda^2*C, sigma(V)=lambda^-1*V",
+  "delta": "(1-2*lambda)*alpha/3",
+  "gamma": "(lambda-2)*beta/3",
+  "norm": "P=C^3-delta^3-gamma^3*V^6-3*delta*gamma*C*V^2",
+  "cut_ratio": "r^3=-B/A",
+  "localized_relation": "X^6=r^3*P",
+  "zero_divisor": "Z=(r*(C-delta-gamma*V^2))^-1*X^2; Z^3=1",
+  "nonzero_factor_supports": [
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      2,
+      4
+    ]
+  ],
+  "conclusion": "the localization has zero divisors; the cubic quotient cannot be a domain and cannot be H3",
+  "not_claimed": [
+    "global nonzero-top rank4 classification",
+    "all curved non-diagonal graphs"
+  ]
+}

@@ -1089,4 +1089,11 @@ A=SU⊗E+E⊗SV、PfA=detSU−detSV。可換側GL2のnormalized congruenceで非
 
 非零負topへ出る対角curved包絡[x,y]=alpha*u²+beta*v²、uv=-vu、u作用diag(lambda,lambda^-1)、v逆作用を全値でAS4/noeth/Koszul/domain・mu++--と認識した。全正常正三次核も判定。lambda±1の非零curvatureはWeyl中央化核零、lambda1零tailはfactor、lambda−1零tailは既知sign。新候補は原始6乗根lambda²−lambda+1=0のG=A x³+B y³、AB非零・tail非零だけで、正常核は全alpha/betaで厳密に2次元。商は正規正則AS-Gorenstein/μRIdだが、商domainとH3許容性は未判定。
 
-lambda原始6乗根でu逆転、X=x/u,Y=y/u,V=v/uと置くと、VX=lambda*XV,VY=lambda^-1*YV、XY−lambda²YX=lambda*alpha−lambda*beta*V²、切断A X³+B Y³=0となる見込み（未公開検証）。alpha0なら補助次数でAS3三次hypersurface coneとなり逆Hilbert非多項式→gl∞の頂点障害が使えそうである。beta0も対称。非零時はC=YX+delta+gamma V²、omega=lambda²、delta=lambda*alpha/(omega−1)、gamma=lambda*beta/(omega^-1−omega)でX C=omega C X、Y C=omega^-1 C YのGWA基底へ。3norm P=C³−delta³−gamma³ V6−3delta gamma C V²と見込む。cutでX³/Y³比を固定し、V↦−Vの二次crossed productからnormが非squareならdomainを示せそうだが、まだ採用しない。affinegl2は有限PI GWAの全閉局所模型の判定が必要。
+原始6乗根curved候補G=A x³+B y³も全alpha/betaで非整域と判定した。u/x逆転chartはk[C,V]上のorder6 GWA、a0=C−delta−gammaV²、3norm P=C³−delta³−gamma³V6−3delta gamma C V²。cutをX6=r³Pへ直し、sigma²の3normもPであるためZ=(r a0)^−1 X²がZ³1。monic6基底上でZ−1とZ²+Z+1がともに非零かつ零積なのでdomain仮定に矛盾する。従って対角curved全chartのH3は零tail/F−Iの既知signのみ。全非零toprank4の完成ではない。
+
+
+## 原始6乗根normal cutの全非整域性（classification-v169）
+
+原始6乗根curved候補G=A x³+B y³も全alpha/betaで非整域と判定した。u/x逆転chartはk[C,V]上のorder6 GWA、a0=C−delta−gammaV²、3norm P=C³−delta³−gamma³V6−3delta gamma C V²。cutをX6=r³Pへ直し、sigma²の3normもPであるためZ=(r a0)^−1 X²がZ³1。monic6基底上でZ−1とZ²+Z+1がともに非零かつ零積なのでdomain仮定に矛盾する。従って対角curved全chartのH3は零tail/F−Iの既知signのみ。全非零toprank4の完成ではない。
+
+局所化前後のbase単射はGWAのLaurent/monic6基底で証明する。K=k(C,V)へは非零係数のsigma6normという中心元を逆転して移る。r³=−B/A、X6=r³P。sigma³a0=a0によりsigma²norm3=P、Z³1。Lの係数field上の支持{0,2}/{0,2,4}が両因子の非零を保証する。次数2の部分crossed productだけを見てRのdomainを予想するのは誤りであり、実際の3normが全候補を排除した。頂点Extやaffineglを調べる必要はこの候補ではなくなった。次は非対角F=±Jのcurved chart：positive shear invariantsのU次数filtrationでGが共通一次因子を持ちそうである（未証明）。
