@@ -1,0 +1,103 @@
+\subsection{混合関係数2の$(2,2)$領域には単冪部分がない}
+\label{subsec:h3-order2-22-rank2-unipotent}
+\begin{lemma}\label{lem:h3-order2-22-rank2-unipotent-rigidity}
+$C$をnoetherian quadratic Koszul AS4型14641の整域とし、
+$\mu_C$は半単純で固有値$+1,-1$を重複度$(2,2)$で持ち、奇二次関係数は2とする。
+$\mu_C$と可換な単冪graded自己同型$H$は恒等である。
+ここでは正規三次の存在を仮定しない。
+\end{lemma}
+\begin{proof}
+必要pencil被覆の証明は、半単純中山・Frobenius対合・関係数・整域性だけを使い、
+$G$を使っていないので、この$C$にも適用される。
+$ruling$型はAS4整域自体から排除済みである。
+従ってpure mixed、secant、tangentの三場合を調べればよい。
+
+pure mixedの場合、必要表示の分類部分
+（定理\ref{thm:h3-order2-22-pure-exclusion}で正常核を調べる前の部分）により、
+二つの係数行列は$p=I,q=\operatorname{diag}(1,z)$、
+$z=-1,i,-i$のいずれかである。
+$H$は二つの純mixed関係直線を保ち、単冪なので各線を点ごとに固定する。
+$H_U=T,H_V=S$と書けば
+\[
+ TS^t=I,\qquad SqT^t=q.
+\]
+従って$T^t$は相異なる固有値を持つ$q$と可換し、対角かつ単冪なので$T=I$、$S=I$である。
+
+secantの場合、$E\subset U\otimes V$にはrank-one tensorの直線がちょうど二本ある。
+$H$の生成する連結単冪群はこの有限集合を点ごとに固定する。
+従って$H_U,H_V$はそれぞれ二軸を保つ対角単冪であり、いずれも恒等である。
+この議論はcross blockの階数によらない。
+
+tangentの場合、唯一のrank-one点$xu$を固定するので
+\[
+ H(x)=x,\quad H(y)=y+\beta x,\quad
+ H(u)=u,\quad H(v)=v+\eta u
+\]
+と書ける。
+$E=(xu,xv+yu),F=(ux,uy-vx)$の基底上では
+\[
+ P=\begin{pmatrix}1&\beta+\eta\\0&1\end{pmatrix},\qquad
+ Q=\begin{pmatrix}1&\beta-\eta\\0&1\end{pmatrix},\qquad
+ g\longmapsto QgP^{-1}.
+\]
+可逆cross blockの必要表示では
+$g=\left(\begin{smallmatrix}0&-1\\1&0\end{smallmatrix}\right)$であり、
+$QgP^{-1}=g$から$\beta=\eta=0$となる。
+退化境界のAS4整域として可能な必要表示は、
+定理\ref{thm:h3-order2-22-tangent-total-exclusion}の$G$を使わない関係認識部分により
+$g=\epsilon I$、正平面は可換、$u^2=\alpha x^2+\delta y^2$、$\delta\ne0$に限る。
+この場合はgraph不変性から$\eta=0$、平方関係の不変性から
+\[
+ \delta(2\beta xy+\beta^2x^2)=0.
+\]
+$x^2,xy$は可換AS2平面で独立なので$\beta=0$となる。
+全ての場合に$H$は全生成元を固定する。
+\end{proof}
+
+\begin{theorem}\label{thm:h3-order2-22-rank2-no-Jordan}
+noetherian quadratic Koszul AS4型14641の整域$B$の中山半単純部分が
+固有値$+1,-1$を重複度$(2,2)$で持ち、その半単純部分による奇二次関係数が2なら、
+$\mu_B$自身が半単純である。
+従ってこれまでの混合関係数2の被覆・排除は、この重複度の全Jordan型を含む。
+\end{theorem}
+\begin{proof}
+$\mu_B=\mu_s\mu_u$をJordan分解する。
+$\mu_u$は$\mu_s$の二つの二次元空間を保つので、
+$N=\mu_u|_{B_1}-I$は$N^2=0$を満たす。
+$H=I+N/4$と置くと$H^4=\mu_u|_{B_1}$である。
+これは$B$のgraded自己同型を定める。
+実際、$I+tN$は整数$t$で$\mu_u^t$に等しく二次関係を保つので、
+関係保存の多項式恒等式は全$t\in k$で成り立つ。
+逆写像は$I-tN$である。
+
+右Zhang twist $C=B^H$を取る。
+$H$のKoszul top上の作用も単冪なのでhomological determinantは1であり、
+本稿の右twist規約による公式
+（\S\ref{sec:as4-h3-reductions}、\cite[Theorem 0.3]{RRZ}）は
+\[
+ \mu_C=\mu_BH^{-4}=\mu_s
+\]
+を与える。指数は$-4$である。
+$C$もnoetherian quadratic Koszul AS4整域であり、
+$H$は$C$の自己同型でもある。
+二次関係は$\mathcal R_C=(1\otimes H^{-1})\mathcal R_B$で、
+$H$は$\mu_s$と可換なので、奇関係数も2のままである。
+$H$は$\mu_C$と可換な単冪自己同型なので、前補題から$H=I$となる。
+従って$\mu_u=I$である。
+この証明は$G$のtwist下の輸送や、twist後のH3性を仮定していない。
+\end{proof}
+
+\begin{corollary}\label{cor:h3-order2-22-rank2-all-Jordan-coverage}
+重複度$(2,2)$・奇関係数2の全H3候補は、全Jordan型を含めて、
+前節の非共鳴可逆secant必要曲面で被覆される。
+非半単純の残課題は、同じ重複度では奇関係数4の領域に限られる。
+\end{corollary}
+\begin{proof}
+前定理で半単純となるので、既証明の全pencil被覆と排除を適用する。
+\end{proof}
+
+\texttt{verify\_cubic\_order2\_22\_rank2\_unipotent.py}は
+二つのtangent stabilizer、pure mixedの相異なる固有値の中央化条件、
+平方関係の不変式、四分根と右twistの$-4$指数を厳密検証する。
+必要被覆の$G$非依存性と、有限rank-one点集合への単冪作用の消滅は本文の構造証明である。
+追加のas4全被覆定理は輸入していない。

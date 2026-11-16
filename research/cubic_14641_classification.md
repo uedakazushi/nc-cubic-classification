@@ -998,4 +998,15 @@ rho−1/2特殊fibreの全値正常核はv152でpublic証明書へ統合して�
 
 再現python computations/verify_cubic_order2_22_secant_resonant.py、入力cubic_order2_22_secant_resonant_input.json、同prefixcertificate。今回通常SymPy backendでPASS。rho特殊fibre全点を排除したので残る必要曲面はsmooth nonresonantconic部分、AS4十分性/H3認識と全正常核は未解決。
 
-次の具体的補題案：mu semisimple (+,+,-,-),oddR2のnoethAS4domain Cに非自明unipotent autoがないことを示せる見通し。secant E pencilは二rank1点を持ち、unipotentは両U/Vaxes固定でId。puremixedはpI/qdiag(1,r),r=-1,+-iの同時stabilizerがtorusでId。tangent fullrank gJはunipotent upper P/Q stabilizerからp=q0。tangent degenerate g=epsilonI/Dunitはnegative shear0、positive y->y+beta xだけ残るがu²=alpha x²+delta y²,deltaunitからbeta0。ruling/noethAS4domain外等は既証明。これをGを使わない必要被覆として厳密に確認し、mu_Uの四分根でC=B^H,muC=muB H^-4=muSsを作ればH∈AutC unipotent、HIdより元muもsemiとなる。現在は未証明案として保持し、次にstabilizer恒等式とuntwist適用を検証する。右twistの指数は必ず−4であり+4へ取り違えない。
+単冪持上げの補題案はv153で証明・全stabilizer検証を完了した。右twistの指数−4を用い、Gを輸送せずAutCの単冪を排除する。下記現行定理を参照。
+
+
+## (2,2) mixed rank2の全Jordan型も半単純（classification-v153）
+
+**全体的なスペクトル制約（classification-v153）**：全(1,3)は幾何学的被覆・必要十分H3判定・全矢/慣性まで確定、全(3,1)は全Jordan型込みで空。(2,2)/mixed rank2でも全Jordan型を半単純へ帰着した。半単純AS4 domainのG非依存pencil被覆から、muを保つ単冪autoはpuremixed/simple-eigen stabilizer、secant二rank1点、tangent upper stabilizerと平方関係の各場合で恒等。元Bのmu_U四分根H=I+(mu_U−I)/4でC=B^H,muC=muB H^-4=muSsを作り、H∈AutCからHId。従って全rank2候補は非共鳴可逆secantのsmooth2dim必要曲面rho*C²+(2rho+1)(2rho*ell²+1)=0、rho(rho+1)(2rho+1)(2rho*ell²+rho+1)unitで被覆。全曲面正常G/AS4十分性は未分類。次は非共鳴conic chartと補sectionの正常incidence。mixed rank4三型/非半単純rank4、三固有値以上、全CY被覆、全成分/圏族降下は未完。
+
+原稿lem:h3-order2-22-rank2-unipotent-rigidity,thm:h3-order2-22-rank2-no-Jordan,cor:h3-order2-22-rank2-all-Jordan-coverage。必要pencil被覆/必要Schur正規化はG存在を使わずnoeth quadratic Koszul AS4 domainにも有効であることを明示。H commute muC unipotentならU/Vを保つ。puremixedはpI/qdiag(1,z),z−1,+-iの両lineをpointwise固定し、T^t q=q T^t、simple eigenでTdiagonalunipotentId。secant Eの二rankone点はconnected unipotent closureでpointwise固定、両U/VaxesよりHId。tangentはx/u固定,y->y+beta x,v->v+eta u。E/F uppermatP(beta+eta),Q(beta−eta)、gJ固定はbeta=eta0、gepsilonI固定はeta0。後者のdomain必要関係u²=alpha x²+delta y²,deltaunitとpositivecommから2delta beta xy+delta beta²x²0でbeta0。rulingはAS4domain外。全caseでHId。
+
+元Bでmu=muSs muU、blocks2+2なのでN=muU−I,N²0。H=I+N/4は整数nでI+nN=muU^nのrelation保存がpolynomialnとして全nへ延長されautoB、H4muU。右twist C=B^Hはnoeth/Koszul/AS4/domainを保存しmuC=muB H^-4=muSs、oddRdim2もid⊗H^-1で保存。HはC autoかつmuCと可換unipotentなのでrigidityからHId、muUsemi消滅。G輸送/右twist後のH3性は使わない。RRZ既存右twist公式を明示し新規as4被覆は輸入しない。
+
+verify_cubic_order2_22_rank2_unipotent.py/certificateが両tangent upper stabilizer、puremixed centralizer、square-invariance、二Jordanblockのfourth-root/−4 formulaをexact PASS。既存必要被覆のG非依存性とfinite rank1点への単冪作用は本文構造証明。これで(2,2) mixed rank2の非半単純残余はなく、mu1±のこの領域は全てv151–152の必要曲面へ。mixed rank4/Jordanと他スペクトルは依然未分類。

@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "scope": "all noetherian quadratic Koszul AS4 domains with Nakayama semisimple spectrum (+,+,-,-) and odd quadratic relation rank2",
+  "exact_checks": [
+    "tangent full-rank upper stabilizer",
+    "tangent degenerate upper stabilizer and square-invariance obstruction",
+    "pure-mixed distinct-eigenvalue centralizer",
+    "unipotent fourth-root and right-twist exponent -4"
+  ],
+  "structural_proofs": [
+    "secant pencil has two rank-one points, forcing trivial unipotent action",
+    "G-independent necessary pencil/domain reductions cover all semisimple bases",
+    "right Zhang untwist preserves odd relation rank and produces an unipotent automorphism of the semisimple base"
+  ],
+  "conclusion": "Nakayama is necessarily semisimple throughout the odd-rank-two (2,2) sector",
+  "not_claimed": [
+    "odd-rank-four Jordan sector",
+    "remaining secant normal cubic classification",
+    "all H3 classification"
+  ]
+}
