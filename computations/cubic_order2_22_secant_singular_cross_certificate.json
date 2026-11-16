@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "scope": "all rank2-cross symmetric secant boundary, rho=+/-1, A=(-c,-c,0,b,c,c), b arbitrary, c!=0",
+  "odd_relation_basis": "columns 0,1,2,4 of alternating top; basis minor4c2 and exact C*T=O over QQ[b,c,c^-1]",
+  "quartic_quotient_dimension": 35,
+  "selected_functional_poles": "only c=0",
+  "normal_rank10_minor": "-32*c5 after row denominator clearing",
+  "conclusion": "unit normal10minor annihilates all normal positive cubics modulo original cubic relations; AS4 positive B3 dimension10 implies no normal cubic. No H3 anywhere on this two-parameter boundary.",
+  "not_claimed": [
+    "AS4 sufficiency of atlas",
+    "nondegenerate positive secant full-cross plus",
+    "global H3 classification",
+    "intrinsic relative descent",
+    "independent peer review"
+  ]
+}

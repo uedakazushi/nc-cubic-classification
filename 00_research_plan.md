@@ -40,7 +40,7 @@ Rains・VdB・AS・anticanonical heartの一般次数比較は [nc-dp-surface-he
 
 **全体的なスペクトル制約（classification-v186）**：全(1,3)は幾何学的被覆・H3必要十分条件・全矢まで確定、全(3,1)は全Jordan型込みで空。(2,2) mixed rank2も全Jordan型込みで空。mixed rank4のcanonical正top P0全体は、退化境界と全Jordan型込みで固定非CY符号族へ完全に幾何学的認識、一般dim2/inertia mu2²。canonical負topQ0は全Jordan型込みで曲がったClifford族に認識。未知の(2,2)はP,Qとも非零で、Pはcomm⊙平方/comm⊙非退化quadの二型。(2,2)/mixed rank4の全H3は実際に半単純。負tangent/非対称型も全排除され、非零Qの未知は対称secant型だけ。三固有値以上、全CY被覆、全成分・intrinsic族降下は未完。
 
-**次の核心（classification-v190）**：平方正top/対称secant型の全境界z5=0を排除し、既存の主chart・負Pfaffianと合わせ、この型全体にH3がないことを証明。三有理曲線の二minor gcd cover、Gaussian/三次根の厳密再消去、唯一の原始六乗根正常pencilの明示的一次因子写像で全値を覆う。次は非退化正topの正Pfaffian三param quadricとrank2secant境界A=(-c,-c,0,b,c,c),c!=0。全CY/三固有値以上/成分/相対降下は未完。
+**次の核心（classification-v191）**：対称secant負topのrank2混合block境界を全二パラメータで排除。最高テンソルの像の四列はminor4c²で全c非零の関係基底となり、正常10minorが−32c5というLaurent単元。平方正topは既に全排除なので、両top非零のmixed4(2,2)に残る未知は非退化正top/対称secant負top/正Pfaffian/混合block可逆の必要quadricだけ。全CY/三固有値以上/成分/相対降下は未完。
 
 既存の主要な構造結果を維持する：
 

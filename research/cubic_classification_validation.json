@@ -1999,5 +1999,13 @@
     "certificate": "computations/cubic_order2_22_secant_square_boundary_certificate.json",
     "proof": "papers/sections/cubic_order2_22_secant_square_boundary.tex",
     "scope": "平方正top/対称secant型の全境界z5=0を排除し、既存の主chart・負Pfaffianと合わせ、この型全体にH3がないことを証明。三有理曲線の二minor gcd cover、Gaussian/三次根の厳密再消去、唯一の原始六乗根正常pencilの明示的一次因子写像で全値を覆う。次は非退化正topの正Pfaffian三param quadricとrank2secant境界A=(-c,-c,0,b,c,c),c!=0。全CY/三固有値以上/成分/相対降下は未完。"
+  },
+  "order2_22_secant_singular_cross_v191": {
+    "status": "PASS exact two-parameter Laurent-unit minor and original top-image basis; no independent peer review",
+    "validator": "computations/verify_cubic_order2_22_secant_singular_cross.py",
+    "input": "computations/cubic_order2_22_secant_singular_cross_input.json",
+    "certificate": "computations/cubic_order2_22_secant_singular_cross_certificate.json",
+    "proof": "papers/sections/cubic_order2_22_secant_singular_cross.tex",
+    "scope": "対称secant負topのrank2混合block境界を全二パラメータで排除。最高テンソルの像の四列はminor4c²で全c非零の関係基底となり、正常10minorが−32c5というLaurent単元。平方正topは既に全排除なので、両top非零のmixed4(2,2)に残る未知は非退化正top/対称secant負top/正Pfaffian/混合block可逆の必要quadricだけ。全CY/三固有値以上/成分/相対降下は未完。"
   }
 }

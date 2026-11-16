@@ -1,0 +1,44 @@
+\subsection{対称secant型の特異混合blockも全排除}
+\begin{proposition}
+非退化正topと対称secant負topの必要atlasで、混合block $M$ のrankが2となる境界にはH3対象はない。
+\end{proposition}
+\begin{proof}
+前の必要atlasで $\rho=\pm1$ は同値なので $\rho=1$ とする。
+二つの偶関係と奇blockは
+\[
+ [x,y]+u^2+v^2=0,\quad xy+yx+u^2-v^2=0,\quad
+ A=(-c,-c,0,b,c,c),\quad c\ne0.
+\]
+ここで $b$ は任意であり、$c$ も正規化で消去しない。
+$UV=(xu,xv,yu,yv)$、$VU=(ux,uy,vx,vy)$ の順序で
+\[
+ M=\begin{pmatrix}0&0&0&0\\0&0&0&-2\\-2&0&0&0\\0&0&0&0\end{pmatrix},\quad
+ O=\begin{pmatrix}A&M\\-M^t&\tau(A)\end{pmatrix}.
+\]
+$O$ の列番号 $0,1,2,4$ は次の行列をなす：
+\[
+ C=\begin{pmatrix}
+ 0&-c&-c&0\\c&0&b&0\\c&-b&0&-2\\0&-c&-c&0\\
+ 0&0&2&0\\0&0&0&c\\0&0&0&-c\\0&2&0&-b
+ \end{pmatrix}.
+\]
+行番号 $0,1,2,4$ のminorは $4c^2$。
+さらに $C T=O$ となる $T$ が $k[b,c,c^{-1}]$ 上存在することを直接検証する。
+従ってこの四列が全値で元の奇関係空間の基底であり、$M$ の逆行列は使っていない。
+
+この六二次関係を四次語へ全挿入して得る商汎関数から、
+正自由三次32語の正常行列を作る。使用する汎関数の分母は $c$ の冪だけである。
+行分母を払った行列の一つの10minorは、全係数恒等式として
+\[
+ -32c^5
+\]
+となる。これはatlas上の単元である。
+写像は全三次関係を消すので、AS4候補の正三次商次元10と合わせれば正常核は零となる。
+従って全 $b$、全 $c\ne0$ でH3の正常三次は存在しない。
+$\rho=-1$ への同値も合わせて特異混合block全体を排除する。
+
+\texttt{verify\_cubic\_order2\_22\_secant\_singular\_cross.py}
+は元の最高テンソルからの関係抽出、$C T=O$、全四次関係を消す汎関数恒等式、
+使用関数の極と単元minorを入力から厳密再生する。
+必要atlasの全点にAS4十分性を主張する計算ではない。
+\end{proof}

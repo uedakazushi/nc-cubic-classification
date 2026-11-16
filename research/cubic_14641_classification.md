@@ -1271,3 +1271,9 @@ canonical負topQ0の(2,2)/mixed rank4全H3を、全Jordan型込みで曲がっ�
 平方正top/対称secant型の全境界z5=0を排除し、既存の主chart・負Pfaffianと合わせ、この型全体にH3がないことを証明。三有理曲線の二minor gcd cover、Gaussian/三次根の厳密再消去、唯一の原始六乗根正常pencilの明示的一次因子写像で全値を覆う。次は非退化正topの正Pfaffian三param quadricとrank2secant境界A=(-c,-c,0,b,c,c),c!=0。全CY/三固有値以上/成分/相対降下は未完。
 
 証明cubic_order2_22_secant_square_boundary.tex。s!=0ではa0にshear正規化しw=t+s、s=(w-w^-1)/2,t=(w+w^-1)/2の一curve、s0ではt±1/a任意の二line。正常10minor二本と使用汎関数の極から有限例外はconicのw²+1,w²±w+1と二lineのa0だけ。Gaussianと原始三乗根及びa0は正常核零。原始六乗根は核2で、r²=-3としてQ2=(-3r theta²+2r)x²-r theta(xy+yx)+2r theta²y²-3(theta²+theta)uv+3(theta²-theta)vuが(x+theta y)との積を正常にする。theta係数span2を厳密検証しproperな射影比例incidenceで全正常pencilを覆う。二次体の共役も同時に覆い、全cutに一次因子。新規性/独立査読未確認。
+
+## 対称secant特異混合blockの全排除（classification-v191）
+
+対称secant負topのrank2混合block境界を全二パラメータで排除。最高テンソルの像の四列はminor4c²で全c非零の関係基底となり、正常10minorが−32c5というLaurent単元。平方正topは既に全排除なので、両top非零のmixed4(2,2)に残る未知は非退化正top/対称secant負top/正Pfaffian/混合block可逆の必要quadricだけ。全CY/三固有値以上/成分/相対降下は未完。
+
+証明cubic_order2_22_secant_singular_cross.tex。rho1のatlas A=(-c,-c,0,b,c,c)を保持し、cを消す誤った正規化を用いない。交代8block Oの列0,1,2,4をCとし行0,1,2,4のminor4c²とC*T=Oを厳密検証。元六二次関係から四次商を消去すると一般次元35、正常32列に一つの10minor−32c5、実使用汎関数はc冪だけを分母とする。よって全値でrank10、AS4正三次次元10から正常核零。既存v149のrank2「奇関係」境界とは異なるため、新verifierをsecant_singular_crossと命名して区別。次はrho(rho²−1)!=0でalpha=(rho−1)/(rho+1)、A=(a,-t,alpha*s,s,t,q)、a*q+t²+alpha*s²=1−rho²。q!=0を正torusでq1とした三param chartと、q0の境界を保持して判定する。
