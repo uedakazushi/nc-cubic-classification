@@ -1,0 +1,149 @@
+\subsection{可換正平面を別々に正規化する二つの負生成元}
+\label{subsec:h3-order2-22-rank4-separated-commutative}
+\begin{theorem}[全$\operatorname{GL}_2$のseparated chartのH3判定]
+\label{thm:h3-order2-22-rank4-separated-commutative}
+$F\in\operatorname{GL}(U)$、$D=\det F$、$U=\langle x,y\rangle$とし、
+\[
+ B(F)=k[x,y]\langle u,v\rangle/
+ \bigl(ut-F(t)u,\ vt-F^{-1}(t)v,\ vu+Duv:\ t=x,y\bigr)
+\]
+と置く。全$F$でこれはnoetherian quadratic Koszul AS4型14641の整域であり、
+$\mu=(+,+,-,-)$を持つ。
+この族にH3切断が存在する必要十分条件は$F=-I$である。
+そのとき全admissible切断・幾何学的矢は、
+定理\ref{thm:fixed-sign-classification}の固定非CY符号包絡の分類そのものである。
+従ってこの全chartのH3部分は既知の二次元幾何学的分枝に帰着する。
+全rank4 graphがこのchartで覆われるとは主張しない。
+\end{theorem}
+\begin{proof}
+$S=k[x,y][u;F]$とし、$\sigma|_{k[x,y]}=F^{-1}$、$\sigma(u)=-Du$と置くと、
+$B(F)=S[v;\sigma]$である。
+二回の自己同型Ore拡大から表示した存在・整域性・noetherian・Koszul・AS4性を得る。
+中山公式は
+\[
+ \mu|_U=I,\qquad\mu(u)=(-D)^{-1}D u=-u,\qquad
+ \mu(v)=D^{-1}(-D)v=-v
+\]
+となる。$P=Q=0$で四次元mixed graphを持つ。
+
+H3に必要な$G$は正三次部分にあり、そのPBW表示は
+\[
+ G=H_3(x,y)+a(x,y)u^2+b(x,y)uv+c(x,y)v^2
+\]
+となる。$a,b,c\in U$である。
+各関係は$u,v$の個別次数を保存するので、正常方程式はこの四成分ごとに分かれる。
+$G$が$x,y$と可換する条件から、$a\ne0$または$c\ne0$なら$F^2=I$が必要である。
+$Gu=-uG,Gv=-vG$を比較すると、必要な正正常核は厳密に
+\[
+ \ker(\operatorname{Sym}^3F+I)
+ \ \oplus\ \ker(F-DI)uv
+ \ \oplus\
+ \begin{cases}
+  \ker(F+I)u^2\oplus\ker(F+I)v^2,&F^2=I,\\
+  0,&F^2\ne I
+ \end{cases}
+\]
+となる。
+実際、$uv$成分の条件は$F(b)=Db$であり、
+$u^2,v^2$の条件は$F(a)=-a,F(c)=-c$である。
+$F^2=I$なら$D^2=1$なので他方の負生成元の正常方程式も自動的に満たす。
+
+$F^2=I$では$F=I,-I$または反射である。
+$F=I$の核は$Uuv$で、全元が積に分かれる。
+反射を$F(x)=x,F(y)=-y$とすれば、三次部分と残る全一次係数は$y$で割れ、
+全$G$が$y$を一次因子に持つ。
+$F=-I$の場合だけ、四次元の二元三次式と四つの平方項を合わせた8次元核が残る。
+
+次に$F^2\ne I$とする。
+\[
+ \det(F-DI)=D\det(F-I)
+\]
+なので、$F$が固有値1を持たなければ$uv$成分は零となる。
+残る$G$は可換二元三次式であり、代数閉体上で一次因子へ分解する。
+固有値が$1,\lambda$と相異なる場合、$F=\operatorname{diag}(1,\lambda)$と選ぶと、
+$H_3$の$x^3$係数は零で、$uv$係数は$y$の倍となる。
+従って再び$G$は$y$で割れる。
+固有値1が重根の非自明Jordanの場合、$\operatorname{Sym}^3F$も単冪なので
+$H_3=0$であり、$G=buv$は積に分かれる。
+これで全$F$を尽くした。
+全ての排除は非零の一次因子と二次因子を与え、$B(F)/(G)$の整域性に反する。
+
+$F=-I$は$q_{01}=1$、他の五係数が$-1$の符号包絡に一致する。
+定理\ref{thm:fixed-sign-classification}の必要十分H3判定を適用すれば十分性と全矢も得られる。
+これは既知族への認識であり、新しい成分性や族降下の主張ではない。
+\end{proof}
+
+逆に、可換正平面と量子負平面$uv=qvu$を持ち、
+$u,v$がそれぞれ正平面を自己同型$f,g$で正規化するseparated graphを考える。
+PBWと結合則から$fg=gf$であり、実際の中山が$(+,+,-,-)$なら
+Ore公式から$fg=I,q=-(\det f)^{-1}$を得る。
+従ってこの条件下の全候補は上の$B(F)$に含まれる。
+mixed graphが$u,v$を混合する場合は含めていない。
+
+\begin{proposition}[Jordan負平面のseparated chartは空]
+\label{prop:h3-order2-22-rank4-separated-Jordan}
+可換正平面を$ut=F(t)u,vt=F(t)v$で正規化し、
+$vu-uv=\kappa u^2$、$\kappa\ne0$とするAS4包絡には、
+中山半単純部分が$(+,+,-,-)$ならH3切断は存在しない。
+\end{proposition}
+\begin{proof}
+これは$S=k[x,y][u;F]$上のOre拡大で、
+$\sigma|_U=F,\sigma(u)=u,\delta|_U=0,\delta(u)=\kappa u^2$となる。
+中山公式から$\mu|_U=F^{-2}$、$\mu(u)=D u$である。
+仮定から$D=-1$で、$F$の固有値の平方はともに1である。
+従って二固有値は相異なる$1,-1$で、$F^2=I$かつ$F$は反射である。
+$F(x)=x,F(y)=-y$と取れば$y$は正規で、
+$B/(y)=k[x,u][v;\delta]$は通常微分Ore整域である。
+必要な$Gu=-uG$をこの商へ移し、$v$最高次数を比較すれば$G$の像は零となる。
+従って$G$は$y$で割れ、整域商を与えない。
+$\mu(v)$の単冪補正を求める必要はなく、twist後のH3性も仮定していない。
+\end{proof}
+
+一般にJordan負平面$vu-uv=\kappa u^2$があり、
+$u,v$が別々の自己同型$f,g$で可換正平面を正規化する場合でも、
+PBWにおける$vut$の比較から$gf=fg$と$gf=f^2$を得るので、$g=f$となる。
+従って量子・Jordan標準形のそれぞれで負生成元が正平面を別々に正規化する全chartは、
+上述の二結果で尽くされる。
+
+
+\begin{corollary}[可換正平面separated chartの全Jordan型]
+\label{cor:h3-order2-22-rank4-separated-all-Jordan}
+中山半単純部分が$(+,+,-,-)$の全AS4候補のうち、
+正平面が可換で、負平面の量子・Jordan標準生成元がそれぞれ正平面を別々に正規化するものについて、
+全Jordan型を含めたH3部分は固定符号包絡に一致する。
+\end{corollary}
+\begin{proof}
+Jordan負平面は前命題で排除済みである。
+量子負平面では$ut=f(t)u,vt=g(t)v,uv=qvu$と書く。
+結合則とPBWから$fg=gf$であり、Ore公式は
+\[
+ \mu|_U=(fg)^{-1},\qquad
+ \mu(u)=q\det(f)u,\qquad
+ \mu(v)=q^{-1}\det(g)v
+\]
+を与える。従って$fg$は単冪で、二つの負固有値は厳密に$-1$である。
+$fg=I$なら既に扱った$B(F)$となる。
+
+$fg\ne I$とする。必要な$G$は依然として
+$H_3+a u^2+buv+c v^2$の形で、正平面上の正常化作用は$fg$である。
+可換正平面の整域性から、$H_3\ne0$なら$fg=I$、
+$a\ne0$または$c\ne0$なら$f^2=fg$または$g^2=fg$、従って$f=g$となる。
+よって$f\ne g$なら$G=buv$は積である。
+
+$f=g$なら$f^2$は非自明単冪である。
+二次元なので$f$の固有値は両方1または両方$-1$で、$\det f=1$となる。
+負固有値の式から$q=-1$である。
+$f$が非自明単冪なら反交換方程式は$a=c=0$、$b$はその固定一次直線に入ることを与える。
+$f$が$-1$固有値の非自明Jordanなら$b=0$、$a,c$は共通の$-1$固有一次直線に入る。
+どちらも$G$は一次因子を持ち、整域商にならない。
+これで正側Jordanも含めて全てを尽くす。
+\end{proof}
+
+
+検証器は
+\[
+ \texttt{verify\_cubic\_order2\_22\_rank4\_separated\_commutative.py}
+\]
+であり、全行列の行列式恒等式、三次作用、Jordan重根と三つの対合型、
+中山の二スカラー式を厳密再生する。
+正常核の各成分比較と因数分解は本文の証明である。

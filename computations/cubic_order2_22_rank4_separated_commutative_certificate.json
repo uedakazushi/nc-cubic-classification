@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "scope": "commutative positive plane with separated quantum/Jordan negative generators, including all Nakayama Jordan types",
+  "family": "ut=F(t)u, vt=F^-1(t)v, vu=-det(F)*uv",
+  "mu": [
+    "x",
+    "y",
+    "-u",
+    "-v"
+  ],
+  "kernel": "ker(Sym^3 F+I) + ker(F-det(F)I)*uv; if F^2=I add ker(F+I)*u^2 and ker(F+I)*v^2",
+  "involutive_kernel_dimensions": [
+    {
+      "F": "identity",
+      "cubic_U_kernel": 0,
+      "u_square_kernel": 0,
+      "v_square_kernel": 0,
+      "uv_kernel": 2,
+      "total": 2
+    },
+    {
+      "F": "negative_identity",
+      "cubic_U_kernel": 4,
+      "u_square_kernel": 2,
+      "v_square_kernel": 2,
+      "uv_kernel": 0,
+      "total": 8
+    },
+    {
+      "F": "reflection",
+      "cubic_U_kernel": 2,
+      "u_square_kernel": 1,
+      "v_square_kernel": 1,
+      "uv_kernel": 1,
+      "total": 5
+    }
+  ],
+  "conclusion": "in the quantum-negative chart only F=-I admits H3; Jordan-negative separated charts are all H3-empty; the entire known fixed-sign classification applies",
+  "proof": "papers/sections/cubic_order2_22_rank4_separated_commutative.tex",
+  "not_claimed": [
+    "all odd graph coverage",
+    "noncommutative positive plane",
+    "pure mixed rank3-projection branch",
+    "global H3 classification"
+  ],
+  "all_Jordan_extension": "if fg is nontrivial unipotent, normal cubic terms either equal linear*uv or all share the fixed/eigenline of f=g=+/-unipotent"
+}

@@ -412,5 +412,29 @@
     "source": "CY_ZERO_COMMUTATORS_FOUR_SIMPLE_SHARED_ZERO_COMPLETE.tex FZ2 explicit formula/constraint only",
     "validator": "computations/verify_cubic_as4_Q_centre_bound.py",
     "scope": "Literal Q skew matrix and CY row products independently checked. The general central-cubic obstruction is proved here. Full zero-commutator CY coverage remains a separate audit."
+  },
+  "rank4_reference_audit_v161": {
+    "commit": "a3ddc8c55e65f336f707ebba5810b26d0698712e",
+    "entry_points": [
+      {
+        "path": "README.md",
+        "sha256": "33897e55cbd3cdbc8e6bc710ddfbf1ff763fdf420ad053a82d334937c95ef95d"
+      },
+      {
+        "path": "research/plan_ja.tex",
+        "sha256": "3a8d400e59e10fd72506f8bb15c87ae56abae68429fa3965e45e5960de16cd91"
+      },
+      {
+        "path": "research/COVERAGE.md",
+        "sha256": "a119ebbceaad51ae4af0435053f75307d5f2c4a5a2845b39c355daa29005c530"
+      },
+      {
+        "path": "research/CLAIMS.json",
+        "sha256": "4fa8b4a1cc56d7df67ba5f61e69f41f7d68fe3351eefcf600fb45db1bd3d8dd4"
+      }
+    ],
+    "inspection": "Read README, current plan scope and relevant sections; searched COVERAGE and all 1049 CLAIMS for mixed (2,2), twisted tensor and double Ore. No theorem covering the current non-CY semisimple rank4 branch was located.",
+    "new_mathematical_imports": [],
+    "scope": "Navigation audit only. Existing imported commits and their assumptions remain unchanged; no latest CY completeness or general unipotent atlas theorem is newly imported."
   }
 }

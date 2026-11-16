@@ -40,7 +40,7 @@ Rains・VdB・AS・anticanonical heartの一般次数比較は [nc-dp-surface-he
 
 **全体的なスペクトル制約（classification-v157）**：全(1,3)は幾何学的被覆・必要十分H3判定・全矢/慣性まで確定、全(3,1)は全Jordan型込みで空。(2,2)のmixed rank2も全Jordan型込みで空と確定した。最後の可逆secant必要曲面は七多項式四次汎関数の1008恒等式と単一10minor −2ell^15*rho^20*(rho+1)^15*(2rho+1)^2により全値排除し、ell0/共鳴fibreも既存全値検証で覆う。従って(2,2)はmixed rank4のみが残る。次は正top三型（零・comm⊙平方・comm⊙非退化quad）と全Jordan型の必要表示・正常三次を調べる。三固有値以上、全CY被覆、全成分/圏族降下は未完。
 
-**次の核心（classification-v160）**：半単純(2,2) mixed rank4の奇関係は、可逆四次元graph(det=-1)か、純UV/VU非退化関係を一本ずつ持つ両射影rank3型の二択で全被覆。部分転置PfD=-PfAと四次元交代像・整域性で証明。正top零のgraph型では、正二次射影が非退化なら負AS2平面上のPBW double Ore表示へ認識。負top零ではこの条件は自動かつtail0、負rank2ではbase q−1又はq±i。退化正射影は別分枝として保持し、全graphやpairedpureを既知doubleOre分類で覆ったと主張しない。 次はP=Q=0の二AS2平面の斉次twisted tensor graphで、実際のNakと正常三次を求める。負rank2の非零tail、純mixed二本型、退化正射影とJordan残余も未解決。
+**次の核心（classification-v161）**：正平面可換・負二生成元がそれぞれ正平面を正規化するseparated chartを、量子/Jordan負平面とも全H3判定した。量子型は全F∈GL2のB(F):ut=F(t)u,vt=F^-1(t)v,vu=−det(F)uv。全AS4とmu++--、正正常核はker(Sym³F+I) +ker(F−detF I)uv、F²Iの場合だけker(F+I)u²/v²を加える。全Fで因数分解を追うとH3はF−Iの既知符号包絡だけ。Jordan負平面も反射Fを強制し、Gが正規一次式で割れるため全排除。一般mixed graph/正側非可換/純mixed二本型の全被覆は未完。 次はP=Q=0 graphの非可換正平面separated型、または負二生成元を混合するgraphで正常三次を判定する。as4最新版a3ddc8cの入口4資料を確認したが新定理の輸入はなく、全非CYrank4被覆は引き続き独立課題。 さらに可換正平面separated chartの全Jordan型も閉じた。量子負平面でμU=(fg)^−1、fg単冪、負μは厳密に−1。fg≠IならG30零、u²/v²成分が非零ならf=g、そうでなければG=linear*uv。f=gでは±単冪の一次固有直線が全係数の共通因子となる。従って非半単純を含め、このchartのH3は既知符号包絡のみ。
 
 既存の主要な構造結果を維持する：
 
