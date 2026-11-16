@@ -10,7 +10,7 @@
 
 **全体的なスペクトル制約（classification-v186）**：全(1,3)は幾何学的被覆・H3必要十分条件・全矢まで確定、全(3,1)は全Jordan型込みで空。(2,2) mixed rank2も全Jordan型込みで空。mixed rank4のcanonical正top P0全体は、退化境界と全Jordan型込みで固定非CY符号族へ完全に幾何学的認識、一般dim2/inertia mu2²。canonical負topQ0は全Jordan型込みで曲がったClifford族に認識。未知の(2,2)はP,Qとも非零で、Pはcomm⊙平方/comm⊙非退化quadの二型。(2,2)/mixed rank4の全H3は実際に半単純。負tangent/非対称型も全排除され、非零Qの未知は対称secant型だけ。三固有値以上、全CY被覆、全成分・intrinsic族降下は未完。
 
-**次の核心（classification-v199）**：鏡共鳴の最後のJm曲線の全正常切断を排除。両枝s=±i(rho+1)(rho²+1)/(2rho), t=(rho²−1)/2で、b=−2i*rho/(rho²−1), Q2=x²+b(rho²+1)(xy+yx)+b²y²+2rho²/(rho²−1)*(uv+vu)としG=(x+by)Q2。35明示多項式四次汎関数と一点B4dim35の上下界からgeneric商次元35、正常恒等式をAS4最大rank開集合へ延長。三normal9minor gcdと3rho²+1=0のfresh数体rank9で全正常核一本を保証し全cutに一次因子。鏡共鳴面全体が空、未知はL0の非鏡領域だけ。全CY/三固有値以上/成分/相対降下は未完。 次はLの非鏡開集合を有理param化して正常行加群を判定する。
+**次の核心（classification-v200）**：最後のL0非鏡開集合を漏れなく有理二paramで表示し、正則な逆写像と全分母条件を厳密検証。p=rho²−1,c=rho²+1,D=c−p*z²,Q=c−2c*z+p*z²,H=Q+4z,F=p*z−c,A=Q²−2D²、U=rho*p*c*D*z*(z−1)*F*A*Q*H。t=pQ/(2D),s=i(rho+1)cH/(2rhoD),a=p²A/(4rho²D²)。この表示だけでH3排除は主張しない。公開入力だけから正常行加群の飽和問題を再生成するportable builderを保存。最終飽和判定は未完。全CY/三固有値以上/成分/相対降下も未完。 次はkernel/正常行加群の商のAnnをUで飽和するか、B=0で正則な汎関数を追加する。
 
 classification-v12 では、積分した族の全次数平坦性・noetherian quadratic Koszul CY AS4 認識を、明示的な開集合 V={h∈H, (1-gamma²)≠0, Delta≠0} 上で証明した。入力は Iyudu–Shkarin Theorem1.1/Corollary6.1、EG形式変形定理、および64個の三次持上げ恒等式・256個の四次巡回恒等式・単元小行列式 -p^6 を確認した LBS 中心拡大定理である。中心三次の関係類の非消滅も巡回商の二係数で全パラメータについて確認した。gamma≠0 では低次数中心が0,0,1、滑らかな楕円THCR境界となり、全中心値の H3 判定は正確に一つの affine 中心切断の有限大域次元へ帰着する。定義体上超越的な全 D は H3。位数4の枝 gamma^4=1+h^3 では固定包絡の悪い D は有限であり、h=1,gamma=2^(1/4),A=1,B=C=0,beta=(-1,0,0),D=pi は明示的な非Clifford H3 対象となる。悪い値の全一覧・全内在的群oid・H3相対開性・降下・全包絡被覆は未解決。
 

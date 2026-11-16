@@ -1,0 +1,69 @@
+\subsection{最後の非鏡曲面を有理二パラメータ開集合で覆う}
+\begin{proposition}
+残る $L=0$ の幾何学的H3候補は、以下の有理二パラメータ開集合で漏れなく覆われる。
+$p=\rho^2-1,c=\rho^2+1$ とし
+\[
+ D=c-pz^2,\quad Q=c-2cz+pz^2,\quad H=Q+4z,\quad
+ F=pz-c,\quad A=Q^2-2D^2
+\]
+と置く。係数底を
+\[
+ V=D(U)\subset\mathbb A^2_{\rho,z},\qquad
+ U=\rho p c D z(z-1)F A Q H
+\]
+とすると、必要な表示は
+\[
+ t=\frac{pQ}{2D},\qquad
+ s=\frac{i(\rho+1)cH}{2\rho D},\qquad
+ a=\frac{p^2A}{4\rho^2D^2}
+\]
+である。この開集合と元の残余開部分の間には正則な逆写像がある。
+正常核零やH3 admissibilityをこの表示だけから結論するものではない。
+\end{proposition}
+\begin{proof}
+元の曲面式を
+\[
+ L=2\rho^2(\rho-1)s^2+2(\rho+1)(\rho^2+1)t^2
+       +(\rho-1)(\rho+1)^2(\rho^2+1)
+\]
+と書く。$\rho^2+1=0$ なら $s^2=0$、従って幾何学的点では $s=0$ となり、既に排除済みである。
+残る領域では $\rho p c\ne0$ としてよい。
+直接代入により $L=0$ と上の $a$ の式に加え
+\[
+ \delta_+=\rho^2+2t-1=\frac{2pc(1-z)}D,\qquad
+ \delta_-=\rho^2-2t-1=-\frac{2pzF}D
+\]
+が成立する。
+従って $U\ne0$ は、全て排除済みの $a=0,s=0,t=0,\delta_+=0,\delta_-=0$ を避ける正確な条件である。
+
+逆写像は
+\[
+ z=\frac{2i\rho s+(\rho+1)(\rho^2+1)}
+         {(\rho+1)(2t+\rho^2-1)}
+\]
+である。
+その分母は現在の開部分で単元となる。
+$v=(\rho+1)(t-1)-i\rho s$ と置くと、$L$ を $v$ で割った剰余は
+\[
+ (\rho+1)(2t+\rho^2-1)^2
+\]
+であり、従って $L=0$ の現在の開部分では $v$ も単元である。
+さらに逆写像を代入した $D$ は、$L$ を法として
+\[
+ D=\frac{4pcv}{(\rho+1)(2t+\rho^2-1)^2}
+\]
+となるので単元である。
+このため隠れた $D=0$ 境界を失っていない。
+二つの合成が恒等となることを $L$ を法とする有理恒等式で検証すれば、主張した逆写像と被覆が従う。
+
+\texttt{verify\_cubic\_order2\_22\_secant\_L\_parameter.py}
+は曲面式、$a,\delta_\pm$、両合成、分母の単元性に必要な剰余恒等式を再生する。
+この座標的な開部分の同定を、intrinsic圏族全体の降下と同一視しない。
+\end{proof}
+
+この底上の次の計算課題は、正三次関係行列の核 $K$ と正常行加群 $F$ について
+$K[U^{-1}]=F[U^{-1}]$ が成立するかを判定することである。
+\texttt{build\_cubic\_order2\_22\_secant\_L\_module.py}
+は、公開済みの元関係汎関数から、この加群計算用のSingular入力を再生成する。
+必要依存はSymPy、python-flint、Singularである。
+本節の時点で、その飽和の最終判定は未完であり、生成器を分類の完成証明とはしていない。

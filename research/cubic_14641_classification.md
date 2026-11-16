@@ -1341,3 +1341,15 @@ L0の非鏡領域はrho²+1=0ならs0なので排除済み。それ以外ではL
 証明cubic_order2_22_secant_mirror_J.tex。正しいtheta条件は((rho²−1)theta+2i*rho)^3であり、一般betaの分母はrho+1でなくrho²−1。Q2係数は入力へ明示しQxx1なのでdomainで非零。35多項式quartic annihilatorの指定35自由語への対角minorが非零、rho2の厳密B4dim35からgeneric四次商35をrigorous上下界で得る。Gの正常commutatorを全部消すためgeneric正常、係数regularかつAS4最大rank余核局所自由で全AS4fiberへ延長。kernel上界normal9minor三本gcdはbaseunitと3rho²+1だけ、交点はQQ(sqrt3,i)上で元R4を再消去しrank9。この証明は全値cutのfactorであって単なるgeneric排除ではない。
 
 次は非鏡L0（a,s,t,delta_plus,delta_minus非零）。rho²+1=0ならLがrho²(rho−1)s²の定数倍でs0に入り既に排除。D=rho²+1−(rho²−1)z², Q=rho²+1−2(rho²+1)z+(rho²−1)z², H=Q+4zとして、t=(rho²−1)Q/(2D), s=i(rho+1)(rho²+1)H/(2rho D)という二param表示を次に厳密検証する。逆z=[2i*rho*s+(rho+1)(rho²+1)]/[(rho+1)(2t+rho²−1)]。a=(rho²−1)²*(Q²−2D²)/(4rho²D²)、delta_plus=2(rho²−1)(rho²+1)(1−z)/D、delta_minus=−2(rho²−1)z*((rho²−1)z−(rho²+1))/Dが候補恒等式。検証前に全被覆として使用しない。
+
+## 最後のL開集合の有理被覆と加群問題（classification-v200）
+
+最後のL0非鏡開集合を漏れなく有理二paramで表示し、正則な逆写像と全分母条件を厳密検証。p=rho²−1,c=rho²+1,D=c−p*z²,Q=c−2c*z+p*z²,H=Q+4z,F=p*z−c,A=Q²−2D²、U=rho*p*c*D*z*(z−1)*F*A*Q*H。t=pQ/(2D),s=i(rho+1)cH/(2rhoD),a=p²A/(4rho²D²)。この表示だけでH3排除は主張しない。公開入力だけから正常行加群の飽和問題を再生成するportable builderを保存。最終飽和判定は未完。全CY/三固有値以上/成分/相対降下も未完。
+
+証明cubic_order2_22_secant_L_parameter.tex。inverse z=[2i*rho*s+(rho+1)(rho²+1)]/[(rho+1)delta_plus]。v=(rho+1)(t−1)−i*rho*sについてL modv=(rho+1)*delta_plus²、D(inverse)=4pcv/[(rho+1)delta_plus²] modLなので、v,Dの単元性と全非鏡残余の被覆を保証する。rho²+1=0のLはs0へ帰着する。全有理恒等式は公開checker実行済み。
+
+再開用計算：`PYTHONPATH=<python-flint installation> python computations/build_cubic_order2_22_secant_L_module.py --output /tmp/L.sing --method direct`、続けて`Singular -q /tmp/L.sing`。presentation法は`--method presentation`。生成器は公開29汎関数の全288元関係を検証してから、param代入の分母をrowごとに明示的単元で払い、U因子だけを除く。出力は約5.3MBだがGitには追跡せず再生成する。portable生成実行済み、生成行のR3*N=0もSingularで確認。
+
+未完計算の正確な状態：局所化商環内の直接syzは重かったため中断。核は局所化と可換なのでQQ(i)[rho,z]のpolynomial kernelへ切り替え、15生成元/その5関係を得た。direct法では正常moduleの標準基底まで完了、Ann=quotient(N,K)計算中。presentation法ではK座標へのlift計算中。AnnのU飽和が単位idealになることはまだ証明していない。builderはその最後にU^m倍の所属も直接再検証する。
+
+必要ならB=(rho−1)s²+(rho+1)t²=0のbasis artifactを埋める。各既存四次商chartで全35汎関数の共通分母にB因子が現れるため、このcurveで制約が不足する可能性がある。rho=3/5,s2,t1（B0）のpointでB4dim35を確認し、そのpointでpivotが非零となる新Markowitz chartをprivateに生成、全元annihilator/B4dim35まで保存済み。選択正常10rowsは[26,61,24,19,8,9,6,21,55,59]、対応quartic functional idsは{6,8,9,19,20,21,24,26}。未公表でありこれを排除証明として使わない。

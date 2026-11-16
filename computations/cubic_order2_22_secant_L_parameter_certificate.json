@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "chart": "rho=r, s=i(r+1)(r2+1)H/(2rD), t=(r2-1)Q/(2D)",
+  "polynomials": {
+    "D": "r**2 - z**2*(r**2 - 1) + 1",
+    "Q": "r**2 + z**2*(r**2 - 1) - z*(2*r**2 + 2) + 1",
+    "H": "r**2 + z**2*(r**2 - 1) - z*(2*r**2 + 2) + 4*z + 1",
+    "F": "-r**2 + z*(r**2 - 1) - 1",
+    "A": "-(r**2 - z**2*(r**2 - 1) + 1)*(2*r**2 - 2*z**2*(r**2 - 1) + 2) + (r**2 + z**2*(r**2 - 1) - z*(2*r**2 + 2) + 1)**2",
+    "localization_unit": "r*z*(r**2 - 1)*(r**2 + 1)*(z - 1)*(-(r**2 - z**2*(r**2 - 1) + 1)*(2*r**2 - 2*z**2*(r**2 - 1) + 2) + (r**2 + z**2*(r**2 - 1) - z*(2*r**2 + 2) + 1)**2)*(-r**2 + z*(r**2 - 1) - 1)*(r**2 - z**2*(r**2 - 1) + 1)*(r**2 + z**2*(r**2 - 1) - z*(2*r**2 + 2) + 1)*(r**2 + z**2*(r**2 - 1) - z*(2*r**2 + 2) + 4*z + 1)"
+  },
+  "inverse": "z=(2i*r*s+(r+1)(r2+1))/((r+1)(2t+r2-1))",
+  "coverage": "r2+1=0 on L implies s0, already excluded. On remaining nonmirror L candidates all factors of U are units. The inverse denominator D is a unit because L mod v=(r+1)*delta_plus2, where v=(r+1)(t-1)-i*r*s, and D(inverse)=4(r2-1)(r2+1)*v/((r+1)*delta_plus2). Exact two-sided rational identities verify the open chart.",
+  "not_claimed": [
+    "normal-module saturation completed",
+    "H3 absence on this chart",
+    "global H3 classification",
+    "intrinsic relative descent",
+    "independent peer review"
+  ]
+}

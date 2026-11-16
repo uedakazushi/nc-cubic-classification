@@ -42,7 +42,7 @@ Rains・VdB・AS・anticanonical heartの一般次数比較は [nc-dp-surface-he
 
 **全体的なスペクトル制約（classification-v186）**：全(1,3)は幾何学的被覆・H3必要十分条件・全矢まで確定、全(3,1)は全Jordan型込みで空。(2,2) mixed rank2も全Jordan型込みで空。mixed rank4のcanonical正top P0全体は、退化境界と全Jordan型込みで固定非CY符号族へ完全に幾何学的認識、一般dim2/inertia mu2²。canonical負topQ0は全Jordan型込みで曲がったClifford族に認識。未知の(2,2)はP,Qとも非零で、Pはcomm⊙平方/comm⊙非退化quadの二型。(2,2)/mixed rank4の全H3は実際に半単純。負tangent/非対称型も全排除され、非零Qの未知は対称secant型だけ。三固有値以上、全CY被覆、全成分・intrinsic族降下は未完。
 
-**次の核心（classification-v199）**：鏡共鳴の最後のJm曲線の全正常切断を排除。両枝s=±i(rho+1)(rho²+1)/(2rho), t=(rho²−1)/2で、b=−2i*rho/(rho²−1), Q2=x²+b(rho²+1)(xy+yx)+b²y²+2rho²/(rho²−1)*(uv+vu)としG=(x+by)Q2。35明示多項式四次汎関数と一点B4dim35の上下界からgeneric商次元35、正常恒等式をAS4最大rank開集合へ延長。三normal9minor gcdと3rho²+1=0のfresh数体rank9で全正常核一本を保証し全cutに一次因子。鏡共鳴面全体が空、未知はL0の非鏡領域だけ。全CY/三固有値以上/成分/相対降下は未完。 次はLの非鏡開集合を有理param化して正常行加群を判定する。
+**次の核心（classification-v200）**：最後のL0非鏡開集合を漏れなく有理二paramで表示し、正則な逆写像と全分母条件を厳密検証。p=rho²−1,c=rho²+1,D=c−p*z²,Q=c−2c*z+p*z²,H=Q+4z,F=p*z−c,A=Q²−2D²、U=rho*p*c*D*z*(z−1)*F*A*Q*H。t=pQ/(2D),s=i(rho+1)cH/(2rhoD),a=p²A/(4rho²D²)。この表示だけでH3排除は主張しない。公開入力だけから正常行加群の飽和問題を再生成するportable builderを保存。最終飽和判定は未完。全CY/三固有値以上/成分/相対降下も未完。 次はkernel/正常行加群の商のAnnをUで飽和するか、B=0で正則な汎関数を追加する。
 
 既存の主要な構造結果を維持する：
 

@@ -2072,5 +2072,14 @@
     "certificate": "computations/cubic_order2_22_secant_mirror_J_certificate.json",
     "proof": "papers/sections/cubic_order2_22_secant_mirror_J.tex",
     "scope": "鏡共鳴の最後のJm曲線の全正常切断を排除。両枝s=±i(rho+1)(rho²+1)/(2rho), t=(rho²−1)/2で、b=−2i*rho/(rho²−1), Q2=x²+b(rho²+1)(xy+yx)+b²y²+2rho²/(rho²−1)*(uv+vu)としG=(x+by)Q2。35明示多項式四次汎関数と一点B4dim35の上下界からgeneric商次元35、正常恒等式をAS4最大rank開集合へ延長。三normal9minor gcdと3rho²+1=0のfresh数体rank9で全正常核一本を保証し全cutに一次因子。鏡共鳴面全体が空、未知はL0の非鏡領域だけ。全CY/三固有値以上/成分/相対降下は未完。"
+  },
+  "order2_22_secant_L_parameter_v200": {
+    "status": "PASS exact rational chart identities, inverse and denominator coverage; normal-module saturation NOT completed",
+    "validator": "computations/verify_cubic_order2_22_secant_L_parameter.py",
+    "certificate": "computations/cubic_order2_22_secant_L_parameter_certificate.json",
+    "proof": "papers/sections/cubic_order2_22_secant_L_parameter.tex",
+    "builder": "computations/build_cubic_order2_22_secant_L_module.py",
+    "builder_execution": "portable input generated; normal row containment verified; final saturation pending",
+    "scope": "最後のL0非鏡開集合を漏れなく有理二paramで表示し、正則な逆写像と全分母条件を厳密検証。p=rho²−1,c=rho²+1,D=c−p*z²,Q=c−2c*z+p*z²,H=Q+4z,F=p*z−c,A=Q²−2D²、U=rho*p*c*D*z*(z−1)*F*A*Q*H。t=pQ/(2D),s=i(rho+1)cH/(2rhoD),a=p²A/(4rho²D²)。この表示だけでH3排除は主張しない。公開入力だけから正常行加群の飽和問題を再生成するportable builderを保存。最終飽和判定は未完。全CY/三固有値以上/成分/相対降下も未完。"
   }
 }
