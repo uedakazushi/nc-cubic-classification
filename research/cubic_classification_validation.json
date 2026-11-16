@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "version": "classification-v171",
+  "version": "classification-v172",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -82,7 +82,10 @@
     "papers/sections/cubic_order2_22_curved_diagonal.tex",
     "papers/sections/cubic_order2_22_primitive6_nondomain.tex",
     "papers/sections/cubic_order2_22_curved_quantum_diagonal.tex",
-    "papers/sections/cubic_order2_22_curved_SL2.tex"
+    "papers/sections/cubic_order2_22_curved_SL2.tex",
+    "papers/sections/cubic_order2_22_curved_Jordan_projection.tex",
+    "papers/sections/cubic_order2_22_curved_quarter.tex",
+    "papers/sections/cubic_order2_22_Pzero_nondegenerate.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -1707,5 +1710,30 @@
     "certificate": "computations/cubic_order2_22_curved_SL2_certificate.json",
     "proof": "papers/sections/cubic_order2_22_curved_SL2.tex",
     "scope": "全F∈SL2のcurved normalizing包絡[x,y]=alpha*u²+beta*v²、uv−、u作用F/v逆作用を、非対角±Jordan込みでH3認識した。全閉detF1で4PBW overlap、curvatureを純負cyclic quarticで加えるKoszul-Frobenius topからmu++--。非対角±Jの正三次shear核は全alpha/betaで定数minor6、必要Gはxuv又はx*(c x²+d u²+e v²)に限り因数分解。対角は既証3norm排除へ接合し、H3はF−I/零curvatureの既知signのみ。"
+  },
+  "order2_22_Pzero_full_recognition_v172": {
+    "status": "PASS exact component identities and complete structural P0 recognition; independent peer review not claimed",
+    "validators": [
+      "computations/verify_cubic_order2_22_curved_Jordan_projection.py",
+      "computations/verify_cubic_order2_22_curved_quarter.py",
+      "computations/verify_cubic_order2_22_Pzero_nondegenerate.py"
+    ],
+    "certificates": [
+      "computations/cubic_order2_22_curved_Jordan_projection_certificate.json",
+      "computations/cubic_order2_22_curved_quarter_certificate.json",
+      "computations/cubic_order2_22_Pzero_nondegenerate_certificate.json"
+    ],
+    "proof": [
+      "papers/sections/cubic_order2_22_curved_Jordan_projection.tex",
+      "papers/sections/cubic_order2_22_curved_quarter.tex",
+      "papers/sections/cubic_order2_22_Pzero_nondegenerate.tex"
+    ],
+    "scope": "canonical正top P=0の(2,2)/mixed rank4全H3を、全Jordan型・全幾何学的矢込みで既知非CY符号族に認識した。P0の正二次射影がrank1ならcross M rank2/rulingとなり、奇交代4像の純UV直線がimMに入って積関係を強制するためAS4domain外。正射影は自動非退化。Q0は既知zero-top認識、Q非零では負base q−1/±i、H_V単冪Id/正側shear固定G因子で全Jordan消滅。eps+はfiltered正常核零、eps−は対角量子/全SL2/Jordan正射影/四乗根weightを全被覆し非零Qを全排除。全H3は既知sign、一般dim2/inertia mu2²。",
+    "not_claimed": [
+      "P nonzero rank4 classification",
+      "global H3 completeness",
+      "componenthood",
+      "relative nonreduced-base descent"
+    ]
   }
 }

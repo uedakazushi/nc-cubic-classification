@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "scope": "curved Jordan positive projection with q=-1 negative plane, all coefficient/boundary values",
+  "cases": [
+    {
+      "epsilon": 1,
+      "PBW_overlaps": 4,
+      "normalizer_composition": "y->y+2*x, x fixed, negative variables negated",
+      "shear_kernel_minor": 384,
+      "fixed_kernel": [
+        "x^3",
+        "x*u^2",
+        "x*u*v",
+        "x*v^2"
+      ]
+    },
+    {
+      "epsilon": -1,
+      "PBW_overlaps": 4,
+      "normalizer_composition": "y->y+2*x, x fixed, negative variables negated",
+      "shear_kernel_minor": 384,
+      "fixed_kernel": [
+        "x^3",
+        "x*u^2",
+        "x*u*v",
+        "x*v^2"
+      ]
+    }
+  ],
+  "conclusion": "every H3 normal cubic would be shear-fixed and hence divisible by x; no H3 in this chart",
+  "proof": "papers/sections/cubic_order2_22_curved_Jordan_projection.tex",
+  "not_claimed": [
+    "rank1 positive projection",
+    "all nonzero-positive-top rank4",
+    "relative family classification"
+  ]
+}

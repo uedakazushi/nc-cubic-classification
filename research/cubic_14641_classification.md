@@ -1003,7 +1003,7 @@ rho−1/2特殊fibreの全値正常核はv152でpublic証明書へ統合して�
 
 ## (2,2) mixed rank2の全Jordan型も半単純（classification-v153）
 
-**全体的なスペクトル制約（classification-v167）**：全(1,3)は幾何学的被覆・H3必要十分条件・全矢まで確定、全(3,1)は全Jordan型込みで空。(2,2) mixed rank2も全Jordan型込みで空。mixed rank4のcanonical零top(P=Q=0)は全Jordan型込みで固定非CY符号族へ完全に幾何学的認識し、一般次元2/慣性mu2²。非零正topでは片側負Jordanを排除、非退化正topなら全Jordan消滅。残る核心はP又はQ非零のrank4、平方正topの正側Jordan、三固有値以上、全CY被覆と全intrinsic族降下・成分。
+**全体的なスペクトル制約（classification-v172）**：全(1,3)は幾何学的被覆・H3必要十分条件・全矢まで確定、全(3,1)は全Jordan型込みで空。(2,2) mixed rank2も全Jordan型込みで空。mixed rank4のcanonical正top P0全体は、退化境界と全Jordan型込みで固定非CY符号族へ完全に幾何学的認識、一般dim2/inertia mu2²。未知の(2,2)は正top非零のcomm⊙平方/comm⊙非退化quadの二型だけ。非退化型のJordanはなく、平方型の非半単純には正側Jordanが必要。三固有値以上、全CY被覆、全成分・intrinsic族降下は未完。
 
 原稿lem:h3-order2-22-rank2-unipotent-rigidity,thm:h3-order2-22-rank2-no-Jordan,cor:h3-order2-22-rank2-all-Jordan-coverage。必要pencil被覆/必要Schur正規化はG存在を使わずnoeth quadratic Koszul AS4 domainにも有効であることを明示。H commute muC unipotentならU/Vを保つ。puremixedはpI/qdiag(1,z),z−1,+-iの両lineをpointwise固定し、T^t q=q T^t、simple eigenでTdiagonalunipotentId。secant Eの二rankone点はconnected unipotent closureでpointwise固定、両U/VaxesよりHId。tangentはx/u固定,y->y+beta x,v->v+eta u。E/F uppermatP(beta+eta),Q(beta−eta)、gJ固定はbeta=eta0、gepsilonI固定はeta0。後者のdomain必要関係u²=alpha x²+delta y²,deltaunitとpositivecommから2delta beta xy+delta beta²x²0でbeta0。rulingはAS4domain外。全caseでHId。
 
@@ -1110,4 +1110,13 @@ A=SU⊗E+E⊗SV、PfA=detSU−detSV。可換側GL2のnormalized congruenceで非
 
 全F∈SL2のcurved normalizing包絡[x,y]=alpha*u²+beta*v²、uv−、u作用F/v逆作用を、非対角±Jordan込みでH3認識した。全閉detF1で4PBW overlap、curvatureを純負cyclic quarticで加えるKoszul-Frobenius topからmu++--。非対角±Jの正三次shear核は全alpha/betaで定数minor6、必要Gはxuv又はx*(c x²+d u²+e v²)に限り因数分解。対角は既証3norm排除へ接合し、H3はF−I/零curvatureの既知signのみ。
 
-次の有力な全被覆（未採用）：P0/Qrank2/正射影a非退化ではevenR=span(b_V,a_U−c_V)、K=a⊗b、M可逆でodd fullgraph、同じ8零topatlasを持つ。aをAS2標準形へ、bはq−1又はq±i。U次数filtrationでtail cを落としたB0に正常核零ならBにも正常Gなし。eps+各chartは既存constant-minorでこの方法が使える。eps−q−1ではpositive quantumは対角p/r又はp1 fullSL2、positive Jordanはfg=muT=非自明shearからnormalGが一次因子。q±iはweight十語がpurecube又は明示一次因子を強制し、重根Fでは固有値a4−1からnormaluに−1固有空間なし。これを全値検証・本文へ移す。canonicalC QnonzeroではpureV b非commなのでH_V単冪Id、残るpositive-only µJordanはU次数filtrationのshear固定核からG factorになりそうである。
+canonical正top P=0の(2,2)/mixed rank4全H3を、全Jordan型・全幾何学的矢込みで既知非CY符号族に認識した。P0の正二次射影がrank1ならcross M rank2/rulingとなり、奇交代4像の純UV直線がimMに入って積関係を強制するためAS4domain外。正射影は自動非退化。Q0は既知zero-top認識、Q非零では負base q−1/±i、H_V単冪Id/正側shear固定G因子で全Jordan消滅。eps+はfiltered正常核零、eps−は対角量子/全SL2/Jordan正射影/四乗根weightを全被覆し非零Qを全排除。全H3は既知sign、一般dim2/inertia mu2²。
+
+
+## canonical正top零の全認識（classification-v172）
+
+canonical正top P=0の(2,2)/mixed rank4全H3を、全Jordan型・全幾何学的矢込みで既知非CY符号族に認識した。P0の正二次射影がrank1ならcross M rank2/rulingとなり、奇交代4像の純UV直線がimMに入って積関係を強制するためAS4domain外。正射影は自動非退化。Q0は既知zero-top認識、Q非零では負base q−1/±i、H_V単冪Id/正側shear固定G因子で全Jordan消滅。eps+はfiltered正常核零、eps−は対角量子/全SL2/Jordan正射影/四乗根weightを全被覆し非零Qを全排除。全H3は既知sign、一般dim2/inertia mu2²。
+
+rank2 cross補題：O=T Omega T^tの4次元交代像、L/N二射影rank>=3、rankM2なら両射影rank3。ell=kerNは等方直線なので純UV線Lell⊂L(ell perp)=imM。正projection rank1ならM=−(a^t⊗b)flipの像は固定正因子rulingで、純UV関係が積になる。従ってrank1境界も存在せずP0の非退化仮定は不要。標準3x3 minor det=z3 PfOmegaとPfOmega*e1=z5 col1−z4 col2が有限検算。
+
+全非零Qの被覆ではcyclic cはq−1ならsquares、q±iならuv+qvu。正projection quantum p≠1はF/G対角、p1はdetF=−q^-1の全行列、JordanはF反復eig a²=−q^-1。q−1は既存curved quantum diagonal/fullSL2/shear384、q±iは10weight/28disjoint/primitive8 no−eig。全パラメータの境界を保つ。次はP非zero、まずQ0のClifford型{u,v}=quadratic(U)とcrossantiを、既存Clifford swap結果との重なりを確認して認識する。全rank4正top非零の被覆は未完。

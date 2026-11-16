@@ -1,0 +1,159 @@
+\subsection{正top零の全幾何学的H3認識}
+\label{subsec:h3-order2-22-Pzero-nondegenerate}
+\begin{lemma}[rank-two crossのruling障害]
+\label{lem:h3-order2-22-Pzero-rank1-impossible}
+半単純$(2,2)$・奇関係数4のAS4整域で、正topが零なら、
+偶関係の正二次射影は一次元で、その生成係数行列は必ず非退化である。
+\end{lemma}
+\begin{proof}
+偶middleの階数2と正主block零から、偶関係は純負$b$と$a(U)-c(V)$で張られる。
+正射影が零なら純負二次関係の二平面にrank-one tensorが現れて整域性に反する。
+$b$も整域性から非退化である。
+もし$a$がrank-oneなら、cyclic cross $M=-(a^t\otimes b)\Pi$は階数2で、
+その像は固定した正一次因子を持つtensorの二平面、すなわちrulingになる。
+
+奇middleを$O=\left(\begin{smallmatrix}A&M\\-M^t&D\end{smallmatrix}\right)$とし、
+四次元像$W$の二射影を$L,N$と書く。
+純mixed関係の二平面にはrank-one式が含まれるため、整域性から両射影の階数は3以上である。
+$W$上の非退化交代bivectorを$\Omega$として$M=L\Omega N^t$と書ける。
+もし一方の射影が可逆なら$\operatorname{rank}M\ge3$となるので、両射影の階数は3である。
+$\ell=\ker N$は一本の直線で、交代形式に関して等方的である。
+従って
+\[
+ L\ell\subset L(\ell^\perp)=\operatorname{im}M.
+\]
+$W$が直和空間へ埋め込まれているので$L\ell\ne0$であり、これは一本の純$UV$関係である。
+ところが$\operatorname{im}M$の全元は固定した正一次因子を持つため、
+この関係は二つの非零一次式の積となり、整域性に反する。
+従って$a$は非退化でなければならない。
+\end{proof}
+
+\begin{theorem}\label{thm:h3-order2-22-Pzero-nondegenerate}
+\label{thm:h3-order2-22-Pzero-classification}
+$(2,2)$・奇関係数4のH3について、canonical半単純untwist $C$の純正topが零とする。
+この全領域のH3対象は、全Jordan型と全幾何学的矢を含めて、固定非CY符号族に一致する。
+従って実際の中山は半単純であり、純負topも零となる。
+一般次元2・一般慣性$(\mu_2)^2$で、全切断と全矢は
+定理\ref{thm:fixed-sign-classification}のものとなる。
+正top非零の全rank4や全H3の完成、族降下や成分性は主張しない。
+\end{theorem}
+\begin{proof}
+まず$C$の正topを$P$、負topを$Q$とする。
+$P=0$と偶middle階数2から、偶関係は一本の純負関係$b$と
+\[
+ a(U)-c(V)
+\]
+の張る空間となる。正射影は一次元である。
+正射影が零なら純負二次関係が二次元となり、rank-one式を含むため整域性に反する。
+$a$は前補題により非退化、$b$も整域性により非退化である。
+$K=\operatorname{vec}(a)\operatorname{vec}(b)^t$と正規化すると、
+cyclic mixed crossは$M=-(a^t\otimes b)\Pi$で可逆である。
+従って奇関係はfull graph、交代$UV$ block $A$も可逆となる。
+この結論と$\operatorname{Pf}A=\pm\det a\det b$の六線型atlasは、
+負主block $Q$を加えても変わらない。
+
+$Q=0$なら、既に全Jordan型を含む零top認識が適用される。
+以下$Q\ne0$とする。
+正top零で負top階数1は整域性に反し、負top階数2では
+純負AS2平面は$q=-1$または$q=\pm i$の量子平面となる。
+これらには非自明なgraded単冪自己同型がない。
+従って$H=\mu_{B,u}^{1/4}$の負制限は恒等である。
+もし正制限が非自明なら、元の$B$の正作用は非自明shear、負作用は厳密に$-I$となる。
+
+逆twistは二つの二次射影の非退化性とfull graphを保つので、元の$B$も
+正次数filtrationに関するAS2標準語PBW表示を持つ。
+$\mu_B(G)=G$を最高正次数で比較すると、
+$G$の正三次部分の最高記号は$kx^3$、残る正一次係数は全て$kx$に入る。
+実際、非自明shearを持つ非退化二元関係の随伴次数は可換またはJordan標準形で、
+その次数3固定核は$kx^3$である。
+実際の$x^3$も固定されるので、これを差し引けば全$G$に$x$が共通因子となる。
+これは整域商に反する。
+従って$H=I$、元の中山も半単純である。
+以下は実際の半単純包絡で$Q\ne0$となる場合を排除すればよい。
+
+負基底を選び$b=uv-qvu$とする。
+$Q=b\mathbin{\odot}c$のcyclic条件を解くと
+\[
+\begin{array}{c|c}
+q=-1&c\in\langle u^2,v^2\rangle,\\
+q^2=-1&c\in\langle uv+qvu\rangle
+\end{array}
+\]
+となる。
+後者は純負関係を法として$\kappa uv$と書ける。
+正側$a$を量子またはJordan標準形に移す。
+$U$次数で$c$を落とした随伴次数$B_0$は、同じfull mixed graphと二つの純AS2関係を持つ。
+六つのmonic簡約の三次標準語は20個で、元のAS4次元20と一致するため全overlapが解消する。
+最高正次数を取ることで$B_0$もPBWとなり、$\operatorname{gr}_U B=B_0$である。
+
+この同じmixed topに零top atlasの符号$\epsilon$を付ける。
+$\epsilon=1$なら、量子正射影の場合は量子・量子正Pfaffian分枝の全正常核零、
+Jordan正射影の場合は$JQ$特殊点の正常minor $-36$が使える。
+補題\ref{lem:h3-order2-22-filtered-normal-exclusion}により、任意のcurvatureを持つ$B$にも非零正常三次はない。
+
+従って$\epsilon=-1$だけを考える。
+$q\ne1$なので、線型atlasは$z_1=z_4=0$を与え、
+二つの負標準生成元は正側を別々に正規化する。
+零curvature表示はAS2平面上の逐次Ore拡大であり、
+元のtopから純負四次部分を引くと、偶middleは$a\mathbin{\odot}b$、奇middleは不変となる。
+一対三flatteningの階数4も保たれるため、PBWのKoszul双対は同じ符号のFrobenius topを持ち、
+中山も$(+,+,-,-)$となる。
+従ってその正規化作用$f,g$は
+\[
+ fg=\mu_{T_U},\qquad
+ q\operatorname{hdet}(f)=-1,\qquad
+ q^{-1}\operatorname{hdet}(g)=-1
+\]
+を満たす。これを各正標準形へ適用する。
+
+正射影が量子型$xy-pyx$、$p\ne1$なら、atlasから$f,g$は対角である。
+ある$r\ne0$により
+\[
+ f=\operatorname{diag}(r,-q^{-1}/r),\qquad
+ g=\operatorname{diag}(p/r,-qr/p)
+\]
+と書ける。
+$q=-1$では全curved量子対角chartの認識を適用し、非零curvatureにはH3がない。
+$q^2=-1$では四乗根負平面のweight因子性を適用し、同じくH3はない。
+
+正射影が可換なら$g=f^{-1}$である。
+$q=-1$では$\det f=1$となり、全SL2 curved認識により非零curvatureは排除される。
+$q^2=-1$では$\det f=q$となり、相異なる固有値は四乗根対角weight表、
+反復固有値は原始8乗根の固有値障害で排除される。
+
+正射影がJordan型なら、$f$の反復固有値$a_0$は
+\[
+ a_0^2=-q^{-1}
+\]
+を満たす。
+$q^2=-1$なら$a_0^4=-1$なので、四乗根chartの反復固有値障害で正常核零である。
+$q=-1$なら二つのatlas根と一つの自由係数は、
+命題\ref{prop:h3-order2-22-curved-Jordan-projection-empty}の二符号全curved表示そのものであり、
+正常化作用の合成shearから$G$が一次因子を持つ。
+これで全標準形・全符号・全curvatureを排除した。
+
+従って$Q\ne0$のH3はなく、残る$P=Q=0$は既知符号族に一致する。
+全幾何学的矢も既知の固定包絡分類へ帰着する。
+\end{proof}
+
+\begin{corollary}[位数2・重複度$(2,2)$に残る正top]
+\label{cor:h3-order2-22-nonzero-positive-remainder}
+まだ認識されていない$(2,2)$型H3は、奇関係数4かつcanonical正top非零に限られる。
+その正topはcommutatorと対称平方、またはcommutatorと非退化対称二次式の対称積の二型である。
+非退化型には中山Jordan部分がなく、平方型の非半単純候補には正側Jordanが必要である。
+これらの正常incidence・admissibility・全矢の分類は未解決である。
+\end{corollary}
+\begin{proof}
+奇関係数2は全Jordan型で空、奇関係数4の正top零は前定理で認識済みである。
+残る二型とJordan制約は、既証明の正top三分法と片側Jordan排除から従う。
+\end{proof}
+
+検証器は
+\[
+ \texttt{verify\_cubic\_order2\_22\_Pzero\_nondegenerate.py}
+\]
+である。cyclic curvature二空間、負量子単冪の消滅、量子・可換・Jordanの
+三つのgraph係数辞書を全係数で確認する。
+rank-two crossの像に純mixed直線が入る恒等式と、rulingの積性も検算する。
+個別正常核・norm・shearの依存検証器はそれぞれの節に記載したものを使う。
+族の相対版や大域成分性を、検証器の成功だけから結論していない。

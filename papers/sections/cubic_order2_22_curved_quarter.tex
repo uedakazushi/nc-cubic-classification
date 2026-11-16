@@ -1,0 +1,67 @@
+\subsection{四乗根負平面のcurved正常核の因子性}
+\label{subsec:h3-order2-22-curved-quarter}
+\begin{proposition}\label{prop:h3-order2-22-curved-quarter-diagonal-empty}
+$q^2=-1$、$p,r\ne0$、$\kappa\in k$とし、全六関係を
+\begin{gather*}
+ xy-pyx=\kappa uv,\qquad uv=qvu,\\
+ ux=r xu,\quad uy=(q/r)yu,\qquad
+ vx=(p/r)xv,\quad vy=-(qr/p)yv
+\end{gather*}
+とする。中山が$(+,+,-,-)$であるH3は、この表示には存在しない。
+\end{proposition}
+\begin{proof}
+全四PBW overlapが$q^2=-1$を法として消える。
+二つの負normalizerのweightを正三次十語について比較すると、
+必要な同時$-1$固有空間は次の表の空間に入る。
+\[
+\begin{array}{c|c}
+\text{係数条件}&\text{正常候補の上限}\\\hline
+p^3=1,\ r^3=-1&\langle x^3\rangle\\
+p^3=1,\ r^3=q&\langle y^3\rangle\\
+p=1,\ r=q&\langle x^2y,xuv\rangle\\
+p=1,\ r=1&\langle xy^2,yuv\rangle\\
+p=-1,\ r=-1&\langle xu^2\rangle\\
+p=-1,\ r=-q&\langle yu^2\rangle\\
+p=-1,\ r=1&\langle xv^2\rangle\\
+p=-1,\ r=q&\langle yv^2\rangle
+\end{array}
+\]
+八条件は互いに交わらず、その他では核零である。
+これは$p,r$を単元とする十個の多項式イデアルの一致と、28組の単位イデアルで全閉値検証できる。
+第三行は$x$を左因子に持つ。
+第四行では$uv$が$y$と可換するため、全元が$y$を右因子に持つ。
+他は一単項式の積である。
+従って全候補が一次と二次の積となり、H3の整域商を与えない。
+\end{proof}
+
+\begin{proposition}\label{prop:h3-order2-22-curved-quarter-repeated-empty}
+負平面を$q^2=-1$の量子平面とし、正二次射影が可換またはJordan型とする。
+負生成元$u$が正平面を反復固有値$a$を持つ線型作用$f$で正規化し、$a^2=q$と仮定する。
+このとき符号中山の正三次正常核は零である。
+特に可換正射影で$\det f=q$となる全非対角反復根も排除される。
+\end{proposition}
+\begin{proof}
+$a^4=-1$である。
+正次数filtrationの随伴次数における$u$の正常化作用は、
+正三次部分に固有値$a^3$、正一次と負二次の部分に固有値
+\[
+ a,\qquad aq=a^3,\qquad aq^2=-a
+\]
+を持つ。
+いずれも$-1$ではない。実際、$a^4+1$は$a+1,a^3+1,1-a$の各式と互いに素である。
+従ってfiltered作用にも$-1$固有空間がなく、必要な非零正常三次は存在しない。
+非対角作用のnilpotent部分やcurvatureは、この固有値の障害を変えない。
+\end{proof}
+
+可換正射影の一般$f\in\operatorname{GL}_2$、$\det f=q$、逆作用$v$についても、
+相異なる固有値なら対角化して前命題、反復根なら後命題へ移る。
+curvatureは$\kappa uv$の形を保つので、全$f$を覆う。
+この一般行列の四PBW overlapも$\det f=q,q^2=-1$のイデアルを法として消える。
+
+検証器は
+\[
+ \texttt{verify\_cubic\_order2\_22\_curved\_quarter.py}
+\]
+であり、十weightイデアル、28交叉、計8PBW overlapと反復根の互いに素性を全係数で確認する。
+負cyclic topでは$\kappa uv$を$\kappa(uv+qvu)/2$と代表させると、
+純負関係を法として同じ曲がりを与え、cyclic tensor条件も満たす。

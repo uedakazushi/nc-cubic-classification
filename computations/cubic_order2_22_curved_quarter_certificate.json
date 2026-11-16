@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "scope": "q^2=-1 negative plane with nondegenerate positive projection, separated odd graph charts",
+  "checks": [
+    "ten localized support ideals",
+    "28 pairwise branch-disjointness certificates",
+    "four diagonal-curvature PBW overlaps",
+    "four det(F)=q matrix-curvature PBW overlaps",
+    "uv commutes y on the right-factor branch",
+    "repeated-eigenvalue odd weights have no -1 eigenspace",
+    "cyclic negative curvature top"
+  ],
+  "normal_support_groups": {
+    "x_cube": [
+      "p**3 - 1",
+      "r**3 + 1"
+    ],
+    "x_factor": [
+      "p - 1",
+      "-q + r"
+    ],
+    "y_factor": [
+      "p - 1",
+      "r - 1"
+    ],
+    "y_cube": [
+      "p**3 - 1",
+      "-q + r**3"
+    ],
+    "x_u_square": [
+      "p + 1",
+      "r + 1"
+    ],
+    "x_v_square": [
+      "p + 1",
+      "r - 1"
+    ],
+    "y_u_square": [
+      "p + 1",
+      "q + r"
+    ],
+    "y_v_square": [
+      "p + 1",
+      "-q + r"
+    ]
+  },
+  "conclusion": "every normal cubic in the diagonal charts has an explicit linear factor; repeated-eigenvalue commutative/Jordan charts have normal kernel0",
+  "proof": "papers/sections/cubic_order2_22_curved_quarter.tex",
+  "not_claimed": [
+    "rank1 positive projection",
+    "all rank4 moduli",
+    "relative descent"
+  ]
+}

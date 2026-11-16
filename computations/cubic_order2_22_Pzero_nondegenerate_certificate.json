@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "scope": "the entire canonical P=0 mixed-rank4 sector; the positive quadratic projection is automatically nondegenerate for an AS4 domain",
+  "checks": [
+    "both possible cyclic negative curvature spaces",
+    "geometric negative quantum unipotent rigidity",
+    "exact QQ diagonal dictionary",
+    "commutative positive full-matrix dictionary",
+    "Jordan positive full dictionary and shear/primitive8 alternatives",
+    "rank2 cross forces pure mixed line into cross image",
+    "rank1 positive projection cross image consists entirely of products"
+  ],
+  "proof": "papers/sections/cubic_order2_22_Pzero_nondegenerate.tex",
+  "dependencies": [
+    "zero_top_classification",
+    "filtered_normal_exclusion",
+    "curved_quantum_diagonal",
+    "curved_SL2",
+    "curved_Jordan_projection",
+    "curved_quarter",
+    "zero_top_QQ_plus and exceptional JQ normal minor"
+  ],
+  "conclusion": "all H3 objects and geometric arrows in the entire canonical P=0 sector are the known fixed sign-envelope cuts; rank1 positive projection is excluded already by domain",
+  "not_claimed": [
+    "P nonzero rank4 classification",
+    "global H3 classification",
+    "relative or nonreduced-base descent"
+  ]
+}

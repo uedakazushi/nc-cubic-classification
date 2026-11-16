@@ -1,0 +1,49 @@
+\subsection{filtered正常核と曲がったJordan正射影}
+\label{subsec:h3-order2-22-curved-Jordan-projection}
+\begin{lemma}[filtered正常核の消滅]
+\label{lem:h3-order2-22-filtered-normal-exclusion}
+$B$が正生成元$U$の個数によるfiltrationを持ち、$\operatorname{gr}B=B_0$とする。
+符号自己同型$\mu=(+,+,-,-)$がfiltrationを保つと仮定する。
+$B_0$の正三次部分に$Gv=\mu^{-1}(v)G$を満たす非零元がなければ、$B$にもそのような元はない。
+\end{lemma}
+\begin{proof}
+非零$G$の最高正次数記号を取れば、同じ四正常方程式を満たす非零正三次元が$B_0$に得られる。
+PBWによるfiltrationの分離性を使っており、Zhang twistで$G$を輸送しているわけではない。
+\end{proof}
+
+\begin{proposition}\label{prop:h3-order2-22-curved-Jordan-projection-empty}
+$\epsilon=\pm1$、$t,\alpha,\beta\in k$について、全六関係を
+\begin{gather*}
+ yx=xy+x^2+\alpha u^2+\beta v^2,\qquad uv=-vu,\\
+ ux=\epsilon xu,\quad uy=\epsilon yu+(\epsilon-t)xu,\\
+ vx=\epsilon xv,\quad vy=\epsilon yv+(\epsilon+t)xv
+\end{gather*}
+とする。この表示を持ち中山が$(+,+,-,-)$となるH3は存在しない。
+\end{proposition}
+\begin{proof}
+全四三次overlapは全係数で消え、標準PBW語を得る。
+$u,v$の正規化作用の正平面への制限を$f,g$とすると
+\[
+ f=\begin{pmatrix}\epsilon&\epsilon-t\\0&\epsilon\end{pmatrix},\quad
+ g=\begin{pmatrix}\epsilon&\epsilon+t\\0&\epsilon\end{pmatrix},\quad
+ fg=\begin{pmatrix}1&2\\0&1\end{pmatrix}.
+\]
+その合成は負変数を共に$-1$倍する。
+必要な$G$は正三次であり、$u,v$の正常化作用でそれぞれ$-1$倍される。
+従って$G$は、負変数を固定し$y\mapsto y+2x$とする正shearで固定される。
+
+正次数filtration上では、三次固定核の上限はJordan正平面の$kx^3$と、
+三つの負二次標準語に対する$kx$の和である。
+これら四元は実際にも固定されるので、全係数で固定核は厳密に
+\[
+ \langle x^3,xu^2,xuv,xv^2\rangle
+\]
+となる。十次元三次空間上の$shear-I$の定数minor 384も、この核次元を証明する。
+従って全$G$が$x$で割れ、整域商を与えない。
+\end{proof}
+
+検証器は
+\[
+ \texttt{verify\_cubic\_order2\_22\_curved\_Jordan\_projection.py}
+\]
+で、二符号の計8overlap、合成作用、二つの定数minor 384を再生する。
