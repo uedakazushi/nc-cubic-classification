@@ -643,3 +643,17 @@ verify_cubic_order2_normal_axis_admissibility.pyは六元関係、cover、正規
 残る二chart：A)四乗零,{v,ell}=0,v²=h(u²,w²)、hとell²独立。ellが量子軸ならv114で既に完全分類なので未被覆はellが両軸成分非零の場合。B)四乗非零,v²=c ell²,{v,ell}=q2(u²,w²)、q2とell²独立。この両chartのp²関係・W1・許容性が次の核心。
 
 未検証だが次に使う着想：負三生成元の三つの二次関係は全て対称で、負平方と交差反交換子が中心となるためClifford表示が期待される。S0の三元三関係quadratic dualは可換三二次式で、B整域はrank1対称関係を禁じるのでArtin complete intersectionを導ける可能性がある。B3のmu負成分dim11はS3とpvp一本で張られるためS3 dim10を強制し、負三生成元部分の三次関係の追加を除ける見込み。これでp²がTをcentralizeする条件をS0内で比較しp²全B中心を導く方策を試す。ただしS0全次数埋込み/AS3性、p²中心性はこの版ではまだ定理に含めない。
+
+## 全(1,3)でp²と負反交換子も中心（classification-v116）
+
+原稿thm:h3-order2-positive-square-central。全(1,3)H3でp²,u²,w²,v²,{u,v},{w,v}が中心と証明。pu=-up,pw=wpとしてP=p²,X=u²,Y=w²は一次独立、負反交換子L1(P,X,Y),L2(P,X,Y)、v²=H(X,Y)という六関係・八係数の必要表示へ還元した。L1/L2のP係数は同時には零でない。任意係数のAS4/H3十分性、三中心二次元の代数的独立性、負三生成元部分代数の全次数AS3埋込みはまだ主張しない。
+
+負三生成元の三関係だけの抽象S0を取る。v115の独立二中心平方の議論は線型係数行列の可逆性だけでS0内でも通り、X,Y,v²中心。A={u,v},D={w,v}はそれぞれu/vとw/vに可換、[A,w]=[u,D]。crossのalpha A+beta D=q(X,Y)中心、alpha/beta少なくとも一方非零から両A,D中心となる。一方を自由Kとして他方を解けばS0はk[X,Y,K]上真正Clifford3、PBW rank8、HS(1−t)^−3。
+
+B3のmu trace−2、dim20から負固有成分dim11。この成分はS0_3とpvp一本で張られる（p²をS0へ、pWpをf(W)p²へ移す）。S0_3dim10なので三次単射性が従う。p²=h2∈S0_2はTをcentralizeするため、同じ三次比較がS0でも成り立つ。S0 Clifford行列のK²係数−(X*dK²+Y*aK²)/4非零、genericで非退化。Cl2(u,w)は中心単純なのでCl3内centralizerは全体の二次元中心に等しい。よってh2はS0中心、次数2中心はspan(X,Y,K)。従ってp²=aX+bY+cK、特にvとも可換。
+
+c0ならr1=pu+up,r2=pw−wp,r3=uw+wu,q=p²−a u²−b w²の間にmu正の独立二syzygyがある：r1w−u r2−p r3−r3p+w r1+r2u0、qp−pq−a(r1u−u r1)−b(r2w+w r2)0。AS4第三Koszul空間のmu正部分はFrobenius双対でdim1なので矛盾。ゆえにc非零、K=(p²−aX−bY)/cも全B中心となる。verify_cubic_order2_positive_square.pyがtrace/dim、generic Clifford determinant、両syzygy/独立unit minor/符号、交差交換子恒等式を厳密検算PASS。generic centralizerと三次単射性は本文構造証明。
+
+次の具体的着手：八係数テンプレートA={u,v}=aP+bX+cY,B={w,v}=dP+eX+fY,H=gX+hYと置き、(a,d)非零、puanti,pwcomm,uwantiを使う。全PXY中心性はテンプレートからも導ける見込み（[v,X]=[v,Y]0、[v,A]=[v,B]0からP係数非零で[v,P]0）。T={p,v}はp,u,vと可換、Tw+wT=2Bp、T²中心、Gcan=Tw−Bpは期待されるmu正常三次、Gcan²=B²P−T²Y。これらは次版でPBW/正常化/非零性・実際のmuを検証するまで未使用。
+
+未検証のPBW構成案：中心PXYとT上Clifford3(p,u,v)（puanti,pv+vp=T,uv+vu=A）を作り、wをsigma(p,u,v,T)=(p,−u,−v,−T)、delta(v)=B,delta(T)=2Bp,delta(p/u)=0のOre変数として加えw²=Yで割る。sigma²1,delta sigma+sigma delta0,delta²0が見込まれ、rank16のモデルとHS1/(1−t)^4を得る。実際のAS4/Nakayama符号条件を先に調べ、generic flatnessや明示正常三次だけでH3十分性としない。
