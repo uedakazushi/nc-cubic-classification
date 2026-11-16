@@ -1184,6 +1184,49 @@ $q_2=\gamma x^2+\delta y^2$。
 逆符号の対角作用は $x,y$ を交換し $a$ を $-a^{-1}$ へ置き換えて同じ表示に移る。
 \end{proof}
 
+\begin{theorem}[反対角normalizing chartの全排除]
+\label{thm:h3-order2-antidiagonal-normalizing-chart}
+全六関係が
+\[
+\begin{gathered}
+ xy+yx=0,\quad px=-xp,\quad py=yp,\\
+ vx=\lambda yv+d_x,\quad vy=\eta xv+d_y,\quad
+ v^2-p^2=\ell v+q_2
+\end{gathered}
+\]
+となるH3は存在しない。ここで $\lambda\eta\ne0$、
+$d_x,d_y,q_2\in k\langle x,y\rangle_2$、$\ell\in\langle x,y\rangle$ は任意である。
+\end{theorem}
+\begin{proof}
+前定理と同じPBW比較により、量子平面 $T=(xy=-yx)$ は忠実で、
+$v$ のcross作用は自己同型 $\nu=(\lambda y,\eta x)$ とskew derivationからなる。
+外側二乗の最高係数を $T$ と比較すると $\nu^2=1$、従って $\lambda\eta=1$。
+$x,y$ の対角尺度変更で $\nu(x)=y$, $\nu(y)=x$ とできる。
+
+$d(x)=d_0x^2+d_1xy+d_2y^2$、$d(y)=e_0x^2+e_1xy+e_2y^2$ と置くと、
+skew derivation条件は $d_0+e_0=d_2+e_2=d_1-e_1=0$。
+内部derivationの二列は独立なので、$v$ の一次式による移動後には
+$d(x)=d(y)=\kappa xy$ の一本だけが残る。
+この作用は $d^2=0$, $d\nu+\nu d=0$ を満たす。
+従って外側関係の係数比較から内部derivation $d_\ell=0$、
+さらに $\ell=0$ と $q_2=Cx^2+Dy^2$ を得る。
+
+残る三パラメータ表示は
+\[
+ vx=yv+\kappa xy,\qquad vy=xv+\kappa xy,\qquad
+ v^2-p^2=Cx^2+Dy^2
+\]
+である。$u=(p+v)/2,w=(p-v)/2$ による二次書換えは全係数でPBWであり、
+74項の多項式最高tensorが全隣接関係と
+$\mu=(-x,-y,p,-v)$ の巡回式を満たし、固定係数 $w_{yxwu}=1$ を持つ。
+AS4という必要仮定の下で、これが実際の中山作用である。
+その140行20列正常化行列は、有理定数だけをpivotとする20段の消去を持つ。
+従って全 $\kappa,C,D$ で $W_1=0$、H3に必要な三次関係は存在しない。
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}order2\_\allowbreak{}antidiagonal\_\allowbreak{}chart.py}
+と74項証明書が、導分の三次元核、内部二列、残余作用、PBW、最高tensorと
+全値rank20を独立再生する。ここでもパラメータで割っていない。
+\end{proof}
+
 \begin{lemma}[単冪twist下の反標準三次関係の輸送]
 \label{lem:h3-unipotent-transport}
 $C$は左右noetherian quadratic Koszul AS4型14641で，$\mu_C$は半単純とする．

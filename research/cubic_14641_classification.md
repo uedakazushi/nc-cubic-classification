@@ -523,3 +523,11 @@ verify_cubic_order2_resonant_obstruction.pyは全中心交換子・scroll関係�
 vを一次式だけずらして、a!=−1ではd0、a−1ではd(x)=alpha y²,d(y)=beta x²。後者はd nu+nu d0,d²0なので全aで(v²−p²)t=nu²(t)(v²−p²)。外側関係のv係数比較によりell t=nu(t)ell、内部derivation d_ell0。前補題の内部写像は全aで単射だからell0。残りq2はnu²正常化、a!=−1は全base二次変形の既排除族、a−1は四パラメータ共鳴の既排除族。vの対角係数を双方逆符号にしたchartもW交換とa->−a^-1で同じ結論。
 
 新たなCASを仮装しない構造的な帰着。dの分類/gcdはv103、一般base変形はv102、共鳴全値はv104の再生器と証明へ依存する。原稿thm:h3-order2-diagonal-normalizing-chart。反対角normalizer、非対角f/Jordan平面、cross射影がgraphでない退化部分、外側二乗投影rank2の既知Clifford正例はこの定理の被覆ではない。次はこれらを区別して扱う。
+
+## 反対角involution normalizing chartの全排除（classification-v106）
+
+T=(xy=-yx)、p x=-xp,p y=yp、v x=lambda yv+d_x,v y=eta xv+d_y、v²−p²=ell v+q2の全六関係を持つH3は存在しない。HFB4のordered monomial比較でPBW、外側最高項の比較でnu²id⇒lambda eta1。対角base尺度でnuがx,y交換に正規化される。skew derivationの六係数にはd0+e0=d2+e2=d1−e1=0の三条件、内部二列独立なのでmod内部はd(x)=d(y)=kappa xyの一本。d²0、d nu+nu d0からell0（内部写像単射）、q2=Cx²+Dy²。
+
+この三パラメータ表示の74項多項式最高tensorは全隣接関係に入り、固定係数w_yxwu1、mu=(-x,-y,p,-v)の巡回式を全値で満たす。AS4なら実際のmuを決定する。140x20正常化行列は定数pivot20段、全パラメータで核零。verify_cubic_order2_antidiagonal_chart.pyが全PBW、tensor/flattening4,6,4、導分、全正常化rank20を独立再生。三パラメータ分母は一切ない。原稿thm:h3-order2-antidiagonal-normalizing-chart。
+
+次の統合：残るnormalizing chartではnu²=f²、hdet_T f=−1。nu=+-fのtrim先頭環は二段Ore（又はinvolution Zhang twist）となりmuの正固有値が二本出て重複度(1,3)に合わない可能性がある。このスペクトルのfiltered保存と二次元平方根分類を証明してから、対角・反対角排除と統合する。cross射影がgraphでない退化部分や外側二乗rank2のClifford正例は未被覆として保持する。

@@ -1,0 +1,15 @@
+{
+  "normalizing_chart": "xy=-yx; px=-xp; py=yp; vx=yv+dx; vy=xv+dy; v\u00b2-p\u00b2=ell*v+P",
+  "skew_derivations": "Modulo inner, delta(x)=delta(y)=A*x*y; delta\u00b2=0 and delta*nu+nu*delta=0",
+  "canonical_family": "vx=yv+A*xy; vy=xv+A*xy; v\u00b2-p\u00b2=C*x\u00b2+D*y\u00b2",
+  "top_terms": 74,
+  "universal_top_ranks": [
+    4,
+    6,
+    4
+  ],
+  "normality_unit_rank": 20,
+  "W1": "zero for every A,C,D",
+  "result": "Entire anti-diagonal involution normalizing chart excluded after removing inner derivations and the forced-zero outer linear term.",
+  "scope": "No general degenerate cross-projection or non-diagonal common-plane matrix coverage asserted."
+}

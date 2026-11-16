@@ -1128,5 +1128,13 @@
       "fixed resonant obstruction v104"
     ],
     "scope_limit": "No coverage of anti-diagonal/Jordan actions, degenerate cross projections, or outer-square projection rank2."
+  },
+  "order2_antidiagonal_chart_exclusion_v106": {
+    "status": "universal exact PBW/top/rank and derivation identities executed; global reduction proof in manuscript",
+    "validator": "computations/verify_cubic_order2_antidiagonal_chart.py",
+    "certificate": "computations/cubic_order2_antidiagonal_chart_certificate.json",
+    "top_certificate": "computations/cubic_order2_antidiagonal_top_certificate.json",
+    "result": "Entire anti-diagonal involution normalizing chart excluded, including arbitrary quadratic cross derivations and outer linear/quadratic base terms. Reduced three-parameter family has W1 zero by20 constant pivots.",
+    "scope_limit": "No coverage of degenerate cross projections, general second common-plane form or all order-two envelopes claimed."
   }
 }
