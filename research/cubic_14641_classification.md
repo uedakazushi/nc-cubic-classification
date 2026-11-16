@@ -723,3 +723,10 @@ H3係数locusはprojective conic bundleのrelative singular incidenceの像の�
 次の具体的着手：全矢はp/u/w各線の尺度とv->s v+t u+r wに限る（mu正直線、commonW、f±axes自然）。8係数slice H0(P in v²)=0を保つにはtarget a*t+d*r=0という一条件。9係数にv²=kP+gX+hYを許せば全semi-direct group(Gm)^4 ⋉Ga²（共通gradingGmを割る）が作用し、sliceはfppf gauge。許容openへの全係数矢とstabilizerを正確に求め、4次元表示stackを作る方針。
 
 未検証の慣性計算案：eunitでa,d両非零はdiagonal比較から全autoはmu2。a0,dunitでc0はnormalaxis mu2²、c非零ではmu2。d0,aunitで(b,c)非同時零もmu2。d0,aunit,b=c0ではvをwだけ移動しf0としてgbar=g−ef/2,hbar=h−f²/4、gbar非0ならmu4、gbar0,hbar非0ならmu8が期待される（hbar0は非H3になる見込み）。H3 criterionと全generator比較で次に証明する。
+
+
+## 全(1,3)表示の全矢と四次元stack（classification-v122）
+
+全(1,3)許容八係数表示の全幾何学的intrinsic矢を三角生成元写像と九係数式で確定した。正規三次はalpha*gamma*delta倍。共通次数尺度を除く明示表示群oidはsource滑らか相対次元4、安定化Lie環はAS4 resultant非零により全点零、従って滑らか既約DM4の表示stack。ad非零開ではa=d=e=1,b=0へfppf正規化し、許容A4_(c,f,g,h)×Bmu2。全intrinsic Abel圏族の認識/降下、全H3成分性は主張しない。次は全境界慣性を確定し、残る中山重複度(3,1)/(2,2)、三固有値以上・CY/unipotent被覆へ進む。
+
+原稿thm:h3-order2-full-arrows、verify_cubic_order2_full_arrows.py/certificate。全矢p->alpha pprime,u->beta uprime,w->gamma wprime,v->delta vprime+r uprime+s wprime。各二次関係比較九式、G共変式、一般正規化は普遍Clifford--Ore模型で厳密検算PASS。Lie環はbeta1でC=-D,R=-bD/2,S=-fD。a(D-2A)=dA=3cD=(ab/2+df)D=(2g-b²/2-ef)D=(4h-bc/2-f²)D=0。D非零ならa0/dunitではc=f=h0、d0/aunitではb=c0,g=ef/2,h=f²/4となりAS resultant零。全点有限エタール慣性でDM。表示群oidは任意基底環上の明示式で定義し、全幾何学的intrinsic矢を被覆する。非被約基底上の任意圏族からこの表示への認識は未証明、分離性も未主張。

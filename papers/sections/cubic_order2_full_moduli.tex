@@ -1,0 +1,91 @@
+\subsection{全$(1,3)$表示の矢と四次元モジュライ}
+\label{subsec:h3-order2-full-moduli}
+定理\ref{thm:h3-order2-complete-conic-admissibility}の八係数許容開集合を
+$\mathcal H\subset\mathbb A^8_{a,b,c,d,e,f,g,h}$と書く。
+従って$e\ne0$、$(a,d)\ne(0,0)$、$\Delta_{\mathrm{AS}}\ne0$であり、
+対応するconic bundle総空間が滑らかである。
+
+\begin{theorem}\label{thm:h3-order2-full-arrows}
+二つの幾何学的点に対応する全intrinsic pointed同値は、共通次数尺度を除いて
+次の生成元写像で、かつそのような写像だけで与えられる：
+\[
+ p\mapsto\alpha p',\quad u\mapsto\beta u',\quad
+ w\mapsto\gamma w',\quad v\mapsto\delta v'+r u'+s w',
+ \qquad\alpha\beta\gamma\delta\ne0.
+\]
+係数の必要十分条件は
+\begin{align*}
+ \beta\delta a'&=a\alpha^2,&
+ \beta\delta b'+2\beta r&=b\beta^2,&
+ \beta\delta c'&=c\gamma^2,\\
+ \gamma\delta d'&=d\alpha^2,&
+ \gamma\delta e'&=e\beta^2,&
+ \gamma\delta f'+2\gamma s&=f\gamma^2,\\
+ ra'+sd'&=0,&&&\\
+ \delta^2g'+\delta r b'+\delta s e'+r^2&=g\beta^2,&&&\\
+ \delta^2h'+\delta r c'+\delta s f'+s^2&=h\gamma^2.&&&
+\end{align*}
+正規三次は$G\mapsto\alpha\gamma\delta G'$となる。
+この係数群oidを共通次数尺度で割った表示stackは滑らか既約な
+四次元Deligne--Mumford stackである。
+さらに$ad\ne0$の開部分は、$a=d=e=1,b=0$とした
+$\mathbb A^4_{c,f,g,h}$内の許容開集合と$B\mu_2$の直積である。
+これは表示族のstackについての主張であり、任意のintrinsic Abel圏族の
+認識・効果的降下や全H3内での成分性を含まない。
+\end{theorem}
+\begin{proof}
+中山作用の正直線$kp$、混合関係から得る共通平面$\langle u,w\rangle$、
+その上の二つの固有軸$ku,kw$は同型に自然である。
+従って全幾何学的矢は表示した三角形に限られる。
+六つの二次関係の係数を比較すると上の九式を得る。
+特に最後の平方関係の$P'$係数は$\delta(ra'+sd')$である。
+逆に九式は全関係を保ち、生成元行列は可逆なので全次数同型を与える。
+正常三次の共変式は$\{u,w\}=0$と$[p,w]=0$で直接確認できる。
+二次包絡の内在的復元により、商のpointed矢もこれらに尽くされる。
+
+以下の相対stackは上の明示式を任意の基底環上で用いて定義する。
+共通尺度を$\beta=1$で除く前に、sourceを固定するとtarget係数は
+四つの可逆尺度と二つの平行移動から一意に決まり、残る条件は
+\[
+ ra/\beta+sd/\gamma=0
+\]
+だけである。$(a,d)$は単位イデアルを生成するのでこれは線束の全空間であり、
+source写像は相対次元5の滑らかな写像である。
+共通尺度を除くと相対次元4となる。合成は生成元写像の合成であり、
+targetも同型により許容集合に属する。
+非空開集合$\mathcal H$は滑らか既約八次元なので、商stackは滑らか既約四次元である。
+
+安定化群のLie環を調べる。$\beta=1$、
+$(\alpha,\gamma,\delta,r,s)=(1+A\epsilon,1+C\epsilon,1+D\epsilon,R\epsilon,S\epsilon)$
+と置くと、$e\ne0$より
+\[
+ C=-D,\quad R=-bD/2,\quad S=-fD,
+\]
+および
+\begin{gather*}
+ a(D-2A)=dA=3cD=0,\
+ (ab/2+df)D=(2g-b^2/2-ef)D=(4h-bc/2-f^2)D=0.
+\end{gather*}
+$ad\ne0$なら直ちに$A=D=0$。
+$a=0,d\ne0$で$D\ne0$なら$c=f=h=0$となり$\Delta_{\mathrm{AS}}=0$。
+$d=0,a\ne0$で$D\ne0$なら$b=c=0,g=ef/2,h=f^2/4$となり、やはり
+$\Delta_{\mathrm{AS}}=0$である。従って全幾何学的安定化群はLie環零、
+有限型アフィンなので有限で、標数0により有限エタールである。
+この群oidの対角は非分岐、従ってstackはDMである。
+対角の固有性・分離性はここでは主張しない。
+
+$ad\ne0$ではsourceから正規形への矢を
+\[
+ \beta=1,\quad\alpha^2=e/d,\quad\gamma=d/a,\quad
+ \delta=ae/d,\quad r=b/2,\quad s=-b/2
+\]
+で与え、九式から$c',f',g',h'$を一意に決められる。
+必要な平方根はfppf局所的に存在する。
+二つの正規形の間の矢は、九式から
+$\gamma=\delta=1,r=s=0,\alpha^2=1$だけであり、残る四係数は不変である。
+よって正規形開部分の群oidは恒等作用の$\mu_2$となり、主張を得る。
+\end{proof}
+
+\texttt{verify\_cubic\_order2\_full\_arrows.py}は普遍Clifford--Ore模型上で
+全関係・三次共変式・正規化式・Lie環で現れるresultant零を厳密検算する。
+滑らか群oidと幾何学的矢の全被覆は上の構造証明による。
