@@ -377,13 +377,13 @@ FZ2のQについてR=U+K diag(rho)、q=(2rho−1)/(2rho+1)を元の式から確�
 
 比の位数3では二次tensorの三つの一般化固有値が相異なり、Rは純A²/混合AC/純C²へ分解する。BはN²gradedとなり、Koszul topも一次元なので二重斉次。v90の二重Hilbert補題により、固有値集合{1,rho}は重複度1+3、{omega,omega²}は2+2となる。Gの固定重みは純三次の二成分だけ。
 
-{1,rho}では固有値1の直線kzが正常化しmu_B(z)=z。混合三関係の両射影の核はaz又はzaという零因子になるため無く、B=S[z;sigma]、Sは三生成元noethquadraticKoszulAS3となる。AS3性は純S成分のKoszul解消と正常一次商のRees lemma。G=F+c z³、F!=0、sigma F=F、Fのnormalizerはmu_B^-1|S。c!=0ならsigma³=mu_B^-1|S。c0の一般normal cone障害はまだ別に検証する。
+{1,rho}では固有値1の直線kzが正常化しmu_B(z)=z。混合三関係の両射影の核はaz又はzaという零因子になるため無く、B=S[z;sigma]、Sは三生成元noethquadraticKoszulAS3となる。AS3性は純S成分のKoszul解消と正常一次商のRees lemma。G=F+c z³、F!=0、sigma F=F、Fのnormalizerはmu_B^-1|S。c!=0ならsigma³=mu_B^-1|S。c0は後述の正規cone頂点障害で排除した。
 
 {omega,omega²}ではG=F_A+F_C、両成分非零（片方だけなら二変数三次が分解）。二生成元一二次関係のdomainで、正常三次のnormalizerが唯一の固有値rho（原始三乗根）なら、その平面はq=rho^-1の量子平面、F=x²y、normalizer=rho Iに限る。可換型はnormalizerIdで不可能、Jordan型はF=p(z)y³とp(z)=rho p(z+1)の最高係数で不可能。量子型の単一固有値graded automorphismはスカラーであり、指標q^u=q^(u−3)=rhoからq³1,u1/2を得る。従ってこのH3候補ではmu_B自体がsemisimpleとなり、xy=omega yx,zt=omega²tz,G=x²y+z²tに規格化できる。
 
 Frobenius対合により四次topのAA/CCブロック係数は非零。巡回式が混合flatteningのオフ対角を二つの可逆binary relation行列のKronecker積へ移すので、その4×4ブロックは可逆。混合rank4からR11のAC/CA両射影が同型、従って全体は標準単項式x^i y^j z^k t^lのPBW基底を持つ。残る混合四関係は可逆4×4twisting matrixで表せるが、全係数・H3 admissibilityは未解決。
 
-原稿thm:h3-order3-two-blocks、検証verify_cubic_order3_two_eigenvalue_reduction.py。有限重み、Jordan最高係数、量子binary指標、混合ブロック行列式を実行確認。成長・Frobenius・AS3性・PBW比較は原稿の証明であり列挙だけで完成としない。2+2の最高tensorと混合係数の全判定は後述classification-v92で完了した。1+3の純base切断のnormal版cone障害、三固有値以上、零交換子CYの被覆監査、非捩れqso3許容性も残る。
+原稿thm:h3-order3-two-blocks、検証verify_cubic_order3_two_eigenvalue_reduction.py。有限重み、Jordan最高係数、量子binary指標、混合ブロック行列式を実行確認。成長・Frobenius・AS3性・PBW比較は原稿の証明であり列挙だけで完成としない。2+2の最高tensorと混合係数の全判定は後述classification-v92で完了した。1+3の残るAS3/正常三次の分類、三固有値以上、零交換子CYの被覆監査、非捩れqso3許容性も残る。
 
 
 ## 二非自明三乗根固有値の全排除（classification-v92）
@@ -396,4 +396,11 @@ rank6のSchur16式、四Diamond（zyx,tyx,tzx,tzy）の24式、正規Gの32式�
 
 標準候補ではtau³=omegaとして、tau G=(x+tau z)[tau xy+zt+tau²{omega²xz−(2omega+1)(xt+yz)/3−yt/3}]という非可換積恒等式をPBW全係数で独立検証。次数1/2の非零因子から商はnondomain、従って全枝でH3を排除する。候補自体のAS4十分性・noetherian存在は不要。
 
-原稿thm:h3-order3-two-nontrivial-excluded、再現verify_cubic_order3_two_block_incidence.pyとcubic_order3_two_block_incidence_certificate.json。全H3二固有値の残る集合は{1,−1},{1,omega},{1,omega²}の三つ。位数3は正常一次元AS3 Ore表示の重複度1+3だけが残る。次はその純base切断c0の正常版cone障害を確定し、c!=0でsigma³=mu_B^-1となる三次元AS3/正常三次を分類する。位数2Jordan/全admissibility、三種類以上の中山固有値、CY零交換子の必要被覆監査、非捩れqso3許容性、大域成分・相対降下は未完。
+原稿thm:h3-order3-two-nontrivial-excluded、再現verify_cubic_order3_two_block_incidence.pyとcubic_order3_two_block_incidence_certificate.json。全H3二固有値の残る集合は{1,−1},{1,omega},{1,omega²}の三つ。位数3は正常一次元AS3 Ore表示の重複度1+3だけが残る。純base切断c0は次の正規cone障害で排除し、残る三次元AS3/正常三次を分類する。位数2Jordan/全admissibility、三種類以上の中山固有値、CY零交換子の必要被覆監査、非捩れqso3許容性、大域成分・相対降下は未完。
+
+
+## 正規cone頂点障害と位数3 Ore切断（classification-v93）
+
+既存のskew cone頂点補題を中心三次から正規三次へ拡張した。B=S[z;sigma]、G∈S3正規正則、Gz=zG、normalizer thetaがSを保ちzを固定する場合、M=k[z]はtheta-twistに不変。正規Rees lemmaのtwistはMを変えず、Ext_B(M,B)の次数3集中からExt_R(M,R)の次数2集中を得る。AS Gorenstein局所双対とsection比較、C=S/Gのkの最小自由解消のRへの誘導によりExt^n_qgr(P,P)=beta_n^C(k)。1/H_C=(1−u)^2/(1+u+u²)は多項式でないため全beta_n非零、H3のcohomological dimension2に反する。中心版の既存応用はtheta=idの特殊例として保持する。
+
+従って{1,rho}の1+3 Ore型でG=F+c z³のc0は不可能。座標を規格化してG=F+z³、sigma F=F、Fのnormalizer=sigma³=mu_B^-1|S。さらに正規一次元zの商にRRZ1302.0437v2 Lemma1.5を適用してmu_S=mu_B|S sigma=sigma^-2を得る。一次資料のmu_B-normal仮定はmu_B(z)=zで満たす。これは必要帰着であり、Sの存在十分性や商のH3判定を結論しない。独立な大規模CAS計算は不要なホモロジー証明であり、新たな計算検証を実行済みとしない。次はsigma³に唯一の原始三乗根固有値を持つAS3とsigma-fixed正常三次Fの分類。三固有値以上の包絡・全許容性・相対分類も残る。

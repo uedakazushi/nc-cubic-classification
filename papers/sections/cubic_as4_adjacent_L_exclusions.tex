@@ -1,12 +1,14 @@
 \subsection{skew coneの頂点障害と隣接支持の二固定表示}
 \label{subsec:cubic-as4-adjacent-L}
-ここでは中心三次が消えない表示を扱う。
+ここでは正規三次が消えない表示を扱う。
 因子性や中心の次元だけからadmissibilityを推測せず、切断後のpoint対象の自己Extを調べる。
 
 \begin{lemma}[自己同型型Ore coneの頂点]\label{lem:cubic-skew-cone-vertex}
 $B=S[z;\sigma]$ は $\deg z=1$ の自己同型型Ore拡大で、
 noetherian quadratic Koszul AS4型14641とする。
-$0\ne G\in S_3\cap Z(B)$ が正則であるとし、
+$0\ne G\in S_3$ が $B$ 内で正規正則であり、$Gz=zG$ とする。
+正規化 $\theta$ を $Gb=\theta(b)G$ で定め、
+$\theta(S)=S$, $\theta(z)=z$ を仮定する。
 $C=S/(G)$, $R=B/(G)=C[z;\bar\sigma]$ と置く。
 このとき $P=\pi k[z]\in\qgr R$ は無限高次の自己Extを持ち、$R$ はH3を与えない。
 \end{lemma}
@@ -19,8 +21,13 @@ $B$ は左右 $S$ 自由であるから、$M=k\otimes_SB\simeq k[z]$ につい�
 \[
  \underline{\operatorname{Ext}}_B^j(M,B)=0\quad(j\ne3).
 \]
-中心正則 $G$ のchange of ringsにより
+正規正則 $G$ のchange of ringsにより
 $\underline{\operatorname{Ext}}_R^j(M,R)=0$ ($j\ne2$) となる。
+ここで正規版Rees lemmaには $\theta$ によるmodule twistが入るが、
+$\theta(S_{\ge1})=S_{\ge1}$ と $\theta(z)=z$ により
+$M^\theta\simeq M$ である。従って上のExt集中は中心の場合と同じである。
+$Gz=zG$ は $\sigma(G)=G$ を与えるので、表示
+$R=C[z;\bar\sigma]$ も成立する。
 $R$ はAS Gorenstein次元3・parameter 1なので、
 定理\ref{thm:h3-polynomial-ore-exclusion}と同じ局所双対とsection比較から
 \[

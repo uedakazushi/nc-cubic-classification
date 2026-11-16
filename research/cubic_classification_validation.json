@@ -1010,5 +1010,11 @@
       "explicit linear times quadratic identity modulo tau³=omega"
     ],
     "scope_limit": "No claim that all necessary incidence candidates are AS4, and no full three/four-eigenvalue or all-H3 coverage."
+  },
+  "normal_cone_and_order3_Ore_v93": {
+    "status": "homological proof in manuscript; primary normal-quotient formula checked; no new CAS verification claimed",
+    "proof": "papers/sections/cubic_as4_adjacent_L_exclusions.tex, lemma cubic-skew-cone-vertex; papers/sections/cubic_as4_reductions.tex, theorem h3-order3-two-blocks",
+    "result": "Pure-base normal cubic excluded when its normalizer preserves S and fixes z. Remaining order-three 1+3 H3 must have G=F+z^3, sigma(F)=F, normalizer(F)=sigma^3=mu_B^-1|S and mu_S=sigma^-2.",
+    "scope_limit": "Necessary structural reduction only; no AS3 coverage or H3 sufficiency asserted."
   }
 }
