@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "version": "classification-v89",
+  "version": "classification-v90",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -977,5 +977,18 @@
     "validator": "computations/verify_cubic_as4_Q_centre_bound.py",
     "certificate": "computations/cubic_as4_Q_centre_bound_certificate.json",
     "result": "All literal FZ2 Q excluded. In CY quantum affine four-space with all qij!=1, centre3 is zero or a single pure cube, so every central cubic quotient is a non-domain. No full zero-commutator CY atlas coverage, or twist invariance of c=0, imported."
+  },
+  "two_eigenvalue_filter_v90": {
+    "status": "structural proofs in manuscript; exact finite arithmetic and factorisation formula executed",
+    "validator": "computations/verify_cubic_two_eigenvalue_filter.py",
+    "certificate": "computations/cubic_two_eigenvalue_filter_certificate.json",
+    "result": "For every strong H3 envelope with exactly two distinct Nakayama eigenvalues, the semisimple part has order2 or3. The preliminary 16 eigenvalue sets reduce to four by multigraded Hilbert and factorisation obstructions. Multiplicities, Jordan parts and admissibility are not classified.",
+    "proof_dependencies": [
+      "mu_B(G)=G",
+      "RRZ Theorem6.3 hdet(mu_B)=1",
+      "Koszul dual Frobenius flattening",
+      "finite polynomial growth and domain",
+      "bigraded Euler polynomial and binary homogeneous factorisation"
+    ]
   }
 }

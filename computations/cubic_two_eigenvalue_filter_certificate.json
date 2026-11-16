@@ -1,0 +1,445 @@
+{
+  "version": "classification-v90",
+  "scope": "Necessary spectrum filter for all strong H3 envelopes with exactly two distinct eigenvalues, including nonsemisimple Jordan parts. The preliminary 16 spectra reduce to four unordered eigenvalue sets by factorisation. This is not an existence, Jordan-type or admissibility classification.",
+  "proof": "papers/sections/cubic_as4_reductions.tex thm:h3-two-eigenvalue-refined",
+  "input": "mu_B(G)=G in degree3; hdet(mu_B)=1 on the degree4 Koszul top; the top cannot split over a nontrivial generator decomposition in a finite-GK AS4 domain.",
+  "arithmetic_determinants": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    9
+  ],
+  "preliminary_semisimple_orders": [
+    2,
+    3,
+    5,
+    6,
+    9
+  ],
+  "possible_semisimple_orders": [
+    2,
+    3
+  ],
+  "eliminated_by_factorisation": [
+    {
+      "eigenvalue_exponents_in_mu90": [
+        10,
+        60
+      ],
+      "reason": "pure cube in the one-dimensional block"
+    },
+    {
+      "eigenvalue_exponents_in_mu90": [
+        15,
+        30
+      ],
+      "reason": "homogeneous cubic in a binary one-quadric domain factors"
+    },
+    {
+      "eigenvalue_exponents_in_mu90": [
+        18,
+        36
+      ],
+      "reason": "normal one-generator block; cubic has a repeated linear factor"
+    },
+    {
+      "eigenvalue_exponents_in_mu90": [
+        18,
+        54
+      ],
+      "reason": "normal one-generator block; cubic has a repeated linear factor"
+    },
+    {
+      "eigenvalue_exponents_in_mu90": [
+        20,
+        30
+      ],
+      "reason": "pure cube in the one-dimensional block"
+    },
+    {
+      "eigenvalue_exponents_in_mu90": [
+        30,
+        50
+      ],
+      "reason": "pure cube in the one-dimensional block"
+    },
+    {
+      "eigenvalue_exponents_in_mu90": [
+        30,
+        80
+      ],
+      "reason": "pure cube in the one-dimensional block"
+    },
+    {
+      "eigenvalue_exponents_in_mu90": [
+        36,
+        72
+      ],
+      "reason": "normal one-generator block; cubic has a repeated linear factor"
+    },
+    {
+      "eigenvalue_exponents_in_mu90": [
+        40,
+        60
+      ],
+      "reason": "pure cube in the one-dimensional block"
+    },
+    {
+      "eigenvalue_exponents_in_mu90": [
+        54,
+        72
+      ],
+      "reason": "normal one-generator block; cubic has a repeated linear factor"
+    },
+    {
+      "eigenvalue_exponents_in_mu90": [
+        60,
+        70
+      ],
+      "reason": "pure cube in the one-dimensional block"
+    },
+    {
+      "eigenvalue_exponents_in_mu90": [
+        60,
+        75
+      ],
+      "reason": "homogeneous cubic in a binary one-quadric domain factors"
+    }
+  ],
+  "remaining_spectra": [
+    {
+      "eigenvalue_exponents_in_mu90": [
+        0,
+        30
+      ],
+      "joint_semisimple_order": 3,
+      "weight_witnesses": [
+        {
+          "cubic_alpha_count": 0,
+          "top_alpha_count": 1,
+          "determinant": -3
+        },
+        {
+          "cubic_alpha_count": 3,
+          "top_alpha_count": 1,
+          "determinant": 9
+        }
+      ]
+    },
+    {
+      "eigenvalue_exponents_in_mu90": [
+        0,
+        45
+      ],
+      "joint_semisimple_order": 2,
+      "weight_witnesses": [
+        {
+          "cubic_alpha_count": 1,
+          "top_alpha_count": 2,
+          "determinant": -2
+        },
+        {
+          "cubic_alpha_count": 3,
+          "top_alpha_count": 2,
+          "determinant": 6
+        }
+      ]
+    },
+    {
+      "eigenvalue_exponents_in_mu90": [
+        0,
+        60
+      ],
+      "joint_semisimple_order": 3,
+      "weight_witnesses": [
+        {
+          "cubic_alpha_count": 0,
+          "top_alpha_count": 1,
+          "determinant": -3
+        },
+        {
+          "cubic_alpha_count": 3,
+          "top_alpha_count": 1,
+          "determinant": 9
+        }
+      ]
+    },
+    {
+      "eigenvalue_exponents_in_mu90": [
+        30,
+        60
+      ],
+      "joint_semisimple_order": 3,
+      "weight_witnesses": [
+        {
+          "cubic_alpha_count": 0,
+          "top_alpha_count": 2,
+          "determinant": -6
+        },
+        {
+          "cubic_alpha_count": 3,
+          "top_alpha_count": 2,
+          "determinant": 6
+        }
+      ]
+    }
+  ],
+  "binary_factorisation_formula_verified_through_degree": 3,
+  "root_coordinate": "Choose one primitive 90th root zeta; exponent pair [u,v] means unordered {zeta^u,zeta^v}.",
+  "preliminary_counts_by_order": {
+    "3": 3,
+    "2": 1,
+    "9": 6,
+    "6": 2,
+    "5": 4
+  },
+  "preliminary_spectra": [
+    {
+      "eigenvalue_exponents_in_mu90": [
+        0,
+        30
+      ],
+      "joint_semisimple_order": 3,
+      "weight_witnesses": [
+        {
+          "cubic_alpha_count": 0,
+          "top_alpha_count": 1,
+          "determinant": -3
+        },
+        {
+          "cubic_alpha_count": 3,
+          "top_alpha_count": 1,
+          "determinant": 9
+        }
+      ]
+    },
+    {
+      "eigenvalue_exponents_in_mu90": [
+        0,
+        45
+      ],
+      "joint_semisimple_order": 2,
+      "weight_witnesses": [
+        {
+          "cubic_alpha_count": 1,
+          "top_alpha_count": 2,
+          "determinant": -2
+        },
+        {
+          "cubic_alpha_count": 3,
+          "top_alpha_count": 2,
+          "determinant": 6
+        }
+      ]
+    },
+    {
+      "eigenvalue_exponents_in_mu90": [
+        0,
+        60
+      ],
+      "joint_semisimple_order": 3,
+      "weight_witnesses": [
+        {
+          "cubic_alpha_count": 0,
+          "top_alpha_count": 1,
+          "determinant": -3
+        },
+        {
+          "cubic_alpha_count": 3,
+          "top_alpha_count": 1,
+          "determinant": 9
+        }
+      ]
+    },
+    {
+      "eigenvalue_exponents_in_mu90": [
+        10,
+        60
+      ],
+      "joint_semisimple_order": 9,
+      "weight_witnesses": [
+        {
+          "cubic_alpha_count": 0,
+          "top_alpha_count": 3,
+          "determinant": -9
+        }
+      ]
+    },
+    {
+      "eigenvalue_exponents_in_mu90": [
+        15,
+        30
+      ],
+      "joint_semisimple_order": 6,
+      "weight_witnesses": [
+        {
+          "cubic_alpha_count": 0,
+          "top_alpha_count": 2,
+          "determinant": -6
+        }
+      ]
+    },
+    {
+      "eigenvalue_exponents_in_mu90": [
+        18,
+        36
+      ],
+      "joint_semisimple_order": 5,
+      "weight_witnesses": [
+        {
+          "cubic_alpha_count": 1,
+          "top_alpha_count": 3,
+          "determinant": -5
+        }
+      ]
+    },
+    {
+      "eigenvalue_exponents_in_mu90": [
+        18,
+        54
+      ],
+      "joint_semisimple_order": 5,
+      "weight_witnesses": [
+        {
+          "cubic_alpha_count": 2,
+          "top_alpha_count": 1,
+          "determinant": 5
+        }
+      ]
+    },
+    {
+      "eigenvalue_exponents_in_mu90": [
+        20,
+        30
+      ],
+      "joint_semisimple_order": 9,
+      "weight_witnesses": [
+        {
+          "cubic_alpha_count": 0,
+          "top_alpha_count": 3,
+          "determinant": -9
+        }
+      ]
+    },
+    {
+      "eigenvalue_exponents_in_mu90": [
+        30,
+        50
+      ],
+      "joint_semisimple_order": 9,
+      "weight_witnesses": [
+        {
+          "cubic_alpha_count": 3,
+          "top_alpha_count": 1,
+          "determinant": 9
+        }
+      ]
+    },
+    {
+      "eigenvalue_exponents_in_mu90": [
+        30,
+        60
+      ],
+      "joint_semisimple_order": 3,
+      "weight_witnesses": [
+        {
+          "cubic_alpha_count": 0,
+          "top_alpha_count": 2,
+          "determinant": -6
+        },
+        {
+          "cubic_alpha_count": 3,
+          "top_alpha_count": 2,
+          "determinant": 6
+        }
+      ]
+    },
+    {
+      "eigenvalue_exponents_in_mu90": [
+        30,
+        80
+      ],
+      "joint_semisimple_order": 9,
+      "weight_witnesses": [
+        {
+          "cubic_alpha_count": 3,
+          "top_alpha_count": 1,
+          "determinant": 9
+        }
+      ]
+    },
+    {
+      "eigenvalue_exponents_in_mu90": [
+        36,
+        72
+      ],
+      "joint_semisimple_order": 5,
+      "weight_witnesses": [
+        {
+          "cubic_alpha_count": 1,
+          "top_alpha_count": 3,
+          "determinant": -5
+        }
+      ]
+    },
+    {
+      "eigenvalue_exponents_in_mu90": [
+        40,
+        60
+      ],
+      "joint_semisimple_order": 9,
+      "weight_witnesses": [
+        {
+          "cubic_alpha_count": 0,
+          "top_alpha_count": 3,
+          "determinant": -9
+        }
+      ]
+    },
+    {
+      "eigenvalue_exponents_in_mu90": [
+        54,
+        72
+      ],
+      "joint_semisimple_order": 5,
+      "weight_witnesses": [
+        {
+          "cubic_alpha_count": 2,
+          "top_alpha_count": 1,
+          "determinant": 5
+        }
+      ]
+    },
+    {
+      "eigenvalue_exponents_in_mu90": [
+        60,
+        70
+      ],
+      "joint_semisimple_order": 9,
+      "weight_witnesses": [
+        {
+          "cubic_alpha_count": 3,
+          "top_alpha_count": 1,
+          "determinant": 9
+        }
+      ]
+    },
+    {
+      "eigenvalue_exponents_in_mu90": [
+        60,
+        75
+      ],
+      "joint_semisimple_order": 6,
+      "weight_witnesses": [
+        {
+          "cubic_alpha_count": 3,
+          "top_alpha_count": 2,
+          "determinant": 6
+        }
+      ]
+    }
+  ],
+  "validation_limit": "Exact residue arithmetic only. Frobenius flattening, free-product exponential growth, the multigraded Hilbert argument and binary-domain factorisation are manuscript proofs, not asserted to be proved by this enumeration."
+}

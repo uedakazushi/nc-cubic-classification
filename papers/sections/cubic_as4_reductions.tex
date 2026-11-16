@@ -51,6 +51,153 @@ $\lambda^4=1$となる．従って$\lambda=1$である．
 一般の自己同型のhomological determinantを通常の$4\times4$行列式と同一視してはいない．
 \end{proof}
 
+\begin{lemma}\label{lem:h3-top-nonseparable}
+H3包絡 $B$ の一次成分を非零部分空間の直和 $V=A\oplus C$ とする。
+四次Koszul topを表す非零tensor $w\in V^{\otimes4}$ は
+$A^{\otimes4}\oplus C^{\otimes4}$ に属さない。
+\end{lemma}
+\begin{proof}
+Koszul双対のFrobenius積 $E_2\otimes E_2\to E_4$ は完全対合である。
+従って $w$ の二次flatteningの像は六次元関係空間 $R$ 全体である。
+もし $w=w_A+w_C$ なら、このflatteningはブロック対角であり、
+$R=R_A\oplus R_C$、$R_A\subset A^{\otimes2}$、$R_C\subset C^{\otimes2}$ となる。
+従って $B=T(A)/(R_A)*T(C)/(R_C)$ は二つの連結次数付き代数の自由積である。
+$B$ は整域なので、各因子内の非零一次元 $a\in A,c\in C$ は
+それぞれ多項式部分代数 $k[a],k[c]$ を生成する。
+自由積の正規形により $k[a]*k[c]=k\langle a,c\rangle$ が $B$ に埋め込まれる。
+その指数成長は $H_B(t)=(1-t)^{-4}$ に矛盾する。
+\end{proof}
+
+\begin{proposition}[二固有値の有限スペクトル制約]
+\label{prop:h3-two-eigenvalue-filter}
+H3包絡の $\mu_B|_{B_1}$ が相異なる二固有値 $\alpha,\beta$ を持つなら、
+その半単純部分の位数は $2,3,5,6,9$ のいずれかである。
+Jordanの単冪部分の消滅は、この結論には含めない。
+一つの原始90乗根 $\zeta$ を固定したとき、可能な非順序固有値集合は
+次の16組に限られる：
+\[
+\begin{array}{c|l|c}
+\text{位数}&\{\alpha,\beta\}&\text{組数}\\\hline
+2&\{1,-1\}&1\\
+3&\mu_3\text{ の相異なる二元}&3\\
+5&\{\xi^k,\xi^{2k}\},\ \xi\text{ 原始5乗根},\ k\in(\mathbb Z/5)^*&4\\
+6&\{\xi^k,\xi^{2k}\},\ \xi\text{ 原始6乗根},\ k=1,5&2\\
+9&\{\xi^k,\xi^{-3k}\},\ \xi\text{ 原始9乗根},\ k\in(\mathbb Z/9)^*&6
+\end{array}
+\]
+各組のAS4存在・H3許容性を主張するものではない。
+\end{proposition}
+\begin{proof}
+$A,C$ を $\alpha,\beta$ に対する一般化固有空間とする。
+$\mu_B(G)=G$ と $B_3$ が $V^{\otimes3}$ の商であることから、
+ある $0\le a\le3$ について $\alpha^a\beta^{3-a}=1$ である。
+一方、\cite[Theorem 6.3]{RRZ}より最高Koszul tensorは $\mu_B^{\otimes4}$ に固定される。
+補題\ref{lem:h3-top-nonseparable}から、$w$ には両一般化固有空間を含む成分があり、
+その $A$ 因子の個数を $1\le c\le3$ とすると
+$\alpha^c\beta^{4-c}=1$ となる。
+一般化固有空間でも、このtensor成分の唯一の固有値はこの積であるから、
+非零固定成分の存在から同じ等式が従う。
+
+二つの等式を消去すると
+\[
+ \alpha^{4a-3c}=\beta^{4a-3c}=1.
+\]
+$4a-3c$ は零にならず、その絶対値の可能性は $1,2,3,5,6,9$ である。
+絶対値1では両固有値が1となり、相異なるという仮定に反する。
+従って二固有値の位数の最小公倍数は $2,3,5,6,9$ のいずれかとなる。
+$\mu_{90}$ 内で二つの重み等式を解くと表の16組を得る。
+この最後の有限整数演算は
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}two\_\allowbreak{}eigenvalue\_\allowbreak{}filter.py}
+で再現し、tensorと自由積の議論は上の証明に依存する。
+\end{proof}
+
+\begin{lemma}\label{lem:h3-bigraded-top-index}
+$B$ が $V=A\oplus C$ の個数による二重次数を持ち、
+四次Koszul topの二重次数が $(c,4-c)$ であるとする。
+$p=\dim A$, $q=\dim C$ とすると $c=p$, $4-c=q$ であり、
+\[
+ H_B(s,t)=\frac1{(1-s)^p(1-t)^q}.
+\]
+\end{lemma}
+\begin{proof}
+二重次数付きKoszul解消から $H_B(s,t)=1/P(s,t)$ を得る。
+$P$ は全次数4以下で、最高次数部分はただ $s^ct^{4-c}$、
+一次部分は $-ps-qt$ である。
+任意の正整数 $m,n$ について、正の再次数付けは元の次数と上下に比較できるので、
+$H_B(u^m,u^n)$ は $u\to1^-$ で正確に4位の極を持つ。
+従って $P$ の $(1,1)$ におけるTaylor展開の4次未満の部分は全て零である。
+実際、最小非零次数が4未満なら、その斉次部分を $(m,n)$ で評価した値が
+全ての正整数対で零となり、その斉次多項式自体が零となって矛盾する。
+最高次数項は一つなので
+$P(s,t)=(s-1)^c(t-1)^{4-c}$ となる。
+一次係数の比較で $p=c,q=4-c$ を得る。
+\end{proof}
+
+\begin{lemma}\label{lem:h3-binary-cubic-factors}
+二生成元・一二次関係の次数付き整域では、全ての非零斉次三次式は一次式の積に分解する。
+\end{lemma}
+\begin{proof}
+関係の $2\times2$ 係数行列は可逆である。
+階数一なら関係自体が二一次式の積であり、整域性に反するためである。
+代数閉体上で関係の可換対称部分の等方方向を選べば、基底を変えて
+\[
+ yx=qxy+\kappa y^2,\qquad q\ne0
+\]
+と書ける。これはPBW表示であり、$y$ は正規正則である。
+$y$ を逆にして $z=xy^{-1}$ と置くと $yz=(qz+\kappa)y$ となる。
+次数 $d$ の式は $f=p(z)y^d$, $\deg p\le d$ と一意に書ける。
+$p$ を一次式へ分解し、その根を $a_1,\ldots,a_s$ とすると、
+\[
+ b_j=q^{j-1}a_j+\kappa\sum_{i=0}^{j-2}q^i
+\]
+によって、非零定数倍を除き
+$f=(x-b_1y)\cdots(x-b_sy)y^{d-s}$ となる。
+これは局所化での等式だが、両辺は元の整域内にあるので元の環でも成立する。
+$d=3$ では必ず低次数の非零因子に分解する。
+\end{proof}
+
+\begin{theorem}[二固有値H3包絡の中山半単純部分]
+\label{thm:h3-two-eigenvalue-refined}
+H3包絡の中山自己同型が相異なる二固有値を持つなら、その半単純部分の位数は
+2または3である。従って固有値集合は
+\[
+ \{1,-1\},\quad \{1,\omega\},\quad\{1,\omega^2\},\quad\{\omega,\omega^2\},
+ \qquad \omega^2+\omega+1=0
+\]
+に限られる。重複度、Jordan型、存在およびH3許容性は別の判定である。
+\end{theorem}
+\begin{proof}
+命題\ref{prop:h3-two-eigenvalue-filter}の残る位数 $5,6,9$ を排除する。
+その12個の固有値集合では、比 $\alpha/\beta$ の位数もそれぞれ $5,6,9$ である。
+従って4次topの重み等式を満たす $\alpha$ の個数 $c$ は一意であり、
+$w$ は二重斉次となる。その二次flatteningの像 $R$ も二重斉次なので、
+$B$ は二重次数を持つ。補題\ref{lem:h3-bigraded-top-index}から
+一般化固有空間の次元は $(c,4-c)$ である。
+同様に三次関係 $G$ の $\alpha$ 個数 $a$ も一意となる。
+
+位数5では $(a,c)=(1,3)$ または $(2,1)$ だけである。
+次元分解が $3+1$ のとき、二重Hilbert式から混合二次関係は三本である。
+一次元側の生成元を $z$ とすると、混合関係の
+$z\otimes A$ と $A\otimes z$ への両射影は整域性により単射である。
+従って両方とも同型となり、$za=\sigma(a)z$、$\sigma$ は可逆な一次変換となる。
+三次 $G$ の二重次数は、一次元側を二個含む型なので、
+正規順序化により $G=\ell z^2$ または $G=z^2\ell$ と分解する。
+これは $B/(G)$ の整域性に反する。
+
+位数9では $(a,c)=(0,3)$ または $(3,1)$ だけであり、
+$G$ は一次元側の純三乗となるので同様に不可能である。
+
+位数6では $c=2$、$a=0$ または3となる。
+純粋な各一般化固有空間の二次関係は一本である。
+非負の二重次数により、その二変数部分代数にはこの一本以外の関係は生じず、整域である。
+$G$ は片方の部分代数の三次式だけからなるので、
+補題\ref{lem:h3-binary-cubic-factors}により分解し、再び整域性に反する。
+以上で12組を全て排除する。
+\end{proof}
+この定理は全H3に対する必要条件であり、as4の未監査な全スペクトルatlasを輸入しない。
+三種類以上の固有値を持つ層をこの定理で排除することも、
+残る単冪部分を自動的に零とすることもない。
+
 \begin{lemma}[単冪twist下の反標準三次関係の輸送]
 \label{lem:h3-unipotent-transport}
 $C$は左右noetherian quadratic Koszul AS4型14641で，$\mu_C$は半単純とする．

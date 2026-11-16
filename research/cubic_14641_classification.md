@@ -358,3 +358,16 @@ FT2/FT3の全P_lambda,r両符号を排除した。全二変数商射影のD3=lam
 FZ2のQについてR=U+K diag(rho)、q=(2rho−1)/(2rho+1)を元の式から確認し、四つのCY行積−1の分子がAB+lambda AC−(lambda+1)BC−lambda(lambda+1)/16で割り切れることを厳密確認した。q−1=−2/(2rho+1)なのでc=0。従って通常Qも全排除。標準cocycle後にq1が生じる場合はこの補題を適用せず、既存skew分類へ戻す。原稿cubic_as4_four_simple_exclusions.tex、再現verify_cubic_as4_Q_centre_bound.py。
 
 全零交換子CYの被覆監査はまだ別の課題。固定as4 a45f834f51a00c47443b51caf66abaf4629546b9のCY_COMPLETE、CI22_COMPLETE、IMAGE_REDUCTION、VERONESE_EXCLUSION、NONDEGENERATE_CHART、QUADRIC_PENCIL_PROJECTIONS、DEGENERATE_CHART_SECOND_QUADRICの論理を読み始めたが、これらの全必要被覆を新規輸入したとはしない。現在は階数六の二次関係を持つ六二次式系の退化微分像から第二二次関係を得るDC1–DC15の全枝を独立に検証し、CI(2,3)/CI(2,4)が消える幾何的核心を監査する。次いでVeronese除外、CI22七射影型と支持分岐の必要性だけを監査する。AS4十分性や全同型はH3排除のために輸入する必要がない。
+
+
+## 全H3の二固有値中山：位数2/3への縮小（classification-v90）
+
+既存の単一固有値フィルタを二固有値へ拡張した。H3包絡BのKoszul top wは任意の非自明なV=A⊕Cに対して純A四次と純C四次だけへ分離しない。Frobenius E2対合によりflattening像はR全体であり、もし分離すればR=R_A⊕R_C、Bは自由積となる。整域性からk[a]*k[c]が入り指数成長となってHilbert14641に反する。
+
+二一般化固有空間の固有値alpha,betaに対し、mu_B(G)=Gからalpha^a beta^(3−a)=1、hdet(mu_B)=1と混合topからalpha^c beta^(4−c)=1、a0..3,c1..3。4a−3cの絶対値は1,2,3,5,6,9、1は二値が一致するので除外。粗い固有値集合はmu90内の非順序16組（位数2:1組、3:3組、5:4組、6:2組、9:6組）に限る。
+
+位数5/6/9の12組ではalpha/betaの位数も5/6/9であり、topのA個数cとGのA個数aが各々一意となる。Rが二重斉次となり、Koszul Euler分母P(s,t)は全次数4以下・最高項s^c t^(4−c)。任意の正の再次数付けのHilbert極が4位なので、Pの(1,1)Taylor次数4未満は零、よってP=(1−s)^c(1−t)^(4−c)。一次係数からdimA=c,dimC=4−cを得る。
+
+位数5は(a,c)=(1,3)/(2,1)、一次元側が正規一次元となりG=ell z²又はz²ellで分解。位数9は(0,3)/(3,1)で一次元側の純三乗。位数6はc2,a0/3で二生成元一二次関係の部分整域内の三次となり、全斉次二変数式の一次因子分解で排除。この二変数補題は可逆二次係数行列の等方方向からyx=qxy+kappa y²へ移し、yを逆にしたz=xy^-1でyz=(qz+kappa)yと書いて通常の一変数多項式の根へ還元する。Jordan q1も含む。
+
+従って全H3の二固有値中山の半単純部分は位数2/3のみ、固有値集合は{1,−1}又はmu3の相異なる二元（三組）の計四組。Jordan単冪部分・各重複度・存在十分性・許容性を完成とはしない。三/四固有値の層も残る。証明はcubic_as4_reductions.texのthm:h3-two-eigenvalue-refined。verify_cubic_two_eigenvalue_filter.pyは有限整数演算16組と12排除の重み型、二変数因数分解式の三次までの普遍多項式恒等式を実行確認する。成長/Frobenius/二重Hilbertの議論は原稿の証明であり、有限列挙だけで証明したとしない。新規の全as4被覆は不要。
