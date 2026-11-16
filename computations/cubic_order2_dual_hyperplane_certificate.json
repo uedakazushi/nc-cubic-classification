@@ -1,0 +1,28 @@
+{
+  "universal_hypotheses": "quadratic Koszul AS4 with the proved common-plane graph in either Nakayama multiplicity(1,3) or(3,1)",
+  "dual_linear_element": "zstar*E1=E1*zstar has dimension3; common kernel is the complementary positive/negative dual line kvstar",
+  "multiplication_ranks_by_degree": [
+    1,
+    3,
+    3,
+    1
+  ],
+  "quotient_Hilbert": [
+    1,
+    3,
+    3,
+    1
+  ],
+  "annihilator_Hilbert": [
+    0,
+    1,
+    3,
+    3,
+    1
+  ],
+  "Frobenius_test": "both degree1/degree2 3x3 pairing matrices are invertible",
+  "equivalent_exact_pair": "Ann(zstar)=Estar*vstar=vstar*Estar; then Ann(vstar)=(zstar)",
+  "consequence_on_test_open": "linear two-periodic E-resolution implies F Koszul; its quadratic dual is AS3 and embeds canonically into B by spectral-sequence edge-map injectivity",
+  "calibration": "explicit(3,1) bi-normal E, a!=0: all identities checked symbolically, ranks1,3,3,1 and exact annihilator pair(P,Z)",
+  "scope": "The universal statement uses Frobenius duality and a change-of-rings spectral-sequence proof. The exact model calibrates ranks and annihilators; no universal Frobenius nonvanishing or full (3,1) coverage is asserted."
+}

@@ -1276,5 +1276,12 @@
     "certificate": "computations/cubic_positive3_binormal_certificate.json",
     "proof": "papers/sections/cubic_positive3_binormal.tex, prop:h3-positive3-binormal-exclusion",
     "scope": "新たに(3,1)の明示bi-normal族 px=xp,xy=yx,py=-yp,zx=-xz,zy=-yz,z²=ap²+bx²+cy²を全係数で排除した。a非零ではClifford--Ore基底と中央自由階数32、二次双対の正規/中央正則列によりnoetherian Koszul AS4、実際mu=(+,+,+,-)。全正常三次はW1=x*span(p²,x²,y²)で全て因子化し非H3。a零では双対の無限次元商によりKoszul AS4外。これは(3,1)全被覆ではない。次は正三次元側の共通平面式q0(W)+gamma*z²（gamma非零も保持）と四次tensorのrank4偶flatteningから残る表示を絞り、(2,2)および他スペクトルの未被覆を減らす。全H3分類は未完。"
+  },
+  "order2_dual_hyperplane_v125": {
+    "status": "PASS exact bi-normal model calibration; universal Frobenius and change-of-rings proof",
+    "validator": "computations/verify_cubic_order2_dual_hyperplane.py",
+    "certificate": "computations/cubic_order2_dual_hyperplane_certificate.json",
+    "proof": "papers/sections/cubic_order2_dual_hyperplane.tex, prop:h3-order2-dual-hyperplane",
+    "scope": "一次元/三次元分解の全common-plane領域（単冪も保持）でE=B!の一次元側双対zetaは正規、zeta E1=E1 zeta dim3、階数列1,3,3,1。F=E/(zeta)は常にHilbert(1,3,3,1)、Ann(zeta)は(0,1,3,3,1)。F Frobenius iff Ann(zeta)=E xi=xi E、xiは共通平面の直交補線。この開部分ではAnn(xi)=(zeta)、二周期線型E解消とchange-of-ringsでF Koszul、F! AS3かつTor edge全射の双対によりF!->B単射。二つの3x3対合行列式で開条件を判定する。全(3,1)でのFrobenius自動性は未証明。次はFrobenius退化域を正規三次incidenceと併せて調べ、残る(3,1)/(2,2)被覆を進める。"
   }
 }

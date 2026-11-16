@@ -746,3 +746,10 @@ H3係数locusはprojective conic bundleのrelative singular incidenceの像の�
 原稿prop:h3-positive3-binormal-exclusion。P=p²,X=x²,Y=y²はaunitで全て中央、T=pz+zpはp/y/zと可換xと反可換。Cl3(p,y,z) over k[P,X,Y,T]、p/yとy/z反交換、{p,z}=T、z²=aP+bX+cY。xはp/y固定,z/T反転、x²XのOre商。全関係から逆模型を復元できPBW16、中央k[P,X,Y,T²]上free32、HB=(1-t)^-4。双対QはPX/XYだけanti、他comm、E=Q/(PZ,P²+aZ²,X²+bZ²,Y²+cZ²)。EbarのP0/Z0 fibreproductで中央三二次式正則列、前向きPP KoszulとASGor FrobeniusよりAS4。nuQ=(-,+,-,+)、tauPZ=(+,-,+,+)でnuE=(-,-,-,+)、muB=(+,+,+,-)。固定三次11基底P/X/Y times p/x/y plusTz,pyx。Gy=yGでp型/Tz/pyx五係数消去、Gp=pGでy型三係数消去、残りxP,xX,xY全て正常三次。常にxでfactorしR非整域。a0双対P0商はk[Z]自由rank4無限次元、Koszul AS4外。verify_cubic_positive3_binormal.py/certificateでClifford全overlap/自動同型、双対直交、十一列系constantpivot8を厳密検算PASS。文献新規性未確認。
 
 正三次元の次案：mu半単純、共通平面作用f=diag(q,q^-1)なら偶flatteningはWW/vW/Wv/vv/zzの10x10対称行列。混合graph条件を線型に課すと普遍四次tensorは23係数（正三元反巡回21、z²W²一本、z4一本）。zz行はq^-2 xy−yx+gamma z²。rank偶4のSchur制約と整域性を使って三次正常核を絞る。scratch /workspace/work/order2_central_template/positive3_top.pyはこの線型空間を計算したが、rank制約・被覆・H3判定をまだ証明しておらず定理には用いない。
+
+
+## 双対一次切断の普遍Hilbert値とAS3還元開部分（classification-v125）
+
+一次元/三次元分解の全common-plane領域（単冪も保持）でE=B!の一次元側双対zetaは正規、zeta E1=E1 zeta dim3、階数列1,3,3,1。F=E/(zeta)は常にHilbert(1,3,3,1)、Ann(zeta)は(0,1,3,3,1)。F Frobenius iff Ann(zeta)=E xi=xi E、xiは共通平面の直交補線。この開部分ではAnn(xi)=(zeta)、二周期線型E解消とchange-of-ringsでF Koszul、F! AS3かつTor edge全射の双対によりF!->B単射。二つの3x3対合行列式で開条件を判定する。全(3,1)でのFrobenius自動性は未証明。次はFrobenius退化域を正規三次incidenceと併せて調べ、残る(3,1)/(2,2)被覆を進める。
+
+原稿prop:h3-order2-dual-hyperplane。mixedgraph二関係より双対zetaの左右積U*像は同じodd2、核は同じxi=Wperp。top zz行q0非退化からzeta²非零、Lzeta:E1->E2 rank3。Frobenius双対で残る階数1,3,1が決まりF Hilbert(1,3,3,1)、annHilbert(0,1,3,3,1)。両側イデアル(zeta)はnuで不変、trace直交により左右ann一致。annはFの双対の捩れ/移動なのでF Frob iff annが左右xi一元生成。両者dim8から逆ann(xi)=(zeta)。E(-q)をzeta/xi交互乗法する線型解消ができ、TorE(F,k)内部q集中。change-of-ringsでF非Koszulの最初のTorF_p,j>pはq0から入る微分なく、出る先内部p-1で消えずKoszulEに矛盾。ゆえF Koszul、F! AS3。さらに全E2項内部p+qで全微分零、TorE(k,k)->TorF(k,k) edge全射。双対ExtF->ExtEの単射が自然F!->Bなので、実際にAS3部分代数が埋まる。Frobenius条件の全点非消滅は未証明なので全被覆とはしない。verify_cubic_order2_dual_hyperplane.py/certificateは全係数bi-normal E16模型でFrob対合、階数列、相互ann、F対合を厳密検算PASS。Frobenius条件は両方向F1/F2の3x3行列式非零で、退化域を黙って除外しない。
