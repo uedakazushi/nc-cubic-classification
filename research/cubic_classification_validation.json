@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "version": "classification-v137",
+  "version": "classification-v138",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -1376,5 +1376,16 @@
     "certificate": "computations/cubic_positive3_Jordan_base_certificate.json",
     "proof": "papers/sections/cubic_positive3_Jordan_base.tex, prop:h3-positive3-Jordan-base-injective and thm:h3-positive3-canonical-base-coverage",
     "scope": "gamma非零の残るJordan基礎S_J(yx=xy+kappa*x²+gamma*z²,zx=epsilon*xz,zy=epsilon*yz+beta*xz)は全係数でPBW/noeth quadraticAS3。z局所degree0は微分Ore A=k[u][v;delta],delta(u)=(kappa+epsilon*beta)u²+epsilon*gamma。deltaを可逆にするとsimple、非零completelyprimeはdeltaの一次因子u−rを含み、元の基礎でx=r zとなるためH3の一次独立性に反する。従ってJordan基礎はB/R両方へ単射。既存全行列標準形と対角kernel二分法を併用し、全(3,1)H3候補のcanonical基礎像を対角AS3/JordanAS3/量子Veroneseconeの三表示で被覆、全てRにも埋まりGは基礎像外。AS3枝では追加positive vと純正二次関係3本、cone枝では2本が残る。追加関係/正常G/許容性/全矢は未分類。"
+  },
+  "positive3_cone_exclusion_v138": {
+    "status": "PASS exact growth/block/centralizer identities; universal translation and Jordan invariant validators rerun; structural cone exclusion",
+    "validator": "computations/verify_cubic_positive3_cone_exclusion.py",
+    "certificate": "computations/cubic_positive3_cone_exclusion_certificate.json",
+    "rechecked": [
+      "computations/verify_cubic_positive3_global_cross.py",
+      "computations/verify_cubic_order2_nonsplit_tensor.py"
+    ],
+    "proof": "papers/sections/cubic_positive3_cone_exclusion.tex",
+    "scope": "残る(3,1)のcanonical基礎の量子Veronesecone枝も排除。Wはq=a^-2 AS2,a4!=1,z²=kappa xy。vがQgr(W)へ落ちるとBは曲線体k(u)上skewLaurent内に入り、degree-n極因子O(n)でGK<=2矛盾。追加2quadsにv²がなければcross退化はこの矛盾、両cross可逆はW PBW×zzを避ける外側語でdegree3dim21矛盾。v²があればv³W0はvvrowのrank2 Wquadとcrossrank<=1がanti-cyclicで矛盾、非分裂v Jordanも既存D invariantでv³W0を強制し排除。半単純化後、z²relのcross0とv4top0からHcross=rk+kr、v移動で[v,ell]0,v²∈W2。q!=+-1のcentralizerからv²=c ell²因子化しdomain矛盾。従って全(3,1)H3のcanonical基礎は対角/Jordan quadraticAS3としてB/R双方に埋まり、Gはその外。HR/HA0=1+t+t²だが有限自由3は未証明。"
   }
 }

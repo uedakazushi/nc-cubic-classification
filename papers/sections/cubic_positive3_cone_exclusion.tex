@@ -1,0 +1,108 @@
+\subsection{円錐基礎枝の排除と標準AS3部分代数}
+\label{subsec:h3-positive3-cone-exclusion}
+\begin{lemma}\label{lem:h3-curve-graded-division-growth}
+$K=k(u)$、$\sigma\in\operatorname{Aut}_kK$とする。
+次数1の有限個の斉次元で生成される
+$K[h,h^{-1};\sigma]$の部分代数はGK次元2以下である。
+従って円錐基礎$S/(C')$の場合、残る正生成元$v$が共通量子平面$T=\langle W\rangle$の
+斉次商体に入るH3包絡は存在しない。
+\end{lemma}
+\begin{proof}
+各生成元を$f_i(u)h$と書き、その全極を支配する有効因子$D$を$\mathbb P^1$上に取る。
+長さ$n$の語の係数の極は$D_n=\sum_{j=0}^{n-1}\sigma^jD$で抑えられる。
+$\deg D_n=n\deg D$なので、係数空間の次元は$O(n)$、累積成長は$O(n^2)$である。
+円錐基礎の斉次商環は、前の量子torus表示から
+$k(u)[z,z^{-1};u\mapsto au]$に等しい。
+もし$v\in Q_{\mathrm{gr}}(T)$なら包絡の四生成元が全てこの斉次商環に入り、
+14641のGK次元4に反する。
+\end{proof}
+
+\begin{theorem}\label{thm:h3-positive3-cone-base-exclusion}
+定理\ref{thm:h3-positive3-canonical-base-coverage}の量子Veronese円錐候補は空である。
+従って全$(3,1)$H3対象の標準基礎$A_0=\langle W,z\rangle$は、
+対角Heisenberg型またはJordan型のquadratic AS3として$B$と$R$の双方へ埋まる。
+\end{theorem}
+\begin{proof}
+円錐の場合と仮定する。その関係は
+\[
+ T=(xy=a^{-2}yx),\quad zx=axz,\quad zy=a^{-1}yz,
+ \quad z^2=\kappa xy,\quad\kappa\ne0,\quad a^4\ne1.
+\]
+$W$上の中山は恒等で、残る正生成元は$v$である。
+二つの追加二次関係を$v^2$へ射影する。
+像が零なら、両cross射影が可逆でない場合に$v\ell=q(W)$または$\ell v=q(W)$となり、
+前補題で排除される。
+両射影が可逆なら$v$は$T$を自己同型$g$とskew derivationでOre正規化する。
+その互換性は$T$の関係に$v$を作用させ、前補題で$v\notin Q_{\mathrm{gr}}(T)$を使えば従う。
+四つの基礎関係と二つのOre cross式には、外側の$vz$や$v^2$を減らす式がない。
+$T$のordered monomialと、$zz$を避ける$v,z$語を用いる書換えは全overlapを解消する。
+必要な条件は$f^2(t)\kappa xy=\kappa xy\,t$、$f(xy)=xy$と$g$-derivation条件だけである。
+従ってそのHilbert級数は
+\[
+ \frac1{(1-t)^2}\frac{1+t}{1-t-t^2}
+\]
+となり、次数3の値21が14641値20に反する。
+
+よって$v^2$射影は一次元である。
+二つの関係のうち一つは$v^2$係数1、もう一つはcrossと$W^2$だけを持つ。
+後者の片方のcross射影が零なら再び$v$が商体へ落ちるため、両方非零である。
+四次topの$v^4$係数は中山巡回式から零で、$v^2$行は非零である。
+もし$v^3W$成分が零なら、この行は$W^2$内の唯一の関係$r_T$の非零倍数となる。
+一方、全cross行は$v^2,z^2$係数が零なので、平方射影の核の二本
+（$r_T$とcross関係）に入り、cross--cross blockの階数は高々1。
+正三元のanti-cyclic式は、$v^2$--$W^2$ blockがそのcross非対角blockの逆符号であることを与える。
+従って前者の階数も高々1となるが、$r_T$の二変数係数行列は階数2なので矛盾する。
+ここで中山に$v\mapsto v+w$という単冪成分があっても、
+$v^3W=0$の下では二つの$v$を持つ成分にその補正は現れず、同じanti-cyclic式が成り立つ。
+
+特に正三次元中山拡大は分裂する。
+非分裂なら$Dv=w\in W,DW=0$であり、既出の不変tensor恒等式により$v^3W$が零となって、
+直前の矛盾を生じるからである。
+従って中山は半単純であり、$v^3W\ne0$である。
+$v^2$行のcross部分を$n(v\ell-\ell v)$、$n\ne0$と書く。
+
+偶関係の基底を
+\[
+ r_T,\quad z^2-\kappa xy,\quad
+ r_{\mathrm{cross}},\quad r_{v^2}
+\]
+と取り、最後の関係だけが$v^2$係数1を持つようにする。
+前二本のcross部分は零、後二本のcross部分を$r=(\ell,-\ell),s$とする。
+middle Frobenius行列をこの基底で$M$と書くと、
+$v^4$係数が零だから$M_{44}=0$である。
+従ってcross--cross blockは
+\[
+ H_{\mathrm{cross}}=M_{33}rr^t+M_{34}(rs^t+sr^t)=rk^t+kr^t
+\]
+と書ける。
+これは定理\ref{thm:h3-positive3-global-cross}と同じanti-cyclic blockであり、
+両対角blockの逆符号から$k$の両成分が一致する。
+$v$の$W$平行移動で全cross blockと$v^2$--$W^2$ blockを消せるため、
+\[
+ [v,\ell]=0,\qquad v^2\in T_2
+\]
+となる。$z^2=\kappa xy$は$v$を含まないので、この基底変更でも変わらない。
+$a^4\ne1$は$T$の量子パラメータ$a^{-2}$が$\pm1$でないことを意味する。
+従って$\ell$の二次centralizerは$k\ell^2$だけで、$v^2=c\ell^2$。
+可換する$v,\ell$の平方差が因子化して整域性に反する。
+これで円錐枝は排除された。
+\end{proof}
+
+\begin{corollary}\label{cor:h3-positive3-AS3-base-Hilbert}
+全$(3,1)$H3対象について標準AS3部分代数は$R$にも埋まり、
+\[
+ \frac{H_R(t)}{H_{A_0}(t)}=1+t+t^2.
+\]
+これはHilbert級数の等式であり、$R$が$A_0$上有限自由階数3であることを
+この等式だけから結論しない。
+\end{corollary}
+\begin{proof}
+基礎はquadratic AS3なので$H_{A_0}=(1-t)^{-3}$、
+$H_R=(1-t^3)(1-t)^{-4}$である。
+\end{proof}
+
+\texttt{verify\_cubic\_positive3\_cone\_exclusion.py}は
+次数3の成長値、Frobenius関係基底からのblock式、およびcentralizer minor
+$-(a^4-1)^2$を厳密検算する。
+用いたanti-cyclic基底変更と非分裂tensorについても、既存の全係数検証器を再実行した。
+このAS3基礎の存在から、追加正生成元の全関係やH3許容性が済んだとはしない。

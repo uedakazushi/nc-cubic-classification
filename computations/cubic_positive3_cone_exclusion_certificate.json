@@ -1,0 +1,11 @@
+{
+  "hypotheses": "H3 multiplicities(3,1), collapsed diagonal base S/(Cprime), hence a^4!=1",
+  "base": "W quantum AS2 xy=a^-2*yx, zx=a*xz,zy=a^-1*yz,z\u00b2=kappa*xy",
+  "rational_collapse_exclusion": "If v lies in Qgr(W), B lies in k(u)[z^+-1;u->a*u]; degree-n coefficients have poles bounded by a divisor of degree O(n), forcing GKdim<=2.",
+  "no_v_squared_relation": "Full Ore cross projections give PBW W-monomials times words(v,z) avoiding zz; degree3 dimension21 contradicts14641 value20. Degenerate projections force the rational collapse.",
+  "one_v_squared_relation": "If v\u00b3W=0, vv row is the nondegenerate pure W quadric but cross-cross rank<=1, contradicting anti-cyclic QvvWW=-Ccross. A nonsplit v->W Jordan action forces precisely that zero case.",
+  "semisimple_block": "The z\u00b2 relation has no cross term, and top v\u2074=0; hence Hcross=r*k^t+k*r^t. Anti-cyclic coordinate translation yields [v,ell]=0 and v\u00b2 in W2.",
+  "centralizer_minor": "-(a^4-1)^2, nonzero in this branch; thus v\u00b2=c*ell\u00b2 and commuting square factors contradict the domain property",
+  "conclusion": "The quantum-Veronese collapsed base cannot occur for H3. Every remaining(3,1) canonical base embeds as an AS3 into B and R.",
+  "scope": "Growth coefficient, nondegenerate/rank-one contrast, relation-basis block and exact centralizer minor checked. Curve-divisor growth, PBW and Jordan/top arguments are structural proofs using existing exact translation and invariant-tensor certificates."
+}
