@@ -730,3 +730,10 @@ H3係数locusはprojective conic bundleのrelative singular incidenceの像の�
 全(1,3)許容八係数表示の全幾何学的intrinsic矢を三角生成元写像と九係数式で確定した。正規三次はalpha*gamma*delta倍。共通次数尺度を除く明示表示群oidはsource滑らか相対次元4、安定化Lie環はAS4 resultant非零により全点零、従って滑らか既約DM4の表示stack。ad非零開ではa=d=e=1,b=0へfppf正規化し、許容A4_(c,f,g,h)×Bmu2。全intrinsic Abel圏族の認識/降下、全H3成分性は主張しない。次は全境界慣性を確定し、残る中山重複度(3,1)/(2,2)、三固有値以上・CY/unipotent被覆へ進む。
 
 原稿thm:h3-order2-full-arrows、verify_cubic_order2_full_arrows.py/certificate。全矢p->alpha pprime,u->beta uprime,w->gamma wprime,v->delta vprime+r uprime+s wprime。各二次関係比較九式、G共変式、一般正規化は普遍Clifford--Ore模型で厳密検算PASS。Lie環はbeta1でC=-D,R=-bD/2,S=-fD。a(D-2A)=dA=3cD=(ab/2+df)D=(2g-b²/2-ef)D=(4h-bc/2-f²)D=0。D非零ならa0/dunitではc=f=h0、d0/aunitではb=c0,g=ef/2,h=f²/4となりAS resultant零。全点有限エタール慣性でDM。表示群oidは任意基底環上の明示式で定義し、全幾何学的intrinsic矢を被覆する。非被約基底上の任意圏族からこの表示への認識は未証明、分離性も未主張。
+
+
+## 全(1,3)慣性と増大曲線（classification-v123）
+
+全(1,3)の全幾何学的矢と滑らか既約DM4表示stackを確定。一般ad非零開は許容A4×Bmu2。全慣性は四種類：a=c0の閉正常軸面はmu2×mu2、d=b=c0の閉曲線はgbar=g−ef/2非零でmu4、gbar0で唯一のmu8点、その他全点mu2。曲線はgbar/hbar正規化により[A1_kappa minus{kappa²=-1}/mu8]、coarse j=gbar²/(e²hbar)∈A1 minus{-1}、hbar=h−f²/4。両増大閉部分は非交差。全(1,3)被覆・必要十分admissibility・幾何学的群oid/慣性・表示族stackまで完成。任意intrinsic圏族認識、全H3の他スペクトル・成分/交叉/閉包は未完。次は(3,1)/(2,2)の正規三次incidenceから未被覆域を減らす。
+
+原稿thm:h3-order2-full-inertia。beta1で全自己矢はgamma*delta1。ad非零はalpha²=gamma=delta1,r=s0。a0,dunitはu平行移動でb0、自己矢r=s0,alpha²1。c非零ならgamma³1だがprimitive3はg=h0すなわちv²0を強制し非H3。c0ではg0がquartic Q*(4ehx²−ez²)の[0:1:0]にQ!=0のrank2 singular fibreを作るため非H3、gunitからgamma²1で独立二符号。d0,aunitはw平行移動でf0、自己矢r=s0,delta=alpha²,gamma=alpha^-2。b非零ならdelta1、b0c非零はdelta³1だがprimitive3でv²0。残りd=b=c=f0はAS resultant a4*(g²+e²h)、quartic xz(4ehx²+4gxz−ez²)−e²a²y4、H3 iff hunit（ASopen上）。h0なら[1:0:0]が退化接錐、hunitならbinary四根相異でquartic smooth。全慣性g(alpha4−1)=h(alpha8−1)=0。曲線の正規化a=e=h1はdelta4=he²,alpha²=delta/a,gamma=e/delta、残るkappa=g/delta²、全矢mu8のkappa->alpha^-4kappa。唯一mu8点はv121具体例。verify_cubic_order2_full_inertia.py/certificate全自己矢・discriminant・除外点・coarse不変量を厳密検算PASS。

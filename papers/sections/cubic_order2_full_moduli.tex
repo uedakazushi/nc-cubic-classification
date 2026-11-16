@@ -89,3 +89,76 @@ $\gamma=\delta=1,r=s=0,\alpha^2=1$だけであり、残る四係数は不変で�
 \texttt{verify\_cubic\_order2\_full\_arrows.py}は普遍Clifford--Ore模型上で
 全関係・三次共変式・正規化式・Lie環で現れるresultant零を厳密検算する。
 滑らか群oidと幾何学的矢の全被覆は上の構造証明による。
+
+\begin{theorem}\label{thm:h3-order2-full-inertia}
+全$(1,3)$許容表示の幾何学的慣性は次の通りである。
+\begin{enumerate}
+\item $a=c=0$の閉部分は正常軸の二次元部分であり、慣性は$\mu_2\times\mu_2$。
+\item $d=b=c=0$の閉部分は一次元である。
+ $\bar g=g-ef/2,\ \bar h=h-f^2/4$と書くと許容条件は
+ $\bar h(\bar g^2+e^2\bar h)\ne0$。
+ 慣性は$\bar g\ne0$で$\mu_4$、$\bar g=0$で$\mu_8$である。
+\item その他の全点の慣性は$\mu_2$。
+\end{enumerate}
+第二部分の表示stackと粗空間はそれぞれ
+\[
+ [\operatorname{Spec}k[\kappa,(\kappa^2+1)^{-1}]/\mu_8],
+ \qquad\mathbb A^1_j\setminus\{-1\},\quad
+ j=\frac{\bar g^2}{e^2\bar h}=\kappa^2,
+\]
+ただし$\rho\in\mu_8$は$\kappa\mapsto\rho^{-4}\kappa$で作用する。
+$\mu_8$点は一つの幾何学的同型類であり、
+$(a,b,c,d,e,f,g,h)=(1,0,0,0,1,0,0,1)$を代表に取れる。
+二つの慣性増大閉部分は互いに交わらない。
+\end{theorem}
+\begin{proof}
+定理\ref{thm:h3-order2-full-arrows}でsourceとtargetを同一とし、
+$\beta=1$で割る。$e\ne0$より$\gamma\delta=1$である。
+$ad\ne0$なら最初と第四の式から$\alpha^2=\delta=\gamma=1$、
+さらに$r=s=0$となるので慣性は$p$の符号だけである。
+
+$a=0,d\ne0$では$v$の$u$平行移動で$b=0$にできる。
+その後の自己同型では$r=s=0,\alpha^2=1$である。
+$c\ne0$なら$\gamma^3=1$。
+もし$\gamma\ne1$なら平方関係の$X,Y$係数から$g=h=0$となるが、
+このとき$v^2=0$で整域性に反する。
+$c=0$では正常軸部分となる。ここで$g=0$は許容されない：
+判別四次は
+\[
+ (xz-dy^2-fx^2)(4ehx^2-ez^2)
+\]
+で、$[0:1:0]$は第一因子が非零の特異点だからrank2 fibre上の悪い判別点である。
+従って$g\ne0$、自己同型式は$\delta^2=\gamma^2=1$となり、
+$\alpha^2=1$と独立に二つの符号が残る。
+
+$d=0,a\ne0$では$v$の$w$平行移動で$f=0$にする。
+係数は$g\mapsto\bar g,h\mapsto\bar h$と変わる。
+自己同型では$r=s=0,\delta=\alpha^2,\gamma=\alpha^{-2}$。
+$b\ne0$なら$\delta=1$。
+$b=0,c\ne0$なら$\delta^3=1$であり、$\delta\ne1$は再び$g=h=0$を強制する。
+従って残る増大部分は$d=b=c=f=0$だけである。
+ここではAS4条件と四次式が
+\[
+ \Delta_{\mathrm{AS}}=a^4(g^2+e^2h)\ne0,\qquad
+ F_4=xz(4ehx^2+4gxz-ez^2)-e^2a^2y^4
+\]
+となる。$h\ne0$なら二項四次$xz(4ehx^2+4gxz-ez^2)$の四根は相異なる。
+$\partial_yF_4=0$は$y=0$を強制するから$F_4$は滑らかである。
+$h=0$なら$[1:0:0]$は退化した接錐を持つ特異点となり非許容である。
+従って必要十分条件は定理の式である。
+自己同型の残る条件は$g(\alpha^4-1)=0,h(\alpha^8-1)=0$で、
+慣性は記載した巡回群となる。
+
+この曲線上ではfppf局所的に$a=e=h=1$へ正規化できる。
+実際、正規形への矢は$\gamma=e/\delta,\delta^4=he^2,\alpha^2=\delta/a$で与える。
+残る$g'=g/\delta^2=\kappa$は$\kappa^2\ne-1$を満たす。
+二つの正規形間の全矢は$\alpha^8=1$と
+$\kappa'=\alpha^{-4}\kappa$だから、上の商stackと粗座標を得る。
+正常軸部分の次元2は既存の全正常軸分類から、曲線の次元1はこの表示から従う。
+両閉部分が交われば$a=d=0$となり許容係数条件に反する。
+\end{proof}
+
+\texttt{verify\_cubic\_order2\_full\_inertia.py}は全自己同型式、根の位数制約、
+曲線上のresultant・判別式、除外する退化接錐とrank2特異点を厳密検算する。
+これで$(1,3)$部分の全幾何学的慣性を決定したが、他スペクトルの被覆、
+全H3の成分・交叉・族の内在的認識は依然として残る。

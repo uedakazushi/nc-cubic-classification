@@ -1,0 +1,22 @@
+{
+  "self_arrow_equations_beta1_delta_inverse_gamma": [
+    "-a*(A**2*t - 1)/t",
+    "(-b*t + b + 2*r*t)/t",
+    "-c*(t - 1)*(t**2 + t + 1)/t",
+    "-d*(A - 1)*(A + 1)",
+    "-f*t**2 + f + 2*s*t",
+    "a*r + d*s",
+    "(b*r*t + e*s*t - g*t**2 + g + r**2*t**2)/t**2",
+    "(c*r*t + f*s*t - h*t**4 + h + s**2*t**2)/t**2"
+  ],
+  "inertia_strata": {
+    "a=c=0": "mu2 x mu2, closed normal-axis surface, dimension2",
+    "d=b=c=0 and g-e*f/2!=0": "mu4, closed enhanced curve minus its special point",
+    "d=b=c=0 and g-e*f/2=0": "mu8, one geometric isomorphism class",
+    "all_other_admissible_points": "mu2"
+  },
+  "enhanced_curve_after_f_removal": "gbar=g-e*f/2, hbar=h-f²/4; hbar*(gbar²+e²*hbar)!=0",
+  "enhanced_curve_stack": "[Spec k[kappa,(kappa²+1)^-1]/mu8], alpha acts by kappa->alpha^-4*kappa",
+  "enhanced_curve_coarse": "j=gbar²/(e²*hbar) in A1 minus {-1}; mu8 exactly at j=0",
+  "scope": "Exact universal self-arrow equations, finite root constraints, enhanced-curve discriminant and excluded boundary tests. Completeness uses the geometric full-arrow theorem and the structural H3 conic criterion."
+}
