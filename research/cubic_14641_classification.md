@@ -1021,3 +1021,9 @@ verify_cubic_order2_22_rank2_unipotent.py/certificateが両tangent upper stabili
 可逆secantのgraded包絡矢Phiとrho/ell不変性は実際のAS4点に関する補助結果として保持するが、この領域にH3点の存在は主張しない。独立査読・新規性確認は未実施。追加のas4結果は輸入していない。
 
 **次の核心（classification-v158）**：(2,2) mixed rank4で正top非零の場合、正平面を固定する片側単冪作用はH3から排除した。負固定VVは<u²,[u,v]>、cyclic Qと偶rank2から負射影line。u²-onlyはPBW三次21でAS4外、comm成分unitはT[u;f][v;sigma,delta]、Tcomm又はq−1へ還元。実際のNakからf²=muT,hdetf−1。commは正常Gが正規一次式yで割れ、q−1は正三次正常核零。従って非退化正topの全Jordan部分が消滅。平方topの非半単純候補は正側Jordan非零が必要。零top・平方topの正側Jordanと半単純rank4の正常incidence/許容性は未解決。
+
+## rank4負topの必要五形（classification-v159）
+
+半単純(2,2) mixed rank4の負cyclic二元topはrank<=2なので、零・第四乗・対称secant(u4+v4)・対称tangent(symu3v)・非対称(uvuv+vuvu)の五形で全被覆した。対称/交代分解とapolar二次核の二根/重根で証明。正top零なら第四乗は整域性で排除、Q零では偶関係が純正/純負非退化quad二本へ分裂、Qrank2では純負AS2平面が一本現れ、対称二型はq−1、非対称型はq±iに限る。混合奇関係と正常三次・admissibilityは未判定。
+
+証明は cubic_order2_22_rank4_negative_top.tex。五形のrankと対称/交代分解をverify_cubic_order2_22_rank4_negative_top.pyで検証。P0でevenmiddleをr1⊙r2と分解し、P0から片方を純負関係に取る。Q1なら純負関係が平方で矛盾。Q2の二因子u²±iv²、u²/uv+vu、uv±ivuを読み、非退化二元関係の因数分解からAS2埋込みを得る。次はこの負平面に対するmixed四関係と正常Gを認識する。

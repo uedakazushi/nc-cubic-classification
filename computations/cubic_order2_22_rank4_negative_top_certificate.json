@@ -1,0 +1,150 @@
+{
+  "status": "PASS",
+  "scope": "all cyclic binary quartic middle matrices of rank<=2, up to GL2 and top scalar",
+  "models": {
+    "zero": [
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "fourth_power": [
+      [
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "symmetric_secant": [
+      [
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    ],
+    "symmetric_tangent": [
+      [
+        "0",
+        "1",
+        "1",
+        "0"
+      ],
+      [
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "noncommutative_rank2": [
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ]
+  },
+  "exact_checks": [
+    "symmetric/alternating splitting",
+    "cyclic equation lambda=-det(q)",
+    "rational normal-form matrices and ranks",
+    "two apolar-kernel charts",
+    "Schur determinant identity"
+  ],
+  "coverage_proof": "papers/sections/cubic_order2_22_rank4_negative_top.tex",
+  "not_claimed": [
+    "AS4 existence",
+    "mixed odd rank4 classification",
+    "normal cubic classification",
+    "H3 admissibility"
+  ]
+}

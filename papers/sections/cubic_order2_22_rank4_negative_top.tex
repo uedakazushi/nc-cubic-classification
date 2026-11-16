@@ -1,0 +1,85 @@
+\subsection{混合関係数4の負二元topの五標準形}
+\label{subsec:h3-order2-22-rank4-negative-top}
+\begin{proposition}\label{prop:h3-order2-22-rank4-negative-top}
+半単純$(2,2)$・奇関係数4の全候補について、純負四次topのmiddle行列$Q$は、
+負平面の基底変更とtop尺度を除いて次の五形で被覆される。
+\[
+\begin{array}{c|c|c}
+ &Q\text{ の非零係数}&\operatorname{rank}Q\\\hline
+0&\text{なし}&0\\
+\text{第四乗}&Q_{u^2,u^2}=1&1\\
+\text{対称secant}&Q_{u^2,u^2}=Q_{v^2,v^2}=1&2\\
+\text{対称tangent}&Q_{u^2,uv}=Q_{u^2,vu}=Q_{uv,u^2}=Q_{vu,u^2}=1&2\\
+\text{非対称型}&Q_{uv,uv}=Q_{vu,vu}=1&2
+\end{array}
+\]
+これらは必要topの分類であり、全AS4存在や正常三次の存在を主張しない。
+\end{proposition}
+\begin{proof}
+偶middleの階数が2なので$\operatorname{rank}Q\le2$である。
+一般cyclic行列を
+\[
+ Q=\begin{pmatrix}a&b&b&c\\b&d&c&e\\b&c&d&e\\c&e&e&f\end{pmatrix}
+\]
+と書く。
+$V^{\otimes2}=\operatorname{Sym}^2V\oplus\bigwedge^2V$で直交直和となり、
+交代直線上の固有値は$d-c$である。
+
+$d\ne c$なら対称部分の階数は高々1である。
+従って、ある対称二次tensor$s=(p,q,q,t)$とスカラー$\lambda$により
+\[
+ Q=s\otimes s+\lambda c_V\otimes c_V,\qquad
+ \lambda=q^2-pt
+\]
+となる。第二式は$Q_{u^2,v^2}=Q_{uv,vu}$というcyclic条件そのものである。
+交代成分が非零なので$s$は非退化対称式であり、$uv+vu$へ移せる。
+このとき$Q$は$uv\otimes uv+vu\otimes vu$の非零倍となる。
+
+$d=c$なら全tensorは対称であり、対応する二元四次式は
+\[
+ F=a u^4+4b u^3v+6c u^2v^2+4e uv^3+f v^4
+\]
+である。その二次catalecticantは
+\[
+ \begin{pmatrix}a&b&c\\b&c&e\\c&e&f\end{pmatrix}
+\]
+で、階数2なら核は二次微分作用素の直線である。
+その二次式が相異なる二根を持つ場合は核を$\partial_u\partial_v$に移せるので、
+$b=c=e=0$となる。階数2より$af\ne0$で、二つの第四乗の和へ正規化できる。
+核が平方なら$\partial_v^2$に移せ、$c=e=f=0$、$b\ne0$となる。
+$v$の平行移動で$a$を消せばtangent形を得る。
+階数1なら$Q=s\otimes s$と書け、cyclic条件から$\det s=0$なので$s$は一次式の平方である。
+従って第四乗形となる。階数0も含めて全場合を尽くす。
+\end{proof}
+
+\begin{corollary}[零正topに残る負平面]
+\label{cor:h3-order2-22-rank4-zero-positive}
+$P=0$のAS4整域候補では、第四乗形の$Q$は存在しない。
+$Q=0$なら偶二関係は純正の非退化二次式一本と純負の非退化二次式一本に分かれる。
+$Q$が階数2なら偶関係中に純負二次式が一本あり、
+対称secant・対称tangentでは反交換平面$uv+vu=0$を、
+非対称型ではパラメータ$\pm i$の量子平面を定める。
+いずれの場合も、この二元AS2平面は包絡へ単射である。
+\end{corollary}
+\begin{proof}
+階数2の対称even middleを$r_1\mathbin{\odot}r_2$と分解する。
+正主blockが零なので、一方、例えば$r_1$の正射影は零である。
+両方が零なら偶関係は純負二元二次式の二平面となり、rank-one式を含んで整域性に反する。
+従って$r_1$は一本の純負関係で、$r_2$の正射影は非零である。
+
+$Q$が階数1なら$r_1,r_2$の負射影は比例し、第四乗の平方根に等しいので、
+$r_1$は一次式の平方となって整域性に反する。
+$Q=0$なら$r_2$の負射影は零であり、二本は純正と純負に分かれる。
+それぞれの二次式はrank-oneではない。
+
+階数2の三標準形では、$Q=r_1\mathbin{\odot}r_{2,V}$の二因子を読む。
+対称secantでは$u^2\pm i v^2$、対称tangentでは$u^2$と$uv+vu$、
+非対称型では$uv\pm i vu$の直線が二因子である。
+tangentの$u^2$は整域性により排除され、残る記述を得る。
+対称非退化二次式は基底変更で$uv+vu$となる。
+これらAS2平面の斉次元の一次式への因数分解と整域性から、埋込みも従う。
+\end{proof}
+
+\texttt{verify\_cubic\_order2\_22\_rank4\_negative\_top.py}は
+対称・交代分解、cyclic係数式、五行列の階数、apolar核の二chartとSchur階数恒等式を再生する。
+全被覆は上述の二元二次式の二根・重根の議論による。

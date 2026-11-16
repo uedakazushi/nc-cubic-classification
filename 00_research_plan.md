@@ -40,7 +40,7 @@ Rains・VdB・AS・anticanonical heartの一般次数比較は [nc-dp-surface-he
 
 **全体的なスペクトル制約（classification-v157）**：全(1,3)は幾何学的被覆・必要十分H3判定・全矢/慣性まで確定、全(3,1)は全Jordan型込みで空。(2,2)のmixed rank2も全Jordan型込みで空と確定した。最後の可逆secant必要曲面は七多項式四次汎関数の1008恒等式と単一10minor −2ell^15*rho^20*(rho+1)^15*(2rho+1)^2により全値排除し、ell0/共鳴fibreも既存全値検証で覆う。従って(2,2)はmixed rank4のみが残る。次は正top三型（零・comm⊙平方・comm⊙非退化quad）と全Jordan型の必要表示・正常三次を調べる。三固有値以上、全CY被覆、全成分/圏族降下は未完。
 
-**次の核心（classification-v158）**：(2,2) mixed rank4で正top非零の場合、正平面を固定する片側単冪作用はH3から排除した。負固定VVは<u²,[u,v]>、cyclic Qと偶rank2から負射影line。u²-onlyはPBW三次21でAS4外、comm成分unitはT[u;f][v;sigma,delta]、Tcomm又はq−1へ還元。実際のNakからf²=muT,hdetf−1。commは正常Gが正規一次式yで割れ、q−1は正三次正常核零。従って非退化正topの全Jordan部分が消滅。平方topの非半単純候補は正側Jordan非零が必要。零top・平方topの正側Jordanと半単純rank4の正常incidence/許容性は未解決。 次は半単純rank4の非退化正topにおける偶graphと奇rank4の必要表示を分類する。
+**次の核心（classification-v159）**：半単純(2,2) mixed rank4の負cyclic二元topはrank<=2なので、零・第四乗・対称secant(u4+v4)・対称tangent(symu3v)・非対称(uvuv+vuvu)の五形で全被覆した。対称/交代分解とapolar二次核の二根/重根で証明。正top零なら第四乗は整域性で排除、Q零では偶関係が純正/純負非退化quad二本へ分裂、Qrank2では純負AS2平面が一本現れ、対称二型はq−1、非対称型はq±iに限る。混合奇関係と正常三次・admissibilityは未判定。 非退化正topのJordanは排除済み。次は正top零かつ負rank2のAS2平面を起点に混合四関係を認識し、正常三次を判定する。平方正topの正側Jordan、零topのJordan、全CY被覆・三固有値以上・族降下も残る。
 
 既存の主要な構造結果を維持する：
 
