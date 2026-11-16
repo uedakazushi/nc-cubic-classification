@@ -1305,3 +1305,11 @@ canonical負topQ0の(2,2)/mixed rank4全H3を、全Jordan型込みで曲がっ�
 証明cubic_order2_22_secant_resonance_final.tex。私的FLINT rational-function sparse Markowitz eliminationで三変数B4dim35と全元関係annihilatorを取得。分母leading coefficientを1にする正規化で有理unit係数の巨大化を防ぎ、八つの汎関数だけを多項式化/primitive化して174KB JSONへ保存した。公開checkerは生成アルゴリズムを信頼するのでなく、六二次関係の全位置・全外語288行をその多項式汎関数が消すことを直接QQ[r,s,t]で検証する。両残余curveで行のs冪だけを除き三minor gcd cover。sqrt−3最後の点s=(1+r)/sqrt3は四次体QQ(sqrt3,i)の埋込みで全符号共役を覆いfresh正常rank8。
 
 次の具体計算：同じ八多項式汎関数の正常10minorを主chart全体で構成し、非共鳴に残る必要supportを減らす。私的fullnormalminorは定数unit*r^4*s³*t12*(r−1)^18*(r+1)^29*(r²−2t−1)²*(r²+2t−1)²*L、L=r5+r4+2r3s²+2r3t²−2r²s²+2r²t²+2rt²−r+2t²−1。元の選択汎関数の極はr²*s*t²*(r−1)^4*(r+1)^6だけ。これを公表するには公開polyλからminor/逆行列恒等式を再生し、分母/poleと別minorで偽の因子r²−2t−1/Lを除く。公開証明未完のためこのgeneric主chart結果を分類済みとして使わない。
+
+## 非共鳴主chartの開集合排除と四残余曲面（classification-v196）
+
+非退化secant正Pf/q1主chartの明示開集合で正常核零を証明。八多項式四次汎関数の元288関係annihilatorに加え、正常10部分行列Cの多項式右逆証明CX=dI10を公開。d=r³*s*t²*(r−1)^5*(r+1)^6*(r²−2t−1)*(r²+2t−1)*L。既存の全aq0/全共鳴排除と合わせ、両top非零mixed4(2,2)の未知はs0,t0,r²−2t−1=0,L0の四曲面（a非零/非共鳴）だけ。全CY/三固有値以上/成分/相対降下は未完。
+
+証明cubic_order2_22_secant_main_open.tex。L=r5+r4+2r3s²+2r3t²−2r²s²+2r²t²+2rt²−r+2t²−1。73KBの明示polynomialXでCX=dIを直接検証するため、生成に使ったFLINT消去や多変数detを再実行する必要はない。全正自由三次32列の正常条件が元三次関係を消すことと正三次商次元10から、全開集合で正常核零。公開polyλはprimitive化済みで元288行を直接消すため、特殊値にもそのまま有効。
+
+次の具体作業：private mirror/tzero/lszero chartを、それぞれ(r,s,t)=(2,1,3/2),(2,1,0),(1/3,0,2/3)でpivotが非零になるsparse Markowitz順序から生成した。全て三変数B4dim35、全元annihilator検証/保存済み。各rawNFはsqnd_main_mirror_raw.pkl等、原稿用証明には未使用。mirror/tzero正常10minorと使用functionalsを計算中。最初の八λはmirror面でrank8/t0でrank4しか保証せず、実際の正常kernel rankをそこから推定しない。新chartのprimitive多項式λを少数選び、全元関係identityとnormal right inverseを公開して残余supportを減らす。s0は最初の八λだけでも一般rank10なので、s0をsampleに別minorを選べる。

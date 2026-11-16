@@ -42,7 +42,7 @@ Rains・VdB・AS・anticanonical heartの一般次数比較は [nc-dp-surface-he
 
 **全体的なスペクトル制約（classification-v186）**：全(1,3)は幾何学的被覆・H3必要十分条件・全矢まで確定、全(3,1)は全Jordan型込みで空。(2,2) mixed rank2も全Jordan型込みで空。mixed rank4のcanonical正top P0全体は、退化境界と全Jordan型込みで固定非CY符号族へ完全に幾何学的認識、一般dim2/inertia mu2²。canonical負topQ0は全Jordan型込みで曲がったClifford族に認識。未知の(2,2)はP,Qとも非零で、Pはcomm⊙平方/comm⊙非退化quadの二型。(2,2)/mixed rank4の全H3は実際に半単純。負tangent/非対称型も全排除され、非零Qの未知は対称secant型だけ。三固有値以上、全CY被覆、全成分・intrinsic族降下は未完。
 
-**次の核心（classification-v195）**：非退化正top/対称secant/正Pfaffianの共鳴面2t+rho²−1=0を全値排除。三変数の明示多項式四次汎関数8本が元288関係を消す恒等式を直接検証。残余rho²=-1,-3で正常8minor三本のgcdはs³、s³*(s²+(2−2sqrt−3)/3)。Gaussian s0はB4dim36で非AS4。残る有限点はQQ(sqrt3,i)で元関係再消去しB4dim35/正常rank8、全共役を覆う。全値因子pencilが全正常核となりH3なし。次はq1主chartのa非零/非共鳴領域。全CY/三固有値以上/成分/相対降下は未完。
+**次の核心（classification-v196）**：非退化secant正Pf/q1主chartの明示開集合で正常核零を証明。八多項式四次汎関数の元288関係annihilatorに加え、正常10部分行列Cの多項式右逆証明CX=dI10を公開。d=r³*s*t²*(r−1)^5*(r+1)^6*(r²−2t−1)*(r²+2t−1)*L。既存の全aq0/全共鳴排除と合わせ、両top非零mixed4(2,2)の未知はs0,t0,r²−2t−1=0,L0の四曲面（a非零/非共鳴）だけ。全CY/三固有値以上/成分/相対降下は未完。 次は各残余曲面で正則な別の多項式商汎関数を追加する。
 
 既存の主要な構造結果を維持する：
 

@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "scope": "nondegenerate positive symmetric-secant q1 positive-Pfaffian main chart",
+  "method": "eight polynomial quartic functionals independently annihilate all 288 original insertions; selected normal submatrix C has explicit polynomial X with C*X=d*I10. No multivariate quotient elimination or determinant computation is needed to replay.",
+  "denominator_factorization": "r**3*s*t**2*(r - 1)**5*(r + 1)**6*(r**2 - 2*t - 1)*(r**2 + 2*t - 1)*(r**5 + r**4 + 2*r**3*s**2 + 2*r**3*t**2 - 2*r**2*s**2 + 2*r**2*t**2 + 2*r*t**2 - r + 2*t**2 - 1)",
+  "H3_exclusion_open": "s*t*(rho2-2t-1)*(rho2+2t-1)*L!=0, rho(rho2-1)!=0",
+  "remaining_after_completed_boundaries_and_resonance": "only s=0, t=0, rho2-2t-1=0, or L=0; also retain a!=0 and rho2+2t-1!=0 since their complements already excluded",
+  "not_claimed": [
+    "four residual surfaces",
+    "AS4 sufficiency of necessary atlas",
+    "global H3 classification",
+    "intrinsic relative descent",
+    "independent peer review"
+  ]
+}
