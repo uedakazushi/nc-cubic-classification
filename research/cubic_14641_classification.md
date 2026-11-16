@@ -1291,3 +1291,9 @@ canonical負topQ0の(2,2)/mixed rank4全H3を、全Jordan型込みで曲がっ�
 証明cubic_order2_22_secant_nondegenerate_resonance.tex。D=r4+2r3+4r²+6r+4s²+3、E=r6+4r5+7r4+8r3+4r²s²+7r²+12rs²+4r+1。因子六係数は最小JSON入力へ保持。係数ideal＋z*r*(r²−1)−1のGroebner基底1。generic商B3dim20/B4dim35の最大rank開集合は全AS4fiberを含み、その局所自由余核で正常恒等式と3次外積零が延長する。domainならQ2のz共通因子を除いた積が常に非零で、像rank1以下は正次数scalar polynomialの零点で矛盾。従って全fiberで分解pencil2を得る。正常核の次元jumpは別問題なので例外曲線を未解決として残す。
 
 次の具体作業：正常8minorのr±3/Eの余分な因子を別minorで除き、残余曲線r²=-1,-3,D0等の正常核を個別判定する。主chart三変数のSymPy通常rref/分母払FF、私的native FLINT有理関数消去は、それぞれ数分で未完のため中断。後者はforward200行/rank184まで進んだが最終商・annihilator検証に達しておらず数学的結果として用いない。反復せず列順序/低パラメータ制約/構造的normalizerへ切り替える。s0の二変数商Nは私的保存されたが公開証明は未完。
+
+## 一重零全排除と共鳴例外二曲線への還元（classification-v194）
+
+非退化secant正Pfの全aq=0領域を排除。二重零環をOre基底Tの一般化Weyl代数として構成し全値domain/Hilbert14641を証明、一重零a0の補助次数先頭環と同定。正常核は非共鳴0/共鳴高々2、全値因子pencilで残りも排除。共鳴面は三追加minorとE,F4,J6 ideal=(s²,(rho+1)²)、一点(-3,0)の厳密再消去により例外rho²−9/E/Dを全て閉じ、残るのはrho²=-1,-3の二つの数体上一param曲線だけ。共鳴外aq非零主chart/全CY/三固有値以上/成分/相対降下は未完。
+
+証明cubic_order2_22_secant_resonance_cover.tex。T=k[u,z][v;sigma,delta], vu=-uv+z,vz=zv,degz2。任意GL2VがTを保ち、A2中心/非零。T[X±1;F^-1]にx=X,y=F(A2)X^-1を置くWeyl表示でBdoublezero≅T⊕ΣTx^n⊕Ty^n、Hilbert1/(1-h)^4/domain。a0,q1はauxdegx1/y−1/V0でqtermだけ2低いのでgrBへdoublezeroから全射、AS4Hilbert同値で同型。gr正常核単射から非共鳴zero、共鳴dim≤2、既存全値normpencilが全kernelを覆う。追加minor三本は単元除去後(r+3)E,s²F4,s²J6、ideal(E,F4,J6)=(s²,(r+1)²)。残余(-3,0)もfresh original R4でrank8。D0=a0既に排除なので共鳴残余はr²=-1,-3だけ。私的secant_res_two_curves.pyでQQ(i)(s)及びQQ(sqrt3,i)(s)上の正常rank8と一変数minor gcdを計算中、未完結果を分類として使わない。

@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "one_zero_boundary": "auxiliary leading relations for a=0,q arbitrary equal the complete doublezero GWA. Ore base T=k[u,z][v;sigma,delta] with vu=-uv+z has Hilbert 1/((1-h)^2*(1-h2)); GWA PBW gives 1/(1-h)^4. For AS4 candidate the filtered map is an isomorphism. Off traceF1 normal kernel zero; at resonance dimension<=2 and universal factor pencil covers it. Thus entire a*q=0 sector excluded.",
+  "resonance_rank_cover": "three additional exact normal8minors; after allowed units their factors are (r+3)*E, s2*F, s2*J. Common zeros away from poles only(-3,0), whose fresh original relation normal rank is8. E,F,J ideal=(s2,(r+1)2).",
+  "conclusion": "entire resonance excluded outside r2=-1,-3, since D=0 is the one-zero boundary; only those two quadratic-field one-parameter curves remain on resonance. Off-resonance main a*q!=0 remains.",
+  "proof_inputs_not_computer_proofs": [
+    "Ore extension and generalized Weyl PBW construction",
+    "filtered normal-kernel injection",
+    "universal factor pencil from previous proposition"
+  ],
+  "not_claimed": [
+    "two exceptional curves",
+    "off-resonance three-parameter main chart",
+    "global classification",
+    "intrinsic relative descent",
+    "independent peer review"
+  ]
+}
