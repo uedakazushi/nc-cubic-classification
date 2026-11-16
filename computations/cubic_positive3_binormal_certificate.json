@@ -1,0 +1,18 @@
+{
+  "presentation": [
+    "px=xp",
+    "xy=yx",
+    "py=-yp",
+    "zx=-xz",
+    "zy=-yz",
+    "z\u00b2=a*p\u00b2+b*x\u00b2+c*y\u00b2"
+  ],
+  "a_nonzero": "noetherian quadratic Koszul AS4, actual Nakayama (+,+,+,-); Clifford--Ore presentation free rank32 over k[p\u00b2,x\u00b2,y\u00b2,T\u00b2]",
+  "a_zero": "dual has infinite-dimensional quotient Q(X,Y,Z)/(X\u00b2+bZ\u00b2,Y\u00b2+cZ\u00b2); not Koszul AS4",
+  "clifford_overlap_count": 10,
+  "fixed_cubic_dimension": 11,
+  "normal_kernel_constant_pivot_rank": 8,
+  "normal_kernel": "x*span(p\u00b2,x\u00b2,y\u00b2); all normal cubics have the nonzero linear factor x",
+  "conclusion": "No H3 cuts anywhere in this explicit (3,1) family.",
+  "scope": "Clifford and automorphism identities, full normal kernel and quadratic dual orthogonality checked universally. Koszul/Frobenius regular-sequence proof is in the manuscript; no coverage of all (3,1) envelopes is asserted."
+}

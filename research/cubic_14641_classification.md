@@ -737,3 +737,12 @@ H3係数locusはprojective conic bundleのrelative singular incidenceの像の�
 全(1,3)の全幾何学的矢と滑らか既約DM4表示stackを確定。一般ad非零開は許容A4×Bmu2。全慣性は四種類：a=c0の閉正常軸面はmu2×mu2、d=b=c0の閉曲線はgbar=g−ef/2非零でmu4、gbar0で唯一のmu8点、その他全点mu2。曲線はgbar/hbar正規化により[A1_kappa minus{kappa²=-1}/mu8]、coarse j=gbar²/(e²hbar)∈A1 minus{-1}、hbar=h−f²/4。両増大閉部分は非交差。全(1,3)被覆・必要十分admissibility・幾何学的群oid/慣性・表示族stackまで完成。任意intrinsic圏族認識、全H3の他スペクトル・成分/交叉/閉包は未完。次は(3,1)/(2,2)の正規三次incidenceから未被覆域を減らす。
 
 原稿thm:h3-order2-full-inertia。beta1で全自己矢はgamma*delta1。ad非零はalpha²=gamma=delta1,r=s0。a0,dunitはu平行移動でb0、自己矢r=s0,alpha²1。c非零ならgamma³1だがprimitive3はg=h0すなわちv²0を強制し非H3。c0ではg0がquartic Q*(4ehx²−ez²)の[0:1:0]にQ!=0のrank2 singular fibreを作るため非H3、gunitからgamma²1で独立二符号。d0,aunitはw平行移動でf0、自己矢r=s0,delta=alpha²,gamma=alpha^-2。b非零ならdelta1、b0c非零はdelta³1だがprimitive3でv²0。残りd=b=c=f0はAS resultant a4*(g²+e²h)、quartic xz(4ehx²+4gxz−ez²)−e²a²y4、H3 iff hunit（ASopen上）。h0なら[1:0:0]が退化接錐、hunitならbinary四根相異でquartic smooth。全慣性g(alpha4−1)=h(alpha8−1)=0。曲線の正規化a=e=h1はdelta4=he²,alpha²=delta/a,gamma=e/delta、残るkappa=g/delta²、全矢mu8のkappa->alpha^-4kappa。唯一mu8点はv121具体例。verify_cubic_order2_full_inertia.py/certificate全自己矢・discriminant・除外点・coarse不変量を厳密検算PASS。
+
+
+## 正三次元bi-normal明示AS4族の全切断排除（classification-v124）
+
+新たに(3,1)の明示bi-normal族 px=xp,xy=yx,py=-yp,zx=-xz,zy=-yz,z²=ap²+bx²+cy²を全係数で排除した。a非零ではClifford--Ore基底と中央自由階数32、二次双対の正規/中央正則列によりnoetherian Koszul AS4、実際mu=(+,+,+,-)。全正常三次はW1=x*span(p²,x²,y²)で全て因子化し非H3。a零では双対の無限次元商によりKoszul AS4外。これは(3,1)全被覆ではない。次は正三次元側の共通平面式q0(W)+gamma*z²（gamma非零も保持）と四次tensorのrank4偶flatteningから残る表示を絞り、(2,2)および他スペクトルの未被覆を減らす。全H3分類は未完。
+
+原稿prop:h3-positive3-binormal-exclusion。P=p²,X=x²,Y=y²はaunitで全て中央、T=pz+zpはp/y/zと可換xと反可換。Cl3(p,y,z) over k[P,X,Y,T]、p/yとy/z反交換、{p,z}=T、z²=aP+bX+cY。xはp/y固定,z/T反転、x²XのOre商。全関係から逆模型を復元できPBW16、中央k[P,X,Y,T²]上free32、HB=(1-t)^-4。双対QはPX/XYだけanti、他comm、E=Q/(PZ,P²+aZ²,X²+bZ²,Y²+cZ²)。EbarのP0/Z0 fibreproductで中央三二次式正則列、前向きPP KoszulとASGor FrobeniusよりAS4。nuQ=(-,+,-,+)、tauPZ=(+,-,+,+)でnuE=(-,-,-,+)、muB=(+,+,+,-)。固定三次11基底P/X/Y times p/x/y plusTz,pyx。Gy=yGでp型/Tz/pyx五係数消去、Gp=pGでy型三係数消去、残りxP,xX,xY全て正常三次。常にxでfactorしR非整域。a0双対P0商はk[Z]自由rank4無限次元、Koszul AS4外。verify_cubic_positive3_binormal.py/certificateでClifford全overlap/自動同型、双対直交、十一列系constantpivot8を厳密検算PASS。文献新規性未確認。
+
+正三次元の次案：mu半単純、共通平面作用f=diag(q,q^-1)なら偶flatteningはWW/vW/Wv/vv/zzの10x10対称行列。混合graph条件を線型に課すと普遍四次tensorは23係数（正三元反巡回21、z²W²一本、z4一本）。zz行はq^-2 xy−yx+gamma z²。rank偶4のSchur制約と整域性を使って三次正常核を絞る。scratch /workspace/work/order2_central_template/positive3_top.pyはこの線型空間を計算したが、rank制約・被覆・H3判定をまだ証明しておらず定理には用いない。

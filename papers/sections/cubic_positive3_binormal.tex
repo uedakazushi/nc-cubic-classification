@@ -1,0 +1,88 @@
+\subsection{$(3,1)$における一つのAS4族と全三次切断の排除}
+\label{subsec:h3-positive3-binormal}
+次の結果は、未被覆の重複度$(3,1)$について、包絡の存在と切断の許容性を
+区別するための明示的な全係数判定である。この族が全$(3,1)$包絡を被覆するとはしない。
+
+\begin{proposition}\label{prop:h3-positive3-binormal-exclusion}
+$a,b,c\in k$に対し、二次代数
+\[
+ B=k\langle p,x,y,z\rangle/
+ (px-xp,\ xy-yx,\ py+yp,\ zx+xz,\ zy+yz,
+ z^2-ap^2-bx^2-cy^2)
+\]
+を考える。$a\ne0$ならこれはnoetherian quadratic Koszul AS4型14641の整域で、
+\[
+ \mu_B(p,x,y,z)=(p,x,y,-z),\qquad
+ W_1(B)=x\langle p^2,x^2,y^2\rangle.
+\]
+従って全ての候補三次は一次因子$x$を持ち、切断はH3でない。
+$a=0$では二次双対は無限次元となり、Koszul AS4ではない。
+よってこの全三係数表示にはH3が存在しない。
+\end{proposition}
+\begin{proof}
+$a\ne0$とする。$P=p^2,X=x^2,Y=y^2$は中心である。
+実際、$X,Y$の中心性は最初の五関係から従い、
+$[z,z^2]=0$と最後の関係により$[z,P]=0$も従う。
+$T=pz+zp$と置くと、$T$は$p,y,z$と可換、$xT=-Tx$である。
+$k[P,X,Y,T]$上の三生成元Clifford代数を
+\[
+ p^2=P,\quad y^2=Y,\quad z^2=aP+bX+cY,\quad
+ \{p,y\}=\{y,z\}=0,\quad\{p,z\}=T
+\]
+で定め、その自己同型$\sigma(p,y,z,T)=(p,y,-z,-T)$を用いて
+$xq=\sigma(q)x,x^2=X$を加える。
+元の関係からこれら全てが従い、逆にこの模型は元の全関係を満たすから、
+双方の生成元写像は逆である。
+従って$B$は左$k[P,X,Y,T]$上、$p^iy^jz^kx^\ell$、
+$i,j,k,\ell\in\{0,1\}$を基底とする。
+$T^2$は中心なので$B$は中心多項式環$k[P,X,Y,T^2]$上自由階数32、
+noetherianであり、Hilbert級数は$(1-t)^{-4}$となる。
+
+二次双対を大文字$P_*,X_*,Y_*,Z_*$で書く。
+$Q$を$P_*X_*=-X_*P_*,X_*Y_*=-Y_*X_*$だけが反交換で、
+他の対は可換な四変数量子多項式環とすると
+\[
+ B^!=Q/(P_*Z_*,\ P_*^2+aZ_*^2,\ X_*^2+bZ_*^2,\ Y_*^2+cZ_*^2).
+\]
+$Q/(P_*Z_*)$は$P_*=0$と$Z_*=0$の三変数量子多項式環のfiber productであり、
+重なりは二変数量子平面である。
+最後の三二次式の生成する多項式環上で、各三変数成分は自由階数8、
+重なりは第一パラメータで割った環上自由階数4となる。
+ここでは$a\ne0$を用いて$P_*=0$成分の$Z_*^2$を第一パラメータで復元する。
+fiber productの完全列とdepth lemmaにより、三二次式は正則列である。
+最初の$P_*Z_*$も$Q$内の正規正則二次である。
+正規正則二次商がKoszul性を保つ方向の定理
+\cite[Chapter 2, Corollary 6.3]{PolishchukPositselski}から双対はKoszulで、
+AS Gorenstein双対性からFrobenius、Hilbert級数$(1+t)^4$を持つ。
+従って$B$はKoszul AS4である。
+$Q$の中山符号は$(-,+,-,+)$、$P_*Z_*$の正規化符号は$(+,-,+,+)$だから、
+RRZの正規商公式により$B^!$の中山符号は$(-,-,-,+)$。
+Koszul双対の符号$-1$を掛けて、表示した実際の$\mu_B$を得る。
+既出のnoetherian AS正則次元4に対するLevasseur定理から整域性も従う。
+
+$G\in W_1(B)$は$\mu_B(G)=G$である。
+上の基底で中山固定三次空間は
+\[
+ \langle Pp,Xp,Yp,\ Px,Xx,Yx,\ Py,Xy,Yy,\ Tz,\ pyx\rangle
+\]
+の十一基底元を持つ。$y$は$p,z$を反転し$x$を固定する正規元なので、
+$Gy=yG$は$Pp,Xp,Yp,Tz,pyx$の係数を全て零にする。
+残りで$Gp=pG$を課すと$Py,Xy,Yy$も消える。
+残る$xP,xX,xY$は全て$p,x,y$と可換、$z$と反可換なので、正常化条件を満たす。
+全係数で八つの定数pivotを用いた消去でも同じ核を確認できる。
+全ての非零$G=xq$で$x,q$は正次数の非零元だから、$B/(G)$は整域でない。
+
+$a=0$では上の二次双対の$P_*=0$商は
+\[
+ k\langle X_*,Y_*,Z_*\rangle/
+ (X_*Y_*+Y_*X_*,\ [X_*,Z_*],\ [Y_*,Z_*],
+ X_*^2+bZ_*^2,\ Y_*^2+cZ_*^2)
+\]
+となる。これは$k[Z_*]$上$1,X_*,Y_*,X_*Y_*$を基底とし無限次元である。
+従ってKoszul AS4の有限次元Frobenius双対を持ち得ない。
+\end{proof}
+
+\texttt{verify\_cubic\_positive3\_binormal.py}は全Clifford重なり、
+Ore自己同型、元の関係との一致、二次双対の直交性、実際の中山符号、
+十一列の正規三次系の全係数定数pivot八段を厳密検算する。
+この判定の文献上の新規性は未確認であり、他の$(3,1)$表示の排除へ拡張しない。

@@ -1269,5 +1269,12 @@
     "certificate": "computations/cubic_order2_full_inertia_certificate.json",
     "proof": "papers/sections/cubic_order2_full_moduli.tex, thm:h3-order2-full-inertia",
     "scope": "全(1,3)の全幾何学的矢と滑らか既約DM4表示stackを確定。一般ad非零開は許容A4×Bmu2。全慣性は四種類：a=c0の閉正常軸面はmu2×mu2、d=b=c0の閉曲線はgbar=g−ef/2非零でmu4、gbar0で唯一のmu8点、その他全点mu2。曲線はgbar/hbar正規化により[A1_kappa minus{kappa²=-1}/mu8]、coarse j=gbar²/(e²hbar)∈A1 minus{-1}、hbar=h−f²/4。両増大閉部分は非交差。全(1,3)被覆・必要十分admissibility・幾何学的群oid/慣性・表示族stackまで完成。任意intrinsic圏族認識、全H3の他スペクトル・成分/交叉/閉包は未完。次は(3,1)/(2,2)の正規三次incidenceから未被覆域を減らす。"
+  },
+  "positive3_binormal_v124": {
+    "status": "PASS exact universal Clifford and normal-kernel verifier; structural regular-sequence proof",
+    "validator": "computations/verify_cubic_positive3_binormal.py",
+    "certificate": "computations/cubic_positive3_binormal_certificate.json",
+    "proof": "papers/sections/cubic_positive3_binormal.tex, prop:h3-positive3-binormal-exclusion",
+    "scope": "新たに(3,1)の明示bi-normal族 px=xp,xy=yx,py=-yp,zx=-xz,zy=-yz,z²=ap²+bx²+cy²を全係数で排除した。a非零ではClifford--Ore基底と中央自由階数32、二次双対の正規/中央正則列によりnoetherian Koszul AS4、実際mu=(+,+,+,-)。全正常三次はW1=x*span(p²,x²,y²)で全て因子化し非H3。a零では双対の無限次元商によりKoszul AS4外。これは(3,1)全被覆ではない。次は正三次元側の共通平面式q0(W)+gamma*z²（gamma非零も保持）と四次tensorのrank4偶flatteningから残る表示を絞り、(2,2)および他スペクトルの未被覆を減らす。全H3分類は未完。"
   }
 }
