@@ -2720,6 +2720,157 @@ noetherian性、有限中心によるExt有限性と$\chi$、飽和性、一次�
 必要性はH3のrankとhomological dimensionから従う。
 \end{proof}
 
+\begin{lemma}[rank-one fibreの局所Clifford判定]
+\label{lem:h3-order2-local-conic-criterion}
+滑らかな中心曲面上の三変数二次形式がrank1となる点を考える。
+一つの単位方向を除いたeven Clifford orderを、$S=k[[x,y]]$ 上
+\[
+ r^2=a(x,y),\quad s^2=c(x,y),\quad rs+sr=d(x,y),
+ \qquad a,c,d\in(x,y)
+\]
+と書く。H3なら、三係数の一次部分の階数は2であり、
+その唯一の線型関係 $\alpha a_1+\beta d_1+\gamma c_1=0$ は
+$\beta^2-\alpha\gamma\ne0$ を満たす。
+逆にこの条件なら完備orderは $k\langle\!\langle r,s\rangle\!\rangle/(rs+sr)$
+に同型で大域次元2である。
+この条件はconic bundle総空間のこのfiber上での平滑性、及び判別の通常node性に等しい。
+\end{lemma}
+\begin{proof}
+fiberは唯一の単純対象 $k$ を持つ。
+一次係数行列の階数を $m$ とすると、radicalの一次生成元は $r,s,x,y$、
+一次関係は中央変数に関する $m$ 本だけなので $\dim\Ext^1(k,k)=4-m$。
+単位のodd Clifford方向によりこの点は次数シフトで固定される。
+H3なら $\Ext^2(k,k)=k$、高次Extは零である。
+最小自由解消を中心分数体へ移したEuler階数から $\dim\Ext^1(k,k)=2$、従って $m=2$ が必要。
+中央二変数を三二次積から消去すると、最小関係の二次部分は
+\[
+ \alpha r^2+\beta(rs+sr)+\gamma s^2.
+\]
+Serre双対はこの点の二つの $\Ext^1$ 間のYoneda積を非退化にする。
+この積は最小関係の二次部分の係数行列と双対なので、
+$\det\left(\begin{smallmatrix}\alpha&\beta\\\beta&\gamma\end{smallmatrix}\right)\ne0$ が必要である。
+
+逆にこの二次形式が非退化なら、定数の基底変更で一次係数行列を
+$\operatorname{diag}(x,y)$ にできる。
+高次のoff-diagonal成分は $(x,y)^2$ に入り、各次数で $xA+yB$ と書ける。
+中心係数の基底変更 $I+\left(\begin{smallmatrix}0&A\\B&0\end{smallmatrix}\right)$ と
+対角成分の形式座標変更を逐次使えば、次数を上げながらoff-diagonalを消去できる。
+完備性により形式行列は正確に $\operatorname{diag}(x',y')$ となる。
+従って $r^2=x',s^2=y',rs+sr=0$、すなわち表示した完備量子平面である。
+
+最後に $a_1=a_1'x+a_2'y$、$d_1=d_1'x+d_2'y$、$c_1=c_1'x+c_2'y$ とする。
+radical直線上の二つのbase方向微分は二つの二元二次式であり、
+それらのresultantは正確に $\beta^2-\alpha\gamma$。
+これは $a_1c_1-d_1^2/4$ の二元判別式にも等しい。
+従って総空間が平滑であること、判別が通常nodeであることとも同値である。
+\end{proof}
+
+\begin{theorem}[全 $(1,3)$ 候補のH3 admissibilityの完全判定]
+\label{thm:h3-order2-complete-conic-admissibility}
+八係数AS4主開集合で $e\ne0$ とする。次は同値である。
+\begin{enumerate}
+\item $R=\mathcal B/(G)$ はH3である。
+\item \eqref{eq:h3-order2-global-conic-matrix}のconic bundle総空間が滑らかである。
+\item 平面四次式 $F_4$ は被約で特異点が通常nodeだけであり、その全特異点で
+\[
+ Q=U=4V-ez^2=0
+\]
+が成立する。
+\end{enumerate}
+従って全重複度 $(1,3)$ H3対象の被覆と全必要十分admissibility条件が、
+明示した可換conic bundle又はplane quarticの有限判定へ帰着する。
+他の中山重複度や全体の成分・族の認識をこの定理に含めない。
+\end{theorem}
+\begin{proof}
+形式のrank0点は存在しない。
+rank3ではorderはAzumayaで局所大域次元2。
+rank2点では単位方向を対角化した局所orderは
+\[
+ (S[z]/(z^2-f))\rtimes\mu_2
+\]
+で、$\mu_2$ は $z$ の符号だけを変える。
+$f$ の一次部分が非零なら二重被覆は正則二次元で、大域次元2となる。
+$f\in\mathfrak m^2$ なら可換被覆は非正則な二次元局所環であり、
+その剰余体は無限射影次元を持つ。
+有限自由なskew groupへの誘導と制限により、点支持加群にも無限射影次元が残るのでH3に反する。
+従ってrank2では判別が滑らかであることが正確な条件である。
+
+rank1点は前補題によりH3なら通常nodeかつtransverseな係数pencilに限り、
+逆にその場合は完備量子平面で局所大域次元2となる。
+可換conic bundleのJacobian判定も同じ条件である。
+rank2 fiberの唯一の特異点では $df\ne0$ が必要十分、
+rank1 fiberのradical直線では二つの微分二次式が共通零点を持たないことが必要十分だからである。
+これで(1)$\Rightarrow$(2)、(2)$\Leftrightarrow$(3)と、(2)から全局所orderの大域次元2が従う。
+
+残るgeneric divisionを証明する。判別因子 $D\sim3E+4F$ はampleなので連結である。
+もしnodeを持てば、その局所Clifford orderは前補題の量子平面であり、
+中心分数体上のquaternionは $(x,y)$ である。
+$x=0$ のresidueは $k((y))$ における $y$ の平方類で、valuationが1なので非自明。
+従ってglobal generic quaternionも非自明、すなわちdivisionである。
+
+nodeがなければ $D$ は滑らかで連結、従って平面四次曲線 $F_4=0$ は滑らかで既約である。
+$P$ chartのClifford形式を一変数で対角化すると、判別のgeneric点でのresidue二重被覆は
+$\sqrt{-X/P}$ で与えられる。
+平面座標では $X/P=Q/(ey^2)$、定数 $-e$ は代数閉体上平方なので、
+この被覆が自明なら $Q/y^2$ が $k(D)$ の平方となる。
+その平方根を $f$ とすると $fy$ は $\OO_D(1)$ の有理sectionで、平方が正則な $Q$ なので極を持たない。
+滑らかな平面四次曲線では
+\[
+ H^0(\mathbb P^2,\OO(1))\xrightarrow{\sim}H^0(D,\OO_D(1))
+\]
+であるから、ある平面一次式 $\ell$ により $Q|_D=\ell^2|_D$。
+次数2の $Q-\ell^2$ が既約四次曲線上で消えるので、$Q=\ell^2$ となる。
+しかし $Q=xz-dy^2-fx^2$ の $x,z$ minorは常に $-1/4$ であり二重直線ではない。
+これは矛盾で、residueは非自明、generic quaternionはdivisionである。
+
+こうして(2)からdivisionと全局所大域次元2が得られ、
+系\ref{cor:h3-order2-conic-recognition}によりH3の全条件が成立する。
+逆向きの必要性も上の局所Ext・Serreと被覆の議論で全て確認済みである。
+\end{proof}
+
+この判定は具体的な有限可換計算で実行できる。
+$F_4$ の射影特異点を求め、各点でHessianの階数が2であることと、
+上の三つの二次式が消えることを調べればよい。
+またconic bundle総空間のrelative singular incidenceは射影的なので、
+H3 fiber locusは係数空間の主開集合内のZariski開集合となり、任意底変更・fpqc局所性に適合する。
+これはこの表示族のfiber条件であり、全intrinsic Abel圏族の効果的降下を結論しない。
+
+例えば $(a,b,c,d,e,f,g,h)=(0,0,0,1,-1,0,1,1)$ では
+\[
+ F_4=(xz-y^2)\bigl(4xz-4y^2-4x^2+z^2\bigr)
+\]
+であり、二つの滑らかなconicが四つのrank-one nodeで横断するのでH3である。
+従ってこのadmissible開集合は非空である。
+
+正規共通軸部分の外にも、特に簡単な具体例がある。
+\begin{example}[滑らかなgenus3判別を持つ非正規軸H3]
+\label{ex:h3-order2-nonnormal-axis}
+$(a,b,c,d,e,f,g,h)=(1,0,0,0,1,0,0,1)$ とする。包絡と三次は
+\[
+ pu=-up,\ pw=wp,\ uw=-wu,\quad
+ uv+vu=p^2,\ wv+vw=u^2,\ v^2=w^2,
+\]
+\[
+ G=(pv+vp)w-u^2p.
+\]
+AS4 resultantは1、判別は
+\[
+ y^4=xz(4x^2-z^2)
+\]
+という滑らかな平面四次曲線である。
+実際 $y$ 微分から特異点なら $y=0$、右辺の四つの一次因子は相異なるので二変数側にも特異点はない。
+従って上の定理で全H3条件が成立する。
+共通平面の軸 $u,w$ はどちらも全包絡では正規でない。
+cross平方核の直線は $w$ なので $u$ の正規性は不可能であり、
+$wv+vw=u^2$ は $w$ の正規性にも反する。
+従ってこれは既に完全分類した正規共通軸Clifford swap部分とはintrinsic pointed同型でない。
+その通常の中山行列式は $-1$ なのでskew多項式包絡とも同型でない。
+文献上の新規性は未確認である。
+\end{example}
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}order2\_\allowbreak{}conic\_\allowbreak{}admissibility.py}
+は局所resultant/Hessian恒等式、形式合同変換の各次数の消去式と、既知の正例・悪い三重点の校正を厳密再生する。
+無限形式変換・Brauer residue・H3認識は本文の証明であり、有限標本計算で置き換えていない。
+
 \begin{lemma}[単冪twist下の反標準三次関係の輸送]
 \label{lem:h3-unipotent-transport}
 $C$は左右noetherian quadratic Koszul AS4型14641で，$\mu_C$は半単純とする．

@@ -1,0 +1,12 @@
+{
+  "hypotheses": "eight-coefficient AS4 locus with e!=0 over algebraically closed characteristic-zero k",
+  "H3_criterion": "The global conic-bundle total space is smooth; equivalently F4 is reduced nodal and each singular point satisfies Q=U=4V-e*z\u00b2=0.",
+  "rank_one_identity": "For F_linear=[[a,d/2],[d/2,c]], kernel(alpha,beta,gamma) gives relation alpha*r\u00b2+beta*(rs+sr)+gamma*s\u00b2. Both det-pencil discriminant and binary-quadric resultant equal beta\u00b2-alpha*gamma.",
+  "rank_one_local_criterion": "rank of the central linear coefficient map is2 and beta\u00b2-alpha*gamma!=0; then formal congruence gives diag(x,y), with completed order the minus-one quantum plane.",
+  "rank_two_local_criterion": "simple discriminant; a unit/parameter Clifford model is a regular double-cover skew group algebra. A higher-order discriminant yields a singular commutative cover and infinite homological dimension.",
+  "generic_division_proof": "If the nodal discriminant has a node, local quaternion(x,y) has nonzero residue. If smooth, a square Q/y\u00b2 on the smooth plane quartic would make a square root a regular section of O_D(1), hence a plane linear form; Q would be a double line, contradicted by its fixed rank-two minor.",
+  "positive_calibration": "(a,b,c,d,e,f,g,h)=(0,0,0,1,-1,0,1,1), F4=Q*K: two smooth conics meeting transversely at four rank-one nodes",
+  "negative_calibration": "(0,0,0,1,-1,-2,1,1) has a triple point [1:0:-2], agreeing with the independently proved nodal-normal-axis obstruction",
+  "explicit_non_normal_axis_H3": "(1,0,0,0,1,0,0,1): pu=-up,pw=wp,uw=-wu,{u,v}=p\u00b2,{w,v}=u\u00b2,v\u00b2=w\u00b2; F4=x*z*(4*x\u00b2-z\u00b2)-y^4 is smooth and the AS4 resultant is1",
+  "scope": "Local polynomial identities, the congruence linearization and calibrations checked exactly. Infinite formal reduction, Serre necessity, Brauer division and H3 recognition are structural proofs in the manuscript, not finite sampling."
+}

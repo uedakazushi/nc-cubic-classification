@@ -707,3 +707,19 @@ Z4=k[P,X,Y,D]上Bfree32、0B(-3)-G->B->R0はZ4自由解消、F=G²=B0²P−DYが
 plane blowdown x=lambda s,y=lambda t,z=mu。Q=xz−dy²−fx²,U=ea y²+bQ+ec x²,V=gQ+eh x²、F4=4QV−U²−eQ z²。F4pullback=4e²lambda detq、判別類3E+4F、Eとの交点1。o=[0:0:1]はpartial_x F4=-eで常にsmooth。rank1 fibreはo外でQ=U=4V−ez²0。E(lambda0)ではdetq=−mu³s/(4e)、s0一点のみrank2単純判別、他Azumayaなので全E近傍gl2。Qのx/z minor−1/4、従ってQは決してdouble lineでない。verify_cubic_order2_conic_bundle.pyでkernel/quotientmatrix、quartic、rank1/例外曲線・conic非二重線を全係数厳密検算PASS。CM/飽和/圏認識は本文構造証明。
 
 次の具体的着手（未証明）：qrank3点はAzumaya、rank2点はCl2 unit/parameter模型で判別の一次微分非零 iffgl2、rank1点は2x2Clifford係数(a,c,d)∈mのlinear maprank2かつ唯一の対称quadratic relationが非退化 iffgl2をSerre Yoneda pairingとformal congruenceで示す。これはconic bundle総空間smooth、又はF4がreduced nodalで全nodeがrank1 fibreという可換幾何条件に等しいはず。generic divisionはnodeがあればlocal quaternion(x,y)の非零Brauer residue、F4smoothならsqrt(Q/y²)が存在するとf*yがH0(D,O(1))のsectionとなりQがdouble lineになって矛盾（planequarticのH0(O1)は平面linear）。これを厳密化しH3全許容性へ進む。この版ではsmooth conic bundleだけからH3と結論しない。
+
+## 全(1,3)H3 admissibilityをconic bundleで完全判定（classification-v121）
+
+原稿lem:h3-order2-local-conic-criterion、thm:h3-order2-complete-conic-admissibility。八係数AS4/eunit領域でR H3 iff rank3 conic bundle総空間smooth iff plane quarticF4が被約nodalで全singular点がQ=U=4V−ez²0のrank1 fibreである。全(1,3)対象の被覆と必要十分許容条件が完成した。他の中山重複度や全intrinsicモジュライの完成とはしない。
+
+局所rank3はAzumaya。rank2ではCl2(unit,f)=commutative doublecover(z²−f)#mu2、f linearならregular gl2、f∈m²ならsingular commcoverの剰余体無限pdがinduction/restrictionでorderにも残る。rank1ではCl2 r²=a,s²=c,{r,s}=d、a/c/d∈m。中央linear maprankmならExt1selfdim4−m。単位odd方向でpoint shift固定、H3 Serre Ext2self1高次0とfree resolutionEulerでm2必要。唯一のquadratic relation alpha r²+beta{r,s}+gamma s²の行列はYoneda/Serreで非退化、beta²−alpha gamma!=0必要。逆にlinear pencilをdiag(x,y)にしoffdiag高次をxA+yBによるGL2形式合同/中心座標変更で逐次消すとexact diag(x',y')、完成quantumplane−1 gl2。binary radical tangent pencilのresultantとdet-pencil discriminantもbeta²−alpha gammaに等しく、これがconic総空間smooth/判別nodeと同値。rank0は大域bundleで不存在。
+
+Divisionも全許容点で証明。判別D=3E+4F ampleconnected。nodeがあればlocal quaternion(x,y)のx-residue y∈k((y))はvaluation1で非平方、globalBrauer非零。node無しならD smoothirreducibleplanequartic、genericresidueはsqrt(Q/(e y²))。仮に平方ならf*yはO_D1の有理sectionで平方Qが正則なので極なし。H0(P2,O1)=H0(D,O_D1)からf*y=linear ell、Q−ell²が次数2でD4上消えQdoublelineとなるが、Qのx/z minor−1/4に反する。よって全点genericdivision、v120認識でrank/Serre/AZ/例外性/整域/Hilbert/AS4を全て満たす。
+
+H3係数locusはprojective conic bundleのrelative singular incidenceの像の補集合なのでZariski open、任意底変更/fpqc局所性に適合。この表示族のfiber条件であり一般intrinsic Abel圏族の効果的降下を主張しない。既知normalaxis点(0,0,0,1,-1,0,1,1)は二smooth conic四横断nodeで非空を確認。verify_cubic_order2_conic_admissibility.pyはlinear kernel/discriminant/resultant、formal合同の各次数消去、正例と悪いtriplepoint校正を厳密検算PASS。無限formal reduction、Brauer/residue、H3認識は本文構造証明。
+
+具体的なnormal-axis外のH3：params(1,0,0,0,1,0,0,1)、rels puanti,pwcomm,uwanti,{u,v}=p²,{w,v}=u²,v²=w²、G=(pv+vp)w−u²p。AS4 resultant1、F4=xz(4x²−z²)−y4。binary quartic四因子が相異なり∂yでy0だけ調べればsmooth、従ってgenus3 smooth判別を持つH3。共通軸u/wどちらも全包絡で正規でなく既知Clifford swap部分とintrinsic pointed非同型。Nakayama通常det−1なのでskewにも非同型、非CY。文献新規性未確認。この例にはp->zeta8 p,u->u,w->zeta8^-2 w,v->zeta8² vというmu8部分群が見込まれ、全慣性は次で検証する。
+
+次の具体的着手：全矢はp/u/w各線の尺度とv->s v+t u+r wに限る（mu正直線、commonW、f±axes自然）。8係数slice H0(P in v²)=0を保つにはtarget a*t+d*r=0という一条件。9係数にv²=kP+gX+hYを許せば全semi-direct group(Gm)^4 ⋉Ga²（共通gradingGmを割る）が作用し、sliceはfppf gauge。許容openへの全係数矢とstabilizerを正確に求め、4次元表示stackを作る方針。
+
+未検証の慣性計算案：eunitでa,d両非零はdiagonal比較から全autoはmu2。a0,dunitでc0はnormalaxis mu2²、c非零ではmu2。d0,aunitで(b,c)非同時零もmu2。d0,aunit,b=c0ではvをwだけ移動しf0としてgbar=g−ef/2,hbar=h−f²/4、gbar非0ならmu4、gbar0,hbar非0ならmu8が期待される（hbar0は非H3になる見込み）。H3 criterionと全generator比較で次に証明する。
