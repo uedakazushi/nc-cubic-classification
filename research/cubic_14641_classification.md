@@ -1227,3 +1227,14 @@ canonical負topQ0の(2,2)/mixed rank4全H3を、全Jordan型込みで曲がっ�
 証明cubic_order2_22_Jordan_complete.tex。Q非零単冪固定cyclicQの一般解det=−3d⁴/16なのでrank≤2ではrank≤1となりrank1禁止に反する。full graphのH可換化idealとdetA²、det(A⊗A)=detA⁴、三次固定作用の四6minorとH4固定核一致を検証。C3正基底のspanningはx²/yx置換とmixed graphから、independenceはAS4正三次次元10から。N(xy²)=2b*y+x(b−a)のyV²成分が2(A⊗A)bneq0なので固定GはxV²。元BでmuG固定からH固定へ移すだけでnormal cutのtwist輸送はしない。新規性/独立査読未確認。
 
 次は二つの負rank2型のcoupled even atlas。対称secantはb1=u²+v²,b2=u²−v²、非対称はb1=uv+i*vu,b2=uv−i*vu。各R1=cU+b1,R2=qU+b2。qU平方は相対係数を全正規化できる見込み、qU非退化はrho*(xy+yx)の残余係数rho≠0を保持する必要。secant Mは平方det−1、非退化det−(1−rho²)²、rho±1はrank2境界になる見込み（未公表計算）。まず全M/Pfaffian線型atlasを求め、可逆graphとrank2境界を区別する。全CY/三固有値以上/成分/相対降下は未完。
+
+
+## 非対称負topの全排除（classification-v186）
+
+非対称負top Q=uv⊗uv+vu⊗vuを全正top/全Jordan/全cross境界込みで完全排除。二つの等方因子uv±i*vuの割当ては負軸交換で同値。全可逆crossの閉/局所化六線型atlasで正Pf枝はA0矛盾、負Pf枝はuの正側作用F²=−iIdへ正規化。uv,vu正二次式とF(b)=aからu²v=−vu²、u4はUと反交換/Vと可換、正常三次がu4と可換かつ反交換となり零。rho±1のrank2 crossもPfaffian ideal(a²,ac,b,c²)で幾何A0となりdomain射影rankに反する。
+
+証明cubic_order2_22_nonsymmetric_complete.tex、同stemの公開verifierは四つの閉/局所化ideal一致、M行列式、二正規化graph、F²−iIdと自由positivequadのF(b)=a、shearによるz0除去、等方因子交換と特異全Pfaffian idealを厳密検証。平方負枝s²=i、nondeg負枝z0z5=i(rho²−1)であり、rho*(rho²−1)を単元としたideal一致を使うため未処理特殊値はない。特異rho±1は別rank2 atlasで処理し、nilpotent baseまでa/c零とは主張しない。Bdomain上のu4共役作用による核零であり、Rdomainの一般論やtwist輸送を使わない。
+
+次は唯一残る非零負top、対称secant。b1=u²+v²,b2=u²−v²、R1=cU+b1,R2=qU+b2。平方qU=x²の負Pf枝はA=(-s,t,s,s,t,0),t²−s²1、s=(w-w^-1)/2,t=(w+w^-1)/2で全wneq0へ一param化し正常核計算中。正Pf平方枝はA=(z0,-z4,-z3+z5,z3,z4,z5),z0z5−z3²+z3z5+z4²=1。非退化qU=rho*(xy+yx)ではrho≠0,±1の二Pf線型atlasとrho±1 rank2 secant boundaryを分ける。相対rhoや境界cを勝手に尺度で除去しない。全CY/三固有値/成分/相対降下も未完。
+
+私的secant atlas計算（未公開）：rho≠0,±1でalpha=(rho−1)/(rho+1)。正Pf A=(z0,-z4,alpha*z3,z3,z4,z5),Pf式z0z5+z4²+alpha*z3²=1−rho²。負Pf A=(0,z4,-alpha*z3,z3,z4,0),z4²+alpha*z3²=1−rho²。rho1 rank2/p=xv+yu正規化ではA=(a,a,0,b,c,c)、全Pf ideal(a²−c²,ac+c²)⇒幾何a=−c,cneq0。p正規化後は一般にcを尺度で1にできないので、b,c二paramを保持する。

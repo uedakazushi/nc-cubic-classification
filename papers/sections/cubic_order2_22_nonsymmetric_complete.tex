@@ -1,0 +1,95 @@
+\subsection{非対称負top型も全て空である}
+\begin{lemma}[負生成元の四乗による正常三次の消滅]
+\label{lem:h3-order2-22-fourth-power-obstruction}
+$++--$ の半単純中山を持つquadratic domain $B$ において、$U=kx+ky,V=ku+kv$ とする。
+$uT=F(T)u$ ($T\in U$)、$F^2=-iI$、$uv=a(U),vu=b(U)\in U^{\otimes2}$ と仮定する。
+このとき $\mu(G)=G,Gz=\mu^{-1}(z)G$ を満たす三次式は零である。
+\end{lemma}
+\begin{proof}
+$(uv)u=u(vu)$ とdomain性により $a=F(b)$。
+$F^2$ は正二次式上では $-1$ として作用するので $F(a)=-b$。
+従って
+\[
+ u^2v=u(uv)=F(a)u=-bu=-vu^2.
+\]
+ゆえに $u^4$ は $V$ と可換し、$U$ とは反交換する。
+$\mu(G)=G$ で次数が3なので、$G$ の各語の正側個数は奇数であり、
+$u^4G=-Gu^4$ が成立する。
+一方、正常条件 $Gu=-uG$ は $u^4G=Gu^4$ を与える。
+標数0・domain性から $G=0$ である。
+\end{proof}
+
+\begin{theorem}\label{thm:h3-order2-22-nonsymmetric-empty}
+$(2,2)$・mixed rank4のH3で、canonical負topの非対称型
+$Q=uv\otimes uv+vu\otimes vu$ は存在しない。
+全Jordan型、全可逆cross及び特異cross境界を含む。
+従って両top非零の未知領域は、対称secant負top型だけである。
+\end{theorem}
+\begin{proof}
+$P=0$ は既存の符号認識で扱ったので $P\ne0$ とする。
+全Jordan部分は前定理で排除済みである。
+負topの二等方因子は $b_1=uv+i vu,b_2=uv-i vu$。
+$u,v$ の交換がこの二直線を非零倍を除いて交換するため、二つの割当ては同じ被覆に入る。
+偶関係は、全係数を正規化して
+\[
+ c_U+b_1=0,\quad h_U+b_2=0,\qquad
+ h_U=x^2\quad\text{又は}\quad \rho(xy+yx),\quad\rho\ne0
+\]
+と書ける。平方型は正側二軸の尺度で相対係数も除去でき、
+非退化型では相対係数 $\rho$ を残して全値を扱う。
+
+平方型で $\det M=1$、非退化型で $\det M=(1-\rho^2)^2$。
+まず $M$ 可逆の場合を考える。
+Pfaffianを平方型では $\epsilon i$、非退化型では $\epsilon i(1-\rho^2)$ と置くと、
+全六線型条件は次の表となる：
+\[
+\begin{array}{c|c|c}
+ &\epsilon=+1&\epsilon=-1\\\hline
+ x^2&A=0&(z_0,0,-s,s,0,0),\quad s^2=i\\
+ \rho(xy+yx)&A=0&(z_0,0,0,0,0,z_5),\quad z_0z_5=i(\rho^2-1)
+\end{array}
+\]
+正Pfaffianは非零Pfaffianに反するので空。
+非退化型の線型式は $\rho(\rho^2-1)$ を単元とする多項式idealの一致として検証しており、
+可逆cross領域の特殊係数をgeneric消去だけで捨ててはいない。
+
+平方型の負Pfaffianでは、正側shear $y\mapsto y+kx$ が
+$z_0\mapsto z_0-2ks$ とし、他の表示係数を保つので $z_0=0$ とできる。
+非退化型では $z_0,z_5\ne0$ なので保存torusで $z_0=1,z_5=i(\rho^2-1)$ とできる。
+各graphから $u$ の正側作用を読むと、順に
+\[
+ F=\begin{pmatrix}is&-is\\0&-is\end{pmatrix},\quad s^2=i;
+ \qquad
+ F=\begin{pmatrix}0&i/(\rho+1)\\-(\rho+1)&0\end{pmatrix}.
+\]
+いずれも $F^2=-iI$。
+さらに偶関係は
+\[
+ uv=-\tfrac12(c_U+h_U),\qquad vu=\tfrac1{2i}(h_U-c_U)
+\]
+を与える。前補題により全正常三次が零となり、この可逆cross全体は空である。
+
+残る $\rho=\pm1$ はrank2 crossである。
+正側二軸交換と負側一様 $i$ 倍により $\rho$ の符号を交換できるので $\rho=1$ に限ってよい。
+このとき $\operatorname{im}M=\langle xv,yu\rangle$。
+奇関係二射影はdomain性からrank3で、その純UV直線は非分解tensorでなければならない。
+保存対角変換でその直線を $p=xv+yu$ に正規化できる。
+前節と同じ交代像の議論により $A=p\wedge r$、六係数は
+$(a,a,0,b,c,c)$ となる。
+固定 $M$ と $D=\tau(A)$ から得る全六次Pfaffian idealは正確に
+\[
+ (a^2,ac,b,c^2).
+\]
+幾何学的点では $A=0$ となり、奇正射影の階数が $\operatorname{rank}M=2$ に落ちる。
+これはdomainに必要なrank3以上に反する。
+非被約底上のnilpotent係数を消したと主張しているのではない。
+以上で全特異crossも排除された。
+
+検証器
+\[
+\texttt{verify\_cubic\_order2\_22\_nonsymmetric\_complete.py}
+\]
+は四つの閉・局所化線型ideal、graph辞書と $F^2=-iI$、自由正二次tensor上の $F(b)=a$、
+正側shear、負等方因子の交換、特異crossの全Pfaffian idealを厳密再生する。
+全H3や残る対称secant型の完全分類、族降下はこの型の排除とは別に残る。
+\end{proof}

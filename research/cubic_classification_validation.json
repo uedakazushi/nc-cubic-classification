@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "version": "classification-v185",
+  "version": "classification-v186",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -97,7 +97,8 @@
     "papers/sections/cubic_order2_22_reverse_resonant.tex",
     "papers/sections/cubic_order2_22_reverse_plus_cover.tex",
     "papers/sections/cubic_order2_22_tangent_rank2.tex",
-    "papers/sections/cubic_order2_22_Jordan_complete.tex"
+    "papers/sections/cubic_order2_22_Jordan_complete.tex",
+    "papers/sections/cubic_order2_22_nonsymmetric_complete.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -1924,6 +1925,19 @@
       "remaining semisimple top classification",
       "global H3 classification",
       "componenthood",
+      "intrinsic relative descent"
+    ]
+  },
+  "order2_22_nonsymmetric_complete_v186": {
+    "status": "PASS four uniform linear ideals, exact fourth-power identities and singular Pfaffian ideal; no independent peer review claim",
+    "validator": "computations/verify_cubic_order2_22_nonsymmetric_complete.py",
+    "certificate": "computations/cubic_order2_22_nonsymmetric_complete_certificate.json",
+    "proof": "papers/sections/cubic_order2_22_nonsymmetric_complete.tex",
+    "scope": "非対称負top Q=uv⊗uv+vu⊗vuを全正top/全Jordan/全cross境界込みで完全排除。二つの等方因子uv±i*vuの割当ては負軸交換で同値。全可逆crossの閉/局所化六線型atlasで正Pf枝はA0矛盾、負Pf枝はuの正側作用F²=−iIdへ正規化。uv,vu正二次式とF(b)=aからu²v=−vu²、u4はUと反交換/Vと可換、正常三次がu4と可換かつ反交換となり零。rho±1のrank2 crossもPfaffian ideal(a²,ac,b,c²)で幾何A0となりdomain射影rankに反する。",
+    "not_claimed": [
+      "nonreduced singular atlas reduction",
+      "symmetric secant classification",
+      "global H3 classification",
       "intrinsic relative descent"
     ]
   }

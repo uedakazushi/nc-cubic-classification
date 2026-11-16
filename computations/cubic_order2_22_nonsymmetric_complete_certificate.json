@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "scope": "entire nonsymmetric rank2 negative-top type, all positive top and all Jordan types",
+  "full_cross_atlas": [
+    {
+      "positive": "square",
+      "detM": "1",
+      "plus_Pfaffian": "all A=0, impossible",
+      "minus_Pfaffian": "A=(z0,0,-s,s,0,0), s2=i"
+    },
+    {
+      "positive": "nondeg",
+      "detM": "(r - 1)**2*(r + 1)**2",
+      "plus_Pfaffian": "all A=0, impossible",
+      "minus_Pfaffian": "A=(z0,0,0,0,0,z5), z0*z5=i*(r2-1)"
+    }
+  ],
+  "fourth_power_obstruction": "uU=F(U)u, F2=-i*I, uv=a(U),vu=b(U),F(b)=a,F(a)=-b imply u2*v=-v*u2 and u4 anticommutes with U, commutes with V. A normal positive cubic both commutes and anticommutes with u4, hence is zero in a domain.",
+  "singular_r_plus_minus_one": "r=-1 equivalent to r=1; rank2-cross normalized A=(a,a,0,b,c,c), six-Pfaffian ideal=(a2,ac,b,c2), hence A=0 on geometric points, contradicting projection rank3",
+  "conclusion": "no H3 with this nonsymmetric negative top; only symmetric secant remains when P,Q are both nonzero",
+  "not_claimed": [
+    "nonreduced singular atlas is reduced",
+    "symmetric secant classification",
+    "global H3 classification",
+    "intrinsic relative descent",
+    "independent peer review"
+  ]
+}
