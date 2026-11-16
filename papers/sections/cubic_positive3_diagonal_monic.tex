@@ -1,0 +1,98 @@
+\subsection{対角標準基礎を持つ正三次元領域の全排除}
+\label{subsec:h3-positive3-diagonal-monic}
+\begin{lemma}\label{lem:h3-positive3-cubic-centralizers}
+$T$を命題\ref{prop:h3-positive3-nonzero-gamma-base}の二生成元三次代数、
+$\alpha=a^2+a^{-2}$とする。
+$T$には非零正規一次元がない。
+$\alpha\ne2$なら、任意の非零$L\in T_1$について
+$\{q\in T_2:[q,L]=0\}=kL^2$であり、次数付き自己同型は対角または反対角に限る。
+$\alpha=2$なら$T$は$C=[x,y]$が中心のHeisenberg型で、
+このcentralizerは$kL^2+kC$、自己同型群は$\operatorname{GL}(W)$である。
+\end{lemma}
+\begin{proof}
+$T_2=W\otimes W$なので、一次正規元の式$Lt=h(t)L$は全$t\in W$に対して
+$L\otimes t=h(t)\otimes L$となり不可能である。
+centralizerは三次関係で$[x^2,L],[xy,L],[yx,L],[y^2,L]$を縮約して求める。
+対角尺度により$L=x$と$L=x+y$を調べればよい。
+両行列とも三次minorの最大公約因子は$\alpha-2$、$\alpha=2$で階数2、
+それ以外で階数3である。既知の核$L^2$と、$\alpha=2$の$C$から主張を得る。
+$\alpha\ne2$では二つの三次関係の可換化の共通因子が$xy$なので、
+自己同型は二軸を置換する。対角・反対角は実際に関係を保つ。
+$\alpha=2$の二関係は$[x,[x,y]]=[y,[x,y]]=0$なので全線型変換で不変である。
+\end{proof}
+
+\begin{theorem}\label{thm:h3-positive3-diagonal-base-exclusion}
+対角標準基礎$S$を持つ$(3,1)$H3候補は、全$a\gamma\ne0$について存在しない。
+特に有限位数や非スカラー共鳴値を除外仮定としていない。
+\end{theorem}
+\begin{proof}
+全被覆定理\ref{thm:h3-positive3-monic-coverage}を使う。
+$\mu_B|_W=1$である。もし$\mu_B(v)=v+w$なら、cross式へ$\mu_B$を作用させて引くと
+$wt=g(t)w$となる。$T_2=W\otimes W$なので$w=0$である。
+従って中山は半単純である。
+四次topの$vv$縮約は非零で、$v^4$係数はanti-cyclic式により零、
+$vvzz$係数も$zv$を含む巡回語から零である。
+従ってこの縮約は純正関係空間の$v^2$係数零の部分に入る。
+もしcrossも零なら$W^2$内の関係となり零なので、crossは非零である。
+anti-cyclic式によりそのcrossは$[v,L]$、$0\ne L\in W$となる。
+正規形の$Tv$係数を比較して$g(L)=L$を得る。
+
+まず$\delta$がinnerなら$v$を$W$で移動して$\delta=0$にする。
+平方互換式は$\ell g(t)=g^2(t)\ell$となり、一次正規元がないため$\ell=0$である。
+この場合$v^2=q$は$L$と可換する。
+$\alpha\ne2$なら前補題で$q=cL^2$、可換平方差の因子化で整域性に反する。
+$\alpha=2$の場合も$q=A L^2+bC$の$b=0$なら同様である。
+$b\ne0$なら$vq=qv$から$g(q)=q$、従って$\det g=1$となる。
+$g(L)=L$なので、$[L,m]=C$となる補元で$g(m)=m+dL$と書ける。
+$q m=g^2(m)q$を比較すると$A=db,dA=0$、従って$d=A=0$である。
+よって$g=1$、$v^2=bC$となる。
+ここでは$\alpha=2$だから$a=\pm1$で、$v^2$は$z^2$の非零倍数である。
+尺度を取って$v^2=z^2$とする。
+$a=1$なら$x,y$は$v,z$と可換し、$[y,x]$は$z^2$の尺度倍である。
+$A=\langle v,z,x\rangle$は、$r=v+z,s=v-z$による
+$k\langle r,s\rangle/(rs+sr)[x]$であり、$B=A[y;D]$という通常の微分Ore拡大になる。
+Ore中山公式\cite[Theorem 3.3]{LWWOre}から
+$\mu_B|_A=\mu_A$、特に$\mu_B(v)=-v$となり矛盾する。
+$a=-1$では$H(x,y,v,z)=(x,y,v,-z)=\mu_B$でZhang twistする。
+$\operatorname{hdet}H=1,H^4=1$なので中山は変わらず、
+新積では$z$も$x,y$と可換する。平方の尺度を調整して同じOre矛盾を得る。
+これでinnerの場合は全て排除された。
+
+残る$\delta$を扱う。$\alpha\ne2$なら$g$は対角または反対角であり、
+固定一次元を持つので、軸交換と尺度を除いて
+$g=\operatorname{diag}(1,c)$または$g(x,y)=(y,x)$である。
+$\alpha=2$では全線型変換を使い、これらの対角型と非自明単冪型に帰着できる。
+
+$g+1$が可逆なら$v$の移動で$\ell=0$にできる。
+平方互換式は$g\delta+\delta g=0$となる。
+対角型で$c\ne-1$の場合、この作用の固有値を$W\to T_2$上で比較すると、
+$c=\pm i$以外では$\delta=0$である。
+$c=\pm i$なら$\delta(x)=K y^2,\delta(y)=0$だけが残る。
+三次関係のskew derivation条件は$K\alpha=0$と同値である。
+$K=0$は既に排除したので$\alpha=0$、従って$a^4=-1$とする。
+このとき$N=x^2y^2\ne0$は$x,y,v$と反可換し、$z$と可換する。
+実際、$y^2x=-xy^2,x^2y=-yx^2$、
+$vx=xv+Ky^2,vy=cyv$から直接従う。
+H3の$G$は$x,y$と可換するため$NG=GN$である。
+一方$\mu_B(G)=G$より$G$は偶数個の$z$を含み、全次数3なので$NG=-GN$となる。
+これは整域性と標数0に反する。
+
+$c=-1$の場合、移動で$\ell$の$x$成分を消す。
+平方互換式を二次の自由基底で比較すると残る$\ell$も零で、
+\[
+ \delta(x)=d_1xy+d_2yx,\qquad \delta(y)=e_0x^2+e_3y^2.
+\]
+三次関係を保つ条件は全$\alpha$で
+$(d_1,d_2,e_0,e_3)=t(-1,1,0,2)$、すなわち$y$によるinner derivationだけである。
+この全値性は、定数pivotの消去後に残る一変数係数イデアルが単位イデアルであることで検証する。
+反対角型でも二つのinner係数を定数で消した残り六列に定数pivotが六個あり、全てinnerである。
+最後に$\alpha=2$の単冪型では$g+1$が可逆で、
+$\delta\mapsto g\delta+\delta g$の全固有値が2なので$\delta=0$となる。
+従っていずれも既に排除したinnerの場合か、四次正規元$N$の矛盾に帰着する。
+\end{proof}
+
+\texttt{verify\_cubic\_positive3\_diagonal\_monic.py}は、元の三次関係から
+$T_4$の定数pivot七個、反対角inner gauge後の定数pivot六個、
+反射型の一変数単位係数イデアル、$c^2=-1$の共鳴条件$\alpha K=0$、
+および両centralizer行列の全値階数を厳密検証する。
+有限標本や一般点の階数を特殊値の証明に代用していない。

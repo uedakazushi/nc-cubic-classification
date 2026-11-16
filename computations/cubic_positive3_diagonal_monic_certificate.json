@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "scope": "all parameters alpha, including roots of unity; diagonal-base necessary charts",
+  "checks": {
+    "T4_constant_pivots": 7,
+    "swap_inner_gauge_constant_pivots": 6,
+    "diag_reflection_skew_derivations": "inner only, univariate unit coefficient ideals",
+    "imaginary_resonance": "delta(x)=K*y^2 requires alpha=0",
+    "quadratic_centralizer": "rank3 except alpha=2, rank2 there, axes and nonaxes"
+  },
+  "structural_steps": [
+    "global monic coverage",
+    "top tensor supplies a fixed linear vector",
+    "square completion",
+    "normal quartic obstruction at alpha=0",
+    "Ore Nakayama obstruction in Heisenberg case"
+  ]
+}
