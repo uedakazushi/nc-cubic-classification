@@ -1,6 +1,6 @@
 # 研究方針：H3型内在的非可換三次曲面の完全分類
 
-2026-11-16 / research-plan-v31 / resonance-hearts-v8。**再開時は本書を最初に読む。GitHub mainが唯一の正本。** 実行規則は `AGENTS.md`、H3の具体的な分類計画は `research/cubic_14641_codex_plan.md`。ここには現時点の目標・到達点・次の着手だけを置き、証明・計算は下記の現行原稿とノートを参照する。
+2026-11-17 / research-plan-v32 / triangle-component-v1。**再開時は本書を最初に読む。GitHub mainが唯一の正本。** 実行規則は `AGENTS.md`、H3の具体的な分類計画は `research/cubic_14641_codex_plan.md`。ここには現時点の目標・到達点・次の着手だけを置き、証明・計算は下記の現行原稿とノートを参照する。
 
 ## I. 恒常的な研究原則と保存許可
 
@@ -28,6 +28,8 @@ Rains・VdB・AS・anticanonical heartの一般次数比較は [nc-dp-surface-he
 
 主原稿は `papers/weak_cubic_axioms.tex`、詳細は `research/cubic_14641_classification.md`、`notes/research_notes.md`、検証範囲は `research/cubic_classification_validation.json`。以下はこれらの現行成果を参照する要約であり、共鳴研究の更新時に全てを独立再監査したという意味ではない。
 
+**量子so3固定包絡の4次元族の非成分性（triangle-component-v1）**：原始三乗根を固定したまま、三関係を `yz-qzy=tx+a t^2`（巡回）へ拡張する。全係数PBW/CY AS4であり、五つの中心三次元が全て持ち上がる。元の `[U/A4]` の滑らかな楕円境界を持つ稠密開部分は、7次元の滑らかな既約H3表示stack `[V/A4]` の余次元3正則閉部分stackとなる。H3性には既存の固定有限位数楕円境界の相対開性定理を使用し、全graded包絡矢の計算により追加三係数は座標変換・intrinsic pointed同型で消えない。従って全intrinsic H3モジュライを通常の局所有限型stackとして構成した際にも、元の4次元族の閉包は既約成分ではない。全stackの代数性や7次元族の成分性・versal性は未証明。証明は `papers/sections/cubic_quantum_triangle_deformations.tex`（主原稿へ組込済み）、再開ノートは `research/quantum_triangle_component.md`、実行済み厳密検証は `computations/quantum_triangle_deformations_certificate.json`。PBW重なり、12中心交換子、全中心式、12群作用、24×16一次変形行列rank15を今回確認した。既存H3開性の全依存定理の独立再監査は未実施。次はこの7次元族の局所被覆、位数3を離れる楕円translation変形と中心三次持上げを調べる。指定B_q正常形内の垂直4次元成分を全H3成分と取り違えない。
+
 **固定PI4包絡の完全判定**：h=1、gamma^4=2、alpha=(−2,−2,0)、beta=(1,1,2)のD切断族で、中心特異値は13個だが非H3値は平方因子のない次数6式 b(D)=(D−Dstar)*P4(D)*Q1(D)の根に限る。他のDのaffine切断は大域次元2。`papers/sections/cubic_order4_local_orders.tex` はgrの最大性、中心正則列とbalanced local dualityによる対称双対、DVR標準形の非分岐性、A1二重被覆の指標多重度を使う。小次元表現のnorm・二中心点への分配・次数6式は厳密検算済み。D直線のH3条件は主開集合D(b)で、任意底変更・fpqc降下に適合し、そのaffine族は相対対角の長さ2以下の射影分解を持つ。これは一固定包絡の判定で、全位数4族・全H3の被覆ではない。
 
 **滑らかな楕円境界部分（H3 classification-v36）**：中央境界では、次数3 translation THCRの全filtered deformationからCY AS4包絡と正則中心三次を復元し、全幾何学的矢をfiltered同型で記述した。有限Nのadmissibilityは中心McKay条件で完全判定し、被約固定N族ではH3開性・任意底変更・fpqc降下も得た。三捩れ量子Weyl chartの全中心と有限Hessian/character判定、j0 potential境界の非分裂例も保持する。
@@ -49,7 +51,7 @@ Rains・VdB・AS・anticanonical heartの一般次数比較は [nc-dp-surface-he
 - Pym L112/R22/S23の一般点、E3の非零変形を中心三次消滅で除外。as4からの検証済み構造結果により量子基底の全非自明unipotent持上げも除外。非零微分Ore包絡は点の自己Extが1,3,4,4,…で全特殊値を除外。CY交換子次元4以上と三交換子beta層の指定持上げも除外。固定SHA・規約は `research/as4_imports.json`。
 - 良い楕円R13中心切断はaffine中心商の有限大域次元に帰着。分裂B=S[t]、低次中心(0,0,kg)ではlambda≠0が一軌道、慣性はmu3によるPAut(S)の中心拡大、lambda=0は除外。有限位数境界の固定包絡では悪い中心値は有限。
 - 位数二Hesse–Cliffordの分裂全切断は中心曲面の滑らかさで判定。固定h=1の位数54商、全指定h族の一般四次元・位数648商を得る。比較群が倍増するh^6+20h^3−8=0も判定済み。非分裂対称ポテンシャルの二次項は平行移動で消え、全beta族はClifford rank1点の通常二重点のみを許す局所条件で分類。一般七次元の明示的群商、Dの混合補正と慣性を保持。
-- gamma≠0への積分族は明示開集合上で全次数平坦・noetherian quadratic Koszul CY AS4。Rains中心元を規約変換した中心三次持上げを持ち、全pointed幾何学的矢はHesse216と一意の混合平行移動で記述。表示商の一般次元8、一般慣性自明、H3部分の慣性有限、非自明unipotent自己同型なし。超越的中心値のH3例もある。
+- gamma≠0への積分族は明示開集合上で全次数平坦・noetherian quadratic Koszul CY AS4。Rains中心元を規約変換した中心三次持上げを持つ。全pointed幾何学的矢はHesse216と一意の混合平行移動で記述。表示商の一般次元8、一般慣性自明、H3部分の慣性有限、非自明unipotent自己同型なし。超越的中心値のH3例もある。
 
 これらを全H3の成分分類とは呼ばない。未被覆のPym特殊locus、低交換子CY、非スカラー共鳴、非対称・非CY包絡、j=0その他の境界、Z-algebraとの差と相対降下を縮小する。詳細な全式と証明は現行papers/sectionsにあり、本書で省略した係数等を削除してはいない。
 
@@ -65,3 +67,5 @@ latexmk papers/weak_cubic_axioms.tex
 python3 computations/verify_cubic_skew_jets.py
 ```
 他の個別検算は現行分類validationに記す。今回の移管は数学的定理の再監査とは区別する。
+
+4次元族の非成分性の再現は `python3 computations/verify_quantum_triangle_deformations.py`、新節だけの組版は `latexmk -lualatex research/quantum_triangle_note.tex`。triangle-component-v1では厳密計算を実行し、新節の日本語LuaLaTeX抜粋PDF（6頁）を組版・参照確認した。主原稿全体の再組版と全既存検証の再実行はこの作業では行っていない。
