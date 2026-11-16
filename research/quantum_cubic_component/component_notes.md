@@ -147,3 +147,11 @@ I2の六基底とI3の三次生成元を持ち上げ、各次数のI_n/J_nへNak
 全Artin底での三次flat性は、別の有限行列証明もある。六関係c_i=[t,x_i],r_i=∂_i Phi^hに対し、三つの[t,r_i]展開syzygyと巡回Euler syzygyが厳密に持ち上がる。特殊fiberで64×48挿入行列rank44、四syzygy48×4rank4。単元44minorのSchur補行列は四syzygyの残り4×4可逆部分により零となる。`verify_universal_cubic_syzygies.py` は打切りなしの20係数多項式環で全四恒等式を検証する。
 
 次は中央incidenceの二次障害：一次8方向の全対について、重なりの解消済み乗法を二次まで展開し、105×40行列Mの余核に二次交換子を射影する。全対で零か、8変数同時積分を妨げる条件が出るかを調べる。全intrinsic被覆とはなお区別する。
+
+
+## 11. 全八方向の二次中心incidence
+
+`verify_second_order_incidence.py` は一次の七既知方向と一横断方向を取り、36個の二次monomial全てについて中心交換子の二次障害を求める。105×40のMと105×36のQでrank(M|-Q)=rankM=18。二次補正Hを厳密に解き、**補正後の元関係から**三つの中心交換子の次数0,1,2を再計算して全て零を確認した。一般のpotential変形では逆順語係数行列Aも動くため、B2=−A0^-1(C2+A1B1+A2B0)を使う。一次でbase-normalizeしたδ規則だけを再使用する誤りを避ける。
+
+従って8変数m³=0の同時potential・中央三次族が構成され、全Artin包絡定理から包絡も三次商も全次数flat。証明は `prop:eight-second-order`、八方向と二次補正の小証明書は `second_order_incidence_certificate.json`。二次jetの存在を全次数形式積分、H3相対認識、全intrinsic被覆や成分の完成としない。
+次は、低次jetを無制限に増やすだけでなく、中央三次incidenceの特異点を解消する明示的chartを構成する。generic中心三次のRains式の三捩れ極限を、cut先頭係数と横断パラメータの多変数族へ拡張する方針が有望。EG Theorem3.4.4/3.4.5はgeneric仮定を持ち、三捩れ点の全intrinsic被覆へ無条件に適用しない。

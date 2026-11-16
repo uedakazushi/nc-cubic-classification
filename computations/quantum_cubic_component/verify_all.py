@@ -4,12 +4,12 @@ from pathlib import Path
 import subprocess,sys,json,platform
 import sympy,networkx
 root=Path(__file__).resolve().parent
-checks=['verify_envelope_family.py','verify_normal_form.py','verify_smooth_witness.py','verify_tangent_quotient.py','verify_integrated_lift.py','verify_cubic_obstruction.py','verify_universal_cubic_syzygies.py']
+checks=['verify_envelope_family.py','verify_normal_form.py','verify_smooth_witness.py','verify_tangent_quotient.py','verify_integrated_lift.py','verify_cubic_obstruction.py','verify_universal_cubic_syzygies.py','verify_second_order_incidence.py']
 completed=[]
 for name in checks:
     subprocess.run([sys.executable,str(root/name)],check=True,cwd=root)
     completed.append({'script':name,'status':'PASS'})
-result={'date':'2026-11-17','version':'triangle-component-v5','status':'PASS',
+result={'date':'2026-11-17','version':'triangle-component-v6','status':'PASS',
         'python':platform.python_version(),'sympy':sympy.__version__,'networkx':networkx.__version__,
         'completed':completed,
         'separate_mathematical_inputs':['fixed-finite-order H3 recognition/openness','Sklyanin boundary and CY/PBW theorems','Hochschild local-to-global and categorical obstruction theory','De Deken--Lowen Theorem 4.5 and perfect-object lifting for Artin injectivity'],

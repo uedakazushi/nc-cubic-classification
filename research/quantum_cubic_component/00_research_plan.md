@@ -1,6 +1,6 @@
 # 研究方針：量子三次曲面を含む既約成分の完全決定
 
-2026-11-17 / triangle-component-v5。**再開時は本書を最初に読む。**
+2026-11-17 / triangle-component-v6。**再開時は本書を最初に読む。**
 この一式は `nc-cubic-moduli` の成分研究に必要な現行成果を集約したもので、旧bundleを必要としない。
 パスはリポジトリrootからの相対パスで記す。本体は `papers/quantum_cubic_component.tex`、補足は `research/quantum_cubic_component/component_notes.md`。
 
@@ -56,7 +56,7 @@
 中央tを係数とするpotential dg複体の各内部次数は有界有限自由で、特殊fiberの正次数homologyが消えるため、perfect複体の最小模型で証明する。四三次syzygyの全係数恒等式も別途確認した。相対Koszul14641・双対性・左右noetherian性が従う。
 中央三次gの持上げが存在すれば、特殊fiberの正則性から商も全次数flatとなる。
 ただし一般dg/Abel変形がこの巡回potential・中央t chartへ入るとは未証明であり、中心三次の全8方向同時持上げとH3認識も別問題である。
-次は105×40中心incidenceの8方向について二次障害を厳密に求め、8変数の同時形式族を構成する。一次rank22だけから形式smooth性を結論しない。
+全8方向の36個の二次障害は零で、元関係を再構成して中心性まで確認した8変数m³=0族を得た（`prop:eight-second-order`）。次はRains中心式の多変数三捩れ極限を用い、全次数の同時形式族を構成する。一次rank22や二次jetだけから形式smooth性を結論しない。
 
 **第二優先：8次元一般表示族の代数化とH3開部分。**
 Hesse曲線と平行移動点の相対二次元底、対称低次ポテンシャル、中央三次線を使う有限提示incidenceを構成する。
@@ -77,7 +77,7 @@ python3 computations/quantum_cubic_component/verify_all.py
 latexmk -lualatex papers/quantum_cubic_component.tex
 ```
 コードと小証明書は同じ専用ディレクトリに置き、統合結果はその `validation.json` に再生成する。
-通常の証明であるArtin再構成を計算PASSと同一視しない。既存7検証器は厳密演算で再実行した。
+通常の証明であるArtin再構成を計算PASSと同一視しない。既存8検証器は厳密演算で再実行した。
 今回の独立原稿をLuaLaTeXで組版する。巨大な既存H3原稿全体の再組版・網羅再検証・独立査読は対象外。
 Git追跡対象は現行TeX・Markdown・Python・小JSONのみ。PDF・ZIP・中間物・cacheは含めない。
 生成・検証結果はコードと文書に、GitHub refの到達確認は保存時の応答に分けて記載する。

@@ -1,6 +1,6 @@
 # 研究方針：H3分類と量子三次曲面を含む既約成分
 
-2026-11-17 / research-plan-v33 / triangle-component-v5。
+2026-11-17 / research-plan-v33 / triangle-component-v6。
 **再開時は本書を最初に読む。GitHub mainが唯一の正本。**
 実行規則は `AGENTS.md`。既存の全H3分類の詳細と必要な式は
 `research/cubic_14641_classification.md`、`research/cubic_14641_codex_plan.md`、
@@ -58,7 +58,7 @@ Library既存ファイルは明示指示なしに削除しない。GitではPDF�
 一般dg変形のheart存在、二次包絡のAS4性、三次核の正則正規性は結論していない。
 
 指定巡回potential chartでは、全Artin底で二次包絡の全次数平坦性・相対Koszul14641・双対性を証明した（`thm:artin-potential-envelope`）。有限自由potential dg複体と特殊fiberのacyclic性を使い、単なる低次数rankの外挿ではない。中央三次元の持上げが与えられれば商もflatである。一般のAbel/dg変形がこのchartに入ることは未証明。
-次は中心三次incidenceの8方向の二次障害を計算し、同時形式族とH3認識、相対代数性へ進む。滑らかな楕円境界を失う点を含む全大域境界・同型群oidも未完成である。
+全8方向の36個の二次障害は消え、補正後の元関係で中心性を再検証した8変数m³=0の平坦な中心切断族を得た。次は同時形式族を与える明示的多変数chartとH3認識、相対代数性へ進む。滑らかな楕円境界を失う点を含む全大域境界・同型群oidも未完成である。
 八次元成分の一意性は現行の比較仮定付き定理であり、全成分の完全決定ではない。
 
 ## IV. 全H3分類で保持する成果と未解決領域
@@ -84,7 +84,7 @@ python3 -m pip install -r computations/quantum_cubic_component/requirements.txt
 python3 computations/quantum_cubic_component/verify_all.py
 latexmk -lualatex papers/quantum_cubic_component.tex
 ```
-検証証明書は `computations/quantum_cubic_component/validation.json`。7検証器は厳密演算で再実行済み。
+検証証明書は `computations/quantum_cubic_component/validation.json`。8検証器は厳密演算で再実行済み。
 Artin再構成は通常の数学的証明であり、計算PASSと区別する。独立原稿をLuaLaTeXで組版し、既存H3主原稿全体は再組版していない。
 全H3分類の再現手順は `research/cubic_classification_validation.json`、例は `python3 computations/verify_cubic_skew_jets.py`。
 

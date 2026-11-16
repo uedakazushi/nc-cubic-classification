@@ -2135,5 +2135,24 @@
       "relative H3 algebraicity",
       "complete component classification"
     ]
+  },
+  "quantum_component_second_order_incidence_v204": {
+    "status": "PASS exact eight-variable second-order jet; rebuilt commutators zero",
+    "validator": "computations/quantum_cubic_component/verify_second_order_incidence.py",
+    "certificate": "computations/quantum_cubic_component/second_order_incidence_certificate.json",
+    "proof": "papers/sections/quantum_cubic_quadratic_obstruction.tex prop:eight-second-order",
+    "checks": [
+      "eight directions span modulo 14 gauge directions",
+      "all 36 quadratic obstruction classes vanish",
+      "rank(M|-Q)=rank(M)=18",
+      "all original-relation commutators rebuilt through order2"
+    ],
+    "scope": "flat envelope and central quotient over k[h0,...,h7]/m^3",
+    "not_claimed": [
+      "all-order formal smoothness",
+      "relative H3 recognition",
+      "all intrinsic coverage",
+      "global component classification"
+    ]
   }
 }
