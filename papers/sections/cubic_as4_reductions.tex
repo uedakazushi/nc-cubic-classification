@@ -915,6 +915,74 @@ $(-1)^l a^{j+k-2l}=-1$ を要求する。
 その上の $f$ は $\operatorname{diag}(a,-a^{-1})$、
 二生成元平面のパラメータは $-a^2$ なので、第一行列標準形の具体的な全値chartとなる。
 
+\begin{theorem}[単項Ore族の全base二次変形も排除される]
+\label{thm:h3-order2-Ore-base-deformations}
+前定理の最後の量子平面関係を
+\[
+ uw+wu=P(x,y),\qquad P=A x^2+Cxy+B y^2
+\]
+へ置き換え、他の五関係を保つ。
+任意の $a\ne0,A,B,C$ について、この表示はH3の二次包絡にならない。
+一般のcross導分や線型base--outer項を追加した表示の被覆は主張しない。
+\end{theorem}
+\begin{proof}
+H3を仮定すれば整域であり、$x,y$ の量子平面は忠実に埋まる。
+量子平面からの高次核があれば斉次一次因子分解により零因子を生じるためである。
+cross則と $uw+wu=P$ を $x,y$ と比較すると
+\[
+ Px=a^2xP,\qquad Py=a^{-2}yP.
+\]
+量子平面の三つの二次PBW単項式を比べれば
+\[
+ (a^2-1)A=(a^2-1)B=0,\qquad (a^4+1)C=0.
+\]
+従って非零変形は $a=\pm1$ の $Ax^2+By^2$ と、原始八乗根の $Cxy$ だけである。
+これらでは $x<y<u<w$ の二次書換えの四つの重なりが全て整合するので、
+PBW基底 $x^iy^ju^kw^l$ を持つ。
+$x,y$ の重みを1、$u,w$ を2とすると、随伴次数環は前定理の $B_a$ である。
+
+H3包絡という仮定の下で、中山作用は変形前と同じ
+$(-x,-y,w,u)$ である。
+各変形chartに対し、係数が $A,B$ 又は $C$ の多項式である四次tensorを保存した。
+その項数は符号二chartで各32、八乗根chartで26であり、
+三つの隣接二次位置の全関係商への射影は零、係数 $w_{yxwu}=1$ である。
+従って全特殊値で非零のKoszul最高tensorを与える。
+同じtensorが $(-x,-y,w,u)$ に関する中山巡回式を満たすことも全係数で再生する。
+AS4の最高空間の一次元性とFrobenius非退化性により、これが実際の中山作用を決定する。
+パラメータ分母を持たない90項の証明書
+\texttt{cubic\_\allowbreak{}order2\_\allowbreak{}Ore\_\allowbreak{}base\_\allowbreak{}top\_\allowbreak{}certificate.json}
+を用いるので、AS4十分性や未検証の中山変形不変性を入力にしない。
+
+$a=1$ では $x$ と反交換する三次の全PBW項は $y$ を奇数個含む。
+$y$ は正規なので、全 $G\in W_1$ は $y$ を因子に持つ。
+$a=-1$ では $Gx=-xG$ から $x$ の個数は偶数。
+$y$ の偶奇で $G=G_{\mathrm{even}}+G_{\mathrm{odd}}$ と分けると、両部分とも $W_1$ に入る。
+\[
+ p=u+w,\quad v=u-w,\quad X=x^2,\quad Y=y^2,\quad s=pv+vp
+\]
+と置く。$X,Y$ は中心、$p^2-v^2=2(AX+BY)$ なので、
+$s$ は部分代数 $\langle p,v,X,Y\rangle$ の中心である。
+三次 $G_{\mathrm{even}}$ はこの部分代数に属する一方、
+$\mu_B(s)=-s$ だから
+$G_{\mathrm{even}}s=-sG_{\mathrm{even}}$ である。
+$s=2(u^2-w^2)\ne0$ と整域性から $G_{\mathrm{even}}=0$。
+従ってここでも全候補は正規元 $y$ を因子に持つ。
+この二場合の非零切断は、商で消えない一次・二次因子を持つので非整域である。
+
+原始八乗根の場合、PBW基底を固定した正常化行列の成分は $C$ の多項式である。
+$C=0$ では前定理により列rankは20。
+従ってある非零 $C$ でもrank20である。
+他方、$u,w$ の同時尺度変更が全ての $C\ne0$ を互いに同型へ移し、中山作用も保つ。
+よって全 $C$ で $W_1=0$。
+これはPBW全族と全非零軌道を使う議論であり、一般点から特殊値への推測ではない。
+残る $P=0$ は前定理で排除済みである。
+
+三単項式の正常化条件のgcd、全変形係数に関する四Diamond恒等式、
+$s$ の四つの交換子と八乗根の基準核は
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}order2\_\allowbreak{}Ore\_\allowbreak{}base\_\allowbreak{}deformations.py}
+で厳密再生する。
+\end{proof}
+
 \begin{lemma}[単冪twist下の反標準三次関係の輸送]
 \label{lem:h3-unipotent-transport}
 $C$は左右noetherian quadratic Koszul AS4型14641で，$\mu_C$は半単純とする．

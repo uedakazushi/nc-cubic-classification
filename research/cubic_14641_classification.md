@@ -481,3 +481,13 @@ M0ではmu_W=epsilon I、F任意det F=epsilon。M1ではmu_W=epsilon[[1,2],[0,1]
 PBW x^i u^j w^k y^lでGx=−xGの指標は(−1)^l a^(j+k−2l)=−1。恒等的に許される三次はu²y,uwy,w²yだけで、他の列を許すaの位数は1,2,3,4,6,8（合計12根）。集合外ではGu=wGの三係数が−a−1/−a+1となってW1零。全六円分体で140x20行列を元のPBW積から厳密再生成し、a1はkuwy、a−1はk(w²−u²)y、他の位数は核零。両非零核もyを因子に持ち全切断nondomain。従ってこの全一パラメータ族を排除した。検証verify_cubic_order2_trimmed_Ore.pyは一般QQ(a)核、全例外核、64生成元三重積の整合、三平面top指標も厳密再生する。
 
 正固有生成元はu+w、W=<x,y>、f=diag(a,−a^-1)、量子平面q=−a²。これは指定した単項/trimmed部分の一具体族であり、全trimmed double Oreやbase二次項・cross導分付きの表示を被覆したとしない。既知Clifford正例はこの族ではなく、除外と矛盾しない。原稿thm:h3-order2-monomial-Ore-excluded。次は係数付き外側二次/cross偶関係の残余、第二行列型と残るJordan拡大、2+2層を扱う。
+
+## 単項Ore族の全base二次変形の排除（classification-v102）
+
+前族のuw+wuをP=A x²+Cxy+B y²へ置き換え、他五関係を保つ全表示もH3から排除した。domainならx,y量子平面は忠実（高次核は一次因子分解で零因子）なので、P x=a²xP、P y=a^-2 yPから(a²−1)A=(a²−1)B=0,(a4+1)C=0。非零Pはa=+-1の平方和、又は原始八乗根のCxyだけ。全係数で四つの二次Diamondを多項式恒等式として確認し、PBW・重み(x,y)1,(u,w)2のgr=B_aを得た。
+
+H3を仮定する場合のmuは変形前の(-x,-y,w,u)のまま。本文では各chartの最高tensorを全係数で直接保存・検証して決定する。符号二chart各32項、八乗根chart26項の計90項はパラメータ多項式で、全三隣接位置の関係商射影零、w_yxwu=1、指定muの巡回式を満たす。従って全特殊値で非零、AS4最高空間の一次元性からmuを確定する。cubic_order2_Ore_base_top_certificate.jsonを独立再生し、一般のNakayama変形不変性を仮定しない。代替説明として、二次双対の逆重みfiltrationと両Hilbert(1+t)4からgrE=E(B_a)、Frobenius対合からgr mu=mu_Baを得て、base符号反転とmuの可換性で低重み補正を除くこともできる。主証明は保存した直接tensor恒等式で完結する。
+
+a1ではGx=−xGがy奇数を強制し全Gがy因子。a−1ではx次数偶数、y偶奇にGを分解。p=u+w,v=u−w,X=x²,Y=y²を取るとX,Y中心、p²−v²=2(AX+BY)、s=pv+vp=2(u²−w²)はC=<p,v,X,Y>の中心。y偶数部G_evenはCに入りsと可換するが、正常化mu(s)=−sから反交換もするので、domain/char0によりG_even0。全Gはy奇数でy因子を持ち非整域。
+
+八乗根CxyではPBW基底上のW1行列はC多項式、C0でrank20、全C非零がu,w同時尺度変更の一軌道なので全値W1零。PBW全族が確認されているため、局所化や特殊化の根拠無しに一般点計算を全値へ広げた議論ではない。verify_cubic_order2_Ore_base_deformations.pyは全正常化条件gcd、任意A,B/CのDiamond、sの四交換子、八乗根基準核を再生する。原稿thm:h3-order2-Ore-base-deformations。全cross導分やbase--outer線型係数の被覆は残る。

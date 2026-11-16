@@ -1,0 +1,17 @@
+{
+  "base_quadratic": "P=A*x^2+C*x*y+B*y^2",
+  "domain_necessary_conditions": {
+    "A,B": "(a^2-1)*A=(a^2-1)*B=0",
+    "C": "(a^4+1)*C=0"
+  },
+  "normality_gcds_by_x_exponent": {
+    "0": "a**2 - 1",
+    "1": "a**4 + 1",
+    "2": "a**2 - 1"
+  },
+  "PBW": "All four overlap ambiguities vanish for arbitrary A,B at a=+/-1, and arbitrary C at primitive eighth roots.",
+  "sign_minus_centralizer": "p=u+w,v=u-w,s=p*v+v*p=2*(u^2-w^2) commutes with p,v,x^2,y^2 for arbitrary A,B",
+  "eighth_root_chart": "W1=0 at C=0; all nonzero C are equivalent under simultaneous scaling of u,w, so semicontinuity and PBW force W1=0 for every C.",
+  "result": "Every quadratic-base deformation P of this explicit Ore family excluded from H3; no coverage of general cross derivations.",
+  "highest_tensor_certificate": "cubic_order2_Ore_base_top_certificate.json: 32+32+26 polynomial tensor terms, all three adjacent relation projections and twisted cyclic identity replayed, fixed nonzero coefficient1"
+}
