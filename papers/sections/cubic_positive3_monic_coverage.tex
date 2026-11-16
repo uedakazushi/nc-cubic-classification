@@ -1,0 +1,82 @@
+\subsection{正三次元領域全体のmonic正規化表示}
+\label{subsec:h3-positive3-monic-coverage}
+\begin{lemma}\label{lem:h3-positive3-no-fraction}
+全$(3,1)$H3候補で、標準AS3部分代数$A_0=\langle W,z\rangle$と
+残る正生成元$v$について、$v\notin Q_{\mathrm{gr}}(A_0)$である。
+\end{lemma}
+\begin{proof}
+定理\ref{thm:h3-positive3-cone-base-exclusion}により$A_0$はnoetherian整域で、
+$A_0\to R=B/(G)$も単射である。
+もし$v$がその斉次商環へ入れば、$B$全体が$Q_{\mathrm{gr}}(A_0)$内に入る。
+Ore条件で非零斉次分母$s\in A_0$を払えば、$0\ne sG\in A_0$となる。
+これは$A_0\cap(G)=0$に反する。
+\end{proof}
+
+\begin{proposition}\label{prop:h3-positive3-Jordan-cubic-base}
+Jordan基礎$S_J$内で$T=\langle x,y\rangle$、$b=\epsilon\beta$、
+$C=[y,x]-\kappa x^2=\gamma z^2$と置く。
+この$T$は重み付きOre表示
+\[
+ Cx=xC,\qquad yC=Cy-2b xC,\qquad yx=xy+\kappa x^2+C,
+ \quad\deg C=2
+\]
+を持ち、$x^iC^jy^k$が基底である。
+従って対角基礎の場合と同様に
+\[
+ H_T(t)=\frac1{(1-t)^2(1-t^2)},\qquad S_J=T\oplus Tz.
+\]
+特にどちらの基礎でも$T_2=W\otimes W$であり、$W$に二次関係はない。
+\end{proposition}
+\begin{proof}
+$z^2x=xz^2$と$z^2y=(y+2b x)z^2$から表示式を得る。
+これは可換環$k[x,C]$上の微分Ore拡大で、
+$\delta(x)=\kappa x^2+C,\delta(C)=-2b xC$である。
+そのPBW基底は$S_J$の$x^iz^{2j}y^k$の非零尺度倍へ移るので単射である。
+$C=[y,x]-\kappa x^2$で生成元$C$を消去でき、像はちょうど$T$となる。
+奇数個の$z$を含む基底も$Tz$となるため直和式を得る。
+\end{proof}
+
+\begin{theorem}[全候補を覆うmonic正規化表示]
+\label{thm:h3-positive3-monic-coverage}
+全$(3,1)$H3候補の追加正生成元は、ある$g\in\operatorname{GL}(W)$、
+$g$-skew derivation $\delta:T\to T$（次数1）、$\ell\in W,q\in T_2$により
+\[
+ vt=g(t)v+\delta(t)\quad(t\in W),\qquad v^2=\ell v+q
+\]
+と表示される。$g$は$T$の次数付き自己同型である。
+さらに$B$は、$T$の基底の右に、$vv,zz$を含まない交互語を置いた基底を持つ。
+特に$T+Tv$は直和であり、
+\[
+ (g\delta+\delta g)(t)=\ell g(t)-g^2(t)\ell\quad(t\in W).
+\]
+これは追加の正規化仮定を課した部分chartではなく、残る全候補の必要表示である。
+\end{theorem}
+\begin{proof}
+純正二次関係空間$L$は三次元で、$L\cap W^{\otimes2}=0$である。
+$v^2$係数射影が零なら、$L$から$vW$への射影に核がある。
+核の非零関係は$uv+r(W)=0$となり、$u\ne0$だから$v$は商体に入る。
+これは前補題に反する。よって$v^2$射影は全射で、その核$L_0$は二次元である。
+同じ議論で$L_0$から$vW$と$Wv$への両射影は単射、従って同型である。
+これから最初の二式と$g\in\operatorname{GL}(W)$を得る。
+残る関係の$vW$項をそれらで消去し、$v^2=\ell v+q$と書ける。
+
+$zW=f(W)z,z^2\in T_2$も使って全ての$W$を左へ移し、
+外側の$vv,zz$を減らすと、主張した元が$B$を張る。
+この書換えは、外側文字数、外側文字より右にある$W$の個数の辞書式順序で停止する。
+外側交互語は各正次数に二つあるので、この生成系の級数は
+\[
+ H_T(t)\left(1+2t+2t^2+\cdots\right)
+ =\frac1{(1-t)^2(1-t^2)}\frac{1+t}{1-t}
+ =\frac1{(1-t)^4}=H_B(t).
+\]
+従って各次数で生成系は独立、すなわち基底である。
+$T$の任意の関係に$v$を左から掛け、$T$成分と$Tv$成分を分離すると、
+$g$が関係を保ち、$\delta$が$T$上で定義されることが分かる。
+$g$は$W$上可逆なので各次数で全射となり、自己同型である。
+最後に$v(vt)=(v^2)t$の$Tv$係数を比較すれば、表示した平方互換式を得る。
+なお、この基底定理から$R$の$A_0$上有限自由性までは主張しない。
+\end{proof}
+
+\texttt{verify\_cubic\_positive3\_monic\_coverage.py}はJordanの重み付きOre互換式、
+級数恒等式と平方互換式の形式計算を厳密検算する。
+商体排除と関係射影の全被覆は本文の構造証明である。

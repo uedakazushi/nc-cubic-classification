@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "scope": "universal monic normalizing coverage for remaining (3,1) H3 candidates; structural fraction/projection proof in TeX",
+  "exact_checks": [
+    "Jordan weighted Ore relation preserved",
+    "alternating-word Hilbert identity",
+    "14641 dimensions through degree6",
+    "square compatibility Tv coefficient"
+  ],
+  "not_claimed": [
+    "existence for arbitrary monic coefficients",
+    "H3 admissibility",
+    "finite free rank3 for the cut"
+  ]
+}
