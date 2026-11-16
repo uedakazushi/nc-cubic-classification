@@ -497,6 +497,78 @@ $Fv-a^6vF$ ($v=x,y,z$) の四次商への写像は階数3であり、
 で元の二次関係から再現する。
 最後に $F$ の非零スカラーは $t$ の尺度変更で吸収できる。
 \end{proof}
+この三次元二次表示自体は古典的なType Eである。
+実際、\cite[p.~186]{LBS}の原始九乗根を $\zeta_9=a^2$ とし、
+その生成元を $(X_1,X_2,X_3)=(x,z,a^3y)$ に移すと、
+三関係は上の $(r_1,r_2,r_3)$ の $(ar_1,ar_3,a^7r_2)$ となる。
+この対応も元の三関係を用いて厳密検証した。
+ここで扱ったのは全H3からこの表示への必要帰着と指定正規三次であり、
+三次元表示の新規性を主張するものではない。
+
+\begin{corollary}[有限候補の条件付き幾何学的慣性]
+\label{cor:h3-order3-candidate-inertia}
+命題\ref{prop:h3-order3-Ore-distinct}の候補がH3を与えるなら、
+その内在的pointed自己同型群は $\mu_9$ である。
+$\rho=\omega$ と $\rho=\omega^2$ の候補の間に幾何学的pointed同値はない。
+従って二固有値・位数3部分の幾何学的群oidは、
+二つの $B\mu_9$ のうち許容されるものの非交和である。
+どちらが許容されるか、また抽象族の相対降下はここでは未判定である。
+\end{corollary}
+\begin{proof}
+H3の二次包絡と中山作用は内在的に復元される。
+全graded自己同型は $\mu_B$ と可換するので $S_1$ と $kt$ を保存し、
+$t$ の正規式から $S$ 上では $\sigma$ と可換する。
+$\sigma$ の三固有値は相異なるため、$x,y,z$ 上の作用は対角である。
+関係の全係数が非零なので、その対角成分は
+\[
+ (d_x,d_y,d_z)=d(1,r,r^2),\qquad r^3=1
+\]
+に限られる。逆にこれらは全て自己同型である。
+$t\mapsto et$ とすると $F_0\mapsto d^3rF_0$ なので、
+$[F_0+t^3]$ の安定化群は $e^3=d^3r$ を満たす。
+共通のgrading scalar $d$ で割り $d=1$ とすれば $r=e^3$, $e^9=1$。
+従って射影安定化群は $\mu_9$、作用は
+\[
+ (x,y,z,t)\longmapsto(x,e^3y,e^6z,et),\qquad e^9=1
+\]
+である。H3のpointed矢の復元により、これは内在的慣性と一致する。
+異なる $\rho$ では中山作用の固有値集合が異なるため同値にならない。
+\end{proof}
+
+\begin{lemma}[有限候補の正規Ore開集合]
+\label{lem:h3-order3-candidate-affine}
+上の候補 $R=S[t;\sigma]/(F_0+t^3)$ がH3を与えると仮定する。
+$D=S^{\sigma^{-1}}$ を右Zhang twistとすると
+\[
+ R[t^{-1}]_0\simeq D/(C+1),\qquad C\in Z(D)_3.
+\]
+具体的には $u=xt^{-1},v=yt^{-1},w=zt^{-1}$ の二次関係は
+\[
+ uv+a^8vu+aw^2=0,\quad
+ a^7u^2+vw+a^2wv=0,\quad
+ a^4v^2+wu+a^5uw=0.
+\]
+従って $D$ は同じ二次模型の $a\mapsto a^4$ 置換である。
+$F_0=c_1y^2z+c_2yzy+c_3zy^2+z^2x$ と書けば
+\[
+ C=a^3c_1v^2w+c_2vwv+a^6c_3wv^2+a^3w^2u.
+\]
+候補がAS正則であるという仮定の下でも $\mu_D=\sigma\ne1$ であるから、
+この表示だけでCY affine認識や大域H3許容性を結論しない。
+\end{lemma}
+\begin{proof}
+Ore則により $(xt^{-1})(yt^{-1})=x\sigma^{-1}(y)t^{-2}$ なので、
+次数零部分は右twist $D$ の三次 $F_0$ に対応する元を $-1$ とする切断である。
+$F_0$ の正規化は $\sigma^3$、$\sigma(F_0)=F_0$ であるから、twist内では
+\[
+ F_0\star v=F_0\sigma^{-3}(v)=vF_0=v\star F_0.
+\]
+従って対応する $C$ は中心である。
+各三次語 $x_ix_jx_k$ に係数 $\sigma_j\sigma_k^2$ が掛かるので、表示した $C$ を得る。
+二次関係の逆代入と $C$ の全三交換子も元の四次商で厳密検証できる。
+最後の中山式は $\operatorname{hdet}\sigma=1$、AS index 3と右twist公式から
+$\mu_D=\mu_S\sigma^3=\sigma$ となる。
+\end{proof}
 
 \begin{lemma}[単冪twist下の反標準三次関係の輸送]
 \label{lem:h3-unipotent-transport}

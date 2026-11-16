@@ -67,5 +67,25 @@
     "a^3-a+2",
     "1"
   ],
-  "scope": "Necessary model only. No all-degree AS3/noetherian/domain/H3 sufficiency assertion."
+  "scope": "Necessary model only. No all-degree AS3/noetherian/domain/H3 sufficiency assertion.",
+  "projective_candidate_inertia_Smith_diagonal": [
+    1,
+    1,
+    9
+  ],
+  "projective_candidate_inertia_mu9_weights": [
+    0,
+    3,
+    6,
+    1
+  ],
+  "normal_Ore_affine_chart": "S_(a^4)/(C+1)",
+  "central_affine_cubic_coefficient_multipliers": [
+    "a^3",
+    "1",
+    "a^6",
+    "a^3"
+  ],
+  "classical_Type_E_source": "Le Bruyn-Smith-Van den Bergh (1996), page186",
+  "classical_Type_E_map": "zeta9=a^2; (X1,X2,X3)=(x,z,a^3*y); (f1,f2,f3)=(a*r1,a*r3,a^7*r2)"
 }

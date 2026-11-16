@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 import sympy as S
 from sympy.polys.matrices import DomainMatrix
+from sympy.matrices.normalforms import smith_normal_form
 
 
 def main():
@@ -39,6 +40,18 @@ def main():
     assert all(mu[i]*mu[j]*mu[k]==K.one for i,j,k in w)
     assert all(sigma[i]*sigma[j]*sigma[k]==K.one for i,j,k in w)
     rel=[{word[1:]:c for word,c in w.items() if word[0]==i} for i in range(3)]
+    # Literal Type E presentation in LBS (1996), page186, not an atlas import.
+    source_root=a**2
+    source_relations=[
+        {(2,0):K.one,(0,2):source_root**8,(1,1):source_root**4},
+        {(0,1):K.one,(1,0):source_root**5,(2,2):source_root**7},
+        {(0,0):source_root,(1,2):K.one,(2,1):source_root**2},
+    ]
+    perm=[0,2,1]
+    scales=[K.one,K.one,a**3]
+    for src,target,factor in zip(source_relations,[rel[0],rel[2],rel[1]],[a,a,a**7]):
+        transformed={(perm[i],perm[j]):c*scales[i]*scales[j] for (i,j),c in src.items()}
+        assert transformed=={word:factor*c for word,c in target.items()}
     # Both first and last slices define exactly the same quadratic relation space.
     for i in range(3):
         last={word[:2]:c for word,c in w.items() if word[2]==i}
@@ -95,9 +108,36 @@ def main():
         assert sum((vector[i]*C[i].get(col,K.zero) for i in range(4)),K.zero)==K.zero
     # All four cubic normal-form coefficients are nonzero.
     assert all(vector)
+    inertia_matrix=S.Matrix([[1,-2,0],[1,1,0],[-2,1,0],[2,1,-3]])
+    snf=smith_normal_form(inertia_matrix,domain=S.ZZ)
+    assert [abs(snf[i,i]) for i in range(3)]==[1,1,9]
+    inertia_weights=[0,3,6,1]
+    for r in rel:
+        assert len({sum(inertia_weights[i] for i in word)%9 for word in r})==1
+    assert {sum(inertia_weights[i] for i in word)%9 for word in candidates}=={3}
+    assert 3*inertia_weights[3]%9==3
+    # Degree-zero localization at the normal Ore variable uses S^(sigma^-1).
+    rel=[
+        {(0,1):K.one,(1,0):a**8,(2,2):a},
+        {(0,0):a**7,(1,2):K.one,(2,1):a**2},
+        {(1,1):a**4,(2,0):K.one,(0,2):a**5},
+    ]
+    affine_basis4,affine_p4=quotient(4)
+    central_coefficients=[c*sigma[word[1]]*sigma[word[2]]**2
+                          for word,c in zip(candidates,vector)]
+    assert central_coefficients==[a**3*vector[0],vector[1],a**6*vector[2],a**3]
+    for i in range(3):
+        residual=[K.zero]*len(affine_basis4)
+        for word,c in zip(candidates,central_coefficients):
+            for ww,sign in [(word+(i,),1),((i,)+word,-1)]:
+                for j,d in affine_p4(ww).items():
+                    residual[j]+=sign*c*d
+        assert not any(residual)
     data={
         'field':'QQ[a]/(a^6+a^3+1)',
         'sigma_exponents':[8,2,5],
+        'classical_Type_E_source':'Le Bruyn-Smith-Van den Bergh (1996), page186',
+        'classical_Type_E_map':'zeta9=a^2; (X1,X2,X3)=(x,z,a^3*y); (f1,f2,f3)=(a*r1,a*r3,a^7*r2)',
         'mu_S_exponents':[2,5,8],
         'quadratic_relations':'xy+a^2*yx+a^7*z^2; a^4*x^2+yz+a^5*zy; a*y^2+zx+a^8*xz',
         'quotient_dimensions':dimensions,
@@ -106,6 +146,10 @@ def main():
         'normal_cubic_dimension':1,
         'two_eigenvalue_weight_cases_mu9':two_weight_cases,
         'Jordan_plane_Nakayama_eigenvalues':[1,1],
+        'projective_candidate_inertia_Smith_diagonal':[1,1,9],
+        'projective_candidate_inertia_mu9_weights':inertia_weights,
+        'normal_Ore_affine_chart':'S_(a^4)/(C+1)',
+        'central_affine_cubic_coefficient_multipliers':['a^3','1','a^6','a^3'],
         'F_words':['yyz','yzy','zyy','zzx'],
         'F_coefficients':['-a^4+a-2','-a^5+2*a^4-2*a^3+a-1','a^3-a+2','1'],
         'scope':'Necessary model only. No all-degree AS3/noetherian/domain/H3 sufficiency assertion.'

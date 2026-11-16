@@ -1023,5 +1023,13 @@
     "certificate": "computations/cubic_order3_Ore_distinct_certificate.json",
     "result": "Single and two eigenvalues of the AS3 base automorphism excluded, including Jordan parts. Every global two-eigenvalue order-three H3 therefore reduces to a unique explicit quadratic model per primitive rho and exactly one invariant cubic with prescribed normalizer. At most one H3 candidate per rho.",
     "scope_limit": "No existence, noetherian AS3/domain, or H3 sufficiency claim. Global order-two, unipotent and three/four-Nakayama-eigenvalue sectors remain."
+  },
+  "order3_finite_candidate_inertia_affine_v95": {
+    "status": "conditional geometric proof in manuscript; exact Smith and centrality identities executed",
+    "validator": "computations/verify_cubic_order3_Ore_distinct.py",
+    "certificate": "computations/cubic_order3_Ore_distinct_certificate.json",
+    "result": "If admissible, each finite order-three candidate has intrinsic inertia mu9, with weights(0,3,6,1). Its normal Ore affine chart is the central cubic C+1 quotient of S_(a^4).",
+    "scope_limit": "Neither candidate H3 admissibility nor affine finite global dimension, AS3 existence or relative stack descent asserted.",
+    "primary_presentation_check": "LBS (1996) p.186 Type E: zeta9=a², (X1,X2,X3)=(x,z,a³y); all three transformed relations checked exactly. No new PI-degree or centre theorem imported."
   }
 }
