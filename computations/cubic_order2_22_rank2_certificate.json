@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "scope": "semisimple Nakayama (+,+,-,-), odd relation dimension2 only",
+  "twisted_quartic_dimensions": {
+    "0": 4,
+    "2": 22,
+    "4": 6
+  },
+  "pfaffian_partial_transpose": "Pf(D)=-Pf(A)",
+  "graph_pencils": [
+    {
+      "type": "secant",
+      "determinant_of_graph": -1
+    },
+    {
+      "type": "tangent",
+      "determinant_of_graph": 1
+    },
+    {
+      "type": "U_ruling",
+      "determinant_of_graph": -1
+    },
+    {
+      "type": "V_ruling",
+      "determinant_of_graph": 1
+    }
+  ],
+  "zero_alternating_block": "two pure nondegenerate mixed quadrics; even cross block determinant -(det(p)*det(q))^2",
+  "not_claimed": [
+    "AS4 existence on necessary charts",
+    "normal cubic classification",
+    "nonsemisimple (2,2)",
+    "mixed dimension4",
+    "H3 admissibility"
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "scope": "complete pure-projection subcase of semisimple (2,2), mixed rank2",
+  "universal_checks": [
+    "diagonal residual identity forcing r=-1 or r^2=-1",
+    "Jordan coefficient ideal is the unit ideal"
+  ],
+  "five_normalized_necessary_presentations": [
+    {
+      "q": "diag(1,-1)",
+      "U": [
+        1,
+        1,
+        0,
+        "1/2"
+      ],
+      "degree3": 20,
+      "degree4": 35,
+      "normalizer_rank": 20
+    },
+    {
+      "q": "diag(1,1*i)",
+      "U": [
+        0,
+        1,
+        "1*sqrt(-2)",
+        0
+      ],
+      "degree3": 20,
+      "degree4": 35,
+      "normalizer_rank": 20
+    },
+    {
+      "q": "diag(1,1*i)",
+      "U": [
+        0,
+        1,
+        "-1*sqrt(-2)",
+        0
+      ],
+      "degree3": 20,
+      "degree4": 35,
+      "normalizer_rank": 20
+    },
+    {
+      "q": "diag(1,-1*i)",
+      "U": [
+        0,
+        1,
+        "1*sqrt(-2)",
+        0
+      ],
+      "degree3": 20,
+      "degree4": 35,
+      "normalizer_rank": 20
+    },
+    {
+      "q": "diag(1,-1*i)",
+      "U": [
+        0,
+        1,
+        "-1*sqrt(-2)",
+        0
+      ],
+      "degree3": 20,
+      "degree4": 35,
+      "normalizer_rank": 20
+    }
+  ],
+  "conclusion": "all five have zero designated Nakayama-normal cubic kernel, hence no H3",
+  "not_claimed": [
+    "four graph-pencil cases",
+    "nonsemisimple (2,2)",
+    "mixed rank4",
+    "AS4 existence for the necessary presentations"
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "version": "classification-v141",
+  "version": "classification-v143",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -62,7 +62,8 @@
     "papers/sections/cubic_as4_adjacent_S_exclusions.tex",
     "papers/sections/cubic_positive3_monic_coverage.tex",
     "papers/sections/cubic_positive3_diagonal_monic.tex",
-    "papers/sections/cubic_positive3_Jordan_monic.tex"
+    "papers/sections/cubic_positive3_Jordan_monic.tex",
+    "papers/sections/cubic_order2_22_rank2.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -1414,5 +1415,25 @@
     ],
     "proof": "papers/sections/cubic_positive3_Jordan_monic.tex",
     "scope": "**全体的なスペクトル制約（classification-v141）**：全(1,3)は被覆・必要十分H3判定・全矢・DM4表示stack・慣性まで確定。全(3,1)は正部分の全Jordan型を含めて空と証明した。gamma0とcone枝、対角canonical AS3基礎の全aに続き、残るJordan基礎も全monic被覆上で排除。非分裂拡大は18個のD invariant quartic恒等式でv4/v3W0となり、W²rel0とvvrow非退化に矛盾。分裂後gはmuWと可換し共通固定線を持つ。muW Jordanならg unipotentで平方完成後delta0。muW semi/fJordanならAutT三角e²=c²、反射のskew derivationはinnerのみ。純根はq~C又はCprime、v²=lambda*z²+rho*x²に限り、通常Ore-y表示のmu v−が正固有値と矛盾。次は残る(2,2)のmixed relation rank2/4と、三固有値以上の正常三次incidenceを縮小する。単一固有値/CY全被覆、全成分/圏族降下も未完で、完全分類とは呼ばない。"
+  },
+  "order2_22_rank2_v142": {
+    "status": "PASS exact Pfaffian/pencil/Schur identities and whole pure-projection branch exclusion",
+    "validators": [
+      "computations/verify_cubic_order2_22_rank2.py",
+      "computations/verify_cubic_order2_22_pure_exclusion.py"
+    ],
+    "certificates": [
+      "computations/cubic_order2_22_rank2_certificate.json",
+      "computations/cubic_order2_22_pure_exclusion_certificate.json"
+    ],
+    "proof": "papers/sections/cubic_order2_22_rank2.tex",
+    "scope": "**全体的なスペクトル制約（classification-v142）**：全(1,3)は被覆・必要十分H3判定・全矢・DM4表示stack・慣性まで確定。全(3,1)は正部分の全Jordan型を含めて空（v141）。次の半単純(2,2)/mixed rank2では、奇top交代行列の両対角blockがD_ji,lk=A_il,kj、PfD=−PfAとなり、A0なら両方向の純mixed二式、A非零なら両射影可逆graphへ漏れなく還元。graphは2x2行列pencilのsecant/tangent/二rulingの四標準形、graph detは−1/+1/−1/+1。純mixed枝はeven crossblock可逆からSchur条件を得て、pI/qJordanは係数ideal1、qdiagは五必要表示へ正規化。五つ全ての指定正常三次140x20は厳密rank20で全H3排除。次は残る四graph型のeven rank4条件と正常三次を判定する。非半単純(2,2)、mixed rank4、三固有値以上、単一固有値/CY全被覆、全成分/圏族降下は未完。"
+  },
+  "order2_22_ruling_v143": {
+    "status": "PASS universal quadratic-minor and three unit-saturation certificates; structural domain exclusion of both rulings",
+    "validator": "computations/verify_cubic_order2_22_ruling_exclusion.py",
+    "certificate": "computations/cubic_order2_22_ruling_exclusion_certificate.json",
+    "proof": "papers/sections/cubic_order2_22_rank2.tex, thm:h3-order2-22-ruling-exclusion",
+    "scope": "**全体的なスペクトル制約（classification-v143）**：全(1,3)は被覆・必要十分H3判定・全矢・DM4表示stack・慣性まで確定。全(3,1)は正部分の全Jordan型を含めて空。半単純(2,2)/mixed rank2は、全pencil被覆に続きpure mixedと二rulingを排除し、secant/tangent二graph型だけに縮小。pure mixedはeven Schur条件から五必要表示に限り、全五つの指定正常三次行列rank20で核零。rulingではKが一行又は一列だけとなり、三つの純二元関係のrank<=1条件とdomainからそのblockが零、反対側に三次元以上の純二次関係を強制して矛盾。二次minor/単位飽和idealを全係数厳密検証。次はsecant/tangentのeven rank4条件と正常三次を全共鳴/退化値込みで判定する。非半単純(2,2)、mixed rank4、三固有値以上、単一固有値/CY全被覆、全成分/圏族降下は未完。"
   }
 }

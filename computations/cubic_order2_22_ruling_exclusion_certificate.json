@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "scope": "all coefficients in both ruling graph pencils of semisimple (2,2), odd rank2",
+  "positive_contractions": "rank<=1 forces B=C=D=0; remaining row A*x0^2 forbidden by domain",
+  "negative_contractions": "rank<=1 makes all three quadratic coefficient determinants zero, certified by three unit saturation ideals",
+  "structural_conclusion": "each ruling forces a >=3 dimensional pure binary quadratic relation space, contradicting domain",
+  "not_claimed": [
+    "secant or tangent graph pencils",
+    "nonsemisimple or odd rank4"
+  ]
+}

@@ -1,0 +1,194 @@
+\subsection{半単純$(2,2)$・混合階数2の全pencil還元}
+\label{subsec:h3-order2-22-rank2}
+ここでは中山が半単純である場合に限る。
+$U=\langle x_0,x_1\rangle$を正部分、$V=\langle z_0,z_1\rangle$を負部分とし、
+奇二次関係の次元を2とする。
+$U\otimes V$と$V\otimes U$の順序基底は、それぞれ辞書式順序とする。
+\begin{proposition}\label{prop:h3-order2-22-pencil-coverage}
+この領域の全候補は、次の二場合へ漏れなく分かれる。
+\begin{enumerate}
+\item 奇関係は、非退化な二変数係数行列を持つ純粋な$U\otimes V$関係一本と
+純粋な$V\otimes U$関係一本の直和である。
+\item 奇関係の両射影は単射であり、二平面$E\subset U\otimes V$と
+$F\subset V\otimes U$の間の可逆graphである。
+基底を取ると、次の四表示のいずれかになる。
+\end{enumerate}
+\[
+\begin{array}{c|c|c|c}
+ & (e_0,e_1)\text{ in }E &(f_0,f_1)\text{ in }F&\det g\\\hline
+\text{secant}&(x_0z_0,x_1z_1)&(z_0x_1,z_1x_0)&-1\\
+\text{tangent}&(x_0z_0,x_0z_1+x_1z_0)&(z_0x_0,z_0x_1-z_1x_0)&1\\
+U\text{-ruling}&(x_0z_0,x_0z_1)&(z_0x_0,z_1x_0)&-1\\
+V\text{-ruling}&(x_0z_0,x_1z_0)&(z_0x_0,z_0x_1)&1
+\end{array}
+\]
+ここでgraphの関係は$r_i=e_i+\sum_j f_jg_{ji}$である。
+これらは必要表示の被覆であり、任意の$g$がAS4やH3を与えるという主張ではない。
+\end{proposition}
+\begin{proof}
+四次topの奇middle blockを
+\[
+ H_{\mathrm{odd}}=\begin{pmatrix}A&B\\-B^t&D\end{pmatrix}
+\]
+と書く。奇Frobenius対合は中山固有値$-1$なので交代、階数2である。
+巡回式から
+\[
+ D_{ji,lk}=A_{il,kj}
+\]
+となる。任意の交代$4\times4$行列について、この線型変換は可逆であり、
+$\operatorname{Pf}(D)=-\operatorname{Pf}(A)$を満たす。
+
+$A=0$なら$D=0$であり、$\operatorname{rank}B=1$である。
+従って奇関係の像は一つずつの純粋なmixed二次式の直和となる。
+その係数行列が退化すればrank-one tensor、すなわち二つの一次式の積となるため、整域性に反する。
+
+$A\ne0$なら$A,D$とも階数2である。
+奇関係の基底列を$P=\binom{P_U}{P_V}$とすれば
+$H_{\mathrm{odd}}=mPJP^t$、$m\ne0$、
+$J=\left(\begin{smallmatrix}0&1\\-1&0\end{smallmatrix}\right)$である。
+従って両射影$P_U,P_V$は階数2で、graphとなる。
+$E$を$2\times2$行列のpencilと見ると、その行列式は二変数二次式である。
+異なる二零点ならrank-one二行列を基底にしてsecant型、
+重根ならrank-one行列と可逆行列を基底にしてtangent型となる。
+行列式が恒等的に零なら全行列がrank1以下で、共通の左因子または右因子を持つ二ruling型となる。
+これで$E$の四標準形が全てを覆う。
+それぞれの$e_0\wedge e_1$に上の線型変換を施すと、表の
+$\pm f_0\wedge f_1$を得る。
+一方graph基底では$D=m\det(g)FJF^t$なので、表の行列式条件が必要である。
+\end{proof}
+
+\begin{corollary}\label{cor:h3-order2-22-pure-mixed-schur}
+前命題の第一の場合、偶middle blockを
+$H_{\mathrm{even}}=\left(\begin{smallmatrix}P&K\\K^t&Q\end{smallmatrix}\right)$と
+$U^2,V^2$に沿って書くと、$K,P$は可逆で
+$Q=K^tP^{-1}K$である。
+\end{corollary}
+\begin{proof}
+純粋なmixed二式の係数行列を$p,q\in\operatorname{GL}_2$とすると、
+$B=m\operatorname{vec}(p)\operatorname{vec}(q)^t$である。
+巡回式によるreshapeは
+$K_{ik,jl}=-B_{kj,li}$であり、
+$\det K=-m^4(\det p\det q)^2\ne0$である。
+偶関係数は4なので$H_{\mathrm{even}}$の階数は4である。
+$K$可逆より先頭四行が独立、末尾四行がその線型結合となることから$P$も可逆で、Schur式を得る。
+\end{proof}
+
+指定符号のtwisted四次tensor空間自体は32次元であり、
+純正4次元、混合22次元、純負6次元に分かれる。
+\texttt{verify\_cubic\_order2\_22\_rank2.py}はこの全語巡回計数、
+Pfaffian恒等式、四pencilのgraph行列式、および純mixedの場合の$\det K$を厳密検証する。
+非半単純$(2,2)$や奇関係数4は本節に含めない。
+
+\begin{theorem}\label{thm:h3-order2-22-pure-exclusion}
+命題\ref{prop:h3-order2-22-pencil-coverage}の第一の場合はH3にならない。
+従って半単純$(2,2)$・奇関係数2のH3候補は、表の四graph型だけに限られる。
+\end{theorem}
+\begin{proof}
+純mixed式の係数行列を$p,q$とする。
+基底を取って$p=I$とし、その残余共役作用と$q$の尺度により、
+$q=\operatorname{diag}(1,r)$、$r\ne0$、または
+$q=\left(\begin{smallmatrix}1&1\\0&1\end{smallmatrix}\right)$とできる。
+純正quarticのmiddle行列はanti-cyclic式により
+\[
+ P=\begin{pmatrix}
+ 0&A&-A&B\\ A&C&-B&D\\-A&-B&-C&-D\\B&D&-D&0
+ \end{pmatrix},\qquad
+ \det P=-B^2(4AD-B^2-C^2).
+\]
+前系から$B\ne0$である。
+$U,V$の相対homothetyとtopの尺度により、奇blockの尺度と$B$をともに1に正規化する。
+
+まず$q=\operatorname{diag}(1,r)$とする。
+$K$は
+\[
+ K=\begin{pmatrix}-1&0&0&0\\0&0&-1&0\\0&-r&0&0\\0&0&0&-r\end{pmatrix}.
+\]
+$Q=K^tP^{-1}K$が負二元のcyclic quarticとなる四条件は、分母を払って
+\begin{gather*}
+ D Z=0,\quad ArZ=0,\quad
+ 2AD(1-r^2)+C(1+r^2)=0,\\
+ 4AD-2-C^2=0,\qquad Z=1+r+C(1-r)
+\end{gather*}
+となる。
+$Z=0$なら$r\ne1$で、$C=-(1+r)/(1-r)$を後二式へ代入すれば
+$(1-r)(1+r)=0$となる。
+従って$r=-1,C=0,AD=1/2$である。
+残余の対角基底変更で$A=1,D=1/2$にできる。
+$Z\ne0$なら$A=D=0$となり、$C^2=-2,r^2=-1$を得る。
+これは四つの必要表示である。
+
+Jordan形の$q$では、四cyclic条件の係数イデアルは
+\[
+\begin{split}
+ (&A-AC-2AD+C-2D+C^2,\\
+ &A(A-1),\ (A-1)(A-C),\ 4AD-2-C^2)
+\end{split}
+\]
+であり、そのGr\"obner基底は$(1)$となる。
+従ってこの場合は存在しない。
+以上で必要表示は五つだけとなった。
+
+各表示の偶関係は$[P\ K]$の四行、奇関係は
+$x_0z_0+x_1z_1$と$z_0x_0+r z_1x_1$である。
+この六関係そのものから三次・四次商を構成すると、その次元は全五表示で20と35である。
+商上の線型写像
+\[
+ B_3\longrightarrow B_4^{\oplus4},\qquad
+ G\longmapsto(Gx_i-x_iG,\ Gz_j+z_jG)_{i,j}
+\]
+は全て階数20、従って核零である。
+計算は$\mathbb Q(i,\sqrt{-2})$上で全五表示について厳密に行う。
+よってH3に必要な非零指定正常三次は存在しない。
+AS4性を有限次数の次元から逆に推論する必要はない。
+\end{proof}
+
+\texttt{verify\_cubic\_order2\_22\_pure\_exclusion.py}は、
+全係数の対角残余恒等式、Jordan形の単位イデアル、
+五必要表示の三次・四次商と指定正規三次行列の階数20を再生する。
+
+\begin{theorem}\label{thm:h3-order2-22-ruling-exclusion}
+半単純$(2,2)$・奇関係数2では、二つのruling graph型も整域AS4にならない。
+従ってこの領域のH3候補はsecant型とtangent型に限られる。
+\end{theorem}
+\begin{proof}
+二次関係空間と任意の二平面$L$の$L^{\otimes2}$との交わりは高々一次元である。
+実際、二次元以上なら係数行列の行列式を射影直線に制限することで、
+非零rank-one tensor、すなわち一次式二つの積を関係に含み、整域性に反する。
+同じ理由で、その一次元空間もrank-one tensorを含めない。
+
+$U$-rulingでは全混合top語の二つの正文字は$x_0$である。
+従って偶blockの$K$は$x_0^2$行だけを持つ。
+純正blockを上の$P(A,B,C,D)$と書くと、
+$x_0x_1,x_1x_0,x_1^2$の三行は全て純正二次関係であり、その行列
+\[
+ \begin{pmatrix}A&C&-B&D\\-A&-B&-C&-D\\B&D&-D&0\end{pmatrix}
+\]
+の階数は高々1でなければならない。
+その二次minorイデアルは$B^2,C^2,D^2$を含むので$B=C=D=0$となる。
+残る行は$Ax_0^2$だから整域性で$A=0$である。
+従って偶関係空間の$U^2$射影は$K$から来る高々一次元だけとなる。
+四次元の偶関係の核は$V^2$内に三次元以上となり矛盾する。
+
+$V$-rulingでは全混合top語の負文字は$z_0$だけである。
+従って$K$は$z_0^2$列だけを持つ。
+純負cyclic blockを
+\[
+ Q=\begin{pmatrix}
+ a&b&b&c\\b&d&c&e\\b&c&d&e\\c&e&e&f
+ \end{pmatrix}
+\]
+と書くと、最後の三行
+$N=\left(\begin{smallmatrix}b&d&c&e\\b&c&d&e\\c&e&e&f\end{smallmatrix}\right)$は
+純負関係であり階数高々1である。
+この条件の下では各行を二変数二次式と見た係数行列の行列式も零になる。
+これは二次minorイデアルを各行の二次行列式で飽和すると単位イデアルになることから従う。
+直接にも、$d\ne c$なら前三行の差が$z_0z_1-z_1z_0$の直線を強制して矛盾し、
+$d=c$なら比例したHankel二行が平方の係数になることで確認できる。
+従って各行はrank-one tensorまたは零であり、整域性から全て零である。
+これで$Q$も$z_0^2$列しか持たず、偶関係の$V^2$射影は高々一次元となる。
+再び$U^2$内に三次元以上の関係を生じて矛盾する。
+\end{proof}
+
+\texttt{verify\_cubic\_order2\_22\_ruling\_exclusion.py}は
+正側の二次minorイデアルと、負側の三つの単位飽和イデアルを全係数で検証する。
+整域性によるrank-one tensor排除が証明の構造的入力である。
