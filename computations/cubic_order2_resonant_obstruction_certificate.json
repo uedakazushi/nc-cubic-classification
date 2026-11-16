@@ -1,0 +1,23 @@
+{
+  "central_elements_in_cut": [
+    "X=x\u00b2",
+    "Y=y\u00b2",
+    "P=p\u00b2",
+    "h=p*y",
+    "s=p*v+v*p"
+  ],
+  "scroll_relations": [
+    "h\u00b2=P*Y",
+    "Y*s=beta*X*h",
+    "h*s=beta*X*P"
+  ],
+  "central_P_chart": {
+    "a\u00b2": "-r*t/beta",
+    "b\u00b2": "H=t\u00b2/4-1-gamma*r*t/beta-delta*r\u00b2",
+    "anticommutator": "a*b+b*a=-alpha*r\u00b2"
+  },
+  "fixed_point": "r=t=a=0, b\u00b2=-1",
+  "completed_generator_square": "f=-r*t/beta-alpha\u00b2*r^4/(4*H) lies in (r,t)\u00b2",
+  "obstruction": "Completion is (k[[r,t,a0]]/(a0\u00b2-f))#mu2. The commutative local hypersurface is not regular; its induced residue module has infinite projective dimension.",
+  "result": "All resonant four-parameter normal cubic cuts excluded from H3: beta=0 factors; beta!=0 has the same fixed completed-order obstruction."
+}

@@ -11,5 +11,5 @@
   "W1": "span(B*x\u00b2*p-y*(p*v+v*p)) at every parameter value",
   "necessary_H3": "B!=0; B=0 gives a factor by y",
   "skew_derivations": "Degree-one nu-skew derivations are all inner except a=-1; at a=-1 residual basis delta(x)=y\u00b2 and delta(y)=x\u00b2.",
-  "scope": "AS4 envelopes and normal cubic candidate family. Domain and H3 admissibility of the cubic cut for B!=0 are not established."
+  "scope": "AS4 envelopes and a normal cubic line constructed. All cuts are separately excluded by the fixed local obstruction; this construction validator alone does not establish H3."
 }

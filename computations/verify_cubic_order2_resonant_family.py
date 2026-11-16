@@ -90,7 +90,7 @@ summary={'family':'xy=-yx; px=-xp; py=yp; vx+xv=A*y²; vy+yv=B*x²; v²-p²=C*x�
  'normality_unit_rank':19,'W1':'span(B*x²*p-y*(p*v+v*p)) at every parameter value',
  'necessary_H3':'B!=0; B=0 gives a factor by y',
  'skew_derivations':'Degree-one nu-skew derivations are all inner except a=-1; at a=-1 residual basis delta(x)=y² and delta(y)=x².',
- 'scope':'AS4 envelopes and normal cubic candidate family. Domain and H3 admissibility of the cubic cut for B!=0 are not established.'}
+ 'scope':'AS4 envelopes and a normal cubic line constructed. All cuts are separately excluded by the fixed local obstruction; this construction validator alone does not establish H3.'}
 path=Path(__file__).with_name('cubic_order2_resonant_family_certificate.json')
 if path.exists():assert json.loads(path.read_text())==summary
 else:path.write_text(json.dumps(summary,indent=2)+'\n')

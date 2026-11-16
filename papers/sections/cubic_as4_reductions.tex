@@ -1030,7 +1030,7 @@ $(d_1,e_2)=(-a^{-2}-a,1-a^{-1})$。
 である。$G$ は全パラメータで非零正規正則。
 $R=B/(G)$ はAS Gorenstein次元3・parameter1で $\mu_R=1$ を満たす。
 $\beta=0$ の切断は非整域でありH3でない。
-$\beta\ne0$ の整域性・H3許容性はここでは結論しない。
+$\beta\ne0$ の整域性はここでは結論しない。H3許容性は次の定理で全排除する。
 \end{theorem}
 \begin{proof}
 $u=(p+v)/2$, $w=(p-v)/2$ と置くと、六関係は
@@ -1059,6 +1059,86 @@ filtered transferからnoetherianかつ整域である。
 と54項証明書で、PBW、三つの最高対合、巡回式、全正常化式を独立再生する。
 整域内の $G\ne0$ は正則であり、正常商の中山公式から $\mu_R=1$、parameterは $4-3=1$。
 $\beta=0$ なら $G=-y(pv+vp)$ は非零一次式と二次式の積なので非整域となる。
+\end{proof}
+
+\begin{theorem}[共鳴族には固定した局所無限Ext点がある]
+\label{thm:h3-order2-resonant-excluded}
+定理\ref{thm:h3-order2-resonant-family}の四パラメータ族の全切断はH3から除外される。
+\end{theorem}
+\begin{proof}
+$\beta=0$ は因子性で排除済みなので $\beta\ne0$ とする。
+$X=x^2$, $Y=y^2$, $P=p^2$, $h=py$, $s=pv+vp$ と置くと、
+$X,Y,P$ は $B$ の中心であり、
+\[
+ [h,v]=-G,\quad [s,y]=2G,\quad
+ [h,x]=[h,y]=[h,p]=[s,x]=[s,p]=[s,v]=0.
+\]
+従って五元は $R=B/(G)$ の中心に入る。
+全生成元の平方と反交換子がこれらの中心式になるので、$R$ は
+$C=k[X,Y,P,h,s]$ 上で平方なし単項式16本により有限生成される。
+特に二次Veroneseを取り $C$ の五元の次数を1と見れば、
+$\qgr R$ は $\operatorname{Proj}C$ 上のcoherent代数の加群圏である。
+ここで $C$ は $R$ 内の中心部分代数を表す。
+\[
+ h^2=PY,\qquad Ys=\beta Xh,\qquad hs=\beta XP
+\]
+も成り立つ。
+
+中心元 $P$ を逆にした次数零chartで
+\[
+ r=yp^{-1}=h/P,\quad t=s/P,\quad
+ a=xp^{-1},\quad b=vp^{-1}-t/2
+\]
+と置く。このchartは $S=k[r,t]$ 上の階数4 Clifford代数
+\[
+ A=S\langle a,b\rangle/
+ \left(a^2+\frac{rt}{\beta},\quad
+ b^2-H,\quad ab+ba+\alpha r^2\right),
+ \qquad
+ H=\frac{t^2}{4}-1-\frac\gamma\beta rt-\delta r^2
+\]
+に等しい。
+実際、逆方向には $A[p,p^{-1};\tau]$ で
+$\tau(a)=-a$, $\tau(b)=-b$, $\tau(r)=r$, $\tau(t)=t$ として
+\[
+ x=ap,\quad y=rp,\quad v=(b+t/2)p
+\]
+を代入すれば、元の六関係と $G=0$ を全て得る。
+順逆の生成元対応も一致するので局所環を単なる商の上界にしていない。
+Clifford PBWにより $S$ は忠実に埋まり、$r=t=0$ は中心の実際の閉点である。
+
+この点で $H=-1$ は単元である。
+完備化 $\widehat S=k[[r,t]]$ 上で平方根 $H^{1/2}$ を選び、
+\[
+ b_0=b/H^{1/2},\quad
+ a_0=a+\frac{\alpha r^2}{2H}b,\quad
+ f=-\frac{rt}{\beta}-\frac{\alpha^2r^4}{4H}
+\]
+とすると、$b_0^2=1$, $b_0a_0=-a_0b_0$, $a_0^2=f$。
+従って
+\[
+ \widehat A\simeq
+ \left(k[[r,t,a_0]]/(a_0^2-f)\right)\#\mu_2,
+\]
+$\mu_2$ は $a_0$ を符号反転する。
+括弧内の可換局所環は次元2、埋込み次元3であり非正則である。
+その剰余体 $k$ は無限射影次元を持つ。
+誘導加群 $M=\widehat A\otimes_{k[[r,t,a_0]]/(a_0^2-f)}k$ は
+二単純加群の直和であり、もし有限射影次元なら自由階数2の拡大を制限して
+$k\oplus k$ も可換局所環上有限射影次元となって矛盾する。
+完備半局所代数の最小解消により、$\operatorname{Ext}^n_{\widehat A}(M,M)$ は無限高次で非零である。
+
+$M$ は元のchart上の $a=r=t=0$, $b^2=-1$ の二点加群から来る。
+中心上有限なcoherent代数では、点支持加群間のExtのlocal-to-global spectral sequenceは退化し、
+中心完備化とも可換する。
+従って対応する $\qgr R$ の点対象も無限高次Extを持つ。
+H3の大域次元2に反するので、全 $\beta\ne0$ も排除される。
+
+中心の交換子・三つのscroll関係と、順逆Clifford chartの全六関係および三次式は
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}order2\_\allowbreak{}resonant\_\allowbreak{}obstruction.py}
+で全パラメータ上厳密に再生する。
+無限Extの結論は、数値標本や未証明の局所--大域貼合せではなく、
+明示した完備局所環と点支持Ext比較による。
 \end{proof}
 
 \begin{lemma}[単冪twist下の反標準三次関係の輸送]

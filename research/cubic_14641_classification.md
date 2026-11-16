@@ -498,8 +498,20 @@ T_a=(xy+a²yx)、nu=(a x,a^-1 y)の次数1skew derivationはa!=−1なら全て�
 
 共鳴でB_(alpha,beta,gamma,delta)=(xy+yx,px+xp,py−yp,vx+xv−alpha y²,vy+yv−beta x²,v²−p²−gamma x²−delta y²)を得る。全四パラメータでnoetherian quadratic Koszul AS4整域。u=(p+v)/2,w=(p−v)/2のPBWと重み(1,1,2,2)grが前a−1単項Oreなのでnoetherian/domain。54項polynomial最高tensorの三隣接関係射影零、固定係数w_yxwu1、flatteningrank4,6,4を有理定数pivotだけで全値再生しFrobenius/AS4とmu=(-x,-y,p,-v)を確定した。
 
-140x20正常化行列も全係数で有理定数だけの19pivot消去があり、全値W1はG=beta x²p−y(pv+vp)の一本。Gのyu²係数−2は全値非零で、Bdomainより正常正則。R=B/GはASGor3index1、mu_Rid。beta0はGのy因子で非整域。beta!=0のdomainとH3許容性は未判定。verify_cubic_order2_resonant_family.pyと54項cubic_order2_resonant_top_certificate.jsonがPBW・最高pairing・中山・全W1rankを独立再生。原稿thm:h3-order2-resonant-family。これは新たな候補族であり、新規性やH3実在は未確認。
+140x20正常化行列も全係数で有理定数だけの19pivot消去があり、全値W1はG=beta x²p−y(pv+vp)の一本。Gのyu²係数−2は全値非零で、Bdomainより正常正則。R=B/GはASGor3index1、mu_Rid。beta0はGのy因子で非整域。beta!=0のdomainは未判定のままだが、H3は次節で全排除した。verify_cubic_order2_resonant_family.pyと54項cubic_order2_resonant_top_certificate.jsonがPBW・最高pairing・中山・全W1rankを独立再生。原稿thm:h3-order2-resonant-family。これは新たな候補族であり、新規性やH3実在は未確認。
 
-次のdomain/局所order計画（以下は未検証の作業仮説、まだ定理の入力でない）：X=x²,Y=y²,P=p²,s=pv+vpについてX,Y,P,s²がB中心で、G²=beta²X²P−Ys²と予想。Bがk[X,Y,P,s²]上32自由であればbeta!=0でG modYが正則、よってY正則R。Y開集合の次数零環はk[z,r]上二生成元Clifford、a²=−z、b²=beta²z²/4−r²−gamma z−delta、ab+ba=−alphaを予想（z=X/Y,r=py/Y,b=v y^-1−beta z/2）。これを元の関係から全係数で確認し、quaternion residueでdomain、centre cubic scroll F1とbranch cubic+fiberで全H3許容性へ進む。
+参照用のdomain/Y開集合の着想（H3は後述の固定P開集合で排除済みなので分類上の次課題ではない。以下のY開集合/domain論は未検証で定理に使用しない）：X=x²,Y=y²,P=p²,s=pv+vpについてX,Y,P,s²がB中心で、G²=beta²X²P−Ys²と予想。Bがk[X,Y,P,s²]上32自由であればbeta!=0でG modYが正則、よってY正則R。Y開集合の次数零環はk[z,r]上二生成元Clifford、a²=−z、b²=beta²z²/4−r²−gamma z−delta、ab+ba=−alphaを予想（z=X/Y,r=py/Y,b=v y^-1−beta z/2）。これを元の関係から全係数で確認し、quaternion residueでdomain、centre cubic scroll F1とbranch cubic+fiberで全H3許容性へ進む。
 
-さらに未検証の有望な中心像：Rでh=pyとsが中心となり、h²=PY,Ys=betaXh,hs=betaXPのcubic scrollを張る。負Cliffordvolume g=xyv+(alpha/2)y³−(beta/2)x³も中心でg²=(alpha²/4)Y³+(beta²/4)X³−XY(P+gammaX+deltaY)を予想。scrollにおけるramificationはplane cubicのpullback Eと一本のfiber、E affineはz r²−beta²z³/4+gamma z²+delta z−alpha²/4=0。alpha,beta非零でE smoothならH3の可能性があるが、最大order性・全局所global dimension・忠実rank・AZ認識を未証明のまま結論しない。
+参照用の中心像（次節でh,sの中心性とscroll関係は厳密確認済み。ここに残すvolume/ramification全体像は定理に使用しない）：Rでh=pyとsが中心となり、h²=PY,Ys=betaXh,hs=betaXPのcubic scrollを張る。負Cliffordvolume g=xyv+(alpha/2)y³−(beta/2)x³も中心でg²=(alpha²/4)Y³+(beta²/4)X³−XY(P+gammaX+deltaY)を予想。scrollにおけるramificationはplane cubicのpullback Eと一本のfiber、E affineはz r²−beta²z³/4+gamma z²+delta z−alpha²/4=0。alpha,beta非零でE smoothならH3の可能性があるが、最大order性・全局所global dimension・忠実rank・AZ認識を未証明のまま結論しない。
+
+## 共鳴四パラメータ族の固定点無限Extによる全排除（classification-v104）
+
+beta0は因子で排除、beta非零も全値H3でないことを確定した。B内でX=x²,Y=y²,P=p²中心、h=py,s=pv+vpについて[h,v]=−G,[s,y]=2G、他の必要交換子零。従ってRではX,Y,P,h,s中心、h²=PY,Ys=betaXh,hs=betaXP。全平方/反交換子がこの中心環に入るのでRは16本のsquare-free語で中心C上有限。R^(2)のSerre表示によりqgrRをProjC上coherent代数として扱える。
+
+P開集合の次数零環はS=k[r,t]上rank4Clifford A：r=yp^-1=h/P,t=s/P,a=xp^-1,b=vp^-1−t/2、a²=−rt/beta,b²=H=t²/4−1−(gamma/beta)rt−delta r²、ab+ba=−alpha r²。逆にA[p,+-1;tau]、tau(a,b)=(-a,-b)でx=ap,y=rp,v=(b+t/2)pを代入し元六関係とG0、順逆生成元対応を再生するので局所環との正確な同型。r=t0の中心点は全パラメータで存在しH−1が単元。
+
+完備局所Sでb0=b/sqrtH,a0=a+alpha r² b/(2H)とするとb0²1,b0a0=−a0b0,a0²=f=−rt/beta−alpha²r4/(4H)∈(r,t)²。ゆえにAhat=(k[[r,t,a0]]/(a0²−f))#mu2。可換環はdim2,embdim3で非正則。剰余体は無限pd、誘導M=k[mu2]も制限でk二本となるので無限pd。完備半局所代数の最小解消でExt^n(M,M)が無限高次非零。Mはchartのa=r=t0,b²−1という二単純点から来る。有限中心coherent代数の点支持Extは局所化/完備化と可換、local-to-globalは点支持で退化するのでqgrRでも無限ExtとなりH3hd2に反する。
+
+verify_cubic_order2_resonant_obstruction.pyは全中心交換子・scroll関係・G²式、順逆chart六関係とG、完備化の平方完成とfの一次項零を厳密再生。無限pd/Extと点支持比較は本文のホモロジー証明であり、計算だけが全証明としない。原稿thm:h3-order2-resonant-excluded。局所orderの最大性や全中心被覆の未証明仮定を用いない。beta非零でのRdomainの独立判定やaffineYchartが良いかどうかを待たず、固定点一つで全H3を排除した。
+
+次は第一行列型の残るbase--outer線型項とcross正規化chart（量子/Jordan/反対角を区別）、第二行列型および非分裂Jordanのcross射影退化部分。2+2や中山三/四固有値、全CY必要被覆、非捩れqso3正admissibility、全大域成分/相対降下も残る。

@@ -1100,6 +1100,22 @@
       "constant-pivot normality rank19 and kernel identity",
       "all skew derivations inner except the two-dimensional resonance at a=-1"
     ],
-    "scope_limit": "Domain and H3 admissibility of the beta!=0 cut, centre/order formulas and moduli not yet established."
+    "scope_limit": "The construction and W1 are proved; all its cubic cuts are subsequently excluded by v104. Independent domain questions are unnecessary for this H3 exclusion."
+  },
+  "order2_resonant_fixed_point_exclusion_v104": {
+    "status": "universal centre/chart/completed-square identities executed; homological obstruction proved in manuscript",
+    "validator": "computations/verify_cubic_order2_resonant_obstruction.py",
+    "certificate": "computations/cubic_order2_resonant_obstruction_certificate.json",
+    "result": "All four-parameter resonant cuts excluded from H3. For beta!=0, the central p² chart has a fixed point whose completion is a nonregular two-dimensional commutative hypersurface crossed with mu2, giving a point object with infinite self Ext. Beta=0 already factors.",
+    "proof_dependencies": [
+      "finite central even-Veronese sheaf algebra",
+      "exact inverse Clifford chart",
+      "unit square root in completed local ring",
+      "nonregular local ring residue field has infinite pd",
+      "restriction along a free finite-group extension",
+      "minimal resolution of semisimple quotient",
+      "point-supported Ext local-to-global and completion"
+    ],
+    "scope_limit": "This excludes the explicit resonant family, not all involution mixed/cross coefficient charts. No R-domain or maximal-order theorem is required."
   }
 }
