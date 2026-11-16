@@ -804,6 +804,54 @@ $\gamma=0$ なら $T_W$ は前系のAS2平面であり、その二次関係の�
 \texttt{verify\_\allowbreak{}cubic\_\allowbreak{}order2\_\allowbreak{}plane\_\allowbreak{}matrices.py}
 で厳密に確認する。一般の第二標準形や他の $F$ をこの例だけで許容としない。
 
+\begin{proposition}[非分裂Jordan拡大の二平面商]
+\label{prop:h3-order2-nonsplit-plane-quotient}
+位数2の重複度が $(p,q)=(1,3)$ の場合を考える。
+負固有空間を $A$、共通二平面を $W\subset A$、正固有直線を $kz$ とする。
+$U=-\mu_B|_A$ と置き、$U$ 加群の列
+$0\to W\to A\to A/W\to0$ が分裂しないと仮定する。
+このとき $v\in A\setminus W$ と $\lambda\ne0$ に対し
+\[
+ B/(W)\simeq k\langle z,v\rangle/(v^2+\lambda z^2).
+\]
+特にこの商は基底変更でパラメータ $-1$ の量子平面である。
+これだけから $B$ をdouble Ore拡大と同一視しない。
+\end{proposition}
+\begin{proof}
+$D=\log U$ とする。非分裂の二場合は、$W=\langle w_1,w_2\rangle$ を取り、
+\[
+ Dv=w_1,\ Dw_1=Dw_2=0,
+ \quad\text{または}\quad
+ Dv=w_2,\ Dw_2=w_1,\ Dw_1=0
+\]
+で尽くされる。
+$D$ 不変な四次tensorは $v$ を三個以上含む成分を持たない。
+これは前者を標準二次元 $\mathfrak{sl}_2$ 加群と自明加群の直和、
+後者を標準三次元加群のraising作用へ拡張すれば従う。
+該当成分のweightは全て負だが、raisingで消えるベクトルのweightは非負だからである。
+別途、81次元tensor空間で各場合九成分の座標汎関数が $D$ の行空間に入ることを、
+有理数49係数からなる18恒等式として保存し、
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}order2\_\allowbreak{}nonsplit\_\allowbreak{}tensor.py}
+で独立再生する。
+
+四次topの $A^{\otimes4}$ 部分は $D$ 不変なので、$v^4$ と $v^3W$ は現れない。
+また奇二次関係は $zW+Wz$ に含まれ、巡回式も $W$ を保つため、
+四次topの任意の巡回隣接位置の $zA+Az$ 成分は $zW+Wz$ に入る。
+従って $z^2$ と $v$ を共に含む成分も零である。
+ここでは $\gamma=0$ なので、flatteningの $z^2$ 列は非零の $q_0(W)$、
+$v^2$ 列も $W^{\otimes2}$ に含まれる。
+整域性より二次関係の $W^{\otimes2}$ との交わりは高々一次元であるから、
+この二列は比例する。行空間も二次関係全体なので、
+$B/(W)$ の関係は $z^2,v^2$ の張る空間内でちょうど一本となる。
+
+その一本の係数が一方で零なら、商は
+$k\langle z,v\rangle/(z^2)$ または $k\langle z,v\rangle/(v^2)$ となる。
+平方一つを避ける語は指数増大するので、$B$ の多項式成長に反する。
+従って両係数は非零であり、表示を得る。
+この二次形式は可逆な係数行列を持つ対称形式なので、
+代数閉体上の基底変更で $xy+yx$ に移る。
+\end{proof}
+
 \begin{lemma}[単冪twist下の反標準三次関係の輸送]
 \label{lem:h3-unipotent-transport}
 $C$は左右noetherian quadratic Koszul AS4型14641で，$\mu_C$は半単純とする．

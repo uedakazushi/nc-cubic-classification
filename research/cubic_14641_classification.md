@@ -465,3 +465,11 @@ M0ではmu_W=epsilon I、F任意det F=epsilon。M1ではmu_W=epsilon[[1,2],[0,1]
 数体不要のSymPy厳密恒等式verify_cubic_order2_plane_matrices.pyで一般J相似式、対称部分detとtraceの同値、alpha=+-1,+-iの全beta式、mu_TW式を再生した。既知Clifford swapはu=x−y,w=z+h(x+y)/2,s=tで、正固有直線ku、W=<s,w>、us=−su,uw=wu,sw=−wsを元の六関係の線型結合として確認。従ってepsilon−、M0、F=diag(−1,1)、量子q−1であり、既知正例を排除していない。新たな一般FのH3許容性をこの照合から推論しない。原稿prop:h3-order2-plane-matrices。
 
 次は三次元側が負、M0でFの共役標準形を取り、既知Clifford F=diag(−1,1)以外の全係数を正常三次incidenceで判定する。M1および残り生成元のJordan拡大も漏らさない。普遍三次元部分代数のAS正則性や偶関係のPBWを未証明のまま仮定しない。
+
+## 負三次元側の非分裂Jordanは量子平面商を持つ（classification-v100）
+
+重複度(1,3)、共通Wを持つ負空間A、正直線kzで、U=−mu|AのWへの拡大が非分裂とする。D=log Uの標準形はDv=w1,DW0又はDv=w2,Dw2=w1,Dw1=0の二つ。D不変四次tensorにv3W/v4項が無いことを、二次元+自明/三次元sl2加群のraising weightで証明し、別に81次元tensor空間上の18有理行恒等式（49非零乗数）を公開再生器で独立確認した。発見時のnullspaceそのものを信頼する必要はなく、証明書に各禁制座標=e_wordがDの行空間に入る乗数を保持する。
+
+奇関係の像Wと巡回性から、四次topでzを含む項はW²z²だけ。負側gamma0とv3/v4消滅によりzz列はq0(W)、vv列もW²関係。domainによりR2∩W²は一本以下なので両列比例、B/(W)の二次関係はz²,v²間の一本。片方の係数が零なら平方一つを禁じる二文字語のFibonacci指数成長がBの多項式成長に反する。従ってB/(W)=k<z,v>/(v²+lambda z²),lambda!=0、基底変更でq−1量子平面。原稿prop:h3-order2-nonsplit-plane-quotient。
+
+これはdouble Ore表示や全PBWの十分条件ではない。残る二つのcross偶関係がWv/vWのgraphをなすことは別に判定すべきであり、q0(W)+ell(W)vのような混合base項を無視してprojection単射をdomainだけから主張しない。次は外側二次が一本のこのchartでcross射影のrank2通常部分とrank1退化部分を分け、全偶係数・W1を計算する。既知正例のClifford swapはWへの拡大が分裂しており、この非分裂結論の対象と混同しない。

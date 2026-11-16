@@ -1063,5 +1063,12 @@
     "certificate": "computations/cubic_order2_plane_matrices_certificate.json",
     "result": "Common-plane data have exactly alternating M=J or nonalternating M=J+diag(1,0) forms. mu_W=-epsilon*M^t*M^-1, Q=M*F^t, F*M*F^t=epsilon*M. The second form has F=[[alpha,beta],[0,alpha]], alpha²=epsilon. Known admissible Clifford swap lies in the first form with F=diag(-1,1).",
     "scope_limit": "Only common-plane data, not all three-dimensional Jordan extensions, ambient even relations, normal cubic incidence or general H3 admissibility."
+  },
+  "order2_nonsplit_plane_quotient_v100": {
+    "status": "global structural proof in manuscript; 18 rational row certificates independently replayed",
+    "validator": "computations/verify_cubic_order2_nonsplit_tensor.py",
+    "certificate": "computations/cubic_order2_nonsplit_tensor_certificate.json",
+    "result": "In multiplicities(1,3), if the three-dimensional unipotent module is a nonsplit extension of the canonical common plane W, invariant quartic tensors have no v³W/v⁴ terms. Frobenius/domain and growth then force B/(W) to be a parameter -1 quantum plane.",
+    "scope_limit": "No double Ore or full cross-projection/PBW conclusion; even relations, normal cubics and H3 admissibility remain."
   }
 }
