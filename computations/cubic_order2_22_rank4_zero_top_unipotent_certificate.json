@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "scope": "H3 with canonical semisimple untwist in the mixed-rank4 zero-positive/zero-negative-top sector",
+  "checks": [
+    "both nontrivial unipotent sides force Pf(A)=0",
+    "one-sided mixed graph block form [[F,D],[0,F]]",
+    "det graph=det(F)^2 in that ordering",
+    "fixed negative quad span u^2 and uv-vu"
+  ],
+  "proof": "papers/sections/cubic_order2_22_rank4_zero_top_unipotent.tex",
+  "conclusion": "every H3 object in this canonical zero-top sector has semisimple Nakayama",
+  "not_claimed": [
+    "all AS4 unipotents absent",
+    "other rank4 top types",
+    "all H3 classification",
+    "relative nonreduced-base statement"
+  ]
+}

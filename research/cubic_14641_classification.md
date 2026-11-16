@@ -1003,7 +1003,7 @@ rho−1/2特殊fibreの全値正常核はv152でpublic証明書へ統合して�
 
 ## (2,2) mixed rank2の全Jordan型も半単純（classification-v153）
 
-**全体的なスペクトル制約（classification-v157）**：全(1,3)は幾何学的被覆・必要十分H3判定・全矢/慣性まで確定、全(3,1)は全Jordan型込みで空。(2,2)のmixed rank2も全Jordan型込みで空と確定した。最後の可逆secant必要曲面は七多項式四次汎関数の1008恒等式と単一10minor −2ell^15*rho^20*(rho+1)^15*(2rho+1)^2により全値排除し、ell0/共鳴fibreも既存全値検証で覆う。従って(2,2)はmixed rank4のみが残る。次は正top三型（零・comm⊙平方・comm⊙非退化quad）と全Jordan型の必要表示・正常三次を調べる。三固有値以上、全CY被覆、全成分/圏族降下は未完。
+**全体的なスペクトル制約（classification-v167）**：全(1,3)は幾何学的被覆・H3必要十分条件・全矢まで確定、全(3,1)は全Jordan型込みで空。(2,2) mixed rank2も全Jordan型込みで空。mixed rank4のcanonical零top(P=Q=0)は全Jordan型込みで固定非CY符号族へ完全に幾何学的認識し、一般次元2/慣性mu2²。非零正topでは片側負Jordanを排除、非退化正topなら全Jordan消滅。残る核心はP又はQ非零のrank4、平方正topの正側Jordan、三固有値以上、全CY被覆と全intrinsic族降下・成分。
 
 原稿lem:h3-order2-22-rank2-unipotent-rigidity,thm:h3-order2-22-rank2-no-Jordan,cor:h3-order2-22-rank2-all-Jordan-coverage。必要pencil被覆/必要Schur正規化はG存在を使わずnoeth quadratic Koszul AS4 domainにも有効であることを明示。H commute muC unipotentならU/Vを保つ。puremixedはpI/qdiag(1,z),z−1,+-iの両lineをpointwise固定し、T^t q=q T^t、simple eigenでTdiagonalunipotentId。secant Eの二rankone点はconnected unipotent closureでpointwise固定、両U/VaxesよりHId。tangentはx/u固定,y->y+beta x,v->v+eta u。E/F uppermatP(beta+eta),Q(beta−eta)、gJ固定はbeta=eta0、gepsilonI固定はeta0。後者のdomain必要関係u²=alpha x²+delta y²,deltaunitとpositivecommから2delta beta xy+delta beta²x²0でbeta0。rulingはAS4domain外。全caseでHId。
 
@@ -1069,3 +1069,17 @@ QQ p=q−1,eps+ではz2=z3=0、z0z5−z1z4=1。二対角torusとU/V軸交換で�
 正量子二元が負AS2平面をそれぞれ正規化するopposite-separated chartも全Jordan型で認識した。負commは正常二次係数がF/Gの一方Idを強制し、正平面commとなってGが正一次因子で割れる。負quantumの対角作用は既存skew分類、q−1反対角は中心平方と奇数乗から正常核零。負Jordanでは二次intertwiner det=(a+1)^3から例外a−1のみ、正中山式p1と奇偶条件で再び因数分解。従ってこのchartの全H3は固定符号包絡のみ。正Jordanのopposite-separated全体は範囲外。
 
 次の新着想（未採用）：P=Q0 canonical半単純CではA交代4x4が可逆。H_U/H_Vとも非自明単冪ならJ⊗JによるAの固定式は(z0,z1,0,0,0,0)だけでPf0。従ってHは片側のみ。正側単冪のみなら元BのG固定式からAS2次数3/1のshear固定核kx³/kxを使いGがx因子。負側単冪のみならmixedR4がut=f(t)u,vt=f(t)v+d(t)u、pureVquadはcomm+κu²となりOre表示。f²=muT/hdetf−1からTcommは反射でfactor、Tquantum≠1はmuTとの一次intertwiner零で純T3factor、TJordanはhdet符号矛盾。一般P=Q0全Jordan消滅として本文/検証器へ整える。
+
+
+## canonical零top領域の全Jordan消滅（classification-v166）
+
+canonical半単純untwistがP=Q=0のH3では中山の全Jordan部分が消滅する。可逆交代UV block Aに対して両側非自明単冪J⊗Jの固定式はPf0となり矛盾。片側正JordanのみはmuG固定式のAS2 shear核からGに一次因子。片側負Jordanのみはmixed graph可換環からT[u;f][v;sigma,delta]、f²=muT,hdetf−1となり、comm反射/quantum一次intertwiner/negative hdet符号で全排除。Gのtwist輸送やH3のtwist不変性は仮定しない。
+
+両側単冪Pf0と片側graph[[f,d],[0,f]]、負二次固定空間をverify_cubic_order2_22_rank4_zero_top_unipotent.pyで確認。元Bは逆twistでpureAS2二本/fullgraphを保ち、Hilbert20/PBWでAS2単項式基底を得る。正側単冪のみではmuG固定の係数がkx³/kx。負側のみではvu−uv=κu²、muUId,muu−からf²=muT,hdetf−1。Tcomm反射はnormaly quotient微分Ore、TquantumはG12係数零→T3factor、TJordanはhdet1/−1矛盾。本文に統合済み。
+
+
+## canonical零topの全幾何学的認識（classification-v167）
+
+canonical零top(P=Q=0) mixed rank4領域の全H3を、全Jordan型・全幾何学的矢込みで既知非CY符号包絡へ認識した。v166全Jordan消滅の後、QQ eps+全排除、QQ eps−のseparated二型と両comm時の二対称式の非退化軸変換、QJ/JQ eps−の同様の軸変換、QJ/JQ eps+の特殊二点正常minor−16/−36、JJ両符号top不存在で八chartを完全被覆。全切断G=f3(U)+ell2(U)u²+ell3(U)v²、H3条件/全矢は固定sign定理へ接合。一般次元2/慣性mu2²。全H3や成分/族降下の完成ではない。
+
+A=SU⊗E+E⊗SV、PfA=detSU−detSV。可換側GL2のnormalized congruenceで非退化対称式をcrossへ移し、全特殊係数をseparatedへ被覆。量子/Jordan正符号特殊点の四overlapと正常minor−16/−36はzero_top_coverage検証器で再生。次はP又はQ非零領域。最小課題として符号graphの曲がった偶関係[x,y]=alpha*u²+beta*v²、uv=-vu、crossantiを調べる。u²/v²/uvの偶Clifford係数上のWeyl関係から、alpha/beta非零なら正三次のx/y中央化核が零となりそうである（未検証）。

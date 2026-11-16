@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "scope": "complete geometric H3 recognition in the canonical mixed-rank4 P=Q=0 sector, together with the zero-top unipotent theorem",
+  "checks": [
+    "universal decomposition into two symmetric binary forms",
+    "Pf=det(SU)-det(SV)",
+    "four exact separation support patterns",
+    "two exceptional PBW points and constant rank10 minors"
+  ],
+  "exceptional_points": [
+    {
+      "chart": "QJ_plus",
+      "PBW_overlaps": 4,
+      "normal_minor": -16
+    },
+    {
+      "chart": "JQ_plus",
+      "PBW_overlaps": 4,
+      "normal_minor": -36
+    }
+  ],
+  "conclusion": "all H3 objects and arrows in this canonical zero-top sector are the known fixed non-CY sign-envelope classification",
+  "not_claimed": [
+    "nonzero-top rank4 classification",
+    "global H3 completeness",
+    "intrinsic family descent or componenthood"
+  ]
+}

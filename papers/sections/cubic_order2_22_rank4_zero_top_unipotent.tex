@@ -1,0 +1,89 @@
+\subsection{両純top零のH3領域にはJordan部分がない}
+\label{subsec:h3-order2-22-rank4-zero-top-unipotent}
+\begin{theorem}\label{thm:h3-order2-22-rank4-zero-top-no-Jordan}
+$(2,2)$・奇関係数4のH3包絡$B$について、
+$H=\mu_{B,u}^{1/4}$、$C=B^H$と置く。
+半単純包絡$C$の純正・純負topがともに零なら、$H=I$である。
+従ってこのcanonical零top領域の全H3は半単純中山を持つ。
+全AS4の同領域に単冪自己同型がないという主張ではない。
+\end{theorem}
+\begin{proof}
+$C$は半単純中山$(+,+,-,-)$を持ち、$H$は$C$の単冪自己同型でもある。
+前節までに$C$の奇$UV$主block $A$は可逆交代行列である。
+$H$のtop直線への作用は単冪、従って1なので、$H_U\otimes H_V$は$A$を保存する。
+
+$H_U,H_V$がともに非自明なら、それぞれを
+$J=\left(\begin{smallmatrix}1&1\\0&1\end{smallmatrix}\right)$にできる。
+一般六係数交代行列について
+\[
+ (J\otimes J)A(J\otimes J)^t=A
+\]
+を解くと、辞書順六係数は$(z_0,z_1,0,0,0,0)$に限られ、Pfaffianは零となる。
+これは$A$の可逆性に反する。
+従って$H$が非自明なら片側だけが非自明である。
+
+$C$の関係は二つの純AS2二次式と可逆mixed graphである。
+逆twistは$\mathcal R_B=(1\otimes H)\mathcal R_C$を与えるので、
+元の$B$にも二つの非退化純AS2関係と可逆graphが残る。
+特に$(U,V)$二重次数があり、AS4の三次次元20とmonic簡約から
+二つのAS2標準語を正・負の順に並べた全次数PBW基底を得る。
+以下では$G$を$C$へ移さず、元の$B$の中山と整域性を使う。
+
+まず$H_U\ne I,H_V=I$の場合を考える。
+$\mu_B|_U$は非自明単冪、$\mu_B|_V=-I$である。
+非自明単冪を持つ二元AS2平面は可換またはJordanであり、
+$x$を固定し$y\mapsto y+\eta x$、$\eta\ne0$とする形にできる。
+その次数$n$固定部分は$kx^n$である。
+$\mu_B(G)=G$を正三次のPBW表示
+\[
+ G=H_3(U)+\sum_{w\in\{u^2,uv,v^2\}}a_w(U)w
+\]
+へ適用すると、$H_3\in kx^3$、全$a_w\in kx$となる。
+従って$G$は$x$を一次因子に持ち、$B/(G)$は整域にならない。
+
+次に$H_U=I,H_V\ne I$とする。
+$H_V(u)=u,H_V(v)=v+u$と選べる。
+可逆mixed graphがこのshearと可換する条件から
+\[
+ ut=f(t)u,\qquad vt=f(t)v+d(t)u\quad(t\in U)
+\]
+となる。実際、負次数を二blockに並べたgraphの可換環は
+$\left(\begin{smallmatrix}f&d\\0&f\end{smallmatrix}\right)$である。
+純負関係はshear固定tensorなので、非退化性から
+$vu-uv=\kappa u^2$と書ける。
+従って正AS2平面$T$の上の逐次Ore表示
+\[
+ S=T[u;f],\quad B=S[v;\sigma,\delta],\quad
+ \sigma|_T=f,\quad\sigma(u)=u,\quad
+ \delta(t)=d(t)u,\quad\delta(u)=\kappa u^2
+\]
+を得る。
+ここで$f$の関係保存とOre条件は、PBW認識と三次結合則から従う。
+元の中山は$\mu_B|_U=I,\mu_B(u)=-u$なので
+\[
+ f^2=\mu_T,\qquad\operatorname{hdet}_T(f)=-1
+\]
+となる。
+
+$T$が可換なら$f$は反射である。
+$d$は$f$と可換するので、$f(x)=x,f(y)=-y$の基底で$d$は対角である。
+よって$y$は正規で、$B/(y)$は可換$k[x,u]$の通常微分Ore整域となる。
+必要な$Gu=-uG$をこの商へ移し、$v$最高次数を比較すると$G$の像は零である。
+従って$G$は$y$で割れ、整域商を与えない。
+
+$T$が非可換量子平面なら、$G$の$V$次数2の最高$v$次数係数$z\in T_1$は
+$z\mu_T(t)=tz$を全$t\in T_1$について満たす。
+そのような一次式は零なので、順に全$V$次数2部分が消える。
+残る$G\in Z(T)_3$は、非零なら二元AS2の一次因子分解により積となる。
+$T$がJordanなら、$f^2=\mu_T$の半単純部分から$\operatorname{hdet}f=1$となり、
+負中山に必要な$-1$と矛盾する。
+全場合で非自明片側Jordanも排除され、$H=I$が従う。
+\end{proof}
+
+検証器は
+\[
+ \texttt{verify\_cubic\_order2\_22\_rank4\_zero\_top\_unipotent.py}
+\]
+である。両側単冪でのPfaffian消滅、片側graphの可換環、純負固定二次式を再生する。
+AS2 shearの次数3固定核と一次intertwinerは既存のseparated検証器でも全係数確認済みである。
+右twistの指数は$-4$であり、twistがH3を保つという仮定は使っていない。

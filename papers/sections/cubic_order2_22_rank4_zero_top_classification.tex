@@ -1,0 +1,92 @@
+\subsection{両純top零の全幾何学的H3認識}
+\label{subsec:h3-order2-22-rank4-zero-top-classification}
+\begin{theorem}\label{thm:h3-order2-22-rank4-zero-top-classification}
+$(2,2)$・奇関係数4のH3のうち、canonical半単純untwistの純正・純負topがともに零となるものは、
+全Jordan型を含めて固定非CY符号包絡のH3切断に一致する。
+中山は実際に半単純であり、全対象は
+\begin{gather*}
+ xy=yx,\quad ut=-tu,\quad vt=-tv\ (t=x,y),\quad uv=-vu,\\
+ G=f_3(x,y)+\ell_2(x,y)u^2+\ell_3(x,y)v^2
+\end{gather*}
+で表示される。
+H3の必要十分条件と全幾何学的pointed exact矢は
+定理\ref{thm:fixed-sign-classification}のものとなる。
+特に$\ell_2,\ell_3$は独立で、それらを$x,y$に正規化し
+$f_3=ax^3+bx^2y+cxy^2+dy^3$とすると、条件は$ad\Delta(a,b,c,d)\ne0$である。
+幾何学的表示群oidは、その$\mathbb P^7$内の許容開集合$\mathcal U$に対する
+\[
+ [\mathcal U/P\operatorname{Aut}_{\rm gr}B](k),\qquad
+ \operatorname{Aut}_{\rm gr}B=\operatorname{GL}_2\times
+ ((\mathbb G_m)^2\rtimes S_2)
+\]
+に一致し、一般次元2、一般慣性$(\mu_2)^2$である。
+この領域での全幾何学的認識であり、全H3の完成、成分性、任意基底上の降下を主張しない。
+\end{theorem}
+\begin{proof}
+定理\ref{thm:h3-order2-22-rank4-zero-top-no-Jordan}により中山は半単純である。
+従って八chartの零top atlasを使える。
+量子・量子の$\epsilon=1$は全値排除済みで、Jordan・Jordanはtop自体が存在しない。
+残る場合を、二方向のseparated認識と二つの特殊点で尽くす。
+
+量子・量子の$\epsilon=-1$では、$q\ne1$なら$z_1=z_4=0$で、
+graphは負生成元を別々に正規化する型となる。
+$q=1,p\ne1$なら$z_0=z_5=0$で、逆向きseparated型となる。
+両者の全H3部分は既知符号包絡に限られる。
+$p=q=1$の場合は次の交代tensorの標準分解を使う。
+$E=\left(\begin{smallmatrix}0&1\\-1&0\end{smallmatrix}\right)$とし
+\[
+ A=S_U\otimes E+E\otimes S_V,
+\]
+\[
+ S_U=\begin{pmatrix}z_0&(z_2-z_3)/2\\(z_2-z_3)/2&z_5\end{pmatrix},\quad
+ S_V=\begin{pmatrix}z_1&(z_2+z_3)/2\\(z_2+z_3)/2&z_4\end{pmatrix}
+\]
+と書くと
+\[
+ \operatorname{Pf}A=\det S_U-\det S_V=-1.
+\]
+従って少なくとも一方の対称式は非退化である。
+可換平面の基底変更とtop再正規化は、対応する対称式に
+$S\mapsto PSP^t/\det P$と作用し、他方を変えない。
+非退化二元対称式の二つの等方直線を軸に選べば、対角係数二つを零にできる。
+$S_U$の場合は$z_0=z_5=0$となり逆向きseparated、
+$S_V$の場合は$z_1=z_4=0$となり元向きseparatedへ移る。
+これで両可換の全点も覆った。
+
+量子・Jordanの$\epsilon=-1$では、$p\ne1$なら
+$z_0=z_5=z_4=0,z_2=-z_3$で逆向きseparatedとなる。
+$p=1$でも$\det S_U=-1$であり、可換正平面の基底変更で$z_0=z_5=0$にできる。
+$S_V$は平方のまま変わらないので、同じ逆向きseparated型となる。
+正平面は量子型であるから、前節の逆向き認識の範囲に入る。
+Jordan・量子の$\epsilon=-1$は、$q\ne1$なら
+$z_1=z_4=z_5=0,z_2=z_3$で元向きseparatedとなる。
+$q=1$では$\det S_V=1$なので、可換負平面の基底変更により同じ表示へ移る。
+これらも全て、既証明のseparated認識で処理される。
+
+最後に量子・JordanとJordan・量子の$\epsilon=1$を調べる。
+前者は$p=-1$、$z_0z_5=-1$なので、対角尺度で
+\[
+ (z_0,z_1,z_2,z_3,z_4,z_5)=(1,0,0,0,0,-1)
+\]
+の一点に移る。
+後者は$q=-1,z_1z_4=1$なので
+\[
+ (z_0,z_1,z_2,z_3,z_4,z_5)=(0,1,0,0,1,0)
+\]
+へ移る。
+各点で四mixed簡約と正負AS2簡約の全四overlapは零となる。
+正三次10基底上の正常行列に、それぞれ定数$-16,-36$の$10\times10$ minorがある。
+従って両点とも正常核零であり、H3を与えない。
+
+これで八chartと全特殊係数を尽くした。
+残るfixed sign包絡には実際のH3が存在し、全条件・全矢は既存の認識定理が与える。
+どのAS2平面や基底も追加標識にしていないので、結論は内在的pointed exact同値に関するものである。
+\end{proof}
+
+検証器は
+\[
+ \texttt{verify\_cubic\_order2\_22\_rank4\_zero\_top\_coverage.py}
+\]
+である。二対称式の普遍分解とPfaffian式、四つのgraph分離パターン、
+特殊二点の計8overlapと二つの定数minorを確認する。
+非退化対称式の等方軸による基底変更と、全八chartを尽くす論理は本文の証明である。

@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "version": "classification-v165",
+  "version": "classification-v167",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -76,7 +76,9 @@
     "papers/sections/cubic_order2_22_rank4_separated_AS2.tex",
     "papers/sections/cubic_order2_22_rank4_zero_top_atlas.tex",
     "papers/sections/cubic_order2_22_rank4_zero_top_QQ_plus.tex",
-    "papers/sections/cubic_order2_22_rank4_opposite_separated.tex"
+    "papers/sections/cubic_order2_22_rank4_opposite_separated.tex",
+    "papers/sections/cubic_order2_22_rank4_zero_top_unipotent.tex",
+    "papers/sections/cubic_order2_22_rank4_zero_top_classification.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -1640,5 +1642,33 @@
     "certificate": "computations/cubic_order2_22_rank4_opposite_separated_certificate.json",
     "proof": "papers/sections/cubic_order2_22_rank4_opposite_separated.tex",
     "scope": "正量子二元が負AS2平面をそれぞれ正規化するopposite-separated chartも全Jordan型で認識した。負commは正常二次係数がF/Gの一方Idを強制し、正平面commとなってGが正一次因子で割れる。負quantumの対角作用は既存skew分類、q−1反対角は中心平方と奇数乗から正常核零。負Jordanでは二次intertwiner det=(a+1)^3から例外a−1のみ、正中山式p1と奇偶条件で再び因数分解。従ってこのchartの全H3は固定符号包絡のみ。正Jordanのopposite-separated全体は範囲外。"
+  },
+  "order2_22_rank4_zero_top_unipotent_v166": {
+    "status": "PASS exact unipotent/Pfaffian/graph identities; all-case structural factor proof",
+    "validator": "computations/verify_cubic_order2_22_rank4_zero_top_unipotent.py",
+    "certificate": "computations/cubic_order2_22_rank4_zero_top_unipotent_certificate.json",
+    "proof": "papers/sections/cubic_order2_22_rank4_zero_top_unipotent.tex",
+    "scope": "canonical半単純untwistがP=Q=0のH3では中山の全Jordan部分が消滅する。可逆交代UV block Aに対して両側非自明単冪J⊗Jの固定式はPf0となり矛盾。片側正JordanのみはmuG固定式のAS2 shear核からGに一次因子。片側負Jordanのみはmixed graph可換環からT[u;f][v;sigma,delta]、f²=muT,hdetf−1となり、comm反射/quantum一次intertwiner/negative hdet符号で全排除。Gのtwist輸送やH3のtwist不変性は仮定しない。"
+  },
+  "order2_22_rank4_zero_top_full_recognition_v167": {
+    "status": "PASS full eight-chart geometric recognition with all Jordan types; independent review not claimed",
+    "validator": "computations/verify_cubic_order2_22_rank4_zero_top_coverage.py",
+    "certificate": "computations/cubic_order2_22_rank4_zero_top_coverage_certificate.json",
+    "proof": "papers/sections/cubic_order2_22_rank4_zero_top_classification.tex",
+    "dependencies": [
+      "zero_top_atlas",
+      "zero_top_QQ_plus",
+      "zero_top_unipotent",
+      "separated_AS2",
+      "opposite_separated",
+      "existing fixed-sign H3 recognition"
+    ],
+    "scope": "canonical零top(P=Q=0) mixed rank4領域の全H3を、全Jordan型・全幾何学的矢込みで既知非CY符号包絡へ認識した。v166全Jordan消滅の後、QQ eps+全排除、QQ eps−のseparated二型と両comm時の二対称式の非退化軸変換、QJ/JQ eps−の同様の軸変換、QJ/JQ eps+の特殊二点正常minor−16/−36、JJ両符号top不存在で八chartを完全被覆。全切断G=f3(U)+ell2(U)u²+ell3(U)v²、H3条件/全矢は固定sign定理へ接合。一般次元2/慣性mu2²。全H3や成分/族降下の完成ではない。",
+    "not_claimed": [
+      "global H3 classification",
+      "nonzero-top rank4 coverage",
+      "componenthood",
+      "intrinsic family descent"
+    ]
   }
 }
