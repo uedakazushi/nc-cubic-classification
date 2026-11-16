@@ -1,0 +1,71 @@
+{
+  "field": "QQ[a]/(a^6+a^3+1)",
+  "sigma_exponents": [
+    8,
+    2,
+    5
+  ],
+  "mu_S_exponents": [
+    2,
+    5,
+    8
+  ],
+  "quadratic_relations": "xy+a^2*yx+a^7*z^2; a^4*x^2+yz+a^5*zy; a*y^2+zx+a^8*xz",
+  "quotient_dimensions": {
+    "2": 6,
+    "3": 10,
+    "4": 15
+  },
+  "sigma_fixed_cubic_dimension": 4,
+  "normality_map_rank": 3,
+  "normal_cubic_dimension": 1,
+  "two_eigenvalue_weight_cases_mu9": [
+    [
+      3,
+      2,
+      5
+    ],
+    [
+      3,
+      5,
+      8
+    ],
+    [
+      3,
+      8,
+      2
+    ],
+    [
+      6,
+      1,
+      7
+    ],
+    [
+      6,
+      4,
+      1
+    ],
+    [
+      6,
+      7,
+      4
+    ]
+  ],
+  "Jordan_plane_Nakayama_eigenvalues": [
+    1,
+    1
+  ],
+  "F_words": [
+    "yyz",
+    "yzy",
+    "zyy",
+    "zzx"
+  ],
+  "F_coefficients": [
+    "-a^4+a-2",
+    "-a^5+2*a^4-2*a^3+a-1",
+    "a^3-a+2",
+    "1"
+  ],
+  "scope": "Necessary model only. No all-degree AS3/noetherian/domain/H3 sufficiency assertion."
+}

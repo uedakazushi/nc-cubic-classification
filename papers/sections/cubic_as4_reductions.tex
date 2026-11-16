@@ -245,7 +245,8 @@ $F$ は $S$ 内でも正規正則、その正規化は $\mu_B^{-1}|_S$ である
 実際には $c\ne0$ が必要であり、$z$ の定数倍で $G=F+z^3$ と規格化できる。
 さらに
 \[
- \sigma^3=\mu_B^{-1}|_S,\qquad \mu_S=\sigma^{-2}
+ \sigma^3=\mu_B^{-1}|_S,\qquad \mu_S=\sigma^{-2},\qquad
+ \operatorname{hdet}_S\sigma=1
 \]
 が必要である。
 \item 固有値集合が $\{\omega,\omega^2\}$ なら、両重複度は二であり、
@@ -293,6 +294,12 @@ $\sigma^3=\mu_B^{-1}|_S$ を与える。
 正規一次元 $z$ の正規化は $S$ 上で $\sigma$ なので、
 正規商の中山公式\cite[Lemma 1.5]{RRZ}は
 $\mu_S=\mu_B|_S\circ\sigma=\sigma^{-2}$ を与える。
+またKoszul双対の二重次数 $(3,0)$ と $(0,1)$ の積は
+一次元top $(3,1)$ に非零に入る。
+$\mu_B(z)=z$ と $\operatorname{hdet}_B\mu_B=1$ から
+$\operatorname{hdet}_S(\mu_B|_S)=1$ である。
+従って $h=\operatorname{hdet}_S\sigma$ は $h^3=1$ を満たし、
+$\operatorname{hdet}_S\mu_S=1$ は $h^2=1$ を与えるので $h=1$ となる。
 
 第二の場合、純粋な各二変数部分代数は一本の二次関係で定義される。
 二重次数が非負なので、混合関係から新しい純粋関係は生じない。
@@ -318,7 +325,7 @@ $(xy-\omega yx)\otimes(zt-\omega^2tz)$ である。
 混合flatteningの可逆ブロックは
 \texttt{verify\_\allowbreak{}cubic\_\allowbreak{}order3\_\allowbreak{}two\_\allowbreak{}eigenvalue\_\allowbreak{}reduction.py}
 で有限恒等式を独立に確認する。
-混合係数の必要系は次の定理で全て判定する。第一の場合の $c=0$ の一般正規cone障害は別に扱う。
+混合係数の必要系は次の定理で全て判定する。
 
 \begin{theorem}[二つの非自明三乗根固有値の全排除]
 \label{thm:h3-order3-two-nontrivial-excluded}
@@ -401,6 +408,95 @@ $G$ の直線を保ったまま $p=q=1$ となる。
 \texttt{verify\_\allowbreak{}cubic\_\allowbreak{}order3\_\allowbreak{}two\_\allowbreak{}block\_\allowbreak{}incidence.py}
 と小さいJSON証明書で再現する。
 生成にはSingular 4.4.1を用いたが、保存した証明書の再生はSymPyだけで行える。
+
+\begin{proposition}[二固有値・位数3 H3の有限候補模型]
+\label{prop:h3-order3-Ore-distinct}
+定理\ref{thm:h3-order3-two-blocks}の第一の場合を
+$B=S[t;\sigma]$, $G=F+t^3$ と書く。
+$\sigma|_{S_1}$ は三つの相異なる固有値を持ち、半単純である。
+原始九乗根 $a$ を $a^3=\rho$ となるよう選べば、
+座標を取って
+\[
+\begin{gathered}
+ \sigma=\operatorname{diag}(a^8,a^2,a^5),\qquad
+ \mu_S=\operatorname{diag}(a^2,a^5,a^8),\\
+ S=k\langle x,y,z\rangle/
+ (xy+a^2yx+a^7z^2,\ a^4x^2+yz+a^5zy,\ ay^2+zx+a^8xz)
+\end{gathered}
+\]
+となる。さらに $\sigma$ 固定かつ正規化 $a^6 I$ の三次空間は一次元で、
+\[
+\begin{split}
+ F_0={}&(-a^4+a-2)y^2z
+       +(-a^5+2a^4-2a^3+a-1)yzy\\
+      &+(a^3-a+2)zy^2+z^2x
+\end{split}
+\]
+で張られる。従って各 $\rho$ について、この層のH3候補は
+$S[t;\sigma]/(F_0+t^3)$ 一対象以下である。
+この表示のAS正則性・noetherian性・H3許容性をここで十分と主張しない。
+\end{proposition}
+\begin{proof}
+$\sigma$ が唯一の固有値 $b$ を持つなら $b^3=\rho^{-1}$。
+$\mu_S=\sigma^{-2}$ の最高三次Koszul tensor上の固有値は
+$b^{-6}=\rho^2\ne1$ となり、$\operatorname{hdet}\mu_S=1$ に反する。
+次に $\sigma$ が二固有値を持つと仮定する。
+比の位数は3なので二次関係は二重斉次となる。
+$\operatorname{hdet}_S\sigma=1$ と $b^3=c^3=\rho^{-1}$ より、
+最高三次tensorの二重次数は混合型の一つに限られる。
+全ての正の再次数付けでHilbert極は三位なので、
+Euler分母の $(1,1)$ における三次未満のTaylor項は零である。
+従って二重Hilbert分母は $(1-s)^p(1-t)^q$、
+$p+q=3$ となり、重複度は最高tensorの混合次数と一致する。
+二次元側を $U$、一次元側を $ku$、固有値を $b,c$ とすると、
+$b^2c=1$、$S=T[u;\nu]$ となる。
+これは先の正常一次元Ore帰着と同じ混合関係のgraph議論による。
+$T$ は二生成元一二次関係のAS2整域である。
+
+固定三次の重みもこの混合型だけなので、$F=f_2u$、$0\ne f_2\in T_2$。
+$\sigma(F)=F$ と $Fu=\rho^{-1}uF$ から
+$\sigma_U(f_2)=c^{-1}f_2$, $\nu(f_2)=\rho f_2$ を得る。
+正規一次元 $u$ の商公式は
+$\mu_T=\sigma_U^{-2}\nu$ を与えるので、
+\[
+ \mu_T(f_2)=\rho c^2 f_2=c^{-1}f_2,\qquad c\ne1.
+\]
+二生成元AS2整域は量子平面またはJordan平面である。
+可換平面とJordan平面の中山作用は二次空間上で唯一の固有値1を持つため、上式に反する。
+残る非可換量子平面の自己同型は対角または反対角であり、
+反対角可逆変換は二つの相異なる固有値を持つ。
+従って唯一の固有値 $b$ を持つ $\sigma_U$ は $bI$ である。
+量子平面の $\mu_T$ は対角なので、$\nu=\sigma_U^2\mu_T$ も対角、
+結局 $B=T[u;\nu][t;\sigma]$ は四変数skew多項式環となる。
+ところが $tx=bxt$ の係数 $b$ は原始九乗根であり、
+定理\ref{thm:skew-finite-37}の必要条件に反する。これで二固有値も排除される。
+
+三固有値なら全ての三乗根が現れ、各固有空間は一次元なので半単純である。
+上記の順で並べると、$\sigma$ が固定する三次tensor単項式は
+$x_i x_i x_{i+1}$ の三つの巡回orbitだけである（添字はmodulo 3）。
+中山巡回式から最高tensorは
+\[
+ w=\sum_{i=0}^2 A_i
+ (x_ix_ix_{i+1}+\lambda_i x_ix_{i+1}x_i
+                      +\lambda_i^2x_{i+1}x_ix_i),\quad
+ (\lambda_0,\lambda_1,\lambda_2)=(a^2,a^5,a^8)
+\]
+となる。$A_i=0$ かつ $A_{i-1}\ne0$ なら第一成分sliceが
+非零の $x_{i-1}^2$ となり、整域性に反する。
+従って全 $A_i\ne0$。尺度変更の指数行列
+$(d_0,d_1,d_2)\mapsto(d_0^2d_1,d_1^2d_2,d_2^2d_0)$ の行列式は9なので、
+代数閉体上で全 $A_i=1$ に規格化できる。三sliceが表示した関係を与える。
+
+この二次表示から全二次・三次・四次語を元の関係で消去すると、
+商の次元は6,10,15、$\sigma$ 固定三次の基底は
+$y^2z,yzy,zy^2,z^2x$ となる。
+$Fv-a^6vF$ ($v=x,y,z$) の四次商への写像は階数3であり、
+核の $z^2x$ 係数を1にすると上の $F_0$ を得る。
+これらは $\mathbb Q[a]/(a^6+a^3+1)$ 上の完全な行消去と全残差零であり、
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}order3\_\allowbreak{}Ore\_\allowbreak{}distinct.py}
+で元の二次関係から再現する。
+最後に $F$ の非零スカラーは $t$ の尺度変更で吸収できる。
+\end{proof}
 
 \begin{lemma}[単冪twist下の反標準三次関係の輸送]
 \label{lem:h3-unipotent-transport}

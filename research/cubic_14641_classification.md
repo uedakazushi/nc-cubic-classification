@@ -404,3 +404,18 @@ rank6のSchur16式、四Diamond（zyx,tyx,tzx,tzy）の24式、正規Gの32式�
 既存のskew cone頂点補題を中心三次から正規三次へ拡張した。B=S[z;sigma]、G∈S3正規正則、Gz=zG、normalizer thetaがSを保ちzを固定する場合、M=k[z]はtheta-twistに不変。正規Rees lemmaのtwistはMを変えず、Ext_B(M,B)の次数3集中からExt_R(M,R)の次数2集中を得る。AS Gorenstein局所双対とsection比較、C=S/Gのkの最小自由解消のRへの誘導によりExt^n_qgr(P,P)=beta_n^C(k)。1/H_C=(1−u)^2/(1+u+u²)は多項式でないため全beta_n非零、H3のcohomological dimension2に反する。中心版の既存応用はtheta=idの特殊例として保持する。
 
 従って{1,rho}の1+3 Ore型でG=F+c z³のc0は不可能。座標を規格化してG=F+z³、sigma F=F、Fのnormalizer=sigma³=mu_B^-1|S。さらに正規一次元zの商にRRZ1302.0437v2 Lemma1.5を適用してmu_S=mu_B|S sigma=sigma^-2を得る。一次資料のmu_B-normal仮定はmu_B(z)=zで満たす。これは必要帰着であり、Sの存在十分性や商のH3判定を結論しない。独立な大規模CAS計算は不要なホモロジー証明であり、新たな計算検証を実行済みとしない。次はsigma³に唯一の原始三乗根固有値を持つAS3とsigma-fixed正常三次Fの分類。三固有値以上の包絡・全許容性・相対分類も残る。
+
+
+## 位数3 Ore型の三固有値base模型（classification-v94）
+
+B=S[t;sigma], G=F+t³の帰着において、sigmaの単一固有値bは不可能。mu_S=sigma^-2のAS3最高tensorへの固有値b^-6=rho²!=1がhdet(mu_S)=1に反する（Jordanも含む）。三固有値ならsigmaはsemisimple、a³=rhoの原始九乗根aを使いsigma=diag(a8,a2,a5)、mu_S=diag(a2,a5,a8)。sigma固定最高tensorは三つのii(i+1)巡回orbitだけ。中山巡回係数を合わせた三係数A_iの一つが零なら前のAが非零である限り二次関係に純平方が出てnondomainとなるので、全A_i非零。指数行列det9の対角尺度変更で全て1へ規格化する。
+
+得られるSの関係はxy+a²yx+a7z²、a4x²+yz+a5zy、ay²+zx+a8xz。全二/三/四次語の厳密商次元は6/10/15。sigma固定三次空間はy²z,yzy,zy²,z²xの四次元で、正常化a6Iの四次係数写像はrank3。従って唯一のF直線はF0=(-a4+a−2)y²z+(-a5+2a4−2a³+a−1)yzy+(a³−a+2)zy²+z²x。元の二次関係からSymPy QQ[a]/Phi9の厳密行消去、最高tensorの両slice一致、正常式全係数零、核rankをverify_cubic_order3_Ore_distinct.pyで再生した。小さいJSONに入力と出力を保持する。
+
+これにより各rhoにつき三固有値sigmaのH3候補はS[t;sigma]/(F0+t³)一対象以下。Sの全次数AS3性、noetherian/domain、切断のH3許容性はまだ未証明。三次/四次Hilbert一致だけから十分性を言わない。原稿prop:h3-order3-Ore-distinct。sigma二固有値も次の議論で排除した。次はこの有限候補の許容性又は排除を判定する。全体のmu_B三固有値以上とは別のbase自己同型sigmaの固有値分類であり、両者を混同しない。
+
+作業中の参考観察（定理に使用しない）：上模型のpoint行列detは−a³(x³+y³+z³)。五/六次Hilbert値も21/28と厳密計算で一致したが、これを正則性の証明とはしない。F0の81個の根の単位係数一次因子・Ore norm探索は空であったが、網羅的因子排除ではない。この有限探索から整域性やH3を結論しない。
+
+同命題でsigma二固有値も全排除した。比が原始三乗根なのでSは二重graded、hdet_S sigma=1からtopの型は2+1、正の再次数付けの三位Hilbert極から重複度も2+1。S=T[u;nu]、TはAS2整域。二次元側sigma_Uの固有値b、u上cについてb²c=1、b³=c³=rho^-1。固定三次はF=f2u。sigma_U(f2)=c^-1 f2とnu(f2)=rho f2、正規商公式mu_T=sigma_U^-2 nuからmu_T(f2)=c^-1 f2!=f2を得る。可換/Jordan平面はmu_Tが二次空間でunipotentなので不可能。量子平面なら単一固有値のsigma_Uはscalar、nuも対角で全Bがskewになるが、tx=bxtのbは原始九乗根となり既証skew37必要条件に反する。Jordan型を除外せずに含めた議論である。
+
+hdet_S sigma=1は追加仮定ではない。BのKoszul双対の(3,0)と(0,1)のFrobenius積、mu_B(t)=t、hdet_B mu_B=1からhdet_S(mu_B|S)=1。sigma³=mu_B^-1|Sよりh³1、mu_S=sigma^-2とhdet mu_S=1よりh²1、従ってh1。この証明を構造帰着にも明記した。よって全二固有値・位数3 H3は有限の明示候補（各rho一つ以下）に縮小できた。単一固有値mu_B=1の単冪層、二固有値位数2、三/四固有値mu_Bを覆ったとはしない。
