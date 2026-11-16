@@ -1,4 +1,4 @@
-\subsection{可逆cross blockを持つtangent型の一変数必要表示}
+\subsection{可逆cross blockを持つtangent型の必要表示と全排除}
 \label{subsec:h3-order2-22-tangent-normalform}
 \begin{proposition}\label{prop:h3-order2-22-tangent-normalform}
 半単純$(2,2)$・奇関係数2のtangent型で、偶cross block $K$が可逆とする。
@@ -56,4 +56,51 @@ $Bc\ne0$なので$X=0$が従う。
 \texttt{verify\_cubic\_order2\_22\_tangent\_normalform.py}は
 全係数のcross行列式、四Schur条件、pencil安定化作用と一変数の行列式を厳密検算する。
 $K$が退化する$c=0$境界は別に残り、この命題の正規化で除外しない。
-指定正常三次と全AS4条件の判定も別問題である。
+指定正常三次は次定理で排除する。任意係数でのAS4存在は主張しない。
+
+\begin{theorem}[tangent可逆部分の全値排除]
+\label{thm:h3-order2-22-tangent-fullrank-exclusion}
+半単純$(2,2)$・奇関係数2のtangent型で、偶cross blockが可逆なH3対象は存在しない。
+より強く、前命題の表示が指定中山作用を持つAS4となる場合、
+正符号三次成分で$x,y$の双方と可換する元は零である。
+これは$D(1+2D^2)\ne0$の全値を含む。
+\end{theorem}
+\begin{proof}
+正符号の三次自由語空間を$V_3^+$、四次自由語空間を$V_4^+$とする。
+その次元は32と128である。
+明示的な33個の多項式線型汎関数
+$\lambda_i:V_4^+\to\mathbb Q[D]$を入力証明書に取る。
+各汎関数が六つの二次関係から生じる全偶四次関係を消すことは、
+4,752本の多項式恒等式で直接検証できる。
+従って任意の$D\ne0$で$B_4^+$上の線型汎関数を与える。
+三つの関係を$2D$倍して検証しているが、これはこの開集合上で可逆な操作である。
+
+これらを二つの交換子へ適用して
+\[
+ N:V_3^+\longrightarrow k^{66},\qquad
+ F\longmapsto\bigl(\lambda_i(Fx-xF),\lambda_i(Fy-yF)\bigr)_i
+\]
+を作る。係数は全て$\mathbb Q[D]$内にある。
+この$66\times32$行列の、入力証明書に指定した九つの$10\times10$ minorの
+最大公約因子は非零有理数倍を除き$D^{12}$である。
+従って任意の$D\ne0$で少なくとも一つのminorが非零となり、
+$\operatorname{rank}N\ge10$である。
+有限標本からの推論ではなく、多項式minorの正確な最大公約因子による全値の被覆である。
+
+指定AS4を仮定すると、命題\ref{prop:h3-order2-mixed-rank}の等変Hilbert級数から
+$\operatorname{Tr}(\mu_B|_{B_3})=0$である。
+$\dim B_3=20$かつ中山が半単純なので$\dim B_3^+=10$、
+従って三次関係空間$\mathcal I_3^+\subset V_3^+$の次元は22である。
+交換子は四次関係へ入るため$\mathcal I_3^+\subset\ker N$である。
+上の階数から$\dim\ker N\le22$なので、両者は一致する。
+従って$F\in B_3^+$が$x,y$と可換すれば、もともと関係であり$B$内では零である。
+H3に必要な$G$は$\mu_B(G)=G$で、$x,y$と可換するので、この矛盾により排除される。
+\end{proof}
+
+汎関数は、一般点の19個のannihilatorへ
+$h(D)=10D^6-D^4-4D^2-1$の零点で不足する14個を補って構成した。
+ただし証明はこの構成法を仮定せず、保存した33個そのものの全恒等式を検査する。
+\texttt{cubic\_order2\_22\_tangent\_annihilator\_input.json}が全係数と九minorの位置を持ち、
+\texttt{verify\_cubic\_order2\_22\_tangent\_exclusion.py}が恒等式・行列式・最大公約因子を再生する。
+有理数の定数分母も入力に保持し、多項式化による係数の脱落を防いでいる。
+この結果の後もtangentの退化cross境界$c=0$、secant型、非半単純型は残る。

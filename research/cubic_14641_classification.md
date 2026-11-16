@@ -917,4 +917,15 @@ secant all-unit chartの再開用未公表計算：g=[[a,b],[c,d]],ad−bc=-1,ab
 
 一変数tangentの現計算：tangent_even_ff.py でeven cubic32語→10、even quartic128語→19、正二元との交換子38x10がgeneric Q(D)上rank10、従って指定正常Gもgeneric0を確認。D1とD=iでも正二元centralizer degree3は零をexact確認したが、これを全Dへ延長しない。全値証明の候補は19個のpolynomial quartic annihilatorを構成し、正三次32語の交換子へ適用して38x32行列rank10をlocal ring Q[D,D^-1,(1+2D²)^-1]上で証明すること。H3ではtraceからpositiveB3dim10が既知なので、rank10なら全candidateの正常Gを排除でき、三次商の基底平坦性は不要。scratch tangent_functionals_valid.py は汎関数の全四次関係へのannihilationも別に再生する。初期実験ではFracElement.numerを用いる際に定数分母を失う実装不備があったため、その出力は破棄し全係数再検証中。全値結果は未証明、wrong cacheを結果として使わない。新cacheはnum/den両方を保持する。
 
-全値tangent計算の最新状態：tangent_functionals_valid.py で19個の正しいpolynomial quartic functionalについて元の全144関係への2736 annihilation恒等式をexact PASS。38x32交換子行列のlocal unit rankは4で止まり、残余全行はh(D)=10D^6−D^4−4D²−1を因子に持つ。これはfunctional basisの特殊化不備である可能性があり、H3/正常核の存在とは結論しない。正しいcache tangent_functionals_cache.json はnum/den両方を保存。次はhを法とする19x128 functional matrixの左核をQ[alpha]/h上で求め、liftした核結合をhで割って新たなpolynomial annihilatorを加える飽和を試す。割るのは全quartic functionalであり、交換子行だけをhで割って特殊値の制約を捏造しない。hはQQ上既約でD(1+2D²)と互いに素。
+全値tangent計算は次のv146で完成した。初期の19個の汎関数はh(D)=10D^6−D^4−4D²−1の零点で不足したが、全functionalを飽和して14個を補った33個の明示証明書を保存した。交換子行だけをhで割らず、全四次functionalのannihilation恒等式を再生することが正しい特殊値の検証である。
+
+
+## 可逆tangentの全D排除（classification-v146）
+
+**全体的なスペクトル制約（classification-v146）**：全(1,3)は被覆・必要十分H3判定・全矢・DM4表示stack・慣性まで確定。全(3,1)は正部分の全Jordan型を含めて空。半単純(2,2)/mixed rank2はpure mixedと二rulingを排除し、さらにtangent K可逆部分も全Dで排除。33個のpolynomial quartic functionalの4752恒等式と、66x32交換子行列の九つの10minorのgcd D^12を厳密検証。H3ではpositiveB3dim10なので、rank>=10が全Dunitで成立するとpositive三次centralizerは零、正常Gも零となる。従ってrank2の残りはsecant型とtangent K退化c0境界。mixed rank4は正topを零/commutator⊙平方/commutator⊙非退化対称式の三種へ被覆。次はtangent c0境界とsecant全rank strataから正常三次を絞り、rank4三型を判定する。非半単純(2,2)、三固有値以上、単一固有値/CY全被覆、全成分/圏族降下は未完。
+
+原稿thm:h3-order2-22-tangent-fullrank-exclusion。input JSONは33個のQ[D]上quartic functional（even128語の辞書式座標）と九10x10 minorの位置を持つ。六関係を前後の二語で挟んだ全144 even quartic relationsへの4752 exact annihilation identitiesを確認。三関係を2D倍してFracElementを使わずQ[D]で直接検証し、定数分母もnum/den両方から復元する。positive cubic32語のx/y交換子にfunctionalを適用したN66x32について九minorは次数80,82,81,84,70,82,75,83,73、monic gcd D^12。ゆえ全Dunitでrank>=10。H3/指定AS4のtraceB3=0からpositiveB3dim10で、positive cubic relation dim22はkerN内、rank>=10からkerNと一致、positive cubic centralizer0。正常Gはmu固定かつcommx/yなので全値で排除。D1等の有限標本は証明に用いず、九exact polynomial minorsのgcdが全値coverを与える。
+
+再現：python computations/verify_cubic_order2_22_tangent_exclusion.py。入力 computations/cubic_order2_22_tangent_annihilator_input.json、出力certificate同prefix。python-flint高速backend（PYTHONPATH=/workspace/work/python-deps SYMPY_GROUND_TYPES=flint）で今回PASS、通常SymPy backendでも今回再実行PASS。汎関数の構成に使ったh-rootのfield linear algebraやgeneric rrefを信頼入力にはせず、全33functionalと九minorを元の六関係から直接点検する。全AS4存在や全H3被覆をこの排除から主張しない。
+
+次の具体的着手：tangent c0ではg upper/ad1、K=[[-b,d,a,0],[a,0,0,0],[-d,0,0,0],[0,0,0,0]] rank2。purepositive rowyy=(B,D,-D,0)とd*rowxy+a*rowyxがpureUU関係で、そのspan<=1/rankone禁止を使ってeven rank4を分岐する。これらから共通positive AS2平面又は正規一次方向を得られるか検証する。secant allunit Schur式は既存の未公表scratch必要条件だけであり、全rank strataを残す。全rank4/nonsemi/他スペクトルは未解決。
