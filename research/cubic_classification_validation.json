@@ -1178,5 +1178,12 @@
     "certificate": "computations/cubic_order2_normal_axis_certificate.json",
     "result": "If a quantum coordinate x of the common noncommutative quantum plane is normal in the entire multiplicities(1,3) H3 envelope, then q=-1 and, after translation of v, x anticommutes with p,y,v. Thus x² is central. The p-action and x-normalizer are involutions. Other root cases, c=1 and the p-commuting branch are excluded.",
     "scope_limit": "Normality of a common coordinate is an additional hypothesis. Non-normal-coordinate charts, commutative/Jordan common planes and the surviving q=-1 relations/admissibility remain."
+  },
+  "order2_normal_axis_clifford_v112": {
+    "status": "conditional global normal-form and unique cubic proof in manuscript; universal Clifford/cocycle identities executed",
+    "validator": "computations/verify_cubic_order2_normal_axis_clifford.py",
+    "certificate": "computations/cubic_order2_normal_axis_clifford_certificate.json",
+    "result": "The normal common quantum coordinate sector has a three-parameter necessary normal form and W1(B)=k[py,v]. A finite sign cocycle gives a rank-eight Clifford algebra over k[x,Y,L,T], with full center Z0+Z0g, g²=-detM. Its discriminant cubic is smooth for a²!=4 and nodal at a=+-2.",
+    "scope_limit": "All-parameter flat Hilbert series is proved; AS4/domain/H3 sufficiency of every parameter, all intrinsic arrows, smooth-boundary overlap and coverage without a normal coordinate remain unresolved."
   }
 }

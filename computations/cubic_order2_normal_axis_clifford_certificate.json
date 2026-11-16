@@ -1,0 +1,43 @@
+{
+  "hypotheses": "H3 multiplicities(1,3), with a normal coordinate in its common noncommutative quantum plane",
+  "necessary_normal_form": [
+    "x anticommutes with p,y,v",
+    "py=yp",
+    "v\u00b2=y\u00b2+i*x\u00b2",
+    "p\u00b2=a*y\u00b2+yv+vy+d*x\u00b2"
+  ],
+  "scope": "Necessary form and unique H3 normal cubic; AS4/domain/H3 sufficiency of every parameter is not claimed.",
+  "normal_cubic": "G=[py,v], spanning W1(B) under the H3 envelope hypotheses",
+  "central_cocycle_model": [
+    "x central",
+    "py+yp=0",
+    "v\u00b2=Y+i*x\u00b2",
+    "p\u00b2=-a*Y-L-d*x\u00b2",
+    "y\u00b2=Y",
+    "yv+vy=L",
+    "pv+vp=T"
+  ],
+  "central_base": "k[x,Y,L,T], degrees (1,2,2,2)",
+  "clifford_basis": [
+    "1",
+    "p",
+    "y",
+    "v",
+    "py",
+    "pv",
+    "yv",
+    "pyv"
+  ],
+  "overlap_identities_checked": 10,
+  "volume": "g=pyv-L*p/2+T*y/2; G maps to 2g",
+  "volume_square": "g\u00b2=-det M, M=[[ -aY-L-dx\u00b2,0,T/2 ],[0,Y,L/2],[T/2,L/2,Y+i*x\u00b2]]",
+  "normalizer_character_order_p_y_v_x": [
+    1,
+    -1,
+    -1,
+    -1
+  ],
+  "boundary_net_discriminant": "4det(M)|x=0=(L+aY)(L-2Y)(L+2Y)-Y*T\u00b2",
+  "binary_cubic_discriminant": "16*(a\u00b2-4)\u00b2",
+  "remaining": "H3 admissibility and all intrinsic arrows in this normal form; overlap with known smooth-boundary Clifford sectors; nodal discriminant cases a=+-2; all charts without the extra normal-coordinate hypothesis."
+}

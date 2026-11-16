@@ -585,3 +585,17 @@ H3のS=(-1)[2]からExt^r(Pi,Pj)=Ext^(2−r)(Pj,P_(i+1))*。Homは単位行列�
 さらにq=-1でもc!=±1はc=±i,v²=Axyから追加二次関係で排除。c1はB/(x)の三次次元>=11が正規一次元商のHilbert次元10に反するため排除：py=epsilon yp,p²=Ay²,v²=Cy²の18列に独立な二つの全係数syzygyを明記し、検証器も定数pivot15と残余一列を再生した。従ってc−1。a1ならmu*theta_xがxのみ符号反転しGを−Gに送るので、Gは奇数個xを含む語の和、正規性でG=xHに因子分解してR整域性に反する。従ってa−1、xは残り三生成元全てと反可換しx²中心となる。正常共通座標が二本あることも不可能（他軸はa1だから）。
 
 次：このx反可換・x²中心領域について全関係を既知Clifford型又は新候補へ還元する。同時に共通量子座標が全Bで正規でない場合、可換/Jordan共通平面のrank2を未被覆として保持する。全H3の半単純化や正常化をこの追加仮定付き定理から推論しない。
+
+## 正規共通量子座標領域の三パラメータClifford正常形（classification-v112）
+
+追加仮定付きだが、この領域の全H3包絡を三パラメータで被覆：xはp,y,v全てと反可換、py=yp、v²=y²+i x²、p²=a y²+yv+vy+d x²。H3三次はG=[py,v]の一本。原稿thm:h3-order2-normal-axis-clifford-form。全三パラメータでのH3十分性・幾何学的矢をまだ結論しない。
+
+証明の要点：正規一次元商S=B/(x)はchange-of-rings二行TorによりKoszul、HS=(1−t)^−3とReesでAS3。RRZ Lemma1.5（一次資料rrz.txtを再確認）のnormalizerはx b=tau(b)x、この場合tau=theta_xはinvolutionで、muS=(-p,y,v)。最高三次rho=tau0(ppy−pyp+ypp)+Phi(y,v)。Phi二文字cyclic三次は完全対称なので平方関係はyv+vyだけを含む。v->v−F yでv²=E' y²+I x²,E'非零（零なら反可換xとvの非零一次元平方零）。最高tensorの収縮でp²の{y,v}係数B'=delta E'/tau0も非零。尺度でE'=B'=1にする。
+
+Gamma=(active parity,p parity,x parity)、c(g,h)=(-1)^(active_g*p_h+x_g*active_h)でC=B^cに移すとx中央、{p,y}=0,v²=y²+i x²,p²=−a y²−{y,v}−d x²。Y=y²,L={y,v},T={p,v}が中央になることを全関係から証明し、CはZ0=k[x,Y,L,T]上rank8の真正Clifford環。M=[[-aY−L−dx²,0,T/2],[0,Y,L/2],[T/2,L/2,Y+ix²]]。十個の全overlapで自由基底1,p,y,v,py,pv,yv,pyvを確認し、全係数の平坦Hilbert1/(1−t)^4を得る。AS4/domain/H3十分性をこのPBW計算だけで言わない。
+
+Z(C)=Z0+Z0*g、g=pyv−L p/2+T y/2、g²=−detM。detMのYT²係数−1/4なので全パラメータで分数体上非退化、中心はF+Fg。gのpyv係数1と定数係数0から格子との交差でZ0+Z0gへ戻る。Bの全W1はmuG1とthetaG−、次数3からGamma=(1,1,0)に限り、cocycleで中央になる。中心3でその次数はgだけ、Bの[py,v]は2gに対応する。よってW1一本。
+
+net判別三次は4detM|x0=(L+aY)(L−2Y)(L+2Y)−Y T²。Y1の三次判別式16(a²−4)²、無限遠点は常に滑らか、a=±2の二重根は普通node。これはnetの判別曲線の計算であって、boundary THCRとの同一視、H3許容性や全AS4存在証明を代替しない。verify_cubic_order2_normal_axis_clifford.pyで十overlap、volume/平方、全符号cocycle、判別式を全パラメータで厳密検算PASS。
+
+次の具体的着手：この三パラメータでH3十分性を、中心Clifford純volume商とprojective character完全交叉で判定する。既知smooth-boundary Clifford部分とのパラメータ対応を先に厳密確認し、a=±2のnodal判別と無限遠のcharacter点を勝手に除外しない。一般の正規座標存在、量子/Jordan/可換共通平面全体、他の中山スペクトル、大域群oid/相対降下は未完成。

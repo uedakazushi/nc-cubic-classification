@@ -1679,6 +1679,140 @@ resultant、原始根の全八行の重み空間とAS2正規化の係数恒等�
 全係数で定数pivot15本と残余一列への消去により再生する。
 座標正規性への全域帰着や、残る $q=-1$ のH3十分性はこの検証の結論ではない。
 
+\begin{theorem}[正規共通量子座標領域の三パラメータClifford帰着]
+\label{thm:h3-order2-normal-axis-clifford-form}
+定理\ref{thm:h3-order2-normal-quantum-axis}の追加仮定を満たすH3包絡は、
+ある $a,d,i\in k$ により次の六関係で表示される。
+\begin{equation}\label{eq:h3-normal-axis-three-parameter}
+ \begin{gathered}
+ xp=-px,\quad xy=-yx,\quad xv=-vx,\quad py=yp,\\
+ v^2=y^2+i x^2,\qquad p^2=a y^2+yv+vy+d x^2.
+ \end{gathered}
+\end{equation}
+この包絡の正常化核は $W_1(B)=k[py,v]$ であり、H3三次は唯一である。
+表示した全三パラメータがH3であるという十分性は主張しない。
+
+さらに有限符号cocycleにより、$B$ は中心一次元 $x$ を持つClifford環 $C$ に移る。
+$Y=y^2$, $L=yv+vy$, $T=pv+vp$ を $C$ の積で定めると
+\[
+ Z_0=k[x,Y,L,T]\subset Z(C),\qquad
+ M=\begin{pmatrix}
+ -aY-L-dx^2&0&T/2\\
+ 0&Y&L/2\\
+ T/2&L/2&Y+i x^2
+ \end{pmatrix}.
+\]
+$C$ は $Z_0$ 上階数8の自由Clifford環であり、中心は
+\[
+ Z(C)=Z_0\oplus Z_0g,\qquad
+ g=pyv-\frac L2p+\frac T2y,\qquad g^2=-\det M.
+\]
+$[py,v]\in B$ はこのcocycleで $2g\in C$ に対応する。
+\end{theorem}
+\begin{proof}
+前定理から $x$ は残り三生成元と反可換し、$py=yp$。
+平方関係は $p^2,v^2\in\langle x^2,y^2,yv,vy\rangle$ に入る。
+$S=B/(x)$ はquadratic Koszul AS3である。
+この点は正規一次元商のchange-of-rings spectral sequenceからも確認できる。
+その二つの行は $\operatorname{Tor}^S_j(k,k)$ と内部次数を1だけずらした同じ群である。
+最初の非線型な $\operatorname{Tor}^S_j$ があれば、低い次数の行は既に線型なので
+その元は微分で消えず、$B$ のKoszul性に反する。
+従って $S$ はKoszulであり、$H_S=(1-t)^{-3}$ から双対Hilbert級数は $(1+t)^3$。
+正規元のRees lemmaによりAS Gorenstein性も降りる。
+RRZ\cite[Lemma 1.5]{RRZ}を、ここではinvolutionである正規化に適用すると
+\[
+ \mu_S(p)=-p,\qquad\mu_S(y)=y,\qquad\mu_S(v)=v.
+\]
+
+最高三次tensorの中山巡回式から、その形は
+\[
+ \rho=\tau(ppy-pyp+ypp)+\Phi(y,v),\qquad\tau\ne0
+\]
+となる。$p^2$ に隣接する一次式が $y$ であるのは、唯一の奇関係が $py-yp$ だからである。
+二文字のcyclic三次tensor $\Phi$ は完全対称なので、ある $\alpha,\beta,\gamma,\delta$ により
+\[
+ \Phi=\alpha y^3+\beta(y^2v+yvy+vy^2)
+       +\gamma(yv^2+vyv+v^2y)+\delta v^3.
+\]
+その収縮による二つの偶関係は
+\[
+ \tau p^2+\alpha y^2+\beta(yv+vy)+\gamma v^2,
+ \qquad\beta y^2+\gamma(yv+vy)+\delta v^2.
+\]
+第二関係は $p^2$ を含まない唯一の偶関係であり、$v^2$ 係数が非零なので $\delta\ne0$。
+従って $B$ の平方関係も
+\[
+ v^2=E y^2+F(yv+vy)+I x^2,\quad
+ p^2=A y^2+B_0(yv+vy)+D x^2
+\]
+となる。$v$ を $v-Fy$ に変更すると第一式は
+$v^2=E' y^2+I x^2$、$E'=E+F^2$ となる。
+$E'=0$ なら $x$ と $v$ の反可換性により非零一次式の平方が零となって矛盾する。
+上のtensorの収縮式をこの基底でも比較すれば
+$B_0'=\delta E'/\tau\ne0$ である。
+代数閉体上で $y,v,p$ を尺度変更して $E'=B_0'=1$ と正規化でき、
+\eqref{eq:h3-normal-axis-three-parameter}を得る。
+
+次に $\Gamma=(\mathbb Z/2)^3$ の次数をactive偶奇、$p$ 偶奇、$x$ 偶奇の順に取る。
+すなわち $p$ の次数は $(1,1,0)$、$y,v$ は $(1,0,0)$、$x$ は $(0,0,1)$。
+全関係はこの次数で斉次であり、二重指標
+\[
+ c((b,e,r),(b',e',r'))=(-1)^{be'+rb'}
+\]
+によるtwist $C=B^c$ の関係は
+\[
+ x\text{ central},\quad py+yp=0,\quad
+ v^2=y^2+i x^2,\quad p^2=-a y^2-yv-vy-d x^2.
+\]
+これは圏のpointed exact同値の主張ではなく、有限符号cocycleによる代数の輸送である。
+
+$Y=y^2$ は $p$ と可換し、$v^2=Y+i x^2$ により $v$ とも可換する。
+$L=yv+vy=-p^2-aY-dx^2$ は $p$ と可換し、
+$Y,v^2$ の中心性から $y,v$ とも可換する。
+従って $p^2$ も中心である。
+$T=pv+vp$ は $p^2,v^2$ の中心性から $p,v$ と可換し、
+$[T,y]=[p,L]=0$ なので中心である。
+これにより $C$ と表示したClifford環の間に相互に逆な準同型がある。
+Cliffordの標準基底
+\[
+ 1,p,y,v,py,pv,yv,pyv
+\]
+は $Z_0$ 上自由である。十個の三次overlapの恒等式によりこのPBW性を直接確認できる。
+特に $Z_0$ は多項式環のまま埋め込まれ、表示の全パラメータで
+$H_C=(1+t)^3/((1-t)(1-t^2)^3)=(1-t)^{-4}$ となる。
+これは全パラメータでの平坦性を示すが、それだけでAS4又はH3十分性とはしない。
+
+$\det M$ の $YT^2$ 係数は $-1/4$ なので、全ての $a,d,i$ で
+$M$ は $Z_0$ の分数体上非退化である。
+非退化な三変数Clifford環の中心は分数体とvolumeの二次拡大である。
+これは対角化して八個の基底の交換子を調べても従う。
+volumeは表示した $g$ であり、$pyv$ 係数が1なので
+分数体から $C$ へ交わりを取ると分母は残らず、中心は正確に $Z_0\oplus Z_0g$。
+Clifford積の直接計算で $g^2=-\det M$ を得る。
+
+最後に任意の非零 $G\in W_1(B)$ を取る。
+$B$ は整域なので $G^2=\mu_B^{-1}(G)G$ から $\mu_B(G)=G$。
+また $Gx=-xG$ より $x$ の正規化は $G$ に $-1$ で作用する。
+この二つの符号と三次という次数を合わせると、$G$ の $\Gamma$ 次数は $(1,1,0)$ に限る。
+この次数のcocycle交換指標は $p$ 上 $+1$、$y,v,x$ 上 $-1$ であり、
+従って対応する $C$ の元は中心となる。
+$Z(C)_3$ のうちこの次数にあるのは $kg$ だけである。
+実際、他の中心三次 $xY,xL,xT,x^3$ は全て $x$ 偶奇が1である。
+cocycle積を展開すると $[py,v]\in B$ の像は $2g$ なので、主張が従う。
+\end{proof}
+
+このClifford netの $x=0$ における判別三次曲線は
+\[
+ (L+aY)(L-2Y)(L+2Y)-YT^2=0\quad\text{in }\mathbb P^2_{Y,L,T}.
+\]
+$Y=1$ の二重被覆表示の判別式は $16(a^2-4)^2$ である。
+従って $a^2\ne4$ なら滑らか、$a=\pm2$ では一つの通常nodeを持つ。
+これはClifford netの計算であり、nodeの存在だけからH3許容性を判断しない。
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}order2\_\allowbreak{}normal\_\allowbreak{}axis\_\allowbreak{}clifford.py}
+は全overlap、volumeと平方、cocycle、判別式を独立に厳密確認する。
+残る課題はこの三パラメータのH3条件と全intrinsic矢、既知smooth-boundary表示との照合、
+および追加の正規座標仮定を持たない領域の被覆である。
+
 \begin{lemma}[単冪twist下の反標準三次関係の輸送]
 \label{lem:h3-unipotent-transport}
 $C$は左右noetherian quadratic Koszul AS4型14641で，$\mu_C$は半単純とする．
