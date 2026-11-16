@@ -72,6 +72,156 @@ $K_n=\ker((B_A)_n\to R_{A,n})$ と置く。
 全次数でこれを適用すれば主張を得る。
 \end{proof}
 
+\begin{proposition}[全20方向の同時一次包絡は全次数で平坦]
+\label{prop:square-zero-potential-pbw}
+$k$ は標数零で原始三乗根 $q$ を含むとし、
+$A=k[e_1,\ldots,e_{20}]/(e_1,\ldots,e_{20})^2$ とする。
+量子so3点のpotential $\Phi_0$ に、次数1--3の20個の巡回語をそれぞれ係数 $e_j$ で加える。
+中央変数 $t$ で斉次化した六つの二次関係の包絡 $B_A$ は、
+\[
+ \{x^ay^bz^ct^d:a,b,c,d\ge0\}
+\]
+を $A$-基底に持つ。従って全次数で有限自由であり、
+相対Koszul解消のrank列は $(1,4,6,4,1)$、双対cohomologyは最高次数の $A(4)$ のみである。
+これはArtin底上の相対AS4性であり、非被約底環を含む $B_A$ 自身の有限大域次元を意味しない。
+
+さらにこの包絡中に中央三次元 $g$ があり、特殊fiberが正則元 $G_0$ なら、
+$g$ は左右正則で $B_A/(g)$ は次数別に有限自由である。
+特に既存の一次potential・中央三次incidenceに属する全方向は、
+包絡と切断環の平坦性に関しては実際の同時一次変形として実現される。
+全intrinsic H3の変形の被覆は別問題である。
+\end{proposition}
+\begin{proof}
+単なる四つのrank条件の外挿ではなく、平方零係数による書換えの停止性を使う。
+六つの逆順対の書換えを、定数部分と平方零部分に分ける。
+$e_j$ を既に含む項には定数部分だけを適用する。二回目の変形項は零になる。
+斉次次数を固定し、まず平方零係数を含む語を係数を含まない語より小さく順序付ける。
+同じ係数層では、$x,y,z$ の個数、次に $x<y<z<t$ の辞書式順序を使う。
+定数部分の書換えはこの順序を狭義に下げ、変形項は係数層を下げる。
+固定次数の語は有限個なので、全ての書換えは停止する。
+
+左辺は六つの相異なる長さ2の逆順対であり、包含曖昧性はない。
+重なる曖昧性は $zyx,tyx,tzx,tzy$ の四つだけである。
+その定数部分は既知の量子so3 PBW恒等式、一次部分は
+\texttt{verify\_cubic\_obstruction.py}の全80恒等式で零になる。
+二次以上の係数積は底環で零である。
+離れた二箇所の書換えは可換なので、全局所曖昧性が解消する。
+停止する線型書換えのDiamondの議論により、既約語は主張した $A$-基底となる。
+
+相対Koszul性も全次数flat性から確認できる。
+augmentation $B_A\to A$ の被約bar複体の内部次数 $n$ 部分は有界有限自由 $A$-複体である。
+特殊fiberのcohomologyは $B_0$ のKoszul性によりhomological次数 $n$ のみにあり、
+そのrankは $n=0,1,2,3,4$ で $1,4,6,4,1$、それ以外で零である。
+補題\ref{lem:artin-perfect}の議論を各内部次数に適用すると、相対Torも同じ対角に有限自由として集中する。
+この基底を順に持ち上げて極小相対自由解消を構成すれば、
+$B_A,B_A(-1)^4,B_A(-2)^6,B_A(-3)^4,B_A(-4)$ の長さ4の解消を得る。
+その双対複体の各内部次数も有界有限自由である。
+特殊fiberのAS Gorenstein性と同じ最小複体の議論から、双対cohomologyは最高次数の $A(4)$ のみとなる。
+
+最後に各次数の $g$ による乗法は、有限自由加群間の写像で特殊fiberが単射である。
+従って適切な最大小行列式が単元で、写像は分裂単射、余核は有限自由である。
+左右両方に適用して正則性と商のflat性を得る。
+\end{proof}
+
+\begin{proposition}[巡回potential上の四syzygyは全Artin底で持ち上がる]
+\label{prop:universal-four-syzygies}
+量子so3点を特殊fiberとする任意の局所Artin底上の巡回potential変形について、
+斉次二次包絡の三次部分は自由rank20である。平方零の仮定は不要である。
+\end{proposition}
+\begin{proof}
+$\widetilde\Phi$ を四変数で三次に斉次化し、
+$r_i=\partial_{x_i}\widetilde\Phi$、$r_t=\partial_t\widetilde\Phi$、
+$c_i=[t,x_i]$ とする。六つの関係は $c_i,r_i$ で取れる。
+$t$ を末尾へ移した表示との差は $c_i$ の線型結合なので、同じ二次包絡である。
+二次式 $f=\sum a_{uv}uv$ に対し
+\[
+ D_t(f)=\sum a_{uv}(c_u v+u c_v),\qquad c_t=0
+\]
+と書く。自由代数で $D_t(f)=[t,f]$ なので、三つの恒等式
+\[
+ t r_i-r_i t-D_t(r_i)=0
+\]
+を得る。さらに巡回微分のEuler恒等式から
+\[
+ \sum_i(x_i r_i-r_i x_i)+D_t(r_t)=0
+\]
+を得る。これらは六関係の四つの線型syzygyであり、係数に打切りを課していない。
+
+特殊fiberの64行48列の挿入行列はrank44で、上の四syzygyはその核の基底である。
+後者は、$r_i$ の左係数に $t$ が現れる三本と、$x_i$ が現れる一本の独立性からも分かる。
+\texttt{verify\_universal\_cubic\_syzygies.py}は全20係数の多項式環上で四恒等式を確認し、
+特殊fiberの二行列のrank44と4も厳密確認する。
+44単元minorによって挿入行列を $I_{44}$ と残り20行4列のSchur補行列へ変形する。
+四syzygyの残り4成分は特殊fiberで基底なので可逆な4次行列をなし、
+正確なsyzygy恒等式からこのSchur補行列は零である。
+従って挿入行列の余核は $A^{20}$ である。
+\end{proof}
+
+\begin{theorem}[巡回potential chartの全Artin底での包絡平坦性]
+\label{thm:artin-potential-envelope}
+$A$ を剰余体 $k$ を持つ局所Artin $k$-代数とする。
+$k$ は標数零で原始三乗根 $q$ を含むとし、
+\[
+ \Phi_A\in A\langle x,y,z\rangle_{\rm cyc}^{\le3},\qquad
+ \Phi_A\bmod\mathfrak m_A=
+ xyz-qxzy-\tfrac12(x^2+y^2+z^2)
+\]
+とする。三次に斉次化した $\widehat\Phi_A\in A[t]\langle x,y,z\rangle_{\rm cyc}$ に対し
+\[
+ B_A=A[t]\langle x,y,z\rangle/
+ (\partial_x\widehat\Phi_A,\partial_y\widehat\Phi_A,
+ \partial_z\widehat\Phi_A),\qquad \deg t=\deg x=\deg y=\deg z=1
+\]
+と置く。この二次包絡は全次数で有限自由、rankは $\binom{n+3}{3}$ であり、
+形成は任意のArtin底変更と両立する。
+$t$ は中央正則で、$B_A$ は左右noetherian、相対Koszul型14641・相対AS Gorensteinである。
+中央三次元が与えられ特殊fiberで正則なら、その商も次数別有限自由となる。
+全intrinsic変形がこのchartを通ること、全中央三次元の持上げ、H3族の大域的実現は本定理に含まない。
+\end{theorem}
+\begin{proof}
+単に三次のflat性から高次を推論せず、potentialのdg複体を使う。
+$A[t]$ 上の自由dg代数 $\mathcal D_A$ を、生成元
+\[
+ x_i:(\text{内部次数},\text{homological次数})=(1,0),\quad
+ \xi_i:(2,1),\quad \zeta:(3,2)
+\]
+と微分
+\[
+ d x_i=d t=0,\qquad d\xi_i=\partial_{x_i}\widehat\Phi_A,
+ \qquad d\zeta=\sum_i[x_i,\xi_i]
+\]
+で定める。$t$ は係数環の中央変数であるから、巡回微分恒等式により $d^2=0$ であり、
+$H_0(\mathcal D_A)=B_A$ となる。
+各内部次数 $n$ の部分は有界有限自由 $A$-複体である。
+
+まず特殊fiber $\mathcal D_0$ を考える。
+$t=0$ での商は斉次potential $xyz-qxzy$ の標準potential dg代数である。
+このpotentialはCY3量子多項式環を定めるため、正のhomological次数でacyclicである。
+ここで使う外部入力は \cite[\S7.1, (7.1.4)]{EG}
+（そこで明示されたGinzburg Theorem5.3.1）である。
+同箇所の定義・仮定を一次資料で確認しており、一般の非斉次potentialに逆向きを適用してはいない。
+$\mathbb Q(q)$ 上の複体の正確性は複素数体への忠実平坦拡大から降下し、任意の $k$ へ拡大できる。
+
+複体の短完全列
+\[
+ 0\longrightarrow\mathcal D_0(-1)\xrightarrow{t}\mathcal D_0
+ \longrightarrow\mathcal D_0/(t)\longrightarrow0
+\]
+の長完全列から、$j>0$ について $H_j(\mathcal D_0)=tH_j(\mathcal D_0)$ となる。
+内部次数は下に有界なので、この等式は $H_j(\mathcal D_0)=0$ を意味する。
+同時に $t$ は $H_0$ 上単射であり、$H_0/(t)$ は量子三変数多項式環となる。
+従って $\dim H_0(\mathcal D_0)_n=\binom{n+3}{3}$ である。
+
+任意の $n$ に対し、有限自由複体 $(\mathcal D_A)_n$ の特殊fiberのhomologyは次数零のみにある。
+補題\ref{lem:artin-perfect}から、この複体は $A^{\binom{n+3}{3}}[0]$ と準同型である。
+これが全次数flat性と底変更を同時に与える。底変更先が非flatでも、perfect複体から得た同定なので問題はない。
+$t$ の正則性は次数ごとの有限自由加群間の写像を特殊fiberで判定して従う。
+左右noetherian性は有限 $\mathfrak m_A$-進filtrationの商が $B_0$ の有限直和であることから従う。
+相対Koszul解消と双対性は命題\ref{prop:square-zero-potential-pbw}のbar複体による議論を適用する。
+その議論で平方零性を使ったのはflat性を得る最初の書換えだけであり、flat性を得た後は任意のArtin底で有効である。
+最後の中央三次商も、同命題の分裂単射の議論で従う。
+\end{proof}
+
 \begin{remark}[一次の実行済み検証と残る条件]
 三乗根の量子so3点では、$t$ を中央変数とする四生成元の斉次表示を使う。
 基本語を $x^ay^bz^ct^d$ とした六つの二次書換えの三次曖昧語は
@@ -80,7 +230,9 @@ $zyx,tyx,tzx,tzy$ の四つである。
 各方向について四つの一次重なりを $\mathbb Q(q)$、$q^2+q+1=0$ 上で計算する。
 80個全てが零となることを厳密検証した。
 これはこの20方向で三次障害の一次項が零であることを示す。
-全次数平坦性、高次の障害消滅、全intrinsic変形のこの表示による被覆は、
+平方零底上の全次数平坦性は上の停止性の証明と合わせて従う。
+指定potential chartの高次包絡平坦性は定理\ref{thm:artin-potential-envelope}で別途証明した。
+全intrinsic変形のこの表示による被覆は、
 この有限計算からは結論しない。
 命題\ref{prop:four-cubic-obstructions}と補題\ref{lem:flat-envelope-principal}自体は通常の証明であり、
 有限標本で置き換えていない。

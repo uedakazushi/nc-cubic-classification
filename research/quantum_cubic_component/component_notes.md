@@ -137,3 +137,13 @@ I2の六基底とI3の三次生成元を持ち上げ、各次数のI_n/J_nへNak
 `papers/sections/quantum_cubic_quadratic_obstruction.tex` に通常の証明を置く。R_A flatならI2rank6,I3rank45。六二次関係の左右挿入45×48行列は特殊fiberでrank44なので単元44minorがあり、Schur補行は1×4の(o1,o2,o3,o4)。従ってB_A,3 = A^19 ⊕ A/(o_i)、三次flat性は四係数零と同値。障害idealはFitt0(I3/(VI2+I2V))なので基底非依存・底変更に適合する。全次数flat性を別途仮定すると、B_A→R_Aの核の各次数は自由でrank B0,n−3、G0の持上げによる左右乗法は特殊fiberで同型、従って全次数で同型。三次核は自動的に左右正則正規主イデアルとなる。
 
 量子so3点の四変数斉次表示の曖昧語zyx,tyx,tzx,tzyについて、20巡回potential方向それぞれの一次overlapをQ(q),q²+q+1=0上で全80件計算し零を確認した。`verify_cubic_obstruction.py` と小証明書に再生。これは指定方向での三次障害の一次項の消滅であり、全intrinsic変形、高次障害、全次数flat性をこの有限検算だけから結論しない。成分研究の次の核心は、この四係数の全Artin底での消滅と高次Koszul認識である。
+
+
+## 10. 指定potential chartの全Artin包絡認識
+
+`thm:artin-potential-envelope` は平方零制限なしに、量子so3点の任意の次数≤3巡回potential変形の斉次包絡を全次数flatとする。中央tを係数とする自由dg代数Dをx_i (内部1,homol0)、xi_i (2,1)、zeta (3,2)、d xi_i=cyclic derivative、d zeta=Σ[x_i,xi_i]で定める。各内部次数は有界有限自由A複体。特殊fiberでt0商はCY量子3spaceの標準potential dg代数で正次数acyclic。外部入力は一次資料EG arXiv0709.3593v4 §7.1 (7.1.4)、同箇所のGinzburg Thm5.3.1引用。本文§7.1–7.3の定義・仮定・証明を今回確認した。t乗法の複体短完全列と内部次数の下有界性から特殊fiber Dもacyclic、H0,nの次元binomial(n+3,3)。perfect複体のArtin最小模型により任意底でH0,n自由となり、任意Artin底変更に適合する。bar複体と特殊fiberのKoszul性から相対14641解消と双対性。有限m-adic filtrationから左右noetherian。中央gが持ち上がるなら分裂単射により商もflat。
+
+これは一般R_Aの二次包絡を無条件に認識する定理ではない。全intrinsic/Abel/dg変形のpotential chartによる被覆、全8方向同時の中央三次持上げ、相対H3性・代数化は未解決。
+全Artin底での三次flat性は、別の有限行列証明もある。六関係c_i=[t,x_i],r_i=∂_i Phi^hに対し、三つの[t,r_i]展開syzygyと巡回Euler syzygyが厳密に持ち上がる。特殊fiberで64×48挿入行列rank44、四syzygy48×4rank4。単元44minorのSchur補行列は四syzygyの残り4×4可逆部分により零となる。`verify_universal_cubic_syzygies.py` は打切りなしの20係数多項式環で全四恒等式を検証する。
+
+次は中央incidenceの二次障害：一次8方向の全対について、重なりの解消済み乗法を二次まで展開し、105×40行列Mの余核に二次交換子を射影する。全対で零か、8変数同時積分を妨げる条件が出るかを調べる。全intrinsic被覆とはなお区別する。

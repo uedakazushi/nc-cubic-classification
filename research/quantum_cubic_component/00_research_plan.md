@@ -1,6 +1,6 @@
 # 研究方針：量子三次曲面を含む既約成分の完全決定
 
-2026-11-17 / triangle-component-v3。**再開時は本書を最初に読む。**
+2026-11-17 / triangle-component-v5。**再開時は本書を最初に読む。**
 この一式は `nc-cubic-moduli` の成分研究に必要な現行成果を集約したもので、旧bundleを必要としない。
 パスはリポジトリrootからの相対パスで記す。本体は `papers/quantum_cubic_component.tex`、補足は `research/quantum_cubic_component/component_notes.md`。
 
@@ -51,13 +51,12 @@
 
 ## IV. 次の課題と具体的な着手
 
-**第一優先：相対二次包絡とH3の認識。**
-全Artin底での反標準環の平坦性・有限表示、適合したAbel変形の接空間の単射性は証明した。
-次はB_A=T_A(A^4)/(六二次関係)の平坦性、Koszul性、AS4双対性を検証する。
-R_Aが平坦だからB_Aも平坦、と飛躍しない。二次関係の三次syzygyの持上げと、
-B_AからR_Aへの核が正則正規な三次元による左右主イデアルになることを示す。
-さらに、構成したdg変形に適切なheartが存在し、逆Serre作用がそれを保つかを扱う。
-De Deken--LowenのZ-代数変形の同値だけから一周期性・14641性まで結論しない。
+**第一優先：中心三次incidenceの形式的実現と全intrinsic変形の被覆。**
+指定巡回potential chartでは二次包絡の全Artin底・全次数flat性を解決した（`thm:artin-potential-envelope`）。
+中央tを係数とするpotential dg複体の各内部次数は有界有限自由で、特殊fiberの正次数homologyが消えるため、perfect複体の最小模型で証明する。四三次syzygyの全係数恒等式も別途確認した。相対Koszul14641・双対性・左右noetherian性が従う。
+中央三次gの持上げが存在すれば、特殊fiberの正則性から商も全次数flatとなる。
+ただし一般dg/Abel変形がこの巡回potential・中央t chartへ入るとは未証明であり、中心三次の全8方向同時持上げとH3認識も別問題である。
+次は105×40中心incidenceの8方向について二次障害を厳密に求め、8変数の同時形式族を構成する。一次rank22だけから形式smooth性を結論しない。
 
 **第二優先：8次元一般表示族の代数化とH3開部分。**
 Hesse曲線と平行移動点の相対二次元底、対称低次ポテンシャル、中央三次線を使う有限提示incidenceを構成する。
@@ -78,7 +77,7 @@ python3 computations/quantum_cubic_component/verify_all.py
 latexmk -lualatex papers/quantum_cubic_component.tex
 ```
 コードと小証明書は同じ専用ディレクトリに置き、統合結果はその `validation.json` に再生成する。
-通常の証明であるArtin再構成を計算PASSと同一視しない。既存5検証器は厳密演算で再実行した。
+通常の証明であるArtin再構成を計算PASSと同一視しない。既存7検証器は厳密演算で再実行した。
 今回の独立原稿をLuaLaTeXで組版する。巨大な既存H3原稿全体の再組版・網羅再検証・独立査読は対象外。
 Git追跡対象は現行TeX・Markdown・Python・小JSONのみ。PDF・ZIP・中間物・cacheは含めない。
 生成・検証結果はコードと文書に、GitHub refの到達確認は保存時の応答に分けて記載する。

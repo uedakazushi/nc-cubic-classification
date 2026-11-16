@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "version": "triangle-component-v4",
+  "version": "triangle-component-v5",
   "status": "PASS",
   "python": "3.12.14",
   "sympy": "1.14.0",
@@ -28,6 +28,10 @@
     },
     {
       "script": "verify_cubic_obstruction.py",
+      "status": "PASS"
+    },
+    {
+      "script": "verify_universal_cubic_syzygies.py",
       "status": "PASS"
     }
   ],

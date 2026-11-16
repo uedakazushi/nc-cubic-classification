@@ -1,6 +1,6 @@
 # 研究方針：H3分類と量子三次曲面を含む既約成分
 
-2026-11-17 / research-plan-v33 / triangle-component-v3。
+2026-11-17 / research-plan-v33 / triangle-component-v5。
 **再開時は本書を最初に読む。GitHub mainが唯一の正本。**
 実行規則は `AGENTS.md`。既存の全H3分類の詳細と必要な式は
 `research/cubic_14641_classification.md`、`research/cubic_14641_codex_plan.md`、
@@ -57,9 +57,8 @@ Library既存ファイルは明示指示なしに削除しない。GitではPDF�
 また相対Serre作用が底変更に適合するsmooth proper dg変形では、反標準環は次数別有限自由、左右noetherianで、四一次生成元・六二次関係・一三次関係の表示を持つ。
 一般dg変形のheart存在、二次包絡のAS4性、三次核の正則正規性は結論していない。
 
-次は、二次関係の三次syzygyと高次Koszul複体を持ち上げ、二次包絡の平坦性・AS4性を証明する。
-R_Aの平坦性だけからQ(R_A)の平坦性を推論しない。その後、相対H3族の実現・代数性、
-滑らかな楕円境界を失う点を含む閉包の全境界・同型群oidを決定する。
+指定巡回potential chartでは、全Artin底で二次包絡の全次数平坦性・相対Koszul14641・双対性を証明した（`thm:artin-potential-envelope`）。有限自由potential dg複体と特殊fiberのacyclic性を使い、単なる低次数rankの外挿ではない。中央三次元の持上げが与えられれば商もflatである。一般のAbel/dg変形がこのchartに入ることは未証明。
+次は中心三次incidenceの8方向の二次障害を計算し、同時形式族とH3認識、相対代数性へ進む。滑らかな楕円境界を失う点を含む全大域境界・同型群oidも未完成である。
 八次元成分の一意性は現行の比較仮定付き定理であり、全成分の完全決定ではない。
 
 ## IV. 全H3分類で保持する成果と未解決領域
@@ -74,7 +73,7 @@ R_Aの平坦性だけからQ(R_A)の平坦性を推論しない。その後、�
 - スペクトル(1,3)は幾何学的分類、(3,1)と(2,2) mixed rank2は全Jordan型込みで排除。mixed rank4のP=0,Q=0は既知族へ認識。両top非零の残余は詳細分類ノートの現行frontierを読む。
 
 分類frontierは **classification-v202**。最後のL0非鏡開集合の正常行加群を自由rank10の核へ移し、全多項式恒等式と10回の局所化単元pivotを公開コードから厳密再生した。両top非零の全候補が消滅し、(2,2)/mixed rank4の全H3は全Jordan型込みで既分類の曲がったClifford族に一致する。詳細な被覆・AS4点での底変更の証明は `papers/sections/cubic_order2_22_secant_L_complete.tex`。この領域の完成を全H3分類と同一視しない。
-成分研究では、三次の二次関係挿入45×48行列を44×44単元minorで整理し、包絡の三次平坦性を四つの係数の消滅へ帰着した。全次数平坦性を別途仮定すれば三次核は自動的に左右正則正規な主イデアル。20巡回potential方向の80個の斉次一次overlapは全て零と検証済み。高次flat性・全intrinsic被覆は未完成。
+成分研究では、三次の二次関係挿入45×48行列を44×44単元minorで整理し、包絡の三次平坦性を四つの係数の消滅へ帰着した。全次数平坦性を別途仮定すれば三次核は自動的に左右正則正規な主イデアル。20巡回potential方向の80個の斉次一次overlapは全て零と検証済み。指定potential chart内の高次flat性は上記定理で解決した。全intrinsic被覆は未完成。
 全CY被覆、三固有値以上、全成分とintrinsic族降下も未完成である。
 
 ## V. 再現・関連研究
@@ -85,7 +84,7 @@ python3 -m pip install -r computations/quantum_cubic_component/requirements.txt
 python3 computations/quantum_cubic_component/verify_all.py
 latexmk -lualatex papers/quantum_cubic_component.tex
 ```
-検証証明書は `computations/quantum_cubic_component/validation.json`。5検証器は厳密演算で再実行済み。
+検証証明書は `computations/quantum_cubic_component/validation.json`。7検証器は厳密演算で再実行済み。
 Artin再構成は通常の数学的証明であり、計算PASSと区別する。独立原稿をLuaLaTeXで組版し、既存H3主原稿全体は再組版していない。
 全H3分類の再現手順は `research/cubic_classification_validation.json`、例は `python3 computations/verify_cubic_skew_jets.py`。
 

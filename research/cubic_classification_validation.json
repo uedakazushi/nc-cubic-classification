@@ -2116,5 +2116,24 @@
       "global H3 classification",
       "all components or intrinsic family descent"
     ]
+  },
+  "quantum_component_artin_potential_envelope_v203": {
+    "status": "ordinary proof added and typeset; seven exact component checkers PASS",
+    "proof": "papers/sections/quantum_cubic_quadratic_obstruction.tex",
+    "theorem": "thm:artin-potential-envelope",
+    "scope": "all local Artin cyclic-potential deformations of the specified quantum-so3 point; not all intrinsic deformations",
+    "external_input": {
+      "source": "Etingof-Ginzburg arXiv:0709.3593v4",
+      "location": "section 7.1 property (7.1.4), referencing Ginzburg Theorem 5.3.1",
+      "checked_this_session": "definitions and assumptions in sections 7.1-7.3; homogeneous CY quantum3space potential only"
+    },
+    "exact_validator": "computations/quantum_cubic_component/verify_universal_cubic_syzygies.py",
+    "certificate": "computations/quantum_cubic_component/universal_cubic_syzygies_certificate.json",
+    "not_claimed": [
+      "all intrinsic deformation coverage",
+      "central cubic lift in all eight simultaneous directions",
+      "relative H3 algebraicity",
+      "complete component classification"
+    ]
   }
 }
