@@ -1247,3 +1247,14 @@ canonical負topQ0の(2,2)/mixed rank4全H3を、全Jordan型込みで曲がっ�
 証明cubic_order2_22_secant_negative.tex、同stemの公開verifierは四つの閉/局所化linear ideal一致、rank2 Pfaffian ideal、非退化conicのfgId/det−1とxy/yx二次係数det−1/rho、平方全wneq0の元quartic関係汎関数と四minor gcdw13を厳密確認。Gaussian値でのrankはminor位置の設計にだけ使い、最終公開証明はQQ[w]多項式恒等式と全値gcdで完結。新規性/独立査読は未確認。
 
 次は平方正Pfaffian。yshearでz5=q!=0 chartはA=((1−t²)/q,−t,q,0,t,q)の二paramへ還元。私的secant_square_general.pyで元三次/四次商と正常10minorを計算中（未公表・全値被覆未証明）。z5=0はz4²−z3²1、z3!=0ならshearでz00、z3=0ならz4±1/z0任意の境界を別に保持。非退化正Pfはrho非zero/±1と三係数quadric、rank2境界はA=(-c,-c,0,b,c,c),c!=0。全CY/三固有値以上/成分/相対降下は未完。
+
+
+## 平方secant正Pf共鳴の全pencil因子化（classification-v188）
+
+対称secant/平方正top/正Pfaffianのz5neq0共鳴z4=1/2を全パラメータで排除。yshearでz3=0へ全被覆しq=z5neq0。正常rank8二minor gcd定数*q10、六係数因子式(x+theta*y)*Q2が正常、theta係数行列の一2minor=256*q8で全q非零に非定数pencil写像。四次汎関数の極q±iはGaussian体上で元関係を再消去しrank8/因子像span2。properなprojective比例incidenceと包絡domain性により全正常pencilが一次因子を持つ。
+
+証明cubic_order2_22_secant_square_resonant.tex。検証器と小入力JSONはnormal two-minor位置、quadratic factor六係数、因子像rank2minor位置を含む。共通original-relation linear algebraは公開cubic_order2_22_secant_tools.pyへ分離し、nf3/nf4の各元関係消去恒等式も毎回検証。N kernelの特定二列に座標化すると4q⁴+12q²+3という不要な分母が出るが、それは選んだ座標の退化であり、因子像theta係数行列のunit minor256q8を使えばそのquartic例外を作らず全pencilを覆える。新規性/独立査読未確認。
+
+次は同じ平方正Pf主chartの共鳴外。A=((1−t²)/q,−t,q,0,t,q),qneq0。私的全二param消去はNF3分母2q²t、全NF4分母に複雑curveも出るが、正常minorに使う7汎関数(j=4,5,6,9,13,14,19)の極はq*t*(t²−1)*(q²−4t²+2)だけ。単一正常10minor=(2t−1)^4(2t+1)^4(2t²−1)/(16*q*t³*(t²−1)²*(q²−4t²+2)²)。genus2らしき全NF分母はこの7関数に不要なので扱わない。選択7関数全normalizer 28行でt=−1/2,±1/sqrt2の代替minorを探す計算中。残るF=q²−4t²+2=0はw=2t+qでt=(w+2/w)/4,q=(w−2/w)/2の有理一param。t0/±1各直線とq0境界、非退化正Pf、rank2secantも未完。全CY/三固有値/成分/相対降下未完。
+
+私的巨大generic左逆行列計算は出力を得ず終了したため再実行不要。7つの選択四次汎関数だけを使うことで不要な高次分母を既に除外できる。私的secant_square_general.pklのN/nf3/nf4はSymPy式へ変換して保存済み（native QQ(q,t) FracElementをpickleするとring内部辞書変更例外が出たため）。公開のsecant_toolsからmain式で再生成可能。

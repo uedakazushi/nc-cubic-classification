@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "version": "classification-v187",
+  "version": "classification-v188",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -99,7 +99,8 @@
     "papers/sections/cubic_order2_22_tangent_rank2.tex",
     "papers/sections/cubic_order2_22_Jordan_complete.tex",
     "papers/sections/cubic_order2_22_nonsymmetric_complete.tex",
-    "papers/sections/cubic_order2_22_secant_negative.tex"
+    "papers/sections/cubic_order2_22_secant_negative.tex",
+    "papers/sections/cubic_order2_22_secant_square_resonant.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -1952,6 +1953,23 @@
     "not_claimed": [
       "positive-Pfaffian secant H3 classification",
       "rank2 secant boundary exclusion",
+      "global H3 classification",
+      "intrinsic relative descent"
+    ]
+  },
+  "order2_22_secant_square_resonant_v188": {
+    "status": "PASS full original-relation rank8 cover, universal factor identity/unit coefficient-span minor and both Gaussian exceptions; no independent peer review claim",
+    "validator": "computations/verify_cubic_order2_22_secant_square_resonant.py",
+    "utility": "computations/cubic_order2_22_secant_tools.py",
+    "certificate": "computations/cubic_order2_22_secant_square_resonant_certificate.json",
+    "input": "computations/cubic_order2_22_secant_square_resonant_input.json",
+    "proof": "papers/sections/cubic_order2_22_secant_square_resonant.tex",
+    "scope": "対称secant/平方正top/正Pfaffianのz5neq0共鳴z4=1/2を全パラメータで排除。yshearでz3=0へ全被覆しq=z5neq0。正常rank8二minor gcd定数*q10、六係数因子式(x+theta*y)*Q2が正常、theta係数行列の一2minor=256*q8で全q非零に非定数pencil写像。四次汎関数の極q±iはGaussian体上で元関係を再消去しrank8/因子像span2。properなprojective比例incidenceと包絡domain性により全正常pencilが一次因子を持つ。",
+    "not_claimed": [
+      "square plus away from resonance",
+      "z5=0 boundary",
+      "nondegenerate positive top secant plus",
+      "rank2 secant boundary",
       "global H3 classification",
       "intrinsic relative descent"
     ]

@@ -1,0 +1,61 @@
+\subsection{平方secant正Pfaffianの共鳴pencilも全て分解する}
+\begin{theorem}\label{thm:h3-order2-22-secant-square-resonant-empty}
+平方正top・対称secant負top・正Pfaffianの必要atlasで、
+$z_5\ne0,z_4=1/2$ となる全領域にH3は存在しない。
+ここでも正常核は二次元であり、その全切断が一次因子を持つために排除される。
+$z_5=0$ と非共鳴領域、非退化正top及びrank2 cross境界は別に残る。
+\end{theorem}
+\begin{proof}
+$z_5=q\ne0$ とする。正側shearは表の係数を
+\[
+\begin{aligned}
+ z_0&\longmapsto z_0+k(q-2z_3)+k^2q,\\
+ z_3&\longmapsto z_3-kq,\qquad z_4\longmapsto z_4,\quad z_5\longmapsto q
+\end{aligned}
+\]
+と変える。従って $z_3=0$ にでき、全mainは
+\[
+ A=( (1-t^2)/q,-t,q,0,t,q),\qquad t=z_4
+\]
+で覆われる。$t=1/2$ の全 $q\ne0$ を扱う。
+
+元の全三次・四次関係から商汎関数を作る。
+三次汎関数の極は $q=0$ のみ、四次汎関数の極は $q=0,\pm i$ のみである。
+正常行列の二つの $8\times8$ minorのgcdは定数倍の $q^{10}$。
+一方、正二次商の六語基底
+\[
+ x^2,xy,yx,y^2,uv,vu
+\]
+に対して、入力JSONにある六係数二次式 $Q_2(q,\theta)$ は
+$\theta$ に関して次数高々2であり、
+\[
+ G(q,\theta)=(x+\theta y)Q_2(q,\theta)
+\]
+は正常三次となる恒等式を満たす。
+この正二次基底は、偶二関係から $u^2,v^2$ を単位係数で消せることにより、全 $q$ で有効である。
+
+$G$ の三次商座標を $\theta$ の係数ごとに並べた $10\times4$ 行列 $J(q)$ を作ると、
+指定した $2\times2$ minorは正確に $256q^8$ である。
+従って全 $q\ne0$ で、これらの正常三次の係数spanは少なくとも二次元。
+$q\ne\pm i$ では上のrank8 coverとAS4正三次次元10により、それが正常核全体となる。
+$q=\pm i$ はGaussian有理数体上で元の関係から改めて消去し、
+正常行列rank8、同じ因子式による三次像の係数span2を確認する。
+極をまたいだ形式的な特殊化でこの二点を処理したのではない。
+
+各 $q\ne0$ で、$\theta$ による因子式は正常pencilへの非定数写像を与える。
+固定した $q$ について、一次式・正二次式・正常pencilの三射影空間で積と正常式の比例条件を課すと、
+pencilへの射影はproperである。
+その像は稠密であり閉でもあるから、全pencilを覆う。
+閉incidenceが形式上許す零積は、仮定したH3包絡のdomain性により除かれる。
+従って正常核の全非零元が実際に一次因子を持つ。
+三次商でその一次・二次因子は非零なので、H3に必要な整域性に反する。
+
+検証器
+\[
+\texttt{verify\_cubic\_order2\_22\_secant\_square\_resonant.py}
+\]
+はshear被覆、元関係の全商汎関数、二rank8 minor、六係数因子identity、
+$256q^8$ の全値minor、及び二Gaussian例外点を厳密再生する。
+その共通線型消去実装は公開した小utilityに分離し、私的中間ファイルを再現の前提にしない。
+この共鳴分枝の排除を全secant型の分類と読み替えてはいない。
+\end{proof}
