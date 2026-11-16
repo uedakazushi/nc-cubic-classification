@@ -1315,5 +1315,19 @@
     ],
     "proof": "papers/sections/cubic_positive3_normalizing.tex",
     "scope": "正三次元(3,1)gamma0で全normalizing chartを単冪込みで排除した。PBW整列/14641比較からg∈Aut(T),g²=f²。g±fは先頭mu重複度2+2で除外、他は対角全排除またはq−1四元数反対角。後者の先頭140x20正常化行列にdet=-128+128iの固定20minorがあり、全補正でもW1=0。対角でmuW=idの非分裂extensionはDv=wからg(w)=w,2wv+d(w)=ell*w⇒v∈Q(T)で排除。従ってgamma0全H3候補はB/(W)=k<z,v>/(z²,v²)かつ中山extension分裂。残るJordan型は半単純またはW上Jordan2＋自明1。gamma非零は未被覆。"
+  },
+  "positive3_global_cross_v130": {
+    "status": "PASS exact anti-cyclic block and translation verifier; structural rank and plane restriction proof",
+    "validator": "computations/verify_cubic_positive3_global_cross.py",
+    "certificate": "computations/cubic_positive3_global_cross_certificate.json",
+    "proof": "papers/sections/cubic_positive3_global_cross.tex, thm:h3-positive3-global-cross",
+    "scope": "(3,1)gamma0かつmu半単純で、正三元anti-cyclic topとrank4 SchurからvをW移動し[v,ell]=0,v²∈T2を全域で導いた。v4=0、v3W非零、vvrowcross=(ell,-ell)、Schur Hcross=rk^t+kr^tの二対角block逆符号でkleft=kright、三v orbitの移動でcross全消去。Tは可換かq=-1に限る。他の量子/JordanではcentralizerT2(ell)=kell²ゆえcommuting平方factorで整域性矛盾。可換f±Iならellはcentral又はmu正常一次、q−1 fdiag(i,-i)ならell²はmu正常二次、v²とell²独立で両軸平方もmu正常。Jordan正Wとgamma非零は未包含。"
+  },
+  "positive3_commutative_plane_v131": {
+    "status": "PASS all-parameter degree3/4 quotient and full normalizer rank10 for both signs; structural normal-linear-quotient recognition",
+    "validator": "computations/verify_cubic_positive3_commutative_plane.py",
+    "certificate": "computations/cubic_positive3_commutative_plane_certificate.json",
+    "proof": "papers/sections/cubic_positive3_global_cross.tex, thm:h3-positive3-commutative-plane-exclusion",
+    "scope": "(3,1)gamma0かつmu半単純で可換共通平面も全排除。正常ell=uと補元tに対しv²=Au²+But+Ct²、C0は平方factor又は余分な[v,t]二次関係で矛盾、Cunitからv²=t²+Iu²へ正規化。B/uは正規一次商の線型Tor議論でKoszul AS3、muC=(t,v,-epsilon*z)。三次topから全商はv²=t²,zt=epsilon*tz,z²=alpha*(tv+vt)+beta*t²,alphaunitに限る。z尺度でalpha1。両epsilon±、全betaで45x10正常化行列に定数pivot10があり、誘導muB=(t,v,-z)正常三次は零。ゆえ元Gはuでfactorし非H3。残る半単純gamma0全候補はT=q−1,fdiag(i,-i)、[v,ell]0,v²∈span(x²,y²)でell²と独立。両軸平方がmu正常。"
   }
 }

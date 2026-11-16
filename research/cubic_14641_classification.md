@@ -783,3 +783,19 @@ H3係数locusはprojective conic bundleのrelative singular incidenceの像の�
 原稿lem:h3-positive3-quaternion-chart,thm:h3-positive3-full-normalizing-chart,cor:h3-positive3-two-square-quotient。fの非自明Jordanならg²=f²の平方根は±f、fscalar±IのJordan平面でもg±f、これらは二段Ore先頭mu外側(-,-)で元の(+,-)と矛盾。g−fの場合の外側交換Zhangtwistはhdet1でmu不変。可換fscalarの反射gと量子fdiag(a,a^-1)のgdiag(a,-a^-1)はv128全対角排除、q−1の反対角g²−Iは尺度でvx=yv,vy=-xv,zx=i xz,zy=-i yz。r=v+z,s=v−z PBW全overlap一致、140x20正常化matrix固定20minor=-128+128i、全低重み補正除外。verify_cubic_positive3_antidiagonal.py/certificate厳密PASS。対角残りWµidではDv=w∈W、cross微分wt=g(t)w、t=wでg(w)=w、平方微分2wv+d(w)=ellw、v/h商体落ち矛盾でmu全体半単純。全normalizingchart空よりgamma0の一平方投影rank1はcross可逆なら全chart排除、退化なら商体lemmaで排除、rank0/一片平方は指数増大商。rank2だけ残り二平方商。非分裂Jordantensorの既存18恒等式を符号に依存せず適用するとzz/vv二列比例で平方像rank<=1となりrank2と矛盾、よってextension分裂。既存nonsplit_tensor/plane_matrices両検証を今回再実行PASS。全(3,1)被覆/排除としない。
 
 次の具体的案（未証明）：gamma0半単純で正三元制限topはanti-cyclic、v4係数は常に零。二平方projectionrank2からv3W非零、vvrowcrossは[v,ell]型。rank4 Schurと二cross対角blockの逆符号から、vをW移動し[v,ell]=0かつv²∈T2という正側cross標準形が得られる見込み。量子q!=+-1/Jordanはcentralizer(v²,ell)=k ell²でcommuting平方factorのため排除候補。T可換又はq−1が残り、positive normalaxisまたはnormalquadratic重みでW1を調べる。正側cross標準形はまだ検証前なので定理には使わない。
+
+
+## 正三次元半単純gamma0の全cross標準形と二平面制限（classification-v130）
+
+(3,1)gamma0かつmu半単純で、正三元anti-cyclic topとrank4 SchurからvをW移動し[v,ell]=0,v²∈T2を全域で導いた。v4=0、v3W非零、vvrowcross=(ell,-ell)、Schur Hcross=rk^t+kr^tの二対角block逆符号でkleft=kright、三v orbitの移動でcross全消去。Tは可換かq=-1に限る。他の量子/JordanではcentralizerT2(ell)=kell²ゆえcommuting平方factorで整域性矛盾。可換f±Iならellはcentral又はmu正常一次、q−1 fdiag(i,-i)ならell²はmu正常二次、v²とell²独立で両軸平方もmu正常。Jordan正Wとgamma非零は未包含。
+
+原稿thm:h3-positive3-global-cross。n(vell−ellv)をvvrowcrossとし、zz/q0coordの2x2blockでSchur。zz-cross0かつinverseqq0なのでcross-cross/vv-cross/vvdiagは変わらず残りrank2。r=(ell,-ell)からHcross=rk+kr、anti-cyclicでBRR=-BLL⇒k=(s,s)。crossC=ell s^t−s ell^t、vvWW=-C。vold=vnew−s/nによりvvv ell orbit(n,-n,n,-n)からAshift=-n(ell t+t ell),Cshift=-n(ell t−t ell),vvWWshift=+n(ell t−t ell)、全消去。[v,ell]0、crossrowからv²∈T2。量子q!=+-1/Jordan centralizer一次元で平方factor、可換又はq−1だけ残る。q−1 ell²/v²独立から両軸平方を線型復元してvcomm、zは両平方反転するのでmu正常二次。verify_cubic_positive3_global_cross.py/certificateでblock/三v項の実際の基底変更/centralizers/平方重み全係数厳密PASS。
+
+
+## 正三次元可換共通平面の全排除（classification-v131）
+
+(3,1)gamma0かつmu半単純で可換共通平面も全排除。正常ell=uと補元tに対しv²=Au²+But+Ct²、C0は平方factor又は余分な[v,t]二次関係で矛盾、Cunitからv²=t²+Iu²へ正規化。B/uは正規一次商の線型Tor議論でKoszul AS3、muC=(t,v,-epsilon*z)。三次topから全商はv²=t²,zt=epsilon*tz,z²=alpha*(tv+vt)+beta*t²,alphaunitに限る。z尺度でalpha1。両epsilon±、全betaで45x10正常化行列に定数pivot10があり、誘導muB=(t,v,-z)正常三次は零。ゆえ元Gはuでfactorし非H3。残る半単純gamma0全候補はT=q−1,fdiag(i,-i)、[v,ell]0,v²∈span(x²,y²)でell²と独立。両軸平方がmu正常。
+
+原稿thm:h3-positive3-commutative-plane-exclusion。C=hのt²係数が0でut係数非零なら[v,v²]=Bu[v,t]0、整域性で[v,t]0となるがR_evenは[u,t],[u,v],v²-hと非零z²係数の一本しかなく余分なpurepositivequadを許さない。u正常regularlinearなのでC3=B/uは0B(-1)->B->C3とTor leastoffdiagでKoszul、HS3、ASGor/FrobからAS3。偶関係dim2/odd1とpositive一次dim2によりtopの元muB反転指標は+（奇なら二positive縮約がodd1へ入りrank欠損）。topz²v0はuniqueoddzt関係から。positivecyclicbinarytopのv縮約はBm²+C(mv+vm)+Dv²、purepositivequad v²-t²一本なのでC0,B=-D,Dunit。t縮約でz²=alpha{t,v}+beta t²,alphaunit。全beta両epsilonの次数3/4商を元の三関係からconstantpivotで10/15基底、正常muB(t,v,z)=(t,v,-z)行列45x10 constantpivot10で全kernel0。verify_cubic_positive3_commutative_plane.py/certificateはsampleではなく全係数恒等式PASS。muCはepsilonで異なるので、この核をmuC自身のW1と混同しない。GimageC0ゆえG=uQ factor。
+
+残るq−1部分の次案（未証明）：ell軸又はell非軸に分ける。軸ell=xではvcommx,v²=gx²+hy²,hunit。双対F=E/(zeta)は明示Frob対合det∝hなのでv125でpositive AS3 SがBへ埋まる見込み。非軸はell=x+y,v²=gX+hY,h!=g、m=x−yでm²=ell²,{ell,m}=4/(g−h)v²−2(g+h)/(g−h)ell²、positive Sは上のepsilon+AS3商と同形でFrob top非退化が示せそう。S埋込み後、z²はWを反転するpositive二次なのでantiW2線型核からxyと[m,v]の二係数形に絞る。軸では正規xの重みで正常Gのzvz項が消え、Sの非零二次K=[y,v]がpositive全三元と反可換ゆえcentreS3零となってH3排除が見込まれる。非軸ではzvz項が残り得るので独立に検算する。これらは次の段階まで未証明扱い。

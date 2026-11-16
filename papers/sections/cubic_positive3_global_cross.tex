@@ -1,0 +1,151 @@
+\subsection{正三次元半単純部分のcross標準形と残る二平面}
+\label{subsec:h3-positive3-global-cross}
+\begin{theorem}\label{thm:h3-positive3-global-cross}
+重複度$(3,1)$のH3包絡で中山作用が半単純、共通平面式の$\gamma=0$とする。
+残る正生成元$v$を$W$だけ平行移動すると、ある$0\ne\ell\in W$により
+\[
+ [v,\ell]=0,\qquad v^2\in T_2
+\]
+となる。$v^2$と$\ell^2$は一次独立である。
+共通AS2平面$T$は、可換平面または量子平面$xy=-yx$に限られる。
+\begin{enumerate}
+\item 可換平面では$f=I$または$-I$であり、$\ell$はそれぞれ中心元、
+ または正常化作用$\mu_B$を持つ正規一次元である。
+\item 量子平面$-1$では$f=\operatorname{diag}(i,-i)$、$i^2=-1$とできる。
+ $\ell^2$は正常化作用$\mu_B$を持つ正規二次元である。
+ さらに両軸の平方$x^2,y^2$は全ての正生成元と可換、$z$と反可換である。
+\end{enumerate}
+この定理は正二平面上のJordan型、および$\gamma\ne0$を含まない。
+\end{theorem}
+\begin{proof}
+正三次元上の四次topはanti-cyclicなので$v^4$係数は零である。
+偶flattening$H$は対称で階数4。
+系\ref{cor:h3-positive3-two-square-quotient}により二平方投影は階数2であり、
+その核のcross部分は一本、両射影は非零である。
+一方が零なら$v,z^2$が$T$の商体へ落ち、商体補題に反する。
+$v^3W$成分は非零である。
+もし零なら$v^2$行は$W^2$内の関係$q_0$の倍数となり、$z^2$行と従属して
+二平方投影の階数2に反する。
+anti-cyclicityにより$v^2$行のcross部分は
+$n(v\ell-\ell v)$、$n\ne0$となる。
+
+$z^2$と$q_0$に対応する一つの$W^2$座標の二次元blockでSchur補完を取る。
+残りの階数は2であり、$z^2$--cross blockが零なのでcross--cross blockは変わらない。
+$v^2$対角成分も零、$v^2$--cross行も$nr$、$r=(\ell,-\ell)$のままである。
+従ってcross--cross blockは$r k^t+k r^t$に限られる。
+anti-cyclicityは$vW,vW$と$Wv,Wv$の二対角blockを互いの逆符号にする。
+$\ell=(1,0)$、$k=(a,b,c,d)$と書くと、この条件は
+\[
+ \begin{pmatrix}2(a-c)&b-d\\b-d&0\end{pmatrix}=0
+\]
+なので$k=(s,s)$となる。
+そのcross非対角blockは$\ell s^t-s\ell^t$、
+$v^2$--$W^2$ blockはその逆符号である。
+$v_{\mathrm{old}}=v_{\mathrm{new}}-s/n$という基底変更で、
+$v^3\ell$のanti-cyclic四項から生じる補正がこれら全blockを消す。
+従って$v^2$行は純粋な$[v,\ell]$、crossのある行は非零$v^2$係数と$W^2$成分だけを持つ。
+これで表示した標準形を得る。
+
+$v$は$\ell$と可換だから$v^2$は$\ell$の$T_2$内のcentralizerに入る。
+非可換Jordan平面、または量子パラメータ$q\ne\pm1$の平面では、
+このcentralizerは$k\ell^2$だけである。
+量子平面の非軸$\ell$は尺度変更で$x+y$とでき、係数行列の二次小行列式は
+$-(q-1)^2(q+1)^2/q^4$となる。軸の場合も$q^2\ne1$で同じ一次元性が従う。
+Jordan平面は正規軸とそれ以外の二場合の直接交換子計算による。
+従ってこれらの平面では$v^2=c\ell^2$となり、$v$と$\ell$が可換するため
+代数閉体上で平方差が一次因子へ分解して整域性に反する。
+同じ理由で、残る場合でも$v^2,\ell^2$は一次独立である。
+
+可換平面では$\mu_T=I=\mu_B|_Wf^2$より$f^2=I$。
+$\det f=1$なので$f=\pm I$である。標準形と合わせて$\ell$の正規性を得る。
+量子平面$-1$では$\mu_T=-I$、$f^2=-I$、
+$\det f=\operatorname{hdet}f=1$が反対角自己同型を除くので、表示した対角形となる。
+任意の$\ell\in W$の平方は$x^2,y^2$の線型結合で、$f$はそれを$-1$倍する。
+従って$\ell^2$は$W,v$と可換、$z$と反可換である。
+$v^2\in T_2$も$\ell$と可換なので$v^2\in\langle x^2,y^2\rangle$。
+これと$\ell^2$の独立性により$x^2,y^2$を両者の線型結合で表せるため、
+両軸平方も$v$と可換となる。$z$との反可換性は$f$から従う。
+\end{proof}
+
+\texttt{verify\_cubic\_positive3\_global\_cross.py}はSchur blockの符号、
+三つの$v$を持つ四項の基底変更による全cross block消去、
+量子/Jordan centralizerと平方の$f$重みを厳密検算する。
+ここで得た正規二次元だけから正常三次の因子化やH3排除を推論しない。
+
+\begin{theorem}[正三次元半単純側の可換共通平面は排除される]
+\label{thm:h3-positive3-commutative-plane-exclusion}
+前定理の仮定で$T$が可換であるH3は存在しない。
+従って$\gamma=0$かつ中山半単純の全$(3,1)$H3候補で
+\[
+ T=(xy=-yx),\qquad f=\operatorname{diag}(i,-i)
+\]
+であり、前定理の$[v,\ell]=0,v^2\in\langle x^2,y^2\rangle$と
+二つの独立な正常二次元$x^2,y^2$が存在する。
+この残る量子平面の場合を、本定理だけで排除したとはしない。
+\end{theorem}
+\begin{proof}
+可換平面と仮定し、$u=\ell$、$t\in W\setminus ku$を取る。
+$[v,u]=[t,u]=0$、$v^2=A u^2+B ut+C t^2$である。
+$C=0$の場合、$B=0$なら$v^2=A u^2$が因子化し整域性に反する。
+$B\ne0$なら$[v,v^2]=0$より$Bu[v,t]=0$、従って$[v,t]=0$となる。
+ところが二次関係の正三元部分との交わりは、
+$[u,t],[u,v],v^2-Au^2-But$の三本だけであり、
+これらと独立な$[v,t]$を含み得ない。
+実際、偶関係は四本で、残る一本は二平方投影により非零$z^2$係数を持つ。
+従って$C\ne0$であり、平方完成と尺度変更で
+\[
+ v^2=t^2+Iu^2
+\]
+とできる。
+
+$f=\epsilon I$、$\epsilon\in\{1,-1\}$なので、$u$は正規正則一次元で
+$uz=\epsilon zu$、他の正生成元と可換である。
+$C_3=B/(u)$と置く。正規商公式からAS Gorenstein次元3・parameter3を持ち、
+$H_{C_3}=(1-t)^{-3}$である。
+$0\to B(-1)\to B\to C_3\to0$は線型解消なので、
+命題\ref{prop:h3-order2-dual-hyperplane}と同じchange-of-ringsの最初の非対角Torの議論により
+$C_3$はKoszulである。その双対Hilbert値は$(1,3,3,1)$で、
+AS Gorenstein双対性によりFrobeniusとなり、従って$C_3$はquadratic AS3である。
+その中山作用は
+\[
+ \mu_{C_3}(t,v,z)=(t,v,-\epsilon z).
+\]
+
+$C_3$には$zt=\epsilon tz,v^2=t^2$があり、
+残る一本の偶関係は非零$z^2$係数を持つ。
+元の$z$反転に対する奇関係空間は一次元、正一次空間は二次元である。
+従ってtopの反転指標は$+1$である。
+もし$-1$なら正二行の縮約が奇関係の一次元空間に入り、topの非退化性に反する。
+よってtopは$z$を偶数個だけ含む。
+AS3の三次topで$z^2v$成分は零である。
+もし非零なら$z$での縮約に$zv$成分が現れ、唯一の奇関係$zt-\epsilon tz$に反する。
+正二元上のtopは通常のcyclic三次なので、その四係数を$A_0,B_0,C_0,D_0$と書くと
+$v$での縮約は
+\[
+ B_0t^2+C_0(tv+vt)+D_0v^2
+\]
+となる。この縮約は非零で、純正二次関係$v^2-t^2$の倍数であるため
+$C_0=0,B_0=-D_0,D_0\ne0$。
+$z^2t$の係数もtop非退化性から非零なので、$t$での縮約は
+\[
+ z^2=\alpha(tv+vt)+\beta t^2,\qquad\alpha\ne0
+\]
+となる。$z$を尺度変更して$\alpha=1$とする。
+
+ここで三生成元表示
+\[
+ v^2=t^2,\qquad zt=\epsilon tz,\qquad
+ z^2=tv+vt+\beta t^2
+\]
+の全三次について、正常化作用$(t,v,z)\mapsto(t,v,-z)$を持つ核は零である。
+これは両$\epsilon$、全$\beta$で成り立つ厳密な線型代数判定である。
+次数3・4の関係商は有理定数pivotだけでそれぞれ次元10・15の基底に落ち、
+三正常化式の45行10列行列にも定数pivot十個がある。
+\texttt{verify\_cubic\_positive3\_commutative\_plane.py}が
+元の三関係から全消去を再構成し、$\beta$による除算なしに全係数で検証する。
+この核は$\mu_{C_3}$自身の正常核であるとは限らず、
+元の包絡の正常化作用$\mu_B$が誘導する作用についての核である。
+
+従ってH3正常三次$G$の$C_3$への像は零であり、$G=uQ$、$Q\in B_2$となる。
+両因子は非零正次数なので$B/(G)$は整域でなく、H3に反する。
+\end{proof}

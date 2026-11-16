@@ -1,0 +1,26 @@
+{
+  "presentation": [
+    "v\u00b2=t\u00b2",
+    "zt=epsilon*tz",
+    "z\u00b2=tv+vt+beta*t\u00b2"
+  ],
+  "normalizer": "t->t,v->v,z->-z",
+  "checks": [
+    {
+      "epsilon": 1,
+      "degree3_dimension": 10,
+      "degree4_dimension": 15,
+      "normalizer_constant_pivot_rank": 10
+    },
+    {
+      "epsilon": -1,
+      "degree3_dimension": 10,
+      "degree4_dimension": 15,
+      "normalizer_constant_pivot_rank": 10
+    }
+  ],
+  "parameter_scope": "all beta over any characteristic-zero field, epsilon=+1 or-1; all reductions divide only rational constants",
+  "conclusion": "No nonzero degree3 normalizer exists in either epsilon-family.",
+  "application": "Every (3,1) semisimple gamma0 H3 candidate with commutative common plane has G divisible by its normal positive linear ell, hence is excluded.",
+  "scope": "Universal degree3/4 relation quotients and full cubic-normalizer rank checked. Recognition of the quotient family and H3 exclusion are structural proofs."
+}

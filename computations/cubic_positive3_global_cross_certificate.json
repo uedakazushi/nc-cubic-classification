@@ -1,0 +1,10 @@
+{
+  "hypotheses": "H3 multiplicities(3,1), gamma=0, actual Nakayama semisimple",
+  "normal_form": "after a W-translation of v, [v,ell]=0 and v\u00b2 in T2, ell!=0",
+  "Schur_block": "r=(ell,-ell); rank2 residual gives Hcross=r*k^t+k*r^t; anti-cyclicity forces kleft=kright",
+  "translation": "v_old=v_new-(a*ell+b*m)/n kills the full cross-cross and vvWW blocks",
+  "plane_restriction": "T is commutative or the minus-one quantum plane; all other AS2 planes force a commuting square factor",
+  "commutative_case": "f=+I or-I, so ell is respectively central or normal with normalizer mu_B",
+  "minus_one_case": "f=diag(i,-i); ell\u00b2 has normalizer mu_B, and v\u00b2 is independent of ell\u00b2; both axis squares commute with all positive generators and anticommute with z",
+  "scope": "Block/translation, exact centralizer and square-weight identities checked. Rank/square-quotient and global plane restrictions use the manuscript proofs. Positive-W Jordan and gamma!=0 remain outside this theorem."
+}
