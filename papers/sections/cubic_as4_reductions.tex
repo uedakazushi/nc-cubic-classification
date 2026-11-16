@@ -2584,6 +2584,142 @@ $v$ の作用が $b/2+q$ と $b/2-q$ を交互に取る点加群である。
 自己1・交差2・重根3の次元を厳密再生する。
 これは一般の特異中心に対する未証明の禁止原理を使わず、具体的なExtとSerre双対で排除したものである。
 
+\begin{theorem}[全候補の大域的conic bundleとClifford order]
+\label{thm:h3-order2-global-conic-bundle}
+$\Delta_{\mathrm{AS}}e\ne0$ とする。$S=\mathbb F_1$ の負切断を $E$、fibreを $F$、
+scroll偏極を $L=\OO_S(E+2F)$ と書く。
+標準scroll座標を
+\[
+ Y=\lambda s^2,\quad J=\lambda st,\quad P=\lambda t^2,\quad
+ B_0=\mu s,\quad T=\mu t
+\]
+と取る。ここで $\lambda,\mu,s,t$ はそれぞれ
+$\OO(E),\OO(E+F),\OO(F),\OO(F)$ のsectionである。
+階数3の束 $\mathcal V=\OO(F)\oplus\OO\oplus\OO$ 上の $L$ 値二次形式を
+\begin{equation}\label{eq:h3-order2-global-conic-matrix}
+ q=\begin{pmatrix}
+ \lambda&0&\mu/2\\0&X&A/2\\\mu/2&A/2&H
+ \end{pmatrix},\qquad
+ \begin{gathered}
+ X=(\mu s-\lambda(dt^2+fs^2))/e,\\
+ A=a\lambda t^2+bX+c\lambda s^2,\quad H=gX+h\lambda s^2
+ \end{gathered}
+\end{equation}
+で定めると、$\widetilde{R^{(2)}}$ はそのeven Clifford order $\mathcal C_0(q)$ に等しい。
+従って全候補で $\mathcal C_0(q)$ は $S$ 上局所自由階数4。
+odd部分のsheafも $\mathcal C_1(q)$ で局所自由階数4となる。
+形式はどの点でも零でないので、$q=0$ のconic bundleは平坦である。
+
+全候補で $Z(R^{(2)})=C$ が成立する。さらに $R$ が整域であることは、
+$q$ のgeneric even Clifford代数がquaternion division algebraであることと同値である。
+\end{theorem}
+\begin{proof}
+$p,u,w,v$ の全反交換子は $R$ で中心となり、その四変数Clifford行列は
+\[
+ M_4=\begin{pmatrix}
+ P&0&J&T/2\\0&X&0&A/2\\J&0&Y&B_0/2\\T/2&A/2&B_0/2&H
+ \end{pmatrix}.
+\]
+scroll関係により、そのradicalは
+\[
+ (-J,0,P,0),\quad(-Y,0,J,0),\quad(-B_0,0,T,0)
+\]
+が生成する線束である。
+標準parametrizationでは同じ線が $(-s,0,t,0)$ で生成され、
+これは $\OO(-F)\subset\OO^4$、商が表示した $\mathcal V$ となる。
+$p=t\ell,w=s\ell$ と書けば $\ell,u,v$ 上に降りる形式は正確に $q$ である。
+上の三つの線型関係は $R$ でも
+$-Jp+Pw=0,-Yp+Jw=0,-B_0p+Tw=0$ と成立する。
+逆に $\mathcal V$ のClifford表示では $pw=J$ と元の全関係が成立するので、
+これらは局所的に相互に逆な表示であり、even/odd Clifford sheafの同定を得る。
+その基底定理から
+\[
+ \mathcal C_0=\OO\oplus(\bigwedge^2\mathcal V)\otimes L^{-1},\qquad
+ \mathcal C_1=\mathcal V\oplus(\bigwedge^3\mathcal V)\otimes L^{-1}
+\]
+はそれぞれ階数4で局所自由である。
+$E$ の外では $\lambda$ が非零、$E$ 上では $\mu$ が非零なので、$q$ はどこでも非零。
+従って各fiberは非零な平面二次式で、conic bundleは平坦である。
+
+graded頂点に余分なtorsionがないことも確認する。
+包絡は中心多項式環 $Z=k[P,X,Y,D]$ 上自由階数32であり、
+$G$ 倍写像による $0\to\mathcal B(-3)\to\mathcal B\to R\to0$ は $Z$ 上の自由解消。
+$G^2=B_0^2P-DY$ が $R$ を殺すので、$R$ は $Z$ 上深さ3である。
+従って偶/奇部分の $C$-local cohomologyも次数0,1,2では零となる。
+ここで $T^2=D,J^2=PY$ により $Z_+$ と $C_+$ のradicalは同じである。
+Serre--Grothendieck比較から両部分は上のClifford sheafのsection moduleに等しい。
+局所自由性とこの飽和性により $R$ は $C$ 上torsion-freeとなり、
+前定理の中心の正規性の議論が整域性を先に仮定せず適用できる。
+よって全候補で $Z(R^{(2)})=C$ である。
+
+$R$ が整域ならgeneric even Clifford代数は四次元の整域なのでdivisionである。
+逆にgenericでdivisionなら $P$ chartの自由Clifford orderはそのdivision環に埋まり整域となる。
+$P$ は局所自由なeven/odd sheafに正則であり、飽和性により $R$ 自身でも正則。
+従って $R$ は前述の整なskew Laurent chartへ埋め込まれ、整域である。
+\end{proof}
+
+\begin{proposition}[判別plane quarticと例外曲線上の一様な局所模型]
+\label{prop:h3-order2-plane-quartic}
+このconic bundleの判別因子の類は $3E+4F$ である。
+負切断を吹き下ろした平面の座標を $x=\lambda s,y=\lambda t,z=\mu$ とし、
+\[
+ Q=xz-dy^2-fx^2,\quad U=ea y^2+bQ+ec x^2,\quad V=gQ+eh x^2
+\]
+と置くと、判別因子は平面四次曲線
+\begin{equation}\label{eq:h3-order2-plane-quartic}
+ F_4=4QV-U^2-eQz^2=0
+\end{equation}
+のstrict transformである。
+標識点 $o=[0:0:1]$ は常に滑らかで、$\partial_xF_4(o)=-e$。
+$o$ 以外のrank-one conic fiberは正確に $Q=U=4V-ez^2=0$ で与えられる。
+また $E$ 上のorderは全候補で局所大域次元2である。
+\end{proposition}
+\begin{proof}
+$\det\mathcal V=\OO(F)$ より $\det q$ は
+$L^3\otimes(\det\mathcal V)^{-2}=\OO(3E+4F)$ のsectionである。
+直接計算で $F_4(\lambda s,\lambda t,\mu)=4e^2\lambda\det q$ を得る。
+平面式の $o$ での微分は表示した値なので、吹き下ろしの標識点に特異性はない。
+その外では一つのClifford座標を単位にして、残る二行列を
+\[
+ N=\begin{pmatrix}Q/e&U/(2e)\\U/(2e)&V/e-z^2/4\end{pmatrix}
+\]
+とできる。$\det N=F_4/(4e^2)$、rank-one fiberは $N=0$ に等しい。
+
+$E=(\lambda=0)$ では $\det q=-\mu^3s/(4e)$ なので、
+$s\ne0$ では非退化、$s=0$ の一地点だけがrank2で判別は単純に横切る。
+非退化点のClifford orderはAzumaya。
+rank2かつ単純判別の完備局所模型は、二次形式を単位と正則parameterへ対角化して
+$k[[x,z]]\rtimes\mu_2$（一変数 $z$ のみ符号反転）となる。
+従っていずれも局所大域次元2である。
+\end{proof}
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}order2\_\allowbreak{}conic\_\allowbreak{}bundle.py}
+は大域的kernel、降下した形式、四次判別式とrank-one locus、例外曲線の全係数恒等式を厳密確認する。
+判別四次曲線の平滑性だけをH3条件とせず、rank-one fiberを持つ節点も次に判定する。
+
+\begin{corollary}[構造対象の例外性と残る二条件]
+\label{cor:h3-order2-conic-recognition}
+$\Delta_{\mathrm{AS}}e\ne0$ の全候補で構造対象は例外的である。
+H3であるために残る必要十分条件は、generic even Clifford代数がdivisionであり、
+全ての完備局所Clifford orderが大域次元2を持つことである。
+\end{corollary}
+\begin{proof}
+構造対象は $\mathcal C_0$ 自身であり、
+\[
+ \mathcal C_0\simeq\OO\oplus\OO(-E-F)^{\oplus2}\oplus\OO(-E-2F)
+\]
+という基礎束を持つ。後二線束の全コホモロジーは零なので
+$\Ext^j(\mathcal C_0,\mathcal C_0)=k$ ($j=0$)、それ以外は零である。
+generic divisionは、generic加群圏における構造対象の長さ1、
+すなわちGabriel--Krull rank-one条件と同値であり、前定理により $R$ の整域性とも同値。
+局所有限大域次元が成立すれば、全coherent対象はperfectとなり、
+AS Gorenstein parameter 1・中山恒等による双対性 $S=(-1)[2]$ が全 $D^b$ へ延びる。
+従ってhomological dimensionは2で、逆Serreはheart上の正確な次数シフトとなる。
+noetherian性、有限中心によるExt有限性と$\chi$、飽和性、一次生成とArtin--Zhang豊富性、
+三次Hilbert値、二次包絡のAS4性は既に確認済みである。
+局所自由性とdivisionによるtorsion-free性も合わせてH3の全条件を得る。
+必要性はH3のrankとhomological dimensionから従う。
+\end{proof}
+
 \begin{lemma}[単冪twist下の反標準三次関係の輸送]
 \label{lem:h3-unipotent-transport}
 $C$は左右noetherian quadratic Koszul AS4型14641で，$\mu_C$は半単純とする．

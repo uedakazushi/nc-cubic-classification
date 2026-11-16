@@ -1,0 +1,35 @@
+{
+  "hypotheses": "eight-coefficient AS4 template, e!=0",
+  "scroll_coordinates": [
+    "Y=lambda*s\u00b2",
+    "J=lambda*s*t",
+    "P=lambda*t\u00b2",
+    "B0=mu*s",
+    "T=mu*t"
+  ],
+  "kernel_line": "(-s,0,t,0), with quotient (p,u,w,v)->(t*ell,u,s*ell,v)",
+  "vector_bundle": "V=O(F) + O + O on F1, quadratic form valued in L=O(E+2F)",
+  "quadratic_matrix": "[[lambda,0,mu/2],[0,X,A/2],[mu/2,A/2,H]]",
+  "form_coefficients": [
+    "X=(mu*s-lambda*(d*t\u00b2+f*s\u00b2))/e",
+    "A=a*lambda*t\u00b2+b*X+c*lambda*s\u00b2",
+    "H=g*X+h*lambda*s\u00b2"
+  ],
+  "discriminant_class": "3E+4F",
+  "plane_blowdown": [
+    "x=lambda*s",
+    "y=lambda*t",
+    "z=mu"
+  ],
+  "plane_conic": "Q=x*z-d*y\u00b2-f*x\u00b2",
+  "plane_quadrics": [
+    "U=e*a*y\u00b2+b*Q+e*c*x\u00b2",
+    "V=g*Q+e*h*x\u00b2"
+  ],
+  "plane_quartic": "F4=4*Q*V-U\u00b2-e*Q*z\u00b2",
+  "marked_point": "[0:0:1] is always smooth, partial_x F4=-e",
+  "rank_one_fibres": "Q=U=4V-e*z\u00b2=0 away from the marked point",
+  "exceptional_curve": "lambda=0 has rank>=2; discriminant meets it in one transverse rank-two point",
+  "non_double_conic_witness": "the x,z minor of Q is -1/4",
+  "scope": "Global kernel, quotient matrix, determinant and rank identities checked exactly. Clifford-sheaf identification and saturation are proved in the manuscript. Smooth conic-bundle/H3 equivalence is not inferred from these identities alone."
+}

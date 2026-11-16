@@ -1241,5 +1241,12 @@
     "certificate": "computations/cubic_order2_cone_obstruction_certificate.json",
     "result": "Every multiplicities(1,3) H3 candidate has e!=0. The cone locus e=0,d!=0 has self/cross Ext1 dimensions 1/2 for distinct roots, or Ext1=3 at its shift-fixed double root, contradicting H3 Serre duality/minimal-resolution ranks. Thus every H3 object in this spectral sector has center F1 and generic quaternion-division rank4.",
     "scope_limit": "All-chart Clifford bundle identification, full H3 admissibility and all arrows in the eight-coefficient family remain to be proved; other spectra and global/relative classification remain incomplete."
+  },
+  "order2_global_conic_bundle_v120": {
+    "status": "global Clifford-sheaf, saturation and recognition proof in manuscript; exact bundle/quartic identities executed",
+    "validator": "computations/verify_cubic_order2_conic_bundle.py",
+    "certificate": "computations/cubic_order2_conic_bundle_certificate.json",
+    "result": "Every e!=0 AS4 candidate has a locally free even Clifford order on F1 from V=O(F)+O+O with L=O(E+2F). Full centers and saturation hold without assuming quotient domain; quotient domain/GK rank-one are equivalent to generic quaternion division. The structure object is exceptional. Remaining H3 conditions are division and local order global dimension2. The plane-quartic discriminant, rank-one locus and automatic regularity along E are explicit.",
+    "scope_limit": "Smooth-conic-bundle/H3 equivalence and all-chart singular-fibre/Brauer tests are still unproved here, as are full arrows and global/relative classification."
   }
 }
