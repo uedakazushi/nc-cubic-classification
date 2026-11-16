@@ -1050,5 +1050,11 @@
     "certificate": "computations/cubic_order2_mixed_rank_certificate.json",
     "result": "For Nakayama eigenvalues {1,-1}, odd quadratic relation dimension is2 in multiplicities3+1/1+3 and2 or4 in2+2. With a one-dimensional block, relations preserve a common two-plane and form a partial Ore action of determinant equal to the three-dimensional eigenvalue.",
     "scope_limit": "Necessary relation/trace reduction only; even relations, normal cubics, existence and H3 admissibility remain."
+  },
+  "order2_adjacent_binary_quadric_v98": {
+    "status": "structural proof in manuscript; no new CAS execution claimed",
+    "proof": "papers/sections/cubic_as4_reductions.tex, corollary h3-order2-plane-quadric",
+    "result": "Every 3+1/1+3 order-two sector has q0(W)+gamma*z² with nondegenerate binary q0. If the three-dimensional eigenvalue is negative then gamma=0 and W generates a genuine quantum/Jordan plane. If gamma!=0, q0 is nonzero normal regular with normalizer f² and f(q0)=q0. All Jordan parts included.",
+    "scope_limit": "No AS3 existence or completeness of higher relations of the two-generator subalgebra when gamma!=0; no full order-two cubic incidence/admissibility."
   }
 }

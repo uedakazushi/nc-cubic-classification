@@ -134,7 +134,7 @@ $P(s,t)=(s-1)^c(t-1)^{4-c}$ となる。
 \end{proof}
 
 \begin{lemma}\label{lem:h3-binary-cubic-factors}
-二生成元・一二次関係の次数付き整域では、全ての非零斉次三次式は一次式の積に分解する。
+二生成元・一二次関係の次数付き整域では、正次数の全ての非零斉次式は一次式の積に分解する。
 \end{lemma}
 \begin{proof}
 関係の $2\times2$ 係数行列は可逆である。
@@ -683,6 +683,47 @@ $M$ が対称なら奇二次Frobenius対合も対称となり、
 従って $M-M^t$ は非零の交代 $2\times2$ 行列であり、
 $f(M-M^t)f^t=\varepsilon(M-M^t)$ から $\det f=\varepsilon$。
 中山作用が奇関係を保つことと $\mu_B(z)$ がスカラーであることから、$W$ も保存される。
+\end{proof}
+
+\begin{corollary}[一次元固有空間の隣の二次関係]
+\label{cor:h3-order2-plane-quadric}
+命題\ref{prop:h3-order2-mixed-rank}で三次元側の固有値を $\varepsilon$、
+一次元側を $kz$、共通二平面を $W$ とする。
+ある $q_0\in W\otimes W$ と $\gamma\in k$ に対し
+\[
+ q_0(W)+\gamma z^2=0
+\]
+が二次関係であり、$q_0$ の $2\times2$ 係数行列は可逆である。
+$\varepsilon=-1$、すなわち重複度 $(p,q)=(1,3)$ なら必ず $\gamma=0$。
+一般に $\gamma=0$ の場合、$W$ の生成する部分代数は
+量子平面またはJordan平面であり、$f$ はその自己同型である。
+$\gamma\ne0$ の場合、$T=\langle W\rangle\subset B$ における $q_0(W)$ は
+非零正規正則二次であり、
+\[
+ f(q_0)=q_0,\qquad q_0(W)w=f^2(w)q_0(W)\quad(w\in W)
+\]
+を満たす。ここでは $T$ のAS正則性や高次関係の完全性を主張しない。
+\end{corollary}
+\begin{proof}
+四次topの行 $zz$ は二次関係を与える。
+その $A\otimes A$ 成分は、奇flatteningの非対角ブロック
+$w_{a_i z z a_j}$ を巡回したものである。
+両射影の像は同じ $W$、$f$ とFrobenius行列 $M$ は可逆なので、
+この非対角ブロックも階数2で、行列の両像は $W$ に含まれる。
+巡回に現れる中山作用も $W$ を保存するから、行 $zz$ は
+可逆な係数行列を持つ $q_0(W)$ と $\gamma z^2$ だけからなる。
+純 $z^4$ の巡回式は $\gamma=-\mu_B(z)\gamma$ であり、
+$\mu_B(z)=1$ のとき $\gamma=0$ となる。
+
+$\gamma=0$ なら $T_0=k\langle W\rangle/(q_0)$ は二生成元AS2平面であり、
+$T_0\to B$ の核は零である。
+非零斉次核元があれば補題\ref{lem:h3-binary-cubic-factors}で一次式へ分解し、
+整域 $B$ 内で非零一次式の積が零になって矛盾するからである。
+$zw=f(w)z$ と $z$ の正則性により、$f$ と $f^{-1}$ は $T$ の関係を保存する。
+
+$\gamma\ne0$ なら $q_0(W)=-\gamma z^2\ne0$。
+$z$ は $T$ を $f$ で正規化するので、$z^2w=f^2(w)z^2$ より正規式を得る。
+また $zq_0=q_0z$ から $f(q_0)=q_0$ となる。
 \end{proof}
 
 \begin{lemma}[単冪twist下の反標準三次関係の輸送]
