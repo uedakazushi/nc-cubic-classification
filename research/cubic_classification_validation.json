@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "version": "classification-v181",
+  "version": "classification-v182",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -93,7 +93,8 @@
     "papers/sections/cubic_order2_22_tangent_negative.tex",
     "papers/sections/cubic_order2_22_tangent_plus_Ore.tex",
     "papers/sections/cubic_order2_22_tangent_Jordan.tex",
-    "papers/sections/cubic_order2_22_tangent_reverse_minus.tex"
+    "papers/sections/cubic_order2_22_tangent_reverse_minus.tex",
+    "papers/sections/cubic_order2_22_reverse_resonant.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -1861,6 +1862,24 @@
       "global H3 classification",
       "intrinsic relative descent",
       "independent peer review"
+    ]
+  },
+  "order2_22_reverse_resonant_v182": {
+    "status": "PASS universal rational identities, rank8 cover and factor incidence plus all exceptional and double-zero checks; no independent peer review claim",
+    "validator": "computations/verify_cubic_order2_22_reverse_resonant.py",
+    "certificate": "computations/cubic_order2_22_reverse_resonant_certificate.json",
+    "inputs": [
+      "computations/cubic_order2_22_reverse_resonant_minors.json",
+      "computations/cubic_order2_22_reverse_resonant_factor.json"
+    ],
+    "proof": "papers/sections/cubic_order2_22_reverse_resonant.tex",
+    "scope": "逆tangent正Pfaffian/非退化正topの共鳴z4=1を全z0,z5境界込みで排除。z5neq0はbeta一param、D=(beta−1)(beta+1)(2beta+1)(4beta+5)非零で正常核2次元、二8minor gcdD²。明示ell*Q2因子identityが正常pencilへ非定数写像を与え、projective比例incidenceのproper閉像から全Dopenのpencilを因数分解。四D例外も元関係でrank8/因子像span2を再検算。軸交換で片零境界を覆い、二重零点はell³−theta*C*ell=x³+theta³y³で全因子化。全正常核零ではなく全cut非domainによる排除。",
+    "not_claimed": [
+      "reverse plus away from resonance",
+      "reverse square rank2-cross boundary",
+      "other negative rank2 types",
+      "global H3 classification",
+      "intrinsic relative descent"
     ]
   }
 }

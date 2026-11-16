@@ -40,7 +40,7 @@ Rains・VdB・AS・anticanonical heartの一般次数比較は [nc-dp-surface-he
 
 **全体的なスペクトル制約（classification-v177）**：全(1,3)は幾何学的被覆・H3必要十分条件・全矢まで確定、全(3,1)は全Jordan型込みで空。(2,2) mixed rank2も全Jordan型込みで空。mixed rank4のcanonical正top P0全体は、退化境界と全Jordan型込みで固定非CY符号族へ完全に幾何学的認識、一般dim2/inertia mu2²。canonical負topQ0は全Jordan型込みで曲がったClifford族に認識。未知の(2,2)はP,Qとも非零で、Pはcomm⊙平方/comm⊙非退化quadの二型。非退化型のJordanはなく、平方型の非半単純には正側Jordanが必要。三固有値以上、全CY被覆、全成分・intrinsic族降下は未完。
 
-**次の核心（classification-v181）**：負tangent逆割当て/非退化正top/負Pfaffianを全Tneq0で排除。全graphは正x/yが負Vをf,gでnormalizeしfgId,detf=detg−1。xy,yxがu²/uv+vuを張るので負側Sym²Vが中心。補助x−y次数の奇成分に対しfの奇冪はdet−1でSym²を恒等にできず、包絡domain性と負二次式単射から正常三次が全て零。GWAの全高次被覆や有限標本外挿を使わない。 次はtangent逆割当て正Pfaffian。非退化正topのatlasはA=(z0,z1,-z4/2,z4/2,z4,z5), z0z5-z1z4-z4²/4=1。z0=z5=0ではx/y opposite-normalizing,fgId,detf1、正常奇成分はSym²fの有限奇位数共鳴に限る見込み。逆平方型はcross rank2 tangent pencilで別境界。負secant/非対称型、全CY/三固有値/成分/相対降下も未完。
+**次の核心（classification-v182）**：逆tangent正Pfaffian/非退化正topの共鳴z4=1を全z0,z5境界込みで排除。z5neq0はbeta一param、D=(beta−1)(beta+1)(2beta+1)(4beta+5)非零で正常核2次元、二8minor gcdD²。明示ell*Q2因子identityが正常pencilへ非定数写像を与え、projective比例incidenceのproper閉像から全Dopenのpencilを因数分解。四D例外も元関係でrank8/因子像span2を再検算。軸交換で片零境界を覆い、二重零点はell³−theta*C*ell=x³+theta³y³で全因子化。全正常核零ではなく全cut非domainによる排除。 次は逆tangent正Pfaffianの共鳴外z4neq1。z5neq0 mainはA=(1+beta*t+t²/4,beta,-t/2,t/2,t,1)の二param。私的reverse_general.pyで元三次/四次商汎関数と正常rank10を計算中（未公表・全値rankcover未証明）。消去分母と単一minor因子を調べ、必要なら有限例外曲線へ分解する。z5=0は軸交換でz0neq0をmainへ、二重零はopposite-normalizerの奇次数中心作用で直接判定できる見込み。逆平方rank2 tangent cross、負secant/非対称型、全CY/三固有値/成分/相対降下は未完。
 
 既存の主要な構造結果を維持する：
 

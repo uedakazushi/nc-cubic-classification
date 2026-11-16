@@ -1,0 +1,18 @@
+{
+  "quadratic_basis": [
+    "xx",
+    "xy",
+    "yx",
+    "yy",
+    "uv",
+    "vv"
+  ],
+  "coefficients": [
+    "2*B**2*theta**2 + 5*B*theta**2 + 2*B*theta + 2*B + 25*theta**2/8 + 5*theta/2 + 1/2",
+    "2*B**2*theta**2 + 11*B*theta**2/2 + 6*B*theta + 2*B + 15*theta**2/4 + 7*theta - 1",
+    "2*B**2*theta**2 + 3*B*theta**2/2 + 6*B*theta + 2*B - 5*theta**2/4 + 7*theta + 3",
+    "2*B*theta**2 + theta**2/2 + 2*theta + 2",
+    "4*B*theta**2 + 5*theta**2 - 4",
+    "2*B*theta**2 + 5*theta**2/2 - 2*theta + 2"
+  ]
+}
