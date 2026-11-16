@@ -1,0 +1,238 @@
+{
+  "version": "classification-v89",
+  "statement": "CY quantum affine four-space with no pure commutator has centre in degree3 of dimension at most1, spanned if nonzero by one pure cube. Every nonzero central cubic cut is a non-domain; no H3 envelope.",
+  "mixed_cubic_types": [
+    {
+      "monomial_exponents": [
+        0,
+        0,
+        1,
+        2
+      ],
+      "forced_unit_commutator_edge": [
+        2,
+        3
+      ]
+    },
+    {
+      "monomial_exponents": [
+        0,
+        0,
+        2,
+        1
+      ],
+      "forced_unit_commutator_edge": [
+        2,
+        3
+      ]
+    },
+    {
+      "monomial_exponents": [
+        0,
+        1,
+        0,
+        2
+      ],
+      "forced_unit_commutator_edge": [
+        1,
+        3
+      ]
+    },
+    {
+      "monomial_exponents": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "forced_unit_commutator_edge": [
+        0,
+        1
+      ]
+    },
+    {
+      "monomial_exponents": [
+        0,
+        1,
+        2,
+        0
+      ],
+      "forced_unit_commutator_edge": [
+        1,
+        2
+      ]
+    },
+    {
+      "monomial_exponents": [
+        0,
+        2,
+        0,
+        1
+      ],
+      "forced_unit_commutator_edge": [
+        1,
+        3
+      ]
+    },
+    {
+      "monomial_exponents": [
+        0,
+        2,
+        1,
+        0
+      ],
+      "forced_unit_commutator_edge": [
+        1,
+        2
+      ]
+    },
+    {
+      "monomial_exponents": [
+        1,
+        0,
+        0,
+        2
+      ],
+      "forced_unit_commutator_edge": [
+        0,
+        3
+      ]
+    },
+    {
+      "monomial_exponents": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "forced_unit_commutator_edge": [
+        0,
+        1
+      ]
+    },
+    {
+      "monomial_exponents": [
+        1,
+        0,
+        2,
+        0
+      ],
+      "forced_unit_commutator_edge": [
+        0,
+        2
+      ]
+    },
+    {
+      "monomial_exponents": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "forced_unit_commutator_edge": [
+        0,
+        2
+      ]
+    },
+    {
+      "monomial_exponents": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "forced_unit_commutator_edge": [
+        0,
+        3
+      ]
+    },
+    {
+      "monomial_exponents": [
+        1,
+        2,
+        0,
+        0
+      ],
+      "forced_unit_commutator_edge": [
+        0,
+        1
+      ]
+    },
+    {
+      "monomial_exponents": [
+        2,
+        0,
+        0,
+        1
+      ],
+      "forced_unit_commutator_edge": [
+        0,
+        3
+      ]
+    },
+    {
+      "monomial_exponents": [
+        2,
+        0,
+        1,
+        0
+      ],
+      "forced_unit_commutator_edge": [
+        0,
+        2
+      ]
+    },
+    {
+      "monomial_exponents": [
+        2,
+        1,
+        0,
+        0
+      ],
+      "forced_unit_commutator_edge": [
+        0,
+        1
+      ]
+    }
+  ],
+  "pure_cube_types": [
+    [
+      0,
+      0,
+      0,
+      3
+    ],
+    [
+      0,
+      0,
+      3,
+      0
+    ],
+    [
+      0,
+      3,
+      0,
+      0
+    ],
+    [
+      3,
+      0,
+      0,
+      0
+    ]
+  ],
+  "nontrivial_third_root_assignments_checked": 64,
+  "assignments_satisfying_all_CY_rows": 0,
+  "Q_source_commit": "a45f834f51a00c47443b51caf66abaf4629546b9",
+  "Q_constraint": "A*B + A*C*lambda - B*C*(lambda + 1) - lambda*(lambda + 1)/16",
+  "Q_skew_rho": [
+    "2*C",
+    "2*B/lambda",
+    "-2*A/(lambda + 1)",
+    "(-2*B + 2*C)/(lambda + 1)",
+    "(2*A - 2*C)/lambda",
+    "2*A - 2*B"
+  ],
+  "Q_CY_row_products_verified_mod_constraint": true,
+  "scope": "All literal FZ2 Q excluded conditional H3 domain/AS4. No full zero-commutator CY atlas coverage imported; arbitrary twists/cocycles are not treated by c=0 invariance."
+}

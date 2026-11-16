@@ -82,10 +82,36 @@ $w$ の群次数も零で、cocycle後の最高Frobenius pairingのNakayamaも�
 退化境界の任意Zhang twistの排除はここでは主張しない。
 \end{proof}
 
+\begin{lemma}\label{lem:cubic-cy-skew-zero-commutator}
+$B=k_{\mathbf q}[x_0,x_1,x_2,x_3]$ をCY skew多項式環とし、
+全 $i<j$ で $q_{ij}\ne1$ とする。
+このとき $Z(B)_3$ は零、または一本の純三乗 $kx_i^3$ である。
+従って $B$ はH3包絡にならない。
+\end{lemma}
+\begin{proof}
+規約を $x_i x_j=q_{ij}x_jx_i$、$q_{ji}=q_{ij}^{-1}$ とする。
+CY条件は各 $i$ について $\prod_{j\ne i}q_{ij}=1$ である。
+PBW単項式の各生成元との交換子は異なる単項式へ移るので、
+中心は中心的な単項式の線型包である。
+三次の混合単項式 $x_i^2x_j$ が中心なら、$x_i$ との交換から $q_{ij}=1$ となる。
+三変数の積が中心なら、その支持内の $x_i$ との交換式とCY式を比較して、
+欠けている第四変数 $x_k$ に対して $q_{ik}=1$ となる。
+従って混合単項式は全て不可能であり、純三乗しか残らない。
+
+二本の異なる純三乗が中心なら、それらの変数に接する五対の $q$ は三乗根となる。
+残る一対もCY式から三乗根となる。
+全 $q_{ij}\ne1$ より、原始三乗根 $\omega$ を固定して各 $q_{ij}=\omega^{\pm1}$ と書ける。
+各行の三つの指数の和が $0\bmod3$ であるには、その三つの符号が全て等しくなければならない。
+一行の符号を固定すると、反対称性により残る三行は全て逆の符号を持つことになり、
+その三行の間の反対称性に矛盾する。
+よって中心純三乗は高々一本である。
+非零中心三次 $G$ は純三乗なので、$B/(G)$ は整域でなく、H3の必要条件に反する。
+\end{proof}
+
 \begin{proposition}\label{prop:cubic-fs-shared-skew}
 同じ表示で $x_8=A_*,x_{11}=B_*,x_{15}=C_*$、他の $x_j=0$ とする
 共有係数表示FZ2は、その指定された全許容領域でskew多項式環である。
-従ってそのH3部分は既証のskew五型・31座標の分類に含まれる。
+さらに、その全域でH3包絡にならない。
 \end{proposition}
 \begin{proof}
 直接の行列積は $R=U+K\operatorname{diag}(f_0,\ldots,f_5)$ を与え、
@@ -108,7 +134,17 @@ FZ2の条件は
 \end{align*}
 後者は各 $1/2\pm f_j$ の非消滅そのものである。
 従って六対全てが可逆skew係数の関係となり、主張を得る。
-この認識にFZ2の全同型や全射影型被覆は不要である。
+また $q_j=(2f_j-1)/(2f_j+1)$ とすると、
+CYの四行の積は上の二次係数条件により全て1になる。
+各 $q_j-1=-2/(2f_j+1)\ne0$ なので、
+補題\ref{lem:cubic-cy-skew-zero-commutator}を適用できる。
+従って通常のQ表示にはH3がない。
+この認識と排除にFZ2の全同型や全射影型被覆は不要である。
+この補題の再現は
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}as4\_\allowbreak{}Q\_\allowbreak{}centre\_\allowbreak{}bound.py}。
+二十単項式の混合型を全て確認し、二本の中心純三乗から得る64通りの非自明三乗根指標と、
+Qの四つのCY行積恒等式を検証する。
+任意のtwistで零交換子条件が保たれるとは主張しない。
 \end{proof}
 
 六関係変換、最高tensor、境界normalityの全値証明書、

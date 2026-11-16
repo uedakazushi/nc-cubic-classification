@@ -349,3 +349,12 @@ FT2/FT3の全P_lambda,r両符号を排除した。全二変数商射影のD3=lam
 生成法の要点：Gaussian分数体でなく各語実/虚を隣接させたQQ(lambda,r)消去で三次・四次商を取得。元のQQ(lambda)[r]関係module GBの未完計算を反復しない。証明データは単項式係数列として保持し、巨大式のSymPy再展開を避ける。局所化した三変数moduleによる別法は180秒で未完、結果不使用。
 
 これで現在参照した四単純基点の共有係数境界の全列挙表示はPも含めて判定できたが、上流の全chart/CY被覆はまだ輸入していない。次はこの列挙と全H3包絡の関係を監査し、未被覆領域を特定する。非捩れqso3の正のadmissibility、全包絡被覆、大域成分・交叉、抽象族降下も引き続き未完。
+
+
+## 零交換子CY skewと通常Qの排除（classification-v89）
+
+四生成元CY skew多項式環で全q_ij!=1なら、中心三次は零か純三乗一本だけである。PBW重みにより中心は中心単項式の線型包。2+1型は平方変数との交換からq_ij1を強制し、1+1+1型はCY行積との比較で欠ける第四変数とのq1を強制する。二本の純三乗が中心なら全六対が三乗根となり、各行の三つの非自明三乗根指数が全て同符号となる必要と反対称性が矛盾する。よって全非零中心切断は純三乗でnondomain。
+
+FZ2のQについてR=U+K diag(rho)、q=(2rho−1)/(2rho+1)を元の式から確認し、四つのCY行積−1の分子がAB+lambda AC−(lambda+1)BC−lambda(lambda+1)/16で割り切れることを厳密確認した。q−1=−2/(2rho+1)なのでc=0。従って通常Qも全排除。標準cocycle後にq1が生じる場合はこの補題を適用せず、既存skew分類へ戻す。原稿cubic_as4_four_simple_exclusions.tex、再現verify_cubic_as4_Q_centre_bound.py。
+
+全零交換子CYの被覆監査はまだ別の課題。固定as4 a45f834f51a00c47443b51caf66abaf4629546b9のCY_COMPLETE、CI22_COMPLETE、IMAGE_REDUCTION、VERONESE_EXCLUSION、NONDEGENERATE_CHART、QUADRIC_PENCIL_PROJECTIONS、DEGENERATE_CHART_SECOND_QUADRICの論理を読み始めたが、これらの全必要被覆を新規輸入したとはしない。現在は階数六の二次関係を持つ六二次式系の退化微分像から第二二次関係を得るDC1–DC15の全枝を独立に検証し、CI(2,3)/CI(2,4)が消える幾何的核心を監査する。次いでVeronese除外、CI22七射影型と支持分岐の必要性だけを監査する。AS4十分性や全同型はH3排除のために輸入する必要がない。
