@@ -1062,3 +1062,10 @@ QQ p=q−1,eps+ではz2=z3=0、z0z5−z1z4=1。二対角torusとU/V軸交換で�
 ## QQ正Pfaffian分枝の全排除（classification-v164）
 
 零top QQ atlasのeps+全分枝をH3排除した。線型式/Pf非零からp−1又はq−1。二つの片側chartと交点SL2四係数を対角二torus/軸交換で正規化した全t chartで被覆。三chartの12PBW overlap全恒等0、正正常行列の四10minorは−8(t+1)²/t9、8(t−1)²/t9、1、−4。Bezoutで第一chartの全t非零を覆い、他chartは定数minor。交点の非分離族t0/t−1含む全境界を処理した。eps−とQJ/JQ、元非半単純への輸送は未完。
+
+
+## opposite-separated量子正平面の認識（classification-v165）
+
+正量子二元が負AS2平面をそれぞれ正規化するopposite-separated chartも全Jordan型で認識した。負commは正常二次係数がF/Gの一方Idを強制し、正平面commとなってGが正一次因子で割れる。負quantumの対角作用は既存skew分類、q−1反対角は中心平方と奇数乗から正常核零。負Jordanでは二次intertwiner det=(a+1)^3から例外a−1のみ、正中山式p1と奇偶条件で再び因数分解。従ってこのchartの全H3は固定符号包絡のみ。正Jordanのopposite-separated全体は範囲外。
+
+次の新着想（未採用）：P=Q0 canonical半単純CではA交代4x4が可逆。H_U/H_Vとも非自明単冪ならJ⊗JによるAの固定式は(z0,z1,0,0,0,0)だけでPf0。従ってHは片側のみ。正側単冪のみなら元BのG固定式からAS2次数3/1のshear固定核kx³/kxを使いGがx因子。負側単冪のみならmixedR4がut=f(t)u,vt=f(t)v+d(t)u、pureVquadはcomm+κu²となりOre表示。f²=muT/hdetf−1からTcommは反射でfactor、Tquantum≠1はmuTとの一次intertwiner零で純T3factor、TJordanはhdet符号矛盾。一般P=Q0全Jordan消滅として本文/検証器へ整える。

@@ -10,7 +10,7 @@
 
 **全体的なスペクトル制約（classification-v157）**：全(1,3)は幾何学的被覆・必要十分H3判定・全矢/慣性まで確定、全(3,1)は全Jordan型込みで空。(2,2)のmixed rank2も全Jordan型込みで空と確定した。最後の可逆secant必要曲面は七多項式四次汎関数の1008恒等式と単一10minor −2ell^15*rho^20*(rho+1)^15*(2rho+1)^2により全値排除し、ell0/共鳴fibreも既存全値検証で覆う。従って(2,2)はmixed rank4のみが残る。次は正top三型（零・comm⊙平方・comm⊙非退化quad）と全Jordan型の必要表示・正常三次を調べる。三固有値以上、全CY被覆、全成分/圏族降下は未完。
 
-**次の核心（classification-v164）**：零top QQ atlasのeps+全分枝をH3排除した。線型式/Pf非零からp−1又はq−1。二つの片側chartと交点SL2四係数を対角二torus/軸交換で正規化した全t chartで被覆。三chartの12PBW overlap全恒等0、正正常行列の四10minorは−8(t+1)²/t9、8(t−1)²/t9、1、−4。Bezoutで第一chartの全t非零を覆い、他chartは定数minor。交点の非分離族t0/t−1含む全境界を処理した。eps−とQJ/JQ、元非半単純への輸送は未完。 次はopposite-separatedの全H3認識とeps−/QJ/JQの基底変換被覆を証明し、P=Q=0の全半単純H3を判定する。単冪輸送を無条件H3保存と扱わない。
+**次の核心（classification-v165）**：正量子二元が負AS2平面をそれぞれ正規化するopposite-separated chartも全Jordan型で認識した。負commは正常二次係数がF/Gの一方Idを強制し、正平面commとなってGが正一次因子で割れる。負quantumの対角作用は既存skew分類、q−1反対角は中心平方と奇数乗から正常核零。負Jordanでは二次intertwiner det=(a+1)^3から例外a−1のみ、正中山式p1と奇偶条件で再び因数分解。従ってこのchartの全H3は固定符号包絡のみ。正Jordanのopposite-separated全体は範囲外。 次は零topの両側単冪Pfaffian矛盾と片側Jordan因子障害を証明し、全Jordanを半単純へ縮小する。eps−とQJ/JQの全基底変換被覆は別途確認する。
 
 classification-v12 では、積分した族の全次数平坦性・noetherian quadratic Koszul CY AS4 認識を、明示的な開集合 V={h∈H, (1-gamma²)≠0, Delta≠0} 上で証明した。入力は Iyudu–Shkarin Theorem1.1/Corollary6.1、EG形式変形定理、および64個の三次持上げ恒等式・256個の四次巡回恒等式・単元小行列式 -p^6 を確認した LBS 中心拡大定理である。中心三次の関係類の非消滅も巡回商の二係数で全パラメータについて確認した。gamma≠0 では低次数中心が0,0,1、滑らかな楕円THCR境界となり、全中心値の H3 判定は正確に一つの affine 中心切断の有限大域次元へ帰着する。定義体上超越的な全 D は H3。位数4の枝 gamma^4=1+h^3 では固定包絡の悪い D は有限であり、h=1,gamma=2^(1/4),A=1,B=C=0,beta=(-1,0,0),D=pi は明示的な非Clifford H3 対象となる。悪い値の全一覧・全内在的群oid・H3相対開性・降下・全包絡被覆は未解決。
 
