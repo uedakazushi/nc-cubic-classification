@@ -2398,6 +2398,108 @@ $\Delta_{\mathrm{AS}}\ne0$ でArtin Koszul Frobeniusとなり、双対の部分�
 九列正常化行列の全係数rank8を独立に厳密確認する。
 まだ必要なのは、この全候補の三次商のH3許容性と全幾何学的矢である。
 
+\begin{theorem}[全候補のscroll中心と逆Clifford chart]
+\label{thm:h3-order2-eight-scroll-order}
+$\Delta_{\mathrm{AS}}\ne0$ とし、$R=\mathcal B/(G)$ とする。
+$J=pw$, $T=pv+vp$ は $R$ で中心となり、
+\begin{equation}\label{eq:h3-order2-eight-scroll-center}
+ C=k[P,X,Y,J,T]/(J^2-PY,\ YT-B_0J,\ JT-B_0P),\quad B_0=dP+eX+fY
+\end{equation}
+から中心部分環への自然な写像がある。各生成元の次数は2とする。
+$(d,e)=(0,0)$ なら $R$ は整域でなく、H3ではない。
+$(d,e)\ne(0,0)$ ならこの写像は単射、$R$ は $C$ 上有限である。
+さらに $R$ が整域なら、偶Veroneseの全中心は正確に $C$（次数半分）であり、
+中心上一般階数4のquaternion division orderを与える。その中心曲面は
+\[
+ \operatorname{Proj}C\simeq
+ \begin{cases}
+ \mathbb F_1,&e\ne0,\\
+ \text{twisted cubic上の射影錐},&e=0,\ d\ne0.
+ \end{cases}
+\]
+後者の頂点の中心完備局所環は $k[[s,t]]^{\mu_3}$、作用は重み $(1,1)$ である。
+
+$P\ne0$ chartの次数零環は、中心
+\[
+ S=k[\kappa,t,z]/(\kappa t-d-ez-f\kappa^2)
+\]
+上の階数4のClifford環であり、
+\begin{equation}\label{eq:h3-order2-eight-P-chart}
+ r=up^{-1},\quad s=vp^{-1}-t/2,\quad
+ r^2=-z,\quad s^2=t^2/4-gz-h\kappa^2,\quad
+ rs+sr=-(a+bz+c\kappa^2).
+\end{equation}
+ここで $\kappa=J/P$, $t=T/P$, $z=X/P$。
+このchartの全中心は $S$ であり、$e\ne0$ では $S=k[\kappa,t]$ となる。
+\end{theorem}
+\begin{proof}
+包絡で既に $T$ は $p,u,v$ と可換する。
+Clifford--Ore関係から
+\[
+ [pw,v]=-G,\qquad[T,w]=2G,
+\]
+なので $J,T$ は三次商で中心となる。さらに包絡のままで
+\[
+ J^2=PY,\quad YT-B_0J=Gw,\quad JT-B_0P=Gp
+\]
+が成立する。
+$d=e=0$ なら $G=(T-fpw)w$ は非零の二次式と一次式の積となり、
+$R$ の一次・二次成分には追加関係がないため整域性に反する。
+
+以下 $(d,e)\ne(0,0)$ とする。
+$e\ne0$ なら $B_0$ を座標として $X$ を消去でき、
+\eqref{eq:h3-order2-eight-scroll-center}は行列
+\[
+ \begin{pmatrix}Y&J&B_0\\J&P&T\end{pmatrix}
+\]
+の三minor環である。これは既出のcubic scroll $S(1,2)$ の正規三次元環。
+$e=0,d\ne0$ なら $T'=(T-fJ)/d$ と置くと三関係は
+\[
+ J^2=PY,\quad YT'=PJ,\quad JT'=P^2.
+\]
+従って $C=k[X]\otimes k[s^3,s^2t,st^2,t^3]$、
+$(Y,J,P,T')=(s^3,s^2t,st^2,t^3)$ という正規環になる。
+いずれも次元3で、次数を1へ直すとHilbert級数は $(1+2t)/(1-t)^3$ である。
+
+$R$ では全四平方と全反交換子が $C$ に入り、$pw=J$ も中心である。
+四生成元のClifford書換えにより $R$ は $C$ の像上有限。
+もし抽象 $C$ からの核が非零なら、正規整域 $C$ の非零イデアル商は次元高々2なので
+$R$ のGK次元も高々2となる。しかし正則三次商のHilbert級数は
+$(1-t^3)/(1-t)^4$ でGK次元3、矛盾する。従って $C$ はそのまま埋め込まれる。
+
+次に $P$ を逆にする。$p$ も可逆なので、表示した $r,s,\kappa,t,z$ を取れる。
+三つのscroll関係から $Y/P=\kappa^2$、$B_0/P=\kappa t$ となり、
+包絡の六関係を計算すると\eqref{eq:h3-order2-eight-P-chart}を得る。
+逆にそのClifford環から
+\[
+ u=rp,\quad w=\kappa p,\quad v=(s+t/2)p,\qquad
+ p(r,s)p^{-1}=(-r,-s)
+\]
+とするskew Laurent拡大を作れば、元の六関係と $G=0$ を全て復元する。
+従ってchartは単なる商ではなく正確にこの自由階数4のClifford環である。
+
+その形式行列の行列式の四倍は
+\begin{equation}\label{eq:h3-order2-eight-local-discriminant}
+ 4z(gz+h\kappa^2)-zt^2-(a+bz+c\kappa^2)^2.
+\end{equation}
+$e\ne0$ で $z=(\kappa t-d-f\kappa^2)/e$ を消去すると、$t^3$ 係数は $-\kappa/e$ で非零。
+$e=0,d\ne0$ なら $\kappa$ が可逆で $t=d/\kappa+f\kappa$、
+上の式の $z\kappa^{-2}$ 係数は $-d^2$ で非零。
+従って分数体上の二変数Clifford形式は常に非退化で、その全中心は分数体自体。
+四基底と交わりを取るとchartの全中心は正確に $S$ となる。
+
+$R$ が整域なら $R^{(2)}$ は $C$ 上torsion-freeである。
+上のchartのgeneric algebraから、その中心分数体は $\operatorname{Frac}C$ に等しい。
+中心元は有限 $C$ 代数の元なので $C$ 上整、$C$ の正規性から全中心は $C$ となる。
+generic次数零環は中心上四次元の整域であり、従ってquaternion division algebraである。
+偶Veroneseと中心上のsheafificationにより、$\qgr R$ は表示した中心曲面上の
+一般階数4のcoherent orderの加群圏となる。
+この記述だけでorderの全局所大域次元を結論しない。
+\end{proof}
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}order2\_\allowbreak{}scroll\_\allowbreak{}order.py}
+は包絡での全中心恒等式、因子化障害、chartの逆代入、判別式と錐の表示を厳密再生する。
+残るH3判定には、整域性そのものと全中心chartの局所orderの解析が必要である。
+
 \begin{lemma}[単冪twist下の反標準三次関係の輸送]
 \label{lem:h3-unipotent-transport}
 $C$は左右noetherian quadratic Koszul AS4型14641で，$\mu_C$は半単純とする．

@@ -1227,5 +1227,12 @@
     "result": "For (a,d)!=(0,0), the eight-coefficient template is flat noetherian with an explicit Clifford-Ore model; it is Koszul AS4 iff the displayed binary-quadratic resultant is nonzero. On that locus mu=(p,-u,-w,-v), W1=kG, G=Tw-B0p, G²=B0²P-T²Y. The negative subalgebra is a genuine CY AS3 and all central polynomial coordinates are established.",
     "primary_source_checked": "Polishchuk–Positselski, Quadratic Algebras, Chapter2 Cor6.3 p37 (regular normal quadratic quotient preserves Koszulness, forward direction); RRZ normal quotient Nakayama formula",
     "scope_limit": "This is complete candidate-envelope/normal-cubic coverage for multiplicities(1,3), not H3 admissibility. Smoothness/rank/Serre/AZ recognition of all quotients, full arrows, other spectra and global/relative classification remain."
+  },
+  "order2_eight_scroll_order_v118": {
+    "status": "global conditional-center proof and exact inverse quaternion chart in manuscript; identities executed",
+    "validator": "computations/verify_cubic_order2_scroll_order.py",
+    "certificate": "computations/cubic_order2_scroll_order_certificate.json",
+    "result": "J=pw and T=pv+vp become central in R. The normal scroll ring C embeds and R is finite over C; if R is a domain, Z(R^(2))=C with generic quaternion-division rank4. The center is F1 for e!=0 or a twisted-cubic cone for e=0,d!=0. d=e=0 is excluded by factorization. The P-chart is exactly the displayed rank-four Clifford algebra.",
+    "scope_limit": "The quotient domain hypothesis is retained for equality of global centers. Cone-vertex smoothness, all-chart H3 admissibility, full arrows and other spectra are not settled."
   }
 }

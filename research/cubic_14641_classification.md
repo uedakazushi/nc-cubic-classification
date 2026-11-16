@@ -673,3 +673,15 @@ Rscript非零ならEbarはk[U,W,V]とquantum3(U,W,P)のk[U,W]上fiber productで
 正常三次G=T w−B0 p、G²=B0²P−T²Y、GのTw係数1、mu正常化全式を全八係数で確認。AS4/domain locusでは全W1はmu固定なので候補基底Pp,Xp,Yp,Tu,Tv,Tw,puv,puw,pvwの9本。係数行列46行9列は定数pivot8、残余零、Tw自由係数のみでW1=kGを全域で証明。負三元Clifford基底u^i v^j w^kはPBWの一部、自由中央KはPXYの可逆線型変換なので全次数埋込みも従う。その双対は可換三二次完全交叉E/(P)、従ってCY AS3。verify_cubic_order2_central_template.pyが全Ore/Clifford恒等式、G/平方、双対直交、resultant、全係数W1 rank8を厳密検算PASS。Koszul・Frobenius・正則列は本文構造証明。
 
 次の具体的着手：この全八係数AS4主開集合のR=B/(G)がH3になる必要十分条件を求める。正常三次だけでH3としない。中央h0=pwはRで中心となり、Tも中心、h0²=PY,TY=B0 h0,T h0=B0 Pというscroll型中心式が期待される。Pchartでr=u p^-1,b=v p^-1−T/(2P)のrank4 Clifford模型r²=−X/P,b²=T²/(4P²)−H/P,{r,b}=−A/Pを調べ、全中心・各chart・完備局所gldim2/障害・rankとSerre/AZを判定する。これら中心/局所式は次の版で逆模型とともに検証するまで許容性定理に使わない。
+
+## 全八係数商の中心scrollとPchart（classification-v118）
+
+原稿thm:h3-order2-eight-scroll-order。包絡で[pw,v]=-G,[T,w]=2G、J=pwとTはRで中心。J²=PY,YT−B0J=Gw,JT−B0P=Gp。d=e0ならG=(T−fpw)wが因子化しR非整域、H3を排除。その他は中心候補C=k[P,X,Y,J,T]/三minorが正規dim3、e!=0ならB0を座標にしてcubic scroll S(1,2)、e0,d!=0ならT'=(T−fJ)/dでC=k[X] tensor k[s³,s²t,st²,t³]。ProjCはF1又はtwisted cubic cone、後者頂点完備中心k[[s,t]]^mu3(1,1)。
+
+全反交換子と平方がCに入りRは有限、RのGK3によりCの追加核なし。R整域ならR2 torsion-free C、PchartgenericcentreがFracCなので全中心はC（有限代数の中央元は整、C正規）。evenRはgeneric rank4quaternion division order、qgrRは中心曲面上coherent order加群圏。中心の平滑性やorder局所gl2をまだ結論しない。
+
+Pchart S=k[kappa,t,z]/(kappa*t−d−e z−f kappa²)、kappa=J/P,t=T/P,z=X/P。r=u p^-1,s=v p^-1−t/2、r²−z,s²=t²/4−g z−h kappa²,{r,s}=−(a+bz+c kappa²)というrank4Clifford。逆模型u=rp,w=kappa p,v=(s+t/2)p、pはr/s反転、中心固定。e!=0でS=A²_(kappa,t)、e0,d!=0でS=Gm_kappa×A1_z。形式行列det四倍=4z(gz+h kappa²)−z t²−(a+bz+c kappa²)²。e!=0でt³係数−kappa/e、e0d!=0でz kappa^-2係数−d²なのでgeneric非退化、chart全中心も正確S。verify_cubic_order2_scroll_order.pyで包絡恒等式、factor障害、逆chart全関係、detと錐parametrizationを厳密検算PASS。
+
+次の具体的着手（未検証の局所障害案）：e0,d!=0の錐頂点をX=u²chartで調べる。S=p u^-1,W=w u^-1,V=v u^-1とすると中心P/X=-S²,Y/X=-W²、alpha=b−aS²−cW²、beta=−dS²−fW²、V²−alpha V+g−hW²0、SW=WS、{W,V}=alpha W−beta。tau=T/X=alpha S−{S,V}が中央、Gはtau W=beta S。頂点ではV²−bV+g0。b²−4g!=0なら二単純点がshiftで交換され、一次extension計算はExt1自己1・交差2となる見込みでSerre必要条件の全四成分同次元に反する。重根なら唯一単純のExt1が3、shift固定からExt2self1,高次0と合わせ最小自由解消Euler順位矛盾が見込まれる。正確なXchart逆表示とinfinitesimal extension線型計算を次に検証するまで、e0全域排除は定理に含めない。
+
+F1側の次案（未検証）：Rでは全pair anticommutatorsが中央なので四生成元Clifford形式行列[[P,0,J,T/2],[0,X,0,A/2],[J,0,Y,B0/2],[T/2,A/2,B0/2,H]]を取れる。scroll三minorからp/w方向のkernelは(-J,0,P,0),(-Y,0,J,0),(-B0,0,T,0)が生成する線直和となるはずで、quotient rank3 bundleのeven Clifford orderとして全chartを記述できる見込み。conic bundleの平滑性・rank低下とgeneric divisionを調べるが、未証明のNC JacobianやH3 opennessには依存しない。

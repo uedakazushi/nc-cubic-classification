@@ -1,0 +1,37 @@
+{
+  "hypotheses": "eight-coefficient AS4 template with nonzero AS resultant; R=B/(G)",
+  "central_quotient_elements": [
+    "P=p\u00b2",
+    "X=u\u00b2",
+    "Y=w\u00b2",
+    "J=pw",
+    "T=pv+vp"
+  ],
+  "center_relations": [
+    "J\u00b2=P*Y",
+    "Y*T=(dP+eX+fY)*J",
+    "J*T=(dP+eX+fY)*P"
+  ],
+  "exact_before_quotient": [
+    "[pw,v]=-G",
+    "[T,w]=2G",
+    "YT-B0*J=G*w",
+    "JT-B0*P=G*p"
+  ],
+  "factor_obstruction": "d=e=0 gives G=(T-f*pw)*w, so no quotient domain and no H3",
+  "P_chart_center": "S=k[kappa,t,z]/(kappa*t-d-e*z-f*kappa\u00b2)",
+  "P_chart_generators": [
+    "r=u*p^-1",
+    "b=v*p^-1-t/2"
+  ],
+  "P_chart_relations": [
+    "r\u00b2=-z",
+    "b\u00b2=t\u00b2/4-g*z-h*kappa\u00b2",
+    "rb+br=-(a+b_parameter*z+c*kappa\u00b2)"
+  ],
+  "inverse": "u=r*p,w=kappa*p,v=(b+t/2)*p; conjugation by p negates r,b and fixes kappa,t,z",
+  "branch_polynomial": "4*z*(g*z+h*kappa\u00b2)-z*t\u00b2-(a+b*z+c*kappa\u00b2)\u00b2",
+  "generic_nonzero_check": "For e!=0, after eliminating z the t\u00b3 coefficient of the branch polynomial is -kappa/e",
+  "global_center_if_R_domain": "The indicated normal scroll ring is exactly Z(R^(2)), generic order rank4. Its Proj is F1 for e!=0 and the cone over a twisted cubic for e=0,d!=0.",
+  "scope": "Central identities, inverse Clifford chart, branch polynomial and cone parametrization checked exactly. Finiteness and equality of the global center use the manuscript proof and the quotient domain hypothesis; no all-chart H3 admissibility is asserted."
+}
