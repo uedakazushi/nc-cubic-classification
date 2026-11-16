@@ -609,6 +609,82 @@ $-\sigma^2(L)\sigma(L)L=F_0$ である。
 定理\ref{thm:h3-two-eigenvalue-refined}と合わせれば結論を得る。
 \end{proof}
 
+\begin{proposition}[残る位数2領域の混合関係数]
+\label{prop:h3-order2-mixed-rank}
+H3包絡の中山固有値集合を $\{1,-1\}$ とし、
+一般化固有空間を $V=A\oplus C$、次元を $p,q$ とする。
+中山作用の半単純部分による奇二次関係の次元を
+\[
+ r=\dim\bigl(\mathcal R\cap(A\otimes C\oplus C\otimes A)\bigr)
+\]
+と置く。単冪部分があっても、次の表に限られる。
+\[
+\begin{array}{c|c|c}
+(p,q)&r&\operatorname{Tr}_B(\mu_B,t)\\\hline
+(3,1)&2&((1-t)^2(1+t^2))^{-1}\\
+(1,3)&2&((1+t)^2(1+t^2))^{-1}\\
+(2,2)&2\text{ または }4&(1+t^2)^{-2}\text{ または }(1-t^2)^{-2}
+\end{array}
+\]
+さらに一方が三次元の場合、その固有値を $\varepsilon\in\{1,-1\}$、
+他方の生成元を $z$ とすると、三次元空間に二次元部分空間 $W$ があり、
+奇関係はちょうど
+\[
+ zw=f(w)z\quad(w\in W),\qquad
+ f\in\mathrm{GL}(W),\quad \det f=\varepsilon
+\]
+となる。$W$ は中山作用で保存される。
+これは関係数とtraceの必要条件であり、表示・許容性の分類ではない。
+\end{proposition}
+\begin{proof}
+$E=B^!$ の二次Frobenius対合を考える。
+中山半単純部分はtop上で1なので、偶二次空間と奇二次空間は直交し、
+それぞれへの対合の制限は非退化である。
+$E$ のFrobenius中山 $\nu$ は一次空間上で $\mu_B$ の双対に符号 $-1$ を掛けたもの
+\cite[Theorem 6.3の証明]{RRZ}なので、奇二次空間上の唯一の固有値は $-1$ である。
+非退化双線型形式の非対称性作用の行列式は1であり、
+$\det(\nu|_{E_{2,\mathrm{odd}}})=(-1)^r$ だから $r$ は偶数である。
+この議論は単冪部分を零と仮定しない。
+
+一次元側がある場合、奇関係の $A\otimes C$ と $C\otimes A$ への射影は単射である。
+核の非零関係は一本の一次元との積になって整域性に反するからである。
+従って $r\le3$。
+$p=q=2$ の場合にも、射影の核に二次元部分空間があれば、
+その $2\times2$ 行列式は射影直線上で零を持ち、非零rank-one tensorを生じる。
+これも零因子なので、各射影の核は高々一次元、従って $r\le5$。
+偶数性と合わせれば、前者は $r=0,2$、後者は $r=0,2,4$ である。
+
+等変Koszul解消とFrobenius双対性から、$s=p-q$ と置くと
+\[
+ \operatorname{Tr}_B(\mu_B,t)
+ =\frac1{1-st+(6-2r)t^2-st^3+t^4}.
+\]
+各次数の中山固有値は $\pm1$ なので、単冪部分があってもtraceの絶対値は
+$\dim B_n=\binom{n+3}{3}$ 以下である。
+従って分母は単位円の内部に零を持たず、相反性から全零が単位円上にある。
+$r=0$ なら $u=t+t^{-1}$ による分母の変換は
+$u^2-su+4$、$s\in\{-2,0,2\}$ であり、判別式 $s^2-16<0$。
+これは単位円上の $t$ に対応する実数 $u$ を持たず矛盾する。
+残る分母を因数分解すれば表を得る。
+
+最後に一次元側を $kz$ とする。
+奇関係の両射影は単射なので、それぞれ二次元像 $U,W$ を持つ。
+四次topの奇flatteningは、奇関係の基底行列を $P$ として
+$PMP^t$ と書け、$M$ は非退化な $2\times2$ 行列である。
+従って対角ブロック
+$H_{ij}=w_{a_i z a_j z}$ と $K_{ij}=w_{z a_i z a_j}$ は階数2で、
+像はそれぞれ $U,W$ となる。
+先頭の $z$ を巡回させ、$\mu_B(z)=-\varepsilon z$ を使うと
+$K=\varepsilon H$ なので $U=W$。
+これで奇関係は表示した可逆写像 $f$ のgraphとなる。
+この基底で同じ恒等式は $fMf^t=\varepsilon M$ を与える。
+$M$ が対称なら奇二次Frobenius対合も対称となり、
+その非対称性作用の固有値 $-1$ に反する。
+従って $M-M^t$ は非零の交代 $2\times2$ 行列であり、
+$f(M-M^t)f^t=\varepsilon(M-M^t)$ から $\det f=\varepsilon$。
+中山作用が奇関係を保つことと $\mu_B(z)$ がスカラーであることから、$W$ も保存される。
+\end{proof}
+
 \begin{lemma}[単冪twist下の反標準三次関係の輸送]
 \label{lem:h3-unipotent-transport}
 $C$は左右noetherian quadratic Koszul AS4型14641で，$\mu_C$は半単純とする．

@@ -1,0 +1,38 @@
+{
+  "rows": [
+    {
+      "multiplicities": [
+        3,
+        1
+      ],
+      "odd_relation_dimension": 2,
+      "trace_denominator": "(1 - t)**2*(t**2 + 1)"
+    },
+    {
+      "multiplicities": [
+        1,
+        3
+      ],
+      "odd_relation_dimension": 2,
+      "trace_denominator": "(t + 1)**2*(t**2 + 1)"
+    },
+    {
+      "multiplicities": [
+        2,
+        2
+      ],
+      "odd_relation_dimension": 2,
+      "trace_denominator": "(t**2 + 1)**2"
+    },
+    {
+      "multiplicities": [
+        2,
+        2
+      ],
+      "odd_relation_dimension": 4,
+      "trace_denominator": "(1 - t**2)**2"
+    }
+  ],
+  "scope": "Necessary conditions including all Jordan parts. Frobenius parity, domain projection bounds and polynomial-growth exclusion are proved in the manuscript, not by finite sampling.",
+  "one_dimensional_sector": "Mixed relations preserve a common 2-plane W; z*w=f(w)*z and det(f)=epsilon, the eigenvalue on the three-dimensional block. This includes all Jordan parts."
+}
