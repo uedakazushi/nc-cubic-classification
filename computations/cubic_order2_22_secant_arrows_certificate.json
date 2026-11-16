@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "scope": "universal graded C-sign isomorphism and square; necessary diagonal-arrow equations",
+  "map": [
+    "q/r*y",
+    "q*x",
+    "v",
+    "u/(r+1)"
+  ],
+  "root_equation": "q^2=-r/(r+1)",
+  "target": [
+    "r",
+    "l",
+    "-C"
+  ],
+  "square": "(-1/(r+1))*mu on degree1",
+  "checks": [
+    "six source relations reduce to zero in target B2",
+    "four square coefficients",
+    "diagonal odd/even coefficient identities"
+  ],
+  "not_claimed": [
+    "AS4 existence",
+    "H3 existence",
+    "relative quotient or descent"
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "version": "classification-v154",
+  "version": "classification-v155",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -1530,5 +1530,12 @@
     "identities": 2736,
     "minor": "2048*ell^16*(2*ell^2-1)^4",
     "scope": "mixed rank2の可逆secant必要曲面ではC=0も全値排除した。共鳴成分は既存証明、rho=-1/(2ell²)成分は19四次汎関数の2736恒等式と単一10minor 2048ell^16(2ell²−1)^4で全点を覆う。従って残る全Jordan型のH3候補はrho*C²+(2rho+1)(2rho*ell²+1)=0、rho(rho+1)C(2rho*ell²+rho+1)unitに限る。全曲面の正常三次incidence・AS4十分性・H3認識は未解決。次はC符号反転の明示矢と残る二変数incidenceを判定する。"
+  },
+  "order2_22_secant_arrows_v155": {
+    "status": "PASS universal coefficient identities; geometric coverage proof in text",
+    "validator": "computations/verify_cubic_order2_22_secant_arrows.py",
+    "certificate": "computations/cubic_order2_22_secant_arrows_certificate.json",
+    "proof": "papers/sections/cubic_order2_22_secant_open.tex",
+    "scope": "可逆secantの実際のAS4包絡の全幾何学的graded矢は次数スカラー、mu、およびC->-Cの明示矢Phiで尽きる。q²=-rho/(rho+1)、Phi(x,y,u,v)=(q*y/rho,q*x,v,u/(rho+1))、Phi²=(-1/(rho+1))*mu。rho/ell不変、C非零H3の慣性は厳密にmu2。切断矢はG直線を保つもの。有限conic chartの補点はPhiでchart内へ移るので、一枚で幾何学的incidenceを計算できる。全曲面正常incidence・AS4/H3十分性・相対降下は未解決。"
   }
 }

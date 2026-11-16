@@ -1014,4 +1014,4 @@ verify_cubic_order2_22_rank2_unipotent.py/certificateが両tangent upper stabili
 
 ## 可逆secantの現行残余（classification-v154）
 
-mixed rank2の可逆secant必要曲面ではC=0も全値排除した。共鳴成分は既存証明、rho=-1/(2ell²)成分は19四次汎関数の2736恒等式と単一10minor 2048ell^16(2ell²−1)^4で全点を覆う。従って残る全Jordan型のH3候補はrho*C²+(2rho+1)(2rho*ell²+1)=0、rho(rho+1)C(2rho*ell²+rho+1)unitに限る。全曲面の正常三次incidence・AS4十分性・H3認識は未解決。次はC符号反転の明示矢と残る二変数incidenceを判定する。
+mixed rank2の可逆secant必要曲面ではC=0も全値排除した。共鳴成分は既存証明、rho=-1/(2ell²)成分は19四次汎関数の2736恒等式と単一10minor 2048ell^16(2ell²−1)^4で全点を覆う。従って残る全Jordan型のH3候補はrho*C²+(2rho+1)(2rho*ell²+1)=0、rho(rho+1)C(2rho*ell²+rho+1)unitに限る。全曲面の正常三次incidence・AS4十分性・H3認識は未解決。可逆secantの実際のAS4包絡の全幾何学的graded矢は次数スカラー、mu、およびC->-Cの明示矢Phiで尽きる。q²=-rho/(rho+1)、Phi(x,y,u,v)=(q*y/rho,q*x,v,u/(rho+1))、Phi²=(-1/(rho+1))*mu。rho/ell不変、C非零H3の慣性は厳密にmu2。切断矢はG直線を保つもの。有限conic chartの補点はPhiでchart内へ移るので、一枚で幾何学的incidenceを計算できる。全曲面正常incidence・AS4/H3十分性・相対降下は未解決。

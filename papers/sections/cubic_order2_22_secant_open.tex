@@ -165,7 +165,73 @@ AS4の正三次部分が10次元であることから、自由正三次空間の
 minorの零点は全て既に除いた$\ell(2\ell^2-1)=0$上にあり、残余値はない。
 \end{proof}
 
-入力は\texttt{cubic\_order2\_22\_secant\_Czero\_input.json}、
-検証器は\texttt{verify\_cubic\_order2\_22\_secant\_Czero.py}である。
-これらにより、
+入力は
+\[
+ \texttt{cubic\_order2\_22\_secant\_Czero\_input.json},
+\]
+検証器は
+\[
+ \texttt{verify\_cubic\_order2\_22\_secant\_Czero.py}
+\]
+であり、これらにより、
 19汎関数の全恒等式とこの一つのminorを再生できる。
+
+\begin{proposition}[可逆secantの幾何学的矢]
+\label{prop:h3-order2-22-secant-arrows}
+表示した必要曲面上の実際のAS4包絡の間のgraded同型は、次数スカラー、
+$\mu=(+,+,-,-)$、および次の矢で尽くされる。
+$ q^2=-\rho/(\rho+1)$を選ぶと
+\[
+ \Phi_C:B(\rho,\ell,C)\longrightarrow B(\rho,\ell,-C),\qquad
+ (x,y,u,v)\longmapsto
+ \left(\frac q\rho y',q x',v',\frac1{\rho+1}u'\right)
+\]
+は同型であり、同じ$q$を使った合成は一次部分で
+\[
+ \Phi_{-C}\Phi_C=-\frac1{\rho+1}\mu
+\]
+となる。特に$\rho,\ell$は全矢で不変である。
+実際のH3切断の矢は、この包絡の矢のうち三次切断直線を保つものに一致する。
+残る$C\ne0$の全H3対象の幾何学的慣性は、次数スカラーを除いて厳密に$\mu_2$である。
+族の相対表示stackや降下は、この命題に含まない。
+\end{proposition}
+\begin{proof}
+六つの源関係に表示した変換を代入し、行先の六関係で簡約する。
+$q^2=-\rho/(\rho+1)$だけで全て零となり、曲面式さえこの検算には不要である。
+一次変換は可逆であり、表示した二回合成を直接計算すれば同型と分かる。
+
+逆に、AS4の実際のNakayamaはgraded同型で共役されるので、正負二平面は保存される。
+奇関係の$UV$への射影は$\langle xu,yv\rangle$であり、
+そのrank-one点は$xu,yv$の二点だけである。
+従って正負双方の軸を保存する対角矢か、双方を同時に交換する矢しかない。
+対角矢を$(x,y,u,v)\mapsto(\alpha x',\beta y',\gamma u',\delta v')$とする。
+奇二式を行先で簡約し係数比較すると
+\[
+ \alpha=\beta,\qquad\gamma=\delta,\qquad\rho'=\rho
+\]
+を得る。
+$K$が可逆なので純正二次語四つは独立である。
+最後の偶関係の比較から
+\[
+ \alpha^2=\gamma^2,\qquad\ell'=\ell
+\]
+となり、残る偶関係から$C'=C$が従う。
+従って対角矢は次数スカラーと$\mu$で尽くされる。
+同時交換矢は$\Phi$と合成すれば対角矢になるので、述べた全矢を得る。
+
+二次包絡の内在的復元と反標準環の復元により、
+定理\ref{thm:h3-order2-full-arrows}と同じく切断直線を保つ矢が全pointed exact矢を尽くす。
+$C\ne0$では同時交換矢は自己矢にならない。
+$\mu(G)=G$なので$\mu$は必ず切断を保ち、次数スカラーと独立な位数2の自己矢を与える。
+これで慣性も確定する。ここでは実際のAS4/H3点だけを扱い、
+必要曲面の全係数で存在やadmissibilityを主張していない。
+\end{proof}
+
+$q$の二つの選択の差は$(-1,-1,1,1)$、すなわち次数$-1$スカラーと$\mu$の積である。
+従って射影三次切断直線上の作用は選択に依存しない。
+相対的には$q$の平方根が必要なので、これだけで一定群による全族の商を主張しない。
+有限$k$のconic chartが落とす一点$(\ell_0,-C_0)$は、
+$\Phi$により$(\ell_0,C_0)$へ移り、後者は$k=\sqrt{-2}$で含まれる。
+従って幾何学的点の正常incidenceは、この矢を使えば一つの有限chartで扱える。
+検証器\texttt{verify\_cubic\_order2\_22\_secant\_arrows.py}は
+六関係、二回合成、対角矢の係数恒等式を厳密再生する。
