@@ -235,3 +235,38 @@ $\Phi$により$(\ell_0,C_0)$へ移り、後者は$k=\sqrt{-2}$で含まれる�
 従って幾何学的点の正常incidenceは、この矢を使えば一つの有限chartで扱える。
 検証器\texttt{verify\_cubic\_order2\_22\_secant\_arrows.py}は
 六関係、二回合成、対角矢の係数恒等式を厳密再生する。
+
+\begin{theorem}[$\ell=0$部分の全値排除]
+\label{thm:h3-order2-22-secant-ellzero}
+必要曲面の$\ell=0$部分にもH3対象は存在しない。
+従って残るmixed rank2の全H3候補は
+\[
+ \rho C^2+(2\rho+1)(2\rho\ell^2+1)=0,\qquad
+ \rho(\rho+1)C\ell(2\rho\ell^2+\rho+1)\ne0
+\]
+を満たす。
+\end{theorem}
+\begin{proof}
+$\ell=0$での曲面式から$\rho=-1/(C^2+2)$となる。
+従って$C^2+2\ne0$であり、$\rho+1\ne0$は$C^2+1\ne0$と同値である。
+六関係を単元$C^2+2$倍した表示に対して、
+$\mathbb Q[C]$上の19四次汎関数を作り、2,736本の消滅恒等式を検証する。
+その$x,y$交換子行列の指定した一つの$10\times10$ minorは
+\[
+ 4(C^2+1)^9(C^2+2)^5
+\]
+である。これは許される全点で非零であり、
+定理\ref{thm:h3-order2-22-secant-Czero}と同じ核次元22の議論から、
+正三次部分に$x,y$と可換する非零元はない。
+これで$\ell=0$の全値を排除し、未処理の特殊値は残らない。
+\end{proof}
+
+検算入力は
+\[
+ \texttt{cubic\_order2\_22\_secant\_ellzero\_input.json},
+\]
+検証器は
+\[
+ \texttt{verify\_cubic\_order2\_22\_secant\_ellzero.py}
+\]
+である。全恒等式と次数28の一つのminorを有理数上で再生する。

@@ -1015,3 +1015,8 @@ verify_cubic_order2_22_rank2_unipotent.py/certificateが両tangent upper stabili
 ## 可逆secantの現行残余（classification-v154）
 
 mixed rank2の可逆secant必要曲面ではC=0も全値排除した。共鳴成分は既存証明、rho=-1/(2ell²)成分は19四次汎関数の2736恒等式と単一10minor 2048ell^16(2ell²−1)^4で全点を覆う。従って残る全Jordan型のH3候補はrho*C²+(2rho+1)(2rho*ell²+1)=0、rho(rho+1)C(2rho*ell²+rho+1)unitに限る。全曲面の正常三次incidence・AS4十分性・H3認識は未解決。可逆secantの実際のAS4包絡の全幾何学的graded矢は次数スカラー、mu、およびC->-Cの明示矢Phiで尽きる。q²=-rho/(rho+1)、Phi(x,y,u,v)=(q*y/rho,q*x,v,u/(rho+1))、Phi²=(-1/(rho+1))*mu。rho/ell不変、C非零H3の慣性は厳密にmu2。切断矢はG直線を保つもの。有限conic chartの補点はPhiでchart内へ移るので、一枚で幾何学的incidenceを計算できる。全曲面正常incidence・AS4/H3十分性・相対降下は未解決。
+
+
+## 可逆secantの正常incidence（classification-v156）
+
+ell=0曲線も全値H3排除。rho=-1/(C²+2)、(C²+1)(C²+2)unit上で19四次汎関数の2736恒等式と単一10minor 4(C²+1)^9(C²+2)^5を厳密再生。残るrank2必要曲面はrho(rho+1)C*ell*(2rho*ell²+rho+1)unit。全正常incidence/AS4十分性/相対降下は未完。二次簡約で偶四次行列を144x128から非零24x36へ縮約し、r,k二変数の分数体上で計算中。次は全曲面のrank10 minor被覆または非零正常核の閉locusを確定する。

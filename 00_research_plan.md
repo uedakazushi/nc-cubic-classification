@@ -40,7 +40,7 @@ Rains・VdB・AS・anticanonical heartの一般次数比較は [nc-dp-surface-he
 
 **全体的なスペクトル制約（classification-v153）**：全(1,3)は幾何学的被覆・必要十分H3判定・全矢/慣性まで確定、全(3,1)は全Jordan型込みで空。(2,2)/mixed rank2でも全Jordan型を半単純へ帰着した。半単純AS4 domainのG非依存pencil被覆から、muを保つ単冪autoはpuremixed/simple-eigen stabilizer、secant二rank1点、tangent upper stabilizerと平方関係の各場合で恒等。元Bのmu_U四分根H=I+(mu_U−I)/4でC=B^H,muC=muB H^-4=muSsを作り、H∈AutCからHId。従って全rank2候補は非共鳴可逆secantのsmooth2dim必要曲面rho*C²+(2rho+1)(2rho*ell²+1)=0、rho(rho+1)(2rho+1)(2rho*ell²+rho+1)unitで被覆。全曲面正常G/AS4十分性は未分類。次は非共鳴conic chartと補sectionの正常incidence。mixed rank4三型/非半単純rank4、三固有値以上、全CY被覆、全成分/圏族降下は未完。
 
-**次の核心（classification-v155）**：可逆secantの実際のAS4包絡の全幾何学的graded矢は次数スカラー、mu、およびC->-Cの明示矢Phiで尽きる。q²=-rho/(rho+1)、Phi(x,y,u,v)=(q*y/rho,q*x,v,u/(rho+1))、Phi²=(-1/(rho+1))*mu。rho/ell不変、C非零H3の慣性は厳密にmu2。切断矢はG直線を保つもの。有限conic chartの補点はPhiでchart内へ移るので、一枚で幾何学的incidenceを計算できる。全曲面正常incidence・AS4/H3十分性・相対降下は未解決。 次はell=0曲線とconic二変数上の正常核を判定する。
+**次の核心（classification-v156）**：ell=0曲線も全値H3排除。rho=-1/(C²+2)、(C²+1)(C²+2)unit上で19四次汎関数の2736恒等式と単一10minor 4(C²+1)^9(C²+2)^5を厳密再生。残るrank2必要曲面はrho(rho+1)C*ell*(2rho*ell²+rho+1)unit。全正常incidence/AS4十分性/相対降下は未完。二次簡約で偶四次行列を144x128から非零24x36へ縮約し、r,k二変数の分数体上で計算中。次は全曲面のrank10 minor被覆または非零正常核の閉locusを確定する。
 
 既存の主要な構造結果を維持する：
 
