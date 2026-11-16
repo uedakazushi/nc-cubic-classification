@@ -1,0 +1,26 @@
+{
+  "hypotheses": "a!=0,gamma!=0; abstract canonical semisimple positive-three common-plane base",
+  "quadratic_base": [
+    "xy-a\u00b2*yx+gamma*z\u00b2=0",
+    "zx=a*xz",
+    "zy=a^-1*yz"
+  ],
+  "quadratic_PBW": "x^i*z^j*y^k",
+  "quadratic_overlap_count": 1,
+  "quadratic_actual_Nakayama": "(x,z,y)->(a*x,z,a^-1*y)",
+  "cubic_subalgebra": "T=<x,y>, C=xy-a\u00b2*yx=-gamma*z\u00b2; basis x^i*C^j*y^k",
+  "cubic_relations": [
+    "x\u00b2y-(a\u00b2+a^-2)xyx+yx\u00b2=0",
+    "y\u00b2x-(a\u00b2+a^-2)yxy+xy\u00b2=0"
+  ],
+  "weighted_Ore_relations": [
+    "Cx=a\u00b2*xC",
+    "yC=a\u00b2*Cy",
+    "yx=a^-2*xy-a^-2*C"
+  ],
+  "weighted_overlap_count": 1,
+  "cubic_regular_structure": "noetherian cubic AS3, resolution type(1,2,2,1), AS index4, actual Nakayama=id",
+  "root_extension": "S=T direct_sum T*z, z*t=f(t)*z, f(x,y)=(a*x,a^-1*y), z\u00b2=-C/gamma",
+  "inverse_normal_quadric": "Cprime=xy-a^-2*yx; Cprime normalizes W by f^-2; C*Cprime is central degree4",
+  "scope": "All rewriting overlaps, both cubic relations, quadratic Koszul top and inverse-actual-Nakayama convention, cyclic quartic top and Hilbert identity checked. Embedding of these abstract bases into every H3 envelope has not been proved."
+}

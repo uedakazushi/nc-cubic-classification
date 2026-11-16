@@ -1,0 +1,23 @@
+{
+  "base": "S=(xy-a\u00b2*yx+gamma*z\u00b2,zx-a*xz,zy-a^-1*yz), gamma!=0",
+  "normalizer": "sigma(x,y,z)=(x,y,-z), not the actual Nakayama of S in general",
+  "parity_fixed_cubic_dimension": 6,
+  "kernel": {
+    "a\u00b2-a+1!=0": "0",
+    "a\u00b2-a+1=0": "span(x\u00b3,y\u00b3)"
+  },
+  "a_minus_one_exclusion": {
+    "rank": 6,
+    "commutator_minor_rows": [
+      3,
+      7,
+      10,
+      12,
+      18,
+      25
+    ],
+    "minor_determinant": "18"
+  },
+  "proof": "z-weight forces a\u00b3=-1; a=-1 is excluded by the constant full-rank minor; both remaining primitive-sixth-root cubes checked modulo Phi6",
+  "scope": "Complete intrinsic sign-normalizer cubic kernel inside the ABSTRACT canonical base. This does not prove that the base embeds into every H3 envelope or that the H3 cubic lies in it, and is not whole (3,1) coverage."
+}

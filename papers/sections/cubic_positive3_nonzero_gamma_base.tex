@@ -1,0 +1,131 @@
+\subsection{残る$\gamma\ne0$対角chartの三次CY基礎代数}
+\label{subsec:h3-positive3-nonzero-gamma-base}
+以下は残る正三次元領域の基礎代数を明示するものであり、H3の許容性判定ではない。
+特に共通二平面をAS2平面と同一視しない。
+
+\begin{proposition}\label{prop:h3-positive3-nonzero-gamma-base}
+$a\gamma\ne0$とし、抽象二次代数
+\[
+ S=k\langle x,y,z\rangle/
+ (xy-a^2yx+\gamma z^2,\ zx-axz,\ zy-a^{-1}yz)
+\]
+を考える。これはnoetherian quadratic Koszul AS3の整域で、
+\[
+ \mu_S(x,y,z)=(ax,a^{-1}y,z).
+\]
+$T=\langle x,y\rangle\subset S$とすると、これは二生成元三次AS正則代数であり、
+\begin{gather*}
+ x^2y-(a^2+a^{-2})xyx+yx^2=0,\\
+ y^2x-(a^2+a^{-2})yxy+xy^2=0
+\end{gather*}
+が全定義関係である。$T$はnoetherian、CY次元3、AS index4、解消型$(1,2,2,1)$である。
+$C=xy-a^2yx=-\gamma z^2$と置けば、
+\[
+ T:\quad Cx=a^2xC,\quad yC=a^2Cy,\quad yx=a^{-2}xy-a^{-2}C,
+ \qquad\deg C=2
+\]
+という重み付き二段Ore表示を持ち、$x^iC^jy^k$が基底となる。
+さらに
+\[
+ S=T\oplus Tz,\qquad zt=f(t)z,\quad
+ f(x,y)=(ax,a^{-1}y),\quad z^2=-\gamma^{-1}C
+\]
+であり、$S$は$T$上自由階数2の二次根拡大である。
+また$C'=xy-a^{-2}yx$は$W$を$f^{-2}$で正規化し、$CC'\in Z(T)_4$である。
+
+H3の共通平面で中山作用が半単純、$f$が対角化可能、$\gamma\ne0$なら、
+共通平面と負生成元がこの$S$から自然な写像を受ける。
+この写像の単射性を一般にはまだ主張しない。
+$f$が非自明Jordan blockであるchartもこの命題の対象外である。
+\end{proposition}
+\begin{proof}
+順序を$x<z<y$と取ると書換えは
+\[
+ zx=axz,\qquad yz=azy,\qquad
+ yx=a^{-2}xy+\gamma a^{-2}z^2.
+\]
+唯一の三次overlap$yzx$は両側とも
+$xzy+\gamma a^{-1}z^3$へ落ちる。
+従って$x^iz^jy^k$がPBW基底である。
+これは$k\langle x,z\rangle/(zx-axz)$上のOre拡大でもあるので、
+noetherian整域、Koszul AS3である。
+その三次Koszul topは
+\[
+ yzx-a\,zyx-a\,yxz+a^{-1}xyz+a^{-1}zxy-xzy
+                   +\gamma a^{-1}zzz.
+\]
+両flatteningは階数3で、実際の中山作用の逆を用いた巡回式を満たす。
+従って表示した$\mu_S$を得る。
+ここでは最高tensorの巡回規約と実際の中山作用を区別している。
+
+$C=-\gamma z^2$は$x,y$を$f^2$で正規化する。
+表示した重み付き三関係の唯一のoverlap$yCx$も一致するため、
+これらは$k\langle x,C\rangle/(Cx-a^2xC)$上のOre拡大を定める。
+その基底$x^iC^jy^k$を$S$へ送ると、非零尺度倍の$x^iz^{2j}y^k$となり、
+PBW独立性から単射である。
+像は$x,y$で生成される。実際$C=xy-a^2yx$なので三番目の重み付き生成元を消去でき、
+残る二式は表示した二つの三次関係になる。
+逆にこの二三次関係から$Cx=a^2xC,yC=a^2Cy$が復元されるため、追加関係もない。
+
+重み付き二段Ore表示から$T$はnoetherian AS正則次元3、
+$H_T=((1-t)^2(1-t^2))^{-1}$、AS index4である。
+その最高三次syzygyは、二つの三次関係を$r_x,r_y$として
+\[
+ xr_y+yr_x=r_yx+r_xy
+\]
+であり、四次tensorとして通常のcyclic式を満たす。
+両端flatteningが階数2なので実際の中山作用は恒等、従ってCYである。
+最小生成元は$x,y$、最小関係は二つの三次式だから解消型も従う。
+
+$S$の偶数個の$z$を含むPBW単項式は全て$T$内にあり、奇数個の場合は$Tz$に入る。
+両者はPBWで独立なので$S=T\oplus Tz$である。
+Hilbert級数も$(1+t)H_T=(1-t)^{-3}$となる。
+$C'$の逆正常化式は二つの三次関係を代入して直接得られ、
+$C$と$C'$の正常化作用が逆なので$CC'$は中心に入る。
+最後にH3の共通平面公式を対角基底で書くと、この$S$の三関係が得られる。
+ただし原包絡内ではこの三関係以外の高次核をまだ排除していない。
+このため、抽象基礎代数のAS正則性をそのままH3の被覆・許容性へ移さない。
+\end{proof}
+
+\texttt{verify\_cubic\_positive3\_nonzero\_gamma\_base.py}は
+両Ore表示のoverlap、二つの三次関係、二次AS3のKoszul topと逆中山巡回規約、
+三次AS3のcyclic四次top、および根拡大のHilbert値を全係数で厳密検算する。
+この基礎代数の表示の文献上の新規性は主張しない。
+
+\begin{proposition}\label{prop:h3-positive3-base-normal-cubics}
+前命題の抽象基礎代数$S$上で$\sigma(x,y,z)=(x,y,-z)$と置く。
+この作用を正常化作用に持つ三次の全空間は
+\[
+ \{G\in S_3:Gw=\sigma(w)G\ (w=x,y,z)\}
+ =\begin{cases}
+ 0,&a^2-a+1\ne0,\\
+ \langle x^3,y^3\rangle,&a^2-a+1=0.
+ \end{cases}
+\]
+$\sigma$は一般には$S$自身の中山作用ではない。
+また、この結果だけから全H3三次がこの空間に属するとはしない。
+原包絡への$S$の単射性と、三次がその像に入ることを別途証明した場合にだけ適用する。
+\end{proposition}
+\begin{proof}
+非零正常三次は整域性から$\sigma(G)=G$を満たす。
+PBW基底上で固定三次は
+\[
+ x^3,\ x^2y,\ xy^2,\ y^3,\ xz^2,\ z^2y
+\]
+の六つである。$x^iz^jy^k$の$z$に関する重みは$a^{i-k}$なので、
+$Gz=-zG$は$a^{i-k}=-1$を要求する。
+この六つの指数$i-k$は$\pm3,\pm1$だから、$a^3=-1$以外では全て零である。
+
+$a=-1$では$\gamma$を$z$の尺度変更で1にできる。
+上の六係数に対する$x,y$との交換子行列には、行列式18の定数六次小行列がある。
+従って核は零である。
+残る$a^3=-1,a\ne-1$は原始6乗根、すなわち$a^2-a+1=0$であり、
+$z$重み条件は$x^3,y^3$以外を除く。
+両者の$x,y$交換子は二次PBW関係で計算すると$a^2-a+1$の倍数となり、
+$z$とは反可換である。よってこの二つは全ての条件を満たし、PBWで独立である。
+\end{proof}
+
+\texttt{verify\_cubic\_positive3\_base\_normal\_cubics.py}は重み条件の全六項、
+$a=-1$の定数六次小行列、および原始6乗根での全正常化式を
+$a^2-a+1$による厳密剰余として検証する。
+これは基礎代数内の全係数判定であり、包絡の全正常核やH3許容条件とは区別する。

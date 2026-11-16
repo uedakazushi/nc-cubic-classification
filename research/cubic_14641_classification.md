@@ -814,3 +814,19 @@ H3係数locusはprojective conic bundleのrelative singular incidenceの像の�
 原稿thm:h3-positive3-gamma-zero-exclusion。v129で中山extension分裂、残りWJordanだけ。common f上三角epsilon²1、T yx=xy+kappa x²（kappa0可）。Dtop不変でv³y0、purev4はanti巡回0、二平方projectionrank2からvvrow/z²row独立なのでv³x!=0。v/x巡回からvvrowcross [v,x]、WWのD核x²よりvx=xv+d x²。x正規でB/xの線型Tor/Koszulとnormal ASGorでAS3、HS3、muC反転z符号−epsilon。B2even6基底x²,xy,y²,xv,yv,vyのDkernel3はx²,xv,vy−yv−dxy、ゆえmodx v²=ccomm。C oddR1/positiveV2でtopは元z反転偶、oddgraphzyがz²vを禁じ、purepositivebinarycyclicv縮約の対称性からc0。クロスcubiccoeff0でtop正二元部分v³/y³だけ、C三関係v²0,zy=epsilon yz,z²=t y²。自由積HS指数、又はdegree3原関係matrix定数pivot15/27でdim12、AS3dim10矛盾。verify_cubic_positive3_Jordan_obstruction.py/certificateでD核・対称縮約・両符号全tのdim12厳密PASS。
 
 次の具体的着手：残る(3,1)はgamma非零。q0(W)+gamma*z²関係のためWにAS2平面分類を直接適用しない。mu半単純fdiag(a,a^-1)ならS(W,z)はxy−a²yx+gamma z²,zx=a xz,zy=a^-1 yzの三generator AS3型、q0非零正常二次。補positivevを含む偶flattenrank4/平方projection/dual Frob開条件から全正常三次を絞る。gamma非零でのW部分代数への高次核、positive unipotent、H3認識はまだ未証明。
+
+
+## gamma非零対角基礎の二次AS3と三次CY根拡大（classification-v134）
+
+残る(3,1)gamma非零のf対角chartについて抽象基礎S=<x,y,z>/(xy−a²yx+gamma z²,zx−axz,zy−a^-1yz)を構造認識。SはPBW x^i z^j y^k,noeth quadratic Koszul AS3、実際muS=(a x,a^-1 y,z)。T=<x,y>はcubicCY AS3/index4/解消1221、二つのquantumSerre係数a²+a^-2が全関係、C=xy−a²yx=-gamma z²のweightedOre基底x^i C^j y^k。S=T+Tz自由rank2、Cprime=xy−a^-2yxは逆正常化、CCprime中央degree4。H3包絡への自然写像の高次核は未排除、f Jordanchartは未包含。この基礎をAS2と混同しない。
+
+原稿prop:h3-positive3-nonzero-gamma-base。Sの順序x<z<y、zx=a xz,yz=a zy,yx=a^-2xy+gamma a^-2 z²、唯一overlap yzx=xzy+gamma a^-1 z³。三次Koszultop yzx−a zyx−a yxz+a^-1xyz+a^-1zxy−xzy+gamma a^-1z³、巡回は実際muSの逆を使う規約で検証（符号固有値のみの以前の計算では逆と同一）。TはC x=a²xC,y C=a²Cy,yx=a^-2xy−a^-2CのweightedOre、Cweight2、PBW x^i C^j y^kがS内even z基底に単射。C消去でx²y−(a²+a^-2)xyx+yx²,y²x−(a²+a^-2)yxy+xy²。最高syzygy x*r_y+y*r_x=r_y*x+r_x*yはcyclic4、muT=id、ASindex4。Cprime逆normalizerf^-2、CCprimecentral。verify_cubic_positive3_nonzero_gamma_base.py/certificateで両overlap、三次rels、二次top/逆mu巡回、三次CYtop左右syzygyとcyclic、Cprime/中央積、Hilbertrootidentity全係数厳密PASS。既知形の新規性は主張しない。
+
+
+## gamma非零抽象基礎内の指定正常三次全判定（classification-v135）
+
+gamma非零対角chartの抽象基礎Sで、指定正常化sigma(x,y,z)=(x,y,-z)の三次全核を判定した。a²-a+1非零なら核0、aがprimitive6ならspan(x³,y³)。Sdomainよりsigma固定、PBW六候補のz重みがa³=-1を強制、a=-1は六交換子系の定数minor18で除外、primitive6で両cubeをPhi6剰余検証。このsigmaは一般にmuSではない。S->B単射とG∈imageSの両方が未証明なので、全(3,1)H3への共鳴条件とはまだしない。
+
+原稿prop:h3-positive3-base-normal-cubics。sigma正常非零GはsigmaG=G、PBW evenz degree3六項。z weight a^(i−k)=-1、指数+-1/+-3からa³=-1。a−1はgamma1へzscale後、commx/yの六列matrix固定rows[3,7,10,12,18,25] minor18でkernel0。primitive6はa+1unitでx³/y³だけがphase許容、両者全正常式をPhi6剰余でzero確認。verify_cubic_positive3_base_normal_cubics.py/certificate厳密PASS。原H3GがSにある/基礎map単射の証明を欠くので全スペクトル共鳴制約へ拡張しない。
+
+gamma非零の次案（未証明）：f対角のW生成cubicCY TはC=xy−a²yx,Cprime=xy−a^-2yx二normalquadを持ち、genericcentreにCCprime degree4。残るpositive vがWをOre正規化するchartではv²∈T2+Wvとなるため、T2のnormalquadとg actionを分類してH3正常Gの核を絞る。vがWを正規化することは未証明で、未被覆chartを黙って除外しない。S->B高次核とGのS成分外項の検算も必要。
