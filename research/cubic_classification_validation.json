@@ -1164,5 +1164,12 @@
     "certificate": "computations/cubic_order2_split_jordan_certificate.json",
     "result": "Every H3 envelope with Nakayama multiplicities(1,3) has semisimple Nakayama action. The remaining split Jordan2+1 forces a normal linear x and v²=C*x² with vx=-xv, contradicting the domain hypothesis.",
     "scope_limit": "No full classification of the remaining semisimple rank-two square sector or other spectral multiplicities is asserted."
+  },
+  "order2_canonical_cycle_v110": {
+    "status": "global normal-cubic and qgr/Serre proofs in manuscript; exact quotient matrix identities executed",
+    "validator": "computations/verify_cubic_order2_boundary_cycle.py",
+    "certificate": "computations/cubic_order2_boundary_cycle_certificate.json",
+    "result": "For every multiplicities(1,3) H3 envelope, W1(B) is contained in (W). The quotient R/(W) yields a canonical unordered point pair exchanged by shift. The Hom matrix is I, Ext2 is the swap matrix and Ext1 has four equal finite dimensions.",
+    "scope_limit": "Higher Ext in qgrR is not computed in qgrA. The common Ext1 dimension, formal local models and full remaining-sector admissibility are not determined."
   }
 }

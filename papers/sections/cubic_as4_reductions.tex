@@ -1446,6 +1446,92 @@ $v+sx$ は非零一次元なので、これは整域性に反する。
 が $\mathbb Q[c,d,\kappa]$ 上で厳密に再生する。
 全H3からこの表示への帰着と整域性による排除は上の構造証明である。
 
+\begin{proposition}[標準的な二周期点対と三次関係の消滅]
+\label{prop:h3-order2-canonical-two-cycle}
+重複度 $(1,3)$ のH3包絡とその共通平面 $W$ に対し、
+全ての $G\in W_1(B)$ は二側イデアル $(W)$ に入る。
+特に $R=B/(G)$ の標準的な商は
+\[
+ R/(W)=B/(W)=A:=k\langle p,v\rangle/(p^2,v^2)
+\]
+であり、$\qgr A$ は二つの単純対象を持つ半単純圏である。
+$\qgr R$ への商環からの制限により二つの相異なる点対象 $P_0,P_1$ が得られ、
+次数シフトはこの二対象を交換する。
+共通平面とこの順序を付けない点対は、H3のpointed同型に関して自然である。
+\end{proposition}
+\begin{proof}
+既に $\mu_B$ は半単純であり、商上では $\mu(p)=p$, $\mu(v)=-v$。
+$\mu(G)=G$ より、その商像は $\bar G=c\,vpv$ に限る。
+一方 $Gp=pG$ なので
+$c(vpvp-pvpv)=0$ である。
+平方零を禁じる交代語は商の基底をなし、二つの四次語は独立なので $c=0$。
+従って $G\in(W)$ である。
+
+$z=pv+vp$ は次数2の中心正則元であり、$A$ は $k[z]$ 上
+\[
+ 1,\ p,\ v,\ pv
+\]
+を基底とする自由加群である。これらの一次独立性は
+$p=sE_{12}$, $v=sE_{21}$, $z=s^2I$ という忠実な行列表示でも確認できる。
+この四元は全交代語を張り、$k[s^2]$ 上独立である。
+$A/(z)$ は有限次元なので、有限生成graded加群における $z$-torsion は
+ちょうど有限次元torsionである。
+$u=p+v$ と置くと $u^2=z$ なので $A[z^{-1}]=A[u^{-1}]$ は強次数付き環となる。
+その次数零部分は
+\[
+ D=k[a]/(a^2-1)\simeq k\times k,\qquad a=(p-v)u^{-1}.
+\]
+中心局所化と強次数付き加群の次数零部分を取る同値により
+$\qgr A\simeq\operatorname{mod}D$ を得る。
+$uau^{-1}=-a$ なので、次数シフトは $D$ の二つの原始冪等元を交換する。
+
+商環からの制限はgraded加群上で完全忠実かつ完全であり、
+有限次元torsionも同じなので商圏へ完全忠実に降りる。
+具体的に右点加群 $M_0$ は各次数 $n\ge0$ に基底 $e_n$ を持ち、
+\[
+ e_np=\begin{cases}e_{n+1}&n\text{ 偶数},\\0&n\text{ 奇数},\end{cases}
+ \qquad
+ e_nv=\begin{cases}0&n\text{ 偶数},\\e_{n+1}&n\text{ 奇数},\end{cases}
+ \qquad e_nW=0.
+\]
+$M_1$ は偶奇を逆にしたものである。両者のtailsは単純かつ相異なり、
+一回のシフトで交換される。
+共通平面は混合関係から標準的に復元されるため、点対の自然性も従う。
+\end{proof}
+ここでの完全忠実性はHomと短完全列の保存についての主張であり、
+$\qgr A$ と $\qgr R$ の高次Extが等しいとは主張しない。
+行列表示、中心自由基底、次数零冪等元、シフトと三次関係の消滅の恒等式は
+\texttt{verify\_\allowbreak{}cubic\_\allowbreak{}order2\_\allowbreak{}boundary\_\allowbreak{}cycle.py}
+で厳密に再生する。
+
+\begin{corollary}[二周期点対のExtに対する必要条件]
+\label{cor:h3-order2-cycle-ext}
+上のH3点対について、ある整数 $n\ge0$ により
+\[
+ \bigl(\dim\Hom(P_i,P_j)\bigr)_{ij}=I_2,
+\]
+\[
+ \bigl(\dim\Ext^1(P_i,P_j)\bigr)_{ij}
+   =n\begin{pmatrix}1&1\\1&1\end{pmatrix},\qquad
+ \bigl(\dim\Ext^2(P_i,P_j)\bigr)_{ij}
+   =\begin{pmatrix}0&1\\1&0\end{pmatrix}.
+\]
+高次Extは消滅する。従ってEuler行列は全成分が $1-n$ である。
+\end{corollary}
+\begin{proof}
+H3のSerre作用は $S=(-1)[2]$ であり、$P_i(-1)\simeq P_{i+1}$
+（添字は $2$ を法とする）。Serre双対により
+\[
+ \Ext^r(P_i,P_j)\simeq
+ \Ext^{2-r}(P_j,P_{i+1})^*.
+\]
+単純対象のHomから次数2の行列が従う。
+次数1では $(i,j)\mapsto(j,i+1)$ が四つの添字対を一つのorbitにするので、
+全四成分の次元は等しい。H3のhomological dimensionは2である。
+\end{proof}
+この条件だけで $n=1$、形式的局所環の正則性、又はH3十分性を結論しない。
+今後の候補の点対上で四つのExtを計算する際の、全域的な必要条件である。
+
 \begin{lemma}[単冪twist下の反標準三次関係の輸送]
 \label{lem:h3-unipotent-transport}
 $C$は左右noetherian quadratic Koszul AS4型14641で，$\mu_C$は半単純とする．

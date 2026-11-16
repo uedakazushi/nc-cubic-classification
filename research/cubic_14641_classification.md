@@ -563,3 +563,11 @@ v108で残ったsplit M1も排除し、重複度(1,3)の全H3包絡でmu半単�
 するとxv,Zはxと反可換するがv²はxと可換し、v²もD不変なのでv²=Cprime x²。s²=−Cprimeを取れば非零一次元v+sxの平方が零となって整域性に反する。kappa0（共通平面可換）も含む。verify_cubic_order2_split_jordan.pyは全導分核係数とZ/平方の恒等式をQ[c,d,kappa]上で再生しPASS、標本検査ではない。全域帰着・一次独立・整域矛盾は本文で証明。
 
 次の具体的着手：半単純M=Jでfに制約det f−1、mu_T=−f²があり、量子平面の対角f（q−a²）又はq−1での反対角fを調べる。ただし後者はdet/hdet条件で既に消える。量子q1はcommutativeでf²−I、Jordan平面でもmu_W−Iとmu_T=−f²を満たすfが存在し得るため除外せず、rank2平方とcross一本・正常三次の全整合を調べる。既知Cliffordのq−1,fdiag(−1,1)を正例として保持する。p²中心性・負三生成元部分AS3は依然仮定しない。
+
+## 標準二周期点対とH3のExt必要条件（classification-v110）
+
+重複度(1,3)の全域で、全G∈W1(B)が(W)に入ることを証明。商A=k<p,v>/(p²,v²)でmu固定三次はvpvのみだが[vpv,p]=vpvp−pvpvは非零、正常化式Gp=pGから商像零。従ってR/(W)=A。z=pv+vpは中央正則、Aはk[z]上1,p,v,pvで自由。u=p+vはu²=z、A[u^-1]の次数零部分D=k[a]/(a²−1),a=(p−v)u^-1。uが二原始冪等元を交換するのでqgrA=mod(k×k)でシフトは二つの点P0,P1を交換する。点対はWから標準的でintrinsic pointed同型に自然。商からqgrRへの制限はHom完全忠実かつ完全だが高次Ext同一とは主張しない。原稿prop:h3-order2-canonical-two-cycle。
+
+H3のS=(-1)[2]からExt^r(Pi,Pj)=Ext^(2−r)(Pj,P_(i+1))*。Homは単位行列、Ext2は交換行列、Ext1は四成分全て同じ整数n>=0、Eulerは全成分1−n、高次Ext0。原稿cor:h3-order2-cycle-ext。この必要条件だけでn1や局所H3十分性を主張しない。verify_cubic_order2_boundary_cycle.pyは忠実行列p=sE12,v=sE21、中央自由基底det−s4、次数零冪等元、シフト交換と正常三次の商消滅を厳密検算、PASS。圏同値とSerre/Extは本文構造証明。
+
+次の焦点：半単純rank2のcross一本と二平方の全係数を、この二周期点対上の自己/交差Extと対照する。W一次近傍でGが消える場合の障害は有力だが、非可換Jacobian判定、n=1、負三生成元部分代数のAS3性、p²中心性はいずれも未証明。先に仮定して全被覆を縮めてはいけない。全係数の形式的近傍又は小次数Koszul計算で必要条件を得て、既知Clifford正例と照合する。

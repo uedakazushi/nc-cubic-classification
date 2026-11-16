@@ -1,0 +1,16 @@
+{
+  "quotient": "A=k<p,v>/(p\u00b2,v\u00b2)",
+  "central_parameter": "z=pv+vp, degree 2, regular",
+  "free_central_basis": [
+    "1",
+    "p",
+    "v",
+    "pv"
+  ],
+  "matrix_model": "p=s*E12, v=s*E21, z=s\u00b2*I",
+  "basis_determinant": "-s^4",
+  "degree_zero_localization": "(A[(p+v)^-1])_0=k[e0] x k[e1], e0,e1 orthogonal primitive idempotents",
+  "shift": "conjugation by u=p+v exchanges e0,e1",
+  "normal_cubic_restriction": "mu-fixed cubics are k*vpv; [vpv,p] has matrix diag(-s^4,s^4), so every H3 normal cubic restricts to zero",
+  "scope": "Polynomial identities and the faithful central basis checked exactly. The qgr equivalence, canonical-point interpretation and normal-cubic reduction are proved in the manuscript."
+}
