@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "version": "classification-v136",
+  "version": "classification-v137",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -1369,5 +1369,12 @@
       "https://stacks.math.columbia.edu/tag/03RF"
     ],
     "scope": "gamma非零f対角基礎Sからgraded domainへの写像（z像非零）の核を全aで完全判定：0又は(Cprime=xy−a^-2yx)のみ。a4=1は必ず単射。z局所degree0はqWeyl wu=q uw+c,q=a^-4,c=gamma a^-3,d=c+(q−1)uw=−a Cprime/z²。q∞はGWA単純性、qrootはd非零開でAzumaya次数N、非零整域商は中心curve上Brauer0/Tsenでsplitし矛盾、ゆえ非零kernelはd0。商はparameter aのquantumtorus、これも完全素非零idealを持たずkernel正確Cprime。S/Cprimeはquantumplane偶Veronesecone、PBWdomainで飽和確認。追加positive vやH3全許容性は未分類。 B/R両方domainと二次部分不変から基礎kernelはcut前後完全一致、基礎像はRにも埋まりGは必ずその外（cor:h3-positive3-base-survives-cut）。"
+  },
+  "positive3_Jordan_base_v137": {
+    "status": "PASS universal Jordan PBW/differential localization identities; injectivity and all-positive-three base coverage proof",
+    "validator": "computations/verify_cubic_positive3_Jordan_base.py",
+    "certificate": "computations/cubic_positive3_Jordan_base_certificate.json",
+    "proof": "papers/sections/cubic_positive3_Jordan_base.tex, prop:h3-positive3-Jordan-base-injective and thm:h3-positive3-canonical-base-coverage",
+    "scope": "gamma非零の残るJordan基礎S_J(yx=xy+kappa*x²+gamma*z²,zx=epsilon*xz,zy=epsilon*yz+beta*xz)は全係数でPBW/noeth quadraticAS3。z局所degree0は微分Ore A=k[u][v;delta],delta(u)=(kappa+epsilon*beta)u²+epsilon*gamma。deltaを可逆にするとsimple、非零completelyprimeはdeltaの一次因子u−rを含み、元の基礎でx=r zとなるためH3の一次独立性に反する。従ってJordan基礎はB/R両方へ単射。既存全行列標準形と対角kernel二分法を併用し、全(3,1)H3候補のcanonical基礎像を対角AS3/JordanAS3/量子Veroneseconeの三表示で被覆、全てRにも埋まりGは基礎像外。AS3枝では追加positive vと純正二次関係3本、cone枝では2本が残る。追加関係/正常G/許容性/全矢は未分類。"
   }
 }

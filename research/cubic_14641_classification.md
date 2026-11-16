@@ -841,3 +841,12 @@ gamma非零f対角基礎Sからgraded domainへの写像（z像非零）の核�
 一次資料：Bavula overview local /workspace/work/sources/bavula_gwa_overview.txt のTheorem2.1（GWA defining conventionYX=t,XY=sigma tも確認）。Stacks Project Tag03RD Theorem59.67.10（functionfield over algclosed of dimr isCr）とTag03RF Lemma59.67.11（curve functionfield Br0）を2026-11-16に原ページ確認、キャッシュ /workspace/work/sources/stacks_03RD.html,stacks_03RF.html。原稿にStacksTsenBrauer書誌を追加、Bavula書誌に2.1を追加。Azumaya全rootのmatrixfiber証明は本文で与え既存被覆定理を輸入しない。verify_cubic_positive3_base_kernel.py/certificateは局所/GWA/normalizer/resultant/oscillator recurrenceとcone4overlap/Hilbertを全係数厳密PASS、Tsen/Azumaya全位数は構造証明。
 
 重要な帰結cor:h3-positive3-base-survives-cut：同じSをH3のRdomainへ写す核も0/Cprimeの二択。B2=R2ゆえ二核のquadratic部分一致、両方二次生成なのでkernel完全一致。基礎像はcut後もRに単射、よってGは必ず基礎像の外にある。v135のprimitive6二平面は全H3の共鳴条件には使わない。これは根拠不明のG基礎所在を仮定する代わりに、実際にその所在を否定する。
+
+
+## Jordan基礎の単射性と全正三次元canonical基礎被覆（classification-v137）
+
+gamma非零の残るJordan基礎S_J(yx=xy+kappa*x²+gamma*z²,zx=epsilon*xz,zy=epsilon*yz+beta*xz)は全係数でPBW/noeth quadraticAS3。z局所degree0は微分Ore A=k[u][v;delta],delta(u)=(kappa+epsilon*beta)u²+epsilon*gamma。deltaを可逆にするとsimple、非零completelyprimeはdeltaの一次因子u−rを含み、元の基礎でx=r zとなるためH3の一次独立性に反する。従ってJordan基礎はB/R両方へ単射。既存全行列標準形と対角kernel二分法を併用し、全(3,1)H3候補のcanonical基礎像を対角AS3/JordanAS3/量子Veroneseconeの三表示で被覆、全てRにも埋まりGは基礎像外。AS3枝では追加positive vと純正二次関係3本、cone枝では2本が残る。追加関係/正常G/許容性/全矢は未分類。
+
+原稿prop:h3-positive3-Jordan-base-injective,thm:h3-positive3-canonical-base-coverage。SJ順序x<z<y、唯一yzx overlap=xzy+(epsilon*kappa−beta)x²z+epsilon*gamma z³。base quantumplane(x,z)上Ore y, sigma(x,z)=(x,epsilon z),delta(x)=kappa x²+gamma z²,delta(z)=−epsilon beta xz。u=x/z,v=y/zで[v,u]=lambda u²+epsilon gamma,lambda=kappa+epsilon beta、z actiontheta(u,v)=(epsilon u,epsilon v+beta u)。inverse x=u z,y=v zで全関係正確復元。微分Oreのf(u)=delta(u)を可逆にしたbasek[u,f^-1]はdifferential-simple、idealの最小v次数とcommuでsimple ring。非零completeprimeがfを含み、lambda0ではA通常Weylsimpleで不可、lambda!=0では一次因子u−rを含む。gradedkernelzlocalのdegree0 J非零⇒x−r z∈I_z⇒zsatでI、一次像独立と矛盾。
+
+全基礎被覆：M1 muWsemiのfdiagは対角S（positive補空間の非分裂Jordanを仮定で除かない）、fJordanはSJ。M2 muWJordanはfscalar含めSJ。両SJ/diagSはquadraticAS3domain、diagのみkernelCprimeのcone像もある。B/R同じ一次・二次より両基礎像保持、Goutsideすべて。gamma非零evenR4のz²射影unitでpurepositivequad3、AS3枝W²kernel0なのでv関係3、coneはWquadCprime一本を消費しv関係2。verify_cubic_positive3_Jordan_base.py/certificateで両epsilon全coeffPBW/局所Ore/逆変換/判別式恒等式厳密PASS。構造被覆を全H3対象分類・全家族降下と混同しない。

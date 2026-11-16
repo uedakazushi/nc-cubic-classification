@@ -1,0 +1,103 @@
+\subsection{Jordan基礎の単射性と全正三次元候補の基礎被覆}
+\label{subsec:h3-positive3-Jordan-base}
+\begin{proposition}\label{prop:h3-positive3-Jordan-base-injective}
+$\epsilon^2=1,\gamma\ne0$とし、$\kappa,\beta$は任意とする。
+\[
+ S_J=k\langle x,y,z\rangle/
+ (yx-xy-\kappa x^2-\gamma z^2,\ zx-\epsilon xz,
+ zy-\epsilon yz-\beta xz)
+\]
+はPBW基底$x^iz^jy^k$を持つnoetherian quadratic Koszul AS3の整域である。
+整域への次数付き準同型で$x,z$の像が一次独立なら、その写像は単射である。
+\end{proposition}
+\begin{proof}
+$x<z<y$とし、書換え
+\[
+ zx=\epsilon xz,\quad yz=\epsilon zy-\epsilon\beta xz,\quad
+ yx=xy+\kappa x^2+\gamma z^2
+\]
+を用いる。唯一のoverlap$yzx$は両方から
+\[
+ xzy+(\epsilon\kappa-\beta)x^2z+\epsilon\gamma z^3
+\]
+となる。
+これは量子平面$k\langle x,z\rangle/(zx-\epsilon xz)$上のOre拡大で、
+$\sigma(x,z)=(x,\epsilon z)$、
+$\delta(x)=\kappa x^2+\gamma z^2,\delta(z)=-\epsilon\beta xz$である。
+従ってnoetherian整域・Koszul AS3性が従う。
+
+$z$は正規である。局所化して$u=xz^{-1},v=yz^{-1}$と置くと
+\[
+ S_J[z^{-1}]=A[z,z^{-1};\theta],\quad
+ A=k[u][v;\delta_0],\quad
+ \delta_0(u)=(\kappa+\epsilon\beta)u^2+\epsilon\gamma,
+\]
+\[
+ \theta(u,v)=(\epsilon u,\epsilon v+\beta u)
+\]
+となる。順逆の対応$x=uz,y=vz$で全関係を復元できるので、これは正確な局所表示である。
+
+$f(u)=\delta_0(u)$と書く。
+$f$は非零定数項を持ち、$f$を可逆にした微分Ore環
+$k[u,f^{-1}][v;f(u)\partial_u]$は単純である。
+実際、非零イデアルの$v$次数最小元を取ると、次数が正なら$u$との交換子で
+さらに小さい次数の非零元を作れる。従って次数零の元を含む。
+その基底環内のイデアルは$f(u)\partial_u$で不変でなければならないが、
+$f$の零点を除いた直線上には非零真微分不変イデアルがない。
+よってイデアルは全体となる。
+
+したがって$A$の非零完全素イデアルは$f$を含む。
+$f$が定数なら単純Weyl環なので非零完全素イデアルは存在しない。
+二次の場合は代数閉体上で分解し、商が整域なので少なくとも一つの一次因子$u-r$を含む。
+もし$S_J$からの写像の核$I$が非零なら、$z$の像が非零であることとstrong gradingにより、
+局所化の次数零核は$A$の非零完全素イデアルとなる。
+従って$x-rz$が局所化した核に入り、$I$の$z$飽和性から$I$自身に入る。
+これは$x,z$の一次像の独立性に反する。従って$I=0$である。
+\end{proof}
+
+\begin{theorem}[全$(3,1)$H3候補の基礎部分代数の被覆]
+\label{thm:h3-positive3-canonical-base-coverage}
+重複度$(3,1)$のH3対象について、共通平面と負直線の生成する
+標準的な部分代数$A_0=\langle W,z\rangle\subset B$は、次の三種の表示で被覆される。
+\begin{enumerate}
+\item $\gamma\ne0$の対角Heisenberg型quadratic AS3
+ $S$（命題\ref{prop:h3-positive3-nonzero-gamma-base}）。
+\item 前命題のJordan型quadratic AS3 $S_J$。
+\item 対角基礎の$S/(C')$、すなわち二変数量子平面の偶Veronese環。
+ これは$a^4\ne1$の場合だけ現れ得る。
+\end{enumerate}
+これらの基礎像は全て$R=B/(G)$にも単射的に保たれ、$G\notin A_0$である。
+前二者では$B$はこのAS3基礎に残る正生成元$v$と三つの純正二次関係を加えた表示を持つ。
+第三の場合には、四つの二次関係を持つ基礎に$v$と二つの純正二次関係を加える。
+この定理は基礎部分代数の被覆であり、追加関係の全AS4条件・正常三次・H3許容性・全矢の分類ではない。
+\end{theorem}
+\begin{proof}
+定理\ref{thm:h3-positive3-gamma-zero-exclusion}から$\gamma\ne0$である。
+共通二平面の二つの行列標準形
+（命題\ref{prop:h3-order2-plane-matrices}）を使う。
+第一型で$f$が対角化可能なら、$f=\operatorname{diag}(a,a^{-1})$として
+対角基礎$S$の三関係を得る。
+核二分法により像は$S$または$S/(C')$である。
+第一型の$f$が非自明Jordanの場合と、第二型の全場合は、
+基底と関係の尺度を取って$S_J$の形となる。
+ここでは$\epsilon=\pm1$、$\kappa,\beta$に実際の標準形から制約があっても、
+前命題はそれら全てを含む任意係数で成り立つ。
+$x,z$は異なる符号の固有方向なので、原包絡内で一次独立であり、$S_J$は単射する。
+この議論は残る正生成元の中山Jordan拡大を分裂と仮定しない。
+
+同じ議論を整域$R$にも適用できる。
+Jordan基礎は両方で単射、対角基礎は$B_2=R_2$と核二分法により核が一致する。
+従って$A_0$は切断後も埋まり、非零$G$が$A_0$に入ることはない。
+
+最後に、全偶二次関係は純正三元の二次式と$kz^2$の中にあり、四次元である。
+$\gamma\ne0$なので$z^2$係数射影は全射、従って純正二次関係は三次元である。
+AS3基礎の場合、この三次元空間と$W^2$の交わりは零であり、
+三本とも追加正生成元$v$を含む。
+円錐基礎の場合は既に$W^2$内に$C'$の関係が一本あるため、残る追加関係は二本である。
+これで表示の関係数も従う。
+\end{proof}
+
+\texttt{verify\_cubic\_positive3\_Jordan\_base.py}は
+両符号、全$\kappa,\beta,\gamma$でPBW overlapと微分Ore局所表示を厳密検算する。
+基礎被覆の証明は既存の全Jordan行列標準形と核二分法を併用する。
+各表示に基底を追加標識したモジュライや、全圏族の降下をこの被覆から主張しない。

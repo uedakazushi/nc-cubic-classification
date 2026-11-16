@@ -1,0 +1,28 @@
+{
+  "presentation": [
+    "yx=xy+kappa*x\u00b2+gamma*z\u00b2",
+    "zx=epsilon*xz",
+    "zy=epsilon*yz+beta*xz"
+  ],
+  "hypotheses": "gamma!=0,epsilon\u00b2=1; kappa and beta arbitrary; algebraically closed characteristic-zero field",
+  "PBW": "x^i*z^j*y^k; quadratic Koszul noetherian AS3 domain",
+  "checks": [
+    {
+      "epsilon": 1,
+      "overlap_count": 1,
+      "delta_of_u": "gamma + u**2*(beta + kappa)",
+      "quadratic_discriminant": "-4*gamma*(beta + kappa)"
+    },
+    {
+      "epsilon": -1,
+      "overlap_count": 1,
+      "delta_of_u": "-gamma + u**2*(-beta + kappa)",
+      "quadratic_discriminant": "-4*gamma*(beta - kappa)"
+    }
+  ],
+  "localized_degree_zero": "k[u][v;delta], u=x/z,v=y/z, delta(u)=(kappa+epsilon*beta)*u\u00b2+epsilon*gamma",
+  "localized_grading_action": "theta(u,v)=(epsilon*u,epsilon*v+beta*u)",
+  "domain_kernel_argument": "A[delta(u)^-1] simple by minimal v-degree and differential-simple localized base. A nonzero completely prime quotient forces u=r at a root of delta, hence x=r*z.",
+  "conclusion": "Every graded map to a domain with linearly independent images of x,z is injective.",
+  "scope": "Exact PBW and localization identities; differential simplicity and all-kernel implication are structural proofs. The additional positive generator and H3 admissibility remain unclassified."
+}
