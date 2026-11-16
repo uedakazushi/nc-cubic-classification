@@ -40,7 +40,7 @@ Rains・VdB・AS・anticanonical heartの一般次数比較は [nc-dp-surface-he
 
 **全体的なスペクトル制約（classification-v186）**：全(1,3)は幾何学的被覆・H3必要十分条件・全矢まで確定、全(3,1)は全Jordan型込みで空。(2,2) mixed rank2も全Jordan型込みで空。mixed rank4のcanonical正top P0全体は、退化境界と全Jordan型込みで固定非CY符号族へ完全に幾何学的認識、一般dim2/inertia mu2²。canonical負topQ0は全Jordan型込みで曲がったClifford族に認識。未知の(2,2)はP,Qとも非零で、Pはcomm⊙平方/comm⊙非退化quadの二型。(2,2)/mixed rank4の全H3は実際に半単純。負tangent/非対称型も全排除され、非零Qの未知は対称secant型だけ。三固有値以上、全CY被覆、全成分・intrinsic族降下は未完。
 
-**次の核心（classification-v189）**：平方正top/対称secant負top/正Pfaffianの全z5neq0主chartを全値排除。選択六四次関数の極q*t*(t²−1)*(q²−4t²+2)のみ、正常10minorは−(2t−1)³(2t+1)³/[16q t³(t²−1)(q²−4t²+2)²]。五有理曲線を二minorで被覆、Gaussian有限点ではt0核零/t−1/2唯一正常三次もx+2yを因子に持つ。残るconicの12次既約例外P(w)は厳密12次数体で元288四次関係を消去しrank10、全共役を同時に排除。t1/2全pencilは既存因子化と接合。 次は平方正Pfのz5=0境界。A=(a,−t,−s,s,t,0),t²−s²1。s!=0ではyshearでa0、w=t+s!=0の有理一param(s=(w-w^-1)/2,t=(w+w^-1)/2)、w±1は除く。s0ではt±1/a任意の二直線を別に保持する。全値正常kernelをまず個別に計算し、共鳴や孤立正常cutが残れば因子incidenceを判定する。非退化正top正Pfの3param quadric、rank2secantのb,c!=0境界は未完。全CY/三固有値以上/全成分/相対降下も未完。
+**次の核心（classification-v190）**：平方正top/対称secant型の全境界z5=0を排除し、既存の主chart・負Pfaffianと合わせ、この型全体にH3がないことを証明。三有理曲線の二minor gcd cover、Gaussian/三次根の厳密再消去、唯一の原始六乗根正常pencilの明示的一次因子写像で全値を覆う。次は非退化正topの正Pfaffian三param quadricとrank2secant境界A=(-c,-c,0,b,c,c),c!=0。全CY/三固有値以上/成分/相対降下は未完。
 
 既存の主要な構造結果を維持する：
 

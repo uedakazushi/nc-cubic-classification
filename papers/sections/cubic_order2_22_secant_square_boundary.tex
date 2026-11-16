@@ -1,0 +1,54 @@
+\subsection{平方正topを持つ対称secant型の境界と全排除}
+\begin{proposition}
+実中山作用が $(+,+,-,-)$、混合射影階数4、純正topが非零平方型、純負topが対称secant型であるH3対象は存在しない。
+\end{proposition}
+\begin{proof}
+負Pfaffianと正Pfaffianの $z_5\ne0$ は前節までで排除済みである。
+残る必要atlasは
+\[
+ A=(a,-t,-s,s,t,0),\qquad t^2-s^2=1.
+\]
+正二平面のshear $y\mapsto y+kx$ は $a\mapsto a-2ks$ と作用する。
+従って $s\ne0$ は $a=0$ とでき、$w=t+s$ を使って
+\[
+ s=(w-w^{-1})/2,\quad t=(w+w^{-1})/2,\quad w(w^2-1)\ne0
+\]
+の一曲線となる。$s=0$ は $t=\pm1$、$a$ 任意の二直線である。
+
+元の二次関係を全て挿入した四次商の汎関数から、自由な正三次32語の正常条件を作る。
+各曲線で行分母を払い、二つの正常10minorのgcdを取る。
+円錐曲線では定数因子を除き
+\[
+ w^{22}(w-1)^7(w+1)^{11}(w^2+1)(w^2-w+1)^2(w^2+w+1)
+\]
+となる。用いる四次汎関数の極は $w(w^2-1)=0$ のみである。
+二直線のgcdはそれぞれ定数倍の $a^4,a^3$、用いる汎関数の極はない。
+このrank10は三次関係を消す写像のrankであり、AS4候補の正三次商次元10から正常核零を与える。
+従って特殊点にgenericな三次基底を仮定していない。
+
+残る点を元関係から再消去する。
+$(a,s,t)=(0,0,\pm1)$、$(0,i,0)$、$(0,\sqrt{-3}/2,-1/2)$
+及びその共役では正常核零となる。
+唯一 $(0,\sqrt{-3}/2,1/2)$ と共役で正常核次元2となる。
+$r=\sqrt{-3}$ と書き、二次語の順序を $(x^2,xy,yx,y^2,uv,vu)$ とすると
+\[
+ Q_2(\theta)=
+ (-3r\theta^2+2r)x^2-r\theta(xy+yx)+2r\theta^2y^2
+ -3(\theta^2+\theta)uv+3(\theta^2-\theta)vu
+\]
+について $G(\theta)=(x+\theta y)Q_2(\theta)$ は正常である。
+元の三次商で $G(\theta)$ の $\theta$ 係数のspanは次元2なので、正常pencilへの非定数有理写像を与える。
+一次式・二次式の積と正常線が比例する条件を外積零で課したprojective incidenceはproperである。
+包絡がdomainなら非零因子の積は零にならず、このincidenceの像は閉集合である。
+上の非定数像を含むため正常pencil全体を覆い、全正常三次が一次因子を持つ。
+商はdomainにならずH3ではない。共役体埋込みで他方も同様である。
+
+検証器
+\[
+\texttt{verify\_cubic\_order2\_22\_secant\_square\_boundary.py}
+\]
+は三曲線の二minor、実際に使用する汎関数の極、有限点の元関係消去、
+上の因子恒等式と係数span2を厳密に再生する。
+これで平方正topの対称secant型を全て閉じた。
+非退化正topの正Pfaffianとrank2のsecant境界は、この命題に含まれない。
+\end{proof}

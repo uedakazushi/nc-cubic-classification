@@ -1266,4 +1266,8 @@ canonical負topQ0の(2,2)/mixed rank4全H3を、全Jordan型込みで曲がっ�
 
 証明cubic_order2_22_secant_square_main.tex。verifierは共通secant_tools.normal_freeで全32自由正三次の正常式を作り、三次のgeneric座標基底を特殊値へ仮定しない。五curveの実際に使うquartic functionの極と二minor gcdの合併を調べ、定義域外と既知t1/2を除く残余因子をGaussian点、既知t0曲線、12次既約Pへ剰余零で写す。P=w12−12w10+28w8+96w6+112w4−192w2+64。QQ[alpha]/P上のR係数をQQ(w)の分子/分母からnative ANPで評価し、SymPy式へ12次根を大量展開せず256語商を消去、B4dim35/normalrank10を全元関係annihilator恒等式付きで検証。実行はoptional Flint exact ground environment、近似根計算なし。Gaussian唯一cutは(x+2y)*(-x²/2+xy+yx+2y²−i(uv+vu))、共役も同じ左因子。新規性/独立査読未確認。
 
-次は平方正Pfのz5=0境界。A=(a,−t,−s,s,t,0),t²−s²1。s!=0ではyshearでa0、w=t+s!=0の有理一param(s=(w-w^-1)/2,t=(w+w^-1)/2)、w±1は除く。s0ではt±1/a任意の二直線を別に保持する。全値正常kernelをまず個別に計算し、共鳴や孤立正常cutが残れば因子incidenceを判定する。非退化正top正Pfの3param quadric、rank2secantのb,c!=0境界は未完。全CY/三固有値以上/全成分/相対降下も未完。
+## 平方secant全境界と平方正topの全排除（classification-v190）
+
+平方正top/対称secant型の全境界z5=0を排除し、既存の主chart・負Pfaffianと合わせ、この型全体にH3がないことを証明。三有理曲線の二minor gcd cover、Gaussian/三次根の厳密再消去、唯一の原始六乗根正常pencilの明示的一次因子写像で全値を覆う。次は非退化正topの正Pfaffian三param quadricとrank2secant境界A=(-c,-c,0,b,c,c),c!=0。全CY/三固有値以上/成分/相対降下は未完。
+
+証明cubic_order2_22_secant_square_boundary.tex。s!=0ではa0にshear正規化しw=t+s、s=(w-w^-1)/2,t=(w+w^-1)/2の一curve、s0ではt±1/a任意の二line。正常10minor二本と使用汎関数の極から有限例外はconicのw²+1,w²±w+1と二lineのa0だけ。Gaussianと原始三乗根及びa0は正常核零。原始六乗根は核2で、r²=-3としてQ2=(-3r theta²+2r)x²-r theta(xy+yx)+2r theta²y²-3(theta²+theta)uv+3(theta²-theta)vuが(x+theta y)との積を正常にする。theta係数span2を厳密検証しproperな射影比例incidenceで全正常pencilを覆う。二次体の共役も同時に覆い、全cutに一次因子。新規性/独立査読未確認。

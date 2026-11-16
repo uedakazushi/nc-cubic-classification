@@ -1991,5 +1991,13 @@
       "global H3 classification",
       "intrinsic relative descent"
     ]
+  },
+  "order2_22_secant_square_boundary_v190": {
+    "status": "PASS exact three-curve rank cover, finite field points and full primitive6 factor pencil; no independent peer review",
+    "validator": "computations/verify_cubic_order2_22_secant_square_boundary.py",
+    "input": "computations/cubic_order2_22_secant_square_boundary_input.json",
+    "certificate": "computations/cubic_order2_22_secant_square_boundary_certificate.json",
+    "proof": "papers/sections/cubic_order2_22_secant_square_boundary.tex",
+    "scope": "平方正top/対称secant型の全境界z5=0を排除し、既存の主chart・負Pfaffianと合わせ、この型全体にH3がないことを証明。三有理曲線の二minor gcd cover、Gaussian/三次根の厳密再消去、唯一の原始六乗根正常pencilの明示的一次因子写像で全値を覆う。次は非退化正topの正Pfaffian三param quadricとrank2secant境界A=(-c,-c,0,b,c,c),c!=0。全CY/三固有値以上/成分/相対降下は未完。"
   }
 }

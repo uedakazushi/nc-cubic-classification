@@ -436,5 +436,32 @@
     "inspection": "Read README, current plan scope and relevant sections; searched COVERAGE and all 1049 CLAIMS for mixed (2,2), twisted tensor and double Ore. No theorem covering the current non-CY semisimple rank4 branch was located.",
     "new_mathematical_imports": [],
     "scope": "Navigation audit only. Existing imported commits and their assumptions remain unchanged; no latest CY completeness or general unipotent atlas theorem is newly imported."
+  },
+  "navigation_audit_v190": {
+    "commit": "80710ae23b68a3a09fd9bb02ca157ef8f63a2d29",
+    "entry_points": [
+      {
+        "file": "README.md",
+        "bytes": 4365,
+        "sha256": "33897e55cbd3cdbc8e6bc710ddfbf1ff763fdf420ad053a82d334937c95ef95d"
+      },
+      {
+        "file": "research/plan_ja.tex",
+        "bytes": 33487,
+        "sha256": "ca1b68b2eebd854b2e209c24bd9d45fdcdb576a10b42c5de4352ef8711892cd8"
+      },
+      {
+        "file": "research/COVERAGE.md",
+        "bytes": 358290,
+        "sha256": "239e967cdabdcc970e8cf1af528680d27d9c50bc739fd41e6c3ff8e539edc354"
+      },
+      {
+        "file": "research/CLAIMS.json",
+        "bytes": 2223547,
+        "sha256": "2005629ca852706ab4705cb9b0af1a679a02d8a8b926488394c38649626e3a3f"
+      }
+    ],
+    "inspected": "README; plan current priority SEMISIMPLE-ATLAS-003; COVERAGE navigation; CLAIMS semisimple211, semisimple22 rank-two and CY-complete scopes",
+    "conclusion": "No new theorem imported. Upstream retains general semisimple AS locus/coverage and independent audits as unfinished; scalar-Nakayama first-form computations do not settle the present (++--) symmetric-secant H3 remainder. Existing pinned imports unchanged."
   }
 }
