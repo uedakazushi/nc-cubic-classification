@@ -1,0 +1,9 @@
+{
+  "hypotheses": "H3 multiplicities(3,1), common plane gamma=0, embedded AS2 T",
+  "excluded_configuration": "complementary positive v in Qgr(T), and negative z\u00b2 in Qgr(T)",
+  "commutative": "inner f\u00b2=id, finite fixed-field extension forces GKdim<=2",
+  "quantum_nonroot": "f\u00b2=mu_T, but h*x*y would be nonzero central homogeneous of degree4; the only homogeneous central elements have degree0",
+  "quantum_root": "f finite and Q(T) finite over a trdeg2 fixed central field; finite structure constants force GKdim<=2",
+  "Jordan": "f(y)=a*y,a\u00b2=1; commuting h with y forces h=c*y\u00b2; (z/y)\u00b2=a*c is scalar, so algebraic closedness and the domain property force z proportional to y",
+  "scope": "Matrix/Nakayama and localized square identities checked exactly. Rational periodicity, homogeneous centers and finite-central growth are structural proofs; no gamma!=0 or full normalizing-chart exclusion asserted."
+}

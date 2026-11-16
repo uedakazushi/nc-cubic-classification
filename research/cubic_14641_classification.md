@@ -753,3 +753,10 @@ H3係数locusはprojective conic bundleのrelative singular incidenceの像の�
 一次元/三次元分解の全common-plane領域（単冪も保持）でE=B!の一次元側双対zetaは正規、zeta E1=E1 zeta dim3、階数列1,3,3,1。F=E/(zeta)は常にHilbert(1,3,3,1)、Ann(zeta)は(0,1,3,3,1)。F Frobenius iff Ann(zeta)=E xi=xi E、xiは共通平面の直交補線。この開部分ではAnn(xi)=(zeta)、二周期線型E解消とchange-of-ringsでF Koszul、F! AS3かつTor edge全射の双対によりF!->B単射。二つの3x3対合行列式で開条件を判定する。全(3,1)でのFrobenius自動性は未証明。次はFrobenius退化域を正規三次incidenceと併せて調べ、残る(3,1)/(2,2)被覆を進める。
 
 原稿prop:h3-order2-dual-hyperplane。mixedgraph二関係より双対zetaの左右積U*像は同じodd2、核は同じxi=Wperp。top zz行q0非退化からzeta²非零、Lzeta:E1->E2 rank3。Frobenius双対で残る階数1,3,1が決まりF Hilbert(1,3,3,1)、annHilbert(0,1,3,3,1)。両側イデアル(zeta)はnuで不変、trace直交により左右ann一致。annはFの双対の捩れ/移動なのでF Frob iff annが左右xi一元生成。両者dim8から逆ann(xi)=(zeta)。E(-q)をzeta/xi交互乗法する線型解消ができ、TorE(F,k)内部q集中。change-of-ringsでF非Koszulの最初のTorF_p,j>pはq0から入る微分なく、出る先内部p-1で消えずKoszulEに矛盾。ゆえF Koszul、F! AS3。さらに全E2項内部p+qで全微分零、TorE(k,k)->TorF(k,k) edge全射。双対ExtF->ExtEの単射が自然F!->Bなので、実際にAS3部分代数が埋まる。Frobenius条件の全点非消滅は未証明なので全被覆とはしない。verify_cubic_order2_dual_hyperplane.py/certificateは全係数bi-normal E16模型でFrob対合、階数列、相互ann、F対合を厳密検算PASS。Frobenius条件は両方向F1/F2の3x3行列式非零で、退化域を黙って除外しない。
+
+
+## 正三次元側の商体退化排除（classification-v126）
+
+正三次元(3,1)側でも、gamma0で共通TがAS2平面の場合、残る正生成元vと負生成元z²が同時に斉次商体Qgr(T)へ入ることを排除した。可換/有限量子は固定中央体上有限次元でGK<=2、無限量子はhxyが非零次数4中心元となり矛盾、Jordanはh=cy²と(z/y)²=ac∈kから代数閉体上整域性によりz∈kyとなり矛盾。単冪も保持するがgamma非零には適用しない。次はgamma0の一平方投影でcross両射影が可逆となるpositive normalizing chartを分類する。半単純対角chartの先頭Ore環ではmu=(+,+,+,-)、正常三次はa³=-1でのみ残り全てyでfactorする見込み。この先頭因子化を変形後の因子化と混同せず、まず非共鳴a³!=-1の全変形除外を証明する。
+
+原稿lem:h3-positive3-rational-collapse。f det=hdet1、muT=muW f²。量子q!=1ではmuWの固有値1のみなのでid、q−1反対角fはdet/hdet逆符号で除外、fdiag(a,a^-1),a²q。q無限位数のhomogeneouscentral r(u)y^mはycommからr(q^-1u)=r(u)、零極議論とq無限位数からr定数、xcommからm0。h=z²inner f²=muT=Ad_(xy)^-1ゆえhxy中央degree4矛盾。有限q/可換ではf有限、Q(T)はtrdeg2中央固定体F上有限、B subset D+DzもF有限、有限構造定数からGK<=2。Jordan yx=xy+y²、f(y)=a y,a²1なのでhcommy、h=r(x/y)y²のr周期は定数c、(zy^-1)²=ac、代数閉体上の整域で代数的元はscalarゆえz∈ky矛盾。verify_cubic_positive3_rational_collapse.py/certificateで量子muとf²、q−1反対角符号、Jordan/局所平方恒等式を厳密検算PASS。合理関数とGK論証は本文。

@@ -1283,5 +1283,12 @@
     "certificate": "computations/cubic_order2_dual_hyperplane_certificate.json",
     "proof": "papers/sections/cubic_order2_dual_hyperplane.tex, prop:h3-order2-dual-hyperplane",
     "scope": "一次元/三次元分解の全common-plane領域（単冪も保持）でE=B!の一次元側双対zetaは正規、zeta E1=E1 zeta dim3、階数列1,3,3,1。F=E/(zeta)は常にHilbert(1,3,3,1)、Ann(zeta)は(0,1,3,3,1)。F Frobenius iff Ann(zeta)=E xi=xi E、xiは共通平面の直交補線。この開部分ではAnn(xi)=(zeta)、二周期線型E解消とchange-of-ringsでF Koszul、F! AS3かつTor edge全射の双対によりF!->B単射。二つの3x3対合行列式で開条件を判定する。全(3,1)でのFrobenius自動性は未証明。次はFrobenius退化域を正規三次incidenceと併せて調べ、残る(3,1)/(2,2)被覆を進める。"
+  },
+  "positive3_rational_collapse_v126": {
+    "status": "PASS exact AS2 normalizer identities; rational and growth arguments in manuscript",
+    "validator": "computations/verify_cubic_positive3_rational_collapse.py",
+    "certificate": "computations/cubic_positive3_rational_collapse_certificate.json",
+    "proof": "papers/sections/cubic_positive3_rational_collapse.tex, lem:h3-positive3-rational-collapse",
+    "scope": "正三次元(3,1)側でも、gamma0で共通TがAS2平面の場合、残る正生成元vと負生成元z²が同時に斉次商体Qgr(T)へ入ることを排除した。可換/有限量子は固定中央体上有限次元でGK<=2、無限量子はhxyが非零次数4中心元となり矛盾、Jordanはh=cy²と(z/y)²=ac∈kから代数閉体上整域性によりz∈kyとなり矛盾。単冪も保持するがgamma非零には適用しない。次はgamma0の一平方投影でcross両射影が可逆となるpositive normalizing chartを分類する。半単純対角chartの先頭Ore環ではmu=(+,+,+,-)、正常三次はa³=-1でのみ残り全てyでfactorする見込み。この先頭因子化を変形後の因子化と混同せず、まず非共鳴a³!=-1の全変形除外を証明する。"
   }
 }
