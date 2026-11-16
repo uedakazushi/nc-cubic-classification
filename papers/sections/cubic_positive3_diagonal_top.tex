@@ -1,0 +1,82 @@
+\subsection{正三次元対角chartの共鳴は$a^3=-1$に限る}
+\label{subsec:h3-positive3-diagonal-top}
+\begin{theorem}\label{thm:h3-positive3-diagonal-top}
+$a\ne0$に対し、次の先頭環を考える：
+\[
+ B_0=k\langle x,y,v,z\rangle/
+ (xy-a^2yx,\ zx-axz,\ zy-a^{-1}yz,
+ vx-axv,\ vy+a^{-1}yv,\ v^2-z^2).
+\]
+これはnoetherian quadratic Koszul AS4型14641の整域で、
+$\mu_{B_0}=(x,y,v,-z)$である。正規三次の全核は
+\[
+ W_1(B_0)=
+ \begin{cases}
+ 0,&a^3\ne-1,\\
+ ky^3,&a^3=-1,\ a\ne-1,\\
+ y\langle x^2,y^2,v^2\rangle,&a=-1.
+ \end{cases}
+\]
+従ってこの先頭族の全三次切断はH3でない。
+さらに、実際の中山作用が$(x,y,v,-z)$である14641包絡の表示が
+\begin{align*}
+ xy&=a^2yx,&zx&=axz,&zy&=a^{-1}yz,\\
+ vx&=axv+d_x(W),&vy&=-a^{-1}yv+d_y(W),\\
+ v^2-z^2&=\ell(W)v+q_2(W)
+\end{align*}
+なら、$a^3\ne-1$の全係数で$W_1(B)=0$であり、H3は存在しない。
+ここで$d_x,d_y,q_2$は任意の二次式、$\ell$は任意の一次式である。
+共鳴値での先頭三次の因子化は、補正後の三次の因子化を意味しない。
+\end{theorem}
+\begin{proof}
+$r=v+z,s=v-z$と置くと$A=k\langle r,s\rangle/(rs+sr)$上の二段Ore表示
+\[
+ B_0=A[x;\sigma_x][y;\sigma_y],\quad
+ \sigma_x(r,s)=a^{-1}(r,s),\quad
+ \sigma_y(r,s,x)=(-as,-ar,a^{-2}x)
+\]
+を得る。従って$r^is^jx^ky^\ell$がPBW基底であり、
+noetherian、整域、Koszul AS4である。
+Ore中山公式\cite[Theorem 3.3]{LWWOre}を適用する。
+$\mu_A=(-r,-s)$、$\operatorname{hdet}_A\sigma_x=a^{-2}$なので
+第一拡大の中山は$(-ar,-as,a^{-2}x)$。
+第二拡大では$\sigma_y^{-1}$を合成して$(r,s,x)\mapsto(s,r,x)$となる。
+$\sigma_y$は$A$の二次関係を$a^2$倍し$x$を$a^{-2}$倍するため、
+第一拡大でのhomological determinantは1、従って$y$は固定される。
+これで表示した実際の中山作用を得る。
+
+正常三次$G$は中山固定である。
+外側平面$A$の次数$n=0,1,2,3$で、中山固定部分の次元は$1,1,1,2$。
+それぞれ$1,v,v^2$、および二次元の三次固定空間である。
+従って$G$を$W$次数$(i,j)$と外側次数$n$、$i+j+n=3$で分解する。
+$Gx=xG,Gy=yG$の必要条件は各部分で
+\[
+ a^{n-2j}=1,\qquad (-1)^n a^{2i-n}=1.
+\]
+$n=1$の三場合と$n=3$では、この二式のLaurent多項式の最大公約数は1なので全て零となる。
+残りは$x^iy^jv^n$、$n=0,2$の六つの単項式である。
+さらに$Gv=vG,Gz=-zG$を課すと
+\[
+ (-1)^j a^{i-j}=1,\qquad a^{i-j}=-1
+\]
+が必要十分となる。従って$j$は奇数で、残る候補は
+$y^3,x^2y,yv^2$だけ。
+最初は$a^3=-1$、後二者は$a=-1$が必要十分である。
+異なる$W$次数の成分は独立で、同じ$W$次数内の固定外側基底もPBWで独立なので、
+この消去は係数の相殺を残さない。各候補の四正常化式を直接確認すると、全核が得られる。
+全て$y$で因子化するので商は整域でない。
+
+補正を持つ表示について、$x,y$の重みを1、$v,z$の重みを2とする。
+先頭関係から$B_0\twoheadrightarrow\operatorname{gr}B$があり、
+各元の元来の斉次次数を固定した有限filtrationの次元を比較できる。
+$B$は14641 Hilbert値を持ち、$B_0$も同じなので、この全射は同型である。
+正常三次$G\ne0$の重み先頭項は非零で、同じ四正常化式と中山固定条件を満たす。
+従って$\operatorname{in}(G)\in W_1(B_0)$。
+$a^3\ne-1$ではこの核が零なので$G$は存在しない。
+共鳴値ではこの議論は先頭項を制限するだけで、変形した$G$の因子化を主張しない。
+\end{proof}
+
+\texttt{verify\_cubic\_positive3\_diagonal\_top.py}は二段Oreの全生成元三重積、
+元の六関係、外側固定部分の次元、十一係数全体の消去に用いるLaurent最大公約数、
+共鳴候補の正常化式を厳密検算する。
+反対角作用、非半単純作用、$\gamma\ne0$やcross射影退化をこの表示で被覆したとはしない。

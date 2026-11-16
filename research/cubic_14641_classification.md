@@ -760,3 +760,10 @@ H3係数locusはprojective conic bundleのrelative singular incidenceの像の�
 正三次元(3,1)側でも、gamma0で共通TがAS2平面の場合、残る正生成元vと負生成元z²が同時に斉次商体Qgr(T)へ入ることを排除した。可換/有限量子は固定中央体上有限次元でGK<=2、無限量子はhxyが非零次数4中心元となり矛盾、Jordanはh=cy²と(z/y)²=ac∈kから代数閉体上整域性によりz∈kyとなり矛盾。単冪も保持するがgamma非零には適用しない。次はgamma0の一平方投影でcross両射影が可逆となるpositive normalizing chartを分類する。半単純対角chartの先頭Ore環ではmu=(+,+,+,-)、正常三次はa³=-1でのみ残り全てyでfactorする見込み。この先頭因子化を変形後の因子化と混同せず、まず非共鳴a³!=-1の全変形除外を証明する。
 
 原稿lem:h3-positive3-rational-collapse。f det=hdet1、muT=muW f²。量子q!=1ではmuWの固有値1のみなのでid、q−1反対角fはdet/hdet逆符号で除外、fdiag(a,a^-1),a²q。q無限位数のhomogeneouscentral r(u)y^mはycommからr(q^-1u)=r(u)、零極議論とq無限位数からr定数、xcommからm0。h=z²inner f²=muT=Ad_(xy)^-1ゆえhxy中央degree4矛盾。有限q/可換ではf有限、Q(T)はtrdeg2中央固定体F上有限、B subset D+DzもF有限、有限構造定数からGK<=2。Jordan yx=xy+y²、f(y)=a y,a²1なのでhcommy、h=r(x/y)y²のr周期は定数c、(zy^-1)²=ac、代数閉体上の整域で代数的元はscalarゆえz∈ky矛盾。verify_cubic_positive3_rational_collapse.py/certificateで量子muとf²、q−1反対角符号、Jordan/局所平方恒等式を厳密検算PASS。合理関数とGK論証は本文。
+
+
+## 正三次元対角chartの共鳴と非共鳴変形の全排除（classification-v127）
+
+(3,1)半単純対角normalizing chartの全先頭AS4族 xy=a²yx,zx=axz,zy=a^-1yz,vx=axv,vy=-a^-1yv,v²=z²の正常三次を完全計算：a³!=-1ならW1=0、a³=-1かつa!=-1ならky³、a=-1ならy*span(x²,y²,v²)。全先頭切断は因子化。重みW1/outer2の先頭環比較により、dx(W),dy(W),ell(W)v+q2(W)を任意に加えた14641/指定muの全変形もa³!=-1ではW1=0で排除。共鳴a³=-1の変形後因子化は未証明。次はa=-1とprimitive6のskew導分/平方補正を全係数で標準化し、正常三次とH3判定を求める。反対角/Jordan、gamma非零、Frobenius退化、(2,2)および三固有値以上は依然未被覆。
+
+原稿thm:h3-positive3-diagonal-top。r=v+z,s=v−zでA=quantumplane−1、B0=A[x;sigma_x][y;sigma_y]、sigma_x(r/s)=a^-1(r/s)、sigma_y(r,s,x)=(-a s,-a r,a^-2 x)。noeth/PBW/domain/KoszulAS4。muA−、第一mu=(-a r,-a s,a^-2 x)、第二でr/s交換,x/y固定となり実際mu=(x,y,v,-z)。mu固定outerdegree0/1/2/3次元1/1/1/2で全三次11。W次数i/j、outer nなら正常化Gx=xG,Gy=yGはa^(n−2j)=1,(-1)^n a^(2i−n)=1。n1/n3は全gcd1で零、残るn0/2単項式はGv/Gzから(-1)^j a^(i−j)=1,a^(i−j)=-1、ゆえjodd。y³のgcd a³+1、x²y/yv²のgcd a+1、他gcd1。元来のgradeddegree固定で重み先頭環への全射とHS比較によりgrB=B0、正常Gの先頭もW1B0なので非共鳴変形全排除。共鳴先頭因子を変形後factorとしない。verify_cubic_positive3_diagonal_top.py/certificateでOre生成元三重積/六関係/固定11次元/全Laurentgcd/候補正常化を厳密検算PASS。
