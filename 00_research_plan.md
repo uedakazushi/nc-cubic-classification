@@ -1,4 +1,4 @@
-# 研究方針：非可換del Pezzo曲面の内在的モジュライとheart比較
+# 研究方針：H3型内在的非可換三次曲面の完全分類
 
 2026-11-16 / research-plan-v31 / resonance-hearts-v8。**再開時は本書を最初に読む。GitHub mainが唯一の正本。** 実行規則は `AGENTS.md`、H3の具体的な分類計画は `research/cubic_14641_codex_plan.md`。ここには現時点の目標・到達点・次の着手だけを置き、証明・計算は下記の現行原稿とノートを参照する。
 
@@ -22,7 +22,7 @@
 
 全対象の被覆、全admissible切断、幾何学的同型群oidと慣性、既約成分・交叉・境界、Serre/heart/rank/AZ認識、相対開性・底変更・stack降下を達成基準とする。全AS4の先行完全分類を要求せず、正規三次incidenceとH3条件から包絡を絞る。1-periodic graded、Zhang twist、4-periodic Z-algebra、qgr同値を区別し、Pym六標準chartだけで全AS4被覆としない。
 
-上位の別の構造目標は全次数のRains heart・VdB heart・AS heart・anticanonical heartの比較である。四名称は由来を示し、四つの相異なるheartの存在を意味しない。realization、指定導来同値、t-exactness、構造対象、反Serre、境界、rank、marking、族の降下を分離する。VdB literal blow-upとsection-model qgrを自動的に同一視しない。現在の共鳴課題はIV節から再開する。
+Rains・VdB・AS・anticanonical heartの一般次数比較は [nc-dp-surface-hearts](https://github.com/uedakazushi/nc-dp-surface-hearts) に移管した。本リポジトリではH3分類を最優先とし、必要な結果を固定commitと仮定に基づいて参照する。
 
 ## III. H3分類の現状と次の具体的着手
 
@@ -53,42 +53,15 @@
 
 これらを全H3の成分分類とは呼ばない。未被覆のPym特殊locus、低交換子CY、非スカラー共鳴、非対称・非CY包絡、j=0その他の境界、Z-algebraとの差と相対降下を縮小する。詳細な全式と証明は現行papers/sectionsにあり、本書で省略した係数等を削除してはいない。
 
-## IV. Rains共鳴：現在の到達点と次の核心
+## IV. 関連研究と研究継続
 
-現行原稿 `papers/nc_del_pezzo_resonance_hearts.tex`、ノート `research/resonance_hearts.md`、検証状態 `research/resonance_hearts_validation.json` を読む。現在の中心証明は `papers/sections/resonance_mixed_a2_category.tex` と `papers/sections/resonance_global_heart.tex`。
+四つのheart・Rains共鳴・cubic cornerの公表原稿・研究ノート・検算は [nc-dp-surface-hearts](https://github.com/uedakazushi/nc-dp-surface-hearts) を正本とする。次数1固有の非可換del Pezzoモジュライは [nc-dp1-moduli](https://github.com/uedakazushi/nc-dp1-moduli)、非可換三次三様体は [nc-cubic-threefold-moduli](https://github.com/uedakazushi/nc-cubic-threefold-moduli) を正本とする。量子FermatのOU障害とambient比較は `papers/quantum_fermat_not_as_surface.tex`、`papers/cubic_surface_ambient_moduli.tex` に保持する。
 
-**符号別Extと最大数値共鳴**：実在する既約境界非交叉root sheafについてm=chi(e,M)と置くと全tau-orbitでh0=max(m,0)、h1=max(−m,0)、h2=0。負指数はRains heartのAZ失敗を検出し、反標準側では有限次元A=R/(g−1)加群[-1]へ移る。Hilbert値1+d n(n+1)/2は不変。genuine avatarでは零指数根共鳴なし。全次数1–6で全根数値共鳴の稠密配置を整数格子とE[3]の9選択で記述し、既約根sheafの直和のExtをADE zigzagと同定した。固定dg圏のframed変形のcubic E6における32個の5次元分枝は、曲面モジュライの成分ではない。
+## V. H3の再現・検証
 
-**任意正負指数の局所完全判定**：q非torsion、Hnef、H²>0では境界外Zは有限長Serre部分圏。指数p,−nの隣接根の非分裂拡大Pのconnecting rankはmin(p,n)、cohomologyは((p−n)+,(n−p)+)。二根部分圏C≃mod_fd Π(A2)の全対象のcohomologyは、quiverの頂点次元a,bと一方の矢のrank tから(pa−min(p,n)t,nb−min(p,n)t)で決まる。p>nとp<nの両torsion pairを得る。p=nならPが消えるがgenuine avatarではこの同時共鳴自体が不可能。kernel e→Pがline bundleになるのはp−n=1だけであり、一般証明はrank-one torsion-freeのまま行う。
-
-**指定楕円gluingの導来比較と全heart**：genuine smooth classical del Pezzo Sとsmooth E、q∈Pic0(E)からのRains gluingについて、既存dP1原稿のorbitのInd生成・境界traceの非零性・両位数の環の有限性・source飽和性を一次資料と照合した。自然Φは全qでDb(Rains)≃Db(qgr R)。この範囲で全Rains heartの振幅が[0,1]となり、T=ker H1Φ、F=ker H0Φによる一回のHRS tiltが反標準heartである。q非torsionではZにも制限し、T∩Z=ker Ext1(e,−)、F∩Z=ker Hom(e,−)。全任意nc曲面・weak avatar・特異境界への主張ではない。
-
-**具体的混合A2のアフィン商**：指数+2/−1では0→W→V→U→0（次元1,2,1）は非分裂でW≄U、作用像は全三角2×2行列代数。逆向き非分裂拡大V'も存在し、A/Ann(V⊕V')≃Π(A2)という四次元商を得る。新しい二単純の根はalpha+beta,−beta、指数は1,1で局所Weyl反射に対応する。商はhomological epimorphismでない。内部Ext_Πの二周期性とambient Ext>2消滅を混同しない。
-
-**残る具体的着手**：楕円データからAの生成元を固定し、上の四次元商への像を係数式で求める。character分離・非分裂性の真偽と指定gluingの導来同値は解決済みとして扱い、未計算のchi_W(a),chi_U(a),eta(a)と区別する。次に全E6境界外圏のアフィン作用、VdB/AS heartとの指定対象の照合、相対familyと特異/weak境界を調べる。大域H3の未被覆分類はIII節のまま維持する。
-
-## V. 他のheart/corner成果と継続課題
-
-共通ノートは `research/heart_comparison.md`、原稿は `papers/nc_del_pezzo_hearts.tex`。振幅1の既知導来同値から(T,U)=(ker R¹δ_*,ker δ_*)、transported heart=〈U[1],T〉、t-exact iff U=0。pointedness・反Serre・標的AZと高次消滅の下で、周期1単純対象のEuler正負はT/Uを判定するが、非単純対象へ符号だけで拡張しない。ample orbitによるheart一意性には高次Ext tail消滅が必要。
-
-Cubic cornerの主原稿は `papers/cubic_heart_corner.tex`、ノートは `research/cubic_corner.md`。18係数非零torusを四交比へ還元し、九つの2×2 minorとq・成分逆数行列の二つのdeterminant、計11条件が有限cornerの必要十分条件。六点復元により標識付き可換cubicの一般位置配置空間と同型。全一般位置でC7=0、C6に8次元以上残り、7が最良の一様消滅次数。Hilbert関数は8+21t+33t²+38t³+33t⁴+21t⁵+8t⁶、総次元162で、底変更と可換する有限平坦代数族を得る。道長gradingと反標準cut gradingを区別する。
-
-11根壁では古典的(-2)曲線のi_*O(−1)が反標準導来切断で消える。一般の一壁の節点三次を含め証明・検算は `cubic_corner_root_walls.tex` に保持する。非可換Rains/VdB/AS壁上のheart存在やAS locus交叉へ無条件に拡張しない。
-
-次はAOUの実際のmutationでE0≃πFを確認し、AS corner同値とqgr F比較を接続する。AOU Theorem9.4の左辺はqgr Fでraw blow-upのabel同値ではない。VdB最後のker δ_6*とR¹δ_6*を同じ楕円六点データで実在対象に対して計算する。有限位数・特異楕円境界・非局所自由gluingではgrading、noetherian性、realization、標識降下を再確認する。
-
-## VI. 維持する並行成果と参照先
-
-次数3の共通公理・境界認識は `papers/weak_cubic_axioms.tex` と `research/weak_cubic_axioms.md`。hdim=2はSerreから従う。exceptionalityなしのpre-weakからExt¹(O,O)=0、全weak対象の正規境界存在は未証明。PBW12係数・三条件、Artin平坦変形の提示保持、有限型形式模型を保持する。
-
-量子Fermatはintrinsic H3の例だがOU AS型ではない。`papers/quantum_fermat_not_as_surface.tex` は離散torsion付きFermat商stackからHH_{−1}=HH_1=2、HH_0=5を計算する。ambientはPym L1111とL112の交点で、全対象がR13に入るという主張を排除する。曲面圏のOU障害とambient成分帰属は別問題。`papers/cubic_surface_ambient_moduli.tex`、`research/r13_generic_moduli.md` にR13の8→7、Poisson持上げ、中心incidence、Hessian商、AOU形式比較などの詳細を保持する。
-
-次数1の内在的モジュライ、10次元dg変形候補族、weighted sextic、反標準モデルと楕円gluingの主原稿・研究ノート・再現手順は [独立リポジトリ](https://github.com/uedakazushi/nc-dp1-moduli) に移管した。H3・Rains共鳴・heart比較で次数1固有の結果が必要な場合、移管先の正本を固定commitで参照する。共通する一般次数のRains共鳴と四つのheartの原稿は引き続き本リポジトリに保持する。
-
-三次三様体と非可換P^4のモジュライ（相対Z-algebra、41次元中心対、17次元形式モデル、period-forgetting等）は[独立リポジトリ](https://github.com/uedakazushi/nc-cubic-threefold-moduli)に主原稿・全証明節・現在有効な研究ノート・検算コード・検証記録を移管した。H3の分類が必要とする場合にのみ、外部の特定commitの結果を引用する。
-
-## VII. 再現と検証状態
-
-共鳴の有限検算：`python3 computations/verify_resonance_mixed_a2.py`。p,n=1,…,8と直既約重複度0,…,4の40,000通りのcohomology、両chamber、balanced仮想場合、四次元商の積・両三角像・commutant・局所Weyl反射を厳密有理数演算で確認した。更新した二証明節を独立LuaLaTeX driverで9ページに組版し、全ページ画像を点検した。**主原稿全体の組版、旧共鳴四スクリプトの再実行、実際の楕円A生成元の作用係数計算は今回未実施。** 一次資料はPDF解析本文で照合したが、原典web screenshotはCache missで取得できなかった。状態の詳細は `research/resonance_hearts_validation.json`。
-
-主原稿の再生成は `latexmk papers/nc_del_pezzo_resonance_hearts.tex`。旧共鳴検算は `verify_resonance_hearts.py`、`verify_resonance_extensions.py`、`verify_resonance_maximal_a2.py`、`verify_resonance_zigzag.py`。cubic cornerは `research/cubic_corner_validation.json` と同ノートの再現手順、H3は `research/cubic_surface_reproduce.md` と現行分類validation、次数1・三次三様体は各現行ノートを参照する。Python3（必要箇所はSymPy）、LuaLaTeX・LuaTeX-ja・latexmkを使い、生成PDFはGit追跡しない。数学的証明、有限検算、文献入力、独立査読を区別する。
+主原稿 `papers/weak_cubic_axioms.tex`、分類ノート `research/cubic_14641_classification.md`、検証 `research/cubic_classification_validation.json` を読む。再現例：
+```sh
+latexmk papers/weak_cubic_axioms.tex
+python3 computations/verify_cubic_skew_jets.py
+```
+他の個別検算は現行分類validationに記す。今回の移管は数学的定理の再監査とは区別する。

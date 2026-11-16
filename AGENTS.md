@@ -73,7 +73,7 @@
 
 **1-periodic graded algebra、Zhang twist、4-periodic AS-regular Z-algebra、qgrの同値は区別する。** 非1周期的なZ-algebraの存在だけから本研究のintrinsic H3対象が得られると主張しない。逆に、graded AS4の部分分類だけで全Z-algebraが覆われると推論しない。Nakayama規約・右左作用・Gorenstein parameterも照合する。
 
-既存のheart/corner、Rains/VdB/AS/anticanonical heart比較、量子FermatのOU障害、Poisson側の成果を**削除・劣化させない**。次数1 del Pezzoの研究は https://github.com/uedakazushi/nc-dp1-moduli に移管したので、本リポジトリでその独立した計画を並行実行せず、必要な定理だけを出典を明示して参照する。それらの証明は現行の `papers/`、`papers/sections/`、`research/` に保持する。非可換三次三様体・P^4の成果は https://github.com/uedakazushi/nc-cubic-threefold-moduli へ移管済みであり、その成果は移管先を正本として参照する。H3主目標に直接関係しない研究を漫然と並行着手して最優先問題を遅らせない。必要時のみ関連する成果を照合する。
+H3と量子FermatのOU障害を保持する。四つのheart・Rains共鳴・cubic cornerは https://github.com/uedakazushi/nc-dp-surface-hearts へ移管済みであり、本リポジトリでは別研究を独立に再開しない。次数1固有のモジュライ、三次三様体もそれぞれの正本を参照する。必要な関連定理は出典・固定commit・適用仮定を明記する。
 
 ## 6. 正確性・原稿・再現性
 

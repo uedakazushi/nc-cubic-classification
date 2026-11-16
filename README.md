@@ -2,25 +2,9 @@
 
 2026-11-16。GitHub mainが現行ソースの正本。最初に [研究方針](00_research_plan.md) を読む。逐次研究・約15分checkpoint・通常のmain保存については [AGENTS.md](AGENTS.md) に従う。GitHub Actions、force push、不要なPRを使わず、PDF・ZIP・中間生成物は追跡しない。GitHub保存成功時はLibraryに保存しない。
 
-## Rains共鳴：全heartのtiltと混合A2のアフィン商
+## 独立したheart比較・Rains共鳴
 
-**指定のgenuine楕円gluingでは、反標準heartは全Rains heartの一回のHRS tiltである。** 滑らかな可換genuine del Pezzo S、滑らかな反標準E、q∈Pic0(E)からの構成に範囲を限定し、既存dP1原稿の全q導来比較を、orbitのInd生成・実際の境界trace・両位数の有限性・source飽和性に分けて点検した。自然ΦはDb(Rains)≃Db(qgr R)、全heartで振幅[0,1]。T=ker H1Φ、F=ker H0Φにより反標準heartは〈F[1],T〉となる。q非torsionでは全境界外Serre部分圏Zにも制限できる。任意のnc曲面、weak avatar、特異境界や相対familyへの無条件な主張ではない。
-
-**混合A2のconnecting rankは任意の正負指数で決定した。** 指数p>0,−n<0の隣接根の非分裂拡大Pではrankδ=min(p,n)、(h0,h1)=((p−n)+,(n−p)+)。この証明は導来比較を仮定しない。二根の有限長Serre部分圏はmod_fd Π(A2)で、四直既約S+,S−,P,Qの全cohomologyと両chamberのtorsion pairを記述する。p=nならPが消えるが、genuine avatarではこの同時共鳴自体が不可能。
-
-**指数+2/−1ではcharacterの分離と非分裂性も解決した。** 反標準側の0→W→V→U→0（次元1,2,1）はW≄Uかつ非分裂であり、Vへの作用像は全三角2×2行列代数。逆向き拡大V'を合わせるとA=R/(g−1)から四次元商A/Ann(V⊕V')≃Π(A2)を得る。新しい根はalpha+beta,−beta、指数は1,1で局所Weyl反射に対応する。商写像はhomological epimorphismではなく、内部Extの二周期性とambient Ext>2消滅を区別する。
-
-残る具体的課題は、元の楕円データの生成元に対する二つのcharacterの値と非対角係数、商のkernelの生成元を求めること。表現の同型型の決定と、指定生成元の作用係数の計算は別である。全E6のアフィン作用、VdB/AS heartとの指定同定、退化境界・相対familyも未解決。
-
-[公表用原稿](papers/nc_del_pezzo_resonance_hearts.tex) ／ [任意混合指数の証明](papers/sections/resonance_mixed_a2_category.tex) ／ [大域比較とアフィン商](papers/sections/resonance_global_heart.tex) ／ [研究ノート](research/resonance_hearts.md) ／ [厳密検算](computations/verify_resonance_mixed_a2.py) ／ [検証状態](research/resonance_hearts_validation.json)
-
-有理数上で40,000通りのcohomology、Hom/Euler/Ext、四次元商の積・両三角像・Weyl反射を検算した。更新二節を独立LuaLaTeX driverで9ページに組版しページ画像を確認した。主原稿全体の組版・既存四コードの再実行・外部独立査読・網羅的新規性調査は今回の完了事項ではない。
-
-### 保持する共鳴の構造結果
-
-既約境界非交叉root sheafの指数m=chi(e,M)について全tau-orbitでh0=max(m,0)、h1=max(−m,0)、h2=0。負指数はRains heartのAZ ampleness失敗を検出し、反標準側では有限次元A加群[-1]に移る。これは導来非同値やqgr特異化を意味しない。Hilbert値1+d n(n+1)/2は不変。
-
-次数1–6の全根が非零指数で同時に数値共鳴するgenuine smooth del Pezzo配置は、固定楕円E・非torsion qの各E^(9−d)でZariski dense。整数の単純根指数とE[3]の9選択で共鳴配置を記述する。最大共鳴の既約根sheafは単純根に限り、その直和のExtはADE zigzag。既知の形式性から固定dg圏内のframed変形は各辺のx_ij*x_ji=0で決まる。cubic E6の32個の5次元formal分枝は、曲面自身のモジュライ成分ではない。
+四つのheart、Rains共鳴のHRS tiltと混合A2、cubic cornerの研究は [nc-dp-surface-hearts](https://github.com/uedakazushi/nc-dp-surface-hearts) を現行正本とする。
 
 ## 14641型intrinsic H3の分類
 
@@ -36,13 +20,9 @@
 
 [三角境界のq-so3切断](papers/sections/cubic_quantum_triangle.tex)でもDline全体を判定した。非H3値はD=f,−f/3の二つ。許容例は非skew CY包絡とFricke cubic中心を持ち、どの正規一次元でも滑らかな楕円境界を得られないため、上記normal-elliptic部分の外に実在する。
 
-## 四つのheartとcubic corner
+## heart比較とcornerの参照先
 
-Rains、VdB、AS、anticanonicalの四名称は由来を表す。VdB raw blow-upとsection-model qgrを区別し、導来同値・t-exactness・構造対象・反Serre・境界・rank・marking・族の降下を個別に検証する。振幅1の既知導来同値は(T,U)=(ker R¹δ_*,ker δ_*)によるHRS tiltを与えるが、全共鳴でのheart一致を意味しない。
-
-Cubic cornerでは四交比の11 determinant条件が有限性に必要十分で、一般位置六点配置空間を復元する。一様C7=0が成立し7は最良、Hilbert関数は8+21t+33t²+38t³+33t⁴+21t⁵+8t⁶、総次元162で有限平坦族となる。古典的11根壁では2-sphericalなi_*O_D(−1)が反標準導来収縮で消える。非可換AS/Rains/VdBの壁上への適用は別問題。
-
-[heart比較](research/heart_comparison.md) ／ [heart原稿](papers/nc_del_pezzo_hearts.tex) ／ [corner原稿](papers/cubic_heart_corner.tex) ／ [cornerノート](research/cubic_corner.md)
+公表原稿・証明・研究ノート・検算コードは [専用リポジトリ](https://github.com/uedakazushi/nc-dp-surface-hearts) に移管済み。H3分類で必要な結果は固定commitと仮定を指定して参照する。
 
 ## 現行原稿と並行成果
 
@@ -59,10 +39,9 @@ Cubic cornerでは四交比の11 determinant条件が有限性に必要十分で
 
 ## 手動再現
 
-    python3 computations/verify_resonance_mixed_a2.py
-    latexmk papers/nc_del_pezzo_resonance_hearts.tex
-    python3 computations/verify_cubic_heart_numerics.py
-    latexmk papers/nc_del_pezzo_hearts.tex
-    latexmk papers/weak_cubic_axioms.tex
+```sh
+latexmk papers/weak_cubic_axioms.tex
+python3 computations/verify_cubic_skew_jets.py
+```
 
-旧共鳴・corner・H3の検算と依存関係は各現行研究ノート・validation・再現手順を参照する。次数1は独立リポジトリの記録を参照する。三次三様体は独立リポジトリを参照する。Python3（必要箇所はSymPy）、日本語LuaLaTeX・LuaTeX-ja・latexmkを使用する。PDF/SyncTeX/ログは `.latexmkrc` の出力先へ再生成し、Gitでは追跡しない。実行済みの検証と、原稿に証明があるだけの事項を区別する。
+その他のH3検証は `research/cubic_classification_validation.json` を参照する。heart比較・共鳴・cornerの再現は [独立リポジトリ](https://github.com/uedakazushi/nc-dp-surface-hearts) にある。PDFやキャッシュをGit追跡しない。
