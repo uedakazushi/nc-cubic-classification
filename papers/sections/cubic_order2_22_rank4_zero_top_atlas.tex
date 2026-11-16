@@ -1,0 +1,82 @@
+\subsection{両純topが零の六線型係数atlas}
+\label{subsec:h3-order2-22-rank4-zero-top-atlas}
+\begin{proposition}\label{prop:h3-order2-22-rank4-zero-top-atlas}
+半単純$(2,2)$・奇関係数4で$P=Q=0$のAS4整域を考える。
+偶関係は純正AS2関係$a$と純負AS2関係$b$の直和であり、奇関係は必ず四次元graph型である。
+$a,b$を二元二次式の$2\times2$係数行列とする。
+$\Pi$を二つの二次元因子の交換行列と置けば、cross blockは
+\[
+ M=-(a^t\otimes b)\Pi,\qquad\det M=-(\det a\det b)^2.
+\]
+全必要quartic topは、六係数交代行列$A$について
+\[
+ h=\epsilon\det a\det b,\quad\epsilon\in\{1,-1\},\qquad
+ \operatorname{Pf}A=h,\qquad h\tau(A)+M^tA^\#M=0
+\]
+と書ける。ここで$\tau(A)$は既出のcyclic部分転置、
+$A^\#=\operatorname{Pf}(A)A^{-1}$は$A$の六係数に線型な行列である。
+従って最後の行列式条件を除けば、六未知係数について線型である。
+これは必要topの正確な有限表示であり、全係数のAS4十分性は含まない。
+\end{proposition}
+\begin{proof}
+偶middleは$\left(\begin{smallmatrix}0&K\\K^t&0\end{smallmatrix}\right)$で階数2なので、
+$K=\operatorname{vec}(a)\operatorname{vec}(b)^t$は階数1である。尺度をtopへ吸収してこの表示に正規化できる。
+偶関係の像は純正$a$と純負$b$の二直線であり、整域性から両係数行列は非退化である。
+cyclic係数の並べ替えを行うと
+\[
+ M_{kj,li}=-a_{ik}b_{jl}
+\]
+となり、表示したKronecker式と非零行列式を得る。
+
+奇middle$O=\left(\begin{smallmatrix}A&M\\-M^t&D\end{smallmatrix}\right)$は階数4である。
+$M$が可逆なので、核の第一成分$x$に対して第二成分は$-M^{-1}Ax$と一意に決まり、
+核次元4から$M^t+DM^{-1}A=0$となる。
+従って$A,D$も可逆で、純mixed二本型はこの領域では生じない。
+$D=\tau(A)$とSchur式により
+$D=-M^tA^{-1}M$である。
+Pfaffianを取れば$(\operatorname{Pf}A)^2=(\det a\det b)^2$となり、二つの$h$を得る。
+$A^{-1}=A^\#/h$を代入すれば六線型式を得る。
+逆にこの線型式と非零Pfaffian式から、cyclic topの偶階数2・奇階数4を再生できる。
+この逆方向はtopの条件についてであり、AS4の十分性を主張していない。
+\end{proof}
+
+$A_{ij}=z_{ij}$の六係数を辞書順に$z_0,\ldots,z_5$とすると
+\[
+ \operatorname{Pf}A=z_0z_5-z_1z_4+z_2z_3.
+\]
+量子関係の標準行列を
+$L(p)=\left(\begin{smallmatrix}0&1\\-p&0\end{smallmatrix}\right)$、
+Jordan関係を$J=\left(\begin{smallmatrix}-1&-1\\1&0\end{smallmatrix}\right)$とする。
+量子・量子の場合、全閉値での線型式は
+\[
+\begin{array}{c|l}
+\epsilon=1&(p+1)z_0=(p+1)z_5=(q+1)z_1=(q+1)z_4=z_2=z_3=0,\\
+\epsilon=-1&(p-1)z_0=(p-1)z_5=(q-1)z_1=(q-1)z_4=0
+\end{array}
+\]
+で、Pfaffian式は$\operatorname{Pf}A=\epsilon pq$である。
+量子・Jordanでは
+\[
+\begin{array}{c|l}
+\epsilon=1&(p+1)z_0=(p+1)z_5=z_1=z_2=z_3=z_4=0,\\
+\epsilon=-1&(p-1)z_0=(p-1)z_5=z_4=z_2+z_3=0
+\end{array}
+\]
+と$\operatorname{Pf}A=\epsilon p$、Jordan・量子では
+\[
+\begin{array}{c|l}
+\epsilon=1&(q+1)z_1=(q+1)z_4=z_0=z_2=z_3=z_5=0,\\
+\epsilon=-1&(q-1)z_1=(q-1)z_4=z_5=z_2-z_3=0
+\end{array}
+\]
+と$\operatorname{Pf}A=\epsilon q$となる。
+Jordan・Jordanの両符号は、線型式を満たすとPfaffianが零になるため、いずれも存在しない。
+ここでは中山が半単純という仮定を保ち、元の両Jordan平面を持つ全非半単純包絡の不存在とは言っていない。
+
+検証器は
+\[
+ \texttt{verify\_cubic\_order2\_22\_rank4\_zero\_top\_atlas.py}
+\]
+である。八chartについて、$p,q$を単元とする多項式イデアルの一致を確認し、
+$p=\pm1,q=\pm1$を含む全特殊fibreを保持する。
+分数体での一般階数だけを用いて特殊値を消していない。

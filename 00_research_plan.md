@@ -40,7 +40,7 @@ Rains・VdB・AS・anticanonical heartの一般次数比較は [nc-dp-surface-he
 
 **全体的なスペクトル制約（classification-v157）**：全(1,3)は幾何学的被覆・必要十分H3判定・全矢/慣性まで確定、全(3,1)は全Jordan型込みで空。(2,2)のmixed rank2も全Jordan型込みで空と確定した。最後の可逆secant必要曲面は七多項式四次汎関数の1008恒等式と単一10minor −2ell^15*rho^20*(rho+1)^15*(2rho+1)^2により全値排除し、ell0/共鳴fibreも既存全値検証で覆う。従って(2,2)はmixed rank4のみが残る。次は正top三型（零・comm⊙平方・comm⊙非退化quad）と全Jordan型の必要表示・正常三次を調べる。三固有値以上、全CY被覆、全成分/圏族降下は未完。
 
-**次の核心（classification-v162）**：二AS2平面のseparated graphを全Jordan型込みで幾何学的H3認識した。可換正平面はv161、非可換正量子平面は対角作用なら全skew分類で空、q−1反対角作用は正常核零、Jordan負平面でもmuTとの一次絡み合わせ零から純二元三次の因数分解で排除。Jordan正平面では中山単冪shearの固定核kx^n又は一次normalizer条件から全Gがxで割れ、Jordan/Jordanは固有値自体が矛盾。従ってこのchartの全H3は既知非CY符号包絡のみ。一般negative-generator mixing graph、純mixed二本型、非零topや全相対降下は未完。 次はP=Q=0の一般混合graphを、六係数交代blockと二AS2関係の線型Pfaffian条件へ還元する。
+**次の核心（classification-v163）**：半単純(2,2) mixed rank4のP=Q=0領域で、K=vec(a)vec(b)^t、a/bは非退化AS2関係、cross M=−(a^t⊗b)flipで可逆。従って全奇関係はfullgraph、pairedpure分枝なし。PfA=h=eps*det(a)det(b)、A#=PfA A^-1線型よりh*tau(A)+M^t A#M=0の六線型必要atlasを得た。QQ/QJ/JQ/JJ両符号八chartの局所化多項式イデアル一致を検証し、p/q±1特殊値を全保持。半単純JJ両分枝はPf0で不存在。全AS4十分性・全H3被覆・全非半単純は未主張。 次はQQ p=q=−1/eps+の非分離graph一パラメータ族で、PBWと正常核の定数minorを公開検証する。一般atlasの基底変換・opposite-separated認識とJordan降下はその後に証明する。
 
 既存の主要な構造結果を維持する：
 

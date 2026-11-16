@@ -1051,4 +1051,9 @@ as4 a3ddc8c55e65f336f707ebba5810b26d0698712eのREADME/plan/COVERAGE/CLAIMSを入
 
 二AS2平面のseparated graphを全Jordan型込みで幾何学的H3認識した。可換正平面はv161、非可換正量子平面は対角作用なら全skew分類で空、q−1反対角作用は正常核零、Jordan負平面でもmuTとの一次絡み合わせ零から純二元三次の因数分解で排除。Jordan正平面では中山単冪shearの固定核kx^n又は一次normalizer条件から全Gがxで割れ、Jordan/Jordanは固有値自体が矛盾。従ってこのchartの全H3は既知非CY符号包絡のみ。一般negative-generator mixing graph、純mixed二本型、非零topや全相対降下は未完。
 
-次の有望な還元（未検証）：P=Q=0ならK=a⊗b、a/b非退化二元AS2関係。cyclic mixed cross Bは−(a^t⊗b)flipなので可逆。rankO4からA,D可逆、従ってpairedpure型はこのlocusで消える。PfA=eps*det(a)det(b)。A#=PfA A^-1は六係数に線型なので、h*tau(A)+B^t A#B=0とPfA=hだけで必要topを有限表示できそうである。まず量子/量子・量子/Jordan・Jordan/Jordanの四標準形で六線型式を展開する。AS十分性を未検証のまま主張しない。
+半単純(2,2) mixed rank4のP=Q=0領域で、K=vec(a)vec(b)^t、a/bは非退化AS2関係、cross M=−(a^t⊗b)flipで可逆。従って全奇関係はfullgraph、pairedpure分枝なし。PfA=h=eps*det(a)det(b)、A#=PfA A^-1線型よりh*tau(A)+M^t A#M=0の六線型必要atlasを得た。QQ/QJ/JQ/JJ両符号八chartの局所化多項式イデアル一致を検証し、p/q±1特殊値を全保持。半単純JJ両分枝はPf0で不存在。全AS4十分性・全H3被覆・全非半単純は未主張。
+
+
+## 零top atlasの次の具体的計算
+
+QQ p=q−1,eps+ではz2=z3=0、z0z5−z1z4=1。二対角torusとU/V軸交換で、両組成分が非零ならz0=z1=1,z4=t,z5=t+1へ正規化できる。私的検算exceptional_QQ.pyでは四PBW overlap全恒等0、54x10正常行列の指定minorが定数−4と判明（公開検証器へ移すまで分類主張として未採用）。片組が零の境界は二方向separated。QQ p=q1 eps−はΛ²(U⊗V)=Sym²U⊗Λ²V + Λ²U⊗Sym²Vの二対称式へ分かれ、Pfneq0なら少なくとも一方非退化。GL2でその対称式をcrossへ移し、一方向separatedへ還元できそうである（未検証）。opposite-separatedも負comm/Jordanとq−1反対角を因子/centreで排除できそうだが、完全な変換と全Jordan輸送は未証明。これらを済ませる前にP=Q0全H3を既知符号だけと結論しない。
