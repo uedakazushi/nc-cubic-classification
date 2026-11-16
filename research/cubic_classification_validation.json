@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "version": "classification-v157",
+  "version": "classification-v158",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -68,7 +68,8 @@
     "papers/sections/cubic_order2_22_rank4_top.tex",
     "papers/sections/cubic_order2_22_secant_strata.tex",
     "papers/sections/cubic_order2_22_secant_open.tex",
-    "papers/sections/cubic_order2_22_rank2_unipotent.tex"
+    "papers/sections/cubic_order2_22_rank2_unipotent.tex",
+    "papers/sections/cubic_order2_22_rank4_Jordan.tex"
   ],
   "mathematical_results": {
     "universal_H3_constraint": "mu_R=id, sigma_G=mu_B^{-1}, mu_B(G)=G; single 140x20 linear kernel W1",
@@ -1563,6 +1564,19 @@
       "AS4 nonexistence",
       "rank4 exclusion",
       "intrinsic family descent"
+    ]
+  },
+  "order2_22_rank4_one_sided_Jordan_v158": {
+    "status": "PASS finite tensor/Gram/Hilbert identities, structural Ore proof in manuscript",
+    "validator": "computations/verify_cubic_order2_22_rank4_one_sided_Jordan.py",
+    "certificate": "computations/cubic_order2_22_rank4_one_sided_Jordan_certificate.json",
+    "proof": "papers/sections/cubic_order2_22_rank4_Jordan.tex",
+    "scope": "(2,2) mixed rank4で正top非零の場合、正平面を固定する片側単冪作用はH3から排除した。負固定VVは<u²,[u,v]>、cyclic Qと偶rank2から負射影line。u²-onlyはPBW三次21でAS4外、comm成分unitはT[u;f][v;sigma,delta]、Tcomm又はq−1へ還元。実際のNakからf²=muT,hdetf−1。commは正常Gが正規一次式yで割れ、q−1は正三次正常核零。従って非退化正topの全Jordan部分が消滅。平方topの非半単純候補は正側Jordan非零が必要。零top・平方topの正側Jordanと半単純rank4の正常incidence/許容性は未解決。",
+    "not_claimed": [
+      "all rank4 classification",
+      "relative or nonreduced-base Jordan descent",
+      "zero top exclusion",
+      "square top two-sided Jordan exclusion"
     ]
   }
 }

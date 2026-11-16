@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "scope": "linear algebra and Hilbert counts for one-sided Jordan with nonzero positive top",
+  "exact_checks": [
+    "fixed VV tensors span u^2 and uv-vu",
+    "cyclic Q restricted to that plane is a*u^4",
+    "two localized Gram charts force one mixed component zero",
+    "u-square-only chart degree3=21",
+    "Ore chart degree3=20",
+    "q=-1 degree1 anticentralizer zero",
+    "untwist changes commutator only by u^2",
+    "nondegenerate binary orthogonal group has no unipotents"
+  ],
+  "structural_proof": "papers/sections/cubic_order2_22_rank4_Jordan.tex",
+  "not_claimed": [
+    "all rank4 classification",
+    "zero-positive-top Jordan coverage",
+    "two-sided square-top Jordan exclusion"
+  ]
+}

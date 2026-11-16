@@ -1,0 +1,164 @@
+\subsection{非零正topと片側Jordanの排除}
+\label{subsec:h3-order2-22-rank4-Jordan}
+以下の議論では、全AS4包絡の分類を仮定せず、
+偶関係数2と二次関係の整域性を使う。
+
+\begin{lemma}[正平面を固定する単冪作用の必要表示]
+\label{lem:h3-order2-22-rank4-one-sided-form}
+$C$を半単純中山$(+,+,-,-)$、奇関係数4のnoetherian quadratic Koszul AS4整域とする。
+純正topを$P=c_U\mathbin{\odot}q\ne0$とし、
+$H$は中山と可換な単冪自己同型で、$H|_U=I$、$H|_V\ne I$とする。
+このとき、$U=\langle x,y\rangle$、$V=\langle u,v\rangle$を選ぶと、関係は
+\begin{gather*}
+ T=k\langle x,y\rangle/(r),\qquad
+ ut=f(t)u,\qquad vt=f(t)v+d(t)u\quad(t=x,y),\\
+ vu-uv=h(x,y)+a u^2
+\end{gather*}
+の形となる。
+ここで$T$は可換平面か$xy+yx=0$の量子平面、$f\in\operatorname{Aut}_{\rm gr}(T)$である。
+$C$はこの表示による逐次Ore拡大
+\[
+ S=T[u;f],\qquad C=S[v;\sigma,\delta],\qquad
+ \sigma|_T=f,\quad\sigma(u)=u
+\]
+に一致する。
+\end{lemma}
+\begin{proof}
+$H(u)=u,H(v)=v+u$と正規化できる。
+$H$は偶関係の正二次射影を点ごとに固定する。
+その射影は二次元の同型なので、偶関係自体も点ごとに固定する。
+$V^{\otimes2}$の固定部分は
+$\langle u^2,c_V\rangle$、$c_V=uv-vu$である。
+従ってeven topのcross blockは
+\[
+ K=c_U\otimes A+q\otimes B,\qquad
+ A=\alpha u^2+\beta c_V,\quad B=\gamma u^2+\eta c_V
+\]
+と書ける。
+偶middleの階数2と$P$の階数2から、負主blockは$Q=A\mathbin{\odot}B$である。
+一方、cyclicな負二元四次tensorで、そのmiddle像が
+$\langle u^2,c_V\rangle$に入るものは$u^4$の倍だけである。
+これは一般cyclic行列の第四行を零、第二行と第三行の和を零とするだけで分かる。
+従って
+\[
+ \beta\eta=0,\qquad\alpha\eta+\beta\gamma=0.
+\]
+$\beta\ne0$なら$B=0$、$\eta\ne0$なら$A=0$、
+それ以外は$A,B$とも$u^2$の倍となる。
+特に偶関係の負二次射影は高々一次元である。
+
+奇関係空間を$W$とし、$F_0=Uu+uU$と置く。
+$N=H-I$は全mixed空間上で$N^2=0$、核と像はともに$F_0$である。
+$W$は四次元の$N$不変部分なので、$\dim(W\cap F_0)\ge2$である。
+整域性から$W\cap Uu=W\cap uU=0$であり、逆にその次元は高々2である。
+従って等号が成り立ち、二本の関係を$ut=f(t)u$、残る二本を
+$vt=f(t)v+d(t)u$と書ける。$f$は可逆な一次変換である。
+
+負二次射影が$u^2$だけに入る場合を先に排除する。
+このとき偶二関係は、一つの純正関係$r$と$u^2=q_2(x,y)$となる。
+$r$は一次因子の積ではないので、二元AS2平面$T$を定める。
+二元AS2平面の斉次元は一次式の積に分解する。
+実際、量子・Jordan標準形で正規一次式$x$を逆転すれば、
+斉次元は$x^n$と$y x^{-1}$の一変数多項式の積となり、代数閉体上で一次因子へ分解できる。
+従って$C$の整域性と一次部分の単射性から$T$は$C$へ単射である。
+$ur=0$から$f$は$T$の自己同型となり、$vr=0$から$d$の必要な関係保存が従う。
+さらに$u^2t$と$u^3$の結合則と整域性から
+\[
+ q_2t=f^2(t)q_2,\qquad f(q_2)=q_2
+\]
+を得る。
+これらは、$T$の標準二次簡約、$ut,vt$の簡約と$u^2$の簡約の
+全三次overlapを解消する。
+従って三次標準語は$T$の標準語に、$uu$を含まない$u,v$の語を続けたものとなる。
+その次元は
+\[
+ 4+3\cdot2+2\cdot3+5=21
+\]
+であり、AS4の20に反する。負射影が零の場合も$u^2=0$となり整域性に反する。
+
+従って負射影は$c_V$の成分を持つ。
+先の二chartの結論から、純正関係は$c_U$または$q$である。
+後者が平方なら整域性に反するので、可能なのは可換平面と$xy+yx=0$の平面だけである。
+残る偶関係を$c_V$について解けば表示した関係を得る。
+このmonic表示の三次標準語は$T$の標準語に$u^iv^j$を続けた20個である。
+実際の三次次元も20なので、全三次overlapは零へ簡約される。
+二次簡約の全ambiguityは三次であるからDiamond lemmaにより全次数でPBWとなり、
+$S$の埋込みと逐次Ore表示を同時に得る。
+\end{proof}
+
+\begin{lemma}[必要Ore表示の正常切断はH3にならない]
+\label{lem:h3-order2-22-rank4-one-sided-Ore-empty}
+前補題のOre表示を持つAS4整域$B$について、
+$\mu_B|_U=I$、$\mu_B(u)=-u$、$\mu_{B,s}|_V=-I$なら、H3切断は存在しない。
+$\mu_B(v)$の単冪成分は許す。
+\end{lemma}
+\begin{proof}
+Ore拡大の中山公式を二回使うと
+\[
+ \mu_B|_T=f^{-2}\mu_T,\qquad
+ \mu_B(u)=\operatorname{hdet}_T(f)u.
+\]
+従って$f^2=\mu_T$、$\operatorname{hdet}_T(f)=-1$である。
+必要な三次$G$は$U$と可換し、$Gu=-uG$を満たす。
+また$\mu_B(G)=G$から半単純部分でも固定される。
+
+$T=k[x,y]$の場合、$f^2=I,\det f=-1$なので
+$f(x)=x,f(y)=-y$と選べる。
+$vut$の結合則から
+\[
+ (df-fd)(t)u^2=0
+\]
+となり、整域性から$df=fd$、従って$d$も対角である。
+よって$y$は$B$の正規元であり、$B/(y)$は
+$k[x,u]$の通常微分Ore拡大で整域となる。
+その中では、非零元と$u$との反交換は不可能である。
+実際、$v$次数最高係数を見ると、$Fu+uF$の最高係数は$2u$倍で非零となる。
+従って$G$は$(y)$へ入り、$G=yF$と因数分解される。
+次数が1と2なので$B/(G)$は整域にならない。
+
+$T=k\langle x,y\rangle/(xy+yx)$の場合は$f^2=-I$である。
+$G$のPBW表示は$T_3$と$T_1u^2,T_1uv,T_1v^2$の和である。
+$V$次数2の項のうち$v$次数が最大の係数を$z\in T_1$とすると、
+$G$が$x,y$と可換する条件の最高係数は
+\[
+ zt+tz=0\qquad(t=x,y)
+\]
+となる。一次式で両方と反交換するものは零である。
+$v$次数を降順に調べると全$V$次数2の係数が消える。
+従って$G\in Z(T)_3$だが、$Z(T)=k[x^2,y^2]$には奇数次元がない。
+この場合は$G=0$である。
+いずれの場合もH3に必要な非零正常三次・整域商は得られない。
+\end{proof}
+
+\begin{theorem}[非零正topにおける片側Jordanの消滅]
+\label{thm:h3-order2-22-rank4-one-sided-Jordan}
+$(2,2)$・奇関係数4のH3包絡$B$を考える。
+$H=\mu_{B,u}^{1/4}$、右twist $C=B^H$を取り、$C$の純正topが非零とする。
+$H|_U=I$なら$H=I$である。
+特に純正topが非退化対称二次式の型なら、中山の全Jordan部分は消える。
+平方型の非半単純候補には、正二平面側の非自明Jordan部分が必要である。
+零top型と平方型の両側Jordan、半単純rank4のadmissibilityは未解決である。
+\end{theorem}
+\begin{proof}
+右twistの$-4$公式により$\mu_C=\mu_{B,s}$であり、$H$は$C$の単冪自己同型でもある。
+$H|_U=I,H|_V\ne I$なら前二補題を適用する。
+逆twistは$U,u$を固定し、$v$に$u$の倍を加えるので、
+$uv-vu$を$u^2$の倍だけ変更する。
+従って元の$B$も同じ必要Ore表示を持つ。
+$\mu_B|_U=I,\mu_B(u)=-u$なので前補題によりH3に反する。
+ここで$G$をtwist後へ輸送したり、twistがH3を保つと仮定したりしていない。
+
+非退化型では、$H|_U$は$c_U\mathbin{\odot}q$を固定する。
+単冪なので$c_U$を固定し、従って$q$も固定する。
+非退化二元対称式の直交群には非自明な単冪元がないので、$H|_U=I$である。
+前半から$H=I$となる。平方型でも$H|_U=I$だけの非半単純候補は排除できるが、
+正側shearが非零の場合はこの議論の仮定から外れる。
+\end{proof}
+
+検証器は
+\[
+ \texttt{verify\_cubic\_order2\_22\_rank4\_one\_sided\_Jordan.py}
+\]
+であり、
+固定tensor、cyclic負block、二つのGram chart、PBW個数と反交換一次係数を検証する。
+Ore認識・中山公式・整域商の障害は上記の構造証明による。

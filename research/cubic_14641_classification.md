@@ -1020,4 +1020,4 @@ verify_cubic_order2_22_rank2_unipotent.py/certificateが両tangent upper stabili
 
 可逆secantのgraded包絡矢Phiとrho/ell不変性は実際のAS4点に関する補助結果として保持するが、この領域にH3点の存在は主張しない。独立査読・新規性確認は未実施。追加のas4結果は輸入していない。
 
-**次の核心（classification-v157）**：(2,2) mixed rank2へ戻らず、mixed rank4の正top三型ごとに必要表示と正常三次を調べる。非退化正quadの安定化群は単冪正平面作用を持たないため、この型のJordan消滅と負平面/混合関係への制約を最小の次課題とする。rank4全被覆、三固有値以上、全CY被覆と全intrinsic族降下・成分は未完。
+**次の核心（classification-v158）**：(2,2) mixed rank4で正top非零の場合、正平面を固定する片側単冪作用はH3から排除した。負固定VVは<u²,[u,v]>、cyclic Qと偶rank2から負射影line。u²-onlyはPBW三次21でAS4外、comm成分unitはT[u;f][v;sigma,delta]、Tcomm又はq−1へ還元。実際のNakからf²=muT,hdetf−1。commは正常Gが正規一次式yで割れ、q−1は正三次正常核零。従って非退化正topの全Jordan部分が消滅。平方topの非半単純候補は正側Jordan非零が必要。零top・平方topの正側Jordanと半単純rank4の正常incidence/許容性は未解決。
