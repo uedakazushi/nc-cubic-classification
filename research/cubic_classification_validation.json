@@ -2903,5 +2903,41 @@
       "main LuaLaTeX build PASS; no overfull/undefined-reference diagnostics",
       "git diff --check PASS"
     ]
+  },
+  "third_root_unit_deformed_double_Ore_v243": {
+    "status": "ordinary all-parameter filtration reduction and central-symbol period-index nondomain proof; exact original PBW/normal and Casimir/norm identities PASS",
+    "proof": "papers/sections/cubic_third_root_unit_deformed_double_Ore.tex",
+    "validator": "computations/verify_cubic_third_root_unit_deformed_double_Ore.py",
+    "certificate": "computations/cubic_third_root_unit_deformed_double_Ore_certificate.json",
+    "results": [
+      "all q,h in actual bc-qcb=h*x^2 two-curvature Ore family excluded",
+      "primitive9 h1 normal kernel dimension1, quotient nondomain",
+      "generic central algebra degree9 but Brauer period and index at most3"
+    ],
+    "external_input": {
+      "author": "Max Lieblich",
+      "title": "Twisted sheaves and the period-index problem",
+      "arxiv": "math/0511244v4",
+      "theorem": "4.2.2.3, p23",
+      "url": "https://arxiv.org/pdf/math/0511244",
+      "pdf_sha256": "8de9324c08bf75289887df7cb01ba684e52fa174872c1222d7a71beb9fd7d10f",
+      "hypotheses": "function field of transcendence degree2 over algebraically closed field",
+      "conclusion": "period=index for every Brauer class",
+      "read_status": "statement, surrounding definitions and printed proof read; full deep proof not independently audited",
+      "journal": "Compositio Mathematica 144(1) (2008), 1-31",
+      "doi": "10.1112/S0010437X07003144"
+    },
+    "not_claimed": [
+      "exact Goldie rank3",
+      "all proportional cube couplings covered",
+      "all semisimple third-root spectra classified",
+      "complete H3 classification"
+    ],
+    "executed_checks": [
+      "individual exact validator PASS",
+      "main LuaLaTeX PASS; no overfull/undefined references/citations",
+      "all27 spectral validators PASS",
+      "git diff --check PASS"
+    ]
   }
 }

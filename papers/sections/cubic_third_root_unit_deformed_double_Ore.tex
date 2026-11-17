@@ -1,0 +1,178 @@
+\subsection{二方向曲率の非split変形：中心ノルムと整域障害}
+\label{subsec:cubic-third-root-unit-deformed-double-Ore}
+\begin{theorem}[指定二方向曲率変形族の全排除]
+\label{thm:cubic-third-root-unit-deformed-double-Ore-empty}
+$q\in k^*,h\in k$ とし、$B_{q,h}$ を
+\begin{gather*}
+ bc-qcb=h x^2,\qquad yb=qby-qc^2,\qquad yc=q^{-1}cy-q^{-1}b^2,\\
+ xb=\omega^2bx,\qquad xc=\omega cx,\qquad xy=yx
+\end{gather*}
+で定義する。全パラメータでnoetherian quadratic Koszul AS4整域であり、
+$\mu_{B_{q,h}}=(1,1,\omega,\omega^2)$（順序 $x,y,b,c$）。
+この族にはH3切断が存在しない。
+特に $q^3=\omega^2,h\ne0$ では正常核 $W_1$ は一本存在するが、
+その商は整域でない。
+全比例結合atlasがこの表示を持つという主張ではない。
+\end{theorem}
+\begin{proof}
+$A=\langle x,b,c\rangle$ は量子平面 $\langle x,b\rangle$ のOre拡大であり、
+$c$ の作用は $\sigma_c(x)=\omega^2x,\sigma_c(b)=q^{-1}b$、
+$\delta_c(x)=0,\delta_c(b)=-q^{-1}h x^2$。
+さらに $B=A[y;\sigma,\delta]$、
+\[
+ \sigma(x,b,c)=(x,qb,q^{-1}c),\qquad
+ \delta(x,b,c)=(0,-qc^2,-q^{-1}b^2).
+\]
+元の四つの三次重なりは全 $q,h$ で零となるので、
+これらは実際のOre表示であり $b^rc^sy^n x^m$ がPBW基底となる。
+自己同型型Ore拡大の標準定理から表示したAS4性と整域性を得る。
+Ore中山公式から $\mu_A(x)=x,\mu_A(b)=\omega q b,
+\mu_A(c)=(\omega q)^{-1}c$。
+対角作用 $(x,b,c,y)\mapsto(x,\omega b,\omega^2c,y)$ と可換性から、
+$\mu_A(c)$ の加法項は零。
+$\operatorname{hdet}_A\sigma=1$ であり、再度Ore公式から
+$\mu_B(y)=y+\ell$、$\ell\in\langle x,b,c\rangle$ となる。
+対角作用との可換性で $\ell\in kx$、
+自己同型 $x\mapsto-x$（他を固定）との可換性で $\ell=0$。
+これで中山も確定する。
+
+$x$ は正常正則、$x$ 進付随次数環は前節のsplit $B_{q,0}$。
+H3に必要な中山不変正常三次の最低 $x$ 次数成分は $W_1(B_{q,0})$ に入る。
+従って $q\ne-1,q^3\ne\omega^2$ なら正常核は零。
+$q=-1$ なら全候補正常三次は $x$ で割れ、整域切断を持たない。
+$q^3=\omega^2$ では最低成分は $\Gamma_q$ の定数倍で、
+係数を合わせて引いた差が非零ならsplit核に正の $x$ 次数の元を生じるので矛盾。
+従って正常核は高々一次元。
+実際、元の関係で
+\[
+ G_h=\Gamma_q+h K_q x^2y,\qquad
+ K_q=\frac{2+\omega+(4\omega-1)q-(1+2\omega)q^2}{3}
+\]
+が正常化 $\mu_B^{-1}$ を持つことを確認できる。
+$h=0$ は前節で排除済み。$h\ne0$ は $x$ の定数倍で $h=1$ へ帰着する。
+以下は $q^3=\omega^2,h=1$ とする。
+
+\paragraph{次数零局所化とCasimir.}
+$x$ を可逆化し、
+$B=b x^{-1},C=c x^{-1},Y=y x^{-1}$（この段落内だけの大文字生成元）と置く。
+次数零部分 $D$ は
+\[
+ BC-QCB=\kappa,\quad YB=QBY-\alpha C^2,\quad
+ YC=Q^{-1}CY-\beta B^2,
+\]
+\[
+ Q=q\omega,\quad \kappa=\omega^2,\quad
+ \alpha=\omega^2q,\quad\beta=\omega q^{-1}
+\]
+を満たし、$Q$ は原始九乗根である。
+逆の生成元変更も存在し、局所化全体は
+$D[x^{\pm1};\rho]$、$\rho(B,C,Y)=(\omega^2B,\omega C,Y)$。
+これは隠れた商を取らない表示の同型である。
+切断の次数零部分は $U=D/(g)$、ただし
+\[
+ g=G_1x^{-3}=Y^3+qBCY+
+ \frac{q(2+\omega)}3B^3+\frac{q^2(1+2\omega)}3C^3+K_qY.
+\]
+$B_{q,1}/(G_1)$ が整域なら $U$ も整域でなければならない。
+
+$W=k\langle B,C\rangle/(BC-QCB-\kappa)$ とし
+\[
+ z=BC-CB,\quad S_3=1+Q+Q^2,\quad
+ H=\frac{\alpha Q^2}{S_3}C^3-\frac{\beta}{S_3}B^3,
+ \quad Z=zY-H
+\]
+と置く。直接計算で
+\[
+ zB=Q^{-1}Bz,\qquad zC=QCz,\qquad [Z,B]=[Z,C]=[Z,Y]=0.
+\]
+従って $z^9$ を可逆化すると、$Y=z^{-1}(Z+H)$ により
+\[
+ D[(z^9)^{-1}]=W[(z^9)^{-1}][Z]
+\]
+という中心多項式拡大になる。$Z$ の代数的独立性はOre $Y$ 次数で分かる。
+量子Weyl関係の九乗から
+\[
+ z^9=\kappa^9+(Q-1)^9 B^9 C^9
+\tag{1}
+\]
+であり、$B^9,C^9$ は $D$ でも中心。
+また元の三関係による正規形計算から
+\[
+ z^3g=Z^3+aZ+b C^9+c B^9,
+\tag{2}
+\]
+\begin{align*}
+ 3a&=-q^5+2q^4-q^3-2q^2+q-2,\\
+ 3b&=-q^5+q^4+q^3-2q^2-q+1,\\
+ 3c&=-2q^5-q^4+q^3-q^2-2q
+\end{align*}
+を得る。$a,b,c$ は全て非零で、重要な恒等式は
+\[
+ a^3(Q-1)^9=27\kappa^9bc.
+\tag{3}
+\]
+これらは $\mathbb Q[q]/(q^6+q^3+1)$ での恒等式で、
+単一の複素近似根についてだけの計算ではない。
+公開検証器は元の正常式、Casimir、(1)--(3)をそれぞれ再生する。
+
+\paragraph{中心一般点の次数と周期.}
+$g$ はOre $Y$ 次数3のmonic正常元なので、$U$ は左 $W$ 加群として
+$W\oplus WY\oplus WY^2$。特に $W$ は $U$ に埋まり、
+非零中心元 $z^9$ は $U$ 上で正則である。
+(2)と $z$ の可逆性から
+\[
+ U[(z^9)^{-1}]=
+ W[(z^9)^{-1}][Z]/(Z^3+aZ+bC^9+cB^9).
+\]
+$W$ は中心 $k[B^9,C^9]$ 上自由rank81。
+$b\ne0$ より上の中心基底は
+$k[B^9,C^9,Z]/(Z^3+aZ+bC^9+cB^9)\simeq k[B^9,Z]$。
+その分数体を $E=k(B^9,Z)$ とする。
+$z^9$ の像は(1)--(2)より非零なので、
+中心一般点で得る代数 $\mathcal A$ は $E$ 上次元81の中心単純代数である。
+実際、$B$ と $z$ を可逆化して量子トーラス表示を取れば
+$\mathcal A$ は次数9のcyclic symbol
+$(B^9,z^9)_{Q^{-1}}$ となる。
+この表示から中心単純性も直接分かる。
+
+$\rho_0^2=-a/3$ を満たす非零定数 $\rho_0\in k$ を選び、
+\[
+ T=Z/\rho_0,\qquad
+ u=\frac{(Q-1)^9\rho_0^3}{b\kappa^9}\,B^9
+\]
+と置く。$E=k(u,T)$ であり、(1)--(3)は
+\[
+ \frac{z^9}{\kappa^9}=1-u(T^3-3T)+u^2
+ =\operatorname{Norm}_{E(s)/E}(s^2-Ts+1),\qquad s^3=u
+\tag{4}
+\]
+を与える。右のノルムは $s^3-u$ とのresultantでも確認できる。
+$k$ は代数閉体なので記号の定数因子は九乗として除ける。
+従って $\xi=[\mathcal A]\in\operatorname{Br}(E)[9]$ は、
+(4)とsymbolのrestriction/corestrictionの射影公式から
+\[
+ \xi=\operatorname{Cor}_{E(s)/E}
+       (u,s^2-Ts+1)_9
+     =3\operatorname{Cor}_{E(s)/E}
+       (s,s^2-Ts+1)_9.
+\]
+最後のsymbolは9捩れであり、従って $3\xi=0$。
+この等式は周期が正確に3だという主張を必要としない。
+
+ここで曲面関数体のperiod--index定理を用いる。
+Lieblich \cite{LieblichPeriodIndex}、arXiv v4のTheorem~4.2.2.3（p.~23）は、
+代数閉体上超越次数2の体の全Brauer類について周期と指数が一致すると述べ、証明する。
+本適用では $E=k(u,T)$、標数0であり、全仮定を満たす。
+従って $\operatorname{ind}(\mathcal A)=\operatorname{per}(\xi)\le3<9$。
+よって次数9の $\mathcal A$ は除法代数でない。
+一方、もし $U$ が整域なら、その非零中心元による局所化である
+有限次元 $E$ 代数 $\mathcal A$ も整域であり、必ず除法代数になる。
+この矛盾により $U$、従って $B_{q,1}/(G_1)$ は整域でない。
+全 $q,h$ の排除が完成する。
+
+なお、引用した深いperiod--index定理自体を有限検算で検証したとは主張しない。
+原始九乗根における正常核と代数恒等式をexactに確認したこと、
+上の通常のBrauer群の証明、一次資料から輸入した定理は区別する。
+また $\operatorname{ind}$ が正確に3、Goldie rankが正確に3、
+あるいは $G_1$ 自身が斉次因子分解するという結論は用いていない。
+\end{proof}
