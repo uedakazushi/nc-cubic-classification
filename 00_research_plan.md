@@ -69,7 +69,7 @@ Library既存ファイルは明示指示なしに削除しない。GitではPDF�
 heart比較・Rains共鳴・cubic cornerは `uedakazushi/nc-dp-surface-hearts`、次数1は `uedakazushi/nc-dp1-moduli`、三次三様体は `uedakazushi/nc-cubic-threefold-moduli` が正本。
 量子FermatのOU障害は [nc-cubic-non-as](https://github.com/uedakazushi/nc-cubic-non-as)、ambient比較は [nc-cubic-ambient](https://github.com/uedakazushi/nc-cubic-ambient) に移管済み。分類に必要な旧定理・コードはこのリポジトリの現行分類原稿からも参照する。
 
-## 多固有値領域の現行到達点（v280）
+## 多固有値領域の現行到達点（v281）
 強いintrinsic H3のAS4包絡は相異なる中山固有値をちょうど三つ持たない。全Jordan型の必要還元、重複1の全22tensor atlas、非単位重複rootの独立・非零比例・零b²列を全て排除した。全H3分類の完成ではない。全CY、四単純共鳴、全成分・境界、相対降下は未完成。
 
 ### 完成した証明の入口
@@ -101,7 +101,15 @@ heart比較・Rains共鳴・cubic cornerは `uedakazushi/nc-dp-surface-hearts`�
 通常証明はfour_simple_curve_phase_reduction節、公開checker（全phase、domain自由語恒等式、正常izer ideal）default Sympy PASS、v280主原稿LuaLaTeX clean PASS。累計63validators across runs、単一63全再生未実行。新規外部/as4輸入なし、新規性未確認。
 重要なscope：有限位数のμで追加の非零n重みtop/G supportがある点はrank4有限部分に保持する。上の斉次chart排除から曲線上の全finite ambientを排除したとは呼ばない。
 
-### 次の最小課題：残るrank三二種類と有限部分
-全四単純の必要被覆はphase M≤24の(α,β,t,γ t^-1)、phaseなし(t,t^-2,t^-1,t²)、共通位数N≤96の有限部分。
-後者rank3曲線をprivate元10tensorで構成済み。代表xxbb,xybc,xycb,xbxb,xbyc,xbcy,xcyb,xcby,yycc,ycyc。四paired rank1 blockとdomainから六multilinear係数全非零。a1=1,a2=p,a4=q,a5=r,a7=pr,a6=pr/qと正規化。H0（xb,yc,bx,cy順）のU(xb,bx)/V(yc,cy) crossblockは[[q,r],[−pt,−prt/q]]でrank1。H0rank2ならI0の少なくとも一方の射影rank1、従って純xb/bx又は純yc/cy関係がある。private有力経路：前者ならx,b正常、後者ならy,c正常。残る混合関係の両向き係数はdomainで非零、六関係の三次PBW候補20とB3dim20で全overlap零、量子平面上の逐次Ore（最後に一つの二次derivation）へ。正常base元zについてμ(z)は他三生成元への正常化scalarの積。Gのx²y,b²c双方の正常固有値を比べると、変形係数非零ならμx1又はμy1となりfour-simpleに矛盾するはず。次にこの通常証明と元10tensor/normalizer idealを公開監査する。
-n=(0,0,1,−1)二定数phaseと有限N≤96の全incidenceも残る。位数4は既に完成。全CY、全成分・境界、intrinsic群oidと相対降下も未完。
+### phaseなし最後のrank三chartも完成（v281）
+(t,t^-2,t^-1,t²)の元10tensorを公開一般diagonal_top helperで構成。paired rank1二式とdomainで六multilinear係数非零、a1=1,a2=p,a4=q,a5=r,a7=pr,a6=pr/q。H0のU(xb,bx)/V(yc,cy) crossは[[q,r],[−pt,−prt/q]]=column(1,−pt/q)*row(q,r)、全rank1。対称rank2H0で両射影同型はcrossrank2を要求するので、純U又は純V関係が必ずある。前者x,b正常、後者y,c正常。残る混合関係の両向き係数は逆向き関係/domainで非零。全六逆順pairの標準三次語20とAS4dim20から全overlap零、量子平面上逐次Ore（最後は二次derivation）を得る。normalbase元の中山固有値は他三生成元への正常化scalar積。
+Gはx²y,b²c双方を持つ。純Uの場合normalx scalars(a,b,c)にa=b²c=abc=λx、従ってac1,bλx。変形yc/cy対xbの自己同型固有値が1対λxなので変形非零ならλx1⇒t1。純Vの場合normaly scalarsa²=b²c=abc=λyからa=b,c1、変形xb/bx対ycの固有値λy対1なのでλy1⇒t²1。変形零はskew、いずれもfour-simple H3なし。
+通常証明はfour_simple_last_rank3_curve節。default Sympy元10tensor/全rank1式/cross外積/両normalizer ideal/逆向き自由語identity PASS、v281主原稿LuaLaTeX clean PASS。前節の中山scalarとgeneratorの表記をλ_bに明確化した（数学的主張の変更なし）。累計64validators across runs、単一64全再生未実行。
+従って残る全四単純の必要被覆はrank3の(α,β,t,γ/t)、phase共通位数M≤24と、rank4共通位数N≤96の有限部分だけ。finite tでも追加supportは有限部分に保持する。
+
+### 次の最小課題：最後の二定数phase chart
+n=(0,0,1,−1)ではr0=2,r±1=2。μxα≠μyβなのでmixed関係は個別pairskew、b,cはU(x,y)上で対角正常。Frobenius paired weightsからphaseはmatched: β=−α,γ=α^-2又はswapped: αβγ1。private経路：matchedはG非零からα6=1、swappedは非skew条件からαβ=±1とα6=1へ。primitive root casesはpurecube又はtopcrossrank1とnormalizerで排除できそうで、残り(1,−1,t,±t^-1)を調べる。
+有力な一般補題：正常一次z、φ_z(z)=zのときμ_B(z)=hdet_B(φ_z) z。B^{φ_z^-1}でzを中心化し、中央元はNakに固定されること（Ae-resolution上z⊗1と1⊗zのchainhomotopy）と右twist公式μ_C=μ_B H^-4 ξ_hdetHから出るはず。既存一次資料RRZ PDF SHA28b4b649089bbebb722664452c665f8a43ad5b8d9589925b2f97818322736e25のThm0.3、Thm5.4とThm0.3の証明を再読し、full scalarの左公式μ_twist=μ σ^l ξ_hdetσ^-1を確認した。右Hは左H^-1なので上記右公式。これはまだ新節へ統合前、次に通常証明を正式化する。
+M chart(1,−1,t,t^-1)はweight−1のxy/yx交代blockがdomainで零、I0はx²,y²,bc,cbのrank2。bc/cb射影rank1なら純AS2 U、rank2ならbc=P(x²,y²),cb=Q(x²,y²)。P,Q独立ならh=f gがU上identity、x²,y²中心、z=xy+yx中心、normalGのx交換からyxy係数零→共通x因子。P,Q比例ならb,c全正常、非退化Pの両平方係数とnormalb f=(A,±A),φb(c)=A²、top固有値A4、一方G固有値A3なので上補題からA1,t1となるはず。これらを元tensorで監査する。
+S chart(1,−1,t,−t^-1)はxx/yy対称blockが純x4zeroからdomainで零、I0はxy,yx,bc,cbの交代rank2。元crossrank1から純bc/cb、b/c正常basePBWへ。G固定基底x³,xy²,ybc、非因子にはx³とybc双方が必要。normalb固有値a³,deとμb=adeからa1,t1になるはず。
+上の最後chart議論はprivate/未公開として扱い、公開前に漏れと各domain・Frobenius仮定を検算する。有限N≤96全atlas、全CY、成分・境界・intrinsic群oidと相対降下は引き続き未完。

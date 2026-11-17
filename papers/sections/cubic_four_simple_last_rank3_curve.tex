@@ -1,0 +1,151 @@
+\subsection{phaseなし最後のrank三曲線の全排除}
+\label{subsec:cubic-four-simple-last-rank3-curve}
+\begin{lemma}[二正常基底上の一つの二次Ore変形]
+\label{lem:cubic-two-normal-base-Ore-scalar}
+四生成元の14641型quadratic AS4整域で、$u,v$ のpair関係と、
+$\{u,v\}$ と $\{z,w\}$ の四cross pair関係が全て非零skew関係であり、
+残り一本が
+\[
+ zw=s\,wz+d\,uv,\qquad s\ne0
+\]
+であるとする。
+このとき量子平面 $T(u,v)$ 上の逐次Ore表示
+$T[z;f][w;g,\delta]$ が成立する。
+$u$ の他三生成元への正常化scalarを $a_v,a_z,a_w$ とすれば
+\[
+ \mu_B(u)=a_va_za_w\,u
+\]
+であり、$v$ にも同じ積公式が成立する。
+\end{lemma}
+\begin{proof}
+変数を $u,v,z,w$ の順に並べ、六つの逆順pairを正順へ書き換える。
+全てのleading係数が非零で、次数3の標準語は20個である。
+AS4の $\dim B_3=20$ から全三次overlapの標準語係数は零になる。
+四つの三文字ambiguityだけを持つ二次書換えなので、Diamond lemmaで全次数PBWが成立する。
+$g$ は対角自己同型、$\delta(u)=\delta(v)=0$、$\delta(z)$ は $uv$ のscalar倍であり、
+同じoverlap式が正確に $g$ と $\delta$ のcompatibilityとなる。
+従って表示したOre環と元の二次表示は一致する。
+
+量子平面から最初のskew拡大を行った中山は $u$ 上で $a_va_z$ 倍である。
+二回目のOre中山公式の基底環への制限は $g^{-1}\mu$ である。
+$g(u)=a_w^{-1}u$ なのでさらに $a_w$ 倍となる。
+$\delta$ はこの基底への制限式を変えない。
+従って表示した積公式を得る。最後の追加生成元への可能な非対角項を無条件に消した議論ではない。
+\end{proof}
+
+\begin{theorem}[最後のphase-free rank三chartも空]
+\label{thm:cubic-last-rank3-curve-empty}
+全support格子がrank三で、方向と位相が
+\[
+ n=(1,-2,-1,2),\qquad \mu_B=(t,t^{-2},t^{-1},t^2)
+\]
+となる四単純H3包絡は存在しない。
+従って全四単純H3の必要スペクトルは、共通位数 $N\le96$ の有限部分と
+\[
+ (\alpha,\beta,t,\gamma t^{-1}),\qquad
+ \alpha^M=\beta^M=\gamma^M=1,\quad M\le24
+\]
+だけで覆われる。
+\end{theorem}
+\begin{proof}
+この方向・位相の実際の巡回四次topは10次元で、代表は
+\[
+ xxbb,xybc,xycb,xbxb,xbyc,xbcy,xcyb,xcby,yycc,ycyc.
+\]
+係数を $a_0,\ldots,a_9$ とする。
+重み0の基底を $(xb,yc,bx,cy)$ とするとmiddleは
+\[
+ H_0=\begin{pmatrix}
+ a_3&a_4&-ta_0&a_5\\
+ a_4&a_9&-ta_2&-a_8/t^2\\
+ -ta_0&-ta_2&-ta_3&-ta_6\\
+ a_5&-a_8/t^2&-ta_6&-a_9/t^2
+ \end{pmatrix}.
+\]
+重み1対 $-1$、重み3対 $-3$ のpaired blockはそれぞれ
+\[
+ \begin{pmatrix}a_1/t&-ta_5\\a_2/t&-ta_7\end{pmatrix},\qquad
+ \begin{pmatrix}a_6&a_7\\-a_1/t^2&-a_4/t^2\end{pmatrix}.
+\]
+両方rank一で、各側の関係は二つの順序からなるpairのskew関係である。
+整域性から各行列の全四成分が非零であり、従って
+\[
+ a_1,a_2,a_4,a_5,a_6,a_7\ne0,\qquad
+ a_1a_7=a_2a_5=a_4a_6.
+\]
+top scalarを用いて $a_1=1$、$a_2=p,a_4=q,a_5=r$ と書けば
+$a_7=pr,a_6=pr/q$ で、$pqr\ne0$。
+
+$U_0=\langle xb,bx\rangle,V_0=\langle yc,cy\rangle$ に分けた $H_0$ のcross blockは
+\[
+ \begin{pmatrix}q&r\\-pt&-prt/q\end{pmatrix}
+ =\binom{1}{-pt/q}(q,r)
+\]
+であり、全値rank一である。
+関係空間 $K=\operatorname{im}H_0$ の次元は2。
+もし $K$ の $U_0,V_0$ への両射影が同型なら、
+対称rank二の表示 $H_0=RJR^t$ で両射影行列も $J$ も可逆となり、cross blockはrank二になる。
+従って少なくとも一方の射影rankは1以下であり、$K$ は純 $U_0$ 又は純 $V_0$ 関係を含む。
+その関係の両係数は、整域性から非零である。
+
+まず純 $U_0$ 関係がある場合を考える。
+四つのcross pairもskewなので、$x,b$ は全 $B$ で正常である。
+残る一本は、純 $U_0$ 関係を使って
+\[
+ A\,yc+C\,cy+D\,xb=0
+\]
+と書ける。$A,C$ は両方非零。
+一方が零なら、例えば $cy=\kappa xb$ であり、
+$y$ と $xb$ のskew可換性を使うと
+$(yc-\kappa\rho xb)y=0$ となって逆向きの独立二次関係を得る。
+これは $\dim K=2$ に反する。$D=0$ なら全六pairがskewであり、既分類から四単純H3ではない。
+従って非skewの場合 $D\ne0$ とできる。
+
+$x$ の正常化scalarを
+\[
+ xy=a\,yx,\qquad xb=b_0\,bx,\qquad xc=c_0\,cx
+\]
+とする。前補題は $\mu_B(x)=ab_0c_0\,x$ を与える。
+中山固有値を $\lambda_x=t,\lambda_y=t^{-2}$ と書く。
+非因子の $G$ は二つの指数型 $x^2y,b^2c$ を双方持つ。
+各pairのskew関係により、各型の全語は単一単項式に比例する。
+正常 $x$ に対する固有値比較から
+\[
+ a=b_0^2c_0=\lambda_x=ab_0c_0.
+\]
+従って $b_0c_0=1$、$a=b_0=\lambda_x$。
+正常化自己同型は $yc,cy$ にscalar $ac_0=1$、$xb$ にscalar $b_0=\lambda_x$ で作用する。
+上の混合関係とその自己同型像を引くと
+\[
+ D(\lambda_x-1)xb=0.
+\]
+$D\ne0$ と整域性から $\lambda_x=1$、すなわち $t=1$ で四単純性に反する。
+
+純 $V_0$ 関係がある場合も、今度は $y,c$ が正常基底である。
+残りを
+\[
+ A\,xb+C\,bx+D\,yc=0
+\]
+と書けば同じ逆向き関係の議論から $AC\ne0$、非skewなら $D\ne0$。
+$y$ の $x,b,c$ への正常化scalarを $a,b_0,c_0$ とすると、前補題から
+$\mu_B(y)=ab_0c_0\,y$。
+二三次成分の固有値比較は
+\[
+ a^2=b_0^2c_0=ab_0c_0.
+\]
+従って $a=b_0,c_0=1$、$\lambda_y=a^2$ となる。
+$xb,bx$ の固有値は $ab_0=\lambda_y$、$yc$ の固有値は1なので、
+非零変形係数は $\lambda_y=1$ を強制する。
+すなわち $t^2=1$ となり、$t,t^{-1}$ が重複して四単純性に反する。
+これで最後のphase-free rank三chartを全て排除した。
+
+全support格子rank四の有限部分は保持する。
+従って本結論は有限位数点で追加supportを持つambientの排除を含まず、
+先の全必要被覆からrank三chartだけを除いたものである。
+\end{proof}
+
+公開再現器は \texttt{verify\_cubic\_four\_simple\_last\_rank3\_curve.py}。
+任意対角中山の元巡回tensorを作る \texttt{cubic\_diagonal\_top.py} を用い、
+元10tensor、二つのrank一式、cross blockの全値rank一、二つの正常固有値ideal、
+逆向き関係の自由語恒等式を検算する。
+射影rankの必要被覆、domain、PBW/Oreの通常証明は本文で与えた。

@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "version": "classification-v280",
+  "version": "classification-v281",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -3872,6 +3872,33 @@
       "whole four-simple classification",
       "complete H3 classification",
       "new external/as4 imports",
+      "novelty confirmed"
+    ]
+  },
+  "four_simple_last_rank3_curve_v281": {
+    "status": "entire phase-free (t,t^-2,t^-1,t²) rank3 support chart excluded",
+    "proof": "papers/sections/cubic_four_simple_last_rank3_curve.tex",
+    "validator": "computations/verify_cubic_four_simple_last_rank3_curve.py",
+    "helper": "computations/cubic_diagonal_top.py",
+    "checks": [
+      "default Sympy original10 top/paired rank1 identities PASS",
+      "all-value crossblock outer factor rank1 PASS",
+      "both normal-base eigenvalue ideals and reverse-pair free-word identity PASS",
+      "v281 main LuaLaTeX clean PASS"
+    ],
+    "ordinary_proofs": [
+      "symmetric rank2 projection cover",
+      "domain reverse-pair coefficients nonzero",
+      "PBW20 cubic overlaps and iterated Ore",
+      "normal base Nakayama product scalars"
+    ],
+    "remaining_rank3_chart": "(alpha,beta,t,gamma/t), phase common orderM<=24",
+    "finite_support_rank4_order_bound": 96,
+    "validation_scope": "64 validators across runs; no single64 replay claimed",
+    "not_claimed": [
+      "finite-order extra-support points excluded",
+      "last phase chart solved",
+      "complete H3 classification",
       "novelty confirmed"
     ]
   }
