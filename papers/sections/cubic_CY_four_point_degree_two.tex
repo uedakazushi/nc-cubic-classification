@@ -1,0 +1,31 @@
+\subsection{出次数2の共有支持の排除}
+\begin{theorem}\label{thm:cubic-CY-four-point-degree-two-empty}
+四単純基点型の零交換子CY包絡の共有支持に出次数2の頂点があれば、H3は存在しない。
+\end{theorem}
+\begin{proof}
+補題\ref{lem:cubic-CY-four-point-support}により
+$x_1=x_4=1,x_3=0$ に規格化する。他の頂点の出次数には条件を課さない。
+この規格化を保つ $\operatorname{diag}(1,1,z,1)$ は
+$(x_0,x_2,x_5)$ を $(zx_0,zx_2,x_5/z)$ へ移す。
+
+固定出典\cite{AS4CYpinned}の隣接共有係数の五つの結果を、以下の必要条件に限って用いる。
+\begin{itemize}
+\item $x_0=0,x_2=0$ では、二対角零の角の必要被覆AZ1--AZ3により
+$L^\eta_\omega$ 又は $J^\eta_h$ となる。$x_0=0,x_2\ne0$ では
+$x_2=1$ に規格化し、第一対角零の必要被覆AF1--AF11により残るのは $J^\eta_h$ である。
+\item $x_0\ne0,x_5=0$ では $x_0=1$ とする。第五対角零の必要被覆AV1以下により
+残るのは $J^\eta_h$ である。ここでは $x_2$ は自由に保つ。
+\item $x_0x_5\ne0$ では $x_0=1$ とし、$p=x_2,f=x_5$ とおく。
+$d=(p-1)f-1\ne0$ なら、開部分の必要被覆AO1--AO2の両符号の表示は
+三次商次元が全許容値で21以上であるため排除される。
+$d=0$ なら $q=p-1\ne0$ として $f=q^{-1}$。
+境界の全Schur解の被覆AB1--AB3により、全候補は $T^\eta_\lambda$ と $S_\zeta$ である。
+\end{itemize}
+$L$ と $J$ は命題\ref{prop:cubic-adjacent-L}と命題\ref{prop:cubic-boundary-J}、
+$S$ と $T$ は命題\ref{prop:cubic-adjacent-S}と定理\ref{thm:cubic-adjacent-T-all}で排除される。
+従って上の被覆に含まれる全候補が消える。
+\end{proof}
+
+共有支持のうち出次数1を含むものと全零支持も既に排除した。
+従って零交換子CY領域に残る必要支持は、部分活性14支持・3軌道と全共有1支持・1軌道である。
+ここでの軌道は有向共有支持の置換軌道を数えている。

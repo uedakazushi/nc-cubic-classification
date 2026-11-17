@@ -98,6 +98,7 @@ CHECKS=[
  'verify_cubic_CY_four_point_two_open.py',
  'verify_cubic_CY_four_point_determinant.py',
  'verify_cubic_CY_four_point_zero_determinant.py',
+ 'verify_cubic_CY_adjacent_open.py',
 ]
 results=[]
 for name in CHECKS:

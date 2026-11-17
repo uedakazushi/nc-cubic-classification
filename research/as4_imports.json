@@ -885,5 +885,52 @@
       "complete CY/H3 classification",
       "novelty"
     ]
+  },
+  "CY_adjacent_necessary_v306": {
+    "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+    "files": [
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_FOUR_SIMPLE_ADJACENT_SHARED_ZERO_CORNER_COMPLETE.tex",
+        "sha256": "2031a5030eb1ba7c0940b419f4309d8e624b6cd69257d040f356081b45f3d0a4"
+      },
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_FOUR_SIMPLE_ADJACENT_SHARED_ZERO_FIRST_COMPLETE.tex",
+        "sha256": "299a5b171b7a9fa27ccd0ab89460d6db1c6237fea0c0c513b2eafac5701f13e1"
+      },
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_FOUR_SIMPLE_ADJACENT_SHARED_ZERO_FIFTH_COMPLETE.tex",
+        "sha256": "2c37fe19f800ee77ed126d1782cee6db74b2132b6713be6a155fc1ce5f42548a"
+      },
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_FOUR_SIMPLE_ADJACENT_SHARED_NONZERO_OPEN_EXCLUDED.tex",
+        "sha256": "dc006139536d322d5e098e093f87fd35b3556a8250e79a5133746e8f0e79c47f"
+      },
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_FOUR_SIMPLE_ADJACENT_SHARED_BOUNDARY_REDUCTION.tex",
+        "sha256": "0adba56ece96ac29d4fa345720a16132f5f8bc1bdcca137e16d0bb9e836e4f0d"
+      },
+      {
+        "path": "code/verify_cy_zero_commutators_four_simple_adjacent_shared_zero_corner_complete.py",
+        "sha256": "b627da5624300042bd5cc5579431ea009a25cf76ca5c9961fe04f082aa753aab"
+      },
+      {
+        "path": "code/verify_cy_zero_commutators_four_simple_adjacent_shared_zero_first_complete.py",
+        "sha256": "84aac8b3ca90992b34d9f9fe957e9562c939c4109d0f901f8e3eae8f8f32acd6"
+      },
+      {
+        "path": "code/verify_cy_zero_commutators_four_simple_adjacent_shared_zero_fifth_complete.py",
+        "sha256": "ff9ef9e09d667eb84e81cf066916e1358a0fc788d8da5c29c5dd434851a3a8f1"
+      },
+      {
+        "path": "code/verify_cy_zero_commutators_four_simple_adjacent_shared_nonzero_open_excluded.py",
+        "sha256": "15727f015045f96c3179e2f48f8202f73cb646627ab2603fa82067294977836f"
+      },
+      {
+        "path": "code/verify_cy_zero_commutators_four_simple_adjacent_shared_boundary_reduction.py",
+        "sha256": "01363e5d682221f49ed265b0c4bdebed341547107845a09dec9982b7a56cbdaa"
+      }
+    ],
+    "used_part": "necessary coverage of AZ, AF, AV, AO and AB charts; existing H3 obstructions for L/J/S/T",
+    "downstream_independent": "AO2 both signs have exact degree-three quotient dimension 21 over QQ(lambda); denominators supported at lambda and lambda+1"
   }
 }
