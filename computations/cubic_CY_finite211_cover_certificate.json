@@ -1,0 +1,438 @@
+{
+  "status": "PASS",
+  "source_commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+  "coefficient_backend": "existing exact flint Gaussian rational functions with conversion identity checks",
+  "scope": "necessary full projection211 cover: 27 bad original quotients and exact retained original frames",
+  "bad_quotients": [
+    {
+      "name": "DZ_vector_zerogeneric",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35,
+        57
+      ],
+      "parameters": [
+        "h"
+      ],
+      "inverted_polynomials": [
+        "h"
+      ]
+    },
+    {
+      "name": "DZ_vector_zero-1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        36
+      ],
+      "parameters": [],
+      "inverted_polynomials": [
+        "h"
+      ]
+    },
+    {
+      "name": "DZ_vector_zero1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        36
+      ],
+      "parameters": [],
+      "inverted_polynomials": [
+        "h"
+      ]
+    },
+    {
+      "name": "DZ_vector_nonzerogeneric",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35,
+        57
+      ],
+      "parameters": [
+        "h"
+      ],
+      "inverted_polynomials": [
+        "h"
+      ]
+    },
+    {
+      "name": "DZ_vector_nonzero-1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        36
+      ],
+      "parameters": [],
+      "inverted_polynomials": [
+        "h"
+      ]
+    },
+    {
+      "name": "DZ_vector_nonzero1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        36
+      ],
+      "parameters": [],
+      "inverted_polynomials": [
+        "h"
+      ]
+    },
+    {
+      "name": "DZ_upper_m1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35,
+        56,
+        84,
+        123
+      ],
+      "parameters": [
+        "h"
+      ],
+      "inverted_polynomials": [
+        "h"
+      ]
+    },
+    {
+      "name": "DZ_zero_n00_r0",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        39
+      ],
+      "parameters": [],
+      "inverted_polynomials": [
+        "h"
+      ]
+    },
+    {
+      "name": "DZ_zero_n00_rplus",
+      "dimensions": [
+        1,
+        4,
+        10,
+        23
+      ],
+      "parameters": [],
+      "inverted_polynomials": [
+        "h"
+      ]
+    },
+    {
+      "name": "DZ_zero_n00_rminus",
+      "dimensions": [
+        1,
+        4,
+        10,
+        23
+      ],
+      "parameters": [],
+      "inverted_polynomials": [
+        "h"
+      ]
+    },
+    {
+      "name": "DZ_zero_n00_p",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35,
+        60
+      ],
+      "parameters": [],
+      "inverted_polynomials": [
+        "h"
+      ]
+    },
+    {
+      "name": "DZ_zero_d01",
+      "dimensions": [
+        1,
+        4,
+        10,
+        23
+      ],
+      "parameters": [],
+      "inverted_polynomials": [
+        "h"
+      ]
+    },
+    {
+      "name": "DZ_zero_d10",
+      "dimensions": [
+        1,
+        4,
+        10,
+        23
+      ],
+      "parameters": [],
+      "inverted_polynomials": [
+        "h"
+      ]
+    },
+    {
+      "name": "DZ_zero_d11_family",
+      "dimensions": [
+        1,
+        4,
+        10,
+        21
+      ],
+      "parameters": [
+        "h"
+      ],
+      "inverted_polynomials": [
+        "h"
+      ]
+    },
+    {
+      "name": "DZ_zero_d11_single",
+      "dimensions": [
+        1,
+        4,
+        10,
+        21
+      ],
+      "parameters": [],
+      "inverted_polynomials": [
+        "h"
+      ]
+    },
+    {
+      "name": "DZ_zero_n01_equal",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        39
+      ],
+      "parameters": [
+        "h"
+      ],
+      "inverted_polynomials": [
+        "h"
+      ]
+    },
+    {
+      "name": "DZ_zero_n01_zero",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        39
+      ],
+      "parameters": [
+        "h"
+      ],
+      "inverted_polynomials": [
+        "h"
+      ]
+    },
+    {
+      "name": "DZ_zero_n01_conic",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        42
+      ],
+      "parameters": [
+        "h"
+      ],
+      "inverted_polynomials": [
+        "h"
+      ]
+    },
+    {
+      "name": "DZ_zero_n1_nonzero",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        39
+      ],
+      "parameters": [
+        "u",
+        "z"
+      ],
+      "inverted_polynomials": [
+        "z",
+        "u**2 - z"
+      ]
+    },
+    {
+      "name": "DZ_zero_n1_zero",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        42
+      ],
+      "parameters": [
+        "h",
+        "u"
+      ],
+      "inverted_polynomials": [
+        "h",
+        "u"
+      ]
+    },
+    {
+      "name": "DZ_upper_m0",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35,
+        56,
+        84,
+        123
+      ],
+      "parameters": [
+        "h"
+      ],
+      "inverted_polynomials": [
+        "h"
+      ]
+    },
+    {
+      "name": "DZ_zero_d00",
+      "dimensions": [
+        1,
+        4,
+        10,
+        22
+      ],
+      "parameters": [
+        "u",
+        "v"
+      ],
+      "inverted_polynomials": []
+    },
+    {
+      "name": "DT_diagonal-1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        21
+      ],
+      "parameters": [
+        "p",
+        "u"
+      ],
+      "inverted_polynomials": []
+    },
+    {
+      "name": "DT_diagonal1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        21
+      ],
+      "parameters": [
+        "p",
+        "u"
+      ],
+      "inverted_polynomials": []
+    },
+    {
+      "name": "DT_quarter_generic",
+      "dimensions": [
+        1,
+        4,
+        10,
+        22
+      ],
+      "parameters": [
+        "t",
+        "u",
+        "v"
+      ],
+      "inverted_polynomials": []
+    },
+    {
+      "name": "DT_boundary_zero_pq",
+      "dimensions": [
+        1,
+        4,
+        10,
+        22
+      ],
+      "parameters": [
+        "r",
+        "u",
+        "v"
+      ],
+      "inverted_polynomials": []
+    },
+    {
+      "name": "DT_boundary_special_r",
+      "dimensions": [
+        1,
+        4,
+        10,
+        22
+      ],
+      "parameters": [
+        "p",
+        "q",
+        "u",
+        "v"
+      ],
+      "inverted_polynomials": []
+    }
+  ],
+  "retained_first_stratum": [
+    "a2",
+    "a1_-1",
+    "a1_1",
+    "c2_-1",
+    "c2_1",
+    "c1u",
+    "c1s"
+  ],
+  "ordinary_dependencies": [
+    "pinned DS1-10, DT4-11 and DZ1-20 necessary full stabilizer and branch covers; upstream replay recorded separately",
+    "all-closed rank specialization of original full word relations on stated unit domains",
+    "existing all-parameter ds211 H3 exclusions"
+  ],
+  "not_claimed": [
+    "all branch Groebner calculations independently reimplemented",
+    "AS sufficiency or full automorphism theorem imported",
+    "relative reduced scheme cover",
+    "full H3 classification",
+    "novelty confirmed"
+  ]
+}

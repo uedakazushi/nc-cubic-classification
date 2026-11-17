@@ -91,6 +91,7 @@ CHECKS=[
  'verify_cubic_CY_DL_cover.py',
  'verify_cubic_CY_finite43_cover.py',
  'verify_cubic_CY_finite22_cover.py',
+ 'verify_cubic_CY_finite211_cover.py',
 ]
 results=[]
 for name in CHECKS:

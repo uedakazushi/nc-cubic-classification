@@ -695,5 +695,49 @@
       "full CY or H3 classification",
       "novelty"
     ]
+  },
+  "CY_finite211_necessary_cover_v300": {
+    "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+    "files": [
+      {
+        "path": "code/verify_cy_zero_commutators_double_simple_nonzero_complete.py",
+        "sha256": "d5b102ed5691276e0a6f3a01750a9751f0cd1b22123da6243c105b0db19041a1"
+      },
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_DOUBLE_SIMPLE_NONZERO_COMPLETE.tex",
+        "sha256": "3cec06e79b97b99ea2b8fa3353142b202b3b77ac63242eb8b384ac71c8eb2cad"
+      },
+      {
+        "path": "code/verify_cy_zero_commutators_double_simple_second_complete.py",
+        "sha256": "e15902c96c7d9f02ff455670c1218e9693bd57c2b246a4a2d0af3ce02f5074de"
+      },
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_DOUBLE_SIMPLE_SECOND_COMPLETE.tex",
+        "sha256": "31fa9c7f730fdc43f96a9cca5828dce649b3ec10149bf8cf7606c9662d1de64e"
+      },
+      {
+        "path": "code/verify_cy_zero_commutators_double_simple_final_exclusion.py",
+        "sha256": "45cf4e259e78146f821d193c807909db6e4db4779bf2ad7625f6ac9280cef6f1"
+      },
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_DOUBLE_SIMPLE_FINAL_EXCLUSION.tex",
+        "sha256": "650810f3d5f1279d85ecedc596fe735ff4770fde05d8d81935b5ab71f9e01c6c"
+      }
+    ],
+    "used_part": "DS1-10, DT4-11, DZ1-20 necessary full branch coverage only",
+    "upstream_status": "proof_written; independent audit pending; novelty unsearched",
+    "upstream_replay": "all three full fixed controllers PASS in isolated output workspace with python-flint",
+    "downstream_status": "PASS exact flint-backed independent27 original quotient controls, every original inserted relation checked against quotient coordinates; all retained presentation identities including both second-stratum families PASS. Default Sympy coefficient run not completed; no default PASS claimed.",
+    "validator": "computations/verify_cubic_CY_finite211_cover.py",
+    "input": "computations/cubic_CY_finite211_input.json",
+    "proof": "papers/sections/cubic_CY_finite211_cover.tex",
+    "not_imported": [
+      "AS sufficiency",
+      "full isomorphisms and automorphism groups",
+      "projection1111 coefficient cover",
+      "relative scheme cover",
+      "full H3 classification",
+      "novelty"
+    ]
   }
 }
