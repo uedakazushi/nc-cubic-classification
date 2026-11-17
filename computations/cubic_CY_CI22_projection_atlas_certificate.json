@@ -1,0 +1,185 @@
+{
+  "status": "PASS",
+  "scope": "all seven necessary six-quadric projection types for integral CI(2,2) image, not algebra coefficient classification",
+  "all_seven_projection_records": [
+    {
+      "type": "1111",
+      "quadrics": [
+        "a*b",
+        "a*c",
+        "a*d",
+        "b*c",
+        "b*d",
+        "c*d"
+      ],
+      "all_two_quadric_relations": [
+        "-z0*z5 + z1*z4",
+        "-z0*z5 + z2*z3"
+      ],
+      "full_rank_combination": [
+        1,
+        -4
+      ],
+      "full_rank_det": "-9/4",
+      "pencil_det": "-la**2*mu**2*(la + mu)**2/64",
+      "span_I_T_T2_dimension": 3
+    },
+    {
+      "type": "211",
+      "quadrics": [
+        "b**2",
+        "a*c",
+        "a*d",
+        "b*c",
+        "b*d",
+        "c*d"
+      ],
+      "all_two_quadric_relations": [
+        "-z1*z4 + z2*z3",
+        "-z0*z5 + z3*z4"
+      ],
+      "full_rank_combination": [
+        1,
+        -4
+      ],
+      "full_rank_det": "-1/4",
+      "pencil_det": "-la**2*mu**4/64",
+      "span_I_T_T2_dimension": 3
+    },
+    {
+      "type": "22",
+      "quadrics": [
+        "b**2",
+        "d**2",
+        "a*c",
+        "a*d",
+        "b*c",
+        "b*d"
+      ],
+      "all_two_quadric_relations": [
+        "-z2*z5 + z3*z4",
+        "-z0*z1 + z5**2"
+      ],
+      "full_rank_combination": [
+        1,
+        -4
+      ],
+      "full_rank_det": "-1/4",
+      "pencil_det": "-la**2*mu**4/64",
+      "span_I_T_T2_dimension": 3
+    },
+    {
+      "type": "31",
+      "quadrics": [
+        "a*c - b**2",
+        "b*c",
+        "c**2",
+        "a*d",
+        "b*d",
+        "c*d"
+      ],
+      "all_two_quadric_relations": [
+        "-z0*z5 - z1*z4 + z2*z3",
+        "-z1*z5 + z2*z4"
+      ],
+      "full_rank_combination": [
+        1,
+        -4
+      ],
+      "full_rank_det": "-1/64",
+      "pencil_det": "-mu**6/64",
+      "span_I_T_T2_dimension": 3
+    },
+    {
+      "type": "4",
+      "quadrics": [
+        "a*c - b**2",
+        "a*d - b*c",
+        "b*d",
+        "c**2",
+        "c*d",
+        "d**2"
+      ],
+      "all_two_quadric_relations": [
+        "-z0*z5 + z1*z4 - z2**2 + z2*z3",
+        "-z3*z5 + z4**2"
+      ],
+      "full_rank_combination": [
+        1,
+        -4
+      ],
+      "full_rank_det": "-1/64",
+      "pencil_det": "-mu**6/64",
+      "span_I_T_T2_dimension": 3
+    },
+    {
+      "type": "L",
+      "quadrics": [
+        "a**2",
+        "a*b",
+        "b**2",
+        "b*c",
+        "a*c - b*d",
+        "a*d"
+      ],
+      "all_two_quadric_relations": [
+        "-z0*z2 + z1**2",
+        "-z0*z3 + z1*z4 + z2*z5"
+      ],
+      "full_rank_combination": [
+        1,
+        -4
+      ],
+      "full_rank_det": "-64",
+      "pencil_det": "-la**6/64",
+      "span_I_T_T2_dimension": 2
+    },
+    {
+      "type": "D",
+      "quadrics": [
+        "a**2",
+        "a*b",
+        "b**2",
+        "c**2",
+        "c*d",
+        "d**2"
+      ],
+      "all_two_quadric_relations": [
+        "-z0*z2 + z1**2",
+        "-z3*z5 + z4**2"
+      ],
+      "full_rank_combination": [
+        1,
+        -4
+      ],
+      "full_rank_det": "-4",
+      "pencil_det": "la**3*mu**3/16",
+      "span_I_T_T2_dimension": 2
+    }
+  ],
+  "all_five_finite_scheme_multiplication_kernels": true,
+  "full_binary_syzygy_rank": 22,
+  "syzygy_parameter_rank": 8,
+  "line_marked_quadric_translation": true,
+  "all_three_basepoint_elimination_identities": true,
+  "all_five_symmetric_matrix_examples": {
+    "1111": "Matrix([[0, 0, 0], [0, 1, 0], [0, 0, 2]])",
+    "211": "Matrix([[1, I, 0], [I, -1, 0], [0, 0, 1]])",
+    "22": "Matrix([[0, 0, 0], [0, 0, 0], [0, 0, 1]])",
+    "31": "Matrix([[0, 0, 1], [0, 0, I], [1, I, 0]])",
+    "4": "Matrix([[1, I, 0], [I, -1, 0], [0, 0, 0]])"
+  },
+  "ordinary_dependencies": [
+    "tangent degeneracy criterion T^2 in span(I,T)",
+    "self-adjoint minimal polynomial degree2 gives direct Veronese double cover or reduced line",
+    "nondegenerate tangent chart base scheme equals smooth conic cut of length4 and spans P3",
+    "complete linear series of a finite curvilinear length4 scheme gives five projective types"
+  ],
+  "not_claimed": [
+    "all AS4 candidates over each projection classified",
+    "all zero-commutator CY H3 excluded",
+    "whole CY classification imported",
+    "novelty confirmed",
+    "geometric proofs mechanically formalized"
+  ]
+}

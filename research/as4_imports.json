@@ -589,5 +589,21 @@
     "validator": "computations/verify_cubic_CY_Veronese.py",
     "proof": "papers/sections/cubic_CY_Veronese.tex",
     "remaining_scope": "CI22 seven projection types and all actual-AS4 chart coverage still need audit; global CY classification and novelty unclaimed"
+  },
+  "CY_CI22_seven_projection_types_v296": {
+    "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+    "path": "research/proofs/CY_ZERO_COMMUTATORS_QUADRIC_PENCIL_PROJECTIONS.tex",
+    "sha256": "72999fb7105f0b709e7f8c45339be58f6dbcbe003732b11259bcce42fab54c62",
+    "hypotheses": "six independent quadratic forms on P3, integral three-dimensional CI22 image and one rank6 quadratic relation",
+    "used_part": "all seven GL4 orbits of symmetric projection systems only, not all algebra coefficients or AS sufficiency",
+    "review": "full geometric proof read; independent downstream all-seven relation pencils, five finite multiplication kernels, universal syzygies, marked line shear and basepoint identities PASS",
+    "validator": "computations/verify_cubic_CY_CI22_projection_atlas.py",
+    "proof": "papers/sections/cubic_CY_CI22_projection_atlas.tex",
+    "not_imported": [
+      "all AS4 coefficient normal forms",
+      "all CI22 algebra isomorphisms",
+      "all H3 cuts",
+      "novelty"
+    ]
   }
 }

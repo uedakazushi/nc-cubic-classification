@@ -87,6 +87,7 @@ CHECKS=[
  'verify_cubic_jordan22_unipotent_vertex.py',
  'verify_cubic_CY_second_quadric.py',
  'verify_cubic_CY_Veronese.py',
+ 'verify_cubic_CY_CI22_projection_atlas.py',
 ]
 results=[]
 for name in CHECKS:
