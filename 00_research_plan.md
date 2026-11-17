@@ -1,6 +1,6 @@
 # 研究方針：H3型内在的非可換三次曲面の完全分類
 
-2026-11-17 / research-plan-v34 / H3分類専用。
+2026-11-17 / research-plan-v35 / H3分類専用。
 **再開時は本書を最初に読む。GitHub mainが唯一の正本。**
 実行規則は `AGENTS.md`。既存の全H3分類の詳細と必要な式は
 `research/cubic_14641_classification.md`、`research/cubic_14641_codex_plan.md`、
@@ -35,10 +35,9 @@ Library既存ファイルは明示指示なしに削除しない。GitではPDF�
 外部ambient・四周期表示・例外列を追加標識にしない。
 全対象の被覆、全許容切断、pointed exact同値の全群oidと慣性、成分・交叉・境界、相対再構成・降下を達成基準とする。
 
-**現在の最優先課題は、量子so3固定包絡の4次元族と、それを含む7次元H3族を通る既約成分の完全決定である。**
-この焦点はユーザーの成分決定の依頼に基づく。4次元族の非成分性は解決済みだが、全成分の大域的同定と全境界は未解決である。
-7次元族を最終成分と決め打ちせず、一般Etingof–Ginzburg型中央三次商を含む8次元成分を検証する。
-全H3分類の他の枝の成果・未解決問題を消したり、この限定研究の結論で置き換えたりしない。
+**このリポジトリの最優先課題は強いintrinsic H3の完全分類である。**
+(2,2) mixed rank4の全Jordan型の判定に続き、未被覆のCY・多固有値部分、全成分・相対降下に取り組む。具体的な最新frontierは下記第IV節と `research/cubic_14641_codex_plan.md` を読む。
+楕円E6量子化成分の完全決定は [nc-cubic-e6](https://github.com/uedakazushi/nc-cubic-e6) に分離済みであり、E6論文の改訂はその正本で行う。
 
 ## III. 現在の分類研究の最優先課題
 
@@ -58,19 +57,13 @@ Library既存ファイルは明示指示なしに削除しない。GitではPDF�
 - スペクトル(1,3)は幾何学的分類、(3,1)と(2,2) mixed rank2は全Jordan型込みで排除。mixed rank4のP=0,Q=0は既知族へ認識。両top非零の残余は詳細分類ノートの現行frontierを読む。
 
 分類frontierは **classification-v202**。最後のL0非鏡開集合の正常行加群を自由rank10の核へ移し、全多項式恒等式と10回の局所化単元pivotを公開コードから厳密再生した。両top非零の全候補が消滅し、(2,2)/mixed rank4の全H3は全Jordan型込みで既分類の曲がったClifford族に一致する。詳細な被覆・AS4点での底変更の証明は `papers/sections/cubic_order2_22_secant_L_complete.tex`。この領域の完成を全H3分類と同一視しない。
-成分研究では、三次の二次関係挿入45×48行列を44×44単元minorで整理し、包絡の三次平坦性を四つの係数の消滅へ帰着した。全次数平坦性を別途仮定すれば三次核は自動的に左右正則正規な主イデアル。20巡回potential方向の80個の斉次一次overlapは全て零と検証済み。指定potential chart内の高次flat性は上記定理で解決した。全intrinsic被覆は未完成。
+独立の[楕円E6量子化成分](https://github.com/uedakazushi/nc-cubic-e6)の研究では、三次の二次関係挿入45×48行列を44×44単元minorで整理し、包絡の三次平坦性を四つの係数の消滅へ帰着した。全次数平坦性を別途仮定すれば三次核は自動的に左右正則正規な主イデアル。20巡回potential方向の80個の斉次一次overlapは全て零と検証済み。指定potential chart内の高次flat性は上記定理で解決した。全intrinsic被覆は未完成。
 全CY被覆、三固有値以上、全成分とintrinsic族降下も未完成である。
 
 ## V. 再現・関連研究
 
-成分研究はリポジトリrootで次を実行する。
-```sh
-python3 -m pip install -r computations/quantum_cubic_component/requirements.txt
-python3 computations/quantum_cubic_component/verify_all.py
-latexmk -lualatex papers/quantum_cubic_component.tex
-```
-検証証明書は `computations/quantum_cubic_component/validation.json`。13検証器は厳密演算で再実行済み。
-Artin再構成は通常の数学的証明であり、計算PASSと区別する。成分原稿をLuaLaTeXで組版した。既存の全分類成果の独立再監査とは区別する。
+分類研究の再現・検証は `research/cubic_classification_validation.json` と `AGENTS.md` に従う。
+独立の楕円E6量子化成分のTeX・計算は [nc-cubic-e6](https://github.com/uedakazushi/nc-cubic-e6) を正本とし、そこで `python3 computations/verify_all.py` と `latexmk -lualatex papers/quantum_cubic_component.tex` を実行する。分類内で必要なH3認識の定理はこのリポジトリの公表用主原稿に保持する。
 全H3分類の再現手順は `research/cubic_classification_validation.json`、例は `python3 computations/verify_cubic_skew_jets.py`。
 
 heart比較・Rains共鳴・cubic cornerは `uedakazushi/nc-dp-surface-hearts`、次数1は `uedakazushi/nc-dp1-moduli`、三次三様体は `uedakazushi/nc-cubic-threefold-moduli` が正本。
