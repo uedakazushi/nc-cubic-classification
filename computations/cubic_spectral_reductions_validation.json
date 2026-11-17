@@ -72,13 +72,17 @@
     {
       "validator": "verify_cubic_third_root_nonunit_Jordan.py",
       "status": "PASS"
+    },
+    {
+      "validator": "verify_cubic_third_root_unit_Jordan.py",
+      "status": "PASS"
     }
   ],
   "current_three_eigenvalue_necessary_spectra": 3,
   "current_minimal_common_semisimple_orders": [
     3
   ],
-  "nonunit_repeated_third_root_Nakayama": "semisimple required; unit-repeat Jordan remains",
+  "three_eigenvalue_Nakayama": "semisimple of order3 required in all three remaining spectra",
   "additional_four_simple_sector": "(a,-a,i/a,-i/a) excluded outside a^4=1; finite boundary unclassified",
   "not_claimed": [
     "H3 existence or admissibility of3 spectra",

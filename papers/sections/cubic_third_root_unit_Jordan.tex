@@ -1,0 +1,95 @@
+\subsection{位数3の重複固有値1のJordan層}
+\label{subsec:cubic-third-root-unit-Jordan}
+\begin{theorem}[三固有値H3の中山は半単純位数3]
+\label{thm:cubic-third-root-unit-Jordan-empty}
+半単純スペクトル $(1,1,\omega,\omega^2)$ を持つH3包絡の中山は半単純である。
+従って全三固有値H3の中山は半単純かつ位数3である。
+\end{theorem}
+\begin{proof}
+非自明なJordan層で
+$\mu(x)=x,\mu(y)=y+x,\mu(b)=\omega b,\mu(c)=\omega^2c$ とする。
+単冪部分の対数から得る次数0の局所冪零導分を $D$ と書くと
+$D(y)=x,D(x)=D(b)=D(c)=0$。
+関係空間 $I_0,I_1,I_2$ は $D$ 安定、各二次元である。
+$I_0\subset U^2+kbc+kcb$ に $yy$ 成分があれば $D^2$ が非零の純 $x^2$ 関係を与え、整域性に反する。
+同様に $D(I_0)\ne0$ も純 $x^2$ 関係を与える。
+従って
+\[
+ I_0\subset\langle x^2,xy-yx,bc,cb\rangle,\qquad D(I_0)=0.
+\tag{1}
+\]
+
+実際の逆中山巡回式は重み1の86語上でrank74、解空間12次元である。
+その全解のmiddleをパラメータ $a_0,\ldots,a_{11}$ で書くと、
+$I_1$ 側の行順 $(xb,yb,bx,by,c^2)$、$I_2$ 側の列順 $(xc,yc,b^2,cx,cy)$ に対し、
+$yc,cy$ 二列は
+\[
+ \begin{pmatrix}2a_6&2a_5\\0&0\\2a_8&2a_6\\0&0\\0&0\end{pmatrix}.
+\]
+逆向きblockの $yb$ 列は
+$-2\omega(a_6,0,0,a_5,0)^t$。
+これらは元の巡回式の全係数を解いた公開exact線型消去による恒等式であり、全12tensorをcertificateへ保存した。
+$a_6^2-a_5a_8\ne0$ なら $I_1$ は純 $xb,bx$ 関係を含むため整域でない。
+従って $a_6^2=a_5a_8$。
+$a_5=0,a_8\ne0$ 又は逆の場合も純積関係を生じるので、三者は全て零又は全て非零である。
+三者全て零なら $I_1$ に $yb,by$、$I_2$ に $yc,cy$ 成分がなく、
+$(1)$ と合わせて $(x,b)$ 商は自由二元環又はその $c^2$ 商となり指数増大する。
+従って全て非零である。
+
+$t=a_6/a_5$、$\alpha=-t^{-1}$ とおく。
+上の二列から $xb+t bx$、逆向きから $t xc+cx$ が関係となる。
+$D$ 安定性と二次元性から残る各mixed関係も完全なgraphとなり、
+ある係数に対して
+\[
+ bx=\alpha xb,\quad cx=\alpha^{-1}xc,\quad
+ by=\alpha yb+\beta xb+\gamma c^2,\quad
+ cy=\alpha^{-1}yc+\epsilon xc+\zeta b^2
+\tag{2}
+\]
+と書ける。
+実際、$yb,by$ を含む第二関係へ $D$ を適用すると既述の一次元関係へ入り、両graphの同じ対角係数が強制される。
+$yc,cy$ も同様である。
+
+$I_0$ の $xy-yx$ 射影が零なら、$(b,c)$ 商が自由 $x,y$ 環又はその $x^2$ 商となり指数増大する。
+従って射影は非零であり、二本の $(1)$ の関係を消去して
+\[
+ bc-qcb=h x^2,\qquad yx=xy+\kappa x^2+\ell bc
+\tag{3}
+\]
+とできる。ただし $q\ne0$。
+ここで $bc,cb$ の一方だけが残る可能性は整域性から除かれる。
+例えば $bc=h x^2$ なら $h=0$ は直ちに非整域であり、$h\ne0$ なら
+$b(cb-h\alpha^{-2}x^2)=0$ からもう一本の純base関係を得る。
+これは $xy-yx$ を含む関係と合わせて $\dim I_0\ge3$ を強制する。
+純 $x^2$ 関係の場合も整域性に反する。
+
+$A=\langle x,b,c\rangle$ とする。
+$(2),(3)$ の三本のbase関係は可逆自己同型型Ore拡大を与え、
+$A$ は基底 $x^a b^r c^s$ を持つ整域である。
+全六関係を語順 $y>c>b>x$ で向き付ければ、標準語は
+$x^a b^r c^s y^n$ であり、各次数の語数はAS4のHilbert値と一致する。
+従ってこれらは実際に独立であり、$A$ は $B$ に埋め込まれ、
+\[
+ B=A[y;\sigma,\delta],\qquad
+ \sigma(x)=x,\ \sigma(b)=\alpha^{-1}b,\ \sigma(c)=\alpha c
+\]
+という実際のOre表示を得る。
+$\delta$ がbase関係を保つことも、同じ標準語の独立性から従う。
+$xy-yx$ の二つの射影rankを別途漏れなく分類したという仮定は不要である。
+
+H3の三次 $G$ は $\mu(G)=G$、従って $D(G)=0$。
+Ore次数 $n>0$ の最高項 $a_n y^n$ に対して $D$ の最高項は
+$n a_n x y^{n-1}$ であり、標数0と整域性から非零である。
+よって $\ker D=A$、特に $G\in A_3$。
+$A/(x)=k\langle b,c\rangle/(bc-qcb)$ へ移すと
+$\bar G=\sum_{r+s=3}d_{rs}b^r c^s$ は
+\[
+ \bar G b=\omega^2 b\bar G,\qquad
+ \bar G c=\omega c\bar G
+\]
+を満たす。
+$d_{rs}\ne0$ なら $q^s=q^r=\omega$ が必要であるが、
+$r=0$ 又は $s=0$ は不可能、$(r,s)=(1,2),(2,1)$ も $\omega^2=\omega$ を強制して不可能。
+従って $\bar G=0$、$G\in xA_2$ となり、全三次が一次因子を持つ。
+整域切断は存在せず、全Jordan層が排除される。
+\end{proof}

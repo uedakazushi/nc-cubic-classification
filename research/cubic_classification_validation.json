@@ -2554,7 +2554,7 @@
   "spectral_reductions_replay": {
     "runner": "computations/verify_cubic_spectral_reductions.py",
     "manifest": "computations/cubic_spectral_reductions_validation.json",
-    "scope": "eighteen finite certificate replays; ordinary mathematical proofs remain separate"
+    "scope": "nineteen finite certificate replays; ordinary mathematical proofs remain separate"
   },
   "fourth_root_negative_repeat_exclusion_v226": {
     "status": "ordinary all-chart free-tensor and AS2 proof; exact original coefficient obstructions PASS",
@@ -2726,6 +2726,27 @@
     ],
     "executed_checks": [
       "all18 spectral validators PASS",
+      "main LuaLaTeX build PASS; no overfull/undefined-reference diagnostics",
+      "git diff --check PASS"
+    ]
+  },
+  "third_root_unit_Jordan_v235": {
+    "status": "ordinary exhaustive mixed/Ore recognition, ker(D)=A and quantum-plane factor proof; complete actual top and coefficient checks PASS",
+    "proof": "papers/sections/cubic_third_root_unit_Jordan.tex",
+    "validator": "computations/verify_cubic_third_root_unit_Jordan.py",
+    "certificate": "computations/cubic_third_root_unit_Jordan_certificate.json",
+    "results": [
+      "unit-repeat third-root Jordan H3 layers all cuts factor through x",
+      "86 weighted words, rank74, top kernel12; all four quantum-plane cubic normal obstructions exact for both roots",
+      "all three-eigenvalue H3 Nakayama automorphisms semisimple of order3"
+    ],
+    "not_claimed": [
+      "remaining3 semisimple spectra H3 existence/admissibility",
+      "four-eigenvalue or CY completeness",
+      "complete H3 classification"
+    ],
+    "executed_checks": [
+      "all19 spectral validators PASS",
       "main LuaLaTeX build PASS; no overfull/undefined-reference diagnostics",
       "git diff --check PASS"
     ]

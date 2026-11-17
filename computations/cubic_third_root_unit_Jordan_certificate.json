@@ -1,0 +1,261 @@
+{
+  "status": "PASS",
+  "scope": "full actual Jordan tensor systems, original mixed columns and all-parameter quantum-plane normal-cubic gcds; ordinary Ore/invariant proof separate",
+  "cases": [
+    {
+      "rho_exponent": 1,
+      "word_count": 86,
+      "cyclic_rank": 74,
+      "top_dimension": 12,
+      "top_basis": [
+        {
+          "xxxx": "-omega",
+          "xxxy": "-2*omega",
+          "xxyx": "2*omega",
+          "xyxx": "-2*omega",
+          "yxxx": "2*omega"
+        },
+        {
+          "xxyx": "2*omega",
+          "xxyy": "2*omega",
+          "xyxx": "-2*omega",
+          "xyyx": "-2*omega",
+          "yxxy": "-2*omega",
+          "yyxx": "2*omega"
+        },
+        {
+          "xbbb": "-2*omega",
+          "bxbb": "2",
+          "bbxb": "2*omega + 2",
+          "bbbx": "2*omega"
+        },
+        {
+          "xxbc": "-2",
+          "xbcx": "2",
+          "bcxx": "-2",
+          "cxxb": "2*omega"
+        },
+        {
+          "xbxc": "-2",
+          "xcxb": "-2*omega",
+          "bxcx": "2",
+          "cxbx": "2*omega"
+        },
+        {
+          "xybc": "2",
+          "xbcx": "2",
+          "xbcy": "2",
+          "yxbc": "-2",
+          "ybcx": "-2",
+          "bcxy": "2",
+          "bcyx": "-2",
+          "cxyb": "-2*omega",
+          "cyxb": "2*omega"
+        },
+        {
+          "xbyc": "2",
+          "xcxb": "-2*omega",
+          "xcyb": "-2*omega",
+          "ybxc": "-2",
+          "ycxb": "2*omega",
+          "bxcx": "2",
+          "bxcy": "2",
+          "bycx": "-2",
+          "cxby": "-2*omega",
+          "cybx": "2*omega"
+        },
+        {
+          "xxcb": "2*omega",
+          "xcbx": "-2*omega",
+          "bxxc": "-2",
+          "cbxx": "2*omega"
+        },
+        {
+          "xycb": "-2*omega",
+          "xcbx": "-2*omega",
+          "xcby": "-2*omega",
+          "yxcb": "2*omega",
+          "ycbx": "2*omega",
+          "bxyc": "2",
+          "byxc": "-2",
+          "cbxy": "-2*omega",
+          "cbyx": "2*omega"
+        },
+        {
+          "bcbc": "-2",
+          "cbcb": "2*omega"
+        },
+        {
+          "bbcc": "-2*omega - 2",
+          "bccb": "-2",
+          "cbbc": "-2",
+          "ccbb": "2*omega"
+        },
+        {
+          "xccc": "-2*omega",
+          "cxcc": "-2*omega - 2",
+          "ccxc": "-2",
+          "cccx": "2*omega"
+        }
+      ],
+      "mixed_pure_columns_determinant": "4*(a6^2-a5*a8)",
+      "zero_parameter_relation_rows_vanish": [
+        "yb,by",
+        "yc,cy"
+      ],
+      "quantum_plane_degree3_obstructions": [
+        {
+          "b_exponent": 0,
+          "c_exponent": 3,
+          "normal_equation_gcd": 1
+        },
+        {
+          "b_exponent": 1,
+          "c_exponent": 2,
+          "normal_equation_gcd": 1
+        },
+        {
+          "b_exponent": 2,
+          "c_exponent": 1,
+          "normal_equation_gcd": 1
+        },
+        {
+          "b_exponent": 3,
+          "c_exponent": 0,
+          "normal_equation_gcd": 1
+        }
+      ]
+    },
+    {
+      "rho_exponent": 2,
+      "word_count": 86,
+      "cyclic_rank": 74,
+      "top_dimension": 12,
+      "top_basis": [
+        {
+          "xxxx": "omega + 1",
+          "xxxy": "2*omega + 2",
+          "xxyx": "-2*omega - 2",
+          "xyxx": "2*omega + 2",
+          "yxxx": "-2*omega - 2"
+        },
+        {
+          "xxyx": "-2*omega - 2",
+          "xxyy": "-2*omega - 2",
+          "xyxx": "2*omega + 2",
+          "xyyx": "2*omega + 2",
+          "yxxy": "2*omega + 2",
+          "yyxx": "-2*omega - 2"
+        },
+        {
+          "xbbb": "2*omega + 2",
+          "bxbb": "2",
+          "bbxb": "-2*omega",
+          "bbbx": "-2*omega - 2"
+        },
+        {
+          "xxbc": "-2",
+          "xbcx": "2",
+          "bcxx": "-2",
+          "cxxb": "-2*omega - 2"
+        },
+        {
+          "xbxc": "-2",
+          "xcxb": "2*omega + 2",
+          "bxcx": "2",
+          "cxbx": "-2*omega - 2"
+        },
+        {
+          "xybc": "2",
+          "xbcx": "2",
+          "xbcy": "2",
+          "yxbc": "-2",
+          "ybcx": "-2",
+          "bcxy": "2",
+          "bcyx": "-2",
+          "cxyb": "2*omega + 2",
+          "cyxb": "-2*omega - 2"
+        },
+        {
+          "xbyc": "2",
+          "xcxb": "2*omega + 2",
+          "xcyb": "2*omega + 2",
+          "ybxc": "-2",
+          "ycxb": "-2*omega - 2",
+          "bxcx": "2",
+          "bxcy": "2",
+          "bycx": "-2",
+          "cxby": "2*omega + 2",
+          "cybx": "-2*omega - 2"
+        },
+        {
+          "xxcb": "-2*omega - 2",
+          "xcbx": "2*omega + 2",
+          "bxxc": "-2",
+          "cbxx": "-2*omega - 2"
+        },
+        {
+          "xycb": "2*omega + 2",
+          "xcbx": "2*omega + 2",
+          "xcby": "2*omega + 2",
+          "yxcb": "-2*omega - 2",
+          "ycbx": "-2*omega - 2",
+          "bxyc": "2",
+          "byxc": "-2",
+          "cbxy": "2*omega + 2",
+          "cbyx": "-2*omega - 2"
+        },
+        {
+          "bcbc": "-2",
+          "cbcb": "-2*omega - 2"
+        },
+        {
+          "bbcc": "2*omega",
+          "bccb": "-2",
+          "cbbc": "-2",
+          "ccbb": "-2*omega - 2"
+        },
+        {
+          "xccc": "2*omega + 2",
+          "cxcc": "2*omega",
+          "ccxc": "-2",
+          "cccx": "-2*omega - 2"
+        }
+      ],
+      "mixed_pure_columns_determinant": "4*(a6^2-a5*a8)",
+      "zero_parameter_relation_rows_vanish": [
+        "yb,by",
+        "yc,cy"
+      ],
+      "quantum_plane_degree3_obstructions": [
+        {
+          "b_exponent": 0,
+          "c_exponent": 3,
+          "normal_equation_gcd": 1
+        },
+        {
+          "b_exponent": 1,
+          "c_exponent": 2,
+          "normal_equation_gcd": 1
+        },
+        {
+          "b_exponent": 2,
+          "c_exponent": 1,
+          "normal_equation_gcd": 1
+        },
+        {
+          "b_exponent": 3,
+          "c_exponent": 0,
+          "normal_equation_gcd": 1
+        }
+      ]
+    }
+  ],
+  "conclusion": "unit-repeat third-root Jordan H3 cuts all factor through x",
+  "combined_frontier": "all three-eigenvalue H3 Nakayama automorphisms semisimple of order3",
+  "not_claimed": [
+    "three semisimple spectra exist or are H3 admissible",
+    "four-eigenvalue/CY completeness",
+    "complete H3 classification"
+  ]
+}
