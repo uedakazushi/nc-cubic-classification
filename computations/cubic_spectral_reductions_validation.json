@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "validator": "verify_cubic_hypersurface_frame.py",
+      "status": "PASS"
+    },
+    {
+      "validator": "verify_cubic_spectral_resonance.py",
+      "status": "PASS"
+    },
+    {
+      "validator": "verify_cubic_spectral_ore_reduction.py",
+      "status": "PASS"
+    },
+    {
+      "validator": "verify_cubic_inverse_spectral_pencils.py",
+      "status": "PASS"
+    },
+    {
+      "validator": "verify_cubic_three_eigenvalue_finite_spectra.py",
+      "status": "PASS"
+    },
+    {
+      "validator": "verify_cubic_fifth_root_spectrum_exclusion.py",
+      "status": "PASS"
+    },
+    {
+      "validator": "verify_cubic_sixth_root_spectrum_reductions.py",
+      "status": "PASS"
+    },
+    {
+      "validator": "verify_cubic_fourth_root_spectrum_reductions.py",
+      "status": "PASS"
+    },
+    {
+      "validator": "verify_cubic_sixth_root_last_Ore_exclusion.py",
+      "status": "PASS"
+    }
+  ],
+  "current_three_eigenvalue_necessary_spectra": 14,
+  "current_minimal_common_semisimple_orders": [
+    3,
+    4
+  ],
+  "not_claimed": [
+    "H3 existence or admissibility of14 spectra",
+    "ordinary proofs independently checked by program",
+    "four-eigenvalue or CY completeness",
+    "complete H3 classification"
+  ]
+}

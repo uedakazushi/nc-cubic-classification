@@ -69,28 +69,8 @@ Library既存ファイルは明示指示なしに削除しない。GitではPDF�
 heart比較・Rains共鳴・cubic cornerは `uedakazushi/nc-dp-surface-hearts`、次数1は `uedakazushi/nc-dp1-moduli`、三次三様体は `uedakazushi/nc-cubic-threefold-moduli` が正本。
 量子FermatのOU障害は [nc-cubic-non-as](https://github.com/uedakazushi/nc-cubic-non-as)、ambient比較は [nc-cubic-ambient-moduli](https://github.com/uedakazushi/nc-cubic-ambient-moduli) に移管済み。分類に必要な旧定理・コードはこのリポジトリの現行分類原稿からも参照する。
 
-一般正規三次切断の認識補題：`papers/sections/cubic_hypersurface_frame.tex`。四line compact frameとnormalizer付きhypersurface作用の二乗判定を保持する。rank-one torsion-freeは別仮定、有限検査・相対開性は未解決である。
-
-多固有値frontier（v211）：四単純中山固有値で十個の二次積が異なる全域はskewへ還元済み。非skew残余は明示的21二次共鳴因子上にあり、さらに三次共鳴条件を課す。証明は `cubic_spectral_resonance.tex`。次はその交叉上の必要tensor atlasと正常核を調べる。
-
-多固有値の二次非共鳴領域は全て排除済み（v213）：(2,1,1)のJordan基底も、正常三次の六binomialと指数det±1から二次共鳴を強制する。全skew H3は三固有値以上を持たないので、三固有値以上の全候補は(2,1,1)の六共鳴因子又は四単純の21共鳴因子上へ縮小。三次共鳴も同時に必要。証明 `cubic_spectral_ore_reduction.tex`。次はこの有限共鳴被覆の交叉上で必要tensor atlasとW1を調べる。
-
-三固有値の四chartと七三次共鳴を具体化（v214）。純三乗枝の一般点は排除し、指定有限捩れ例外を保持。次はAS4四次topの中山不変性・非退化性を課してスペクトル候補を縮小する。
-
-四次top非退化性による三固有値縮小（v215）：全固有値が共通N乗根(N≤24)の有限部分、又は重複2を先頭に(1,z,z^-1),(z,1,z^-1)の二pencilに限る。単冪部分込みの必要条件。次はpencil上の関係空間のFrobenius相反重みと整域性を照合する。
-
-最新frontier（v216）：三固有値の非有限スペクトルは(1,1,z,z^-1)の単一pencilのみ。(z,z,1,z^-1)は低位数例外を除き関係数≤5でAS4から排除。残るpencilの必要atlasはbU=f(U)b,cU=g(U)cと二本のU²/bc/cb関係。bc/cb射影階数1/2を分けてW1を調べる。証明 `cubic_inverse_spectral_pencils.tex`。
-
-現在の最小未解決chart（v217）：相反pencil(1,1,z,z^-1)の偶射影rank1全体は正常三次の一次因子で排除済み（z位数1〜4外）。非有限スペクトル残余はrank2のみ。bc,cbをU二次式へ消去し、得る二元cubic関係とW1を調べる。基底のAS3性を未証明で仮定しない。
-
-最新の到達点（v219）：rank2の二元基底SのHilbert級数を決定し、S/(G)の傾き3/2とArtin–Staffordの一次生成GK2整域定理（著者自身の再掲Theorem5.2を確認）による整数傾きが矛盾。三固有値の全非有限pencilを排除し、全H3の三固有値半単純スペクトルは共通N乗根(N≤24)の有限集合へ還元。単冪部分込み。次はこの有限集合の厳密列挙と正常核/許容性を調べる。四単純・CY全被覆・成分・相対降下は未完。
-
-有限三固有値の厳密列挙（v220）：次数3までのcharacterと整域性で38スペクトル・42関係パターン、共通位数3,4,5,6,9,12へ縮小。全候補と57除外witnessを公開certificateに保存。次は純二元AS2三次の因子障害と必要Frobenius tensorを適用する。
-
-最新（v221）：N9/12の8スペクトルは純二元AS2三次の因子で全排除。三固有値H3の半単純位数は3,4,5,6、必要リスト30個（Galoisラベル16軌道）。次はN5単一型とN3/4/6の正常核/許容性。全CY・四単純・成分・相対降下は未完。
-
-最新（v222）：位数5の全4候補をAS2 Ore表示と正常式の非零差で排除。三固有値の半単純位数は3,4,6のみ、残る26スペクトル・Galoisラベル15軌道。次は正常変数を三次が含まないOre円錐の無限ExtとN6(1,0,4)の曲率関係を検証する。これら次の着想は未証明。
-
-最新（v223）：位数6の9候補をcone無限Ext/曲率/補助次数/二AS2作用で全排除。三固有値残余17個（N3:3,N4:12,N6:2）、Galoisラベル10軌道。N6は(6;2,0,5),(6;4,0,1)だけ。次は重み−1関係の偶数性とN4相反pencil、及びN6残余AS3 Ore基底を調べる。GにcUc語が残るため純T三次と仮定しない。
-
-最新（v224）：重み−1関係の偶数性とroot4相反pencil排除で三固有値残余16個（N3:3,N4:11,N6:2）、Galois9軌道、各関係パターン一つ。次はN6残余をAS3最高cubicのsigma固定orbitから有限normalformへ還元する。
+## V. 最新の具体的frontier（v225）
+三固有値の全半単純スペクトルを有限化し、位数5・6・9・12と相反pencilを排除した。残る必要候補は位数3の3個、位数4の11個、計14スペクトル（8 Galoisラベル軌道）、各関係パターン一つ。単冪中山も含む必要被覆であり、14候補の存在・H3許容性は未分類。
+証明は `cubic_spectral_resonance.tex`、`cubic_inverse_spectral_pencils.tex` と `cubic_*root_spectrum*`、有限リスト/全再生は `python computations/verify_cubic_spectral_reductions.py`。最新の証明・文献入力・certificateと次の最小課題は分類ノート末尾に統合した。
+次はN4(2,1,3)の補助Z次数と正常式G=F b²+L c²をrank1/rank2で検証する。四単純固有値の21共鳴領域、全CY被覆、全成分・相対降下も未完。
+一般正規三次の四line compact frameは `cubic_hypersurface_frame.tex`。rank-one torsion-freeは別仮定で、有限H3検査や相対開性は未証明。

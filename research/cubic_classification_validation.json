@@ -2533,5 +2533,27 @@
       "N6 AS3 normalform already proved",
       "complete classification"
     ]
+  },
+  "sixth_root_last_Ore_exclusion_v225": {
+    "status": "ordinary exhaustive sigma/top-tensor orbit proof and normalizer argument; exact original slice and fixed-space checks PASS",
+    "proof": "papers/sections/cubic_sixth_root_last_Ore_exclusion.tex",
+    "validator": "computations/verify_cubic_sixth_root_last_Ore_exclusion.py",
+    "certificate": "computations/cubic_sixth_root_last_Ore_exclusion_certificate.json",
+    "results": [
+      "last two order6 spectra excluded, including nonsemisimple sigma candidates",
+      "only fixed A3 line k*x^2*y has nonzero normal-x obstruction",
+      "all three-eigenvalue H3 semisimple common orders3 or4 only",
+      "14 necessary spectra,14 relation patterns,8 Galois label orbits"
+    ],
+    "not_claimed": [
+      "remaining14 H3 existence/admissibility",
+      "full four-eigenvalue or CY classification",
+      "global components or family descent"
+    ]
+  },
+  "spectral_reductions_replay": {
+    "runner": "computations/verify_cubic_spectral_reductions.py",
+    "manifest": "computations/cubic_spectral_reductions_validation.json",
+    "scope": "nine finite certificate replays; ordinary mathematical proofs remain separate"
   }
 }

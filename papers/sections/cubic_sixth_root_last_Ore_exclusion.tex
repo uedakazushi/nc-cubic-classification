@@ -1,0 +1,94 @@
+\subsection{位数6の最後のAS3 Ore基底と正常核}
+\label{subsec:cubic-sixth-root-last-Ore}
+\begin{theorem}[位数6の残る二スペクトルの全排除]
+\label{thm:cubic-sixth-root-last-empty}
+$(6;2,0,5)$、$(6;4,0,1)$ の候補もH3を持たない。
+従って三固有値H3の中山半単純部分の最小共通位数は3又は4だけである。
+\end{theorem}
+\begin{proof}
+原始3乗根 $\omega$ を用いて半単純スペクトルを
+$(\omega,\omega,1,-\omega)$ と書く。重複空間を $U$、単純基底を $b,c$ とする。
+有限リストでは $bU+Ub$ の関係数2、$bc,cb$ の関係数1が孤立重みであり、$b^2$ の関係はない。
+従って前節のOre復元により
+\[
+ B=A[b;\sigma],\qquad A=\langle U,c\rangle,
+ \qquad\sigma(U)=U,\quad\sigma(c)=q c
+\]
+となる。ここで $\sigma(U)=U$ は部分空間を保存する意味である。
+$A=B/(b)$ はnoetherian quadratic AS Gorenstein次元3・parameter3であり、
+自己同型型Ore拡大のKoszul解消から $A$ もKoszulである。
+$H_A=(1-t)^{-3}$ と双対Hilbert級数 $(1+t)^3$ よりAS正則次元3である。
+$A$ は $B$ に埋まるので整域。
+
+正常三次は $G=C b^3+H$、$H\in A_3$ の形となる。
+$C=0$ ならOre cone頂点補題でH3でないので $C\ne0$ とする。
+$G$ の $A_1$ との正常式の $b^3$ 成分と、Ore中山公式から
+\[
+ \sigma^3=\mu_B^{-1}|_A,\qquad
+ \mu_A=\sigma\mu_B|_A=\sigma^{-2},\qquad
+ \operatorname{hdet}_A\sigma=\mu_B(b)/b=1.
+\]
+従って $\sigma|_U$ の半単純固有値は全て $a^3=\omega^2$ の三つの根に属し、
+$q^3=-\omega^2$。$q$ はそれらの根の負号のいずれかである。
+
+$A$ の最高三次Koszul tensorを $w$ とする。
+$\operatorname{hdet}\sigma=1$ より $\sigma^{\otimes3}w=w$、
+中山巡回は右巡回 $\tau$ に関し
+\[
+ w=(\sigma^2\otimes1\otimes1)\tau(w)
+\]
+である。
+$\sigma|_U$ の半単純固有値が一致すると、$U$ 純三次は重み $\omega^2\ne1$ で現れない。
+固定三次語は高々 $Uc^2$ の各巡回だけになり、$U$ の二つのfirst sliceは共に $kc^2$ に入る。
+縮約写像の単射性に反するため、この場合はAS3基底自体が存在しない。
+従って二固有値は相異なり、$\sigma$ は $A_1$ 上半単純である。
+$U$ の基底を交換して
+\[
+ \sigma(x)=a x,\quad\sigma(y)=a\omega y,\quad
+ \sigma(c)=-a\omega^k c,\qquad k\in\{0,1,2\},\quad a^3=\omega^2
+\]
+と書ける。特に $a$ は原始9乗根。
+
+$\sigma$ 固定の純 $U$ 三次は $x^2y$ の巡回だけ。
+$k=1$ では $c$ を含む固定三次がなく、最高tensorの縮約が退化する。
+$k=2$ では追加orbitは $xc^2$ だけであり、$y$ のsliceは非零の $x^2$ 又は零となる。
+前者は整域性、後者はFrobenius非退化性に反する。
+残る $k=0$ では最高tensorは
+\[
+\begin{split}
+ w={}&A(x^2y+a\omega\,xyx+a^2\omega^2yx^2)\\
+     &+D(yc^2+a^2cyc+a^4c^2y).
+\end{split}
+\]
+$A,D$ はともに非零でなければならない。
+実際、$A=0$ なら $x$ のsliceが零、$D=0$ なら $y$ のsliceが純平方となる。
+三つのsliceは、ある $\kappa\ne0$ を用いて
+\[
+ x^2=\kappa c^2,\qquad yx=u xy,\qquad yc=u cy,
+ \qquad u=-a^2
+\]
+を与える。これは反交換AS2平面 $\langle x,c\rangle$ 上のscalar Ore拡大である。
+ここまでの有限orbitとsliceの還元は、AS3の先行完全分類を輸入せず最高tensorから直接得た。
+
+正常式 $Gb=bG$ は $\sigma(H)=H$ を与える。
+上のAS2 Ore基底で $A_3$ を調べると、$\sigma$ 固定部分は $kx^2y$ 一本。
+具体的に $y$ 個数0,1,2,3の重みはそれぞれ $\pm\omega^2,\pm1,\pm\omega,\omega^2$ で、
+重み1では $x^2y,c^2y$ が比例する。
+従って $G=C b^3+E x^2y$。
+$\mu_B^{-1}(x)=\omega^2x$ であり、$b^3$ 部分は既に正常式を満たす。
+一方
+\[
+ (x^2y)x-\omega^2x(x^2y)=(u-\omega^2)x^3y.
+\]
+$u^3=-a^6=-\omega\ne1$ なので $u\ne\omega^2$。
+整域性から $E=0$、従って全候補は $kb^3$ だけである。
+その三次商は整域でなく、H3を与えない。
+$\sigma|_U$ の非半単純候補も最初のslice退化で排除したので、全Jordan型を含む。
+\end{proof}
+
+\begin{corollary}[三固有値領域の現在の必要被覆]
+\label{cor:cubic-three-eigenvalue-14-list}
+三固有値H3の必要リストは、位数3の3個と位数4の11個、合計14個に限られる。
+各候補の必要関係重みパターンは一つ、Galoisラベルは8軌道である。
+全位数6候補は排除済みであるが、残る14候補の存在・許容性は未分類である。
+\end{corollary}

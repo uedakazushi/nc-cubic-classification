@@ -1361,60 +1361,31 @@ python computations/verify_cubic_order2_22_secant_L_saturation.py --prefix /tmp/
 
 次の最優先は共有方針の量子三次成分における全Artin底の相対二次包絡。一般H3分類では三固有値以上とCY残余の被覆も未完成である。
 
-## 正規三次切断の共通frameと残る判定（v210）
-`papers/sections/cubic_hypersurface_frame.tex` に、一般の正則正規三次切断の四line compact generatorとproper dg cohomology次元55,21を保存した。mu_R=idの整域候補について、Gabriel–Krull rank-one torsion-freeを別途仮定すると、全coherent Fにおけるnormalizer付きhypersurface作用 eta_F の二乗消滅とH3性が同値。二項bimodule解消の右作用は Gb=nu(b)G、Tor1=R_nu(-3)であり中央性を仮定しない。AS双対性とcompact生成は通常の証明、公開検証器のrank6,45は指定中央fiberの数値例である。有限個の試験によるH3判定、開性、rank条件の自動性は未解決。全H3の被覆は三固有値以上・CY残余へ進む。
+## 共通認識補題と多固有値の現在の必要被覆
 
-## 多固有値の最初の必要共鳴被覆（v211）
-`cubic_spectral_resonance.tex`：mu(G)=Gから半単純中山固有値に三次共鳴が必要。唯一の共鳴が単純固有直線の純三乗ならG=cx³で商が非整域となり排除。単冪部分があっても成立する。(2,1,1)では八個の非除外共鳴divisorとb³=c³=1の交叉を保持、四単純では16非純共鳴divisorと二つ以上の純共鳴交叉を保持する。一般点での排除から共鳴交叉を落とさない。次はこの被覆上でtwisted四次tensorのmiddle rank6・正常核を合わせ、非skew候補を縮小する。CY全被覆・成分・相対降下は未完。
+### 正規三次切断の四line frame
+`cubic_hypersurface_frame.tex`：noetherian quadratic Koszul AS4型14641の正則正規三次切断、整域、mu_R=idを仮定。四line compact generatorのproper dg cohomologyはH0=55,H2=21。Gb=nu(b)Gの規約ではTor1=R_nu(-3)、hypersurface作用eta_F:F→F_nu(-3)[2]。Gabriel–Krull rank-one torsion-freeを別仮定すると、全coherent Fのeta_F²消滅とH3性が同値。全heart対象は四lineから8段で生成。有限検査や相対開性、rank条件の自動性は未証明。
 
-四単純固有値で十個の二次積が相異なるなら包絡はskew：関係空間の半単純固有分解と整域性から、平方関係はなく六pair各一本のskew関係が強制される。従って非skewの残余は21二次共鳴（反対固有値6、平方対二異値積12、互いに素なpair積3）上へ縮小。全Jordan問題は四単純では生じない。次はこの21因子と三次共鳴の交叉の必要tensor atlasを、添字置換と既分類skewを除いて作る。
+### スペクトル被覆と関係character
+`cubic_spectral_resonance.tex`,`cubic_spectral_ore_reduction.tex`：mu(G)=Gから三次共鳴が必要、単純固有直線の唯一の純三乗共鳴は非整域で排除。四単純固有値の十個の二次積が相異なる領域はskew、(2,1,1)の二次非共鳴領域も二元AS2 Oreと全基底型の因子/正常核比較からskew。既分類skew H3は三固有値以上を持たないので、三固有値は六二次共鳴、四単純は21共鳴（反対固有値6、平方対二異値積12、互いに素なpair積3）上に限る。
+三固有値はA=(a,-a,c),B=(a,b,-b),C=(a,at,a/t),D=(a,at,at²)の四chart。各七三次共鳴。AS4最高wの中山巡回を四回反復してmu^tensor4(w)=w、Frobenius次数1/3から各固有方向を含む四次重みが存在。三次/四次の文字格子detにより、共通N乗根(N≤24)又は二相反pencilに縮小。
+二次関係の重みchiとchi^-1の次元は等しい。重み−1は中山巡回二回とdetから偶数（単冪込み）。重みspace次元Dchi、固有重複miならrank-one Segre回避でrchi≤Dchi−max(mi+mj−1)。KoszulcharacterはB2=V²-I、B3=V³-2VI+V*、R3=B3-1。R整域の線型乗法単射性を全重みで課す。
 
-(2,1,1)でも六個の二次固有値積が相異なる全域は、二元AS2平面T上の二つの可換自己同型による逐次skew polynomial拡大へ還元。関係数6と整域性で各固有blockの最大関係数(1,2,2,0,1,0)が強制される。f(r),g(r)の関係保存とfg=gfはBの整域性で直接証明し、TのBへの単射性を先に仮定する循環論法を避ける。単冪中山の有無を問わない。次はこのOre領域に中山の指定固有値とW1を適用し、残る二次共鳴領域との境界を分ける。
+### 相反pencilとGK2傾き障害
+`cubic_inverse_spectral_pencils.tex`：(z,z,1,z^-1)は位数1〜4外で関係数≤5となりAS4外。(1,1,z,z^-1)の必要atlasはbU=f(U)b,cU=g(U)cと二本のU²/bc/cb関係。偶射影rank1はAS2 inverse-Nakayama一次intertwinerとmodF正常式で全因子。rank2はbc=h(U),cb=k(U)、S=<U>が二元二本のcubic関係でHS=1/((1-t)²(1-t²))。bのOre局所化S[b±1;f]からS noetherian/gldim≤4。G∈S3、S/(G)↪B/(G)だが商のGK2傾き3/2はArtin–Staffordの一次生成GK2整域の整数傾きに反する。SのAS3性は仮定しない。root4 unit pencilも偶数性で同じ関係/charge0分布を確認して排除。
+文献入力はStafford本人を含むStafford–Van den Bergh arXiv:math/9910082v2 Theorem5.2 p14（Artin–Stafford Theorem0.2の明示的再掲）。本文・代数閉体・次数1生成・GK2・有限余次元THCRの結論を実読。原論文DOI10.1007/BF01231444のabstract/書誌も照合したが、原論文全文証明の独立再監査とは称さない。PDF digestと適用範囲はvalidation JSON。曲線Riemann–RochでHilbert傾きが整数になる。これで全三固有値スペクトルはまず共通N≤24の有限集合へ。
 
-## 多固有値H3の二次共鳴被覆（v213）
-`cubic_spectral_ore_reduction.tex`：二次非共鳴(2,1,1)の全H3包絡はskew。可換AS2基底の非半単純作用は、正常式で係数をx冪へ制限し、三次supportの共通因子で排除。反交換AS2基底の片側反対角は重複2中山条件と矛盾、両側反対角は中心二乗の固定と奇次数符号からW1=0。その他量子基底はskew。
-Jordan基底でも正常x式が係数をx冪に制限し、正常y式がsupportを直線へ制限する。座標因子なしの直線は三辺又は六binomialだけ。辺の二変数斉次三次は分解、六binomialの正常x指数行列det±1がOre固有値alpha=beta=1を強制する。mu_s=(1,1,q,q^-1)はa²=bcの二次共鳴を持ち非共鳴条件に矛盾。Jordan中山の符号mu(y)=y+2kappa*xは2×2 Koszul双対行列で検証。全格子直線・六det・三固有値二次衝突の公開検証器はPASS。
-全skew H3の中山固有値は恒等又は(1,1,-1,-1)。従って三固有値以上のH3は必ず二次共鳴を持つ。(2,1,1)ではa=-b,a=-c,b=-c,a²=bc,b²=ac,c²=abの六因子、四単純では21因子が漏れない必要被覆となる。さらに三次共鳴を同時に課す。次は六/21因子と三次共鳴の交叉上の必要tensor atlas、middle rank6、W1を調べる。共鳴領域のH3十分条件、全CY被覆、成分・相対降下は未完。
+### 有限スペクトルの全列挙と排除
+`cubic_three_eigenvalue_finite_spectra.tex`：N≤24全最小共通位数・相異指数35424組を整数剰余で全列挙。共鳴/整域関係容量を通る99関係パターンに次数3までのcharacter/乗法単射を課し、57除外witness（56単射違反、1負次元）を保存。必要38スペクトルからN9/12の8組を純二元AS2三次の因子で排除。残余に以下を適用した。
+- 位数5四候補：`cubic_fifth_root_spectrum_exclusion.tex`。AS2 Ore表示と全自己同型型を比較、最終強制p=eta³,q=eta^-1で元の三関係NF(c x²b-b c x²)=-2eta x c³≠0。全Jordan込みで排除。
+- 位数6：`cubic_sixth_root_spectrum_reductions.tex`。四scalar-normalizer Ore cone、二曲率（q³1と原始三乗根の矛盾）、一補助Z-grading正常核、二つのAS2平面作用矛盾で九候補を排除。cone補題はGv=lambda*vGへ一般化しM=k[v]のtwist同型v^n↦lambda^-n v^nを明示、既存Betti/無限Ext証明を維持。旧adjacent-L verifierも再実行PASS。
+- 位数4：`cubic_fourth_root_spectrum_reductions.tex`。四奇数重み−1パターンを除き、(1,1,i,-i)を既述charge0障害で排除。
+- 最後の位数6：`cubic_sixth_root_last_Ore_exclusion.tex`。正常bでB=A[b;sigma]、coneでb³係数非零が必要。正常式からsigma³=muB^-1|A、muA=sigma^-2、hdet sigma1。sigmaUの同一固有値は最高AS3cubicのslice退化、相異なる場合は(a,a*omega),a³omega²、sigma c=-a*omega^k。最高tensorの固定orbitを直接列挙しk0だけ残る。Aはx²=kappa*c²,yx=-a²xy,yc=-a²cy、sigma=(a,a*omega,-a)。sigma固定A3はkx²y一本だが正常x残差(-a²-omega²)x³yが非零、従って全Gはkb³で非整域。先行AS3完全分類を輸入していない。QQ(a),Phi9で全tensor slice、固定A3 rank9、元の正常残差をexact PASS。単冪sigma候補もslice退化で排除。
 
-## 三固有値の具体的スペクトルatlas（v214）
-`cubic_spectral_resonance.tex`：単純二固有値の交換を除く必要被覆はA=(a,-a,c), B=(a,b,-b), C=(a,at,a/t), D=(a,at,at²)の四chart。各十個の三次重みは七共鳴へまとまる。Cのk±3及びDのk6の純共鳴枝ではtの位数3,4,5,6が必要、Aのc³1枝はa12=1が必要。有限捩れ例外は残す。公開検証器が全十重みの代入と純supportをexact PASS。二次・三次共鳴の文字格子は独立なので三固有値のスペクトル集合は次元≤1、四固有値は≤2。これは包絡やH3 moduliの次元上界ではない。次は四次topの中山不変性と全一次方向への非退化性を課し、四chartの残余を絞る。
+### 現在の残余：三固有値14スペクトル（v225）
+三固有値H3の中山半単純最小共通位数は3又は4。必要リストはN3:3個,N4:11個の14個で、各関係重みパターンは一つ。Galoisラベル8軌道の代表(N;a,b,c)、重複2を先頭に、単純二固有値を昇順に書く：
+(3;0,1,2),(3;1,0,2);
+(4;0,1,2),(4;1,0,2),(4;1,0,3),(4;1,2,3),(4;2,0,1),(4;2,1,3)。
+Galoisラベルはk線型同値の商ではない。14候補のAS4存在・正常三次・H3許容性は未分類。全リストと現在値は `computations/cubic_sixth_root_last_Ore_exclusion_certificate.json`。再生は `python computations/verify_cubic_spectral_reductions.py`、9検証器のPASSは有限計算であり通常の全証明の独立機械検証ではない。
 
-## 三固有値の有限捩れ部分と二つのpencil（v215）
-AS4四次top wの中山巡回式を四回反復してmu^tensor4(w)=w、Frobenius次数1/3のperfect pairingから各固有空間の文字を含む四次重みが存在する。単冪中山でも成立。四chartの三次・四次重みを合わせると、三固有値の全H3スペクトルは、全固有値が共通N乗根(1≤N≤24)の有限集合、又は重複2を先頭に(1,z,z^-1),(z,1,z^-1)の二pencilで覆われる。z≠±1。A/Bの2(4i−3r)、C/Dの3l−4kの非零行列式が共通位数≤24を与え、零行列式の四次support非退化性から二pencilだけを残す。指数列挙・上界24・零行列式supportを公開検証器でPASS。次は二pencilの二次関係の固有block次元とFrobenius相反対称性を課す。全有限捩れ点のAS4存在/正常核/H3条件は未完。
-
-## 相反pencilのFrobenius相反重みと関係atlas（v216）
-`cubic_inverse_spectral_pencils.tex`：二次関係の中山半単純重みchiとchi^-1の重複度は等しい。Koszul双対E2のperfect pairingとtop作用1による通常の証明。スペクトル(z,z,1,z^-1)でzの位数が1〜4以外なら、整域性による関係数上界が5でAS4の6に矛盾し、包絡自体が存在しない。単冪部分込み。
-従って三固有値H3スペクトルは共通N乗根(N≤24)の有限部分、又は(1,1,z,z^-1)の単一pencilのみ。後者でzの位数1〜4を除くと、重み関係次元は(2,2,2)で強制され、bU=f(U)b,cU=g(U)cと二本のr_i(U)+alpha_i bc+beta_i cbという必要atlasを得る。bc/cb射影階数1（純U関係一本）と2（純U関係なし）を分ける。f,g可換やAS4存在を未確認で仮定しない。公開検証器は重み次元と整数次元制約PASS。次はこの階数1/2の正常三次W1を調べる。有限捩れ点と四単純・CY全被覆は未完。
-
-## 単一相反pencilの偶射影rank1の排除（v217）
-`cubic_inverse_spectral_pencils.tex`：rank1では純U関係rがAS2平面Tを定める。Frobenius middleの二つの可逆graphから四小blockが可逆となり、残る偶関係のbc,cb係数はともに非零。三次標準語20個と実dim20から全overlapを比較し、fg=gf及びh u=fg(u)hを得てambiskew Ore表示を復元。正常三次G=H3(T)+F1(T)bcに対しL=(fg)^-1FはL u=mu_T^-1(u)Lを満たす。非可換AS2では量子/ Jordan両正規形の2×2minorが-(p-1)²/p,-kappa²でF=0、H3(T)は一次因子を持つ。可換基底ではf(F)=detf*F,g(F)=detg*FからT/(F)上f,g恒等、正常b式をmodFに移してz≠1よりH∈(F)、G全体が一次因子を持つ。従ってrank1全域にH3なし。単冪中山も含む。公開検証器は四graph小block行列式、標準三次語数20、元AS2関係のintertwinerをexact PASS。次はrank2でbc,cbを二元二次式へ消去したcubic-AS3候補基底と正常三次を調べる。基底AS3性は未証明であり仮定しない。
-
-## 三固有値の全非有限スペクトル排除（v219）
-`cubic_inverse_spectral_pencils.tex`：残るeven rank2でbc=h(U),cb=k(U)としS=<U>。charge分解B=S⊕ΣSb^n⊕ΣSc^n、domainによる各成分の単射からHS=1/((1-t)²(1-t²))。bのOre局所化はS[b±1;f]、従ってSは左右noetherianかつgldim≤4。局所化で全関係を消去するとSは二元二本の三次関係で提示される。AS3 Gorenstein性は証明に不要で仮定しない。候補正常三次はS3内の30×6線型核へ帰着するが、以下の整域障害で全排除。
-Gはcharge0正則正規なのでS/(G)↪B/(G)。右辺がH3整域なら左辺も一次生成GK2整域となるが、Hilbert級数は(1+t+t²)/((1-t)(1-t²))で傾き3/2。Artin–Staffordの一次生成GK2整域定理から曲線THCRに有限余次元で埋め込み、Riemann–Rochで傾きは整数となり矛盾。従ってrank2も空、単一相反pencilは位数1〜4外で全排除。結論：三固有値の全H3は共通N乗根(N≤24)の有限半単純スペクトルに限られる。単冪部分込みの必要被覆であり、有限候補の存在/許容性/群oidは未完。
-文献入力はStafford本人を含むStafford–Van den Bergh arXiv:math/9910082v2 Theorem5.2 p14（原論文Artin–Stafford Theorem0.2の明示的再掲）。本文・全体の代数閉体仮定・次数1生成・GK2・有限余次元THCRの結論を実際に読んだ。原論文DOI10.1007/BF01231444のabstractと書誌も照合したが、原論文全文は今回取得できず、その証明の独立再監査とは称さない。公開検証器はcharge Hilbert恒等式、S3=6/S4=9、商の傾き3/2と偶奇係数をexact PASS。
-次はN≤24の有限三固有値を相異性・三次/四次共鳴・関係重みの相反性・整域性で厳密列挙する。四単純固有値と全CY、成分・相対降下は依然未完。
-
-## 三固有値の有限character列挙（v220）
-`cubic_three_eigenvalue_finite_spectra.tex`：rank-one tensorのSegre次元上界、二次関係の相反重み、Koszul character B2=V²-I,B3=V³-2VI+V*、切断R3=B3-1と線型乗法単射性を適用。N≤24の全最小共通位数・相異指数組35424組を整数剰余で全列挙。三次/四次/二次共鳴と既証pencil排除後、関係重み候補99個を検査し、57違反（56乗法単射違反、1負次元）の具体的witnessをcertificateへ保存。38スペクトル・42関係パターンが必要条件を通過。位数内訳N3:3,N4:12,N5:4,N6:11,N9:6,N12:2。次数3までの検査であり全次数の存在判定ではない。Galoisラベルは18軌道、k線型同値での商ではない。次はこの有限リストに純二元AS2三次の因子障害と必要Frobenius tensorを適用する。
-
-## 三固有値の位数3,4,5,6への還元（v221）
-N9の6組とN12の2組では、不変三次は重複二平面Uの純三次のみで、孤立二次重みU²に関係一本が強制される。domainにより関係は非退化AS2、全斉次三次が一次因子を持つので全正常候補を排除。T→Bの全次数単射性を仮定しない因子議論。公開検証器が8組の唯一の三次共鳴(3,0,0)、二次重みの純U性、関係次元1をexact PASS。従って全三固有値H3の中山半単純最小共通位数は3,4,5,6のみ、必要リストは30スペクトル（N3:3,N4:12,N5:4,N6:11）、Galoisラベル16軌道。単冪部分込み。次はN5の単一Galoisラベル型とN3/4/6の必要tensor/Ore表示を調べる。これら30候補のH3存在は未証明。
-
-## 位数5の三固有値候補全排除（v222）
-`cubic_fifth_root_spectrum_exclusion.tex`：4スペクトルは原始5乗根etaによる(eta,eta,1,eta³)の一Galois型。関係重みとFrobenius middleからB=T[c;g][b;sigma,delta]、T二元AS2、bU=f(U)b+d(U)c²、bc=qcb、fg=gf、qd=d gを漏れなく復元。μU=(fg)^-1 μT、q hdetf1、q^-1hdetg eta³。
-G=C b³+cF2(T)、整域候補はC≠0。d0は既存のAS2二変数Ore認識でskew/因子/正常核消滅へ。d非零ではg scalarはq=eta³と正常c式q³=eta²が矛盾。可換/Jordanでg非半単純はkerdの正規固有線に対するb³正常式がeta³=eta^-1を要求し矛盾。量子対角/可換半単純ではd(x)≠0,d(y)0へ還元し、正常y,c,bの先頭係数からp³=eta^-1,q³=eta²,F=A x²,qeta^-1,p²eta、従ってpeta³。元の三関係でNF(c x² b-b c x²)=-2eta x c³≠0となり矛盾。反交換反対角はg²=q²Iとμcからqeta³、正常c²のb³成分がq6=eta4を要求する一方q6eta3で矛盾。全AS2/全Jordan中山を含め排除。
-公開検証器は4スペクトルの関係重みと三次support、QQ(eta)で元の三関係と唯一の三次overlapを再生し、非零差-2eta x c³をexact PASS。従って三固有値H3の半単純位数は3,4,6のみ。残る26スペクトル（Galoisラベル15軌道）の存在/許容性は未完。
-次の有力な手段：正常単純生成元vが全三次supportに現れず、B=A[v;sigma]となる場合のprojective cone頂点の無限Extを使う。例N6(1,3,4)はb正常、全GがU,c側で、b²関係なし。一般cone排除補題と正確なOre/Ext局所化を証明してから適用する。N6(1,0,4)は両b,c正常、U二次関係r(U)+lambda*c²。lambda≠0ならb作用でhdetf=q²、μb1からq³1だがGのb³非零と正常cからq³=eta²となり矛盾、lambda0は既存AS2逐次Ore認識へ帰着できる見込み（まだ未証明・原稿未統合）。
-
-## 位数6の九候補排除と17スペクトル（v223）
-`cubic_sixth_root_spectrum_reductions.tex`：既存Ore cone頂点補題をGv=lambda*vGへ拡張。M=k[v]のnormalizer twistはv^n↦lambda^-n*v^nで同型なので既存Rees/local duality/Betti無限Ext証明を維持。正常単純変数を全Gが含まない四スペクトル(6;1,3,4),(6;2,3,5),(6;4,1,3),(6;5,2,3)を排除。旧adjacent-L検証器も再実行PASS。
-二曲率型(6;1,0,4),(6;5,0,2)はb,c正常、U関係r=lambda*c²。lambda0は既存AS2自己同型Ore認識で排除、lambda非零はf(r)=q²r、equivariant Reesでhdet_A sigma=q*hdet_T f=q³=mu_b1。一方Gのb³非零と正常cがq³=xi²≠1を要求し矛盾。
-(6;3,2,4)は補助Z次数(U0,b1,c−1)によりG=Cb³+Dc³の正常式の最高chargeがC=D=0を強制。二AS2型(6;2,1,4),(6;4,2,5)はG=H3(U)+K3(V)、両非零が必要。Hの正常式がU量子平面p³1へ制限、V反交換平面上のnormalx作用F²=alpha^-2よりK正常式はalpha^-6=omega²、Ore中山はalpha6=(p/omega)^3=1となり矛盾。全Jordan型を含む。
-公開検証器が四coneの全support/所有重み、二曲率型、補助grading、二AS2 blockの純性をexact PASS。残余はN3:3,N4:12,N6:2の17スペクトル、Galoisラベル10軌道。N6残余は(6;2,0,5)と(6;4,0,1)のみ。
-次の最小課題：N4の重み−1関係の偶数性をFrobenius middle determinantから証明し、(4;0,1,3)を高位数相反pencilの既証のrank1/rank2排除へ拡張する（未証明の次手）。N6残余は正常bによるB=A[b;sigma]、Aの三次不変空間は5次元でcUc語が一本残るので、Gを純T3+b³と誤って仮定しない。Gのb³係数0ならconeで排除、非零ならsigma³=mu_B^-1|A、mu_A=sigma^-2、hdet sigma1となる見込み。AS3 Type E/有限sigma固有値の監査が有力だが、まだ証明・輸入していない。
-
-## 重み−1の偶数性と位数4相反枝排除（v224）
-`cubic_fourth_root_spectrum_reductions.tex`：中山巡回二回からH=(nu⊗nu)Ht。重み−1の非退化関係pairing Mに対してM=D Mt、detD1だがD半単純−Iなので関係次元は偶数。単冪中山も含む。有限リストの四奇数重複度パターンを除去。
-(4;0,1,3)の残る関係パターンは(2,2,0,2)のみ。b²/c²関係なしで補助Z次数が存在、全Gcharge0。高位数相反pencilのrank1因子証明とrank2GK2傾き3/2証明に必要な仮定が揃い、このroot4枝も全排除。公開検証器は四奇数パターン、全cubiccharge0、元のbinarytwisted循環bbccのmiddle[[0,1],[-1,0]]をexact PASS。残余16スペクトル（N3:3,N4:11,N6:2）、全て必要関係パターン一つ、Galois9軌道。
-次はN6残余(omega,omega,1,-omega)の正常bによるAS3 Ore基底。coneでGのb³係数非零が必要ならsigma³=muB^-1|A、muA=sigma^-2,hdet sigma1。sigmaUの固有値が一致するとsigma固定最高cubicがUc²だけになりFrobenius退化、相異なれば(a,a*omega), a³omega²、sigma c=-a*omega^kへ。最高AS3cubicの固定orbitはx²yと指定Uc²で有限normalformへ還元できる見込み（未証明・次に原稿化検証する）。
+次の最小課題はN4(2,1,3)の補助Z次数とG=F(U)b²+L(U)c²の正常式。偶射影rank2ではS2=U⊗U自由なのでF f²(u)=mu^-1(u)Fが非零一次係数を許さない見込み。rank1はAS2基底でF,L独立を要し、可換はf=g、JordanはF,L同一正規線、量子対角はF=x,L=yからp1を強制する可能性を検証する（まだ未証明）。その後は残るN3/N4のhighest tensor atlasとW1。四単純の21共鳴上の全被覆、全CY、全成分・境界、intrinsic族降下は依然未完。
