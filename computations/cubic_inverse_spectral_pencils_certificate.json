@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "scope": "exact character counts and finite integer dimension constraints; ordinary Frobenius/domain proof separate",
+  "scope": "exact character counts, integer constraints, graph block determinant identities and original AS2 normal-form intertwiners; ordinary proofs separate",
   "quadratic_weight_dimensions": {
     "unit_repeated": {
       "-2": 1,
@@ -29,5 +29,11 @@
     2,
     3,
     4
-  ]
+  ],
+  "four_graph_block_determinant_identities": "PASS",
+  "AS2_Ore_standard_cubic_word_count": 20,
+  "linear_inverse_Nakayama_intertwiner_minors": {
+    "quantum": "-(p - 1)**2/p",
+    "Jordan": "-kappa**2"
+  }
 }

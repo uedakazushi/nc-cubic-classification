@@ -78,3 +78,83 @@ $6=s+2r$ より $s=2,r=2$ が強制される。
 最後の二関係の $bc,cb$ 射影が零なら $U^2$ に二次元の関係空間ができ、整域性に反する。
 従ってその射影階数は1又は2で、核次元から最後の主張を得る。
 \end{proof}
+
+\begin{theorem}[残る相反pencilの偶射影rank1の排除]
+\label{thm:cubic-unit-pencil-even-rank1-empty}
+命題\ref{prop:cubic-unit-repeated-pencil-relations}の必要atlasで、
+$bc,cb$ への射影階数が1ならH3は存在しない。
+従って位数1〜4を除く残余pencilのH3候補は射影階数2に限られる。
+\end{theorem}
+\begin{proof}
+純 $U$ 関係を $r$ とし、$T=T(U)/(r)$ と置く。
+整域性から $r$ は非退化な二元tensorなので $T$ はAS2平面である。
+残る偶関係を $\alpha bc+\beta cb-h(U)$ と書く。
+まず $\alpha\beta\ne0$ を示す。
+四次topのmiddle行列の重み $z,z^{-1}$ 間のblockはrank2であり、
+その像と転置像は、それぞれ $Ub+bU$、$Uc+cU$ 上の可逆graphである。
+従って二つのgraph基底行列を用いて $P M Q^t$ と因子分解でき、
+$M$ と両graphの二つのprojectionが全て可逆なので、四つの $2\times2$ 小blockは全て可逆。
+$\beta=0$ なら関係空間全体の $cb$ 成分が零なので $w_{UUcb}=0$。
+右巡回で $w_{bUUc}=0$ となり、その四小blockの一つが零となる矛盾を得る。
+$\alpha=0$ も逆側のblockで同様である。
+
+従って偶関係を $bc-qcb=h(U)$、$q\ne0$ と書ける。
+$br=f(r)b=0$ と次数2の純 $U$ 関係が $kr$ であることから $f(r)\in kr$、$g(r)\in kr$。
+よって $f,g$ は $T$ の自己同型である。
+$T$ の量子・Jordan標準形、$bu=f(u)b$、$cu=g(u)c$、
+$cb=q^{-1}bc-q^{-1}h$ による標準三次語は20個で、実際の $\dim B_3=20$ と一致する。
+従って三次overlapの正規形は零である。
+$cbu$ のoverlapで $Ubc$ と純 $U^3$ の係数を別々に比較すると
+\[
+ fg=gf,\qquad h u=fg(u)h\quad(u\in U)
+\]
+を得る。これにより
+\[
+ B=T[b;f][c;\sigma,\delta],\quad
+ \sigma|_T=g,\quad\sigma(b)=q^{-1}b,\quad
+ \delta|_T=0,\quad\delta(b)=-q^{-1}h
+\]
+が同じ全二次提示で成立する。
+特に $T$ は $B$ に単射であり、PBW比較を循環的に仮定していない。
+
+$z$ の位数が4以下でないことと $\mu_B(G)=G$ より、三次では $b,c$ の個数が等しい。
+従って偶関係で $cb$ を消すと
+\[
+ G=H+Fbc,\qquad H\in T_3,\quad F\in T_1.
+\]
+Ore中山公式と単純固有直線から
+\[
+ \mu_B^{-1}|_T=fg\mu_T^{-1},\qquad
+ \mu_B(b)=z b=q\operatorname{hdet}(f)b,\quad
+ \mu_B(c)=z^{-1}c=q^{-1}\operatorname{hdet}(g)c.
+\]
+正常式の $Ubc$ 成分に $ (fg)^{-1}$ を作用させると、
+$L=(fg)^{-1}(F)$ について
+\[
+ L u=\mu_T^{-1}(u)L\quad(u\in U)
+\]
+となる。
+非可換AS2平面ではこのような一次元 $L$ は零である。
+実際、$xy=p yx$、$p\ne1$ では $L=A x+B y$ の二式が
+$(1-p^{-1})A=(1-p)B=0$ を与える。
+Jordan平面では $Lx=xL$ から $L=A x$、
+$\mu_T^{-1}(y)=y-2\kappa x$ との比較から $\kappa A=0$ となる。
+従って非可換基底では $F=0$。
+$T$ の任意の斉次三次式は一次因子を持つので、$G=H$ は整域商を与えない。
+この因子分解は、量子・Jordan標準形の正規一次元 $x$ を逆転し、
+$x^3$ と $x^{-1}y$ の一変数多項式の積に書いて、その多項式を代数閉体上で分解すれば従う。
+
+最後に $T=k[x,y]$ とする。$F=0$ なら同じ因子分解で排除されるので $F\ne0$ とする。
+正常式の $b^2c,bc^2$ 成分から
+\[
+ f(F)=\operatorname{det}(f)F,\qquad g(F)=\operatorname{det}(g)F
+\]
+を得る。従って一次元商 $T_1/kF$ 上で $f,g$ は恒等である。
+正常式の残る $b$ 成分は
+\[
+ H-q^{-1}Ff(h)=z^{-1}f(H).
+\]
+これを $T/(F)$ に移すと $\overline H=z^{-1}\overline H$。
+$z\ne1$ なので $H\in(F)$ となり、$G=H+Fbc$ 全体が $F$ で割れる。
+これも整域商に反する。全場合でH3はない。
+\end{proof}

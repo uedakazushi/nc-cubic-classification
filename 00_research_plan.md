@@ -80,3 +80,5 @@ heart比較・Rains共鳴・cubic cornerは `uedakazushi/nc-dp-surface-hearts`�
 四次top非退化性による三固有値縮小（v215）：全固有値が共通N乗根(N≤24)の有限部分、又は重複2を先頭に(1,z,z^-1),(z,1,z^-1)の二pencilに限る。単冪部分込みの必要条件。次はpencil上の関係空間のFrobenius相反重みと整域性を照合する。
 
 最新frontier（v216）：三固有値の非有限スペクトルは(1,1,z,z^-1)の単一pencilのみ。(z,z,1,z^-1)は低位数例外を除き関係数≤5でAS4から排除。残るpencilの必要atlasはbU=f(U)b,cU=g(U)cと二本のU²/bc/cb関係。bc/cb射影階数1/2を分けてW1を調べる。証明 `cubic_inverse_spectral_pencils.tex`。
+
+現在の最小未解決chart（v217）：相反pencil(1,1,z,z^-1)の偶射影rank1全体は正常三次の一次因子で排除済み（z位数1〜4外）。非有限スペクトル残余はrank2のみ。bc,cbをU二次式へ消去し、得る二元cubic関係とW1を調べる。基底のAS3性を未証明で仮定しない。

@@ -2388,5 +2388,23 @@
       "normal cubic kernel of two even-rank charts",
       "finite torsion, four-eigenvalue or CY coverage"
     ]
+  },
+  "unit_inverse_pencil_rank1_exclusion_v217": {
+    "status": "ordinary Frobenius, Ore overlap and normal-factor proof; exact matrix and original AS2 relation checks PASS",
+    "proof": "papers/sections/cubic_inverse_spectral_pencils.tex",
+    "validator": "computations/verify_cubic_inverse_spectral_pencils.py",
+    "certificate": "computations/cubic_inverse_spectral_pencils_certificate.json",
+    "results": [
+      "even rank1 forces both bc and cb coefficients nonzero",
+      "AS2 ambiskew Ore presentation recovered from dimension20 overlaps",
+      "noncommutative AS2 linear inverse-Nakayama intertwiners vanish",
+      "commutative AS2 normal cubic divisible by F from modF normal equation",
+      "rank1 sector has no H3, including Jordan Nakayama"
+    ],
+    "not_claimed": [
+      "rank2 exclusion",
+      "AS3 recognition for rank2 base",
+      "finite torsion or full H3 classification"
+    ]
   }
 }

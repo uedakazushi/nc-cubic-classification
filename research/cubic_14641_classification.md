@@ -1385,3 +1385,6 @@ AS4四次top wの中山巡回式を四回反復してmu^tensor4(w)=w、Frobenius
 ## 相反pencilのFrobenius相反重みと関係atlas（v216）
 `cubic_inverse_spectral_pencils.tex`：二次関係の中山半単純重みchiとchi^-1の重複度は等しい。Koszul双対E2のperfect pairingとtop作用1による通常の証明。スペクトル(z,z,1,z^-1)でzの位数が1〜4以外なら、整域性による関係数上界が5でAS4の6に矛盾し、包絡自体が存在しない。単冪部分込み。
 従って三固有値H3スペクトルは共通N乗根(N≤24)の有限部分、又は(1,1,z,z^-1)の単一pencilのみ。後者でzの位数1〜4を除くと、重み関係次元は(2,2,2)で強制され、bU=f(U)b,cU=g(U)cと二本のr_i(U)+alpha_i bc+beta_i cbという必要atlasを得る。bc/cb射影階数1（純U関係一本）と2（純U関係なし）を分ける。f,g可換やAS4存在を未確認で仮定しない。公開検証器は重み次元と整数次元制約PASS。次はこの階数1/2の正常三次W1を調べる。有限捩れ点と四単純・CY全被覆は未完。
+
+## 単一相反pencilの偶射影rank1の排除（v217）
+`cubic_inverse_spectral_pencils.tex`：rank1では純U関係rがAS2平面Tを定める。Frobenius middleの二つの可逆graphから四小blockが可逆となり、残る偶関係のbc,cb係数はともに非零。三次標準語20個と実dim20から全overlapを比較し、fg=gf及びh u=fg(u)hを得てambiskew Ore表示を復元。正常三次G=H3(T)+F1(T)bcに対しL=(fg)^-1FはL u=mu_T^-1(u)Lを満たす。非可換AS2では量子/ Jordan両正規形の2×2minorが-(p-1)²/p,-kappa²でF=0、H3(T)は一次因子を持つ。可換基底ではf(F)=detf*F,g(F)=detg*FからT/(F)上f,g恒等、正常b式をmodFに移してz≠1よりH∈(F)、G全体が一次因子を持つ。従ってrank1全域にH3なし。単冪中山も含む。公開検証器は四graph小block行列式、標準三次語数20、元AS2関係のintertwinerをexact PASS。次はrank2でbc,cbを二元二次式へ消去したcubic-AS3候補基底と正常三次を調べる。基底AS3性は未証明であり仮定しない。
