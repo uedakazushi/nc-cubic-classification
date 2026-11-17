@@ -78,3 +78,21 @@ $[c,f(a,b)]$ は濾過次数零なので $A=B=0$ が必要となる。
 $i=0,3$ は許容域で不可能、$i=1$ は禁止値 $t=-1/3$、
 $i=2$ は矛盾となる。従って中心三次は零である。
 \end{proof}
+
+\begin{theorem}\label{thm:cubic-CY-two-commutators-empty}
+二交換子のCY包絡を持つH3は存在しない。
+\end{theorem}
+\begin{proof}
+固定出典\cite{AS4CYpinned}の二交換子被覆
+\texttt{cor:cy-two-commutators-complete}の必要方向により、
+既に扱った表示と、混合階数二の孤立表示 $I$ で尽くされる。
+$I$ は同出典VTの $B_I,\gamma=-2/9$ を使う。
+元16語のトップ行列から独立な六列を取り、
+元関係挿入で得た三次・四次商の次元は20,35である。
+中心条件の $140\times20$ 行列の20次小行列式の一つは
+$-32768/22876792454961$ であり、中心三次は零となる。
+この有理数体上の計算は標数零の拡大でも同じである。
+公開検証器\\
+\texttt{verify\_cubic\_CY\_two\_commutator\_I.py}
+で元行列から再現できる。
+\end{proof}

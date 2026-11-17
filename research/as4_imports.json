@@ -1010,5 +1010,35 @@
       }
     ],
     "used_part": "necessary Q_q,N_1,N_2, VM1 and VR presentations only"
+  },
+  "CY_two_commutators_complete_necessary_v308": {
+    "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+    "files": [
+      {
+        "path": "research/proofs/CY_TWO_COMMUTATORS_DISJOINT_SEGRE.tex",
+        "sha256": "ff7e9a8a77059e30a0f32f1e9017ed0f0442a462d37d41242d24d856d3586548"
+      },
+      {
+        "path": "research/proofs/CY_TWO_COMMUTATORS_PROJECTION.tex",
+        "sha256": "6aa8432f566a9030c1be1185b148a4fcf799bf05ab48f27012dbbc83bc10de3e"
+      },
+      {
+        "path": "research/proofs/CY_TWO_COMMUTATORS_SHARED_EXCLUSION.tex",
+        "sha256": "915e837692cdde8f8e6dba6a43b22fc6558bcb14e9411c58bafc3d1af28766f1"
+      },
+      {
+        "path": "research/proofs/CY_TWO_COMMUTATORS_VERONESE_MIXED_RANKONE.tex",
+        "sha256": "419ae5f5ece84ce33b00a634765bb64abfccab4adb0c2b6a4e0ab9b74a8a2c10"
+      },
+      {
+        "path": "research/proofs/CY_TWO_COMMUTATORS_VERONESE_MIXED_RANKTWO.tex",
+        "sha256": "30401e18038ad4742d048337b92344adcb5d6be55eb3e968b892ba6ce4e23722"
+      },
+      {
+        "path": "research/proofs/CY_TWO_COMMUTATORS_VERONESE_RANK_POSITIVE.tex",
+        "sha256": "fa43f77731d4d13f2b682690fbdbc84e3c7a00acfd192b10bfdf727fa77e062d"
+      }
+    ],
+    "used_part": "necessary direction of cor:cy-two-commutators-complete and explicit presentations; independent H3 obstructions downstream"
   }
 }
