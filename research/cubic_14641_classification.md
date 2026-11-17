@@ -1406,3 +1406,10 @@ N9の6組とN12の2組では、不変三次は重複二平面Uの純三次のみ
 G=C b³+cF2(T)、整域候補はC≠0。d0は既存のAS2二変数Ore認識でskew/因子/正常核消滅へ。d非零ではg scalarはq=eta³と正常c式q³=eta²が矛盾。可換/Jordanでg非半単純はkerdの正規固有線に対するb³正常式がeta³=eta^-1を要求し矛盾。量子対角/可換半単純ではd(x)≠0,d(y)0へ還元し、正常y,c,bの先頭係数からp³=eta^-1,q³=eta²,F=A x²,qeta^-1,p²eta、従ってpeta³。元の三関係でNF(c x² b-b c x²)=-2eta x c³≠0となり矛盾。反交換反対角はg²=q²Iとμcからqeta³、正常c²のb³成分がq6=eta4を要求する一方q6eta3で矛盾。全AS2/全Jordan中山を含め排除。
 公開検証器は4スペクトルの関係重みと三次support、QQ(eta)で元の三関係と唯一の三次overlapを再生し、非零差-2eta x c³をexact PASS。従って三固有値H3の半単純位数は3,4,6のみ。残る26スペクトル（Galoisラベル15軌道）の存在/許容性は未完。
 次の有力な手段：正常単純生成元vが全三次supportに現れず、B=A[v;sigma]となる場合のprojective cone頂点の無限Extを使う。例N6(1,3,4)はb正常、全GがU,c側で、b²関係なし。一般cone排除補題と正確なOre/Ext局所化を証明してから適用する。N6(1,0,4)は両b,c正常、U二次関係r(U)+lambda*c²。lambda≠0ならb作用でhdetf=q²、μb1からq³1だがGのb³非零と正常cからq³=eta²となり矛盾、lambda0は既存AS2逐次Ore認識へ帰着できる見込み（まだ未証明・原稿未統合）。
+
+## 位数6の九候補排除と17スペクトル（v223）
+`cubic_sixth_root_spectrum_reductions.tex`：既存Ore cone頂点補題をGv=lambda*vGへ拡張。M=k[v]のnormalizer twistはv^n↦lambda^-n*v^nで同型なので既存Rees/local duality/Betti無限Ext証明を維持。正常単純変数を全Gが含まない四スペクトル(6;1,3,4),(6;2,3,5),(6;4,1,3),(6;5,2,3)を排除。旧adjacent-L検証器も再実行PASS。
+二曲率型(6;1,0,4),(6;5,0,2)はb,c正常、U関係r=lambda*c²。lambda0は既存AS2自己同型Ore認識で排除、lambda非零はf(r)=q²r、equivariant Reesでhdet_A sigma=q*hdet_T f=q³=mu_b1。一方Gのb³非零と正常cがq³=xi²≠1を要求し矛盾。
+(6;3,2,4)は補助Z次数(U0,b1,c−1)によりG=Cb³+Dc³の正常式の最高chargeがC=D=0を強制。二AS2型(6;2,1,4),(6;4,2,5)はG=H3(U)+K3(V)、両非零が必要。Hの正常式がU量子平面p³1へ制限、V反交換平面上のnormalx作用F²=alpha^-2よりK正常式はalpha^-6=omega²、Ore中山はalpha6=(p/omega)^3=1となり矛盾。全Jordan型を含む。
+公開検証器が四coneの全support/所有重み、二曲率型、補助grading、二AS2 blockの純性をexact PASS。残余はN3:3,N4:12,N6:2の17スペクトル、Galoisラベル10軌道。N6残余は(6;2,0,5)と(6;4,0,1)のみ。
+次の最小課題：N4の重み−1関係の偶数性をFrobenius middle determinantから証明し、(4;0,1,3)を高位数相反pencilの既証のrank1/rank2排除へ拡張する（未証明の次手）。N6残余は正常bによるB=A[b;sigma]、Aの三次不変空間は5次元でcUc語が一本残るので、Gを純T3+b³と誤って仮定しない。Gのb³係数0ならconeで排除、非零ならsigma³=mu_B^-1|A、mu_A=sigma^-2、hdet sigma1となる見込み。AS3 Type E/有限sigma固有値の監査が有力だが、まだ証明・輸入していない。

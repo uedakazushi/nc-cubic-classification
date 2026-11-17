@@ -2496,5 +2496,25 @@
       "Ore cone exclusion or N6 curvature argument already proved",
       "full classification"
     ]
+  },
+  "sixth_root_spectrum_reductions_v223": {
+    "status": "ordinary cone, equivariant Rees, grading and AS2 normalizer proofs; exact finite witnesses PASS",
+    "proof": "papers/sections/cubic_sixth_root_spectrum_reductions.tex",
+    "cone_proof_generalization": "papers/sections/cubic_as4_adjacent_L_exclusions.tex",
+    "validator": "computations/verify_cubic_sixth_root_spectrum_reductions.py",
+    "certificate": "computations/cubic_sixth_root_spectrum_reductions_certificate.json",
+    "existing_cone_validator_rerun": "computations/verify_cubic_as4_four_simple_adjacent_L.py PASS",
+    "results": [
+      "four scalar-normalizer Ore cones excluded",
+      "two curvature cases excluded by q^3=1 versus primitive cube root",
+      "one case W1=0 by auxiliary Z-grading",
+      "two cases excluded by two-AS2 normalizer obstruction",
+      "17 necessary spectra remain: N3=3,N4=12,N6=2, Galois label10 orbits"
+    ],
+    "not_claimed": [
+      "all sixth-order spectra excluded",
+      "remaining17 H3 existence",
+      "full classification"
+    ]
   }
 }

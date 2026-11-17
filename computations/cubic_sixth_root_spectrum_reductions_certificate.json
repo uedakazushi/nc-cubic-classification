@@ -1,0 +1,593 @@
+{
+  "status": "PASS",
+  "scope": "exact spectral support and relation owners, scalar module twist, curvature/AS2 constants; ordinary proofs separate",
+  "cone_exclusions": [
+    {
+      "N": 6,
+      "spectrum": [
+        1,
+        3,
+        4
+      ],
+      "cubic_support": [
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          2,
+          0,
+          1
+        ]
+      ],
+      "witnesses": [
+        {
+          "relation_pattern": [
+            0,
+            1,
+            2,
+            0,
+            2,
+            1
+          ],
+          "normal_variable_index": 1
+        }
+      ]
+    },
+    {
+      "N": 6,
+      "spectrum": [
+        2,
+        3,
+        5
+      ],
+      "cubic_support": [
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          3,
+          0,
+          0
+        ]
+      ],
+      "witnesses": [
+        {
+          "relation_pattern": [
+            0,
+            2,
+            1,
+            0,
+            1,
+            2
+          ],
+          "normal_variable_index": 1
+        }
+      ]
+    },
+    {
+      "N": 6,
+      "spectrum": [
+        4,
+        1,
+        3
+      ],
+      "cubic_support": [
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ]
+      ],
+      "witnesses": [
+        {
+          "relation_pattern": [
+            0,
+            2,
+            1,
+            0,
+            1,
+            2
+          ],
+          "normal_variable_index": 2
+        }
+      ]
+    },
+    {
+      "N": 6,
+      "spectrum": [
+        5,
+        2,
+        3
+      ],
+      "cubic_support": [
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          2,
+          1,
+          0
+        ]
+      ],
+      "witnesses": [
+        {
+          "relation_pattern": [
+            0,
+            1,
+            2,
+            0,
+            2,
+            1
+          ],
+          "normal_variable_index": 2
+        }
+      ]
+    }
+  ],
+  "curvature_exclusions": [
+    {
+      "N": 6,
+      "spectrum": [
+        1,
+        0,
+        4
+      ],
+      "cubic_support": [
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "N": 6,
+      "spectrum": [
+        5,
+        0,
+        2
+      ],
+      "cubic_support": [
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ]
+      ]
+    }
+  ],
+  "auxiliary_grading_exclusion": [
+    {
+      "N": 6,
+      "spectrum": [
+        3,
+        2,
+        4
+      ],
+      "cubic_support": [
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          3,
+          0
+        ]
+      ],
+      "auxiliary_Z_grading": "U:0,b:+1,c:-1"
+    }
+  ],
+  "two_AS2_exclusions": [
+    {
+      "N": 6,
+      "spectrum": [
+        2,
+        1,
+        4
+      ],
+      "cubic_support": [
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          3,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "N": 6,
+      "spectrum": [
+        4,
+        2,
+        5
+      ],
+      "cubic_support": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "final_survivors": [
+    {
+      "N": 3,
+      "spectrum": [
+        0,
+        1,
+        2
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "N": 3,
+      "spectrum": [
+        1,
+        0,
+        2
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "N": 3,
+      "spectrum": [
+        2,
+        0,
+        1
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "N": 4,
+      "spectrum": [
+        0,
+        1,
+        2
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "N": 4,
+      "spectrum": [
+        0,
+        1,
+        3
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          2,
+          0,
+          2
+        ],
+        [
+          3,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "N": 4,
+      "spectrum": [
+        0,
+        2,
+        3
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "N": 4,
+      "spectrum": [
+        1,
+        0,
+        2
+      ],
+      "relation_weight_multiplicities": [
+        [
+          0,
+          2,
+          2,
+          2
+        ],
+        [
+          1,
+          1,
+          3,
+          1
+        ]
+      ]
+    },
+    {
+      "N": 4,
+      "spectrum": [
+        1,
+        0,
+        3
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "N": 4,
+      "spectrum": [
+        1,
+        2,
+        3
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "N": 4,
+      "spectrum": [
+        2,
+        0,
+        1
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "N": 4,
+      "spectrum": [
+        2,
+        0,
+        3
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "N": 4,
+      "spectrum": [
+        2,
+        1,
+        3
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          2,
+          0,
+          2
+        ],
+        [
+          3,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "N": 4,
+      "spectrum": [
+        3,
+        0,
+        1
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "N": 4,
+      "spectrum": [
+        3,
+        0,
+        2
+      ],
+      "relation_weight_multiplicities": [
+        [
+          0,
+          2,
+          2,
+          2
+        ],
+        [
+          1,
+          1,
+          3,
+          1
+        ]
+      ]
+    },
+    {
+      "N": 4,
+      "spectrum": [
+        3,
+        1,
+        2
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "N": 6,
+      "spectrum": [
+        2,
+        0,
+        5
+      ],
+      "relation_weight_multiplicities": [
+        [
+          0,
+          1,
+          2,
+          0,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "N": 6,
+      "spectrum": [
+        4,
+        0,
+        1
+      ],
+      "relation_weight_multiplicities": [
+        [
+          0,
+          1,
+          2,
+          0,
+          2,
+          1
+        ]
+      ]
+    }
+  ],
+  "final_spectrum_count": 17,
+  "remaining_orders": [
+    3,
+    4,
+    6
+  ],
+  "remaining_counts": {
+    "3": 3,
+    "4": 12,
+    "6": 2
+  },
+  "remaining_sixth_order_exponents": [
+    [
+      2,
+      0,
+      5
+    ],
+    [
+      4,
+      0,
+      1
+    ]
+  ],
+  "cone_vertex_reciprocal_Hilbert_series_nonpolynomial": true,
+  "not_claimed": [
+    "remaining17 spectra exist",
+    "all order6 excluded",
+    "complete H3 classification"
+  ]
+}

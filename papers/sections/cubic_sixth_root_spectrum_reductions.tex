@@ -1,0 +1,157 @@
+\subsection{位数6のOre円錐と曲率枝の排除}
+\label{subsec:cubic-sixth-root-spectrum}
+\begin{lemma}[有限重みから強制されるOre円錐]
+\label{lem:cubic-finite-spectrum-forced-cone}
+三固有値候補の単純固有基底を $v$ とする。
+各他固有空間 $V_j$ に対し、重み $\lambda_v\lambda_j$ の二次tensor空間が
+$vV_j+V_jv$ だけで、その関係次元が $\dim V_j$ であるとする。
+また重み $\lambda_v^2$ に関係がなく、三次重み1の全指数組が $v$ の個数0であるとする。
+この候補はH3を与えない。
+\end{lemma}
+\begin{proof}
+整域性から各mixed関係の両projectionは同型である。
+従って $v$ は残る三生成元を可逆一次変換 $\sigma$ で正規化する。
+$v^2$ を含む関係はなく、残りの三本の二次関係は他の三生成元だけからなる。
+その三生成元のquadratic提示を $A$ とすると、
+$v r=\sigma(r)v=0$ と整域性により $\sigma$ は三次元の関係空間を保存する。
+生成元上可逆なので $\sigma\in\operatorname{Aut}_{\rm gr}A$、全二次提示から $B=A[v;\sigma]$ を得る。
+三次重み条件により $G\in A_3$。
+$\theta=\mu_B^{-1}$ は $A$ と $kv$ を保存し、$\theta(v)=\lambda_v^{-1}v$。
+補題\ref{lem:cubic-skew-cone-vertex}をscalar normalizer版で適用でき、
+$\pi k[v]$ の無限高次自己ExtからH3でない。
+\end{proof}
+
+\begin{proposition}[位数6の四つの円錐スペクトルの排除]
+\label{prop:cubic-sixth-root-four-cones}
+有限リストの次の四指数組はH3を持たない。
+\[
+ (N;a,b,c)=(6;1,3,4),(6;2,3,5),(6;4,1,3),(6;5,2,3).
+\]
+\end{proposition}
+\begin{proof}
+最初の二つでは $\lambda_b=-1$、後二つでは $\lambda_c=-1$ の単純基底を $v$ と取る。
+全三次共鳴は $v$ を含まず、$v^2$ の関係はなく、
+$vU+Uv$ の関係数2、もう一つの単純基底とのmixed関係数1が、それぞれ孤立した重み空間にある。
+公開検証器で全四組の指数と関係重みを確認し、前補題を適用する。
+$v$ の正常化は $-1$ 倍なので、可換中心coneだけに限定した補題では足りず、
+先のscalar normalizer版を用いている。
+\end{proof}
+
+\begin{theorem}[位数6の二つの曲率スペクトルの排除]
+\label{thm:cubic-sixth-root-curvature-empty}
+有限リストの $(6;1,0,4)$、$(6;5,0,2)$ もH3を持たない。
+\end{theorem}
+\begin{proof}
+原始6乗根 $\xi$ により $\mu_{B,s}=(\xi,\xi,1,\xi^{-2})$ と書く。
+二次関係の重みは $Ub+bU$ に2、$Uc+cU$ に2、$bc,cb$ に1、$U^2+kc^2$ に1である。
+従って
+\[
+ bu=f(u)b,\quad cu=g(u)c,\quad bc=qcb,\quad r(U)=\lambda c^2
+\]
+と書ける。$f,g$ は可逆、$q\ne0$。
+Frobenius middleで $U^2+kc^2$ 対 $bc,cb$ のrank1 blockを巡回すると、
+二つのmixed graphの可逆小blockを得るので、$r$ の二元係数行列は非退化である。
+従って $T=T(U)/(r)$ は形式的に二元AS2平面を定める。
+
+$\lambda=0$ なら、三次overlapと $\dim B_3=20$ により
+$fg=gf$、$f,g\in\operatorname{Aut}T$ となり、$B$ は二元AS2上の二つの自己同型型Ore拡大。
+可換非半単純作用は命題\ref{prop:cubic-commuting-Ore-no-shear}で排除、
+可換半単純作用と対角量子作用はskewとなり、三固有値H3を持たない。
+Jordan基底は命題\ref{prop:cubic-Jordan-Ore-resonance}の必要固有値1条件が
+重複中山固有値 $\xi\ne1$ と矛盾する。
+反交換基底の反対角作用は、位数5の証明の $d=0$ と同じ中心固定・奇次数係数比較で正常核が零。
+よってこの枝は空である。
+
+$\lambda\ne0$ とする。
+$b,c$ による共役は関係 $r=\lambda c^2$ を保つため、純 $U^2$ のtensorとして
+\[
+ f(r)=q^2r,\qquad g(r)=r.
+\]
+従って $\operatorname{hdet}_T(f)=q^2$。
+$b$ を除く三生成元が生成する $A$ に対し $B=A[b;\sigma]$、
+$\sigma|_U=f$、$\sigma(c)=q c$ となる。
+$A$ は $B/(b)$ と同じquadratic提示を持ち、正規正則一次元による商なのでAS Gorenstein次元3。
+また $c$ は $A$ 上正規正則で $A/(c)=T$。
+この正規一次元のequivariant Rees lemmaで最高Extのcharacterを比較すると
+\[
+ \operatorname{hdet}_A(\sigma)=q\operatorname{hdet}_T(f)=q^3.
+\]
+Ore中山公式と $\mu_B(b)=b$ より $q^3=1$ を得る。
+
+三次共鳴は $b^3,U^2c,c^3$ だけ。
+$c$ は $B$ 全体で正規なので、整域商のためには $G$ の $b^3$ 係数が非零でなければならない。
+正常式 $Gc=\xi^2cG$ の $b^3$ 成分は $q^3=\xi^2$ を要求する。
+$\xi^2\ne1$ であり、先の $q^3=1$ と矛盾する。
+\end{proof}
+
+\begin{proposition}[位数6の反対重複固有値の正常核消滅]
+\label{prop:cubic-sixth-root-opposite-repeat-empty}
+指数組 $(6;3,2,4)$ の候補は $W_1(B)=0$ である。
+\end{proposition}
+\begin{proof}
+固有値を $(-1,-1,\omega,\omega^2)$ と書く。
+関係空間は $U^2+kbc+kcb$ に2、$Ub+bU$ に2、$Uc+cU$ に2で、
+$b^2,c^2$ を含まない。
+従って $\deg U=0,\deg b=1,\deg c=-1$ という補助 $\mathbb Z$ 次数が成立する。
+不変三次は $G=C b^3+D c^3$ だけである。
+正常式 $Gb=\omega^{-1}bG$ の補助次数4成分から
+$(1-\omega^{-1})C b^4=0$、整域性から $C=0$。
+同様に $Gc=\omega^{-2}cG$ の補助次数 $-4$ 成分から $D=0$。
+中山の $U$ 上の単冪部分はこの比較を変えない。
+\end{proof}
+
+\begin{theorem}[位数6の二AS2平面型の排除]
+\label{thm:cubic-sixth-root-two-AS2-empty}
+指数組 $(6;2,1,4)$、$(6;4,2,5)$ の候補にもH3は存在しない。
+\end{theorem}
+\begin{proof}
+前者で $\mu_{B,s}|_U=\omega I$、$\omega$ を原始3乗根とする。
+関係重みから、純 $U$ 関係 $r$ が一本、
+$b^2=\kappa c^2$ ($\kappa\ne0$) が一本、
+$bu=f(u)b,cu=g(u)c$ ($u\in U$) が各二本となる。
+$r$ は非退化で $T=T(U)/(r)$ はAS2、
+$V=k\langle b,c\rangle/(b^2-\kappa c^2)$ もAS2で、線型基底変更により反交換平面である。
+全関係は $U$ 次数と $b,c$ 次数の二重次数を保つ。
+不変三次は $G=H+K$、$H\in T_3,K\in V_3$ と書ける。
+一方が零なら純AS2三次の因子障害で整域商にならないので、両方非零とする。
+
+二重次数を使って $U$ との正常式を比較すると
+$Hu=\mu_B^{-1}(u)H$ を得る。
+可換 $T$ ではこの式が $\mu_B|_U=1$ を強制し、$\omega\ne1$ と矛盾。
+Jordanでは正規一次元 $x$ に対する多項式の平行移動式の最高係数から、
+normalizerの $x$ 固有値は1でなければならず、同じく矛盾する。
+従って $T$ は量子平面 $xy=p yx$ である。
+その自己同型は $p=-1$ の反対角を除き対角。
+反対角は二つの固有値が相異なるため、現在の重複中山にはなれない。
+よって実際に $\mu_B|_U=\omega I$ である。
+$H=\sum_i H_i x^iy^{3-i}$ の正常式は、非零項ごとに
+\[
+ p^i=\omega^{-1},\qquad p^{-(3-i)}=\omega^{-1}
+\]
+を与える。従って $p^3=1$、$p\ne1$。
+$f,g$ はこの $T$ の自己同型なので対角であり、
+$bx=\alpha xb,by=\beta yb,cx=\gamma xc,cy=\delta yc$ と書ける。
+$b^2=\kappa c^2$ と整域性から $\alpha^2=\gamma^2,\beta^2=\delta^2$。
+
+従って $x,y$ は $V$ をそれぞれ対角自己同型 $F,J$ で正規化し、
+$F(b)=\alpha^{-1}b,F(c)=\gamma^{-1}c$、
+$F^2=\alpha^{-2}I$、$\operatorname{hdet}_V F=\alpha^{-2}$。
+同じ全二次提示から
+$B=V[x;F][y;\widetilde J]$、$\widetilde J(x)=p^{-1}x$ である。
+Ore中山公式から
+\[
+ \omega=\mu_B(x)/x=p\alpha^{-2},\qquad
+ \alpha^6=(p/\omega)^3=1.
+\]
+一方、$K$ に対する $x$ の正常式は $F(K)=\omega K$。
+次数3で $F^2$ は $\alpha^{-6}$ 倍なので、$K\ne0$ から
+$\alpha^{-6}=\omega^2$ を得る。これは $\alpha^6=1$ と矛盾する。
+後者の指数組も $\omega$ の共役と $b,c$ の交換で同じ議論となる。
+\end{proof}
+
+\begin{corollary}[現在残る三固有値の17スペクトル]
+\label{cor:cubic-three-eigenvalue-17-list}
+以上の排除後、三固有値H3の必要リストは、位数3の3個、位数4の12個、
+および位数6の $(6;2,0,5),(6;4,0,1)$ の2個、合計17個に限られる。
+Galoisラベルは10軌道である。残る候補の存在やH3十分性は未完成である。
+\end{corollary}
