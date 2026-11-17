@@ -1,0 +1,86 @@
+\subsection{非零even-cornerの第一rank-one型の全値判定}
+\label{subsec:cubic-third-root-unit-onezero-plus}
+\begin{theorem}[片方零結合の $\lambda=\omega$ 型も空]
+\label{thm:cubic-third-root-unit-onezero-plus-empty}
+$P=(1,0),Q=S=0$ とし、$T=a_{21}\ne0,a_{16}\ne0$ とする。
+\[
+ \lambda=\frac{a_{17}}{(\omega+1)a_{16}}=\omega
+\]
+となる全層にはH3切断は存在しない。
+$\lambda=-\omega,\pm i\omega$ と $a_{16}=0$ を、この定理の排除に含めない。
+\end{theorem}
+\begin{proof}
+$b^2$ 成分の単元pivotを消した元middleは $3\times4$ のrank1行列である。
+$a_{16}=s\ne0$ の成分をpivotとしてその全rank1条件を解くと、
+$A,r,h,\kappa,s,\lambda$ を用い
+\begin{gather*}
+ a_2=A,\ a_9=r,\ a_{13}=h,\ a_{16}=s,\quad
+ a_{17}=\lambda(\omega+1)s,\quad a_{15}=\lambda^2(\omega+1)s,\\
+ a_6=\lambda r,\quad a_{12}=\lambda h,\quad
+ a_7=r+\kappa s,\quad a_{11}=\lambda h+\kappa\lambda s,\\
+ a_8=(\omega+1)A+\kappa r,\quad
+ a_3=(\omega+1)A+\kappa(r-h)
+\end{gather*}
+となる。これは $s$ 以外のパラメータを可逆化しない必要表示である。
+evenの右下は $\operatorname{diag}(T,-\omega T)$ なので、rank2はSchur補零に同値。
+$y^2,y^2$ 成分から $\lambda^4=\omega$ が従う。
+$\lambda=\omega$ では $xy,y^2$ と $yx,y^2$ 成分の和が
+$2s(\omega+1)(r-h)$ となるので $h=r$。
+残るSchur条件は全て恒等的に零となる。
+
+対角scalar変更で $T=s=1$ としてよい。
+実際、top係数 $a_{10},a_{16},a_{21}$ の語の重みはそれぞれ
+$xb^3,y^2bc,b^2c^2$ である。
+$x,b$ を固定し、$c$ を $T^{-1/2}$ 倍、$y$ を $\beta$ 倍とし
+$\beta^2=T^{1/2}/s$ と選べばこの正規化を得る。
+$a_{16},a_{17}$ は同じscalar重みなので $\lambda$ は変わらない。
+この正規化後、$a_0,a_1,a_4,a_5$ はSchur補から
+\[
+ a_0=\omega A(2r+\kappa),\quad a_1=0,\quad
+ a_4=-\omega^2\kappa(2r+\kappa),\quad a_5=-\omega^2(2r+\kappa)
+\]
+となり、全係数は三変数 $A,r,\kappa$ で明示される。
+
+元22tensorから関係像を再構成する。次の七因子を置く：
+\begin{gather*}
+ A,\quad r,\quad \kappa+r,\quad \kappa+2r,\\
+ J=(\omega+1)A+\kappa r+r^2,\qquad
+ H=-(\omega+1)A+\kappa^2+3\kappa r+3r^2,\qquad
+ L=A+\omega r^2.
+\end{gather*}
+その積が非零なら、元の全次数3,4関係から得る商次元は20,35である。
+全関係pivotと分母の非定数因子は、この七因子だけに支持される。
+中山固定三次8個の正常行列は $44\times8$。
+最小係数次数の非零成分を順に選ぶと、正常消去の8個のpivotは全て
+$\mathbb Q(\omega)^*$ の定数である。
+従ってこの全開集合で正常核は零となる。
+元関係像の選択 $6\times6$ minorも同じ因子支持を持ち、
+関係基底を一つの一般点から無条件に特殊化した議論ではない。
+
+除いた七因子の全零点も次の有理曲線と有限点で覆う。
+残る対角scalar作用は $(A,r,\kappa)$ に重み $(2,1,1)$ で作用する。
+実際、$b$ を $\gamma$ 倍、$c$ を $\gamma^{-1}$ 倍、
+$x$ を $\gamma^{-3}$ 倍、$y$ を固定すれば $P=T=s=1$ を保ち、
+$A,r,\kappa$ はそれぞれ $\gamma^{-6},\gamma^{-3},\gamma^{-3}$ 倍される。
+$r\ne0$ では $r=1$ として次の六曲線を調べればよい：
+\[
+ A=0,\quad \kappa=-1,\quad \kappa=-2,\quad
+ A=-\frac{\kappa+1}{\omega+1},\quad
+ A=\frac{\kappa^2+3\kappa+3}{\omega+1},\quad A=-\omega.
+\]
+$r=0,\kappa\ne0$ は $\kappa=1$ の一曲線、
+$r=\kappa=0$ は $A=1$ と原点の二点で覆われる。
+
+各曲線で新しく元関係を構成し、一変数関数体上で正常8列のrank8を確認する。
+全関係・正常pivotと分母、元関係像のminorを含む例外多項式を計算し、
+平方因子を除く。その全因子は $\mathbb Q(\omega)$ 上一次式へ分解する。
+重複を除いた例外点と上の二点は、係数体上で一つずつ新しく再構成する。
+各点で正常核が零、又はAS4のHilbert値と一致しないことを確認する。
+一部の曲線の一般点でも三次商次元は22となるが、
+その実際の商上で正常式を計算しており、20次元へ切り詰めていない。
+これで全特殊化を含めてH3が排除される。
+
+公開再現器は \texttt{verify\_cubic\_third\_root\_unit\_onezero\_plus.py}。
+元22tensorの構成、全pivot支持、七曲線と全fresh例外点を標数0で再生する。
+有限体標本はこの全値判定の証明に使用していない。
+\end{proof}

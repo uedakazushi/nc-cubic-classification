@@ -1,0 +1,340 @@
+{
+  "status": "PASS",
+  "field": "omega^2+omega+1",
+  "chart": "P1,Q0,S0,T=s1,lambda=omega,h=r",
+  "generic": {
+    "normal_shape": [
+      44,
+      8
+    ],
+    "constant_normal_pivots": [
+      "-1/CRootOf(z**2 + z + 1, 1)",
+      "-1/CRootOf(z**2 + z + 1, 1)",
+      "-1",
+      "-1",
+      "-1",
+      "-1",
+      "1",
+      "(-14474011154664524427946373126085988481658748083205070504932198000989141204992 + 14474011154664524427946373126085988481658748083205070504932198000989141204992*CRootOf(z**2 + z + 1, 1))/(14474011154664524427946373126085988481658748083205070504932198000989141204992*CRootOf(z**2 + z + 1, 1))"
+    ],
+    "source_rows": [
+      0,
+      1,
+      2,
+      3,
+      6,
+      7
+    ],
+    "source_columns": [
+      0,
+      1,
+      2,
+      3,
+      6,
+      7
+    ],
+    "support_factors": [
+      "A",
+      "r",
+      "k + r",
+      "k + 2*r",
+      "A*(1 + CRootOf(z**2 + z + 1, 1)) + k*r + r**2",
+      "A*(-1 - CRootOf(z**2 + z + 1, 1)) + k**2 + 3*k*r + 3*r**2",
+      "A + r**2*CRootOf(z**2 + z + 1, 1)"
+    ]
+  },
+  "curves": [
+    {
+      "case": "A0",
+      "bad_polynomial": "t**5 + 6*t**4 + 14*t**3 + 15*t**2 + 6*t",
+      "normal_shape": [
+        43,
+        8
+      ],
+      "normal_pivots": 8
+    },
+    {
+      "case": "kminus1",
+      "bad_polynomial": "t**2 + t*CRootOf(z**2 + z + 1, 1)",
+      "normal_shape": [
+        44,
+        8
+      ],
+      "normal_pivots": 8
+    },
+    {
+      "case": "kminus2",
+      "bad_polynomial": "t**2 + t*CRootOf(z**2 + z + 1, 1)",
+      "normal_shape": [
+        43,
+        8
+      ],
+      "normal_pivots": 8
+    },
+    {
+      "case": "J0",
+      "bad_polynomial": "t**2 + 3*t + 2",
+      "normal_shape": [
+        46,
+        8
+      ],
+      "normal_pivots": 8
+    },
+    {
+      "case": "H0",
+      "bad_polynomial": "t**4 + 6*t**3 + 14*t**2 + 15*t + 6",
+      "normal_shape": [
+        44,
+        8
+      ],
+      "normal_pivots": 8
+    },
+    {
+      "case": "r0",
+      "bad_polynomial": "t**2 + t*CRootOf(z**2 + z + 1, 1)",
+      "normal_shape": [
+        42,
+        8
+      ],
+      "normal_pivots": 8
+    },
+    {
+      "case": "L0",
+      "bad_polynomial": "t**2 + 3*t + 2",
+      "normal_shape": [
+        44,
+        8
+      ],
+      "normal_pivots": 8
+    }
+  ],
+  "fresh_points": [
+    {
+      "case": "A0",
+      "parameters": [
+        [],
+        [
+          "1"
+        ],
+        []
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "excluded": "normal kernel zero"
+    },
+    {
+      "case": "A0",
+      "parameters": [
+        [],
+        [
+          "1"
+        ],
+        [
+          "1",
+          "-1"
+        ]
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "excluded": "normal kernel zero"
+    },
+    {
+      "case": "A0",
+      "parameters": [
+        [],
+        [
+          "1"
+        ],
+        [
+          "-1"
+        ]
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        22,
+        46
+      ],
+      "excluded": "nonAS4 Hilbert"
+    },
+    {
+      "case": "A0",
+      "parameters": [
+        [],
+        [
+          "1"
+        ],
+        [
+          "-1",
+          "-2"
+        ]
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "excluded": "normal kernel zero"
+    },
+    {
+      "case": "A0",
+      "parameters": [
+        [],
+        [
+          "1"
+        ],
+        [
+          "-2"
+        ]
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "excluded": "normal kernel zero"
+    },
+    {
+      "case": "kminus1",
+      "parameters": [
+        [
+          "-1",
+          "0"
+        ],
+        [
+          "1"
+        ],
+        [
+          "-1"
+        ]
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "excluded": "normal kernel zero"
+    },
+    {
+      "case": "kminus2",
+      "parameters": [
+        [
+          "-1",
+          "0"
+        ],
+        [
+          "1"
+        ],
+        [
+          "-2"
+        ]
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        23,
+        55
+      ],
+      "excluded": "nonAS4 Hilbert"
+    },
+    {
+      "case": "r0",
+      "parameters": [
+        [],
+        [],
+        [
+          "1"
+        ]
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        22,
+        46
+      ],
+      "excluded": "nonAS4 Hilbert"
+    },
+    {
+      "case": "r0",
+      "parameters": [
+        [
+          "-1",
+          "0"
+        ],
+        [],
+        [
+          "1"
+        ]
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "excluded": "normal kernel zero"
+    },
+    {
+      "case": "r0k0A1",
+      "parameters": [
+        [
+          "1"
+        ],
+        [],
+        []
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "excluded": "normal kernel zero"
+    },
+    {
+      "case": "origin",
+      "parameters": [
+        [],
+        [],
+        []
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        23,
+        55
+      ],
+      "excluded": "nonAS4 Hilbert"
+    }
+  ],
+  "fresh_count": 11,
+  "scope": "all normalized plus-chart parameters by weighted scalar action (A,r,k) weights(2,1,1), explicit7 surface cover and fresh points",
+  "not_claimed": [
+    "lambda=-omega or primitive4 types",
+    "s0 stratum",
+    "whole onezero atlas",
+    "complete H3 classification"
+  ]
+}
