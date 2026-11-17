@@ -3342,5 +3342,24 @@
       "v258 main LuaLaTeX PASS clean",
       "new function-field exploration only reached degree7; no claimed center9 result"
     ]
+  },
+  "third_root_unit_boundary_L_function_center_v259": {
+    "status": "finite-characteristic function-field diagnostic completed; characteristic-zero center claim not proved by this calculation",
+    "input": "computations/explore_cubic_third_root_boundary_L_function_center.py",
+    "results": [
+      "GF109(E)[d]/(d3+63E3+63²), u1v0, weight0 center9:46 columns,41 constant pivots,5 free, zero residual, all original commutators reinserted zero",
+      "all quotient degrees0..10 match cubic Hilbert values"
+    ],
+    "executed_checks": [
+      "smart pivot complexity and inverse cache diagnostic PASS in153 seconds with private FLINT",
+      "char0 attempt reached degree4 and then coefficient growth; stopped, no claimed completion",
+      "source compile and git diff check PASS"
+    ],
+    "not_claimed": [
+      "characteristic-zero generic center kernel from modular zeros",
+      "every E covered",
+      "full L H3 exclusion",
+      "complete H3 classification"
+    ]
   }
 }
