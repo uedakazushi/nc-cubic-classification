@@ -3182,5 +3182,33 @@
       "all35 replay running; not yet recorded PASS",
       "git diff --check PASS"
     ]
+  },
+  "third_root_unit_boundary_L_order_obstruction_v253": {
+    "status": "ordinary proof with audited external local hereditary classification and ramification inputs; not a new finite computation",
+    "proof": "papers/sections/cubic_third_root_unit_boundary_L_order_obstruction.tex",
+    "results": [
+      "Frobenius plus finite left/right global dimension over DVR implies complete normal order by hereditary lattice-chain and equal block argument",
+      "fixed E2,u1,v0 all6 embeddings cannot be H3",
+      "all E2,v=Z=0,w1 and all u excluded by scalar map or cone vertex"
+    ],
+    "external_input": {
+      "source": "John Voight, Quaternion Algebras GTM288 (2021), Chapter21 pp343-352",
+      "url": "https://link.springer.com/chapter/10.1007/978-3-030-56694-4_21",
+      "doi": "10.1007/978-3-030-56694-4_21",
+      "read": "Theorem21.5.1 statement and printed reference, §21.3.1/Lemma21.3.3/Prop21.3.7 printed proofs, §21.5.3, Remark21.2.8 division extension",
+      "audit_limit": "hereditary classification imported from textbook; original Hijikata-Nishida/Reiner not read; block-dual consequence proved in present paper"
+    },
+    "not_claimed": [
+      "actual Brauer period computed",
+      "U domain decided separately",
+      "entire L curve excluded",
+      "complete H3 classification"
+    ],
+    "executed_checks": [
+      "relative dual all81x4 identities exact PASS v252",
+      "v253 main LuaLaTeX PASS including scalar/vertex corollary; no overfull or unresolved references/citations",
+      "all35 spectral replay running, not yet claimed PASS",
+      "git diff --check PASS"
+    ]
   }
 }

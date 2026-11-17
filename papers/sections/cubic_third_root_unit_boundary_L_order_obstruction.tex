@@ -1,0 +1,98 @@
+\subsection{有限大域次元の局所認識と固定例のH3排除}
+\label{subsec:cubic-third-root-unit-boundary-L-order-obstruction}
+\begin{lemma}[Frobenius orderの有限大域次元]
+\label{lem:cubic-Frobenius-order-hereditary}
+$R$ は標数0の体を含むDVR、$\Lambda$ はその上有限自由なorderで、
+一般点は中心単純とする。
+$\operatorname{Hom}_R(\Lambda,R)\simeq\Lambda_\eta$ が両側加群として成り立ち、
+$\Lambda$ の左右大域次元が有限なら、その完備化はnormal orderである。
+\end{lemma}
+\begin{proof}
+まず $\widehat\Lambda$ がhereditaryであることを示す。
+$R$ の完備化は平坦であり、$\widehat\Lambda$ の単純加群は中心の一様化元で殺されるので、
+$\Lambda$ の単純加群としても定義される。
+左右の有限projective resolutionを完備化すれば、
+$\widehat\Lambda$ 上でも各単純加群は有限projective dimensionを持つ。
+双対の同型も完備化で保たれる。
+
+以下、完備化の記号を省く。
+$R$ の長さ1の単射分解と忘却関手の随伴から
+\[
+ \operatorname{Ext}^i_\Lambda
+ (M,\operatorname{Hom}_R(\Lambda,R))
+ \simeq\operatorname{Ext}^i_R(M,R)=0\quad(i>1).
+\]
+従って $\Lambda$ の左自己単射次元は1以下。
+完備orderはsemiperfectであり、有限生成加群には極小projective resolutionがある。
+有限projective dimension $d$ の非零加群では、極小分解の最後を双対化すると
+$\operatorname{Ext}^d_\Lambda(M,\Lambda)\ne0$ となる。
+実際、最後の微分の成分はJacobson radicalに入り、双対の像もradicalに入るので、
+最後の非零projective双対のtopを覆えない。
+従って全単純左加群のprojective dimensionは1以下。
+右側も同様である。右半単純商のprojective dimensionが1以下なので
+任意の有限生成左加群の極小分解で第2項以降は零となる。
+よって $\Lambda$ はhereditaryである。
+
+ここでhereditaryだけからnormalと結論してはならない。
+完備DVR上のhereditary orderの格子鎖標準形を用いる
+\cite[Theorem~21.5.1, Sections~21.3.1, 21.5.3, Remark~21.2.8]{VoightOrders}。
+一般点を $M_n(D)$、$D$ の極大orderを $\mathcal D$、そのradicalを
+$\mathfrak r=\varpi\mathcal D$ と書く。
+標準形は、正整数 $n_1,\ldots,n_r$ をblockサイズとし、
+対角及び上側blockが $\mathcal D$、下側が $\mathfrak r$ である。
+相異なる既約projective columnを巡回順に $P_1,\ldots,P_r$ とすれば
+\[
+ {}_\Lambda\Lambda\simeq\bigoplus_i P_i^{\oplus n_i}.
+\]
+trace双対のcolumnを計算すると
+\[
+ {}_\Lambda\operatorname{Hom}_R(\Lambda,R)
+ \simeq\bigoplus_i P_{i-1}^{\oplus n_i},\qquad P_0=P_r.
+\]
+この計算は、trace双対の $(i,j)$ blockが
+$i\geq j$ なら $\mathcal D^\#$、$i<j$ なら $\mathfrak r^\#$ となることによる。
+$\mathcal D^\#$ は $\varpi$ の冪によるprincipal fractional idealで、
+column全体を右から適切な冪で掛けると、ちょうど一つ前のprojective columnになる。
+右からの乗法は左 $\Lambda$ 線型である。
+
+Frobenius仮定とKrull--Schmidtの一意性から $n_i=n_{i+1}$ が全 $i$ で成り立つ。
+blockが等しいとき、隣接blockを巡回させ最後のblockに $\varpi$ を置く行列が
+Jacobson radicalを左右から生成する。
+これはnormal orderの定義そのものであり、結論を得る。
+格子鎖分類は外部入力であり、この証明はその分類を再証明するものではない。
+\end{proof}
+
+\begin{theorem}[固定正常三次例のH3排除]
+\label{thm:cubic-third-root-unit-boundary-L-fixed-no-H3}
+$E=2,u=1,v=0$ の固定代数体例は、標数0代数閉体への全六埋込みについてH3を与えない。
+\end{theorem}
+\begin{proof}
+仮にH3を与えるなら、既証の必要条件からアフィン切断 $U$ は整域で、
+左右有限大域次元を持つ。
+全中心は $k[\psi,z]$、一般点は次数9の中心単純代数であり、
+相対双対は位数3の $\nu$ による $U_\nu$ である。
+高さ1の全局所化は有限大域次元を持ち、前補題より完備化はnormal orderとなる。
+命題\ref{prop:cubic-Frobenius-order-period}に $m=3$ を適用すると
+一般点のBrauer周期は3を割る。
+一方、整域性と曲面period--index定理から周期は9となるので矛盾する。
+
+従ってこのorderが実際に整域かどうかを先に判定する必要はない。
+整域なら有限大域次元でなく、有限大域次元なら整域でない。
+この結論は固定例のH3排除であり、全 $L$ 曲線の排除や、
+一般の周期の決定、正確なGoldie rankの決定を意味しない。
+\end{proof}
+
+\begin{corollary}[$v=0$ の全 $u$]
+同じ $E=2$、$L=0$ の全六埋込みに対し、$v=Z=0,w=1$ の切断は
+全 $u\in k$ でH3を与えない。
+\end{corollary}
+\begin{proof}
+$u\ne0$ なら $x_1\mapsto\sqrt{u}\,x_u$、他の生成元を固定する同型が
+$u=1$ の表示を $u$ の表示へ移す。
+正常三次も $\Gamma+C_*yx_1^2\mapsto\Gamma+uC_*yx_u^2$ と一致する。
+$u=0$ なら包絡は三次元Sklyanin基底上の正常一次Ore拡大で、切断は純baseの $\Gamma$。
+従って補題\ref{lem:cubic-skew-cone-vertex}の頂点障害でH3でない。
+具体的には $x\ne0$ の頂点における次数零代数は、三変数の
+$S/(\Gamma)$ の次数付きtwistであり、Hilbert級数は
+$(1+t+t^2)/(1-t)^2$。その逆数が多項式でないので、原点単純加群は有限projective分解を持たない。
+\end{proof}
