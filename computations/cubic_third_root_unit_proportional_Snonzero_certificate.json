@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "scope": "full original22-orbit Schur matrix, universal rank-one consistency, nonzero branch coefficient, and all-parameter cubic syzygies; ordinary rank/domain/opposite proof separate",
+  "proportional_normalization": "P=Q=(1,0),S=1",
+  "rank_one_consistency": "r*t=0",
+  "off_axis_nonzero_a16": "omega*t^2*c/p",
+  "normal_x_quotient_Hilbert_target_A3": 10,
+  "two_independent_overlap_syzygies": [
+    "b^3",
+    "c^3"
+  ],
+  "all_parameter_A3_lower_bound": 11,
+  "conclusion": "all unit-repeat H3 candidates require S=0",
+  "remaining_unit_repeat_sector": "rank(P,Q)=1,S=0",
+  "not_claimed": [
+    "remaining S0 proportional sector classified",
+    "nonunit semisimple spectrum classified",
+    "complete H3 classification"
+  ]
+}

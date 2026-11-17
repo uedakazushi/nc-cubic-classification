@@ -1,0 +1,84 @@
+\subsection{比例cube結合でも $bbcc$ 係数は零}
+\label{subsec:cubic-third-root-unit-proportional-Snonzero}
+\begin{theorem}[unit-repeat残余の $bbcc$ 零条件]
+\label{thm:cubic-third-root-unit-Szero-necessary}
+$\mu=(1,1,\omega,\omega^2)$ のH3包絡では、最高tensorの $bbcc$ 係数 $S$ は零である。
+従って未分類の必要領域は
+$\operatorname{rank}(P,Q)=1,S=0$ に限られる。
+\end{theorem}
+\begin{proof}
+独立結合は排除済みである。
+比例結合で $S\ne0$ と仮定すると、前節の純平方関係の議論から $P,Q$ はともに非零。
+生成元のscalar、$U$ 基底と最高tensorのscalarで
+$P=Q=(1,0),S=1$ に正規化できる。
+この場合mixedのsquare pivotのSchur補は
+\[
+ N=\begin{pmatrix}
+ a_8-1&a_9&-a_2+\omega&a_{11}\\
+ \omega^2a_{12}&a_{17}&-a_6&-a_{15}\\
+ \omega^2(1-a_3)&-\omega^2a_7&-a_8-1&-\omega^2a_{12}\\
+ \omega^2a_{13}&-\omega^2a_{16}&-a_9&-a_{17}
+ \end{pmatrix},\qquad\operatorname{rank}N=1.
+\]
+$N=uv^t$、$u=(p,r,s,t)^t,v=(a,b,c,d)^t$ と書けば
+\[
+ pa+sc=-2,\quad pb+tc=0,\quad ra+sd=0,\quad rb+td=0.
+\tag{1}
+\]
+四式を係数 $(rt,-rs,-pt,ps)$ で結合すると $rt=0$ を得る。
+整域性により $u,v$ の前半と後半はそれぞれ非零である。
+
+$r=0,t\ne0$ とする。
+$p\ne0$、$(1)$ より $d=0,c\ne0,b=-tc/p$。
+元Schur成分との比較から
+\[
+ a_6=a_{11}=a_{15}=0,\qquad a_{16}=\omega t^2c/p\ne0.
+\]
+重み1のeven blockの $bc,cb$ 主blockは
+$K=\left(\begin{smallmatrix}T&-\omega\\-\omega&-\omega T\end{smallmatrix}\right)$、
+$yy$ 対 $bc,cb$ の行は $(0,a_{16})$。
+$K$ 特異ならrank $H_0=2$ はこの行を $K$ の一次元行空間へ入れるが、
+$T^2=-\omega$ によりその行空間は両成分非零のため不可能である。
+この行空間条件は、対称rank2分解 $H_0=RMR^t$ の下二行のrankから従う。
+
+$K$ 可逆ならpure binary blockは $A=\mathcal P K^{-1}\mathcal P^t$。
+$A_{yy,yy}=0$ と $a_{16}\ne0$ から $T=0$。
+すると $K^{-1}$ は対角零、非対角 $-\omega^2$ であり、
+$A$ の $yy$ 行は $-\omega^2a_{16}(a_2,0,0,0)$ となる。
+一方binary反巡回条件では同じ行は $(0,a_5,-a_5,0)$
+（rank高々2から既に $a_1=0$）なので、$a_2=a_5=0$。
+従って $\mathcal P$ の $bc$ 列が零であり、$I_0$ は純 $cb$ 関係を含む。
+整域性に反する。
+
+$t=0,r\ne0$ は反対代数で同じ矛盾となる。
+実際、反対代数はAS4整域性を保ち、中山は逆となるので $\omega$ を $\omega^2$ とすればよい。
+最高tensorの反転は比例する非零 $P,Q$ と $S\ne0$ を保ち、
+mixed relationの $u$ は $(s,t,p,r)$ へ移る。
+scalar再正規化後も零成分の型は変わらず、前の場合に一致する。
+ここではH3の反対圏帰属を仮定せず、AS4整域自体の非存在を使っている。
+
+最後に $r=t=0$ とする。
+$(1)$ と整域性から $p,s,a,c$ は全て非零、$b=d=0$。
+従ってmixed関係は $x$ と $b,c$ の可逆な正常式を含み、
+$I_1$ の $yb,by$ 成分と $I_2$ の $yc,cy$ 成分は零である。
+元middleから $a_{15}=a_{16}=0$、binary rankから $a_1=0$。
+$a_5=0$ なら $(x,c)$ 商が $k\langle y,b\rangle/(b^2)$ となり指数増大する。
+従って $a_5\ne0$ であり、$H_0$ の $yy$ 列は純関係 $xy-yx$ を与える。
+よって $x$ は $B$ 全体で正常正則である。
+
+$A=B/(x)$ は三つの次数1生成元 $y,b,c$ による二次代数であり、
+\[
+ H_A(t)=(1-t)H_B(t)=(1-t)^{-3},\quad\dim A_2=6,\quad\dim A_3=10.
+\]
+二つのmixed pivot関係を商にすると $b^2=c^2=0$。
+従って三次元の二次関係空間 $R_2$ に対して
+$R_2\otimes V\cap V\otimes R_2$ は独立な $b^3,c^3$ を含む。
+それゆえ
+\[
+ \dim A_3=27-\dim(R_2\otimes V+V\otimes R_2)
+ \ge27-(9+9-2)=11,
+\]
+という矛盾を得る。
+正常一次商のAS正則性に関する追加の一般定理は用いていない。
+全場合で $S\ne0$ は不可能であり、結論を得る。
+\end{proof}

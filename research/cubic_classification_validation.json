@@ -2554,7 +2554,7 @@
   "spectral_reductions_replay": {
     "runner": "computations/verify_cubic_spectral_reductions.py",
     "manifest": "computations/cubic_spectral_reductions_validation.json",
-    "scope": "twenty-four finite certificate replays; ordinary mathematical proofs remain separate"
+    "scope": "twenty-six finite certificate replays; ordinary mathematical proofs remain separate"
   },
   "fourth_root_negative_repeat_exclusion_v226": {
     "status": "ordinary all-chart free-tensor and AS2 proof; exact original coefficient obstructions PASS",
@@ -2857,6 +2857,49 @@
     ],
     "executed_checks": [
       "all24 spectral validators PASS",
+      "main LuaLaTeX build PASS; no overfull/undefined-reference diagnostics",
+      "git diff --check PASS"
+    ]
+  },
+  "third_root_unit_proportional_Snonzero_v241": {
+    "status": "ordinary exhaustive rank1 Schur/opposite/normal-linear-quotient proof; exact original constants and universal syzygy checks PASS",
+    "proof": "papers/sections/cubic_third_root_unit_proportional_Snonzero.tex",
+    "validator": "computations/verify_cubic_third_root_unit_proportional_Snonzero.py",
+    "certificate": "computations/cubic_third_root_unit_proportional_Snonzero_certificate.json",
+    "results": [
+      "proportional nonzero cube couplings with S nonzero contain no AS4 domain",
+      "last normal x quotient has two cubic overlap syzygies, A3>=11 but required10",
+      "all unit-repeat H3 candidates require rank(P,Q)=1 and S=0"
+    ],
+    "not_claimed": [
+      "remaining S0 proportional sector classified",
+      "nonunit semisimple spectrum classified",
+      "complete H3 classification"
+    ],
+    "executed_checks": [
+      "all26 spectral validators PASS",
+      "main LuaLaTeX build PASS; no overfull/undefined-reference diagnostics",
+      "git diff --check PASS"
+    ]
+  },
+  "third_root_unit_split_double_Ore_v242": {
+    "status": "ordinary split-family all-q normal decomposition and cone/factor proof; exact PBW, Smith and primitive9 kernel PASS",
+    "proof": "papers/sections/cubic_third_root_unit_split_double_Ore.tex",
+    "validator": "computations/verify_cubic_third_root_unit_split_double_Ore.py",
+    "certificate": "computations/cubic_third_root_unit_split_double_Ore_certificate.json",
+    "results": [
+      "W1 at q-1 is k*x*y^2, at q³omega² is k*Gamma, zero otherwise",
+      "entire split two-curvature family excluded by factor or Ore vertex",
+      "central fixed quadratic vs normal cubic loci disjoint by exact gcd"
+    ],
+    "not_claimed": [
+      "general x-dependent filtered deformations covered",
+      "h1 ninth-root candidate H3/domain decided",
+      "all proportional couplings classified",
+      "complete H3 classification"
+    ],
+    "executed_checks": [
+      "all26 spectral validators PASS",
       "main LuaLaTeX build PASS; no overfull/undefined-reference diagnostics",
       "git diff --check PASS"
     ]

@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "scope": "all-q original PBW overlaps, exact Laurent-polynomial Smith forms, x-degree decomposition coefficients and fresh complete primitive9 kernel; ordinary cone/factor proof separate",
+  "B_original_cubic_critical_overlaps": 4,
+  "fixed_quadric_and_normal_cubic_Smith": {
+    "Z2fixed": {
+      "shape": [
+        8,
+        2
+      ],
+      "common_denominator": "q**3",
+      "monic_invariant_factors": [
+        "1",
+        "q**3 + q**2"
+      ]
+    },
+    "normalG3": {
+      "shape": [
+        13,
+        4
+      ],
+      "common_denominator": "q**7",
+      "monic_invariant_factors": [
+        "1",
+        "q**2",
+        "q**4",
+        "q**9 + q**6*(1 + CRootOf(z**2 + z + 1, 1))"
+      ]
+    }
+  },
+  "disjoint_parameter_conditions_gcd": 1,
+  "fresh_q_minus1_fixed_quadric": "k*y^2",
+  "fresh_primitive9_field": "t^6+t^3+1; omega=t^6",
+  "primitive9_normal_rank": 3,
+  "Gamma_coefficients_in_b3_c3_bcy_y3": [
+    "-CRootOf(t**6 + t**3 + 1, 5)**4/3 + CRootOf(t**6 + t**3 + 1, 5)/3",
+    "-CRootOf(t**6 + t**3 + 1, 5)**2/3 - 2*CRootOf(t**6 + t**3 + 1, 5)**5/3",
+    "CRootOf(t**6 + t**3 + 1, 5)**4",
+    "1"
+  ],
+  "W1_classification": {
+    "q=-1": "k*x*y^2",
+    "q^3=omega^2": "k*Gamma_q",
+    "otherwise": "0"
+  },
+  "not_claimed": [
+    "general x-dependent deformations covered",
+    "all proportional cube couplings classified",
+    "complete H3 classification"
+  ]
+}

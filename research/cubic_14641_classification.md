@@ -1382,10 +1382,10 @@ python computations/verify_cubic_order2_22_secant_L_saturation.py --prefix /tmp/
 - 位数4：`cubic_fourth_root_spectrum_reductions.tex`。四奇数重み−1パターンを除き、(1,1,i,-i)を既述charge0障害で排除。
 - 最後の位数6：`cubic_sixth_root_last_Ore_exclusion.tex`。正常bでB=A[b;sigma]、coneでb³係数非零が必要。正常式からsigma³=muB^-1|A、muA=sigma^-2、hdet sigma1。sigmaUの同一固有値は最高AS3cubicのslice退化、相異なる場合は(a,a*omega),a³omega²、sigma c=-a*omega^k。最高tensorの固定orbitを直接列挙しk0だけ残る。Aはx²=kappa*c²,yx=-a²xy,yc=-a²cy、sigma=(a,a*omega,-a)。sigma固定A3はkx²y一本だが正常x残差(-a²-omega²)x³yが非零、従って全Gはkb³で非整域。先行AS3完全分類を輸入していない。QQ(a),Phi9で全tensor slice、固定A3 rank9、元の正常残差をexact PASS。単冪sigma候補もslice退化で排除。
 
-### 現在の残余：半単純・位数3の3スペクトル（v240）
+### 現在の残余：半単純・位数3の3スペクトル（v242）
 三固有値H3の中山は半単純であり、位数3のみ。必要リストはN3:3個で、各関係重みパターンは一つ。Galoisラベル2軌道の代表(N;a,b,c)、重複2を先頭、単純二固有値を昇順に書く：
 (3;0,1,2),(3;1,0,2)。
-Galoisラベルはk線型同値の商ではない。3候補のAS4存在・正常三次・H3許容性は未分類。全リストと現在値は `computations/cubic_fourth_root_last_negative_simple_certificate.json`。再生は `python computations/verify_cubic_spectral_reductions.py`、24検証器のPASSは有限計算であり通常の全証明の独立機械検証ではない。
+Galoisラベルはk線型同値の商ではない。3候補のAS4存在・正常三次・H3許容性は未分類。全リストと現在値は `computations/cubic_fourth_root_last_negative_simple_certificate.json`。再生は `python computations/verify_cubic_spectral_reductions.py`、26検証器のPASSは有限計算であり通常の全証明の独立機械検証ではない。
 N4(2,1,3)は `cubic_fourth_root_negative_repeat_exclusion.tex` で全排除。G=F b²+L c²、domainにF,L独立が必要。even rank2はS2自由なのでF f²(u)=mu^-1(u)Fが不可能。rank1はAS2 Oreへ復元し、可換はf=gとh0でskewへ、JordanはF,Lが同一正常線で因子、量子反対角はscalar linear normalizerなし、量子対角はF=x,L=y、alpha=i,alpha*gamma=-pとgamma²=-pからp1を強制。単冪中山込み。公開検証器が元Jordan relationのminorとkernel、量子のp(1-p)矛盾、free-tensor augmented rankをexact PASS。
 
 次の課題：残る二Galoisラベルの必要最高tensor atlasと正常核。
@@ -1423,6 +1423,13 @@ p0軸はr1,c1/lambda、K可逆ならd0,T=2omega*lambda/(lambda²-omega)、残り
 比例結合の一方的曲率Ore部分の全排除（v240）：`cubic_third_root_unit_curved_Ore.tex`。実際にB=T[b;f][c;sigma,delta]、sigmaTg,sigmab=q^-1b,delta b=-q^-1h,delta u=d(u)b²（d非零）と提示され、muU1,bomega,comega²なら、G=H+Fbc+C b³+D c³。正常cの最高c4からまずD0、その後の正常bのb4からC0、正常uのb3からFd(u)0⇒F0、G∈T3で二元AS2斉次因子。Dを消さずb4を比較するとc³bの曲率項が混ざるため、必ずこの順序で行う。
 全AS2型の通常証明と実際の検算族を区別する。公開検算はTcomm、bx=a xb,by=omega yb,cx=a^-1xc+b²,cy=omega²yc,cb=a bc-a(h0x²+h1xy+h2y²)の有理関数体全係数。全四重なりが零で実Ore AS4整域、mu=(1,1,omega,omega²)。元関係でc4/b4/b3の三段階残差をexact PASS。比例結合全体をこの表示で被覆したとは主張しない。
 次の最小課題：rank1 cube結合を一方向へ合わせ、片方零の場合の退化mixed projectionと偶射影rank2、及び両方向非零比例の場合を調べる。非単位重複根の半単純22次元atlasも残る。AS4存在だけやnormal核非零だけでH3としない。
+比例結合のS非零も全排除（v241）：`cubic_third_root_unit_proportional_Snonzero.tex`。P=Q=(1,0),S1の元mixed Schur rank1 N=uv^tはpa+sc=-2,pb+tc=ra+sd=rb+td=0。整合条件rt0。r0,t非零ではa6=a11=a150,a16=omega*t²*c/p非零。H0のbc/cb block Kが特異ならyy行(0,a16)がrowKに入らず矛盾、可逆ならyy対角零からT0、binary yy行比較でa20、純cb関係が生じ非整域。t0,r非零は反対代数（primitive omegaを逆にして全仮定保持）で同じAS4整域矛盾。
+r=t0ではI1のyb/byとI2のyc/cy成分が零。a15=a160,a10。a50なら(x,c)商free<y,b>/(b²)で指数増大。a5非零なら純xy-yx関係があり、xはB全体で正常正則。A=B/(x)はHS=(1-t)^-3、3二次関係だがb²=c²0を含むため二つの独立三次overlap b³,c³を持ち、dimA3≥11>10となる。正常一次商のAS3正則性を仮定せず直接Hilbert矛盾を用いた。公開exact検算は全元22tensorSchur、rt恒等式、非零a16と全パラメータsyzygyをPASS。
+従って全unit-repeat必要残余はrank(P,Q)=1,S0のみ。次はP非零Q0（及び交換）、両方非零比例のS0 atlasをU基底で一方向へ合わせ、退化mixed projection/偶rank2/二方向曲率を解析する。実際の一方的AS2 Ore表示は既にv240で排除済みだが、表示の全被覆は未証明。非単位重複根の半単純22次元atlasも残る。
+split二方向曲率Ore族の全正常核（v242）：`cubic_third_root_unit_split_double_Ore.tex`。Aqはbc=qcb,yb=qby-qc²,yc=q^-1cy-q^-1b²のCY AS3 PBW整域。tau(y,b,c)=(y,omega²b,omega c)、B=Aq[x;tau]はmu=(1,1,omega,omega²)のAS4。Gのx次数分解はG3+G2x+a*y*x²+d*x³、x³正常係数でd0、yx²のc²残差でa0、G2∈Z(Aq)2^tau、G3はtau^-1正常三次。
+固定二次の全q Smith因子1,q²(q+1)、正常三次は1,q²,q4,q6(q³-omega²)（分母はq冪のみ）。q-1はW1=k*x*y²で因子、q³omega²はW1=k*Gamma、Gamma=y³+q*omega²*bcy+q(2+omega)/3*b³+q²(1+2omega)/3*c³で純base。その他W1零。二条件はgcd1で交わらず、全値H3なし（純baseは一般Ore頂点補題）。全PBW重なり、x次数係数、SmithとPhi9体でのfresh核をexact PASS。一般x依存曲率変形へこのsplit排除を外挿しない。
+次の具体候補（まだ公表定理でない）：q^6+q³+1=0,omega=q6、上のBでbc-qcb=h*x²だけを変形し、x b=omega² b x,x c=omega c x,xy=yxを保つ。h0はsplit既排除、h非零はxのscalarでh1へ。private exact原PBW/正常消去でh1のW1はrank7/八係数で一本、G_h=Gamma+h*K*x²*y、K=[2+omega+(4omega-1)q-(1+2omega)q²]/3。H3/整域性は未判定。
+privateでx局所化degree0（B=b*x^-1,C=c*x^-1,Y=y*x^-1）を調べた。Q=q*omega,kappa=omega²hではBC-QCB=kappa,YB=QBY-omega²q*C²,YC=Q^-1CY-omega*q^-1*B²。z=BC-CB、S3=1+Q+Q²、H=(omega²q*Q²/S3)C³-(omega*q^-1/S3)B³、Z=zY-Hが中心。h1でz³*gbar=Z³+aZ+bC9+cB9を元関係NFでexact確認し、a³(Q-1)^9=27*kappa9*b*cも確認した。これはChebyshev/norm形を示唆し、9次cyclic symbolのperiod3・Goldie rank障害を次に検証する。現時点で中心同定/商非整域を公表済みとはしない。再開補助private unit_double_curvature_h1.py,unit_h1_center_identity.pyに所在（GitHub正本の証明書は次に作る）。de Jongのsurface period=indexを使う可能性があり、一次資料の適用仮定をこれから照合する。
 四単純の新しい全除外chart（v228）：`cubic_detminus1_spectral_exclusion.tex`。as4固定6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0のREADME、plan、COVERAGE、該当CLAIMS、DETMINUS1全文・自己監査・certificate状態を確認。nu=mu^-1なのでa→a^-1と後二基底交換で同じmu-chartになる。四族被覆/AS十分性/同型は輸入せず、H3域に次の直接証明を与えた。
 mu=(a,-a,i/a,-i/a),a4≠±1ではU²,mixed,V²の二次重みが分離して二重次数が存在。各平面に関係がなければ自由二生成の次数7が128でAS4値120を超え、domainなら純二元関係は高々一本なので両平面はAS2。混合三次の重み±ia,±a^-1は1にならず、純U三次重み1はa6=1、純Vはa6=-1を要して同時に起きない。従って全Gは片方のAS2純三次となり因子化、H3なし。a4=-1境界は既証二固有値必要集合±1に反し空、残るa4=1境界は四単純集合{1,-1,i,-i}のみで未分類。全det負一又は全四単純をこのchartが覆うとは主張しない。公開verifierは全パラメータLaurent多項式の非零因子・共鳴・境界特性多項式と128>120をexact PASS。出典/仮定/未実行の上流検算はas4_imports.jsonに記録。
 四単純の残る共鳴上の全被覆、全CY、全成分・境界、intrinsic族降下は依然未完。

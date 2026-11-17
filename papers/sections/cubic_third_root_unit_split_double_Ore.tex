@@ -1,0 +1,79 @@
+\subsection{比例結合のsplit二方向曲率Ore族の全正常核}
+\label{subsec:cubic-third-root-unit-split-double-Ore}
+\begin{theorem}[split二方向曲率族の全値分類とH3排除]
+\label{thm:cubic-third-root-unit-split-double-Ore-empty}
+$q\in k^*$ とし、$A_q$ を
+\[
+ bc=qcb,\qquad yb=qby-qc^2,\qquad yc=q^{-1}cy-q^{-1}b^2
+\]
+で定義する。$\tau(y)=y,\tau(b)=\omega^2b,\tau(c)=\omega c$ とし
+$B_q=A_q[x;\tau]$ と置く。
+これは全 $q$ でAS4整域、$\mu_{B_q}=(1,1,\omega,\omega^2)$（順序 $x,y,b,c$）である。
+その正常核は
+\[
+ W_1(B_q)=\begin{cases}
+ k\,xy^2&q=-1,\\
+ k\,\Gamma_q&q^3=\omega^2,\\
+ 0&\text{その他},
+ \end{cases}
+\]
+ただし
+\[
+ \Gamma_q=y^3+q\omega^2bcy+
+ \frac{q(2+\omega)}3b^3+\frac{q^2(1+2\omega)}3c^3.
+\]
+全 $q$ でH3切断は存在しない。
+これはsplit族の全値判定であり、$x$ を含む一般の曲率変形まで分類したという主張ではない。
+\end{theorem}
+\begin{proof}
+$A_q$ は量子平面 $bc=qcb$ の上の実際の自己同型型Ore拡大であり、
+$\sigma(b)=qb,\sigma(c)=q^{-1}c$、$\delta(b)=-qc^2,\delta(c)=-q^{-1}b^2$。
+唯一の三次重なり $ycb$ は零となるので、標準基底 $b^rc^sy^n$ を持つ。
+従ってnoetherian quadratic Koszul AS3整域である。
+Ore中山公式は $\mu_{A_q}(b)=b,\mu_{A_q}(c)=c$、$\mu_{A_q}(y)=y+\ell$ を与える。
+$\ell\in\langle b,c\rangle$ だが、$\tau$ と中山が可換であり、
+$\tau$ のこの二次元空間に固有値1がないので $\ell=0$。
+従って $A_q$ はCY。
+$\tau$ のhdetは1、従って $B_q$ はAS4整域、表示した中山を持つ。
+
+中山不変三次をOre $x$ 次数で分けると
+\[
+ G=G_3+G_2x+a yx^2+d x^3,
+\]
+\[
+ G_3\in\langle b^3,c^3,bcy,y^3\rangle,\qquad
+ G_2\in\langle bc,y^2\rangle.
+\]
+正常 $b$ 式の $x^3$ 成分は $(1-\omega^2)d$ を与え、$d=0$。
+$x^2$ 成分に $yb=qby-qc^2$ を使うと、非零の $c^2$ 係数から $a=0$。
+$x$ 成分の正常式は $G_2\in Z(A_q)_2^\tau$ に等価、定数成分は
+\[
+ G_3b=\omega^2bG_3,\quad G_3c=\omega cG_3,\quad G_3y=yG_3
+\tag{*}
+\]
+となる。
+各 $x$ 次数は独立であり、これらの条件を混ぜてはいない。
+
+元三関係の正規形で係数比較する有限行列を $\mathbb Q(\omega)[q,q^{-1}]$ 上で作る。
+$G_2$ 二係数の行列は共通分母 $q^3$ を払い、Smith因子は単元を除き
+$1,q^2(q+1)$。
+従って $q\ne-1$ では $G_2=0$、$q=-1$ では正確に $G_2\in ky^2$。
+ここで中心二次全体ではなく、$\tau$ 固定の二次部分だけを扱う。
+
+$(*)$ の四係数行列は共通分母 $q^7$ を払い、Smith因子は単元を除き
+\[
+ 1,\ q^2,\ q^4,\ q^6(q^3-\omega^2).
+\]
+従って $q^3\ne\omega^2$ では $G_3=0$。
+$q^3=\omega^2$ は既約体 $\mathbb Q(q)$、$q^6+q^3+1=0$、$\omega=q^6$ で元関係をfresh消去し、
+rank3と表示した $\Gamma_q$ が正確な核基底であることを得る。
+これは両原始三乗根及び全六つの原始九乗根を含むexact検算である。
+$\gcd(q+1,q^3-\omega^2)=1$ なので、$G_2,G_3$ が同時に非零となるパラメータはない。
+以上で表示した全正常核を得る。
+
+$q=-1$ の三次は一次因子 $x$ を持つ。
+$q^3=\omega^2$ の三次は全て純base $A_q$ に入り、
+正常化 $\mu_{B_q}^{-1}$ は $A_q$ を保ち、$x$ を固定する。
+よって補題\ref{lem:cubic-skew-cone-vertex}により頂点の高次自己Extが消えず、H3でない。
+全値で候補切断は排除される。
+\end{proof}
