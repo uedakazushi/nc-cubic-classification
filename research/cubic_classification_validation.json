@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "version": "classification-v271",
+  "version": "classification-v272",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -3653,6 +3653,26 @@
       "v1 isolated nonzeroT phase excluded",
       "v0 or zero coupling excluded",
       "wholeH3 complete"
+    ]
+  },
+  "third_root_nonunit_proportional_Tzero_v272": {
+    "status": "all v1,n=T0 nonunit proportional boundary excluded",
+    "proof": "papers/sections/cubic_third_root_nonunit_proportional_Tzero.tex",
+    "validator": "computations/verify_cubic_third_root_nonunit_proportional_Tzero.py",
+    "checks": [
+      "default Sympy full necessary equations/13root count cyclotomic spectra PASS",
+      "actual skew source identity unit6minor/parameter-constant denominators PASS",
+      "existing skewcone lemma hypotheses read and checked",
+      "v272 main LuaLaTeX clean PASS"
+    ],
+    "remaining": [
+      "v1 n0 Tnonzero isolated phase",
+      "v0 self",
+      "zero b2 coupling"
+    ],
+    "not_claimed": [
+      "whole nonunit atlas covered",
+      "complete H3 classification"
     ]
   }
 }

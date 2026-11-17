@@ -1,0 +1,76 @@
+\subsection{比例selfの $n=T=0$ 境界の全排除}
+\label{subsec:cubic-third-root-nonunit-proportional-Tzero}
+\begin{theorem}[零corner比例境界も空]
+\label{thm:cubic-third-root-nonunit-proportional-Tzero-empty}
+前節に残った $v=1,n=T=0,\alpha=-\omega m^2,m\ne0$ は全てH3を与えない。
+従って非退化self結合 $v\ne0$ に残るのは、
+$n=0,T\ne0,\alpha=m=-\omega^2$ の相だけである。
+\end{theorem}
+\begin{proof}
+この場合、middleの $bc,cb$ 射影はrank1であり、
+$c^2$ 行は純 $U^2$ 関係
+\[
+ Q=yx-\omega m^4xy
+\]
+を与える。$Q$ は非退化である。
+rank2条件により、$yb,by$ 行と $xb+m\,bx$ 行は、全てこの純 $U^2$ 行に比例する。
+$x^2,y^2$ 成分と残る二成分を比較すると正確に
+\begin{gather*}
+ a_1=a_2=a_{15}=0,\qquad
+ a_6=\frac{\omega^2}{\alpha^2}a_5,\quad a_8=m a_5,\\
+ (m-\omega^2)a_0=0,\qquad
+ (m^5-\omega)a_4=0,\qquad
+ (m^9-1)a_5=0
+\end{gather*}
+となる。
+例えば $by$ 行と $c^2$ 行の二成分minorに上の $a_6,a_8$ を入れると
+$(1-m^9)a_5/\alpha^3$、
+$xb+m\,bx$ 行のminorは $-(m^5-\omega)a_4/\alpha$ となる。
+これらは単元 $m,\omega$ 以外を可逆化しない恒等式である。
+全 $a_0,a_4,a_5$ が零なら、元middleは純 $c^2$ 関係を含み、整域性に反する。
+従って $m^5=\omega$ 又は $m^9=1$ に限る。
+両多項式のgcdは $m-\omega^2$ なので、固定した $\omega$ ごとに13点である。
+
+元の関係は
+\[
+ xy=\omega^2m^{-4}yx,\qquad xb=m^{-1}bx,\qquad xc=\omega m^2cx
+\]
+を含む。従って $x$ は正常で、正常化は
+\[
+ \phi(x,y,b,c)=(x,\omega^2m^{-4}y,m^{-1}b,\omega m^2c).
+\]
+H3正常式 $Gx=\omega^2xG$ は $\phi(G)=\omega G$ を必要とする。
+中山固定三次の語型 $U^3,Ubc,b^3,c^3$ における $\phi$ 固有値を全て調べる。
+$\phi$ は有限位数なので、商における固有vectorも同じ固有値の語で代表できる。
+
+$m^5=\omega,m\ne\omega^2$ の四点は位数15であり、
+全ての上記固有値は五乗根となる。従って固有値 $\omega$ はなく、$G=0$。
+$m=\omega^2$ では全固定三次の固有値は1であり、やはり $G=0$。
+$m=1,\omega$ では、要求固有値の語は全て $x$ を含むため、正常 $x$ を左へ動かして
+$G\in xB_2$ となり、整域切断ではない。
+位数9の $m$ で $m^3=\omega$ の三点も、要求固有値が存在せず $G=0$。
+
+残る三点は位数9で $m^3=\omega^2$ の場合である。
+この場合、要求固有値の語は $y,b,c$ のみからなり、$G\in A_3$、
+$A=\langle y,b,c\rangle$ となる。
+$a_0=a_4=0,a_5=C$ と書くと、元の全関係は
+\begin{gather*}
+ b^2+yc+m^{-2}cy=0,\qquad m bc+cb+C y^2=0,\\
+ \omega^2Cyb+\frac\omega{\alpha^2}Cby-\omega\alpha c^2=0,\\
+ xy=m^{-1}yx,\qquad xb=m^{-1}bx,\qquad xc=m^{-1}cx
+\end{gather*}
+である。
+元22tensorの画像をこの六関係で掛け戻し、unit minorと $C$ に依存しない分母も確認する。
+従って $B=A[x;\sigma]$、$\sigma|_{A_1}=m^{-1}$ という実際のskew coneである。
+$\sigma$ は次数scalarなので、任意の斉次二次関係を保つ。
+$C=0$ は純 $c^2$ で整域性に反し、$C\ne0$ でも
+補題\ref{lem:cubic-skew-cone-vertex}の全仮定が成立する。
+特に $G\in A_3$、その正常化は $A$ を保ち、$Gx=\omega^2xG$ である。
+従ってcone頂点が無限高次自己Extを持ち、H3を与えない。
+
+全固有値検算は $\mathbb Q(\omega)$、$\Phi_9$ 体、$\Phi_{15}$ 体で行う。
+固定した $\omega$ を保つ全埋込みを覆っており、Galois共役を幾何学的同型としてはいない。
+公開再現器は \texttt{verify\_cubic\_third\_root\_nonunit\_}\\
+\texttt{proportional\_Tzero.py}。
+有限標本のrankや未証明の全AS4性を使っていない。
+\end{proof}

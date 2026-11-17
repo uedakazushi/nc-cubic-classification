@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "scope": "all v1,n=T0 proportional nonunit coupling; proof uses domain and normalizer eigenconditions",
+  "necessary_cube_equations": [
+    "a1=a2=a15=0",
+    "a6=omega\u00b2/alpha\u00b2*a5",
+    "a8=m*a5",
+    "(m-omega\u00b2)*a0=0",
+    "(m5-omega)*a4=0",
+    "(m9-1)*a5=0"
+  ],
+  "finite_m_values_at_fixed_omega": 13,
+  "normal_x_spectra": [
+    {
+      "case": "m1",
+      "conclusion": "x factor",
+      "allowed_words": [
+        "xyy",
+        "xbc",
+        "xcb",
+        "yxy",
+        "yyx",
+        "bxc",
+        "bcx",
+        "cxb",
+        "cbx"
+      ]
+    },
+    {
+      "case": "momega",
+      "conclusion": "x factor",
+      "allowed_words": [
+        "xxy",
+        "xyx",
+        "yxx"
+      ]
+    },
+    {
+      "case": "momega2",
+      "conclusion": "zero",
+      "allowed_words": []
+    },
+    {
+      "case": "primitive9_cube_omega",
+      "conclusion": "zero",
+      "allowed_words": []
+    },
+    {
+      "case": "primitive9_cube_omega2",
+      "conclusion": "pure base",
+      "allowed_words": [
+        "yyy",
+        "ybc",
+        "ycb",
+        "byc",
+        "bbb",
+        "bcy",
+        "cyb",
+        "cby",
+        "ccc"
+      ]
+    },
+    {
+      "case": "primitive15",
+      "conclusion": "zero",
+      "allowed_words": []
+    }
+  ],
+  "actual_skew_cone": "originalH=displayedR*coords, unit6minor, coefficient-field denominators only; x has uniform scalar m^-1 on y,b,c",
+  "external_to_program": "ordinary skew-cone vertex lemma in existing paper; not independently computer-proved",
+  "not_claimed": [
+    "v1 Tnonzero isolated phase excluded",
+    "v0 or zero couplings covered",
+    "wholeH3 complete"
+  ]
+}
