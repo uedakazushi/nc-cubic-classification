@@ -79,3 +79,45 @@ $g$ と $q$ は可逆なので $\sigma$ も自己同型である。
 定理\ref{thm:cubic-third-root-unit-curved-Ore-empty}が適用でき、矛盾を得る。
 これで、実Ore表示を前提とした既存排除へ、元tensorの明示射影条件から到達した。
 \end{proof}
+
+\begin{corollary}[片方零結合の零even-corner全排除]
+\label{cor:cubic-third-root-unit-onezero-Tzero-empty}
+$P=(1,0),Q=0,S=T=0$ の全層はH3を与えない。
+従って重複1の未解決領域は、片方零結合かつ $T\ne0$ に限る。
+\end{corollary}
+\begin{proof}
+前定理の二つの射影条件が、実は整域性と元middleのrank2から自動的に従うことを示す。
+evenのcross二列を
+\[
+ R=(a_2,a_6,-a_{11},a_{15})^t,\qquad
+ S=(a_3,a_7,-a_{13},a_{16})^t
+\]
+と書く。既に示した通り、cross rankは1である。
+
+まず $R=0$ は不可能である。
+元middle $M$ の行順を $xb,yb,bx,by,c^2$、
+列順を $xc,yc,b^2,cx,cy$ とする。
+$R=0$ なら最初の二行の最後の二列は零である。
+$b$-mixedの $Ub$ 射影は整域性からrank2なので、この二行は $M$ の行空間の基底である。
+従って全行の最後の二列が零となる。
+第三・第四行から $a_8=a_9=a_{12}=a_{17}=0$ となり、
+第二行全体が零となるので矛盾する。
+$S=0$ の場合も、$bU$ 射影のrank2により第三・第四行を基底とし、
+最初の二列の消滅から同じ四係数が零となり、第四行が零となる矛盾を得る。
+従って $R,S$ は共に非零であり、$R=\rho S$、$\rho\ne0$ と書ける。
+これは前定理のeven射影の両係数非零条件を与える。
+
+純 $U$ 二次関係は $S$ で生成され、その係数行列は
+\[
+ Q=\begin{pmatrix}a_3&a_7\\-a_{13}&a_{16}\end{pmatrix}.
+\]
+整域性から $\det Q\ne0$。
+元middleの二つのminorを直接取ると
+\[
+ \det M_{(bx,by),(xc,yc)}=(\omega+1)^2\det Q,\qquad
+ \det M_{(xb,yb),(cx,cy)}=\rho^2\det Q.
+\]
+従って $c$-mixedの両射影も同型である。
+前定理が適用でき、全 $T=0$ 層が排除される。
+元22tensorの関係を使う二つのminor恒等式は、公開再現器でもexactに検算する。
+\end{proof}

@@ -154,10 +154,10 @@
     ]
   ],
   "ordinary_proof": "T0 rank2 even gives cross rank1; domain gives AS2 pure relation and invertible b projections; c projection conditions and both nonzero cross columns give actual curved Ore by spanning and full AS4 Hilbert equality",
+  "T0_full_exclusion": "domain forces both cross columns nonzero and nondegenerate pure Q; displayed minors force both c projections invertible; ordinary Ore recognition then excludes allT0",
   "not_claimed": [
     "all one-zero atlas covered",
     "Tnonzero excluded",
-    "projection degeneracies excluded",
     "complete H3 classification"
   ]
 }

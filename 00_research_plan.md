@@ -69,8 +69,8 @@ Library既存ファイルは明示指示なしに削除しない。GitではPDF�
 heart比較・Rains共鳴・cubic cornerは `uedakazushi/nc-dp-surface-hearts`、次数1は `uedakazushi/nc-dp1-moduli`、三次三様体は `uedakazushi/nc-cubic-threefold-moduli` が正本。
 量子FermatのOU障害は [nc-cubic-non-as](https://github.com/uedakazushi/nc-cubic-non-as)、ambient比較は [nc-cubic-ambient](https://github.com/uedakazushi/nc-cubic-ambient) に移管済み。分類に必要な旧定理・コードはこのリポジトリの現行分類原稿からも参照する。
 
-## VI. 現在の全H3 frontier（v266）
-三固有値H3の中山は半単純位数3に限られ、必要スペクトルは(1,1,ω,ω²),(ω,ω,1,ω²)と後者の共役の3個（2 Galoisラベル軌道）である。これはk-linear moduli同型による商ではない。重複1の全22tensor atlasはrank(P,Q)=1,S0まで必要制限され、両結合非零比例の場合は六係数正常一次chartへ被覆し、wの全値をH3排除した。残る重複1は片方零結合のみ。非単位重複根atlas、四単純の未被覆共鳴、全CY、成分・境界・相対降下は未完。各還元の証明は主原稿と分類ノートにあり、現在の最小課題は以下を読む。
+## VI. 現在の全H3 frontier（v267）
+三固有値H3の中山は半単純位数3に限られ、必要スペクトルは(1,1,ω,ω²),(ω,ω,1,ω²)と後者の共役の3個（2 Galoisラベル軌道）である。これはk-linear moduli同型による商ではない。重複1の全22tensor atlasはrank(P,Q)=1,S0まで必要制限され、両結合非零比例の場合は六係数正常一次chartへ被覆し、wの全値をH3排除した。残る重複1は片方零結合かつT非零のみ。非単位重複根atlas、四単純の未被覆共鳴、全CY、成分・境界・相対降下は未完。各還元の証明は主原稿と分類ノートにあり、現在の最小課題は以下を読む。
 
 ## 正常一次chartの完成した排除と次の未被覆層（v265）
 両非零比例結合は元22tensorから六係数正常一次chartへ被覆され、そのw≠0はproper elliptic/99点/六軸点、w0も以下で全排除された。従ってunit-repeatのrank(P,Q)=1,S0において、残るのは片方のみ非零のP0又はQ0である。非単位重複rootの半単純22tensor atlas、四単純残余、全CY/成分/相対降下も未完で、全H3完成ではない。
@@ -85,3 +85,8 @@ T=a21=0のeven対称blockは右下零、全rank2ならcross rank≤1。cross0な
 証明はcubic_third_root_unit_onezero_projection.tex。元22tensorからmiddle/even/c²行零と全2×2射影minorを再生するpublic validator/default Sympy PASS、v266主原稿LuaLaTeX PASS clean。数学的Ore認識は通常証明で、有限標本を全被覆証明に使っていない。36既存unified+14後続個別=50validators across runs。
 T非零探索は大きな10変数Groebner出力を直接追わず、middleの残余3×4 rank1を単元pivotでパラメータ化する。private a16=s≠0 chartではa17=λ(ω+1)s,a15=λ²(ω+1)s,a6=λr,a12=λh,a7=r+κs,a11=λh+κλs,a8=(ω+1)A+κr,a3=(ω+1)A+κ(r−h),a9=r,a13=h,a2=A。Schur条件からλ4=ω。λ=ωならh=r、λ=−ωならκ0で他Schur全式が零。λ=±iω型、s0境界は未整理。T=s1の二型をGF109で各5標本検算し、四つはdegree3/4 dims20/35,正常核零、全零r/A等では23/55かつ正常核零。標本のみなので全値除外とはしていない。plus型のexact Q(ω)(A,r,κ)正常行列をprivate unit_onezero_plus_exact.pyで構成中（degree3まで到達、degree4未了）。これはT,sの全値正規化をまだ証明していない限定sliceで、全atlasの被覆と混同しない。
 次はT0の射影退化閉集合又は上のT非零rank1chartの正常核。非単位重複rootの22tensor、四単純、全CY、成分/相対降下も未完。新規as4輸入なし。
+
+## 重複1の片方零結合もT0全排除（v267）
+前節の射影条件はT0で自動的に成立する。even cross列R=(a2,a6,−a11,a15),S=(a3,a7,−a13,a16)はrank1。R0ならmiddle最初二行の最後二列が零、domainが強制するUb射影rank2から全行の最後二列が零となる。a8,a9,a12,a17=0となって第二行零、矛盾。S0もbU射影rank2から第四行零の矛盾。従ってR=ρS、ρ非零。純U関係Q=[[a3,a7],[−a13,a16]]はdomainからdetQ非零。元middleのminor M[(bx,by),(xc,yc)]=(ω+1)²detQ、M[(xb,yb),(cx,cy)]=ρ²detQ。従ってc-mixed両射影可逆で、bc/cb両係数も非零。前節のAS2–Ore認識と既存curvature因子障害で全T0を排除。
+この通常証明を同じonezero_projection節へ系として統合、元二minorとR0/S0強制零行を公開checkerでdefault Sympy exact PASS。v267主原稿LuaLaTeX PASS clean。全unit-repeat残余は片方零結合かつT≠0のみ。非単位重複root22tensor/四単純/全CY/成分/相対降下は未完。
+次はT≠0。a16非零rank1chartのλ=±ω等を整理し、正常核を判定する。限定T=s1,λ=ω,h=rのexact3parameter sliceはdegree4まで商dims20/35を構成済み。DomainMatrix.rankは係数膨張で約4分停止したため中断し、最小次数のpivotを選ぶ8列sparse normal消去へ変更して再計算中。有限体10標本のnormal核零を全値証明にせず、s0/λ=±iω/係数零の境界を保持する。今の最優先はこのT非零残余の必要被覆である。

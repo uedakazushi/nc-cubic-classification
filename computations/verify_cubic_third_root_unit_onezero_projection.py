@@ -37,6 +37,16 @@ left,right=minors([0,1]),minors([3,4])
 assert any(left) and any(right)
 # A right/left projection is invertible at rank2 points iff one listed minor
 # is nonzero; no unrecorded generic pivot choice is made.
-out={'status':'PASS','normalization':'P=(1,0),Q0,S0','pure_c_quotient':'k[c] at all parameters','middle_rows':['xb','yb','bx','by','cc'],'middle_columns':['xc','yc','bb','cx','cy'],'middle':[[str(v) for v in M.row(i)] for i in range(5)],'even_basis':['xx','xy','yx','yy','bc','cb'],'even':[[str(v) for v in H0.row(i)] for i in range(6)],'c_left_projection_minors':[str(v) for v in left],'c_right_projection_minors':[str(v) for v in right],'T0_cross_block':[[str(v) for v in R.row(i)] for i in range(4)],'ordinary_proof':'T0 rank2 even gives cross rank1; domain gives AS2 pure relation and invertible b projections; c projection conditions and both nonzero cross columns give actual curved Ore by spanning and full AS4 Hilbert equality','not_claimed':['all one-zero atlas covered','Tnonzero excluded','projection degeneracies excluded','complete H3 classification']}
+rho=s.Symbol('rho')
+qdet=a[3]*a[16]+a[7]*a[13]
+assert red(M.extract([2,3],[0,1]).det()-(O+1)**2*qdet)==0
+prop={a[2]:rho*a[3],a[6]:rho*a[7],a[11]:rho*a[13],a[15]:rho*a[16]}
+assert red(M.extract([0,1],[3,4]).det().subs(prop)-rho**2*qdet)==0
+# Vanishing one cross column and the forced opposite projections annihilates
+# a required b-mixed basis row, exactly as in the ordinary proof.
+zeros={a[j]:0 for j in [8,9,12,17]}
+assert M[1,:].subs({a[j]:0 for j in [2,6,11,15]}).subs(zeros)==s.zeros(1,5)
+assert M[3,:].subs({a[j]:0 for j in [3,7,13,16]}).subs(zeros)==s.zeros(1,5)
+out={'status':'PASS','normalization':'P=(1,0),Q0,S0','pure_c_quotient':'k[c] at all parameters','middle_rows':['xb','yb','bx','by','cc'],'middle_columns':['xc','yc','bb','cx','cy'],'middle':[[str(v) for v in M.row(i)] for i in range(5)],'even_basis':['xx','xy','yx','yy','bc','cb'],'even':[[str(v) for v in H0.row(i)] for i in range(6)],'c_left_projection_minors':[str(v) for v in left],'c_right_projection_minors':[str(v) for v in right],'T0_cross_block':[[str(v) for v in R.row(i)] for i in range(4)],'ordinary_proof':'T0 rank2 even gives cross rank1; domain gives AS2 pure relation and invertible b projections; c projection conditions and both nonzero cross columns give actual curved Ore by spanning and full AS4 Hilbert equality','T0_full_exclusion':'domain forces both cross columns nonzero and nondegenerate pure Q; displayed minors force both c projections invertible; ordinary Ore recognition then excludes allT0','not_claimed':['all one-zero atlas covered','Tnonzero excluded','complete H3 classification']}
 Path(__file__).with_name('cubic_third_root_unit_onezero_projection_certificate.json').write_text(json.dumps(out,indent=2)+'\n')
 print('PASS original22 onezero blocks and all projection minors')
