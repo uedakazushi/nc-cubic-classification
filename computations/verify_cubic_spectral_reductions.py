@@ -41,6 +41,7 @@ CHECKS=[
  'verify_cubic_third_root_unit_boundary_L_incidence.py',
  'verify_cubic_third_root_unit_boundary_L_PI.py',
  'verify_cubic_third_root_unit_boundary_L_finite_center.py',
+ 'verify_cubic_third_root_unit_boundary_L_finite_CSA.py',
 ]
 results=[]
 for name in CHECKS:

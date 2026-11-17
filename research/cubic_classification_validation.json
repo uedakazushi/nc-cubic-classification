@@ -3121,9 +3121,33 @@
       "complete H3 classification"
     ],
     "executed_checks": [
-      "individual fresh exact center/module validator PASS",
-      "main LuaLaTeX running",
-      "full33 replay pending"
+      "individual exact recursive center/module validator PASS",
+      "main LuaLaTeX PASS after GK macro correction; overfull inline dimension list subsequently converted to table",
+      "all33 spectral validators PASS",
+      "git diff --check PASS"
+    ]
+  },
+  "third_root_unit_boundary_L_finite_CSA_v251": {
+    "status": "ordinary positive modular witness lift and generic CSA/full-center argument; fixed109 trace determinant and source matrix identities PASS",
+    "proof": "papers/sections/cubic_third_root_unit_boundary_L_finite_CSA.tex",
+    "validator": "computations/verify_cubic_third_root_unit_boundary_L_finite_CSA.py",
+    "certificate": "computations/cubic_third_root_unit_boundary_L_finite_CSA_certificate.json",
+    "results": [
+      "fixed E2/u1/v0 all6 embeddings: full center K[x,Psi,z9] and prime generic CSA degree9",
+      "affine normal cut U prime, full center k[psi,z], PI degree9",
+      "over algclosedchar0 R domain iff Brauer period9"
+    ],
+    "not_claimed": [
+      "period9 or3 decided",
+      "U finite global dimension or H3 admissible",
+      "all parameter center classification",
+      "complete H3 classification"
+    ],
+    "executed_checks": [
+      "positive109 source/center/trace validator PASS; center1, trace determinant45",
+      "main LuaLaTeX PASS; inline dimension-list overfull corrected to table, no overfull/undefined references/citations",
+      "full34 replay running, not yet recorded PASS",
+      "git diff --check PASS"
     ]
   }
 }

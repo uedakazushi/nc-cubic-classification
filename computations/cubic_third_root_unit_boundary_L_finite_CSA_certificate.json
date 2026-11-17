@@ -1,0 +1,35 @@
+{
+  "prime": 109,
+  "root_t": 15,
+  "omega": 63,
+  "central_fiber_Psi": 0,
+  "central_fiber_Z": 1,
+  "fiber_dimensions_12_13": [
+    81,
+    81
+  ],
+  "fiber_center_dimension": 1,
+  "trace_rank": 81,
+  "trace_determinant": 45,
+  "trace_gram_integer_bound": 944784,
+  "matrix_size": 81,
+  "status": "PASS",
+  "scope": "positive nonzero modular minors and trace determinant lift to the characteristic-zero finite-free central family; no modular zero-rank extrapolation",
+  "numpy_version": "2.3.5",
+  "integer_arithmetic": "int64 entries reduced mod109 after every product, max dot bound81*108^2<2^63",
+  "Gram_sha256": "a4e3f270695e5f6a2565f092130b480960f4f9492df72d57a8b8c5fc463457cf",
+  "source_certificate": "cubic_third_root_unit_boundary_L_finite_center_certificate.json",
+  "lift_argument": "free rank81 proved in characteristic zero; selected fiber quotient pivots are nonzero mod109, hence same basis lifts; center80-minor and nonzero trace determinant remain nonzero",
+  "conclusions": [
+    "full center of fixed C/G is K[x,Psi,z9]",
+    "center generic algebra is central simple of degree9",
+    "fixed affine U is prime, full center k[psi,z], PI degree9"
+  ],
+  "not_claimed": [
+    "generic algebra division",
+    "Brauer period9 or3",
+    "H3 admissible",
+    "same conclusion for all parameters",
+    "complete H3 classification"
+  ]
+}
