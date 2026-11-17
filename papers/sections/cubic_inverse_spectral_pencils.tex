@@ -1,0 +1,80 @@
+\subsection{相反スペクトルpencilの二次関係による縮小}
+\label{subsec:cubic-inverse-spectral-pencils}
+\begin{lemma}[二次関係の相反重み対称性]
+\label{lem:cubic-relation-reciprocal-weights}
+AS4型14641包絡の二次関係空間を $I_2$ とする。
+中山半単純部分の $I_2$ 上の重み $\chi$ の重複度は、$\chi^{-1}$ の重複度に等しい。
+\end{lemma}
+\begin{proof}
+Koszul双対 $E=B^!$ はFrobeniusで、$E_2=I_2^*$、$\dim E_4=1$。
+前節の $\mu_B^{\otimes4}w=w$ より、$\mu_B$ から誘導される双対作用は $E_4$ 上で恒等。
+従って半単純作用に不変なperfect pairing $E_2\times E_2\to E_4$ は
+互いに逆の重みだけを対にする。双対に戻して結論を得る。
+\end{proof}
+
+\begin{proposition}[重複固有値が非自明な相反pencilの排除]
+\label{prop:cubic-inverse-pencil-nonunit-repeated-empty}
+中山半単純スペクトルが $(z,z,1,z^{-1})$ であり、
+$z^n\ne1$ ($1\le n\le4$) なら、AS4型14641整域包絡は存在しない。
+H3の正常三次を仮定する必要もない。
+\end{proposition}
+\begin{proof}
+固有空間を $U\oplus kb\oplus kc$、$\dim U=2$ とする。
+二次tensorの相異なる五重みと空間は
+\[
+\begin{array}{c|ccccc}
+\chi&z^2&z&1&z^{-1}&z^{-2}\\\hline
+ &U^2&Ub+bU&Uc+cU+kb^2&kbc+kcb&kc^2.
+\end{array}
+\]
+整域性から $kc^2$ に関係はなく、前補題により $U^2$ にも関係はない。
+$kbc+kcb$ の関係次元は高々1、従って $Ub+bU$ の関係次元も高々1。
+重み1の関係空間 $J$ について、$Uc$ への射影の核は $cU+kb^2$ に含まれる。
+その核から $kb^2$ への射影は単射である。
+実際、$cU$ の任意の非零元は一次元の積であり関係には入らない。
+従って $\dim J\le\dim Uc+\dim kb^2=3$。
+全二次関係数は高々 $0+1+3+1+0=5$ となり、必要な6に矛盾する。
+\end{proof}
+
+\begin{theorem}[三固有値の非有限部分は重複固有値1のpencilのみ]
+\label{thm:cubic-three-spectrum-one-pencil}
+三つの相異なる中山半単純固有値を持つH3包絡のスペクトルは、
+全固有値が共通 $N$ 乗根となる $1\le N\le24$ の有限集合、又は
+\[
+ (1,1,z,z^{-1}),\qquad z\ne\pm1
+\]
+で覆われる。この結論は単冪部分を持つ中山にも適用する。
+\end{theorem}
+\begin{proof}
+定理\ref{thm:cubic-three-spectrum-torsion-pencil}の第三pencilで $z$ の位数が4以下なら
+有限集合に含まれ、それ以外は前命題で包絡自体が存在しない。
+\end{proof}
+
+\begin{proposition}[残るpencilの必要な関係atlas]
+\label{prop:cubic-unit-repeated-pencil-relations}
+中山半単純スペクトル $(1,1,z,z^{-1})$ のAS4型14641整域について、
+$z^n\ne1$ ($1\le n\le4$) とする。
+$U=\langle x,y\rangle$ を重複固有空間、$b,c$ を単純固有基底とすると、
+二次関係は
+\[
+ b u=f(u)b,\quad c u=g(u)c\quad(u\in U),\qquad
+ r_i(U)+\alpha_i bc+\beta_i cb=0\quad(i=1,2)
+\]
+という形に限られる。ここで $f,g\in\operatorname{GL}(U)$、最後の二関係は独立。
+$2\times2$ 行列 $(\alpha_i,\beta_i)$ の階数は1又は2である。
+階数1では純 $U$ 関係がちょうど一本、階数2では純 $U$ 関係はない。
+$f,g$ の可換性やAS4十分性はここでは仮定・結論しない。
+\end{proposition}
+\begin{proof}
+二次の五重み空間は
+$U^2+kbc+kcb$、$Ub+bU$、$Uc+cU$、$kb^2$、$kc^2$ である。
+最後の二つには整域性から関係がない。
+相反重み対称性から、中央二空間の関係次元は等しく、これを $r$ とする。
+各projectionが単射なので $r\le2$。
+重み1の関係次元を $s$ とすると、$bc,cb$ 成分への射影の核は $U^2$ に含まれる。
+二元tensorでrank-oneを含まない部分空間は高々一次元なので $s\le3$。
+$6=s+2r$ より $s=2,r=2$ が強制される。
+二つのmixed関係は両projectionが同型のgraphとなり、$f,g$ は可逆。
+最後の二関係の $bc,cb$ 射影が零なら $U^2$ に二次元の関係空間ができ、整域性に反する。
+従ってその射影階数は1又は2で、核次元から最後の主張を得る。
+\end{proof}

@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "scope": "exact character counts and finite integer dimension constraints; ordinary Frobenius/domain proof separate",
+  "quadratic_weight_dimensions": {
+    "unit_repeated": {
+      "-2": 1,
+      "-1": 4,
+      "0": 6,
+      "1": 4,
+      "2": 1
+    },
+    "nonunit_repeated": {
+      "-2": 1,
+      "-1": 2,
+      "0": 5,
+      "1": 4,
+      "2": 4
+    }
+  },
+  "unit_repeated_relation_dimensions_s_r": [
+    [
+      2,
+      2
+    ]
+  ],
+  "nonunit_repeated_maximum_number_of_relations": 5,
+  "possible_weight_collision_orders": [
+    1,
+    2,
+    3,
+    4
+  ]
+}

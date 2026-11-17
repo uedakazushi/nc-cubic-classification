@@ -2371,5 +2371,22 @@
       "finite torsion admissibility",
       "complete four-eigenvalue or CY classification"
     ]
+  },
+  "inverse_spectral_pencil_reduction_v216": {
+    "status": "ordinary Frobenius reciprocity and domain dimension proof; exact weight counts PASS",
+    "proof": "papers/sections/cubic_inverse_spectral_pencils.tex",
+    "validator": "computations/verify_cubic_inverse_spectral_pencils.py",
+    "certificate": "computations/cubic_inverse_spectral_pencils_certificate.json",
+    "results": [
+      "quadratic relation multiplicities reciprocal in semisimple Nakayama weights",
+      "(z,z,1,z^-1) impossible for domain AS4 if z has no order1..4",
+      "three-eigenvalue H3: finite common N<=24 or one pencil (1,1,z,z^-1)",
+      "one-pencil necessary graph atlas with even bc/cb projection rank1 or2, including Jordan Nakayama"
+    ],
+    "not_claimed": [
+      "H3 existence on remaining pencil",
+      "normal cubic kernel of two even-rank charts",
+      "finite torsion, four-eigenvalue or CY coverage"
+    ]
   }
 }
