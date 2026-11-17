@@ -1,0 +1,62 @@
+\subsection{正常一次境界の非零 $y^2$ 項：稠密開集合の排除}
+\label{subsec:cubic-third-root-unit-normal-boundary-open}
+\begin{theorem}[正常一次境界商の開集合障害]
+\label{thm:cubic-third-root-unit-normal-boundary-open}
+前定理の六係数表示で $w\ne0$ とする。
+生成元のscalar変更で $w=1$ とした後、以下の多項式を定義する：
+\begin{align*}
+ L&=D^3+\omega E^3+\omega^2,\\
+ C_j&=D^2E+\omega^{-j}D+\omega^j E^2\quad(j=0,1,2),\\
+ \Delta&=DE(D^3-E^3)(E^3-1)
+ (D^3+\omega E^3)(D^3+\omega^2E^3)C_0C_1C_2L.
+\end{align*}
+$\Delta\ne0$ ならH3切断は存在しない。これは非空稠密開集合の排除であり、
+$\Delta=0$ の曲線又は $w=0$ の全排除ではない。
+\end{theorem}
+\begin{proof}
+$y\mapsto s y,b\mapsto r b,c\mapsto r c$ とし、$\gamma=r/s$ と置くと、
+三生成元境界商の新係数は $D'=\gamma D,E'=\gamma E,w'=\gamma^3w$。
+従って代数閉体上で $w'=1$ にでき、四生成元の六関係の形も保たれる。
+$x$ は正常正則なので、$S=B/(x)$ は三関係
+\[
+ Dyb+Eby+c^2=0,\qquad Eyc+Dcy+b^2=0,\qquad
+ Dbc+Ecb+y^2=0
+\tag{*}
+\]
+を持つ。
+H3の候補 $G$ の像 $\overline G$ が零なら $G\in xB_2$ で非整域切断となる。
+従って $\overline G\ne0$ が必要であり、これは中山固定部分の中で
+\[
+ \overline Gy=y\overline G,\quad
+ \overline Gb=\omega^2b\overline G,\quad
+ \overline Gc=\omega c\overline G
+\tag{**}
+\]
+を満たさなければならない。
+
+元の $(*)$ の三次・四次関係挿入行列を
+$\mathbb Q(\omega)(D,E)$ 上で消去する。
+それぞれrank17,66であり、商次元は10,15。
+全83個の関係pivotの分子・分母の非定数因子は $\Delta$ の因子に限る。
+これは因数分解の推測でなく、各分子・分母を $\Delta$ とのgcdで逐次割り切り、
+残りが定数となることを公開検証器で確かめる。
+従って $\Delta\ne0$ の全点で同じ商基底を使える。
+中山固定三次の自由基底は $b^3,bcy,cby,c^3$ の四つ。
+
+$(**)$ の全係数行列を作り、最初の三つのpivotで三係数を消去する。
+これらのpivotも分子・分母が $\Delta$ 上だけで消える。
+残る第四係数に対して九つの残差 $r_i\in\mathbb Q(\omega)(D,E)$ が得られる。
+$r_i$ の分母も全て $\Delta$ 上だけで消える。
+その分子を $n_i$ とし、$I=(n_1,\ldots,n_9)$ と置く。
+元の九分子から計算したGroebner基底でexactに
+\[
+ \bigl(E(E^3-1)L\bigr)^3\in I
+\tag{***}
+\]
+となる。基底の全係数、元行列からの再生、$(***)$ の零剰余をcertificateと検証器に保持する。
+$\Delta\ne0$ なら $(***)$ の左辺は非零なので、全 $r_i$ が同時に零になることはない。
+従って第四係数も零、正常核は零。
+これは一点のrank4を一般化した議論ではなく、全pivot単元性と残差イデアルによる開集合全体の証明である。
+$u,v,Z$ は $(*)$ に現れないので、それらの全値を同時に排除する。
+なお $D=2,E=3$ では $\Delta\ne0$ であり、開集合は非空。
+\end{proof}

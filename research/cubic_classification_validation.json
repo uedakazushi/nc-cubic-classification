@@ -2983,5 +2983,28 @@
       "main LuaLaTeX PASS; no overfull/undefined references/citations",
       "git diff --check PASS"
     ]
+  },
+  "third_root_unit_normal_boundary_open_v246": {
+    "status": "ordinary dense-open normal-linear boundary obstruction; exact original relation module pivots and residual Groebner membership PASS",
+    "proof": "papers/sections/cubic_third_root_unit_normal_boundary_open.tex",
+    "validator": "computations/verify_cubic_third_root_unit_normal_boundary_open.py",
+    "certificate": "computations/cubic_third_root_unit_normal_boundary_open_certificate.json",
+    "results": [
+      "w nonzero normalized to1; explicit nonempty Delta-open excluded for all u,v,Z",
+      "all83 relation pivots, three normal pivots supported on Delta",
+      "nine residual numerator ideal contains (E*(E^3-1)*L)^3"
+    ],
+    "not_claimed": [
+      "all Delta-zero boundary curves excluded",
+      "w0 boundary covered",
+      "generic L normal lift H3 admissible",
+      "complete H3 classification"
+    ],
+    "executed_checks": [
+      "all30 spectral validators PASS",
+      "main LuaLaTeX PASS; no overfull/undefined references/citations",
+      "fresh generic L exploratory script PASS; only function-field and first-order statements",
+      "git diff --check PASS"
+    ]
   }
 }

@@ -1382,10 +1382,10 @@ python computations/verify_cubic_order2_22_secant_L_saturation.py --prefix /tmp/
 - 位数4：`cubic_fourth_root_spectrum_reductions.tex`。四奇数重み−1パターンを除き、(1,1,i,-i)を既述charge0障害で排除。
 - 最後の位数6：`cubic_sixth_root_last_Ore_exclusion.tex`。正常bでB=A[b;sigma]、coneでb³係数非零が必要。正常式からsigma³=muB^-1|A、muA=sigma^-2、hdet sigma1。sigmaUの同一固有値は最高AS3cubicのslice退化、相異なる場合は(a,a*omega),a³omega²、sigma c=-a*omega^k。最高tensorの固定orbitを直接列挙しk0だけ残る。Aはx²=kappa*c²,yx=-a²xy,yc=-a²cy、sigma=(a,a*omega,-a)。sigma固定A3はkx²y一本だが正常x残差(-a²-omega²)x³yが非零、従って全Gはkb³で非整域。先行AS3完全分類を輸入していない。QQ(a),Phi9で全tensor slice、固定A3 rank9、元の正常残差をexact PASS。単冪sigma候補もslice退化で排除。
 
-### 現在の残余：半単純・位数3の3スペクトル（v245）
+### 現在の残余：半単純・位数3の3スペクトル（v246）
 三固有値H3の中山は半単純であり、位数3のみ。必要リストはN3:3個で、各関係重みパターンは一つ。Galoisラベル2軌道の代表(N;a,b,c)、重複2を先頭、単純二固有値を昇順に書く：
 (3;0,1,2),(3;1,0,2)。
-Galoisラベルはk線型同値の商ではない。3候補のAS4存在・正常三次・H3許容性は未分類。全リストと現在値は `computations/cubic_fourth_root_last_negative_simple_certificate.json`。再生は `python computations/verify_cubic_spectral_reductions.py`、29検証器のPASSは有限計算であり通常の全証明の独立機械検証ではない。
+Galoisラベルはk線型同値の商ではない。3候補のAS4存在・正常三次・H3許容性は未分類。全リストと現在値は `computations/cubic_fourth_root_last_negative_simple_certificate.json`。再生は `python computations/verify_cubic_spectral_reductions.py`、30検証器のPASSは有限計算であり通常の全証明の独立機械検証ではない。
 N4(2,1,3)は `cubic_fourth_root_negative_repeat_exclusion.tex` で全排除。G=F b²+L c²、domainにF,L独立が必要。even rank2はS2自由なのでF f²(u)=mu^-1(u)Fが不可能。rank1はAS2 Oreへ復元し、可換はf=gとh0でskewへ、JordanはF,Lが同一正常線で因子、量子反対角はscalar linear normalizerなし、量子対角はF=x,L=y、alpha=i,alpha*gamma=-pとgamma²=-pからp1を強制。単冪中山込み。公開検証器が元Jordan relationのminorとkernel、量子のp(1-p)矛盾、free-tensor augmented rankをexact PASS。
 
 次の課題：残る二Galoisラベルの必要最高tensor atlasと正常核。
@@ -1438,7 +1438,9 @@ x局所化degree0のB=b*x^-1,C=c*x^-1,Y=y*x^-1でQ=q*omega,kappa=omega²、BC-QC
 even元blockを本文に全表示。T非零はSchur0からa1=a5=a40,D²=omega²E²,a0=A(D+omegaE)/T。D=E0は(x,c)商free<y,b>/(b²)で非AS4。その他D=eps*omega*E、q=-eps*omega²,h=-(1+eps)A/T、yx=xy+(A/D)x²+(T/D)bcの実量子Weyl基底Ore表示へ。標準語数とAS4 Hilbert値からPBW/Oreの実在を証明し、delta x非零障害で全H3なし。
 T0,A非零はcross rank1がE=-omega²Dを強制。D0は純x²で非整域。D非零はeven rank2のbinary分解でa0=a1=a4=a50、even像はA*x²+D[x,y]とbc-omega²cb。qomega²,h0,delta x=(A/D)x²の実Oreに入り排除。従って両非零比例結合H3はT=A0に限る。
 T=A0,D=E0ならI0が二次元純U²なので二次形式pencilにdecomposableがあり整域矛盾。よって(D,E)非同時零。rank2からa10、even像は[x,y]とD bc+E cb+u x²+v xy+w y²。全必要候補は6係数(D,E,Z,u,v,w)の六関係：xy=yx,xb=omega²bx,xc=omega*cx,Dyb+Eby+c²+omegaZxb0,Eyc+Dcy+b²+Zxc0,D bc+E cb+u x²+v xy+w y²0。D0/E0を捨てず元top像一致を公開exact検算。xは正常、正常化mu^-1。AS4十分性/H3許容性/同型は未分類。
-次の最小課題：この正常一次境界でGがx因子を持たないためには、S=B/(x)の正常核（中山逆指標）が非零であることが必要。Sの三関係はDyb+Eby+c²,Eyc+Dcy+b²,Dbc+Ecb+w y²。w非零はscalarでw1へ、D/E二変数の三次/四次商と四係数正常核を解析する。generic消去はS3dim10,S4dim15を確認したが、全例外曲線/正常核はまだ未公表。w0は既存split A_qと同型に正規化できる（D/E非零）、量子Weyl基底を持つ全Bへの被覆とは混同しない。片方零結合のmixed退化、非単位重複根atlas、全CY/四単純/成分/降下も未完成。
+正常一次境界の稠密開集合排除（v246）：`cubic_third_root_unit_normal_boundary_open.tex`。w非零をscalarでw1へ。S=B/xの三関係Dyb+Eby+c²,Eyc+Dcy+b²,Dbc+Ecb+y²から元次数3/4挿入を消去しdim10/15、全83pivotを再生。L=D³+omega*E³+omega²、Cj=D²E+omega^(-j)D+omega^j E²、Δ=D*E*(D³-E³)*(E³-1)*(D³+omegaE³)*(D³+omega²E³)*C0C1C2*L。全関係pivotと正常3pivotの分子/分母がΔ上だけで消えることを逐次gcd割切りでexact確認。固定三次基底b³,bcy,cby,c³、三pivot後の九残差分子idealに(E*(E³-1)*L)^3が入りGroebner零剰余。よって全Δ非零点で正常rank4、Gbar0、Gにx因子がありH3なし。u,v,Z全値同時。D2E3で開非空。Δ零やw0へ一般点rankを外挿しない。
+次の最小課題：Δ零各曲線/交点の全被覆、特にL=0の正常三次のx進持上げ。`computations/explore_cubic_third_root_boundary_L.py` は関数体QQ(omega)(E)[d]/(d³+omega*E³+omega²)でS3/S4dim10/15、正常rank3（一本）と最初のx進持上げをexact探索する。補助 `cubic_function_extension.py` の逆元はcubic norm/adjugate恒等式を毎回確認し、FracElementの非monic定数分数を構造比較せず差の零で比較。L曲線の全閉点、AS4十分性、正常三次の全次数持上げやH3許容性は未証明。
+探索ではx²0まで、二つの補正G2*xと二変形Z/vを同時に四列で解き、rank2なので第一x次数には障害がない。これはH3の存在を示さない。次はy shearでZを消した後、u*x²/v*xyの第二/第三x次数の持上げ、全正常商の整域性/PI位数を調べる。w0はD/E非零なら既存split A_qへ正規化できるが、全Bの量子Weyl基底被覆とは別問題。片方零結合、非単位重複根atlas、全CY/四単純/成分/降下も未完成。
 四単純の新しい全除外chart（v228）：`cubic_detminus1_spectral_exclusion.tex`。as4固定6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0のREADME、plan、COVERAGE、該当CLAIMS、DETMINUS1全文・自己監査・certificate状態を確認。nu=mu^-1なのでa→a^-1と後二基底交換で同じmu-chartになる。四族被覆/AS十分性/同型は輸入せず、H3域に次の直接証明を与えた。
 mu=(a,-a,i/a,-i/a),a4≠±1ではU²,mixed,V²の二次重みが分離して二重次数が存在。各平面に関係がなければ自由二生成の次数7が128でAS4値120を超え、domainなら純二元関係は高々一本なので両平面はAS2。混合三次の重み±ia,±a^-1は1にならず、純U三次重み1はa6=1、純Vはa6=-1を要して同時に起きない。従って全Gは片方のAS2純三次となり因子化、H3なし。a4=-1境界は既証二固有値必要集合±1に反し空、残るa4=1境界は四単純集合{1,-1,i,-i}のみで未分類。全det負一又は全四単純をこのchartが覆うとは主張しない。公開verifierは全パラメータLaurent多項式の非零因子・共鳴・境界特性多項式と128>120をexact PASS。出典/仮定/未実行の上流検算はas4_imports.jsonに記録。
 四単純の残る共鳴上の全被覆、全CY、全成分・境界、intrinsic族降下は依然未完。

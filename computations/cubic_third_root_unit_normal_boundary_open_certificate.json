@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "scope": "original three relations degree3/4 row modules, complete pivot support, three normal pivots and residual-ideal open cover",
+  "w_normalization": 1,
+  "original_S3_S4_dimensions": [
+    10,
+    15
+  ],
+  "relation_pivot_count": 83,
+  "first_normal_pivot_count": 3,
+  "last_residual_count": 9,
+  "dense_open_Delta_factor_list": [
+    "D",
+    "E",
+    "D**3 - E**3",
+    "E**3 - 1",
+    "D**3 + E**3*CRootOf(z**2 + z + 1, 1)",
+    "D**3 + E**3*CRootOf(z**2 + z + 1, 1)**2",
+    "D**2*E + D + E**2",
+    "D**2*E + D*CRootOf(z**2 + z + 1, 1)**2 + E**2*CRootOf(z**2 + z + 1, 1)",
+    "D**2*E + D*CRootOf(z**2 + z + 1, 1) + E**2*CRootOf(z**2 + z + 1, 1)**2",
+    "D**3 + E**3*CRootOf(z**2 + z + 1, 1) + CRootOf(z**2 + z + 1, 1)**2"
+  ],
+  "normal_coefficient_basis": [
+    "bbb",
+    "bcy",
+    "cby",
+    "ccc"
+  ],
+  "residual_Groebner_basis": [
+    "D**3 + E**12*(1 + CRootOf(z**2 + z + 1, 1)) + E**9*(-2 - 2*CRootOf(z**2 + z + 1, 1)) + E**6 + E**3*(-1 + CRootOf(z**2 + z + 1, 1))",
+    "D**2*E**13 + D**2*E**10*(-2 + CRootOf(z**2 + z + 1, 1)) - 3*D**2*E**7*CRootOf(z**2 + z + 1, 1) + D**2*E**4*(2 + 3*CRootOf(z**2 + z + 1, 1)) + D**2*E*(-1 - CRootOf(z**2 + z + 1, 1))",
+    "D*E**14 + D*E**11*(-2 + CRootOf(z**2 + z + 1, 1)) - 3*D*E**8*CRootOf(z**2 + z + 1, 1) + D*E**5*(2 + 3*CRootOf(z**2 + z + 1, 1)) + D*E**2*(-1 - CRootOf(z**2 + z + 1, 1))",
+    "E**15 + E**12*(-2 + CRootOf(z**2 + z + 1, 1)) - 3*E**9*CRootOf(z**2 + z + 1, 1) + E**6*(2 + 3*CRootOf(z**2 + z + 1, 1)) + E**3*(-1 - CRootOf(z**2 + z + 1, 1))"
+  ],
+  "open_cover_identity": "(E*(E^3-1)*(D^3+omega*E^3+omega^2))^3 in ideal(all nine residual numerators)",
+  "normal_rank_on_Delta_nonzero": 4,
+  "not_claimed": [
+    "all exceptional Delta-zero curves excluded",
+    "w0 boundary covered",
+    "all proportional couplings classified",
+    "complete H3 classification"
+  ]
+}
