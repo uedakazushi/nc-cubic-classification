@@ -1,0 +1,161 @@
+\subsection{片方零結合の完成と重複1スペクトルの排除}
+\label{subsec:cubic-third-root-unit-onezero-completion}
+\begin{lemma}[正常 $b$ の固有値障害]
+\label{lem:cubic-third-root-unit-normal-b-spectrum}
+$B$ を整域、$\mu=(1,1,\omega,\omega^2)$ とし、$b$ が正常であるとする。
+その正常化 $ba=\phi(a)b$ が
+\[
+ \phi(x)=\omega x,\quad
+ \phi(y)=\varepsilon\omega y+\eta x,\quad
+ \phi(b)=b,\quad\phi(c)=\varepsilon\omega^2c,
+ \qquad\varepsilon\in\{1,-1\}
+\]
+なら、H3候補正常三次は零である。
+\end{lemma}
+\begin{proof}
+$\phi$ は $\mu$ と可換である。
+$B_3^\mu$ は、語型 $U^3,Ubc,b^3,c^3$ の像で張られる。
+$\phi$ を三角化すると、これらの各語の対角固有値は全て $\pm1$ である。
+Jordan補正 $\eta$ は固有値を変えない。
+従って商空間 $B_3^\mu$ にも固有値 $\omega$ は存在しない。
+一方、H3正常式 $Gb=\omega^2bG$ と右 $b$ の消去は
+$\phi(G)=\omega G$ を与えるので、$G=0$ となる。
+\end{proof}
+
+\begin{proposition}[量子Weyl基底Ore表示の非零 $\delta(x)$ 障害]
+\label{prop:cubic-third-root-unit-onecurved-F}
+基底 $A'=k\langle x,b,c\rangle$ が
+\[
+ xb=\omega^2bx,\quad xc=\omega cx,\quad bc-qcb=h x^2,
+ \qquad q\ne0
+\]
+というAS3量子Weyl代数であり、$B=A'[y;\sigma,\delta]$ が実際のOre表示を持つとする。
+$\mu_B=(1,1,\omega,\omega^2)$、
+$\sigma(x,b,c)=(x,qb,q^{-1}c)$、
+$0\ne\delta(x)\in\langle x^2,bc\rangle$ なら、H3切断は存在しない。
+$\delta(b)$ の $c^2$ 係数の非零性は不要である。
+\end{proposition}
+\begin{proof}
+定理\ref{thm:cubic-third-root-unit-normalx-Ore-cover-empty}の
+$F=\delta(x)\ne0$ の段落は、この仮定だけで成立するが、要点を記す。
+中山固定 $G=\sum a_jy^j$ の全 $a_j$ は $x$ と可換で、$\sigma(F)=F$。
+$[G,x]$ の最高 $y^{N-1}$ 係数は $Na_NF$ なので $N>0$ は不可能。
+従って $G\in A'_3$。
+$x=0$ の量子平面で $G$ の単項式 $b^rc^s$、$r+s=3$ の正常条件は
+$q^r=q^s=\omega$ となり、整数対の全四通りで不可能である。
+従って $G\in xA'_2$、整域切断は得られない。
+\end{proof}
+
+\begin{theorem}[片方零結合の全残余排除]
+\label{thm:cubic-third-root-unit-onezero-complete}
+$P=(1,0),Q=S=0,T\ne0$ の全層はH3を与えない。
+従って重複1の三乗根スペクトル $(1,1,\omega,\omega^2)$ は全て排除される。
+\end{theorem}
+\begin{proof}
+まず $a_{16}\ne0$ とする。前節のrank-one表示と正規化 $T=s=1$ を使う。
+Schur条件 $\lambda^4=\omega$ の四根は
+$\lambda=\omega,-\omega,i\omega,-i\omega$ である。
+$\lambda=\omega$ は前定理で全値排除済みである。
+
+$\lambda=-\omega$ ではSchur条件から $\kappa=0$ となり、$A,r,h$ は残る。
+evenのcross列は $R=-\omega S$ である。
+元middleの $b^2$ 列、$yc$ 列とその差、evenの $bc,cb$ 列の和から、正確に
+\[
+ xb=\omega^2bx,\quad yb=\omega^2by,\quad bc=\omega^2cb
+\]
+を得る。これらの元列恒等式で使う分母は $s,T$ だけである。
+従って $b$ は補題\ref{lem:cubic-third-root-unit-normal-b-spectrum}の
+$\varepsilon=1,\eta=0$ の正常元となり、H3はない。
+
+$\lambda=i\omega$ ではSchur条件から
+\[
+ h=r+i\kappa s,\quad
+ r=-\frac{1+i}{2}\kappa s,\quad
+ A=-\frac{i\omega}{2}\kappa^2s
+\]
+となる。実際、$xy,xy$ と $yx,yx$ の和は
+$4(\omega+1)(r+(1+i)\kappa s/2)^2$、
+これを零とした $x^2,y^2$ と $xy,yx$ の和は
+$-2(-A\omega s+i(\omega+1)\kappa^2s^2/2)$ である。
+残る必要式もこの表示で零となる。
+$T=s=1$ の後、残余scalar作用で $\kappa=1$ 又は0にできる。
+$\mathbb Q[t]/(t^4-t^2+1)$、$\omega=t^4,i=t^3$ で
+二つの元22tensorを新しく構成すると、どちらも三次商次元は23である。
+AS4の20に反するので両方とも除外される。
+$i$ の符号を変えた埋込みは $\lambda=-i\omega$ の全値を同時に覆う。
+これは算術埋込みによる全値検算であり、moduliの幾何学的同一視ではない。
+
+次に $a_{16}=0$ とする。Schurの $y^2,y^2$ 成分から $a_{15}=0$、
+middleのminorから $a_{17}=0$ が従う。
+$b$-mixedの $Ub,bU$ 射影は整域性から両方rank2である。
+従ってmiddleの $yb,by$ 行は共に非零で、
+$b^2$ pivot後のrank1条件から、ある $\lambda\ne0$ を用いて
+\[
+ a_9=r,\quad a_{13}=h,\quad
+ a_6=\lambda r,\quad a_7=r,\quad
+ a_{11}=a_{12}=\lambda h,\qquad (r,h)\ne(0,0)
+\]
+となる。$A=a_2,B_0=a_3,Z=a_8$ と書く。
+残るmiddle条件は、符号を含めて
+\[
+ r(B_0-Z)+h\bigl(Z-(\omega+1)A\bigr)=0.
+\tag{M0}
+\]
+Schur条件は
+\begin{gather*}
+ A^2=\omega^2B_0^2,\\
+ (\lambda^2-\omega^2)rh=0,\quad
+ (\lambda^2-\omega^2)(r^2+h^2)=0,\\
+ (A\lambda-\omega^2B_0)(r-h)=0.
+\end{gather*}
+従って $\lambda=\sigma\omega$、$\sigma=\pm1$、
+$A=\epsilon\omega B_0$、$\epsilon=\pm1$ に限る。
+
+$\epsilon=\sigma$ 又は $B_0=0$ なら、even crossは $R=\lambda S$。
+evenの元二列の差から $bc=-\sigma\omega^2cb$ となる。
+$b$-mixedの両射影は同型なので
+$bx=\omega xb,\ by=-\sigma\omega yb+\eta xb$ と書ける。
+従って $b$ は補題の $\varepsilon=-\sigma$ の正常元であり、H3はない。
+ここでは $r,h$ のいずれかを可逆化せず、Jordan補正も捨てていない。
+
+残るのは $B_0\ne0,\epsilon=-\sigma$。
+最後のSchur式から $h=r\ne0$ となり、(M0)から
+$B_0=(\omega+1)A$ が従う。
+従って $\epsilon=-1,\sigma=1$ だけが可能であり、
+\[
+ \lambda=\omega,\quad A=-\omega B_0,\quad h=r\ne0,
+ \quad B_0T\ne0
+\]
+となる。$Z$ は任意に残る。
+この場合、元六関係の像は正確に
+\begin{gather*}
+ xb=\omega^2bx,\quad xc=\omega cx,\quad
+ bc+\omega^2cb=\frac{2\omega B_0}{T}x^2,\\
+ yx=xy-\frac{B_0}{r}x^2+\frac{T}{\omega r}bc,\\
+ yb=-\omega^2by-\frac{Z-B_0}{\omega r}bx,\qquad
+ yc=-\omega cy-\frac1r b^2-\frac{Z+B_0}{r}xc
+\end{gather*}
+である。この像の一致は元22tensorとのrank6の掛け戻しでも確認する。
+$x<b<c<y$ の標準語はこれらで全語を張り、
+AS4の全Hilbert値との一致から独立となる。
+従って三生成元量子Weyl AS3基底上の実際のOre拡大である。
+$\sigma=(1,-\omega^2,-\omega)$ であり、
+\[
+ 0\ne\delta(x)=-\frac{B_0}{r}x^2+\frac{T}{\omega r}bc
+\]
+となるので、前命題が適用できる。
+これで $a_{16}=0$ の全境界も排除される。
+
+$P=0,Q\ne0$ は $b,c$ の交換と $\omega\mapsto\omega^2$ で同じ証明に入る。
+$T=0$ は前系で排除済み、両結合非零比例も既に全値排除済みである。
+既存atlasのrank1必要被覆と合わせて、重複1スペクトル全体が空となる。
+公開再現器は \texttt{verify\_cubic\_third\_root\_unit\_onezero\_}\\
+\texttt{completion.py}。通常証明の代わりに有限標本を用いてはいない。
+\end{proof}
+
+\begin{corollary}[三固有値H3の新しい必要スペクトル]
+三固有値を持つH3の中山は半単純位数3であり、
+必要スペクトルは $(\omega,\omega,1,\omega^2)$ と
+$(\omega^2,\omega^2,1,\omega)$ の二つに限る。
+この二つの非単位重複根atlasの存在・全許容性は、まだ分類していない。
+\end{corollary}

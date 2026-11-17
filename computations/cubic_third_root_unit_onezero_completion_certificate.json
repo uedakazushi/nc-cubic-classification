@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "normal_b_spectral_check": [
+    {
+      "epsilon": 1,
+      "fixed_tensor_words": 22,
+      "eigenvalues": [
+        "1"
+      ]
+    },
+    {
+      "epsilon": -1,
+      "fixed_tensor_words": 22,
+      "eigenvalues": [
+        "-1",
+        "1"
+      ]
+    }
+  ],
+  "minus_explicit_source_normal_b_relations": "PASS with only s,T denominators",
+  "primitive4_lambda_field": "t^4-t^2+1, omega=t4,i=t3",
+  "primitive4_fresh": [
+    {
+      "k": 0,
+      "dimensions": [
+        1,
+        4,
+        10,
+        23
+      ],
+      "excluded": "degree3 is23, AS4 requires20"
+    },
+    {
+      "k": 1,
+      "dimensions": [
+        1,
+        4,
+        10,
+        23
+      ],
+      "excluded": "degree3 is23, AS4 requires20"
+    }
+  ],
+  "a16zero_residual_determinant": "r*(B-Z)+h*(Z-(omega+1)*A)=0",
+  "a16zero_Schur_identities": "PASS",
+  "crossed_branch_original_image_equals_actual_Ore_relations": "PASS; displayed relation unit6minor, originalH=displayedR*coordinates reinserted, all coordinate denominators supported onlyrT",
+  "crossed_F": "-B/r*x2+T/(omega*r)*bc nonzero",
+  "scope": "ordinary exhaustive onezero completion proof uses domain, full AS4 Hilbert series and previously proved Fnonzero Ore obstruction",
+  "not_claimed": [
+    "nonunit-repeat spectra excluded",
+    "complete H3 classification"
+  ]
+}
