@@ -40,6 +40,7 @@ CHECKS=[
  'verify_cubic_third_root_unit_normal_boundary_open.py',
  'verify_cubic_third_root_unit_boundary_L_incidence.py',
  'verify_cubic_third_root_unit_boundary_L_PI.py',
+ 'verify_cubic_third_root_unit_boundary_L_finite_center.py',
 ]
 results=[]
 for name in CHECKS:

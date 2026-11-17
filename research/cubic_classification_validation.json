@@ -3099,8 +3099,31 @@
     "executed_checks": [
       "individual scalar/order/growth validator PASS",
       "main LuaLaTeX PASS after GK macro correction; no overfull/undefined references/citations",
-      "full32 replay running, not yet recorded PASS",
+      "all32 spectral validators PASS",
       "git diff --check PASS"
+    ]
+  },
+  "third_root_unit_boundary_L_finite_center_v250": {
+    "status": "ordinary central-regular-sequence/free-module proof; fresh exact recursive relation/center/Artinian certificates PASS at all6 field embeddings",
+    "proof": "papers/sections/cubic_third_root_unit_boundary_L_finite_center.tex",
+    "validator": "computations/verify_cubic_third_root_unit_boundary_L_finite_center.py",
+    "certificate": "computations/cubic_third_root_unit_boundary_L_finite_center_certificate.json",
+    "results": [
+      "E2,u1,v0 exact ambient/cut center dimensions through degree9",
+      "central polynomial subring K[x,Psi,z9] with cut free rank81",
+      "all source relation left/right actions through10/10/13 and center kernel reinsertions PASS"
+    ],
+    "not_claimed": [
+      "all parameter center classification",
+      "full center equals displayed subring",
+      "PI degree9 inferred only from rank81",
+      "normal cut domain or H3 admissible",
+      "complete H3 classification"
+    ],
+    "executed_checks": [
+      "individual fresh exact center/module validator PASS",
+      "main LuaLaTeX running",
+      "full33 replay pending"
     ]
   }
 }
