@@ -79,6 +79,7 @@ CHECKS=[
  'verify_cubic_four_simple_zero_dimensional.py',
  'verify_cubic_four_simple_positive_rank.py',
  'verify_cubic_four_simple_positive_finite.py',
+ 'verify_cubic_four_simple_final_curves.py',
 ]
 results=[]
 for name in CHECKS:

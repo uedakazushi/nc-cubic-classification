@@ -1561,8 +1561,8 @@ public cubic_third_root_onezero_plus.py + verify_cubic_third_root_unit_onezero_p
 次の有力な通常証明（まだ未統合・未完成）：λ−ω,sT非零ならκ0,h自由でeven crossR=−ωS。bは全U上scalarω、c上ω²の正常元となり、中山固定三次上そのnormalizerは恒等。Gの正常b式はω²なのでG零。元関係像の同定を監査して正式化する。λ=±iωはh=r±iκs、他Schurからr=−(1±i)κs/2,A=∓iωκ²s/2のはず（private i_branch exact factor式）。T=s1後κ1/0の二点にscalar正規化し、Q(ω,i)でfresh核を判定できる。
 a16=0,T非零の着想：Schurとmixed minorからa15=a17=0。domainのUb/bU射影を使うとa12=a11,a7=a9、a6=λa9,a11=λa13（λ≠0）。Schurからλ=±ω、a2=εωa3。符号が同じならcrossR=λSでb正常、μ固定三次上normalizer固有値は±1しかなく、要求固有値ωに矛盾する可能性がある（bのJordan補正も固有値議論なら許す）。符号が逆かつa3≠0ならa13=a9≠0を強制。x,b,cの量子Weyl AS3基底、yをOre変数とする表示に戻り、δ(x)にbc非零係数T/(λa9)が出る。既存normalx_Ore_coverのF≠0証明は曲率二方向仮定を使わないので、一方曲率にも適用して排除できる見込み。実際Ore被覆と全符号/零境界は未監査のため、まだ全unit-repeat完成とはしない。この最小課題から継続する。
 
-## 多固有値領域の現行到達点（v285）
-強いintrinsic H3のAS4包絡は相異なる中山固有値をちょうど三つ持たない。全Jordan型の必要還元、重複1の全22tensor atlas、非単位重複rootの独立・非零比例・零b²列を全て排除した。全H3分類の完成ではない。全CY、四単純共鳴、全成分・境界、相対降下は未完成。
+## 多固有値領域の現行到達点（v288）
+強いintrinsic H3のAS4包絡は相異なる中山固有値をちょうど三つ持たない。全Jordan型の必要還元、重複1の全22tensor atlas、非単位重複rootの独立・非零比例・零b²列を全て排除した。全H3分類の完成ではない。全CY・単一固有値単冪、全成分・境界、相対降下は未完成。
 
 ### 完成した証明の入口
 三固有値全体の結論は `papers/sections/cubic_third_root_nonunit_zero_column.tex` の `thm:cubic-three-eigenvalue-sector-empty`。重複1はunit_onezero_completion、非単位重複rootの非零列はnonunit_independent、nonunit_proportional_open、nonunit_proportional_Tzero、nonunit_isolated、nonunit_degenerate_selfの各節を経由する。Q=0の別分枝を含めて必要被覆を保持している。
@@ -1632,4 +1632,10 @@ M符号(1,−1,t,t^-1)はxy/yx交代blockをdomainで消しI0⊂x²,y²,bc,cb。
 ### 正次元片の元rank条件と五曲線への削減（v287）
 75正次元必要片にCの独立列のorbit係数1 gaugeを追加し、Smith全torsion枝を保持して16表示へ。全元weight blockの(r+1)minorを数体Laurent多項式としてexact計算、単項式単元を除く。N5の唯一dim3表示は二minorの差−4ζ10³で空。他14の非自明表示では全minorのgcdが実際にminorとして現れるのでrank上界locusは証明書の単一式と一致（一般点のみでない）。一つは全torus。有限になった12parameter点はQQζ20/24/28/36でfresh全Hrank6、B3/4=20/35、W1核0を確認して排除した。N6(1,2,4,5)ラベル全体が消える。
 現行必要被覆は4 Galoisラベル/9根集合、五つの一変数表示。positive_rank_certificateのbranch0,3はN5(1,2,3,4)、branch7はN6(0,1,2,3)、branch10はN7(1,2,5,6)、branch13はN9(1,3,6,8)。元75片から全表示への被覆・位相・係数Laurent指数・全rank式を公開certificateに保持する。通常証明はfour_simple_positive_rank節、verify_cubic_four_simple_positive_rank.py/positive_finite.py default Sympy全PASS（後者のdegree被覆assert追加後も再実行PASS）。v287主原稿LuaLaTeX clean PASS。累計71validators across runs、単一71全再生未実行。
-次の最小課題は五曲線の全正常三次incidence。private branch0はt2=t,t1=2t²/(t²+ζ10)、domain t(t²+ζ10)非零で元Hrank6,B3/4=20/35、正常26×4 generic rank4。全pivot分子の数体一変数因子を収集し、例外既約因子の全根をMonogenicFiniteExtensionでfresh判定中（curve0.py/curve0_fresh.py）。generic rankだけで全曲線排除と呼ばない。他四curveも同様に全例外を保持して進める。全CY/成分/境界/intrinsic群oid/相対降下は未完、新規性未確認。
+
+### 三・四固有値領域の全排除完成（v288）
+全H3包絡の中山作用は相異なる固有値を高々二つしか持たない。四単純全体も排除した。単一固有値は1だが、単冪部分の自明性は未証明。全H3分類の完成ではない。
+通常証明はcubic_four_simple_final_curves節、thm:cubic-four-simple-sector-empty。v287の五曲線branch0,3,7,10,13を各F=QQζL(t)で一変数化。元Hの六列source minorΔ、全次数商のpivot分子/分母、正常行列の全pivotと係数分母/parameter定義域を記録し、非零積P上で全底変更を保証。generic正常shape26×4,23×4,22×4,17×2,14×2は全列rank。Pの全数体既約因子を積へ掛け戻し、各既約性を確認し、E=F[t]/fで元H/商/正常行列をfresh計算した。全因子数11,5,13,8,9、定義域内因子数8,2,12,5,6、F上次数和20,3,23,11,9。全有効例外もHrank6、B3/4=20/35、正常核0。有限標本・数値根は使わない。
+公開verify_cubic_four_simple_final_curves.py/certificateに全pivot多項式と全例外の数体係数・source/商/正常rankを保存。default Sympy PASS（因数積一致・既約性assert追加後もPASS）、v288主原稿LuaLaTeX clean PASS。累計72validators across runs、単一72全再生未実行。以前の全被覆の独立再監査、新規性確認、全homological証明の機械形式化とは呼ばない。
+次の核心は単一固有値1の全CY・単冪持上げと、既分類領域を含む全intrinsic群oid・成分・相対降下。as4-reference固定SHA6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0のCY_COMPLETE/UNIPOTENT_UNTWIST本文とCOVERAGEを対象を絞って読んだが、全CY統合定理を新規監査済み入力として輸入していない。前者の有限許容atlasだけでは本研究の全幾何学的分類・成分・降下の完成にならない。
+具体的着手：最大単冪Jordan4を先に調べる。private /workspace/work/unipotent_remaining/principal_top.pyでCY anti-cyclic66方向のD総作用核12を独立構成し、as4座標語0001,0011,0021,0031,0020,0111,0202,0211,0113,0213,1112,0033で単位化。c11zero時のgeneric対称射影rank8なので、先にrank6条件を課す必要がある。c9非零なら六昇順pairのmiddle小行列が最高weightの交代tensorによりdet定数×c9^6、Schurの全係数式へ進める。sourceのprincipal分類の証明を借用する場合は適用仮定・固定SHA・独立検算をas4_importsへ追加する。一般点rank8からAS候補排除と推論しない。全CY/成分/境界/intrinsic群oid/相対降下は未完、新規性未確認。
