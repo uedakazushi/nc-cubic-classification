@@ -3492,5 +3492,26 @@
       "w0 full classification",
       "complete H3 classification"
     ]
+  },
+  "third_root_unit_boundary_w0_exclusion_v265": {
+    "status": "all-value w0 H3 exclusion; whole six-parameter both-nonzero proportional chart excluded",
+    "proof": "papers/sections/cubic_third_root_unit_boundary_w0.tex",
+    "validators": [
+      "verify_cubic_third_root_unit_boundary_w0.py",
+      "verify_cubic_third_root_unit_boundary_w0_center.py",
+      "verify_cubic_third_root_unit_boundary_w0_CSA.py"
+    ],
+    "checks": [
+      "allvalue Smith/pivot support/fresh8 minors default Sympy PASS",
+      "normal27x8 kernel1, centre3 kernel2, centre9 kernel5 constant pivots PASS",
+      "alluv original normal and center equations and left/right source actions PASS",
+      "Artinian81 and positive109 Psi1 Z2 fibre trace det1 centre1 PASS",
+      "v265 main LuaLaTeX clean PASS"
+    ],
+    "not_claimed": [
+      "one-zero coupling atlas covered",
+      "nonunit-repeat atlas covered",
+      "whole H3 complete"
+    ]
   }
 }

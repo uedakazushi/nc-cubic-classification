@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "p": 109,
+  "root": 4,
+  "omega": 63,
+  "Psi": 1,
+  "Z": 2,
+  "center": 1,
+  "trace_determinant": 1,
+  "original_x": 0,
+  "int64_bound": 944784,
+  "source": "w0_center_certificate",
+  "lift": "positive center80 minor and trace determinant to all characteristic-zero embeddings; boundary independent of u,v"
+}
