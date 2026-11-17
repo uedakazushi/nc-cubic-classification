@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "version": "classification-v281",
+  "version": "classification-v282",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -3899,6 +3899,37 @@
       "finite-order extra-support points excluded",
       "last phase chart solved",
       "complete H3 classification",
+      "novelty confirmed"
+    ]
+  },
+  "four_simple_zero_pair_rank3_v282": {
+    "status": "entire last rank3 support chart excluded; all four-simple Nakayama spectra common finite orderN<=96",
+    "proof": "papers/sections/cubic_four_simple_zero_pair_rank3.tex",
+    "validator": "computations/verify_cubic_four_simple_zero_pair_rank3.py",
+    "checks": [
+      "default Sympy allM<=24 reciprocal-character phases including separate square-collision branches PASS",
+      "original10/9/10/6/7 top and rank/Pfaff/cross data PASS",
+      "central quadratic free-word identity and all normalizer ideals PASS",
+      "v282 main LuaLaTeX clean PASS"
+    ],
+    "normal_linear_hdet_ordinary_proof": "central Nakayama fixing by Ae chainhomotopy; centralize normaldegree1 via right twist; full scalar formula",
+    "primary_rechecked": {
+      "source": "RRZ Skew Calabi-Yau algebras and homological identities",
+      "locators": [
+        "Theorem0.3",
+        "Theorem5.4(a)",
+        "proof ofTheorem0.3"
+      ],
+      "pdf_sha256": "28b4b649089bbebb722664452c665f8a43ad5b8d9589925b2f97818322736e25",
+      "scope": "explicit fullscalar use of existing cited theorem; not new as4 import"
+    },
+    "remaining_rank3_charts": [],
+    "all_four_simple_common_order_bound": 96,
+    "validation_scope": "65 validators across runs; no single65 replay claimed",
+    "not_claimed": [
+      "all finite spectra classified",
+      "complete H3 classification",
+      "ordinary homological proofs mechanically verified in full",
       "novelty confirmed"
     ]
   }

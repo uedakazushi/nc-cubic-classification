@@ -1,0 +1,575 @@
+{
+  "status": "PASS",
+  "scope": "entire last (alpha,beta,t,gamma/t) rank3 support chart excluded by paper proof; all four-simple H3 spectra now bounded finite torsion",
+  "phase_orbits": [
+    [
+      "0",
+      "1/2",
+      "0",
+      "M"
+    ],
+    [
+      "0",
+      "1/2",
+      "1/2",
+      "S"
+    ],
+    [
+      "1/6",
+      "1/3",
+      "1/2",
+      "S"
+    ],
+    [
+      "1/6",
+      "2/3",
+      "2/3",
+      "M"
+    ],
+    [
+      "1/3",
+      "2/3",
+      "0",
+      "S"
+    ],
+    [
+      "1/3",
+      "5/6",
+      "1/3",
+      "M"
+    ],
+    [
+      "2/3",
+      "5/6",
+      "1/2",
+      "S"
+    ]
+  ],
+  "phase_moduli": [
+    {
+      "modulus": 1,
+      "labeled_minimal_order_cases": 0
+    },
+    {
+      "modulus": 2,
+      "labeled_minimal_order_cases": 4
+    },
+    {
+      "modulus": 3,
+      "labeled_minimal_order_cases": 2
+    },
+    {
+      "modulus": 4,
+      "labeled_minimal_order_cases": 0
+    },
+    {
+      "modulus": 5,
+      "labeled_minimal_order_cases": 0
+    },
+    {
+      "modulus": 6,
+      "labeled_minimal_order_cases": 8
+    },
+    {
+      "modulus": 7,
+      "labeled_minimal_order_cases": 0
+    },
+    {
+      "modulus": 8,
+      "labeled_minimal_order_cases": 0
+    },
+    {
+      "modulus": 9,
+      "labeled_minimal_order_cases": 0
+    },
+    {
+      "modulus": 10,
+      "labeled_minimal_order_cases": 0
+    },
+    {
+      "modulus": 11,
+      "labeled_minimal_order_cases": 0
+    },
+    {
+      "modulus": 12,
+      "labeled_minimal_order_cases": 0
+    },
+    {
+      "modulus": 13,
+      "labeled_minimal_order_cases": 0
+    },
+    {
+      "modulus": 14,
+      "labeled_minimal_order_cases": 0
+    },
+    {
+      "modulus": 15,
+      "labeled_minimal_order_cases": 0
+    },
+    {
+      "modulus": 16,
+      "labeled_minimal_order_cases": 0
+    },
+    {
+      "modulus": 17,
+      "labeled_minimal_order_cases": 0
+    },
+    {
+      "modulus": 18,
+      "labeled_minimal_order_cases": 0
+    },
+    {
+      "modulus": 19,
+      "labeled_minimal_order_cases": 0
+    },
+    {
+      "modulus": 20,
+      "labeled_minimal_order_cases": 0
+    },
+    {
+      "modulus": 21,
+      "labeled_minimal_order_cases": 0
+    },
+    {
+      "modulus": 22,
+      "labeled_minimal_order_cases": 0
+    },
+    {
+      "modulus": 23,
+      "labeled_minimal_order_cases": 0
+    },
+    {
+      "modulus": 24,
+      "labeled_minimal_order_cases": 0
+    }
+  ],
+  "excluded_square_collision_phase_cases": [
+    {
+      "modulus": 3,
+      "alpha_exponent": 1,
+      "fixed_cubics": [
+        [
+          0,
+          3,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "status": "primitive cube phase, normal-x eigenvalue contradiction",
+      "common_U_factor": null
+    },
+    {
+      "modulus": 3,
+      "alpha_exponent": 2,
+      "fixed_cubics": [
+        [
+          0,
+          3,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "status": "primitive cube phase, normal-x eigenvalue contradiction",
+      "common_U_factor": null
+    },
+    {
+      "modulus": 3,
+      "alpha_exponent": 1,
+      "fixed_cubics": [
+        [
+          0,
+          3,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "status": "primitive cube phase, normal-x eigenvalue contradiction",
+      "common_U_factor": null
+    },
+    {
+      "modulus": 3,
+      "alpha_exponent": 2,
+      "fixed_cubics": [
+        [
+          0,
+          3,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "status": "primitive cube phase, normal-x eigenvalue contradiction",
+      "common_U_factor": null
+    },
+    {
+      "modulus": 5,
+      "alpha_exponent": 1,
+      "fixed_cubics": [
+        [
+          1,
+          2,
+          0,
+          0
+        ]
+      ],
+      "status": "common U factor",
+      "common_U_factor": 0
+    },
+    {
+      "modulus": 5,
+      "alpha_exponent": 3,
+      "fixed_cubics": [
+        [
+          1,
+          2,
+          0,
+          0
+        ]
+      ],
+      "status": "common U factor",
+      "common_U_factor": 0
+    },
+    {
+      "modulus": 5,
+      "alpha_exponent": 1,
+      "fixed_cubics": [
+        [
+          1,
+          2,
+          0,
+          0
+        ]
+      ],
+      "status": "common U factor",
+      "common_U_factor": 0
+    },
+    {
+      "modulus": 5,
+      "alpha_exponent": 2,
+      "fixed_cubics": [
+        [
+          1,
+          2,
+          0,
+          0
+        ]
+      ],
+      "status": "common U factor",
+      "common_U_factor": 0
+    },
+    {
+      "modulus": 5,
+      "alpha_exponent": 3,
+      "fixed_cubics": [
+        [
+          1,
+          2,
+          0,
+          0
+        ]
+      ],
+      "status": "common U factor",
+      "common_U_factor": 0
+    },
+    {
+      "modulus": 5,
+      "alpha_exponent": 4,
+      "fixed_cubics": [
+        [
+          1,
+          2,
+          0,
+          0
+        ]
+      ],
+      "status": "common U factor",
+      "common_U_factor": 0
+    },
+    {
+      "modulus": 5,
+      "alpha_exponent": 2,
+      "fixed_cubics": [
+        [
+          1,
+          2,
+          0,
+          0
+        ]
+      ],
+      "status": "common U factor",
+      "common_U_factor": 0
+    },
+    {
+      "modulus": 5,
+      "alpha_exponent": 4,
+      "fixed_cubics": [
+        [
+          1,
+          2,
+          0,
+          0
+        ]
+      ],
+      "status": "common U factor",
+      "common_U_factor": 0
+    },
+    {
+      "modulus": 9,
+      "alpha_exponent": 1,
+      "fixed_cubics": [
+        [
+          0,
+          3,
+          0,
+          0
+        ]
+      ],
+      "status": "common U factor",
+      "common_U_factor": 1
+    },
+    {
+      "modulus": 9,
+      "alpha_exponent": 2,
+      "fixed_cubics": [
+        [
+          0,
+          3,
+          0,
+          0
+        ]
+      ],
+      "status": "common U factor",
+      "common_U_factor": 1
+    },
+    {
+      "modulus": 9,
+      "alpha_exponent": 2,
+      "fixed_cubics": [
+        [
+          0,
+          3,
+          0,
+          0
+        ]
+      ],
+      "status": "common U factor",
+      "common_U_factor": 1
+    },
+    {
+      "modulus": 9,
+      "alpha_exponent": 5,
+      "fixed_cubics": [
+        [
+          0,
+          3,
+          0,
+          0
+        ]
+      ],
+      "status": "common U factor",
+      "common_U_factor": 1
+    },
+    {
+      "modulus": 9,
+      "alpha_exponent": 8,
+      "fixed_cubics": [
+        [
+          0,
+          3,
+          0,
+          0
+        ]
+      ],
+      "status": "common U factor",
+      "common_U_factor": 1
+    },
+    {
+      "modulus": 9,
+      "alpha_exponent": 4,
+      "fixed_cubics": [
+        [
+          0,
+          3,
+          0,
+          0
+        ]
+      ],
+      "status": "common U factor",
+      "common_U_factor": 1
+    },
+    {
+      "modulus": 9,
+      "alpha_exponent": 5,
+      "fixed_cubics": [
+        [
+          0,
+          3,
+          0,
+          0
+        ]
+      ],
+      "status": "common U factor",
+      "common_U_factor": 1
+    },
+    {
+      "modulus": 9,
+      "alpha_exponent": 1,
+      "fixed_cubics": [
+        [
+          0,
+          3,
+          0,
+          0
+        ]
+      ],
+      "status": "common U factor",
+      "common_U_factor": 1
+    },
+    {
+      "modulus": 9,
+      "alpha_exponent": 4,
+      "fixed_cubics": [
+        [
+          0,
+          3,
+          0,
+          0
+        ]
+      ],
+      "status": "common U factor",
+      "common_U_factor": 1
+    },
+    {
+      "modulus": 9,
+      "alpha_exponent": 7,
+      "fixed_cubics": [
+        [
+          0,
+          3,
+          0,
+          0
+        ]
+      ],
+      "status": "common U factor",
+      "common_U_factor": 1
+    },
+    {
+      "modulus": 9,
+      "alpha_exponent": 7,
+      "fixed_cubics": [
+        [
+          0,
+          3,
+          0,
+          0
+        ]
+      ],
+      "status": "common U factor",
+      "common_U_factor": 1
+    },
+    {
+      "modulus": 9,
+      "alpha_exponent": 8,
+      "fixed_cubics": [
+        [
+          0,
+          3,
+          0,
+          0
+        ]
+      ],
+      "status": "common U factor",
+      "common_U_factor": 1
+    }
+  ],
+  "normal_linear_identity": "mu_B(z)=hdet_B(phi_z)*z, proved by centralization and central Nakayama fixing",
+  "primary_rechecked": {
+    "source": "Reyes-Rogalski-Zhang, Skew Calabi-Yau algebras and homological identities",
+    "theorems": [
+      "0.3 full scalar formula",
+      "5.4(a)",
+      "proof of0.3"
+    ],
+    "pdf_sha256": "28b4b649089bbebb722664452c665f8a43ad5b8d9589925b2f97818322736e25",
+    "right_twist": "mu_BH=mu_B H^-4 xi_hdetH"
+  },
+  "top_dimensions": {
+    "matched_sign": 10,
+    "swapped_sign": 9,
+    "swapped_cube": 10,
+    "matched_nonsign_cube": 6
+  },
+  "exact_checks": [
+    "all bounded reciprocal-character phase cases and7 orbits",
+    "matched sign pure-minus block and both rank1 paired determinants",
+    "swapped sign symmetric pure-square block and skew Pfaff=-detcross",
+    "swapped cube crossrank1 from full paired equations",
+    "matched nonsign all quartic supports pure offdiagonal",
+    "independentP/Q free-word central quadratic identity",
+    "all4 normalizer ideal contradictions"
+  ],
+  "ordinary_cases": [
+    "swapped square collision: common factor or primitive cube normal-x contradiction",
+    "swapped cubic singlepurecube",
+    "matched nonsign pure AS2 factor",
+    "swapped cube purepair and degree3/4 normalizer",
+    "swapped sign PBW fixed cubic factor criterion",
+    "matched sign projectionrank1 pureAS2 and center flip, orrank2 independent/proportionalP/Q"
+  ],
+  "remaining_four_simple_spectra": "all eigenvalues common Nth roots for some N<=96",
+  "scope_warning": "rank4 extra-support finite points not excluded here",
+  "not_claimed": [
+    "all bounded finite spectra classified",
+    "all CY covered",
+    "global components/groupoids/descent",
+    "complete H3 classification",
+    "ordinary homological proofs mechanically verified in full"
+  ]
+}

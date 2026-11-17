@@ -1,0 +1,209 @@
+\subsection{最後のrank三phase chartの完成と全四単純の有限化}
+\label{subsec:cubic-four-simple-zero-pair-rank3}
+\begin{lemma}[正常一次元の中山固有値と正常化のhdet]
+\label{lem:cubic-normal-linear-hdet}
+$B$ を本稿のnoetherian AS4整域とし、正常一次元 $z$ に対して
+$za=\phi(a)z,\phi(z)=z,\mu_B(z)=\lambda z$ とする。このとき
+\[
+ \lambda=\operatorname{hdet}_B\phi.
+\]
+\end{lemma}
+\begin{proof}
+まずskew CY環の中山は中心を点ごとに固定する。
+実際、中心元 $a$ に対し $a\otimes1$ と $1\otimes a^{\rm op}$ の作用は
+$B^e$ 加群 $B$ 上で同じである。
+射影双加群解消上の二つのliftはchain homotopicなので、双対解消とその最高Ext上の作用も等しい。
+最高Extを ${}^1B^{\mu_B}$ と同定し、生成元1に作用させると $a=\mu_B(a)$ を得る。
+
+右twist $C=B^{\phi^{-1}}$ では $z$ が中心となる。
+既存入力\cite[Theorem 0.3]{RRZ}のfull scalar公式を右twistへ直すと
+\[
+ \mu_{B^H}=\mu_B H^{-4}\xi_{\operatorname{hdet}H}.
+\]
+従って $H=\phi^{-1}$、$H(z)=z$ を代入すれば
+$\mu_C(z)=\lambda(\operatorname{hdet}\phi)^{-1}z$。
+中心固定性によりこれが $z$ であり、結論を得る。
+左公式、Theorem 5.4(a)とTheorem 0.3の証明を一次資料で再確認した。
+既に用いたhdet一のtwist公式でscalar項を無条件に省いた議論ではない。
+\end{proof}
+
+\begin{theorem}[全rank三supportの排除]
+\label{thm:cubic-all-four-simple-rank3-empty}
+方向 $(0,0,1,-1)$ の最後のrank三support chartも全てH3を与えない。
+従って四つの相異なる中山固有値を持つH3包絡では、ある $1\le N\le96$ に対して
+\[
+ \lambda_1^N=\lambda_2^N=\lambda_3^N=\lambda_4^N=1
+\]
+となる。四単純なので中山は半単純であり、位数もこの $N$ を割る。
+全有限候補の存在・許容性又は全H3分類は、この必要有限化には含まれない。
+\end{theorem}
+\begin{proof}
+$\mu_B=(\alpha,\beta,t,\gamma/t)$、$\alpha\ne\beta$ とし、
+$U=\langle x,y\rangle$、torus重みを $(0,0,1,-1)$ とする。
+必要関係数は $r_0=2,r_1=r_{-1}=2$。
+$Ub+bU$ の二関係は両射影の核が純積になるので可逆graphである。
+中山の $x,y$ 固有値が異なることからgraphは対角であり、$b$ は $x,y$ と個別にskew可換。
+$c$ も同様で、四つのcross pairは全て非零skew関係である。
+二次Frobenius対合は中山指標の逆数をpairにするので
+\[
+ \{\alpha,\beta\}=
+ \{(\alpha\gamma)^{-1},(\beta\gamma)^{-1}\}.
+\]
+従ってphaseには二種類しかない：
+\[
+ \mathrm M:\quad \beta=-\alpha,\ \gamma=\alpha^{-2},
+ \qquad
+ \mathrm S:\quad \alpha\beta\gamma=1.
+\]
+
+\paragraph{S型の平方衝突を先に処理する．}
+$\gamma=\alpha^2$ なら $\beta=\alpha^{-3}$、相異性から $\alpha^4\ne1$。
+$\gamma=\beta^2$ は $x,y$ の交換で同じである。
+$\alpha^8=1$ の場合は原始8乗根となり、重み零・中山固定の三次指数は一つもない。
+それ以外ではFrobeniusの逆指標と全関係数2から、純 $xy,yx$ 関係が一本あり、
+残り一本は $x^2,bc,cb$ の空間にある。
+従って $x,y$ は全包絡で正常である。
+三次の可能な指標は、純 $U$ では $\alpha^{4i-9}$ ($0\le i\le3$)、
+mixedでは $\alpha^3,\alpha^{-1}$。
+非零三次があるのは $\alpha$ の位数が3,5,9のいずれかのときだけである。
+位数5では全候補に $x,y$ の因子、位数9では純 $y^3$ の因子があり、
+$xy$ のskew関係から全 $G$ が分解する。
+
+位数3だけは $x^3,y^3,xbc$ の三指数が残る。
+許容top型は $x^3y$ とmultilinearだけであり、非skewなら双方が非零である。
+正常 $x$ の $y,b,c$ へのscalarを $a,d,e$ とする。
+前補題とtopの二型から
+\[
+ \alpha=\operatorname{hdet}\phi_x=a=ade,
+ \quad\text{従って }a=\alpha,\ de=1.
+\]
+三つの固定三次型上の $\phi_x$ 固有値は全て1である。
+しかし正常三次条件は $\phi_x(G)=\alpha G$ を要求するので $G=0$。
+これで平方衝突を全排除した。
+
+平方衝突がなく $\gamma\ne\alpha\beta$ なら、
+重み0関係は純 $U^2$ の一本と純 $bc,cb$ の一本へ分かれる。
+純 $U$ 関係が $xy,yx$ なら包絡全体がskew。
+残る可能性は $\beta=-\alpha$ の $x^2+\kappa y^2$ だが、
+その指標 $\alpha^2$ と $bc$ の指標 $-\alpha^{-2}$ は逆数でない。
+二つが共に自己逆でも片方は $-1$ となり、
+自己逆 $-1$ 指標上の交代middleにrank一を要求して不可能である。
+従って非skew S型には $\gamma=\alpha\beta=\epsilon\in\{1,-1\}$ が必要。
+三次指標の全列挙から、この場合も $\alpha^6=1$ が必要である。
+M型も三次指標 $\alpha^3(-1)^j$ 又は $\pm\alpha^{-1}$ から $\alpha^6=1$ を得る。
+全 $M\le24$ 位相の公開列挙は、平方衝突の上記排除を含めてこの必要還元を検算する。
+
+\paragraph{残る根位相．}
+M型で $\alpha\ne\pm1$ の場合、四次topは $x^2bc,y^2bc$ 型だけである。
+middleの $U^2$ と $bc,cb$ の二主blockは零なのでrank2はcross rank一を強制し、
+関係は純 $x^2+\kappa y^2$ と純 $bc+\rho cb$ に分かれる。
+三次は純 $U$ に限られ、二元AS2因子補題\ref{lem:h3-binary-cubic-factors}で分解する。
+
+S型 $\epsilon=-1,\alpha\ne\pm1$ では固定三次はただ一つの純三乗だけであり、整域商にならない。
+S型 $\epsilon=1$ では相異性と三次存在から、
+$\{\alpha,\beta\}=\{\omega,\omega^2\}$、$\gamma=1$ のみが残る。
+このtopは $x^2y^2,b^2c^2$ とmultilinearの10次元。
+四cross pairのrank一式から、$\langle xy,yx\rangle$ と $\langle bc,cb\rangle$ のcross blockはrank一になる。
+対称rank2の射影議論から純 $xy,yx$ 又は純 $bc,cb$ 関係がある。
+前者では $G$ はAS2平面の純三次となって分解する。
+後者では $b,c$ が正常で、残る $xy,yx$ 関係は両係数非零、
+非skewなら非零の $bc$ 変形を含む。
+正常 $b$ の $x,y,c$ scalarを $a,d,e$ とすると、multilinear topと前補題から
+$\lambda_b=ade$。
+非因子 $G$ は $x^3,y^3$ 双方を持つので $a^3=d^3=\lambda_b$。
+非零変形は $ad=e$ を要求し、従って
+\[
+ \lambda_b^3=(ad)^6=\lambda_b^4,\qquad \lambda_b=1.
+\]
+すると $b,c$ の中山固有値が重複する。
+以上で残るのは $\alpha,\beta=1,-1$ の二chartだけである。
+
+\paragraph{S符号chart $(1,-1,t,-t^{-1})$．}
+元topは9次元で、その純 $x^2,y^2$ middleは
+\[
+ \begin{pmatrix}0&a_0\\a_0&a_7\end{pmatrix}.
+\]
+非零rank2なら純平方を含み、rank一でも $a_0=0$ で純 $y^2$ 関係になるので、domainはこのblockを零にする。
+残る重み0 middleは $xy,yx,bc,cb$ 上の交代rank2行列で、左上blockが零。
+Pfaffianはcross blockのdeterminantの負なのでcross rankは一である。
+零rankなら純 $bc,cb$ 全体となりdomainに反する。
+従って純 $bc,cb$ 関係があり、$b,c$ が正常基底となる。
+残りは $xy,yx$ の両向き係数非零の関係と $bc$ 変形であり、
+補題\ref{lem:cubic-two-normal-base-Ore-scalar}のPBW/Ore認識が使える。
+固定三次のPBW基底は
+\[
+ x^3,\quad xy^2,\quad ybc.
+\]
+非因子となるには第一と第三の係数が共に非零でなければならない。
+第三が零なら共通左因子 $x$、第一が零なら共通右因子 $y$ がある。
+正常 $b$ の $x,y,c$ scalarを $a,d,e$ とすると、
+multilinear topの存在と前補題から $\lambda_b=ade$。
+二成分の比較 $a^3=de=ade$ は $a=1,\lambda_b=1$ を強制し、$\mu_B(x)=x$ と重複する。
+
+\paragraph{M符号chart $(1,-1,t,t^{-1})$．}
+元top10次元のうち、$xy,yx$ の交代blockは
+$\left(\begin{smallmatrix}0&-a_0\\a_0&0\end{smallmatrix}\right)$。
+domainから $a_0=0$ であり、残るrank2関係空間 $K$ は
+$\langle x^2,y^2,bc,cb\rangle$ 内にある。
+さらに二つのpaired rank一行列は
+\[
+ \begin{pmatrix}a_3&-a_1\\-a_2/t&-a_3\end{pmatrix},\qquad
+ \begin{pmatrix}a_7&a_5\\-a_6/t&a_7\end{pmatrix}.
+\]
+整域性から全成分が非零であり、特に $K$ の $x^2,y^2$ の両座標射影は非零である。
+$K$ の $bc,cb$ への射影rankで分ける。
+rank零なら純 $U^2$ の二次元pencilがrank-one tensorを含むのでdomainでない。
+
+rank一なら純 $x^2+\kappa y^2$ 関係がある。
+残り一本の $bc,cb$ 両係数も、正常 $U$ 上の逆向き関係の議論から非零である。
+従ってAS2平面 $T(U)$ 上の二Ore表示となる。
+$b,c$ の $U$ 上の正常化を $f,g$ とすると、Ore中山式は
+$\mu_B|_U=-(fg)^{-1}$、従って $fg=\operatorname{diag}(-1,1)$。
+残る $cb$ 変形項 $P(U)$ は $Pu=(fg)(u)P$ を満たす。
+しかし $T(U)$ の中心元 $xy+yx\ne0$ はこの作用で負になる。
+非零正常元の正常化は中心を点ごとに固定するので、$P=0$。
+これで $b,c$ も全正常となる。
+$f=(A,\pm A)$、$bc=qcb$ とすれば $\lambda_b=A^2q$。
+非因子三次には純 $U$ 三次と $xbc$ 双方が必要であり、
+正常 $b$ の固有値比較 $A^3=Aq=A^2q$ から $A=1,\lambda_b=1$、相異性に反する。
+
+射影rank二なら
+\[
+ bc=P(x^2,y^2),\qquad cb=Q(x^2,y^2)
+\]
+と書ける。
+$P,Q$ が独立なら、$h=fg$ に対して $Pu=h(u)P,Qu=h(u)Q$ となるので、
+$x^2,y^2$ 自身が同じ正常式を満たす。
+$x^3,y^3\ne0$ から $h(x)=x,h(y)=y$、従って $x^2,y^2$ は $U$ 上中心である。
+$z=xy+yx$ も中心となり、全固定三次は
+\[
+ G=A x^3+Bxy^2+Cyxy
+\]
+へ還元される。
+$Gx=xG$ の交換子は
+\[
+ C\bigl((yx)^2-(xy)^2\bigr)=Cz(yx-xy).
+\]
+純 $U$ 二次関係がないので $z,yx-xy$ は共に非零、domainから $C=0$。
+従って $G=x(Ax^2+By^2)$ は分解する。
+
+最後に $P,Q$ が比例するとする。両方非零で、$cb=\kappa P$、$bc=P$ と書ける。
+$b,c$ は全正常である。
+上のpaired rank一行列の全成分非零から、$P$ の $x^2,y^2$ 係数は共に非零。
+$b(cb)=(bc)b$ により $f(P)=\kappa^{-1}P$ なので
+$f(x)=Ax,f(y)=\pm Ay,\phi_b(c)=\kappa^{-1}c=A^2c$。
+元topの全非零語に対する $\phi_b$ の固有値は $A^4$、
+固定三次の全許容語に対する固有値は $A^3$ である。
+前補題は $\lambda_b=A^4$ を与え、正常三次は $\lambda_b=A^3$ を要求する。
+従って $A=1,\lambda_b=1$、再び四単純性に反する。
+これで最後の全rank三chartも排除した。
+
+先のrank四有限部分は保持されるので、全四単純スペクトルは共通位数 $N\le96$ に限られる。
+\end{proof}
+
+公開再現器は \texttt{verify\_cubic\_four\_simple\_zero\_pair\_rank3.py}。
+全 $M\le24$ 位相と平方衝突の追加分枝、残る七位相型、
+元10/9/10/6/7tensorの必要block、rank一とPfaffian、
+中心二次式の自由語恒等式と各正常化idealを再生する。
+正常一次のhdet補題のhomological証明、domain・PBW・中心固定の通常証明は本文にある。
+有限 $N\le96$ の全incidence、全CY・成分・相対降下は未完成である。

@@ -69,7 +69,7 @@ Library既存ファイルは明示指示なしに削除しない。GitではPDF�
 heart比較・Rains共鳴・cubic cornerは `uedakazushi/nc-dp-surface-hearts`、次数1は `uedakazushi/nc-dp1-moduli`、三次三様体は `uedakazushi/nc-cubic-threefold-moduli` が正本。
 量子FermatのOU障害は [nc-cubic-non-as](https://github.com/uedakazushi/nc-cubic-non-as)、ambient比較は [nc-cubic-ambient](https://github.com/uedakazushi/nc-cubic-ambient) に移管済み。分類に必要な旧定理・コードはこのリポジトリの現行分類原稿からも参照する。
 
-## 多固有値領域の現行到達点（v281）
+## 多固有値領域の現行到達点（v282）
 強いintrinsic H3のAS4包絡は相異なる中山固有値をちょうど三つ持たない。全Jordan型の必要還元、重複1の全22tensor atlas、非単位重複rootの独立・非零比例・零b²列を全て排除した。全H3分類の完成ではない。全CY、四単純共鳴、全成分・境界、相対降下は未完成。
 
 ### 完成した証明の入口
@@ -107,9 +107,14 @@ Gはx²y,b²c双方を持つ。純Uの場合normalx scalars(a,b,c)にa=b²c=abc=
 通常証明はfour_simple_last_rank3_curve節。default Sympy元10tensor/全rank1式/cross外積/両normalizer ideal/逆向き自由語identity PASS、v281主原稿LuaLaTeX clean PASS。前節の中山scalarとgeneratorの表記をλ_bに明確化した（数学的主張の変更なし）。累計64validators across runs、単一64全再生未実行。
 従って残る全四単純の必要被覆はrank3の(α,β,t,γ/t)、phase共通位数M≤24と、rank4共通位数N≤96の有限部分だけ。finite tでも追加supportは有限部分に保持する。
 
-### 次の最小課題：最後の二定数phase chart
-n=(0,0,1,−1)ではr0=2,r±1=2。μxα≠μyβなのでmixed関係は個別pairskew、b,cはU(x,y)上で対角正常。Frobenius paired weightsからphaseはmatched: β=−α,γ=α^-2又はswapped: αβγ1。private経路：matchedはG非零からα6=1、swappedは非skew条件からαβ=±1とα6=1へ。primitive root casesはpurecube又はtopcrossrank1とnormalizerで排除できそうで、残り(1,−1,t,±t^-1)を調べる。
-有力な一般補題：正常一次z、φ_z(z)=zのときμ_B(z)=hdet_B(φ_z) z。B^{φ_z^-1}でzを中心化し、中央元はNakに固定されること（Ae-resolution上z⊗1と1⊗zのchainhomotopy）と右twist公式μ_C=μ_B H^-4 ξ_hdetHから出るはず。既存一次資料RRZ PDF SHA28b4b649089bbebb722664452c665f8a43ad5b8d9589925b2f97818322736e25のThm0.3、Thm5.4とThm0.3の証明を再読し、full scalarの左公式μ_twist=μ σ^l ξ_hdetσ^-1を確認した。右Hは左H^-1なので上記右公式。これはまだ新節へ統合前、次に通常証明を正式化する。
-M chart(1,−1,t,t^-1)はweight−1のxy/yx交代blockがdomainで零、I0はx²,y²,bc,cbのrank2。bc/cb射影rank1なら純AS2 U、rank2ならbc=P(x²,y²),cb=Q(x²,y²)。P,Q独立ならh=f gがU上identity、x²,y²中心、z=xy+yx中心、normalGのx交換からyxy係数零→共通x因子。P,Q比例ならb,c全正常、非退化Pの両平方係数とnormalb f=(A,±A),φb(c)=A²、top固有値A4、一方G固有値A3なので上補題からA1,t1となるはず。これらを元tensorで監査する。
-S chart(1,−1,t,−t^-1)はxx/yy対称blockが純x4zeroからdomainで零、I0はxy,yx,bc,cbの交代rank2。元crossrank1から純bc/cb、b/c正常basePBWへ。G固定基底x³,xy²,ybc、非因子にはx³とybc双方が必要。normalb固有値a³,deとμb=adeからa1,t1になるはず。
-上の最後chart議論はprivate/未公開として扱い、公開前に漏れと各domain・Frobenius仮定を検算する。有限N≤96全atlas、全CY、成分・境界・intrinsic群oidと相対降下は引き続き未完。
+### 最後のrank三phase chartも完成、全四単純を有限化（v282）
+全四単純H3の中山は半単純で、共通位数N≤96の有限集合に限る。全support格子rank3を全排除した。これを全四単純又は全H3の完成とは呼ばない。
+通常証明はfour_simple_zero_pair_rank3節。正常一次zとφ_zについてμ_B(z)=hdet_B(φ_z) zを証明：中心はAe-resolutionの二中央作用のchainhomotopyからNakに固定、B^{φ^-1}でz中心化、既存RRZ Thm0.3 fullscalar右公式μ_twist=μ H^-4 ξ_hdetHを適用。一次資料RRZ Thm0.3/5.4(a)/0.3の証明を再確認（PDF SHA28b4b649089bbebb722664452c665f8a43ad5b8d9589925b2f97818322736e25）。これは既存文献のscalar項を新たに明示適用したもの、as4新規輸入なし。
+n=(0,0,1,−1)ではb,cはU上対角正常、FrobeniusからM:β−α,γα^-2又はS:αβγ1。Sの平方衝突γα²/β²は別分枝として保持した。α5/9は孤立因子、α3は追加7tensor chart(α,1,t,α²/t)で正常xのhdetからφxが全固定三次に1倍、必要固有値αと矛盾。平方衝突を省略してSのαβ±1を主張しない。残りSはskew/交代rank1不可からαβ=±1、非零Gからα6=1。Mもα6=1。七位相型の全default Sympy列挙。
+M非符号2型はtop6のpureAS2因子、S非符号minus2型は唯一purecube。S primitivecubeはtop10 crossrank1からpureU又はpureV、前者binary因子、後者正常b scalara³=d³=λ=adeと変形ad=eからλ1。S符号(1,−1,t,−t^-1)はpure-square対称blockをdomainで消し、交代rank2のPfaffからpurebc/cb。PBW固定基底x³,xy²,ybcの非因子に第一/第三必須、正常bでa³=de=ade⇒λb1。
+M符号(1,−1,t,t^-1)はxy/yx交代blockをdomainで消しI0⊂x²,y²,bc,cb。bc/cb射影rank1は純AS2 U、cb変形Pの正常izerfg=diag(−1,1)がU中心xy+yxを負にするのでP0、Ore正常固有値でλb1。射影rank2はbc=P(x²,y²),cb=Q。P/Q独立ならx²,y²中心、G=Ax³+Bxy²+Cyxyのx交換子C(xy+yx)(yx−xy)からC0⇒因子x。P/Q比例ならpaired rank1の全成分非零でP両平方係数非零。正常b scalars(A,±A,1,A²)によりtop固有値A4、G固有値A3、上hdet補題でA1,λb1。全rank3完成。
+公開checker default Sympy PASS（全phaseと平方追加分枝、元10/9/10/6/7tensor、rank/Pfaff/中心freeword/normalizer ideals）。v282主原稿LuaLaTeX clean PASS。累計65validators across runs、単一65全再生未実行。新規性未確認、通常homological証明の全機械検証とは呼ばない。
+
+### 次の最小課題：有限N≤96の全四単純
+private C++ exact整数列挙で、最小共通位数N≤96の四相異なる根集合62,290,587個から二次衝突/三次共鳴/有効quartic全変数被覆で134,703集合。raw全共鳴support rank4で5,338、Frobenius r_s=r_-s、sumr6、自己−1偶数、domain cap_s=dimtensor_s−1の整数DPで604集合（115Galoisラベル軌道）へ減った。残る位数は4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,22,28。位数4集合は既排除。Galoisラベル軌道はintrinsic同型商ではない。これはまだprivate探索で公開証明書へ未統合。
+private資産 /workspace/work/spectral_remaining/four_simple_finite_enum.cpp とfour_simple_finite_filter.cpp、tsv/logに全入力/結果がある。次は元巡回topの単一monomial列をdomainで強制零にする線型pruning、rank上界/三次characterを加え、必要被覆を公開する。原始根位数の全共役を落とさず、有限体標本や数値rankだけで排除しない。全CY、成分・境界、intrinsic群oidと相対降下は引き続き未完。
