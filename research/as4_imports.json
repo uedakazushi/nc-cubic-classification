@@ -667,5 +667,33 @@
       "full CY or H3 classification",
       "novelty"
     ]
+  },
+  "CY_finite22_necessary_cover_v299": {
+    "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+    "files": [
+      {
+        "path": "code/verify_cy_zero_commutators_curvilinear_two_two_complete.py",
+        "sha256": "21382154e23a01e817444e035183efb5d99c397b5b5ae17f4c9b448aa93b608a"
+      },
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_CURVILINEAR_TWO_TWO_COMPLETE.tex",
+        "sha256": "f969ac7da7588acab6152ed9ddd56a8b0926abfa9e9c0f0af7ae8e2fc8dd2e00"
+      }
+    ],
+    "used_part": "TT1-TT14 necessary full coefficient and boundary coverage only",
+    "upstream_status": "proof_written; independent_audit_pending; novelty_unsearched",
+    "upstream_replay": "full fixed controller PASS isolated with python-flint",
+    "downstream_independent": "full21 frame, mixed cyclic rank15, N/T/W marking covariance, nine bad original quotient representatives/families, six retained presentation matches including both A signs",
+    "validator": "computations/verify_cubic_CY_finite22_cover.py",
+    "input": "computations/cubic_CY_finite22_input.json",
+    "proof": "papers/sections/cubic_CY_finite22_cover.tex",
+    "not_imported": [
+      "AS sufficiency",
+      "full isomorphisms and automorphism groups",
+      "other projection coefficient covers",
+      "relative scheme cover",
+      "full CY or H3 classification",
+      "novelty"
+    ]
   }
 }

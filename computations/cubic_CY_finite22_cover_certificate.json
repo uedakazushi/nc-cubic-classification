@@ -1,0 +1,129 @@
+{
+  "status": "PASS",
+  "source_commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+  "scope": "necessary finite-base22 cover; nine bad representatives/families checked from original relations; six retained presentations literally match old exclusions",
+  "bad_quotients": [
+    {
+      "name": "II-1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        38
+      ],
+      "parameters": [
+        "h"
+      ]
+    },
+    {
+      "name": "III-1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        40
+      ],
+      "parameters": []
+    },
+    {
+      "name": "II1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        38
+      ],
+      "parameters": [
+        "h"
+      ]
+    },
+    {
+      "name": "III1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        40
+      ],
+      "parameters": []
+    },
+    {
+      "name": "a0",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        39
+      ],
+      "parameters": [
+        "h"
+      ]
+    },
+    {
+      "name": "c1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        42
+      ],
+      "parameters": [
+        "h"
+      ]
+    },
+    {
+      "name": "cminus",
+      "dimensions": [
+        1,
+        4,
+        10,
+        21
+      ],
+      "parameters": [
+        "h"
+      ]
+    },
+    {
+      "name": "disc_zero-1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        24
+      ],
+      "parameters": [
+        "h"
+      ]
+    },
+    {
+      "name": "disc_zero1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        24
+      ],
+      "parameters": [
+        "h"
+      ]
+    }
+  ],
+  "ordinary_dependencies": [
+    "TT1-TT14 full branch normalization, pinned upstream control replay separately",
+    "all-closed raw relation rank lower bound on explicitly allowed unit domains",
+    "existing thm:tt22-C-all-excluded, thm:tt22-EF-all-excluded, prop:tt22-fixed-all-excluded"
+  ],
+  "not_claimed": [
+    "all branch Groebner controls independently reimplemented",
+    "AS sufficiency or full automorphisms imported",
+    "relative reduced scheme cover",
+    "full H3 classification",
+    "novelty confirmed"
+  ]
+}
