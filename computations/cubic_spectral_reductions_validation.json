@@ -140,6 +140,10 @@
     {
       "validator": "verify_cubic_third_root_unit_boundary_L_Frobenius.py",
       "status": "PASS"
+    },
+    {
+      "validator": "verify_cubic_third_root_unit_boundary_L_polynomial_center.py",
+      "status": "PASS"
     }
   ],
   "current_three_eigenvalue_necessary_spectra": 3,

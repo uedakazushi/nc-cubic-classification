@@ -1,4 +1,4 @@
-\subsection{二変形パラメータの稠密開集合排除と有限例外比}
+\subsection{二中心fiberによる固定楕円パラメータの全排除}
 \label{subsec:cubic-third-root-unit-boundary-L-open-obstruction}
 \begin{proposition}[全変形の相対Frobenius双対]
 $E=2$ の全 $u,v$ に対し
@@ -20,75 +20,126 @@ $x$ 倍と自由基底変換の二つの $81\times81$ 行列は、
 再現器は \texttt{verify\_cubic\_third\_root\_unit\_boundary\_L\_polynomial\_Frobenius.py}。
 \end{proof}
 
-\begin{theorem}[非空開集合の排除と有限個の比への還元]
-\label{thm:cubic-third-root-unit-boundary-L-finite-ratios}
-$E=2$ と $L=0$ の六埋込みを固定する。
-$Z=0,w=1$ の二変形パラメータ平面には、$(1,0)$ を含む非空開集合
-$\mathcal U\subset\mathbb A^2_{u,v}$ が存在し、その全点はH3を与えない。
-さらに有限集合 $F_{d,\omega}\subset k$ が存在し、H3となり得る点は
+\begin{lemma}[trace非退化開集合上の中心]
+\label{lem:cubic-trace-open-center}
+$k$ は標数0代数閉体、$P$ は既約な被約有限型 $k$ 代数、$V$ は $P$ 上有限自由な代数とする。
+正則trace形式が非退化な開集合が非空で、その一点でfiberの中心が一次元なら、
+その開集合の全fiberは中心単純である。
+\end{lemma}
+\begin{proof}
+trace非退化な有限次元代数ではJacobson radicalは零であり、各fiberは半単純となる。
+trace双対基底 $e_i,e^i$ を用いて
 \[
- v\ne0,\qquad u/v^2\in F_{d,\omega}
+ E(a)=\sum_i e_i a e^i
 \]
-に限る。有限集合の元の列挙と、それぞれの許容性は未決定である。
+を定める。各半単純fiberのmatrix blockでは、正則traceの規格化から
+$E$ は中心へのprojectorとなる。
+従って $E^2=E$、像が全中心となる等式は、被約な開集合全体でも成り立つ。
+このprojectorのrankは局所一定であり、開集合は既約なので一定。
+既知の一点でrank1であるから、全fiberの中心は一次元である。
+\end{proof}
+
+\begin{theorem}[$E=2$ の全二変形で中心単純次数9]
+\label{thm:cubic-third-root-unit-boundary-L-E2-CSA}
+$E=2$、$L=0$ の全六埋込みに対し、$v\ne0$ の全 $u$ で
+$A_{u,v}$ の全中心は $k[x,\Psi,z_9]$、一般点は次数9の中心単純代数である。
 \end{theorem}
 \begin{proof}
-まず $P=K[u,v]$ 上でも、Artinian基底の持上げは
+$x$ のscalar変換により $v=1,u=a$ に正規化する。
+$P=K[a]$ 上でもArtinian基底の持上げは
 $P[x,\Psi,z_9]$ 上の自由基底になる。
 実際、三中心元による商はパラメータ独立なArtinian商の $P$ への拡大であり、
 次数付き帰納法で基底持上げからの写像は全射となる。
-各パラメータ点では既証のHilbert級数から同型であり、
 その核は自由加群の部分加群で一般点で零なので零である。
-これは表示した中心部分環上の自由性であり、全中心の底変更を主張していない。
 
 $u=1,v=0$ における新しい $z_9$ を、既知の旧中心基底で書く：
 \[
  z_9=a_0x^9+a_1x^6\Psi+a_2x^3\Psi^2+a_3\Psi^3+c z_9^{\rm old},\qquad c\ne0.
 \]
 係数は公開証明書の中心基底変換で一意に定まり、元の全語ベクトルへ再代入して確認する。
-$b=a_0+c$ とおけば、中心fiber
+$b=a_0+c$ とおく。
+次の二つの $P$ 上自由階数81の中心fiberを使う：
 \[
- \mathcal V=A/(x-1,\Psi,z_9-b)
+ V_b=A_{a,1}/(x-1,\Psi,z_9-b),\qquad
+ V_1=A_{a,1}/(x-1,\Psi,z_9-1).
 \]
-は $P$ 上自由階数81で、$(1,0)$ では既知の中心単純fiberそのものである。
-この自由基底に関する正則trace形式のGram行列を $T(u,v)$、
-四生成元との交換子写像の行列を $M(u,v)$ とする。
-全ての成分は $P$ の多項式である。
+それぞれの正則trace Gram行列式を $f_b(a),f_1(a)\in K[a]$ とする。
+各々、$a=0$ で中心一次元かつtrace非退化となることを正の有限体witnessで確認する。
+補題\ref{lem:cubic-trace-open-center}により、各 $D(f_\bullet)$ の全fiberは中心単純である。
+
+従って $f_b,f_1$ に共通零点がないことを示せばよい。
+その証明では、先に標数0の全乗法行列を構成し、その後で還元する。
+$A/(\Psi,z_9-\beta x^9)$ の次数12,13の語基底と $x$ 倍の逆行列を用いると、
+$v=1,u=a$ の全生成元行列は $K[a]$ の多項式となる。
+全relation pivotと $x$ の逆行列分母がパラメータ定数であることを確認する。
+基底語の $y,b,c$ の長さを $d_i$ とすれば、全生成元行列について
 \[
- \mathcal U=D(\det T)\ \cap\ \{\operatorname{rank}M=80\}
+ 2\deg_a (R_v)_{ji}\le d_i+1-d_j
 \]
-と定める。単位元が常に交換子核にあるのでrankは80以下であり、
-この条件は80次minorで定まる開条件である。
-既知fiberにより $(1,0)\in\mathcal U$。
-これは有限行列による定義であり、minorや判別式の展開係数を列挙済みという意味ではない。
+を標数0の実際の全係数で確認できる。
+従って $\deg_a\operatorname{Tr}(R_{e_i e_j})\le(d_i+d_j)/2$、
+\[
+ \deg f_b,\deg f_1\le\sum_i d_i=486.
+\]
 
-各 $\mathcal U$ 点で中心fiberは半単純かつ中心一次元となる。
-その正のminorとtrace行列式を中心一般点へ移せば、
-一般点は次数9の中心単純代数となる。
-中心部分環の整閉性から全中心も $k[x,\Psi,z_9]$ に一致する。
-前命題の位数3の相対双対、局所order認識、曲面の周期障害を適用すれば、
-固定例と全く同じ矛盾によりH3でない。
+還元 $p=1021,t=169$ を使う。
+六次最小多項式、原始三乗根条件、全係数の有理分母が $p$ で可逆なことを確認する。
+各fiberのtrace行列式を487点で評価し、次数上界486を用いて一意に補間する。
+さらに8点の再評価を確認する。
+得られる二式は
+\[
+ \overline f_b=340h_b^{54},\qquad \overline f_1=340h_1^{54},
+\]
+ただし $\mathbb F_{1021}[a]$ において
+\begin{align*}
+ h_b={}&(a^2+228a+306)(a^2+471a+147)(a^2+573a+1012)\\
+ &\hspace{12mm}\cdot(a^3+317a^2+112a+981),\\
+ h_1={}&(a+95)(a+110)(a+579)\\
+ &\hspace{12mm}\cdot(a^6+805a^5+322a^4+741a^3+284a^2+740a+787).
+\end{align*}
+全係数を掛け戻して補間式との一致を確認し、Euclid算法で
+$h_b,h_1$ のB\'ezout恒等式1を確認する。
+二つの486次trace多項式のresultantは $965\bmod1021$ で非零である。
 
-最後に $x$ のscalar変換はパラメータに重み $(2,1)$ の作用を与える。
-従って $\mathcal U$ の $\mathbb G_m$ 飽和もH3を含まない非空開集合である。
-原点以外の閉じた不変補集合を重み付き射影直線
-$\mathbb P(2,1)$ に写すと、真の閉部分集合なので有限となる。
-$v=0$ は既に全て排除済みであり、残る有限点は $u/v^2$ で表される。
-これが $F_{d,\omega}$ である。
-この議論はH3許容性自体の相対開性を仮定しない。
+両還元の次数が上界486に達するので、標数0でも次数は正確に486であり、
+次数落ちした還元のgcdだけを見ているわけではない。
+同じ固定次数のSylvester resultantが非零に還元されるから、
+$f_b,f_1$ の標数0でのresultantも非零である。
+従って代数閉体上でも共通零点はない。
+全六埋込みに対して、各 $a$ で少なくとも一方の中心fiberが中心単純となる。
+
+その正のtrace行列式と中心minorを中心一般点へ移せば、
+$A_{a,1}$ の一般点は次数9の中心単純代数である。
+中心部分環の整閉性から全中心は $k[x,\Psi,z_9]$ に一致する。
+再現器は \texttt{verify\_cubic\_third\_root\_unit\_boundary\_L\_two\_fibers.py}。
+NumPyの整数行列演算では全積の直後に還元し、
+内積上限 $81\cdot1020^2=84272400<2^{63}$ を確認する。
+これは有限体点の標本からの外挿ではなく、標数0次数上界と
+非零resultantを組み合わせた証明である。
 \end{proof}
 
-\begin{corollary}[第二軸の排除]
-$E=2$ の全六埋込みで $u=0$ の全 $v$ もH3を与えない。
-従って上の有限例外比集合は $F_{d,\omega}\subset k^*$ と取れる。
-\end{corollary}
+\begin{theorem}[$E=2$ の正常一次境界の全H3排除]
+\label{thm:cubic-third-root-unit-boundary-L-E2-no-H3}
+$E=2$、$L=0$ の全六埋込みで、$w=1$ の全 $Z,u,v\in k$ はH3を与えない。
+\end{theorem}
 \begin{proof}
-$u=0,v=1$、中心fiber $\Psi=0,z_9=b$ を調べる。
-同じ整数環の還元 $p=109,t=15,\omega=63$ では $b=83$。
-中心核は一次元、正則trace Gram行列式は $64\bmod109$ で非零となる。
-元の六二次関係、三次切断、二中心関係の全行列への再代入も零である。
-自由階数81は全パラメータで標数0において既知なので、
-固定例と同じ正のwitnessの持上げにより、この点の一般中心単純次数は9となる。
-位数3の相対双対による障害でH3を排除する。
-$v\ne0$ は $x$ のscalar変換でこの点に移り、$v=0$ は既証の頂点障害で排除される。
-再現器は \texttt{verify\_cubic\_third\_root\_unit\_boundary\_L\_second\_CSA.py}。
+命題\ref{prop:cubic-third-root-unit-boundary-L-incidence}のshearにより
+$Z=0$ へ移せる。この操作は $d,E$ を変えず、$u,v$ だけを変える。
+従って $Z=0$ の全 $u,v$ を排除すればよい。
+$v\ne0$ では前定理から全中心が多項式環、一般中心単純次数が9である。
+相対双対は位数3の $\nu$ によるものなので、
+有限大域次元なら局所order認識と周期障害によりBrauer周期は3を割る。
+一方、整域なら曲面period--index定理により周期9となる。
+従ってH3の二つの必要条件は両立しない。
+$v=0$ は既にscalar同型と頂点障害で全 $u$ を排除した。
 \end{proof}
+
+\begin{remark}[独立な第二点と適用範囲]
+$u=0,v=1$ の中心fiber $\Psi=0,z_9=b$ では、
+$p=109,t=15,\omega=63$ の還元で $b=83$、中心一次元、
+正則trace Gram行列式 $64\bmod109$ を独立に確認している。
+再現器 \texttt{verify\_cubic\_third\_root\_unit\_boundary\_L\_second\_CSA.py}
+は元の六二次関係、三次切断、二中心関係の全行列への再代入も確認する。
+本節は固定楕円パラメータ $E=2$ の全変形を扱う。
+全 $L$ 曲線の排除、各商の整域性や周期の単独決定、全H3分類は未完成である。
+\end{remark}

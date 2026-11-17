@@ -3233,7 +3233,7 @@
       "fresh polynomial exact validator PASS using Sympy with private FLINT backend",
       "previous35 spectral validators PASS",
       "v254 main LuaLaTeX PASS; no overfull or unresolved references/citations",
-      "full36 replay running, not yet recorded PASS",
+      "all36 spectral validators PASS (default Sympy backend)",
       "git diff --check PASS"
     ]
   },
@@ -3260,7 +3260,7 @@
       "all-u,v exact relative dual324 identities PASS, matrix inverse denominators parameter-constant",
       "positive fiber coordinate identity reinsertion PASS",
       "v255 main LuaLaTeX PASS clean",
-      "full36 replay running; new37th validator individual PASS"
+      "all36 spectral validators PASS; additional polynomial Frobenius individual PASS"
     ]
   },
   "third_root_unit_boundary_L_second_CSA_v256": {
@@ -3285,6 +3285,32 @@
       "public modular parameter-matrix construction PASS",
       "private exact characteristic-zero parameter-matrix construction PASS",
       "finite109 point grid: all center1, trace degenerates at10/84 only; observation not characteristic-zero coverage"
+    ]
+  },
+  "third_root_unit_boundary_L_two_fibers_v257": {
+    "status": "ordinary separable-trace and H3 obstruction proof; exact characteristic-zero models, sharp degree bounds and positive modular resultant certificate PASS",
+    "proof": "papers/sections/cubic_third_root_unit_boundary_L_open_obstruction.tex",
+    "validator": "computations/verify_cubic_third_root_unit_boundary_L_two_fibers.py",
+    "certificate": "computations/cubic_third_root_unit_boundary_L_two_fibers_certificate.json",
+    "results": [
+      "all E2 embeddings, allv nonzero,u arbitrary: full center polynomial, generic CSA degree9 via two central fibers",
+      "trace determinants degree<=486 checked in characteristic zero and degrees486 preserved mod1021",
+      "two trace determinants340*h9^54, coprime degree9 factors with reinserted Bezout1; resultant965 mod1021",
+      "allE2,w1 and allZ,u,v H3 excluded, after existing shear and v0 vertex/scalar cases"
+    ],
+    "not_claimed": [
+      "all L curve excluded",
+      "actual Brauer period or domain separately decided",
+      "complete H3 classification"
+    ],
+    "executed_checks": [
+      "latest exact characteristic-zero model/interpolation/degree9 factor/Bezout/resultant validator PASS",
+      "independent private FLINT resultant965 PASS",
+      "primitive omega reduction652 mod1021 PASS",
+      "both origin centers1, trace nonzero, all source matrix relation reinsertions PASS",
+      "all36 previous spectral validators PASS; additional polynomial Frobenius, secondCSA and two_fibers individual PASS (39 total across runs)",
+      "main v257 LuaLaTeX PASS after final shear addition; no overfull or unresolved references/citations",
+      "git diff --check PASS"
     ]
   }
 }
