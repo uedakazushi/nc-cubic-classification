@@ -1,0 +1,82 @@
+\subsection{例外曲線のアフィン包絡と切断はPIである}
+\label{subsec:cubic-third-root-unit-boundary-L-PI}
+\begin{theorem}[境界translationの位数9とアフィンPI還元]
+\label{thm:cubic-third-root-unit-boundary-L-PI}
+$L=0,\Omega\ne0$ の前節の全族について、$C=B^\theta$、
+$D=(C[x^{-1}])_0$、$g=\widetilde\Gamma x^{-3}$、$\psi=\Psi x^{-3}$ と置く。
+境界 $S_C=C/(x)$ の楕円translationは正確に位数9である。
+全 $u,v$ で $D$ はPIであり、従ってアフィン切断 $U=D/(g)$ もPIである。
+これは境界translationの位数であって、$\mu_B$ の位数は引き続き3である。
+$D,U$ のPI次数、全中心、$U$ の素性・整域性はまだ結論しない。
+\end{theorem}
+\begin{proof}
+$S_C$ は三次元Sklyanin $(d\omega,E\omega^2,1)$ であり、
+点三次曲線の滑らかさは前節と同じdiscriminantから従う。
+標準の中心三次を $g_0$、点曲線を $\mathcal E$、translationを $\tau$ と書く。
+標準Sklyaninの性質として
+\[
+ S_C/(g_0)=B(\mathcal E,\tau,\mathcal L)
+\]
+は滑らかな楕円曲線のTHCR整域である
+\cite[Introduction, \S3]{SmithTateCenters}。
+
+$\Gamma_0=\widetilde\Gamma\bmod x$ は非零三次で、
+正常化 $\delta=(1,\omega^2,\omega)$（順序 $y,b,c$）を持つ。
+もし $\Gamma_0$ が $g_0$ の定数倍なら中心となり、
+$S_C$ の整域性と正常 $b$ 式が矛盾する。
+従ってTHCRへの像も非零。
+THCRの次数付き分数環 $k(\mathcal E)[t^{\pm1};\tau]$ では、
+非零の次数3元による共役は関数体上で $\tau^3$ を与える。
+正常式から同じ共役は $\delta$ なので
+\[
+ \tau^3=\delta|_{k(\mathcal E)}.
+\]
+ここでは関数体に対する作用で規約を固定する。
+射影行列 $\operatorname{diag}(1,\omega^2,\omega)$ は滑らかな平面三次曲線上で
+非自明な位数3の自己同型なので、$\tau^9=1,\tau^3\ne1$。
+従って $\tau$ の位数は正確に9である。
+
+Smith--Tate \cite[Theorem~3.7, $r=1$]{SmithTateCenters}より、
+この場合の中心は次数3の $g_0$ と次数9の元で生成される。
+特に $Z(S_C)_3=kg_0$。
+前節の $\Psi_0=\Psi\bmod x$ は非零中心三次なので $g_0$ の非零定数倍。
+非零性は、境界の自由三次基底で $\Gamma_0$ の $c^3$ 係数が1、
+$y^3$ のその係数が0であることからも直接確認できる。
+$\Gamma_0\bmod\Psi_0\ne0$ だから、THCR整域性により
+$\Gamma_0^3\bmod\Psi_0\ne0$。
+このことと斉次次数3,9から、$\Psi_0,\Gamma_0^3$ は代数的独立である。
+実際、斉次関係から $\Psi_0$ の最大共通冪を除き、$\Psi_0$ で商にすると、
+非零定数倍の $\Gamma_0$ の冪だけが残り矛盾する。
+
+$x$ は $C$ の中心的正則な一次元である。
+従って $D$ は $S_C$ のPBW変形で、$\operatorname{gr}D=S_C$、$\operatorname{GKdim} D=3$。
+$\delta^3=1$ より $g^3$ は $D$ の中心であり、$\psi$ も中心。
+その最高記号は上記の代数的独立な $\Gamma_0^3,\Psi_0$ なので、
+$\psi,g^3$ も代数的独立である。
+$F=k(\psi,g^3)$ とし、中心局所化 $D_F$ を取る。
+これは $F$ 上有限生成な整域である。
+
+次元低下を明示する。
+$V=\langle1,yx^{-1},bx^{-1},cx^{-1}\rangle_k$ とし
+$f(n)=\dim_F(FV^n)$ と置く。
+$V^n$ の語から $F$ 一次独立な $f(n)$ 個を選ぶ。
+それらに $\psi^i(g^3)^j$、$i+j\le n$ を掛けたものは $k$ 一次独立であり、
+$\psi,g^3$ のfiltered degreeが3,9なので全て $V^{10n}$ に入る。
+従って
+\[
+ \binom{n+2}{2}f(n)\le\dim_k V^{10n}
+ =\binom{10n+3}{3}.
+\]
+特に $f(n)=O(n)$、$\operatorname{GKdim}_F D_F\le1$。
+有限次元の場合は直ちにPI。
+無限次元の場合はGK次元が1であり、
+Pappacena--Small--Wald \cite[Theorem~5]{PSSGKone}を、
+任意の体上のaffine semiprime algebraという仮定で適用できる。
+同定理の証明から得る標準恒等式を $D\subset D_F$ に制限すれば、$D$ は $k$ 上PI。
+係数体 $F$ を代数閉体と取り違えてはいない。
+最後に $U=D/(g)$ は商なので同じ多項式恒等式を満たす。
+
+ここで用いたGK1の定理とSklyanin中心定理は既知の入力であり、
+有限検算がそれらの全証明を機械検証したという主張ではない。
+現段階で位数9から変形後のPI次数9を推論することもしていない。
+\end{proof}

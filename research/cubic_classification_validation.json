@@ -3053,7 +3053,53 @@
     "executed_checks": [
       "expanded individual exact validator PASS including W3/quartic/Psi",
       "main LuaLaTeX PASS; no overfull/undefined references/citations",
-      "full31 replay running after recognition extension, not yet recorded PASS",
+      "all31 spectral validators PASS after recognition extension",
+      "git diff --check PASS"
+    ]
+  },
+  "third_root_unit_boundary_L_PI_v249": {
+    "status": "ordinary THCR translation-order and independent-center/GK reduction proof; exact arithmetic checks PASS",
+    "proof": "papers/sections/cubic_third_root_unit_boundary_L_PI.tex",
+    "validator": "computations/verify_cubic_third_root_unit_boundary_L_PI.py",
+    "certificate": "computations/cubic_third_root_unit_boundary_L_PI_certificate.json",
+    "results": [
+      "boundary point translation exact order9; ambient Nakayama remains order3",
+      "all affine ambient D and normal quotients U PI on same L/Omega-open",
+      "central fraction localization over k(psi,g^3) has GK at most1"
+    ],
+    "external_inputs": [
+      {
+        "authors": "S. P. Smith and J. Tate",
+        "title": "The center of the 3-dimensional and 4-dimensional Sklyanin algebras",
+        "journal": "K-Theory 8 (1994), 19-63",
+        "url": "https://sites.math.washington.edu/~smith/Research/tate.pdf",
+        "pdf_sha256": "2cf94c6171dcbd212eed51d0d6a915618d8d279e26541c596ddffda13a9df74e",
+        "read_locator": "Introduction/definition of A and canonical g, Lemma3.5 and proof, Theorem3.7 and proof; printed pp20-21,36-38",
+        "used": "proper elliptic Sklyanin canonical central cubic and THCR; center generated in degrees3 and9 when translation order9"
+      },
+      {
+        "authors": "Christopher J. Pappacena, Lance W. Small, Jeanne Wald",
+        "title": "Affine semiprime algebras of GK dimension one are (still) PI",
+        "journal": "Glasgow Mathematical Journal45 (2003),243-247",
+        "doi": "10.1017/S0017089503001204",
+        "arxiv": "math/0211330v1",
+        "url": "https://arxiv.org/pdf/math/0211330",
+        "pdf_sha256": "53f7b2acdc9c6f293ba63f4bc256286b294976eecc0f835730210dbf5b9a78ab",
+        "read_locator": "Theorem5 and complete printed proof, arXiv pp4-5; preparatory statements and proof read",
+        "hypotheses": "affine semiprime algebra over any field, GK dimension1",
+        "application": "central localization of domain D over k(psi,g^3); standard identity restricts to D"
+      }
+    ],
+    "not_claimed": [
+      "PI degree D/U equals9",
+      "full center or Brauer period",
+      "U prime/domain",
+      "complete H3 classification"
+    ],
+    "executed_checks": [
+      "individual scalar/order/growth validator PASS",
+      "main LuaLaTeX PASS after GK macro correction; no overfull/undefined references/citations",
+      "full32 replay running, not yet recorded PASS",
       "git diff --check PASS"
     ]
   }
