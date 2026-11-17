@@ -1,0 +1,108 @@
+\subsection{位数4のrank2基底の双対化と正常二次}
+\label{subsec:cubic-fourth-root-unit-simple-rank2}
+\begin{lemma}[rank2基底には非退化な正常二次がある]
+\label{lem:cubic-fourth-root-rank2-nondegenerate-normal}
+$\mu_{B,s}=(\rho,\rho,1,-1)$、$\rho=\pm i$ の必要atlasで偶射影rank2を仮定する。
+$bc=h(U),cb=k(U)$、$S=\langle U\rangle$ とすると、$h,k$ の少なくとも一方は
+$U^{\otimes2}$ のrank2 tensorである。
+\end{lemma}
+\begin{proof}
+$h,k\ne0$、$S_2=U^{\otimes2}$、$h=f(k),k=g(h)$、
+$h u=fg(u)h,k u=gf(u)k$ は既証のrank2構造による。
+まず $h,k$ が比例するrank1 tensorなら、Frobenius middleの $U^2$ 対 $bc,cb$ の二列は
+ともにrank1 tensorの倍数となる。
+巡回で得るmixedの $2\times2$ 小blockもrank高々1となるが、
+二つの可逆mixed graphと非退化pairingは四小block全てを可逆にする。
+具体的にmixed全blockは $\binom{F}{I}M\binom{G}{I}^{t}$ の形で、
+$F,G,M$ は可逆 $2\times2$ 行列である。
+四小blockは $FMG^t,FM,MG^t,M$ となる。矛盾する。
+
+従って両方rank1とすれば独立である。
+$h=u v,k=s t$ と分解し、$f(k)=h,g(h)=k$ を自由な二次tensorで比較すると
+$fg$ は $ku,kv$ をそれぞれ保存する。
+$u,v$ が独立なら $h u=fg(u)h$ の左因子 $u$ を消去して
+$vu=\lambda uv$ を得るが、$S_2$ が自由なことに反する。
+よって $h$ は平方、$k$ も同様に平方であり、基底を選んで $h=x^2,k=y^2$ とできる。
+$\mu_B(h)=-h,\mu_B(k)=-k$ と $S_2$ の自由性から
+$\mu_B(x)=\rho x,\mu_B(y)=\rho y$。
+
+even middleはrank2で、その関係基底 $bc-h,cb-k$ の $bc,cb$ 射影は同型である。
+従ってその $U^2$ 主block $P$ はrank2で像が $\langle x^2,y^2\rangle\subset\operatorname{Sym}^2U$ となる。
+対応する純 $U$ 四次tensor $w_U$ は第一・第二位置の交換に不変。
+一方、中山巡回から $\tau(w_U)=-\rho w_U$。
+位置交換を巡回で共役すると全隣接交換への不変性が従い、$w_U$ は完全対称となる。
+すると $\tau(w_U)=w_U$ であり、$-\rho\ne1$ より $w_U=0$。
+これは $P$ のrank2に反する。
+\end{proof}
+
+\begin{lemma}[同じAS indexを持つrank2基底の中山比較]
+\label{lem:cubic-rank2-base-Nakayama-comparison}
+上の基底 $S$ はnoetherian cubic AS正則次元3、AS index4であり、
+\[
+ \mu_S=\mu_B|_S.
+\]
+\end{lemma}
+\begin{proof}
+前補題の非退化な方を $h$ と書く。
+$h$ は $S$ 上正規正則で、$H_S=1/((1-t)^2(1-t^2))$ から
+$H_{S/(h)}=(1-t)^{-2}$。
+非退化二次関係 $h$ のAS2平面が $S/(h)$ へ全射し、Hilbert級数の一致から同型である。
+$S$ は既に左右noetherian、有限大域次元高々4である。
+正常Rees lemmaと $S/(h)$ 上の長さ2の $k$ の解消を持ち上げることにより、
+$S$ はAS Gorenstein次元3・index $2+2=4$、$\operatorname{pd}_S k\le3$ を得る。
+従って $S$ はAS正則次元3である。
+
+$L=B[b^{-1}]=S[b,b^{-1};f]$、$C=S[t;f]$、$\deg t=1$ とする。
+$C$ の自己同型型Ore拡大の二項相対bimodule解消は
+AS正則次元4・index5と $\mu_C|_S=f^{-1}\mu_S$ を与える。
+$t$ を $b$ と同定すると $C[t^{-1}]=L$。
+有限projective bimodule解消を左右flatなOre局所化で底変更すれば、
+最高Extの二つの表示は
+\[
+ \underline{\operatorname{Ext}}^4_{L^e}(L,L^e)
+ \simeq {}^1L^{\mu_B}(4)
+ \simeq {}^1L^{\mu_C}(5)
+\]
+となる。
+$L$ の単元は $\lambda b^n$ だけである。
+実際、Laurent chargeの最大値と最小値は積で加法的なので単元は一つのchargeに限られ、
+その係数は連結次数付き整域 $S$ の単元、従ってscalarである。
+二つのshiftの生成元の次数は $-4,-5$ なので、上の同型は後者の生成元を
+$\lambda b^{-1}$ 倍した前者へ送る。
+右作用の両立性は
+\[
+ \mu_C(s)b^{-1}=b^{-1}\mu_B(s)\quad(s\in S)
+\]
+を与え、従って $\mu_C|_S=f^{-1}\mu_B|_S$。
+Ore公式と比較して $\mu_S=\mu_B|_S$ を得る。
+shift符号を省略して無次数のinner同値だけを比較した議論ではない。
+\end{proof}
+
+\begin{theorem}[単純固有値1を持つ位数4枝の全排除]
+\label{thm:cubic-fourth-root-unit-simple-rank2-empty}
+$(4;1,0,2)$ と $(4;3,0,2)$ のrank2必要atlasにはAS4整域が存在しない。
+rank1排除と合わせ、この二スペクトルのH3候補は全て空である。
+\end{theorem}
+\begin{proof}
+前二補題の非退化正常二次を $h$、そのnormalizerを $\tau$ とする。
+$T=S/(h)$ は二元AS2平面である。
+$\mu_S(h)=\mu_B(h)=-h$、$\tau(h)=h$ であり、$S_2=U^{\otimes2}$ なので、
+これらは自由二次tensor上の厳密な等式である。
+従って $T$ 上の自己同型として
+\[
+ \operatorname{hdet}_T(\mu_S)=-1,\qquad
+ \operatorname{hdet}_T(\tau)=1.
+\]
+ここで二元AS2のhdetは定義二次関係のscalarである。
+正常商の中山公式\cite[Lemma 1.5]{RRZ}は $\mu_T=(\mu_S\tau)|_T$ を与えるため、
+$\operatorname{hdet}_T\mu_T=-1$ となる。
+しかしAS2の量子・Jordan標準形で中山は関係をちょうど固定し、hdetは1である。
+標数0で矛盾する。
+\end{proof}
+
+\begin{corollary}[三固有値領域の11個の必要スペクトル]
+\label{cor:cubic-three-eigenvalue-11-list}
+三固有値H3の必要リストは、位数3の3個、位数4の8個、合計11個に限られる。
+各関係重みパターンは一つ、Galoisラベルは6軌道である。
+残る候補の存在・H3許容性、四単純及びCY領域の全被覆は未分類である。
+\end{corollary}

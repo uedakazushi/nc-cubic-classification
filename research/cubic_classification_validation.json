@@ -2554,7 +2554,7 @@
   "spectral_reductions_replay": {
     "runner": "computations/verify_cubic_spectral_reductions.py",
     "manifest": "computations/cubic_spectral_reductions_validation.json",
-    "scope": "twelve finite certificate replays; ordinary mathematical proofs remain separate"
+    "scope": "thirteen finite certificate replays; ordinary mathematical proofs remain separate"
   },
   "fourth_root_negative_repeat_exclusion_v226": {
     "status": "ordinary all-chart free-tensor and AS2 proof; exact original coefficient obstructions PASS",
@@ -2601,6 +2601,27 @@
       "all determinant-minus-one or four-simple-eigenvalue coverage",
       "finite fourth-root boundary admissibility",
       "complete H3 classification"
+    ]
+  },
+  "fourth_root_unit_simple_rank2_v229": {
+    "status": "ordinary nondegenerate-normal-quadric, Rees and graded localization proof; exact tensor/AS2 checks PASS",
+    "proof": "papers/sections/cubic_fourth_root_unit_simple_rank2.tex",
+    "validator": "computations/verify_cubic_fourth_root_unit_simple_rank2.py",
+    "certificate": "computations/cubic_fourth_root_unit_simple_rank2_certificate.json",
+    "results": [
+      "two unit-simple fourth-root spectra entirely excluded including nonsemisimple Nakayama",
+      "11 necessary three-eigenvalue spectra; N3:3, N4:8; six Galois label orbits"
+    ],
+    "primary_formula_check": "RRZ Lemma1.5: mu-normal means eigenvector, scalar need not equal1; source text lines441-464 checked",
+    "not_claimed": [
+      "ordinary homological proof formally machine checked",
+      "remaining11 H3 existence/admissibility",
+      "complete classification"
+    ],
+    "executed_checks": [
+      "all13 spectral replay validators PASS",
+      "LuaLaTeX main build PASS; no overfull/undefined-reference diagnostics",
+      "git diff --check PASS"
     ]
   }
 }

@@ -1,0 +1,283 @@
+{
+  "status": "PASS",
+  "scope": "exact binary tensor symmetry, AS2 relation scaling and finite survivor bookkeeping; ordinary homological proof separate",
+  "tensor_checks": [
+    {
+      "rho": "I",
+      "twisted_binary_quartic_dimension": 3,
+      "first_pair_symmetric_twisted_dimension": 0
+    },
+    {
+      "rho": "-I",
+      "twisted_binary_quartic_dimension": 3,
+      "first_pair_symmetric_twisted_dimension": 0
+    }
+  ],
+  "independent_square_even_principal_rank": 2,
+  "AS2_Nakayama_relation_scale": 1,
+  "normal_quadric_quotient_Hilbert": "1/(1-t)^2",
+  "graded_localization_generator_degree": -1,
+  "excluded_spectra": [
+    {
+      "N": 4,
+      "spectrum": [
+        1,
+        0,
+        2
+      ],
+      "relation_weight_multiplicities": [
+        [
+          0,
+          2,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "N": 4,
+      "spectrum": [
+        3,
+        0,
+        2
+      ],
+      "relation_weight_multiplicities": [
+        [
+          0,
+          2,
+          2,
+          2
+        ]
+      ]
+    }
+  ],
+  "final_survivors": [
+    {
+      "N": 3,
+      "spectrum": [
+        0,
+        1,
+        2
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "N": 3,
+      "spectrum": [
+        1,
+        0,
+        2
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "N": 3,
+      "spectrum": [
+        2,
+        0,
+        1
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "N": 4,
+      "spectrum": [
+        0,
+        1,
+        2
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "N": 4,
+      "spectrum": [
+        0,
+        2,
+        3
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "N": 4,
+      "spectrum": [
+        1,
+        0,
+        3
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "N": 4,
+      "spectrum": [
+        1,
+        2,
+        3
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "N": 4,
+      "spectrum": [
+        2,
+        0,
+        1
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "N": 4,
+      "spectrum": [
+        2,
+        0,
+        3
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "N": 4,
+      "spectrum": [
+        3,
+        0,
+        1
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "N": 4,
+      "spectrum": [
+        3,
+        1,
+        2
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ]
+    }
+  ],
+  "final_spectrum_count": 11,
+  "remaining_orders": [
+    3,
+    4
+  ],
+  "remaining_counts": {
+    "3": 3,
+    "4": 8
+  },
+  "Galois_label_orbit_count": 6,
+  "Galois_label_representatives": [
+    [
+      3,
+      0,
+      1,
+      2
+    ],
+    [
+      3,
+      1,
+      0,
+      2
+    ],
+    [
+      4,
+      0,
+      1,
+      2
+    ],
+    [
+      4,
+      1,
+      0,
+      3
+    ],
+    [
+      4,
+      1,
+      2,
+      3
+    ],
+    [
+      4,
+      2,
+      0,
+      1
+    ]
+  ],
+  "not_claimed": [
+    "ordinary Rees/Ore/localization arguments formally verified",
+    "remaining11 H3 existence or admissibility",
+    "four-eigenvalue/CY coverage",
+    "complete H3 classification"
+  ]
+}
