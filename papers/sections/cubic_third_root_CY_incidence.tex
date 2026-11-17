@@ -1,0 +1,78 @@
+\subsection{位数3残余の標準CY untwistと22次元必要atlas}
+\label{subsec:cubic-third-root-CY-incidence}
+\begin{proposition}[位数3の正常三次incidenceの可逆なCY還元]
+\label{prop:cubic-third-root-CY-incidence}
+三固有値H3包絡の中山を $\theta=\mu_B$ とする。
+このとき $\theta^3=1$ であり、右Zhang twist $C=B^\theta$ はCY AS4である。
+三次 $G$ を同じ次数付きvectorとして見ると
+\[
+ \theta(G)=G,\qquad Gv=\theta^{-1}(v)G
+\]
+は $C$ 上でも厳密に成立し、左右の $G$ 倍写像は $B$ と $C$ で同一である。
+$G$ は $C$ の中心元ではない。
+
+逆に、CY AS4整域 $C$、位数3の次数付き自己同型 $\theta$、
+$\operatorname{hdet}_C\theta=1$、$\theta$ 固定の正則正常三次
+$Gv=\theta^{-1}(v)G$ があれば、$B=C^{\theta^{-1}}$ は
+$\mu_B=\theta$、$\mu_{B/(G)}=1$ を満たす。
+この可逆対応は正規三次の必要incidenceを扱うものであり、H3許容性を自動的に結論しない。
+\end{proposition}
+\begin{proof}
+$\theta$ のhdetは1である。
+本稿の右twist公式は $\mu_{B^H}=\mu_BH^{-4}$（hdetが1の場合）なので
+$\mu_C=\theta\theta^{-4}=1$。
+$\theta$ は $C$ の自己同型でもあり、そのhdetも1である。
+実際、Koszul topのtwist同型は $\theta^{\otimes4}$ と可換なので最高次へのscalarは変わらない。
+
+次数付きvector $u\in B_n$ に対して
+\[
+ G*_C u=G\theta^3(u)=Gu,\qquad
+ u*_C G=u\theta^n(G)=uG.
+\]
+従って正常式、正則性、二側ideal $(G)$ の次数付きvector空間は変わらず、
+\[
+ C/(G)\simeq (B/(G))^{\bar\theta}.
+\]
+これは三次の正常性をtwistで無条件に輸送した主張ではなく、
+$\deg G=3,\theta^3=1,\theta(G)=G$ の三条件を全て用いた等式である。
+逆向きも同じ計算とtwist公式で成立する。
+中心性まで成立すれば整域内で $(v-\theta^{-1}v)G=0$ となり、$\theta=1$ を強制する。
+三固有値の場合には不可能である。
+
+Zhangのpointedな商圏同値は保持されるが、$C/(G)$ の表示次数をそのまま反Serre次数とは呼ばない。
+実際、正規商公式は $\mu_{C/(G)}=\theta^{-1}$ を与える。
+元の反標準orbit環は $B/(G)$ であり、CY包絡の中心三次分類だけではこの残余を覆わない。
+\end{proof}
+
+\begin{proposition}[二つの22次元最高tensor atlas]
+\label{prop:cubic-third-root-22-atlas}
+重複固有値を先頭に置くと、残る二つのGaloisラベルは
+\[
+ \theta|_{B_1}=(1,1,\omega,\omega^2),\qquad
+ (\omega,\omega,1,\omega^2)
+\]
+である。各ラベルで実際の中山巡回式の最高tensor解空間は22次元である。
+その射影空間内の全三重みmiddle rank2条件は全AS4候補の必要被覆を与える。
+$B$ はmiddleの像を全二次関係として回収されるが、このrank条件だけでAS4十分性は主張しない。
+各AS4候補で $W_1$ を求める三次の中山不変部分の次元は、それぞれ8、7である。
+\end{proposition}
+\begin{proof}
+全四次語を右巡回軌道に分け、代表係数を1とし、回転ごとに
+$-\theta(\text{末字})^{-1}$ を掛ける。
+軌道を一周した係数が1である22軌道だけが自由に残る。
+全代表、全係数と元巡回式は公開exact検証器とcertificateに保持する。
+Koszul双対のFrobenius pairingはmiddleの像が全二次関係であることと、各重みrank2を与える。
+従って任意の候補はこの射影atlasに入る。
+
+$C$ のCY topは、$w_B$ から
+\[
+ w_C=(1\otimes\theta^{-1}\otimes\theta^{-2}\otimes\theta^{-3})w_B
+\]
+として得られる。
+上の22軌道全てで直接代入すると通常の反巡回式 $w_C=-\tau w_C$ を満たす。
+これもtwistの向きの独立な係数検証である。
+$\theta$-characterを $V,I$ とすると
+$[B_3]=V^3-2VI+V^*$、$I=(2,2,2)$。
+$V=(2,1,1)$ 又は $(1,2,1)$ を代入すると不変成分は8又は7となる。
+残る正常式は各この空間から四つの四次商への線型写像であり、その全核・許容性が次の未解決問題である。
+\end{proof}

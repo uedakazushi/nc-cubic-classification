@@ -1,0 +1,616 @@
+{
+  "status": "PASS",
+  "scope": "complete original semisimple orbit recurrence, every CY top coefficient and character arithmetic; ordinary incidence proof separate",
+  "cases": [
+    {
+      "weights_mod3": [
+        0,
+        0,
+        1,
+        2
+      ],
+      "top_dimension": 22,
+      "orbit_representatives": [
+        "xxxy",
+        "xxyy",
+        "xxbc",
+        "xxcb",
+        "xyxy",
+        "xyyy",
+        "xybc",
+        "xycb",
+        "xbxc",
+        "xbyc",
+        "xbbb",
+        "xbcy",
+        "xcyb",
+        "xcby",
+        "xccc",
+        "yybc",
+        "yycb",
+        "ybyc",
+        "ybbb",
+        "yccc",
+        "bbcc",
+        "bcbc"
+      ],
+      "B_twisted_top_basis": [
+        {
+          "xxxy": "1",
+          "yxxx": "-1",
+          "xyxx": "1",
+          "xxyx": "-1"
+        },
+        {
+          "xxyy": "1",
+          "yxxy": "-1",
+          "yyxx": "1",
+          "xyyx": "-1"
+        },
+        {
+          "xxbc": "1",
+          "cxxb": "-CRootOf(z**2 + z + 1, 1)",
+          "bcxx": "1",
+          "xbcx": "-1"
+        },
+        {
+          "xxcb": "1",
+          "bxxc": "1 + CRootOf(z**2 + z + 1, 1)",
+          "cbxx": "1",
+          "xcbx": "-1"
+        },
+        {
+          "xyxy": "1",
+          "yxyx": "-1"
+        },
+        {
+          "xyyy": "1",
+          "yxyy": "-1",
+          "yyxy": "1",
+          "yyyx": "-1"
+        },
+        {
+          "xybc": "1",
+          "cxyb": "-CRootOf(z**2 + z + 1, 1)",
+          "bcxy": "1",
+          "ybcx": "-1"
+        },
+        {
+          "xycb": "1",
+          "bxyc": "1 + CRootOf(z**2 + z + 1, 1)",
+          "cbxy": "1",
+          "ycbx": "-1"
+        },
+        {
+          "xbxc": "1",
+          "cxbx": "-CRootOf(z**2 + z + 1, 1)",
+          "xcxb": "CRootOf(z**2 + z + 1, 1)",
+          "bxcx": "-1"
+        },
+        {
+          "xbyc": "1",
+          "cxby": "-CRootOf(z**2 + z + 1, 1)",
+          "ycxb": "CRootOf(z**2 + z + 1, 1)",
+          "bycx": "-1"
+        },
+        {
+          "xbbb": "1",
+          "bxbb": "1 + CRootOf(z**2 + z + 1, 1)",
+          "bbxb": "CRootOf(z**2 + z + 1, 1)",
+          "bbbx": "-1"
+        },
+        {
+          "xbcy": "1",
+          "yxbc": "-1",
+          "cyxb": "CRootOf(z**2 + z + 1, 1)",
+          "bcyx": "-1"
+        },
+        {
+          "xcyb": "1",
+          "bxcy": "1 + CRootOf(z**2 + z + 1, 1)",
+          "ybxc": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "cybx": "-1"
+        },
+        {
+          "xcby": "1",
+          "yxcb": "-1",
+          "byxc": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "cbyx": "-1"
+        },
+        {
+          "xccc": "1",
+          "cxcc": "-CRootOf(z**2 + z + 1, 1)",
+          "ccxc": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "cccx": "-1"
+        },
+        {
+          "yybc": "1",
+          "cyyb": "-CRootOf(z**2 + z + 1, 1)",
+          "bcyy": "1",
+          "ybcy": "-1"
+        },
+        {
+          "yycb": "1",
+          "byyc": "1 + CRootOf(z**2 + z + 1, 1)",
+          "cbyy": "1",
+          "ycby": "-1"
+        },
+        {
+          "ybyc": "1",
+          "cyby": "-CRootOf(z**2 + z + 1, 1)",
+          "ycyb": "CRootOf(z**2 + z + 1, 1)",
+          "bycy": "-1"
+        },
+        {
+          "ybbb": "1",
+          "bybb": "1 + CRootOf(z**2 + z + 1, 1)",
+          "bbyb": "CRootOf(z**2 + z + 1, 1)",
+          "bbby": "-1"
+        },
+        {
+          "yccc": "1",
+          "cycc": "-CRootOf(z**2 + z + 1, 1)",
+          "ccyc": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "cccy": "-1"
+        },
+        {
+          "bbcc": "1",
+          "cbbc": "-CRootOf(z**2 + z + 1, 1)",
+          "ccbb": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "bccb": "-CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "bcbc": "1",
+          "cbcb": "-CRootOf(z**2 + z + 1, 1)"
+        }
+      ],
+      "CY_untwisted_top_basis": [
+        {
+          "xxxy": "1",
+          "yxxx": "-1",
+          "xyxx": "1",
+          "xxyx": "-1"
+        },
+        {
+          "xxyy": "1",
+          "yxxy": "-1",
+          "yyxx": "1",
+          "xyyx": "-1"
+        },
+        {
+          "xxbc": "CRootOf(z**2 + z + 1, 1)",
+          "cxxb": "-CRootOf(z**2 + z + 1, 1)",
+          "bcxx": "CRootOf(z**2 + z + 1, 1)",
+          "xbcx": "-CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "xxcb": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "bxxc": "1 + CRootOf(z**2 + z + 1, 1)",
+          "cbxx": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "xcbx": "1 + CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "xyxy": "1",
+          "yxyx": "-1"
+        },
+        {
+          "xyyy": "1",
+          "yxyy": "-1",
+          "yyxy": "1",
+          "yyyx": "-1"
+        },
+        {
+          "xybc": "CRootOf(z**2 + z + 1, 1)",
+          "cxyb": "-CRootOf(z**2 + z + 1, 1)",
+          "bcxy": "CRootOf(z**2 + z + 1, 1)",
+          "ybcx": "-CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "xycb": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "bxyc": "1 + CRootOf(z**2 + z + 1, 1)",
+          "cbxy": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "ycbx": "1 + CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "xbxc": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "cxbx": "1 + CRootOf(z**2 + z + 1, 1)",
+          "xcxb": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "bxcx": "1 + CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "xbyc": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "cxby": "1 + CRootOf(z**2 + z + 1, 1)",
+          "ycxb": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "bycx": "1 + CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "xbbb": "1",
+          "bxbb": "-1",
+          "bbxb": "1",
+          "bbbx": "-1"
+        },
+        {
+          "xbcy": "CRootOf(z**2 + z + 1, 1)",
+          "yxbc": "-CRootOf(z**2 + z + 1, 1)",
+          "cyxb": "CRootOf(z**2 + z + 1, 1)",
+          "bcyx": "-CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "xcyb": "CRootOf(z**2 + z + 1, 1)",
+          "bxcy": "-CRootOf(z**2 + z + 1, 1)",
+          "ybxc": "CRootOf(z**2 + z + 1, 1)",
+          "cybx": "-CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "xcby": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "yxcb": "1 + CRootOf(z**2 + z + 1, 1)",
+          "byxc": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "cbyx": "1 + CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "xccc": "1",
+          "cxcc": "-1",
+          "ccxc": "1",
+          "cccx": "-1"
+        },
+        {
+          "yybc": "CRootOf(z**2 + z + 1, 1)",
+          "cyyb": "-CRootOf(z**2 + z + 1, 1)",
+          "bcyy": "CRootOf(z**2 + z + 1, 1)",
+          "ybcy": "-CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "yycb": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "byyc": "1 + CRootOf(z**2 + z + 1, 1)",
+          "cbyy": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "ycby": "1 + CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "ybyc": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "cyby": "1 + CRootOf(z**2 + z + 1, 1)",
+          "ycyb": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "bycy": "1 + CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "ybbb": "1",
+          "bybb": "-1",
+          "bbyb": "1",
+          "bbby": "-1"
+        },
+        {
+          "yccc": "1",
+          "cycc": "-1",
+          "ccyc": "1",
+          "cccy": "-1"
+        },
+        {
+          "bbcc": "CRootOf(z**2 + z + 1, 1)",
+          "cbbc": "-CRootOf(z**2 + z + 1, 1)",
+          "ccbb": "CRootOf(z**2 + z + 1, 1)",
+          "bccb": "-CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "bcbc": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "cbcb": "1 + CRootOf(z**2 + z + 1, 1)"
+        }
+      ],
+      "B3_character": [
+        8,
+        6,
+        6
+      ],
+      "normal_cubic_coefficient_dimension": 8
+    },
+    {
+      "weights_mod3": [
+        1,
+        1,
+        0,
+        2
+      ],
+      "top_dimension": 22,
+      "orbit_representatives": [
+        "xxxb",
+        "xxyb",
+        "xxby",
+        "xxcc",
+        "xyxb",
+        "xyyb",
+        "xyby",
+        "xycc",
+        "xbyy",
+        "xbbc",
+        "xbcb",
+        "xcxc",
+        "xcyc",
+        "xcbb",
+        "xccy",
+        "yyyb",
+        "yycc",
+        "ybbc",
+        "ybcb",
+        "ycyc",
+        "ycbb",
+        "bccc"
+      ],
+      "B_twisted_top_basis": [
+        {
+          "xxxb": "1",
+          "bxxx": "-1",
+          "xbxx": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "xxbx": "-CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "xxyb": "1",
+          "bxxy": "-1",
+          "ybxx": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "xybx": "-CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "xxby": "1",
+          "yxxb": "1 + CRootOf(z**2 + z + 1, 1)",
+          "byxx": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "xbyx": "-CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "xxcc": "1",
+          "cxxc": "-CRootOf(z**2 + z + 1, 1)",
+          "ccxx": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "xccx": "-CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "xyxb": "1",
+          "bxyx": "-1",
+          "xbxy": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "yxbx": "-CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "xyyb": "1",
+          "bxyy": "-1",
+          "ybxy": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "yybx": "-CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "xyby": "1",
+          "yxyb": "1 + CRootOf(z**2 + z + 1, 1)",
+          "byxy": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "ybyx": "-CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "xycc": "1",
+          "cxyc": "-CRootOf(z**2 + z + 1, 1)",
+          "ccxy": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "yccx": "-CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "xbyy": "1",
+          "yxby": "1 + CRootOf(z**2 + z + 1, 1)",
+          "yyxb": "CRootOf(z**2 + z + 1, 1)",
+          "byyx": "-CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "xbbc": "1",
+          "cxbb": "-CRootOf(z**2 + z + 1, 1)",
+          "bcxb": "CRootOf(z**2 + z + 1, 1)",
+          "bbcx": "-CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "xbcb": "1",
+          "bxbc": "-1",
+          "cbxb": "CRootOf(z**2 + z + 1, 1)",
+          "bcbx": "-CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "xcxc": "1",
+          "cxcx": "-CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "xcyc": "1",
+          "cxcy": "-CRootOf(z**2 + z + 1, 1)",
+          "ycxc": "1",
+          "cycx": "-CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "xcbb": "1",
+          "bxcb": "-1",
+          "bbxc": "1",
+          "cbbx": "-CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "xccy": "1",
+          "yxcc": "1 + CRootOf(z**2 + z + 1, 1)",
+          "cyxc": "1",
+          "ccyx": "-CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "yyyb": "1",
+          "byyy": "-1",
+          "ybyy": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "yyby": "-CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "yycc": "1",
+          "cyyc": "-CRootOf(z**2 + z + 1, 1)",
+          "ccyy": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "yccy": "-CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "ybbc": "1",
+          "cybb": "-CRootOf(z**2 + z + 1, 1)",
+          "bcyb": "CRootOf(z**2 + z + 1, 1)",
+          "bbcy": "-CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "ybcb": "1",
+          "bybc": "-1",
+          "cbyb": "CRootOf(z**2 + z + 1, 1)",
+          "bcby": "-CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "ycyc": "1",
+          "cycy": "-CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "ycbb": "1",
+          "bycb": "-1",
+          "bbyc": "1",
+          "cbby": "-CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "bccc": "1",
+          "cbcc": "-CRootOf(z**2 + z + 1, 1)",
+          "ccbc": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "cccb": "-1"
+        }
+      ],
+      "CY_untwisted_top_basis": [
+        {
+          "xxxb": "1",
+          "bxxx": "-1",
+          "xbxx": "1",
+          "xxbx": "-1"
+        },
+        {
+          "xxyb": "1",
+          "bxxy": "-1",
+          "ybxx": "1",
+          "xybx": "-1"
+        },
+        {
+          "xxby": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "yxxb": "1 + CRootOf(z**2 + z + 1, 1)",
+          "byxx": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "xbyx": "1 + CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "xxcc": "CRootOf(z**2 + z + 1, 1)",
+          "cxxc": "-CRootOf(z**2 + z + 1, 1)",
+          "ccxx": "CRootOf(z**2 + z + 1, 1)",
+          "xccx": "-CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "xyxb": "1",
+          "bxyx": "-1",
+          "xbxy": "1",
+          "yxbx": "-1"
+        },
+        {
+          "xyyb": "1",
+          "bxyy": "-1",
+          "ybxy": "1",
+          "yybx": "-1"
+        },
+        {
+          "xyby": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "yxyb": "1 + CRootOf(z**2 + z + 1, 1)",
+          "byxy": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "ybyx": "1 + CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "xycc": "CRootOf(z**2 + z + 1, 1)",
+          "cxyc": "-CRootOf(z**2 + z + 1, 1)",
+          "ccxy": "CRootOf(z**2 + z + 1, 1)",
+          "yccx": "-CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "xbyy": "CRootOf(z**2 + z + 1, 1)",
+          "yxby": "-CRootOf(z**2 + z + 1, 1)",
+          "yyxb": "CRootOf(z**2 + z + 1, 1)",
+          "byyx": "-CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "xbbc": "1",
+          "cxbb": "-1",
+          "bcxb": "1",
+          "bbcx": "-1"
+        },
+        {
+          "xbcb": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "bxbc": "1 + CRootOf(z**2 + z + 1, 1)",
+          "cbxb": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "bcbx": "1 + CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "xcxc": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "cxcx": "1 + CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "xcyc": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "cxcy": "1 + CRootOf(z**2 + z + 1, 1)",
+          "ycxc": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "cycx": "1 + CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "xcbb": "CRootOf(z**2 + z + 1, 1)",
+          "bxcb": "-CRootOf(z**2 + z + 1, 1)",
+          "bbxc": "CRootOf(z**2 + z + 1, 1)",
+          "cbbx": "-CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "xccy": "1",
+          "yxcc": "-1",
+          "cyxc": "1",
+          "ccyx": "-1"
+        },
+        {
+          "yyyb": "1",
+          "byyy": "-1",
+          "ybyy": "1",
+          "yyby": "-1"
+        },
+        {
+          "yycc": "CRootOf(z**2 + z + 1, 1)",
+          "cyyc": "-CRootOf(z**2 + z + 1, 1)",
+          "ccyy": "CRootOf(z**2 + z + 1, 1)",
+          "yccy": "-CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "ybbc": "1",
+          "cybb": "-1",
+          "bcyb": "1",
+          "bbcy": "-1"
+        },
+        {
+          "ybcb": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "bybc": "1 + CRootOf(z**2 + z + 1, 1)",
+          "cbyb": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "bcby": "1 + CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "ycyc": "-1 - CRootOf(z**2 + z + 1, 1)",
+          "cycy": "1 + CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "ycbb": "CRootOf(z**2 + z + 1, 1)",
+          "bycb": "-CRootOf(z**2 + z + 1, 1)",
+          "bbyc": "CRootOf(z**2 + z + 1, 1)",
+          "cbby": "-CRootOf(z**2 + z + 1, 1)"
+        },
+        {
+          "bccc": "1",
+          "cbcc": "-1",
+          "ccbc": "1",
+          "cccb": "-1"
+        }
+      ],
+      "B3_character": [
+        7,
+        6,
+        7
+      ],
+      "normal_cubic_coefficient_dimension": 7
+    }
+  ],
+  "right_twist_index_identity": "theta*theta^(-4)=1 for theta^3=1",
+  "normal_cubic_transport_hypotheses": [
+    "degree G=3",
+    "theta^3=1",
+    "theta(G)=G"
+  ],
+  "not_claimed": [
+    "rank2 top condition AS4 sufficient",
+    "normal kernels of all22-parameter charts solved",
+    "H3 admissibility",
+    "complete classification"
+  ]
+}

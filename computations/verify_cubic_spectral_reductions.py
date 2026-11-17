@@ -27,6 +27,7 @@ CHECKS=[
  'verify_cubic_fourth_root_last_negative_simple.py',
  'verify_cubic_third_root_nonunit_Jordan.py',
  'verify_cubic_third_root_unit_Jordan.py',
+ 'verify_cubic_third_root_CY_incidence.py',
 ]
 results=[]
 for name in CHECKS:

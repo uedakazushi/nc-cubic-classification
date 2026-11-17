@@ -1382,10 +1382,10 @@ python computations/verify_cubic_order2_22_secant_L_saturation.py --prefix /tmp/
 - 位数4：`cubic_fourth_root_spectrum_reductions.tex`。四奇数重み−1パターンを除き、(1,1,i,-i)を既述charge0障害で排除。
 - 最後の位数6：`cubic_sixth_root_last_Ore_exclusion.tex`。正常bでB=A[b;sigma]、coneでb³係数非零が必要。正常式からsigma³=muB^-1|A、muA=sigma^-2、hdet sigma1。sigmaUの同一固有値は最高AS3cubicのslice退化、相異なる場合は(a,a*omega),a³omega²、sigma c=-a*omega^k。最高tensorの固定orbitを直接列挙しk0だけ残る。Aはx²=kappa*c²,yx=-a²xy,yc=-a²cy、sigma=(a,a*omega,-a)。sigma固定A3はkx²y一本だが正常x残差(-a²-omega²)x³yが非零、従って全Gはkb³で非整域。先行AS3完全分類を輸入していない。QQ(a),Phi9で全tensor slice、固定A3 rank9、元の正常残差をexact PASS。単冪sigma候補もslice退化で排除。
 
-### 現在の残余：半単純・位数3の3スペクトル（v235）
+### 現在の残余：半単純・位数3の3スペクトル（v236）
 三固有値H3の中山は半単純であり、位数3のみ。必要リストはN3:3個で、各関係重みパターンは一つ。Galoisラベル2軌道の代表(N;a,b,c)、重複2を先頭、単純二固有値を昇順に書く：
 (3;0,1,2),(3;1,0,2)。
-Galoisラベルはk線型同値の商ではない。3候補のAS4存在・正常三次・H3許容性は未分類。全リストと現在値は `computations/cubic_fourth_root_last_negative_simple_certificate.json`。再生は `python computations/verify_cubic_spectral_reductions.py`、19検証器のPASSは有限計算であり通常の全証明の独立機械検証ではない。
+Galoisラベルはk線型同値の商ではない。3候補のAS4存在・正常三次・H3許容性は未分類。全リストと現在値は `computations/cubic_fourth_root_last_negative_simple_certificate.json`。再生は `python computations/verify_cubic_spectral_reductions.py`、20検証器のPASSは有限計算であり通常の全証明の独立機械検証ではない。
 N4(2,1,3)は `cubic_fourth_root_negative_repeat_exclusion.tex` で全排除。G=F b²+L c²、domainにF,L独立が必要。even rank2はS2自由なのでF f²(u)=mu^-1(u)Fが不可能。rank1はAS2 Oreへ復元し、可換はf=gとh0でskewへ、JordanはF,Lが同一正常線で因子、量子反対角はscalar linear normalizerなし、量子対角はF=x,L=y、alpha=i,alpha*gamma=-pとgamma²=-pからp1を強制。単冪中山込み。公開検証器が元Jordan relationのminorとkernel、量子のp(1-p)矛盾、free-tensor augmented rankをexact PASS。
 
 次の課題：残る二Galoisラベルの必要最高tensor atlasと正常核。
@@ -1406,7 +1406,9 @@ muUiのbinary twisted quarticのskew middleに対角な純U関係alpha*x²+beta*
 重複1のJordan層も `cubic_third_root_unit_Jordan.tex` で全排除（v235）。実際のmuU=[[1,1],[0,1]]の86語巡回系はrank74、top核12次元。局所冪零D(y)=xによりI0はx²,[x,y],bc,cb内でD0。元mixed middleの純xb,bx二列のdet=4(a6²-a5*a8)、domainにはdet0及びa5,a6,a8全非零が必要（全零は指数増大商）。t=a6/a5とするとbx=-t^-1xb,cx=-t xc、残る二mixedは同じ対角の完全graph。
 I0の[x,y]射影零は(b,c)商で指数増大。射影非零を消去して、baseにbc-qcb=h x²（q非零）、残りにyx=xy+κx²+ell bcを得る。bc/cb一方だけのbase関係はdomaincancelで追加純base関係を生じI0dim3となるため除外。全六関係の順序y>c>b>xの標準語数がAS4 Hilbert値に一致し、実際にB=A[y;sigma,delta],A=<x,b,c>というOre表示を得る。sigma x=x,balpha^-1,calphaでAは量子Weyl型AS3基底。
 H3 Gはmu固定なのでDG0。Ore次数最高n項へDはn*a_n*x*y^(n-1)を与えるためkerD=A。G∈A3をA/(x)=quantumplane(b,c;q)へ写すと、Gb=omega² bG,Gc=omega cGは各b^r c^s,r+s3にq^r=q^s=omegaを要求し、四通り全て不可能。従ってG∈xA2で因子化。両omegaについて全12tensor核・元mixed二列・全パラメータ量子平面gcdをexact PASS。通常のOre認識/最高次数議論は本文の証明であり有限計算の出力と区別。
-全三固有値中山は半単純・位数3に限る。次の最小課題：重複1/重複omegaの二半単純top atlasは各22次元、privateで全軌道とmiddleを展開済み。正常核と整域条件を同時に解析し、候補の存在/許容性を判定する。private /workspace/work/spectral_remaining/third_top.pyは再開補助だけでGitHub正本の証明書ではない。各22次元atlasを公表する際は元巡回式を再生成する。
+全三固有値中山は半単純・位数3に限る。`cubic_third_root_CY_incidence.tex`（v236）は残る二atlas各22次元の全最高tensor軌道と、可逆CY還元を与える。theta=muBでC=B^thetaはmuC=theta*theta^-4=1。degG3,theta3=1,thetaG1によりG*_C u=Gu,u*_C G=uGが厳密に成立し、G正常化theta^-1、左右正則性、idealのvector空間は同じ。逆にCY Cのtheta（hdet1）と同じ正常GからB=C^(theta^-1)を復元しmuBtheta,muR1。thetaを余分な任意標識とした全intrinsicモジュライ分類はまだ主張しない。
+GはCで非中心（中心ならdomaincancelでtheta1）。C/(G)のNakayamaはtheta^-1で、表示次数を反標準次数と混同しない。商圏はpointed Zhang同値だが元の反Serre orbit環はB/(G)。CY中心三次の既分類だけではこの正常incidenceを覆わない。
+全22軌道を元のtwisted巡回式で検証し、wC=(1⊗theta^-1⊗theta^-2⊗theta^-3)wBが通常反巡回であることも全係数で検証。middle像から関係Iを回収、各重みrank2が全AS4候補の必要atlas（十分性は未証明）。character B3=V³-2VI+V*から正常三次係数はunit repeat8、nonunit repeat7。全basisは公開certificate。次の最小課題はこのrank2 atlasと8/7次元正常核を同時に解析し、整域/AS4/H3条件を判定する。as4のSEMISIMPLE211は正確な三共鳴2011/1111/0211のみの仮定であり、本残余の追加Ub³/Uc³又はU³b等の軌道を含まないのでその八行表を全被覆として使わない（固定commit6f798e0のCLAIM及び証明冒頭の仮定だけを照合、定理輸入なし）。
 四単純の新しい全除外chart（v228）：`cubic_detminus1_spectral_exclusion.tex`。as4固定6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0のREADME、plan、COVERAGE、該当CLAIMS、DETMINUS1全文・自己監査・certificate状態を確認。nu=mu^-1なのでa→a^-1と後二基底交換で同じmu-chartになる。四族被覆/AS十分性/同型は輸入せず、H3域に次の直接証明を与えた。
 mu=(a,-a,i/a,-i/a),a4≠±1ではU²,mixed,V²の二次重みが分離して二重次数が存在。各平面に関係がなければ自由二生成の次数7が128でAS4値120を超え、domainなら純二元関係は高々一本なので両平面はAS2。混合三次の重み±ia,±a^-1は1にならず、純U三次重み1はa6=1、純Vはa6=-1を要して同時に起きない。従って全Gは片方のAS2純三次となり因子化、H3なし。a4=-1境界は既証二固有値必要集合±1に反し空、残るa4=1境界は四単純集合{1,-1,i,-i}のみで未分類。全det負一又は全四単純をこのchartが覆うとは主張しない。公開verifierは全パラメータLaurent多項式の非零因子・共鳴・境界特性多項式と128>120をexact PASS。出典/仮定/未実行の上流検算はas4_imports.jsonに記録。
 四単純の残る共鳴上の全被覆、全CY、全成分・境界、intrinsic族降下は依然未完。
