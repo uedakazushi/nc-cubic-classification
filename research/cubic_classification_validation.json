@@ -2554,6 +2554,20 @@
   "spectral_reductions_replay": {
     "runner": "computations/verify_cubic_spectral_reductions.py",
     "manifest": "computations/cubic_spectral_reductions_validation.json",
-    "scope": "nine finite certificate replays; ordinary mathematical proofs remain separate"
+    "scope": "ten finite certificate replays; ordinary mathematical proofs remain separate"
+  },
+  "fourth_root_negative_repeat_exclusion_v226": {
+    "status": "ordinary all-chart free-tensor and AS2 proof; exact original coefficient obstructions PASS",
+    "proof": "papers/sections/cubic_fourth_root_negative_repeat_exclusion.tex",
+    "validator": "computations/verify_cubic_fourth_root_negative_repeat_exclusion.py",
+    "certificate": "computations/cubic_fourth_root_negative_repeat_exclusion_certificate.json",
+    "results": [
+      "spectrum(-1,-1,i,-i) excluded including nonsemisimple Nakayama",
+      "13 necessary three-eigenvalue spectra,13 relation patterns,7 Galois label orbits"
+    ],
+    "not_claimed": [
+      "remaining13 H3 existence or admissibility",
+      "full classification"
+    ]
   }
 }

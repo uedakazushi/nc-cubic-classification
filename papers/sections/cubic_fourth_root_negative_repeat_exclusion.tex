@@ -1,0 +1,77 @@
+\subsection{重複固有値が負の位数4枝の正常式}
+\label{subsec:cubic-fourth-root-negative-repeat}
+\begin{theorem}[重複固有値 $-1$ の位数4枝の全排除]
+\label{thm:cubic-fourth-root-negative-repeat-empty}
+指数組 $(4;2,1,3)$、すなわち半単純スペクトル $(-1,-1,i,-i)$ の候補もH3を持たない。
+従って現在の三固有値必要リストは13スペクトルとなる。
+\end{theorem}
+\begin{proof}
+関係パターンは $(2,2,0,2)$ 一本である。
+$U$ を重複空間、$b,c$ を単純基底とすると、
+$bu=f(u)b,cu=g(u)c$ の可逆graphが各二本、
+$U^2+kbc+kcb$ に二本、$b^2,c^2$ の関係はない。
+補助次数 $\deg U=0,\deg b=1,\deg c=-1$ が成立し、不変三次は
+\[
+ G=F b^2+L c^2,\qquad F,L\in U.
+\]
+整域商のためには $F,L$ がともに非零で独立でなければならない。
+比例すれば共通の一次左因子を持ち、一方が零でも明らかに分解するからである。
+
+偶関係の $bc,cb$ 射影rankが2なら、$bc=h(U),cb=k(U)$、$S=\langle U\rangle$ と書け、
+$S_2=U^{\otimes2}$ は自由である。
+正常式の補助次数2成分は
+\[
+ F f^2(u)=\mu_B^{-1}(u)F\quad(u\in U)
+\]
+を $S_2$ 内で与える。
+$\mu_B^{-1}(u)$ が $F$ と独立な $u$ を選ぶと、自由tensor空間で
+$F\otimes f^2(u)=\mu_B^{-1}(u)\otimes F$ は不可能。
+従って $F=0$ となり、このrankは排除される。
+単冪中山の有無をここで仮定していない。
+
+射影rank1なら純 $U$ 関係が一本あり、AS2平面 $T$ を定める。
+可逆graphのFrobenius middle四小blockから、残る偶関係の $bc,cb$ 係数は両方非零。
+20標準三次語のoverlap比較により、前節と同じく
+\[
+ B=T[b;f][c;\sigma,\delta],\quad bc-qcb=h(U),\quad
+ fg=gf,\quad h u=fg(u)h,
+ \qquad\mu_B^{-1}|_T=fg\mu_T^{-1}
+\]
+を得る。このOre復元部分は重複固有値1を使わず成立する。
+正常式の最高及び最低chargeから
+\[
+ F f^2(u)=fg\mu_T^{-1}(u)F,\qquad
+ L g^2(u)=fg\mu_T^{-1}(u)L,
+ \qquad f(F)=iF,\quad g(L)=-iL.
+\]
+以下、AS2全標準形を調べる。
+
+$T$ が可換なら、最初の式で非零 $F$ を消去して $f^2=fg$、従って $f=g$。
+独立な $F,L$ はその固有値 $i,-i$ の基底なので $f^2=-I$。
+$h u=-u h$ は可換整域で $h=0$ を強制し、全包絡はskewとなる。
+既分類skew H3は三固有値を持たないので矛盾する。
+
+Jordan平面では $f(x)=\alpha x,g(x)=\beta x$ と書ける正規一次元 $x$ を使う。
+最初の $x$ の式は $\alpha^2 F x=\alpha\beta xF$。
+元の関係 $yx=xy+\kappa x^2$ の係数を比較すれば、非零 $F$ から
+$\alpha=\beta$ かつ $F\in kx$。
+$L$ も同様に $kx$ に入り、独立性に反する。
+
+量子平面 $xy=p yx$、$p\ne1$ では、自己同型は $p=-1$ の反対角を除き対角である。
+片側だけ反対角なら $(fg)^{-1}\mu_T$ の二固有値が相異なるため、重複 $-1$ と両立しない。
+両方反対角なら $fg=dI$、$\mu_T=-I$ より $d=1$。
+$f^2=sI$ なので最初の式は $F u=-s^{-1}uF$ を与えるが、
+反交換平面の非零一次元が両生成元に同じscalarで正規化することはできない。
+従ってこの場合も $F=0$。
+
+残る対角作用を
+$f(x)=\alpha x,f(y)=\beta y,g(x)=\gamma x,g(y)=\varepsilon y$ と書く。
+実際の中山も $-I$ となり、$fg=-\mu_T$、従って $\alpha\gamma=-p$。
+正常式 $F f^2(u)=-uF$ を元の量子関係で比較すると、
+$F$ が $x,y$ の両係数を持つなら $p=1$ となるので、$F$ は座標直線に入る。
+$L$ も同様。独立性から基底を交換して $F=x,L=y$ とできる。
+$f(F)=iF$ より $\alpha=i$、$\alpha\gamma=-p$ より $\gamma=i p$。
+一方、$L g^2(x)=-xL$ は $\gamma^2=-p$ を与える。
+従って $-p^2=-p$、$p\ne0$ より $p=1$。これは現在の仮定に反する。
+全基底型と全Jordan型で排除できた。
+\end{proof}
