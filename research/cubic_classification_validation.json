@@ -2266,5 +2266,28 @@
       "all intrinsic family fpqc descent",
       "global component boundary classification"
     ]
+  },
+  "normal_cubic_hypersurface_frame_v210": {
+    "status": "ordinary compact-frame and eta-square proofs; original relation ranks exact PASS",
+    "proof": "papers/sections/cubic_hypersurface_frame.tex",
+    "validator": "computations/verify_cubic_hypersurface_frame.py",
+    "certificate": "computations/cubic_hypersurface_frame_certificate.json",
+    "results": [
+      "four-line compact generator without H3 assumption",
+      "proper dg frame cohomology type55 in degree0 and21 in degree2",
+      "under stated hypotheses H3 iff eta_F squared zero for every coherent F, with normalizer twists",
+      "H3 heart objects obtained in at most8 extension steps from frame"
+    ],
+    "not_claimed": [
+      "finite list of H3 tests",
+      "uniform diagonal resolution length8",
+      "H3 Zariski openness",
+      "finite exceptional collection on H3 surface"
+    ],
+    "hypotheses": [
+      "noetherian quadratic Koszul AS4 type14641",
+      "regular normal cubic; quotient domain and mu_R=id",
+      "H3 equivalence additionally assumes intrinsic Gabriel-Krull rank-one torsion-free"
+    ]
   }
 }

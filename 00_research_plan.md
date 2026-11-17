@@ -68,3 +68,5 @@ Library既存ファイルは明示指示なしに削除しない。GitではPDF�
 
 heart比較・Rains共鳴・cubic cornerは `uedakazushi/nc-dp-surface-hearts`、次数1は `uedakazushi/nc-dp1-moduli`、三次三様体は `uedakazushi/nc-cubic-threefold-moduli` が正本。
 量子FermatのOU障害は [nc-cubic-non-as](https://github.com/uedakazushi/nc-cubic-non-as)、ambient比較は [nc-cubic-ambient-moduli](https://github.com/uedakazushi/nc-cubic-ambient-moduli) に移管済み。分類に必要な旧定理・コードはこのリポジトリの現行分類原稿からも参照する。
+
+一般正規三次切断の認識補題：`papers/sections/cubic_hypersurface_frame.tex`。四line compact frameとnormalizer付きhypersurface作用の二乗判定を保持する。rank-one torsion-freeは別仮定、有限検査・相対開性は未解決である。

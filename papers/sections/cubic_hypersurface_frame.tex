@@ -1,0 +1,107 @@
+\subsection{四つのline objectによる有限frameとH3判定の残余}
+\label{sec:four-line-frame}
+\begin{proposition}[H3を仮定しない四対象compact generator]\label{prop:four-line-frame}
+標数0の代数閉体上、$B$ を左右noetherian quadratic Koszul AS4型14641、
+$G\in B_3$ を正則正規元、$R=B/(G)$ を整域とする。
+$\mu_R=1$ を仮定する。以下のH3判定ではさらに $\pi R$ が
+Gabriel--Krull rank-one torsion-freeであることを仮定する。
+このrank条件を整域性だけから無条件に推論しない。
+\[
+ E=\pi R\oplus\pi R(1)\oplus\pi R(2)\oplus\pi R(3)
+\]
+は $D(\operatorname{QGr}R)$ のcompact generatorである。
+そのdg自己準同型 $C_R$ はproperで、cohomologyは次数0と2のみにあり、次元はそれぞれ55と21である。
+これはH3性を仮定せずに成立する。$E$ がtiltingであるとか、H3曲面に有限完全例外列があるとは主張しない。
+\end{proposition}
+\begin{proof}
+まずambientの $T_B=\bigoplus_{i=0}^3\pi B(i)$ を考える。
+AS Cohen--Macaulay性とparameter4の双対性から、$-3\le m\le3$ に対し
+\[
+ \Hom(\pi B,\pi B(m))=B_m,\qquad
+ \Ext^{p>0}(\pi B,\pi B(m))=0
+\]
+である。従って四対象はambientのstrong exceptional列となる。
+AS4 Koszul解消をtailsへ移した長さ4の完全列から、四つの連続shiftが全てのshiftを生成する。
+全shiftのcompact生成性は同じ有限cohomological次元とample列から従う。
+これはambientに関するBeilinsonの議論であり、曲面自体に同じ例外列を仮定していない。
+
+商に沿うderived restrictionを $i^*$、exactで保守的なforgetful functorを $i_*$ とする。
+$G$ は正則なので、$i^*$ は二項の $B$-加群解消から定まり、torsion商へ降りる。
+$i_*$ は任意直和を保つ。
+従ってadjunctionから $i^*T_B=E$ はcompactであり、
+$\operatorname{RHom}(E,F)=0$ なら $\operatorname{RHom}(T_B,i_*F)=0$、従って $F=0$ となる。
+
+$R$ のparameterは1、AS Cohen--Macaulay次元は3である。
+同じlocal cohomologyと双対性から
+\[
+ \Ext^p(\pi R(i),\pi R(j))=
+ \begin{cases}R_{j-i}&p=0,\\R_{i-j-1}^{*}&p=2,\\0&\text{その他}\end{cases}
+\]
+を得る。負次数の $R$ は零とする。
+$(\dim R_0,\ldots,\dim R_3)=(1,4,10,19)$ より、二つの行列は
+\[
+ H^0:\begin{pmatrix}1&4&10&19\\0&1&4&10\\0&0&1&4\\0&0&0&1\end{pmatrix},\qquad
+ H^2:\begin{pmatrix}0&0&0&0\\1&0&0&0\\4&1&0&0\\10&4&1&0\end{pmatrix}.
+\]
+総次元は55と21である。
+\texttt{verify\_cubic\_hypersurface\_frame.py}は指定fiberの元の二次・三次関係のrank6,45を直接確認し、
+これらの数値を再生する。消滅と双対性の通常の証明をrank計算で置き換えていない。
+\end{proof}
+
+\begin{theorem}[hypersurface作用のheart上の二乗による判定]\label{thm:eta-square-H3}
+上記の仮定の下、$Gb=\nu(b)G$ でnormalizerを定める。
+右加群のtwistを $F_\nu$ と書く。derived自己交叉のPostnikov三角は任意のcoherent $F$ に自然な写像
+\[
+ \eta_F:F\longrightarrow F_\nu(-3)[2]
+\]
+を与える。このとき
+\[
+ R\text{ がH3}\quad\Longleftrightarrow\quad
+ \eta_F^2:F\longrightarrow F_{\nu^2}(-6)[4]\text{ が全coherent }F\text{ で零}.
+\]
+H3である場合、全てのcoherent対象は $E$ とそのshift・有限直和・直和因子から、
+高々8段のextensionで得られる。
+このheart上の一様な有限frameを、H3の有限個の数値検査に置き換えてはいない。
+\end{theorem}
+\begin{proof}
+正規性と正則性から $\nu(G)=G$ であり、$\nu$ は $R$ 上へ降りる。
+$b\mapsto bG$ によるbimodule解消
+$0\to B_\nu(-3)\to B\to R\to0$ を用いる。
+右作用の規約は $b*a=b\nu(a)$ である。従って
+$R\otimes_B^{\mathbf L}R$ のhomologyは $R$ と $R_\nu(-3)[1]$ のみである。
+二つの $R$-作用を保ったPostnikov三角を $F$ とderived tensorすれば
+\[
+ F_\nu(-3)[1]\longrightarrow Li^*i_*F\longrightarrow F
+        \xrightarrow{\eta_F}F_\nu(-3)[2]
+\]
+を得る。この三角を一般にsplitとはしていない。
+H3ならheartのhomological次元は2なので、$\eta_F^2$ はExt4に入り零である。
+
+逆に全 $F$ で二乗が零とする。
+二つの $\eta$ の合成にoctahedral axiomを適用すると、$\operatorname{Cone}(\eta_F^2)$ は
+$Li^*i_*F$ と $Li^*i_*(F_\nu(-3))$ のshift二つのextensionとなる。
+合成が零なのでこの錐は $F_{\nu^2}(-6)[4]\oplus F[1]$ であり、$F$ はその直和因子である。
+ambient $\operatorname{qgr}B$ は有限homological次元を持つため $i_*F$ はperfect、
+従って二つのrestrictionと $F$ もperfectである。
+properなperfect圏上のAS Gorenstein Serre双対は
+$S=(-1)[2]$ を与える。
+全coherent対象がperfectとなったので、$n>2$ について
+\[
+ \Ext^n(F,H)^*\simeq\Hom(H,F(-1)[2-n])=0
+\]
+となる。rank条件は仮定した。AS Gorenstein性からsection mapは同型、
+$\pi R$ はexceptionalであり、noetherian性と $\chi$ によりshift列はAZ ampleである。
+Serre式から反標準作用はshift、三次切断は二次を変えず $Q(R)=B$ なのでH3を得る。
+
+最後のboundはambientのfull strong exceptional四対象によるsemiorthogonal分解を使う。
+任意の $i_*F$ と $i_*(F_\nu(-3))$ は $T_B$ の高々4段のextensionに入る。
+restriction後も同じboundであり、上の二つのextensionと直和因子の議論から8段を得る。
+このboundはcoherent heartに対するもので、任意のdg bimoduleのresolution長を同じ8に制限したものではない。
+\end{proof}
+
+\begin{remark}[残る有限判定問題]
+このproper dg frameのcohomology次元が一定であることだけでは、
+未知fiberのsmooth性やH3 locusの開性を結論できない。
+上の判定は全coherent対象に量化しており、有限個の代数的検査への還元は未解決である。
+rank条件とその相対版も別途検証する必要がある。
+\end{remark}

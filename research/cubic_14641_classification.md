@@ -1360,3 +1360,6 @@ python computations/verify_cubic_order2_22_secant_L_saturation.py --prefix /tmp/
 全三段階を公開コードから実行してPASS。小証明書は `computations/cubic_order2_22_secant_L_saturation_certificate.json`。ASCII exportはSingular 4.4.1のalgebraic minpoly dump不具合を避ける。旧direct/presentationの巨大Ann/lift計算は証明に不要。B0追加汎関数も不要となった。
 
 次の最優先は共有方針の量子三次成分における全Artin底の相対二次包絡。一般H3分類では三固有値以上とCY残余の被覆も未完成である。
+
+## 正規三次切断の共通frameと残る判定（v210）
+`papers/sections/cubic_hypersurface_frame.tex` に、一般の正則正規三次切断の四line compact generatorとproper dg cohomology次元55,21を保存した。mu_R=idの整域候補について、Gabriel–Krull rank-one torsion-freeを別途仮定すると、全coherent Fにおけるnormalizer付きhypersurface作用 eta_F の二乗消滅とH3性が同値。二項bimodule解消の右作用は Gb=nu(b)G、Tor1=R_nu(-3)であり中央性を仮定しない。AS双対性とcompact生成は通常の証明、公開検証器のrank6,45は指定中央fiberの数値例である。有限個の試験によるH3判定、開性、rank条件の自動性は未解決。全H3の被覆は三固有値以上・CY残余へ進む。

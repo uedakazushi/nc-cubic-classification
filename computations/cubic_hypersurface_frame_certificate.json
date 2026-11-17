@@ -1,0 +1,92 @@
+{
+  "status": "PASS",
+  "field": "Q(q), q^2+q+1=0",
+  "quadratic_relation_rank": 6,
+  "cubic_relation_plus_cut_rank": 45,
+  "cut": [
+    2,
+    1,
+    2,
+    3,
+    5
+  ],
+  "four_line_frame": [
+    "O",
+    "O(1)",
+    "O(2)",
+    "O(3)"
+  ],
+  "R_dimensions_0_to_3": [
+    1,
+    4,
+    10,
+    19
+  ],
+  "Hom_dimension_matrix": [
+    [
+      1,
+      4,
+      10,
+      19
+    ],
+    [
+      0,
+      1,
+      4,
+      10
+    ],
+    [
+      0,
+      0,
+      1,
+      4
+    ],
+    [
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "Ext2_dimension_matrix_by_AS_Gorenstein_duality": [
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      4,
+      1,
+      0,
+      0
+    ],
+    [
+      10,
+      4,
+      1,
+      0
+    ]
+  ],
+  "dg_frame_type": {
+    "H0": 55,
+    "H1": 0,
+    "H2": 21
+  },
+  "separate_mathematical_inputs": [
+    "ambient AS4 Beilinson generation",
+    "hypersurface restriction adjunction",
+    "AS Cohen-Macaulay vanishing and AS Gorenstein duality"
+  ],
+  "not_claimed": [
+    "finite truncation determines arbitrary nonsmooth dg algebras",
+    "H3 openness",
+    "full exceptional collection on the cubic surface"
+  ]
+}
