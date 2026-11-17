@@ -84,3 +84,102 @@ $i+j$ が奇数なら等しくならない。従って全係数が零となり $
 残る量子平面では全自己同型が対角であり、全包絡がskewとなる。
 Jordan残余の存在や許容性はここでは結論しない。
 \end{proof}
+
+\begin{proposition}[Jordan基底の整域切断は二次共鳴を強制する]
+\label{prop:cubic-Jordan-Ore-resonance}
+前節のOre表示で基底を
+$T=k\langle x,y\rangle/(yx-xy-\kappa x^2)$、$\kappa\ne0$ とする。
+$f,g$ は可換なgraded自己同型とする。
+$G\in W_1(B)$ に対して $B/(G)$ が整域ならば、
+$f,g$ の $T_1$ 上の固有値はともに1である。
+従って $\mu_{B,s}$ の固有値は $(1,1,q,q^{-1})$ であり、
+重複型 $(2,1,1)$ の二次非共鳴条件には反する。
+\end{proposition}
+\begin{proof}
+Jordan平面の全graded自己同型は
+\[
+ f(x)=\alpha x,\ f(y)=\alpha(y+s x),\qquad
+ g(x)=\beta x,\ g(y)=\beta(y+t x)
+\]
+の形である。
+規約を固定すると $\mu_T(x)=x$、$\mu_T(y)=y+2\kappa x$、
+$\operatorname{hdet}f=\alpha^2$、$\operatorname{hdet}g=\beta^2$。
+従ってOre公式は
+\[
+ \mu_B^{-1}(x)=\alpha\beta x,\quad
+ \mu_B^{-1}(y)=\alpha\beta(y+(s+t-2\kappa)x),\quad
+ \mu_B(b)=q\alpha^2b,\quad \mu_B(c)=q^{-1}\beta^2c
+\]
+を与える。
+最初のJordan中山式の符号は、関係行列
+$C=\left(\begin{smallmatrix}-\kappa&-1\\1&0\end{smallmatrix}\right)$ に対する
+Koszul双対公式 $\mu_T=-(C^{-1}C^t)^{-t}$ からも直接確認できる。
+
+$G=\sum F_{mn}b^mc^n$ とし、$d=3-m-n$ とする。
+$x$ はJordan平面の正規元なので局所化し、$u=x^{-1}y$ と置く。
+$ux=x(u+\kappa)$ であり、$F_{mn}=x^dP_{mn}(u)$ と書ける。
+正常式の $x$ 成分は
+\[
+ \alpha^m\beta^nP_{mn}(u+\kappa)=\alpha\beta P_{mn}(u)
+\]
+となる。非零多項式の最高係数を比較し、標数0と $\kappa\ne0$ を使うと
+\[
+ \alpha^m\beta^n=\alpha\beta,\qquad P_{mn}\text{ は定数}
+\]
+を得る。従って $G$ のsupportは $x^db^mc^n$ に限られる。
+$y$ 成分を比較すると
+\[
+ ms+nt-d\kappa=s+t-2\kappa,
+ \qquad m(s+\kappa)+n(t+\kappa)=s+t+\kappa.
+\]
+$s=t=-\kappa$ ならこの式は不可能。
+それ以外は三次格子上の一本の直線を定める。
+
+この直線上の格子点が座標因子を共有すれば $G$ は一次式で割れ、整域商を与えない。
+座標因子を共有しない直線を全列挙すると、三つの辺と、
+一つの頂点から向かい側の辺の非頂点格子点へ結ぶ六本だけである。
+辺上では $G$ は二変数量子平面の斉次三次式なので一次因子を持つ。
+これは二元AS2平面の斉次式の分解と同じで、正規一次元を逆転して一変数多項式を分解すればよい。
+残る六本のsupportは、$X_1=x,X_2=b,X_3=c$ として
+\[
+ X_i^3,\quad X_jX_k^2\qquad(\{i,j,k\}=\{1,2,3\})
+\]
+の二点である。整域商のためには両係数が非零である。
+二点の $(m-1,n-1)$ を行とする $2\times2$ 整数行列の行列式は全六型で $\pm1$。
+従って両点の $\alpha^{m-1}\beta^{n-1}=1$ は $\alpha=\beta=1$ を強制する。
+これで主張を得る。
+\end{proof}
+
+\begin{theorem}[二次非共鳴の全 $(2,1,1)$ H3包絡はskew]
+\label{thm:cubic-211-nonresonant-skew}
+中山の半単純固有値が重複型 $(2,1,1)$ であり、六つの二次固有値積が相異なる
+H3包絡はskew polynomial algebraである。単冪部分がある場合も含む。
+従ってこの全領域のH3幾何学的分類は既存の五skew型の分類の該当部分に一致する。
+\end{theorem}
+\begin{proof}
+定理\ref{thm:cubic-211-nonresonant-Ore}、
+系\ref{cor:cubic-211-Jordan-residual}、命題\ref{prop:cubic-Jordan-Ore-resonance}を合わせる。
+基底平面やOre表示を新たな標識として加えず、得たskew包絡の既知の全pointed矢を用いる。
+\end{proof}
+
+\begin{corollary}[三固有値以上のH3に必須の二次共鳴]
+\label{cor:cubic-multispectrum-quadratic-resonance}
+H3包絡の中山半単純部分が三つ以上の固有値を持つなら、
+相異なる固有値に関する二次積は衝突する。
+重複型 $(2,1,1)$ では、その固有値を $a,b,c$ として
+\[
+ a=-b,\quad a=-c,\quad b=-c,\quad
+ a^2=bc,\quad b^2=ac,\quad c^2=ab
+\]
+の少なくとも一つが成立する。
+四単純固有値では定理\ref{thm:cubic-simple-spectrum-skew}の21共鳴のいずれかが成立する。
+これらに命題\ref{prop:cubic-spectral-resonance}の三次共鳴も同時に必要である。
+\end{corollary}
+\begin{proof}
+二次積に衝突がなければ、四単純の場合は定理\ref{thm:cubic-simple-spectrum-skew}、
+重複型 $(2,1,1)$ では定理\ref{thm:cubic-211-nonresonant-skew}からskewとなる。
+既分類の五skew型（定理\ref{thm:all-skew-H3-geometric}）の中山スペクトルは
+恒等または $(1,1,-1,-1)$ だけであり、三固有値以上にはならない。
+三固有値の六積の衝突で、共通の固有値を約して異なる固有値の等式となるものを除くと、
+列挙した六条件だけが残る。
+\end{proof}

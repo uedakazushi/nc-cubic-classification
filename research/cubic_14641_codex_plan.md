@@ -12,7 +12,7 @@
 
 **多固有値の必要被覆（v211）**：三次固有値共鳴が必要、単純固有直線の唯一の純三乗共鳴は非整域で排除。複数共鳴交叉は残す。`cubic_spectral_resonance.tex`。四単純固有値の二次積が全て相異なる領域はskewと証明済み。非skew残余の21二次共鳴因子と三次共鳴の交叉上で、twisted四次tensorのmiddle rank6を調べる。
 
-**Ore残余（v212）**：二次非共鳴(2,1,1)のH3はskew又はJordan平面基底。可換基底の非半単純作用と反交換基底の反対角作用を排除済み。次はJordan基底の正常式とNakayama規約を監査する。
+**多固有値の現在の核心（v213）**：二次非共鳴(2,1,1)はJordan基底込みでskewに還元、既分類skew H3は三固有値以上を持たない。従って全三固有値以上のH3候補には二次共鳴が必須。(2,1,1)の六因子、四単純の21因子に三次共鳴を同時に課した有限被覆から、必要tensor atlasとW1を調べる。Jordan正常三次の六binomial指数det±1と中山符号を公開検証器でPASS。一般共鳴領域の十分性・CY全被覆・相対降下は未完。
 
 **一般正規切断の有限frame（v210）**：`cubic_hypersurface_frame.tex` は四line compact generator、proper dg type(55,21)、normalizer付きhypersurface作用の二乗によるH3判定を与える。rank-one torsion-freeは別仮定であり、全coherent対象に対する判定を有限検査へ還元したとは主張しない。
 

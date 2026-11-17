@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "scope": "exhaustive cubic lattice and exact shear matrices; not a substitute for ordinary proofs",
+  "scope": "exhaustive cubic lattice, exact shear matrices, Jordan Koszul-dual convention; ordinary proofs separate",
   "lines": [
     {
       "direction": [
@@ -162,5 +162,203 @@
     2,
     3
   ],
-  "Ore_action_power_identities": 10
+  "Ore_action_power_identities": 10,
+  "Jordan_support_edge_lines": 3,
+  "Jordan_nonfactor_binomial_supports": [
+    {
+      "line": [
+        1,
+        -2,
+        0
+      ],
+      "support": [
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          1
+        ]
+      ],
+      "normal_x_exponent_determinant": 1
+    },
+    {
+      "line": [
+        1,
+        3,
+        3
+      ],
+      "support": [
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          0,
+          3,
+          0
+        ]
+      ],
+      "normal_x_exponent_determinant": 1
+    },
+    {
+      "line": [
+        2,
+        -1,
+        0
+      ],
+      "support": [
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "normal_x_exponent_determinant": -1
+    },
+    {
+      "line": [
+        2,
+        3,
+        6
+      ],
+      "support": [
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          0,
+          3,
+          0
+        ]
+      ],
+      "normal_x_exponent_determinant": -1
+    },
+    {
+      "line": [
+        3,
+        1,
+        3
+      ],
+      "support": [
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          2,
+          1,
+          0
+        ]
+      ],
+      "normal_x_exponent_determinant": 1
+    },
+    {
+      "line": [
+        3,
+        2,
+        6
+      ],
+      "support": [
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          1,
+          2,
+          0
+        ]
+      ],
+      "normal_x_exponent_determinant": -1
+    }
+  ],
+  "Jordan_Nakayama_matrix": "Matrix([[1, 2*kappa], [0, 1]])",
+  "three_distinct_eigenvalue_quadratic_collisions": [
+    [
+      [
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        2,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        2
+      ],
+      [
+        1,
+        1,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        2
+      ],
+      [
+        2,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        2,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        2,
+        0
+      ],
+      [
+        1,
+        0,
+        1
+      ]
+    ],
+    [
+      [
+        0,
+        2,
+        0
+      ],
+      [
+        2,
+        0,
+        0
+      ]
+    ]
+  ]
 }

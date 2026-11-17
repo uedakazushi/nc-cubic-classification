@@ -2319,9 +2319,25 @@
       "non-skew nonresonant (2,1,1) sector reduces to Jordan AS2 base"
     ],
     "not_claimed": [
-      "Jordan-base exclusion",
       "quadratic-resonant (2,1,1) coverage",
       "complete H3 classification"
+    ]
+  },
+  "multieigenvalue_quadratic_resonance_cover_v213": {
+    "status": "ordinary proof with exhaustive lattice support, six unimodular exponent determinants and Jordan Koszul-dual matrix PASS",
+    "proof": "papers/sections/cubic_spectral_ore_reduction.tex",
+    "validator": "computations/verify_cubic_spectral_ore_reduction.py",
+    "certificate": "computations/cubic_spectral_ore_reduction_certificate.json",
+    "results": [
+      "Jordan-base domain normal cuts force alpha=beta=1 and a quadratic spectral collision",
+      "all quadratic-nonresonant (2,1,1) H3 envelopes are skew",
+      "all H3 with three or more semisimple eigenvalues require a quadratic collision",
+      "necessary cover: six divisors for (2,1,1), twenty-one for four simple eigenvalues; also cubic resonance"
+    ],
+    "not_claimed": [
+      "quadratic-resonant admissibility",
+      "all CY classification",
+      "global components or relative descent"
     ]
   }
 }
