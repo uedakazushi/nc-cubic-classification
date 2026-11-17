@@ -1,0 +1,75 @@
+\subsection{単冪Jordan型\texorpdfstring{$(3,1)$}{(3,1)}の全排除}
+\label{subsec:cubic-jordan31-unipotent-vertex}
+\begin{theorem}\label{thm:cubic-jordan31-unipotent-empty}
+強い内在的H3の二次包絡の中山作用は、単一固有値1のJordan型 $(3,1)$ を持たない。
+\end{theorem}
+\begin{proof}
+前節と同じねじり解除で $B=C^H$、$H=\exp N$、$C$ はCYとし、
+\[
+ Nx_1=x_0,\quad Nx_2=x_1,\quad Nx_0=Nx_3=0
+\]
+とする。元反巡回topの $N_{\rm tot}$ 核は18次元である。
+次の18語の係数を順に $a_0,\ldots,a_{17}$ として一意に表示できる：
+\[
+\begin{gathered}
+0001,0002,0003,0011,0012,0013,0022,0023,0031,\\
+0032,0033,0113,0123,0133,0233,0303,0323,0333.
+\end{gathered}
+\]
+middleの列22は $a_6x_0^2$ だけなので $a_6=0$。
+$a_{12}=0$ なら列12が $a_4x_0^2$ だけとなり、$a_4=0$ も必要。
+このとき $x_0,x_3$ を殺した全関係は $kx_1^2$ に含まれ、
+$k\langle x_1,x_2\rangle/(x_1^2)$ への全射が指数成長を与える。
+従って $a_{12}\ne0$、topを尺度変更して $a_{12}=1$ とする。
+
+weightを $(0,1,2,0)$ とする。元六関係のunit minorは $-1$ であり、
+最高weight部分は、可換三変数環 $k[x_0,x_1,x_2]$ 上のOre拡大
+\[
+ \operatorname{gr} C=k[x_0,x_1,x_2][x_3;\delta]
+\]
+の六関係となる。ただし $h=a_4$ として
+\[
+ \delta(x_0)=hx_0^2,\qquad \delta(x_1)=hx_0x_1,\qquad
+ \delta(x_2)=-3hx_0x_2+2hx_1^2.
+\]
+残りの項はweightが厳密に低い。
+Oreの並べ替えと低weightへの帰納で順序単項式が張り、AS4 Hilbert値と個数が一致するため基底となる。
+従って上の随伴環同定は全次数で正しい。$h=0$ も含めている。
+$N\delta=\delta N$、$Nx_3=0$ なので、PBW基底 $x_0^ix_1^jx_2^kx_3^l$ 上の
+随伴 $N$ は可換三変数側だけに作用する。
+その全三次核は
+\[
+ x_0^3,\ x_0^2x_3,\ x_0x_3^2,\ x_3^3,\quad
+ x_0(2x_0x_2-x_1^2),\ (2x_0x_2-x_1^2)x_3
+\]
+で張られ、最高weightは2である。
+輸送された正常三次 $F$ は $N(F)=0$ なので、先頭項の議論からweightが高々2となる。
+従って $J=(x_0,x_1,x_3)$ に対し $F\in J^2$。
+$H$ は $J$ を保ち、$B/J=k[x_2]$、従って $R=B/(F)$ に
+$P=\pi k[x_2]$ が存在する。
+
+前節の全tails自己拡大の議論をこの $P$ に適用する。
+$x_2$ の作用を恒等にし、他の三生成元の非対角成分を
+$f=(f_0,f_1,f_3)^t$ とする。
+$J$ 内の三つの二次関係と $F\in J^2$ は一次化で零であり、残る三関係は可逆な漸化式を与える。
+元18係数のまま、shiftの行列は
+\[
+ M=\begin{pmatrix}
+ 1&0&0\\
+ \lambda&1&a_{16}-a_{14}\\
+ 3a_4&0&1
+ \end{pmatrix},\qquad
+ \lambda=1-2a_{11}+3a_{16}a_4-a_7-2a_9
+\]
+となる。特に $(M-I)^3=0$、$\det M=1$。
+任意の初期値が一つの拡大を与えるので $\Ext^1(P,P)=k^3$。
+$S=(-1)[2]$ と $P\simeq P(-1)$ に対し、
+補題\ref{lem:cubic-odd-Serre-determinant}の行列式条件に矛盾する。
+従って全係数・全退化境界を含めてこのJordan型はH3を与えない。
+\end{proof}
+公開再現器は\\
+\texttt{verify\_cubic\_jordan31\_unipotent\_vertex.py}。
+元18核、二つのdomain/growth列、unit source minor、最高weightのOre関係、
+$N\delta=\delta N$、全三次核、twist後の全point拡大とmonodromyを検証する。
+必要なSerre・tails論証は前節と上の通常証明に依存する。
+単一固有値に残る非自明Jordan型は $(2,2),(2,1,1)$ であり、CY全被覆も未完成である。
