@@ -1,0 +1,62 @@
+\subsection{対角商零次元層の全成分判定}
+\label{subsec:cubic-four-simple-zero-dimensional}
+前節の必要torus式だけで対角商が零次元となる全81片を判定する。
+これは一般点の標本計算ではなく、整数Smith成分を全て保持した有限被覆である。
+\begin{proposition}\label{prop:cubic-four-simple-zero-dimensional}
+前節の零次元81片は全てH3を与えない。
+従って四単純スペクトルの必要被覆は次の五つのGaloisラベル、計10根集合に限られる：
+\[
+ (5;1,2,3,4),\quad (6;0,1,2,3),\quad (6;1,2,4,5),\quad
+ (7;1,2,5,6),\quad (9;1,3,6,8).
+\]
+残る必要三次support片は75個であり、存在・AS4性・H3十分性を主張しない。
+\end{proposition}
+\begin{proof}
+一片の非零orbit係数を $a_1,\ldots,a_p$、必要式を
+$a^A=\zeta_{2N}^{b}$ と書く。整数Smith分解を $UAV=D$、非零対角を
+$d_1,\ldots,d_r$ とする。対角生成元変更の係数重み行列を $C$ とすると、
+全片で $AC^t=0$、$\operatorname{rank}C=p-r$ である。
+従って対角生成元torusの像は解torusの単位成分と同じ連結部分torusである。
+代数閉体上では各連結成分に推移的に作用するので、Smith自由座標を全て1にできる。
+ただし有限成分は捨てない。$L=2N\operatorname{lcm}_i|d_i|$ として
+\[
+ a_j=\zeta_L^{L\sum_{i=1}^r V_{ji}((Ub)_i+2Nk_i)/(2Nd_i)},
+ \qquad 0\leq k_i<|d_i|
+\]
+を全て取る。元の中山固有値も同じ原始根で表示し、共通根位数を最小化して重複を除く。
+全81片から30点が得られ、根位数は $5,6,9,10,12,18$ である。
+
+各点で元の巡回四次tensorのmiddle像を二次関係とし、自由語への関係挿入から
+次数3、4の商と正常三次行列を数体 $\mathbb Q(\zeta_L)$ 上で厳密計算する。
+全点で二次像rankは6。三点は商次元が $(22,46)$ となりAS4の $(20,35)$ に反する。
+残る27点のうち26点は $W_1(B)=0$ である。
+これらの数値は有限体や浮動小数根に依存しない。
+
+最後の一点は $(9;0,1,4,7)$ の層にあり、$\zeta=\zeta_9$ とすると
+$B=S(y,b,c)[x;\sigma]$、$\sigma(y,b,c)=\zeta^6(y,b,c)$ となる。
+実際、二次像の基底は三つの純base関係と三つの
+$xu-\zeta^6ux$ であり、$\sigma$ はbase関係空間を保つ。
+正常核は一次元で、その全語は $S_3$ に属する。
+仮にH3なら $G$ は正規正則で、そのnormalizerは $\mu_B^{-1}$、従って
+$S$ を保ち $x$ を固定する。
+補題\ref{lem:cubic-skew-cone-vertex}をそのまま適用でき、頂点対象の無限高次自己ExtがH3に反する。
+以上で全零次元片が消える。残る片を全て数えると命題の五ラベルとなる。
+\end{proof}
+
+再現器は
+\texttt{verify\_cubic\_four\_simple\_zero\_dimensional.py}、証明書は\\
+\texttt{cubic\_four\_simple\_zero\_dimensional\_certificate.json}。
+全Smith有限成分と各片から代表点への対応、全30点の次数商次元・正常rankを保存する。
+残る75片のtorus必要式の対角商次元は次表の通りである。
+\[
+\begin{array}{c|c|rrr}
+N&\text{指数代表}&1&2&3\\\hline
+5&(1,2,3,4)&18&18&15\\
+6&(0,1,2,3)&11&0&0\\
+6&(1,2,4,5)&9&0&0\\
+7&(1,2,5,6)&1&1&0\\
+9&(1,3,6,8)&1&1&0
+\end{array}
+\]
+この次元は未処理の非binomial minorや正常三次incidenceを課す前の値であり、
+実際のAS4族やintrinsic moduliの次元ではない。

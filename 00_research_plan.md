@@ -133,8 +133,7 @@ M符号(1,−1,t,t^-1)はxy/yx交代blockをdomainで消しI0⊂x²,y²,bc,cb。
 現行必要被覆は12 Galoisラベル/31根集合、22非零orbit層/156G-support片。ラベルは(5;1,2,3,4)、(6;0,1,2,3),(6;0,1,3,5),(6;1,2,4,5)、(7;1,2,5,6)、(9;0,1,4,7),(9;1,3,4,7),(9;1,3,6,8)、(12;0,1,4,10),(12;1,3,4,7),(12;1,3,7,10),(12;1,4,6,10)。全必要orbit係数A,bと各G bitmaskをcertificateに保持。
 公開verify_cubic_four_simple_orbit_torus.py default Sympy/数体全PASS、v285主原稿LuaLaTeX clean PASS。C対角generator重みでA C^t0も検証、effective_dimension=m−rankA−rankCはtoric必要式だけの対角商次元、実AS4/moduli次元ではない。累計68validators across runs、単一68全再生未実行。
 
-### 次の最小課題：対角商零次元片の全数体判定
-privateで有効次元0の全Smith成分を列挙し、対角torusのconnected作用（rankC=free dim）でfree座標を1へ。d_i各torsion rootを全て取り、λとtop係数の共通原始根位数Lを最小化して31点（N7既排除の1点含む）へ。root Lは5,6,9,10,12,14,18だけ。先にmodprimeを探索controlに用いたが、全31点をQQ(ζL)上でdefault Sympy exact再計算済み：27点正常核0、3点B3dim22/B4dim46で非AS4、1点のみ正常核1。private four_simple_zero_dim_points.py /four_simple_zero_dim_exact.pyとlog/jsonに全データ。まだ公開証明へ未統合、正本frontierは12ラベル。
-残る一点はN9代表(0,1,4,7)、point15。BはS(y,b,c)[x;σ]（xは三base変数とskew可換、base三関係だけ）、正常Gはpure S3でx³成分なし。既存一般cone頂点補題lem:cubic-skew-cone-vertex（cubic_as4_adjacent_L_exclusions節）はσscalarを仮定せず、そのまま適用できる。従って一点もH3なしになるはず。次は全零次元片のSmith/diagonal gauge被覆、全31数体点/この最後のcone仮定を公開検証・通常証明へ統合する。
-これが完成すると正次元の必要部分は5ラベル/10根集合：N5(1,2,3,4)51support片（toric商dim1/2/3）、N6(0,1,2,3)11片dim1、N6(1,2,4,5)9片dim1、N7(1,2,5,6)2片dim1/2、N9(1,3,6,8)2片dim1/2。合計75必要片。まだ完成扱いしない。
-正次元片はrankC独立columnsのa_j=1 gaugeを追加し、Smith全torsion枝と自由変数dim1..3でparametrizeする。残るrank2非binomialminorをfactorして追加層化、実商の正常行列へ進む。generic rank計算だけで全parameterを除外しない。全CY/成分/境界/intrinsic群oid/相対降下は引き続き未完、新規性未確認。
+### 対角商零次元片の全数体判定完成（v286）
+全81零次元必要片を整数Smith全torsion成分と対角torus作用で30点へ漏れなく被覆した。A C^t0、rankC=p−rankAを全片で確認し、連結対角torus像が解の単位成分と一致するので自由座標を1へ正規化できる。全有限成分を保持。共通根位数5,6,9,10,12,18のQQ(ζL)上で全点をexact判定：26点正常核0、3点B3dim22/B4dim46で非AS4、1点はN9(0,1,4,7)のB=S(y,b,c)[x;σ], σ=ζ9^6で正常核pure S3。既存一般cone頂点補題lem:cubic-skew-cone-vertexから最後の点もH3なし。通常証明はfour_simple_zero_dimensional節、公開verify_cubic_four_simple_zero_dimensional.py/certificateに全81片から30点への被覆と各exact rankを保存。default Sympy PASS、v286主原稿LuaLaTeX clean PASS。累計69validators across runs、単一69全再生は未実行。
+現行必要被覆は5 Galoisラベル/10根集合：N5(1,2,3,4)51support片（toric商dim1/2/3の個数18/18/15）、N6(0,1,2,3)11片dim1、N6(1,2,4,5)9片dim1、N7(1,2,5,6)2片dim1/2、N9(1,3,6,8)2片dim1/2。合計75必要片。存在やH3十分性は未判定。Galoisラベルをintrinsic同型商と呼ばない。
+次は正次元片でrankC独立columnsのa_j=1 gaugeを追加し、Smith全torsion枝と自由変数dim1..3でparametrizeする。残るrank2非binomialminorをfactorして追加層化、実商の正常行列へ進む。generic rank計算だけで全parameterを除外しない。全CY/成分/境界/intrinsic群oid/相対降下は引き続き未完、新規性未確認。

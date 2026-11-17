@@ -1,0 +1,4600 @@
+{
+  "status": "PASS",
+  "scope": "all81 zero-dimensional necessary toric support pieces excluded; five positive-dimensional necessary spectral labels remain",
+  "zero_dimensional_piece_count": 81,
+  "all_Smith_component_cover": [
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 1,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 3,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 5,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 7,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 9,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 10,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 11,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 13,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 14,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 15,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 1,
+      "cubic_mask": 2,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        2,
+        3
+      ]
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 1,
+      "cubic_mask": 3,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        2,
+        3
+      ]
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 1,
+      "cubic_mask": 5,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        2,
+        3
+      ]
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 1,
+      "cubic_mask": 6,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        2,
+        3
+      ]
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 1,
+      "cubic_mask": 7,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        2,
+        3
+      ]
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 1,
+      "cubic_mask": 10,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        2,
+        3
+      ]
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 1,
+      "cubic_mask": 11,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        2,
+        3
+      ]
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 1,
+      "cubic_mask": 13,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        2,
+        3
+      ]
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 1,
+      "cubic_mask": 14,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        2,
+        3
+      ]
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 1,
+      "cubic_mask": 15,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        2,
+        3
+      ]
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 5,
+      "cubic_mask": 4,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        4,
+        5
+      ]
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 5,
+      "cubic_mask": 5,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        4,
+        5
+      ]
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 5,
+      "cubic_mask": 6,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        4,
+        5
+      ]
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 5,
+      "cubic_mask": 7,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        4,
+        5
+      ]
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 5,
+      "cubic_mask": 10,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        4,
+        5
+      ]
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 5,
+      "cubic_mask": 11,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        4,
+        5
+      ]
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 5,
+      "cubic_mask": 12,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        4,
+        5
+      ]
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 5,
+      "cubic_mask": 13,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        4,
+        5
+      ]
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 5,
+      "cubic_mask": 14,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        4,
+        5
+      ]
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 5,
+      "cubic_mask": 15,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        4,
+        5
+      ]
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 7,
+      "cubic_mask": 5,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        6,
+        7
+      ]
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 7,
+      "cubic_mask": 7,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        6,
+        7
+      ]
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 7,
+      "cubic_mask": 8,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        6,
+        7
+      ]
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 7,
+      "cubic_mask": 9,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        6,
+        7
+      ]
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 7,
+      "cubic_mask": 10,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        6,
+        7
+      ]
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 7,
+      "cubic_mask": 11,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        6,
+        7
+      ]
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 7,
+      "cubic_mask": 12,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        6,
+        7
+      ]
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 7,
+      "cubic_mask": 13,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        6,
+        7
+      ]
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 7,
+      "cubic_mask": 14,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        6,
+        7
+      ]
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pattern_index": 7,
+      "cubic_mask": 15,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        6,
+        7
+      ]
+    },
+    {
+      "N": 6,
+      "exponents": [
+        0,
+        1,
+        3,
+        5
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 1,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        8,
+        9
+      ]
+    },
+    {
+      "N": 6,
+      "exponents": [
+        0,
+        1,
+        3,
+        5
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 3,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        8,
+        9
+      ]
+    },
+    {
+      "N": 6,
+      "exponents": [
+        0,
+        1,
+        3,
+        5
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 5,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        8,
+        9
+      ]
+    },
+    {
+      "N": 6,
+      "exponents": [
+        0,
+        1,
+        3,
+        5
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 7,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 4,
+      "representative_point_ids": [
+        8,
+        9
+      ]
+    },
+    {
+      "N": 9,
+      "exponents": [
+        0,
+        1,
+        4,
+        7
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 1,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        9
+      ],
+      "diagonal_action_rank": 3,
+      "representative_point_ids": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "N": 9,
+      "exponents": [
+        0,
+        1,
+        4,
+        7
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 2,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        9
+      ],
+      "diagonal_action_rank": 3,
+      "representative_point_ids": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "N": 9,
+      "exponents": [
+        0,
+        1,
+        4,
+        7
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 3,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        9
+      ],
+      "diagonal_action_rank": 3,
+      "representative_point_ids": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "N": 9,
+      "exponents": [
+        0,
+        1,
+        4,
+        7
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 4,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        9
+      ],
+      "diagonal_action_rank": 3,
+      "representative_point_ids": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "N": 9,
+      "exponents": [
+        0,
+        1,
+        4,
+        7
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 5,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        9
+      ],
+      "diagonal_action_rank": 3,
+      "representative_point_ids": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "N": 9,
+      "exponents": [
+        0,
+        1,
+        4,
+        7
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 6,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        9
+      ],
+      "diagonal_action_rank": 3,
+      "representative_point_ids": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "N": 9,
+      "exponents": [
+        0,
+        1,
+        4,
+        7
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 7,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        9
+      ],
+      "diagonal_action_rank": 3,
+      "representative_point_ids": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "N": 9,
+      "exponents": [
+        0,
+        1,
+        4,
+        7
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 9,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        9
+      ],
+      "diagonal_action_rank": 3,
+      "representative_point_ids": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "N": 9,
+      "exponents": [
+        0,
+        1,
+        4,
+        7
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 10,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        9
+      ],
+      "diagonal_action_rank": 3,
+      "representative_point_ids": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "N": 9,
+      "exponents": [
+        0,
+        1,
+        4,
+        7
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 11,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        9
+      ],
+      "diagonal_action_rank": 3,
+      "representative_point_ids": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "N": 9,
+      "exponents": [
+        0,
+        1,
+        4,
+        7
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 12,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        9
+      ],
+      "diagonal_action_rank": 3,
+      "representative_point_ids": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "N": 9,
+      "exponents": [
+        0,
+        1,
+        4,
+        7
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 13,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        9
+      ],
+      "diagonal_action_rank": 3,
+      "representative_point_ids": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "N": 9,
+      "exponents": [
+        0,
+        1,
+        4,
+        7
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 14,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        9
+      ],
+      "diagonal_action_rank": 3,
+      "representative_point_ids": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "N": 9,
+      "exponents": [
+        0,
+        1,
+        4,
+        7
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 15,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        9
+      ],
+      "diagonal_action_rank": 3,
+      "representative_point_ids": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "N": 9,
+      "exponents": [
+        1,
+        3,
+        4,
+        7
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 1,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "diagonal_action_rank": 3,
+      "representative_point_ids": [
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "N": 9,
+      "exponents": [
+        1,
+        3,
+        4,
+        7
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 4,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "diagonal_action_rank": 3,
+      "representative_point_ids": [
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "N": 9,
+      "exponents": [
+        1,
+        3,
+        4,
+        7
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 5,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "diagonal_action_rank": 3,
+      "representative_point_ids": [
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "N": 9,
+      "exponents": [
+        1,
+        3,
+        4,
+        7
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 8,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "diagonal_action_rank": 3,
+      "representative_point_ids": [
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "N": 9,
+      "exponents": [
+        1,
+        3,
+        4,
+        7
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 9,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "diagonal_action_rank": 3,
+      "representative_point_ids": [
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "N": 9,
+      "exponents": [
+        1,
+        3,
+        4,
+        7
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 12,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "diagonal_action_rank": 3,
+      "representative_point_ids": [
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "N": 9,
+      "exponents": [
+        1,
+        3,
+        4,
+        7
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 13,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "diagonal_action_rank": 3,
+      "representative_point_ids": [
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "N": 12,
+      "exponents": [
+        0,
+        1,
+        4,
+        10
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 6,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        4
+      ],
+      "diagonal_action_rank": 3,
+      "representative_point_ids": [
+        22,
+        23,
+        24,
+        25
+      ]
+    },
+    {
+      "N": 12,
+      "exponents": [
+        0,
+        1,
+        4,
+        10
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 7,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        4
+      ],
+      "diagonal_action_rank": 3,
+      "representative_point_ids": [
+        22,
+        23,
+        24,
+        25
+      ]
+    },
+    {
+      "N": 12,
+      "exponents": [
+        0,
+        1,
+        4,
+        10
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 9,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        4
+      ],
+      "diagonal_action_rank": 3,
+      "representative_point_ids": [
+        22,
+        23,
+        24,
+        25
+      ]
+    },
+    {
+      "N": 12,
+      "exponents": [
+        0,
+        1,
+        4,
+        10
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 11,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        4
+      ],
+      "diagonal_action_rank": 3,
+      "representative_point_ids": [
+        22,
+        23,
+        24,
+        25
+      ]
+    },
+    {
+      "N": 12,
+      "exponents": [
+        0,
+        1,
+        4,
+        10
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 12,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        4
+      ],
+      "diagonal_action_rank": 3,
+      "representative_point_ids": [
+        22,
+        23,
+        24,
+        25
+      ]
+    },
+    {
+      "N": 12,
+      "exponents": [
+        0,
+        1,
+        4,
+        10
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 13,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        4
+      ],
+      "diagonal_action_rank": 3,
+      "representative_point_ids": [
+        22,
+        23,
+        24,
+        25
+      ]
+    },
+    {
+      "N": 12,
+      "exponents": [
+        0,
+        1,
+        4,
+        10
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 14,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        4
+      ],
+      "diagonal_action_rank": 3,
+      "representative_point_ids": [
+        22,
+        23,
+        24,
+        25
+      ]
+    },
+    {
+      "N": 12,
+      "exponents": [
+        0,
+        1,
+        4,
+        10
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 15,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        4
+      ],
+      "diagonal_action_rank": 3,
+      "representative_point_ids": [
+        22,
+        23,
+        24,
+        25
+      ]
+    },
+    {
+      "N": 12,
+      "exponents": [
+        1,
+        3,
+        4,
+        7
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 2,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "diagonal_action_rank": 3,
+      "representative_point_ids": [
+        26
+      ]
+    },
+    {
+      "N": 12,
+      "exponents": [
+        1,
+        3,
+        4,
+        7
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 3,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "diagonal_action_rank": 3,
+      "representative_point_ids": [
+        26
+      ]
+    },
+    {
+      "N": 12,
+      "exponents": [
+        1,
+        3,
+        7,
+        10
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 1,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "diagonal_action_rank": 3,
+      "representative_point_ids": [
+        27
+      ]
+    },
+    {
+      "N": 12,
+      "exponents": [
+        1,
+        3,
+        7,
+        10
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 3,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "diagonal_action_rank": 3,
+      "representative_point_ids": [
+        27
+      ]
+    },
+    {
+      "N": 12,
+      "exponents": [
+        1,
+        4,
+        6,
+        10
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 4,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 3,
+      "representative_point_ids": [
+        28,
+        29
+      ]
+    },
+    {
+      "N": 12,
+      "exponents": [
+        1,
+        4,
+        6,
+        10
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 5,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 3,
+      "representative_point_ids": [
+        28,
+        29
+      ]
+    },
+    {
+      "N": 12,
+      "exponents": [
+        1,
+        4,
+        6,
+        10
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 6,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 3,
+      "representative_point_ids": [
+        28,
+        29
+      ]
+    },
+    {
+      "N": 12,
+      "exponents": [
+        1,
+        4,
+        6,
+        10
+      ],
+      "pattern_index": 0,
+      "cubic_mask": 7,
+      "Smith_diagonal": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagonal_action_rank": 3,
+      "representative_point_ids": [
+        28,
+        29
+      ]
+    }
+  ],
+  "algebraic_point_count": 30,
+  "cyclotomic_root_orders": [
+    5,
+    6,
+    9,
+    10,
+    12,
+    18
+  ],
+  "all30_exact_points": [
+    {
+      "N": 5,
+      "spectrum": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "active_indices": [
+        0,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "root_order": 10,
+      "coefficient_exponents": [
+        0,
+        7,
+        4,
+        4,
+        3,
+        0,
+        3,
+        0,
+        0
+      ],
+      "Nakayama_exponents": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        23,
+        4
+      ],
+      "normal_rank": 4,
+      "exclusion": "normal_kernel_zero"
+    },
+    {
+      "N": 5,
+      "spectrum": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "active_indices": [
+        0,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "root_order": 10,
+      "coefficient_exponents": [
+        0,
+        2,
+        4,
+        9,
+        8,
+        0,
+        3,
+        0,
+        0
+      ],
+      "Nakayama_exponents": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        21,
+        4
+      ],
+      "normal_rank": 4,
+      "exclusion": "normal_kernel_zero"
+    },
+    {
+      "N": 5,
+      "spectrum": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "active_indices": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        12
+      ],
+      "root_order": 10,
+      "coefficient_exponents": [
+        0,
+        7,
+        4,
+        4,
+        0,
+        3,
+        3,
+        0,
+        0
+      ],
+      "Nakayama_exponents": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        26,
+        4
+      ],
+      "normal_rank": 4,
+      "exclusion": "normal_kernel_zero"
+    },
+    {
+      "N": 5,
+      "spectrum": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "active_indices": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        12
+      ],
+      "root_order": 5,
+      "coefficient_exponents": [
+        0,
+        1,
+        2,
+        2,
+        0,
+        4,
+        4,
+        0,
+        0
+      ],
+      "Nakayama_exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        26,
+        4
+      ],
+      "normal_rank": 4,
+      "exclusion": "normal_kernel_zero"
+    },
+    {
+      "N": 5,
+      "spectrum": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "active_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        13
+      ],
+      "root_order": 10,
+      "coefficient_exponents": [
+        2,
+        9,
+        9,
+        0,
+        3,
+        0,
+        3,
+        0,
+        0
+      ],
+      "Nakayama_exponents": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        23,
+        4
+      ],
+      "normal_rank": 4,
+      "exclusion": "normal_kernel_zero"
+    },
+    {
+      "N": 5,
+      "spectrum": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "active_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        13
+      ],
+      "root_order": 10,
+      "coefficient_exponents": [
+        7,
+        4,
+        4,
+        0,
+        3,
+        0,
+        3,
+        0,
+        0
+      ],
+      "Nakayama_exponents": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        23,
+        4
+      ],
+      "normal_rank": 4,
+      "exclusion": "normal_kernel_zero"
+    },
+    {
+      "N": 5,
+      "spectrum": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "active_indices": [
+        2,
+        3,
+        4,
+        6,
+        8,
+        9,
+        10,
+        12,
+        13
+      ],
+      "root_order": 10,
+      "coefficient_exponents": [
+        7,
+        4,
+        4,
+        3,
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Nakayama_exponents": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        26,
+        4
+      ],
+      "normal_rank": 4,
+      "exclusion": "normal_kernel_zero"
+    },
+    {
+      "N": 5,
+      "spectrum": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "active_indices": [
+        2,
+        3,
+        4,
+        6,
+        8,
+        9,
+        10,
+        12,
+        13
+      ],
+      "root_order": 10,
+      "coefficient_exponents": [
+        2,
+        9,
+        4,
+        3,
+        8,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Nakayama_exponents": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        24,
+        4
+      ],
+      "normal_rank": 4,
+      "exclusion": "normal_kernel_zero"
+    },
+    {
+      "N": 6,
+      "spectrum": [
+        0,
+        1,
+        3,
+        5
+      ],
+      "active_indices": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11
+      ],
+      "root_order": 6,
+      "coefficient_exponents": [
+        4,
+        0,
+        0,
+        0,
+        4,
+        4,
+        2,
+        0,
+        0,
+        0
+      ],
+      "Nakayama_exponents": [
+        0,
+        1,
+        3,
+        5
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        17,
+        3
+      ],
+      "normal_rank": 3,
+      "exclusion": "normal_kernel_zero"
+    },
+    {
+      "N": 6,
+      "spectrum": [
+        0,
+        1,
+        3,
+        5
+      ],
+      "active_indices": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11
+      ],
+      "root_order": 6,
+      "coefficient_exponents": [
+        1,
+        3,
+        0,
+        0,
+        4,
+        4,
+        2,
+        0,
+        0,
+        0
+      ],
+      "Nakayama_exponents": [
+        0,
+        1,
+        3,
+        5
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        17,
+        3
+      ],
+      "normal_rank": 3,
+      "exclusion": "normal_kernel_zero"
+    },
+    {
+      "N": 9,
+      "spectrum": [
+        0,
+        1,
+        4,
+        7
+      ],
+      "active_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "root_order": 9,
+      "coefficient_exponents": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Nakayama_exponents": [
+        0,
+        1,
+        4,
+        7
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        22,
+        46
+      ],
+      "exclusion": "nonAS4_Hilbert"
+    },
+    {
+      "N": 9,
+      "spectrum": [
+        0,
+        1,
+        4,
+        7
+      ],
+      "active_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "root_order": 9,
+      "coefficient_exponents": [
+        1,
+        5,
+        5,
+        7,
+        0,
+        2,
+        0,
+        1,
+        0
+      ],
+      "Nakayama_exponents": [
+        0,
+        1,
+        4,
+        7
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        16,
+        5
+      ],
+      "normal_rank": 5,
+      "exclusion": "normal_kernel_zero"
+    },
+    {
+      "N": 9,
+      "spectrum": [
+        0,
+        1,
+        4,
+        7
+      ],
+      "active_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "root_order": 9,
+      "coefficient_exponents": [
+        2,
+        1,
+        1,
+        5,
+        0,
+        4,
+        0,
+        2,
+        0
+      ],
+      "Nakayama_exponents": [
+        0,
+        1,
+        4,
+        7
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        16,
+        5
+      ],
+      "normal_rank": 5,
+      "exclusion": "normal_kernel_zero"
+    },
+    {
+      "N": 9,
+      "spectrum": [
+        0,
+        1,
+        4,
+        7
+      ],
+      "active_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "root_order": 9,
+      "coefficient_exponents": [
+        3,
+        6,
+        6,
+        3,
+        0,
+        6,
+        0,
+        3,
+        0
+      ],
+      "Nakayama_exponents": [
+        0,
+        1,
+        4,
+        7
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        22,
+        46
+      ],
+      "exclusion": "nonAS4_Hilbert"
+    },
+    {
+      "N": 9,
+      "spectrum": [
+        0,
+        1,
+        4,
+        7
+      ],
+      "active_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "root_order": 9,
+      "coefficient_exponents": [
+        4,
+        2,
+        2,
+        1,
+        0,
+        8,
+        0,
+        4,
+        0
+      ],
+      "Nakayama_exponents": [
+        0,
+        1,
+        4,
+        7
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        16,
+        5
+      ],
+      "normal_rank": 4,
+      "normal_basis": [
+        {
+          "bby": [
+            "-1",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "bcc": [
+            "-1",
+            "1",
+            "0",
+            "-1",
+            "1"
+          ],
+          "cbc": [
+            "1",
+            "0",
+            "0",
+            "1",
+            "0",
+            "1"
+          ],
+          "ccb": [
+            "1",
+            "-1",
+            "0",
+            "1",
+            "-1",
+            "0"
+          ]
+        }
+      ],
+      "sigma_on_base": [
+        [
+          "-1",
+          "0",
+          "0",
+          "-1"
+        ],
+        [
+          "-1",
+          "0",
+          "0",
+          "-1"
+        ],
+        [
+          "-1",
+          "0",
+          "0",
+          "-1"
+        ]
+      ],
+      "exclusion": "existing_skew_cone_vertex_lemma",
+      "ordinary_lemma": "lem:cubic-skew-cone-vertex"
+    },
+    {
+      "N": 9,
+      "spectrum": [
+        0,
+        1,
+        4,
+        7
+      ],
+      "active_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "root_order": 9,
+      "coefficient_exponents": [
+        5,
+        7,
+        7,
+        8,
+        0,
+        1,
+        0,
+        5,
+        0
+      ],
+      "Nakayama_exponents": [
+        0,
+        1,
+        4,
+        7
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        16,
+        5
+      ],
+      "normal_rank": 5,
+      "exclusion": "normal_kernel_zero"
+    },
+    {
+      "N": 9,
+      "spectrum": [
+        0,
+        1,
+        4,
+        7
+      ],
+      "active_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "root_order": 9,
+      "coefficient_exponents": [
+        6,
+        3,
+        3,
+        6,
+        0,
+        3,
+        0,
+        6,
+        0
+      ],
+      "Nakayama_exponents": [
+        0,
+        1,
+        4,
+        7
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        22,
+        46
+      ],
+      "exclusion": "nonAS4_Hilbert"
+    },
+    {
+      "N": 9,
+      "spectrum": [
+        0,
+        1,
+        4,
+        7
+      ],
+      "active_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "root_order": 9,
+      "coefficient_exponents": [
+        7,
+        8,
+        8,
+        4,
+        0,
+        5,
+        0,
+        7,
+        0
+      ],
+      "Nakayama_exponents": [
+        0,
+        1,
+        4,
+        7
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        16,
+        5
+      ],
+      "normal_rank": 5,
+      "exclusion": "normal_kernel_zero"
+    },
+    {
+      "N": 9,
+      "spectrum": [
+        0,
+        1,
+        4,
+        7
+      ],
+      "active_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "root_order": 9,
+      "coefficient_exponents": [
+        8,
+        4,
+        4,
+        2,
+        0,
+        7,
+        0,
+        8,
+        0
+      ],
+      "Nakayama_exponents": [
+        0,
+        1,
+        4,
+        7
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        16,
+        5
+      ],
+      "normal_rank": 5,
+      "exclusion": "normal_kernel_zero"
+    },
+    {
+      "N": 9,
+      "spectrum": [
+        1,
+        3,
+        4,
+        7
+      ],
+      "active_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "root_order": 18,
+      "coefficient_exponents": [
+        17,
+        16,
+        0,
+        2,
+        1,
+        0,
+        4,
+        2,
+        0
+      ],
+      "Nakayama_exponents": [
+        2,
+        6,
+        8,
+        14
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        18,
+        4
+      ],
+      "normal_rank": 4,
+      "exclusion": "normal_kernel_zero"
+    },
+    {
+      "N": 9,
+      "spectrum": [
+        1,
+        3,
+        4,
+        7
+      ],
+      "active_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "root_order": 18,
+      "coefficient_exponents": [
+        11,
+        4,
+        0,
+        14,
+        7,
+        0,
+        16,
+        8,
+        0
+      ],
+      "Nakayama_exponents": [
+        2,
+        6,
+        8,
+        14
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        18,
+        4
+      ],
+      "normal_rank": 4,
+      "exclusion": "normal_kernel_zero"
+    },
+    {
+      "N": 9,
+      "spectrum": [
+        1,
+        3,
+        4,
+        7
+      ],
+      "active_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "root_order": 18,
+      "coefficient_exponents": [
+        5,
+        10,
+        0,
+        8,
+        13,
+        0,
+        10,
+        14,
+        0
+      ],
+      "Nakayama_exponents": [
+        2,
+        6,
+        8,
+        14
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        18,
+        4
+      ],
+      "normal_rank": 4,
+      "exclusion": "normal_kernel_zero"
+    },
+    {
+      "N": 12,
+      "spectrum": [
+        0,
+        1,
+        4,
+        10
+      ],
+      "active_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "root_order": 12,
+      "coefficient_exponents": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Nakayama_exponents": [
+        0,
+        1,
+        4,
+        10
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        11,
+        3
+      ],
+      "normal_rank": 3,
+      "exclusion": "normal_kernel_zero"
+    },
+    {
+      "N": 12,
+      "spectrum": [
+        0,
+        1,
+        4,
+        10
+      ],
+      "active_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "root_order": 12,
+      "coefficient_exponents": [
+        6,
+        3,
+        0,
+        0,
+        0,
+        6,
+        0
+      ],
+      "Nakayama_exponents": [
+        0,
+        1,
+        4,
+        10
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        11,
+        3
+      ],
+      "normal_rank": 3,
+      "exclusion": "normal_kernel_zero"
+    },
+    {
+      "N": 12,
+      "spectrum": [
+        0,
+        1,
+        4,
+        10
+      ],
+      "active_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "root_order": 12,
+      "coefficient_exponents": [
+        0,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Nakayama_exponents": [
+        0,
+        1,
+        4,
+        10
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        11,
+        3
+      ],
+      "normal_rank": 3,
+      "exclusion": "normal_kernel_zero"
+    },
+    {
+      "N": 12,
+      "spectrum": [
+        0,
+        1,
+        4,
+        10
+      ],
+      "active_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "root_order": 12,
+      "coefficient_exponents": [
+        6,
+        9,
+        0,
+        0,
+        0,
+        6,
+        0
+      ],
+      "Nakayama_exponents": [
+        0,
+        1,
+        4,
+        10
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        11,
+        3
+      ],
+      "normal_rank": 3,
+      "exclusion": "normal_kernel_zero"
+    },
+    {
+      "N": 12,
+      "spectrum": [
+        1,
+        3,
+        4,
+        7
+      ],
+      "active_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "root_order": 12,
+      "coefficient_exponents": [
+        11,
+        10,
+        0,
+        2,
+        1,
+        0,
+        0
+      ],
+      "Nakayama_exponents": [
+        1,
+        3,
+        4,
+        7
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        11,
+        3
+      ],
+      "normal_rank": 3,
+      "exclusion": "normal_kernel_zero"
+    },
+    {
+      "N": 12,
+      "spectrum": [
+        1,
+        3,
+        7,
+        10
+      ],
+      "active_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "root_order": 12,
+      "coefficient_exponents": [
+        11,
+        10,
+        0,
+        2,
+        1,
+        0,
+        0
+      ],
+      "Nakayama_exponents": [
+        1,
+        3,
+        7,
+        10
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        10,
+        2
+      ],
+      "normal_rank": 2,
+      "exclusion": "normal_kernel_zero"
+    },
+    {
+      "N": 12,
+      "spectrum": [
+        1,
+        4,
+        6,
+        10
+      ],
+      "active_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        7
+      ],
+      "root_order": 12,
+      "coefficient_exponents": [
+        9,
+        1,
+        0,
+        8,
+        4,
+        0,
+        0
+      ],
+      "Nakayama_exponents": [
+        1,
+        4,
+        6,
+        10
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        11,
+        3
+      ],
+      "normal_rank": 3,
+      "exclusion": "normal_kernel_zero"
+    },
+    {
+      "N": 12,
+      "spectrum": [
+        1,
+        4,
+        6,
+        10
+      ],
+      "active_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        7
+      ],
+      "root_order": 12,
+      "coefficient_exponents": [
+        3,
+        7,
+        0,
+        8,
+        4,
+        0,
+        0
+      ],
+      "Nakayama_exponents": [
+        1,
+        4,
+        6,
+        10
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        11,
+        3
+      ],
+      "normal_rank": 3,
+      "exclusion": "normal_kernel_zero"
+    }
+  ],
+  "exclusion_counts": {
+    "normal_kernel_zero": 26,
+    "nonAS4_Hilbert": 3,
+    "existing_skew_cone_vertex_lemma": 1
+  },
+  "remaining_positive_support_pieces": [
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 2,
+      "cubic_mask": 5,
+      "effective_dimension": 2
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 2,
+      "cubic_mask": 6,
+      "effective_dimension": 2
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 2,
+      "cubic_mask": 7,
+      "effective_dimension": 2
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 2,
+      "cubic_mask": 9,
+      "effective_dimension": 2
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 2,
+      "cubic_mask": 10,
+      "effective_dimension": 2
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 2,
+      "cubic_mask": 11,
+      "effective_dimension": 2
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 2,
+      "cubic_mask": 13,
+      "effective_dimension": 2
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 2,
+      "cubic_mask": 14,
+      "effective_dimension": 2
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 2,
+      "cubic_mask": 15,
+      "effective_dimension": 2
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 3,
+      "cubic_mask": 5,
+      "effective_dimension": 1
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 3,
+      "cubic_mask": 6,
+      "effective_dimension": 1
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 3,
+      "cubic_mask": 7,
+      "effective_dimension": 1
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 3,
+      "cubic_mask": 9,
+      "effective_dimension": 1
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 3,
+      "cubic_mask": 10,
+      "effective_dimension": 1
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 3,
+      "cubic_mask": 11,
+      "effective_dimension": 1
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 3,
+      "cubic_mask": 13,
+      "effective_dimension": 1
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 3,
+      "cubic_mask": 14,
+      "effective_dimension": 1
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 3,
+      "cubic_mask": 15,
+      "effective_dimension": 1
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 4,
+      "cubic_mask": 3,
+      "effective_dimension": 2
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 4,
+      "cubic_mask": 5,
+      "effective_dimension": 2
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 4,
+      "cubic_mask": 7,
+      "effective_dimension": 2
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 4,
+      "cubic_mask": 10,
+      "effective_dimension": 2
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 4,
+      "cubic_mask": 11,
+      "effective_dimension": 2
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 4,
+      "cubic_mask": 12,
+      "effective_dimension": 2
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 4,
+      "cubic_mask": 13,
+      "effective_dimension": 2
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 4,
+      "cubic_mask": 14,
+      "effective_dimension": 2
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 4,
+      "cubic_mask": 15,
+      "effective_dimension": 2
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 6,
+      "cubic_mask": 3,
+      "effective_dimension": 1
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 6,
+      "cubic_mask": 5,
+      "effective_dimension": 1
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 6,
+      "cubic_mask": 7,
+      "effective_dimension": 1
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 6,
+      "cubic_mask": 10,
+      "effective_dimension": 1
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 6,
+      "cubic_mask": 11,
+      "effective_dimension": 1
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 6,
+      "cubic_mask": 12,
+      "effective_dimension": 1
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 6,
+      "cubic_mask": 13,
+      "effective_dimension": 1
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 6,
+      "cubic_mask": 14,
+      "effective_dimension": 1
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 6,
+      "cubic_mask": 15,
+      "effective_dimension": 1
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 8,
+      "cubic_mask": 1,
+      "effective_dimension": 3
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 8,
+      "cubic_mask": 2,
+      "effective_dimension": 3
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 8,
+      "cubic_mask": 3,
+      "effective_dimension": 3
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 8,
+      "cubic_mask": 4,
+      "effective_dimension": 3
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 8,
+      "cubic_mask": 5,
+      "effective_dimension": 3
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 8,
+      "cubic_mask": 6,
+      "effective_dimension": 3
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 8,
+      "cubic_mask": 7,
+      "effective_dimension": 3
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 8,
+      "cubic_mask": 8,
+      "effective_dimension": 3
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 8,
+      "cubic_mask": 9,
+      "effective_dimension": 3
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 8,
+      "cubic_mask": 10,
+      "effective_dimension": 3
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 8,
+      "cubic_mask": 11,
+      "effective_dimension": 3
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 8,
+      "cubic_mask": 12,
+      "effective_dimension": 3
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 8,
+      "cubic_mask": 13,
+      "effective_dimension": 3
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 8,
+      "cubic_mask": 14,
+      "effective_dimension": 3
+    },
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1,
+      "pattern_index": 8,
+      "cubic_mask": 15,
+      "effective_dimension": 3
+    },
+    {
+      "N": 6,
+      "exponents": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "label_count": 2,
+      "pattern_index": 0,
+      "cubic_mask": 4,
+      "effective_dimension": 1
+    },
+    {
+      "N": 6,
+      "exponents": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "label_count": 2,
+      "pattern_index": 0,
+      "cubic_mask": 5,
+      "effective_dimension": 1
+    },
+    {
+      "N": 6,
+      "exponents": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "label_count": 2,
+      "pattern_index": 0,
+      "cubic_mask": 6,
+      "effective_dimension": 1
+    },
+    {
+      "N": 6,
+      "exponents": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "label_count": 2,
+      "pattern_index": 0,
+      "cubic_mask": 7,
+      "effective_dimension": 1
+    },
+    {
+      "N": 6,
+      "exponents": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "label_count": 2,
+      "pattern_index": 0,
+      "cubic_mask": 9,
+      "effective_dimension": 1
+    },
+    {
+      "N": 6,
+      "exponents": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "label_count": 2,
+      "pattern_index": 0,
+      "cubic_mask": 10,
+      "effective_dimension": 1
+    },
+    {
+      "N": 6,
+      "exponents": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "label_count": 2,
+      "pattern_index": 0,
+      "cubic_mask": 11,
+      "effective_dimension": 1
+    },
+    {
+      "N": 6,
+      "exponents": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "label_count": 2,
+      "pattern_index": 0,
+      "cubic_mask": 12,
+      "effective_dimension": 1
+    },
+    {
+      "N": 6,
+      "exponents": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "label_count": 2,
+      "pattern_index": 0,
+      "cubic_mask": 13,
+      "effective_dimension": 1
+    },
+    {
+      "N": 6,
+      "exponents": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "label_count": 2,
+      "pattern_index": 0,
+      "cubic_mask": 14,
+      "effective_dimension": 1
+    },
+    {
+      "N": 6,
+      "exponents": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "label_count": 2,
+      "pattern_index": 0,
+      "cubic_mask": 15,
+      "effective_dimension": 1
+    },
+    {
+      "N": 6,
+      "exponents": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "label_count": 1,
+      "pattern_index": 0,
+      "cubic_mask": 3,
+      "effective_dimension": 1
+    },
+    {
+      "N": 6,
+      "exponents": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "label_count": 1,
+      "pattern_index": 0,
+      "cubic_mask": 5,
+      "effective_dimension": 1
+    },
+    {
+      "N": 6,
+      "exponents": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "label_count": 1,
+      "pattern_index": 0,
+      "cubic_mask": 7,
+      "effective_dimension": 1
+    },
+    {
+      "N": 6,
+      "exponents": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "label_count": 1,
+      "pattern_index": 0,
+      "cubic_mask": 10,
+      "effective_dimension": 1
+    },
+    {
+      "N": 6,
+      "exponents": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "label_count": 1,
+      "pattern_index": 0,
+      "cubic_mask": 11,
+      "effective_dimension": 1
+    },
+    {
+      "N": 6,
+      "exponents": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "label_count": 1,
+      "pattern_index": 0,
+      "cubic_mask": 12,
+      "effective_dimension": 1
+    },
+    {
+      "N": 6,
+      "exponents": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "label_count": 1,
+      "pattern_index": 0,
+      "cubic_mask": 13,
+      "effective_dimension": 1
+    },
+    {
+      "N": 6,
+      "exponents": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "label_count": 1,
+      "pattern_index": 0,
+      "cubic_mask": 14,
+      "effective_dimension": 1
+    },
+    {
+      "N": 6,
+      "exponents": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "label_count": 1,
+      "pattern_index": 0,
+      "cubic_mask": 15,
+      "effective_dimension": 1
+    },
+    {
+      "N": 7,
+      "exponents": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "label_count": 3,
+      "pattern_index": 0,
+      "cubic_mask": 3,
+      "effective_dimension": 2
+    },
+    {
+      "N": 7,
+      "exponents": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "label_count": 3,
+      "pattern_index": 1,
+      "cubic_mask": 3,
+      "effective_dimension": 1
+    },
+    {
+      "N": 9,
+      "exponents": [
+        1,
+        3,
+        6,
+        8
+      ],
+      "label_count": 3,
+      "pattern_index": 0,
+      "cubic_mask": 3,
+      "effective_dimension": 2
+    },
+    {
+      "N": 9,
+      "exponents": [
+        1,
+        3,
+        6,
+        8
+      ],
+      "label_count": 3,
+      "pattern_index": 1,
+      "cubic_mask": 3,
+      "effective_dimension": 1
+    }
+  ],
+  "remaining_Galois_labels": 5,
+  "remaining_root_sets": 10,
+  "final_necessary_labels": [
+    {
+      "N": 5,
+      "exponents": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_count": 1
+    },
+    {
+      "N": 6,
+      "exponents": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "label_count": 2
+    },
+    {
+      "N": 6,
+      "exponents": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "label_count": 1
+    },
+    {
+      "N": 7,
+      "exponents": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "label_count": 3
+    },
+    {
+      "N": 9,
+      "exponents": [
+        1,
+        3,
+        6,
+        8
+      ],
+      "label_count": 3
+    }
+  ],
+  "ordinary_proof_inputs": [
+    "integer Smith representatives with every finite component",
+    "rankC equals torus free dimension, diagonal action transitive on each connected component over algebraically closed field",
+    "all coefficient/generator weights A Ctranspose0",
+    "exact QQ(cyclotomic) images and graded quotient modules",
+    "existing arbitrary-automorphism skew-cone vertex lemma for unique remaining cubic"
+  ],
+  "not_claimed": [
+    "finite-field tests used as proof",
+    "all positive-dimensional pieces AS4 or have normal cubic",
+    "Galois labels geometric quotient",
+    "complete H3 classification",
+    "ordinary descent or cone lemma mechanically proved in entirety"
+  ]
+}

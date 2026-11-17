@@ -76,6 +76,7 @@ CHECKS=[
  'verify_cubic_four_simple_finite_atlas.py',
  'verify_cubic_four_simple_support_sieve.py',
  'verify_cubic_four_simple_orbit_torus.py',
+ 'verify_cubic_four_simple_zero_dimensional.py',
 ]
 results=[]
 for name in CHECKS:

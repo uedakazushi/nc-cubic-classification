@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "version": "classification-v285",
+  "version": "classification-v286",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -4037,6 +4037,27 @@
       "remaining masks AS4",
       "G exists on necessary supports",
       "all finite spectra classified",
+      "complete H3 classification",
+      "novelty confirmed"
+    ]
+  },
+  "four_simple_zero_dimensional_v286": {
+    "status": "PASS exact checker and main LuaLaTeX clean",
+    "proof": "papers/sections/cubic_four_simple_zero_dimensional.tex",
+    "validator": "computations/verify_cubic_four_simple_zero_dimensional.py",
+    "certificate": "computations/cubic_four_simple_zero_dimensional_certificate.json",
+    "coverage": "all81 zero-dimensional necessary pieces; every Smith component,30 exact cyclotomic representatives",
+    "exclusions": {
+      "normal_kernel_zero": 26,
+      "nonAS4_Hilbert": 3,
+      "existing_skew_cone_vertex_lemma": 1
+    },
+    "remaining_Galois_labels": 5,
+    "remaining_root_sets": 10,
+    "remaining_positive_support_pieces": 75,
+    "validation_scope": "69 validators across runs; no single69 replay",
+    "not_claimed": [
+      "positive-dimensional incidence complete",
       "complete H3 classification",
       "novelty confirmed"
     ]
