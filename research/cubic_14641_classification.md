@@ -1731,3 +1731,8 @@ v300の再開文に「Qにはskew H3が残り得る」とした記述を訂正�
 
 ### 二交換子・非共有Segreの中心三次（再開用）
 固定as4 CY_TWO_COMMUTATORS_DISJOINT_SEGRE.texの必要表示は Q_q, N_1, N_2。孤立型の元関係を直接読むと a,c は正常で、ac の正常化作用は -I 又は -I に b→b+8a の単冪shearを合成したもの。従って既存 lem:normalizer-minus-unipotent-odd-centre で両型はH3から消える。Q_q の中心単項式条件は q^(i-j)=q^(k-l)=1。総次数3では少なくとも一方の差が奇数なので、q≠1 なら原始三乗根かつ純三乗に限る。この場合の許容切断は既存skew分類との係数対応を確認する。ここではQ全排除を主張しない。二交換子の残る必要射影二型は固定CY_TWO_COMMUTATORS_VERONESE_MIXED_RANKONE/RANKTWOの表示を確認する。
+
+非共有SegreのQ_qの純三乗例外は、順序(a,b,c,d)で交換指数(0,1,2,2,1,0)に一致し、既存 prop:third-six-rank-obstruction で全排除。混合階数一VM1では個数濾過の先頭と正常元aの平行移動から中心はk[a,b,z]（z=ac+bd）に含まれる。[c,z]=-bz,[d,z]=azから中心三次はkab²のみで、整域切断はない。本文 cubic_CY_two_commutators_Segre 節。次の混合階数二VRでもaは正常、同じ濾過の先頭核を与える線型形式は t ac+β bd。中心三次と孤立型Iの判定は未完了。
+
+### 二交換子の残る孤立型
+非共有Segre、混合階数一Veronese、混合階数二の全VRパラメータ族を排除した。本文 cubic_CY_two_commutators_Segre 節。特にVRでは正常元aの平行移動の先頭核から中心元をk[a,b,tac+βbd]に絞り、cとの交換で中心三次が零となる。次は固定VTの孤立型Iについて元六関係から中心三次を判定し、二交換子の七対称射影の必要全被覆を監査する。

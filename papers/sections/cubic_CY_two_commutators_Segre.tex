@@ -1,0 +1,80 @@
+\subsection{二交換子の非共有Segre射影}
+\begin{proposition}\label{prop:cubic-CY-two-disjoint-Segre-empty}
+二交換子を持つCY包絡のうち、対称射影が
+$\langle ac,ad,bc,bd\rangle$ となるものはH3を与えない。
+\end{proposition}
+\begin{proof}
+固定出典\cite{AS4CYpinned}の非共有Segre必要被覆により、
+$Q_q,N_1,N_2$ の三表示を調べればよい。
+$Q_q$ では $ab=ba,cd=dc$ であり、交差交換係数は
+$ac=qca$, $ad=q^{-1}da$, $bc=q^{-1}cb$, $bd=qdb$、$q\ne1$ である。
+PBW基底より中心三次は、その中の中心単項式の線型包である。
+$a^i b^j c^k d^l$ が中心である条件は $q^{i-j}=q^{k-l}=1$。
+総次数3では二つの差の一方は奇数である。$q\ne1$ のため
+その差の絶対値は3でなければならず、$q$ は原始三乗根となる。
+従って中心三次は $\langle a^3,b^3,c^3,d^3\rangle$ に限られる。
+
+この原始三乗根の場合、順序 $(a,b,c,d)$ で六交換指数は
+$(0,1,2,2,1,0)$ となる。
+定理\ref{thm:skew-finite-37}の最終行に一致するので、命題\ref{prop:third-six-rank-obstruction}により
+全切断が排除される。
+
+$N_1,N_2$ では $a,c$ がそれぞれ正常である。規約を
+$nv=\nu_n(v)n$ とすると、$\nu_a$ は $(a,b,c,d)$ 上の
+$\operatorname{diag}(1,1,-1,-1)$ である。
+$\nu_c$ は $a\mapsto-a,c\mapsto c,d\mapsto d$ とし、
+$b\mapsto-b$（$N_1$）又は $b\mapsto-b+8a$（$N_2$）である。
+よって非零の $ac$ の正常化作用は半単純部分が $-I$ である。
+補題\ref{lem:normalizer-minus-unipotent-odd-centre}から両表示に非零中心三次はない。
+\end{proof}
+
+\begin{proposition}\label{prop:cubic-CY-two-veronese-one-empty}
+二交換子の混合階数一Veronese型にH3包絡は存在しない。
+\end{proposition}
+\begin{proof}
+固定出典\cite{AS4CYpinned}の必要表示VM1を用いる。
+$c,d$ の個数で濾過すると、VM1の六関係の先頭は可換関係である。
+AS4のHilbert級数との比較により、随伴次数環は $k[a,b,c,d]$ となる。
+$a$ は正常で、正常化作用は $c\mapsto c-2b,d\mapsto d+2a$、
+$a,b$ は固定される。従って任意の中心元の最高濾過項は
+$(-b\partial_c+a\partial_d)$ の核に入る。
+この核は $k[a,b,ac+bd]$ である。実際、$k(a,b)$ 上では線型座標変換で
+$k(a,b)[ac+bd]$ を得る。各 $c,d$ 次数 $m$ の係数を比較すると、
+$(ac+bd)^m$ の両端係数 $a^m,b^m$ は互いに素なので、係数に分母は残らない。
+
+$z=ac+bd$ は $a,b$ と可換である。
+上の核の記述に従って中心元の最高項を $a,b,z$ の多項式で差し引けば、
+差は引き続き $a$ と可換であり、濾過次数が下がる。
+従って中心元は $k[a,b,z]$ に属する。
+VM1から $[c,z]=-bz$、$[d,z]=az$ が従う。
+従って $[c,a^ib^jz^m]=(2i-j-m)b a^ib^jz^m$。
+随伴次数環での代数的独立性により、この作用の核は
+$2i=j+m$ の単項式で張られる。
+総次数3の条件 $i+j+2m=3$ と合わせると $i=1,j=2,m=0$ だけとなる。
+実際 $ab^2$ は $d$ とも可換である。
+中心三次切断は従って $ab^2$ の倍数であり、その商は整域でない。
+\end{proof}
+
+\begin{proposition}
+混合階数二Veronese型の表示VRで与えられる全 $A_t(r_0,r_1,r_2)$ に対し、
+中心三次は零である。
+\end{proposition}
+\begin{proof}
+VM1と同じ濾過を用いる。$a$ の正常化作用は
+$c\mapsto c+b/(2t),d\mapsto d-a/(2\beta)$ であり、
+最高項の不変環は $k[a,b,z]$、$z=tac+\beta bd$ である。
+両端係数の互いに素性と濾過降下の議論はそのまま適用できる。
+実際に $z$ は $a,b$ と可換であり、後者には
+$t/(t-1)=\beta/(2(2\beta-1))$ を使う。
+従って中心三次は $f(a,b)+(Aa+Bb)z$ と書ける。
+
+VRによれば、$[c,z]$ の濾過次数一の部分は
+$-\frac{t+1}{2t(t-1)}bz$ である。
+$[c,a]=-ab/(2t)$ と $[c,b]=b^2/(t-1)$ を合わせると、
+$[c,(Aa+Bb)z]$ の濾過次数一の部分は
+$(-Aa/(t-1)+Bb/(2t))bz$ である。
+$[c,f(a,b)]$ は濾過次数零なので $A=B=0$ が必要となる。
+残る単項式 $a^ib^j$ には $i+j=3$ と $i(t-1)=2tj$ が必要となる。
+$i=0,3$ は許容域で不可能、$i=1$ は禁止値 $t=-1/3$、
+$i=2$ は矛盾となる。従って中心三次は零である。
+\end{proof}
