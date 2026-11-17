@@ -28,6 +28,7 @@ CHECKS=[
  'verify_cubic_third_root_nonunit_Jordan.py',
  'verify_cubic_third_root_unit_Jordan.py',
  'verify_cubic_third_root_CY_incidence.py',
+ 'verify_cubic_third_root_unit_closed_strata.py',
 ]
 results=[]
 for name in CHECKS:

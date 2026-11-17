@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "scope": "original22-orbit block identities, exact all-parameter normal matrix and every relation-pivot factor, Smith invariants, fresh exceptional fibers; ordinary coverage and charge proofs separate",
+  "field": "QQ(omega), omega^2+omega+1=0",
+  "normalized_family_relations": [
+    "x^2+y^2",
+    "bx-omega*xb",
+    "cy-omega^2*yc",
+    "b^2-omega^2*xc-cx",
+    "c^2+yb+omega^2*by",
+    "bc-omega^2*cb-kappa*(xy-yx)"
+  ],
+  "generic_B3_B4_dimensions": [
+    20,
+    35
+  ],
+  "all_relation_pivot_factors": [
+    "kappa",
+    "kappa + 1"
+  ],
+  "invariant_cubic_basis": [
+    "yyx",
+    "yyy",
+    "bbb",
+    "bcx",
+    "bcy",
+    "cbx",
+    "cby",
+    "ccc"
+  ],
+  "normal_matrix_shape": [
+    41,
+    8
+  ],
+  "normal_common_denominator": "kappa",
+  "cleared_normal_Smith_monic_factors": [
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "kappa",
+    "kappa"
+  ],
+  "fresh_exceptions": [
+    {
+      "kappa": 0,
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "normal_rank": 8,
+      "exclusion": "W1 zero"
+    },
+    {
+      "kappa": -1,
+      "B3_B4_dimensions": [
+        22,
+        46
+      ],
+      "normal_rank": 8,
+      "exclusion": "B3 dimension22 !=20"
+    }
+  ],
+  "excluded_unit_repeat_strata": [
+    "P=Q=0",
+    "P,Q independent and S=T=0"
+  ],
+  "not_claimed": [
+    "rank1 P,Q strata excluded",
+    "independent P,Q with nonzero pure bc quartic block excluded",
+    "all semisimple third-root spectra classified",
+    "complete H3 classification"
+  ]
+}

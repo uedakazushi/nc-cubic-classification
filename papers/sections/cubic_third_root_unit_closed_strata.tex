@@ -1,0 +1,94 @@
+\subsection{重複固有値1の三乗根atlasにおける二つの閉領域の排除}
+\label{subsec:cubic-third-root-unit-closed-strata}
+本節では $\mu=(1,1,\omega,\omega^2)$ とする。
+命題\ref{prop:cubic-third-root-22-atlas}のunit-repeat側の22代表を辞書式順に番号付けし、
+係数を $a_0,\ldots,a_{21}$ とする。
+\[
+ P=(a_{10},a_{18}),\quad Q=(a_{14},a_{19}),\quad S=a_{20},\quad T=a_{21}
+\]
+はそれぞれ $Ub^3,Uc^3,bbcc,bcbc$ 軌道の係数である。
+\begin{proposition}[全cube結合が零の閉領域の排除]
+\label{prop:cubic-third-root-unit-no-cube-coupling}
+H3候補では $P,Q$ は同時には零でない。
+また包絡の整域性だけで $P=0$ 又は $Q=0$ なら $S=0$ が必要である。
+\end{proposition}
+\begin{proof}
+mixed middleの $b^2$ 列は、行順 $(xb,yb,bx,by,c^2)$ で
+$(a_{10},a_{18},-\omega^2a_{10},-\omega^2a_{18},\omega^2S)^t$。
+$P=0,S\ne0$ なら純 $c^2$ 関係を得る。逆向きblockも $Q=0,S\ne0$ なら純 $b^2$ 関係を与える。
+従って両場合とも $S=0$ が必要である。
+
+$P=Q=0$ なら二次関係は
+$Ub+bU$ に二本、$Uc+cU$ に二本、$U^2+kbc+kcb$ に二本である。
+整域性により前二組は可逆graphである。
+従って $\deg U=0,\deg b=1,\deg c=-1$ のchargeが定義される。
+$\mu(G)=G$ なので、三次のchargeは $0,3,-3$ だけであり
+$G=G_0+C b^3+D c^3$ と分解する。
+正常 $b$ 式のcharge4成分は $C(1-\omega^2)b^4$、
+正常 $c$ 式のcharge $-4$ 成分は $D(1-\omega)c^4$ なので、整域性から $C=D=0$。
+よって $G$ はcharge0である。
+
+この関係分布とcharge0を確認した上で、相反pencilのrank1及びrank2の証明を適用できる。
+rank1ではAS2基底上で $G=H+Fbc$、非可換基底なら $F=0$、可換基底なら $H$ が $F$ で割れる。
+いずれも因子を持つ。
+rank2では $bc=h(U),cb=k(U)$ と $H_{\langle U\rangle}=1/((1-t)^2(1-t^2))$ から、
+$\langle U\rangle/(G)$ のGK2 Hilbert傾き $3/2$ が整域の整数性に反する。
+ここでは位数が4より大きいという既定理の結論を無条件に流用せず、
+その仮定が使われたcharge0性を独立に示した。
+残る両証明は $\omega\ne1$ のみを使うため、位数3にも適用される。
+\end{proof}
+
+\begin{theorem}[独立cube結合・純二変数四次零の全領域の排除]
+\label{thm:cubic-third-root-unit-independent-zero-quartic}
+$P,Q$ が独立で $S=T=0$ の必要atlasにもH3候補は存在しない。
+\end{theorem}
+\begin{proof}
+$U$ の基底と最高tensorのscalarを選んで
+$P=(1,0),Q=(0,1)$ とする。
+mixed middleのrank2条件を元の22軌道から展開すると
+\[
+ a_6=a_9=a_{12}=a_{13}=0,\quad
+ a_3=a_8=-\omega^2a_2,\quad a_7=\omega^2a_{11},\quad
+ a_{17}=\omega^2a_{15},\quad a_{16}=-\omega^2a_{15}.
+\]
+実際、$b^2$ と $c^2$ を含む二行二列に単元pivotがあるため、他の全行列成分との比較でこれらを得る。
+重み1のmiddleの純 $U^2$ 主blockのrankが高々2なので、既述のbinary反巡回計算から $a_1=0$。
+$(xy,yx,bc,cb)$ 主minorは $\omega a_{11}^4$ となり、$a_{11}=0$。
+純 $U$ 関係は $a_2x^2+a_{15}y^2$、整域性から $a_2a_{15}\ne0$。
+純 $U^2$ blockを $ev^t+ve^t$、$e=xy-yx$ と書き、
+この対角な純関係が像に入ることを使うと
+$a_4=0,a_0a_{15}=a_5a_2$ を得る（blockが零の場合も含む）。
+従って全六関係は、生成元のscalar正規化の後、ある $\kappa\in k$ に対して
+\[
+ \begin{gathered}
+ x^2+y^2=0,\quad bx=\omega xb,\quad cy=\omega^2yc,\\
+ b^2=\omega^2xc+cx,\quad c^2=-yb-\omega^2by,\quad
+ bc-\omega^2cb=\kappa(xy-yx)
+ \end{gathered}
+\tag{*}
+\]
+に尽くされる。
+正規化には $x'=sx,y'=ty,b'=ub,c'=vc$ を使い、
+$t^2=(a_{15}/a_2)s^2,u^2=sv/a_2,v^2=tu/a_{15}$ を解けばよい。
+代数閉体上で非零解が存在し、$\kappa$ の値は制限しない。
+
+$(*)$ の元の全関係を $\mathbb Q(\omega)(\kappa)$ 上で消去すると
+$\dim B_3=20,\dim B_4=35$。
+全消去pivotの非定数既約因子は $\kappa,\kappa+1$ だけである。
+従って $\kappa(\kappa+1)\ne0$ 全域に同じ自由基底と商行列を使える。
+中山不変三次八係数の正常行列は $41\times8$、共通分母は $\kappa$。
+分母を払った行列の $\mathbb Q(\omega)[\kappa]$ 上のSmith非零因子は、単元を除き
+\[
+ 1,1,1,1,1,1,\kappa,\kappa.
+\]
+従ってこの全開集合で正常核は零である。
+これはgeneric rankだけを特殊値へ延長した計算ではなく、全pivot因子とSmith因子を用いた全値判定である。
+残る $\kappa=0$ は元関係をfresh消去して $B_3,B_4$ の次元20,35、正常rank8。
+$\kappa=-1$ は $\dim B_3=22$ となりAS4でない。
+従って全 $\kappa$ でH3候補は空である。
+全入力、元の線型消去、pivot因子、Smith計算と二例外値は公開検証器で再生する。
+\end{proof}
+
+従って重複1のunit-repeat atlasで残るのは、$P,Q$ のrank1領域と、
+rank2かつ $(S,T)\ne(0,0)$ の領域である。
+この必要層別化の残余について、AS4存在・正常三次・H3許容性は未分類である。
