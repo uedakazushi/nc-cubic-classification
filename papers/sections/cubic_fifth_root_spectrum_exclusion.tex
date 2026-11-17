@@ -1,0 +1,120 @@
+\subsection{三固有値の位数5候補の全排除}
+\label{subsec:cubic-fifth-root-spectrum}
+\begin{lemma}[位数5の必要Ore表示]
+\label{lem:cubic-fifth-root-Ore-form}
+位数5の必要リストの包絡を、原始5乗根 $\eta$ を用いて
+$\mu_{B,s}|_{B_1}=(\eta,\eta,1,\eta^3)$ と書く。
+重複固有空間を $U$、単純基底を $b,c$ とする。
+このとき二元AS2平面 $T=T(U)/(r)$ と自己同型 $f,g$ を用いて
+\[
+ B=T[c;g][b;\sigma,\delta],\quad
+ \sigma|_T=f,\quad\sigma(c)=q c,\quad
+ \delta(c)=0,\quad\delta(u)=d(u)c^2
+\]
+と書ける。$q\ne0$、$d:U\to k$ は線型、$fg=gf$。
+さらに
+\[
+ qd=d\circ g,\quad
+ \mu_B|_T=(fg)^{-1}\mu_T,\quad
+ q\operatorname{hdet}f=1,\quad
+ q^{-1}\operatorname{hdet}g=\eta^3.
+\]
+$U$ 上の実際の中山作用は非半単純でもよい。
+\end{lemma}
+\begin{proof}
+有限certificateの関係重みは、順に
+$\eta^2$ の純 $U^2$ に1、$\eta^3$ の $bc,cb$ に1、
+$\eta^4$ の $Uc+cU$ に2、$\eta$ の $Ub+bU+kc^2$ に2である。
+従って $r$ は非退化AS2関係、$bc=qcb$、$cu=g(u)c$ と書ける。
+最後の二関係の $Ub,bU$ へのprojectionがともに同型であることも示せる。
+実際、Frobenius middleの $U^2$ 対 $bc,cb$ blockはrank1で、
+その二列は非零scalar倍の $r$ である。
+中山巡回で得る $bU$ 対 $Uc$ と $Ub$ 対 $cU$ の二つの小blockは、
+それぞれ $r$ の転置と可逆一次変換から得られるためrank2。
+従って関係の両projectionはrank2であり、
+$bu=f(u)b+d(u)c^2$、$f\in\operatorname{GL}(U)$ と書ける。
+
+$T$ の標準形と表示した規則による標準三次語は20個で、実際の $\dim B_3=20$ と一致する。
+全三次overlapを比較すると、$f,g$ は $T$ の自己同型、$fg=gf$、
+$\delta$ は表示した $\sigma$-derivationとなる。
+特に $cu=g(u)c$ に $\delta$ を作用させて $qd=d\circ g$ を得る。
+これで同じ全二次提示を持つOre拡大が得られる。
+最後の中山式はOre公式による。
+$b,c$ は単純固有直線なので実際にも $\mu_B(b)=b,\mu_B(c)=\eta^3c$。
+\end{proof}
+
+\begin{theorem}[位数5の全正常三次は整域H3を与えない]
+\label{thm:cubic-fifth-root-spectrum-empty}
+三固有値の位数5候補4個には、単冪部分を含めてH3は存在しない。
+従って三固有値H3の半単純最小共通位数は $3,4,6$ に限られる。
+\end{theorem}
+\begin{proof}
+前補題の表示を使う。三次重み1は $b^3$ と $U^2c$ だけなので
+\[
+ G=C b^3+cF,\qquad F\in T_2.
+\]
+$C=0$ なら一次因子 $c$ を持つため、整域商の候補では $C\ne0$ が必要。
+正規式の $b^3$ 成分を以下で比較する。
+
+まず $d=0$ の場合を処理する。
+可換 $T$ で $f,g$ が半単純なら同時対角化でskew、非半単純なら
+命題\ref{prop:cubic-commuting-Ore-no-shear}で排除される。
+Jordan $T$ では命題\ref{prop:cubic-Jordan-Ore-resonance}が
+Ore固有値をともに1へ制限するため、重複中山固有値 $\eta\ne1$ と両立しない。
+非可換量子 $T$ の対角作用もskewとなり、既分類skew H3は三固有値を持たない。
+反交換 $T$ の両反対角作用では、偶 $b,c$ 個数に対する奇次数係数はscalar normalizerを持てず、
+奇個数に対する反対角normalizerは中心 $x^2,y^2$ を固定できない。
+従って前節と同じ係数比較で $W_1=0$。
+片側だけ反対角なら中山の $U$ 固有値が二つに分かれるため現在の重複条件に反する。
+これで $d=0$ は全て排除される。
+
+以下 $d\ne0$ とする。
+$g=\gamma I$ なら $qd=d\circ g$ から $q=\gamma$。
+$\operatorname{hdet}g=\gamma^2$ と中山式から $\gamma=\eta^3$。
+正常式 $Gc=\eta^{-3}cG$ の $b^3$ 成分は $q^3=\eta^2$ を要求するが、
+実際は $q^3=\eta^4$ であり矛盾する。
+
+$T$ が可換又はJordanで $g$ が非半単純なら、その唯一の固有直線 $k\ell$ は $\ker d$ である。
+この直線は $T$ でも正規で、$f$ もこれを保存する。
+$f,g$ の固有値を $\alpha,\beta$ とすると
+$q=\beta$、$q\alpha^2=1$、$\alpha\beta=\eta^{-1}$ より $\alpha=\eta$。
+従って $b^3\ell=\eta^3\ell b^3$ だが、正常式は
+$G\ell=\eta^{-1}\ell G$ を要求する。$\eta^3\ne\eta^{-1}$ なので $C=0$ となる矛盾。
+Jordanの非scalar自己同型は全てこの場合である。
+
+次に $T=k\langle x,y\rangle/(xy-pyx)$ で、$f,g$ が対角、$g$ が非scalarの場合を考える。
+可換平面の $g$ が相異なる固有値を持つ場合も $p=1$ として含める。
+$d$ は $g$ の固有covectorなので、一方だけ非零であり、変数を交換して
+$d(x)=D\ne0,d(y)=0$ とする。
+$f(x)=\alpha x,f(y)=\beta y,g(x)=q x,g(y)=\gamma y$ と書くと
+\[
+ \alpha q=p\eta^{-1},\quad
+ \beta\gamma=p^{-1}\eta^{-1},\quad q\alpha\beta=1,
+ \qquad\beta=p^{-1}\eta,\quad\gamma=\eta^{-2}.
+\]
+$y$ の正常式の $b^3$ 成分から $p^3=\eta^{-1}$、
+$c$ の正常式から $q^3=\eta^2$ を得る。
+同じ $c$ の式に $F=A x^2+Bxy+Ey^2$ を入れると
+$E=0$、$B\ne0\Rightarrow q=1$、$A\ne0\Rightarrow q^2=\eta^3$。
+$F=0$ なら $G=C b^3$ は分解するので、$A\ne0$ が必要となり、
+\[
+ q=\eta^{-1},\qquad F=A x^2,\qquad\alpha=p.
+\]
+正常式 $Gb=bG$ の $bcx^2$ 成分は $p^2=q^{-1}=\eta$ を要求する。
+従って $p=\eta^3$。
+しかし元の三関係 $cx=qxc,bc=qcb,bx=p xb+D c^2$ から直接
+\[
+ c x^2b=p^{-2}q^{-1}b c x^2
+       -D(p^{-2}+p^{-1}q^{-2})c^3x
+\]
+であり、最後の係数は $2D\eta^4\ne0$。
+$b^3$ の項は $b$ と可換なので、この非零差を消せない。矛盾を得る。
+
+残る量子平面の非対角自己同型は $p=-1$ の反対角だけである。
+片側反対角は先と同様に重複中山条件に反し、両側反対角では
+$g^2=sI$、$\operatorname{hdet}g=s$。
+$d\circ g=qd\ne0$ より $s=q^2$、中山式より $q=\eta^3$ となる。
+正常式を $c^2$ に適用した $b^3$ 成分は
+$q^6=\eta^{-6}=\eta^4$ を要求するが、実際は $q^6=\eta^3$。
+これも矛盾する。全AS2基底と全自己同型型を尽くした。
+\end{proof}

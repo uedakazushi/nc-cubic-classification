@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "field": "Q(eta), eta primitive fifth root",
+  "scope": "exact spectral/Ore character checks and literal original-relation obstruction; ordinary coverage proof separate",
+  "fifth_root_spectra_checked": 4,
+  "cubic_resonance_exponents": [
+    [
+      0,
+      3,
+      0
+    ],
+    [
+      2,
+      0,
+      1
+    ]
+  ],
+  "relation_dimensions_in_eta_powers": [
+    0,
+    2,
+    1,
+    1,
+    2
+  ],
+  "forced_parameters": {
+    "p": "eta^3",
+    "q": "eta^4"
+  },
+  "original_relations": [
+    "c*x=q*x*c",
+    "b*x=p*x*b+c^2",
+    "b*c=q*c*b"
+  ],
+  "only_cubic_overlap": "PASS",
+  "nonzero_obstruction": "NF(c*x^2*b-b*c*x^2)=-2*eta*x*c^3",
+  "ordinary_scope": [
+    "all AS2 base types",
+    "all commuting f,g types",
+    "nonsemisimple Nakayama allowed"
+  ],
+  "not_claimed": [
+    "orders3,4,6 excluded",
+    "complete H3 classification"
+  ]
+}

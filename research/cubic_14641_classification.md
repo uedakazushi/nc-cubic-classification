@@ -1400,3 +1400,9 @@ Gはcharge0正則正規なのでS/(G)↪B/(G)。右辺がH3整域なら左辺も
 
 ## 三固有値の位数3,4,5,6への還元（v221）
 N9の6組とN12の2組では、不変三次は重複二平面Uの純三次のみで、孤立二次重みU²に関係一本が強制される。domainにより関係は非退化AS2、全斉次三次が一次因子を持つので全正常候補を排除。T→Bの全次数単射性を仮定しない因子議論。公開検証器が8組の唯一の三次共鳴(3,0,0)、二次重みの純U性、関係次元1をexact PASS。従って全三固有値H3の中山半単純最小共通位数は3,4,5,6のみ、必要リストは30スペクトル（N3:3,N4:12,N5:4,N6:11）、Galoisラベル16軌道。単冪部分込み。次はN5の単一Galoisラベル型とN3/4/6の必要tensor/Ore表示を調べる。これら30候補のH3存在は未証明。
+
+## 位数5の三固有値候補全排除（v222）
+`cubic_fifth_root_spectrum_exclusion.tex`：4スペクトルは原始5乗根etaによる(eta,eta,1,eta³)の一Galois型。関係重みとFrobenius middleからB=T[c;g][b;sigma,delta]、T二元AS2、bU=f(U)b+d(U)c²、bc=qcb、fg=gf、qd=d gを漏れなく復元。μU=(fg)^-1 μT、q hdetf1、q^-1hdetg eta³。
+G=C b³+cF2(T)、整域候補はC≠0。d0は既存のAS2二変数Ore認識でskew/因子/正常核消滅へ。d非零ではg scalarはq=eta³と正常c式q³=eta²が矛盾。可換/Jordanでg非半単純はkerdの正規固有線に対するb³正常式がeta³=eta^-1を要求し矛盾。量子対角/可換半単純ではd(x)≠0,d(y)0へ還元し、正常y,c,bの先頭係数からp³=eta^-1,q³=eta²,F=A x²,qeta^-1,p²eta、従ってpeta³。元の三関係でNF(c x² b-b c x²)=-2eta x c³≠0となり矛盾。反交換反対角はg²=q²Iとμcからqeta³、正常c²のb³成分がq6=eta4を要求する一方q6eta3で矛盾。全AS2/全Jordan中山を含め排除。
+公開検証器は4スペクトルの関係重みと三次support、QQ(eta)で元の三関係と唯一の三次overlapを再生し、非零差-2eta x c³をexact PASS。従って三固有値H3の半単純位数は3,4,6のみ。残る26スペクトル（Galoisラベル15軌道）の存在/許容性は未完。
+次の有力な手段：正常単純生成元vが全三次supportに現れず、B=A[v;sigma]となる場合のprojective cone頂点の無限Extを使う。例N6(1,3,4)はb正常、全GがU,c側で、b²関係なし。一般cone排除補題と正確なOre/Ext局所化を証明してから適用する。N6(1,0,4)は両b,c正常、U二次関係r(U)+lambda*c²。lambda≠0ならb作用でhdetf=q²、μb1からq³1だがGのb³非零と正常cからq³=eta²となり矛盾、lambda0は既存AS2逐次Ore認識へ帰着できる見込み（まだ未証明・原稿未統合）。

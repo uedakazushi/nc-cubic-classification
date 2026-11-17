@@ -2480,5 +2480,21 @@
       "H3 existence or complete admissibility of30 spectra",
       "four-simple-eigenvalue or CY coverage"
     ]
+  },
+  "three_eigenvalue_order5_exclusion_v222": {
+    "status": "ordinary complete AS2 Ore/normalizer proof; exact original-relation obstruction PASS",
+    "proof": "papers/sections/cubic_fifth_root_spectrum_exclusion.tex",
+    "validator": "computations/verify_cubic_fifth_root_spectrum_exclusion.py",
+    "certificate": "computations/cubic_fifth_root_spectrum_exclusion_certificate.json",
+    "results": [
+      "all four order5 spectra have no H3, including nonsemisimple Nakayama",
+      "three-eigenvalue minimal common semisimple orders3,4,6 only",
+      "26 remaining necessary spectra,15 Galois label orbits"
+    ],
+    "not_claimed": [
+      "orders3,4,6 admissibility",
+      "Ore cone exclusion or N6 curvature argument already proved",
+      "full classification"
+    ]
   }
 }
