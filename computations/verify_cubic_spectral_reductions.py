@@ -80,6 +80,8 @@ CHECKS=[
  'verify_cubic_four_simple_positive_rank.py',
  'verify_cubic_four_simple_positive_finite.py',
  'verify_cubic_four_simple_final_curves.py',
+ 'verify_cubic_principal_unipotent_cover.py',
+ 'verify_cubic_principal_unipotent_vertex.py',
 ]
 results=[]
 for name in CHECKS:

@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "scope": "universal principal Jordan4 H3 vertex obstruction, conditional only on actual H3/AS hypotheses stated in paper",
+  "top_weight6": "minus a9 times alternating tensor after a11=0",
+  "source_minor_det": "-1",
+  "weighted_PBW_relations": [
+    {
+      "00": "3*a10 + 5*a8",
+      "01": "-1",
+      "10": "1"
+    },
+    {
+      "00": "-9*a10**2 - 33*a10*a8 - a3 - 3*a6/4 - 30*a8**2",
+      "01": "3*a10 + 5*a8",
+      "02": "-1",
+      "20": "1"
+    },
+    {
+      "00": "9*a10**3 + 60*a10**2*a8 + a10*a3 + 3*a10*a6/2 + 129*a10*a8**2 - a2 + 3*a3*a8 + 7*a6*a8/2 + 90*a8**3",
+      "01": "-3*a10**2 - 14*a10*a8 - a6/2 - a7 - 15*a8**2",
+      "02": "a10 + 5*a8",
+      "03": "-1",
+      "11": "a10",
+      "30": "1"
+    },
+    {
+      "00": "27*a10**3 + 144*a10**2*a8 + 6*a10*a3 + 9*a10*a6/4 + 255*a10*a8**2 + 2*a2 + 10*a3*a8 + a5 + 15*a6*a8/4 + 150*a8**3",
+      "01": "-9*a10**2 - 30*a10*a8 - a3 - 3*a6/4 - 25*a8**2",
+      "02": "3*a10 + 3*a8",
+      "11": "a8",
+      "12": "-1",
+      "21": "1"
+    },
+    {
+      "00": "-54*a10**4 - 450*a10**3*a8 - 18*a10**2*a3 - 9*a10**2*a6 + 9*a10**2*a7 - 1374*a10**2*a8**2 - 2*a10*a2 - 75*a10*a3*a8 - a10*a5 - 147*a10*a6*a8/4 + 33*a10*a7*a8 - 1830*a10*a8**3 - 6*a2*a8 - a3**2 - a3*a6 + a3*a7 - 75*a3*a8**2 + a4 - 3*a5*a8 - 3*a6**2/16 + 3*a6*a7/4 - 145*a6*a8**2/4 + 30*a7*a8**2 - 900*a8**4",
+      "01": "18*a10**3 + 114*a10**2*a8 + 4*a10*a3 + 3*a10*a6 + 230*a10*a8**2 + a2 + 8*a3*a8 + a5 + 6*a6*a8 + 150*a8**3",
+      "02": "-6*a10**2 - 32*a10*a8 - a3 - 5*a6/4 + a7 - 34*a8**2",
+      "03": "3*a10 + 7*a8",
+      "11": "-3*a10**2 - 6*a10*a8 - a7 - 3*a8**2",
+      "12": "a10 + a8",
+      "13": "-1",
+      "31": "1"
+    },
+    {
+      "00": "a0 + 3*a1*a10 + 5*a1*a8 + 162*a10**5 + 1674*a10**4*a8 + 63*a10**3*a3 + 27*a10**3*a6 - 27*a10**3*a7 + 6822*a10**3*a8**2 + 15*a10**2*a2 + 393*a10**2*a3*a8 + 3*a10**2*a5 + 693*a10**2*a6*a8/4 - 153*a10**2*a7*a8 + 13734*a10**2*a8**3 + 63*a10*a2*a8 + 4*a10*a3**2 + 15*a10*a3*a6/4 - 3*a10*a3*a7 + 804*a10*a3*a8**2 - 3*a10*a4 + 15*a10*a5*a8 + 9*a10*a6**2/8 - 9*a10*a6*a7/4 + 1449*a10*a6*a8**2/4 - 288*a10*a7*a8**2 + 13680*a10*a8**4 - a2*a6/2 + 66*a2*a8**2 + 9*a3**2*a8 + 37*a3*a6*a8/4 - 6*a3*a7*a8 + 540*a3*a8**3 - 6*a4*a8 - a5*a6/4 + 18*a5*a8**2 + 45*a6**2*a8/16 - 9*a6*a7*a8/2 + 495*a6*a8**3/2 - 180*a7*a8**3 + 5400*a8**5",
+      "01": "-a1 - 54*a10**4 - 450*a10**3*a8 - 15*a10**2*a3 - 9*a10**2*a6 - 1374*a10**2*a8**2 - 6*a10*a2 - 62*a10*a3*a8 - 3*a10*a5 - 39*a10*a6*a8 - 1830*a10*a8**3 - 11*a2*a8 - a3*a6/4 - a3*a7 - 63*a3*a8**2 + a4 - 6*a5*a8 - 3*a6**2/16 - 3*a6*a7/4 - 41*a6*a8**2 - 900*a8**4",
+      "02": "18*a10**3 + 132*a10**2*a8 + 4*a10*a3 + 15*a10*a6/4 - 3*a10*a7 + 294*a10*a8**2 + a2 + 11*a3*a8 - a5 + 21*a6*a8/2 - 6*a7*a8 + 204*a8**3",
+      "03": "-9*a10**2 - 39*a10*a8 - a3 - 3*a6/2 - 42*a8**2",
+      "11": "9*a10**3 + 36*a10**2*a8 + a10*a3 + 3*a10*a6/4 + 3*a10*a7 + 45*a10*a8**2 + a5 - a6*a8/4 + 6*a7*a8 + 18*a8**3",
+      "12": "-3*a10**2 - 9*a10*a8 - a7 - 6*a8**2",
+      "13": "3*a10 + 7*a8",
+      "22": "-a10 - 3*a8",
+      "23": "-1",
+      "32": "1"
+    }
+  ],
+  "extension_recurrence_A": "Matrix([\n[  1,  0, 0],\n[ -1,  1, 0],\n[1/2, -1, 1]])",
+  "extension_recurrence_B": "Matrix([\n[                                            1,             0, 0],\n[                                -3*a10 - 7*a8,             1, 0],\n[9*a10**2 + 39*a10*a8 + a3 + 3*a6/2 + 42*a8**2, -3*a10 - 7*a8, 1]])",
+  "extension_shift_monodromy": "Matrix([\n[                                                                 1,                 0, 0],\n[                                                 -3*a10 - 7*a8 + 1,                 1, 0],\n[9*a10**2 + 39*a10*a8 - 3*a10 + a3 + 3*a6/2 + 42*a8**2 - 7*a8 + 1/2, -3*a10 - 7*a8 + 1, 1]])",
+  "monodromy_determinant": 1,
+  "classical_cubic_invariant_dimension": 3,
+  "max_invariant_index_weight": 3,
+  "ordinary_proof_inputs": [
+    "principal CY untwist and domain growth exclusions from preceding section",
+    "weighted PBW from AS4 Hilbert dimensions and quadratic overlaps",
+    "D-fixed normal cubic has index weight at most3, hence lies in J^2",
+    "tails point extensions have dimension3 from full recurrence, shift acts by M or its inverse",
+    "graded Serre trace gives nondegenerate b with b(v,w)=-b(Tw,v); odd dimension and detT1 impossible"
+  ],
+  "not_claimed": [
+    "Serre proof mechanically formalized",
+    "all unipotent Jordan types classified",
+    "complete H3 classification",
+    "novelty confirmed"
+  ]
+}

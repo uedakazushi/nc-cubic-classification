@@ -1,0 +1,95 @@
+\subsection{最大単冪Jordan型の奇数接空間障害}
+\label{subsec:cubic-principal-unipotent-vertex}
+\begin{lemma}[Serre shiftの行列式と自己一次拡大]
+\label{lem:cubic-odd-Serre-determinant}
+Ext有限な導来圏の対象 $P$ について $S=T[2]$、$\eta:P\simeq T(P)$ とする。
+$E=\Ext^1(P,P)$ 上で $T$ と $\eta$ が誘導する作用を $t$ と書く。
+このとき $\dim E$ が奇数なら $\det t=-1$ である。
+特に $t$ が単冪なら $\dim E$ は偶数である。
+\end{lemma}
+\begin{proof}
+Serre traceと $\eta$ は $E$ 上の非退化双線型形式 $b$ を与える。
+次数1の射を交換したgraded traceの符号により
+$b(v,w)=-b(tw,v)$ となる（$\eta$ の逆向きの規約なら $t^{-1}$ となり、同じ結論を得る）。
+行列式を取ると $1=(-1)^{\dim E}\det t$ である。
+単に $S(P)\simeq P[2]$ というだけで $t=1$ を仮定してはいない。
+\end{proof}
+
+\begin{theorem}\label{thm:cubic-principal-unipotent-empty}
+強い内在的H3の二次包絡の中山作用は、固有値1のサイズ4単一Jordanブロックを持たない。
+\end{theorem}
+\begin{proof}
+標準単冪ねじり解除により包絡を $B=C^H$ と書く。
+$C$ はCY AS4、$H=\exp N$ は単冪自己同型で、基底を選べば
+$Nx_i=x_{i-1}$ ($i=1,2,3$)、$Nx_0=0$ である。
+$N$ は導分であり、$C$ の四次Koszul topは反巡回かつ $N_{\rm tot}$ に固定される。
+補題\ref{lem:h3-unipotent-transport}により三次関係 $F\in C_3$ は $H(F)=F$、
+すなわち $N(F)=0$ を満たす。
+
+反巡回topの66方向に $N_{\rm tot}$ を作用させた核は12次元であり、次の語の係数を
+$a_0,\ldots,a_{11}$ として一意的に表示できる：
+\[
+0001,0011,0021,0031,0020,0111,0202,0211,0113,0213,1112,0033.
+\]
+これらは本文の変数添字を表す。
+元middle行列の列33は行00に係数 $a_{11}$ を持つだけなので、整域性から $a_{11}=0$。
+さらに $a_9=0$ なら一語だけを支持する列から $3a_{10}+5a_8=0$ を得る。
+この条件下で $x_0,x_1$ を零にすると、全二次関係の像は $kx_2^2$ に含まれる。
+従って $C$ は $k\langle x_2,x_3\rangle/(x_2^2)$ へ全射する。
+語 $x_3^3,x_3x_2x_3$ の全連結は独立なので、この商は指数成長し、AS4のHilbert級数に反する。
+よって $a_9\ne0$、topの尺度を変えて $a_9=1$ とする。
+
+添字和をweightとする。$a_{11}=0$ のtopの最高weightは6で、その部分は
+$-a_9$ 倍の四文字交代tensorである。
+昇順二文字の六列と逆順二文字の六行で取ったmiddle小行列の行列式は $\pm1$。
+rank6なのでその六列が全関係を与え、逆順対ごとの関係は
+\[
+ x_i x_j-x_jx_i+\{\text{weight}<i+j\text{ の二次式}\},\qquad i>j
+\]
+となる。
+並べ替えにより順序単項式が張り、その個数が $H_C=(1-z)^{-4}$ と一致するので、全次数で基底である。
+従ってweight随伴環は可換多項式環であり、$N$ の随伴作用も $Nx_i=x_{i-1}$ である。
+可換三次部分の $N$ 核は
+\[
+ x_0^3,\qquad x_0(2x_0x_2-x_1^2),\qquad
+ 3x_0^2x_3-3x_0x_1x_2+x_1^3
+\]
+で張られ、それぞれweightは0,2,3である。
+従って $N(F)=0$ の最高weightは高々3であり、
+全ての順序三次語は $J=(x_0,x_1,x_2)$ の文字を少なくとも二つ含む。
+すなわち $F\in J^2$ である。
+$H$ は $J$ を保つのでtwist後にも $J^2$ は同じ部分空間を表す。
+
+$C/J=k[x_3]$ であり、$H(x_3)\equiv x_3\pmod J$ なので
+$R=B/(F)$ にもpoint module $k[x_3]$ がある。$P=\pi k[x_3]$ と置く。
+$P$ の自己拡大は十分高次数で各成分が二次元となり、$x_3$ の作用は可逆である。
+基底を逐次選んで $x_3$ を恒等にすれば、$x_i$ ($i<3$) の作用は
+上三角の非対角成分 $f_i(n)$ だけで表される。
+これは全自己拡大を尽くす：H3の豊富性とSerre消滅により、tailsの拡大のsection列は十分高次数で完全となる。
+逆に以下の行列は有限生成graded拡大を実際に定める。
+
+$J$ 内の二文字の関係は一次化で零であり、$F\in J^2$ も一次化で零となる。
+残る $x_3x_i$ の三関係だけが
+\[
+ A\,f(n+1)=D\,f(n),\qquad f(n)=(f_0(n),f_1(n),f_2(n))^t
+\]
+を与える。上のweight三角形とtwist $H$ の三角形から、$A,D$ は下三角で対角が全て1である。
+公開計算では元12方向の全係数のままこの二行列を構成し確認する。
+従って任意の $f(n_0)\in k^3$ が一意に全拡大を定め、
+残る拡大の同値はこの三成分を変えない。
+よって $\Ext^1(P,P)=k^3$。
+次数shiftは $M=A^{-1}D$ 又はその逆で作用し、いずれも単冪で行列式1である。
+
+H3では $S=(-1)[2]$ であり、$P\simeq P(-1)$ は $x_3$ によって同定される。
+補題\ref{lem:cubic-odd-Serre-determinant}により、三次元の自己拡大空間と
+行列式1のshift作用は両立しない。これで最大Jordan型の全係数を排除した。
+\end{proof}
+
+公開再現器は\\
+\texttt{verify\_cubic\_principal\_unipotent\_cover.py}、\\
+\texttt{verify\_cubic\_principal\_unipotent\_vertex.py}。
+前者は12核の独立構成、元rank6の全枝と二つの非零枝の全係数gaugeも保持する。
+後者は最高weight、unit source minor、全関係のweight三角形、twist後の全point拡大行列、
+可換三次核を元係数のまま検証する。
+Serre traceとtails拡大の通常証明を有限rank計算だけで代替したとはしない。
+残る単一固有値のJordan型 $(3,1),(2,2),(2,1,1)$ とCY全被覆は未完成である。
