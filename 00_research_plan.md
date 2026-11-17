@@ -69,7 +69,7 @@ Library既存ファイルは明示指示なしに削除しない。GitではPDF�
 heart比較・Rains共鳴・cubic cornerは `uedakazushi/nc-dp-surface-hearts`、次数1は `uedakazushi/nc-dp1-moduli`、三次三様体は `uedakazushi/nc-cubic-threefold-moduli` が正本。
 量子FermatのOU障害は [nc-cubic-non-as](https://github.com/uedakazushi/nc-cubic-non-as)、ambient比較は [nc-cubic-ambient](https://github.com/uedakazushi/nc-cubic-ambient) に移管済み。分類に必要な旧定理・コードはこのリポジトリの現行分類原稿からも参照する。
 
-## 多固有値領域の現行到達点（v284）
+## 多固有値領域の現行到達点（v285）
 強いintrinsic H3のAS4包絡は相異なる中山固有値をちょうど三つ持たない。全Jordan型の必要還元、重複1の全22tensor atlas、非単位重複rootの独立・非零比例・零b²列を全て排除した。全H3分類の完成ではない。全CY、四単純共鳴、全成分・境界、相対降下は未完成。
 
 ### 完成した証明の入口
@@ -126,7 +126,15 @@ M符号(1,−1,t,t^-1)はxy/yx交代blockをdomainで消しI0⊂x²,y²,bc,cb。
 因子条件も全Tへ適用：旧common-skew/pure-AS2に加え、指数u²z/vz²、uz skew、vz/zv/u²内のrank1関係なら向き別書換えで共通z因子。単純sampleでなく全S/T/character被覆。39中19ラベル全排除、20 Galoisラベル/45根集合、残位数5,6,7,8,9,12、全1306必要support片。各片はcharacter番号/S,T bitmask/正常gen bitmaskで小証明書に保存。非空・AS4・正常三次存在・H3十分性を主張しない。
 通常証明はfour_simple_support_sieve節、公開verify_cubic_four_simple_support_sieve.py default Sympy全PASS、v284主原稿LuaLaTeX clean PASS。累計67validators across runs、単一67全再生未実行。全20ラベル/片はcertificateから再開する。新外部/as4入力なし、新規性未確認。
 
-### 次の最小課題：元orbit非零supportとrankの全必要制約
-次はcount Sだけでなく元top orbit係数の全非零mask（最大14係数、2^14程度）を調べる。rank1blockの非零位置は完全rectangleでなければならない。一般rank rでは(r+1)minorの完全matching項数を調べ、1項なら非零なので不可、2項ならroot-of-unity係数のmonomial binomial式を得る。全binomialを整数Smithで照合する。強制pairscalar q_ijは実際の二行source列の比=−root*orbitcoeff比と書ける場合、normalizerの全S/T方程式も同じorbit変数へ戻して検算する。3項以上のminorを数値標本で排除しない。全20必要ラベルから始め、1306片を勝手に一つのgeneric片へ置換しない。
-同時に小さい通常証明を進める：位数7代表(0,1,2,4)は必要片が一つだけ、top countはmultilinearとy³c,yb³,bc³、Gはx³とybc双方。base S(y,b,c)の三pairは強制skew。残り三関係x u−σ(u)x−δ(u)でδ(y)=d_y c²,δ(b)=d_b y²,δ(c)=d_c b²、全d非零。片側xu係数零はbase monomialとuのskew可換から逆向き独立quadを生じるので不可。B3dim20で全Ore overlaps零、B=S[x;σ,δ]。Gx=xGではδ(ybc)が零を要求するが、δ(ybc)はyb³,y³c,bc³の三つの相異なるbase PBW単項式を全非零係数で持つので不可能。このprivate証明を公開監査すればこの位数7ラベルも除ける。
-全CY、全成分・境界、intrinsic群oidと相対降下は引き続き未完。新規性未確認。
+### 元orbit全非零層とLaurent torus閉包（v285）
+20ラベルの全top orbit非零maskを走査した。rank1blockは完全rectangleが必要、全(r+1)minorの1項matchingは不可、2項はroot付きbinomial。純二変数U²内に支持されるsource列の空間はdomainでrank≤1なので、その全2minorも課す。pairに正確に支持される一つの列があれば（block全体に限らず）forcedskew、q_ij=−H_ji/H_ijで実orbit係数比へ戻す。
+全binomialは整数Smith行格子（飽和しない、torsion全成分保持）でLaurent指数を正規化、係数をQQ(ζ2N)でexact加算。minorが1非零monomialなら全層排除、2項でroot比なら必要binomialを追加して閉包。3項以上の残余や非root係数比を勝手に零としない。normalizer top/G式も同じorbit係数へ課す。全S/Tと必要characterを保持して13ラベル/33根集合、23非零mask/157G-support。
+さらに(7;0,1,2,4)の唯一mask/片を通常Ore証明で排除。base S(y,b,c)は三pairskew、x追加はδ(y)=d_yc²,δ(b)=d_by²,δ(c)=d_cb²、全d非零。逆向き係数/domainとB3dim20の全overlap零からB=S[x;σ,δ]。G=Ax³+B ybc双方、μx1なのでGx=xGがδ(ybc)=0を要求するが、δvolumeは三つの異なるPBW単項式yb³,y³c,bc³を全非零係数で持ち矛盾。
+現行必要被覆は12 Galoisラベル/31根集合、22非零orbit層/156G-support片。ラベルは(5;1,2,3,4)、(6;0,1,2,3),(6;0,1,3,5),(6;1,2,4,5)、(7;1,2,5,6)、(9;0,1,4,7),(9;1,3,4,7),(9;1,3,6,8)、(12;0,1,4,10),(12;1,3,4,7),(12;1,3,7,10),(12;1,4,6,10)。全必要orbit係数A,bと各G bitmaskをcertificateに保持。
+公開verify_cubic_four_simple_orbit_torus.py default Sympy/数体全PASS、v285主原稿LuaLaTeX clean PASS。C対角generator重みでA C^t0も検証、effective_dimension=m−rankA−rankCはtoric必要式だけの対角商次元、実AS4/moduli次元ではない。累計68validators across runs、単一68全再生未実行。
+
+### 次の最小課題：対角商零次元片の全数体判定
+privateで有効次元0の全Smith成分を列挙し、対角torusのconnected作用（rankC=free dim）でfree座標を1へ。d_i各torsion rootを全て取り、λとtop係数の共通原始根位数Lを最小化して31点（N7既排除の1点含む）へ。root Lは5,6,9,10,12,14,18だけ。先にmodprimeを探索controlに用いたが、全31点をQQ(ζL)上でdefault Sympy exact再計算済み：27点正常核0、3点B3dim22/B4dim46で非AS4、1点のみ正常核1。private four_simple_zero_dim_points.py /four_simple_zero_dim_exact.pyとlog/jsonに全データ。まだ公開証明へ未統合、正本frontierは12ラベル。
+残る一点はN9代表(0,1,4,7)、point15。BはS(y,b,c)[x;σ]（xは三base変数とskew可換、base三関係だけ）、正常Gはpure S3でx³成分なし。既存一般cone頂点補題lem:cubic-skew-cone-vertex（cubic_as4_adjacent_L_exclusions節）はσscalarを仮定せず、そのまま適用できる。従って一点もH3なしになるはず。次は全零次元片のSmith/diagonal gauge被覆、全31数体点/この最後のcone仮定を公開検証・通常証明へ統合する。
+これが完成すると正次元の必要部分は5ラベル/10根集合：N5(1,2,3,4)51support片（toric商dim1/2/3）、N6(0,1,2,3)11片dim1、N6(1,2,4,5)9片dim1、N7(1,2,5,6)2片dim1/2、N9(1,3,6,8)2片dim1/2。合計75必要片。まだ完成扱いしない。
+正次元片はrankC独立columnsのa_j=1 gaugeを追加し、Smith全torsion枝と自由変数dim1..3でparametrizeする。残るrank2非binomialminorをfactorして追加層化、実商の正常行列へ進む。generic rank計算だけで全parameterを除外しない。全CY/成分/境界/intrinsic群oid/相対降下は引き続き未完、新規性未確認。

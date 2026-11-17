@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "version": "classification-v284",
+  "version": "classification-v285",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -4010,6 +4010,33 @@
       "compatible patterns actual rank6 or normal G exists",
       "all20 labels have H3",
       "Galois quotient geometric",
+      "complete H3 classification",
+      "novelty confirmed"
+    ]
+  },
+  "four_simple_orbit_torus_v285": {
+    "status": "all orbit-nonzero toric refinement plus Ore exclusion leaves12 Galois labels /31 root sets",
+    "proof": "papers/sections/cubic_four_simple_orbit_torus.tex",
+    "validator": "computations/verify_cubic_four_simple_orbit_torus.py",
+    "helper": "computations/cubic_four_simple_laurent_torus.py",
+    "checks": [
+      "default Sympy all nonzero orbit masks/rank/domain/actual pair ratios PASS",
+      "Smith identities and exact cyclotomic Laurent reduction, all torsion components retained PASS",
+      "all normalizer top/G equations in actual orbit coefficients PASS",
+      "A Ctranspose0 and necessary toric quotient dimensions PASS",
+      "sole order7 full support and nonzero volume monomial coefficients PASS",
+      "v285 main LuaLaTeX clean PASS"
+    ],
+    "remaining_Galois_labels": 12,
+    "remaining_root_sets": 31,
+    "necessary_orbit_strata": 22,
+    "necessary_cubic_support_pieces": 156,
+    "scope": "nonbinomial rank equations and existence unresolved; effective dimension only of necessary toric quotient",
+    "validation_scope": "68 validators across runs; no single68 replay claimed",
+    "not_claimed": [
+      "remaining masks AS4",
+      "G exists on necessary supports",
+      "all finite spectra classified",
       "complete H3 classification",
       "novelty confirmed"
     ]

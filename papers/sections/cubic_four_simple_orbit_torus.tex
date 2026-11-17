@@ -1,0 +1,133 @@
+\subsection{元orbitの全非零層とLaurent二項式による有限必要被覆の縮小}
+\label{subsec:cubic-four-simple-orbit-torus}
+\begin{proposition}[全非零orbit層の厳密な必要判定]
+\label{prop:cubic-orbit-torus-sieve}
+前節の20必要ラベルの各topについて、巡回orbit係数の零・非零を全て指定する。
+非零係数を $a_1,\ldots,a_m$ とすると、その層上の必要二項式条件は
+\[
+ a^A=\zeta_{2N}^{b}
+\]
+という整数指数方程式で扱える。
+以下の判定で、全13ラベル・33根集合、23個の非零orbit層、157個の三次support片へ必要削減される。
+この段階ではrank条件の非二項式部分を解いたとは主張しない。
+\end{proposition}
+\begin{proof}
+全 $2^m-1$ 個の非空orbit maskを列挙し、前節の必要文字数supportと関係characterを保つものだけを調べる。
+各middle成分は一つのorbit係数とroot of unityの積であり、異なるorbitから同じ成分への相殺はない。
+従ってこの層では各成分の零・非零が完全に決まる。
+
+rank一blockの非零位置は、非零行集合と非零列集合のCartesian積でなければならない。
+一般の指定rank $r$ に対しては全 $(r+1)$ 次minorを展開する。
+非零matching項が一つなら、そのminorはこの層で消えず不可能。
+二つなら、根の符号も $\zeta_{2N}$ の指数に含めて二項式を得る。
+また、二変数 $u,v$ の二次tensor空間内に全体が支持されるsource列は、
+整域性から高々一次元しか張れない。
+二次元なら $2\times2$ determinant pencilがrank-one tensorを含むからである。
+この追加rank一条件の全minorも課す。
+
+得た二項式をSmith標準形 $UAV=D$ で扱う。
+$D$ の非零対角 $d_i$ に対し、Laurent単項式指数 $e$ を $eV$ へ移し、
+各座標を $d_i$ で割った剰余へ正規化する。
+商の分だけ、$Ub$ の対応成分によるroot of unityを係数へ掛ける。
+自由座標はそのまま保持する。
+これは整数行格子による正規化であり、飽和によってtorsion成分を捨てたり一つのroot枝を選んだりしない。
+同じ正規化指数の係数は $\mathbb Q(\zeta_{2N})$ 上で厳密に加算する。
+
+全minorをこのLaurent二項式商へ還元する。
+一つの非零単項式だけになれば、そのminorは全層で非零なので除く。
+二単項式となり係数比がroot of unityなら、新たな必要二項式として追加し、再びSmith正規化する。
+整数行格子の昇鎖なので、この操作は停止する。
+三項以上の残余や、係数比がroot of unityでない二項式を、零と仮定したり数値標本で排除したりしない。
+
+あるsource列が pair $ij,ji$ に正確に支持されれば、その非零像は強制skew関係である。
+ここではblock全体の像がpair内にある場合だけに限定しない。
+そのscalarは
+\[
+ q_{ij}=-\frac{H_{ji,c}}{H_{ij,c}}
+\]
+であり、root of unityと非零orbit係数比の積になる。
+従って前節の正常化hdet・正常三次条件も、同じ実際のorbit係数に対するmonomial方程式として追加できる。
+独立な未知 $q_{ij}$ としてのみ扱った必要条件より強いが、ここでも全非零層を保持する。
+
+各層の全三次supportを走査し、既証因子障害と整数左核障害を適用する。
+公開exact replayの結果は表示した13ラベル・23層・157片である。
+残る全指数行列とroot右辺を証明書に保存する。
+非零orbit係数のgenerator対角変更の重み行列を $C$ とすると、全必要行で $AC^t=0$ も厳密に確認する。
+証明書の $m-\operatorname{rank}A-\operatorname{rank}C$ は、このtoric必要方程式だけの対角商次元であり、
+AS4成分やintrinsic moduliの次元ではない。
+\end{proof}
+
+\begin{lemma}[位数7の唯一のvolume chartも空]
+\label{lem:cubic-order7-volume-Ore-empty}
+スペクトル $(1,\zeta_7,\zeta_7^2,\zeta_7^4)$ の残る必要chartはH3を与えない。
+\end{lemma}
+\begin{proof}
+このラベルには前判定後、一つの層と一つの三次support片しか残らない。
+topの文字数は
+\[
+ xybc,\quad y^3c,\quad yb^3,\quad bc^3,
+\]
+の四型全て、三次は $x^3,ybc$ 双方である。
+$y,b,c$ の三pairは孤立二次元指標空間で関係数1なので、非零skew関係を持つ。
+この三変数の量子多項式環を $S$ とする。
+残り三つの関係は $xu,ux$ と一つのbase平方からなる。
+両向き係数は非零である。
+一方だけなら $xu=\kappa v^2$ 又は逆向きとなり、
+$u,v^2$ のbase skew可換性と整域性から逆向きの独立二次関係が生じ、rank一に反する。
+従って
+\[
+ B=S[x;\sigma,\delta],\qquad
+ \delta(y)=d_yc^2,\quad\delta(b)=d_by^2,\quad\delta(c)=d_cb^2
+\]
+と書ける。
+このOre認識は、全六逆順pairの標準三次語20と $\dim B_3=20$ による全overlap消滅で正当化される。
+四次supportの後三型が非零であることから、$d_y,d_b,d_c$ は全て非零である。
+$\sigma$ の各対角scalarも非零である。
+
+非因子三次は $G=Ax^3+B_0ybc$、$AB_0\ne0$ と書ける。
+$\mu_B(x)=x$ なので $Gx=xG$ が必要である。
+Ore PBWの $x$ 次数を比べると、これは特に $\delta(ybc)=0$ を要求する。
+ところが $bc=r cb$、$\sigma(y)=s_y y,\sigma(b)=s_b b$ と書けば
+\[
+ \delta(ybc)=s_ys_bd_c\,yb^3+s_yd_b\,y^3c+d_yr^{-2}\,bc^3.
+\]
+三つは $S$ の相異なるPBW単項式で、全係数が非零である。
+従ってこの式は零にならず矛盾する。
+\end{proof}
+
+\begin{theorem}[12有限ラベルによる全必要被覆]
+\label{thm:cubic-four-simple-twelve-orbit-torus}
+全四単純H3の必要スペクトルは次の12 Galoisラベル軌道、31根集合で覆われる。
+その全候補は22個の非零orbit層と156個の三次support片に入る。
+\end{theorem}
+\begin{proof}
+命題\ref{prop:cubic-orbit-torus-sieve}から前補題の一ラベル・一層・一片を除く。
+他の有限位数点や特殊非零層を省略していない。
+\end{proof}
+
+\begin{center}
+\begin{longtable}{r l r r}
+\toprule $N$&指数代表&orbit層&三次support片\\\midrule
+\endfirsthead
+\toprule $N$&指数代表&orbit層&三次support片\\\midrule
+\endhead
+5&$(1,2,3,4)$&9&91\\
+6&$(0,1,2,3)$&1&11\\
+6&$(0,1,3,5)$&1&4\\
+6&$(1,2,4,5)$&1&9\\
+7&$(1,2,5,6)$&2&2\\
+9&$(0,1,4,7)$&1&14\\
+9&$(1,3,4,7)$&1&7\\
+9&$(1,3,6,8)$&2&2\\
+12&$(0,1,4,10)$&1&8\\
+12&$(1,3,4,7)$&1&2\\
+12&$(1,3,7,10)$&1&2\\
+12&$(1,4,6,10)$&1&4\\
+\bottomrule
+\end{longtable}
+\end{center}
+
+公開再現器は \texttt{verify\_cubic\_four\_simple\_orbit\_torus.py}。\\
+Laurent正規化は \texttt{cubic\_four\_simple\_\allowbreak laurent\_torus.py} にあり、
+全Smith単元恒等式、cyclotomic係数、全orbit mask、各残余monomial方程式を再生する。
+残る非二項式rank条件、三次正常核、AS4とH3十分性は未完成である。
