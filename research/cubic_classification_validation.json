@@ -2356,5 +2356,20 @@
       "H3 sufficiency",
       "moduli dimension bound"
     ]
+  },
+  "three_eigenvalue_torsion_pencils_v215": {
+    "status": "ordinary Frobenius and character-lattice proof; determinant bounds and supports exact PASS",
+    "proof": "papers/sections/cubic_spectral_resonance.tex",
+    "validator": "computations/verify_cubic_spectral_resonance.py",
+    "certificate": "computations/cubic_spectral_resonance_certificate.json",
+    "results": [
+      "all Jordan types: quartic weight1 support meets every semisimple eigenspace",
+      "three-eigenvalue H3 spectra: finite common-root sets N<=24 or two explicit inverse pencils"
+    ],
+    "not_claimed": [
+      "existence on two pencils",
+      "finite torsion admissibility",
+      "complete four-eigenvalue or CY classification"
+    ]
   }
 }

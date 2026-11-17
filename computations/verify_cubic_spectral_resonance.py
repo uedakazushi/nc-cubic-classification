@@ -47,12 +47,42 @@ for name,exponent,index in [('C',3,1),('C',-3,2),('D',6,2)]:
     support = [v for v in cubic3 if sum(v[i]*E[i][1] for i in range(3))==exponent]
     pure = tuple(3 if j==index else 0 for j in range(3))
     assert support==[pure]
+quartic3 = [v for v in itertools.product(range(5),repeat=3) if sum(v)==4]
+quartic_results = {}
+for name,(E,signs) in charts.items():
+    weights = set()
+    for v in quartic3:
+        e = tuple(sum(v[i]*E[i][j] for i in range(3)) for j in range(2))
+        sign = 1
+        for i in range(3): sign *= signs[i]**v[i]
+        weights.add((e,sign))
+    assert len(weights)==9
+    quartic_results[name] = sorted(weights)
+A_determinants = sorted({4*i-3*r for i in range(4) for r in range(5)
+                         if not (i==0 and r==0) and not (i==3 and r==4)})
+assert 0 not in A_determinants and max(2*abs(d) for d in A_determinants)==24
+zero = {}
+for name,K,L in [('C',range(-3,4),range(-4,5)),('D',range(7),range(9))]:
+    pairs = [(k,l) for k in K for l in L]
+    zero[name] = [(k,l) for k,l in pairs if 3*l==4*k]
+    assert max(abs(3*l-4*k) for k,l in pairs)==24
+assert zero['C']==[(-3,-4),(0,0),(3,4)]
+assert zero['D']==[(0,0),(3,4),(6,8)]
+for name,exponent,index in [('C',-4,2),('C',4,1),('D',0,0),('D',8,2)]:
+    E,_ = charts[name]
+    support = [v for v in quartic3 if sum(v[i]*E[i][1] for i in range(3))==exponent]
+    assert support==[tuple(4 if j==index else 0 for j in range(3))]
 result = {'status': 'PASS',
           'scope': 'exhaustive exponent and spectral chart enumeration only; ordinary proofs separate',
           'quadratic_exponents': quad, 'cubic_resonance_exponents': cubic,
           'nontrivial_quadratic_collisions_for_distinct_eigenvalues': collisions,
           'counts': counts, 'three_eigenvalue_chart_cubic_weights':chart_results,
-          'isolated_pure_branch_checks':['C:k=3','C:k=-3','D:k=6']}
+          'isolated_pure_branch_checks':['C:k=3','C:k=-3','D:k=6'],
+          'three_eigenvalue_chart_quartic_weights':quartic_results,
+          'opposite_pair_chart_nonzero_determinants':A_determinants,
+          'cubic_quartic_zero_determinants':zero,
+          'common_torsion_order_bound':24,
+          'zero_determinant_residual_spectra':['(1,z,z^-1)','(z,1,z^-1)']}
 Path(__file__).with_name('cubic_spectral_resonance_certificate.json').write_text(
     json.dumps(result, indent=2) + '\n')
-print(json.dumps({'status': 'PASS', 'counts': counts,'chart_cubic_weight_counts':{k:len(v) for k,v in chart_results.items()}}))
+print(json.dumps({'status': 'PASS', 'counts': counts,'chart_cubic_weight_counts':{k:len(v) for k,v in chart_results.items()},'torsion_bound':24}))
