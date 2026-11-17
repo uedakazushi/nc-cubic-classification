@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "scope": "literal valid Ore family over QQ(omega)(a,h0,h1,h2); every original overlap and ordered normalizer coefficient checked; all-chart Ore recognition not claimed",
+  "original_critical_overlaps": 4,
+  "normal_c_highest_c4_coefficient": "D*(1-omega)",
+  "after_D_zero_normal_b_b4_coefficient": "C*(1-omega^2)",
+  "after_C_D_zero_Gx_pure_b3_coefficient": "F*b^3",
+  "all_h_coefficients_symbolic": true,
+  "cube_root_action_preserves_every_relation": true,
+  "not_claimed": [
+    "entire rank1 coupling locus is Ore",
+    "degenerate mixed projections covered",
+    "even-rank2 or two-curvature cases covered",
+    "complete H3 classification"
+  ]
+}

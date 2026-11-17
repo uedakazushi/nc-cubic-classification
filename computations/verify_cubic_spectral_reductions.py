@@ -31,6 +31,7 @@ CHECKS=[
  'verify_cubic_third_root_unit_closed_strata.py',
  'verify_cubic_third_root_unit_independent_Szero.py',
  'verify_cubic_third_root_unit_independent_Snonzero.py',
+ 'verify_cubic_third_root_unit_curved_Ore.py',
 ]
 results=[]
 for name in CHECKS:

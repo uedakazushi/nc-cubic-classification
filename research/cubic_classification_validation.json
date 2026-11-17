@@ -2554,7 +2554,7 @@
   "spectral_reductions_replay": {
     "runner": "computations/verify_cubic_spectral_reductions.py",
     "manifest": "computations/cubic_spectral_reductions_validation.json",
-    "scope": "twenty-three finite certificate replays; ordinary mathematical proofs remain separate"
+    "scope": "twenty-four finite certificate replays; ordinary mathematical proofs remain separate"
   },
   "fourth_root_negative_repeat_exclusion_v226": {
     "status": "ordinary all-chart free-tensor and AS2 proof; exact original coefficient obstructions PASS",
@@ -2836,6 +2836,28 @@
       "all23 spectral validators PASS",
       "main LuaLaTeX build PASS; no overfull/undefined-reference diagnostics",
       "original top-image equality checked for off-axis, generic-axis and singular-axis inputs",
+      "git diff --check PASS"
+    ]
+  },
+  "third_root_unit_curved_Ore_v240": {
+    "status": "ordinary all-AS2 Ore factor proof; valid original full-parameter Ore family overlaps and ordered normal coefficients PASS",
+    "proof": "papers/sections/cubic_third_root_unit_curved_Ore.tex",
+    "validator": "computations/verify_cubic_third_root_unit_curved_Ore.py",
+    "certificate": "computations/cubic_third_root_unit_curved_Ore_certificate.json",
+    "results": [
+      "every H3 cubic in actual one-curvature AS2 Ore chart factors through AS2 degree3",
+      "normal c4 first kills D, then normal b4 kills C, then normal u b3 kills F",
+      "valid AS4 family verified over QQ(omega)(a,h0,h1,h2) at all symbolic coefficients"
+    ],
+    "not_claimed": [
+      "all rank1 cube couplings admit this Ore presentation",
+      "degenerate mixed projections or even rank2 covered",
+      "two-curvature cases covered",
+      "complete H3 classification"
+    ],
+    "executed_checks": [
+      "all24 spectral validators PASS",
+      "main LuaLaTeX build PASS; no overfull/undefined-reference diagnostics",
       "git diff --check PASS"
     ]
   }

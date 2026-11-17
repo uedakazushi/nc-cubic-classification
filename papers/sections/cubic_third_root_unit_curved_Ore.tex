@@ -1,0 +1,59 @@
+\subsection{比例cube結合の一方的曲率Ore領域}
+\label{subsec:cubic-third-root-unit-curved-Ore}
+\begin{theorem}[非零の一方的曲率を持つAS2--Ore領域の全排除]
+\label{thm:cubic-third-root-unit-curved-Ore-empty}
+$\mu_B=(1,1,\omega,\omega^2)$ とし、二元AS2平面 $T$ と可逆 $f,g$ を用いて
+\[
+ B=T[b;f][c;\sigma,\delta],\qquad
+ \sigma|_T=g,\quad\sigma(b)=q^{-1}b,\quad
+ \delta(b)=-q^{-1}h,\quad\delta(u)=d(u)b^2\ (u\in T_1)
+\]
+と実際に提示されるAS4整域を考える。
+ここで $q\ne0,h\in T_2$、$d:T_1\to k$ は非零線型写像とする。
+この全領域にはH3切断が存在しない。
+単純固有直線 $b,c$ を交換した表示にも同じ結論が成立する。
+\end{theorem}
+\begin{proof}
+Ore基底で中山不変三次は
+\[
+ G=H+Fbc+C b^3+D c^3,\qquad H\in T_3,F\in T_1,C,D\in k
+\]
+と書ける。
+正常 $c$ 式 $Gc=\omega cG$ の最高 $c$ 次数4の係数は
+$D(1-\omega)$ だけなので $D=0$。
+ここで $c$ によるOre導分は $c$ 次数を増やさない。
+この順序で消すことは重要であり、$D\ne0$ のまま $b^4$ 係数を比較してはいない。
+
+$D=0$ の後、正常 $b$ 式 $Gb=\omega^2 bG$ の $b^4c^0$ 係数は
+$C(1-\omega^2)$ だけであり、$C=0$。
+実際、$Fbc\,b=q^{-1}Fb^2c-q^{-1}Ff(h)b$ で、$b^4$ を生じない。
+従って $G=H+Fbc$。
+$u\in T_1$ に対する正常式 $Gu=uG$ の $b^3c^0$ 係数を比較すると
+\[
+ Fd(u)=0
+\]
+となる。$d\ne0$ なので $F=0$。
+残る $G=H\in T_3$ は、二元AS2の量子/Jordan標準形における既証の斉次二元因子分解により
+一次因子を持つ。従って整域切断は存在しない。
+
+この定理は、比例したcube結合の全領域が上のOre表示で覆われると主張するものではない。
+とくにmixed projectionの退化、偶射影rank2、両方向の非零曲率を一方的な表示へ勝手に置き換えない。
+\end{proof}
+
+\begin{example}[全係数で検算する実際の曲率Ore族]
+$T=k[x,y]$、$a\ne0$、$h=h_0x^2+h_1xy+h_2y^2$ とし
+\[
+ bx=axb,\quad by=\omega yb,\quad
+ cx=a^{-1}xc+b^2,\quad cy=\omega^2yc,\quad
+ cb=abc-ah
+\]
+を $xy=yx$ とともに課す。
+$f=(a,\omega)$、$g=(a^{-1},\omega^2)$、$q=a^{-1}$、$d(x)=1,d(y)=0$ である。
+全四つの三次重なりは零となり、これは実際の可逆自己同型Ore拡大である。
+従ってAS4整域であり、Ore中山公式から
+$\mu|_T=1,\mu(b)=\omega b,\mu(c)=\omega^2c$ を得る。
+最後の単純直線は、同じ三乗根作用が全関係を保つことから混合項を持たない。
+公開検証器は $\mathbb Q(\omega)(a,h_0,h_1,h_2)$ 上で元六関係の全三次重なりと、
+三段階の正常係数比較を再生する。
+これは通常の上の全AS2型の証明と、今回検算した具体族の範囲を区別したものである。
+\end{example}
