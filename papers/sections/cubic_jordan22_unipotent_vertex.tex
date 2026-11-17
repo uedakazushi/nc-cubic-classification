@@ -1,0 +1,101 @@
+\subsection{最後の単冪Jordan型\texorpdfstring{$(2,2)$}{(2,2)}と単一固有値のCY性}
+\label{subsec:cubic-jordan22-unipotent-vertex}
+\begin{theorem}\label{thm:cubic-jordan22-unipotent-empty}
+強い内在的H3の二次包絡の中山作用は、単一固有値1のJordan型 $(2,2)$ を持たない。
+従って中山作用の固有値が一種類しかないH3包絡は、必ずCYである。
+\end{theorem}
+\begin{proof}
+標準ねじり解除を $B=C^H$、$C$ CY、$H=\exp N$ と書き、
+$Nx_1=x_0$, $Nx_3=x_2$, $Nx_0=Nx_2=0$ とする。
+$U=\langle x_0,x_2\rangle$、$V=\langle x_1,x_3\rangle$ とし、$V$ の個数をweightとする。
+元反巡回topの $N_{\rm tot}$ 核は26次元であり、weight0,1,2の次元はそれぞれ4,12,10である。
+次の語の係数を順に $a_0,\ldots,a_{25}$ とする：
+\[
+\begin{gathered}
+0001,0002,0003,0011,0012,0013,0021,0022,0023,0031,0032,0033,0122,\\
+0123,0202,0203,0213,0222,0223,0232,0233,0303,0322,0323,2223,2233.
+\end{gathered}
+\]
+middleの $U^2$ 行・$V^2$ 列blockは
+\[
+ Q=\begin{pmatrix}
+ a_3&a_5&a_9&a_{11}\\
+ a_5&a_{16}&a_{11}+a_{13}&a_{20}\\
+ a_9&a_{11}+a_{13}&a_{16}+a_{21}&a_{20}+a_{23}\\
+ a_{11}&a_{20}&a_{20}+a_{23}&a_{25}
+ \end{pmatrix}.
+\]
+その列は純 $U^2$ の実関係である。
+二次元の二次関係空間は代数閉体上でdecomposable tensorを含むので、整域性から
+$\operatorname{rank}Q\le1$。
+$Q=0$ なら全weight2部分が零となる。このときmiddleはweight0とweight1で
+$\left(\begin{smallmatrix}P&M\\M^t&0\end{smallmatrix}\right)$ の形となり、
+rank6から $r=\operatorname{rank}M\le3$。
+全関係の純 $U^2$ 部分は次元 $6-r\ge3$ となり、再び整域性に反する。
+従って $Q$ は非零rank1である。
+
+対称性と代数閉性により $Q=qq^t$ と書ける。
+$q$ 自体も実二次関係なので、その $2\times2$ 係数行列は可逆である。
+$U$ の基底変換と $V$ の同じ基底変換は $N$ を保つ。
+二生成元AS2の二次標準形により、$q$ は
+\[
+ q=(0,1,-p,0),\ p\ne0,\qquad\text{又は}\qquad q=(1,1,-1,0)
+\]
+にできる。topの尺度も正規化した。
+前者の最高mixed blockの一つの五次minorは
+$-p^2(p-1)^2(p+1)^2$ である。
+純 $U^2/V^2$ のrank1対合が既にrank2を使うので、middle全rank6はmixed rankが高々4であることを要求する。
+従って $p=1,-1$ だけが残る。
+以上で最高weightの全層は、可換・反可換・Jordanの三表示で漏れなく覆われる。
+
+各表示でmiddleの行列番号 $(2,7,1,3,6,11)$ の六次principal minorは $-1$ である
+（番号 $4i+j$ は語 $ij$ を表す）。
+従って全低weight係数のまま元六関係を構成できる。
+最高関係の六逆順pair $(20,10,12,30,32,31)$ の係数行列も単元であり、
+$U$ 内と $V$ 内はそれぞれ同じAS2関係、四つの $VU$ 対は $UV$ の一次結合へ書き換えられる。
+まず $V/U$ の並べ替え、次に各二元の並べ替えを行えば、
+$x_0^ix_2^jx_1^kx_3^l$ が張る。
+その個数はAS4 Hilbert値と一致するので、実際の $C$ のweight随伴環は
+この最高関係の代数と全次数で一致する。
+特に退化した低weight係数でもこの議論は変わらない。
+
+この三つの最高代数の三次商は20次元で、誘導された $N$ の核は各々6次元である。
+その全核のweightは高々1となる。
+これは元の最高六関係を用いた $20\times20$ 有理行列の核として厳密に検証する。
+従って輸送された正常三次 $N(F)=0$ の先頭もweightが高々1であり、
+$J=(x_0,x_1,x_2)$ に対して $F\in J^2$ である。
+三表示とも $C/J=k[x_3]$、$H(J)=J$、$H(x_3)\equiv x_3\pmod J$ なので、
+$R=B/(F)$ に $P=\pi k[x_3]$ がある。
+
+元の全低weight係数を残してpointの自己拡大を一次化する。
+$x_3$ を恒等とし、他の非対角成分を $(f_0,f_1,f_2)$ とする。
+全六二次関係は、三つの独立な漸化式に一致し、他の一次条件は無い。
+$F\in J^2$ も追加条件を課さないので $\Ext^1(P,P)=k^3$ である。
+$B=C^H$ へtwistした後のshift行列は次の形になる：
+\[
+\begin{array}{c|c|c}
+\text{表示}&M&\det M\\\hline
+\text{可換}&\begin{pmatrix}1&0&0\\\lambda&1&\rho\\0&0&1\end{pmatrix}&1\\
+\text{反可換}&\begin{pmatrix}-1&0&0\\\lambda&-1&\rho\\0&0&1\end{pmatrix}&1\\
+\text{Jordan}&\begin{pmatrix}1&0&0\\\lambda&1&\rho\\3&0&1\end{pmatrix}&1
+\end{array}
+\]
+ここで可換では $\lambda=a_{15}-a_8+1$, $\rho=a_{18}+a_{19}$、
+反可換では $\lambda=-a_{15}-a_8-1$, $\rho=-a_{18}-a_{19}$、
+Jordanでは $\lambda=a_{15}+3a_{19}-a_8+1$, $\rho=a_{18}+a_{19}$。
+三つの漸化式を解くminorも単元なので、これは全係数・全特殊値で成立する。
+反可換の場合にshiftが単冪であるとは主張しない。
+必要なのは行列式1であり、補題\ref{lem:cubic-odd-Serre-determinant}が
+三次元の自己拡大とH3のSerre作用の両立を否定する。
+これで $(2,2)$ も全排除した。
+
+単一固有値は命題\ref{prop:h3-spectral-filter}より1である。
+非自明単冪の四つのJordan型 $(4),(3,1),(2,2),(2,1,1)$ は本定理と前節までで全て排除された。
+従って単一固有値の場合は $\mu_B=I$、すなわちCYである。
+\end{proof}
+公開再現器は\\
+\texttt{verify\_cubic\_jordan22\_unipotent\_vertex.py}。
+元26核、全rank1最高block、量子parameterの必要五次minor、三つのunit source表示、
+最高PBW関係・全三次 $N$ 核・twist後の全point漸化式を検証する。
+二次標準形・全被覆・PBWとtails・Serreの通常証明を有限標本で代替したものではない。
+全CY包絡の中央三次切断とintrinsic幾何学的群oid・成分・相対降下は未完成である。
