@@ -21,11 +21,38 @@ counts = {t: sum(x['type'] == t for x in collisions)
           for t in ['opposite', 'square_pair', 'disjoint_pairs']}
 assert len(quad) == 10 and len(cubic) == 20 and len(collisions) == 21
 assert counts == {'opposite': 6, 'square_pair': 12, 'disjoint_pairs': 3}
+# Substitute all ten three-eigenvalue cubic weights into the four charts.
+cubic3 = [v for v in itertools.product(range(4),repeat=3) if sum(v)==3]
+charts = {
+    'A': ([(1,0),(1,0),(0,1)],[1,-1,1]),
+    'B': ([(1,0),(0,1),(0,1)],[1,1,-1]),
+    'C': ([(1,0),(1,1),(1,-1)],[1,1,1]),
+    'D': ([(1,0),(1,1),(1,2)],[1,1,1])}
+chart_results = {}
+for name,(exponents,signs) in charts.items():
+    weights = set()
+    for v in cubic3:
+        e = tuple(sum(v[i]*exponents[i][j] for i in range(3)) for j in range(2))
+        sign = 1
+        for i in range(3): sign *= signs[i]**v[i]
+        weights.add((e,sign))
+    assert len(weights)==7
+    chart_results[name] = sorted(weights)
+assert set(chart_results['A']) == {((d,3-d),s) for d in range(1,4) for s in [-1,1]} | {((0,3),1)}
+assert set(chart_results['B']) == {((d,3-d),s) for d in range(3) for s in [-1,1]} | {((3,0),1)}
+assert set(chart_results['C']) == {((3,k),1) for k in range(-3,4)}
+assert set(chart_results['D']) == {((3,k),1) for k in range(7)}
+for name,exponent,index in [('C',3,1),('C',-3,2),('D',6,2)]:
+    E,_ = charts[name]
+    support = [v for v in cubic3 if sum(v[i]*E[i][1] for i in range(3))==exponent]
+    pure = tuple(3 if j==index else 0 for j in range(3))
+    assert support==[pure]
 result = {'status': 'PASS',
-          'scope': 'exhaustive exponent enumeration only; domain and skew reduction are ordinary proofs',
+          'scope': 'exhaustive exponent and spectral chart enumeration only; ordinary proofs separate',
           'quadratic_exponents': quad, 'cubic_resonance_exponents': cubic,
           'nontrivial_quadratic_collisions_for_distinct_eigenvalues': collisions,
-          'counts': counts}
+          'counts': counts, 'three_eigenvalue_chart_cubic_weights':chart_results,
+          'isolated_pure_branch_checks':['C:k=3','C:k=-3','D:k=6']}
 Path(__file__).with_name('cubic_spectral_resonance_certificate.json').write_text(
     json.dumps(result, indent=2) + '\n')
-print(json.dumps({'status': 'PASS', 'counts': counts}))
+print(json.dumps({'status': 'PASS', 'counts': counts,'chart_cubic_weight_counts':{k:len(v) for k,v in chart_results.items()}}))

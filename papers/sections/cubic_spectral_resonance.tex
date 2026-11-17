@@ -107,3 +107,55 @@ $(fg-gf)(u)bc=0$。整域性から $fg=gf$。
 従って表示した $\widetilde g$ は $T[b;f]$ の自己同型を定める。
 得た逐次Ore拡大と $B$ は同じ二次生成関係を持ち、$B$ はquadraticなので一致する。
 \end{proof}
+
+\subsubsection{三固有値共鳴の四つの具体的chart}
+\begin{proposition}[二次・三次共鳴の有限スペクトルatlas]
+\label{prop:cubic-three-spectrum-atlas}
+重複2の固有値を先頭に置き、二つの単純固有値の交換を許す。
+系\ref{cor:cubic-multispectrum-quadratic-resonance}の三固有値必要被覆は、次の四chartで覆われる。
+全パラメータは非零とし、表示した固有値は相異なるものに制限する。
+\[
+\begin{array}{c|c|l}
+ & (a,b,c)&\text{必要な三次共鳴（少なくとも一つ）}\\\hline
+ A&(a,-a,c)&a^3=\pm1,\ a^2c=\pm1,\ ac^2=\pm1,\ c^3=1\\
+ B&(a,b,-b)&a^3=1,\ a^2b=\pm1,\ ab^2=\pm1,\ b^3=\pm1\\
+ C&(a,at,a/t)&a^3t^k=1\quad(-3\le k\le3)\\
+ D&(a,at,at^2)&a^3t^k=1\quad(0\le k\le6)
+\end{array}
+\]
+$C,D$ では $t\ne\pm1$。これは必要スペクトルのatlasであり、包絡やH3対象の存在を保証しない。
+さらに $C$ の $k=\pm3$ 又は $D$ の $k=6$ の枝がH3に現れるなら、
+$t$ の位数は $3,4,5,6$ のいずれかである。
+$A$ の $c^3=1$ 枝がH3に現れるなら、$a^{12}=1$ が必要である。
+従ってこれらの純共鳴枝の非捩れ一般点を候補として保持する必要はない。
+\end{proposition}
+\begin{proof}
+六つの二次共鳴は、単純固有値の交換を除くと
+$a=-b$、$b=-c$、$a^2=bc$、$b^2=ac$ の四場合である。
+前二つは $A,B$、後二つは $t=b/a$ と置いて $C,D$ の表示を得る。
+十個の三次指数組に代入して同じ単項式をまとめると、各行の七条件を得る。
+
+$C$ の $k=3,-3$ はそれぞれ単純固有直線 $b,c$ の純三乗だけに対応する。
+$D$ の $k=6$ も $c$ の純三乗だけである。
+孤立純共鳴の排除により、これらの枝では異なる $k'$ の共鳴がもう一つ必要。
+従って $t^{k-k'}=1$、$1\le|k-k'|\le6$。
+$t\ne\pm1$ を合わせると位数は3,4,5,6に限られる。
+$A$ の $c^3=1$ でも、別の共鳴が必要である。
+$a^3=\pm1$、$a^2c=\pm1$、$ac^2=\pm1$ のいずれも、$c^3=1$ と合わせれば $a^{12}=1$ を含意する。
+有限捩れ点の全てがH3であるという逆向きは主張しない。
+\end{proof}
+
+\begin{corollary}[半単純固有値集合の次元上界]
+\label{cor:cubic-spectral-dimension}
+三固有値以上のH3包絡が取り得る半単純固有値の集合のZariski閉包は、
+三固有値の場合は次元高々1、四固有値の場合は次元高々2である。
+包絡族や内在的moduli自体の次元の上界ではない。
+\end{corollary}
+\begin{proof}
+$r$ 個の相異なる固有値のtorus上で、必要な二次共鳴は
+$\lambda^u=\epsilon$、$\sum u_i=0$、$u\ne0$、$\epsilon\in\{1,-1\}$、
+三次共鳴は $\lambda^v=1$、$\sum v_i=3$ の形となる。
+$u,v$ は有理数上独立なので、両条件の共通部分は空か、
+次元 $r-2$ のtorusの有限個のtranslateである。
+有限個の共鳴の和集合と固有値の有限置換で次元は増えない。
+\end{proof}

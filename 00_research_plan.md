@@ -74,3 +74,5 @@ heart比較・Rains共鳴・cubic cornerは `uedakazushi/nc-dp-surface-hearts`�
 多固有値frontier（v211）：四単純中山固有値で十個の二次積が異なる全域はskewへ還元済み。非skew残余は明示的21二次共鳴因子上にあり、さらに三次共鳴条件を課す。証明は `cubic_spectral_resonance.tex`。次はその交叉上の必要tensor atlasと正常核を調べる。
 
 多固有値の二次非共鳴領域は全て排除済み（v213）：(2,1,1)のJordan基底も、正常三次の六binomialと指数det±1から二次共鳴を強制する。全skew H3は三固有値以上を持たないので、三固有値以上の全候補は(2,1,1)の六共鳴因子又は四単純の21共鳴因子上へ縮小。三次共鳴も同時に必要。証明 `cubic_spectral_ore_reduction.tex`。次はこの有限共鳴被覆の交叉上で必要tensor atlasとW1を調べる。
+
+三固有値の四chartと七三次共鳴を具体化（v214）。純三乗枝の一般点は排除し、指定有限捩れ例外を保持。次はAS4四次topの中山不変性・非退化性を課してスペクトル候補を縮小する。

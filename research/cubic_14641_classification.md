@@ -1375,3 +1375,6 @@ python computations/verify_cubic_order2_22_secant_L_saturation.py --prefix /tmp/
 `cubic_spectral_ore_reduction.tex`：二次非共鳴(2,1,1)の全H3包絡はskew。可換AS2基底の非半単純作用は、正常式で係数をx冪へ制限し、三次supportの共通因子で排除。反交換AS2基底の片側反対角は重複2中山条件と矛盾、両側反対角は中心二乗の固定と奇次数符号からW1=0。その他量子基底はskew。
 Jordan基底でも正常x式が係数をx冪に制限し、正常y式がsupportを直線へ制限する。座標因子なしの直線は三辺又は六binomialだけ。辺の二変数斉次三次は分解、六binomialの正常x指数行列det±1がOre固有値alpha=beta=1を強制する。mu_s=(1,1,q,q^-1)はa²=bcの二次共鳴を持ち非共鳴条件に矛盾。Jordan中山の符号mu(y)=y+2kappa*xは2×2 Koszul双対行列で検証。全格子直線・六det・三固有値二次衝突の公開検証器はPASS。
 全skew H3の中山固有値は恒等又は(1,1,-1,-1)。従って三固有値以上のH3は必ず二次共鳴を持つ。(2,1,1)ではa=-b,a=-c,b=-c,a²=bc,b²=ac,c²=abの六因子、四単純では21因子が漏れない必要被覆となる。さらに三次共鳴を同時に課す。次は六/21因子と三次共鳴の交叉上の必要tensor atlas、middle rank6、W1を調べる。共鳴領域のH3十分条件、全CY被覆、成分・相対降下は未完。
+
+## 三固有値の具体的スペクトルatlas（v214）
+`cubic_spectral_resonance.tex`：単純二固有値の交換を除く必要被覆はA=(a,-a,c), B=(a,b,-b), C=(a,at,a/t), D=(a,at,at²)の四chart。各十個の三次重みは七共鳴へまとまる。Cのk±3及びDのk6の純共鳴枝ではtの位数3,4,5,6が必要、Aのc³1枝はa12=1が必要。有限捩れ例外は残す。公開検証器が全十重みの代入と純supportをexact PASS。二次・三次共鳴の文字格子は独立なので三固有値のスペクトル集合は次元≤1、四固有値は≤2。これは包絡やH3 moduliの次元上界ではない。次は四次topの中山不変性と全一次方向への非退化性を課し、四chartの残余を絞る。

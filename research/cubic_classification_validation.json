@@ -2339,5 +2339,22 @@
       "all CY classification",
       "global components or relative descent"
     ]
+  },
+  "three_eigenvalue_spectral_atlas_v214": {
+    "status": "ordinary necessary atlas and dimension proof; exact substitutions PASS",
+    "proof": "papers/sections/cubic_spectral_resonance.tex",
+    "validator": "computations/verify_cubic_spectral_resonance.py",
+    "certificate": "computations/cubic_spectral_resonance_certificate.json",
+    "results": [
+      "four charts cover necessary (2,1,1) spectral locus up to exchanging simple eigenvalues",
+      "seven cubic conditions per chart",
+      "specified isolated pure branches reduced to finite torsion exceptions",
+      "semisimple eigenvalue locus dimension at most1 for three and2 for four eigenvalues"
+    ],
+    "not_claimed": [
+      "existence of envelopes on charts",
+      "H3 sufficiency",
+      "moduli dimension bound"
+    ]
   }
 }
