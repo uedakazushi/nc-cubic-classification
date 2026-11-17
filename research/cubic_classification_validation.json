@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "version": "classification-v278",
+  "version": "classification-v279",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -3791,6 +3791,61 @@
     "not_claimed": [
       "global detminus1 coverage",
       "complete four-simple or CY coverage",
+      "complete H3 classification",
+      "novelty confirmed"
+    ]
+  },
+  "four_simple_spectral_curve_atlas_v279": {
+    "status": "complete necessary four-curve/bounded finite spectral cover",
+    "proof": "papers/sections/cubic_four_simple_spectral_curve_atlas.tex",
+    "validator": "computations/verify_cubic_four_simple_spectral_curve_atlas.py",
+    "checks": [
+      "default Sympy all60 extra-quartic plane cases PASS",
+      "all21x20x35 integer kernels, support1062, sumzero10 orbits PASS",
+      "all10 domain-cap and moment integer rank solutions unique PASS",
+      "all6 excluded direction factor prerequisites PASS",
+      "all determinant and gcd bounds PASS",
+      "v279 main LuaLaTeX clean PASS"
+    ],
+    "ordinary_proofs": [
+      "positive regrading pole4 forces sum weights0 and second moment",
+      "full actual G/top support lattice covers finite-order points without assuming closure of mu is a torus",
+      "six directions factor",
+      "Smith torsion coset representatives"
+    ],
+    "remaining_curve_directions": [
+      [
+        0,
+        0,
+        1,
+        -1
+      ],
+      [
+        0,
+        1,
+        -3,
+        2
+      ],
+      [
+        0,
+        1,
+        -2,
+        1
+      ],
+      [
+        1,
+        -2,
+        -1,
+        2
+      ]
+    ],
+    "curve_phase_common_order_bound": 24,
+    "finite_point_common_order_bound": 96,
+    "validation_scope": "62 validators across runs; no single62 replay claimed",
+    "not_claimed": [
+      "curves or finite points admissible",
+      "geometric quotient or full groupoid",
+      "all four-simple classified",
       "complete H3 classification",
       "novelty confirmed"
     ]

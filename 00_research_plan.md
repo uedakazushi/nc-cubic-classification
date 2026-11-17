@@ -69,7 +69,7 @@ Library既存ファイルは明示指示なしに削除しない。GitではPDF�
 heart比較・Rains共鳴・cubic cornerは `uedakazushi/nc-dp-surface-hearts`、次数1は `uedakazushi/nc-dp1-moduli`、三次三様体は `uedakazushi/nc-cubic-threefold-moduli` が正本。
 量子FermatのOU障害は [nc-cubic-non-as](https://github.com/uedakazushi/nc-cubic-non-as)、ambient比較は [nc-cubic-ambient](https://github.com/uedakazushi/nc-cubic-ambient) に移管済み。分類に必要な旧定理・コードはこのリポジトリの現行分類原稿からも参照する。
 
-## 三固有値・四単純位数4の現行到達点（v278）
+## 多固有値領域の現行到達点（v279）
 強いintrinsic H3のAS4包絡は相異なる中山固有値をちょうど三つ持たない。全Jordan型の必要還元、重複1の全22tensor atlas、非単位重複rootの独立・非零比例・零b²列を全て排除した。全H3分類の完成ではない。全CY、四単純共鳴、全成分・境界、相対降下は未完成。
 
 ### 完成した証明の入口
@@ -89,6 +89,11 @@ heart比較・Rains共鳴・cubic cornerは `uedakazushi/nc-dp-surface-hearts`�
 全値は二つのOre曲線(h=k=D0,A=t,ρ−it²,E±t)と18有限対角軌道へ。曲線のb,c正常固有値の二条件は固定三次の全五基底方向でgcd定数、全t非零正常核0。有限点はhk非零2点、hのみ/kのみ各4点、D1かつt4−iの8点。QQ[z]/(z8+1),i=z4で全18根の元商dims3/4=20/35、正常28×5又は25×5全rank5。新checker default Sympy PASS、v278主原稿LuaLaTeX clean PASS。
 従ってスペクトル集合{1,−1,i,−i}は全H3排除。既存一般chartと合わせ、全非零aで(a,−a,i/a,−i/a)も全排除。ただし全det負一スペクトルの被覆ではない。通常証明はfour_simple_order4_rankA/rankB節。累計61validators across runs、単一61全再生未実行。新規as4/外部定理輸入なし、新規性未確認。
 
-### 次の最小課題：残る四単純のスペクトル被覆
-四単純非skewは21二次共鳴と三次共鳴上にある。quartic topは各固有変数を含む必要がある。二次共鳴指数uを三型(2,−2,0,0),(2,−1,−1,0),(1,1,−1,−1)へ、三次指数vを全20個へ分けると、span_Q(u,v)内の非負degree4指数だけでは四変数を全て被覆できないことをprivate exact60ケースで確認した（公開通常証明は未統合）。これを厳密化すれば追加独立quartic共鳴が必要となり、四単純スペクトルの次元上界を2から1へ下げ、有限の一変数spectral atlasへ進める。次はこの最小組合せ補題を公開検証・通常証明にし、全rank3指数格子のtorus成分を整理する。一般点排除だけで境界を消さない。
-全CY、残る全四単純共鳴、全成分・境界、intrinsic群oidと相対降下は未完。三固有値・位数4の解決済み計算や移管済み独立論文を再開しない。
+### 全四単純の四曲線／有界有限点への必要被覆（v279）
+四単純H3スペクトル全体は、ある共通位数N≤96の有限集合、又はλ_i=α_i t^{n_i}（α共通位数M≤24、t非零、有限位数も含む）の四方向n=(0,0,1,−1),(0,1,−3,2),(0,1,−2,1),(1,−2,−1,2)で必要被覆される。Mは24の約数とは限らない。これは存在やH3十分性・群oid分類ではない。
+証明はfour_simple_spectral_curve_atlas節。二次指数u、Gの実際の全三次support、topの実際の全四次supportの有理span Lを使う。二次u/三次vだけの平面ではquartic全変数被覆が不可能なのでrankL≥3。rank4はu,v,wと追加cubic又はquarticのdeterminant、三型の最大det(48,96,48)/(36,72,36)から共通位数≤96。rank3は全top/Gがprimitive kernel n重み0なので、μが有限位数でも実際のtorus作用とG固定を得る。正のregrading deg=N+n_iのHilbertpole4からsum n_i0とΣr_s s²=2Σn_i²。全21×20×35指数kernelとquartic被覆で1062方向、sumzeroと置換/反転で10型。domain Segre上界とmomentで各I2重みrankが一意。六型は共通一次因子の通常証明で排除。残四型のphase代表はSmith最大因子≤3minor gcd、最大gcd(12,24,12)と符号から共通位数M≤24。
+公開checker default Sympy PASS（全60平面、全kernel、全rank整数解、因子pair、全det/gcd）、v279主原稿LuaLaTeX clean PASS。累計62validators across runs、単一62全再生未実行。新規as4/外部定理輸入なし、新規性未確認。
+
+### 次の最小課題：四方向のphase削減と正常incidence
+四曲線のphaseをquartic巡回式・Gの非因子性で削減する。private推論：n=(0,1,−3,2)はGにx³とybcの両方が必要、cを含む唯一quartic xybcからλx1、topがmultilinearだけならskewなのでy³bも必要。よって(1,t,t^-3,t²)へ。n=(0,1,−2,1)はb正常onU(y,c)、Gにx³とU²b双方が必要、quartic全被覆とmultilinear-skew補題から(1,t,t^-2,−t)へ。n=(1,−2,−1,2)はGのx²y/b²c双方、唯一二次衝突xb=ycとquarticから(t,t^-2,t^-1,t²)へ。これらの通常証明・公開検算はまだ未統合、次に監査する。
+n=(0,0,1,−1)の二定数phaseは依然未判定。全有限位数N≤96の元tensor atlasとJordan（四単純なので半単純）必要incidenceも残る。位数4集合は全排除済みなので戻らない。全CY、全成分・境界、intrinsic群oidと相対降下も未完。
