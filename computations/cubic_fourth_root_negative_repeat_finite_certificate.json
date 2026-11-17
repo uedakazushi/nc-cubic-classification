@@ -1,0 +1,536 @@
+{
+  "status": "PASS",
+  "scope": "original twisted top blocks and finite exact normal kernels for both signs; ordinary atlas coverage and unipotent-rigidity proof separate",
+  "orbit_representatives": [
+    "xxxx",
+    "xxxy",
+    "xxyy",
+    "xxbb",
+    "xyxy",
+    "xyyy",
+    "xybb",
+    "xbyb",
+    "xbby",
+    "xbcc",
+    "xcbc",
+    "xccb",
+    "yyyy",
+    "yybb",
+    "ybcc",
+    "ycbc",
+    "yccb"
+  ],
+  "atlas_checks": [
+    {
+      "imaginary_root": "I",
+      "top_dimension": 17,
+      "Pfaffians_and_normalform": true
+    },
+    {
+      "imaginary_root": "-I",
+      "top_dimension": 17,
+      "Pfaffians_and_normalform": true
+    }
+  ],
+  "finite_kernel_cases": [
+    {
+      "imaginary_root": "I",
+      "q": "1",
+      "A": 0,
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "invariant_cubic_basis": [
+        "bxx",
+        "byx",
+        "bbb",
+        "cyc",
+        "ccx",
+        "ccy"
+      ],
+      "normal_matrix_rank": 5,
+      "W1_basis": [
+        "ccx"
+      ]
+    },
+    {
+      "imaginary_root": "I",
+      "q": "1",
+      "A": 1,
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "invariant_cubic_basis": [
+        "byx",
+        "byy",
+        "bbb",
+        "cyc",
+        "ccx",
+        "ccy"
+      ],
+      "normal_matrix_rank": 5,
+      "W1_basis": [
+        "ccx"
+      ]
+    },
+    {
+      "imaginary_root": "I",
+      "q": "-1",
+      "A": 0,
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "invariant_cubic_basis": [
+        "bxx",
+        "byx",
+        "bbb",
+        "cyc",
+        "ccx",
+        "ccy"
+      ],
+      "normal_matrix_rank": 6,
+      "W1_basis": []
+    },
+    {
+      "imaginary_root": "I",
+      "q": "-1",
+      "A": 1,
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "invariant_cubic_basis": [
+        "byx",
+        "byy",
+        "bbb",
+        "cyc",
+        "ccx",
+        "ccy"
+      ],
+      "normal_matrix_rank": 6,
+      "W1_basis": []
+    },
+    {
+      "imaginary_root": "I",
+      "q": "I",
+      "A": 0,
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "invariant_cubic_basis": [
+        "bxx",
+        "byx",
+        "bbb",
+        "cyc",
+        "ccx",
+        "ccy"
+      ],
+      "normal_matrix_rank": 6,
+      "W1_basis": []
+    },
+    {
+      "imaginary_root": "I",
+      "q": "I",
+      "A": 1,
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "invariant_cubic_basis": [
+        "byx",
+        "byy",
+        "bbb",
+        "cyc",
+        "ccx",
+        "ccy"
+      ],
+      "normal_matrix_rank": 6,
+      "W1_basis": []
+    },
+    {
+      "imaginary_root": "I",
+      "q": "-I",
+      "A": 0,
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "invariant_cubic_basis": [
+        "bxx",
+        "byx",
+        "bbb",
+        "cyc",
+        "ccx",
+        "ccy"
+      ],
+      "normal_matrix_rank": 6,
+      "W1_basis": []
+    },
+    {
+      "imaginary_root": "I",
+      "q": "-I",
+      "A": 1,
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "invariant_cubic_basis": [
+        "byx",
+        "byy",
+        "bbb",
+        "cyc",
+        "ccx",
+        "ccy"
+      ],
+      "normal_matrix_rank": 6,
+      "W1_basis": []
+    },
+    {
+      "imaginary_root": "-I",
+      "q": "1",
+      "A": 0,
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "invariant_cubic_basis": [
+        "bxx",
+        "byx",
+        "bbb",
+        "cyc",
+        "ccx",
+        "ccy"
+      ],
+      "normal_matrix_rank": 5,
+      "W1_basis": [
+        "ccx"
+      ]
+    },
+    {
+      "imaginary_root": "-I",
+      "q": "1",
+      "A": 1,
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "invariant_cubic_basis": [
+        "byx",
+        "byy",
+        "bbb",
+        "cyc",
+        "ccx",
+        "ccy"
+      ],
+      "normal_matrix_rank": 5,
+      "W1_basis": [
+        "ccx"
+      ]
+    },
+    {
+      "imaginary_root": "-I",
+      "q": "-1",
+      "A": 0,
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "invariant_cubic_basis": [
+        "bxx",
+        "byx",
+        "bbb",
+        "cyc",
+        "ccx",
+        "ccy"
+      ],
+      "normal_matrix_rank": 6,
+      "W1_basis": []
+    },
+    {
+      "imaginary_root": "-I",
+      "q": "-1",
+      "A": 1,
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "invariant_cubic_basis": [
+        "byx",
+        "byy",
+        "bbb",
+        "cyc",
+        "ccx",
+        "ccy"
+      ],
+      "normal_matrix_rank": 6,
+      "W1_basis": []
+    },
+    {
+      "imaginary_root": "-I",
+      "q": "I",
+      "A": 0,
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "invariant_cubic_basis": [
+        "bxx",
+        "byx",
+        "bbb",
+        "cyc",
+        "ccx",
+        "ccy"
+      ],
+      "normal_matrix_rank": 6,
+      "W1_basis": []
+    },
+    {
+      "imaginary_root": "-I",
+      "q": "I",
+      "A": 1,
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "invariant_cubic_basis": [
+        "byx",
+        "byy",
+        "bbb",
+        "cyc",
+        "ccx",
+        "ccy"
+      ],
+      "normal_matrix_rank": 6,
+      "W1_basis": []
+    },
+    {
+      "imaginary_root": "-I",
+      "q": "-I",
+      "A": 0,
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "invariant_cubic_basis": [
+        "bxx",
+        "byx",
+        "bbb",
+        "cyc",
+        "ccx",
+        "ccy"
+      ],
+      "normal_matrix_rank": 6,
+      "W1_basis": []
+    },
+    {
+      "imaginary_root": "-I",
+      "q": "-I",
+      "A": 1,
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "invariant_cubic_basis": [
+        "byx",
+        "byy",
+        "bbb",
+        "cyc",
+        "ccx",
+        "ccy"
+      ],
+      "normal_matrix_rank": 6,
+      "W1_basis": []
+    }
+  ],
+  "excluded_spectra": [
+    {
+      "N": 4,
+      "spectrum": [
+        2,
+        0,
+        1
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "N": 4,
+      "spectrum": [
+        2,
+        0,
+        3
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ]
+    }
+  ],
+  "final_survivors": [
+    {
+      "N": 3,
+      "spectrum": [
+        0,
+        1,
+        2
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "N": 3,
+      "spectrum": [
+        1,
+        0,
+        2
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "N": 3,
+      "spectrum": [
+        2,
+        0,
+        1
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "N": 4,
+      "spectrum": [
+        1,
+        0,
+        3
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "N": 4,
+      "spectrum": [
+        1,
+        2,
+        3
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "N": 4,
+      "spectrum": [
+        3,
+        0,
+        1
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "N": 4,
+      "spectrum": [
+        3,
+        1,
+        2
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ]
+    }
+  ],
+  "final_spectrum_count": 7,
+  "remaining_orders": [
+    3,
+    4
+  ],
+  "remaining_counts": {
+    "3": 3,
+    "4": 4
+  },
+  "Galois_label_orbit_count": 4,
+  "Galois_label_representatives": [
+    [
+      3,
+      0,
+      1,
+      2
+    ],
+    [
+      3,
+      1,
+      0,
+      2
+    ],
+    [
+      4,
+      1,
+      0,
+      3
+    ],
+    [
+      4,
+      1,
+      2,
+      3
+    ]
+  ],
+  "not_claimed": [
+    "all eight candidate presentations AS4 sufficient",
+    "remaining7 H3 existence/admissibility",
+    "four-eigenvalue/CY completeness",
+    "complete H3 classification"
+  ]
+}

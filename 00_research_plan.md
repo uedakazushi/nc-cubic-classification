@@ -69,9 +69,9 @@ Library既存ファイルは明示指示なしに削除しない。GitではPDF�
 heart比較・Rains共鳴・cubic cornerは `uedakazushi/nc-dp-surface-hearts`、次数1は `uedakazushi/nc-dp1-moduli`、三次三様体は `uedakazushi/nc-cubic-threefold-moduli` が正本。
 量子FermatのOU障害は [nc-cubic-non-as](https://github.com/uedakazushi/nc-cubic-non-as)、ambient比較は [nc-cubic-ambient-moduli](https://github.com/uedakazushi/nc-cubic-ambient-moduli) に移管済み。分類に必要な旧定理・コードはこのリポジトリの現行分類原稿からも参照する。
 
-## V. 最新の具体的frontier（v230）
-三固有値の全半単純スペクトルを有限化し、位数5・6・9・12と相反pencilを排除した。残る必要候補は位数3の3個、位数4の6個、計9スペクトル（5 Galoisラベル軌道）、各関係パターン一つ。単冪中山も含む必要被覆であり、9候補の存在・H3許容性は未分類。
+## V. 最新の具体的frontier（v231）
+三固有値の全半単純スペクトルを有限化し、位数5・6・9・12と相反pencilを排除した。残る必要候補は位数3の3個、位数4の4個、計7スペクトル（4 Galoisラベル軌道）、各関係パターン一つ。単冪中山も含む必要被覆であり、7候補の存在・H3許容性は未分類。
 証明は `cubic_spectral_resonance.tex`、`cubic_inverse_spectral_pencils.tex` と `cubic_*root*`、有限リスト/全再生は `python computations/verify_cubic_spectral_reductions.py`。最新の証明・文献入力・certificateと次の最小課題は分類ノート末尾に統合した。
-N4(2,1,3)は自由tensor/AS2正常式で全排除済み。N4(1,0,2)とその共役もrank1の純T4因子、rank2の正常二次と次数付き双対化比較により全排除。重複1のN4(0,1,2)と共役も、16次元最高tensorのrank条件から整域/指数増大商の矛盾で全排除。次は残る五ラベルの最高tensor atlasとW1、とくにN4重複固有値-1の枝を調べる。
+N4(2,1,3)は自由tensor/AS2正常式で全排除済み。N4(1,0,2)とその共役もrank1の純T4因子、rank2の正常二次と次数付き双対化比較により全排除。重複1のN4(0,1,2)と共役も、16次元最高tensorのrank条件から整域/指数増大商の矛盾で全排除。N4重複-1の残る二スペクトルも八表示への全必要被覆、全正常核の因子/消滅、単冪自己同型の剛性で全排除した。次は残る四ラベルの最高tensor atlasとW1、とくにN4重複固有値iの二枝を調べる。
 四単純chart(a,-a,i/a,-i/a)はa4≠±1全域をAS2因子で排除、a4=-1も既証二固有値障害で空、a4=1の有限四単純境界を保持。as4固定commitのchartを参照し被覆/AS十分性/同型は輸入していない。四単純の残る共鳴領域、全CY被覆、全成分・相対降下は未完。
 一般正規三次の四line compact frameは `cubic_hypersurface_frame.tex`。rank-one torsion-freeは別仮定で、有限H3検査や相対開性は未証明。

@@ -1382,20 +1382,23 @@ python computations/verify_cubic_order2_22_secant_L_saturation.py --prefix /tmp/
 - 位数4：`cubic_fourth_root_spectrum_reductions.tex`。四奇数重み−1パターンを除き、(1,1,i,-i)を既述charge0障害で排除。
 - 最後の位数6：`cubic_sixth_root_last_Ore_exclusion.tex`。正常bでB=A[b;sigma]、coneでb³係数非零が必要。正常式からsigma³=muB^-1|A、muA=sigma^-2、hdet sigma1。sigmaUの同一固有値は最高AS3cubicのslice退化、相異なる場合は(a,a*omega),a³omega²、sigma c=-a*omega^k。最高tensorの固定orbitを直接列挙しk0だけ残る。Aはx²=kappa*c²,yx=-a²xy,yc=-a²cy、sigma=(a,a*omega,-a)。sigma固定A3はkx²y一本だが正常x残差(-a²-omega²)x³yが非零、従って全Gはkb³で非整域。先行AS3完全分類を輸入していない。QQ(a),Phi9で全tensor slice、固定A3 rank9、元の正常残差をexact PASS。単冪sigma候補もslice退化で排除。
 
-### 現在の残余：三固有値9スペクトル（v230）
-三固有値H3の中山半単純最小共通位数は3又は4。必要リストはN3:3個,N4:6個の9個で、各関係重みパターンは一つ。Galoisラベル5軌道の代表(N;a,b,c)、重複2を先頭、単純二固有値を昇順に書く：
+### 現在の残余：三固有値7スペクトル（v231）
+三固有値H3の中山半単純最小共通位数は3又は4。必要リストはN3:3個,N4:4個の7個で、各関係重みパターンは一つ。Galoisラベル4軌道の代表(N;a,b,c)、重複2を先頭、単純二固有値を昇順に書く：
 (3;0,1,2),(3;1,0,2);
-(4;1,0,3),(4;1,2,3),(4;2,0,1)。
-Galoisラベルはk線型同値の商ではない。9候補のAS4存在・正常三次・H3許容性は未分類。全リストと現在値は `computations/cubic_fourth_root_unit_repeat_resonance_certificate.json`。再生は `python computations/verify_cubic_spectral_reductions.py`、14検証器のPASSは有限計算であり通常の全証明の独立機械検証ではない。
+(4;1,0,3),(4;1,2,3)。
+Galoisラベルはk線型同値の商ではない。7候補のAS4存在・正常三次・H3許容性は未分類。全リストと現在値は `computations/cubic_fourth_root_negative_repeat_finite_certificate.json`。再生は `python computations/verify_cubic_spectral_reductions.py`、15検証器のPASSは有限計算であり通常の全証明の独立機械検証ではない。
 N4(2,1,3)は `cubic_fourth_root_negative_repeat_exclusion.tex` で全排除。G=F b²+L c²、domainにF,L独立が必要。even rank2はS2自由なのでF f²(u)=mu^-1(u)Fが不可能。rank1はAS2 Oreへ復元し、可換はf=gとh0でskewへ、JordanはF,Lが同一正常線で因子、量子反対角はscalar linear normalizerなし、量子対角はF=x,L=y、alpha=i,alpha*gamma=-pとgamma²=-pからp1を強制。単冪中山込み。公開検証器が元Jordan relationのminorとkernel、量子のp(1-p)矛盾、free-tensor augmented rankをexact PASS。
 
-次の課題：残る五Galoisラベルの必要最高tensor atlasと正常核。
+次の課題：残る四Galoisラベルの必要最高tensor atlasと正常核。
 N4(1,0,2)と(3,0,2)のeven rank1は `cubic_fourth_root_unit_simple_rank1.tex` で排除済み（v227）。G=C b³+F2 c+D bc²、bc-qcb=h。正常b式の純T4成分は-q^-1F2*hだけ。h非零ならF2=0でG左b因子、h0ならAS2自己同型Oreの既存全型認識へ。元AS4 Ore family QQ(i)(alpha,beta)で四重なりとF2三基底の純T4残差をexact PASS。
 この二スペクトルのrank2も `cubic_fourth_root_unit_simple_rank2.tex` で全排除（v229）。bc=h,cb=k、S2自由4次元、HS=1/((1-t)^2(1-t^2))。h,kが双方rank1なら正常式で独立平方に帰着し、最高binary quarticの第一pair対称性と巡回固有値±iが矛盾する。従って少なくとも一方hが非退化な正常二次。S/(h)はAS2、正常Reesと既証noetherian/gldim上界からSはcubic AS3・index4。
 B[b^-1]=S[b±1;f]=C[b^-1], C=S[b;f]の次数付きbimodule最高Extを比較する。B index4とC index5の差により同型の単元はscalar*b^-1に限られ、muC|S=f^-1*muB|SとOre公式muC|S=f^-1*muSからmuS=muB|S。無次数のinner同値だけではこの結論にならない。自由S2上でmuS(h)=-h、正常化tau(h)=h。RRZ Lemma1.5（mu-normalは固有vectorの意味であり固有値1を要求しない、一次資料rrz.txt448–464を確認）からmuT=muS*tau、hdetT(muT)=-1となり、AS2の量子/Jordan標準形のhdet1に矛盾する。単冪も含む。公開検証はbinary tensorの対称/巡回連立rank16、AS2元関係の固定と11候補への更新をexact PASS。正常Rees/Ore/局所化は通常の数学的証明であり有限計算がこれを形式検証したとは称さない。
 旧rank2の25×4正常係数核は構造還元として保持するが、この枝にAS4整域自体がなくなったので現在の未解決課題ではない。残るN4 atlasの検討へ進んだ。
 重複1の残存N4(0,1,2),(0,2,3)も `cubic_fourth_root_unit_repeat_resonance.tex` で全排除（v230）。半単純mu=(1,1,i,-1)の最高tensorは16軌道、重みblock rankは(2,1,2,1)。bc/cb関係の両係数非零でmixed列比qを置き、U基底を適合させる。重み-1のPfaffianからa8=q²a5,a10=q4a5,a11=0、必ずxc+q^-2cx関係。純U主block rank≤2はa1=0を強制し、A=e*v^t+v*e^t、e=xy-yx,v=(a0,a3/2,a3/2,a4)。a4非零ならxy=yxとc²∈U²、q4=-1が強制され、c²x=-xc²と可換性が矛盾。a4零なら二次提示を(x,c)で商にしてk<y,b>/(b²)、次数15は1597>AS4値816となる。正常一次商のAS正則性などの未確認一般定理は使わない。
-単冪部分は既証の右twist公式mu_(B^H)=muB*H^-4でH=mu_u^(1/4)を取ると消える。関係重みとAS4整域性を保つので同じ矛盾。この枝ではAS4整域自体を排除しており、G正常性のZhang輸送は仮定しない。公開検証器は256語から全巡回軌道、元middle、Pfaffian、minor、商関係supportと語数を両符号でexact PASS。次は残るN4の三Galoisラベル、とくに重複-1の枝を調べる。
+単冪部分は既証の右twist公式mu_(B^H)=muB*H^-4でH=mu_u^(1/4)を取ると消える。関係重みとAS4整域性を保つので同じ矛盾。この枝ではAS4整域自体を排除しており、G正常性のZhang輸送は仮定しない。公開検証器は256語から全巡回軌道、元middle、Pfaffian、minor、商関係supportと語数を両符号でexact PASS。続いて重複-1の枝を調べた。
+重複-1の残るN4(2,0,1),(2,0,3)は `cubic_fourth_root_negative_repeat_finite.tex` で全排除（v231）。mu=(-1,-1,1,i)の最高tensorは17軌道。rank1 mixedをqで正規化し、重み-1 Pfaffianでa13=0,a6=q4*a8,a7=q²*a8。H0のbb列は純U関係r=a3x²+a8q4xy+a8yx、domainにa8≠0が必要。yy列もrに比例しa12=0,a2=a3*a5/a8,a5(1-q4)=0。a5=0なら(x,b)商がk<y,c>/(c²)で指数増大。よってq4=1,a5≠0、xy/yx列差からa4=a2。yのshearでa3=a2=a4=0、rank2minorでa0=0。
+全必要表示はyx+xy=0,b²+A x²+C y²=0,bx=q²xb,by+q²yb+d c²=0,cx=iqxc,cb=-q^-1bc（C,d≠0）。scalar変更でC=d=1,A0/1、q四乗根の八表示。元R3/R4を再消去して全八表示の次元20/35、正常核はq1でk*c²x、他三qで零をexact確認。両i符号の計16検算を公開。非零正常三次も因子なのでH3なし。八表示のAS4十分性は不要であり主張していない。
+単冪untwist D=B^H後もHはDの自己同型、mu_sと可換。唯一のUc+cU関係からHx=x、Hy=y+t*x。純U関係xy+yxの保存は2t*x²=0を強制、H=1。従って全単冪候補も既述半単純の場合に含まれる。Gの正常性をtwistで輸送することは使わない。次は位数4の重複iの二Galoisラベル、及び位数3の二ラベルの最高tensorと正常核を調べる。
 四単純の新しい全除外chart（v228）：`cubic_detminus1_spectral_exclusion.tex`。as4固定6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0のREADME、plan、COVERAGE、該当CLAIMS、DETMINUS1全文・自己監査・certificate状態を確認。nu=mu^-1なのでa→a^-1と後二基底交換で同じmu-chartになる。四族被覆/AS十分性/同型は輸入せず、H3域に次の直接証明を与えた。
 mu=(a,-a,i/a,-i/a),a4≠±1ではU²,mixed,V²の二次重みが分離して二重次数が存在。各平面に関係がなければ自由二生成の次数7が128でAS4値120を超え、domainなら純二元関係は高々一本なので両平面はAS2。混合三次の重み±ia,±a^-1は1にならず、純U三次重み1はa6=1、純Vはa6=-1を要して同時に起きない。従って全Gは片方のAS2純三次となり因子化、H3なし。a4=-1境界は既証二固有値必要集合±1に反し空、残るa4=1境界は四単純集合{1,-1,i,-i}のみで未分類。全det負一又は全四単純をこのchartが覆うとは主張しない。公開verifierは全パラメータLaurent多項式の非零因子・共鳴・境界特性多項式と128>120をexact PASS。出典/仮定/未実行の上流検算はas4_imports.jsonに記録。
 四単純の残る共鳴上の全被覆、全CY、全成分・境界、intrinsic族降下は依然未完。
