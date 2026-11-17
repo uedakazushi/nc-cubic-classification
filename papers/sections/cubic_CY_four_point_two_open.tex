@@ -1,0 +1,98 @@
+\subsection{出次数1の行列式非零部分の全排除}
+\label{subsec:cubic-CY-four-point-two-open}
+\begin{theorem}\label{thm:cubic-CY-four-point-two-open-empty}
+四単純基点の元表示で
+\[
+ x_0x_1\ne0,\qquad x_3=x_4=0,\qquad x_0x_2-x_1^2\ne0
+\]
+を満たす全領域と、その全monomial軌道はH3包絡を与えない。
+$x_5=0$ と $x_5\ne0$ の両方を含む。
+\end{theorem}
+\begin{proof}
+固定出典\cite{AS4CYpinned}の第二共有開部分と第五係数零開部分の必要被覆を用いる。
+両方の全controllerを隔離出力先で再実行し、当repoでも以下の全元係数消去・
+全局所化分岐・表示移送を独立に確認する。
+AS正則性の十分性や全同型群は用いない。
+まず独立な対角比で $x_0=x_1=1$ とし、$p=x_2\ne1$ と書く。
+
+\paragraph{$x_5\ne0$}
+さらに $x_5=1$ とする。
+全21係数のSchur式から $\lambda,\lambda+1,p-1$ だけを単元として消去する。
+$q=x_{10},u=x_6,v=x_7$ を残すと、元残余idealは
+\[
+ q(u-v),\qquad q(pu-v)
+\]
+を含む。$q\ne0$ なら $p\ne1$ により $u=v=0$。
+これを元残余式へ代入したidealは $q\lambda(\lambda+1)(p-1)$ の局所化で単位idealになる。
+従って $q=0$ であり、この側の全単元消去は残余なしで完了する。
+全係数は既存 $H_{\lambda,p}$、すなわち
+\[
+\begin{gathered}
+ x_0=x_1=x_5=1,\quad x_2=p,\quad x_9=(\lambda^2-1)/16,\\
+ x_{14}=\lambda^2/(16(p-1)),\quad x_{19}=-\lambda/(16(p-1)),\quad
+ x_{20}=p/(16(p-1)),\quad g=1/8
+\end{gathered}
+\]
+となり、他は零である。
+独立再現器は全消去式・単元pivot・最終全係数を検査し、
+元関係が既存表示と文字どおり一致することを確認した。
+命題\ref{prop:cubic-second-shared-H}から全許容値でH3でない。
+
+\paragraph{$x_5=0$}
+同じ局所化環で全21係数を消去する。
+$q=0$ の全残余は $\lambda=1$ を単元倍の式として強制し、
+他の全係数は
+\[
+\begin{gathered}
+ x_0=x_1=1,\quad x_2=p,\quad x_9=r,\quad
+ x_{14}=1/(16(p-1)),\\
+ x_{19}=-1/(16(p-1)),\quad x_{20}=p/(16(p-1)),\quad g=1/8
+\end{gathered}
+\]
+となる。$r$ を自由に保って元全係数へ戻ることも検査した。
+対角 $\operatorname{diag}(1,z,z,1)$ は $r$ を $z^2r$ へ移すので、
+$r=0$ 又は1へ全規格化でき、既存 $M^0_p,M^1_p$ に尽くされる。
+命題\ref{prop:cubic-zero-fifth-m}で全排除される。
+
+残る $q\ne0$ で $p=0$ の場合には、
+\[
+ P=\operatorname{diag}(1,1/\lambda,1/\lambda,1/\lambda)P_{(bc)}
+\]
+を施すと、元係数のまま $x'_0=x'_3=x'_4=0,x'_1=1$ となる。
+定理\ref{thm:cubic-CY-four-point-first-empty}がこの全chartを排除するので、
+正則性の十分条件や特定の残余係数の零を追加してはいない。
+
+以後 $pq\ne0$。
+元残余式の一つが単元倍を除き
+\[
+ p(-\lambda^2+16qx_8)(-\lambda q+\lambda x_8-q)=0
+\]
+となる。二因子をそれぞれ零とした全必要分岐は
+\[
+\begin{array}{c|c|c|c}
+ &x_8&(\lambda,p)&q^2\\\hline
+ A&\lambda^2/(16q)&(1/2,-2)&-1/192\\
+ B&(\lambda+1)q/\lambda&(2,-2)&-1/12
+\end{array}
+\]
+である。
+これは一般点の数値探索ではなく、$x_6,x_7,x_9$ を含まない元残余式のidealと、
+表の三式のidealとが、$\lambda(\lambda+1)p(p-1)q$ の局所化で一致することによる。
+両方のidealを有理数体上で独立に再計算した。
+各行の $q$ の一根を代入した残余は、数体上のidealとして
+$x_6,x_7,x_9$ の各正冪を含むので、全て零となる。
+他の根は数体共役であり、同じ結論を持つ。
+ここでの幾何学的な必要被覆を、残余schemeの被約性と同一視していない。
+
+この四候補はいずれも既存の固定表示 $N$ と次数付き同型である。
+当repoでは全24置換と対角正規化を元関係へ作用させ、
+四候補の各々に対して可逆な関係基底移送を具体的に確認した。
+$N$ の元表示も既存排除表示と文字どおり一致するので、
+命題\ref{prop:cubic-zero-fifth-fixed}から全てH3でない。
+以上で二開chartの全場合が尽くされた。
+\end{proof}
+
+独立検証器は\\
+\texttt{verify\_cubic\_CY\_four\_point\_two\_open.py}。
+最小固定入力は必要な消去手順・残余式・候補係数だけを保持する。
+行列式零境界、出次数2・部分活性・全共有支持の全必要係数被覆と相対分類は未完成である。

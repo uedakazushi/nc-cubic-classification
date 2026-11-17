@@ -1,0 +1,78 @@
+{
+  "status": "PASS",
+  "source_commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+  "scope": "both full degree1 x0 nonzero determinant-open CY charts are H3 empty",
+  "coverage": "all unit elimination equations independently replayed; FO vector consequences and empty ideal; FZ q-zero/lambda1, p-zero original matrix transport into first chart, both saturated finite-branch ideals",
+  "all_four_exceptional_literal_transports": {
+    "B1": {
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "diagonal": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ]
+    },
+    "A-1": {
+      "permutation": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "diagonal": [
+        "1",
+        "-1/2",
+        "1",
+        "1/2"
+      ]
+    },
+    "A1": {
+      "permutation": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "diagonal": [
+        "1",
+        "-sqrt(3)*I/12",
+        "1",
+        "-sqrt(3)*I/12"
+      ]
+    },
+    "B-1": {
+      "permutation": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "diagonal": [
+        "1",
+        "-2*sqrt(3)*I",
+        "1",
+        "-sqrt(3)*I/6"
+      ]
+    }
+  },
+  "ordinary_dependencies": [
+    "independent torus normalization over algebraically closed field",
+    "p-1 and every recorded nonzero coefficient kept as units",
+    "existing all-value H/M/N exclusions",
+    "full necessary branch derivations and isolated pinned upstream controller replays"
+  ],
+  "not_claimed": [
+    "determinant-zero boundaries covered",
+    "all degree2 or full shared supports excluded",
+    "AS sufficiency/full automorphisms imported",
+    "relative scheme cover",
+    "full H3 classification",
+    "novelty confirmed"
+  ]
+}

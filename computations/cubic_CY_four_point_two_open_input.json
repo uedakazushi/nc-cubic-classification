@@ -1,0 +1,437 @@
+{
+  "source_commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+  "source_sha256": {
+    "code/verify_cy_zero_commutators_four_simple_second_shared_open_complete.py": "e4d191a4c3b424fe08ffbd00f6b2b1b7eb64cc84cff08d39ffcc8a4ba5330c58",
+    "research/proofs/CY_ZERO_COMMUTATORS_FOUR_SIMPLE_SECOND_SHARED_OPEN_COMPLETE.tex": "9083d0d46d187470e1c718b0cc069ed7fbf395b535ab95850c489dbc121467b7",
+    "code/verify_cy_zero_commutators_four_simple_zero_fifth_open_complete.py": "11ebfa0c0e9a4442c5c3110944d3dcaabadd7b79377ec0e73f3799a052b0cdb0",
+    "research/proofs/CY_ZERO_COMMUTATORS_FOUR_SIMPLE_ZERO_FIFTH_OPEN_COMPLETE.tex": "43a2b5736a9e2ac93fc0fe1034663b2fd4cace80129eb08db1fb665431390bb9"
+  },
+  "second_shared_open": {
+    "normal_coefficients": {
+      "x0": "1",
+      "x1": "1",
+      "x2": "p",
+      "x3": "0",
+      "x4": "0",
+      "x5": "1",
+      "x6": "0",
+      "x7": "0",
+      "x8": "0",
+      "x9": "lam**2/16 - 1/16",
+      "x10": "0",
+      "x11": "0",
+      "x12": "0",
+      "x13": "0",
+      "x14": "lam**2/(16*p - 16)",
+      "x15": "0",
+      "x16": "0",
+      "x17": "0",
+      "x18": "0",
+      "x19": "-lam/(16*p - 16)",
+      "x20": "p/(16*p - 16)",
+      "g": "1/8"
+    },
+    "complete_elimination": [
+      {
+        "variable": "x8",
+        "equation": "4*x8/(lam + 1)",
+        "unit_pivot": "4",
+        "value": "0"
+      },
+      {
+        "variable": "x15",
+        "equation": "-4*(lam*x15 + x10)/lam",
+        "unit_pivot": "-4*lam",
+        "value": "-x10/lam"
+      },
+      {
+        "variable": "x16",
+        "equation": "-4*(lam*x16 + x11*x2)/lam",
+        "unit_pivot": "-4*lam",
+        "value": "-x11*x2/lam"
+      },
+      {
+        "variable": "x11",
+        "equation": "-2*(x10 - x11)*(x2 - 1)/lam",
+        "unit_pivot": "2*x2 - 2",
+        "value": "x10"
+      },
+      {
+        "variable": "x18",
+        "equation": "-2*(lam*x18 + x10*x7 + x13)/lam",
+        "unit_pivot": "-2*lam",
+        "value": "(-x10*x7 - x13)/lam"
+      },
+      {
+        "variable": "x13",
+        "equation": "-2*(x10*x2*x6 - x10*x7 + x13*x2 - x13)/lam",
+        "unit_pivot": "2 - 2*x2",
+        "value": "(-x10*x2*x6 + x10*x7)/(x2 - 1)"
+      },
+      {
+        "variable": "x17",
+        "equation": "2*(-lam**2*x17 - lam*x12 - lam*x17 + lam*x6 - x12)/(lam*(lam + 1))",
+        "unit_pivot": "-2*lam**2 - 2*lam",
+        "value": "(-lam*x12 + lam*x6 - x12)/(lam**2 + lam)"
+      },
+      {
+        "variable": "x12",
+        "equation": "-2*(lam*x12*x2 - lam*x12 + lam*x6 - lam*x7 + x12*x2 - x12)/(lam*(lam + 1))",
+        "unit_pivot": "-2*lam*x2 + 2*lam - 2*x2 + 2",
+        "value": "(-lam*x6 + lam*x7)/(lam*x2 - lam + x2 - 1)"
+      },
+      {
+        "variable": "g",
+        "equation": "(8*g*lam*x2 - 8*g*lam + 8*g*x2 - 8*g - lam**2*x2 + lam**2 - lam*x2 + lam + 16*x2*x6**2 + 16*x2*x9 - 16*x7**2 - 16*x9)/(8*(lam + 1)*(x2 - 1))",
+        "unit_pivot": "8*lam*x2 - 8*lam + 8*x2 - 8",
+        "value": "(lam**2*x2 - lam**2 + lam*x2 - lam - 16*x2*x6**2 - 16*x2*x9 + 16*x7**2 + 16*x9)/(8*lam*x2 - 8*lam + 8*x2 - 8)"
+      },
+      {
+        "variable": "x19",
+        "equation": "-2*(lam**4*x19*x2 - lam**4*x19 + lam**3*x10**2*x2 - lam**3*x10**2 + lam**3*x14*x2 - lam**3*x14 + 2*lam**3*x19*x2 - 2*lam**3*x19 + lam**3*x6**2 - lam**3*x6*x7 + 3*lam**2*x10**2*x2 - 3*lam**2*x10**2 + 2*lam**2*x14*x2 - 2*lam**2*x14 + lam**2*x19*x2 - lam**2*x19 + 3*lam*x10**2*x2 - 3*lam*x10**2 + lam*x14*x2 - lam*x14 + x10**2*x2 - x10**2)/(lam**2*(lam + 1)**2*(x2 - 1))",
+        "unit_pivot": "-2*lam**4*x2 + 2*lam**4 - 4*lam**3*x2 + 4*lam**3 - 2*lam**2*x2 + 2*lam**2",
+        "value": "(-lam**3*x10**2*x2 + lam**3*x10**2 - lam**3*x14*x2 + lam**3*x14 - lam**3*x6**2 + lam**3*x6*x7 - 3*lam**2*x10**2*x2 + 3*lam**2*x10**2 - 2*lam**2*x14*x2 + 2*lam**2*x14 - 3*lam*x10**2*x2 + 3*lam*x10**2 - lam*x14*x2 + lam*x14 - x10**2*x2 + x10**2)/(lam**4*x2 - lam**4 + 2*lam**3*x2 - 2*lam**3 + lam**2*x2 - lam**2)"
+      },
+      {
+        "variable": "x20",
+        "equation": "-2*(lam**5*x2*x20 - lam**5*x20 + lam**4*x10**2*x2**2 - lam**4*x10**2*x2 + 2*lam**4*x2*x20 - 2*lam**4*x20 + 2*lam**3*x10**2*x2**2 - 2*lam**3*x10**2*x2 - lam**3*x14*x2**2 + lam**3*x14*x2 + lam**3*x2*x20 - lam**3*x2*x6**2 - lam**3*x20 + lam**3*x7**2 - 2*lam**2*x14*x2**2 + 2*lam**2*x14*x2 - 2*lam*x10**2*x2**2 + 2*lam*x10**2*x2 - lam*x14*x2**2 + lam*x14*x2 - x10**2*x2**2 + x10**2*x2)/(lam**3*(lam + 1)**2*(x2 - 1))",
+        "unit_pivot": "-2*lam**5*x2 + 2*lam**5 - 4*lam**4*x2 + 4*lam**4 - 2*lam**3*x2 + 2*lam**3",
+        "value": "(-lam**4*x10**2*x2**2 + lam**4*x10**2*x2 - 2*lam**3*x10**2*x2**2 + 2*lam**3*x10**2*x2 + lam**3*x14*x2**2 - lam**3*x14*x2 + lam**3*x2*x6**2 - lam**3*x7**2 + 2*lam**2*x14*x2**2 - 2*lam**2*x14*x2 + 2*lam*x10**2*x2**2 - 2*lam*x10**2*x2 + lam*x14*x2**2 - lam*x14*x2 + x10**2*x2**2 - x10**2*x2)/(lam**5*x2 - lam**5 + 2*lam**4*x2 - 2*lam**4 + lam**3*x2 - lam**3)"
+      },
+      {
+        "variable": "x14",
+        "equation": "-(-lam**3*x2 + lam**3 + 16*lam**2*x10**2*x2**2 - 32*lam**2*x10**2*x2 + 16*lam**2*x10**2 + 16*lam**2*x14*x2**2 - 32*lam**2*x14*x2 + 16*lam**2*x14 - 16*lam**2*x2*x6**2 - 16*lam**2*x2*x9 - 2*lam**2*x2 - 16*lam**2*x6**2 + 32*lam**2*x6*x7 + 16*lam**2*x9 + 2*lam**2 + 32*lam*x10**2*x2**2 - 64*lam*x10**2*x2 + 32*lam*x10**2 + 32*lam*x14*x2**2 - 64*lam*x14*x2 + 32*lam*x14 - 16*lam*x2*x6**2 - 16*lam*x2*x9 - lam*x2 + 16*lam*x7**2 + 16*lam*x9 + lam + 16*x10**2*x2**2 - 32*x10**2*x2 + 16*x10**2 + 16*x14*x2**2 - 32*x14*x2 + 16*x14)/(8*lam*(lam + 1)**2*(x2 - 1))",
+        "unit_pivot": "-16*lam**2*x2**2 + 32*lam**2*x2 - 16*lam**2 - 32*lam*x2**2 + 64*lam*x2 - 32*lam - 16*x2**2 + 32*x2 - 16",
+        "value": "(lam**3*x2 - lam**3 - 16*lam**2*x10**2*x2**2 + 32*lam**2*x10**2*x2 - 16*lam**2*x10**2 + 16*lam**2*x2*x6**2 + 16*lam**2*x2*x9 + 2*lam**2*x2 + 16*lam**2*x6**2 - 32*lam**2*x6*x7 - 16*lam**2*x9 - 2*lam**2 - 32*lam*x10**2*x2**2 + 64*lam*x10**2*x2 - 32*lam*x10**2 + 16*lam*x2*x6**2 + 16*lam*x2*x9 + lam*x2 - 16*lam*x7**2 - 16*lam*x9 - lam - 16*x10**2*x2**2 + 32*x10**2*x2 - 16*x10**2)/(16*lam**2*x2**2 - 32*lam**2*x2 + 16*lam**2 + 32*lam*x2**2 - 64*lam*x2 + 32*lam + 16*x2**2 - 32*x2 + 16)"
+      },
+      {
+        "variable": "x9",
+        "equation": "(lam**4*x2 - lam**4 + 16*lam**2*x10**2*x2**2 - 32*lam**2*x10**2*x2 + 16*lam**2*x10**2 - 16*lam**2*x2*x6**2 - 16*lam**2*x2*x9 - lam**2*x2 + 16*lam**2*x7**2 + 16*lam**2*x9 + lam**2 - 16*x10**2*x2**2 + 32*x10**2*x2 - 16*x10**2)/(8*lam**3*(x2 - 1))",
+        "unit_pivot": "-16*lam**2*x2 + 16*lam**2",
+        "value": "(lam**4*x2 - lam**4 + 16*lam**2*x10**2*x2**2 - 32*lam**2*x10**2*x2 + 16*lam**2*x10**2 - 16*lam**2*x2*x6**2 - lam**2*x2 + 16*lam**2*x7**2 + lam**2 - 16*x10**2*x2**2 + 32*x10**2*x2 - 16*x10**2)/(16*lam**2*x2 - 16*lam**2)"
+      }
+    ],
+    "remaining_equations": [
+      "2*x10*(x6 - x7)/(lam*(lam + 1)*(x2 - 1))",
+      "2*x10*(x2*x6 - x7)/((lam + 1)*(x2 - 1))",
+      "x10*(lam - 1)*(lam + 1)*(lam**2 + 16*x10**2*x2 - 16*x10**2)/(4*lam**3)",
+      "-(lam**4*x6 + lam**3*x7 + 16*lam**2*x10**2*x2*x6 - 16*lam**2*x10**2*x6 - 8*lam*x10**2*x2*x6 + 8*lam*x10**2*x2*x7 - 8*x10**2*x2*x6 - 8*x10**2*x2*x7 + 16*x10**2*x7)/(4*lam**2*(lam + 1)*(x2 - 1))",
+      "-(-lam**3*x2*x6 + 8*lam**2*x10**2*x2**2*x6 - 16*lam**2*x10**2*x2*x6 + 8*lam**2*x10**2*x2*x7 - lam**2*x7 - 8*lam*x10**2*x2**2*x6 + 8*lam*x10**2*x2*x7 - 16*x10**2*x2*x7 + 16*x10**2*x7)/(4*lam**2*(lam + 1)*(x2 - 1))",
+      "-x10*(lam**6*x2 - lam**6 + 3*lam**5*x2 - 3*lam**5 + 16*lam**4*x10**2*x2**2 - 32*lam**4*x10**2*x2 + 16*lam**4*x10**2 + 3*lam**4*x2 - 3*lam**4 + 32*lam**3*x10**2*x2**2 - 64*lam**3*x10**2*x2 + 32*lam**3*x10**2 + lam**3*x2 + 16*lam**3*x6**2 - 32*lam**3*x6*x7 + 16*lam**3*x7**2 - lam**3 - 32*lam*x10**2*x2**2 + 64*lam*x10**2*x2 - 32*lam*x10**2 - 16*x10**2*x2**2 + 32*x10**2*x2 - 16*x10**2)/(4*lam**3*(lam + 1)**2*(x2 - 1)**2)",
+      "-x10*(lam - 1)*(lam**4*x2 - lam**4 + 2*lam**3*x2 - 2*lam**3 + 16*lam**2*x10**2*x2**3 - 16*lam**2*x10**2*x2**2 - 16*lam**2*x10**2*x2 + 16*lam**2*x10**2 + 16*lam**2*x2*x6**2 - 16*lam**2*x2*x6*x7 + lam**2*x2 - 16*lam**2*x6*x7 + 16*lam**2*x7**2 - lam**2 + 32*lam*x10**2*x2**3 - 32*lam*x10**2*x2**2 - 32*lam*x10**2*x2 + 32*lam*x10**2 + 16*x10**2*x2**3 - 16*x10**2*x2**2 - 16*x10**2*x2 + 16*x10**2)/(8*lam**3*(lam + 1)*(x2 - 1)**2)",
+      "-x10*(-lam**5*x2**2 + lam**5*x2 + 16*lam**4*x10**2*x2**3 - 32*lam**4*x10**2*x2**2 + 16*lam**4*x10**2*x2 - 3*lam**4*x2**2 + 3*lam**4*x2 + 32*lam**3*x10**2*x2**3 - 64*lam**3*x10**2*x2**2 + 32*lam**3*x10**2*x2 - 16*lam**3*x2**2*x6**2 - 3*lam**3*x2**2 + 32*lam**3*x2*x6*x7 + 3*lam**3*x2 - 16*lam**3*x7**2 - lam**2*x2**2 + lam**2*x2 - 32*lam*x10**2*x2**3 + 64*lam*x10**2*x2**2 - 32*lam*x10**2*x2 - 16*x10**2*x2**3 + 32*x10**2*x2**2 - 16*x10**2*x2)/(4*lam**3*(lam + 1)**2*(x2 - 1)**2)"
+    ],
+    "nonzero_x10_exclusion": {
+      "vector_consequences": [
+        "x10*(x6-x7)",
+        "x10*(x2*x6-x7)"
+      ],
+      "saturated_after_x6_x7_zero": [
+        "1"
+      ]
+    },
+    "zero_x10_elimination": [
+      {
+        "variable": "x6",
+        "equation": "-lam*(lam*x6 + x7)/(4*(lam + 1)*(x2 - 1))",
+        "unit_pivot": "-lam**2",
+        "value": "-x7/lam"
+      },
+      {
+        "variable": "x7",
+        "equation": "-x7/(4*(lam + 1))",
+        "unit_pivot": "-1",
+        "value": "0"
+      }
+    ]
+  },
+  "zero_fifth_open": {
+    "zero_family": {
+      "x0": "1",
+      "x1": "1",
+      "x2": "p",
+      "x3": "0",
+      "x4": "0",
+      "x5": "0",
+      "x6": "0",
+      "x7": "0",
+      "x8": "0",
+      "x9": "r",
+      "x10": "0",
+      "x11": "0",
+      "x12": "0",
+      "x13": "0",
+      "x14": "1/(16*p - 16)",
+      "x15": "0",
+      "x16": "0",
+      "x17": "0",
+      "x18": "0",
+      "x19": "-1/(16*p - 16)",
+      "x20": "p/(16*p - 16)",
+      "lam": "1",
+      "g": "1/8"
+    },
+    "special": {
+      "x0": "1",
+      "x1": "1",
+      "x2": "-2",
+      "x3": "0",
+      "x4": "0",
+      "x5": "0",
+      "x6": "0",
+      "x7": "0",
+      "x8": "sqrt(3)*I/4",
+      "x9": "0",
+      "x10": "sqrt(3)*I/6",
+      "x11": "sqrt(3)*I/6",
+      "x12": "0",
+      "x13": "0",
+      "x14": "1/12",
+      "x15": "-sqrt(3)*I/12",
+      "x16": "sqrt(3)*I/6",
+      "x17": "0",
+      "x18": "0",
+      "x19": "1/12",
+      "x20": "1/12",
+      "lam": "2",
+      "g": "3/8"
+    },
+    "coverage": {
+      "unit_elimination": [
+        {
+          "variable": "x15",
+          "equation": "-4*(lam*x15 + x10)/lam",
+          "unit_pivot": "-4*lam",
+          "value": "-x10/lam"
+        },
+        {
+          "variable": "x17",
+          "equation": "-2*(lam*x17 + x12)/lam",
+          "unit_pivot": "-2*lam",
+          "value": "-x12/lam"
+        },
+        {
+          "variable": "x12",
+          "equation": "-2*x12*(x2 - 1)/lam",
+          "unit_pivot": "2 - 2*x2",
+          "value": "0"
+        },
+        {
+          "variable": "x16",
+          "equation": "-4*(lam*x16 + x11*x2)/lam",
+          "unit_pivot": "-4*lam",
+          "value": "-x11*x2/lam"
+        },
+        {
+          "variable": "x11",
+          "equation": "-2*(x10 - x11)*(x2 - 1)/lam",
+          "unit_pivot": "2*x2 - 2",
+          "value": "x10"
+        },
+        {
+          "variable": "g",
+          "equation": "(8*g*lam - lam**2 + 16*x10*x8)/(8*lam)",
+          "unit_pivot": "8*lam",
+          "value": "(lam**2 - 16*x10*x8)/(8*lam)"
+        },
+        {
+          "variable": "x18",
+          "equation": "-2*(lam*x18 + x10*x7 + x13)/lam",
+          "unit_pivot": "-2*lam",
+          "value": "(-x10*x7 - x13)/lam"
+        },
+        {
+          "variable": "x13",
+          "equation": "-2*(x10*x2*x6 - x10*x7 + x13*x2 - x13)/lam",
+          "unit_pivot": "2 - 2*x2",
+          "value": "(-x10*x2*x6 + x10*x7)/(x2 - 1)"
+        },
+        {
+          "variable": "x20",
+          "equation": "-(-lam**3 + 16*lam**2*x20 + 16*lam*x10**2 + 16*lam*x19 + 16*x10**2*x2)/(8*lam**2)",
+          "unit_pivot": "-16*lam**2",
+          "value": "(lam**3 - 16*lam*x10**2 - 16*lam*x19 - 16*x10**2*x2)/(16*lam**2)"
+        },
+        {
+          "variable": "x19",
+          "equation": "(-lam**2 - 16*x10**2*x2 + 16*x10**2 + 16*x10*x2*x8 - 16*x19*x2 + 16*x19)/(8*lam)",
+          "unit_pivot": "16 - 16*x2",
+          "value": "(-lam**2 - 16*x10**2*x2 + 16*x10**2 + 16*x10*x2*x8)/(16*x2 - 16)"
+        },
+        {
+          "variable": "x14",
+          "equation": "-(-lam**4 - 16*lam**2*x10**2*x2 + 16*lam**2*x10**2 + 16*lam**2*x10*x2*x8 + 16*lam*x10**2*x2 - 16*lam*x10**2 + 16*lam*x10*x2*x8 - 16*lam*x10*x8 + 16*lam*x14*x2 - 16*lam*x14 + 16*x10**2*x2 - 16*x10**2)/(8*lam**2*(x2 - 1))",
+          "unit_pivot": "-16*lam*x2 + 16*lam",
+          "value": "(lam**4 + 16*lam**2*x10**2*x2 - 16*lam**2*x10**2 - 16*lam**2*x10*x2*x8 - 16*lam*x10**2*x2 + 16*lam*x10**2 - 16*lam*x10*x2*x8 + 16*lam*x10*x8 - 16*x10**2*x2 + 16*x10**2)/(16*lam*x2 - 16*lam)"
+        }
+      ],
+      "q_zero_elimination": [
+        {
+          "variable": "x15",
+          "equation": "-4*x15",
+          "unit_pivot": "-4",
+          "value": "0"
+        },
+        {
+          "variable": "x16",
+          "equation": "-2*(lam*x16 + x11)/lam",
+          "unit_pivot": "-2*lam",
+          "value": "-x11/lam"
+        },
+        {
+          "variable": "x11",
+          "equation": "-4*x11*(x2 - 1)/lam",
+          "unit_pivot": "4 - 4*x2",
+          "value": "0"
+        },
+        {
+          "variable": "x17",
+          "equation": "-2*(lam*x17 + x12)/lam",
+          "unit_pivot": "-2*lam",
+          "value": "-x12/lam"
+        },
+        {
+          "variable": "x12",
+          "equation": "-2*x12*(x2 - 1)/lam",
+          "unit_pivot": "2 - 2*x2",
+          "value": "0"
+        },
+        {
+          "variable": "g",
+          "equation": "(8*g - lam)/8",
+          "unit_pivot": "8",
+          "value": "lam/8"
+        },
+        {
+          "variable": "x18",
+          "equation": "-2*(lam*x18 + x13)/lam",
+          "unit_pivot": "-2*lam",
+          "value": "-x13/lam"
+        },
+        {
+          "variable": "x13",
+          "equation": "-2*x13*(x2 - 1)/lam",
+          "unit_pivot": "2 - 2*x2",
+          "value": "0"
+        },
+        {
+          "variable": "x19",
+          "equation": "-2*(lam*x19 + x14)/lam",
+          "unit_pivot": "-2*lam",
+          "value": "-x14/lam"
+        },
+        {
+          "variable": "x14",
+          "equation": "-(-lam + 16*x14*x2 - 16*x14)/(8*lam)",
+          "unit_pivot": "16 - 16*x2",
+          "value": "lam/(16*x2 - 16)"
+        },
+        {
+          "variable": "x20",
+          "equation": "-(16*lam*x2*x20 - 16*lam*x20 - x2)/(8*lam*(x2 - 1))",
+          "unit_pivot": "-16*lam*x2 + 16*lam",
+          "value": "x2/(16*lam*x2 - 16*lam)"
+        },
+        {
+          "variable": "x8",
+          "equation": "-x8/(4*(x2 - 1))",
+          "unit_pivot": "-1",
+          "value": "0"
+        },
+        {
+          "variable": "x6",
+          "equation": "-(x6 + x7)/(8*(x2 - 1))",
+          "unit_pivot": "-1",
+          "value": "-x7"
+        },
+        {
+          "variable": "x7",
+          "equation": "-x7/(8*lam)",
+          "unit_pivot": "-1",
+          "value": "0"
+        }
+      ],
+      "p_zero_transform": "Matrix([[1, 0, 0, 0], [0, 0, 1/lam, 0], [0, 1/lam, 0, 0], [0, 0, 0, 1/lam]])",
+      "p_zero_x15": "x10/lam",
+      "q_nonzero_split": "x2*(-lam**2 + 16*x10*x8)*(-lam*x10 + lam*x8 - x10)",
+      "branches": {
+        "A": {
+          "groebner_basis": [
+            "sat + 128*x10/3",
+            "x2 + 2",
+            "x10**2 + 1/192",
+            "lam - 1/2"
+          ],
+          "normal": {
+            "x0": "1",
+            "x1": "1",
+            "x3": "0",
+            "x4": "0",
+            "x5": "0",
+            "x15": "-sqrt(3)*I/12",
+            "x17": "0",
+            "x12": "0",
+            "x16": "sqrt(3)*I/6",
+            "x11": "sqrt(3)*I/24",
+            "g": "0",
+            "x18": "0",
+            "x13": "0",
+            "x20": "-1/24",
+            "x19": "1/48",
+            "x14": "-1/96",
+            "lam": "1/2",
+            "x2": "-2",
+            "x10": "sqrt(3)*I/24",
+            "x8": "-sqrt(3)*I/8",
+            "x6": "0",
+            "x7": "0",
+            "x9": "0"
+          },
+          "remaining_solution": {
+            "x6": "0",
+            "x7": "0",
+            "x9": "0"
+          }
+        },
+        "B": {
+          "groebner_basis": [
+            "sat + x10/3",
+            "x2 + 2",
+            "x10**2 + 1/12",
+            "lam - 2"
+          ],
+          "normal": {
+            "x0": "1",
+            "x1": "1",
+            "x3": "0",
+            "x4": "0",
+            "x5": "0",
+            "x15": "-sqrt(3)*I/12",
+            "x17": "0",
+            "x12": "0",
+            "x16": "sqrt(3)*I/6",
+            "x11": "sqrt(3)*I/6",
+            "g": "3/8",
+            "x18": "0",
+            "x13": "0",
+            "x20": "1/12",
+            "x19": "1/12",
+            "x14": "1/12",
+            "lam": "2",
+            "x2": "-2",
+            "x10": "sqrt(3)*I/6",
+            "x8": "sqrt(3)*I/4",
+            "x6": "0",
+            "x7": "0",
+            "x9": "0"
+          },
+          "remaining_solution": {
+            "x6": "0",
+            "x7": "0",
+            "x9": "0"
+          }
+        }
+      }
+    }
+  }
+}

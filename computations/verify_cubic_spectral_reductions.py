@@ -95,6 +95,7 @@ CHECKS=[
  'verify_cubic_CY_four_point_support.py',
  'verify_cubic_CY_four_point_shared_zero.py',
  'verify_cubic_CY_four_point_first_cover.py',
+ 'verify_cubic_CY_four_point_two_open.py',
 ]
 results=[]
 for name in CHECKS:

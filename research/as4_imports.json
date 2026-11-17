@@ -795,5 +795,41 @@
       "complete CY/H3 classification",
       "novelty"
     ]
+  },
+  "CY_four_point_two_open_necessary_v303": {
+    "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+    "files": [
+      {
+        "path": "code/verify_cy_zero_commutators_four_simple_second_shared_open_complete.py",
+        "sha256": "e4d191a4c3b424fe08ffbd00f6b2b1b7eb64cc84cff08d39ffcc8a4ba5330c58"
+      },
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_FOUR_SIMPLE_SECOND_SHARED_OPEN_COMPLETE.tex",
+        "sha256": "9083d0d46d187470e1c718b0cc069ed7fbf395b535ab95850c489dbc121467b7"
+      },
+      {
+        "path": "code/verify_cy_zero_commutators_four_simple_zero_fifth_open_complete.py",
+        "sha256": "11ebfa0c0e9a4442c5c3110944d3dcaabadd7b79377ec0e73f3799a052b0cdb0"
+      },
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_FOUR_SIMPLE_ZERO_FIFTH_OPEN_COMPLETE.tex",
+        "sha256": "43a2b5736a9e2ac93fc0fe1034663b2fd4cace80129eb08db1fb665431390bb9"
+      }
+    ],
+    "used_part": "FO1-FO5 and zero-fifth-open FZ1-FZ6 necessary two full charts only",
+    "upstream_status": "proof_written; independent_audit_pending; novelty_unsearched",
+    "upstream_replay": "both full fixed controllers PASS with python-flint in isolated output workspace",
+    "downstream_independent": "default exact PASS all original unit elimination equations; FO localized vector consequences and unit ideal; q-zero full normal coefficients; FZ lambda1 unit/q-zero all coefficients; p-zero actual matrix into first chart; both saturated finite ideals, geometric forcing of remaining coefficients over QQ(sqrt(-3)), all four literal exceptional N transports; old H/M/N literal matches",
+    "validator": "computations/verify_cubic_CY_four_point_two_open.py",
+    "input": "computations/cubic_CY_four_point_two_open_input.json",
+    "proof": "papers/sections/cubic_CY_four_point_two_open.tex",
+    "not_imported": [
+      "determinant-zero boundary classification",
+      "other nonzero shared supports",
+      "AS sufficiency/full automorphisms",
+      "relative scheme coverage",
+      "complete H3 classification",
+      "novelty"
+    ]
   }
 }
