@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "source_commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+  "scope": "entire x0*x1*x5 nonzero determinant-zero degree1 chart H3 empty, including all imaginary h=0 fibers",
+  "independent_checks": [
+    "both full unit elimination traces, every source equation and unit pivot",
+    "first signed split and second factor split",
+    "both saturated ideals equal complete target ideals over QQ(i)",
+    "all R signs and lambda1 literal old frames",
+    "all four signed imaginary fibers literal old J transports, no h division"
+  ],
+  "imaginary_transports": [
+    {
+      "source_delta_sign": 1,
+      "source_lambda": "I",
+      "literal_J_transports": [
+        {
+          "target_eta": 1,
+          "target_h": "h"
+        }
+      ]
+    },
+    {
+      "source_delta_sign": 1,
+      "source_lambda": "-I",
+      "literal_J_transports": [
+        {
+          "target_eta": 1,
+          "target_h": "h"
+        }
+      ]
+    },
+    {
+      "source_delta_sign": -1,
+      "source_lambda": "I",
+      "literal_J_transports": [
+        {
+          "target_eta": -1,
+          "target_h": "h"
+        }
+      ]
+    },
+    {
+      "source_delta_sign": -1,
+      "source_lambda": "-I",
+      "literal_J_transports": [
+        {
+          "target_eta": -1,
+          "target_h": "h"
+        }
+      ]
+    }
+  ],
+  "ordinary_dependencies": [
+    "independent diagonal normalization and first signed split over algebraically closed field",
+    "existing prop:cubic-boundary-R all lambda and prop:cubic-boundary-J including h0 degree5 failure",
+    "pinned necessary FG1-FG5 proof and isolated upstream full replay"
+  ],
+  "not_claimed": [
+    "AS sufficiency or full automorphisms imported",
+    "x5 zero determinant boundary excluded",
+    "all degree2/full supports excluded",
+    "relative reduced scheme cover",
+    "complete H3 classification",
+    "novelty confirmed"
+  ]
+}

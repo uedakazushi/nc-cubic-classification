@@ -831,5 +831,32 @@
       "complete H3 classification",
       "novelty"
     ]
+  },
+  "CY_four_point_determinant_necessary_v304": {
+    "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+    "files": [
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_FOUR_SIMPLE_GENERAL_BOUNDARY_COMPLETE.tex",
+        "sha256": "00c80079cab99d229ab7adab3140c4b061f125298c8590a5118da77087a5f7a7"
+      },
+      {
+        "path": "code/verify_cy_zero_commutators_four_simple_general_boundary_complete.py",
+        "sha256": "f0500a1e0ab6f8b3bc75c66be5144a82f315d188f84863923a4a832cadd6d7ee"
+      }
+    ],
+    "used_part": "FG1-FG5 necessary full nonzero-x5 determinant boundary only",
+    "upstream_status": "proof_written; independent_audit_pending; novelty_unsearched",
+    "upstream_replay": "general and imaginary boundary full fixed controllers PASS isolated with python-flint; their AS sufficiency not imported",
+    "downstream_independent": "default exact PASS both full21-variable unit elimination traces; signed and factor splits; both complete saturated ideal equalities over QQ(i); literal old R both signs/alllambda/lambda1, all four signed imaginary fibers with invertible original relation transport into old J, no h division; old R/J including h0 exclusions reused",
+    "validator": "computations/verify_cubic_CY_four_point_determinant.py",
+    "input": "computations/cubic_CY_four_point_determinant_input.json",
+    "proof": "papers/sections/cubic_CY_four_point_determinant.tex",
+    "not_imported": [
+      "x5zero determinant boundary cover",
+      "AS sufficiency/full automorphisms",
+      "relative scheme cover",
+      "complete H3 classification",
+      "novelty"
+    ]
   }
 }
