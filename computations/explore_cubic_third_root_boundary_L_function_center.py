@@ -96,6 +96,7 @@ def compute_center(prime=109,omega=63,fixed_uv=None,weight_zero=False,elliptic_e
  regular_at_E2=None if elliptic_e is not None else all(n.numer.evaluate(0,two) and n.denom.evaluate(0,two) for n in CF.norm_log)
  out['all_logged_inverse_norms_units_at_E2']=None if regular_at_E2 is None else bool(regular_at_E2)
  out['numeric_elliptic_E']=elliptic_e
+ if elliptic_e is not None:out['scope']='exact characteristic-zero numeric elliptic parameter, polynomial deformation coefficients; selected central subspace only'
  return out,A,piv,ids
 
 if __name__=='__main__':

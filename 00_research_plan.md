@@ -69,7 +69,7 @@ Library既存ファイルは明示指示なしに削除しない。GitではPDF�
 heart比較・Rains共鳴・cubic cornerは `uedakazushi/nc-dp-surface-hearts`、次数1は `uedakazushi/nc-dp1-moduli`、三次三様体は `uedakazushi/nc-cubic-threefold-moduli` が正本。
 量子FermatのOU障害は [nc-cubic-non-as](https://github.com/uedakazushi/nc-cubic-non-as)、ambient比較は [nc-cubic-ambient](https://github.com/uedakazushi/nc-cubic-ambient) に移管済み。分類に必要な旧定理・コードはこのリポジトリの現行分類原稿からも参照する。
 
-## V. 最新の具体的frontier（v260）
+## V. 最新の具体的frontier（v261）
 三固有値の全半単純スペクトルを有限化し、位数4・5・6・9・12と相反pencilを排除した。残る必要候補は位数3の3個のみ（2 Galoisラベル軌道）、各関係パターン一つ。全Jordan層を排除し中山自体が半単純・位数3である。3候補の存在・H3許容性は未分類。
 証明は `cubic_spectral_resonance.tex`、`cubic_inverse_spectral_pencils.tex` と `cubic_*root*`、有限リスト/全再生は `python computations/verify_cubic_spectral_reductions.py`。最新の証明・文献入力・certificateと次の最小課題は分類ノート末尾に統合した。
 位数4は全排除済み。最後の(i,i,-1,-i)はb4零の四表示でW1因子/零、b4非零はrank2 middleのSchur補と非退化対称二次の巡回障害で空。単冪も含む。位数3の非単位重複根の全Jordan層も、実際の中山巡回式の85変数線型系と指数増大商で排除。重複1のJordan層も実際の12次元top核、Ore認識とker(D)=A、量子平面商の正常三次障害で因子を強制し全排除。残る二ラベルの半単純topは各22次元、正常三次係数は8/7次元。C=B^muという可逆なCY untwistを証明し、Gは同じ次数付きvectorで正常化mu^-1を保つ。GはCで非中心、CY中心三次分類を代用しない。重複1のatlasではP=Q=0及びP,Q独立/S=T=0を全排除。後者は一変数族へ還元し、全pivotとSmith因子、κ0/-1のfresh検算で全値W1零/非AS。独立P,QかつS0はT非零も二変数平面・四境界曲線・残る一変数族/三例外値の全pivotで全排除した。独立P,QのS非零も全Schur分枝と有限/一変数/行列式零境界を排除済み。比例結合の一方的非零曲率AS2–Ore表示も、正常c/b/基底一次の順序付き係数で全因子となり排除。Ore被覆は別問題。比例結合でもS非零は全AS4整域が存在せず、全unit-repeat H3はrank(P,Q)=1,S0に限る。最後は正常一次商の二つの三次overlapによるHilbert矛盾。二方向曲率split Ore族も全qのW1をSmith形式で分類し、因子/頂点で全排除。x²非split変形も中心Casimir/ノルム/曲面period=indexから九乗根商の非整域性を示し全排除。量子Weyl AS3基底を持つ全二方向曲率Ore層も、全補正項をshear又は共鳴付随次数で排除。両非零比例結合は元22tensorからT=a2=0と正常xを強制し六係数の正常一次境界へ被覆。w非零の境界商はw1へ正規化し、明示Δ非零の全開集合で正常核を排除。L曲線の明示Ω開集合では全u,vの正常核が一本で全次数持上げを明示。全u,vの実AS4整域性も1-regular xと明示W3持上げで認識し、中心Ψを明示。境界translation位数9とaffine ambient/切断のPI性も中心二元とGK1定理で証明。固定E2,u1,v0の独立閉点では中心部分環k[x,Ψ,z9]上自由階数81を完全な有限証明書で確認。その固定例の全中心も多項式環、generic CSA次数9・primeと正の有限体witnessで確定。E2,w1の全Z,u,vは位数3相対双対と二fiber resultantでH3排除済み。次は全L/Ωへの持上げ、残るΔ曲線/Ω零点、w0、片方零結合、非単位重複根atlasを調べる。P,QはUb3/Uc3、S,Tはbbcc/bcbc係数。
@@ -77,11 +77,11 @@ heart比較・Rains共鳴・cubic cornerは `uedakazushi/nc-dp-surface-hearts`�
 一般正規三次の四line compact frameは `cubic_hypersurface_frame.tex`。rank-one torsion-freeは別仮定で、有限H3検査や相対開性は未証明。
 
 
-## 正常一次L境界の現在位置と次の実行（v260）
+## 正常一次L境界の現在位置と次の実行（v261）
 
 E2の全正常一次境界の排除（v257）：v1,u=aの二中心fiber(Znew=b及び1)を標数0K[a]上で構成。全生成元のfiltered degree inequalityからtrace det次数≤486、p1021,t169の還元でも両486次を保存。487点補間+8点再確認、各340*h9^54の掛け戻し、h9同士Bezout1、trace resultant965非零で標数0coprime。trace非退化開集合では中心projectorのrank一定なので、各fiberで一点の中心1から全semisimple点がCSA。二trace開集合が全aを覆い、E2全v非零がgenericCSA9/fullcenter。相対双対ν3の局所order障害、v0既排除、Zの既知shearでE2,w1の全Z,u,vはH3なし。有限例外比の列挙問題はこの固定E2では解消し、解決済みへ戻らない。次はE可変のL/Ωで中心9の定数pivot型を認識し、同様の二fiber resultantを持上げる。全L曲線/他Δ境界/非単位根/CY/成分/降下は未完。
 
 全L/Ωのアフィン包絡PI次数（v258）：Rains Thm2.13を各中央商D/(psi−lambda)へ適用し、全fiberの中心flat、domain、中心rank81・PI9を得た。Dはk[psi]上自由で∩(psi−lambda)D=0、全fiberのmatrix9恒等式がDへ戻る。grDもPI9なのでD自身のPI次数は正確に9。正常商Uの全素因子はPI degree≤9。Uの全中心/素性/degree9をこれだけから外挿しない。直接のgenericE中心探索は公開function_center scriptを使い、GF109(E)[d]・u,v多項式でdegree7まで到達。係数膨張があるので次はinverse cacheとu1v0固定枝で最小center9持上げを確認する。center9の完成結果はまだない。
 
 全L/Ω正常一次境界の完成した排除（v260）：同PI次数を保つtrace-closed中央商の中心持上げを通常証明で確立。CはLBSのAR/CMとgraded stablyfree、PI9からStafford2.10/2.11によりtrace-closed。Z(C)→Z(S_C)全射。正常ΓのTHCR像は一つの被約9点軌道を切り、軌道上非消滅の中心9をCへ持上げるとAのboundary fiber(x0,Psi0,z1)=Mat9。全L/Ω,全u,vでfull polynomial centerとfree81/genericCSA9、relative Frobeniusν3を認識し、finiteglならperiod|3、domainならperiod9の矛盾で全Z,u,vをH3排除。有限field center探索はこの一般証明の前提でなく、E2全exact計算を独立な検証例として保持。
-次の最小課題はΩ0の有限33点（E0、d0、E³1、残る二つのE³値）と他のΔ曲線。一般化の候補は、残るproper Sklyanin中央拡大にcanonical中心三次の持上げを認識し、同じtrace/9軌道障害を適用すること。全proper領域のcanonicalCasimirを既存EG等の一次資料で監査できれば多数のΔ分枝をまとめられる。Ω外でW1のjumpやZ-shear失敗を無視しない。w0、一方零結合、非単位根atlas、全CY/成分/相対降下は未完。E3全u,vの重み0核は独立チェックとして現在計算中。
+正常一次境界の現在の必要被覆（v261）：Etingof–Ginzburg Thm3.3.2(ii)は任意のhomogeneous CY topと任意lower potentialでnonscalar centre≤3を与え、genericを要求しない。全六係数untwistのpotentialを元関係でexact確認。H3のproper Sklyanin境界なら正常Gからτ9、従ってEG中心のleadingはcanonicalg0。v260のRains/Stafford/9軌道/周期障害を適用でき、全proper elliptic層をL/ΩやZ-shearに依存せず排除した。残るw1必要候補はD0,E≠0又はE0,D≠0の二軸と99個の明示点のみ。99点はD=−ω^b(t+1), E=ω^(b−a)t, a,b=0,1,2、共通squarefree11次h(t)=0で与え、全係数はelliptic_reduction節/certificate。Δ上への9Hesse線代入、axes/nonPHS除去、全点重複なしをexact確認。Ω33点を独立優先課題として再開せず、この二軸/99点を次に判定する。各点でもZ,u,vの正常核とadmissibilityは未完。w0、一方零結合、非単位根atlas、全CY・成分・降下も未完。

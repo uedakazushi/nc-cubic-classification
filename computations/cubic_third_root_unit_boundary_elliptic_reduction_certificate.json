@@ -1,0 +1,1277 @@
+{
+  "status": "PASS",
+  "omega_relation": "omega^2+omega+1=0",
+  "potential_derivatives_equal_all_three_untwisted_relations": true,
+  "proper_elliptic_criterion": "D*E*((D^3+E^3+1)^3-27*D^3*E^3) !=0",
+  "nine_line_factorization": "product_(a,b=0..2)(D+omega^a*E+omega^b)",
+  "finite_cover_after_axes_and_nonPHS_removal": [
+    {
+      "a": 0,
+      "b": 0,
+      "D": "-omega^a*E-omega^b",
+      "remaining_E_polynomial_low_to_high": [
+        [
+          "1/6"
+        ],
+        [
+          "7/6"
+        ],
+        [
+          "8/3"
+        ],
+        [
+          "1/3"
+        ],
+        [
+          "-55/6"
+        ],
+        [
+          "-53/3"
+        ],
+        [
+          "-25/2"
+        ],
+        [
+          "7/2"
+        ],
+        [
+          "27/2"
+        ],
+        [
+          "23/2"
+        ],
+        [
+          "11/2"
+        ],
+        [
+          "1"
+        ]
+      ],
+      "degree": 11,
+      "factors": [
+        {
+          "degree": 1,
+          "coefficients_low_to_high": [
+            [
+              "-1"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        },
+        {
+          "degree": 1,
+          "coefficients_low_to_high": [
+            [
+              "1/2"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        },
+        {
+          "degree": 3,
+          "coefficients_low_to_high": [
+            [
+              "-1/3",
+              "1/3"
+            ],
+            [
+              "-1",
+              "1"
+            ],
+            [
+              "-1",
+              "1"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        },
+        {
+          "degree": 3,
+          "coefficients_low_to_high": [
+            [
+              "1/3",
+              "2/3"
+            ],
+            [
+              "1",
+              "2"
+            ],
+            [
+              "1",
+              "2"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        },
+        {
+          "degree": 3,
+          "coefficients_low_to_high": [
+            [
+              "-1"
+            ],
+            [],
+            [
+              "3"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        }
+      ]
+    },
+    {
+      "a": 0,
+      "b": 1,
+      "D": "-omega^a*E-omega^b",
+      "remaining_E_polynomial_low_to_high": [
+        [
+          "-1/6",
+          "-1/6"
+        ],
+        [
+          "7/6",
+          "0"
+        ],
+        [
+          "8/3"
+        ],
+        [
+          "-1/3",
+          "-1/3"
+        ],
+        [
+          "-55/6",
+          "0"
+        ],
+        [
+          "-53/3"
+        ],
+        [
+          "25/2",
+          "25/2"
+        ],
+        [
+          "7/2",
+          "0"
+        ],
+        [
+          "27/2"
+        ],
+        [
+          "-23/2",
+          "-23/2"
+        ],
+        [
+          "11/2",
+          "0"
+        ],
+        [
+          "1"
+        ]
+      ],
+      "degree": 11,
+      "factors": [
+        {
+          "degree": 1,
+          "coefficients_low_to_high": [
+            [
+              "-1",
+              "0"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        },
+        {
+          "degree": 1,
+          "coefficients_low_to_high": [
+            [
+              "1/2",
+              "0"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        },
+        {
+          "degree": 3,
+          "coefficients_low_to_high": [
+            [
+              "1/3",
+              "2/3"
+            ],
+            [
+              "-2",
+              "-1"
+            ],
+            [
+              "1",
+              "-1"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        },
+        {
+          "degree": 3,
+          "coefficients_low_to_high": [
+            [
+              "-1/3",
+              "1/3"
+            ],
+            [
+              "-1",
+              "-2"
+            ],
+            [
+              "2",
+              "1"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        },
+        {
+          "degree": 3,
+          "coefficients_low_to_high": [
+            [
+              "-1"
+            ],
+            [],
+            [
+              "3",
+              "0"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        }
+      ]
+    },
+    {
+      "a": 0,
+      "b": 2,
+      "D": "-omega^a*E-omega^b",
+      "remaining_E_polynomial_low_to_high": [
+        [
+          "1/6",
+          "0"
+        ],
+        [
+          "-7/6",
+          "-7/6"
+        ],
+        [
+          "8/3"
+        ],
+        [
+          "1/3",
+          "0"
+        ],
+        [
+          "55/6",
+          "55/6"
+        ],
+        [
+          "-53/3"
+        ],
+        [
+          "-25/2",
+          "0"
+        ],
+        [
+          "-7/2",
+          "-7/2"
+        ],
+        [
+          "27/2"
+        ],
+        [
+          "23/2",
+          "0"
+        ],
+        [
+          "-11/2",
+          "-11/2"
+        ],
+        [
+          "1"
+        ]
+      ],
+      "degree": 11,
+      "factors": [
+        {
+          "degree": 1,
+          "coefficients_low_to_high": [
+            [
+              "-1/2",
+              "-1/2"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        },
+        {
+          "degree": 1,
+          "coefficients_low_to_high": [
+            [
+              "1",
+              "1"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        },
+        {
+          "degree": 3,
+          "coefficients_low_to_high": [
+            [
+              "-1"
+            ],
+            [],
+            [
+              "-3",
+              "-3"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        },
+        {
+          "degree": 3,
+          "coefficients_low_to_high": [
+            [
+              "1/3",
+              "2/3"
+            ],
+            [
+              "1",
+              "-1"
+            ],
+            [
+              "-2",
+              "-1"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        },
+        {
+          "degree": 3,
+          "coefficients_low_to_high": [
+            [
+              "-1/3",
+              "1/3"
+            ],
+            [
+              "2",
+              "1"
+            ],
+            [
+              "-1",
+              "-2"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        }
+      ]
+    },
+    {
+      "a": 1,
+      "b": 0,
+      "D": "-omega^a*E-omega^b",
+      "remaining_E_polynomial_low_to_high": [
+        [
+          "1/6",
+          "0"
+        ],
+        [
+          "-7/6",
+          "-7/6"
+        ],
+        [
+          "8/3"
+        ],
+        [
+          "1/3",
+          "0"
+        ],
+        [
+          "55/6",
+          "55/6"
+        ],
+        [
+          "-53/3"
+        ],
+        [
+          "-25/2",
+          "0"
+        ],
+        [
+          "-7/2",
+          "-7/2"
+        ],
+        [
+          "27/2"
+        ],
+        [
+          "23/2",
+          "0"
+        ],
+        [
+          "-11/2",
+          "-11/2"
+        ],
+        [
+          "1"
+        ]
+      ],
+      "degree": 11,
+      "factors": [
+        {
+          "degree": 1,
+          "coefficients_low_to_high": [
+            [
+              "-1/2",
+              "-1/2"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        },
+        {
+          "degree": 1,
+          "coefficients_low_to_high": [
+            [
+              "1",
+              "1"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        },
+        {
+          "degree": 3,
+          "coefficients_low_to_high": [
+            [
+              "-1"
+            ],
+            [],
+            [
+              "-3",
+              "-3"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        },
+        {
+          "degree": 3,
+          "coefficients_low_to_high": [
+            [
+              "1/3",
+              "2/3"
+            ],
+            [
+              "1",
+              "-1"
+            ],
+            [
+              "-2",
+              "-1"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        },
+        {
+          "degree": 3,
+          "coefficients_low_to_high": [
+            [
+              "-1/3",
+              "1/3"
+            ],
+            [
+              "2",
+              "1"
+            ],
+            [
+              "-1",
+              "-2"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        }
+      ]
+    },
+    {
+      "a": 1,
+      "b": 1,
+      "D": "-omega^a*E-omega^b",
+      "remaining_E_polynomial_low_to_high": [
+        [
+          "1/6"
+        ],
+        [
+          "7/6"
+        ],
+        [
+          "8/3"
+        ],
+        [
+          "1/3"
+        ],
+        [
+          "-55/6"
+        ],
+        [
+          "-53/3"
+        ],
+        [
+          "-25/2"
+        ],
+        [
+          "7/2"
+        ],
+        [
+          "27/2"
+        ],
+        [
+          "23/2"
+        ],
+        [
+          "11/2"
+        ],
+        [
+          "1"
+        ]
+      ],
+      "degree": 11,
+      "factors": [
+        {
+          "degree": 1,
+          "coefficients_low_to_high": [
+            [
+              "-1"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        },
+        {
+          "degree": 1,
+          "coefficients_low_to_high": [
+            [
+              "1/2"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        },
+        {
+          "degree": 3,
+          "coefficients_low_to_high": [
+            [
+              "-1/3",
+              "1/3"
+            ],
+            [
+              "-1",
+              "1"
+            ],
+            [
+              "-1",
+              "1"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        },
+        {
+          "degree": 3,
+          "coefficients_low_to_high": [
+            [
+              "1/3",
+              "2/3"
+            ],
+            [
+              "1",
+              "2"
+            ],
+            [
+              "1",
+              "2"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        },
+        {
+          "degree": 3,
+          "coefficients_low_to_high": [
+            [
+              "-1"
+            ],
+            [],
+            [
+              "3"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        }
+      ]
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "D": "-omega^a*E-omega^b",
+      "remaining_E_polynomial_low_to_high": [
+        [
+          "-1/6",
+          "-1/6"
+        ],
+        [
+          "7/6",
+          "0"
+        ],
+        [
+          "8/3"
+        ],
+        [
+          "-1/3",
+          "-1/3"
+        ],
+        [
+          "-55/6",
+          "0"
+        ],
+        [
+          "-53/3"
+        ],
+        [
+          "25/2",
+          "25/2"
+        ],
+        [
+          "7/2",
+          "0"
+        ],
+        [
+          "27/2"
+        ],
+        [
+          "-23/2",
+          "-23/2"
+        ],
+        [
+          "11/2",
+          "0"
+        ],
+        [
+          "1"
+        ]
+      ],
+      "degree": 11,
+      "factors": [
+        {
+          "degree": 1,
+          "coefficients_low_to_high": [
+            [
+              "-1",
+              "0"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        },
+        {
+          "degree": 1,
+          "coefficients_low_to_high": [
+            [
+              "1/2",
+              "0"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        },
+        {
+          "degree": 3,
+          "coefficients_low_to_high": [
+            [
+              "1/3",
+              "2/3"
+            ],
+            [
+              "-2",
+              "-1"
+            ],
+            [
+              "1",
+              "-1"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        },
+        {
+          "degree": 3,
+          "coefficients_low_to_high": [
+            [
+              "-1/3",
+              "1/3"
+            ],
+            [
+              "-1",
+              "-2"
+            ],
+            [
+              "2",
+              "1"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        },
+        {
+          "degree": 3,
+          "coefficients_low_to_high": [
+            [
+              "-1"
+            ],
+            [],
+            [
+              "3",
+              "0"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        }
+      ]
+    },
+    {
+      "a": 2,
+      "b": 0,
+      "D": "-omega^a*E-omega^b",
+      "remaining_E_polynomial_low_to_high": [
+        [
+          "-1/6",
+          "-1/6"
+        ],
+        [
+          "7/6",
+          "0"
+        ],
+        [
+          "8/3"
+        ],
+        [
+          "-1/3",
+          "-1/3"
+        ],
+        [
+          "-55/6",
+          "0"
+        ],
+        [
+          "-53/3"
+        ],
+        [
+          "25/2",
+          "25/2"
+        ],
+        [
+          "7/2",
+          "0"
+        ],
+        [
+          "27/2"
+        ],
+        [
+          "-23/2",
+          "-23/2"
+        ],
+        [
+          "11/2",
+          "0"
+        ],
+        [
+          "1"
+        ]
+      ],
+      "degree": 11,
+      "factors": [
+        {
+          "degree": 1,
+          "coefficients_low_to_high": [
+            [
+              "-1",
+              "0"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        },
+        {
+          "degree": 1,
+          "coefficients_low_to_high": [
+            [
+              "1/2",
+              "0"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        },
+        {
+          "degree": 3,
+          "coefficients_low_to_high": [
+            [
+              "1/3",
+              "2/3"
+            ],
+            [
+              "-2",
+              "-1"
+            ],
+            [
+              "1",
+              "-1"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        },
+        {
+          "degree": 3,
+          "coefficients_low_to_high": [
+            [
+              "-1/3",
+              "1/3"
+            ],
+            [
+              "-1",
+              "-2"
+            ],
+            [
+              "2",
+              "1"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        },
+        {
+          "degree": 3,
+          "coefficients_low_to_high": [
+            [
+              "-1"
+            ],
+            [],
+            [
+              "3",
+              "0"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        }
+      ]
+    },
+    {
+      "a": 2,
+      "b": 1,
+      "D": "-omega^a*E-omega^b",
+      "remaining_E_polynomial_low_to_high": [
+        [
+          "1/6",
+          "0"
+        ],
+        [
+          "-7/6",
+          "-7/6"
+        ],
+        [
+          "8/3"
+        ],
+        [
+          "1/3",
+          "0"
+        ],
+        [
+          "55/6",
+          "55/6"
+        ],
+        [
+          "-53/3"
+        ],
+        [
+          "-25/2",
+          "0"
+        ],
+        [
+          "-7/2",
+          "-7/2"
+        ],
+        [
+          "27/2"
+        ],
+        [
+          "23/2",
+          "0"
+        ],
+        [
+          "-11/2",
+          "-11/2"
+        ],
+        [
+          "1"
+        ]
+      ],
+      "degree": 11,
+      "factors": [
+        {
+          "degree": 1,
+          "coefficients_low_to_high": [
+            [
+              "-1/2",
+              "-1/2"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        },
+        {
+          "degree": 1,
+          "coefficients_low_to_high": [
+            [
+              "1",
+              "1"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        },
+        {
+          "degree": 3,
+          "coefficients_low_to_high": [
+            [
+              "-1"
+            ],
+            [],
+            [
+              "-3",
+              "-3"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        },
+        {
+          "degree": 3,
+          "coefficients_low_to_high": [
+            [
+              "1/3",
+              "2/3"
+            ],
+            [
+              "1",
+              "-1"
+            ],
+            [
+              "-2",
+              "-1"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        },
+        {
+          "degree": 3,
+          "coefficients_low_to_high": [
+            [
+              "-1/3",
+              "1/3"
+            ],
+            [
+              "2",
+              "1"
+            ],
+            [
+              "-1",
+              "-2"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        }
+      ]
+    },
+    {
+      "a": 2,
+      "b": 2,
+      "D": "-omega^a*E-omega^b",
+      "remaining_E_polynomial_low_to_high": [
+        [
+          "1/6"
+        ],
+        [
+          "7/6"
+        ],
+        [
+          "8/3"
+        ],
+        [
+          "1/3"
+        ],
+        [
+          "-55/6"
+        ],
+        [
+          "-53/3"
+        ],
+        [
+          "-25/2"
+        ],
+        [
+          "7/2"
+        ],
+        [
+          "27/2"
+        ],
+        [
+          "23/2"
+        ],
+        [
+          "11/2"
+        ],
+        [
+          "1"
+        ]
+      ],
+      "degree": 11,
+      "factors": [
+        {
+          "degree": 1,
+          "coefficients_low_to_high": [
+            [
+              "-1"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        },
+        {
+          "degree": 1,
+          "coefficients_low_to_high": [
+            [
+              "1/2"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        },
+        {
+          "degree": 3,
+          "coefficients_low_to_high": [
+            [
+              "-1/3",
+              "1/3"
+            ],
+            [
+              "-1",
+              "1"
+            ],
+            [
+              "-1",
+              "1"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        },
+        {
+          "degree": 3,
+          "coefficients_low_to_high": [
+            [
+              "1/3",
+              "2/3"
+            ],
+            [
+              "1",
+              "2"
+            ],
+            [
+              "1",
+              "2"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        },
+        {
+          "degree": 3,
+          "coefficients_low_to_high": [
+            [
+              "-1"
+            ],
+            [],
+            [
+              "3"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "multiplicity": 1
+        }
+      ]
+    }
+  ],
+  "normalized_parameter_polynomial_low_to_high": [
+    [
+      "1/6"
+    ],
+    [
+      "7/6"
+    ],
+    [
+      "8/3"
+    ],
+    [
+      "1/3"
+    ],
+    [
+      "-55/6"
+    ],
+    [
+      "-53/3"
+    ],
+    [
+      "-25/2"
+    ],
+    [
+      "7/2"
+    ],
+    [
+      "27/2"
+    ],
+    [
+      "23/2"
+    ],
+    [
+      "11/2"
+    ],
+    [
+      "1"
+    ]
+  ],
+  "normalized_parameterization": "D=-omega^b*(t+1), E=omega^(b-a)*t, a,b=0..2",
+  "sum_line_degrees": 99,
+  "geometric_finite_point_count": 99,
+  "common_E_polynomial_degree": 33,
+  "multiple_line_points": [],
+  "scope": "conditional necessary cover from elliptic obstruction plus previous Delta-open exclusion, not admissibility at remaining points",
+  "not_claimed": [
+    "remaining finite points excluded",
+    "axis families classified",
+    "complete H3 classification",
+    "EG/Rains/trace geometry computer verified"
+  ]
+}

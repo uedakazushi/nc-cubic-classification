@@ -3403,7 +3403,43 @@
       "regular trace Gram determinant9^81 and Artinian total81 PASS",
       "v260 main LuaLaTeX PASS clean",
       "all36 previous replay plus polynomialFrobenius/secondCSA/two_fibers/orbit individual PASS (40 total across runs)",
-      "independent E3 allu,v fixed-weight center calculation running, not claimed complete",
+      "independent E3 allu,v weight0 center9:46cols/41pivots/free5, all original commutator reinsertion PASS in char0",
+      "git diff --check PASS"
+    ]
+  },
+  "third_root_unit_boundary_elliptic_reduction_v261": {
+    "status": "ordinary all-proper-elliptic H3 obstruction using EG center existence; exact potential/discriminant/finite-cover identities PASS",
+    "proof": "papers/sections/cubic_third_root_unit_boundary_elliptic_exclusion.tex",
+    "validator": "computations/verify_cubic_third_root_unit_boundary_elliptic_reduction.py",
+    "certificate": "computations/cubic_third_root_unit_boundary_elliptic_reduction_certificate.json",
+    "results": [
+      "every proper elliptic Sklyanin boundary in six-parameter w1 chart excluded, no L/Ω/shear or normal-kernel uniqueness assumptions",
+      "allw1 H3 necessary residual is two nonzero axes plus99 explicit D,E points",
+      "all9 Hesse lines normalize to common squarefree degree11 h(t), badPHS/axes removed,99distinct verified",
+      "original untwisted relations equal cyclic potential derivatives for allD,E,Z,u,v"
+    ],
+    "external_input": {
+      "EG": {
+        "arxiv": "0709.3593v4",
+        "url": "https://arxiv.org/abs/0709.3593v4",
+        "pdf_sha256": "bb1730c492553a7e233a82e54b712f20b20a1e6d60e13324740f0d5580797901",
+        "fresh_read": "Theorem3.3.2(i),(ii), full printed proof§8.3 p32, and contrast with generic Theorem3.4.5",
+        "applies": "homogeneous CY cubic, weights1,1,1, any lower cyclic potential; nonscalar central filtered degree<=3, no generic hypothesis",
+        "basefield": "original complex-field existence descends by finite centrality linear-system ranks to any characteristic-zero coefficient field",
+        "audit_limit": "external theorem input, not full deep-paper independent audit"
+      },
+      "IS": "Theorem1.1 PHS criterion and Cor6.1 CY criterion re-read from same audited primary PDF"
+    },
+    "not_claimed": [
+      "axis or99point H3 admissibility determined",
+      "w0 chart covered",
+      "complete H3 classification"
+    ],
+    "executed_checks": [
+      "full potential/9-line/Delta restriction/squarefree/normalized parameter/point-count validator PASS with default Sympy",
+      "v261 main LuaLaTeX PASS after filename break fix; no overfull or unresolved references/citations",
+      "E3 independent char0 allu,v weight0 kernel PASS",
+      "all36 prior unified replay plus5 additional individual validators PASS (41 total across runs)",
       "git diff --check PASS"
     ]
   }

@@ -1,0 +1,30 @@
+{
+  "prime": 0,
+  "omega": "primitive symbolic",
+  "fixed_uv": null,
+  "weight_zero_only": true,
+  "selected_columns": 46,
+  "constant_center_pivots": 41,
+  "nonzero_residuals": 0,
+  "free_columns": 5,
+  "dimensions": [
+    1,
+    4,
+    10,
+    19,
+    31,
+    46,
+    64,
+    85,
+    109,
+    136,
+    166
+  ],
+  "inverse_count": 91,
+  "seconds": 85.35020844099927,
+  "scope": "exact char0 E3 all6 embeddings, polynomial in u,v, weight0 central degree9 only",
+  "all_logged_inverse_norms_units_at_E2": null,
+  "numeric_elliptic_E": 3,
+  "reproduce": "python computations/explore_cubic_third_root_boundary_L_function_center.py --prime 0 --elliptic-E 3 --weight-zero --output /tmp/E3_center.json",
+  "proof_dependency": false
+}

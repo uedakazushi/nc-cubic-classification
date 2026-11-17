@@ -48,6 +48,7 @@ CHECKS=[
  'verify_cubic_third_root_unit_boundary_L_second_CSA.py',
  'verify_cubic_third_root_unit_boundary_L_two_fibers.py',
  'verify_cubic_third_root_unit_boundary_L_orbit.py',
+ 'verify_cubic_third_root_unit_boundary_elliptic_reduction.py',
 ]
 results=[]
 for name in CHECKS:

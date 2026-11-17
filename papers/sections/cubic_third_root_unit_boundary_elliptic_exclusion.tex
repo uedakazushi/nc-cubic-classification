@@ -1,0 +1,97 @@
+\subsection{正常一次境界の全proper elliptic層の排除}
+\label{subsec:cubic-third-root-unit-boundary-elliptic-exclusion}
+\begin{theorem}[楕円Sklyanin境界の構造的障害]
+\label{thm:cubic-third-root-unit-boundary-elliptic-exclusion}
+六係数の正常一次境界を $w=1$ に正規化する。
+\[
+ DE\bigl((D^3+E^3+1)^3-27D^3E^3\bigr)\ne0
+\]
+なら、全 $Z,u,v$ でH3切断は存在しない。
+ここでは $L=0$、$\Omega\ne0$、$Z$ を消すshearの存在を仮定しない。
+\end{theorem}
+\begin{proof}
+H3を仮定し、既知のCY untwist $C=B^\theta$ を取る。
+$x$ は中央正則で、$S=C/(x)$ はproper三次元Sklyanin代数
+$(D\omega,E\omega^2,1)$ である。
+$G\bmod x=0$ なら $G$ は $x$ 因子を持って切断が非整域となるので、
+$\Gamma=G\bmod x\ne0$ としてよい。
+そのnormalizerは $\delta=(y,\omega^2b,\omega c)$。
+標準中心三次 $g_0$ の定数倍ではないので、
+$H=S/(g_0)$ における像 $\gamma$ も非零である。
+$H$ の分数環における三次元による共役を関数体上で比較すると、
+$\tau^3=\delta|_{k(\mathcal E)}$。
+右辺は滑らかな平面三次上の非自明な位数3の射影変換なので、$\tau$ は正確に位数9となる。
+
+ここでは中央三次の明示式は必要ない。
+$D_{\rm aff}=(C[x^{-1}])_0$ の生成元を $Y,B_0,C_0$ とすると、
+三関係は次のcyclic potentialの三つの偏微分に等しい：
+\begin{align*}
+ \Phi={}&D\omega YB_0C_0+E\omega^2YC_0B_0
+       +\frac{Y^3+B_0^3+C_0^3}{3}\\
+       &+\omega^2Z B_0C_0+\frac v2Y^2+uY.
+\end{align*}
+実際、元の関係のright Zhang untwist後、$y,b,c$ の関係をそれぞれ
+$1,\omega,\omega^2$ 倍すればこの三偏微分となる。
+この恒等式は全係数について直接検証できる。
+最高三次potentialはproper SklyaninのCY-potentialである
+\cite[Corollary~6.1]{ISSklyanin}。
+Etingof--Ginzburg\cite[Theorem~3.3.2(ii), proof in \S8.3]{EGdelpezzo}を使うと、
+$D_{\rm aff}$ に次数3以下の非scalar中心元 $\psi$ が存在する。
+この定理の該当部分はgeneric仮定を要求しない。
+原定理の基礎体が $\mathbb C$ である点は、有限生成係数体を $\mathbb C$ に埋め、
+次数3以下の中心を定義する有限線型系のrankを降下することで、任意の標数0体へ拡張できる。
+
+位数9のSklyanin中心は次数1,2で零、次数3では $kg_0$ である。
+従って $\psi$ の最高記号は $g_0$ の非零倍となり、
+同次化すると $C$ の中心三次 $\Psi$ を得る。
+ここからは中央fiberによるPI次数の証明、trace-closed中央商の補題、
+正常三次の九点軌道の証明をそのまま適用できる。
+すなわちRainsの定理から各 $D_{\rm aff}/(\psi-\lambda)$ はPI次数9で、
+その全fiberの恒等式から $D_{\rm aff}$ と $C$ もPI次数9。
+Staffordのtrace-closed性と
+補題\ref{lem:cubic-trace-closed-central-reduction}により中心は $S$ から持ち上がる。
+正常 $\gamma$ の九点軌道上で非消滅な中心九次を選ぶと、
+$A=C/(G)$ は多項式中心上自由階数81、boundary fiberは $M_9(k)$ となる。
+これで中心一般点の次数9と、位数3の相対Frobenius双対を得る。
+有限大域次元ならBrauer周期は3を割るが、整域なら周期9となるのでH3に矛盾する。
+この議論では、先に特定の正常核の式を選んだり、その次元を1と仮定したりしていない。
+\end{proof}
+
+\begin{corollary}[二軸と99個の境界パラメータ点への必要還元]
+\label{cor:cubic-third-root-unit-boundary-99}
+$w\ne0$ を $w=1$ に正規化した正常一次境界のH3候補は、
+$D=0,E\ne0$ 又は $E=0,D\ne0$ の二つの軸族と、以下の99個の $(D,E)$ に限る。
+\[
+ D=-\omega^b(t+1),\qquad E=\omega^{b-a}t,
+ \qquad a,b\in\{0,1,2\},\quad h(t)=0,
+\]
+ただし
+\begin{align*}
+ h(t)={}&(t-1)(t+\tfrac12)(t^3+3t^2-1)\\
+ &\cdot\bigl[t^3+(1-\omega)(t^2+t+\tfrac13)\bigr]
+       \bigl[t^3+(2+\omega)(t^2+t+\tfrac13)\bigr].
+\end{align*}
+これは必要被覆であり、各軸や99点での全 $Z,u,v$ の許容性はまだ判定していない。
+\end{corollary}
+\begin{proof}
+前定理から、両軸以外では
+\[
+ (D^3+E^3+1)^3-27D^3E^3
+  =\prod_{a,b=0}^2(D+\omega^aE+\omega^b)=0.
+\]
+既証の $\Delta\ne0$ 排除も同時に満たす必要がある。
+九直線の各々に $D=-\omega^aE-\omega^b$ を代入し、
+$\Delta$ の全因子を掛け、square-free部分を取る。
+軸点と、三次元SklyaninがPHSでない $D^3=E^3=1$ を除く。
+PHSの必要性は $x$ の正則性からのHilbert級数であり、
+そのパラメータ判定は\cite[Theorem~1.1]{ISSklyanin}による。
+原点も同じPHS条件で除外される。
+
+各直線で $t=\omega^{a-b}E$ と正規化すると、残る多項式は上の同じsquare-freeな11次式 $h(t)$。
+全代入とgcd、九直線間の重複点を厳密演算で調べると、
+残る点同士に重複はなく、$9\cdot11=99$ 点となる。
+全係数、各直線での多項式、因数分解と重複照合は
+\texttt{verify\_cubic\_third\_root\_unit\_boundary\_}\allowbreak
+\texttt{elliptic\_reduction.py}に保持する。
+ここでprimitive三乗根のGaloisラベルを同型類と同一視していない。
+\end{proof}
