@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "scope": "original complete four critical overlaps, forced nonresonant constraints, exact shear and resonant split-Smith units",
+  "critical_overlap_residuals": {
+    "(2, 1, 0)": {},
+    "(3, 1, 0)": {
+      "(0, 0, 1)": "k*q*(-1 - CRootOf(z**2 + z + 1, 1)) - k*CRootOf(z**2 + z + 1, 1)"
+    },
+    "(3, 2, 0)": {
+      "(0, 0, 2)": "(k*q*(1 + CRootOf(z**2 + z + 1, 1)) + k*CRootOf(z**2 + z + 1, 1))/q"
+    },
+    "(3, 2, 1)": {
+      "(0, 0, 0)": "(2*h*k*q - h*m + h*n*q*(1 + CRootOf(z**2 + z + 1, 1)))/q**2",
+      "(0, 1, 2)": "(-m*q*CRootOf(z**2 + z + 1, 1) + m - n*q**2 + n*q*(-1 - CRootOf(z**2 + z + 1, 1)))/q**2"
+    }
+  },
+  "nonresonant_constraints": "kappa=0,n=-omega*m/q for q!=omega^2",
+  "shear": "y_new=y+m/(q-omega^2)*x",
+  "resonant_parameter": "q=omega^2, split W1=0",
+  "nonzero_delta_x": "mu-fixed Ore coefficients commute with x, top [G,x] coefficient N*a_N*delta(x) forces G in A3; quantum-plane gcd excludes nonzero image",
+  "chart_hypotheses": [
+    "A=<x,b,c> quantum-Weyl AS3 base with xb=omega^2*bx,xc=omega*cx,bc-qcb=h*x^2",
+    "B=A[y;sigma,delta] actual graded Ore extension; x need not be normal in B",
+    "mu_B(x,y,b,c)=(x,y,omega*b,omega^2*c)",
+    "both c^2 in delta(b) and b^2 in delta(c) nonzero"
+  ],
+  "not_claimed": [
+    "this AS3 subbase exists for every proportional cube coupling",
+    "all AS3 subbases have this form",
+    "all proportional atlas covered",
+    "complete H3 classification"
+  ]
+}

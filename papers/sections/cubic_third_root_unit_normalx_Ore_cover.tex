@@ -1,0 +1,94 @@
+\subsection{量子Weyl AS3基底を持つ二方向曲率Ore層の被覆}
+\label{subsec:cubic-third-root-unit-normalx-Ore-cover}
+\begin{theorem}[指定量子Weyl基底Ore層の全排除]
+\label{thm:cubic-third-root-unit-normalx-Ore-cover-empty}
+$A$ が
+\[
+ xb=\omega^2bx,\qquad xc=\omega cx,\qquad bc-qcb=h x^2
+ \quad(q\in k^*,h\in k)
+\]
+という三生成元AS3基底であり、$B=A[y;\sigma,\delta]$ が実際の次数付きOre拡大であるとする。
+$\mu_B(x,y,b,c)=(x,y,\omega b,\omega^2c)$ と仮定する。
+$\delta(b)$ の $c^2$ 係数、$\delta(c)$ の $b^2$ 係数が共に非零なら、
+$B$ にH3切断は存在しない。
+この定理は表示されたAS3部分代数を仮定する層の被覆であり、
+全比例結合atlasがそのような部分代数を持つとは主張しない。
+\end{theorem}
+\begin{proof}
+基底の中山は前節と同じく
+$\mu_A(x,b,c)=(x,\omega q b,(\omega q)^{-1}c)$。
+Ore公式 $\mu_B|_A=\sigma^{-1}\mu_A$ は
+\[
+ \sigma(x,b,c)=(x,qb,q^{-1}c)
+\]
+を強制する。
+$\mu_B(y)=y$ なので、Ore関係に $\mu_B$ を作用させると
+$\sigma,\delta$ は $\mu_B|_A$ と可換である。
+従って二次重みから
+\[
+ \delta(x)\in\langle x^2,bc\rangle,\quad
+ \delta(b)\in\langle bx,c^2\rangle,\quad
+ \delta(c)\in\langle cx,b^2\rangle.
+\]
+まず $F=\delta(x)\ne0$ の場合を排除する。
+$\sigma(x^2)=x^2,\sigma(bc)=bc$ より $\sigma(F)=F$。
+H3の候補 $G=\sum_{j=0}^N a_jy^j$ は中山不変なので、
+全係数 $a_j$ が $\mu_B|_A$ 固定である。
+$A$ では $xa=\mu_B^{-1}(a)x$ だから全 $a_j$ は $x$ と可換。
+Ore関係 $yx=xy+F$ を反復すると、
+$[y^N,x]$ の最高 $y^{N-1}$ 係数は $N F$。
+ここで $\sigma(F)=F$ を使い、$\delta(F)$ はより低い次数にしか寄与しない。
+候補の正常式 $[G,x]=0$ より、$N>0$ なら $N a_NF=0$、
+標数0と $A$ の整域性に矛盾する。従って $G\in A_3$。
+
+$A/(x)$ は量子平面 $bc=qcb$。
+$G$ の像の単項式 $b^rc^s$（$r+s=3$）に対し、
+正常 $b,c$ 式は $q^r=q^s=\omega$ を必要とする。
+$r$ 又は $s$ が0なら不可能、残る $(1,2),(2,1)$ も不可能。
+従って像は零、$G\in xA_2$ であり、切断は非整域。
+この議論は $F\ne0$ なら二方向曲率の非零性さえ必要としない。
+
+残るのは $F=0$ である。このとき $x$ は $B$ 内でも正常で、
+以下の記法では $\kappa=0$ だが、重なりの整合性の確認のため
+一般に $\delta(x)=\kappa x^2$ と書いた式も記録する。
+仮定した二つの非零曲率は、$b,c,y$ の非零scalar変更で
+\[
+ \delta(b)=m bx-qc^2,\qquad
+ \delta(c)=n cx-q^{-1}b^2
+\]
+へ同時に正規化できる。実際、元の二係数が $u,v\ne0$ なら
+$b\mapsto r b,c\mapsto t c,y\mapsto s y$ による新係数は
+$sr u/t^2,st v/r^2$ であり、代数閉体上で所望の二値にできる。
+
+順序 $x<b<c<y$ の元関係の三次重なりを比較する。
+$ybx$ の差の $x^2b$ 係数と、$ycb$ の差の $xbc$ 係数はそれぞれ
+\[
+ \kappa\omega^2(q-\omega^2),\qquad
+ -q^{-2}(\omega m+qn)(q-\omega^2).
+\]
+$B$ は実際のOre拡大なので基底単項式は独立、従ってこれらは零。
+公開検証器は他の二重なりと $ycb$ の $x^3$ 係数も含め、
+元の四重なりの全残差をexactに記録する。
+
+$q\ne\omega^2$ なら
+$\kappa=0,n=-\omega m/q$。
+$y'=y+t x$ と変更すると二つの一次補正は
+\[
+ m'=m+t(\omega^2-q),\qquad
+ n'=n+t(\omega-q^{-1}).
+\]
+$t=m/(q-\omega^2)$ により双方零。
+$x$ と $y'$ は可換となり、全六関係は前節の $B_{q,h}$ に一致する。
+しかも $x,y$ は共に中山固定なので、この変更で中山の規約も保たれる。
+従って定理\ref{thm:cubic-third-root-unit-deformed-double-Ore-empty}が全ての $h$ を排除する。
+
+$q=\omega^2$ ではshearの分母を可逆化してはならない。
+代わりに正常正則 $x$ の進付随次数環を取る。
+$h x^2,\kappa x^2,m bx,n cx$ は、それぞれの関係の他項より
+$x$ 次数が真に高い。Ore基底から付随次数環は正確にsplit $B_{q,0}$ である。
+元の候補正常三次の最低 $x$ 次数成分は、このsplit環の $W_1$ に入る。
+しかし $q=\omega^2$ は $q\ne-1,q^3\ne\omega^2$ を満たし、
+定理\ref{thm:cubic-third-root-unit-split-double-Ore-empty}よりその核は零。
+従って元の候補も零である。
+これで共鳴値を除外せず、指定されたOre層全体を排除した。
+\end{proof}

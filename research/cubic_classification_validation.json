@@ -2939,5 +2939,27 @@
       "all27 spectral validators PASS",
       "git diff --check PASS"
     ]
+  },
+  "third_root_unit_normalx_Ore_cover_v244": {
+    "status": "ordinary actual Ore chart necessity, nonzero delta(x) factor, exhaustive shear/resonant filtration proof; all-overlap and quantum-plane gcd PASS",
+    "proof": "papers/sections/cubic_third_root_unit_normalx_Ore_cover.tex",
+    "validator": "computations/verify_cubic_third_root_unit_normalx_Ore_cover.py",
+    "certificate": "computations/cubic_third_root_unit_normalx_Ore_cover_certificate.json",
+    "results": [
+      "actual quantum-Weyl AS3 base Ore chart with two nonzero curvatures excluded; x need not be normal in B",
+      "nonzero delta(x) forces G into base and then x factor",
+      "delta(x)=0 nonresonant corrections gauge to excluded family; resonant q=omega^2 associated graded normal kernel zero"
+    ],
+    "not_claimed": [
+      "all rank1 cube couplings admit normal x or this AS3 base",
+      "degenerate mixed projections covered",
+      "nonunit semisimple atlas classified",
+      "complete H3 classification"
+    ],
+    "executed_checks": [
+      "all28 spectral validators PASS",
+      "main LuaLaTeX PASS; no overfull/undefined references/citations",
+      "git diff --check PASS"
+    ]
   }
 }
