@@ -52,6 +52,8 @@ CHECKS=[
  'verify_cubic_third_root_unit_boundary_axes.py',
  'verify_cubic_third_root_unit_boundary_axis_incidence.py',
  'verify_cubic_third_root_unit_boundary_99.py',
+ 'verify_cubic_third_root_unit_boundary_axis_center.py',
+ 'verify_cubic_third_root_unit_boundary_axis_CSA.py',
 ]
 results=[]
 for name in CHECKS:

@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "p": 109,
+  "root": 4,
+  "omega": 63,
+  "Psi": 1,
+  "Z": 0,
+  "center": 1,
+  "trace_determinant": 108,
+  "matrix_size": 81,
+  "int64_dot_bound": 944784,
+  "original_x": 0,
+  "auxiliary_homogenizer": true,
+  "lift": "positive center80 minor and trace determinant lift over Phi18; original x0 fiber independent of allu,v",
+  "not_claimed": [
+    "generic division",
+    "complete H3 classification"
+  ]
+}

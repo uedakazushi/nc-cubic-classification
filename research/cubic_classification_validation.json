@@ -3467,5 +3467,30 @@
       "w0 chart covered",
       "whole H3 complete"
     ]
+  },
+  "third_root_unit_boundary_axis_exclusion_v264": {
+    "status": "ordinary H3 exclusion for all six axis points, allZuv; hence allw_nonzero normal-x chart excluded",
+    "proof": "papers/sections/cubic_third_root_unit_boundary_axes.tex",
+    "validators": [
+      "verify_cubic_third_root_unit_boundary_axis_center.py",
+      "verify_cubic_third_root_unit_boundary_axis_CSA.py"
+    ],
+    "checks": [
+      "default Sympy alluv center9 kernel5/41unit pivots PASS",
+      "central Psi and all kernel original commutators PASS",
+      "Artinian13 dimensions/total81 and both original relation actions PASS",
+      "positive109 boundaryfiber Psi1 Z0 trace det108, center1 PASS",
+      "v264 main LuaLaTeX clean PASS"
+    ],
+    "logic": [
+      "finite-free81 conditional on necessary H3 Hilbert series, not finite-degree AS4 inference",
+      "positive boundary fiber independent of alluv",
+      "opposite-ring relation check transfers contradiction to second axis",
+      "relative Frobenius order3 and published order period obstruction"
+    ],
+    "not_claimed": [
+      "w0 full classification",
+      "complete H3 classification"
+    ]
   }
 }
