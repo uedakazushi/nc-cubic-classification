@@ -1,0 +1,60 @@
+\subsection{同じPI次数を保つ中央商の中心持上げ}
+\label{subsec:cubic-third-root-unit-boundary-L-trace-center}
+\begin{lemma}[trace-closed中央商]
+\label{lem:cubic-trace-closed-central-reduction}
+$T$ は標数0体上のprime PI代数で、PI次数を $n$ とする。
+$T$ は自身のtrace ringに等しいと仮定する。
+$x\in Z(T)$ は正則で、$S=T/(x)$ はnoetherian整域かつPI次数 $n$ とする。
+このとき自然な写像 $Z(T)\to Z(S)$ は全射で、核は $xZ(T)$ である。
+\end{lemma}
+\begin{proof}
+$R=\operatorname{im}(Z(T)\to Z(S))$、$L=\operatorname{Frac}R$ と置く。
+trace-closed性から、各 $a\in T$ の次数 $n$ のreduced characteristic polynomialは
+$Z(T)$ に係数を持つ。従って任意の $s\in S$ は $R$ 上次数 $n$ のmonic多項式を満たす。
+$S_L$ の全元も $L$ 上次数 $n$ 以下で代数的である。
+非零元の消滅多項式から $t$ の因子を除けば定数項を非零にできるので、
+その逆元は同じ元の多項式で与えられる。
+従って $S_L$ は除法環であり、$Q(S)$ に等しい。
+
+$K=Z(Q(S))$ の各元の $L$ 上の次数も $n$ 以下である。
+標数0のprimitive element定理から、$[K:L]$ は有限で $n$ 以下。
+実際、各有限部分拡大は単拡大となり次数 $n$ 以下なので、全拡大の次元も $n$ 以下となる。
+$Q(S)$ の $K$ 上の次数は仮定により $n$。
+その最大部分体 $M/K$ は次数 $n$ であり、$M/L$ は有限分離拡大である。
+再びprimitive elementを取ると、その次数は $n[K:L]$ であるが、
+$Q(S)=S_L$ の元の次数上界 $n$ により $[K:L]=1$。
+従って $K=L$ である。
+
+$T$ のreduced traceは $xT$ を $xZ(T)$ に写すので、
+$R$ 線型な巡回写像 $\bar t:S\to R$ を誘導し、$\bar t(1)=n$ を満たす。
+これを $L$ へ局所化すると、中心単純代数 $Q(S)$ 上の $L$ 線型巡回写像になる。
+このような写像はreduced traceのscalar倍であり、単位元の値からそれ自身に等しい。
+従って任意の $z\in Z(S)$ について $\bar t(z)=nz\in R$、すなわち $z\in R$ となる。
+最後に、$xa\in Z(T)$ なら $x[a,b]=0$ が全 $b\in T$ で成り立ち、
+$x$ の正則性から $a\in Z(T)$。これが核の記述を与える。
+\end{proof}
+
+\begin{theorem}[全 $L/\Omega$ 上の中心持上げ]
+\label{thm:cubic-third-root-unit-boundary-L-trace-center}
+本族の全楕円パラメータと全 $u,v$ に対し
+\[
+ Z(C)/(x)\simeq Z(S_C),\qquad
+ \operatorname{gr} Z(D)=Z(S_C).
+\]
+$C$ は全中心上有限で、その中心は正規である。
+ここでは各幾何学的点についての主張であり、任意底変更での全中心形成までは主張しない。
+\end{theorem}
+\begin{proof}
+既証の正規一次拡大認識とLBS\cite[Corollaries~2.3, 2.7]{LBS}から、
+$C$ はnoetherian、Auslander-regular、Cohen--Macaulayである。
+またconnected gradedかつ有限大域次元なのでstably freeである。
+後者は、有限生成projectiveにgood filtrationを入れ、
+associated gradedの有限graded free resolutionをfiltered free resolutionへ持ち上げ、
+その分裂を交互に取ることで直接分かる。
+前節でPI次数9を証明した $D$ と $C$ は、中央Laurent局所化で同じPI次数を持つ。
+従ってStafford\cite[Theorem~2.10, Corollary~2.11]{StaffordMaxOrders}により、
+$C$ は自身のtrace ringに等しく、全中心上有限、中心は正規となる。
+$S_C=C/(x)$ も整域でPI次数9なので、前補題を適用できる。
+中心は次数付きであるから、斉次中心元は同じ次数の中心元へ持ち上がる。
+中央 $x$ の局所化の次数零部分を取れば $D$ の濾過中心の主張が従う。
+\end{proof}

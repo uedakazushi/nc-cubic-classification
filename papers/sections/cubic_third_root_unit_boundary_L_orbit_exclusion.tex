@@ -1,0 +1,105 @@
+\subsection{九点軌道の中心fiberと全 $L/\Omega$ のH3排除}
+\label{subsec:cubic-third-root-unit-boundary-L-orbit-exclusion}
+\begin{lemma}[正常三次の九点軌道]
+\label{lem:cubic-third-root-unit-boundary-L-nine-orbit}
+$H=S_C/(g_0)=B(\mathcal E,\tau,\mathcal L)$ とし、
+$\gamma=\Gamma_0\bmod g_0\ne0$ とする。
+$\gamma$ の零因子は、$\tau$ の一つの被約九点軌道である。
+$z\in Z(H)_9$ をその軌道上で非消滅となるように選べば
+\[
+ (H/(\gamma))/(z-1)\simeq M_9(k).
+\]
+この $z$ は $Z(S_C)_9$ の元の像として選べる。
+\end{lemma}
+\begin{proof}
+$\deg\mathcal L=3$ なので、三次section $\gamma$ の零因子 $P$ の次数は9。
+正常性から $\gamma H_1=H_1\gamma$。
+$\mathcal L$ がbasepoint-freeなので、左辺の共通base divisorは $P$、
+右辺は $\tau P$ である。従って $P$ は $\tau$ 不変となる。
+位数9の非自明な平行移動は自由に作用するから、
+次数9の不変有効因子は一つの被約九点軌道に限る。
+
+$Q=H/(\gamma)$ は、この九点へのsectionの制限像と同一視できる。
+実際、その核は各次数で $\gamma H_{n-3}$ であり、
+$H^1(\mathcal L_n(-P))=0$ が $n\ge4$ で成り立つので、
+その次数以降は九点上の全sectionsに一致する。
+$Z(H)_9$ は商楕円曲線上の次数3のline bundleのsectionsなので、
+軌道の像で非消滅な $z$ を選べる。
+Smith--Tate\cite[Theorem~3.7 and its proof]{SmithTateCenters}の中心持上げにより、
+これは $Z(S_C)_9$ から来る。
+
+$z$ を反転すれば低次数の制限も消え、九点上の全skew Laurent section代数となる。
+九つのidempotentを $e_i$、九点を巡回する次数1の単元を $t$ とすれば、
+$z$ の規格化後は $t^9=z$ である。
+従って $z=1$ の商は $k^9\rtimes\mathbb Z/9$、すなわち $M_9(k)$。
+具体的に $e_i t^r$ はmatrix unit $E_{i,i-r}$ に写り、全81個のmatrix unitを与える。
+\end{proof}
+
+\begin{theorem}[全正常一次 $L/\Omega$ 境界の中心と次数9]
+\label{thm:cubic-third-root-unit-boundary-L-all-center}
+$L=0,\Omega\ne0$ の全楕円パラメータと全 $u,v$ について、
+ある中心三次 $\Psi$ と中心九次 $z_9$ を用いて
+\[
+ Z(A)=k[x,\Psi,z_9],\qquad
+ A\text{ はこの多項式環上自由階数81}
+\]
+となる。$A$ は素で、その中心一般点は次数9の中心単純代数である。
+従って $U$ は素、$Z(U)=k[\psi,z]$、PI次数9である。
+\end{theorem}
+\begin{proof}
+前補題で選んだ $z\in Z(S_C)_9$ を
+定理\ref{thm:cubic-third-root-unit-boundary-L-trace-center}により $Z(C)_9$ へ持ち上げ、
+その $A=C/(G)$ への像を $z_9$ とする。
+$x$ は $A$ 上正則であり、$\Psi\bmod x$ は標準の $g_0$ の非零倍である。
+$g_0$ と $\Gamma_0$ の正則列の交換から $\Psi$ も $A/(x)$ 上正則。
+さらに $z$ は九点上で非消滅なので、$Q=H/(\gamma)$ 上正則である。
+従って $x,\Psi,z_9$ は中央正則列となる。
+
+$Q$ のHilbert値は次数0から $1,3,6,8,9,9,\ldots$ なので、
+$Q/(z)$ の値は
+\[
+ 1,3,6,8,9,9,9,9,9,8,6,3,1,0,\ldots,
+\]
+総数81となる。
+次数付きNakayamaとHilbert級数の比較により、
+三中心元は代数的独立で、$A$ はその多項式環上自由階数81となる。
+しかも中心fiber
+\[
+ A/(x,\Psi,z_9-1)=Q/(z-1)\simeq M_9(k)
+\]
+が存在する。
+このfiberの正則trace形式は非退化、中心は一次元なので、
+同じ正の行列式とrank80 minorにより中心一般点も次数9の中心単純代数となる。
+全中心の元は多項式部分環上整で、その分数体に入るため、整閉性から全中心も一致する。
+自由性と一般点の単純性から $A$ は素。
+中央 $x$ の局所化と次数零部分を取ると、$U$ の全主張が従う。
+\end{proof}
+
+\begin{theorem}[正常一次例外曲線の全開集合排除]
+\label{thm:cubic-third-root-unit-boundary-L-all-no-H3}
+$w=1,L=0,\Omega\ne0$ の正常一次境界は、全 $Z,u,v$ でH3を与えない。
+\end{theorem}
+\begin{proof}
+既知のshearで $Z=0$ としてよい。
+$A$ のbalanced dualizing complexは、正常三次商の公式から
+$A_\delta(-1)[3]$、$\delta=(1,1,\omega^2,\omega)$ である。
+前定理の中心多項式環の次数和は $1+3+9=13$。
+中央正則列の\v Cech局所双対と $A$ の中心自由性を使うと
+\[
+ \operatorname{Hom}_{k[x,\Psi,z_9]}(A,k[x,\Psi,z_9])
+   \simeq A_\delta(12).
+\]
+中央 $x$ を反転して次数零部分を取れば
+$\operatorname{Hom}_{k[\psi,z]}(U,k[\psi,z])\simeq U_\delta$、$\delta^3=1$ となる。
+
+H3なら $U$ は整域かつ左右有限大域次元である。
+有限大域次元とFrobenius双対から、高さ1の完備orderはnormalとなる
+（補題\ref{lem:cubic-Frobenius-order-hereditary}）。
+位数3の双対に対する周期障害
+（命題\ref{prop:cubic-Frobenius-order-period}）によりBrauer周期は3を割る。
+しかし前定理の次数9と整域性、曲面period--index定理から周期は9となるので矛盾する。
+
+これは $L/\Omega$ の全点を扱うが、$\Omega=0$、残る別の $\Delta$ 曲線、
+$w=0$ や一方零結合、他のスペクトルを排除したという意味ではない。
+既存の $E=2$ のexact中心・二fiber計算は、この一般証明の独立な検証例として保持する。
+\end{proof}

@@ -9,10 +9,15 @@ from cubic_function_extension import CubicField
 from cubic_parameter_polynomials import ParameterRing
 from cubic_incremental_graded import GradedAlgebra
 
-def compute_center(prime=109,omega=63,fixed_uv=None,weight_zero=False):
+def compute_center(prime=109,omega=63,fixed_uv=None,weight_zero=False,elliptic_e=None):
  start=time.monotonic()
  E=s.Symbol('E')
- if prime:
+ if elliptic_e is not None:
+  assert not prime, 'numeric diagnostic currently uses characteristic zero'
+  z=s.Symbol('z');F=s.QQ.alg_field_from_poly(s.Poly(z*z+z+1,z));J=F;oo=F.unit;ee=F.convert(elliptic_e)
+  cube=elliptic_e**3
+  assert s.Poly(z**6-(cube+1)*z**3+cube**2-cube+1,z).is_irreducible
+ elif prime:
   assert s.isprime(prime)
   F=s.GF(prime);J=F.frac_field(E);ee=J.gens[0];oo=J.convert(omega)
   assert omega!=1 and (omega**2+omega+1)%prime==0
@@ -64,7 +69,7 @@ def compute_center(prime=109,omega=63,fixed_uv=None,weight_zero=False):
  def simplicity(c):
   key=tuple(c.a)
   if key not in simplicity_cache:
-   simplicity_cache[key]=sum(max(a.numer.degree(),a.denom.degree())+(i>0) for i,a in enumerate(c.a) if a)
+   simplicity_cache[key]=sum((max(a.numer.degree(),a.denom.degree()) if hasattr(a,'numer') else 0)+(i>0) for i,a in enumerate(c.a) if a)
   return simplicity_cache[key]
  piv={};waiting=rows
  while waiting:
@@ -88,15 +93,16 @@ def compute_center(prime=109,omega=63,fixed_uv=None,weight_zero=False):
     assert not total
  out={'prime':prime,'omega':omega if prime else 'primitive symbolic','fixed_uv':fixed_uv,'weight_zero_only':weight_zero,'selected_columns':len(ids),'constant_center_pivots':len(piv),'nonzero_residuals':len(waiting),'free_columns':len(free),'dimensions':[len(A.basis[j]) for j in range(11)],'inverse_count':len(CF.norm_log),'seconds':time.monotonic()-start,'scope':'function-field exploration; no assertion for every elliptic parameter or characteristic zero unless prime0 is completed'}
  two=F.convert(2)
- regular_at_E2=all(n.numer.evaluate(0,two) and n.denom.evaluate(0,two) for n in CF.norm_log)
- out['all_logged_inverse_norms_units_at_E2']=bool(regular_at_E2)
+ regular_at_E2=None if elliptic_e is not None else all(n.numer.evaluate(0,two) and n.denom.evaluate(0,two) for n in CF.norm_log)
+ out['all_logged_inverse_norms_units_at_E2']=None if regular_at_E2 is None else bool(regular_at_E2)
+ out['numeric_elliptic_E']=elliptic_e
  return out,A,piv,ids
 
 if __name__=='__main__':
  parser=argparse.ArgumentParser(description=__doc__)
- parser.add_argument('--weight-zero',action='store_true')
+ parser.add_argument('--elliptic-E',type=int);parser.add_argument('--weight-zero',action='store_true')
  parser.add_argument('--fixed-uv',choices=['u1v0','u0v1','v1'])
  parser.add_argument('--prime',type=int,default=109);parser.add_argument('--omega',type=int,default=63)
  parser.add_argument('--output',required=True);args=parser.parse_args()
- out,*_=compute_center(args.prime,args.omega,args.fixed_uv,args.weight_zero)
+ out,*_=compute_center(args.prime,args.omega,args.fixed_uv,args.weight_zero,args.elliptic_E)
  Path(args.output).write_text(json.dumps(out,indent=2)+'\n');print(out)

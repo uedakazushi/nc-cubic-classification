@@ -3361,5 +3361,50 @@
       "full L H3 exclusion",
       "complete H3 classification"
     ]
+  },
+  "third_root_unit_boundary_L_orbit_exclusion_v260": {
+    "status": "ordinary reduced-trace center-lifting and nine-orbit geometric proof; finite crossed-product/Hilbert certificate PASS",
+    "proofs": [
+      "papers/sections/cubic_third_root_unit_boundary_L_trace_center.tex",
+      "papers/sections/cubic_third_root_unit_boundary_L_orbit_exclusion.tex"
+    ],
+    "validator": "computations/verify_cubic_third_root_unit_boundary_L_orbit.py",
+    "certificate": "computations/cubic_third_root_unit_boundary_L_orbit_certificate.json",
+    "results": [
+      "equal PI-degree trace-closed central quotient has full center base change",
+      "allL/Ω C has center lifting onto S_C, finite normal center",
+      "Gamma section cuts one reduced9 orbit; boundary central fiber Mat9",
+      "allL/Ω,u,v: normal cut A free rank81 over full polynomial center; prime generic CSA9",
+      "allw1,L0,Ωnonzero,Z,u,v excluded from H3 by relative Frobenius order3 and period-index obstruction"
+    ],
+    "external_input": {
+      "Stafford": {
+        "title": "Auslander-Regular Algebras and Maximal Orders",
+        "author": "J.T.Stafford",
+        "journal": "J.LondonMathSoc(2)50(1994)276-292",
+        "doi": "10.1112/jlms/50.2.276",
+        "primary_url": "https://deepblue.lib.umich.edu/bitstream/handle/2027.42/135495/jlms0276.pdf?sequence=1",
+        "read": "primary indexed pages276,277,286; Theorem2.10 statement and Cor2.11 statement/full printed short proof",
+        "access_limit": "direct PDF fetch403, full PDF/full Theorem2.10 proof not read; no PDF digest claimed",
+        "hypotheses_checked": "C noetherian Auslander-regular/CM by LBS, stablyfree by connected-graded finite-free-resolution lift, affine PI9 by v258"
+      },
+      "LBS": "Cor2.3,Cor2.7 and their hypotheses re-read from same audited primary PDF",
+      "SmithTate": "Theorem3.7 proof explicitly gives center surjection to elliptic THCR"
+    },
+    "not_claimed": [
+      "Ωzero finite points covered",
+      "all remaining Δ curves covered",
+      "whole H3 classification completed",
+      "new novelty confirmed",
+      "external theorems mechanically verified"
+    ],
+    "executed_checks": [
+      "nine-cycle all6561 basis products PASS",
+      "regular trace Gram determinant9^81 and Artinian total81 PASS",
+      "v260 main LuaLaTeX PASS clean",
+      "all36 previous replay plus polynomialFrobenius/secondCSA/two_fibers/orbit individual PASS (40 total across runs)",
+      "independent E3 allu,v fixed-weight center calculation running, not claimed complete",
+      "git diff --check PASS"
+    ]
   }
 }
