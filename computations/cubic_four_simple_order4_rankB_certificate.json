@@ -1,0 +1,682 @@
+{
+  "status": "PASS",
+  "scope": "whole final rank(2,0,2,2) excluded; with previous two ranks whole order4 spectrum empty by paper proof",
+  "zero_first_column": "pure-square H0 and nonzero 3minor A\u00b2C contradiction",
+  "nonzero_first_column": "u=v nonzero individually, normalize u1, rho=v; H0 rank2 gives L0,C=rho B,D(rho\u00b2-i)0",
+  "Bzero": "domain forces E,k nonzero but rank2 has 3minor E\u00b2",
+  "Bnonzero": "normalize B1; full rank2 system four displayed polynomials",
+  "rank2_equations": [
+    "A**2*rho + h*k - I*rho**2",
+    "h*(A*rho + E)",
+    "k*(-A*rho + E)",
+    "-E**2 + h*k*rho + I*rho"
+  ],
+  "source_curves": [
+    {
+      "eps": 1,
+      "normal_b_c_equation_numerators": [
+        [
+          "(0 + -1*I)*t**3 + (-1 + 0*I)",
+          "t**3 + (0 + 1*I)"
+        ],
+        [
+          "(0 + -1*I)*t**3 + (-1 + 0*I)",
+          "t**3 + (0 + 1*I)"
+        ],
+        [
+          "(0 + -1*I)*t + (0 + -1*I)",
+          "(0 + 1*I)*t + (0 + -1*I)"
+        ],
+        [
+          "(0 + -1*I)*t + (-1 + 0*I)",
+          "(0 + 1*I)*t**3 + (1 + 0*I)"
+        ],
+        [
+          "t**3 + (0 + -1*I)",
+          "(-1 + 0*I)*t + (0 + 1*I)"
+        ]
+      ],
+      "all_five_gcds": "nonzero constants"
+    },
+    {
+      "eps": -1,
+      "normal_b_c_equation_numerators": [
+        [
+          "(0 + -1*I)*t**3 + (-1 + 0*I)",
+          "t**3 + (0 + 1*I)"
+        ],
+        [
+          "(0 + -1*I)*t**3 + (-1 + 0*I)",
+          "t**3 + (0 + 1*I)"
+        ],
+        [
+          "(0 + -1*I)*t + (0 + -1*I)",
+          "(0 + 1*I)*t + (0 + -1*I)"
+        ],
+        [
+          "(0 + -1*I)*t + (1 + 0*I)",
+          "(0 + 1*I)*t**3 + (-1 + 0*I)"
+        ],
+        [
+          "(-1 + 0*I)*t**3 + (0 + -1*I)",
+          "t + (0 + 1*I)"
+        ]
+      ],
+      "all_five_gcds": "nonzero constants"
+    }
+  ],
+  "finite_field": "QQ[z]/(z8+1), i=z4",
+  "fresh_all18": [
+    {
+      "label": "both",
+      "rho_A_E_h_k_D_power_basis": [
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [],
+        [],
+        [
+          "1"
+        ],
+        [
+          "-1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        []
+      ],
+      "normal_shape": [
+        28,
+        5
+      ],
+      "normal_kernel": 0
+    },
+    {
+      "label": "both",
+      "rho_A_E_h_k_D_power_basis": [
+        [
+          "-1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [],
+        [],
+        [
+          "1"
+        ],
+        [
+          "-1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        []
+      ],
+      "normal_shape": [
+        28,
+        5
+      ],
+      "normal_kernel": 0
+    },
+    {
+      "label": "h",
+      "rho_A_E_h_k_D_power_basis": [
+        [
+          "1"
+        ],
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "-1",
+          "0",
+          "0"
+        ],
+        [
+          "1"
+        ],
+        [],
+        []
+      ],
+      "normal_shape": [
+        28,
+        5
+      ],
+      "normal_kernel": 0
+    },
+    {
+      "label": "k",
+      "rho_A_E_h_k_D_power_basis": [
+        [
+          "1"
+        ],
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [],
+        [
+          "1"
+        ],
+        []
+      ],
+      "normal_shape": [
+        28,
+        5
+      ],
+      "normal_kernel": 0
+    },
+    {
+      "label": "h",
+      "rho_A_E_h_k_D_power_basis": [
+        [
+          "1"
+        ],
+        [
+          "-1",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "1"
+        ],
+        [],
+        []
+      ],
+      "normal_shape": [
+        28,
+        5
+      ],
+      "normal_kernel": 0
+    },
+    {
+      "label": "k",
+      "rho_A_E_h_k_D_power_basis": [
+        [
+          "1"
+        ],
+        [
+          "-1",
+          "0",
+          "0"
+        ],
+        [
+          "-1",
+          "0",
+          "0"
+        ],
+        [],
+        [
+          "1"
+        ],
+        []
+      ],
+      "normal_shape": [
+        28,
+        5
+      ],
+      "normal_kernel": 0
+    },
+    {
+      "label": "h",
+      "rho_A_E_h_k_D_power_basis": [
+        [
+          "-1"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1"
+        ],
+        [],
+        []
+      ],
+      "normal_shape": [
+        28,
+        5
+      ],
+      "normal_kernel": 0
+    },
+    {
+      "label": "k",
+      "rho_A_E_h_k_D_power_basis": [
+        [
+          "-1"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [],
+        [
+          "1"
+        ],
+        []
+      ],
+      "normal_shape": [
+        28,
+        5
+      ],
+      "normal_kernel": 0
+    },
+    {
+      "label": "h",
+      "rho_A_E_h_k_D_power_basis": [
+        [
+          "-1"
+        ],
+        [
+          "-1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1"
+        ],
+        [],
+        []
+      ],
+      "normal_shape": [
+        28,
+        5
+      ],
+      "normal_kernel": 0
+    },
+    {
+      "label": "k",
+      "rho_A_E_h_k_D_power_basis": [
+        [
+          "-1"
+        ],
+        [
+          "-1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [],
+        [
+          "1"
+        ],
+        []
+      ],
+      "normal_shape": [
+        28,
+        5
+      ],
+      "normal_kernel": 0
+    },
+    {
+      "label": "D",
+      "rho_A_E_h_k_D_power_basis": [
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [],
+        [],
+        [
+          "1"
+        ]
+      ],
+      "normal_shape": [
+        25,
+        5
+      ],
+      "normal_kernel": 0
+    },
+    {
+      "label": "D",
+      "rho_A_E_h_k_D_power_basis": [
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-1",
+          "0",
+          "0",
+          "0"
+        ],
+        [],
+        [],
+        [
+          "1"
+        ]
+      ],
+      "normal_shape": [
+        25,
+        5
+      ],
+      "normal_kernel": 0
+    },
+    {
+      "label": "D",
+      "rho_A_E_h_k_D_power_basis": [
+        [
+          "-1",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [],
+        [],
+        [
+          "1"
+        ]
+      ],
+      "normal_shape": [
+        25,
+        5
+      ],
+      "normal_kernel": 0
+    },
+    {
+      "label": "D",
+      "rho_A_E_h_k_D_power_basis": [
+        [
+          "-1",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [],
+        [],
+        [
+          "1"
+        ]
+      ],
+      "normal_shape": [
+        25,
+        5
+      ],
+      "normal_kernel": 0
+    },
+    {
+      "label": "D",
+      "rho_A_E_h_k_D_power_basis": [
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "-1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-1",
+          "0",
+          "0",
+          "0"
+        ],
+        [],
+        [],
+        [
+          "1"
+        ]
+      ],
+      "normal_shape": [
+        25,
+        5
+      ],
+      "normal_kernel": 0
+    },
+    {
+      "label": "D",
+      "rho_A_E_h_k_D_power_basis": [
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "-1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [],
+        [],
+        [
+          "1"
+        ]
+      ],
+      "normal_shape": [
+        25,
+        5
+      ],
+      "normal_kernel": 0
+    },
+    {
+      "label": "D",
+      "rho_A_E_h_k_D_power_basis": [
+        [
+          "-1",
+          "0",
+          "0"
+        ],
+        [
+          "-1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [],
+        [],
+        [
+          "1"
+        ]
+      ],
+      "normal_shape": [
+        25,
+        5
+      ],
+      "normal_kernel": 0
+    },
+    {
+      "label": "D",
+      "rho_A_E_h_k_D_power_basis": [
+        [
+          "-1",
+          "0",
+          "0"
+        ],
+        [
+          "-1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [],
+        [],
+        [
+          "1"
+        ]
+      ],
+      "normal_shape": [
+        25,
+        5
+      ],
+      "normal_kernel": 0
+    }
+  ],
+  "conclusion": "no H3 with Nakayama eigenvalue set {1,-1,i,-i}; entire specified detminus1 spectral chart excluded",
+  "not_claimed": [
+    "all determinant-minus-one spectra covered by this chart",
+    "all four-simple or CY classification",
+    "complete H3 classification",
+    "ordinary proofs fully mechanically checked"
+  ]
+}

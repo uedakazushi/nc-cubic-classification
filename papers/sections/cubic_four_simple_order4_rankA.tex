@@ -1,0 +1,111 @@
+\subsection{四単純位数4のpaired rank一型の全排除}
+\label{subsec:cubic-four-simple-order4-rankA}
+\begin{theorem}[二つ目のrank型の完成]
+\label{thm:cubic-four-simple-order4-rankA-empty}
+スペクトル $(1,-1,i,-i)$ の必要rank型 $(2,2,1,1)$ も全てH3を与えない。
+従ってこのスペクトルに残る必要rank型は $(2,0,2,2)$ だけである。
+\end{theorem}
+\begin{proof}
+前節の記号を使う。$M$ はrank一なので、非零列 $P$ と非零行 $Q^t$ により
+$M=PQ^t$ と書ける。
+$P$ の基底は $(xb,yc,bx,cy)$、$Q$ の基底は $(xc,yb,by,cx)$ である。
+いずれも四つのtensorは相異なる行と列に位置するので、
+一本だけ非零成分を持つ $P$ 又は $Q$ は純積関係となる。
+整域性から両supportの大きさは2以上である。
+元巡回式は正確に
+\begin{gather*}
+ p_2q_3=-p_0q_0,\qquad p_2q_2=ip_0q_1,\\
+ p_3q_3=-ip_1q_0,\qquad p_3q_2=p_1q_1
+\end{gather*}
+を与える。
+
+この四式の非零supportを調べると、可能なものは次の十組だけである。
+$02$ はsupport $\{0,2\}$、$0123$ は全supportの略記とする。
+\[
+\begin{array}{c|c}
+ \operatorname{supp}P&\operatorname{supp}Q\\\hline
+ 02&03,\ 12,\ 0123\\
+ 13&03,\ 12,\ 0123\\
+ 0123&03,\ 12\\
+ 01&23\\
+ 23&01
+\end{array}
+\]
+実際、各式で二つの積の一方だけが非零となるsupportは不可能である。
+大きさ2以上のsupportの全組についてこの条件を適用すると、
+上の十組と両方全supportの場合だけが残る。
+最後の場合は最初と第三式から $p_2/p_3=-ip_0/p_1$、
+第二と第四式から $p_2/p_3=ip_0/p_1$ となり矛盾する。
+これはsupportに関する有限の通常の議論である。
+公開再現器は全組を列挙し、非零座標をsaturateした式でも同じ十組を再現する。
+
+$b,c$ を交換し、原始四乗根を $i'=-i$ と読み替えると、
+元のスペクトルと巡回式は同じ形を保つ。
+この操作は $P02$ と $Q03$、$P13$ と $Q12$、
+$P01,Q23$ と $P23,Q01$ を交換する。
+従って以下の三chartを調べれば全被覆となる。
+これは対象のintrinsic同型による軌道同一視を主張したものではない。
+
+\paragraph{$P02$ chart．}
+外積のscalar自由度を使って
+\[
+ P=(1,0,p,0)^t,\quad
+ Q=(u,v,iv/p,-u/p)^t,\qquad p\ne0
+\]
+と書ける。$H_2$ の $c^2$ 列は $a_{14}b^2$ なので、整域性から $a_{14}=0$。
+$H_2$ のrank2と整域性を合わせると $a_0v\ne0$。
+実際、$v=0$ なら純 $xy,yx$ 関係が生じ、
+$a_0=0,v\ne0$ なら純 $b^2$ 関係が生じ、両方零ならrankが零となる。
+このchartの重み0 middleは
+\[
+ H_0=\begin{pmatrix}
+ 0&a_0&u/p&-ipu\\a_0&a_{10}&0&0\\
+ u/p&0&a_{15}&0\\-ipu&0&0&-ia_{15}
+ \end{pmatrix}.
+\]
+$u=0$ なら第一列は非零純 $y^2$ 関係である。
+$u\ne0$ なら左上 $2\times2$ blockは可逆なので、rank2はそのSchur補の消滅と同値。
+その非対角成分は $-ia_{10}u^2/a_0^2$ だから $a_{10}=0$、
+対角成分から $a_{15}=0$ となる。
+すると第二列は非零純 $x^2$ 関係となり、やはり整域性に反する。
+
+\paragraph{$P13$ chart．}
+同様に
+\[
+ P=(0,1,0,p)^t,\quad
+ Q=(u,v,v/p,-iu/p)^t,\qquad p\ne0
+\]
+と書ける。$H_0$ の第一列は $a_0y^2$ なので $a_0=0$。
+$H_2$ の $b^2$ 列は $-a_{14}c^2$ なので $a_{14}=0$。
+この二つを消すと $H_2$ の第一列は $-iu c^2/p$ である。
+$u\ne0$ なら純平方関係、$u=0$ なら $H_2=0$ となり、いずれも不可能。
+
+\paragraph{$P01,Q23$ chart．}
+外積と非零topのscalar変更で
+\[
+ P=(1,p,0,0)^t,\quad Q=(0,0,1,q)^t,\qquad pq\ne0
+\]
+と書ける。$H_2$ のPfaffianは $-a_0a_{14}-pq$ なので
+$a_0a_{14}=-pq\ne0$ が必要である。
+一方、$H_0$ は
+\[
+ \begin{pmatrix}
+ 0&a_0&-q&0\\a_0&a_{10}&0&p\\
+ -q&0&a_{15}&-ia_{14}\\0&p&-ia_{14}&-ia_{15}
+ \end{pmatrix}.
+\]
+左上blockが可逆であるから、rank2はSchur補の消滅を強制する。
+右下成分から $a_{15}=0$、左上成分から $a_{10}=0$。
+非対角成分は $-ia_{14}+pq/a_0$ であり、Pfaffian条件を代入すると
+\[
+ (1+i)pq/a_0\ne0
+\]
+となって矛盾する。
+以上で六chartの全てが消え、paired rank一型は空である。
+\end{proof}
+
+公開再現器は \texttt{verify\_cubic\_four\_simple\_order4\_rankA.py}。
+全support、巡回四式、対称操作、元16tensorからの三chartの復元、
+純積列、PfaffianとSchur恒等式を標数0で検算する。
+正常核の一般点計算や有限標本に依存せず、必要rankと整域性だけで全値を排除した。
+残る $(2,0,2,2)$ と全四単純・全CY・相対分類は別の未完成問題である。

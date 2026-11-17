@@ -72,7 +72,7 @@ Coordinate with the current as4, asz4 and poisson-p4 repositories for ambient an
 For each result record assumptions, dependencies, proof location, whether freshly verified, exact computation input and certificate, unresolved points and novelty status. Keep a current self-contained research plan, research notes and Japanese LuaLaTeX paper, not chronological logs. Update source, code and small reproducibility certificates on GitHub main via ordinary fast-forward; do not track PDFs, ZIPs, caches, TeX outputs, or use GitHub Actions, PRs or force push. Verify remote HEAD. For this repository, do not save to Library if the GitHub push succeeds; Library is an emergency fallback only.
 
 
-## 三固有値領域の完成と現行再開課題（v275）
+## 三固有値・四単純位数4の現行到達点（v278）
 強いintrinsic H3のAS4包絡は相異なる中山固有値をちょうど三つ持たない。全Jordan型の必要還元、重複1の全22tensor atlas、非単位重複rootの独立・非零比例・零b²列を全て排除した。全H3分類の完成ではない。全CY、四単純共鳴、全成分・境界、相対降下は未完成。
 
 ### 完成した証明の入口
@@ -86,6 +86,12 @@ For each result record assumptions, dependencies, proof location, whether freshl
 この最後の包絡はb²+c²,xy−yx,xb+bx,xc+cx,yb+i by−i xc,yc−i cy−xb。normalx開集合の次数零環はYB−i BY=iC,YC+i CY=B,B²+C²0,2C²Y−BC+i CB0。原点characterの自己Ext1はY方向1。H3 Serre=(-1)[2]をnormalxで同定するとH(Y,B,C)=(Y,−B,−C)、Ext1に恒等作用。twisted Serre traceの符号から非退化交代対が必要となり矛盾。S(L)=L[2]だけで作用自明を仮定せず、唯一のY方向に実際に作用が自明と確認した。
 通常証明はcubic_four_simple_order4_rankC節。公開checker default Sympy PASS（16top/rank/GB13/全値sourceunitminor/十軌道/因子/例外G/dehom/character接空間）。v276 main LuaLaTeX clean PASS。累計59validators across runs、単一59全再生未実行。全四単純又は全H3完成とは呼ばない。新規外部/as4輸入なし、新規性未確認。
 
-### 次の最小課題
-四単純位数4の残る(2,2,1,1)又は(2,0,2,2)を元16tensor上で判定する。前者はpaired4×4M rank1なので外積P Q^tの四つの巡回binomial式へ移せる。domainはP,Qそれぞれ少なくとも二非零成分を強制する（supportはpermutation行列状）。この小support atlasとH0/H2 rank2、正常三次5列を組み合わせる。
-既存detminus1 chart μ=(a,−a,i/a,−i/a)はa⁴≠1全排除済みだが、全四単純スペクトルの被覆ではない。一般の四単純非skewは21二次共鳴超曲面上にあり、残りと全CY、全成分・境界、intrinsic群oidと相対降下は未完。三固有値の解決済み計算や移管済み独立論文を再開しない。
+### 四単純位数4の全完成（v278）
+残る(2,2,1,1)はpaired M=P Q^tの巡回四binomial式とdomainから全十support、六chartへ。primitive iの選択変更とb/c交換で三chartを見れば十分。P02はH2純平方からa14zero,a0v非零、H0rank2 Schurから純x²又はy²。P13はH0純y²とH2純c²で全排除。P01/Q23はPfaff a0a14=−pqとH0Schurの(1+i)pq/a0非零で矛盾。元16tensor/全support/全Schur恒等式公開default Sympy PASS、v277主原稿clean PASS。
+最後の(2,0,2,2)はH2zero。H0=[[0,0,u,v],[0,L,B,C],[u,B,D,0],[v,C,0,−iD]]。u=v0はdomainがD,BC,Ah非零を強制しMに3minor−A²C。片方のみ非零は純bc/cb。uv非零をu1,vρへ、H0SchurでL0,CρB,D(ρ²−i)0。B0はdomainE,k非零だがM3minorE²。B非零をB1へ、rank2の単元ρpivotで全条件hk+ρA²−iρ²=0,h(E+ρA)=0,k(E−ρA)=0,ρhk−E²+iρ=0。
+全値は二つのOre曲線(h=k=D0,A=t,ρ−it²,E±t)と18有限対角軌道へ。曲線のb,c正常固有値の二条件は固定三次の全五基底方向でgcd定数、全t非零正常核0。有限点はhk非零2点、hのみ/kのみ各4点、D1かつt4−iの8点。QQ[z]/(z8+1),i=z4で全18根の元商dims3/4=20/35、正常28×5又は25×5全rank5。新checker default Sympy PASS、v278主原稿LuaLaTeX clean PASS。
+従ってスペクトル集合{1,−1,i,−i}は全H3排除。既存一般chartと合わせ、全非零aで(a,−a,i/a,−i/a)も全排除。ただし全det負一スペクトルの被覆ではない。通常証明はfour_simple_order4_rankA/rankB節。累計61validators across runs、単一61全再生未実行。新規as4/外部定理輸入なし、新規性未確認。
+
+### 次の最小課題：残る四単純のスペクトル被覆
+四単純非skewは21二次共鳴と三次共鳴上にある。quartic topは各固有変数を含む必要がある。二次共鳴指数uを三型(2,−2,0,0),(2,−1,−1,0),(1,1,−1,−1)へ、三次指数vを全20個へ分けると、span_Q(u,v)内の非負degree4指数だけでは四変数を全て被覆できないことをprivate exact60ケースで確認した（公開通常証明は未統合）。これを厳密化すれば追加独立quartic共鳴が必要となり、四単純スペクトルの次元上界を2から1へ下げ、有限の一変数spectral atlasへ進める。次はこの最小組合せ補題を公開検証・通常証明にし、全rank3指数格子のtorus成分を整理する。一般点排除だけで境界を消さない。
+全CY、残る全四単純共鳴、全成分・境界、intrinsic群oidと相対降下は未完。三固有値・位数4の解決済み計算や移管済み独立論文を再開しない。

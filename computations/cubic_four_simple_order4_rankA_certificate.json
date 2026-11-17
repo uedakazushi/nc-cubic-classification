@@ -1,0 +1,148 @@
+{
+  "status": "PASS",
+  "scope": "whole rank(2,2,1,1) empty by exhaustive domain and middle-rank proof",
+  "support_patterns": [
+    [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ]
+    ],
+    [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ],
+    [
+      [
+        1,
+        3
+      ],
+      [
+        0,
+        3
+      ]
+    ],
+    [
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    [
+      [
+        1,
+        3
+      ],
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ],
+    [
+      [
+        2,
+        3
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    [
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        0,
+        3
+      ]
+    ],
+    [
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        1,
+        2
+      ]
+    ]
+  ],
+  "six_chart_cover": [
+    "P02",
+    "P13",
+    "Q03",
+    "Q12",
+    "P01-Q23",
+    "P23-Q01"
+  ],
+  "paired_outer_equations": [
+    "p0*q0 + p2*q3",
+    "-I*p0*q1 + p2*q2",
+    "I*p1*q0 + p3*q3",
+    "-p1*q1 + p3*q2"
+  ],
+  "symmetry": "exchange b,c and rename primitive i to -i; no intrinsic orbit quotient asserted",
+  "three_chart_obstructions": {
+    "P02": "a14zero; domain forces a0,v nonzero; u0 gives purey\u00b2; u nonzero Schur forces a10=a15zero and purex\u00b2",
+    "P13": "pure y\u00b2 forces a0zero; pure c\u00b2 forces a14zero; H2rank2 then forces another purec\u00b2",
+    "P01-Q23": "pfaff requires a0*a14=-p*q nonzero; H0 Schur offdiagonal gives (1+i)*p*q contradiction"
+  },
+  "remaining_order4_relation_ranks_weight0_2_1_3": [
+    [
+      2,
+      0,
+      2,
+      2
+    ]
+  ],
+  "not_claimed": [
+    "whole order4 boundary excluded",
+    "all four-simple or CY coverage",
+    "complete H3 classification",
+    "ordinary domain arguments entirely mechanically checked"
+  ]
+}

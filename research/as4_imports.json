@@ -100,7 +100,18 @@
         "four-family sufficiency or full groupoid",
         "global CY classification",
         "non-1-periodic Z-algebra results"
-      ]
+      ],
+      "downstream_finite_boundary_completion_v278": {
+        "status": "the remaining order4 spectral boundary and hence the whole specified chart independently excluded",
+        "proof": "papers/sections/cubic_four_simple_order4_rankB.tex",
+        "controls": [
+          "verify_cubic_four_simple_order4_rankC.py",
+          "verify_cubic_four_simple_order4_rankA.py",
+          "verify_cubic_four_simple_order4_rankB.py"
+        ],
+        "new_upstream_theorem_import": false,
+        "not_claimed": "this chart covers all determinant-minus-one spectra"
+      }
     }
   ],
   "upstream_controls_rerun": [

@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "version": "classification-v276",
+  "version": "classification-v278",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -3762,6 +3762,36 @@
       "complete four-simple or CY coverage",
       "complete H3 classification",
       "new as4/external theorem import",
+      "novelty confirmed"
+    ]
+  },
+  "four_simple_order4_rankA_v277": {
+    "status": "whole paired-rank1 type(2,2,1,1) excluded",
+    "proof": "papers/sections/cubic_four_simple_order4_rankA.tex",
+    "validator": "computations/verify_cubic_four_simple_order4_rankA.py",
+    "checks": [
+      "default Sympy exhaustive10 supports/six-chart symmetry PASS",
+      "original16 three-chart outer factors, pure-product columns, Pfaff and Schur exact identities PASS",
+      "v277 main LuaLaTeX clean PASS"
+    ]
+  },
+  "four_simple_order4_rankB_v278": {
+    "status": "whole final rank(2,0,2,2) excluded, completing entire order4 finite spectrum and specified detminus1 chart",
+    "proof": "papers/sections/cubic_four_simple_order4_rankB.tex",
+    "validator": "computations/verify_cubic_four_simple_order4_rankB.py",
+    "checks": [
+      "default Sympy zero/nonzero column and Bzero 3minors, exact Schur/rank2 four-equation system PASS",
+      "all-t two-curve source unit6minor/Laurent coordinates and all5 eigenspace gcds PASS",
+      "all18 exact field points original middle6 and graded3/4 dimensions20/35 PASS",
+      "all18 normal matrices rank5 PASS",
+      "v278 main LuaLaTeX clean PASS"
+    ],
+    "remaining_order4_ranks": [],
+    "validation_scope": "61 validators across runs; no single61 replay claimed",
+    "not_claimed": [
+      "global detminus1 coverage",
+      "complete four-simple or CY coverage",
+      "complete H3 classification",
       "novelty confirmed"
     ]
   }

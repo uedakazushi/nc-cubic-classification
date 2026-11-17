@@ -1,0 +1,124 @@
+\subsection{四単純位数4の最後のrank型と有限境界の完成}
+\label{subsec:cubic-four-simple-order4-rankB}
+\begin{theorem}[最後の $(2,0,2,2)$ 型も空]
+\label{thm:cubic-four-simple-order4-rankB-empty}
+中山スペクトル $(1,-1,i,-i)$ の必要rank型 $(2,0,2,2)$ はH3を与えない。
+\end{theorem}
+\begin{proof}
+元16tensorの記号を使う。$H_2=0$ から
+$a_0,a_3,a_4,a_7,a_9,a_{14}=0$。
+$u=a_1,v=a_2,L=a_{10},B=a_{11},C=a_{12},D=a_{15}$、
+$A=a_5,h=a_6,k=a_8,E=a_{13}$ と書くと
+\[
+ H_0=\begin{pmatrix}
+ 0&0&u&v\\0&L&B&C\\u&B&D&0\\v&C&0&-iD
+ \end{pmatrix},\quad
+ M=\begin{pmatrix}
+ A&h&0&-u\\-ik&-iE&C&0\\iv&0&ih&-A\\0&-iB&-iE&-k
+ \end{pmatrix}.
+\]
+
+まず $u=v=0$ を排除する。
+$D=0$ なら $H_0$ の後二列が純 $y^2$ 関係なので $B=C=0$ を強制し、rank2に反する。
+従って $D\ne0$ であり、純 $bc,cb$ 関係を避けるため $BC\ne0$ である。
+$M$ の第一行は $Axc+hyb$ 関係を与える。
+片方だけ非零なら純積、両方零なら $M$ の像は $\langle yc,cy\rangle$ 全体となり、やはり純積を含む。
+従って $Ah\ne0$。
+ところが $M$ の行 $(0,1,2)$、列 $(0,2,3)$ のminorは $-A^2C\ne0$ であり、rank2と矛盾する。
+
+$u,v$ の一方だけ非零なら $H_0$ の第一列が純積になる。
+従って残るのは $uv\ne0$、topを $u=1,v=\rho\ne0$ と正規化した場合である。
+$H_0$ の行列を添字 $(0,2,1,3)$ 順へ並べると左上blockは可逆で、そのSchur補は
+\[
+ \begin{pmatrix}
+ L&C-\rho B\\C-\rho B&D(\rho^2-i)
+ \end{pmatrix}.
+\]
+従って全値で
+\[
+ L=0,\quad C=\rho B,\quad D(\rho^2-i)=0.
+\]
+$B=0$ も不可能である。
+この場合、$M$ の第二行は $-i(kxc+Eyb)$ である。
+$k,E$ の片方だけ非零なら純積、両方零なら像が $\langle xb,bx\rangle$ 全体となり純積を含む。
+従って $kE\ne0$。
+しかし行 $(0,1,3)$、列 $(1,2,3)$ のminorは $E^2\ne0$ となる。
+
+そこで $B\ne0$ を $x/y$ の対角変更で $B=1$ と正規化する。
+$M$ の行 $(0,1)$、列 $(2,3)$ のminorは $\rho$ で全値可逆。
+この二列で全行を消去すると、rank2条件は正確に
+\begin{gather*}
+ hk+\rho A^2-i\rho^2=0,\qquad h(E+\rho A)=0,\\
+ k(E-\rho A)=0,\qquad \rho hk-E^2+i\rho=0
+\end{gather*}
+となる。
+これにより残りは次の曲線と十八点で全て覆われる。
+\begin{enumerate}
+\item $h=k=0$：$A=t\ne0,\rho=-it^2,E=\epsilon t$、$\epsilon=\pm1$。
+$D=0$ は二つの全 $t\ne0$ 曲線である。
+$D\ne0$ なら $t^4=-i$ で、残る対角変更により $D=1$、合計八点。
+\item $hk\ne0$：$A=E=0,\rho=\pm i,hk=-i,D=0$。
+$b/c$ の対角変更により $h=1,k=-i$、合計二点。
+\item $h\ne0,k=0$：$\rho=\pm1,A^2=i\rho,E=-\rho A,D=0$。
+$h=1$ とでき、合計四点。
+\item $h=0,k\ne0$：$\rho=\pm1,A^2=i\rho,E=\rho A,D=0$。
+$k=1$ とでき、合計四点。
+\end{enumerate}
+この場合分けは四式を直接解いたもので、一般点の解析から閉値を除外したものではない。
+対角変更では $B=1$ を保つ $x/y$ 比を固定した後も、
+$b/c$ 比と $bc/x^2$ 比を独立に変えられる。
+前者は $h,k$ を逆比例に、後者は $D$ を任意の非零scalar倍にする。
+従って表示した全正規化が可能である。
+
+二つの曲線では元二次関係の全画像は
+\begin{gather*}
+ x^2+y^2=0,\quad bc=it^2cb,\\
+ xb=-tbx,\quad yc=-\epsilon t^{-1}cy,\quad
+ cx=txc,\quad by=-\epsilon t^{-1}yb.
+\end{gather*}
+これは二元AS2平面 $T(x,y)/(x^2+y^2)$ 上の逐次skew Ore拡大であり、全 $t\ne0$ でPBWを持つ。
+元middleとの同定はunit六次minorとLaurent-$t$ 座標で全値検算する。
+$b,c$ は正常で、固定三次の基底は
+\[
+ x^3,\quad yxy,\quad xbc,\quad yb^2,\quad yc^2.
+\]
+$b,c$ の正常化自己同型の固有値はそれぞれ
+\[
+ \bigl(-t^{-3},-t^{-3},-it,-\epsilon/t,\epsilon t^3\bigr),
+ \qquad
+ \bigl(t^3,t^3,-i/t,\epsilon/t^3,-\epsilon t\bigr).
+\]
+$Gb=-ibG,Gc=icG$ から必要な固有値はそれぞれ $i,-i$ である。
+各基底方向の二条件を分母を払って比べると、全て最大公約因子が非零定数である。
+例えば純 $U$ 三次では $-t^{-3}=i,t^3=-i$ が両立せず、
+$xbc$ では $t=-1,t=1$ が同時に必要となる。
+後二方向も $t=i\epsilon$ と $t^3=i\epsilon$ を同時に要求して矛盾する。
+従って二つの曲線の正常核は全値で零である。
+
+十八点は $\mathbb Q[z]/(z^8+1)$、$i=z^4$ 上で、
+全ての表示した根を元16tensorへ代入して新しく商を作る。
+各点で元middle rank6、次数3,4の次元は20,35であるが、
+固定三次5列の正常行列は全てrank5となる。
+$hk\ne0$ と一方のみ非零の十点は $28\times5$、$D=1$ の八点は $25\times5$ である。
+全十八点のexact eliminationが正常核零を与え、これで最後の型も完成する。
+\end{proof}
+
+\begin{corollary}[四単純位数4と指定det負一chartの全排除]
+\label{cor:cubic-four-simple-order4-empty}
+H3包絡の中山スペクトルは $\{1,-1,i,-i\}$ にならない。
+さらに、任意の非零 $a$ に対して、重複を許した
+$(a,-a,i/a,-i/a)$ というスペクトルはH3に現れない。
+\end{corollary}
+\begin{proof}
+命題\ref{prop:cubic-four-simple-order4-atlas}の必要三rank型は、
+定理\ref{thm:cubic-four-simple-order4-rankC-empty}、
+\ref{thm:cubic-four-simple-order4-rankA-empty}、前定理で全て排除された。
+指定chartは系\ref{cor:cubic-detminus1-spectral-boundary}により
+この位数4集合へ制限されるので、同時に全排除となる。
+指定chartが全det負一スペクトルを覆うという主張ではない。
+\end{proof}
+
+公開再現器は \texttt{verify\_cubic\_four\_simple\_order4\_rankB.py}。
+全必要Schur式、零列の純積障害、rank2四式、二曲線の全値source同定と固有値方程式のgcd、
+全十八根の元商・正常核を厳密検算する。
+全四単純の残る21共鳴被覆、全CY、成分・境界・相対降下は引き続き未完成である。
