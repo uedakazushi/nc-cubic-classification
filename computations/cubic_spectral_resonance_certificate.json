@@ -1,0 +1,510 @@
+{
+  "status": "PASS",
+  "scope": "exhaustive exponent enumeration only; domain and skew reduction are ordinary proofs",
+  "quadratic_exponents": [
+    [
+      0,
+      0,
+      0,
+      2
+    ],
+    [
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      2,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      2,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      2,
+      0,
+      0,
+      0
+    ]
+  ],
+  "cubic_resonance_exponents": [
+    [
+      0,
+      0,
+      0,
+      3
+    ],
+    [
+      0,
+      0,
+      1,
+      2
+    ],
+    [
+      0,
+      0,
+      2,
+      1
+    ],
+    [
+      0,
+      0,
+      3,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      2
+    ],
+    [
+      0,
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      2,
+      0
+    ],
+    [
+      0,
+      2,
+      0,
+      1
+    ],
+    [
+      0,
+      2,
+      1,
+      0
+    ],
+    [
+      0,
+      3,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      2
+    ],
+    [
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      2,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      2,
+      0,
+      0
+    ],
+    [
+      2,
+      0,
+      0,
+      1
+    ],
+    [
+      2,
+      0,
+      1,
+      0
+    ],
+    [
+      2,
+      1,
+      0,
+      0
+    ],
+    [
+      3,
+      0,
+      0,
+      0
+    ]
+  ],
+  "nontrivial_quadratic_collisions_for_distinct_eigenvalues": [
+    {
+      "left": [
+        0,
+        0,
+        0,
+        2
+      ],
+      "right": [
+        0,
+        0,
+        2,
+        0
+      ],
+      "type": "opposite"
+    },
+    {
+      "left": [
+        0,
+        0,
+        0,
+        2
+      ],
+      "right": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "type": "square_pair"
+    },
+    {
+      "left": [
+        0,
+        0,
+        0,
+        2
+      ],
+      "right": [
+        0,
+        2,
+        0,
+        0
+      ],
+      "type": "opposite"
+    },
+    {
+      "left": [
+        0,
+        0,
+        0,
+        2
+      ],
+      "right": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "type": "square_pair"
+    },
+    {
+      "left": [
+        0,
+        0,
+        0,
+        2
+      ],
+      "right": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "type": "square_pair"
+    },
+    {
+      "left": [
+        0,
+        0,
+        0,
+        2
+      ],
+      "right": [
+        2,
+        0,
+        0,
+        0
+      ],
+      "type": "opposite"
+    },
+    {
+      "left": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "right": [
+        0,
+        2,
+        0,
+        0
+      ],
+      "type": "square_pair"
+    },
+    {
+      "left": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "right": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "type": "disjoint_pairs"
+    },
+    {
+      "left": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "right": [
+        2,
+        0,
+        0,
+        0
+      ],
+      "type": "square_pair"
+    },
+    {
+      "left": [
+        0,
+        0,
+        2,
+        0
+      ],
+      "right": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "type": "square_pair"
+    },
+    {
+      "left": [
+        0,
+        0,
+        2,
+        0
+      ],
+      "right": [
+        0,
+        2,
+        0,
+        0
+      ],
+      "type": "opposite"
+    },
+    {
+      "left": [
+        0,
+        0,
+        2,
+        0
+      ],
+      "right": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "type": "square_pair"
+    },
+    {
+      "left": [
+        0,
+        0,
+        2,
+        0
+      ],
+      "right": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "type": "square_pair"
+    },
+    {
+      "left": [
+        0,
+        0,
+        2,
+        0
+      ],
+      "right": [
+        2,
+        0,
+        0,
+        0
+      ],
+      "type": "opposite"
+    },
+    {
+      "left": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "right": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "type": "disjoint_pairs"
+    },
+    {
+      "left": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "right": [
+        2,
+        0,
+        0,
+        0
+      ],
+      "type": "square_pair"
+    },
+    {
+      "left": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "right": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "type": "disjoint_pairs"
+    },
+    {
+      "left": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "right": [
+        2,
+        0,
+        0,
+        0
+      ],
+      "type": "square_pair"
+    },
+    {
+      "left": [
+        0,
+        2,
+        0,
+        0
+      ],
+      "right": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "type": "square_pair"
+    },
+    {
+      "left": [
+        0,
+        2,
+        0,
+        0
+      ],
+      "right": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "type": "square_pair"
+    },
+    {
+      "left": [
+        0,
+        2,
+        0,
+        0
+      ],
+      "right": [
+        2,
+        0,
+        0,
+        0
+      ],
+      "type": "opposite"
+    }
+  ],
+  "counts": {
+    "opposite": 6,
+    "square_pair": 12,
+    "disjoint_pairs": 3
+  }
+}

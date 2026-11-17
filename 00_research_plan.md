@@ -70,3 +70,5 @@ heart比較・Rains共鳴・cubic cornerは `uedakazushi/nc-dp-surface-hearts`�
 量子FermatのOU障害は [nc-cubic-non-as](https://github.com/uedakazushi/nc-cubic-non-as)、ambient比較は [nc-cubic-ambient-moduli](https://github.com/uedakazushi/nc-cubic-ambient-moduli) に移管済み。分類に必要な旧定理・コードはこのリポジトリの現行分類原稿からも参照する。
 
 一般正規三次切断の認識補題：`papers/sections/cubic_hypersurface_frame.tex`。四line compact frameとnormalizer付きhypersurface作用の二乗判定を保持する。rank-one torsion-freeは別仮定、有限検査・相対開性は未解決である。
+
+多固有値frontier（v211）：四単純中山固有値で十個の二次積が異なる全域はskewへ還元済み。非skew残余は明示的21二次共鳴因子上にあり、さらに三次共鳴条件を課す。証明は `cubic_spectral_resonance.tex`。次はその交叉上の必要tensor atlasと正常核を調べる。

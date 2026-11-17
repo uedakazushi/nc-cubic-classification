@@ -2289,5 +2289,23 @@
       "regular normal cubic; quotient domain and mu_R=id",
       "H3 equivalence additionally assumes intrinsic Gabriel-Krull rank-one torsion-free"
     ]
+  },
+  "multieigenvalue_spectral_reduction_v211": {
+    "status": "ordinary proofs; exhaustive exponent enumeration PASS",
+    "proof": "papers/sections/cubic_spectral_resonance.tex",
+    "validator": "computations/verify_cubic_spectral_resonance.py",
+    "certificate": "computations/cubic_spectral_resonance_certificate.json",
+    "results": [
+      "cubic resonance necessary including nonsemisimple Nakayama",
+      "isolated pure cube on a simple eigenline excluded by domain",
+      "four simple eigenvalues and no quadratic collisions imply skew envelope",
+      "non-skew four-simple-spectrum candidates lie on 21 explicit quadratic resonance divisors",
+      "(2,1,1) without quadratic product collisions is an iterated skew polynomial extension of an AS2 plane by commuting automorphisms"
+    ],
+    "not_claimed": [
+      "sufficiency of spectral conditions",
+      "exclusion of multiple-resonance intersections",
+      "complete multieigenvalue classification"
+    ]
   }
 }

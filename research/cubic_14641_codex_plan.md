@@ -10,6 +10,8 @@
 
 **現在のスペクトルfrontier（classification-v202）**：(1,3)は全幾何学的分類済み、(3,1)と(2,2) mixed rank2は空。(2,2) mixed rank4では最後のL非鏡開集合も正常行加群の全単元消去で排除済み。P,Qとも非零のH3はなく、全Jordan型を含め曲がったClifford族へ認識する。証明は `cubic_order2_22_secant_L_complete.tex`、公開builder・座標恒等式・飽和検証器にある。解決済みのL飽和へ戻らない。未解決の核心は三固有値以上、全CY被覆、全成分・intrinsic族降下である。
 
+**多固有値の必要被覆（v211）**：三次固有値共鳴が必要、単純固有直線の唯一の純三乗共鳴は非整域で排除。複数共鳴交叉は残す。`cubic_spectral_resonance.tex`。四単純固有値の二次積が全て相異なる領域はskewと証明済み。非skew残余の21二次共鳴因子と三次共鳴の交叉上で、twisted四次tensorのmiddle rank6を調べる。
+
 **一般正規切断の有限frame（v210）**：`cubic_hypersurface_frame.tex` は四line compact generator、proper dg type(55,21)、normalizer付きhypersurface作用の二乗によるH3判定を与える。rank-one torsion-freeは別仮定であり、全coherent対象に対する判定を有限検査へ還元したとは主張しない。
 
 classification-v12 では、積分した族の全次数平坦性・noetherian quadratic Koszul CY AS4 認識を、明示的な開集合 V={h∈H, (1-gamma²)≠0, Delta≠0} 上で証明した。入力は Iyudu–Shkarin Theorem1.1/Corollary6.1、EG形式変形定理、および64個の三次持上げ恒等式・256個の四次巡回恒等式・単元小行列式 -p^6 を確認した LBS 中心拡大定理である。中心三次の関係類の非消滅も巡回商の二係数で全パラメータについて確認した。gamma≠0 では低次数中心が0,0,1、滑らかな楕円THCR境界となり、全中心値の H3 判定は正確に一つの affine 中心切断の有限大域次元へ帰着する。定義体上超越的な全 D は H3。位数4の枝 gamma^4=1+h^3 では固定包絡の悪い D は有限であり、h=1,gamma=2^(1/4),A=1,B=C=0,beta=(-1,0,0),D=pi は明示的な非Clifford H3 対象となる。悪い値の全一覧・全内在的群oid・H3相対開性・降下・全包絡被覆は未解決。

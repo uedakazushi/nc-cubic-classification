@@ -1363,3 +1363,10 @@ python computations/verify_cubic_order2_22_secant_L_saturation.py --prefix /tmp/
 
 ## 正規三次切断の共通frameと残る判定（v210）
 `papers/sections/cubic_hypersurface_frame.tex` に、一般の正則正規三次切断の四line compact generatorとproper dg cohomology次元55,21を保存した。mu_R=idの整域候補について、Gabriel–Krull rank-one torsion-freeを別途仮定すると、全coherent Fにおけるnormalizer付きhypersurface作用 eta_F の二乗消滅とH3性が同値。二項bimodule解消の右作用は Gb=nu(b)G、Tor1=R_nu(-3)であり中央性を仮定しない。AS双対性とcompact生成は通常の証明、公開検証器のrank6,45は指定中央fiberの数値例である。有限個の試験によるH3判定、開性、rank条件の自動性は未解決。全H3の被覆は三固有値以上・CY残余へ進む。
+
+## 多固有値の最初の必要共鳴被覆（v211）
+`cubic_spectral_resonance.tex`：mu(G)=Gから半単純中山固有値に三次共鳴が必要。唯一の共鳴が単純固有直線の純三乗ならG=cx³で商が非整域となり排除。単冪部分があっても成立する。(2,1,1)では八個の非除外共鳴divisorとb³=c³=1の交叉を保持、四単純では16非純共鳴divisorと二つ以上の純共鳴交叉を保持する。一般点での排除から共鳴交叉を落とさない。次はこの被覆上でtwisted四次tensorのmiddle rank6・正常核を合わせ、非skew候補を縮小する。CY全被覆・成分・相対降下は未完。
+
+四単純固有値で十個の二次積が相異なるなら包絡はskew：関係空間の半単純固有分解と整域性から、平方関係はなく六pair各一本のskew関係が強制される。従って非skewの残余は21二次共鳴（反対固有値6、平方対二異値積12、互いに素なpair積3）上へ縮小。全Jordan問題は四単純では生じない。次はこの21因子と三次共鳴の交叉の必要tensor atlasを、添字置換と既分類skewを除いて作る。
+
+(2,1,1)でも六個の二次固有値積が相異なる全域は、二元AS2平面T上の二つの可換自己同型による逐次skew polynomial拡大へ還元。関係数6と整域性で各固有blockの最大関係数(1,2,2,0,1,0)が強制される。f(r),g(r)の関係保存とfg=gfはBの整域性で直接証明し、TのBへの単射性を先に仮定する循環論法を避ける。単冪中山の有無を問わない。次はこのOre領域に中山の指定固有値とW1を適用し、残る二次共鳴領域との境界を分ける。

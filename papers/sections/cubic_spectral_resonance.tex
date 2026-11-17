@@ -1,0 +1,109 @@
+\subsection{多固有値領域の三次共鳴による必要被覆}
+\label{subsec:cubic-spectral-resonance}
+\begin{proposition}[単純固有直線の孤立純三乗共鳴の排除]
+\label{prop:cubic-spectral-resonance}
+H3包絡の中山自己同型の半単純部分について
+$B_1=\bigoplus_{i=1}^r V_i$、固有値を相異なる $\lambda_i$、
+$m_i=\dim V_i$ とする。ある非負整数組 $a=(a_1,\ldots,a_r)$ が
+\[
+ |a|=3,\qquad \lambda^a=1
+\]
+を満たすことが必要である。
+さらに、そのような組がただ一つで $a=3e_i,m_i=1$ ならH3は存在しない。
+これは中山の単冪部分が非自明でも成立する。
+\end{proposition}
+\begin{proof}
+定理\ref{thm:nakayama-cubic-linearization}より $\mu_B(G)=G\ne0$。
+有限次元空間 $B_3$ 上のJordan分解から $\mu_{B,s}(G)=G$。
+積写像 $B_1^{\otimes3}\twoheadrightarrow B_3$ は半単純作用に関して同変であり、
+固有値1の部分上も全射である。tensor側の固有値は、各語の文字数 $a$ に対する
+$\lambda^a$ なので最初の主張を得る。
+唯一の共鳴が $3e_i$ で $V_i=kx$ なら、固有値1部分の像は $kx^3$ に含まれる。
+従って $G=cx^3$、$c\ne0$ である。
+$R=B/(G)$ では $x$ と $x^2$ はそれぞれ次数1、2の非零元のまま残る一方、
+$x\,x^2=0$。これはH3の整域性に反する。
+\end{proof}
+
+\paragraph{固有値重複型 $(2,1,1)$ の具体的な被覆．}
+重複2の固有値を $a$、単純な二つを $b,c$ とする。
+必要共鳴は
+\[
+ a^3,a^2b,a^2c,ab^2,abc,ac^2,b^3,b^2c,bc^2,c^3
+\]
+のいずれかが1となることである。
+ただ一つの共鳴が $b^3=1$ または $c^3=1$ の領域は空である。
+正確な被覆は、八共鳴の和集合と $\{b^3=c^3=1\}$ の和集合である。
+この最後の有限固有値条件を省略しない。
+
+\paragraph{四単純固有値．}
+$\lambda_1,\ldots,\lambda_4$ が相異なる場合、20個の三次指数組がある。
+四つの純三乗共鳴それぞれについて、それ以外の19共鳴が成立しない開部分は空である。
+従って候補は16個の非純共鳴の和集合と、少なくとも二つの純共鳴が成立する領域で覆われる。
+これらは必要条件のみであり、AS4存在、正常核の非消滅、H3十分性を含まない。
+特に固有値の重複や複数共鳴の交叉を一般点の排除から消去していない。
+
+\begin{theorem}[四単純固有値の二次非共鳴領域はskew]
+\label{thm:cubic-simple-spectrum-skew}
+$B$ を上記のAS4包絡とし、中山の半単純部分が $B_1$ 上に相異なる四固有値
+$\lambda_1,\ldots,\lambda_4$ を持つとする。
+十個の積 $\lambda_i\lambda_j$ ($i\le j$) が全て相異なるなら、
+$B$ はその固有基底に関してskew polynomial algebraである。
+従って未分類の非skew四単純固有値候補は次の21条件のいずれかを満たす：
+\[
+ \lambda_i=-\lambda_j\ (i<j),\qquad
+ \lambda_i^2=\lambda_j\lambda_k\ (i,j,k\text{相異なる}),\qquad
+ \lambda_i\lambda_j=\lambda_k\lambda_l\ (\{i,j,k,l\}=\{1,2,3,4\}).
+\]
+中央の条件は $i$ と順序なしの $\{j,k\}$ で12個、最後は分割として3個と数える。
+\end{theorem}
+\begin{proof}
+二次関係空間を $I_2\subset B_1^{\otimes2}$ とする。
+その次元は6であり、中山の半単純作用に不変である。
+十個の固有値が異なるので、tensorの固有空間は
+$kx_i^2$ と $\langle x_ix_j,x_jx_i\rangle$ ($i<j$) である。
+整域性から $I_2\cap kx_i^2=0$。
+二次元の後者との交叉は高々一次元で、非零なら両係数とも非零である。
+一方の係数が零なら非零一次元の積が零になるからである。
+六つのpair空間しかなく $\dim I_2=6$ なので、全てのpairに関係が一本ずつ存在する。
+従って $I_2$ は $x_ix_j-q_{ij}x_jx_i$、$q_{ij}\ne0$ の六本で張られる。
+$B$ はquadraticなので、これが全提示である。
+最後に二つの二次指数組が添字を共有すれば、その積の等式は異なる固有値の等式に帰着して不可能。
+共有しない場合は、平方同士、平方と二つの異なる添字、二つの互いに素なpairという
+三種類だけであり、列挙した6+12+3条件を得る。
+\end{proof}
+
+\begin{theorem}[重複型 $(2,1,1)$ の二次非共鳴領域]
+\label{thm:cubic-211-nonresonant-Ore}
+中山の半単純部分の固有空間を $U\oplus kb\oplus kc$、
+固有値を $a,b_0,c_0$ とし、$\dim U=2$ とする。
+六個の積 $a^2,ab_0,ac_0,b_0^2,b_0c_0,c_0^2$ が全て相異なるなら、
+包絡は二元AS2平面 $T=T(U)/(r)$ 上の逐次skew polynomial拡大
+\[
+ B=T[b;f][c;\widetilde g],\qquad
+ f,g\in\operatorname{Aut}_{\rm gr}T,\quad fg=gf,\quad
+ \widetilde g|_T=g,\quad\widetilde g(b)=q^{-1}b
+\]
+となる。ここで $q\ne0$。中山の単冪部分の消滅は仮定していない。
+\end{theorem}
+\begin{proof}
+二次tensorの六固有空間は $U^{\otimes2}$、$Ub+bU$、$Uc+cU$、
+$kb^2$、$kbc+kcb$、$kc^2$ である。
+整域性から関係空間はdecomposableな非零tensorを含まない。
+$U^{\otimes2}$ と関係空間との交叉は高々一次元である。
+実際、二次元の $2\times2$ 行列pencilは代数閉体上で非零特異行列を含む。
+$Ub+bU$ との交叉は両射影が単射なので高々二次元、$Uc+cU$ も同様。
+$b^2,c^2$ は関係に入らず、$bc,cb$ の空間には高々一本である。
+上界の和は $1+2+2+1=6$ であり、関係数が6なので全て等号となる。
+従って関係は、非退化 $r\in U^{\otimes2}$、
+$b u=f(u)b$、$c u=g(u)c$ ($u\in U$)、$bc=qcb$ と書ける。
+$f,g$ は可逆で $q\ne0$。
+
+二元非退化二次関係は二元AS2平面を定める。
+$br=f(r)b=0$ と整域性から $f(r)=0$ in $B_2$ であり、
+$B_2$ の純 $U$ 関係が $kr$ なので $f(r)\in kr$。
+従って $f$ は $T$ の自己同型であり、$g$ も同様。
+$(bc)u$ を二通りに書き換えて差を取ると
+$(fg-gf)(u)bc=0$。整域性から $fg=gf$。
+従って表示した $\widetilde g$ は $T[b;f]$ の自己同型を定める。
+得た逐次Ore拡大と $B$ は同じ二次生成関係を持ち、$B$ はquadraticなので一致する。
+\end{proof}
