@@ -605,5 +605,31 @@
       "all H3 cuts",
       "novelty"
     ]
+  },
+  "CY_DL_necessary_cover_v297": {
+    "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+    "files": [
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_DOUBLE_COVER_COMPLETE.tex",
+        "sha256": "d5d2c2b5e819a702e1dadd135b0b3b247553406049ac8516d198c5b5212c06df"
+      },
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_LINE_BASE_EXCLUSION.tex",
+        "sha256": "df7721472112f15ffde5f1d589dd11be98fd7961a491783d4ad037b207b104ba"
+      }
+    ],
+    "used_part": "DCC4–DCC12 necessary coefficient cover and LBE2–LBE10 necessary all-branch elimination only; no AS sufficiency, isomorphism or automorphism theorem",
+    "hypotheses": "CY noetherian Koszul AS4 H3 envelope, hence domain; c0 and geometric D or L symmetric projection",
+    "independent_control": "all22+22 cyclic directions/full rank, universal D Schur/discriminants/linear8/binomials/diagonal root normalizations/constant invertible transport to old all-h excluded presentations; universal L GL2 covariance/two ranks/polynomial eliminations/square column",
+    "proof": "papers/sections/cubic_CY_DL_cover.tex",
+    "validator": "computations/verify_cubic_CY_DL_cover.py",
+    "existing_H3_input": "thm:as4-double-cover-h3-exclusion, already proved for all nonzero h",
+    "not_imported": [
+      "full D AS4 sufficiency/Koszul filtration",
+      "full D isomorphisms/automorphisms",
+      "all finite-base projection coefficient covers",
+      "full CY classification",
+      "novelty"
+    ]
   }
 }

@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "version": "classification-v296",
+  "version": "classification-v297",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -4237,6 +4237,21 @@
       "all CYc0 H3 excluded",
       "ordinary geometry mechanically formalized",
       "complete H3 classification",
+      "novelty confirmed"
+    ]
+  },
+  "CY_DL_cover_v297": {
+    "status": "PASS full default exact control and main LuaLaTeX clean",
+    "proof": "papers/sections/cubic_CY_DL_cover.tex",
+    "validator": "computations/verify_cubic_CY_DL_cover.py",
+    "certificate": "computations/cubic_CY_DL_cover_certificate.json",
+    "scope": "entire D/L H3 projection strata empty; remaining finite-base five types",
+    "validation_scope": "81 validators across runs; no single81 replay",
+    "not_claimed": [
+      "AS4 existence sufficiency imported",
+      "remaining finite-base strata excluded",
+      "full CY/H3 classification",
+      "ordinary group coverage mechanically formalized",
       "novelty confirmed"
     ]
   }

@@ -88,6 +88,7 @@ CHECKS=[
  'verify_cubic_CY_second_quadric.py',
  'verify_cubic_CY_Veronese.py',
  'verify_cubic_CY_CI22_projection_atlas.py',
+ 'verify_cubic_CY_DL_cover.py',
 ]
 results=[]
 for name in CHECKS:

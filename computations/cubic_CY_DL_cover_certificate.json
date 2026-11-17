@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "scope": "full necessary D coefficient cover by the two previously excluded families; complete L projection exclusion",
+  "D_normal_relations": {
+    "I": "Matrix([[1, 0, 0, 0, 0, 0], [0, 1/2 - I/2, 0, 0, 0, 0], [0, 0, 2, 0, 0, 2], [0, 0, 0, 0, 0, 0], [0, 1/2 + I/2, 0, 0, 0, 0], [0, 0, 1, 0, 0, 0], [0, 0, 0, 0, 0, 0], [2*h, 0, 0, -2*h, 0, 0], [0, 0, -2, 0, 0, -2], [0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0], [0, 0, 0, 0, 1/2 - I/2, 0], [0, 0, 0, 0, 0, 0], [-2*h, 0, 0, 2*h, 0, 0], [0, 0, 0, 0, 1/2 + I/2, 0], [0, 0, 0, 0, 0, 1]])",
+    "II": "Matrix([[1, 0, 0, 0, 0, 0], [0, 1/2 - I/2, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 2, -2*h, 0, 0], [0, 1/2 + I/2, 0, 0, 0, 0], [0, 0, 1, 0, 0, 0], [2*h, 0, 0, 0, 0, 2], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [-2*h, 0, 0, 0, 0, -2], [0, 0, 0, 1, 0, 0], [0, 0, 0, 0, 1/2 - I/2, 0], [0, 0, -2, 2*h, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 1/2 + I/2, 0], [0, 0, 0, 0, 0, 1]])"
+  },
+  "D_full_mixed_dimension": 22,
+  "D_internal_SL2_discriminants": "both -1/4, no zero values",
+  "D_all_supports": "four nonzero coefficient pairs force exactly I or II by six explicit binomials",
+  "D_all_nonzero_normalization": "auxiliary roots rv2=uv/p or rv4=1/(p3 rr), preserving r0s0=t0u0",
+  "L_full_mixed_dimension": 22,
+  "D_old_presentation_transport": "all polynomial identities and constant invertible relation basis, for every h",
+  "L_all_GL2_covariance": true,
+  "L_rank0_obstruction": "free two-generator quotient",
+  "L_rank1_obstruction": "all-parameter polynomial identities force actual a2 relation",
+  "ordinary_dependencies": [
+    "all rank6 marked relation normalizations from prior seven-projection theorem",
+    "SL2 transitivity on fixed nonzero binary discriminants",
+    "domain support exclusions and integral-field nonzero root choices",
+    "existing theorem thm:as4-double-cover-h3-exclusion handles all nonzero h"
+  ],
+  "not_claimed": [
+    "AS4 existence sufficiency imported",
+    "all finite-base CY projection types excluded",
+    "full CY or H3 classification",
+    "novelty confirmed"
+  ]
+}
