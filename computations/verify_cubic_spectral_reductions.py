@@ -64,6 +64,7 @@ CHECKS=[
  'verify_cubic_third_root_nonunit_proportional_open.py',
  'verify_cubic_third_root_nonunit_proportional_Tzero.py',
  'verify_cubic_third_root_nonunit_isolated.py',
+ 'verify_cubic_third_root_nonunit_degenerate_self.py',
 ]
 results=[]
 for name in CHECKS:

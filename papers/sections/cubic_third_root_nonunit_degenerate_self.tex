@@ -1,0 +1,122 @@
+\subsection{比例退化selfの全排除と零結合への帰着}
+\label{subsec:cubic-third-root-nonunit-degenerate-self}
+\begin{lemma}[正常一次商の逆向き零積障害]
+\label{lem:cubic-normal-linear-opposite-products}
+Hilbert級数 $(1-t)^{-4}$ の二次代数整域 $B$ に正常な非零一次元 $b$ があるとする。
+三生成元二次商 $S=B/(b)$ に、独立な一次元 $x,c$ の二関係 $xc=cx=0$ があれば矛盾する。
+\end{lemma}
+\begin{proof}
+$b$ は正則なので $H_S=(1-t)^{-3}$、従って $\dim S_2=6,\dim S_3=10$ である。
+三生成元の二次関係空間 $I_2$ は次元3。
+$I_2\otimes S_1$ と $S_1\otimes I_2$ の自由三次語内の像の交わりには、
+二つの独立な語 $xcx,cxc$ が入る。
+従って三次商次元は $27-(9+9-2)\ge11$ となり、10に反する。
+ここでは一次正規商のAS3分類を外部入力としていない。
+\end{proof}
+
+\begin{theorem}[非零比例退化selfも全て空]
+\label{thm:cubic-third-root-nonunit-degenerate-self-empty}
+残る $u=1,v=0$、$\alpha\ne0,\alpha^2+\omega\ne0$ の全層はH3を与えない。
+従って非単位重複rootの全H3必要候補は、$b^2$ 列の両結合 $p=r=0$ に限る。
+\end{theorem}
+\begin{proof}
+self関係を
+\[
+ xc+\alpha cx=0,\qquad b^2+xc-\frac\omega\alpha cx=0
+\tag{S0}
+\]
+とする。$\kappa=\alpha+\omega/\alpha\ne0$ と書けば $b^2=\kappa cx$。
+以下も元22tensorのrank2条件からの必要被覆であり、AS4の十分性を仮定しない。
+
+\paragraph{$n\ne0,T\ne0$.}
+対角generator/top変更で $n=T=1$ とできる。
+$v=1$ の場合と同じ最初の8斉次式の行列式により、
+$\alpha=-1,-\omega,-\omega^2$ に限る。
+各値で $\mathbb Q(\omega)[m]$ 上の定数単元消去を新しく行うと、
+前三相のpivot数は8,8,7である。
+前二相では残余に非零定数が現れ、全 $m$ で不可能。
+主相 $\alpha=-\omega^2$ の全残余は零で、$a_{15}=Z$ の一本の斉次核だけが残る。
+$Y=y+(m+\omega^2)x$ と置くと、元全関係の像は
+\begin{gather*}
+ xc=\omega^2cx,\quad b^2+2xc=0,\quad bY=\omega^2Yb,\\
+ Yb-\omega^2xb-bx-c^2=0,\quad
+ bc+ZY^2=0,\quad cb+\omega^2ZY^2=0.
+\end{gather*}
+この同定は元画像を表示関係で掛け戻し、unit minorとパラメータ分母の不在を確認する。
+$P=xb-\omega bx$ とすると、自由語上の正確な恒等式
+\[
+ 2Pc=2x(bc-\omega cb)+\omega\bigl((b^2+2xc)b-b(b^2+2xc)\bigr)
+\]
+により $Pc=0$ である。
+一方、二次語上で $xb$ に1、$c^2$ に $-\omega^2$、他に0を与える線型汎関数は
+表示六関係を全て消し、$P$ には1を与える。
+従って $P\ne0$ は全 $Z$ に一様な非零零因子であり、整域性に反する。
+
+\paragraph{$n\ne0,T=0$.}
+$n=1$ とする。$bc,cb$ 射影はrank2で、$c^2$ 行の右二成分が零なので、
+左の純 $x^2$ 項も零でなければならない。
+これは $\alpha^2=\omega$ を強制する。
+$\alpha=\omega^2$ は上の斉次行列式が非零でcube係数を全て零にし、
+純 $bc,cb$ 関係を生じるので不可能。
+従って $\alpha=-\omega^2$ のみである。
+このとき $c^2$ 行は零、$b$-mixedは純 $Ub+bU$ で、元二列が
+\[
+ bx=(mx+y)b,\qquad by=(\omega-m^2)xb-myb
+\]
+を与える。$Y=y+mx$ と変更すれば $bx=Yb,bY=\omega xb$ となり、$m=0$ の標準形に戻せる。
+selfは $x,b,c$ だけなので、この変更で (S0) は変わらない。
+元八係数の線型系はrank6であり、二つの自由係数 $S,Z$ を用いた全必要表示は
+\begin{gather*}
+ xc=\omega^2cx,\quad b^2+2xc=0,\quad bx=yb,\quad by=\omega xb,\\
+ cb+Zx^2+\omega Zxy-\omega S yx+\omega^2Zy^2=0,\\
+ bc+\omega Zx^2-\omega^2Sxy+\omega^2Zyx+Zy^2=0.
+\end{gather*}
+元22tensorとのunit minorと全画像恒等式も確認する。
+$S=Z=0$ は純 $bc$ 関係で整域性に反する。
+$x,y$ を共に $r$ 倍、$c$ を $r^{-1}$ 倍、$b$ を固定すれば正規化を保ち、
+$(S,Z)$ は共に $r^3$ 倍される。
+従って $Z=1,S=a$ の一変数族と $Z=0,S=1$ の固定点で全値を覆う。
+一変数族の元商上の正常行列は一般点で $33\times7$、全列rankである。
+全関係・正常pivotと分母の例外多項式は $a(a+1)$。
+$a=0$ のfresh正常核も零、$a=-1$ は次数4商次元36で非AS4。
+$Z=0,S=1$ は次数3商次元22で非AS4である。
+従ってこの全領域もH3を与えない。
+
+\paragraph{$n=0$.}
+$bc,cb$ 射影rank2なら、前と同じ $yb,by$ 行の消滅から指数増大商
+$k\langle y,b\rangle/(b^2)$ が得られ、AS4でない。
+従って射影rank1であり
+\[
+ \alpha=-\omega m^2,\quad m\ne0,\quad T(m+\omega^2)=0
+\]
+が必要である。
+
+$T\ne0$ なら $m=\alpha=-\omega^2$。
+元 $c^2$ 行は $cb=\omega^2bc$ を与え、(S0)は $b^2+2xc=0$ となる。
+上の自由語恒等式から再び $(xb-\omega bx)c=0$、従って整域なら $xb=\omega bx$。
+重み $\omega$ の二次関係空間は二次元で、$c^2$ への射影rankは1。
+その純 $Ub+bU$ 部分にこの非零関係が入るので、
+$c^2$ を含む元の関係と合わせ、全関係が $xb,bx,c^2$ のみに入る。
+従って $yb,by$ 行は零、全 $y^2$ 成分も零となる。
+再び指数増大商が生じ、矛盾する。
+
+$T=0$ なら、$c^2$ 行の純 $x^2$ 項が零でなければ整域性に反するので $\alpha^2=\omega$。
+この行は全て零となり、二つの $b$-mixed関係は純 $Ub+bU$ に入る。
+整域性から両射影は同型で、$b$ は $U$ 上の正常元である。
+元 $cb$ 列から $bx=mxb$ も得られる。
+$b^2=\kappa cx$ を使って $bb^2=b^2b$ を比較すると
+\[
+ (bc-m^{-1}cb)x=0.
+\]
+従って $bc=m^{-1}cb$、$b$ は全 $B$ の正常元となる。
+正常正則一次商 $B/(b)$ では、(S0)と $\kappa\ne0$ により $xc=cx=0$ となる。
+補題\ref{lem:cubic-normal-linear-opposite-products}のHilbert矛盾が適用でき、
+この最後の境界も不可能である。
+
+公開再現器は \texttt{verify\_cubic\_third\_root\_nonunit\_}\\
+\texttt{degenerate\_self.py}。
+元self分解、全線型incidence、全値画像恒等式、非零二次零因子の証明書、
+一変数正常核、fresh点と結合則恒等式を標数0で再生する。
+独立結合と非退化比例selfの既存排除と合わせ、非零 $b^2$ 列を全て排除した。
+両結合零のatlasを排除したという意味ではない。
+\end{proof}

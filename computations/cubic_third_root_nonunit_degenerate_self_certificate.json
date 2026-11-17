@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "scope": "all proportional degenerate self u1,v0 with nonzero p,r",
+  "nT_nonzero_incidence": [
+    {
+      "alpha": "-1",
+      "unit_pivots": 8,
+      "residual": "nonzero constant"
+    },
+    {
+      "alpha": "-CRootOf(z**2 + z + 1, 1)",
+      "unit_pivots": 8,
+      "residual": "nonzero constant"
+    },
+    {
+      "alpha": "-CRootOf(z**2 + z + 1, 1)**2",
+      "unit_pivots": 7,
+      "residual": "zero"
+    }
+  ],
+  "nonzeroT_model": "original image unit6minor, uniform nonzero P=xb-omega*bx and P*c=0 tensor identity",
+  "n_nonzero_Tzero": "m0 rank6 free(S,Z), exact source model, common scalar normalization",
+  "normal_ratio_curve": {
+    "matrix": [
+      33,
+      7
+    ],
+    "bad": "a*(a+1)"
+  },
+  "fresh_points": [
+    {
+      "case": "ratio0",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_columns": 7
+    },
+    {
+      "case": "ratio-1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        36
+      ],
+      "normal_columns": 7
+    },
+    {
+      "case": "Zzero",
+      "dimensions": [
+        1,
+        4,
+        10,
+        22,
+        46
+      ],
+      "normal_columns": 8
+    }
+  ],
+  "nzero_boundary": "ordinary domain normality plus exact associativity, or Fibonacci quotient",
+  "normal_quotient_overlap_bound": {
+    "required_S3": 10,
+    "actual_lower_bound": 11
+  },
+  "not_claimed": [
+    "zero b2 coupling excluded",
+    "whole nonunit atlas completed",
+    "complete H3 classification"
+  ]
+}

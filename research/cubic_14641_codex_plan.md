@@ -72,22 +72,21 @@ Coordinate with the current as4, asz4 and poisson-p4 repositories for ambient an
 For each result record assumptions, dependencies, proof location, whether freshly verified, exact computation input and certificate, unresolved points and novelty status. Keep a current self-contained research plan, research notes and Japanese LuaLaTeX paper, not chronological logs. Update source, code and small reproducibility certificates on GitHub main via ordinary fast-forward; do not track PDFs, ZIPs, caches, TeX outputs, or use GitHub Actions, PRs or force push. Verify remote HEAD. For this repository, do not save to Library if the GitHub push succeeds; Library is an emergency fallback only.
 
 
-## 三固有値の現行必要被覆と再開課題（v273）
-三固有値H3の中山は半単純位数3、必要スペクトルは(ω,ω,1,ω²)と(ω²,ω²,1,ω)のみ（一つのGaloisラベル軌道、幾何学的同型商ではない）。重複1の(1,1,ω,ω²)は元22tensor atlas全体を排除済み。全CY・四単純・成分/境界/相対降下と全H3分類は未完成。
+## 三固有値の現行必要被覆と再開課題（v274）
+必要スペクトルは半単純位数3の(ω,ω,1,ω²)と(ω²,ω²,1,ω)のみ（一つのGaloisラベル軌道、幾何学的同型商ではない）。重複1の全22tensor atlasは排除済み。非単位重複rootもb²列p(U)c+c r(U)の全非零結合を排除した。残るのはp=r0だけ。全CY/四単純/成分・境界/相対降下と全H3分類は未完成。
 
-### 完成した証明と再現入口
-重複1：独立cube結合/S非零/両非零比例の六係数正常一次chart/片方零T0及び全T非零を排除。最後はonezero_completion節・checkerの正常b固有値、Phi12二点nonAS4、a16zeroの最後の実Ore表示δx非零。source originalH=displayedR*coords、unit6minor、分母rTだけを確認。古いL/ΩやE2中心へ戻らない。
-非単位重複根：自己対称H0のb²列はp(U)c+c r(U)、p=(a13,a20),r=(−ωa9,−ωa17)。一方零のみは因子でdomain外。独立p/rはp=x,r=y、self xc+cy,b²+t yc−ωt cxへ。t/T非零、対角変更でt=T1、Mのbc/cb射影minor J=mn−ω−1とmnで全値rank2。8homdet ωJ4*(m³+ωmn−n³)*(m+(ω+1)(n+1))。F/L/J三曲線のpolySmith inhomgcdで全値不可能、最後node m=n0の正常36×7rank7で排除。証明nonunit_independent節/checker。
-両非零比例：p=x,r=αx (α非零)、self rank2からP=(1,0,0,α,0),V=(u,v,1,−ωu/α,−ωv/α)。v非零はu0,v1。v0ならdomainからu非零,α²+ω非零でu1へ。v1の全値は以下で完成：
-- n=a18非零：T非零、n=T1正規化、α−1/−ω/−ω²の三相。前二相はB3dim22。主相はY=y+(m+ω²)xの二変数(l,Z)モデル、正常41×7の7constantpivotsと4境界曲線/2fresh点で全排除。nonunit_proportional_open節/checker。
-- n0は射影rank2なら商k<y,b>/(b²)指数増大。残りnT0,α−ωm²は13m値へ有限化し、正常x固有値/因子/実skew-cone頂点で全排除。nonunit_proportional_Tzero節/checker。
-- n0,T非零はT1,α=m−ω²。4×4pureU行列の36minor GB11個、線型a1=(1+ω)a2,a5=ωa8,a6=(1+ω)a8。A=a0,B=a2,D=a4,C=a8,E=a15,W=B+ωD−2ωでW非零はpurec²/domain外。W0はB=ω(2−D),AC=ω²(2−D)(1−D),AE=−ω(2−D)C,C²=ωE(D−1)。純Uの選択行Qdet=1−DだがQ=0を捨てず、D1,A0,C0,E1を別fresh点へ（B3dim22）。A非零はweights(A,C,E)=(-1,1,2)でA1のD一変数へ、D1はこのA1族では純x²、正常38×7の7constantpivots、bad=(D−1)(D−2)、D2はB4dim36。A0,D2はC1/0二点、前者正常7核零、後者B4dim36。これでv1全体完成。nonunit_isolated節/checker。
-最新主原稿v273 LuaLaTeX clean PASS。新checkersは全てdefault Sympy PASS、共有model変更後にprevious proportional_openも再PASS。累計56validators across runs（既存36統合再生と20後続個別）、単一56全再生未実行。新規as4/外部入力なし。
+### 完成した証明の入口
+重複1はonezero_completion節に至る必要被覆全体で完成。非単位重複rootはnonunit_independent（独立p/r全値Smith）、nonunit_proportional_open（v1,n非零、4曲線/2点）、nonunit_proportional_Tzero（v1,nT0、13根の正常x固有値と実skew cone）、nonunit_isolated（v1最後の相、GB11/一変数/4fresh点、Q=0別分枝含む）により、全非退化self v1を完成した。
+比例p=x,r=αxのselfはxc+αcx,b²+u xc+v yc−(ω/α)(u cx+v cy)。v非零はu0,v1へ、v0はdomainからu非零,α²+ω非零でu1へ。最新nonunit_degenerate_self節とcheckerでv0も全値排除：
+- nT両非零はn=T1、同じhomdetでα−1/−ω/−ω²の3相。前二相はpolynomialunit residual非零定数。主相はY=y+(m+ω²)xでxc=ω²cx,b²+2xc,bY=ω²Yb,Yb−ω²xb−bx−c²,bc+ZY²,cb+ω²ZY²のモデル。P=xb−ωbxは全Zで非零（定数汎関数L(xb)=1,L(c²)=−ω²で全I2を消す）、2Pc=2x(bc−ωcb)+ω[(b²+2xc)b−b(b²+2xc)]でPc0、全非整域。
+- n非零T0はα²ω、正相はhomdet/P0/domain外、α−ω²だけ。Y=y+mxでm0、constantfield rank6/free(S,Z)のexact model。共通scalarでZ1,S=a又はZ0S1へ。正常33×7の全source/normal bad a(a+1)、a0正常核零、a−1 B4dim36、Z0S1 B3dim22。全値排除。
+- n0でbc/cb射影rank2は指数商。rank1はα−ωm²,T(m+ω²)0。T非零ならα=m−ω²、base b²+2xcとbc=ωcbから再びPc0、domainP0。I1純Ub kernel1にPが入ると全yb/by成分が消えて指数商、入らなければ非整域。
+- nT0はpurex²行からα²ω、I1は純Ub2でdomainがb正常onUを強制、bx=mxb。b²=κcxとbb²=b²bからbc=m^-1cb、従ってb全正常。正常正則bの商SはHS(1−t)^-3だがxc=cx0を含む。I2dim3で二つの独立cubic overlaps xcx,cxcがありS3≥11、HSの10に矛盾。外部AS3domain定理を新規輸入せず直接Hilbert矛盾。
+最新v274主原稿LuaLaTeX clean PASS。新checker default Sympy全PASS（sourceunit画像、自由語零因子identity/非零functional、normal一変数/fresh点、b³結合則/overlap bound）。累計57validators across runs、単一57全再生未実行。新規as4/外部定理輸入なし。
 
-### 現在の未解決：比例v0と零b²結合
-最優先はv0,u1のself xc+αcx,b²+xc−(ω/α)cx、α非零,α²+ω非零。元coはa13=1,a9=−αω²,a11=2,a3=1/α−ω²α、a12=a14=a7=a16=a17=a19=a200,a10=m,a18=n,a21=T。Mはprivate nonunit_prop_v0_unitlinear.py等に再構成済み。まだこの層を全排除していない。
-private確認済みの次の小課題：nT両非零はn=T1へ正規化。最初8homdetはv1と同じα三相を強制。α−1/−ωのpolynomial unit消去は残余が非零定数なので不可能。α−ω²相は7unitpivots/freea15、rhs零でhomogeneous kernel。Y=y+(m+ω²)x後の候補モデルはxc=ω²cx,b²+2xc=0,bY=ω²Yb,Yb−ω²xb−bx−c²=0,bc+ZY²=0,cb+ω²ZY²=0のはず。これを元画像で監査する。domainならxc=-b²/2とcb=ω²bcの結合則から(xb−ωbx)c=0、従ってxb=ωbx。この二次式が表示I2にないことをunit matrixで確認すれば全モデル非整域となる。未統合。
-n非零,T0はrowcc purex²からα²=ω。α正ω²はhomdet非零/P0でdomain外、主相α−ω²ではfirst8homogeneous rank6（T1のrank7と混同しない）、二つのfree cube係数が残る。private nonunit_prop_v0_T0_unitlinear.pyで確認。T0相をT1の1parameter modelへ勝手に代入しない。
-n0でbc/cb射影rank2なら前と同じ指数商で非AS4。rank1残余はα=−ωm²,n0かつT(m+ω²)=0。T0ならrowcc purex²のdomain条件からα²=ω、従ってm4=ω²の4点。rowcc0なのでI1は純Ub+bU、domainからb正常onU、かつbx=mxb。b²=(α+ω/α)cxとxc=-αcxからbb²=b²bを使えばbc=m^-1cbでbが全Bに正常となる。正常正則bの商S=B/bはHS(1−t)^-3だが、xc=cx0を含み、二つの独立なcubic overlaps xcx/cxcによりdimS3≥11（HSは10）となる見込み。一次正規商AS3domain定理を新規輸入せず、このHilbert矛盾を検証・証明する。
-T非零のn0,α=m−ω²ではbase cb=ω²bc,b²+2xcとxcω²cxから再びxb=ωbxをdomainが強制。I1 pureUb部分は1次元なのでその式が入るならyb/by成分が全零となり指数商、入らなければ非整域。全source像で監査して正式化する。
-両結合零p=r0は別領域：H0はUc+cUの二関係だけ、domainなら両射影が同型でcがU上の正常元になる。Mとbc/cbの連結、正常三次7核と全H3条件は未判定。次は上のv0の小さい三境界から継続する。
+### 次の最小課題：零b²列だけ
+p=r0なのでH0はUc+cUの2関係。domainなら両射影同型、cはU上の正常元c u=F(u)c（F可逆）。H0=R J R^t,R=[−F;I],J対称可逆で、bottom=−ωtopからFJF^t=−ω²J。全sourceのcanonicalizationを監査・正式化する。
+有力な完成経路（通常証明/source検算をまだ公開統合していない）：m=a10,n=a18,T=a21とL=mx+ny。m=n0はT非零ならpurec²、T0ならpureU²2関係pencilでdomain外。従ってL非零、bc/cb射影は全値rank2。T0ならc²行が零となりH0 cross blockも零、domainの両射影可逆と矛盾するのでT非零。元I1はLb=T c²,bL=ω²T c²。c²LからF²L=ω²L。F(L)=λLならc³結合則からbc=λcb、cが全正常となり、B/cでLb=bL0。既存normal-linear-opposite-products lemmaによりHilbert矛盾。
+従ってL,F(L)独立。CayleyHamiltonからtrF0,detF−ω²,F²ω²I、U基底をFdiag(ω,−ω)へ。Joffdiagだけ、self co a12=s,a14=ω²s,a7=ωs、s非零。Lは両固有成分非零（m,n非零）。generator/top diagonalでs=m=n=T1へ正規化可能。元rank2Mの12linear式は8cube係数をa0=a1=D+ω,a2=a6=−ω(D+ω),a4=a5=a15=D,a8=ω²Dへ制限するはず（manual row消去）。
+この一変数候補をprivate nonunit_zero_coupling_model.pyで元22から再構成し、dims3/4 20/35、正常33×7がgeneric kernel0まで確認。より簡単なsource表示はcx=ωxc,cy=−ωyc,(x+y)b=c²,b(x+y)=ω²c²,bc=−((D+ω)x+Dy)(x+y),cb=−ω²(x+y)((D+ω)x+Dy)。private nonunit_zero_coupling_curve.pyで全source/normal pivot例外多項式を計算中（log v275_nonunit_zero_coupling_curve.log）。次はこのbad polyの全根をfresh判定し、上の必要被覆・正常商Hilbert矛盾・source画像を正式化する。完成すれば全三固有値が排除されるが、現時点ではまだ完成扱いしない。
+四単純と全CY被覆、全成分/境界/相対降下は引き続き未完。移管済み独立論文をここで再開しない。
