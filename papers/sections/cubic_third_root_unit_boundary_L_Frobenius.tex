@@ -1,0 +1,109 @@
+\subsection{Frobenius双対と分岐による追加障害}
+\label{subsec:cubic-third-root-unit-boundary-L-Frobenius}
+\begin{proposition}[固定例のArtinian双対性]
+固定例の $T=A/(x,\Psi,z_9)$ は最高次数12の次数付きFrobenius代数である。
+$T_{12}\simeq K$ の座標を $\lambda$ とすると、全ての $n$ について
+\[
+ T_n\times T_{12-n}\longrightarrow K,\qquad (a,b)\longmapsto\lambda(ab)
+\]
+は完全pairingである。規約
+$\lambda(av)=\lambda(\nu(v)a)$ における自己同型は
+\[
+ \nu(y)=y,\qquad \nu(b)=\omega^2b,\qquad\nu(c)=\omega c
+\]
+であり、位数は3である。
+\end{proposition}
+\begin{proof}
+元の全関係を用いた逐次商から、各pairing行列を直接作る。
+次数0から12までのrankは
+\[
+ 1,3,6,8,9,9,9,9,9,8,6,3,1
+\]
+となり、両側の次元に等しい。
+さらに次数11の全基底と三生成元について上のtwisted cyclic等式を再代入する。
+一次生成性から全ての積に等式が従う。
+計算は同じ六次代数体内で行い、全六埋込みに有効である。
+再現器は \texttt{verify\_cubic\_third\_root\_unit\_boundary\_L\_Frobenius.py}。
+\end{proof}
+
+\begin{proposition}[相対双対への持上げ]
+$S=K[x,\Psi,z_9]$ に対し
+\[
+ \operatorname{Hom}_S(A,S)\simeq A_\nu(12),\qquad
+ \nu(x,y,b,c)=(x,y,\omega^2b,\omega c).
+\]
+従ってアフィンorderの相対双対も位数3の同じ自己同型で与えられる。
+\end{proposition}
+\begin{proof}
+$T$ の各次数の語基底をそのまま $A$ へ持ち上げると、既証の自由性から
+$S$ 基底になる。次数12の唯一の基底元だけで値1を取る
+次数 $-12$ の $S$ 線型写像を $\widetilde\lambda$ とする。
+積のpairingは $S$ の斉次極大idealを法として前命題の完全pairingとなる。
+次数付きNakayama補題により相対pairingは全体でも完全である。
+
+残るtwisted cyclic等式も有限個の厳密計算で確認できる。
+基底元の次数は12以下であり、生成元を掛けたとき
+$\widetilde\lambda$ の値は次数1以下である。
+従って非零の可能性は次数12での定数と次数13での $x$ の倍だけである。
+$A/(\Psi,z_9)$ の次数12,13はともに81次元で、$x$ 倍は同型。
+全81基底元と四生成元に対し、$x$ 倍の逆行列と自由基底の変換行列を用いて
+$\widetilde\lambda(av)=\widetilde\lambda(\nu(v)a)$ を厳密に確認する。
+$x=1$ としても、調べる係数が次数0または1なので情報を失わない。
+これで全生成元、従って全 $A$ に対する両側加群同型を得る。
+中央 $x$ の局所化後、$x=1$ の次数零部分を取ればアフィン版を得る。
+\end{proof}
+
+次の障害はArtinian商の計算とは独立な条件付きの道具である。
+ここでnormal orderは、余次元1でJacobson radicalが一つの元で
+左右から生成されるというorder理論の意味で使う。
+単に整閉な中心を持つという意味ではない。
+\begin{proposition}[normal order上の有限位数双対の周期障害]
+\label{prop:cubic-Frobenius-order-period}
+$k$ を標数0代数閉体、$Z=k[s,t]$、$F=k(s,t)$ とする。
+$V$ は中心 $Z$ 上有限自由なorderで、$V_F$ は中心単純とする。
+次を仮定する。
+\begin{enumerate}
+\item $\operatorname{Hom}_Z(V,Z)\simeq V_\eta$ が両側加群として成り立ち、
+      $\eta^m=1$。
+\item $Z$ の全高さ1素点における完備化はnormal orderである。
+\end{enumerate}
+このとき $m[V_F]=0\in\operatorname{Br}(F)$。
+特に $V$ が整域なら、$V_F$ の次数は $m$ を割る。
+\end{proposition}
+\begin{proof}
+高さ1素点で完備化し、$\pi$ をorderのradical生成元、$e$ をその全分岐指数とする。
+normal orderの標準形とtrace双対の計算
+\cite[Theorem~10.8, Corollary~10.9, Proposition~10.12]{ChanOrders}
+から、双対は $\pi^{-(e-1)}V$ である。
+$\pi$ の共役が半単純剰余の中心に誘導する自己同型 $\sigma$ の位数は $e$。
+双対の二つの記述を比較すると、$\eta$ の誘導作用は
+$\sigma^{e-1}$ またはその逆である。両側加群の規約による逆は結論に影響しない。
+比較に現れる単元による内部自己同型は剰余中心に自明に作用する。
+従って $\eta^m=1$ より $e\mid m(e-1)$、すなわち $e\mid m$。
+実際のBrauer留数の位数はこの全分岐指数を割る。
+よって $m[V_F]$ の全てのアフィン高さ1留数は零である。
+
+最後の消滅を単に中心の有理性から推論してはならない。
+$\mathbb A^2\subset\mathbb P^2$ と見れば、残り得る分岐は無限遠直線だけである。
+Artin--Mumfordのsecondary residueの相殺により、その直線上の巡回拡大は
+全閉点で不分岐となる。しかし $\mathbb P^1$ は非自明な有限\'etale巡回被覆を持たない。
+従って直線の留数も零である
+\cite[Theorem~15.1, Example~15.4(1)]{ChanOrders}。
+曲面のpurityと $\operatorname{Br}(\mathbb P^2)=0$
+\cite[Theorems~12.5, 15.6]{ChanOrders} から $m[V_F]=0$ を得る。
+$V$ が整域なら $V_F$ は除法代数であり、曲面のperiod--index定理
+\cite[Theorem~4.2.2.3]{LieblichPeriodIndex} によって次数は周期に等しく、$m$ を割る。
+\end{proof}
+
+\begin{remark}[固定例への適用に残る点]
+上のArtinian双対の位数3だけから、命題の二仮定を結論しない。
+固定例の次数9と $m=3$ が矛盾するためには、アフィンorder自体の
+相対双対は上で同定できたが、H3の有限大域次元から余次元1のnormal order性を導く必要がある。
+特にhereditary orderとnormal orderは区別する。
+検討中の経路は、DVR上のFrobenius双対から自己単射次元1を得て、
+有限大域次元と合わせてhereditary性を導き、さらに格子鎖のblockの大きさが
+Frobenius性によって等しいことを示すものである。
+この最後の局所認識は未完了であり、
+固定例のH3排除、整域性、全 $L$ 曲線の排除はここでは主張しない。
+文献のnormal order計算と曲面分岐定理は外部入力であり、上の有限計算による機械検証ではない。
+\end{remark}

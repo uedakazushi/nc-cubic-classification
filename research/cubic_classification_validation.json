@@ -3146,7 +3146,40 @@
     "executed_checks": [
       "positive109 source/center/trace validator PASS; center1, trace determinant45",
       "main LuaLaTeX PASS; inline dimension-list overfull corrected to table, no overfull/undefined references/citations",
-      "full34 replay running, not yet recorded PASS",
+      "all34 spectral validators PASS",
+      "git diff --check PASS"
+    ]
+  },
+  "third_root_unit_boundary_L_Frobenius_v252": {
+    "status": "exact Artinian Frobenius checks PASS; conditional normal-order period obstruction proved separately; application to H3 pending",
+    "proof": "papers/sections/cubic_third_root_unit_boundary_L_Frobenius.tex",
+    "validator": "computations/verify_cubic_third_root_unit_boundary_L_Frobenius.py",
+    "certificate": "computations/cubic_third_root_unit_boundary_L_Frobenius_certificate.json",
+    "results": [
+      "all13 complementary-degree perfect pairings at fixed all6 embeddings",
+      "twisted cyclic Frobenius automorphism (y,b,c)->(y,omega2*b,omega*c), exact order3",
+      "conditional finite-order relative dual plus codimension1 normal-order hypotheses imply period divides order",
+      "relative dual Hom_S(A,S)=A_nu(12) and affine relative dual with exact order3, all81x4 generator identities"
+    ],
+    "not_claimed": [
+      "finite global dimension implies local normal proved",
+      "fixed example H3 excluded",
+      "complete H3 classification"
+    ],
+    "external_input": {
+      "author": "Daniel Chan",
+      "title": "Lectures on Orders",
+      "date": "2011-05-16",
+      "url": "https://web.maths.unsw.edu.au/~danielch/Lect_Orders.pdf",
+      "sha256": "2280d86df8844091d96311d226ec82fdb9c721929fe2faab0df7810c08b33b19",
+      "read": "Theorem10.8 and proof context, Cor10.9, Prop10.12 full printed proof; Thm12.5 full printed proof; Thm15.1 statement (printed proof omitted), Example15.4(1) explanation; Thm15.6 statement",
+      "audit_limit": "external ramification and Brauer input, not independent full proof audit; not computer verified"
+    },
+    "executed_checks": [
+      "Artinian pairings and relative-dual lift validator PASS",
+      "all34 previous spectral replay PASS",
+      "v252 main LuaLaTeX PASS after relative-lift addition, no overfull or unresolved references/citations",
+      "all35 replay running; not yet recorded PASS",
       "git diff --check PASS"
     ]
   }

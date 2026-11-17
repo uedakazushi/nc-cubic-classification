@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "scope": "fixed E2,u1,v0 all6 characteristic-zero embeddings; exact top-degree Artinian pairings only",
+  "top_degree": 12,
+  "pairing_ranks": [
+    1,
+    3,
+    6,
+    8,
+    9,
+    9,
+    9,
+    9,
+    9,
+    8,
+    6,
+    3,
+    1
+  ],
+  "convention": "lambda(a*v)=lambda(nu(v)*a)",
+  "generators": [
+    "y",
+    "b",
+    "c"
+  ],
+  "nu_omega_exponents": [
+    0,
+    2,
+    1
+  ],
+  "nu_order": 3,
+  "not_claimed": [
+    "finite global dimension exclusion",
+    "full L-curve classification",
+    "local Frobenius hereditary implies normal proof"
+  ],
+  "relative_dual": "Hom_S(A,S) = A_nu(12), by homogeneous perfect pairing and exact basis/generator twisted cyclic identities",
+  "relative_nu_xybc_exponents": [
+    0,
+    0,
+    2,
+    1
+  ],
+  "relative_nu_order": 3
+}

@@ -1460,3 +1460,11 @@ A中心9の既知四元x9,x6Ψ,x3Ψ²,Ψ³に独立なz9を選び、元語係数
 四単純の新しい全除外chart（v228）：`cubic_detminus1_spectral_exclusion.tex`。as4固定6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0のREADME、plan、COVERAGE、該当CLAIMS、DETMINUS1全文・自己監査・certificate状態を確認。nu=mu^-1なのでa→a^-1と後二基底交換で同じmu-chartになる。四族被覆/AS十分性/同型は輸入せず、H3域に次の直接証明を与えた。
 mu=(a,-a,i/a,-i/a),a4≠±1ではU²,mixed,V²の二次重みが分離して二重次数が存在。各平面に関係がなければ自由二生成の次数7が128でAS4値120を超え、domainなら純二元関係は高々一本なので両平面はAS2。混合三次の重み±ia,±a^-1は1にならず、純U三次重み1はa6=1、純Vはa6=-1を要して同時に起きない。従って全Gは片方のAS2純三次となり因子化、H3なし。a4=-1境界は既証二固有値必要集合±1に反し空、残るa4=1境界は四単純集合{1,-1,i,-i}のみで未分類。全det負一又は全四単純をこのchartが覆うとは主張しない。公開verifierは全パラメータLaurent多項式の非零因子・共鳴・境界特性多項式と128>120をexact PASS。出典/仮定/未実行の上流検算はas4_imports.jsonに記録。
 四単純の残る共鳴上の全被覆、全CY、全成分・境界、intrinsic族降下は依然未完。
+
+## Frobenius双対とnormal orderの周期障害（v252）
+固定例T=A/(x,Psi,z9)の最高次数は12。全補次数pairing rankは1,3,6,8,9,9,9,9,9,8,6,3,1で完全。lambda(a*v)=lambda(nu(v)*a)の規約でnu=(y,omega²b,omega*c)、exact位数3。公開verifier/certificateは `cubic_third_root_unit_boundary_L_Frobenius`。全六埋込みに有効。
+原稿の条件付き命題：中心k[s,t]上有限自由なCSA orderで相対双対V_eta、eta^m=1、全高さ1完備化normalならBrauer周期|m。局所trace双対はpi^{-(e-1)}V、radical共役の剰余中心上位数eからe|m(e-1)すなわちe|m。真のBrauer留数次数はeを割る。m倍はA2上不分岐。P2で残る無限遠直線上のsecondary residue相殺とP1の単連結性から無限遠留数も0、BrP2=0で消滅。整域ならde Jongで次数|m。
+一次資料：Daniel Chan, Lectures on Orders (16 May2011), https://web.maths.unsw.edu.au/~danielch/Lect_Orders.pdf、SHA256 2280d86df8844091d96311d226ec82fdb9c721929fe2faab0df7810c08b33b19。Thm10.8/Cor10.9/Prop10.12(全印刷証明)、Thm12.5(全印刷証明)、Thm15.1(statement、証明は原資料でも省略)、Example15.4(1)(説明全文)、Thm15.6(statement)を実読。深い入力の独立証明再監査ではない。
+未完：Artinian nuだけからrelative Nakayama位数を外挿しない。相対双対をAS-Gorenstein双対性又は自由基底pairingで同定し、有限大域次元+FrobeniusからDVR自己単射次元1、hereditary、balanced lattice-chain、normalを導く必要がある。John Voight Quaternion Algebras GTM288(2021) chapter21の著者/出版社一次HTMLでsplit lattice chainの標準形とprojective cycleを確認したが、全局所認識の証明未完成。固定例のH3排除・整域性・全L曲線排除は未主張。
+
+相対双対の持上げもv252で解決：Tの全81語基底をS基底へ持上げ、top functionalのpairingはgraded Nakayamaで完全。基底次数≤12と生成元次数1からtwisted cyclic係数は定数/xだけなのでA/(Psi,z9)次数12/13のx可逆行列で全81×4等式をexact確認。Hom_S(A,S)=A_nu(12)、nu(x,y,b,c)=(x,y,omega²b,omega c)、affine版も位数3。未解決は有限大域次元からlocal normalへ至る局所補題であり、双対の持上げではない。
