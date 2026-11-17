@@ -3006,5 +3006,28 @@
       "fresh generic L exploratory script PASS; only function-field and first-order statements",
       "git diff --check PASS"
     ]
+  },
+  "third_root_unit_boundary_L_incidence_v247": {
+    "status": "ordinary Omega-open incidence theorem; exact cubic field and all-polynomial-u-v original relation/normal identities PASS",
+    "proof": "papers/sections/cubic_third_root_unit_boundary_L_incidence.tex",
+    "validator": "computations/verify_cubic_third_root_unit_boundary_L_incidence.py",
+    "certificate": "computations/cubic_third_root_unit_boundary_L_incidence_certificate.json",
+    "results": [
+      "all u,v in recorded Omega-open of L have a unique inverse-Nakayama normal cubic",
+      "explicit full lift has four correction coefficients; all normal residuals zero",
+      "full Z gauged away on same open; B3/B4 dimensions20/35 certified"
+    ],
+    "not_claimed": [
+      "AS4 sufficient from only degrees3/4",
+      "normal quotient domain or H3 admissible",
+      "all Omega-zero/other Delta curves covered",
+      "complete H3 classification"
+    ],
+    "executed_checks": [
+      "individual exact validator PASS over full polynomial u,v",
+      "main LuaLaTeX PASS; no overfull/undefined references/citations",
+      "full31 spectral replay running, not yet recorded PASS",
+      "git diff --check PASS"
+    ]
   }
 }

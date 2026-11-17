@@ -38,6 +38,7 @@ CHECKS=[
  'verify_cubic_third_root_unit_normalx_Ore_cover.py',
  'verify_cubic_third_root_unit_proportional_Szero_cover.py',
  'verify_cubic_third_root_unit_normal_boundary_open.py',
+ 'verify_cubic_third_root_unit_boundary_L_incidence.py',
 ]
 results=[]
 for name in CHECKS:

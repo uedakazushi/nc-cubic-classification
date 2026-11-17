@@ -1,0 +1,82 @@
+\subsection{例外三次曲線上の正常三次incidence：全二変形の持上げ}
+\label{subsec:cubic-third-root-unit-boundary-L-incidence}
+\begin{proposition}[指定 $L$ 開集合の全正常核]
+\label{prop:cubic-third-root-unit-boundary-L-incidence}
+$L=d^3+\omega E^3+\omega^2=0$ とし
+\[
+ \Omega(E)=E(E^3-1)(E^3+\omega)
+ \left(E^3+\frac{1+2\omega}{3}\right)
+ \left(E^3+\frac{\omega-1}{3}\right)\ne0
+\]
+を仮定する。前節の表示で $D=d,w=1$ とした環を考える。
+$y\mapsto y+t x$、$t=\omega Z/(d+\omega E)$ によって
+$Z=0$ とでき、新しい係数は $u'=u-vt+t^2,v'=v-2t$。
+以下はこの正規化後の $u,v$ とする。
+$Y=E^3$ と置き、
+\begin{align*}
+ \Gamma={}&\omega b^3+c^3-d\bigl((\omega+2)Y+\omega^2\bigr)bcy
+       +E\bigl(2-(\omega+2)Y\bigr)cby,\\
+ A_*={}&\frac{-(\omega+2)Y^2-2\omega Y-(\omega+1)E^2d-\omega Ed^2+1}{Y-1},\\
+ B_*={}&\frac d{Y-1},\\
+ C_*={}&\frac{-(\omega+2)Y^2+(1-\omega)Y-\omega E^2d-(\omega+1)Ed^2}{Y-1},\\
+ K_*={}&\frac{(\omega+1)Y+\omega E^2d+\omega Ed^2-1}{(Y-1)^2}
+\end{align*}
+とする。全 $u,v$ について
+\[
+ \widetilde\Gamma=\Gamma+v A_*y^2x+vB_*bcx
+                  +(uC_*+v^2K_*)yx^2+uvK_*x^3
+\]
+は正常化 $(x,y,b,c)\mapsto(x,y,\omega^2b,\omega c)$ を持つ非零三次である。
+表示環の次数3,4の次元は20,35であり、中山固定の三次におけるこの正常核は
+正確に $k\widetilde\Gamma$。
+特に所定のAS4整域・中山を持つ場合の $W_1$ はこの一本である。
+これは正常incidenceの判定であり、全パラメータのAS4十分性や
+$B/(\widetilde\Gamma)$ の整域性・H3許容性はまだ主張しない。
+\end{proposition}
+\begin{proof}
+$L$ の関数体を
+\[
+ F=\mathbb Q(\omega)(E)[d]/(d^3+\omega E^3+\omega^2)
+\]
+と置く。右辺 $-\omega E^3-\omega^2$ は単純零点を持ち、
+$\mathbb Q(\omega)(E)$ の三乗でないので、これは三次体拡大である。
+係数 $a+bd+cd^2$ の逆元は、$d^3=R$ として
+\[
+ \frac{(a^2-bcR)+(c^2R-ab)d+(b^2-ac)d^2}
+ {a^3+b^3R+c^3R^2-3abcR}
+\]
+で計算できる。
+公開検証器は各逆元について積が1となることも確認し、近似根を用いない。
+
+境界商 $S=B/(x)$ の元三関係の次数3,4の全挿入行列を消去すると、
+次元10,15となる。固定三次基底 $b^3,bcy,cby,c^3$ の正常行列はrank3であり、
+$c^3$ 係数1で正規化した核が表示の $\Gamma$。
+次に正規化後の六関係を、二変数多項式環 $F[u,v]$ のまま扱う。
+単項式を $x$ 個数、次に辞書式順序で並べると、
+全関係消去のpivotは $u,v$ に依存しない非零 $F$ 定数となる。
+次数3,4の商次元は全 $u,v$ で20,35、固定三次は8次元。
+これは有限個の $u,v$ 標本を一般化した計算ではない。
+
+$\Gamma$ の四つの正常式に補正
+$\alpha y^2x+\beta bcx+\gamma yx^2+\delta x^3$ を入れる。
+補正係数の行列には四つの $F$ 単元pivotがあり、残る正常残差は全て零。
+一意の解は
+\[
+ (\alpha,\beta,\gamma,\delta)
+ =(vA_*,vB_*,uC_*+v^2K_*,uvK_*).
+\]
+元関係から作った全次数4行加群の中で、この解の全正常残差が零となることを独立に再代入する。
+$\Gamma\ne0$ は境界商の自由基底での $c^3$ 係数1から分かる。
+他の正常三次との差は境界商で零なので、
+$y^2x,bcx,yx^2,x^3$ の四補正だけである。
+四pivotが単元なのでその差も零となり、正常核は一本。
+
+以上の全逆元の三次ノルムについて、分子と分母の最小公倍式を取り、
+squarefree化すると、単元を除き正確に表示した $\Omega(E)$ となる。
+従ってこれらの恒等式・全pivot・商基底は、関数体だけでなく
+$L=0,\Omega\ne0$ の全閉点と全 $u,v$ に有効である。
+また $d+\omega E$ のノルムの零点も $\Omega$ に含まれるので、
+冒頭のshearはこの開集合で常に定義される。
+全係数とノルム支持、元次数3/4挿入、全正常再代入は公開certificateに保持する。
+$\Omega=0$ の点をこの一般点計算で処理したとは主張しない。
+\end{proof}

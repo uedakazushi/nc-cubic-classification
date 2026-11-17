@@ -22,6 +22,7 @@ class CubicElement:
  __rmul__=__mul__
  def inverse(self):
   a,b,c=self.a;R=self.K.R;N=a**3+b**3*R+c**3*R**2-3*a*b*c*R
+  self.K.norm_log.append(N)
   if not N:raise ZeroDivisionError('cubic norm zero')
   out=CubicElement(self.K,[(a*a-b*c*R)/N,(c*c*R-a*b)/N,(b*b-a*c)/N]);assert self*out==self.K.one
   return out
@@ -35,5 +36,5 @@ class CubicElement:
  def __repr__(self):return str(self.a)
 class CubicField:
  def __init__(self,J,R):
-  self.J=J;self.R=R;self.zero=self.convert(0);self.one=self.convert(1);self.generator=CubicElement(self,[J.zero,J.one,J.zero])
+  self.J=J;self.R=R;self.norm_log=[];self.zero=self.convert(0);self.one=self.convert(1);self.generator=CubicElement(self,[J.zero,J.one,J.zero])
  def convert(self,x):return CubicElement(self,[self.J.convert(x),self.J.zero,self.J.zero])

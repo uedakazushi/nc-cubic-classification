@@ -1,0 +1,66 @@
+{
+  "status": "PASS",
+  "scope": "exact cubic function field plus complete polynomial u,v original B3/B4 and normal equations; extends only to recorded Omega-open of L",
+  "base_curve": "d^3+omega*E^3+omega^2=0, omega^2+omega+1=0",
+  "field_irreducibility_reason": "-omega*E^3-omega^2 has simple zeros, hence not a cube in QQ(omega)(E)",
+  "Z_gauge": "t=omega*Z/(d+omega*E), y_new=y+t*x, u_new=u-v*t+t^2, v_new=v-2*t, Z_new=0",
+  "B_relations": "xy=yx; xb=omega^2*bx; xc=omega*cx; d*yb+E*by+c^2=0; E*yc+d*cy+b^2=0; d*bc+E*cb+u*x^2+v*xy+y^2=0",
+  "S3_S4_dimensions": [
+    10,
+    15
+  ],
+  "S_inverse_Nakayama_normal_rank": 3,
+  "B3_B4_dimensions": [
+    20,
+    35
+  ],
+  "B3_fixed_character_dimension": 8,
+  "all_u_v_parameter_pivots_constant": true,
+  "normal_correction_rank": 4,
+  "normal_kernel_dimension": 1,
+  "Gamma_in_bbb_bcy_cby_ccc": [
+    "omega",
+    "d*(E**3*(-omega - 2) + omega + 1)",
+    "E**4*(-omega - 2) + 2*E",
+    "1"
+  ],
+  "lift_correction_basis": [
+    "y^2*x",
+    "b*c*x",
+    "y*x^2",
+    "x^3"
+  ],
+  "lift_corrections": [
+    {
+      "(0, 1)": "(E**6*(-omega - 2) - 2*E**3*omega + E**2*d*(-omega - 1) - E*d**2*omega + 1)/(E**3 - 1)"
+    },
+    {
+      "(0, 1)": "d/(E**3 - 1)"
+    },
+    {
+      "(1, 0)": "(E**6*(-omega - 2) + E**3*(1 - omega) - E**2*d*omega + E*d**2*(-omega - 1))/(E**3 - 1)",
+      "(0, 2)": "(E**3*(omega + 1) + E**2*d*omega + E*d**2*omega - 1)/(E**6 - 2*E**3 + 1)"
+    },
+    {
+      "(1, 1)": "(E**3*(omega + 1) + E**2*d*omega + E*d**2*omega - 1)/(E**6 - 2*E**3 + 1)"
+    }
+  ],
+  "Omega_E_monic": "E**13 + E**10*(2*omega - 1) + E**7*(-10*omega/3 - 4/3) + E**4*(4*omega/3 + 5/3) - E/3",
+  "selected_inverse_count": 1160,
+  "Omega_factor_list": [
+    "E",
+    "E - 1",
+    "E - omega",
+    "E + omega + 1",
+    "E**3 + omega/3 - 1/3",
+    "E**3 + 2*omega/3 + 1/3",
+    "E**3 + omega"
+  ],
+  "not_claimed": [
+    "all closed points of L covered",
+    "AS4 existence proved just from degrees3/4",
+    "normal quotient domain or H3 admissible",
+    "all other Delta-zero curves covered",
+    "complete H3 classification"
+  ]
+}
