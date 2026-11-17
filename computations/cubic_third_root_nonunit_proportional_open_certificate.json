@@ -1,0 +1,107 @@
+{
+  "status": "PASS",
+  "scope": "nonzero proportional b2 coupling, second self direction independent (v1), n nonzero; all parameters",
+  "source_incidence": [
+    {
+      "alpha": "-1",
+      "constant_pivots": 8,
+      "residual": "m-omega",
+      "free_a15": false
+    },
+    {
+      "alpha": "-CRootOf(z**2 + z + 1, 1)",
+      "constant_pivots": 8,
+      "residual": "m-1",
+      "free_a15": false
+    },
+    {
+      "alpha": "-CRootOf(z**2 + z + 1, 1)**2",
+      "constant_pivots": 7,
+      "residual": "zero",
+      "free_a15": true
+    }
+  ],
+  "two_nonAS4_phase_points": [
+    {
+      "alpha": "-1",
+      "m": "CRootOf(z**2 + z + 1, 1)",
+      "B3_dimension": 22
+    },
+    {
+      "alpha": "-CRootOf(z**2 + z + 1, 1)",
+      "m": "1",
+      "B3_dimension": 22
+    }
+  ],
+  "simple_model_parameters": [
+    "l",
+    "Z"
+  ],
+  "source_model_identity": "originalH=displayedR*coordinates, unit6minor and only coefficient-field denominators",
+  "generic_normal_shape": [
+    41,
+    7
+  ],
+  "generic_constant_normal_pivots": 7,
+  "four_support_factors": [
+    "Z",
+    "Z*l+omega/2",
+    "Z-omega\u00b2",
+    "Z-2omega\u00b2"
+  ],
+  "curves": [
+    {
+      "case": "z0",
+      "bad": "1",
+      "normal_columns": 7
+    },
+    {
+      "case": "z1",
+      "bad": "t - 1/2 - CRootOf(z**2 + z + 1, 1)/2",
+      "normal_columns": 7
+    },
+    {
+      "case": "z2",
+      "bad": "t - 1/4 - CRootOf(z**2 + z + 1, 1)/4",
+      "normal_columns": 7
+    },
+    {
+      "case": "hyper",
+      "bad": "t**3 + t**2*(3 + 3*CRootOf(z**2 + z + 1, 1)) + 2*t*CRootOf(z**2 + z + 1, 1)",
+      "normal_columns": 8
+    }
+  ],
+  "fresh_points": [
+    [
+      [
+        "1/2",
+        "1/2"
+      ],
+      [
+        "-1",
+        "-1"
+      ]
+    ],
+    [
+      [
+        "1/4",
+        "1/4"
+      ],
+      [
+        "-2",
+        "-2"
+      ]
+    ]
+  ],
+  "fresh_dimensions3": 22,
+  "v1_remaining_necessary": [
+    "n=0,T=0,alpha=-omega*m^2,m nonzero",
+    "n=0,T nonzero,alpha=m=-omega^2"
+  ],
+  "not_claimed": [
+    "these v1 residual branches excluded",
+    "v0 self covered",
+    "zero b2 coupling covered",
+    "wholeH3 complete"
+  ]
+}

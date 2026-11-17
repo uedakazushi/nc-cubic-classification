@@ -1577,3 +1577,11 @@ mu weights[1,1,0,2]の元22tensorを構成。自己対称H0の語順(xc,yc,bb,cx
 現行の非単位重複root残余はp=r0又はp,r両非零比例のみ。重複1は全排除済み、ここへ戻らない。二つの非単位スペクトルは共役で同じ証明入力を共有するがintrinsic同型としない。
 次の最小課題：p=x,r=αx (α≠0)のrank2selfを整理する。H0=PVt+VPtとbottom=−ωtopからV=(u,v,1,−ωu/α,−ωv/α)、self関係xc+αcx、b²+u xc+v yc−(ω/α)(u cx+v cy)。v非零はUのy変更でu0,v1、v0はdomainからu非零及びα²+ω非零を必要とする見込み（純b²因子を避ける）。この分類と全境界を元画像で監査してから使用する。
 v1候補coはa13=1,a20=a17=0,a9=−αω²,a11=a19=a3=a160,a12=1,a14=−ω/α,a7=−ω²α,a10=m,a18=n,a21=T。Mのbc/cb射影はn非零又はm²+αω²非零ならrank2。v1のc²行U²成分非零なのでこの開集合でT非零。残余torusでn,T両非零をn=T1へ正規化できる可能性があり、まず二係数α,mのrank2/正常7核を調べる。n0、射影退化、v0、p=r0を捨てない。四単純、全CY、成分/相対降下も未完。
+
+## 非単位比例結合のv1,n非零の全排除（v271）
+p=x,r=αxのself rank2はP=(1,0,0,α,0),V=(u,v,1,−ωu/α,−ωv/α)。v非零はy=ux+vyでu0,v1。v0はdomainからu非零,α²+ω非零、u1へ正規化。v1でn=a18非零ならbc/cb射影rank2、c²行からT非零。generator/top diagonalでn=T1を保つ正規化を明示。8homogeneous determinantはω(α+1)(α+ω)(α+ω²)²、αは−1,−ω,−ω²。polyQ(ω)[m] constant-unit消去で前三相rank8,8,7、残余m−ω,m−1,0。前二相は唯一二点ともB3dim22で非AS4。
+α−ω²相はa15=Z自由、l=m+ω²,Y=y+lxで六関係の二変数表示を得る（本文）。originalH=displayedR*coordinates、unit6minor、全分母は係数体のみでall-specialisationの必要同定を検証。正常41×7は7constant pivots、source pivot支持4因子Z,Zl+ω/2,Z−ω²,Z−2ω²。4曲線の全関係/正常pivotのbad polyはそれぞれ1,l+ω²/2,l+ω²/4,Z(Z−ω²)(Z−2ω²)。全有限例外は二点、B3dim22で非AS4。よって全v1,n非零はH3なし。
+v1,n0でもbc/cb射影rank2ならyb/by行が零、全y²成分も零、商(x,c)がk<y,b>/(b²)で指数増大し非AS4。従って残余はn0,T0,α=−ωm²,m非零、又はn0,T非零,α=m=−ω²のみ。T非零はT1へ正規化可能。u1,v0及びp=r0も未解決。
+public verify_cubic_third_root_nonunit_proportional_open.py+model helper default Sympy全PASS（source incidence、7/8 constant polynomial pivots、source画像全掛け戻し、4曲線/2fresh点、n0projection minor/指数商支持）。v271主原稿LuaLaTeX clean PASS。累計54validators across runs、単一54全再生未実行。外部/as4新規輸入なし。
+次の有力なT0証明（未統合・未検証）：v1,nT0,α=−ωm²ではrowcc pureQ=yx−ωm4xy、bc/cb射影rank1。domainQ非退化よりpureU rows比例。これからa1=a2=a150,a6=(ω²/α²)a5,a8=m a5、(m−ω²)a0=0,(m5−ω)a4=0,(m9−1)a5=0を得る見込み。全a0,a4,a50はpurec²でdomain外なのでm5=ω又はm9=1の13点へ必要制限。xは正常、normalizerφ=(1,ω²m^-4,m^-1,ωm²)。μ固定三次上要求固有値はω。m5=ωのorder15点は全φ固有値5乗根でW1零、mω²は全φ固有値1でW1零。m1/ωはGにx因子、m9primitiveでm³ωはW1零、m³ω²はG∈k<y,b,c>3。最後は実skew-cone B=A[x;φ]（purebaseA3関係）で既存lem:cubic-skew-cone-vertex排除が使える。各式・全根・実skew被覆を元22画像で監査してから正式化する。
+T非零隔離相α=m−ω²,n0,T1では8cube係数のrank1pureU matrixが残り、domainのQdet非零を用いて必要被覆を調べる。v0,p=r0、四単純/CY/成分/降下も未完。

@@ -1,0 +1,106 @@
+\subsection{比例した $b^2$ 結合の標準形と非零横結合の全排除}
+\label{subsec:cubic-third-root-nonunit-proportional-open}
+\begin{proposition}[比例self結合の二つの必要標準形]
+\label{prop:cubic-third-root-nonunit-proportional-self}
+非単位重複rootの $b^2$ 結合が両非零比例なら、$p=x,r=\alpha x$、$\alpha\ne0$ とできる。
+自己対称rank2 blockの関係は
+\[
+ xc+\alpha cx=0,\qquad
+ b^2+u xc+v yc-\frac\omega\alpha(u cx+v cy)=0.
+\]
+$v\ne0$ なら $y$ を変更して $u=0,v=1$ とできる。
+$v=0$ なら整域性から $u\ne0,\alpha^2+\omega\ne0$ が必要であり、$u=1$ に正規化できる。
+\end{proposition}
+\begin{proof}
+前節と同じrank2対称分解を使う。
+$P=(1,0,0,\alpha,0)^t$ とし、$V_{b^2}=1$ とすると、
+二つの主blockの比例 $-\omega$ により
+$V=(u,v,1,-\omega u/\alpha,-\omega v/\alpha)^t$ となる。
+$v\ne0$ なら $y'=ux+vy$ と選べる。
+$v=0$ で $u=0$ 又は $\alpha^2=-\omega$ なら、二関係から純 $b^2$ 関係が得られ、整域性に反する。
+残る $u$ は対角scalar変更で1にできる。
+\end{proof}
+
+\begin{theorem}[非退化selfの非零横結合全排除]
+\label{thm:cubic-third-root-nonunit-proportional-open-empty}
+上の $u=0,v=1$ 標準形で、$m=a_{10},n=a_{18},T=a_{21}$ とする。
+$n\ne0$ の全層はH3を与えない。
+$n=0$ の候補も、次の二領域に限られる：
+\[
+ T=0,\quad\alpha=-\omega m^2,\quad m\ne0;
+ \qquad
+ T\ne0,\quad\alpha=m=-\omega^2.
+\]
+この二領域、$v=0$、および両結合零は、本定理では排除しない。
+\end{theorem}
+\begin{proof}
+元middleの最後二列への射影には、$n^2$ と $m^2+\alpha\omega^2$ のminorがある。
+$n\ne0$ ならこの射影はrank2であり、$c^2$ 行の非零 $xy,yx$ 成分から $T\ne0$ となる。
+$n=T=1$ としてよい。
+実際、$\gamma^3=n/T$ とし、$x,y,c$ をそれぞれ
+$n/\gamma,1/\gamma,\gamma$ 倍、$b$ を固定し、topを $1/n$ 倍すると、
+self標準形と $\alpha,m$ を保ってこの正規化を得る。
+
+$yb,by$ 行の最後二列は定数単元行列なので、rank2条件は八つの $U^3b$ 係数に関する12線型式となる。
+最初の8斉次式の行列式は
+\[
+ \omega(\alpha+1)(\alpha+\omega)(\alpha+\omega^2)^2.
+\]
+これが非零なら八係数が零となり、残る $c^2$ 行の非零項に矛盾する。
+従って $\alpha=-1,-\omega,-\omega^2$ の三値に限る。
+各値で $\mathbb Q(\omega)[m]$ 上のパラメータ定数単元だけによる消去を行う。
+$\alpha=-1,-\omega$ では8単元pivot、残余多項式はそれぞれ $m-\omega,m-1$ の非零定数倍となる。
+その二点を元22tensorから再構成すると、どちらも三次商次元22であり、AS4値20に反する。
+
+$\alpha=-\omega^2$ では7単元pivotで全残余が零、$a_{15}=Z$ が全 $m$ で自由に残る。
+$l=m+\omega^2$、$Y=y+lx$ と置くと、全元関係の像は正確に
+\begin{gather*}
+ xc=\omega^2cx,\qquad b^2+Yc+\omega^2cY-2lxc=0,\\
+ bY=\omega^2Yb,\qquad Yb-\omega^2xb-bx-c^2=0,\\
+ bc=x^2-\omega xY-ZY^2,\qquad
+ cb=\omega^2x^2-Yx-\omega^2ZY^2
+\end{gather*}
+となる。元最高tensorの画像を表示六関係で掛け戻し、
+unit minorと係数体以外の分母がないことも確認する。
+従ってこれは一般点だけの同定でなく、全 $l,Z$ の必要表示である。
+
+この二変数表示の次数3,4商を全関係から構成すると、
+正常核の稠密開集合の行列は $41\times7$、正常消去の7個のpivotは全て係数体の非零定数となる。
+関係pivotと分母の全非定数因子は
+\[
+ Z,\quad Zl+\omega/2,\quad Z-\omega^2,\quad Z-2\omega^2
+\]
+だけに支持される。従ってその積が非零なら正常核は零。
+四つの曲線を新しく一変数関数体上で計算したとき、
+全関係・正常pivotと分母を含む例外多項式の平方因子を除いたものは
+\[
+\begin{array}{c|c|c}
+\text{曲線}&\text{変数}&\text{例外多項式}\\\hline
+Z=0&l&1\\
+Z=\omega^2&l&l+\omega^2/2\\
+Z=2\omega^2&l&l+\omega^2/4\\
+l=-\omega/(2Z)&Z&Z(Z-\omega^2)(Z-2\omega^2).
+\end{array}
+\]
+最後の曲線では $Z\ne0$ が座標条件である。
+従って例外点は二つだけであり、いずれも三次商次元22となってAS4でない。
+曲線上では実際の商の正常核全体を計算しており、固定部分が8次元へ増える場合も捨てていない。
+これで全 $n\ne0$ を排除した。
+
+最後に $n=0$ とする。
+最後二列への射影がrank2なら、$yb,by$ 行は右二成分が零なので全行が零となる。
+これにより
+$a_1=a_2=a_5=a_6=a_8=a_{15}=0$、さらに全関係の $y^2$ 成分も零となる。
+二次提示を $(x,c)$ で商にすると $k\langle y,b\rangle/(b^2)$ となり、
+次数15の1597がAS4の816を超える。
+従って射影rankは1でなければならない。
+二つのminorから
+\[
+ m^2+\alpha\omega^2=0,\qquad T(m+\omega^2)=0
+\]
+が必要となり、記載した二つの残余に限られる。
+
+公開再現器は \texttt{verify\_cubic\_third\_root\_nonunit\_}\\
+\texttt{proportional\_open.py}。
+パラメータを残した全線型消去、元画像の恒等式、四曲線と二点を標数0で再生する。
+\end{proof}

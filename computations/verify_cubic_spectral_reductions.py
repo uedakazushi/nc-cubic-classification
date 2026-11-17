@@ -61,6 +61,7 @@ CHECKS=[
  'verify_cubic_third_root_unit_onezero_plus.py',
  'verify_cubic_third_root_unit_onezero_completion.py',
  'verify_cubic_third_root_nonunit_independent.py',
+ 'verify_cubic_third_root_nonunit_proportional_open.py',
 ]
 results=[]
 for name in CHECKS:
