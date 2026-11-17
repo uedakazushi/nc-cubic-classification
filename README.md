@@ -11,7 +11,7 @@
 | ambient／intrinsic／marked ASモジュライの比較 | [nc-cubic-ambient-moduli](https://github.com/uedakazushi/nc-cubic-ambient-moduli) |
 | 量子Fermat三次曲面がAS surfaceでない短報 | [nc-cubic-non-as](https://github.com/uedakazushi/nc-cubic-non-as) |
 
-分類の主原稿に数学的に必要な認識定理・証明・コードは維持する。ここに残る別論文の旧TeX・ノートは更新の対象にせず、上記の独立mainを公表用正本とする。分類Codexはそれぞれの独立論文へ重複pushせず、必要な成果を正確に引用する。
+分類の主原稿に数学的に必要な認識定理・証明・コードは維持する。別論文の旧独立TeX・専用ノートは分離し、上記の独立mainを公表用正本とする。分類Codexは独立論文を旧パスへ再生成せず、必要な成果を正確に引用する。
 
 ## 独立したheart比較・Rains共鳴
 

@@ -1,7 +1,7 @@
 # Codex 研究指示 — nc-cubic-moduli
 更新日: 2026-11-15。対象: **一つのCloud Codexタスクによる逐次研究**。GitHub `main` が唯一の正本。
 
-> **研究正本の分離（2026-11-17）**：このリポジトリはH3認識・完全分類専用。楕円E6量子化成分の独立論文・研究・検算の正本は [nc-cubic-e6](https://github.com/uedakazushi/nc-cubic-e6)、ambient/markedモジュライ比較は [nc-cubic-ambient-moduli](https://github.com/uedakazushi/nc-cubic-ambient-moduli)、量子Fermat非AS短報は [nc-cubic-non-as](https://github.com/uedakazushi/nc-cubic-non-as)。同じ数学的結果を分類で引用・利用するのはよいが、これらの**独立論文の更新を本リポジトリの旧コピーに行わない**。各自の新しいmainに保存する。全H3認識に必要な有効な証明を削除せず保持する。移管済みファイルを旧版正本として再開しない。
+> **研究正本の分離（2026-11-17）**：このリポジトリはH3認識・完全分類専用。楕円E6量子化成分の独立論文・研究・検算の正本は [nc-cubic-e6](https://github.com/uedakazushi/nc-cubic-e6)、ambient/markedモジュライ比較は [nc-cubic-ambient-moduli](https://github.com/uedakazushi/nc-cubic-ambient-moduli)、量子Fermat非AS短報は [nc-cubic-non-as](https://github.com/uedakazushi/nc-cubic-non-as)。同じ数学的結果を分類で引用・利用するのはよいが、これらの**独立論文を本リポジトリの旧パスへ再作成・更新しない**。各自の新しいmainに保存する。全H3認識に必要な有効な証明を削除せず保持する。移管済みファイルを旧版正本として再開しない。
 
 ## 0. 最優先の実行規則：完全分類まで、可能な限り止まらない
 
