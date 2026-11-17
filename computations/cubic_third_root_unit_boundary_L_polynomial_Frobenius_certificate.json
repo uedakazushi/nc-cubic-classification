@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "scope": "E2 all6 embeddings, all u,v; exact polynomial identities",
+  "pairing_ranks": [
+    1,
+    3,
+    6,
+    8,
+    9,
+    9,
+    9,
+    9,
+    9,
+    8,
+    6,
+    3,
+    1
+  ],
+  "relative_dual": "Hom_S(A,S)=A_nu(12)",
+  "convention": "lambda(a*v)=lambda(nu(v)*a)",
+  "nu_xybc_omega_exponents": [
+    0,
+    0,
+    2,
+    1
+  ],
+  "nu_order": 3,
+  "number_of_basis_generator_identities": 324,
+  "inverse_denominators_parameter_constants": true,
+  "not_claimed": [
+    "all parameter generic CSA degree9",
+    "all parameter H3 exclusion",
+    "entire L curve classification",
+    "complete H3 classification"
+  ]
+}

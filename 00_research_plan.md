@@ -69,7 +69,7 @@ Library既存ファイルは明示指示なしに削除しない。GitではPDF�
 heart比較・Rains共鳴・cubic cornerは `uedakazushi/nc-dp-surface-hearts`、次数1は `uedakazushi/nc-dp1-moduli`、三次三様体は `uedakazushi/nc-cubic-threefold-moduli` が正本。
 量子FermatのOU障害は [nc-cubic-non-as](https://github.com/uedakazushi/nc-cubic-non-as)、ambient比較は [nc-cubic-ambient](https://github.com/uedakazushi/nc-cubic-ambient) に移管済み。分類に必要な旧定理・コードはこのリポジトリの現行分類原稿からも参照する。
 
-## V. 最新の具体的frontier（v254）
+## V. 最新の具体的frontier（v256）
 三固有値の全半単純スペクトルを有限化し、位数4・5・6・9・12と相反pencilを排除した。残る必要候補は位数3の3個のみ（2 Galoisラベル軌道）、各関係パターン一つ。全Jordan層を排除し中山自体が半単純・位数3である。3候補の存在・H3許容性は未分類。
 証明は `cubic_spectral_resonance.tex`、`cubic_inverse_spectral_pencils.tex` と `cubic_*root*`、有限リスト/全再生は `python computations/verify_cubic_spectral_reductions.py`。最新の証明・文献入力・certificateと次の最小課題は分類ノート末尾に統合した。
 位数4は全排除済み。最後の(i,i,-1,-i)はb4零の四表示でW1因子/零、b4非零はrank2 middleのSchur補と非退化対称二次の巡回障害で空。単冪も含む。位数3の非単位重複根の全Jordan層も、実際の中山巡回式の85変数線型系と指数増大商で排除。重複1のJordan層も実際の12次元top核、Ore認識とker(D)=A、量子平面商の正常三次障害で因子を強制し全排除。残る二ラベルの半単純topは各22次元、正常三次係数は8/7次元。C=B^muという可逆なCY untwistを証明し、Gは同じ次数付きvectorで正常化mu^-1を保つ。GはCで非中心、CY中心三次分類を代用しない。重複1のatlasではP=Q=0及びP,Q独立/S=T=0を全排除。後者は一変数族へ還元し、全pivotとSmith因子、κ0/-1のfresh検算で全値W1零/非AS。独立P,QかつS0はT非零も二変数平面・四境界曲線・残る一変数族/三例外値の全pivotで全排除した。独立P,QのS非零も全Schur分枝と有限/一変数/行列式零境界を排除済み。比例結合の一方的非零曲率AS2–Ore表示も、正常c/b/基底一次の順序付き係数で全因子となり排除。Ore被覆は別問題。比例結合でもS非零は全AS4整域が存在せず、全unit-repeat H3はrank(P,Q)=1,S0に限る。最後は正常一次商の二つの三次overlapによるHilbert矛盾。二方向曲率split Ore族も全qのW1をSmith形式で分類し、因子/頂点で全排除。x²非split変形も中心Casimir/ノルム/曲面period=indexから九乗根商の非整域性を示し全排除。量子Weyl AS3基底を持つ全二方向曲率Ore層も、全補正項をshear又は共鳴付随次数で排除。両非零比例結合は元22tensorからT=a2=0と正常xを強制し六係数の正常一次境界へ被覆。w非零の境界商はw1へ正規化し、明示Δ非零の全開集合で正常核を排除。L曲線の明示Ω開集合では全u,vの正常核が一本で全次数持上げを明示。全u,vの実AS4整域性も1-regular xと明示W3持上げで認識し、中心Ψを明示。境界translation位数9とaffine ambient/切断のPI性も中心二元とGK1定理で証明。固定E2,u1,v0の独立閉点では中心部分環k[x,Ψ,z9]上自由階数81を完全な有限証明書で確認。その固定例の全中心も多項式環、generic CSA次数9・primeと正の有限体witnessで確定。次はBrauer周期（整域iff周期9）と有限大域次元、残るΔ曲線/Ω零点、w0、片方零結合、非単位重複根atlasを調べる。P,QはUb3/Uc3、S,Tはbbcc/bcbc係数。
@@ -79,3 +79,7 @@ heart比較・Rains共鳴・cubic cornerは `uedakazushi/nc-dp-surface-hearts`�
 固定例の局所order障害（v253）：E2,u1,v0の全六埋込みはH3を与えない。次数9のgeneric CSAと位数3の相対Frobenius双対に対し、有限大域次元なら高さ1完備orderはhereditary、さらに双対のprojective column巡回とKrull–Schmidtから全blockサイズが等しくnormalとなる。留数計算とBr(A2)=0で周期|3、整域ならperiod=index9となり矛盾。整域か有限大域次元かを各々決定したわけではない。xのscalar同型とu0の頂点障害でE2,v=Z=0,w1の全uへ排除を拡張した。次はL/Ω全パラメータの中心z9・自由81・CSA9を持上げる。必要な入力は新しいorder_obstruction節とFrobenius節。未解決のΔ境界、w0、一方零結合、非単位重複根、全CY・成分・降下も保持する。
 
 E2全変形の一様中心部分環（v254）：u,v両変数を残したK[u,v]上で、元関係の全pivotと中心9の131pivotをパラメータ定数単元だけで消去し、残余零と全5核ベクトルの元交換子零を確認。37語のZ9はx0でパラメータ独立。全u,vに中心多項式部分環k[x,Psi,Z9]上自由81を証明。全点での全中心/CSA9は未主張。次は既知u1v0 CSA点から正のminor/trace判定をspreadして非空開集合H3排除を示し、例外パラメータと全L/Ωへの持上げを調べる。
+
+E2二変形の稠密開集合排除（v255）：全u,vの相対双対もν=(1,1,omega²,omega)、位数3と324多項式恒等式で確定。既知中心単純fiberを新Z9座標へexact変換。中心fiberのtrace非退化かつ中心rank80という有限行列の開条件で(1,0)を含む非空開集合をH3から排除。重み(2,1)scalar作用で飽和し、v0全排除と合わせ、E2のH3必要残余は有限個のu/v²比のみ。有限例外集合の列挙は未完。次はこの有限行列判定のweighted成分から例外比の多項式を計算し、E可変へ拡張する。
+
+第二軸排除（v256）：u0v1の正の109 witnessで中心1・trace det64、次数9 CSAとfullcenterを確定し、全u0軸をH3排除。E2必要残余はu,vとも非零で有限個の非零比u/v²のみ。v1,u=aの多項式81行列モデルはmod109と標数0の両方で構成済み（生成元次数≤6）。mod109全109点では中心は常に1、固定fiberのtrace退化はa10,84のみ。これは標数0の例外比ではなく有限体観察。次は標数0モデルを大きい素数へ還元してdegree-bound付き判別式補間/別fiberとのresultantを計算する。公開探索コードparameter_fiber/parameter_gridから再現でき、標数0の有限例外列挙は未完。

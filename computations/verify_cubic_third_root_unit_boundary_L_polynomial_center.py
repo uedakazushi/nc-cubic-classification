@@ -89,11 +89,23 @@ for kernel in kernels:
  vv=vector({w:eval10(c) for w,c in poly.items() if eval10(c)})
  if rank(known+[vv])==5:break
 assert rank(known+[vv])==5
+oldz={tuple('xybc'.index(c) for c in w):anp(cc) for w,cc in reference['Z9_original_polynomial_C_coordinates'].items()}
+center_rows=known+[vector(oldz)]
+Cmat=DomainMatrix.from_dod({i:row for i,row in enumerate(center_rows)},(5,len(N.basis[9])),F)
+_,center_pivots=Cmat.rref();assert len(center_pivots)==5
+small=Cmat.extract(range(5),center_pivots)
+vr=DomainMatrix.from_dod({0:{j:vv.get(c,F.zero) for j,c in enumerate(center_pivots) if vv.get(c,F.zero)}},(1,5),F)
+coordinates=vr.matmul(small.inv()).to_list()[0]
+reinsert={}
+for co,row in zip(coordinates,center_rows):N.addto(reinsert,row,co)
+assert reinsert==vv and coordinates[4]
+family_CSA_fiber_b=coordinates[0]+coordinates[4]
 zb={tuple(j-1 for j in w):c for w,c in poly.items() if 0 not in w}
 assert zb and all(c.is_ground for c in zb.values())
 def encode(poly):return {''.join('xybc'[j] for j in w):{','.join(map(str,mon)):list(map(str,c.to_list())) for mon,c in co.items()} for w,co in poly.items() if co}
 out={'status':'PASS','field':'t^6-9t^3+57','parameters':['u','v'],'E':2,'constant_center9_pivots':len(piv),'center9_free_rank':5,'Z9_C_word_polynomial_coefficients':encode(poly),'boundary_Z9_parameter_independent':True,'original_generator_commutators_all5_kernel_vectors':'PASS','new_Z9_independent_of_known4_at_u1v0':'PASS','dimensions':[len(A.basis[j]) for j in range(11)]}
 
+out['old_positive_fiber_in_new_coordinates']={'Psi':0,'Z9':list(map(str,family_CSA_fiber_b.to_list())),'coordinates_in_old_center9_basis':[list(map(str,c.to_list())) for c in coordinates],'old_basis_order':['x9','x6Psi','x3Psi2','Psi3','oldZ9'],'coordinate_identity_reinserted':'PASS'}
 print('all-parameter polynomial center PASS; Z9 terms',len(poly),'boundary terms',len(zb),flush=True)
 
 # The boundary Artinian quotient is independent of u,v.

@@ -3236,5 +3236,55 @@
       "full36 replay running, not yet recorded PASS",
       "git diff --check PASS"
     ]
+  },
+  "third_root_unit_boundary_L_open_obstruction_v255": {
+    "status": "ordinary spreading-out and weighted-projective proof, exact polynomial relative dual identities PASS",
+    "proof": "papers/sections/cubic_third_root_unit_boundary_L_open_obstruction.tex",
+    "validator": "computations/verify_cubic_third_root_unit_boundary_L_polynomial_Frobenius.py",
+    "certificate": "computations/cubic_third_root_unit_boundary_L_polynomial_Frobenius_certificate.json",
+    "results": [
+      "allE2 embeddings and allu,v relative Frobenius dual with order3",
+      "fixed positive central fiber transported into uniform Z9 coordinates by exact reinserted basis identity",
+      "nonempty parameter open containing (1,0) excluded from H3 by trace/center rank and local order obstruction",
+      "remaining E2 H3 candidates have v nonzero and finitely many ratios u/v2"
+    ],
+    "not_claimed": [
+      "exceptional finite ratio list computed",
+      "trace determinant or minor expanded",
+      "all points of E2 family excluded",
+      "all L curve excluded",
+      "H3 admissibility open assumed",
+      "complete H3 classification"
+    ],
+    "executed_checks": [
+      "all-u,v exact relative dual324 identities PASS, matrix inverse denominators parameter-constant",
+      "positive fiber coordinate identity reinsertion PASS",
+      "v255 main LuaLaTeX PASS clean",
+      "full36 replay running; new37th validator individual PASS"
+    ]
+  },
+  "third_root_unit_boundary_L_second_CSA_v256": {
+    "status": "positive finite109 witness lifted using uniform characteristic-zero free81; ordinary H3 obstruction",
+    "proof": "papers/sections/cubic_third_root_unit_boundary_L_open_obstruction.tex",
+    "validator": "computations/verify_cubic_third_root_unit_boundary_L_second_CSA.py",
+    "certificate": "computations/cubic_third_root_unit_boundary_L_second_CSA_certificate.json",
+    "results": [
+      "u0v1 generic CSA9/full polynomial center, fiber center1, trace determinant64 mod109",
+      "allE2 embeddings, u0 allv H3 excluded",
+      "finite remaining ratios u/v2 can be restricted to nonzero"
+    ],
+    "not_claimed": [
+      "finite exceptional ratio list computed",
+      "actual Brauer period computed",
+      "all E2 or all L excluded",
+      "complete H3 classification"
+    ],
+    "executed_checks": [
+      "public second positive modular center/trace/source validator PASS",
+      "v256 main LuaLaTeX PASS; no overfull or unresolved references/citations",
+      "public modular parameter-matrix construction PASS",
+      "private exact characteristic-zero parameter-matrix construction PASS",
+      "finite109 point grid: all center1, trace degenerates at10/84 only; observation not characteristic-zero coverage"
+    ]
   }
 }

@@ -1476,3 +1476,15 @@ E2,v=Z=0,w1の全uも排除済み：u非零はxのscalar同型、u0は純base正
 公開 `verify_cubic_third_root_unit_boundary_L_polynomial_center.py` はK[u,v]上で元の全relation moduleを次数10まで構成。全relation pivotがパラメータ定数であることをassert。中心9の136列行列は、行の先頭に限定せず任意の定数単元成分をpivotとして選び、既選pivot行も戻して消去。131pivotで残余全零、核free5。全5ベクトルの元四交換子を再代入して零。u1v0で既知4中心単項式と独立になる核を選ぶとZ9は37語で、x0の5語係数は定数。新Z9を用いるArtinian境界商もdims1,3,6,8,9,9,9,9,9,8,6,3,1,0、全元左右作用次数10/13でPASS。既証の全u,v AS4とx/Psi正則性、HSから全点でk[x,Psi,Z9]上free81。全中心/CSA9/素性が全点で同じとは結論しない。
 単純な有理関数体上の逐次RREFは次数6で係数膨張し、4分程度進展しなかったため終了し、多項式定数単元pivot法へ切り替えた。後者はパラメータ分母を一つも使わず全u,vの証明に至った。一般Eの拡大体への移行でも、この定数pivot・再挿入方法を優先する。
 次の最小課題は非空パラメータ開集合のH3排除。既知u1v0 CSA中心fiberの座標を新Z9へ移し、相対free81の固定中心fiberに対する中心rank80 minorと非零trace行列式をspreadすれば開集合が得られる。全中心とCSA次数を全点へ外挿しない。残る例外集合とE可変への持上げは別問題。
+
+## E2全相対双対と稠密開集合のH3排除（v255）
+公開 polynomial_Frobenius verifierはuniform Z9のT境界全13pairing完全、A/(Psi,Z9)次数12/13の二81行列のinverse denominatorがパラメータ定数、全81×4 twisted cyclic identity零を確認。Hom_S(A,S)=A_nu(12)、nu=(x,y,omega²b,omega c)位数3を全u,vで確定。
+新中心9の(1,0)特殊化を旧基底(x9,x6Psi,x3Psi²,Psi³,oldZ9)へexact展開し、元語へ再代入PASS。a0=0、cold≠0。正の既知fiberはΨ0,Znew=b=a0+cへ移る。bの全六次体係数はuniform center certificateのold_positive_fiber_in_new_coordinatesに保存し、mod109では83。
+uniform familyはP=K[u,v]上でも表示中心部分環P[x,Psi,Z]にfree81：Artinian商基底からgraded inductionで全射、各fiber同Hilbert値なので核は一般点で零の自由加群部分として零。固定中心fiberV=A/(x1,Psi0,Zb)もP-free81。traceGram T(u,v)と四交換子行列M(u,v)からU=D(detT)∩{rankM=80}を定義すると、(1,0)を含む非空開集合。全U点のgenericCSA9/fullcenterSが正のfiberから従い、相対Frobenius位数3と局所order障害で全UをH3排除。判別式/minorの展開係数は未計算、行列条件による開集合の定義と非空性の証明である。
+scalar x作用の重みは(u,v)=(2,1)。UのGm飽和の不変閉補集合をP(2,1)へ写すと真の閉集合、従って有限。v0は全排除済みなので残るH3必要候補はv≠0, u/v²∈有限集合F_(d,omega)。Fの列挙・許容性未完。H3許容性自体の相対開性を仮定していない。次はfinite fiber判定のweighted成分を使ってFを計算する。u0v1のpositive witnessもv256で確定。
+
+## 第二軸排除と例外比計算の行列モデル（v256）
+u0v1の公開second_CSA validatorはp109,t15,omega63、fiberPsi0,Znew83で中心1、trace determinant64、元六R2/G3/中心fiber関係行列零をPASS。自由81は標数0全族で既知、非零minor/traceをliftして次数9CSA/fullcenter、相対双対ν3からH3なし。x scalarによりu0全v非零、原点vertexで第二軸全排除。E2で必要残余はuv非零の有限個の非零比のみ。
+次の例外比探索用に、v1,u=a、p109における固定center fiber(Psi0,Z83)の81次元行列モデルをGF109[a]上で構成。全relation pivotとx逆行列分母がパラメータ定数、生成元matrix polynomial degree bounds0,6,5,5、中心交換子行列も多項式。private input `/workspace/work/spectral_remaining/unit_L_modular_parameter_fiber.py`、model JSON同dir。まだ標数0の例外列挙の証明ではない。次に有限体でtrace/rankの悪いaを探索し、polynomial determinant/weighted-component gcdの非零resultantをliftして有限例外比の厳密被覆を狙う。有限体の点全列挙のみから標数0の空性を結論しない。
+
+行列探索の実行状態：公開 `explore_cubic_third_root_boundary_L_parameter_fiber.py --prime 109 --root 15 --output /tmp/L_model.json` と `explore_cubic_third_root_boundary_L_parameter_grid.py --model /tmp/L_model.json --output /tmp/L_grid.json` で再現可。GF109全109点で中心1、trace退化はa10,84(rank27)のみ。他の107点は非退化。これは固定center fiberの有限体観察で、標数0の例外比列挙ではない。prime/rootを省くexact modeも用意し、private先行版ではK[a]上の全行列を実際に構成済み（係数Horner変換を使用）。全生成元次数0,6,5,5。次にこの標数0行列をp1021,t169（六次poly根）等へ還元し、trace determinantの次数上界と補間、異なる中心fiberとのresultantを調べる。有限体gcd1だけでは次数落ちで隠れる標数0因子を排除できないので、少なくとも一方の次数保存又は正の固定次数Sylvester minorを確認する必要がある。

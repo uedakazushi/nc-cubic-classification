@@ -1,0 +1,94 @@
+\subsection{二変形パラメータの稠密開集合排除と有限例外比}
+\label{subsec:cubic-third-root-unit-boundary-L-open-obstruction}
+\begin{proposition}[全変形の相対Frobenius双対]
+$E=2$ の全 $u,v$ に対し
+\[
+ \operatorname{Hom}_{k[x,\Psi,z_9]}(A_{u,v},k[x,\Psi,z_9])
+ \simeq (A_{u,v})_\nu(12),\qquad
+ \nu(x,y,b,c)=(x,y,\omega^2b,\omega c).
+\]
+\end{proposition}
+\begin{proof}
+パラメータ独立なArtinian商の語基底81個を用い、固定例と同じtop functionalを定める。
+その完全pairingはArtinian商の全13次数で直接確認する。
+相対版の完全性は次数付きNakayamaによる。
+残る双対の自己同型については、$A/(\Psi,z_9)$ を
+$K[u,v]$ 上で次数13まで構成する。
+$x$ 倍と自由基底変換の二つの $81\times81$ 行列は、
+逆行列の共通分母がパラメータ定数であることを確認して反転する。
+全81基底元と四生成元の324等式を多項式として再代入し零を確認する。
+再現器は \texttt{verify\_cubic\_third\_root\_unit\_boundary\_L\_polynomial\_Frobenius.py}。
+\end{proof}
+
+\begin{theorem}[非空開集合の排除と有限個の比への還元]
+\label{thm:cubic-third-root-unit-boundary-L-finite-ratios}
+$E=2$ と $L=0$ の六埋込みを固定する。
+$Z=0,w=1$ の二変形パラメータ平面には、$(1,0)$ を含む非空開集合
+$\mathcal U\subset\mathbb A^2_{u,v}$ が存在し、その全点はH3を与えない。
+さらに有限集合 $F_{d,\omega}\subset k$ が存在し、H3となり得る点は
+\[
+ v\ne0,\qquad u/v^2\in F_{d,\omega}
+\]
+に限る。有限集合の元の列挙と、それぞれの許容性は未決定である。
+\end{theorem}
+\begin{proof}
+まず $P=K[u,v]$ 上でも、Artinian基底の持上げは
+$P[x,\Psi,z_9]$ 上の自由基底になる。
+実際、三中心元による商はパラメータ独立なArtinian商の $P$ への拡大であり、
+次数付き帰納法で基底持上げからの写像は全射となる。
+各パラメータ点では既証のHilbert級数から同型であり、
+その核は自由加群の部分加群で一般点で零なので零である。
+これは表示した中心部分環上の自由性であり、全中心の底変更を主張していない。
+
+$u=1,v=0$ における新しい $z_9$ を、既知の旧中心基底で書く：
+\[
+ z_9=a_0x^9+a_1x^6\Psi+a_2x^3\Psi^2+a_3\Psi^3+c z_9^{\rm old},\qquad c\ne0.
+\]
+係数は公開証明書の中心基底変換で一意に定まり、元の全語ベクトルへ再代入して確認する。
+$b=a_0+c$ とおけば、中心fiber
+\[
+ \mathcal V=A/(x-1,\Psi,z_9-b)
+\]
+は $P$ 上自由階数81で、$(1,0)$ では既知の中心単純fiberそのものである。
+この自由基底に関する正則trace形式のGram行列を $T(u,v)$、
+四生成元との交換子写像の行列を $M(u,v)$ とする。
+全ての成分は $P$ の多項式である。
+\[
+ \mathcal U=D(\det T)\ \cap\ \{\operatorname{rank}M=80\}
+\]
+と定める。単位元が常に交換子核にあるのでrankは80以下であり、
+この条件は80次minorで定まる開条件である。
+既知fiberにより $(1,0)\in\mathcal U$。
+これは有限行列による定義であり、minorや判別式の展開係数を列挙済みという意味ではない。
+
+各 $\mathcal U$ 点で中心fiberは半単純かつ中心一次元となる。
+その正のminorとtrace行列式を中心一般点へ移せば、
+一般点は次数9の中心単純代数となる。
+中心部分環の整閉性から全中心も $k[x,\Psi,z_9]$ に一致する。
+前命題の位数3の相対双対、局所order認識、曲面の周期障害を適用すれば、
+固定例と全く同じ矛盾によりH3でない。
+
+最後に $x$ のscalar変換はパラメータに重み $(2,1)$ の作用を与える。
+従って $\mathcal U$ の $\mathbb G_m$ 飽和もH3を含まない非空開集合である。
+原点以外の閉じた不変補集合を重み付き射影直線
+$\mathbb P(2,1)$ に写すと、真の閉部分集合なので有限となる。
+$v=0$ は既に全て排除済みであり、残る有限点は $u/v^2$ で表される。
+これが $F_{d,\omega}$ である。
+この議論はH3許容性自体の相対開性を仮定しない。
+\end{proof}
+
+\begin{corollary}[第二軸の排除]
+$E=2$ の全六埋込みで $u=0$ の全 $v$ もH3を与えない。
+従って上の有限例外比集合は $F_{d,\omega}\subset k^*$ と取れる。
+\end{corollary}
+\begin{proof}
+$u=0,v=1$、中心fiber $\Psi=0,z_9=b$ を調べる。
+同じ整数環の還元 $p=109,t=15,\omega=63$ では $b=83$。
+中心核は一次元、正則trace Gram行列式は $64\bmod109$ で非零となる。
+元の六二次関係、三次切断、二中心関係の全行列への再代入も零である。
+自由階数81は全パラメータで標数0において既知なので、
+固定例と同じ正のwitnessの持上げにより、この点の一般中心単純次数は9となる。
+位数3の相対双対による障害でH3を排除する。
+$v\ne0$ は $x$ のscalar変換でこの点に移り、$v=0$ は既証の頂点障害で排除される。
+再現器は \texttt{verify\_cubic\_third\_root\_unit\_boundary\_L\_second\_CSA.py}。
+\end{proof}
