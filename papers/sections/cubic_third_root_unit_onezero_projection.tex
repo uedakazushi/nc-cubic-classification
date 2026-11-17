@@ -1,0 +1,81 @@
+\subsection{片方零結合の射影条件からのOre認識}
+\label{subsec:cubic-third-root-unit-onezero-projection}
+\begin{proposition}[片方零結合の曲率のない固有直線商]
+\label{prop:cubic-third-root-unit-onezero-pure-c}
+$P=(1,0),Q=0,S=0$ の元22tensor atlasでは
+\[
+ B/(x,y,b)\simeq k[c].
+\]
+従ってH3候補正常三次 $G$ の純 $c^3$ 係数は零である。
+$P=0,Q\ne0$ には $b,c$ を交換した主張が成り立つ。
+\end{proposition}
+\begin{proof}
+重み $\omega$ の関係像を与えるmiddleの $c^2$ 行は零である。
+他の重みの二次関係にも $c^2$ は現れない。
+従って三生成元を零とした表示には $c$ の関係は残らない。
+$Gc=\omega cG$ をこの商に写すと、純 $c^3$ 係数 $d$ に対し
+$(1-\omega)d c^4=0$、従って $d=0$。
+これはOre基底の存在を仮定しない議論である。
+\end{proof}
+
+\begin{theorem}[零even-cornerと可逆なmixed射影の全排除]
+\label{thm:cubic-third-root-unit-onezero-projection}
+$P=(1,0),Q=0,S=0,T=a_{21}=0$ とし、H3を与えると仮定する。
+$U=\langle x,y\rangle$ とし、二次関係空間の重み $\omega^2$ 部分を
+\[
+ I_c\subset (U\otimes c)\oplus(c\otimes U)\oplus k b^2
+\]
+と書く。次の二条件が同時に成り立つ領域にはH3は存在しない：
+\begin{enumerate}
+\item $I_c$ から $U\otimes c$ と $c\otimes U$ への両射影が同型である。
+\item even関係の $bc,cb$ への射影像を生成するベクトルの両係数が非零である。
+\end{enumerate}
+この領域の外、特に $T\ne0$ を本定理の結論に含めない。
+\end{theorem}
+\begin{proof}
+元even blockは $U^2,bc,cb$ の分割で
+$\left(\begin{smallmatrix}H&R\\R^t&0\end{smallmatrix}\right)$
+という対称行列である。全rankは2なので $\operatorname{rank}R\le1$。
+$R=0$ なら二つの独立な関係が純 $U^2$ に入り、
+その二次元pencilはrank1 tensorを含むため、$B$ の整域性に反する。
+従って $\operatorname{rank}R=1$。
+全rank2から、even関係像は次の二本で書ける：
+\[
+ Q(U)=0,\qquad bc-qcb=h(U),\quad q\ne0,
+\]
+ここで最後の非零性には条件2を使う。
+$Q$ は非零で、rank1なら積の零関係となるのでrank2である。
+従って二元一関係代数 $T_0=k\langle x,y\rangle/(Q)$ は二次元AS-regularであり、
+量子又はJordan標準形の語基底を持つ。
+ここで $T_0\hookrightarrow B$ はまだ仮定していない。
+
+重み $\omega$ の関係空間は $Ub\oplus bU$ に含まれる二次元空間である。
+いずれかの射影に核があれば純 $ub$ 又は $bu$ の関係が生じ、整域性に反する。
+従って両射影は同型であり、可逆線型写像 $f$ を用いて
+$b u=f(u)b$ と書ける。
+条件1により残りのmixed関係は
+\[
+ c u=g(u)c+d(u)b^2\quad(u\in U)
+\]
+と書け、$g$ は可逆である。$P\ne0$ なので $d\ne0$。
+
+以上の六関係を使うと、全語は
+$T_0$ の標準語 $\cdot b^i c^j$ で張られる。
+実際、まず $c$ を右へ動かすと、補正項は $c$ の個数を下げる。
+次いで $b$ を右へ動かし、最後に $T_0$ の関係で整理する。
+この標準語の個数は各次数で $1/(1-t)^4$ の係数に一致する。
+仮定したAS4 Hilbert級数も同じなので全語は独立であり、
+$T_0$ と $T_0[b;f]$ は実際に埋め込まれる。
+結合則を標準語係数で比較すると、$f$ は $T_0$ の自己同型となり、
+$c$ の係数は $T_0[b;f]$ の自己同型 $\sigma$ と $\sigma$-導分 $\delta$ を与える。
+$g$ と $q$ は可逆なので $\sigma$ も自己同型である。
+従ってこれは実際の
+\[
+ B=T_0[b;f][c;\sigma,\delta],\quad
+ \sigma|_{T_0}=g,\quad\sigma(b)=q^{-1}b,\quad
+ \delta(u)=d(u)b^2,\quad\delta(b)=q^{-1}h
+\]
+という表示である（$h$ の符号は既存定理の記号へ吸収する）。
+定理\ref{thm:cubic-third-root-unit-curved-Ore-empty}が適用でき、矛盾を得る。
+これで、実Ore表示を前提とした既存排除へ、元tensorの明示射影条件から到達した。
+\end{proof}

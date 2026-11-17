@@ -1,0 +1,163 @@
+{
+  "status": "PASS",
+  "normalization": "P=(1,0),Q0,S0",
+  "pure_c_quotient": "k[c] at all parameters",
+  "middle_rows": [
+    "xb",
+    "yb",
+    "bx",
+    "by",
+    "cc"
+  ],
+  "middle_columns": [
+    "xc",
+    "yc",
+    "bb",
+    "cx",
+    "cy"
+  ],
+  "middle": [
+    [
+      "a8",
+      "a9",
+      "1",
+      "-a2",
+      "a11"
+    ],
+    [
+      "-a12*omega - a12",
+      "a17",
+      "0",
+      "-a6",
+      "-a15"
+    ],
+    [
+      "a3*omega + a3",
+      "a7*omega + a7",
+      "omega + 1",
+      "-a8",
+      "a12*omega + a12"
+    ],
+    [
+      "-a13*omega - a13",
+      "a16*omega + a16",
+      "0",
+      "-a9",
+      "-a17"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ]
+  ],
+  "even_basis": [
+    "xx",
+    "xy",
+    "yx",
+    "yy",
+    "bc",
+    "cb"
+  ],
+  "even": [
+    [
+      "0",
+      "a0",
+      "-a0",
+      "a1",
+      "a2",
+      "a3"
+    ],
+    [
+      "a0",
+      "a4",
+      "-a1",
+      "a5",
+      "a6",
+      "a7"
+    ],
+    [
+      "-a0",
+      "-a1",
+      "-a4",
+      "-a5",
+      "-a11",
+      "-a13"
+    ],
+    [
+      "a1",
+      "a5",
+      "-a5",
+      "0",
+      "a15",
+      "a16"
+    ],
+    [
+      "a2",
+      "a6",
+      "-a11",
+      "a15",
+      "a21",
+      "0"
+    ],
+    [
+      "a3",
+      "a7",
+      "-a13",
+      "a16",
+      "0",
+      "-a21*omega"
+    ]
+  ],
+  "c_left_projection_minors": [
+    "a12*a9*omega + a12*a9 + a17*a8",
+    "-a3*a9 + a7*a8 + omega*(-a3*a9 + a7*a8)",
+    "a13*a9 + a16*a8 + omega*(a13*a9 + a16*a8)",
+    "0",
+    "-a17*a3 + omega*(-a12*a7 - a17*a3)",
+    "a13*a17 + omega*(-a12*a16 + a13*a17)",
+    "0",
+    "omega*(a13*a7 + a16*a3)",
+    "0",
+    "0"
+  ],
+  "c_right_projection_minors": [
+    "a11*a6 + a15*a2",
+    "a11*a8 - a12*a2*omega - a12*a2",
+    "a11*a9 + a17*a2",
+    "0",
+    "-a12*a6*omega - a12*a6 - a15*a8",
+    "-a15*a9 + a17*a6",
+    "0",
+    "a12*a9*omega + a12*a9 + a17*a8",
+    "0",
+    "0"
+  ],
+  "T0_cross_block": [
+    [
+      "a2",
+      "a3"
+    ],
+    [
+      "a6",
+      "a7"
+    ],
+    [
+      "-a11",
+      "-a13"
+    ],
+    [
+      "a15",
+      "a16"
+    ]
+  ],
+  "ordinary_proof": "T0 rank2 even gives cross rank1; domain gives AS2 pure relation and invertible b projections; c projection conditions and both nonzero cross columns give actual curved Ore by spanning and full AS4 Hilbert equality",
+  "not_claimed": [
+    "all one-zero atlas covered",
+    "Tnonzero excluded",
+    "projection degeneracies excluded",
+    "complete H3 classification"
+  ]
+}

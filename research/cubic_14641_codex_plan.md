@@ -78,3 +78,10 @@ w0全値の必要被覆：D1,E=eで元関係pivotと正常行列の分母支持�
 A/(x,Psi,Z9)のArtinian列は1,3,6,8,9,9,9,9,9,8,6,3,1,0。H3の既知HSとgradedNakで中心3元代数的独立/free81。x0,Psi1,Z2の全uv共通fiberがp109,t4,ω63でcentre1、trace det1の正のwitnessを持ち、標数0CSA9へlift。全uv full polynomial centre/genericCSA9/prime、相対Frobeniusν3からfinitegl⇒period|3、domain⇒period=index9で矛盾。有限次数から全AS4性を推論していない。
 公開verify_cubic_third_root_unit_boundary_w0.py、w0_center.py、w0_CSA.pyはdefault Sympyで全PASS（左右元関係挿入含む）。既存36 unified+13後続個別=49 validators across runs、単一49 replayとはしていない。主原稿w0節を追加し、LuaLaTeX PASS、未解決参照/引用/overfullなし。新規外部/as4輸入なし。
 次の最小課題：片方零結合P=(1,0),Q0,S0を元22tensorで解析する。重みω middleはrow/col b²に一単元pivot、残り3×4 rank1条件。even H0 rank2と合わせて全AS2–Ore被覆を証明できれば既存curved_Ore排除を適用できるが、その被覆は未証明。private unit_onezero_probe.pyに元middle/evenを構成し、T=a21非零のSchur条件をa2=±ωa3,a15=±ωa16の四符号に分け、rank1minorとのGroebner系を探索中。T0、projection退化を捨てない。実際のAS2–Ore部分だけは既に証明済みなので再証明しない。既存解決済みのL/ΩやE2中心計算へ戻らない。
+
+## 片方零結合の新しい必要被覆（v266）
+元22tensorのP=(1,0),Q0,S0ではc²行が恒等零なのでB/(x,y,b)=k[c]。H3正常式Gc=ωcGをこの商に写すと純c³係数が零。Ore表示を仮定しない。正常三次の残る7係数へ進める。
+T=a21=0のeven対称blockは右下零、全rank2ならcross rank≤1。cross0なら純U²二関係pencilのrank1因子でdomain外、従ってcrossrank1、純Uのrank2二次Qが一本あり二元AS2を定める。b-mixedはUb+bUだけ、domainなら両射影自動同型。c-mixedの両射影(Uc及びcU)が同型で、evenのbc/cb両射影係数が非零なら、六関係の標準語T0語·b^i c^jが張る。AS4全Hilbert値との一致で独立になり、T0とb拡大が実際に埋込み、結合則が自己同型型の一方曲率Ore表示を与える。既存curved_Ore除外が適用可能。この条件領域は全排除。全片方零層、T非零、c射影退化、bc/cb係数零はまだ排除していない。
+証明はcubic_third_root_unit_onezero_projection.tex。元22tensorからmiddle/even/c²行零と全2×2射影minorを再生するpublic validator/default Sympy PASS、v266主原稿LuaLaTeX PASS clean。数学的Ore認識は通常証明で、有限標本を全被覆証明に使っていない。36既存unified+14後続個別=50validators across runs。
+T非零探索は大きな10変数Groebner出力を直接追わず、middleの残余3×4 rank1を単元pivotでパラメータ化する。private a16=s≠0 chartではa17=λ(ω+1)s,a15=λ²(ω+1)s,a6=λr,a12=λh,a7=r+κs,a11=λh+κλs,a8=(ω+1)A+κr,a3=(ω+1)A+κ(r−h),a9=r,a13=h,a2=A。Schur条件からλ4=ω。λ=ωならh=r、λ=−ωならκ0で他Schur全式が零。λ=±iω型、s0境界は未整理。T=s1の二型をGF109で各5標本検算し、四つはdegree3/4 dims20/35,正常核零、全零r/A等では23/55かつ正常核零。標本のみなので全値除外とはしていない。plus型のexact Q(ω)(A,r,κ)正常行列をprivate unit_onezero_plus_exact.pyで構成中（degree3まで到達、degree4未了）。これはT,sの全値正規化をまだ証明していない限定sliceで、全atlasの被覆と混同しない。
+次はT0の射影退化閉集合又は上のT非零rank1chartの正常核。非単位重複rootの22tensor、四単純、全CY、成分/相対降下も未完。新規as4輸入なし。
