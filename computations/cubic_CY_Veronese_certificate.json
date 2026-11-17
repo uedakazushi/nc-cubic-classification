@@ -1,0 +1,103 @@
+{
+  "status": "PASS",
+  "scope": "scoped complete Veronese projection exclusion, independent original-frame/downstream controls using pinned minimal proof input",
+  "source_commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+  "mixed_cyclic_kernel_dimension": 25,
+  "all_six_integrability_planes": [
+    {
+      "type": "alpha",
+      "root_type": "triple",
+      "cubic_dimension": 3
+    },
+    {
+      "type": "alpha",
+      "root_type": "double",
+      "cubic_dimension": 2
+    },
+    {
+      "type": "alpha",
+      "root_type": "distinct",
+      "cubic_dimension": 1
+    },
+    {
+      "type": "beta",
+      "root_type": "triple",
+      "cubic_dimension": 3
+    },
+    {
+      "type": "beta",
+      "root_type": "double",
+      "cubic_dimension": 1
+    },
+    {
+      "type": "beta",
+      "root_type": "distinct",
+      "cubic_dimension": 1
+    }
+  ],
+  "zero_cubic_degree3_lower_bound": 25,
+  "all_eight_candidates": [
+    {
+      "case": "cube",
+      "exclusion": "actual square relation"
+    },
+    {
+      "case": "tangent",
+      "exclusion": "actual square relation"
+    },
+    {
+      "case": "transverse",
+      "exclusion": "actual square relation"
+    },
+    {
+      "case": "transverse_cube",
+      "exclusion": "actual square relation"
+    },
+    {
+      "case": "mixed",
+      "exclusion": "unit residual ideal"
+    },
+    {
+      "case": "mixed_cube",
+      "exclusion": "unit residual ideal"
+    },
+    {
+      "case": "alpha_distinct",
+      "independent_dimensions": [
+        1,
+        4,
+        10,
+        22
+      ],
+      "translation_jacobian": "8/27",
+      "both_signs": true,
+      "exclusion": "entire translation orbit has nonAS4 Hilbert values"
+    },
+    {
+      "case": "beta_distinct",
+      "independent_dimensions": [
+        1,
+        4,
+        10,
+        20,
+        37
+      ],
+      "translation_jacobian": "-72",
+      "both_signs": true,
+      "exclusion": "entire translation orbit has nonAS4 Hilbert values"
+    }
+  ],
+  "independent_Hilbert_method": "our GradedAlgebra, original defining relation insertions over exact QQ(i) and QQ(i,sqrt3)",
+  "ordinary_dependencies": [
+    "all maximal isotropic plane and binary cubic root orbit coverage",
+    "normalization of integrable cubic strata",
+    "geometric projection recovery in paper"
+  ],
+  "not_claimed": [
+    "whole CY atlas audited",
+    "all CI22 charts imported",
+    "full H3 classification",
+    "novelty confirmed",
+    "ordinary geometric proof mechanically formalized"
+  ]
+}
