@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "version": "classification-v274",
+  "version": "classification-v275",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -3572,24 +3572,9 @@
     ]
   },
   "current_three_eigenvalue_frontier": {
-    "necessary_spectra": [
-      [
-        "omega",
-        "omega",
-        "1",
-        "omega^2"
-      ],
-      [
-        "omega^2",
-        "omega^2",
-        "1",
-        "omega"
-      ]
-    ],
-    "Nakayama": "semisimple of order3",
-    "Galois_label_orbits": 1,
-    "unit_repeat": "entire atlas excluded",
-    "not_geometric_quotient": true,
+    "necessary_spectra": [],
+    "status": "entire three-distinct-eigenvalue Nakayama sector excluded, including all Jordan types",
+    "proof": "papers/sections/cubic_third_root_nonunit_zero_column.tex",
     "whole_H3_complete": false
   },
   "third_root_unit_onezero_completion_v269": {
@@ -3713,6 +3698,30 @@
     "not_claimed": [
       "whole three-eigenvalue classification completed",
       "wholeH3 complete"
+    ]
+  },
+  "third_root_nonunit_zero_column_v275": {
+    "status": "zero b-squared column excluded; completes entire three-eigenvalue sector",
+    "proof": "papers/sections/cubic_third_root_nonunit_zero_column.tex",
+    "validator": "computations/verify_cubic_third_root_nonunit_zero_column.py",
+    "checks": [
+      "default Sympy full source columns/graph/CH/linear rank7 PASS",
+      "all-value source image unit6minor and constant-field denominators PASS",
+      "normal33x7 constant7 pivots, exact bad D(D+omega/2)(D+omega) PASS",
+      "all3 fresh points PASS",
+      "v275 main LuaLaTeX clean PASS"
+    ],
+    "validation_scope": "58 validators across runs; no single 58-validator replay claimed",
+    "remaining": [
+      "four-simple quadratic resonance",
+      "all CY coverage",
+      "global components/groupoids/boundaries",
+      "relative reconstruction and descent"
+    ],
+    "not_claimed": [
+      "complete H3 classification",
+      "new external theorem imports",
+      "novelty confirmed"
     ]
   }
 }

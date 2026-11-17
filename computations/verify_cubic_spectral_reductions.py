@@ -65,6 +65,7 @@ CHECKS=[
  'verify_cubic_third_root_nonunit_proportional_Tzero.py',
  'verify_cubic_third_root_nonunit_isolated.py',
  'verify_cubic_third_root_nonunit_degenerate_self.py',
+ 'verify_cubic_third_root_nonunit_zero_column.py',
 ]
 results=[]
 for name in CHECKS:
@@ -76,11 +77,11 @@ for name in CHECKS:
     print('PASS',name)
 final=json.loads((ROOT/'cubic_fourth_root_last_negative_simple_certificate.json').read_text())
 assert final['status']=='PASS' and final['final_spectrum_count']==3 and final['remaining_orders']==[3]
-out={'status':'PASS','checks':results,'current_three_eigenvalue_necessary_spectra':2,
-     'current_minimal_common_semisimple_orders':[3],
-     'three_eigenvalue_Nakayama':'semisimple of order3 required in all three remaining spectra',
+out={'status':'PASS','checks':results,'current_three_eigenvalue_necessary_spectra':0,
+     'current_minimal_common_semisimple_orders':[],
+     'three_eigenvalue_Nakayama':'entire sector excluded, including all Jordan layers',
      'unit_repeat_order3_sector':'excluded by complete original22 necessary cover and onezero completion',
-     'unit_repeat_bbcc_top_coefficient_required':0,
+     'nonunit_repeat_sector':'independent, proportional-nondegenerate, proportional-degenerate and zero b2 columns all excluded',
      'additional_four_simple_sector':'(a,-a,i/a,-i/a) excluded outside a^4=1; finite boundary unclassified',
-     'not_claimed':['H3 existence or admissibility of2 remaining spectra','ordinary proofs independently checked by program','four-eigenvalue or CY completeness','complete H3 classification']}
+     'not_claimed':['ordinary proofs independently checked by program','four-eigenvalue or CY completeness','complete H3 classification']}
 (ROOT/'cubic_spectral_reductions_validation.json').write_text(json.dumps(out,indent=2)+'\n')

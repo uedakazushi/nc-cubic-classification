@@ -1,0 +1,90 @@
+{
+  "status": "PASS",
+  "scope": "all last zero-b\u00b2-column nonunit spectra by ordinary exhaustive domain/normalizer/Hilbert cover",
+  "source_column_relations": [
+    "(m*x+n*y)*b=T*c2",
+    "b*(m*x+n*y)=omega\u00b2*T*c2"
+  ],
+  "normal_c_form": "cU=F(U)c; F\u00b2L=omega\u00b2L; eigen-L gives normal quotient opposite-zero-products contradiction; otherwise trF0,detF=-omega\u00b2",
+  "canonical_self": "cx=omega*xc,cy=-omega*yc",
+  "canonical_source_linear_rank": 7,
+  "canonical_cube_coefficients": [
+    "D+omega",
+    "D+omega",
+    "-omega*(D+omega)",
+    "D",
+    "D",
+    "-omega*(D+omega)",
+    "omega\u00b2*D",
+    "D"
+  ],
+  "source_model_identity": "originalH=displayedR*coords with unit6minor and parameter-constant denominators",
+  "normal_shape": [
+    33,
+    7
+  ],
+  "normal_constant_pivots": 7,
+  "bad_polynomial": "D*(D+omega/2)*(D+omega)",
+  "fresh_points": [
+    {
+      "D": [],
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        31,
+        7
+      ],
+      "normal_kernel": 0
+    },
+    {
+      "D": [
+        "-1/2",
+        "0"
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        22,
+        46
+      ],
+      "normal_shape": [
+        46,
+        8
+      ],
+      "normal_kernel": 0
+    },
+    {
+      "D": [
+        "-1",
+        "0"
+      ],
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        32,
+        7
+      ],
+      "normal_kernel": 0
+    }
+  ],
+  "conclusions": [
+    "entire nonunit-repeat spectrum excluded",
+    "with unit-repeat completion, no H3 with three distinct Nakayama eigenvalues"
+  ],
+  "not_claimed": [
+    "four-simple or CY classification",
+    "complete H3 classification",
+    "ordinary proofs mechanically checked in their entirety"
+  ]
+}

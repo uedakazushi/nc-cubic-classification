@@ -1,0 +1,115 @@
+\subsection{零 $b^2$ 列の完成と三固有値全体の排除}
+\label{subsec:cubic-third-root-nonunit-zero-column}
+\begin{theorem}[最後の零 $b^2$ 列も空]
+\label{thm:cubic-third-root-nonunit-zero-column-empty}
+非単位重複rootの $p=r=0$ の全atlasはH3を与えない。
+\end{theorem}
+\begin{proof}
+この場合、重み1の関係は二つの純 $Uc+cU$ 関係である。
+どちらかの射影に核があれば純 $uc$ 又は $cu$ の零積となるので、整域性から両射影は同型。
+従って $c$ は $U$ 上の正常元であり、可逆線型写像 $F$ を用いて
+$c u=F(u)c$ と書ける。
+自己対称middleは $RJR^t$、$R=\binom{-F}{I_2}$、$J$ は対称可逆と書け、
+元巡回式の二主blockの比例から
+\[
+ FJF^t=-\omega^2J
+\]
+となる。
+
+$m=a_{10},n=a_{18},T=a_{21}$ とし、$L=mx+ny$ と置く。
+元middleの最後二列は正確に
+\[
+ Lb=T c^2,\qquad bL=\omega^2T c^2
+\tag{Z0}
+\]
+を与える。
+$m=n=0$ は不可能である。$T\ne0$ なら純 $c^2$ 関係、
+$T=0$ なら二次元の純 $U^2$ 関係pencilがあり、いずれも整域性に反する。
+従って $L\ne0$、この二列への射影rankは2である。
+$T=0$ なら $c^2$ 行全体が零となり、自己対称middleのcross blockも零になる。
+しかし上のgraph表示ではcrossは $-FJ$ で可逆なので矛盾する。
+従って $T\ne0$。
+
+(Z0)の結合則から
+$c^2L=\omega^2Lc^2$、従って
+\[
+ F^2(L)=\omega^2L
+\]
+となる。
+$F(L)=\lambda L$ の場合は、$c^2c=cc^2$ と (Z0) により
+$L(bc-\lambda cb)=0$、従って $bc=\lambda cb$ である。
+$c$ は全 $B$ の正常元となり、正常正則一次商 $B/(c)$ は
+独立な $L,b$ に対して $Lb=bL=0$ を持つ。
+補題\ref{lem:cubic-normal-linear-opposite-products}のHilbert矛盾に反する。
+
+従って $L,F(L)$ は独立である。
+Cayley--Hamiltonを $L$ に作用させると
+\[
+ (\operatorname{tr}F)F(L)=(\det F+\omega^2)L
+\]
+なので $\operatorname{tr}F=0,\det F=-\omega^2$。
+$F$ は相異なる固有値 $\omega,-\omega$ を持ち、$U$ の基底をその固有基底へ取れる。
+この基底で $FJF^t=-\omega^2J$ は $J$ の対角成分を零にし、
+非零off-diagonalだけが残る。
+従ってselfの最高係数は
+\[
+ a_{12}=s,\quad a_{14}=\omega^2s,\quad a_7=\omega s,
+ \qquad s\ne0
+\]
+で、他の $U^2c^2$ 係数は零である。
+$L$ が固有vectorでないことから $m,n$ は共に非零。
+対角generator/top変更で $s=m=n=T=1$ とできる。
+例えば $c$ を固定し、$\gamma^3=Ts/(mn)$ として
+$b,x,y$ をそれぞれ $\gamma,T/(\gamma m),T/(\gamma n)$ 倍、topを $1/(\gamma T)$ 倍すればよい。
+
+元rank2条件の12線型式を係数体上で解くと、rankは7で、全八係数は一変数 $D$ により
+\[
+ (a_0,a_1,a_2,a_4,a_5,a_6,a_8,a_{15})
+ =(D+\omega,D+\omega,-\omega(D+\omega),D,D,-\omega(D+\omega),\omega^2D,D)
+\]
+と書ける。
+$A=D+\omega$ とすると元関係の像は、全 $D$ に対し
+\begin{gather*}
+ cx=\omega xc,\quad cy=-\omega yc,\quad
+ (x+y)b=c^2,\quad b(x+y)=\omega^2c^2,\\
+ bc=-(Ax+Dy)(x+y),\qquad
+ cb=-\omega^2(x+y)(Ax+Dy)
+\end{gather*}
+である。
+元画像を表示関係で掛け戻し、unit $6\times6$ minorとパラメータ分母がないことを確認する。
+
+この一変数族の全次数3,4商から作る正常行列は一般点で $33\times7$ であり、
+正常消去の7個のpivotは全て係数体の非零定数である。
+全関係・正常pivotと分母の例外多項式は、平方因子を除いて
+\[
+ D(D+\omega/2)(D+\omega)
+\]
+となる。従ってこの三値以外では正常核は零。
+三値を元商上で新しく構成すると、$D=0,-\omega$ は正常核零、
+$D=-\omega/2$ は次数3商次元22で非AS4となる。
+これで最後の全値を排除した。
+
+公開再現器は \texttt{verify\_cubic\_third\_root\_nonunit\_zero\_column.py}。
+元二列、自己対称graph、Cayley--Hamilton恒等式、全線型incidence、
+元画像の全値同定、一変数全pivotと三つのfresh値を標数0で再生する。
+通常のdomain・正常商の証明を、有限標本で置き換えてはいない。
+\end{proof}
+
+\begin{theorem}[三固有値H3包絡は存在しない]
+\label{thm:cubic-three-eigenvalue-sector-empty}
+強いintrinsic H3のAS4包絡の中山は、相異なる固有値をちょうど三つ持つことはない。
+\end{theorem}
+\begin{proof}
+系\ref{cor:cubic-three-eigenvalue-order3-only}と
+定理\ref{thm:cubic-third-root-unit-Jordan-empty}により、
+この全領域の中山は半単純位数3、三つの必要スペクトルに限られる。
+重複1は定理\ref{thm:cubic-third-root-unit-onezero-complete}で全排除済み。
+非単位重複rootの元22tensor atlasは、$b^2$ 列の独立結合、非零比例結合、零結合に分かれる。
+独立結合は定理\ref{thm:cubic-third-root-nonunit-independent-empty}、
+非零比例結合は定理\ref{thm:cubic-third-root-nonunit-proportional-nondegenerate-empty}と
+\ref{thm:cubic-third-root-nonunit-degenerate-self-empty}、
+零結合は前定理により排除される。
+一方だけ非零は純積関係で整域でない。
+$\omega$ の共役にも同じ係数体上の証明が適用できるので、全三固有値領域が空である。
+これは四単純・全CY・全成分と相対降下を完成したという主張ではない。
+\end{proof}

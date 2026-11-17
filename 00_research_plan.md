@@ -58,7 +58,7 @@ Library既存ファイルは明示指示なしに削除しない。GitではPDF�
 
 (2,2)完成部分のfrontierは **classification-v202**。最後のL0非鏡開集合の正常行加群を自由rank10の核へ移し、全多項式恒等式と10回の局所化単元pivotを公開コードから厳密再生した。両top非零の全候補が消滅し、(2,2)/mixed rank4の全H3は全Jordan型込みで既分類の曲がったClifford族に一致する。詳細な被覆・AS4点での底変更の証明は `papers/sections/cubic_order2_22_secant_L_complete.tex`。この領域の完成を全H3分類と同一視しない。
 独立の[楕円E6量子化成分](https://github.com/uedakazushi/nc-cubic-e6)の研究では、三次の二次関係挿入45×48行列を44×44単元minorで整理し、包絡の三次平坦性を四つの係数の消滅へ帰着した。全次数平坦性を別途仮定すれば三次核は自動的に左右正則正規な主イデアル。20巡回potential方向の80個の斉次一次overlapは全て零と検証済み。指定potential chart内の高次flat性は上記定理で解決した。全intrinsic被覆は未完成。
-全CY被覆、三固有値以上、全成分とintrinsic族降下も未完成である。
+三固有値領域は排除済み。全CY被覆、四単純共鳴、全成分とintrinsic族降下は未完成である。
 
 ## V. 再現・関連研究
 
@@ -69,21 +69,14 @@ Library既存ファイルは明示指示なしに削除しない。GitではPDF�
 heart比較・Rains共鳴・cubic cornerは `uedakazushi/nc-dp-surface-hearts`、次数1は `uedakazushi/nc-dp1-moduli`、三次三様体は `uedakazushi/nc-cubic-threefold-moduli` が正本。
 量子FermatのOU障害は [nc-cubic-non-as](https://github.com/uedakazushi/nc-cubic-non-as)、ambient比較は [nc-cubic-ambient](https://github.com/uedakazushi/nc-cubic-ambient) に移管済み。分類に必要な旧定理・コードはこのリポジトリの現行分類原稿からも参照する。
 
-## 三固有値の現行必要被覆と再開課題（v274）
-必要スペクトルは半単純位数3の(ω,ω,1,ω²)と(ω²,ω²,1,ω)のみ（一つのGaloisラベル軌道、幾何学的同型商ではない）。重複1の全22tensor atlasは排除済み。非単位重複rootもb²列p(U)c+c r(U)の全非零結合を排除した。残るのはp=r0だけ。全CY/四単純/成分・境界/相対降下と全H3分類は未完成。
+## 三固有値領域の完成と現行再開課題（v275）
+強いintrinsic H3のAS4包絡は相異なる中山固有値をちょうど三つ持たない。全Jordan型の必要還元、重複1の全22tensor atlas、非単位重複rootの独立・非零比例・零b²列を全て排除した。全H3分類の完成ではない。全CY、四単純共鳴、全成分・境界、相対降下は未完成。
 
 ### 完成した証明の入口
-重複1はonezero_completion節に至る必要被覆全体で完成。非単位重複rootはnonunit_independent（独立p/r全値Smith）、nonunit_proportional_open（v1,n非零、4曲線/2点）、nonunit_proportional_Tzero（v1,nT0、13根の正常x固有値と実skew cone）、nonunit_isolated（v1最後の相、GB11/一変数/4fresh点、Q=0別分枝含む）により、全非退化self v1を完成した。
-比例p=x,r=αxのselfはxc+αcx,b²+u xc+v yc−(ω/α)(u cx+v cy)。v非零はu0,v1へ、v0はdomainからu非零,α²+ω非零でu1へ。最新nonunit_degenerate_self節とcheckerでv0も全値排除：
-- nT両非零はn=T1、同じhomdetでα−1/−ω/−ω²の3相。前二相はpolynomialunit residual非零定数。主相はY=y+(m+ω²)xでxc=ω²cx,b²+2xc,bY=ω²Yb,Yb−ω²xb−bx−c²,bc+ZY²,cb+ω²ZY²のモデル。P=xb−ωbxは全Zで非零（定数汎関数L(xb)=1,L(c²)=−ω²で全I2を消す）、2Pc=2x(bc−ωcb)+ω[(b²+2xc)b−b(b²+2xc)]でPc0、全非整域。
-- n非零T0はα²ω、正相はhomdet/P0/domain外、α−ω²だけ。Y=y+mxでm0、constantfield rank6/free(S,Z)のexact model。共通scalarでZ1,S=a又はZ0S1へ。正常33×7の全source/normal bad a(a+1)、a0正常核零、a−1 B4dim36、Z0S1 B3dim22。全値排除。
-- n0でbc/cb射影rank2は指数商。rank1はα−ωm²,T(m+ω²)0。T非零ならα=m−ω²、base b²+2xcとbc=ωcbから再びPc0、domainP0。I1純Ub kernel1にPが入ると全yb/by成分が消えて指数商、入らなければ非整域。
-- nT0はpurex²行からα²ω、I1は純Ub2でdomainがb正常onUを強制、bx=mxb。b²=κcxとbb²=b²bからbc=m^-1cb、従ってb全正常。正常正則bの商SはHS(1−t)^-3だがxc=cx0を含む。I2dim3で二つの独立cubic overlaps xcx,cxcがありS3≥11、HSの10に矛盾。外部AS3domain定理を新規輸入せず直接Hilbert矛盾。
-最新v274主原稿LuaLaTeX clean PASS。新checker default Sympy全PASS（sourceunit画像、自由語零因子identity/非零functional、normal一変数/fresh点、b³結合則/overlap bound）。累計57validators across runs、単一57全再生未実行。新規as4/外部定理輸入なし。
+三固有値全体の結論は `papers/sections/cubic_third_root_nonunit_zero_column.tex` の `thm:cubic-three-eigenvalue-sector-empty`。重複1はunit_onezero_completion、非単位重複rootの非零列はnonunit_independent、nonunit_proportional_open、nonunit_proportional_Tzero、nonunit_isolated、nonunit_degenerate_selfの各節を経由する。Q=0の別分枝を含めて必要被覆を保持している。
+最後のp=r0ではcがU上で正常、c u=F(u)c、FJF^t=−ω²J。元二列はLb=T c²,bL=ω²T c²（L=mx+ny）。domainからL,T非零。F²L=ω²Lで、Lが固有vectorならc全正常、B/cにLb=bL0が生じHilbert矛盾。L,F(L)独立ならCHからFdiag(ω,−ω)、self offdiagのみ。generator/top変更でs=m=n=T1。元rank2条件の12linear式はrank7で一変数Dへ。全値source画像はcx=ωxc,cy=−ωyc,(x+y)b=c²,b(x+y)=ω²c²,bc=−((D+ω)x+Dy)(x+y),cb=−ω²(x+y)((D+ω)x+Dy)。unit6minor/係数体分母で全値同定。正常33×7は定数7pivot、全source/normal例外はD(D+ω/2)(D+ω)。fresh D0,−ωは正常核零、D−ω/2はB3dim22。これで最後の列も全排除。
+最新v275主原稿LuaLaTeX clean PASS、新checker default Sympy PASS。累計58validators across runs、単一58全再生は未実行。統合replayソースの現行候補は0、古いキャッシュ出力を新実行と扱わない。新規as4/外部定理輸入なし。新規性未確認。
 
-### 次の最小課題：零b²列だけ
-p=r0なのでH0はUc+cUの2関係。domainなら両射影同型、cはU上の正常元c u=F(u)c（F可逆）。H0=R J R^t,R=[−F;I],J対称可逆で、bottom=−ωtopからFJF^t=−ω²J。全sourceのcanonicalizationを監査・正式化する。
-有力な完成経路（通常証明/source検算をまだ公開統合していない）：m=a10,n=a18,T=a21とL=mx+ny。m=n0はT非零ならpurec²、T0ならpureU²2関係pencilでdomain外。従ってL非零、bc/cb射影は全値rank2。T0ならc²行が零となりH0 cross blockも零、domainの両射影可逆と矛盾するのでT非零。元I1はLb=T c²,bL=ω²T c²。c²LからF²L=ω²L。F(L)=λLならc³結合則からbc=λcb、cが全正常となり、B/cでLb=bL0。既存normal-linear-opposite-products lemmaによりHilbert矛盾。
-従ってL,F(L)独立。CayleyHamiltonからtrF0,detF−ω²,F²ω²I、U基底をFdiag(ω,−ω)へ。Joffdiagだけ、self co a12=s,a14=ω²s,a7=ωs、s非零。Lは両固有成分非零（m,n非零）。generator/top diagonalでs=m=n=T1へ正規化可能。元rank2Mの12linear式は8cube係数をa0=a1=D+ω,a2=a6=−ω(D+ω),a4=a5=a15=D,a8=ω²Dへ制限するはず（manual row消去）。
-この一変数候補をprivate nonunit_zero_coupling_model.pyで元22から再構成し、dims3/4 20/35、正常33×7がgeneric kernel0まで確認。より簡単なsource表示はcx=ωxc,cy=−ωyc,(x+y)b=c²,b(x+y)=ω²c²,bc=−((D+ω)x+Dy)(x+y),cb=−ω²(x+y)((D+ω)x+Dy)。private nonunit_zero_coupling_curve.pyで全source/normal pivot例外多項式を計算中（log v275_nonunit_zero_coupling_curve.log）。次はこのbad polyの全根をfresh判定し、上の必要被覆・正常商Hilbert矛盾・source画像を正式化する。完成すれば全三固有値が排除されるが、現時点ではまだ完成扱いしない。
-四単純と全CY被覆、全成分/境界/相対降下は引き続き未完。移管済み独立論文をここで再開しない。
+### 次の最小課題：四単純位数4の残余
+既存detminus1 chart μ=(a,−a,i/a,−i/a)ではa⁴≠±1は排除、a⁴=−1も二固有値既結果で排除。a⁴=1、スペクトル(1,−1,i,−i)が未判定。これは全四単純スペクトルの被覆ではない。四単純非skewは一般に21個の二次共鳴超曲面上にあり、その残りと全CYも継続する。
+この位数4点のtwisted-cyclic quartic topは16次元。二次weight groupsは0:(xx,yy,bc,cb)、2:(xy,yx,bb,cc)、1:(xb,yc,bx,cy)、3:(xc,yb,by,cx)。0block対称、2block交代、1/3paired。次は全Hilbert trace必要rank型を厳密に絞り、元16tensorから正常三次incidenceを作る。private probeは /workspace/work/spectral_remaining/four_simple_order4_probe.py（公開前の探索、未分類）。三固有値の解決済み計算や移管済み独立論文を再開しない。
