@@ -1,0 +1,68 @@
+\subsection{全楕円パラメータのアフィン包絡のPI次数9}
+\label{subsec:cubic-third-root-unit-boundary-L-ambient-degree}
+\begin{theorem}[中央三次の全fiberからのPI次数]
+\label{thm:cubic-third-root-unit-boundary-L-ambient-degree}
+$L=0,\Omega\ne0$ の全楕円パラメータと全 $u,v$ に対し、
+アフィン包絡 $D=(C[x^{-1}])_0$ のPI次数は正確に9である。
+全 $\lambda\in k$ について、$D/(\psi-\lambda)$ も中心上有限な整域でPI次数9である。
+従って正常三次切断 $U=D/(g)$ の全素因子のPI次数は9以下である。
+$U$ 自体の素性、全中心、正確なPI次数やH3許容性をこれだけから結論しない。
+\end{theorem}
+\begin{proof}
+$S=S_C=\operatorname{gr}D$ の標準中心三次を $g_0$ とする。
+$\operatorname{gr}\psi$ はその非零定数倍であり、$g_0$ は正則である。
+従って全 $\lambda$ について
+\[
+ \operatorname{gr}(D/(\psi-\lambda))\simeq S/(g_0)
+   =B(\mathcal E,\tau,\mathcal L)
+\]
+である。右辺は滑らかな楕円曲線のTHCR整域で、$\tau$ は正確に位数9。
+従って各fiber $V_\lambda=D/(\psi-\lambda)$ も整域となる。
+Rainsの中心持上げ定理\cite[Theorem~2.13]{RainsCut}は、
+標数0、translationがtorsion、filtered deformationというこの仮定で適用でき、
+\[
+ \operatorname{gr}Z(V_\lambda)=Z(B(\mathcal E,\tau,\mathcal L))
+\]
+を与える。
+
+楕円THCRはその中心上有限であり、中心は商楕円曲線の三次座標環の次数を9倍したもの。
+最高記号を引く帰納法により $V_\lambda$ もその中心上有限である。
+与えた濾過におけるHilbert級数は
+\[
+ H_{\operatorname{gr}V_\lambda}(t)=\frac{1+t+t^2}{(1-t)^2},\qquad
+ H_{\operatorname{gr}Z(V_\lambda)}(t)
+   =\frac{1+t^9+t^{18}}{(1-t^9)^2}.
+\]
+有限加群のgeneric rankは同じ濾過による最高増大係数の比に等しいので、
+\[
+ \operatorname{rank}_{Z(V_\lambda)}V_\lambda
+   =\lim_{t\to1}\frac{H_{\operatorname{gr}V_\lambda}(t)}
+                           {H_{\operatorname{gr}Z(V_\lambda)}(t)}=81.
+\]
+整域 $V_\lambda$ の中心分数体上の次元は81、従ってPI次数は9である。
+ここでは中心上の自由性やCM性を別途仮定する必要はない。
+
+次に全fiberの恒等式を $D$ 自体へ戻す。
+$S/(g_0)$ の斉次基底を $D$ へ持ち上げると、
+$g_0$ の正則性と最高次数による帰納法から $D$ の $k[\psi]$ 自由基底になる。
+特に
+\[
+ \bigcap_{\lambda\in k}(\psi-\lambda)D=0.
+\]
+実際、自由基底で書いた有限個の係数多項式が全ての $\psi-\lambda$ で割れれば零である。
+次数9のmatrix代数の任意の多重線型恒等式を $D$ の元に代入すると、
+全 $V_\lambda$ で零となるので、上の交叉の消滅により $D$ でも零となる。
+従って $D$ はPI次数9以下。
+一方、$D$ の多重線型恒等式の最高記号は $S$ の恒等式となる。
+$S$ は位数9のproper Sklyanin代数でPI次数9
+\cite[Theorem~3.7]{SmithTateCenters}なので、$D$ のPI次数は9より小さくならない。
+標数0での多重線型化により、これで $D$ のPI次数が正確に9と分かる。
+商と素因子に同じmatrix恒等式が降りることから、$U$ に関する上界も従う。
+\end{proof}
+
+\begin{remark}[中心持上げの対象]
+Rainsの定理を適用したのは中央商 $D/(\psi-\lambda)$ である。
+このことだけから、$D$ の中心形成や正常商 $D/(g)$ の中心形成も
+全ての基底変更と可換すると推論してはいない。
+特に固定 $E=2$ 以外で9次中心元が持ち上がることは、別途認識する必要がある。
+\end{remark}

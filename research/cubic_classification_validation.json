@@ -3312,5 +3312,35 @@
       "main v257 LuaLaTeX PASS after final shear addition; no overfull or unresolved references/citations",
       "git diff --check PASS"
     ]
+  },
+  "third_root_unit_boundary_L_ambient_degree_v258": {
+    "status": "ordinary central-fiber polynomial-identity argument, audited Rains input; no new finite validator claims",
+    "proof": "papers/sections/cubic_third_root_unit_boundary_L_ambient_degree.tex",
+    "results": [
+      "all L/Ω,u,v: every central fiber D/(psi-lambda) domain finite over center, PI degree9",
+      "affine ambient D has exactly matrix9 identities and PI degree9",
+      "all prime factors of normal cut U have PI degree<=9"
+    ],
+    "external_input": {
+      "author": "Eric M. Rains",
+      "title": "Filtered deformations of elliptic algebras",
+      "arxiv": "2107.13540v2",
+      "url": "https://arxiv.org/abs/2107.13540v2",
+      "pdf_sha256": "6b8ce29a6a0a8533fde76b98af8784229b4e09769e4e6628163d565b0078c050",
+      "fresh_read": "Theorem2.13 and preceding torsion-translation discussion pp15-16; Proposition2.9 and full printed proof/obstruction discussion p11; Remark following Example2.5 p14 distinguishes higher center lifts",
+      "hypotheses_checked": "char0, smooth elliptic THCR, exact torsion translation9, associated graded of every psi-lambda central quotient",
+      "audit_limit": "external center-lifting theorem, not independent full-paper proof audit"
+    },
+    "not_claimed": [
+      "all-parameter full center of D or U",
+      "generic normal cut prime",
+      "normal cut PI degree exactly9 everywhere",
+      "all L H3 exclusion",
+      "complete H3 classification"
+    ],
+    "executed_checks": [
+      "v258 main LuaLaTeX PASS clean",
+      "new function-field exploration only reached degree7; no claimed center9 result"
+    ]
   }
 }
