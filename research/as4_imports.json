@@ -513,5 +513,56 @@
   },
   "additional_reference_commits": [
     "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0"
-  ]
+  ],
+  "CY_second_quadric_scoped_v294": {
+    "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+    "files": [
+      {
+        "path": "README.md",
+        "sha256": "33897e55cbd3cdbc8e6bc710ddfbf1ff763fdf420ad053a82d334937c95ef95d"
+      },
+      {
+        "path": "research/plan_ja.tex",
+        "sha256": "0e689cc55bebebb1848383dea76118d565cc44b889107cd840b073535cf712a4"
+      },
+      {
+        "path": "research/COVERAGE.md",
+        "sha256": "8ca320d2fc4d6133ac3939ff6dd61cde095d8a146afc52823b155e202ae0a044"
+      },
+      {
+        "path": "research/CLAIMS.json",
+        "sha256": "ca20e6948494d3f2988bf0a26ff5ccc0a7fe107e8b3f6c05ef6888265569c7c1"
+      },
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_NONDEGENERATE_CHART.tex",
+        "sha256": "1509a0c84acf9a73721e006e03500254d39e298677dc37134d39f5aa37a33402"
+      },
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_DEGENERATE_CHART_SECOND_QUADRIC.tex",
+        "sha256": "b0e02568fe971b5e6a8d9c99536d0111ba3253c744a2e99a50d59c05cae42285"
+      },
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_IMAGE_REDUCTION.tex",
+        "sha256": "d0dca002079d56e1717b9f43636e65ebc2ade97068a2c00f50954d227f0deeeb"
+      }
+    ],
+    "used_claims": [
+      "C-CY-ZERO-COMMUTATORS-NONDEGENERATE-CHART",
+      "C-CY-ZERO-COMMUTATORS-DEGENERATE-CHART-SECOND-QUADRIC"
+    ],
+    "hypotheses": "char0 algebraically closed; six independent quadratic polynomials on P3, nonsingular rank6 quadratic relation, image dimension3",
+    "used_part": "all full-rank differential tangent branches force an independent second quadratic relation; no whole CY atlas or AS4 sufficiency",
+    "upstream_status": "proof_written, computation_passed, independent_audit_pending, novelty_unsearched",
+    "this_review": "read full two local proofs and image reduction; independently implemented all relevant universal polynomial identities, syzygy ranks and branch normal forms; ordinary tangent normalization/divisibility/cyclic arguments reviewed in manuscript",
+    "validator": "computations/verify_cubic_CY_second_quadric.py",
+    "proof": "papers/sections/cubic_CY_second_quadric.tex",
+    "not_imported": [
+      "full CY_COMPLETE",
+      "all CI22 candidate coverage",
+      "AS4 existence sufficiency",
+      "all isomorphisms",
+      "Veronese AS4 exclusion as independently audited",
+      "novelty"
+    ]
+  }
 }

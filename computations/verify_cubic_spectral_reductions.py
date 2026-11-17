@@ -85,6 +85,7 @@ CHECKS=[
  'verify_cubic_jordan31_unipotent_vertex.py',
  'verify_cubic_jordan211_ore_reduction.py',
  'verify_cubic_jordan22_unipotent_vertex.py',
+ 'verify_cubic_CY_second_quadric.py',
 ]
 results=[]
 for name in CHECKS:

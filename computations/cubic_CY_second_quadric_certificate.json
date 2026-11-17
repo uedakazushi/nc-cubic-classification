@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "scope": "scoped as4 import: every full-rank differential tangent branch for six quadrics has a second independent quadratic relation",
+  "source_commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+  "degenerate_syzygy_map_rank": 10,
+  "syzygy_parameter_rank": 8,
+  "both_nondivisible_condition_rank": 8,
+  "both_nondivisible_target_change_det": 1,
+  "degenerate_second_quadric": "-4*nu*xi*z3*z5 + nu*z2**2 + xi*z1**2 + z0*z4",
+  "asymmetric_pencil_det": "beta*(alpha**3*n2 + alpha**2*beta*(-2*l2 + n1) - alpha*beta**2*(2*l1 + t2) - beta**3*t1)",
+  "singular_pencil_new_quadric": "z0*z5-z1^2, rank3",
+  "cyclic_basis_independence_witness": -1,
+  "nondegenerate_second_quadric": "z0*z4 - z1*(m0*z1 + m1*z2 + m2*z3) - z2*(m1*z1 + m3*z2 + m4*z3) - z3*(m2*z1 + m4*z2 + m5*z3) - z4**2*(m0 + m3 + m5) + z4*z5*(-m0**2/2 - m1**2 - m2**2 - m3**2/2 - m4**2 - m5**2/2 + (m0 + m3 + m5)**2/2) - z5**2*(m0*m3*m5 - m0*m4**2 - m1**2*m5 + 2*m1*m2*m4 - m2**2*m3)",
+  "nondegenerate_pencil_det": "-det(mu I+lambda M)^2/4",
+  "ordinary_dependencies": [
+    "all tangent Witt normalizations",
+    "integral-domain exhaustive factor branches and nonzero divisors",
+    "cyclicity from independence of six minors",
+    "generic differential rank for three-dimensional image"
+  ],
+  "not_claimed": [
+    "full CY classification audited",
+    "Veronese AS4 exclusion independently replayed here",
+    "all CI22 charts imported",
+    "novelty confirmed",
+    "geometric arguments mechanically formalized"
+  ]
+}

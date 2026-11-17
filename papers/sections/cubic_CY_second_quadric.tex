@@ -1,0 +1,120 @@
+\subsection{零交換子CY被覆のための第二二次関係}
+\label{subsec:cubic-CY-second-quadric}
+ここからは全CY中央切断の必要被覆を進める。
+以下はas4の固定commitにある六二次式系の局所定理を、必要な範囲に限って用いる
+\cite{AS4CYpinned}。全CY分類・AS十分性・全同型を同時に輸入しない。
+
+\begin{proposition}\label{prop:cubic-CY-six-quadrics-second}
+$U\subset k[a,b,c,d]_2$ は六次元で、六つの基底二次式の間にrank6の二次関係 $Q$ があるとする。
+$\mathbb P^3\dashrightarrow V(Q)\subset\mathbb P^5$ の像が三次元なら、
+$Q$ と独立な第二の二次関係が存在する。
+\end{proposition}
+\begin{proof}
+標数0なので微分rank3となる定義域内の点を取れる。
+$Q$ の接二次空間は非退化四次元で、その三次元微分像への制限はrank3又は2である。
+固定出典の二つの局所定理は、この二場合を全て扱う。
+以下にその被覆・非零条件・独立性を明記し、使う全多項式恒等式を独立再生する。
+
+非退化の場合、可逆な入力・標的変換により、対称な非スカラー $3\times3$ 行列 $M$ と
+$b=(b,c,d)^t$ を用いて
+\[
+ q_0=a^2+b^tM^2b,\quad q_{1,2,3}=ab+b\times Mb,\quad
+ q_4=b^tMb,\quad q_5=b^tb
+\]
+となる。
+全二次syzygy $b^tf=0$ は $f=b\times Nb$ で表され、核次元は8である。
+$(b^tNb-f_4)(b^tNb+f_4)$ が既約式 $b^tb$ で割れることから、
+スカラー部分を除き、交代部分を入力・標的の単元変換で消す。
+この議論は零因子や非半単純な対称 $M$ も含む。
+第二関係は
+\[
+ P=z_0z_4-z^tMz-\operatorname{tr}(M)z_4^2
+    +e_2(M)z_4z_5-\det(M)z_5^2,
+ \quad z=(z_1,z_2,z_3)^t.
+\]
+第一関係 $Q=z_0z_5-z_1^2-z_2^2-z_3^2-z_4^2$ と独立である。
+一般六係数の対称 $M$ で両関係と、交代部分を除く全変換恒等式を検証する。
+
+退化の場合はWitt基底を選んで $Q=z_0z_5-z_1z_2-z_3z_4$ とし、
+全局所表示は
+\[
+\begin{gathered}
+ q_0=a^2+h,\quad q_1=ab+f_1,\quad q_2=ac+f_2,\quad
+ q_3=ad+f_3,\quad q_4=f_4,\quad q_5=bc,\\
+ cf_1+bf_2+df_4=0,\qquad hbc=f_1f_2+f_3f_4
+\end{gathered}
+\]
+となる。syzygyの全解は
+\[
+ f_1=b\ell+dm,\quad f_2=-c\ell+dn,\quad f_4=-cm-bn,
+ \qquad \ell,m,n\in k[b,c,d]_1
+\]
+で、冗長性は $(\ell,m,n)\mapsto(\ell+sd,m-sb,n+sc)$ だけである。
+係数写像はrank8、全syzygy条件はrank10であり、これで全解を尽くす。
+$b=0,c=0$ の二つの制限から
+\[
+ m|_{b=0}(d^2n-cd\ell-cf_3)|_{b=0}=0,\qquad
+ n|_{c=0}(bd\ell-bf_3+d^2m)|_{c=0}=0
+\]
+を得る。
+$m\in(b),n\in(c)$ の両方は $q_4\in kq_5$ となり独立性に反する。
+他の三枝を捨てない。
+
+両方とも整除されなければ、積の第二因子が両方零である。
+その全八線型条件と冗長性を除くと、単元標的変換による六式は
+\[
+ A^2+\nu\xi d^2,\quad Ab+\nu cd,\quad Ac+\xi bd,\quad
+ Ad,\quad-\xi b^2-\nu c^2,\quad bc,
+ \qquad \nu\xi\ne0
+\]
+となる。ここで $\nu\xi\ne0$ は選んだ枝そのものの条件である。
+第一関係に加えて
+$z_0z_4+\xi z_1^2+\nu z_2^2-4\nu\xi z_3z_5=0$ があり、
+$z_0z_4$ 係数により独立である。
+
+片側だけ整除される二枝は $b,c$ の交換で同じである。
+$m=0$ と正規化し、六式は二つの一次式ベクトル
+\[
+ u=(A,n,-c,0)^t,\qquad v=(t,A-2\ell,d,b)^t
+\]
+の外積成分となる。
+$\alpha u+\beta v$ の入力係数行列式は
+\[
+ \beta\{n_d\alpha^3+(n_c-2\ell_d)\alpha^2\beta
+ -(2\ell_c+t_d)\alpha\beta^2-t_c\beta^3\}.
+\]
+恒等的に零なら $n_d=0,n_c=2\ell_d,t_d=-2\ell_c,t_c=0$ であり、
+$n\notin(c)$ から $n_b\ne0$。
+$n_b$ だけを分母に持つ可逆変換により六式は
+\[
+ b^2,\ bX,\ bc,\ Xd,\ cX+n_bbd,\ X^2
+\]
+となり、rank3の関係 $z_0z_5-z_1^2=0$ がrank6の元関係と独立である。
+この枝の分母は元の非零条件で保証される。
+
+行列式が恒等的に零でなければ、可逆な一次結合を入力座標 $x$ と取れ、
+六式は $x\wedge Tx$ の六成分となる。
+その独立性は $T$ が巡回であることを強制する。
+実際、非巡回なら同じ固有値の独立な二つの左固有vectorがあり、その外積が六成分の線型関係を与える。
+二形式
+\[
+ Q_0(z)=z\wedge z,\qquad Q_T(z)=z\wedge(\bigwedge^2T)z
+\]
+は $z=x\wedge Tx$ 上でともに零である。
+巡回vector $w$ に対し $z=w\wedge T^2w$ とすれば
+$Q_0(z)=0$、$Q_T(z)=-\det(w,Tw,T^2w,T^3w)\ne0$ なので独立である。
+$T$ の可逆性・対角化可能性は不要である。
+以上でrank3微分像の全接形式・全整除分岐に第二関係を得た。
+\end{proof}
+
+公開再現器は\\
+\texttt{verify\_cubic\_CY\_second\_quadric.py}。
+固定出典のDC1--DC15および非退化接空間の恒等式に対応して、全syzygy rank、
+単元変換、全pencil行列式、恒等特異枝、一般16係数 $T$ の外積恒等式と巡回独立性の証拠、
+一般対称 $M$ の第二関係を独立計算した。
+接空間の正規化・整域による全分岐・幾何学的像の議論は上の通常証明と固定出典に依存する。
+
+CYで実交換子が零なら、対称射影は六次元であり、対称topのrank6部分が上の $Q$ を与える。
+ただし本命題の適用前には、像が三次元であることを確認する必要がある。
+低次元像からのVeronese復元と、そのAS4排除の全証明の監査は次の課題として保持する。
+この命題だけで全零交換子CYの被覆や全H3分類が完成したとはしない。
