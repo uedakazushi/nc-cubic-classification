@@ -8,7 +8,8 @@
 |---|---|
 | H3の内在的認識・完全分類 | **この `nc-cubic-moduli` のmain** |
 | 楕円 $E_6$ 量子化成分・Fricke・DAHA | [nc-cubic-e6](https://github.com/uedakazushi/nc-cubic-e6) |
-| ambient／intrinsic／marked ASモジュライの比較 | [nc-cubic-ambient-moduli](https://github.com/uedakazushi/nc-cubic-ambient-moduli) |
+| ambient射・R(1,3)成分 | [nc-cubic-ambient](https://github.com/uedakazushi/nc-cubic-ambient) |
+| 標識忘却・Picard作用 | [nc-cubic-unmark](https://github.com/uedakazushi/nc-cubic-unmark) |
 | 量子Fermat三次曲面がAS surfaceでない短報 | [nc-cubic-non-as](https://github.com/uedakazushi/nc-cubic-non-as) |
 
 分類の主原稿に数学的に必要な認識定理・証明・コードは維持する。別論文の旧独立TeX・専用ノートは分離し、上記の独立mainを公表用正本とする。分類Codexは独立論文を旧パスへ再生成せず、必要な成果を正確に引用する。
@@ -40,7 +41,8 @@
 | 対象 | 主原稿・再開ノート |
 |---|---|
 | H3の公理・認識・全切断の部分分類 | [weak_cubic_axioms.tex](papers/weak_cubic_axioms.tex)、[分類ノート](research/cubic_14641_classification.md) |
-| 次数3のambient・R13・形式比較 | [nc-cubic-ambient-moduli](https://github.com/uedakazushi/nc-cubic-ambient-moduli)、[R13](research/r13_generic_moduli.md) |
+| 次数3のambient・R13比較 | [nc-cubic-ambient](https://github.com/uedakazushi/nc-cubic-ambient)、[R13](research/r13_generic_moduli.md) |
+| 標識忘却・形式Weyl商・Picard作用 | [nc-cubic-unmark](https://github.com/uedakazushi/nc-cubic-unmark) |
 | 量子FermatのOU AS障害 | [nc-cubic-non-as](https://github.com/uedakazushi/nc-cubic-non-as) |
 | 次数1のrank・weighted sextic・候補族（移管済み） | [nc-dp1-moduli](https://github.com/uedakazushi/nc-dp1-moduli) |
 | 次数1の反標準モデル・導来比較（移管済み） | [nc-dp1-moduli](https://github.com/uedakazushi/nc-dp1-moduli) |
