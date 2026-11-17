@@ -1,0 +1,258 @@
+{
+  "status": "PASS",
+  "source_commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+  "scope": "entire zero-fifth determinant boundary H3 empty; together with earlier necessary covers, all degree1 shared supports empty",
+  "independent_coverage": [
+    "both original unit elimination traces and nonzero x17 unit contradiction",
+    "both split memberships and all localized base ideal equalities, both signs",
+    "all seven full coupling matrices; generic rank/determinant and complete kernels",
+    "all exceptional number-field ranks and coupling1 normalization, every conjugate retained",
+    "actual family connections and all original inserted relation coordinates checked"
+  ],
+  "bad_quotients": [
+    {
+      "name": "Am-1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        37
+      ],
+      "minimal_polynomial": null
+    },
+    {
+      "name": "Ap-1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        37
+      ],
+      "minimal_polynomial": null
+    },
+    {
+      "name": "Az-1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        21
+      ],
+      "minimal_polynomial": null
+    },
+    {
+      "name": "B-1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        21
+      ],
+      "minimal_polynomial": null
+    },
+    {
+      "name": "Ap8-1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35,
+        59
+      ],
+      "minimal_polynomial": "lambda**4 + 1"
+    },
+    {
+      "name": "Api-1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35,
+        58
+      ],
+      "minimal_polynomial": "lambda**2 + 1"
+    },
+    {
+      "name": "Azspecial-1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        21
+      ],
+      "minimal_polynomial": null
+    },
+    {
+      "name": "Bspecial-1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        21
+      ],
+      "minimal_polynomial": null
+    },
+    {
+      "name": "Am1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        37
+      ],
+      "minimal_polynomial": null
+    },
+    {
+      "name": "Ap1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        37
+      ],
+      "minimal_polynomial": null
+    },
+    {
+      "name": "Az1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        21
+      ],
+      "minimal_polynomial": null
+    },
+    {
+      "name": "B1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        21
+      ],
+      "minimal_polynomial": null
+    },
+    {
+      "name": "Ap81",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35,
+        59
+      ],
+      "minimal_polynomial": "lambda**4 + 1"
+    },
+    {
+      "name": "Api1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35,
+        58
+      ],
+      "minimal_polynomial": "lambda**2 + 1"
+    },
+    {
+      "name": "Azspecial1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        21
+      ],
+      "minimal_polynomial": null
+    },
+    {
+      "name": "Bspecial1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        21
+      ],
+      "minimal_polynomial": null
+    }
+  ],
+  "literal_exceptional_N_transports": {
+    "('Bh', -1)": {
+      "permutation": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "diagonal": [
+        "1",
+        "sqrt(3)*I/6",
+        "1",
+        "-sqrt(3)*I/6"
+      ]
+    },
+    "('Ah', -1)": {
+      "permutation": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "diagonal": [
+        "1",
+        "-2*sqrt(3)*I",
+        "1",
+        "-sqrt(3)*I/12"
+      ]
+    },
+    "('Ah', 1)": {
+      "permutation": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "diagonal": [
+        "1",
+        "1",
+        "1",
+        "-1/24"
+      ]
+    },
+    "('Bh', 1)": {
+      "permutation": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "diagonal": [
+        "1",
+        "1",
+        "1",
+        "-1/12"
+      ]
+    }
+  },
+  "old_fixed_exclusions_reused": "C and its coefficient conjugate, R_1 signs/all nonzero r, N; no fresh downstream centre3 run claimed",
+  "ordinary_dependencies": [
+    "base polynomial memberships give seven exhaustive cases",
+    "raw relation rank gives all-closed dimension lower bounds on stated units",
+    "torus normalization of nonzero kernel coordinate and nonzero x9 over algebraically closed field",
+    "existing all-parameter first/open/general-boundary exclusions and old C/R/N centre obstructions"
+  ],
+  "not_claimed": [
+    "relative reduced scheme coverage",
+    "degree2/partial-active/full shared supports excluded",
+    "AS sufficiency/full automorphism theorem imported",
+    "complete CY or H3 classification",
+    "novelty confirmed"
+  ]
+}

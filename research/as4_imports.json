@@ -858,5 +858,32 @@
       "complete H3 classification",
       "novelty"
     ]
+  },
+  "CY_four_point_zero_determinant_v305": {
+    "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+    "files": [
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_FOUR_SIMPLE_ZERO_FIFTH_BOUNDARY_COMPLETE.tex",
+        "sha256": "cbde5c33bcf0abb7d55d78a5b095e3c6f7e41a0ae48e6e92b93715036cc4448b"
+      },
+      {
+        "path": "code/verify_cy_zero_commutators_four_simple_zero_fifth_boundary_complete.py",
+        "sha256": "f82d8e30f24cc92f6cf4bef8f19bbf38e55085e137e8054d522a86e51823aa00"
+      }
+    ],
+    "used_part": "FB1-FB9 necessary complete base and coupling coverage only",
+    "upstream_status": "proof_written; independent_audit_pending; novelty_unsearched",
+    "upstream_replay": "full fixed zero-fifth boundary controller PASS isolated with python-flint",
+    "downstream_independent": "PASS exact flint-ground original unit traces, both split memberships and all base ideals for both signs, all seven coupling matrices/generic and exceptional ranks/kernels, sixteen original bad quotients including full degree4/2 number-field conjugates, actual family connections, torus weights, old C/conjugate and R1 transports and all four literal N transports",
+    "validator": "computations/verify_cubic_CY_four_point_zero_determinant.py",
+    "input": "computations/cubic_CY_four_point_zero_determinant_input.json",
+    "proof": "papers/sections/cubic_CY_four_point_zero_determinant.tex",
+    "not_imported": [
+      "AS sufficiency/full automorphisms",
+      "degree2/partial-active/full shared coefficient covers",
+      "relative reduced scheme coverage",
+      "complete CY/H3 classification",
+      "novelty"
+    ]
   }
 }

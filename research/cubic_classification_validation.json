@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "version": "classification-v304",
+  "version": "classification-v305",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -4381,5 +4381,29 @@
       "complete H3 classification",
       "novelty confirmed"
     ]
+  },
+  "CY_four_point_zero_determinant_v305": {
+    "status": "PASS exact independent base/coupling/number-field controls and all retained transports; main LuaLaTeX clean,446 pages",
+    "proof": "papers/sections/cubic_CY_four_point_zero_determinant.tex",
+    "validator": "computations/verify_cubic_CY_four_point_zero_determinant.py",
+    "input": "computations/cubic_CY_four_point_zero_determinant_input.json",
+    "certificate": "computations/cubic_CY_four_point_zero_determinant_certificate.json",
+    "scope": "whole x5zero determinant boundary H3 empty; all degree1 shared supports empty; CYc0 remaining624 supports/44 S4 support orbits",
+    "validation_scope": "90 validators across runs; no single90 replay",
+    "pause": "user explicitly requested stopping at a good checkpoint; stop after this result is saved; no next research calculation launched",
+    "not_claimed": [
+      "remaining624 supports nonempty or H3 admissible",
+      "support orbits are moduli components or intrinsic isomorphism classes",
+      "remaining degree2/partial-active/full supports excluded",
+      "old C/R/N centre ranks freshly rerun",
+      "AS sufficiency/full automorphisms imported",
+      "relative scheme cover",
+      "complete H3 classification",
+      "novelty confirmed"
+    ],
+    "main_build": {
+      "pages": 446,
+      "result": "latexmk up-to-date; no overfull boxes, undefined references/citations or fatal errors found"
+    }
   }
 }

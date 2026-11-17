@@ -1,0 +1,127 @@
+\subsection{第五係数零の行列式境界と全出次数1支持の排除}
+\label{subsec:cubic-CY-four-point-zero-determinant}
+\begin{theorem}\label{thm:cubic-CY-four-point-zero-determinant-empty}
+四単純基点の元表示で
+\[
+ x_0x_1\ne0,\quad x_3=x_4=x_5=0,\quad x_0x_2-x_1^2=0
+\]
+を満たす全領域と、その全monomial軌道はH3包絡を与えない。
+\end{theorem}
+\begin{proof}
+$x_0=x_1=x_2=1$ と規格化する。
+固定出典\cite{AS4CYpinned}の第五係数零境界の必要被覆FB1--FB9を用いる。
+全controllerを隔離出力先で再実行し、当repoでも以下の元消去・全結合係数・
+全数体商・既存表示への移送を独立に検証する。
+
+$x_{17}\ne0$ なら残る対角作用で $x_{17}=1$ とできるが、
+全元Schur式の $\lambda,\lambda+1$ だけによる単元消去に非零単元が残る。
+従って $x_{17}=0$ であり、消去式から $x_{12}=0$ も従う。
+$q=x_{10},b=x_{11},c=x_8,k=x_{14}$ と置くと、全残余の一式が単元倍を除き
+\[
+ (k+q^2)(\lambda q+\lambda c+q)=0
+\]
+となる。二枝の元idealはそれぞれ
+\[
+\begin{gathered}
+ q(-2\lambda+192q^2+5)
+ \{4(\lambda-1)q-\lambda\}\{4(\lambda-1)q+\lambda\},\\
+ q(\lambda-1)(2\lambda-1)
+ \{4(\lambda-1)q-\lambda\}\{4(\lambda-1)q+\lambda\},\\
+ (16q^2-\lambda^2)(\lambda-2),\qquad
+ (16q^2-\lambda^2)(3\lambda^2+48q^2-8)
+\end{gathered}
+\]
+を含む。所属と、各枝の基礎係数idealの完全な一致を元式から再計算する。
+これにより、$\sigma=\pm1,\zeta^2=-3$ として全基礎係数は次の七行に尽くされる。
+\[
+\begin{array}{c|c|c|c|c|c}
+ &\lambda&q&b&c&k\\\hline
+ A_z&\text{任意}&0&\sigma\lambda/4&\sigma(\lambda+1)/4&0\\
+ A_+&\lambda\ne1&\frac{\sigma\lambda}{4(\lambda-1)}&
+ \frac{\sigma\lambda^2}{4(\lambda-1)}&\frac{\sigma(\lambda+1)}4&-q^2\\
+ A_-&\lambda\ne1&\frac{\sigma\lambda}{4(\lambda-1)}&
+ -\frac{\sigma\lambda^2}{4(\lambda-1)}&-\frac{\sigma(\lambda^2+1)}{4(\lambda-1)}&-q^2\\
+ A_1&1&\sigma i/8&-\sigma i/8&0&1/64\\
+ A_h&1/2&\sigma\zeta/12&-\sigma\zeta/24&-\sigma\zeta/8&1/48\\
+ B_0&\text{任意}&\sigma\lambda/4&0&-\sigma(\lambda+1)/4&0\\
+ B_h&2&\sigma\zeta/6&-\sigma\zeta/3&-\sigma\zeta/4&-1/6
+\end{array}
+\]
+全てで $\lambda\ne0,-1$ を課す。
+$q=0$、波括弧因子零、残る $\lambda=1,1/2,2$ を順に場合分けして得られ、
+基礎体上で係数が消える値を一般点の除算で捨てていない。
+
+\paragraph{全結合係数の被覆}
+残る結合係数は $(x_6,x_7,x_{13},x_9)$ である。
+$A_-$ の前三成分の線型行列は全域でrank1、核は
+$(-u/\lambda,u,v)$、残余は
+$x_9=-4\sigma uv(\lambda-1)/\lambda^2$ を強制する。
+この全二変数族の四次商次元は37であり、全閉値を排除する。
+
+$A_+,A_z,B_0$ の線型行列式は、許容単元倍を除き順に
+\[
+ \lambda^4+1,\qquad(2\lambda+1)^2,\qquad(\lambda+2)^2.
+\]
+これらが非零なら前三成分は零。
+$x_9$ の係数は $A_+$ では $\lambda^2+1$ の単元倍、他は単元なので、
+一般の残余は $x_9=0$ である。
+この零結合係数族の四次又は三次商次元は、順に37,21,21。
+元関係行列のrank特殊化により、同じ表示の全許容閉値も排除される。
+
+線型係数が消える全例外を含めると、残る非零結合係数は次表で尽くされる。
+\[
+\begin{array}{c|c|c|c|c|c|c}
+ &\text{条件}&x_6&x_7&x_{13}&x_9&\text{排除次元}\\\hline
+ A_+&\lambda^4+1=0&u&\lambda^2u&-\frac{\sigma\lambda u}{4(\lambda-1)}&-u^2&\dim C_5=59\\
+ A_+&\lambda^2+1=0&0&0&0&r&\dim C_5=58\\
+ A_z&\lambda=-1/2&u&0&0&-u^2&\dim C_3=21\\
+ B_0&\lambda=-2&0&u&\sigma u/2&u^2&\dim C_3=21
+\end{array}
+\]
+$u=0$ 又は $r=0$ は既に零結合係数族で排除された。
+それ以外は $\operatorname{diag}(1,z,z,1)$ により $u=1$ 又は $r=1$ へ移せる。
+実際、前三結合成分の重みは $z$、$x_9$ の重みは $z^2$ で、全基礎係数は不変である。
+独立検証器は全例外の線型rankと核、残余による $x_9$ の一意性を確認する。
+$\lambda^4+1$ と $\lambda^2+1$ では、それぞれ既約四次・二次数体上で元商を計算し、
+全代数的共役を含む。両符号を保った全16非正則代表・族の元商を独立に再生した。
+一般族の原分母は明記した $\lambda,\lambda+1,\lambda-1$ の冪だけなので、
+一般商の下界はその全許容閉値に及ぶ。
+
+\paragraph{残る全表示の排除}
+$A_1,A_h,B_h$ の線型行列はrank3であり、前三結合成分は零。
+$A_h,B_h$ は $x_9=0$ を強制し、両符号の四点は既存 $N$ に移る。
+全24置換と対角規格化の中から、四点の各々へ可逆な元関係基底移送を確認した。
+命題\ref{prop:cubic-zero-fifth-fixed}を適用できる。
+
+$A_1$ だけは $x_9=r$ が自由である。
+$r=0$ の表示は既存 $C$ とその係数共役であり、既存の中心三次rank20を適用する。
+$r\ne0$ は $r=1$ に規格化でき、
+\[
+ P=\operatorname{diag}(1,1/8,i,i/8)P_{(ab)(cd)}
+\]
+による $R^+_1$ から正符号表示への元関係移送と、その係数共役による負符号移送を確認した。
+従って命題\ref{prop:cubic-boundary-R}から、これらも全てH3でない。
+以上で全場合が尽くされた。
+\end{proof}
+
+\begin{corollary}\label{cor:cubic-CY-four-point-degree-one-empty}
+四単純基点のCY共有支持に出次数1の頂点があれば、H3包絡は存在しない。
+従って全零交換子CYのH3に残る必要支持は624個、$S_4$ 支持軌道は44個以下である。
+内訳は出次数2の場合609支持・40軌道、部分活性14支持・3軌道、全共有1支持・1軌道である。
+これは存在するmoduli成分やintrinsic同型類の個数ではない。
+\end{corollary}
+\begin{proof}
+出次数1の頂点を持つ全支持は、補題\ref{lem:cubic-CY-four-point-support}により
+$x_1\ne0,x_3=x_4=0$ へ移る。
+$x_0=0$ なら定理\ref{thm:cubic-CY-four-point-first-empty}、
+$x_0\ne0$ の行列式非零部分は定理\ref{thm:cubic-CY-four-point-two-open-empty}、
+行列式零部分は定理\ref{thm:cubic-CY-four-point-determinant-empty}と本定理で全て排除される。
+共有零支持も既に全排除済みなので、全4096支持から3471個と1個を除くと624個が残る。
+他の対称射影型は前節までで排除した。
+\end{proof}
+
+公開検証器は\\
+\texttt{verify\_cubic\_CY\_four\_point\_zero\_determinant.py}。
+通常の全場合分け、全元消去と結合係数、全数体商、既存 $C/R/N$ の中心障害を区別する。
+AS十分性、全自己同型群、相対schemeの被約性・降下を同時に主張しない。
+出次数2・部分活性・全共有支持の全必要係数被覆と、全CY中央切断分類は未完成である。
