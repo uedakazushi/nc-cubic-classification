@@ -631,5 +631,41 @@
       "full CY classification",
       "novelty"
     ]
+  },
+  "CY_finite43_necessary_cover_v298": {
+    "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+    "files": [
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_CURVILINEAR_FOUR_COMPLETE.tex",
+        "sha256": "88dc2b483d4bdd08a31ee8d184b02926c33b317c4508de0b5270b2a8d951752c"
+      },
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_CURVILINEAR_THREE_ONE_COMPLETE.tex",
+        "sha256": "29db71800d41de6e499d7084919432f7556c19b4da95005de5e1fb9a76170ffa"
+      },
+      {
+        "path": "code/verify_cy_zero_commutators_curvilinear_four_complete.py",
+        "sha256": "46ef5e698dcfd35456c5d7228eaf75d1c571f5e03adb4e2b13ffbb89c57bcf83"
+      },
+      {
+        "path": "code/verify_cy_zero_commutators_curvilinear_three_one_complete.py",
+        "sha256": "b9775c917b88bed5a24d472fa1627e9b54f4848e8e3015afb147b5bdbc828e1e"
+      }
+    ],
+    "used_part": "CF6–CF13 and CT3–CT17 all necessary coefficient/gauge/empty/Hilbert-obstructed strata only; no positive AS sufficiency or automorphism theorem",
+    "upstream_status": "proof_written/computation_passed/independent_audit_pending/novelty_unsearched",
+    "upstream_replay": "both full fixed controllers PASS in isolated workspace with python-flint, reference unchanged",
+    "downstream_independent": "original21+21 CY frames, empty ideals, finite leading annihilator (with nilpotence kept), all14 bad original quotient representatives/families, all parameter denominator units, literal constant transports to old excluded CF2/CF3/CT2",
+    "validator": "computations/verify_cubic_CY_finite43_cover.py",
+    "input": "computations/cubic_CY_finite43_input.json",
+    "proof": "papers/sections/cubic_CY_finite43_cover.tex",
+    "not_imported": [
+      "AS4 sufficiency/Koszul filtrations",
+      "all isomorphisms or automorphisms",
+      "reduced/relative leading tuple classification",
+      "other finite-base coefficient covers",
+      "full CY or H3 classification",
+      "novelty"
+    ]
   }
 }

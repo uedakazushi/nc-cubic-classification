@@ -1,0 +1,218 @@
+{
+  "status": "PASS",
+  "scope": "scoped necessary projection4/31 covers reduce to the three previously H3-excluded fixed presentations; all14 bad representatives/families independently checked",
+  "source_commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+  "all14_bad_quotients": [
+    {
+      "case": "CF_branch0",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        37
+      ],
+      "parameters": [],
+      "inverted_parameters": []
+    },
+    {
+      "case": "x9_a",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        37
+      ],
+      "parameters": [],
+      "inverted_parameters": []
+    },
+    {
+      "case": "x9_b-1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        37
+      ],
+      "parameters": [
+        "h"
+      ],
+      "inverted_parameters": []
+    },
+    {
+      "case": "x9_b1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        37
+      ],
+      "parameters": [
+        "h"
+      ],
+      "inverted_parameters": []
+    },
+    {
+      "case": "x9_c-1-1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        36
+      ],
+      "parameters": [],
+      "inverted_parameters": []
+    },
+    {
+      "case": "x9_c-11",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        36
+      ],
+      "parameters": [],
+      "inverted_parameters": []
+    },
+    {
+      "case": "x9_c1-1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        36
+      ],
+      "parameters": [],
+      "inverted_parameters": []
+    },
+    {
+      "case": "x9_c11",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        36
+      ],
+      "parameters": [],
+      "inverted_parameters": []
+    },
+    {
+      "case": "x12_main",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        37
+      ],
+      "parameters": [
+        "h"
+      ],
+      "inverted_parameters": [
+        "h"
+      ]
+    },
+    {
+      "case": "x12_boundary-1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35,
+        62
+      ],
+      "parameters": [
+        "h"
+      ],
+      "inverted_parameters": []
+    },
+    {
+      "case": "x12_boundary1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35,
+        62
+      ],
+      "parameters": [
+        "h"
+      ],
+      "inverted_parameters": []
+    },
+    {
+      "case": "x17_mu",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        39
+      ],
+      "parameters": [
+        "h",
+        "mu"
+      ],
+      "inverted_parameters": [
+        "mu"
+      ]
+    },
+    {
+      "case": "x17_minus1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        39
+      ],
+      "parameters": [
+        "h",
+        "j"
+      ],
+      "inverted_parameters": []
+    },
+    {
+      "case": "x17_zero",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        42
+      ],
+      "parameters": [
+        "h",
+        "mu"
+      ],
+      "inverted_parameters": [
+        "mu"
+      ]
+    }
+  ],
+  "CF_leading_annihilator": "v^2*(2v+1)*(7v+1), geometric tuple cover only; necessary leading scheme is not asserted reduced",
+  "all_three_old_presentation_transports": "literal constant invertible relation bases",
+  "coverage_control": "full pinned upstream controllers replayed in isolated workspace, distinguished from this independent downstream control",
+  "ordinary_dependencies": [
+    "full marked stabilizers and nonzero weight normalizations from pinned proofs",
+    "complete branch and special-value coverage using recorded nonzero gauge coefficients",
+    "generic raw relation matrix rank gives all-closed quotient dimension lower bound on stated unit domains",
+    "existing thm:as4-curvilinear4-h3-exclusion for remaining CF2/CF3/CT2"
+  ],
+  "not_claimed": [
+    "AS4 sufficient conditions imported",
+    "all isomorphisms or automorphism groups imported",
+    "remaining projections22/211/1111 excluded",
+    "full CY/H3 classification",
+    "novelty confirmed"
+  ]
+}
