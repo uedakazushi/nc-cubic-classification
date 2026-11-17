@@ -932,5 +932,65 @@
     ],
     "used_part": "necessary coverage of AZ, AF, AV, AO and AB charts; existing H3 obstructions for L/J/S/T",
     "downstream_independent": "AO2 both signs have exact degree-three quotient dimension 21 over QQ(lambda); denominators supported at lambda and lambda+1"
+  },
+  "CY_partial_active_necessary_v307": {
+    "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+    "files": [
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_FOUR_SIMPLE_INACTIVE_SHARED_VERTEX_EXCLUDED.tex",
+        "sha256": "eec0e7a52d6347dae0b446310605bb21137af8a9c94745f97e9fba2dc36ae06c"
+      },
+      {
+        "path": "code/verify_cy_zero_commutators_four_simple_inactive_shared_vertex_excluded.py",
+        "sha256": "5dd6e4513e4c213160641c55cca7a891a12855eed9bbf3302ef4d72c20e69f8f"
+      }
+    ],
+    "used_part": "IV1–IV13, no Schur solution on partial active supports"
+  },
+  "CY_full_shared_necessary_v307": {
+    "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+    "files": [
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_FOUR_SIMPLE_FULL_SHARED_INVERTIBLE_REDUCTION.tex",
+        "sha256": "b5d86f3853c49a62cc9d34c04cfe2f2a26213dd9d883baee395cbd93d44e3986"
+      },
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_FOUR_SIMPLE_FULL_SHARED_BOUNDARY_EXCLUDED.tex",
+        "sha256": "aed9da278e8dac0fab5d0b199eb7217c23bc7b8959aab87d222e973b8a6c83fe"
+      },
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_FOUR_SIMPLE_TWO_RANK_ONE_BLOCKS_EXCLUDED.tex",
+        "sha256": "83136b7377092b0f9bcdfcbd15a7927e0b0cac3506edd3e08126e6ba74298903"
+      },
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_FOUR_SIMPLE_SINGULAR_RANK_ONE_EXCLUDED.tex",
+        "sha256": "22bc3ffe7cff6c3de62882703a7cb3a74857774519d3b215b4f42016847ac335"
+      },
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_FOUR_SIMPLE_SINGULAR_RANK_TWO_EXCLUDED.tex",
+        "sha256": "3f3070306d3e64f9e57a6bbdac2f76d52b2cc04b5b17f10dc675d6f3b1b7dcb6"
+      },
+      {
+        "path": "code/verify_cy_zero_commutators_four_simple_full_shared_invertible_reduction.py",
+        "sha256": "2b8131ba0db485cd05eec82992057053f59049ef6e523a9159f86e54163f30ef"
+      },
+      {
+        "path": "code/verify_cy_zero_commutators_four_simple_full_shared_boundary_excluded.py",
+        "sha256": "0d4c30f972253be19212e8b014ebca2bfdf2fd7ba7d38a74646cbece8add4165"
+      },
+      {
+        "path": "code/verify_cy_zero_commutators_four_simple_two_rank_one_blocks_excluded.py",
+        "sha256": "a93c0ce2b649fbad24a5ed33863ffe6bb876b033f3a615700108559c10db675e"
+      },
+      {
+        "path": "code/verify_cy_zero_commutators_four_simple_singular_rank_one_excluded.py",
+        "sha256": "da25581932ed5c5d76b50e5fd9e34bb2f69b5213192ca17a1de3babdcab65d3b"
+      },
+      {
+        "path": "code/verify_cy_zero_commutators_four_simple_singular_rank_two_excluded.py",
+        "sha256": "470279a6da900a72eabd6c35ad76ebdac3e25ce33b740421677b0af714bfd6ad"
+      }
+    ],
+    "used_part": "FT1–FT12 for an invertible block, the full singular rank-one and rank-two exclusions and their boundary dependencies; no global AS4 sufficiency used"
   }
 }

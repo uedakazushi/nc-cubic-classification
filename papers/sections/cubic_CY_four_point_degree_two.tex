@@ -29,3 +29,42 @@ $S$ と $T$ は命題\ref{prop:cubic-adjacent-S}と定理\ref{thm:cubic-adjacent
 共有支持のうち出次数1を含むものと全零支持も既に排除した。
 従って零交換子CY領域に残る必要支持は、部分活性14支持・3軌道と全共有1支持・1軌道である。
 ここでの軌道は有向共有支持の置換軌道を数えている。
+
+\begin{corollary}\label{cor:cubic-CY-four-point-full-shared-necessary}
+零交換子CY包絡を持つH3では、対称射影の基点は四単純で、十二共有係数が全て非零である。
+\end{corollary}
+\begin{proof}
+残る部分活性支持では、出次数は0又は3であり、両方が現れる。
+活性頂点を $a$ に移し、独立な対角比で $x_1=x_3=x_4=1$ とする。
+固定出典\cite{AS4CYpinned}の部分活性排除（IV1--IV13）は、
+この規格化で活性頂点が一つ、二つ、三つの各場合を扱う。
+一つの場合は残余式が非零単元を含む。二つの場合は
+$r=-x_{10}x_9+x_{13}x_6$ とおくと $x_9r=r(x_{10}r+x_{13}^2)=0$ であり、
+$r\ne0$ は $x_{13}\ne0$ と矛盾し、$r=0$ でも残余式に非零単元が現れる。
+三つの場合は同出典のIV4--IV13の全局所化分岐を適用する。
+この分岐では正則性を仮定せず元Schur解を排除しており、$\lambda\ne0,-1$ の全値が含まれる。
+従って部分活性支持は残らない。
+\end{proof}
+
+\begin{theorem}\label{thm:cubic-CY-zero-commutator-empty}
+H3のCY包絡 $B$ の二次関係空間を $R_B$ とすると、$\dim(R_B\cap\bigwedge^2 B_1)\ge1$ である。
+\end{theorem}
+\begin{proof}
+零交換子と仮定する。系\ref{cor:cubic-CY-four-point-full-shared-necessary}により、
+四単純基点で十二共有係数が全て非零である。
+各頂点に接する三つの生成元対から得る $B$ の主ブロックを考える。
+
+ある主ブロックが可逆なら、その頂点を $a$ に移し、
+$x_1=x_3=x_4=1$ と規格化する。固定出典\cite{AS4CYpinned}の
+可逆主ブロックの必要帰着FT1--FT12は、元Schur解をFT2--FT3の
+$\mathcal P^\eta_{\lambda,r}$ に被覆する。
+この表示の全許容値は定理\ref{thm:cubic-full-P-excluded}で排除される。
+
+全主ブロックが特異であれば、非零の共有係数により階数は1又は2である。
+固定出典の特異階数1排除では、階数1の頂点が二つある枝と、
+一つの頂点から始める残余分岐を扱う。途中で現れる境界表示
+$\mathcal B^\eta_\lambda$ は五次商次元が少なくとも58であり、
+必要値56に反する。従って階数1の頂点はない。
+全て階数2の枝は同出典の特異階数2排除により、元Schur解が存在しない。
+これで矛盾を得る。
+\end{proof}
