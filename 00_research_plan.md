@@ -72,3 +72,5 @@ heart比較・Rains共鳴・cubic cornerは `uedakazushi/nc-dp-surface-hearts`�
 一般正規三次切断の認識補題：`papers/sections/cubic_hypersurface_frame.tex`。四line compact frameとnormalizer付きhypersurface作用の二乗判定を保持する。rank-one torsion-freeは別仮定、有限検査・相対開性は未解決である。
 
 多固有値frontier（v211）：四単純中山固有値で十個の二次積が異なる全域はskewへ還元済み。非skew残余は明示的21二次共鳴因子上にあり、さらに三次共鳴条件を課す。証明は `cubic_spectral_resonance.tex`。次はその交叉上の必要tensor atlasと正常核を調べる。
+
+二次非共鳴(2,1,1)の非skew残余はJordan平面基底の逐次Oreへ縮小（v212）。可換基底の非半単純作用は三次格子の因子で、反交換基底の反対角作用は正常核消滅で排除済み。証明 `cubic_spectral_ore_reduction.tex`。次はJordan基底の正常三次を元の関係から検証する。

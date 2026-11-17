@@ -1,0 +1,166 @@
+{
+  "status": "PASS",
+  "scope": "exhaustive cubic lattice and exact shear matrices; not a substitute for ordinary proofs",
+  "lines": [
+    {
+      "direction": [
+        0,
+        1
+      ],
+      "points": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          0
+        ]
+      ],
+      "common_factor_exponents": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "direction": [
+        1,
+        -2
+      ],
+      "points": [
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "common_factor_exponents": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "direction": [
+        1,
+        -1
+      ],
+      "points": [
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          0
+        ]
+      ],
+      "common_factor_exponents": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "direction": [
+        1,
+        0
+      ],
+      "points": [
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          0,
+          1
+        ]
+      ],
+      "common_factor_exponents": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "direction": [
+        1,
+        1
+      ],
+      "points": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          3,
+          0,
+          0
+        ]
+      ],
+      "common_factor_exponents": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "direction": [
+        2,
+        -1
+      ],
+      "points": [
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "common_factor_exponents": [
+        0,
+        1,
+        0
+      ]
+    }
+  ],
+  "shear_difference_ranks_degrees_0_to_3": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "Ore_action_power_identities": 10
+}

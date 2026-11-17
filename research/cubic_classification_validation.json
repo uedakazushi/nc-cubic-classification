@@ -2307,5 +2307,21 @@
       "exclusion of multiple-resonance intersections",
       "complete multieigenvalue classification"
     ]
+  },
+  "multieigenvalue_Ore_reduction_v212": {
+    "status": "ordinary proofs; exact finite support and shear checks PASS",
+    "proof": "papers/sections/cubic_spectral_ore_reduction.tex",
+    "validator": "computations/verify_cubic_spectral_ore_reduction.py",
+    "certificate": "computations/cubic_spectral_ore_reduction_certificate.json",
+    "results": [
+      "commutative AS2 base with a nonsemisimple commuting Ore action has no domain normal anticanonical cubic quotient",
+      "anticommutative base off-diagonal actions excluded under repeated Nakayama eigenvalue hypothesis",
+      "non-skew nonresonant (2,1,1) sector reduces to Jordan AS2 base"
+    ],
+    "not_claimed": [
+      "Jordan-base exclusion",
+      "quadratic-resonant (2,1,1) coverage",
+      "complete H3 classification"
+    ]
   }
 }

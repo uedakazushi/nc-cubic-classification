@@ -1,0 +1,86 @@
+\subsection{多固有値Ore領域の非Jordan基底の認識}
+\label{subsec:cubic-spectral-Ore-reduction}
+\begin{lemma}[三次格子の中心を通る直線]\label{lem:cubic-lattice-line}
+$k,m,n\ge0$、$k+m+n=3$ とし、$(s,t)\ne(0,0)$ を固定する。
+$(m-1)s+(n-1)t=0$ を満たす全格子点では、三座標のうち少なくとも一つが
+共通して正である。
+\end{lemma}
+\begin{proof}
+$(1,1,1)$ 以外の格子点の方向 $(m-1,n-1)$ を符号と共通因子を除いて列挙すると
+\[
+ (1,1),(1,0),(1,-1),(1,-2),(0,1),(2,-1)
+\]
+だけである。それぞれの直線上の点で共通して正な座標は順に $k,n,k,n,m,m$。
+いずれの方向も該当しないときは $(1,1,1)$ のみである。
+\end{proof}
+
+\begin{proposition}[可換平面上の非半単純可換作用の排除]
+\label{prop:cubic-commuting-Ore-no-shear}
+$T=k[x,y]$、$f,g\in\operatorname{GL}(T_1)$、$fg=gf$、$q\ne0$ とし、
+$B=T[b;f][c;\widetilde g]$、$\widetilde g(b)=q^{-1}b$ とする。
+$f,g$ の少なくとも一つが非半単純なら、$B$ はH3包絡にならない。
+従ってこの可換基底の全H3部分はskew包絡に属する。
+\end{proposition}
+\begin{proof}
+可換な二つの可逆行列の一方が非半単純なら、共通基底で
+\[
+ f(x)=\alpha x,\ f(y)=\alpha(y+s x),\qquad
+ g(x)=\beta x,\ g(y)=\beta(y+t x),\qquad(s,t)\ne(0,0)
+\]
+と書ける。Ore中山公式は
+$\mu_B|_T=(fg)^{-1}$、$\mu_B(b)\in k^*b$、$\mu_B(c)\in k^*c$ を与える。
+H3の必要正常三次をPBW基底で
+$G=\sum_{m+n\le3}F_{mn}(x,y)b^mc^n$ と書く。
+$b,c$ に対する正規式から、各 $F_{mn}$ は $f,g$ の固有ベクトルである。
+少なくとも一つのshearが非零なので、次数 $k=3-m-n$ のその固有ベクトルは $kx^k$ のみ。
+従って $G$ は $x^kb^mc^n$ の線型結合となる。
+
+$Gx=\mu_B^{-1}(x)G=\alpha\beta xG$ のPBW係数比較により、
+非零項ごとに $\alpha^m\beta^n=\alpha\beta$。
+$Gy=\alpha\beta(y+(s+t)x)G$ と比較すると
+\[
+ (m-1)s+(n-1)t=0
+\]
+を得る。前補題から全非零項に共通する $x,b,c$ のいずれかが存在する。
+これら三生成元は互いにskew可換なので、$G$ はその一次生成元を左因子として持つ。
+三次商ではこの一次因子と残る非零二次因子が零因子となり、整域性に反する。
+一方、$f,g$ がともに半単純なら可換性から同時対角化でき、$B$ はskewである。
+\end{proof}
+
+\begin{proposition}[反交換基底の反対角作用の排除]
+\label{prop:cubic-anticommuting-Ore-no-swap}
+定理\ref{thm:cubic-211-nonresonant-Ore}の領域で、基底平面が
+$T=k\langle x,y\rangle/(xy+yx)$ なら、全H3包絡はskewである。
+\end{proposition}
+\begin{proof}
+$T$ の自己同型は対角または反対角。
+一方だけが反対角なら、可換性から他方はscalarであり、$fg$ は反対角。
+$\mu_T=-I$ とOre公式から $\mu_B|_U=-(fg)^{-1}$ は二つの異なる固有値を持ち、
+重複2の半単純固有空間という仮定に反する。
+両方対角ならskewである。
+両方反対角なら可換性から $fg=dI$、$d\ne0$。
+
+正常三次のPBW係数 $F_{mn}\in T_{3-m-n}$ に対する $T$ との正常式は
+\[
+ F_{mn}f^mg^n(u)=-d\,uF_{mn}\quad(u=x,y)
+\]
+となる。$m+n$ が奇数なら $f^mg^n$ は反対角である。
+非零 $F_{mn}$ が存在すると、そのnormalizerは反対角自己同型のscalar倍となる。
+しかし正常元のnormalizerは中心 $x^2,y^2$ を点ごとに固定する必要があり、
+反対角作用はこれらを交換するため不可能。
+$m+n$ が偶数なら $f^mg^n$ はscalarであり、$F_{mn}$ の次数は奇数である。
+$F x=\rho xF$、$F y=\rho yF$ を満たす奇数次の元は零である。
+実際、PBW単項式 $x^iy^j$ の二つの符号は $(-1)^j,(-1)^i$ で、
+$i+j$ が奇数なら等しくならない。従って全係数が零となり $W_1(B)=0$。
+\end{proof}
+
+\begin{corollary}[二次非共鳴 $(2,1,1)$ の残余]\label{cor:cubic-211-Jordan-residual}
+定理\ref{thm:cubic-211-nonresonant-Ore}のH3包絡は、既分類のskew包絡、
+または基底 $T$ がJordan平面である逐次Ore拡大に限られる。
+\end{corollary}
+\begin{proof}
+二元AS2平面は量子平面またはJordan平面である。
+可換平面と反交換平面は上の二命題で処理した。
+残る量子平面では全自己同型が対角であり、全包絡がskewとなる。
+Jordan残余の存在や許容性はここでは結論しない。
+\end{proof}
