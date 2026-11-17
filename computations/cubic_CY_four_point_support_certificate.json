@@ -1,0 +1,1747 @@
+{
+  "status": "PASS",
+  "scope": "complete original CY four-point frame and shared-support reduction only; no algebra coefficient chart or H3 admissibility imported",
+  "mixed_cyclic_rank": 15,
+  "KK_cyclic_rank": 20,
+  "joint_rank": 35,
+  "all24_marked_actions": [
+    {
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "lambda": "lambda",
+      "scale": "1",
+      "g_affine_shift": "0",
+      "g_multiplier": "Poly(lambda + 1, lambda, domain='ZZ')",
+      "shared_edge_units": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "permutation": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "lambda": "-lambda - 1",
+      "scale": "1",
+      "g_affine_shift": "0",
+      "g_multiplier": "Poly(lambda + 1, lambda, domain='ZZ')",
+      "shared_edge_units": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "permutation": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "lambda": "1/lambda",
+      "scale": "lambda",
+      "g_affine_shift": "(lambda + 1)/(8*lambda)",
+      "g_multiplier": "Poly(lambda + 1, lambda, domain='ZZ')",
+      "shared_edge_units": [
+        "1/lambda",
+        "1/lambda",
+        "1/lambda",
+        "-1/lambda",
+        "1/lambda",
+        "1/lambda",
+        "-1/lambda",
+        "1/lambda",
+        "1/lambda",
+        "1/lambda",
+        "1/lambda",
+        "1/lambda"
+      ]
+    },
+    {
+      "permutation": [
+        0,
+        2,
+        3,
+        1
+      ],
+      "lambda": "-1/(lambda + 1)",
+      "scale": "-lambda - 1",
+      "g_affine_shift": "lambda/(8*lambda + 8)",
+      "g_multiplier": "Poly(lambda + 1, lambda, domain='ZZ')",
+      "shared_edge_units": [
+        "-1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "-1/(lambda + 1)"
+      ]
+    },
+    {
+      "permutation": [
+        0,
+        3,
+        1,
+        2
+      ],
+      "lambda": "(-lambda - 1)/lambda",
+      "scale": "lambda",
+      "g_affine_shift": "(-lambda - 1)/(8*lambda)",
+      "g_multiplier": "Poly(lambda + 1, lambda, domain='ZZ')",
+      "shared_edge_units": [
+        "1/lambda",
+        "1/lambda",
+        "1/lambda",
+        "-1/lambda",
+        "1/lambda",
+        "1/lambda",
+        "-1/lambda",
+        "1/lambda",
+        "1/lambda",
+        "1/lambda",
+        "1/lambda",
+        "1/lambda"
+      ]
+    },
+    {
+      "permutation": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "lambda": "-lambda/(lambda + 1)",
+      "scale": "-lambda - 1",
+      "g_affine_shift": "-lambda/(8*lambda + 8)",
+      "g_multiplier": "Poly(lambda + 1, lambda, domain='ZZ')",
+      "shared_edge_units": [
+        "-1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "-1/(lambda + 1)"
+      ]
+    },
+    {
+      "permutation": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "lambda": "-lambda - 1",
+      "scale": "1",
+      "g_affine_shift": "0",
+      "g_multiplier": "Poly(lambda + 1, lambda, domain='ZZ')",
+      "shared_edge_units": [
+        "1",
+        "-1",
+        "-1",
+        "1",
+        "-1",
+        "-1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "permutation": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "lambda": "lambda",
+      "scale": "1",
+      "g_affine_shift": "0",
+      "g_multiplier": "Poly(lambda + 1, lambda, domain='ZZ')",
+      "shared_edge_units": [
+        "1",
+        "-1",
+        "-1",
+        "1",
+        "-1",
+        "-1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "permutation": [
+        1,
+        2,
+        0,
+        3
+      ],
+      "lambda": "(-lambda - 1)/lambda",
+      "scale": "lambda",
+      "g_affine_shift": "(-lambda - 1)/(8*lambda)",
+      "g_multiplier": "Poly(lambda + 1, lambda, domain='ZZ')",
+      "shared_edge_units": [
+        "-1/lambda",
+        "1/lambda",
+        "-1/lambda",
+        "-1/lambda",
+        "1/lambda",
+        "1/lambda",
+        "-1/lambda",
+        "-1/lambda",
+        "-1/lambda",
+        "1/lambda",
+        "1/lambda",
+        "1/lambda"
+      ]
+    },
+    {
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "lambda": "-lambda/(lambda + 1)",
+      "scale": "-lambda - 1",
+      "g_affine_shift": "-lambda/(8*lambda + 8)",
+      "g_multiplier": "Poly(lambda + 1, lambda, domain='ZZ')",
+      "shared_edge_units": [
+        "1/(lambda + 1)",
+        "1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "1/(lambda + 1)",
+        "1/(lambda + 1)",
+        "1/(lambda + 1)"
+      ]
+    },
+    {
+      "permutation": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "lambda": "1/lambda",
+      "scale": "lambda",
+      "g_affine_shift": "(lambda + 1)/(8*lambda)",
+      "g_multiplier": "Poly(lambda + 1, lambda, domain='ZZ')",
+      "shared_edge_units": [
+        "-1/lambda",
+        "1/lambda",
+        "-1/lambda",
+        "-1/lambda",
+        "1/lambda",
+        "1/lambda",
+        "-1/lambda",
+        "-1/lambda",
+        "-1/lambda",
+        "1/lambda",
+        "1/lambda",
+        "1/lambda"
+      ]
+    },
+    {
+      "permutation": [
+        1,
+        3,
+        2,
+        0
+      ],
+      "lambda": "-1/(lambda + 1)",
+      "scale": "-lambda - 1",
+      "g_affine_shift": "lambda/(8*lambda + 8)",
+      "g_multiplier": "Poly(lambda + 1, lambda, domain='ZZ')",
+      "shared_edge_units": [
+        "1/(lambda + 1)",
+        "1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "1/(lambda + 1)",
+        "1/(lambda + 1)",
+        "1/(lambda + 1)"
+      ]
+    },
+    {
+      "permutation": [
+        2,
+        0,
+        1,
+        3
+      ],
+      "lambda": "-1/(lambda + 1)",
+      "scale": "-lambda - 1",
+      "g_affine_shift": "lambda/(8*lambda + 8)",
+      "g_multiplier": "Poly(lambda + 1, lambda, domain='ZZ')",
+      "shared_edge_units": [
+        "1/(lambda + 1)",
+        "1/(lambda + 1)",
+        "1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "1/(lambda + 1)",
+        "1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "-1/(lambda + 1)"
+      ]
+    },
+    {
+      "permutation": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "lambda": "1/lambda",
+      "scale": "lambda",
+      "g_affine_shift": "(lambda + 1)/(8*lambda)",
+      "g_multiplier": "Poly(lambda + 1, lambda, domain='ZZ')",
+      "shared_edge_units": [
+        "-1/lambda",
+        "-1/lambda",
+        "-1/lambda",
+        "1/lambda",
+        "-1/lambda",
+        "-1/lambda",
+        "1/lambda",
+        "1/lambda",
+        "1/lambda",
+        "1/lambda",
+        "-1/lambda",
+        "1/lambda"
+      ]
+    },
+    {
+      "permutation": [
+        2,
+        1,
+        0,
+        3
+      ],
+      "lambda": "-lambda/(lambda + 1)",
+      "scale": "-lambda - 1",
+      "g_affine_shift": "-lambda/(8*lambda + 8)",
+      "g_multiplier": "Poly(lambda + 1, lambda, domain='ZZ')",
+      "shared_edge_units": [
+        "1/(lambda + 1)",
+        "1/(lambda + 1)",
+        "1/(lambda + 1)",
+        "1/(lambda + 1)",
+        "1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "1/(lambda + 1)",
+        "1/(lambda + 1)",
+        "1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "-1/(lambda + 1)"
+      ]
+    },
+    {
+      "permutation": [
+        2,
+        1,
+        3,
+        0
+      ],
+      "lambda": "(-lambda - 1)/lambda",
+      "scale": "lambda",
+      "g_affine_shift": "(-lambda - 1)/(8*lambda)",
+      "g_multiplier": "Poly(lambda + 1, lambda, domain='ZZ')",
+      "shared_edge_units": [
+        "-1/lambda",
+        "-1/lambda",
+        "-1/lambda",
+        "-1/lambda",
+        "1/lambda",
+        "-1/lambda",
+        "1/lambda",
+        "1/lambda",
+        "1/lambda",
+        "-1/lambda",
+        "-1/lambda",
+        "-1/lambda"
+      ]
+    },
+    {
+      "permutation": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "lambda": "lambda",
+      "scale": "1",
+      "g_affine_shift": "0",
+      "g_multiplier": "Poly(lambda + 1, lambda, domain='ZZ')",
+      "shared_edge_units": [
+        "-1",
+        "-1",
+        "-1",
+        "-1",
+        "1",
+        "1",
+        "-1",
+        "-1",
+        "-1",
+        "1",
+        "1",
+        "-1"
+      ]
+    },
+    {
+      "permutation": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "lambda": "-lambda - 1",
+      "scale": "1",
+      "g_affine_shift": "0",
+      "g_multiplier": "Poly(lambda + 1, lambda, domain='ZZ')",
+      "shared_edge_units": [
+        "-1",
+        "-1",
+        "-1",
+        "-1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "-1",
+        "-1",
+        "-1",
+        "-1"
+      ]
+    },
+    {
+      "permutation": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "lambda": "-lambda/(lambda + 1)",
+      "scale": "-lambda - 1",
+      "g_affine_shift": "-lambda/(8*lambda + 8)",
+      "g_multiplier": "Poly(lambda + 1, lambda, domain='ZZ')",
+      "shared_edge_units": [
+        "1/(lambda + 1)",
+        "1/(lambda + 1)",
+        "1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "1/(lambda + 1)",
+        "1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "-1/(lambda + 1)"
+      ]
+    },
+    {
+      "permutation": [
+        3,
+        0,
+        2,
+        1
+      ],
+      "lambda": "(-lambda - 1)/lambda",
+      "scale": "lambda",
+      "g_affine_shift": "(-lambda - 1)/(8*lambda)",
+      "g_multiplier": "Poly(lambda + 1, lambda, domain='ZZ')",
+      "shared_edge_units": [
+        "-1/lambda",
+        "-1/lambda",
+        "-1/lambda",
+        "1/lambda",
+        "-1/lambda",
+        "-1/lambda",
+        "1/lambda",
+        "1/lambda",
+        "1/lambda",
+        "1/lambda",
+        "-1/lambda",
+        "1/lambda"
+      ]
+    },
+    {
+      "permutation": [
+        3,
+        1,
+        0,
+        2
+      ],
+      "lambda": "-1/(lambda + 1)",
+      "scale": "-lambda - 1",
+      "g_affine_shift": "lambda/(8*lambda + 8)",
+      "g_multiplier": "Poly(lambda + 1, lambda, domain='ZZ')",
+      "shared_edge_units": [
+        "1/(lambda + 1)",
+        "1/(lambda + 1)",
+        "1/(lambda + 1)",
+        "1/(lambda + 1)",
+        "1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "1/(lambda + 1)",
+        "1/(lambda + 1)",
+        "1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "-1/(lambda + 1)",
+        "-1/(lambda + 1)"
+      ]
+    },
+    {
+      "permutation": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "lambda": "1/lambda",
+      "scale": "lambda",
+      "g_affine_shift": "(lambda + 1)/(8*lambda)",
+      "g_multiplier": "Poly(lambda + 1, lambda, domain='ZZ')",
+      "shared_edge_units": [
+        "-1/lambda",
+        "-1/lambda",
+        "-1/lambda",
+        "-1/lambda",
+        "1/lambda",
+        "-1/lambda",
+        "1/lambda",
+        "1/lambda",
+        "1/lambda",
+        "-1/lambda",
+        "-1/lambda",
+        "-1/lambda"
+      ]
+    },
+    {
+      "permutation": [
+        3,
+        2,
+        0,
+        1
+      ],
+      "lambda": "-lambda - 1",
+      "scale": "1",
+      "g_affine_shift": "0",
+      "g_multiplier": "Poly(lambda + 1, lambda, domain='ZZ')",
+      "shared_edge_units": [
+        "-1",
+        "-1",
+        "-1",
+        "-1",
+        "1",
+        "1",
+        "-1",
+        "-1",
+        "-1",
+        "1",
+        "1",
+        "-1"
+      ]
+    },
+    {
+      "permutation": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "lambda": "lambda",
+      "scale": "1",
+      "g_affine_shift": "0",
+      "g_multiplier": "Poly(lambda + 1, lambda, domain='ZZ')",
+      "shared_edge_units": [
+        "-1",
+        "-1",
+        "-1",
+        "-1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "-1",
+        "-1",
+        "-1",
+        "-1"
+      ]
+    }
+  ],
+  "support_counts": {
+    "zero": 1,
+    "degree1": 3471,
+    "degree2": 609,
+    "partial_active": 14,
+    "full": 1
+  },
+  "orbit_counts": {
+    "zero": 1,
+    "degree1": 173,
+    "degree2": 40,
+    "partial_active": 3,
+    "full": 1
+  },
+  "all218_support_orbits": [
+    {
+      "representative": 0,
+      "type": "zero",
+      "size": 1
+    },
+    {
+      "representative": 1,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 3,
+      "type": "degree2",
+      "size": 12
+    },
+    {
+      "representative": 7,
+      "type": "partial_active",
+      "size": 4
+    },
+    {
+      "representative": 9,
+      "type": "degree1",
+      "size": 6
+    },
+    {
+      "representative": 10,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 11,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 14,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 15,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 18,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 19,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 20,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 21,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 22,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 23,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 27,
+      "type": "degree2",
+      "size": 12
+    },
+    {
+      "representative": 29,
+      "type": "degree2",
+      "size": 12
+    },
+    {
+      "representative": 30,
+      "type": "degree2",
+      "size": 24
+    },
+    {
+      "representative": 31,
+      "type": "degree2",
+      "size": 24
+    },
+    {
+      "representative": 54,
+      "type": "degree2",
+      "size": 6
+    },
+    {
+      "representative": 55,
+      "type": "degree2",
+      "size": 12
+    },
+    {
+      "representative": 63,
+      "type": "partial_active",
+      "size": 6
+    },
+    {
+      "representative": 73,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 75,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 76,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 77,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 79,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 81,
+      "type": "degree1",
+      "size": 8
+    },
+    {
+      "representative": 83,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 84,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 85,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 86,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 87,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 90,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 91,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 92,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 93,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 94,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 95,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 98,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 99,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 100,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 101,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 102,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 103,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 106,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 107,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 108,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 109,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 110,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 111,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 115,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 116,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 117,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 118,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 119,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 122,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 123,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 124,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 125,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 126,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 127,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 219,
+      "type": "degree2",
+      "size": 4
+    },
+    {
+      "representative": 220,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 221,
+      "type": "degree2",
+      "size": 24
+    },
+    {
+      "representative": 223,
+      "type": "degree2",
+      "size": 12
+    },
+    {
+      "representative": 228,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 229,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 230,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 231,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 237,
+      "type": "degree2",
+      "size": 12
+    },
+    {
+      "representative": 238,
+      "type": "degree2",
+      "size": 24
+    },
+    {
+      "representative": 239,
+      "type": "degree2",
+      "size": 24
+    },
+    {
+      "representative": 246,
+      "type": "degree2",
+      "size": 12
+    },
+    {
+      "representative": 247,
+      "type": "degree2",
+      "size": 24
+    },
+    {
+      "representative": 255,
+      "type": "degree2",
+      "size": 12
+    },
+    {
+      "representative": 292,
+      "type": "degree1",
+      "size": 4
+    },
+    {
+      "representative": 293,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 295,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 301,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 302,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 303,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 310,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 311,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 319,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 365,
+      "type": "degree2",
+      "size": 24
+    },
+    {
+      "representative": 367,
+      "type": "degree2",
+      "size": 12
+    },
+    {
+      "representative": 373,
+      "type": "degree2",
+      "size": 8
+    },
+    {
+      "representative": 375,
+      "type": "degree2",
+      "size": 24
+    },
+    {
+      "representative": 382,
+      "type": "degree2",
+      "size": 12
+    },
+    {
+      "representative": 383,
+      "type": "degree2",
+      "size": 24
+    },
+    {
+      "representative": 511,
+      "type": "partial_active",
+      "size": 4
+    },
+    {
+      "representative": 585,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 587,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 591,
+      "type": "degree1",
+      "size": 4
+    },
+    {
+      "representative": 593,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 594,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 595,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 596,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 597,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 598,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 599,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 601,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 602,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 603,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 604,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 605,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 606,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 607,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 625,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 626,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 627,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 630,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 631,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 633,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 634,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 635,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 638,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 639,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 659,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 660,
+      "type": "degree1",
+      "size": 3
+    },
+    {
+      "representative": 661,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 663,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 666,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 667,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 669,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 670,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 671,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 674,
+      "type": "degree1",
+      "size": 6
+    },
+    {
+      "representative": 675,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 678,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 679,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 683,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 686,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 687,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 694,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 695,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 703,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 729,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 731,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 732,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 733,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 735,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 737,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 739,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 741,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 742,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 743,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 745,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 746,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 747,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 748,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 749,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 750,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 751,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 753,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 755,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 756,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 757,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 758,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 759,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 761,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 762,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 763,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 764,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 765,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 766,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 767,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 819,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 822,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 823,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 826,
+      "type": "degree1",
+      "size": 8
+    },
+    {
+      "representative": 827,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 830,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 831,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 875,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 876,
+      "type": "degree1",
+      "size": 6
+    },
+    {
+      "representative": 877,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 879,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 883,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 885,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 886,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 887,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 891,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 892,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 893,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 894,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 895,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 947,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 949,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 951,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 955,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 957,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 958,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 959,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 1019,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 1020,
+      "type": "degree1",
+      "size": 6
+    },
+    {
+      "representative": 1021,
+      "type": "degree1",
+      "size": 24
+    },
+    {
+      "representative": 1023,
+      "type": "degree1",
+      "size": 12
+    },
+    {
+      "representative": 1755,
+      "type": "degree2",
+      "size": 12
+    },
+    {
+      "representative": 1757,
+      "type": "degree2",
+      "size": 12
+    },
+    {
+      "representative": 1758,
+      "type": "degree2",
+      "size": 24
+    },
+    {
+      "representative": 1759,
+      "type": "degree2",
+      "size": 24
+    },
+    {
+      "representative": 1782,
+      "type": "degree2",
+      "size": 3
+    },
+    {
+      "representative": 1783,
+      "type": "degree2",
+      "size": 12
+    },
+    {
+      "representative": 1791,
+      "type": "degree2",
+      "size": 6
+    },
+    {
+      "representative": 1883,
+      "type": "degree2",
+      "size": 24
+    },
+    {
+      "representative": 1887,
+      "type": "degree2",
+      "size": 8
+    },
+    {
+      "representative": 1907,
+      "type": "degree2",
+      "size": 6
+    },
+    {
+      "representative": 1911,
+      "type": "degree2",
+      "size": 24
+    },
+    {
+      "representative": 1917,
+      "type": "degree2",
+      "size": 12
+    },
+    {
+      "representative": 1918,
+      "type": "degree2",
+      "size": 24
+    },
+    {
+      "representative": 1919,
+      "type": "degree2",
+      "size": 24
+    },
+    {
+      "representative": 2029,
+      "type": "degree2",
+      "size": 4
+    },
+    {
+      "representative": 2031,
+      "type": "degree2",
+      "size": 12
+    },
+    {
+      "representative": 2039,
+      "type": "degree2",
+      "size": 12
+    },
+    {
+      "representative": 2047,
+      "type": "degree2",
+      "size": 12
+    },
+    {
+      "representative": 4095,
+      "type": "full",
+      "size": 1
+    }
+  ],
+  "not_claimed": [
+    "all degree1/2 coefficient charts audited",
+    "partial active supports excluded",
+    "full shared singular supports excluded",
+    "complete CYc0 classification",
+    "complete H3 classification",
+    "novelty confirmed"
+  ]
+}

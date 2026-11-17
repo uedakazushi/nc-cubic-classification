@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "version": "classification-v300",
+  "version": "classification-v301",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -4304,6 +4304,27 @@
       "projection1111 entirely H3 empty",
       "relative scheme cover",
       "complete H3 classification",
+      "novelty confirmed"
+    ]
+  },
+  "CY_four_point_support_shared_zero_v301": {
+    "status": "PASS default exact two controls and main LuaLaTeX clean",
+    "proof": "papers/sections/cubic_CY_four_point_support.tex",
+    "validators": [
+      "computations/verify_cubic_CY_four_point_support.py",
+      "computations/verify_cubic_CY_four_point_shared_zero.py"
+    ],
+    "certificates": [
+      "computations/cubic_CY_four_point_support_certificate.json",
+      "computations/cubic_CY_four_point_shared_zero_certificate.json"
+    ],
+    "scope": "all21+1 original frames, all4096 supports/218 orbits, whole shared-zero H3 stratum empty including Q",
+    "validation_scope": "86 validators across runs; no single86 replay",
+    "correction": "Q has every q_ij !=1 and is H3-excluded; earlier v300 resume sentence suggesting skew H3 survival corrected",
+    "not_claimed": [
+      "nonzero shared supports fully excluded",
+      "relative scheme coverage",
+      "full CY or H3 classification",
       "novelty confirmed"
     ]
   }

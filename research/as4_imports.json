@@ -739,5 +739,33 @@
       "full H3 classification",
       "novelty"
     ]
+  },
+  "CY_four_point_support_shared_zero_v301": {
+    "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+    "files": [
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_FOUR_SIMPLE_DIAGONAL_OPEN_COMPLETE.tex",
+        "sha256": "6727f6f7b9fece016ae0cae7b4b05f2e90ea4e555f87e80843edf99e0076c279"
+      },
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_FOUR_SIMPLE_SHARED_ZERO_COMPLETE.tex",
+        "sha256": "7af55f9003b3a7104a70179d45f0d787080e923aa0f72282896086119ad6b56e"
+      }
+    ],
+    "used_part": "FS1-FS2 original coefficient frames and FZ1-FZ10 necessary shared-zero equations; independently rederived here, no AS sufficiency or full isomorphisms imported",
+    "upstream_status": "proof_written; independent audit pending; novelty unsearched",
+    "downstream_independent": "PASS default exact full21+1 CY affine frame, all24 marking/g shifts/shared support actions, all4096 supports/218 orbits, full shared-zero equations and gauges, actual O boundary unit product relations, Q skew six-binomial/CY row identities; old S/Q/O/H exclusions reused",
+    "validators": [
+      "computations/verify_cubic_CY_four_point_support.py",
+      "computations/verify_cubic_CY_four_point_shared_zero.py"
+    ],
+    "proof": "papers/sections/cubic_CY_four_point_support.tex",
+    "not_imported": [
+      "nonzero shared coefficient covers",
+      "AS sufficiency or full automorphisms",
+      "relative scheme quotient",
+      "full CY/H3 classification",
+      "novelty"
+    ]
   }
 }
