@@ -1394,3 +1394,6 @@ AS4四次top wの中山巡回式を四回反復してmu^tensor4(w)=w、Frobenius
 Gはcharge0正則正規なのでS/(G)↪B/(G)。右辺がH3整域なら左辺も一次生成GK2整域となるが、Hilbert級数は(1+t+t²)/((1-t)(1-t²))で傾き3/2。Artin–Staffordの一次生成GK2整域定理から曲線THCRに有限余次元で埋め込み、Riemann–Rochで傾きは整数となり矛盾。従ってrank2も空、単一相反pencilは位数1〜4外で全排除。結論：三固有値の全H3は共通N乗根(N≤24)の有限半単純スペクトルに限られる。単冪部分込みの必要被覆であり、有限候補の存在/許容性/群oidは未完。
 文献入力はStafford本人を含むStafford–Van den Bergh arXiv:math/9910082v2 Theorem5.2 p14（原論文Artin–Stafford Theorem0.2の明示的再掲）。本文・全体の代数閉体仮定・次数1生成・GK2・有限余次元THCRの結論を実際に読んだ。原論文DOI10.1007/BF01231444のabstractと書誌も照合したが、原論文全文は今回取得できず、その証明の独立再監査とは称さない。公開検証器はcharge Hilbert恒等式、S3=6/S4=9、商の傾き3/2と偶奇係数をexact PASS。
 次はN≤24の有限三固有値を相異性・三次/四次共鳴・関係重みの相反性・整域性で厳密列挙する。四単純固有値と全CY、成分・相対降下は依然未完。
+
+## 三固有値の有限character列挙（v220）
+`cubic_three_eigenvalue_finite_spectra.tex`：rank-one tensorのSegre次元上界、二次関係の相反重み、Koszul character B2=V²-I,B3=V³-2VI+V*、切断R3=B3-1と線型乗法単射性を適用。N≤24の全最小共通位数・相異指数組35424組を整数剰余で全列挙。三次/四次/二次共鳴と既証pencil排除後、関係重み候補99個を検査し、57違反（56乗法単射違反、1負次元）の具体的witnessをcertificateへ保存。38スペクトル・42関係パターンが必要条件を通過。位数内訳N3:3,N4:12,N5:4,N6:11,N9:6,N12:2。次数3までの検査であり全次数の存在判定ではない。Galoisラベルは18軌道、k線型同値での商ではない。次はこの有限リストに純二元AS2三次の因子障害と必要Frobenius tensorを適用する。

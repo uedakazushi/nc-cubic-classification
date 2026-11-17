@@ -10,7 +10,7 @@
 
 **現在のスペクトルfrontier（v219）**：(1,3)は全幾何学的分類済み、(3,1)及び(2,2) mixed rank2は空、(2,2) mixed rank4は全Jordan型込みで曲がったClifford族へ認識（最後のL飽和はv202で完了）。解決済みLへ戻らない。
 三固有値以上では二次・三次共鳴が必要、四単純の二次非共鳴領域はskewへ還元して排除。三固有値は四次top非退化性から有限共通N乗根(N≤24)又は二pencilへ縮小、一方は関係数不足、残る(1,1,z,z^-1)はeven rank1の一次因子とrank2のGK2傾き3/2障害で位数1〜4外を全排除した。従って三固有値の全半単純スペクトルはN≤24の有限集合。単冪部分込み。
-**次の最小未解決問題**：有限N≤24の三固有値を共鳴・Frobenius相反重み・整域性で厳密列挙し、残る正常三次/許容切断を調べる。四単純、全CY被覆、全成分・intrinsic族降下も未完。
+**最新の有限リスト（v220）**：全N≤24を厳密列挙し、三次までのcharacter/整域性で38スペクトル・42関係パターン（N3,4,5,6,9,12）に縮小。全リストと57除外witnessは公開certificate。次は純二元AS2三次の因子障害と必要Frobenius tensorを適用する。四単純、全CY被覆、全成分・intrinsic族降下も未完。
 証明は `cubic_spectral_resonance.tex` と `cubic_inverse_spectral_pencils.tex`。Artin–Stafford入力はStafford–Van den Bergh arXiv:math/9910082v2 Theorem5.2 p14の著者による正確な再掲を実読、原論文証明の独立再監査とは称さない。基底SのAS3性を未確認で仮定せず、Hilbert傾きと整域性だけで排除した。
 一般正規三次の四line compact frame（v210）は `cubic_hypersurface_frame.tex`。rank-one torsion-freeは別仮定、有限検査・相対開性は未解決。
 

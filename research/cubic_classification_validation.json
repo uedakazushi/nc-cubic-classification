@@ -2442,5 +2442,28 @@
       "complete four-eigenvalue or CY coverage",
       "global components or family descent"
     ]
+  },
+  "three_eigenvalue_finite_character_list_v220": {
+    "status": "ordinary necessary bounds and equivariant Koszul proof; exhaustive integer enumeration PASS",
+    "proof": "papers/sections/cubic_three_eigenvalue_finite_spectra.tex",
+    "validator": "computations/verify_cubic_three_eigenvalue_finite_spectra.py",
+    "certificate": "computations/cubic_three_eigenvalue_finite_spectra_certificate.json",
+    "results": [
+      "38 necessary spectra,42 relation weight patterns",
+      "possible minimal common orders3,4,5,6,9,12",
+      "57 concrete rejected relation pattern witnesses",
+      "18 Galois label orbits; not geometric equivalence"
+    ],
+    "checked_internal_degrees": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "not_claimed": [
+      "AS4 existence",
+      "normal cubic or H3 admissibility",
+      "all-degree verification or complete classification"
+    ]
   }
 }

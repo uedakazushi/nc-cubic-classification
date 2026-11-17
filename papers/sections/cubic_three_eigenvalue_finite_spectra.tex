@@ -1,0 +1,100 @@
+\subsection{三固有値有限候補の三次までの厳密列挙}
+\label{subsec:cubic-three-eigenvalue-finite-list}
+\begin{lemma}[関係重みの整域上界と三次character]
+\label{lem:cubic-finite-spectrum-character-bounds}
+相異なる半単純固有値を $\lambda_i$、重複度を $m_i$ とし、
+二次tensorの重み $\chi$ の次元を $D_\chi$、二次関係の同重みの次元を $r_\chi$ とする。
+AS4整域について
+\[
+ r_\chi\le D_\chi-\max_{\lambda_i\lambda_j=\chi}(m_i+m_j-1),
+ \qquad r_\chi=r_{\chi^{-1}},\qquad\sum_\chi r_\chi=6.
+\]
+有限位数の重みのgroup ringで、$V$ を $B_1$、$I$ を二次関係のcharacter、
+$V^*$ を逆重みのcharacterと書くと、
+\[
+ [B_2]=V^2-I,\qquad [B_3]=V^3-2VI+V^*,\qquad
+ [R_3]=V^3-2VI+V^*-1.
+\]
+$R=B/(G)$ がH3整域なら、全ての重み $\chi$ と一次固有値 $\lambda_i$ に対して
+\[
+ \dim(R_n)_\chi\le\dim(R_{n+1})_{\lambda_i\chi}\quad(0\le n\le2).
+\]
+\end{lemma}
+\begin{proof}
+関係空間はrank-one tensorを含まない。
+重み $\chi$ のprojective空間は次元 $D_\chi-1$ で、その中に
+$\mathbb P(V_i)\times\mathbb P(V_j)$ という次元 $m_i+m_j-2$ のSegre部分多様体を含む。
+projective次元定理から、これを避ける線型関係空間は
+$r_\chi-1+m_i+m_j-2<D_\chi-1$ を満たす。これが上界である。
+相反対称性は補題\ref{lem:cubic-relation-reciprocal-weights}による。
+
+Koszul解消の次数3 syzygyは双対Frobeniusの次数1/3 pairingから $V^*$ のcharacterを持つ。
+最高tensor上の中山作用が1であることをここでも使う。
+解消のcharacter恒等式を次数3まで展開すると表示した $B_2,B_3$ の式となる。
+$\mu_{B,s}(G)=G$ なので、三次切断は重み1を一本だけ引く。
+最後の不等式は、一次固有空間の非零元の左乗法が整域 $R$ 上で単射なことから従う。
+単冪部分の有無に依存しない。
+\end{proof}
+
+\begin{theorem}[三固有値H3の38個の必要スペクトル]
+\label{thm:cubic-three-eigenvalue-38-list}
+中山半単純部分が三固有値を持つH3包絡では、その最小共通位数は
+\[
+ N\in\{3,4,5,6,9,12\}
+\]
+に限られる。$\zeta_N$ を原始 $N$ 乗根とし、重複2を先頭に
+$(\lambda_0,\lambda_1,\lambda_2)=(\zeta_N^a,\zeta_N^b,\zeta_N^c)$、$b<c$ と書く。
+以下の必要検査を全通過する指数組は38個、二次関係の重み次元パターンは42個である。
+全リストは公開certificateに保存する。
+\[
+\begin{array}{c|rrrrrr|r}
+N&3&4&5&6&9&12&\text{合計}\\\hline
+\text{指数組}&3&12&4&11&6&2&38
+\end{array}
+\]
+これは候補の漏れない必要被覆であって、AS4存在・正規三次存在・H3十分性の分類ではない。
+\end{theorem}
+\begin{proof}
+系\ref{cor:cubic-three-eigenvalues-finite-order}から $N\le24$。
+最小共通位数は $\gcd(N,a,b,c)=1$ と同値なので、これと三固有値相異性を満たす全組を列挙する。
+順に三次共鳴、孤立純三乗排除、各固有空間を含む四次共鳴、二次共鳴、
+既証の二つの相反pencil排除を適用する。
+残る各組に対し、前補題の上界・相反性・総次元6を満たす全 $I$ を列挙する。
+各 $I$ について $R_0,R_1,R_2,R_3$ のcharacter係数の非負性と、前補題の乗法単射不等式を検査する。
+
+\texttt{verify\_cubic\_three\_eigenvalue\_finite\_spectra.py}は、この有限範囲を
+浮動小数点なしの整数剰余と畳み込みで全列挙する。
+関係重みの候補99個のうち57個は、元次数2から3への乗法不等式などの明示的違反で落ちる。
+各違反の元次数・元重み・乗法元の重み・両次元をcertificateに残す。
+残る42パターンの指数組は38個で、上表の内訳となる。
+次数4以上を検査したという主張はせず、次数3までの必要条件だけでこの被覆を得ている。
+\end{proof}
+
+\paragraph{Galoisに関する計算の整理．}
+指数全体への $(\mathbb Z/N)^*$ の乗法と $b,c$ の並べ直しで、38組は18軌道にまとまる。
+これは証明計算を共役な係数で再利用するためのラベルの整理であり、
+異なるGalois共役を $k$ 線型pointed同値で同一視するものではない。
+代表 $(N;a,b,c)$ は次の通りである。
+\[
+\begin{array}{c|c|r}
+ N&(a,b,c)&\text{軌道の大きさ}\\\hline
+3&(0,1,2)&1\\
+3&(1,0,2)&2\\
+4&(0,1,2)&2\\
+4&(0,1,3)&1\\
+4&(1,0,2)&2\\
+4&(1,0,3)&2\\
+4&(1,2,3)&2\\
+4&(2,0,1)&2\\
+4&(2,1,3)&1\\
+5&(1,0,3)&4\\
+6&(1,0,4)&2\\
+6&(1,3,4)&2\\
+6&(2,0,5)&2\\
+6&(2,1,4)&2\\
+6&(2,3,5)&2\\
+6&(3,2,4)&1\\
+9&(3,1,2)&6\\
+12&(4,5,11)&2\\
+\end{array}
+\]
