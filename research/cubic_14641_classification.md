@@ -1382,10 +1382,10 @@ python computations/verify_cubic_order2_22_secant_L_saturation.py --prefix /tmp/
 - 位数4：`cubic_fourth_root_spectrum_reductions.tex`。四奇数重み−1パターンを除き、(1,1,i,-i)を既述charge0障害で排除。
 - 最後の位数6：`cubic_sixth_root_last_Ore_exclusion.tex`。正常bでB=A[b;sigma]、coneでb³係数非零が必要。正常式からsigma³=muB^-1|A、muA=sigma^-2、hdet sigma1。sigmaUの同一固有値は最高AS3cubicのslice退化、相異なる場合は(a,a*omega),a³omega²、sigma c=-a*omega^k。最高tensorの固定orbitを直接列挙しk0だけ残る。Aはx²=kappa*c²,yx=-a²xy,yc=-a²cy、sigma=(a,a*omega,-a)。sigma固定A3はkx²y一本だが正常x残差(-a²-omega²)x³yが非零、従って全Gはkb³で非整域。先行AS3完全分類を輸入していない。QQ(a),Phi9で全tensor slice、固定A3 rank9、元の正常残差をexact PASS。単冪sigma候補もslice退化で排除。
 
-### 現在の残余：三固有値3スペクトル（v233）
+### 現在の残余：三固有値3スペクトル（v234）
 三固有値H3の中山半単純最小共通位数は3のみ。必要リストはN3:3個で、各関係重みパターンは一つ。Galoisラベル2軌道の代表(N;a,b,c)、重複2を先頭、単純二固有値を昇順に書く：
 (3;0,1,2),(3;1,0,2)。
-Galoisラベルはk線型同値の商ではない。3候補のAS4存在・正常三次・H3許容性は未分類。全リストと現在値は `computations/cubic_fourth_root_last_negative_simple_certificate.json`。再生は `python computations/verify_cubic_spectral_reductions.py`、17検証器のPASSは有限計算であり通常の全証明の独立機械検証ではない。
+Galoisラベルはk線型同値の商ではない。3候補のAS4存在・正常三次・H3許容性は未分類。全リストと現在値は `computations/cubic_fourth_root_last_negative_simple_certificate.json`。再生は `python computations/verify_cubic_spectral_reductions.py`、18検証器のPASSは有限計算であり通常の全証明の独立機械検証ではない。
 N4(2,1,3)は `cubic_fourth_root_negative_repeat_exclusion.tex` で全排除。G=F b²+L c²、domainにF,L独立が必要。even rank2はS2自由なのでF f²(u)=mu^-1(u)Fが不可能。rank1はAS2 Oreへ復元し、可換はf=gとh0でskewへ、JordanはF,Lが同一正常線で因子、量子反対角はscalar linear normalizerなし、量子対角はF=x,L=y、alpha=i,alpha*gamma=-pとgamma²=-pからp1を強制。単冪中山込み。公開検証器が元Jordan relationのminorとkernel、量子のp(1-p)矛盾、free-tensor augmented rankをexact PASS。
 
 次の課題：残る二Galoisラベルの必要最高tensor atlasと正常核。
@@ -1402,6 +1402,8 @@ B[b^-1]=S[b±1;f]=C[b^-1], C=S[b;f]の次数付きbimodule最高Extを比較す�
 全必要表示はyx=i xy,c²+C y²=0,cx=-i q²xc,yc+q²cy+d b²=0,bx=q^-1xb,cb=-q^-1bc（C,d≠0）。scalar変更でC=d=1、四つのqのみ。元R3/R4と正常核を両i符号計八表示でexact確認、唯一の非零W1はq=-iのk*(i b³-i c y b+c b y)。これは純base切断でB=S[x;sigma],sigma=-i scalar、正常化はSを保ちxを-i倍するので既証一般Ore cone頂点補題がH3を排除する。非零核を因子だと誤認せず無限高次Extを用いた。単冪untwist後のHも唯一のUc relationとxy+i yxの保存でH1となり、Gのtwist輸送を使わず全Jordanを扱う。
 追加b4を含む最後のN4(i,i,-1,-i)と共役も `cubic_fourth_root_last_negative_simple.tex` で全排除（v233）。最高tensor17軌道。b4係数z0は同じeven rank条件の四表示に戻り、W1はq1でk*(yb+by)x、他は零（両符号八表示を元関係でexact PASS）。z非零はz1とmixed正規化を両立させ、H0のbb pivotのSchur補Tが対称rank1となる。T=v v^t,v=(p,r,s,t)でt²=-i r²,st=-i pr,s²=-i p²+q^-4-i。r0は純x²関係又は二本のU²関係でdomain外、よってr非零。eta=t/rでeta²=-i,s=eta p,q4=-i。H2の純U関係はq^-2 x²+i eta(px+ry)²となり非退化対称。
 muUiのbinary twisted quarticのskew middleに対角な純U関係alpha*x²+beta*y²を入れると、rank2 Pfaffian -i alpha B,beta A+alpha D,i(-beta A+alpha D)がA=B=D0を強制し、純c²関係が生じる。これでz非零全chartが空。untwist後はz0四表示だけで、唯一のUc関係とxy+i yxから単冪H1。G正常性のtwist輸送を使わない。17元軌道、Schur恒等式、対称二次の行列式、Pfaffianと有限正常核をexact PASS。次はN3の二Galoisラベルの最高tensoratlasと正常核。全三固有値の存在/許容性はまだ未完成。
+位数3の非単位重複根の全Jordan層は `cubic_third_root_nonunit_Jordan.tex` で排除（v234）。実際のmuU=[[omega,1],[0,omega]]の逆中山巡回を半単純重み1の全85語で解き、rank75、top核10次元。H0の(xc,yc,cx,cy)主minor=256*a8^4*(omega+1)^4によりrank2にはa80が必要。このときI0にはyc/cy成分がなく、I2のyy成分は恒等的に零。よって(x,b)商はfree<y,c>又はfree<y,c>/(c²)となり、次数15が1597以上>816でAS4外。両omega符号について全kernel・元巡回式・全関係行をexact PASS。半単純topをJordanへ流用した計算ではない。
+従って残る非単位重複根の二スペクトルではmuは半単純。重複1のスペクトルではJordanも未解決。次の最小課題：両半単純top atlasは各22次元、privateで全軌道とmiddleを展開済み。公開定理へまとめる場合は元巡回式を再生する。重複1の実Jordan topは12次元（未公表の計算）で、I0にyy成分なし、rank2 mixedのdomain回避はa6²=a5*a8及びa5,a6,a8全部非零を要する見込み。これらは未検証の着想として保持し、全被覆やW1消滅を先取りしない。private /workspace/work/spectral_remaining/third_top.py とthird_jordan_top.pyは再開補助だけでありGitHub正本の証明書ではない。
 四単純の新しい全除外chart（v228）：`cubic_detminus1_spectral_exclusion.tex`。as4固定6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0のREADME、plan、COVERAGE、該当CLAIMS、DETMINUS1全文・自己監査・certificate状態を確認。nu=mu^-1なのでa→a^-1と後二基底交換で同じmu-chartになる。四族被覆/AS十分性/同型は輸入せず、H3域に次の直接証明を与えた。
 mu=(a,-a,i/a,-i/a),a4≠±1ではU²,mixed,V²の二次重みが分離して二重次数が存在。各平面に関係がなければ自由二生成の次数7が128でAS4値120を超え、domainなら純二元関係は高々一本なので両平面はAS2。混合三次の重み±ia,±a^-1は1にならず、純U三次重み1はa6=1、純Vはa6=-1を要して同時に起きない。従って全Gは片方のAS2純三次となり因子化、H3なし。a4=-1境界は既証二固有値必要集合±1に反し空、残るa4=1境界は四単純集合{1,-1,i,-i}のみで未分類。全det負一又は全四単純をこのchartが覆うとは主張しない。公開verifierは全パラメータLaurent多項式の非零因子・共鳴・境界特性多項式と128>120をexact PASS。出典/仮定/未実行の上流検算はas4_imports.jsonに記録。
 四単純の残る共鳴上の全被覆、全CY、全成分・境界、intrinsic族降下は依然未完。

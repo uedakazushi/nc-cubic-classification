@@ -1,0 +1,51 @@
+\subsection{位数3の非単位重複固有値におけるJordan層の排除}
+\label{subsec:cubic-third-root-nonunit-Jordan}
+\begin{theorem}[非単位重複三乗根の中山は半単純]
+\label{thm:cubic-third-root-nonunit-Jordan-empty}
+三固有値H3の必要スペクトル $(\omega,\omega,1,\omega^2)$、
+$\omega^2+\omega+1=0$ において、中山の単冪部分は恒等でなければならない。
+\end{theorem}
+\begin{proof}
+非自明なJordan層では基底を選び
+\[
+ \mu(x)=\omega x,\quad \mu(y)=x+\omega y,\quad
+ \mu(b)=b,\quad \mu(c)=\omega^2c
+\]
+とできる。
+必要な二次関係重複度は三重みとも2である。
+$\nu=\mu^{-1}$、右巡回 $\tau$ とすると
+$(1+(\nu\otimes1^{\otimes3})\tau)w=0$。
+この式を四回反復すると $\mu^{\otimes4}w=w$ であるため、
+$w$ の語は半単純重み1の85語だけに含まれる。
+この85変数の厳密な線型系のrankは75、解空間は10次元である。
+以下はその全解のmiddleに対する有限線型消去であり、標本計算ではない。
+
+パラメータを $a_0,\ldots,a_9$ と選べば、重み1の語順 $(xc,yc,bb,cx,cy)$ に対して
+\[
+ \frac14 H_0=\begin{pmatrix}
+ a_4(\omega+1)&0&a_6(\omega+1)&a_7(\omega+1)-a_8\omega&a_8(\omega+1)\\
+ 0&0&0&-a_8(\omega+1)&0\\
+ a_6(\omega+1)&0&0&a_3&0\\
+ a_7(\omega+1)&-a_8(\omega+1)&a_3&a_4&0\\
+ a_8(\omega+1)&0&0&0&0
+ \end{pmatrix}.
+\]
+また重み $\omega^2$ のmiddleの語順 $(xx,xy,yx,yy,bc,cb)$ では $yy$ 行は恒等的に零である。
+85語の入力、逆中山の全係数、十個の解tensor、全巡回式への代入は公開検証器とcertificateに保持する。
+従って、この表示が全解を覆うことと二つの行の消滅は再生可能な有限exact命題である。
+
+$H_0$ の $(xc,yc,cx,cy)$ 主minorは
+$256a_8^4(\omega+1)^4$。
+関係空間の次元が2なので $\operatorname{rank}H_0=2$、従って $a_8=0$。
+すると $yc,cy$ 行も零となり、重み1の全関係は $xc,cx,b^2$ だけに入る。
+重み $\omega^2$ の関係には $yy$ 成分がなく、重み $\omega$ の関係は
+$Ub+bU+kc^2$ に入る。
+従って二次提示を二側ideal $(x,b)$ で商にすると、
+\[
+ B/(x,b)\simeq k\langle y,c\rangle/J,\qquad J=0\ \text{又は}\ (c^2).
+\]
+どちらも次数15の次元は1597以上であり、$\dim B_{15}=816$ に反する。
+よってこの全Jordan層にAS4整域は存在しない。
+$\omega$ を $\omega^2$ に置き換えた場合も同じ全係数の共役で成立する。
+半単純な二候補の存在・H3許容性、重複固有値1のJordan層はこの定理では未解決である。
+\end{proof}

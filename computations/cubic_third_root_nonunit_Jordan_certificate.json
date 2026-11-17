@@ -1,0 +1,189 @@
+{
+  "status": "PASS",
+  "scope": "complete finite actual-Jordan tensor linear systems and relation/growth obstruction",
+  "field": "QQ(omega), omega^2+omega+1=0",
+  "cases": [
+    {
+      "rho_exponent": 1,
+      "restricted_word_count": 85,
+      "linear_system_rank": 75,
+      "top_kernel_dimension": 10,
+      "top_basis": [
+        {
+          "xxxb": "-4",
+          "xxbx": "4*omega",
+          "xbxx": "4*omega + 4",
+          "bxxx": "4"
+        },
+        {
+          "xxyb": "4",
+          "xyxb": "-4",
+          "xybx": "-4*omega",
+          "xbxx": "-4*omega",
+          "xbxy": "4*omega + 4",
+          "yxbx": "4*omega",
+          "ybxx": "-4*omega - 4",
+          "bxxy": "-4",
+          "bxyx": "4"
+        },
+        {
+          "xxyb": "4",
+          "xxbx": "4",
+          "xxby": "4*omega",
+          "xybx": "-4*omega",
+          "xbxx": "-4*omega",
+          "xbyx": "4*omega + 4",
+          "yxxb": "-4",
+          "ybxx": "-4*omega - 4",
+          "bxxy": "-4",
+          "byxx": "4"
+        },
+        {
+          "xbbc": "4*omega + 4",
+          "bbcx": "4",
+          "bcxb": "-4",
+          "cxbb": "4"
+        },
+        {
+          "xcxc": "4*omega + 4",
+          "cxcx": "4"
+        },
+        {
+          "xbcb": "-4*omega - 4",
+          "bxbc": "4*omega + 4",
+          "bcbx": "-4",
+          "cbxb": "4"
+        },
+        {
+          "xcbb": "4*omega + 4",
+          "bxcb": "-4*omega - 4",
+          "bbxc": "4*omega + 4",
+          "cbbx": "4"
+        },
+        {
+          "xxcc": "4*omega",
+          "xccx": "4*omega + 4",
+          "cxxc": "4*omega + 4",
+          "ccxx": "4"
+        },
+        {
+          "xycc": "-4*omega",
+          "xccx": "-4*omega",
+          "xccy": "4*omega + 4",
+          "yxcc": "4*omega",
+          "yccx": "-4*omega - 4",
+          "cxyc": "-4*omega - 4",
+          "cyxc": "4*omega + 4",
+          "ccxy": "-4",
+          "ccyx": "4"
+        },
+        {
+          "bccc": "-4",
+          "cbcc": "4*omega",
+          "ccbc": "4*omega + 4",
+          "cccb": "4"
+        }
+      ],
+      "forbidden_minor": "256*a8^4*(rho+1)^4",
+      "relation_rows_vanish": [
+        "yc,cy after a8=0",
+        "yy identically"
+      ]
+    },
+    {
+      "rho_exponent": 2,
+      "restricted_word_count": 85,
+      "linear_system_rank": 75,
+      "top_kernel_dimension": 10,
+      "top_basis": [
+        {
+          "xxxb": "-4",
+          "xxbx": "-4*omega - 4",
+          "xbxx": "-4*omega",
+          "bxxx": "4"
+        },
+        {
+          "xxyb": "4",
+          "xyxb": "-4",
+          "xybx": "4*omega + 4",
+          "xbxx": "4*omega + 4",
+          "xbxy": "-4*omega",
+          "yxbx": "-4*omega - 4",
+          "ybxx": "4*omega",
+          "bxxy": "-4",
+          "bxyx": "4"
+        },
+        {
+          "xxyb": "4",
+          "xxbx": "4",
+          "xxby": "-4*omega - 4",
+          "xybx": "4*omega + 4",
+          "xbxx": "4*omega + 4",
+          "xbyx": "-4*omega",
+          "yxxb": "-4",
+          "ybxx": "4*omega",
+          "bxxy": "-4",
+          "byxx": "4"
+        },
+        {
+          "xbbc": "-4*omega",
+          "bbcx": "4",
+          "bcxb": "-4",
+          "cxbb": "4"
+        },
+        {
+          "xcxc": "-4*omega",
+          "cxcx": "4"
+        },
+        {
+          "xbcb": "4*omega",
+          "bxbc": "-4*omega",
+          "bcbx": "-4",
+          "cbxb": "4"
+        },
+        {
+          "xcbb": "-4*omega",
+          "bxcb": "4*omega",
+          "bbxc": "-4*omega",
+          "cbbx": "4"
+        },
+        {
+          "xxcc": "-4*omega - 4",
+          "xccx": "-4*omega",
+          "cxxc": "-4*omega",
+          "ccxx": "4"
+        },
+        {
+          "xycc": "4*omega + 4",
+          "xccx": "4*omega + 4",
+          "xccy": "-4*omega",
+          "yxcc": "-4*omega - 4",
+          "yccx": "4*omega",
+          "cxyc": "4*omega",
+          "cyxc": "-4*omega",
+          "ccxy": "-4",
+          "ccyx": "4"
+        },
+        {
+          "bccc": "-4",
+          "cbcc": "-4*omega - 4",
+          "ccbc": "-4*omega",
+          "cccb": "4"
+        }
+      ],
+      "forbidden_minor": "256*a8^4*(rho+1)^4",
+      "relation_rows_vanish": [
+        "yc,cy after a8=0",
+        "yy identically"
+      ]
+    }
+  ],
+  "quotient_degree15_lower_bound": 1597,
+  "AS4_degree15": 816,
+  "conclusion": "nonunit repeated third-root spectra require semisimple Nakayama",
+  "not_claimed": [
+    "semisimple nonunit spectra excluded",
+    "unit-repeat Jordan spectrum excluded",
+    "complete H3 classification"
+  ]
+}

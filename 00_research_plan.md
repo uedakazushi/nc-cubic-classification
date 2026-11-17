@@ -69,9 +69,9 @@ Library既存ファイルは明示指示なしに削除しない。GitではPDF�
 heart比較・Rains共鳴・cubic cornerは `uedakazushi/nc-dp-surface-hearts`、次数1は `uedakazushi/nc-dp1-moduli`、三次三様体は `uedakazushi/nc-cubic-threefold-moduli` が正本。
 量子FermatのOU障害は [nc-cubic-non-as](https://github.com/uedakazushi/nc-cubic-non-as)、ambient比較は [nc-cubic-ambient-moduli](https://github.com/uedakazushi/nc-cubic-ambient-moduli) に移管済み。分類に必要な旧定理・コードはこのリポジトリの現行分類原稿からも参照する。
 
-## V. 最新の具体的frontier（v233）
+## V. 最新の具体的frontier（v234）
 三固有値の全半単純スペクトルを有限化し、位数4・5・6・9・12と相反pencilを排除した。残る必要候補は位数3の3個のみ（2 Galoisラベル軌道）、各関係パターン一つ。単冪中山も含む必要被覆であり、3候補の存在・H3許容性は未分類。
 証明は `cubic_spectral_resonance.tex`、`cubic_inverse_spectral_pencils.tex` と `cubic_*root*`、有限リスト/全再生は `python computations/verify_cubic_spectral_reductions.py`。最新の証明・文献入力・certificateと次の最小課題は分類ノート末尾に統合した。
-位数4は全排除済み。最後の(i,i,-1,-i)はb4零の四表示でW1因子/零、b4非零はrank2 middleのSchur補と非退化対称二次の巡回障害で空。単冪も含む。次は位数3の重複1及び重複omegaの二ラベルの最高tensor atlasとW1を調べる。
+位数4は全排除済み。最後の(i,i,-1,-i)はb4零の四表示でW1因子/零、b4非零はrank2 middleのSchur補と非退化対称二次の巡回障害で空。単冪も含む。位数3の非単位重複根の全Jordan層も、実際の中山巡回式の85変数線型系と指数増大商で排除。次は非単位根の半単純atlas、及び重複1のJordan/半単純atlasとW1を調べる。
 四単純chart(a,-a,i/a,-i/a)はa4≠±1全域をAS2因子で排除、a4=-1も既証二固有値障害で空、a4=1の有限四単純境界を保持。as4固定commitのchartを参照し被覆/AS十分性/同型は輸入していない。四単純の残る共鳴領域、全CY被覆、全成分・相対降下は未完。
 一般正規三次の四line compact frameは `cubic_hypersurface_frame.tex`。rank-one torsion-freeは別仮定で、有限H3検査や相対開性は未証明。
