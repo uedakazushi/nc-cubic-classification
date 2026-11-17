@@ -1,0 +1,125 @@
+{
+  "status": "PASS",
+  "scope": "original Schur constants and rank1 parameterization, finite off-axis top-image equality, complete axis pivot cover, fresh root fields and singular middle boundaries; ordinary case exhaustion separate",
+  "off_axis_finite_cases": [
+    {
+      "lambda": "-1",
+      "B3_B4_dimensions": [
+        22,
+        46
+      ],
+      "exclusion": "B3 dimension22 !=20",
+      "original_top_image_equal_relations": true
+    },
+    {
+      "lambda": "-CRootOf(z**2 + z + 1, 1)",
+      "B3_B4_dimensions": [
+        22,
+        46
+      ],
+      "exclusion": "B3 dimension22 !=20",
+      "original_top_image_equal_relations": true
+    }
+  ],
+  "axis_open": {
+    "B3_B4_dimensions": [
+      20,
+      35
+    ],
+    "relation_pivot_factors": [
+      "L",
+      "L + 1 + CRootOf(z**2 + z + 1, 1)",
+      "L - 1 - CRootOf(z**2 + z + 1, 1)",
+      "L**2 + CRootOf(z**2 + z + 1, 1)",
+      "L**4 + 4*L**2*CRootOf(z**2 + z + 1, 1) + 1 + CRootOf(z**2 + z + 1, 1)"
+    ],
+    "normal_coefficient_dimension": 8,
+    "normal_rank": 8,
+    "normal_pivot_factors": [
+      "L",
+      "L + 1",
+      "L + 1 + CRootOf(z**2 + z + 1, 1)",
+      "L + CRootOf(z**2 + z + 1, 1)",
+      "L - 1",
+      "L - 1 - CRootOf(z**2 + z + 1, 1)",
+      "L - CRootOf(z**2 + z + 1, 1)"
+    ]
+  },
+  "axis_four_rational_field_exceptions": [
+    {
+      "lambda": "1",
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "normal_coefficient_dimension": 8,
+      "normal_rank": 8
+    },
+    {
+      "lambda": "-1",
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "normal_coefficient_dimension": 8,
+      "normal_rank": 8
+    },
+    {
+      "lambda": "CRootOf(z**2 + z + 1, 1)",
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "normal_coefficient_dimension": 8,
+      "normal_rank": 8
+    },
+    {
+      "lambda": "-CRootOf(z**2 + z + 1, 1)",
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "normal_coefficient_dimension": 8,
+      "normal_rank": 8
+    }
+  ],
+  "axis_H_exception_field": {
+    "minimal_polynomial": "L**8 - 4*L**6 + 17*L**4 + 4*L**2 + 1",
+    "omega": "-(L^4+1)/(4L^2+1)",
+    "B3_B4_dimensions": [
+      20,
+      35
+    ],
+    "normal_coefficient_dimension": 8,
+    "normal_rank": 8
+  },
+  "axis_singular_middle_cases": [
+    {
+      "pure_U_sign": -1,
+      "field": "L^4-L^2+1; omega=-L^2",
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "normal_coefficient_dimension": 8,
+      "normal_rank": 8
+    },
+    {
+      "pure_U_sign": 1,
+      "field": "L^4-L^2+1; omega=-L^2",
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "normal_coefficient_dimension": 8,
+      "normal_rank": 8
+    }
+  ],
+  "conclusion": "unit-repeat independent P,Q entirely excluded",
+  "remaining_unit_repeat_sector": "rank(P,Q)=1",
+  "not_claimed": [
+    "rank1 cube-coupling sector classified",
+    "nonunit semisimple spectrum classified",
+    "complete H3 classification"
+  ]
+}

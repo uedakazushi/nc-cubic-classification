@@ -1,0 +1,162 @@
+\subsection{独立cube結合の最後のSchur領域}
+\label{subsec:cubic-third-root-unit-independent-Snonzero}
+\begin{theorem}[重複1では二つのcube結合は比例する]
+\label{thm:cubic-third-root-unit-independent-couplings-empty}
+$\mu=(1,1,\omega,\omega^2)$ のH3包絡では
+前節の二本のcovector $P,Q$ は独立でない。
+従って残る必要領域は $\operatorname{rank}(P,Q)=1$ に限られる。
+\end{theorem}
+\begin{proof}
+$P,Q$ 独立を仮定する。$S=0$ は排除済みなので、最高tensorのscalarと $U$ 基底で
+$P=(1,0),Q=(0,1),S=1$ と正規化する。
+mixed middleの $c^2,b^2$ pivotは $\omega^2$ であり、そのSchur補は
+\[
+ N=\begin{pmatrix}
+ a_8&a_9-1&-a_2&a_{11}+\omega\\
+ \omega^2a_{12}&a_{17}&-a_6&-a_{15}\\
+ -\omega^2a_3&\omega^2(1-a_7)&-a_8&-\omega^2a_{12}-1\\
+ \omega^2a_{13}&-\omega^2a_{16}&-a_9&-a_{17}
+ \end{pmatrix}.
+\]
+rank $N=1$ である。特に右上の定数 $+\omega$ を省略してはならない。
+$N=uv^t$、$u=(p,r,s,t)^t,v=(a,b,c,d)^t$ と書くと
+\[
+ pa+sc=0,\quad pb+tc=-1,\quad ra+sd=-1,\quad rb+td=0.
+\]
+その整合条件は $pt+rs=0$。
+整域性から $u$ の前半・後半はともに非零であり、ある $\lambda\ne0$ に対して
+\[
+ u=(p,r,\lambda p,-\lambda r)^t,\quad
+ v=(-\lambda c,\lambda d,c,d)^t,\quad
+ \lambda(pd-rc)=-1
+\tag{1}
+\]
+となる。$p,r$ の一方が零の場合も、この形は四式から直接得られる。
+
+重み1の $bc,cb$ blockと、それに接する純 $U^2$ の四行は
+\[
+ K=\begin{pmatrix}T&-\omega\\-\omega&-\omega T\end{pmatrix},\qquad
+ \mathcal P=\begin{pmatrix}
+ -pc&\lambda^2\omega pc\\
+ -rc&1-\lambda^2\omega pd\\
+ -pd+\omega&-\lambda^2\omega rc\\
+ -rd&\lambda^2\omega rd
+ \end{pmatrix}.
+\tag{2}
+\]
+純binary block $A$ はrank高々2なので、既述の反巡回計算から $a_1=0$、
+$A=ev_0^t+v_0e^t$、$e=(0,1,-1,0)^t$ である。
+以下では $(1),(2)$ と、このbinary blockの係数条件を全て保つ。
+
+\textbf{$pr\ne0$ の場合。}
+$(1)$ より $pc,rd$ の少なくとも一方は非零。
+$K$ が特異ならrank $H_0=2$ は $\mathcal P$ の全行を $K$ の行空間に入れる。
+$m=\lambda^2\omega$、$X=rc,Y=pd$ とすると
+$(-1,m)$ と $(-X,1-mY),(-Y+\omega,-mX)$ がその同じ行空間に入り、
+\[
+ mT=\omega,\qquad T=\omega(X+Y),\qquad X+Y=\omega.
+\]
+従って $T=\omega^2$ となるが、$\det K=0$ は $T^2=-\omega$ を要求し、矛盾する。
+
+よって $K$ は可逆、$A=\mathcal P K^{-1}\mathcal P^t$。
+binary blockの対角及び反巡回条件から順に
+\[
+ T=\frac{2\lambda^2\omega}{\lambda^4\omega-1},\quad
+ X+Y=\frac1{2\lambda^2\omega}+\frac\omega2,\quad X-Y=\lambda^{-1},
+\]
+\[
+ (\lambda^3+1)(1+\lambda\omega)=0
+\]
+を得る。
+ここで $\lambda^4\omega=\pm1$ は可逆性又は最初の等式に反する。
+最後の式の許容解は $\lambda=-1,-\omega$ だけである。
+残る $U$ の対角変更とrank1分解のscalarで $p=r=1$ とできる。
+具体的に $x'=h^{-1}x,y'=h^2y,b'=hb,c'=c$ と最高tensorのscalar $h^2$ は
+$P,Q,S$ の正規化を保ち、$p/r$ を $h^3p/r$ に変える。
+これにより $(1)$ の全この領域を二つの有限表示へ還元する。
+
+その入力は
+\[
+ X=\frac1{4\lambda^2\omega}+\frac\omega4+\frac1{2\lambda},\qquad
+ Y=\frac1{4\lambda^2\omega}+\frac\omega4-\frac1{2\lambda},\qquad c=X,d=Y
+\]
+と $(2)$、及びmixed関係 $u$, $v$ と二つのpivot列で指定される。
+$\mathcal P K^{-1}$ を係数として $bc,cb$ を消す二本を合わせ、元六関係を得る。
+両 $\lambda$ で元の全三次関係をexact消去すると $\dim B_3=22$。
+従ってこの全領域はAS4でない。
+有限表示が元22tensorのmiddle像に厳密に一致することも検算する。
+
+\textbf{$r=0$ の場合。}
+rank1分解を正規化して $p=1,d=-1/\lambda$ とする。
+$(2)$ の中央二行は
+$(0,1+\lambda\omega)$ と $((1+\lambda\omega)/\lambda,0)$。
+$K$ 可逆なら $A_{xy,yx}=0$ が $1+\lambda\omega=0$ を強制する。
+$K$ 特異でもこの二行が同じ一次元行空間に入るため同じ結論となる。
+よって $\lambda=-\omega^2$。
+$c\ne0$ なら $(-1,\lambda^2\omega)$ の条件が、可逆の場合は上の $T$ の式の分母零、
+特異の場合は $T^2=-\omega$ との矛盾を生じる。
+$c=0$ なら $\mathcal P=0$。
+$K$ 可逆では $I_0$ に純 $bc,cb$ 関係が生じ、整域でない。
+$K$ 特異ではrank $H_0=2$ のため純binary blockがrank1となる必要があるが、
+対称rank1と $xx,yy$ 対角成分零を課すとbinary反巡回blockは零となるため不可能である。
+
+\textbf{$p=0$ の場合。}
+$r=1,c=1/\lambda$ とする。
+$(2)$ の中央行は $w=(-1/\lambda,1)$ と $-\lambda\omega w$、最後の行は $d(-1,m)$。
+$K$ 可逆なら $A_{xy,yx}=0$ が $wK^{-1}w^t=0$ を与え、
+\[
+ T=\frac{2\omega\lambda}{\lambda^2-\omega},\qquad
+ \lambda(\lambda^2-\omega)(\lambda^2+\omega)\ne0.
+\tag{3}
+\]
+$d\ne0$ なら $(-1,m)$ も等方的であり、残るbinary巡回条件は
+二つの等方直線の一致又は $1-\lambda\omega=0$ を要求する。
+いずれも $\lambda=\omega^2$ となり $(3)$ に反する。従って $d=0$。
+この一変数族のmixed四関係は
+\[
+ yb-\lambda by=0,\quad xb-\omega^2bx+\omega^2c^2=0,\quad
+ -xc+\lambda^{-1}cx=0,\quad \omega^2yc+\omega^2b^2-cy=0.
+\tag{4}
+\]
+残る二関係は $(2)$ の $\mathcal P K^{-1}$ と $bc,cb$ から得る。
+元関係の全消去pivotの因子は
+\[
+ \lambda,\ \lambda\pm\omega^2,\ \lambda^2+\omega,\
+ H(\lambda)=\lambda^4+4\omega\lambda^2-\omega^2
+\]
+のみであり、正常行列のpivot因子は
+$\lambda,\lambda\pm1,\lambda\pm\omega,\lambda\pm\omega^2$ のみ。
+全unit領域で $W_1=0$。
+$\lambda=\pm1,\pm\omega$ は元関係のfresh消去で全て正常rank8。
+$H=0$ は
+\[
+ \lambda^8-4\lambda^6+17\lambda^4+4\lambda^2+1=0,\qquad
+ \omega=-\frac{\lambda^4+1}{4\lambda^2+1}
+\]
+という既約八次体で元関係をfresh消去し、次元20,35、正常rank8。
+この八次体は両原始三乗根と $H$ の全根を覆う。
+$\lambda=0,\pm\omega^2$ は $(3)$ より既に除かれる。
+
+最後に $K$ 特異の $p=0$ 境界を落とさない。
+行空間条件 $w(\omega,T)^t=0$ は $T=\omega/\lambda$、従って
+$\lambda^2=-\omega,T=-\lambda$ を与える。
+$d\ne0$ なら $(-1,m)(\omega,T)^t=0$ も必要で、$\lambda=\omega^2$ となり矛盾する。
+従って $d=0$。
+pure binary rank条件からまず $a_1=0$。
+$xy-\lambda\omega yx$ の係数方向は $e=xy-yx$ と独立なので、
+$A=ev_0^t+v_0e^t$ の像がこの方向を含むためには $a_0=a_5=0$ が必要である
+（$A=0$ の場合も同じ）。残る $a_4$ は
+\[
+ a_4=0\quad\text{又は}\quad a_4=-2/\lambda^3.
+\]
+これは一つの $bc$ pivot後の二行二列Schur行列式
+$-a_4(a_4+2/\lambda^3)$ から従う。
+純 $U$ 関係はそれぞれ $xy-\lambda\omega yx$ 又は $xy+\lambda\omega yx$、
+もう一本は
+$bc-\lambda cb-\omega^2xy+\lambda yx$ である。
+$(4)$ と合わせた両有限表示を
+$\mathbb Q(\lambda)$、$\lambda^4-\lambda^2+1=0$、$\omega=-\lambda^2$ 上でfresh消去すると、
+次元20,35、正常rank8。
+この体も両三乗根及び境界の全根を覆う。
+以上で独立結合の全Schur領域が排除される。
+\end{proof}

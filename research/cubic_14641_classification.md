@@ -1382,10 +1382,10 @@ python computations/verify_cubic_order2_22_secant_L_saturation.py --prefix /tmp/
 - 位数4：`cubic_fourth_root_spectrum_reductions.tex`。四奇数重み−1パターンを除き、(1,1,i,-i)を既述charge0障害で排除。
 - 最後の位数6：`cubic_sixth_root_last_Ore_exclusion.tex`。正常bでB=A[b;sigma]、coneでb³係数非零が必要。正常式からsigma³=muB^-1|A、muA=sigma^-2、hdet sigma1。sigmaUの同一固有値は最高AS3cubicのslice退化、相異なる場合は(a,a*omega),a³omega²、sigma c=-a*omega^k。最高tensorの固定orbitを直接列挙しk0だけ残る。Aはx²=kappa*c²,yx=-a²xy,yc=-a²cy、sigma=(a,a*omega,-a)。sigma固定A3はkx²y一本だが正常x残差(-a²-omega²)x³yが非零、従って全Gはkb³で非整域。先行AS3完全分類を輸入していない。QQ(a),Phi9で全tensor slice、固定A3 rank9、元の正常残差をexact PASS。単冪sigma候補もslice退化で排除。
 
-### 現在の残余：半単純・位数3の3スペクトル（v238）
+### 現在の残余：半単純・位数3の3スペクトル（v239）
 三固有値H3の中山は半単純であり、位数3のみ。必要リストはN3:3個で、各関係重みパターンは一つ。Galoisラベル2軌道の代表(N;a,b,c)、重複2を先頭、単純二固有値を昇順に書く：
 (3;0,1,2),(3;1,0,2)。
-Galoisラベルはk線型同値の商ではない。3候補のAS4存在・正常三次・H3許容性は未分類。全リストと現在値は `computations/cubic_fourth_root_last_negative_simple_certificate.json`。再生は `python computations/verify_cubic_spectral_reductions.py`、22検証器のPASSは有限計算であり通常の全証明の独立機械検証ではない。
+Galoisラベルはk線型同値の商ではない。3候補のAS4存在・正常三次・H3許容性は未分類。全リストと現在値は `computations/cubic_fourth_root_last_negative_simple_certificate.json`。再生は `python computations/verify_cubic_spectral_reductions.py`、23検証器のPASSは有限計算であり通常の全証明の独立機械検証ではない。
 N4(2,1,3)は `cubic_fourth_root_negative_repeat_exclusion.tex` で全排除。G=F b²+L c²、domainにF,L独立が必要。even rank2はS2自由なのでF f²(u)=mu^-1(u)Fが不可能。rank1はAS2 Oreへ復元し、可換はf=gとh0でskewへ、JordanはF,Lが同一正常線で因子、量子反対角はscalar linear normalizerなし、量子対角はF=x,L=y、alpha=i,alpha*gamma=-pとgamma²=-pからp1を強制。単冪中山込み。公開検証器が元Jordan relationのminorとkernel、量子のp(1-p)矛盾、free-tensor augmented rankをexact PASS。
 
 次の課題：残る二Galoisラベルの必要最高tensor atlasと正常核。
@@ -1416,7 +1416,10 @@ S=T=0排除を次のS0全領域へ拡張した。非単位重複根の半単純2
 独立P,QのS0全排除（v238）：`cubic_third_root_unit_independent_Szero.tex`。T非零ならH0のbc/cb block C=diag(T,-omega*T)が可逆で、Schur0からa1=0,a0=A*E/T,a4=-E²/T,a5=D*E/T、A=a2,D=a15,E=a11。全六関係を明記した。scalar変更でA非零はA=T1へ、d=AD*T²,e=ETの二変数平面。A0,D非零は生成元x/y,b/c同時交換とomega→omega²で同じatlas（明示パラメータ変換も本文）。
 二変数の全元R3/R4はgeneric dim20/35、全関係pivot因子d,e,d-e,d-e²、正常pivot因子d,e,d-e²のみ。全開集合でW1零。境界d=eはgeneric B3dim22なので元多項式行列のrank上界から全fiber非AS4。d0/e0曲線はパラメータt非零で全pivot因子tのみ、d=e²曲線は関係pivot t,t-1・正常pivot t、残る交点0/1はd=e曲線に包含。これで二変数平面全域を排除。
 A=D0ならE非零、T1,E=lambda一変数。関係pivot lambda,lambda±1、正常pivot lambdaのみ、全開W1零。fresh lambda±1はB4dim37、lambda0はB3dim26で非AS4。公開検証器は全入力、Schur恒等式/正規化、全pivot因子、全四境界と三例外値をexact PASS。generic値を境界へ外挿したのでなく、多項式rank上界を用いたd=eの全値非AS証明と、残るunit pivot coverを区別する。
-現在のunit-repeat残余はrank(P,Q)=1とrank2,S非零。次はこの二領域の正常incidenceを縮小する。S非零ではmixed5×5のsquare/square pivotのSchur補がrank1になる。privateでgenericパラメータ化を探索中だが、原Schurの外積項の定数を落とさず元22tensorへ代入確認してから使う。非単位重複根の半単純22次元atlasも残る。三スペクトルの全存在/許容性、四単純/CY全被覆、成分/降下は未分類。
+独立P,QのS非零も全排除（v239）：`cubic_third_root_unit_independent_Snonzero.tex`。P=(1,0),Q=(0,1),S1のmixed Schur Nはrank1で、右上はa11+omega、第三行第四列は-omega²*a12-1（定数項を保持）。N=u*v^t、domainと四係数整合からu=(p,r,lambda*p,-lambda*r),v=(-lambda*c,lambda*d,c,d),lambda(pd-rc)=-1。H0のbc/cb block K=[[T,-omega],[-omega,-omega*T]]、cross四行も本文に全式を保存。
+pr非零はK特異が行空間条件とT²=-omegaの矛盾。K可逆のbinary反巡回条件によりT=2lambda²omega/(lambda4omega-1)、X=rc,Y=pdはX+Y=1/(2lambda²omega)+omega/2,X-Y=1/lambda、残る式は許容領域でlambda=-1,-omegaだけ。対角torusとrank1 factor scalarでp=r1、元22tensorと六関係の像の一致を確認し両候補B3dim22で非AS4。r0軸はK可逆/特異ともlambda=-omega²から整域又はbinary rankに矛盾。
+p0軸はr1,c1/lambda、K可逆ならd0,T=2omega*lambda/(lambda²-omega)、残り一変数。全関係pivot因子lambda,lambda±omega²,lambda²+omega,H=lambda4+4omega*lambda²-omega²、正常pivot因子lambda,lambda±1,lambda±omega,lambda±omega²。全unit領域W1零、fresh±1/±omegaとHの全八次体根もrank8。lambda0/±omega²は幾何条件で除外。K特異境界はlambda²=-omega,T=-lambda,d0、binary係数a4は0又は-2/lambda³。両有限表示をPhi12体で元消去してrank8。これで全Schur分枝を覆う。通常の層別化証明と、公開exact入力/元top像一致/全pivot/例外体の検算を区別する。
+現在のunit-repeat残余はrank(P,Q)=1のみ（少なくとも一方非零、二本が比例）。次は片方零又は両方非零比例のchartをU基底でP,Qを一つの方向へ揃えて調べる。非単位重複根の半単純22次元atlasも残る。全三スペクトルの存在/許容性、四単純/CY全被覆、成分/降下は未分類。
 四単純の新しい全除外chart（v228）：`cubic_detminus1_spectral_exclusion.tex`。as4固定6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0のREADME、plan、COVERAGE、該当CLAIMS、DETMINUS1全文・自己監査・certificate状態を確認。nu=mu^-1なのでa→a^-1と後二基底交換で同じmu-chartになる。四族被覆/AS十分性/同型は輸入せず、H3域に次の直接証明を与えた。
 mu=(a,-a,i/a,-i/a),a4≠±1ではU²,mixed,V²の二次重みが分離して二重次数が存在。各平面に関係がなければ自由二生成の次数7が128でAS4値120を超え、domainなら純二元関係は高々一本なので両平面はAS2。混合三次の重み±ia,±a^-1は1にならず、純U三次重み1はa6=1、純Vはa6=-1を要して同時に起きない。従って全Gは片方のAS2純三次となり因子化、H3なし。a4=-1境界は既証二固有値必要集合±1に反し空、残るa4=1境界は四単純集合{1,-1,i,-i}のみで未分類。全det負一又は全四単純をこのchartが覆うとは主張しない。公開verifierは全パラメータLaurent多項式の非零因子・共鳴・境界特性多項式と128>120をexact PASS。出典/仮定/未実行の上流検算はas4_imports.jsonに記録。
 四単純の残る共鳴上の全被覆、全CY、全成分・境界、intrinsic族降下は依然未完。

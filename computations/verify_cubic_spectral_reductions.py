@@ -30,6 +30,7 @@ CHECKS=[
  'verify_cubic_third_root_CY_incidence.py',
  'verify_cubic_third_root_unit_closed_strata.py',
  'verify_cubic_third_root_unit_independent_Szero.py',
+ 'verify_cubic_third_root_unit_independent_Snonzero.py',
 ]
 results=[]
 for name in CHECKS:
@@ -44,6 +45,7 @@ assert final['status']=='PASS' and final['final_spectrum_count']==3 and final['r
 out={'status':'PASS','checks':results,'current_three_eigenvalue_necessary_spectra':3,
      'current_minimal_common_semisimple_orders':[3],
      'three_eigenvalue_Nakayama':'semisimple of order3 required in all three remaining spectra',
+     'unit_repeat_cube_coupling_rank_required':1,
      'additional_four_simple_sector':'(a,-a,i/a,-i/a) excluded outside a^4=1; finite boundary unclassified',
      'not_claimed':['H3 existence or admissibility of3 spectra','ordinary proofs independently checked by program','four-eigenvalue or CY completeness','complete H3 classification']}
 (ROOT/'cubic_spectral_reductions_validation.json').write_text(json.dumps(out,indent=2)+'\n')
