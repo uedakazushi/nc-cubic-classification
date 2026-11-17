@@ -1,0 +1,156 @@
+\subsection{rank三supportのphase削減と二方向の全排除}
+\label{subsec:cubic-four-simple-curve-phase-reduction}
+本節では前定理の証明で用いた\emph{全support格子がrank三}の場合を扱う。
+従って $B$ の実際のtopと $G$ は方向 $n$ に関して重み零である。
+有限位数点で追加の非零重みsupportが現れる場合はrank四の有限部分に保持し、
+曲線上の全ambientをこの斉次chartに入ると仮定しない。
+
+\begin{lemma}[multilinear topだけならskew]
+\label{lem:cubic-multilinear-top-skew}
+四変数の14641型AS4整域の四次topが、各文字を一回ずつ含む語だけからなるなら、包絡はskewである。
+\end{lemma}
+\begin{proof}
+middleの一つの列に現れる関係語は、その列の二文字の補集合の二つの順序だけである。
+従って関係空間は六つの $\langle x_ix_j,x_jx_i\rangle$ との交叉の直和となる。
+整域性から各交叉は高々一次元、非零なら両係数非零である。
+全関係数6から六つ全てに一本ずつあり、skew表示となる。
+\end{proof}
+
+\begin{proposition}[三方向のphase-free表示への削減]
+\label{prop:cubic-three-curve-phase-free}
+rank三supportの四方向のうち、
+\[
+ (0,1,-3,2),\quad (0,1,-2,1),\quad (1,-2,-1,2)
+\]
+はそれぞれ
+\[
+ (1,t,t^{-3},t^2),\qquad
+ (1,t,t^{-2},-t),\qquad
+ (t,t^{-2},t^{-1},t^2)
+\]
+へ必要削減される。
+\end{proposition}
+\begin{proof}
+各方向の成分1の位相をparameterへ吸収する。
+最初の方向を $(\eta,t,\xi t^{-3},\gamma t^2)$ と書く。
+torus固定三次の指数は $x^3,ybc$ だけである。
+$y,b,c$ の三pairは孤立した二次元重み空間で関係数1なので、全てskew可換である。
+従って三次商が整域となるには両三次型が必要で、
+$\eta^3=1,\xi\gamma=1$。
+$c$ を含む唯一の重み零四次型は $xybc$ なので $\eta\xi\gamma=1$、従って $\eta=1$。
+純 $x^4$ の巡回係数は $-\eta^{-1}=-1$ であり、この型はtopに現れない。
+残る非multilinear四次型は $y^3b$ だけで、その固有値は $\xi$。
+これがなければ前補題からskewとなりH3の四単純性に反するので $\xi=\gamma=1$。
+
+第二の方向を $(\eta,t,\xi t^{-2},\zeta t)$、$\zeta\ne1$ と書く。
+$U=\langle y,c\rangle$ とすると、$Ub+bU$ の二関係は両射影の核が純積となるので可逆graphである。
+従って $b$ は $U$ 上で正常。
+固定三次の型は $x^3$ と $U^2b$ だけで、後者だけなら $b$ の因子を持つ。
+従って $\eta^3=1$ と、少なくとも一つの
+$\xi\zeta^j=1$ ($j=0,1,2$) が必要。
+非純四次型は $xU^2b$ で、許容指数は $\eta\xi\zeta^j=1$。
+純 $x^4$ は $\eta^3=1$ と巡回式から不可能。
+全変数被覆には、許容 $j$ に1を含むか、0と2を両方含む必要がある。
+$\zeta\ne1$ から前者だけなら許容型は $xybc$ のみとなりskew。
+従って0,2双方が必要で、$\zeta^2=1$、すなわち $\zeta=-1$。
+$\eta\xi=1$ と三次条件から $\xi\in\{1,-1\}$、$\eta^3=1$ を合わせて $\eta=\xi=1$ となる。
+
+第三の方向を $(t,\beta t^{-2},\zeta t^{-1},\gamma t^2)$ と書く。
+二三次型 $x^2y,b^2c$ の各pairはskew可換であり、非因子性には双方が必要。
+従って $\beta=1,\zeta^2\gamma=1$。
+同じtorus重みを持つ異なるunordered二次pairは $xb,yc$ だけである。
+それらの中山位相も一致しなければ、関係は六pair直和となりskewである。
+従って $\zeta=\beta\gamma=\gamma$、すなわち $\zeta^3=1$。
+三つの許容四次指数は $x^2b^2,y^2c^2,xybc$ であり、
+この条件の下で全て固有値 $\zeta^2$ を持つ。
+非零topの存在から $\zeta=1$ となる。
+有限位数点の偶然の共鳴があっても、実際の関係はtorus斉次なので異なるtorus重みの混合を許さない。
+\end{proof}
+
+\begin{theorem}[二つのrank三曲線chartの全排除]
+\label{thm:cubic-first-two-rank3-curves-empty}
+rank三support chartで、方向 $(0,1,-3,2)$ と $(0,1,-2,1)$ は全てH3を与えない。
+従って全四単純H3の必要スペクトル被覆は、共通位数 $N\le96$ の有限部分と、
+\[
+ (\alpha,\beta,t,\gamma t^{-1})\quad
+ (\alpha^M=\beta^M=\gamma^M=1,\ M\le24),
+ \qquad (t,t^{-2},t^{-1},t^2)
+\]
+の二種類へ縮む。固有値は相異なるものに制限する。
+\end{theorem}
+\begin{proof}
+最初のphase-free chartでは $b$ が全包絡で正常であり、
+$g=\operatorname{Ad}_b$ を
+\[
+ bx=a\,xb,\quad by=d\,yb,\quad bc=e\,cb
+\]
+と書ける。$a,d,e$ は全て非零。
+$b$ を除く三変数の関係は、非零scalar $p,r$ と係数 $A,C,D$ を用いて
+\[
+ xy=p\,yx,\qquad yc=r\,cy,\qquad Axc+Ccx+Dy^2=0
+\]
+である。$A,C$ は両方非零でなければならない。
+例えば $A=0$ なら $cx=\kappa y^2$、$\kappa\ne0$ であり、
+\[
+ (xc-\kappa p^2y^2)x
+ =x(cx-\kappa y^2)+\kappa\bigl((xy-pyx)y+p\,y(xy-pyx)\bigr)=0.
+\]
+整域性から独立な逆向き二次関係が生じ、当該重みの関係数1に反する。
+$C=0$ も同様である。
+
+$A_0$ をこの三変数二次表示の環とすれば、全提示から
+$B=A_0[b;g]$ である。
+$A_0$ はKoszul AS3であることも、このOre表示のKoszul双対から直接分かる。
+実際、$b$ 次数零のbar複体でKoszul性が降り、
+$B^!$ は $A_0^!$ のtwisted外積一次拡大となる。
+最高次pairingの非退化性は $A_0^!$ に降り、Hilbert値は $(1,3,3,1)$ となる。
+従って既に用いているOre中山公式を適用できる。
+$A_0$ の三次topのtorus重みは3で、その指数は $xyc,y^3$ だけである。
+非退化性から $x,c$ を含むmultilinear係数が非零なので
+\[
+ \operatorname{hdet}_{A_0}g=ade,\qquad \mu_B(b)=ade\,b.
+\]
+
+非因子の $G$ は $x^3$ と $ybc$ 双方を非零係数で持つ。
+正常 $b$ に対する $Gb=\mu_B(b)^{-1}bG$ は、
+$g$ の両成分の固有値が $\mu_B(b)$ と一致することを要求する。
+従って
+\[
+ a^3=de=ade.
+\]
+$de\ne0$ より $a=1$、さらに $\mu_B(b)=a^3=1$。
+しかし $\mu_B(x)=1$ なので四単純性に反する。
+
+第二のphase-free chartではtopの許容指数は $xy^2b,xc^2b$ だけである。
+従って $U=\langle y,c\rangle$ の関係は
+$y^2+\kappa c^2$、$\kappa\ne0$ であり、$yc,cy$ は関係に入らない。
+他の五つは、実際の中山位相 $y/c$ の差とtorus rankから全てpairごとのskew関係になる。
+従って $T=T(U)/(y^2+\kappa c^2)$ を用いて
+\[
+ B=T[x;f][b;g],\qquad g(x)=q x
+\]
+と書け、$g|_U$ は対角である。
+$g$ が二次式を保存するので、その二対角係数の平方は共通の $d^2\ne0$ である。
+Koszul topのscalarから
+\[
+ \operatorname{hdet}_{T[x;f]}g=q d^2,\qquad \mu_B(b)=q d^2 b.
+\]
+$G$ は非零の $x^3$ 成分と $U^2b$ 成分を持つ。
+後者の固定位相成分は $y^2,c^2$ の像であり、$g$ はその全体に $d^2$ 倍で作用する。
+従って正常 $b$ の式は
+\[
+ q^3=d^2=q d^2
+\]
+を強制する。$d\ne0$ より $q=1$、$\mu_B(b)=q^3=1$。
+再び $\mu_B(x)=1$ と重複して矛盾する。
+
+最初の定理のrank四部分はそのまま残し、rank三部分から二方向だけを除いたので、
+表示した二種類と有界有限部分は全必要被覆である。
+有限位数点に追加supportがある場合を、斉次chartの排除から消してはいない。
+\end{proof}
+
+公開再現器は \texttt{verify\_cubic\_four\_simple\_curve\_phase\_reduction.py}。
+全 $M\le24$ 位相、三方向の全四次指数、multilinear補集合、
+片側二次係数のdomain恒等式、二つの正常化固有値idealを厳密検証する。
+Ore認識とKoszul topの通常証明は本文で与えた。
+残る二種類の全incidence、有限部分、CY・全成分・相対降下は未完成である。

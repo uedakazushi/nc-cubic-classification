@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "version": "classification-v279",
+  "version": "classification-v280",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -3847,6 +3847,31 @@
       "geometric quotient or full groupoid",
       "all four-simple classified",
       "complete H3 classification",
+      "novelty confirmed"
+    ]
+  },
+  "four_simple_curve_phase_reduction_v280": {
+    "status": "all three phase reductions and two entire rank3-support-chart exclusions",
+    "proof": "papers/sections/cubic_four_simple_curve_phase_reduction.tex",
+    "validator": "computations/verify_cubic_four_simple_curve_phase_reduction.py",
+    "checks": [
+      "default Sympy allM<=24 phase cases/three quartic supports PASS",
+      "multilinear complementary-pair support PASS",
+      "missing-xc-coefficient free-word domain identity PASS",
+      "two normalizer/Nakayama ideals force repeated eigenvalues PASS",
+      "v280 main LuaLaTeX clean PASS"
+    ],
+    "scope_warning": "finite-order points with additional nonzero-n top/G support remain in rank4 finite N<=96 sector",
+    "remaining_rank3_charts": [
+      "(alpha,beta,t,gamma/t), phase orderM<=24",
+      "(t,t^-2,t^-1,t²)"
+    ],
+    "validation_scope": "63 validators across runs; no single63 replay claimed",
+    "not_claimed": [
+      "all ambients at finite points on excluded spectral curves excluded",
+      "whole four-simple classification",
+      "complete H3 classification",
+      "new external/as4 imports",
       "novelty confirmed"
     ]
   }

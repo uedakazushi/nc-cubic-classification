@@ -1561,7 +1561,7 @@ public cubic_third_root_onezero_plus.py + verify_cubic_third_root_unit_onezero_p
 次の有力な通常証明（まだ未統合・未完成）：λ−ω,sT非零ならκ0,h自由でeven crossR=−ωS。bは全U上scalarω、c上ω²の正常元となり、中山固定三次上そのnormalizerは恒等。Gの正常b式はω²なのでG零。元関係像の同定を監査して正式化する。λ=±iωはh=r±iκs、他Schurからr=−(1±i)κs/2,A=∓iωκ²s/2のはず（private i_branch exact factor式）。T=s1後κ1/0の二点にscalar正規化し、Q(ω,i)でfresh核を判定できる。
 a16=0,T非零の着想：Schurとmixed minorからa15=a17=0。domainのUb/bU射影を使うとa12=a11,a7=a9、a6=λa9,a11=λa13（λ≠0）。Schurからλ=±ω、a2=εωa3。符号が同じならcrossR=λSでb正常、μ固定三次上normalizer固有値は±1しかなく、要求固有値ωに矛盾する可能性がある（bのJordan補正も固有値議論なら許す）。符号が逆かつa3≠0ならa13=a9≠0を強制。x,b,cの量子Weyl AS3基底、yをOre変数とする表示に戻り、δ(x)にbc非零係数T/(λa9)が出る。既存normalx_Ore_coverのF≠0証明は曲率二方向仮定を使わないので、一方曲率にも適用して排除できる見込み。実際Ore被覆と全符号/零境界は未監査のため、まだ全unit-repeat完成とはしない。この最小課題から継続する。
 
-## 多固有値領域の現行到達点（v279）
+## 多固有値領域の現行到達点（v280）
 強いintrinsic H3のAS4包絡は相異なる中山固有値をちょうど三つ持たない。全Jordan型の必要還元、重複1の全22tensor atlas、非単位重複rootの独立・非零比例・零b²列を全て排除した。全H3分類の完成ではない。全CY、四単純共鳴、全成分・境界、相対降下は未完成。
 
 ### 完成した証明の入口
@@ -1586,6 +1586,14 @@ a16=0,T非零の着想：Schurとmixed minorからa15=a17=0。domainのUb/bU射�
 証明はfour_simple_spectral_curve_atlas節。二次指数u、Gの実際の全三次support、topの実際の全四次supportの有理span Lを使う。二次u/三次vだけの平面ではquartic全変数被覆が不可能なのでrankL≥3。rank4はu,v,wと追加cubic又はquarticのdeterminant、三型の最大det(48,96,48)/(36,72,36)から共通位数≤96。rank3は全top/Gがprimitive kernel n重み0なので、μが有限位数でも実際のtorus作用とG固定を得る。正のregrading deg=N+n_iのHilbertpole4からsum n_i0とΣr_s s²=2Σn_i²。全21×20×35指数kernelとquartic被覆で1062方向、sumzeroと置換/反転で10型。domain Segre上界とmomentで各I2重みrankが一意。六型は共通一次因子の通常証明で排除。残四型のphase代表はSmith最大因子≤3minor gcd、最大gcd(12,24,12)と符号から共通位数M≤24。
 公開checker default Sympy PASS（全60平面、全kernel、全rank整数解、因子pair、全det/gcd）、v279主原稿LuaLaTeX clean PASS。累計62validators across runs、単一62全再生未実行。新規as4/外部定理輸入なし、新規性未確認。
 
-### 次の最小課題：四方向のphase削減と正常incidence
-四曲線のphaseをquartic巡回式・Gの非因子性で削減する。private推論：n=(0,1,−3,2)はGにx³とybcの両方が必要、cを含む唯一quartic xybcからλx1、topがmultilinearだけならskewなのでy³bも必要。よって(1,t,t^-3,t²)へ。n=(0,1,−2,1)はb正常onU(y,c)、Gにx³とU²b双方が必要、quartic全被覆とmultilinear-skew補題から(1,t,t^-2,−t)へ。n=(1,−2,−1,2)はGのx²y/b²c双方、唯一二次衝突xb=ycとquarticから(t,t^-2,t^-1,t²)へ。これらの通常証明・公開検算はまだ未統合、次に監査する。
-n=(0,0,1,−1)の二定数phaseは依然未判定。全有限位数N≤96の元tensor atlasとJordan（四単純なので半単純）必要incidenceも残る。位数4集合は全排除済みなので戻らない。全CY、全成分・境界、intrinsic群oidと相対降下も未完。
+### rank三supportのphase削減と二方向完成（v280）
+全support格子rank3のうちn=(0,1,−3,2),(0,1,−2,1),(1,−2,−1,2)はそれぞれ(1,t,t^-3,t²),(1,t,t^-2,−t),(t,t^-2,t^-1,t²)へ必要削減した。topがmultilinearだけならmiddle像が六pair直和になりdomain/rank6からskew、という補題を使う。全M≤24位相/quad衝突/quartic支持を公開default Sympy PASS。
+最初の方向はb,yが正常、Gにx³とybc双方が必要。B=A0[b;g]、A0はxy,yc skewとAxc+Ccx+Dy²のAS3。片側xc係数零は正常yとdomainから逆向き独立quadが生じるので不可。Ore/Koszul双対からA0 AS3、topのxyc非零によりhdetg=ade、μb=ade。正常bの固有値比較a³=de=ade⇒a=μb1、μx1と重複。全rank3 chart排除。
+第二方向はU(y,c)のAS2関係y²+κc²、他五pairskewなのでB=T[x;f][b;g]。g(x)=q x、g|Uの平方scalar d²共通、μb=q d²。非因子Gにx³とU²b双方が必要、正常bからq³=d²=q d²⇒q=μb1、μx1と重複。全rank3 chart排除。
+通常証明はfour_simple_curve_phase_reduction節、公開checker（全phase、domain自由語恒等式、正常izer ideal）default Sympy PASS、v280主原稿LuaLaTeX clean PASS。累計63validators across runs、単一63全再生未実行。新規外部/as4輸入なし、新規性未確認。
+重要なscope：有限位数のμで追加の非零n重みtop/G supportがある点はrank4有限部分に保持する。上の斉次chart排除から曲線上の全finite ambientを排除したとは呼ばない。
+
+### 次の最小課題：残るrank三二種類と有限部分
+全四単純の必要被覆はphase M≤24の(α,β,t,γ t^-1)、phaseなし(t,t^-2,t^-1,t²)、共通位数N≤96の有限部分。
+後者rank3曲線をprivate元10tensorで構成済み。代表xxbb,xybc,xycb,xbxb,xbyc,xbcy,xcyb,xcby,yycc,ycyc。四paired rank1 blockとdomainから六multilinear係数全非零。a1=1,a2=p,a4=q,a5=r,a7=pr,a6=pr/qと正規化。H0（xb,yc,bx,cy順）のU(xb,bx)/V(yc,cy) crossblockは[[q,r],[−pt,−prt/q]]でrank1。H0rank2ならI0の少なくとも一方の射影rank1、従って純xb/bx又は純yc/cy関係がある。private有力経路：前者ならx,b正常、後者ならy,c正常。残る混合関係の両向き係数はdomainで非零、六関係の三次PBW候補20とB3dim20で全overlap零、量子平面上の逐次Ore（最後に一つの二次derivation）へ。正常base元zについてμ(z)は他三生成元への正常化scalarの積。Gのx²y,b²c双方の正常固有値を比べると、変形係数非零ならμx1又はμy1となりfour-simpleに矛盾するはず。次にこの通常証明と元10tensor/normalizer idealを公開監査する。
+n=(0,0,1,−1)二定数phaseと有限N≤96の全incidenceも残る。位数4は既に完成。全CY、全成分・境界、intrinsic群oidと相対降下も未完。
