@@ -92,11 +92,29 @@ while pool:
     pool-=orbit
     orbits.append({'representative':[N,a,b,c],'members':sorted(orbit)})
 assert len(orbits)==18 and assignments==99 and len(failures)==57
-result={'status':'PASS','scope':'exhaustive necessary finite character filter only; not AS4 existence or H3 admissibility',
+factor_exclusions=[];final=[]
+for row in survivors:
+    N=row['N'];lam=tuple(row['spectrum']);a,b,c=lam
+    cub=[v for v in CUBIC if sum(x*y for x,y in zip(v,lam))%N==0]
+    w=2*a%N
+    owners=[(i,j) for i in range(3) for j in range(3) if (lam[i]+lam[j])%N==w]
+    if cub==[(3,0,0)] and owners==[(0,0)] and all(r[w]==1 for r in row['relation_weight_multiplicities']):
+        factor_exclusions.append({'N':N,'spectrum':lam,'only_cubic_resonance':[3,0,0],
+                                  'pure_U_relation_weight':w,'pure_U_relation_dimension':1})
+    else:final.append(row)
+assert len(factor_exclusions)==8 and {x['N'] for x in factor_exclusions}=={9,12}
+final_counts=Counter(x['N'] for x in final)
+assert final_counts=={3:3,4:12,5:4,6:11} and len(final)==30
+final_orbits=[o for o in orbits if o['representative'][0] not in (9,12)]
+assert len(final_orbits)==16
+result={'status':'PASS','scope':'exhaustive necessary finite character filter plus AS2 factor exclusion; not AS4 existence or H3 admissibility',
         'maximum_common_order_input':24,'maximum_checked_internal_degree':3,
         'multiplicities':MULT,'stage_counts':dict(stages),'tested_relation_assignments':assignments,
         'survivor_count':len(survivors),'relation_pattern_count':42,'counts_by_order':dict(sorted(counts.items())),
         'survivors':survivors,'Galois_label_orbits':orbits,'excluded_relation_pattern_witnesses':failures,
+        'pure_AS2_factor_exclusions':factor_exclusions,'final_survivors':final,
+        'final_spectrum_count':len(final),'final_counts_by_order':dict(sorted(final_counts.items())),
+        'final_Galois_label_orbits':final_orbits,
         'not_claimed':['Galois conjugacy is k-linear equivalence','all degrees verified','H3 existence of surviving spectra']}
 Path(__file__).with_name('cubic_three_eigenvalue_finite_spectra_certificate.json').write_text(json.dumps(result,indent=2)+'\n')
-print(json.dumps({'status':'PASS','spectra':38,'relation_patterns':42,'Galois_label_orbits':18,'counts_by_order':dict(sorted(counts.items()))}))
+print(json.dumps({'status':'PASS','initial_spectra':38,'AS2_factor_exclusions':8,'final_spectra':30,'final_Galois_label_orbits':16,'final_orders':sorted(final_counts)}))

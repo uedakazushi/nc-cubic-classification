@@ -2465,5 +2465,20 @@
       "normal cubic or H3 admissibility",
       "all-degree verification or complete classification"
     ]
+  },
+  "three_eigenvalue_AS2_factor_filter_v221": {
+    "status": "ordinary pure-AS2 factor proof; all eight exponent/relation conditions exact PASS",
+    "proof": "papers/sections/cubic_three_eigenvalue_finite_spectra.tex",
+    "validator": "computations/verify_cubic_three_eigenvalue_finite_spectra.py",
+    "certificate": "computations/cubic_three_eigenvalue_finite_spectra_certificate.json",
+    "results": [
+      "all six N9 and two N12 spectra excluded",
+      "minimal common semisimple order3,4,5,6 only",
+      "30 necessary spectra,16 Galois label orbits; nonsemisimple Nakayama included"
+    ],
+    "not_claimed": [
+      "H3 existence or complete admissibility of30 spectra",
+      "four-simple-eigenvalue or CY coverage"
+    ]
   }
 }
