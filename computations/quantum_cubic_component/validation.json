@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "version": "triangle-component-v9",
+  "version": "triangle-component-v11",
   "status": "PASS",
   "python": "3.12.14",
   "sympy": "1.14.0",
@@ -52,6 +52,10 @@
     },
     {
       "script": "verify_algebraic_boundary.py",
+      "status": "PASS"
+    },
+    {
+      "script": "verify_boundary_graph.py",
       "status": "PASS"
     }
   ],

@@ -2231,5 +2231,40 @@
       "relative THCR identification yet",
       "global component classification"
     ]
+  },
+  "quantum_component_relative_boundary_v208": {
+    "status": "ordinary proof and exact graph checks completed",
+    "proof": "papers/sections/quantum_cubic_algebraic_boundary.tex thm:relative-THCR-boundary",
+    "validator": "computations/quantum_cubic_component/verify_boundary_graph.py",
+    "certificate": "computations/quantum_cubic_component/boundary_graph_certificate.json",
+    "scope": [
+      "relative THCR boundary compatible with all base changes",
+      "all geometric cut fibers domains",
+      "geometric generic central-value fiber H3"
+    ],
+    "not_claimed": [
+      "all-fiber H3 smoothness",
+      "uniform H3 openness"
+    ]
+  },
+  "quantum_component_presentation_stack_v209": {
+    "status": "ordinary finite-type stack construction and etale-chart proof; not a numerical certificate",
+    "proof": "papers/sections/quantum_cubic_presentation_stack.tex",
+    "inputs": [
+      "all-Artin envelope flatness",
+      "formal presentation incidence smooth22",
+      "explicit algebraic eight-variable family",
+      "rigidity ranks center1=1 and potential gradient kernel=1"
+    ],
+    "results": [
+      "finite-type smooth DM presentation stack dimension8",
+      "explicit eight-variable etale atlas",
+      "all H3 geometric arrows in this chart equal affine-plus-two-scalar gauge"
+    ],
+    "not_claimed": [
+      "H3 locus Zariski open",
+      "all intrinsic family fpqc descent",
+      "global component boundary classification"
+    ]
   }
 }

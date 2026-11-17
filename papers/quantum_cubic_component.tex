@@ -26,8 +26,8 @@
 \renewcommand{\AA}{\mathbb A}
 \newcommand{\PP}{\mathbb P}
 \title{量子三次曲面を含む既約成分の決定に向けて\\\large 七次元正常形・横断積分・八次元形式変形}
-\author{研究原稿：大域被覆とH3相対再構成は未完成}
-\date{2026年11月17日\quad triangle-component-v3}
+\author{研究原稿：H3開性・全大域境界の分類は未完成}
+\date{2026年11月17日\quad triangle-component-v11}
 \begin{document}\maketitle
 \begin{abstract}
 原始三乗根の量子 $\mathfrak{so}_3$ 包絡の中心三次切断から得られる四次元族は、
@@ -42,7 +42,9 @@
 これは全H3モジュライの構成・全境界の分類を無条件に完成したという主張ではない。
 任意のArtin底上で反標準環の次数別平坦性と六二次・一三次表示を証明し、
 適合したenhanced Abel変形から圏変形への同型類上の単射性を得る。
-相対代数性とH3族の実現を仮定した成分定理、および残る被覆問題を区別する。
+さらに選んだ点の全Artin形式近傍を八変数で分類し、明示族の相対THCR境界と幾何学的一般点のH3性を認識する。
+指定表示の近傍にはsmooth DMな八次元代数的表示stackを構成する。
+全fiberのH3開性、全intrinsic族の降下、成分の大域閉包と全境界はなお未完成である。
 \end{abstract}
 \tableofcontents
 
@@ -62,7 +64,8 @@ Artin--Zhang豊富性、三次曲面の反標準Hilbert値を満たし、
 固定位数三の中央PBW部分&指定した開集合の正常形を全係数で証明。第\ref{sec:normal}節。\\
 横断変形&全次数平坦なAS4包絡と中心三次商を形式的に構成。一般中心値でH3。第\ref{sec:integrate}節。\\
 一般点の圏の変形&滑らかな中心・境界と記載した局所order模型の下で $\HH^2=8,\HH^3=0$。第\ref{sec:hh}節。\\
-全H3の既約成分&相対再構成・代数性を仮定した場合の八次元性を分離。全大域被覆・境界は未完成。\\\bottomrule
+選んだ点の全Artin形式近傍&八変数の全同時形式族で分類。第\ref{sec:artin-enhancement}節。\\
+代数的表示stack&smooth DM八次元の近傍を構成。第\ref{sec:presentation-stack}節。H3の開性・全大域境界は未完成。\\\bottomrule
 \end{tabular}\end{center}
 
 ポテンシャルPBW変形と中心元の存在はEtingof--Ginzburg \cite{EG} の既知結果を使う。
@@ -493,6 +496,7 @@ Rainsの $E_6$ 型幾何学と比較する際には、
 \input{papers/sections/quantum_cubic_multivariate_formal_chart.tex}
 \input{papers/sections/quantum_cubic_artin_enhancement.tex}
 \input{papers/sections/quantum_cubic_algebraic_boundary.tex}
+\input{papers/sections/quantum_cubic_presentation_stack.tex}
 
 \section{再現と検証範囲}
 全コードはPython 3、SymPy、NetworkXを使用し、各コードと同じ場所へ小さいJSON証明書を再生成する。
@@ -509,7 +513,8 @@ Rainsの $E_6$ 型幾何学と比較する際には、
 \path{verify_rains_central_formula.py}&修正中心式の全係数恒等式：PASS\\
 \path{verify_central_multivariate_lift.py}&八変数正則化・全先頭式：PASS\\
 \path{verify_potential_recovery.py}&potential rank19、中心直線rank3：PASS\\
-\path{verify_algebraic_boundary.py}&境界行列式・判別式：PASS\\\bottomrule
+\path{verify_algebraic_boundary.py}&境界行列式・判別式：PASS\\
+\path{verify_boundary_graph.py}&右graph・generic非三周期性：PASS\\\bottomrule
 \end{tabular}\end{center}
 有限体の標本による外挿はしていない。
 H3開性・相対圏の再構成・局所order認識は、計算証明書と通常の数学的証明を区別して記載した。

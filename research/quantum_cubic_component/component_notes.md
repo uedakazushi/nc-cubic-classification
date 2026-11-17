@@ -1,6 +1,6 @@
 # 成分研究ノート
 
-2026-11-17 / triangle-component-v9。方針はこのディレクトリの `00_research_plan.md`、証明は `papers/quantum_cubic_component.tex`（rootからのパス）。
+2026-11-17 / triangle-component-v11。方針はこのディレクトリの `00_research_plan.md`、証明は `papers/quantum_cubic_component.tex`（rootからのパス）。
 このノートは履歴ではなく、現在の入力・障害・再開のための知識を記す。
 
 ## 1. 記法と既存入力
@@ -190,3 +190,22 @@ C=kappa+kappa²lambda+(kappa³/3+9eta³zeta³)lambda²、F=q0*p*(x³+eta³y³+ze
 
 EG arXivv4のb2印刷係数は、著者サイトMAGMA（https://math.mit.edu/~etingof/delpezzocenter）で正しい形となっている。今回原本を取得確認し、既存 `verify_cubic_clifford_integration.py` も同じ正しい式を用いていることを確認した。今回の全係数再生は三捩れchartに正則な別の正常形での検証であり、新しい中心式の発見ではない。
 次はこのF曲線とMのgraphから相対THCR境界を認識し、一般中心値のH3性を明示8変数族へ適用する。全パラメータのH3 admissibility、H3 locusのZariski開性、成分の大域閉包はなお未解決。
+
+
+## 15. 相対THCR認識と幾何学的一般点H3
+
+`thm:relative-THCR-boundary`。左右関係行列のdetは共に3lambda F。lambda0で両方rank2、projectiveE上のrank1閉部分をproper射影で除くと、左右kernelから相対自己同型sigmaと逆が構成される。THCRのLnは次数3nでH1zero、H0rank3nと底変更。base-point-free pencilと平面三次の二次関係不存在により次数1生成。S=B/(t)→THCRの全射を得る。
+
+generic sigma³は恒等でない。`verify_boundary_graph.py` は有理section(0:zeta:−eta)をlambda1/2,kappa2,eta=zeta1で三反復し、第一座標が0から非零になることを厳密確認。これはgeneric恒等式を否定する一点反例であって、全fiber非三周期の標本外挿ではない。THCRの関数体skew Laurent埋込みから、sigma³非恒等なら中央次数3部分は零。従って中央Gbarの像はgenericに零、有限局所自由切断加群のtorsion-free性で全底へ延長。Hilbert値一致からR/(t)=THCR、任意底変更に適合する。正則中央列t,GとTHCR整域性から全幾何fiberのRも整域。H3 smoothnessとは別。
+
+独立中心値Dのgenericfiberは、V_K⊗K[H] K(H)という中心局所化で有限globaldim。既存の中央smoothE境界認識により**明示八変数族の幾何学的一般点はH3**（`cor:eight-generic-H3`）。全数値Dや位数変動下の一様H3開性はまだ主張しない。
+
+## 16. smooth DM八次元の代数的表示stack
+
+`papers/sections/quantum_cubic_presentation_stack.tex`。全20potentialの次数2,3,4関係挿入行列について、Artin包絡flat性から期待rankを越すminorが局所m全冪に入り、Krull intersectionと係数空間の整域性から恒等的に零。期待rank minorを可逆化する共通開W上でB2/B3/B4がvector bundleとなる。この有限次数の開性を全次数AS4へ無条件に外挿しない。
+
+W上の三次bundleから零を除き、Gの三交換子を四次bundleで零とする有限型incidence Zを作る。作用群Gamma=(GL3⋉Ga3)×Gm_Phi×Gm_Gは14次元。既存形式分類から指定点でZの完備局所環は22変数、従ってZはその点でsmooth22。明示代数的8族と作用からのGamma×U→Zは接写像同型なのでetale。作用の不変性でetale locus=Gamma×U'、像Z'は不変開。center1 rank3/potential recovery rank19も課せる。**[Z'/Gamma]はsmooth DM次元8、U'がetale全射atlas**。全fiberの包絡AS4・商domain・smoothE境界はsourceの証明から移る。
+
+H3幾何学的対象間の全pointed exact矢は、canonicalRのgraded回復→中央一次tの保存→filtered affine同型→rank19でpotential scalar回復→三次kernel scalar回復によりGamma作用に一致する。共通次数スカラーはt1非斉次化で除去済み。これは幾何学的群oidの全矢の主張であり、H3 locusがZariski開であることや全intrinsic族のfpqc降下は未証明。表示stackの一般点H3と、指定点の全ArtinH3形式分類の両方を得たが、全H3成分の大域分類ではない。
+
+次の具体的課題はこの有限型表示stack内のH3 admissibilityの全値判定。滑らかな楕円境界でaffine central quotientの有限globaldimへ帰着済みである。一般中心値だけでなく、悪い中心値と高次元有限表示・Morita局所模型を調べ、H3 locusのconstructibility/Zariski開性を証明するか、障害を見つける。幾何学的root条件やblowup六点との比較には証明済みの適用範囲を確認し、Rainsの次数3全被覆を未証明のまま輸入しない。

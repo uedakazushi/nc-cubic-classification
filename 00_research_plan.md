@@ -1,6 +1,6 @@
 # 研究方針：H3分類と量子三次曲面を含む既約成分
 
-2026-11-17 / research-plan-v33 / triangle-component-v9。
+2026-11-17 / research-plan-v33 / triangle-component-v11。
 **再開時は本書を最初に読む。GitHub mainが唯一の正本。**
 実行規則は `AGENTS.md`。既存の全H3分類の詳細と必要な式は
 `research/cubic_14641_classification.md`、`research/cubic_14641_codex_plan.md`、
@@ -42,25 +42,14 @@ Library既存ファイルは明示指示なしに削除しない。GitではPDF�
 
 ## III. 成分研究の到達点と直ちに着手する課題
 
-専用方針は `research/quantum_cubic_component/00_research_plan.md`、ノートは同ディレクトリの `component_notes.md`。
-公表原稿は `papers/quantum_cubic_component.tex`。新しいArtin再構成の証明は
-`papers/sections/quantum_cubic_artin_reconstruction.tex` から読み込む。
+専用方針は `research/quantum_cubic_component/00_research_plan.md`、ノートは同ディレクトリの `component_notes.md`、公表原稿は `papers/quantum_cubic_component.tex`。
+7次元PBW族・全中心・全矢・固定位数3の開正常形を保持する。滑らかな中心・楕円分岐orderの既存同定の下でHH1=0、HH2dim8、HH3zeroを得る。
 
-現行原稿は、7次元PBW族と全中心・全矢、固定位数3の開正常形、三捩れを離れる全次数の中心三次持上げ、
-超越的中心値のH3性、滑らかな中心と反標準分岐の下でのHH^2=8・HH^3=0を保持する。
-105×40の一次incidenceはrank18、核22、座標変更14方向、商8であり、既知7方向と横断1方向が核を張る。
-これを全intrinsic変形の被覆や全成分分類と混同しない。
+**指定点の全Artin形式分類**：potential dg複体による全Artin包絡flat性、修正Rains式による8変数同時中心切断、qgrのsmooth proper enhancement、HH1によるtau=(1)剛性、反標準環とpotentialの回復を証明した。既存order/HH入力の下で、選んだH3点G0=2Omega+X+2Y+3Z+5の全Artin pointed Abel/H3形式変形は8変数族で分類される（`thm:intrinsic-formal-eight`）。全てのH3点への被覆ではない。
 
-**Artin再構成の成果**：適合したenhancementを持つflat Abel変形からdg圏変形への写像は、全局所Artin底で同型類上単射である。
-反標準ample列のExt消滅とDe Deken–Lowen Theorem4.5、exceptional対象の持上げを使う。
-従ってこの相対変形問題では、一般点のH3接空間の次元は8以下。
-また相対Serre作用が底変更に適合するsmooth proper dg変形では、反標準環は次数別有限自由、左右noetherianで、四一次生成元・六二次関係・一三次関係の表示を持つ。
-一般dg変形のheart存在、二次包絡のAS4性、三次核の正則正規性は結論していない。
+**代数的表示stack**：有理中心式の共通lambda²を除き、有限型smooth底上で全次数flatな包絡・中央商を構成した。相対THCR境界R/(t)=B(E,L,sigma)、全幾何fiberの商の整域性、幾何学的一般点のH3性を得た。表示incidenceの近傍にはsmooth DM八次元stack [Z'/Gamma]と明示8族のetale全射atlasがある。H3対象間の全幾何学的矢はGamma作用に一致する（`papers/sections/quantum_cubic_presentation_stack.tex`）。
 
-指定巡回potential chartでは、全Artin底で二次包絡の全次数平坦性・相対Koszul14641・双対性を証明した（`thm:artin-potential-envelope`）。有限自由potential dg複体と特殊fiberのacyclic性を使い、単なる低次数rankの外挿ではない。中央三次元の持上げが与えられれば商もflatである。一般のAbel/dg変形がこのchartに入ることは未証明。
-修正Rains中心式の多変数極限から、8変数同時の中心三次持上げとflat商を全次数で構成した。非定数係数の共通lambda²を正確に除き、先頭x³係数9eta²zeta²(1+q0)の単元性と全先頭式を検証した。指定表示incidenceの完備局所環は22変数冪級数環、恒等近傍の14座標方向を除いた形式sliceは8変数である（`papers/sections/quantum_cubic_multivariate_formal_chart.tex`）。
-qgrのsmooth proper enhancement、HH1zeroによるtau=(1)の剛性、反標準環とpotentialの回復を証明し、既存order/HH入力の下で選んだH3点の全Artin形式変形を8変数族で分類した（`thm:intrinsic-formal-eight`）。次は代数的H3開族への効果性・相対代数化へ進む。全intrinsic被覆、相対代数性、有限慣性を含む全群oidと大域境界は未完成である。
-八次元成分の一意性は現行の比較仮定付き定理であり、全成分の完全決定ではない。
+**次の最優先**：この有限型表示stack内の全H3 admissibilityを判定する。smooth楕円境界によりaffine中央商の有限globaldimへ帰着済み。一般中心値だけでなく悪い中心値・高次元有限表示・局所Morita模型を調べ、H3 locusのconstructibility/開性を証明するか障害を示す。同時に全intrinsic族の相対再構成・fpqc降下を確認する。表示stackの代数性や一形式近傍の分類を、全H3 stackの代数性・成分大域閉包・全境界の分類と同一視しない。
 
 ## IV. 全H3分類で保持する成果と未解決領域
 
@@ -85,12 +74,9 @@ python3 -m pip install -r computations/quantum_cubic_component/requirements.txt
 python3 computations/quantum_cubic_component/verify_all.py
 latexmk -lualatex papers/quantum_cubic_component.tex
 ```
-検証証明書は `computations/quantum_cubic_component/validation.json`。12検証器は厳密演算で再実行済み。
-Artin再構成は通常の数学的証明であり、計算PASSと区別する。独立原稿をLuaLaTeXで組版し、既存H3主原稿全体は再組版していない。
+検証証明書は `computations/quantum_cubic_component/validation.json`。13検証器は厳密演算で再実行済み。
+Artin再構成は通常の数学的証明であり、計算PASSと区別する。成分原稿をLuaLaTeXで組版した。既存の全分類成果の独立再監査とは区別する。
 全H3分類の再現手順は `research/cubic_classification_validation.json`、例は `python3 computations/verify_cubic_skew_jets.py`。
 
 heart比較・Rains共鳴・cubic cornerは `uedakazushi/nc-dp-surface-hearts`、次数1は `uedakazushi/nc-dp1-moduli`、三次三様体は `uedakazushi/nc-cubic-threefold-moduli` が正本。
 量子FermatのOU障害は `papers/quantum_fermat_not_as_surface.tex`、ambient比較は `papers/cubic_surface_ambient_moduli.tex` に保持する。
-
-
-明示8変数族の表示自体は有限型smooth底上に代数化でき、eta*zeta*p*(p³+1)と中心式の有限分母を除けば全次数flatな包絡・中央商となる。境界候補F=q0*p*(x³+eta³y³+zeta³z³)+Cxyz、C=kappa+kappa²lambda+(kappa³/3+9eta³zeta³)lambda²、detM=3lambda F、判別式DeltaE=C³+27p³eta³zeta³を厳密検証した。指定点でDeltaE170。次は相対THCR境界と一般中心値H3をこの有限表示族で認識する。全fiberのH3性・H3のZariski開性はまだ結論しない。

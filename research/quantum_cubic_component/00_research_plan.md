@@ -1,6 +1,6 @@
 # 研究方針：量子三次曲面を含む既約成分の完全決定
 
-2026-11-17 / triangle-component-v9。**再開時は本書を最初に読む。**
+2026-11-17 / triangle-component-v11。**再開時は本書を最初に読む。**
 この一式は `nc-cubic-moduli` の成分研究に必要な現行成果を集約したもので、旧bundleを必要としない。
 パスはリポジトリrootからの相対パスで記す。本体は `papers/quantum_cubic_component.tex`、補足は `research/quantum_cubic_component/component_notes.md`。
 
@@ -51,14 +51,12 @@
 
 ## IV. 次の課題と具体的な着手
 
-**第一優先：八変数形式近傍の代数的H3開族への効果性と相対代数化。**
-指定potential chartの全Artin二次包絡のflat性・相対Koszul14641は解決した。修正Rains中心式の多変数正則化により、8変数同時の中央三次持上げとflat商を全次数で構成した（`thm:eight-formal-central-lift`）。一次8方向と14座標方向が全接空間を張るため、表示incidenceは形式smooth22次元、恒等gauge商は形式smooth8次元（`thm:formal-potential-incidence-smooth`）。
-qgrのsmooth proper enhancement・HH1zeroによるtau=(1)剛性・反標準環とpotentialの回復を証明した。既存の局所order同定/HH入力の下で、この点の全Artin形式変形は8変数族で分類される（`thm:intrinsic-formal-eight`）。次は有限generatorと対角perfect性の代数化、または有限提示の非可換Proj smoothness判定により代数的H3開族を認識する。形式smooth性だけからH3のZariski開性を推論しない。有限特殊fiber自己同型と全大域境界も別問題である。
+**第一優先：有限型表示stack内の全H3 admissibility。**
+選んだ点の全Artin形式近傍は8変数族で分類済み。明示族は有限型底へ延び、相対THCR境界・全fiberの整域性・幾何学的一般点H3を認識した。さらにsmooth DM八次元表示stack [Z'/Gamma]とetale atlasを構成し、H3対象間の全幾何学的矢を決定した。
+次は一般中心値に限らない有限globaldimの全値判定を行う。悪い中心値、有限表示、局所Morita型を調べ、H3 locusのconstructibility/Zariski開性を証明するか反例を得る。形式smooth性だけから開性を推論しない。Rainsの次数3全被覆を未証明のまま使わない。
 
-**第二優先：8次元一般表示族の代数化とH3開部分。**
-Hesse曲線と平行移動点の相対二次元底、対称低次ポテンシャル、中央三次線を使う有限提示incidenceを構成する。
-3-torsionでは中心が跳ぶため、単純な射影束ではなく選択された境界三次と9×9持上げchartを使う。
-中心局所化で得た一般H3点から、対角分解または適切な有限生成圏模型を広げ、Zariski開性を証明する。
+**第二優先：全intrinsic族の相対再構成と降下。**
+幾何学的矢と全Artin形式分類は得たが、一般非被約有限型底のSerre作用・反標準環・二次包絡の底変更とfpqc降下はまだ別問題である。表示stackのH3部分が実際のintrinsic族を全て被覆する範囲を証明し、有限慣性・分離性を決定する。
 
 **第三優先：全成分の閉包・境界。**
 一般像の閉包に含まれるH3を、境界のsmooth/nodal/reducible型、PI位数、低次中心、Nakayama型で層別化する。
@@ -74,10 +72,7 @@ python3 computations/quantum_cubic_component/verify_all.py
 latexmk -lualatex papers/quantum_cubic_component.tex
 ```
 コードと小証明書は同じ専用ディレクトリに置き、統合結果はその `validation.json` に再生成する。
-通常の証明であるArtin再構成を計算PASSと同一視しない。既存12検証器は厳密演算で再実行した。
+通常の証明であるArtin再構成を計算PASSと同一視しない。既存13検証器は厳密演算で再実行した。
 今回の独立原稿をLuaLaTeXで組版する。巨大な既存H3原稿全体の再組版・網羅再検証・独立査読は対象外。
 Git追跡対象は現行TeX・Markdown・Python・小JSONのみ。PDF・ZIP・中間物・cacheは含めない。
 生成・検証結果はコードと文書に、GitHub refの到達確認は保存時の応答に分けて記載する。
-
-
-明示8変数族の表示自体は有限型smooth底上に代数化でき、eta*zeta*p*(p³+1)と中心式の有限分母を除けば全次数flatな包絡・中央商となる。境界候補F=q0*p*(x³+eta³y³+zeta³z³)+Cxyz、C=kappa+kappa²lambda+(kappa³/3+9eta³zeta³)lambda²、detM=3lambda F、判別式DeltaE=C³+27p³eta³zeta³を厳密検証した。指定点でDeltaE170。次は相対THCR境界と一般中心値H3をこの有限表示族で認識する。全fiberのH3性・H3のZariski開性はまだ結論しない。
