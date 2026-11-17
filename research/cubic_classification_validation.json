@@ -4430,6 +4430,7 @@
     "proof": "papers/sections/cubic_CY_two_commutators_Segre.tex",
     "scope": "all two-commutator CY envelopes excluded by necessary pinned cover and downstream central cubic obstructions",
     "independent_exact_control": "isolated VT matrix rebuilt over QQ; rank 20, minor -32768/22876792454961",
-    "limits": "Pinned upstream necessary classification used; no independent full proof replay claimed"
+    "limits": "Pinned upstream necessary classification used; no independent full proof replay claimed",
+    "main_build": "LuaLaTeX PASS; theorem reference resolved; no undefined references/citations or overfull boxes found"
   }
 }
