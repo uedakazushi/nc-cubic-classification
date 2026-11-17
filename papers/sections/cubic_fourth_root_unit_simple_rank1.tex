@@ -1,0 +1,73 @@
+\subsection{単純固有値1を持つ位数4枝の偶射影rank1}
+\label{subsec:cubic-fourth-root-unit-simple-rank1}
+\begin{theorem}[二つの単純固有値が $1,-1$ のrank1枝は空]
+\label{thm:cubic-fourth-root-unit-simple-rank1-empty}
+$(4;1,0,2)$ と $(4;3,0,2)$ の候補、すなわち半単純スペクトル
+$(\rho,\rho,1,-1)$、$\rho=\pm i$ を考える。
+偶関係の $bc,cb$ 射影階数が1の部分はH3を持たない。
+従ってこの二スペクトルのH3候補は射影rank2に限られる。
+\end{theorem}
+\begin{proof}
+関係は $bu=f(u)b,cu=g(u)c$ 各二本と $U^2+kbc+kcb$ の二本であり、
+$b^2,c^2$ の関係はない。
+rank1では前節と同じFrobenius四小blockと三次20標準語比較により
+\[
+ B=T[b;f][c;\sigma,\delta],\quad bc-qcb=h(U),\quad
+ fg=gf,\quad h u=fg(u)h
+\]
+という二元AS2平面 $T$ 上のOre表示を得る。
+補助次数 $U:0,b:1,c:-1$ を保ち、三次共鳴から
+\[
+ G=C b^3+F c+D b c^2,\qquad F\in T_2,\quad C,D\in k.
+\]
+実際に $\mu_B(b)=b$ なので $Gb=bG$ である。
+元のOre関係は
+\[
+ c b=q^{-1}bc-q^{-1}h,\qquad
+ bc^2b=q^{-2}b^2c^2-
+       \bigl(q^{-2}f(h)+q^{-1}fg(h)\bigr)bc
+\]
+を与える。
+従って $Gb-bG$ の標準形における純 $T_4$ 成分は $-q^{-1}Fh$ だけ。
+$h\ne0$ なら $T$ の整域性から $F=0$。
+このとき $G=b(Cb^2+Dc^2)$ であり整域商を与えない。
+
+$h=0$ なら二つの自己同型型Ore拡大となる。
+可換平面の非半単純作用は既証の共通因子障害、半単純作用はskewへの同時対角化で処理される。
+Jordan平面では既証の正常三次因子条件が重複中山固有値を1に制限し、$\rho\ne1$ と矛盾する。
+量子平面の対角作用もskewとなる。
+反交換平面の反対角作用は、一方だけなら重複中山条件に反し、両方なら中心二乗の固定と奇数次数のscalar intertwiner比較で $W_1=0$。
+これらは位数5の $d=0$ 及び位数6の $\lambda=0$ の証明で用いたAS2全標準形の議論であり、
+根の位数には依存せず、ここでも重複固有値が1でないことだけを使う。
+既分類skew H3に三固有値はなく、この枝も空である。
+\end{proof}
+
+\begin{proposition}[残るrank2の四次元正常係数核]
+\label{prop:cubic-fourth-root-unit-simple-rank2-kernel}
+同じ二スペクトルの偶射影rank2では $bc=h(U),cb=k(U)$ と書き、$S=\langle U\rangle$ とする。
+整域H3切断が存在するためには
+\[
+ f^3=\mu_B^{-1}|_U
+\]
+が必要である。これが成立すれば、全ての整域候補は三次式のscalar倍を除き
+\[
+ G=b^3+F c,\quad F\in K\subset S_2,
+\]
+であり、$K$ は次の $25\times4$ 線型核で与えられる。
+\[
+ Fg(u)=\mu_B^{-1}(u)F\ (u=x,y),\qquad
+ g(F)=-F,\qquad Fk=f(F)h.
+\]
+整域切断には $F\ne0$ が必要であるが、非零 $F$ やこの核の存在だけで商の整域性・H3十分性を主張しない。
+\end{proposition}
+\begin{proof}
+rank2のcharge分解とOre局所化による基底構造は前節と同じであり、
+$H_S=1/((1-t)^2(1-t^2))$、$S_2=U^{\otimes2}$、$h=f(k),k=g(h)$。
+$G=C b^3+Fc$ と書け、$C=0$ なら一次因子 $c$ を持つので $C\ne0$。
+$U$ との正常式のcharge3成分が必要な $f^3=\mu_B^{-1}|_U$ を与える。
+$\mu_B(k)=-k$ なので $f^2(h)=f^3(k)=-k$、従って $b^3c=-cb^3$。
+よって $b^3$ 自体が全生成元の必要正常式を満たす。
+$Fc$ 部分の $U,c,b$ との正常式は順に表示した三条件となる。
+$\dim S_2=4,\dim S_3=6,\dim S_4=9$ から条件数は $2\cdot6+4+9=25$。
+この核をまだ全表示パラメータで解いたとは主張しない。
+\end{proof}

@@ -18,6 +18,8 @@ CHECKS=[
  'verify_cubic_fourth_root_spectrum_reductions.py',
  'verify_cubic_sixth_root_last_Ore_exclusion.py',
  'verify_cubic_fourth_root_negative_repeat_exclusion.py',
+ 'verify_cubic_fourth_root_unit_simple_rank1.py',
+ 'verify_cubic_detminus1_spectral_exclusion.py',
 ]
 results=[]
 for name in CHECKS:
@@ -31,5 +33,6 @@ final=json.loads((ROOT/'cubic_fourth_root_negative_repeat_exclusion_certificate.
 assert final['status']=='PASS' and final['final_spectrum_count']==13 and final['remaining_orders']==[3,4]
 out={'status':'PASS','checks':results,'current_three_eigenvalue_necessary_spectra':13,
      'current_minimal_common_semisimple_orders':[3,4],
+     'additional_four_simple_sector':'(a,-a,i/a,-i/a) excluded outside a^4=1; finite boundary unclassified',
      'not_claimed':['H3 existence or admissibility of13 spectra','ordinary proofs independently checked by program','four-eigenvalue or CY completeness','complete H3 classification']}
 (ROOT/'cubic_spectral_reductions_validation.json').write_text(json.dumps(out,indent=2)+'\n')

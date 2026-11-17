@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "scope": "exact original AS4 Ore family, all four critical cubic overlaps and three independent quadratic coefficients; ordinary all-chart proof separate",
+  "partial_chart_spectra": [
+    {
+      "N": 4,
+      "spectrum": [
+        1,
+        0,
+        2
+      ],
+      "relation_weight_multiplicities": [
+        [
+          0,
+          2,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "N": 4,
+      "spectrum": [
+        3,
+        0,
+        2
+      ],
+      "relation_weight_multiplicities": [
+        [
+          0,
+          2,
+          2,
+          2
+        ]
+      ]
+    }
+  ],
+  "cubic_form": "C*b^3+F2*c+D*b*c^2",
+  "four_original_critical_overlaps": "PASS",
+  "pure_T4_component_of_normal_b_equation": "-q^-1*F2*h",
+  "b_c2_term_has_no_pure_T4_component": true,
+  "h_nonzero_forces": "F2=0 and G=b*(C*b^2+D*c^2)",
+  "remaining_even_rank2_kernel_shape": [
+    25,
+    4
+  ],
+  "not_claimed": [
+    "rank2 chart excluded",
+    "two spectra excluded",
+    "complete classification"
+  ]
+}

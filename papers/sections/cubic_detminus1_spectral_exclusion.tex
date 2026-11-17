@@ -1,0 +1,65 @@
+\subsection{一般det負一スペクトルの二平面因子障害}
+\label{subsec:cubic-detminus1-spectral}
+このchartはas4の固定commit
+\texttt{6f798e0}にある\texttt{DETMINUS1.tex}で四族表示の対象とされている\cite{AS4detChart}。
+同repoの $\nu=\mu^{-1}$ 規約で固有値を逆転し、$a\mapsto a^{-1}$ と後二基底の交換を行えば、
+以下の $\mu$ のchartも同じ形になる。
+本節の排除は、H3に必要な整域性と二次・三次重みから直接証明する。
+
+\begin{theorem}[一般det負一chartのH3排除]
+\label{thm:cubic-detminus1-spectral-empty}
+H3包絡の中山スペクトルが
+\[
+ (a,-a,i/a,-i/a),\qquad a\ne0,\quad a^4\notin\{1,-1\}
+\]
+となることはない。
+\end{theorem}
+\begin{proof}
+$U$ を最初の二固有直線の和、$V$ を後の二固有直線の和とする。
+二次tensorの重みの集合は
+\[
+ U^2:\ \{a^2,-a^2\},\qquad
+ UV+VU:\ \{i,-i\},\qquad
+ V^2:\ \{a^{-2},-a^{-2}\}.
+\]
+仮定により三集合は互いに素である。
+従って二次関係は純 $U^2$、mixed、純 $V^2$ の直和であり、
+$U$ 次数と $V$ 次数を数える $\mathbb N^2$ 次数が環全体で成立する。
+
+純 $U^2$ 関係が零なら、bidegree $(n,0)$ 成分は自由二生成代数の次数 $n$ 成分と一致する。
+$n=7$ だけでもその次元128はAS4の値 $\dim B_7=120$ を超え、矛盾する。
+従って純 $U^2$ 関係は非零で、純 $V^2$ についても同様である。
+一方、整域の二元二次関係空間はrank-one tensorを含まないので、
+代数閉体上の $2\times2$ determinant pencilにより次元は高々1。
+よって両平面にちょうど一本ずつ非退化な二次関係がある。
+二重次数から純平面の高次関係もその一本で生成され、各平面は二元AS2部分代数を定める。
+
+H3の $G$ は $\mu_B(G)=G$ を満たす。
+$U$ 二文字・$V$ 一文字の三次重みは $\pm ia$、
+$U$ 一文字・$V$ 二文字では $\pm a^{-1}$ である。
+いずれかが1なら $a^4=1$ となり仮定に反する。
+従って $G$ は純 $U$ 三次と純 $V$ 三次の和に限られる。
+前者に重み1があるには $a^6=1$、後者には $a^6=-1$ が必要であり、同時には成立しない。
+よって非零 $G$ は片方のAS2部分代数の純三次である。
+その斉次三次は一次因子を持つので、$B/(G)$ は整域にならない。
+\end{proof}
+
+\begin{corollary}[同じスペクトル式の境界]
+\label{cor:cubic-detminus1-spectral-boundary}
+H3包絡の中山スペクトルが、重複を許して $(a,-a,i/a,-i/a)$ の形なら、
+$a^4=1$ が必要である。その場合の四つの相異なる固有値は $\{1,-1,i,-i\}$ である。
+この有限境界のH3存在・許容性は本節では未分類である。
+\end{corollary}
+\begin{proof}
+残る $a^4=-1$ では二固有値 $\{a,-a\}$ が各二重となる。
+$a$ は原始8乗根なので、定理\ref{thm:h3-order3-two-eigenvalues-excluded}の二固有値H3の必要集合 $\{1,-1\}$ に反する。
+$a^4=1$ の場合は直接表示を評価すればよい。
+\end{proof}
+
+\begin{remark}[as4参照の範囲]
+固定commitのREADME、研究方針、COVERAGE、CLAIMSの該当ID、
+\texttt{DETMINUS1.tex}全文と自己監査、有限certificateの状態を確認した。
+同所の四族のAS十分性・全同型の別担当監査はpendingと明記されている。
+本節ではその被覆・十分性・同型を輸入せず、指定スペクトルchartに対するH3障害を直接証明した。
+特に全det負一スペクトルや全四単純スペクトルをこの一chartが覆うとは主張しない。
+\end{remark}

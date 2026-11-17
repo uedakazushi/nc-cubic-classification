@@ -65,6 +65,42 @@
       "upstream_proof_status": "proof_written",
       "upstream_audit_status": "pending",
       "this_task_review": "Read the used mathematical proof and verified H3 hypotheses/conventions; finite controls listed separately. Not an independent review of all upstream dependencies. For the alpha tensor, directly checked all256 signed-cyclic coefficient identities and a constant rank6 minor -1 for every h,alpha,beta; under the existing H3 Koszul-AS4 hypothesis this proves mu_B=id without importing ambient regularity for arbitrary coefficients."
+    },
+    {
+      "claim_id": "C-DETMINUS1-CLASSIFICATION",
+      "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+      "path": "research/proofs/DETMINUS1.tex",
+      "sha256": "1f9abcd63b34cc8b0527c5270b4f5af6ae792d828366a57d011261ec71da69e3",
+      "used_part": "the explicit candidate spectrum chart (a,-a,i/a,-i/a), a^4!=+/-1; four-family coverage, AS sufficiency and isomorphisms are not used",
+      "upstream_proof_status": "proof_written",
+      "upstream_audit_status": "pending",
+      "upstream_computation_status": "passed in checked-in certificate; not rerun here",
+      "this_task_review": "Read README, targeted plan/COVERAGE, exact claim, full DETMINUS1 proof and self-audit; inspected certificate status/scope. H3 exclusion proved independently from quadratic/cubic weights, domain and finite Hilbert growth.",
+      "entry_points_inspected": [
+        "README.md",
+        "research/plan_ja.tex",
+        "research/COVERAGE.md",
+        "research/CLAIMS.json C-DETMINUS1-CLASSIFICATION",
+        "research/proofs/DETMINUS1.tex",
+        "research/audits/DETMINUS1-001.md",
+        "certificates/detminus1_certificate.json status/scope"
+      ],
+      "convention_map": "as4 nu=mu^-1; invert spectrum, a->a^-1 and swap the last two eigenvectors to recover the same chart",
+      "H3_hypotheses": [
+        "quadratic finite-GK AS4 envelope",
+        "domain",
+        "mu_B(G)=G",
+        "regular normal cubic quotient must be domain"
+      ],
+      "classification_theorem_used": false,
+      "this_task_validator": "computations/verify_cubic_detminus1_spectral_exclusion.py PASS",
+      "proof_in_this_repository": "papers/sections/cubic_detminus1_spectral_exclusion.tex",
+      "not_imported": [
+        "whole AS4 coverage",
+        "four-family sufficiency or full groupoid",
+        "global CY classification",
+        "non-1-periodic Z-algebra results"
+      ]
     }
   ],
   "upstream_controls_rerun": [
@@ -463,5 +499,8 @@
     ],
     "inspected": "README; plan current priority SEMISIMPLE-ATLAS-003; COVERAGE navigation; CLAIMS semisimple211, semisimple22 rank-two and CY-complete scopes",
     "conclusion": "No new theorem imported. Upstream retains general semisimple AS locus/coverage and independent audits as unfinished; scalar-Nakayama first-form computations do not settle the present (++--) symmetric-secant H3 remainder. Existing pinned imports unchanged."
-  }
+  },
+  "additional_reference_commits": [
+    "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0"
+  ]
 }

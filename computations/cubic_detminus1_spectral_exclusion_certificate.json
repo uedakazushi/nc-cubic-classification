@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "scope": "exact all-parameter Laurent divisibility and degree-seven growth witness; ordinary AS2/domain proof separate",
+  "spectrum": [
+    "a",
+    "-a",
+    "i/a",
+    "-i/a"
+  ],
+  "assumptions": [
+    "a!=0",
+    "a^4!=1",
+    "a^4!=-1"
+  ],
+  "quadratic_interblock_numerators": [
+    "(a - 1)*(a + 1)*(a - I)*(a + I)",
+    "(a**2 - I)*(a**2 + I)",
+    "-(a - 1)*(a + 1)*(a - I)*(a + I)",
+    "-(a**2 - I)*(a**2 + I)",
+    "-I*(a**2 + I)",
+    "-I*(a**2 - I)",
+    "-a**2 + I",
+    "-a**2 - I",
+    "I*(a**2 + I)",
+    "I*(a**2 - I)",
+    "a**2 + I",
+    "a**2 - I"
+  ],
+  "quadratic_zero_loci_contained_in": "a^8-1=0",
+  "mixed_cubic_weights": [
+    "-1/a",
+    "-I*a",
+    "1/a",
+    "I*a"
+  ],
+  "mixed_cubic_resonance_implies": "a^4=1",
+  "pure_cubic_resonance_conditions": [
+    "a^6=1",
+    "a^6=-1"
+  ],
+  "pure_conditions_gcd": 1,
+  "free_plane_degree7_dimension": 128,
+  "AS4_degree7_dimension": 120,
+  "nu_to_mu_inverse_chart": "a->1/a, swap last two eigenvectors",
+  "boundary_a4_minus1_characteristic_polynomial": "(T^2-a^2)^2",
+  "boundary_a4_plus1_characteristic_polynomial": "T^4-1",
+  "reference_as4_commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+  "not_claimed": [
+    "as4 four-family classification independently verified",
+    "finite fourth-root boundary H3 classification",
+    "all four-simple-eigenvalue coverage"
+  ]
+}

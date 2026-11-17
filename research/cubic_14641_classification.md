@@ -1386,8 +1386,12 @@ python computations/verify_cubic_order2_22_secant_L_saturation.py --prefix /tmp/
 三固有値H3の中山半単純最小共通位数は3又は4。必要リストはN3:3個,N4:10個の13個で、各関係重みパターンは一つ。Galoisラベル7軌道の代表(N;a,b,c)、重複2を先頭、単純二固有値を昇順に書く：
 (3;0,1,2),(3;1,0,2);
 (4;0,1,2),(4;1,0,2),(4;1,0,3),(4;1,2,3),(4;2,0,1)。
-Galoisラベルはk線型同値の商ではない。13候補のAS4存在・正常三次・H3許容性は未分類。全リストと現在値は `computations/cubic_fourth_root_negative_repeat_exclusion_certificate.json`。再生は `python computations/verify_cubic_spectral_reductions.py`、10検証器のPASSは有限計算であり通常の全証明の独立機械検証ではない。
+Galoisラベルはk線型同値の商ではない。13候補のAS4存在・正常三次・H3許容性は未分類。全リストと現在値は `computations/cubic_fourth_root_negative_repeat_exclusion_certificate.json`。再生は `python computations/verify_cubic_spectral_reductions.py`、12検証器のPASSは有限計算であり通常の全証明の独立機械検証ではない。
 N4(2,1,3)は `cubic_fourth_root_negative_repeat_exclusion.tex` で全排除。G=F b²+L c²、domainにF,L独立が必要。even rank2はS2自由なのでF f²(u)=mu^-1(u)Fが不可能。rank1はAS2 Oreへ復元し、可換はf=gとh0でskewへ、JordanはF,Lが同一正常線で因子、量子反対角はscalar linear normalizerなし、量子対角はF=x,L=y、alpha=i,alpha*gamma=-pとgamma²=-pからp1を強制。単冪中山込み。公開検証器が元Jordan relationのminorとkernel、量子のp(1-p)矛盾、free-tensor augmented rankをexact PASS。
 
-次の課題：残る七Galoisラベルの必要最高tensor atlasと正常核。N4(1,0,2)はU二次+bc/cb二本と二mixed graphの補助Z次数があり、G=C b³+F2(U)c+D b c²。even rank1のOre曲率h≠0では正常b式の純U4成分がF2*h0を強制し、残りが左b因子になる見込み。h0はAS2自己同型Ore認識へ。even rank2はbc=h,cb=k、S2自由の四次正常条件となり、先行AS3性を未確認で仮定しない。この着想はまだ未検証。具体的な障害が特定されたのでas4の現行coverage/claimsと有限中山層の必要表示を監査して利用することも検討する。
-四単純の21共鳴上の全被覆、全CY、全成分・境界、intrinsic族降下は依然未完。
+次の課題：残る七Galoisラベルの必要最高tensor atlasと正常核。
+N4(1,0,2)と(3,0,2)のeven rank1は `cubic_fourth_root_unit_simple_rank1.tex` で排除済み（v227）。G=C b³+F2 c+D bc²、bc-qcb=h。正常b式の純T4成分は-q^-1F2*hだけ。h非零ならF2=0でG左b因子、h0ならAS2自己同型Oreの既存全型認識へ。元AS4 Ore family QQ(i)(alpha,beta)で四重なりとF2三基底の純T4残差をexact PASS。
+この二スペクトルのrank2が次の最小chart。bc=h,cb=k、S2自由4次元、S3=6,S4=9。整域候補にb³係数非零が必要で、正常式からf³=muB^-1|U。これが満たされればb³は既に正常、G=b³+F c、FはFg(u)=muB^-1(u)F,gF=-F,Fk=f(F)hという25×4線型核に属する。核やF非零だけで整域/H3を結論しない。SのAS3 Gorenstein性を未確認で仮定せず、基底S2/S3/S4の通常の構造証明を使う。
+四単純の新しい全除外chart（v228）：`cubic_detminus1_spectral_exclusion.tex`。as4固定6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0のREADME、plan、COVERAGE、該当CLAIMS、DETMINUS1全文・自己監査・certificate状態を確認。nu=mu^-1なのでa→a^-1と後二基底交換で同じmu-chartになる。四族被覆/AS十分性/同型は輸入せず、H3域に次の直接証明を与えた。
+mu=(a,-a,i/a,-i/a),a4≠±1ではU²,mixed,V²の二次重みが分離して二重次数が存在。各平面に関係がなければ自由二生成の次数7が128でAS4値120を超え、domainなら純二元関係は高々一本なので両平面はAS2。混合三次の重み±ia,±a^-1は1にならず、純U三次重み1はa6=1、純Vはa6=-1を要して同時に起きない。従って全Gは片方のAS2純三次となり因子化、H3なし。a4=-1境界は既証二固有値必要集合±1に反し空、残るa4=1境界は四単純集合{1,-1,i,-i}のみで未分類。全det負一又は全四単純をこのchartが覆うとは主張しない。公開verifierは全パラメータLaurent多項式の非零因子・共鳴・境界特性多項式と128>120をexact PASS。出典/仮定/未実行の上流検算はas4_imports.jsonに記録。
+四単純の残る共鳴上の全被覆、全CY、全成分・境界、intrinsic族降下は依然未完。
