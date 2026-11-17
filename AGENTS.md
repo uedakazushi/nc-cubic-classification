@@ -1,6 +1,8 @@
 # Codex 研究指示 — nc-cubic-moduli
 更新日: 2026-11-15。対象: **一つのCloud Codexタスクによる逐次研究**。GitHub `main` が唯一の正本。
 
+> **研究正本の分離（2026-11-17）**：このリポジトリはH3認識・完全分類専用。楕円E6量子化成分の独立論文・研究・検算の正本は [nc-cubic-e6](https://github.com/uedakazushi/nc-cubic-e6)、ambient/markedモジュライ比較は [nc-cubic-ambient-moduli](https://github.com/uedakazushi/nc-cubic-ambient-moduli)、量子Fermat非AS短報は [nc-cubic-non-as](https://github.com/uedakazushi/nc-cubic-non-as)。同じ数学的結果を分類で引用・利用するのはよいが、これらの**独立論文の更新を本リポジトリの旧コピーに行わない**。各自の新しいmainに保存する。全H3認識に必要な有効な証明を削除せず保持する。移管済みファイルを旧版正本として再開しない。
+
 ## 0. 最優先の実行規則：完全分類まで、可能な限り止まらない
 
 **最終目標は強い内在的な14641型非可換三次曲面 `H3` の完全分類である。** 一つの補題、計算、節、論文、検証、commit、push、あるいは一段階の研究計画を完了したことを**タスク終了の理由にしない**。その時点で残る最も価値の高い未解決問題に、利用可能な実行時間・計算資源の範囲で**直ちに取り組む**。
@@ -73,7 +75,7 @@
 
 **1-periodic graded algebra、Zhang twist、4-periodic AS-regular Z-algebra、qgrの同値は区別する。** 非1周期的なZ-algebraの存在だけから本研究のintrinsic H3対象が得られると主張しない。逆に、graded AS4の部分分類だけで全Z-algebraが覆われると推論しない。Nakayama規約・右左作用・Gorenstein parameterも照合する。
 
-H3と量子FermatのOU障害を保持する。四つのheart・Rains共鳴・cubic cornerは https://github.com/uedakazushi/nc-dp-surface-hearts へ移管済みであり、本リポジトリでは別研究を独立に再開しない。次数1固有のモジュライ、三次三様体もそれぞれの正本を参照する。必要な関連定理は出典・固定commit・適用仮定を明記する。
+H3分類の本体と、その証明に必要な量子Fermatの数学的結果を保持する。量子Fermat非AS短報そのものの公表用正本は独立リポジトリへ移管済み。四つのheart・Rains共鳴・cubic cornerは https://github.com/uedakazushi/nc-dp-surface-hearts へ移管済みであり、本リポジトリでは別研究を独立に再開しない。次数1固有のモジュライ、三次三様体もそれぞれの正本を参照する。必要な関連定理は出典・固定commit・適用仮定を明記する。
 
 ## 6. 正確性・原稿・再現性
 

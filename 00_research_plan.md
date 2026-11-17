@@ -1,6 +1,6 @@
-# 研究方針：H3分類と量子三次曲面を含む既約成分
+# 研究方針：H3型内在的非可換三次曲面の完全分類
 
-2026-11-17 / research-plan-v33 / triangle-component-v11。
+2026-11-17 / research-plan-v34 / H3分類専用。
 **再開時は本書を最初に読む。GitHub mainが唯一の正本。**
 実行規則は `AGENTS.md`。既存の全H3分類の詳細と必要な式は
 `research/cubic_14641_classification.md`、`research/cubic_14641_codex_plan.md`、
@@ -40,16 +40,11 @@ Library既存ファイルは明示指示なしに削除しない。GitではPDF�
 7次元族を最終成分と決め打ちせず、一般Etingof–Ginzburg型中央三次商を含む8次元成分を検証する。
 全H3分類の他の枝の成果・未解決問題を消したり、この限定研究の結論で置き換えたりしない。
 
-## III. 成分研究の到達点と直ちに着手する課題
+## III. 現在の分類研究の最優先課題
 
-専用方針は `research/quantum_cubic_component/00_research_plan.md`、ノートは同ディレクトリの `component_notes.md`、公表原稿は `papers/quantum_cubic_component.tex`。
-7次元PBW族・全中心・全矢・固定位数3の開正常形を保持する。滑らかな中心・楕円分岐orderの既存同定の下でHH1=0、HH2dim8、HH3zeroを得る。
+本リポジトリの最優先は強い内在的14641型H3の**完全分類**であり、全対象の漏れない被覆、正規三次incidence、全幾何学的群oid、成分・境界、相対認識を完成させる。詳細な現行分類frontierと未解決の最小補題は `research/cubic_14641_codex_plan.md` と `research/cubic_14641_classification.md` を読む。
 
-**指定点の全Artin形式分類**：potential dg複体による全Artin包絡flat性、修正Rains式による8変数同時中心切断、qgrのsmooth proper enhancement、HH1によるtau=(1)剛性、反標準環とpotentialの回復を証明した。既存order/HH入力の下で、選んだH3点G0=2Omega+X+2Y+3Z+5の全Artin pointed Abel/H3形式変形は8変数族で分類される（`thm:intrinsic-formal-eight`）。全てのH3点への被覆ではない。
-
-**代数的表示stack**：有理中心式の共通lambda²を除き、有限型smooth底上で全次数flatな包絡・中央商を構成した。相対THCR境界R/(t)=B(E,L,sigma)、全幾何fiberの商の整域性、幾何学的一般点のH3性を得た。表示incidenceの近傍にはsmooth DM八次元stack [Z'/Gamma]と明示8族のetale全射atlasがある。H3対象間の全幾何学的矢はGamma作用に一致する（`papers/sections/quantum_cubic_presentation_stack.tex`）。
-
-**次の最優先**：この有限型表示stack内の全H3 admissibilityを判定する。smooth楕円境界によりaffine中央商の有限globaldimへ帰着済み。一般中心値だけでなく悪い中心値・高次元有限表示・局所Morita模型を調べ、H3 locusのconstructibility/開性を証明するか障害を示す。同時に全intrinsic族の相対再構成・fpqc降下を確認する。表示stackの代数性や一形式近傍の分類を、全H3 stackの代数性・成分大域閉包・全境界の分類と同一視しない。
+楕円E6量子化成分の8次元変形・全Artin形式分類とFricke–Askey–Wilson locusは、独立正本 [nc-cubic-e6](https://github.com/uedakazushi/nc-cubic-e6) へ移管した。本分類には必要な認識定理と有効な具体例・証明を保持するが、E6成分そのものの相対H3開性・全境界・DAHA比較の研究は同リポジトリの研究方針に従う。比較論文は [nc-cubic-ambient-moduli](https://github.com/uedakazushi/nc-cubic-ambient-moduli)、量子Fermat非AS短報は [nc-cubic-non-as](https://github.com/uedakazushi/nc-cubic-non-as) を新しい正本とする。
 
 ## IV. 全H3分類で保持する成果と未解決領域
 
@@ -79,4 +74,4 @@ Artin再構成は通常の数学的証明であり、計算PASSと区別する�
 全H3分類の再現手順は `research/cubic_classification_validation.json`、例は `python3 computations/verify_cubic_skew_jets.py`。
 
 heart比較・Rains共鳴・cubic cornerは `uedakazushi/nc-dp-surface-hearts`、次数1は `uedakazushi/nc-dp1-moduli`、三次三様体は `uedakazushi/nc-cubic-threefold-moduli` が正本。
-量子FermatのOU障害は `papers/quantum_fermat_not_as_surface.tex`、ambient比較は `papers/cubic_surface_ambient_moduli.tex` に保持する。
+量子FermatのOU障害は [nc-cubic-non-as](https://github.com/uedakazushi/nc-cubic-non-as)、ambient比較は [nc-cubic-ambient-moduli](https://github.com/uedakazushi/nc-cubic-ambient-moduli) に移管済み。分類に必要な旧定理・コードはこのリポジトリの現行分類原稿からも参照する。

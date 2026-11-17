@@ -2,6 +2,17 @@
 
 2026-11-16。GitHub mainが現行ソースの正本。最初に [研究方針](00_research_plan.md) を読む。逐次研究・約15分checkpoint・通常のmain保存については [AGENTS.md](AGENTS.md) に従う。GitHub Actions、force push、不要なPRを使わず、PDF・ZIP・中間生成物は追跡しない。GitHub保存成功時はLibraryに保存しない。
 
+## 論文別の現在の正本
+
+| 研究 | 正本 |
+|---|---|
+| H3の内在的認識・完全分類 | **この `nc-cubic-moduli` のmain** |
+| 楕円 $E_6$ 量子化成分・Fricke・DAHA | [nc-cubic-e6](https://github.com/uedakazushi/nc-cubic-e6) |
+| ambient／intrinsic／marked ASモジュライの比較 | [nc-cubic-ambient-moduli](https://github.com/uedakazushi/nc-cubic-ambient-moduli) |
+| 量子Fermat三次曲面がAS surfaceでない短報 | [nc-cubic-non-as](https://github.com/uedakazushi/nc-cubic-non-as) |
+
+分類の主原稿に数学的に必要な認識定理・証明・コードは維持する。ここに残る別論文の旧TeX・ノートは更新の対象にせず、上記の独立mainを公表用正本とする。分類Codexはそれぞれの独立論文へ重複pushせず、必要な成果を正確に引用する。
+
 ## 独立したheart比較・Rains共鳴
 
 四つのheart、Rains共鳴のHRS tiltと混合A2、cubic cornerの研究は [nc-dp-surface-hearts](https://github.com/uedakazushi/nc-dp-surface-hearts) を現行正本とする。
@@ -29,8 +40,8 @@
 | 対象 | 主原稿・再開ノート |
 |---|---|
 | H3の公理・認識・全切断の部分分類 | [weak_cubic_axioms.tex](papers/weak_cubic_axioms.tex)、[分類ノート](research/cubic_14641_classification.md) |
-| 次数3のambient・R13・形式比較 | [cubic_surface_ambient_moduli.tex](papers/cubic_surface_ambient_moduli.tex)、[R13](research/r13_generic_moduli.md) |
-| 量子FermatのOU AS障害 | [quantum_fermat_not_as_surface.tex](papers/quantum_fermat_not_as_surface.tex) |
+| 次数3のambient・R13・形式比較 | [nc-cubic-ambient-moduli](https://github.com/uedakazushi/nc-cubic-ambient-moduli)、[R13](research/r13_generic_moduli.md) |
+| 量子FermatのOU AS障害 | [nc-cubic-non-as](https://github.com/uedakazushi/nc-cubic-non-as) |
 | 次数1のrank・weighted sextic・候補族（移管済み） | [nc-dp1-moduli](https://github.com/uedakazushi/nc-dp1-moduli) |
 | 次数1の反標準モデル・導来比較（移管済み） | [nc-dp1-moduli](https://github.com/uedakazushi/nc-dp1-moduli) |
 | 三次三様体と非可換P4（移管済み） | [独立研究リポジトリ](https://github.com/uedakazushi/nc-cubic-threefold-moduli) |
