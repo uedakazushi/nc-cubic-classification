@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "version": "classification-v269",
+  "version": "classification-v270",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -3613,6 +3613,26 @@
       "nonunit-repeat spectra covered",
       "allCY/four-simple classified",
       "complete H3 classification"
+    ]
+  },
+  "third_root_nonunit_independent_v270": {
+    "status": "whole independent b-squared coupling stratum excluded",
+    "proof": "papers/sections/cubic_third_root_nonunit_independent.tex",
+    "validator": "computations/verify_cubic_third_root_nonunit_independent.py",
+    "checks": [
+      "default Sympy canonical self factorization/projection minors/homogeneous determinant PASS",
+      "all3 polySmith identities, determinants unit, inhom compatibility gcd PASS",
+      "row-clearing denominator supports coordinate units only PASS",
+      "node unique linear solution and original normal36x7 rank7 PASS",
+      "v270 main LuaLaTeX clean PASS"
+    ],
+    "remaining": [
+      "p=r0",
+      "both nonzero proportional p,r"
+    ],
+    "not_claimed": [
+      "whole nonunit atlas covered",
+      "wholeH3 classification"
     ]
   }
 }

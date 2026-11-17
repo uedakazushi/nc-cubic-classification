@@ -1,0 +1,95 @@
+{
+  "status": "PASS",
+  "spectrum_weights": [
+    1,
+    1,
+    0,
+    2
+  ],
+  "scope": "all independent left/right b-squared couplings; normal-form proof uses H3 domain and rank2; not whole nonunit atlas",
+  "canonical_self_relations": [
+    "xc+cy",
+    "b2+t*yc-omega*t*cx"
+  ],
+  "canonical_parameters": [
+    "t",
+    "T",
+    "m",
+    "n"
+  ],
+  "t_and_T_nonzero_necessary": true,
+  "homogeneous_determinant": "omega*(m^3+omega*m*n-n^3)*(m*n-omega-1)^4*(m+(omega+1)*(n+1))",
+  "curves": [
+    {
+      "case": "F",
+      "coordinate_units": "q^3-1",
+      "matrix_shape": [
+        12,
+        8
+      ],
+      "Smith_left_right_identity": "PASS",
+      "Smith_transform_determinants_constant": true,
+      "compatibility_gcd": "q**7 - q**4 + q"
+    },
+    {
+      "case": "L",
+      "coordinate_units": "none",
+      "matrix_shape": [
+        12,
+        8
+      ],
+      "Smith_left_right_identity": "PASS",
+      "Smith_transform_determinants_constant": true,
+      "compatibility_gcd": "q**2 + q + 1"
+    },
+    {
+      "case": "J",
+      "coordinate_units": "q",
+      "matrix_shape": [
+        12,
+        8
+      ],
+      "Smith_left_right_identity": "PASS",
+      "Smith_transform_determinants_constant": true,
+      "compatibility_gcd": "q"
+    }
+  ],
+  "unique_node_cube_coefficients": [
+    [],
+    [
+      "-1"
+    ],
+    [],
+    [],
+    [
+      "1",
+      "0"
+    ],
+    [],
+    [],
+    []
+  ],
+  "node_normal_matrix": [
+    36,
+    7
+  ],
+  "node_normal_rank": 7,
+  "node_minor_rows": [
+    0,
+    1,
+    3,
+    4,
+    5,
+    6,
+    8
+  ],
+  "node_minor_determinant": [
+    "-3",
+    "3"
+  ],
+  "not_claimed": [
+    "proportional b-squared coupling excluded",
+    "zero b-squared coupling excluded",
+    "whole H3 complete"
+  ]
+}

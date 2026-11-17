@@ -60,6 +60,7 @@ CHECKS=[
  'verify_cubic_third_root_unit_onezero_projection.py',
  'verify_cubic_third_root_unit_onezero_plus.py',
  'verify_cubic_third_root_unit_onezero_completion.py',
+ 'verify_cubic_third_root_nonunit_independent.py',
 ]
 results=[]
 for name in CHECKS:
