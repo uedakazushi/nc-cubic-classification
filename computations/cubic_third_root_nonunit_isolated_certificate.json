@@ -1,0 +1,98 @@
+{
+  "status": "PASS",
+  "scope": "all v1,n0,Tnonzero proportional nonunit boundary; includes Q=0 exceptional branch",
+  "rankone_minors": 36,
+  "Groebner_basis": [
+    "a0*a2 + a0*a4*CRootOf(z**2 + z + 1, 1) - 2*a0*CRootOf(z**2 + z + 1, 1)",
+    "-a0*a8 + a2**2 - a2*CRootOf(z**2 + z + 1, 1)",
+    "a0*a8*(-1 - CRootOf(z**2 + z + 1, 1)) + a2*a4 - a2",
+    "-a0*a8*CRootOf(z**2 + z + 1, 1) + a2*(-1 - CRootOf(z**2 + z + 1, 1)) + a4**2 - 2*a4",
+    "a0*a15 + a2*a8",
+    "a0*a15*(1 + CRootOf(z**2 + z + 1, 1)) + a4*a8 - 2*a8",
+    "-a15*a4*CRootOf(z**2 + z + 1, 1) + a15*CRootOf(z**2 + z + 1, 1) + a8**2",
+    "a15*a2 + a15*a4*CRootOf(z**2 + z + 1, 1) - 2*a15*CRootOf(z**2 + z + 1, 1)",
+    "a1 + a2*(-1 - CRootOf(z**2 + z + 1, 1))",
+    "a5 - a8*CRootOf(z**2 + z + 1, 1)",
+    "a6 + a8*(-1 - CRootOf(z**2 + z + 1, 1))"
+  ],
+  "cover": [
+    "A1,Dneq1 curve",
+    "A0,D2,C1",
+    "A0,D2,C0",
+    "Qzero:A0,D1,C0,E1"
+  ],
+  "source_curve_identity": "unit6minor and originalH=displayedR*coords, only coefficient-field denominators",
+  "curve_normal_shape": [
+    38,
+    7
+  ],
+  "curve_constant_normal_pivots": 7,
+  "curve_bad_polynomial": "(D-1)*(D-2)",
+  "fresh_points": [
+    {
+      "case": "curveD2",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        36
+      ],
+      "normal_shape": [
+        34,
+        7
+      ],
+      "normal_dimension": 0
+    },
+    {
+      "case": "A0C1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        36,
+        7
+      ],
+      "normal_dimension": 0
+    },
+    {
+      "case": "A0C0",
+      "dimensions": [
+        1,
+        4,
+        10,
+        20,
+        36
+      ],
+      "normal_shape": [
+        31,
+        7
+      ],
+      "normal_dimension": 0
+    },
+    {
+      "case": "Qzero",
+      "dimensions": [
+        1,
+        4,
+        10,
+        22,
+        46
+      ],
+      "normal_shape": [
+        51,
+        8
+      ],
+      "normal_dimension": 0
+    }
+  ],
+  "not_claimed": [
+    "v0 self excluded",
+    "zero coupling excluded",
+    "wholeH3 complete"
+  ]
+}

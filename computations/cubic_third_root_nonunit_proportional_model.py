@@ -7,7 +7,7 @@ def relations(K,o,l,Z):
  {(2,1):one,(1,2):-o**2},{(1,2):one,(0,2):-o**2,(2,0):-one,(3,3):-one},
  {(2,3):one,(0,0):-one,(0,1):o,(1,1):Z},{(3,2):one,(0,0):-o**2,(1,0):one,(1,1):o**2*Z}]
 
-def analyze(K,o,l,Z,finite=False):
+def analyze(K,o,l,Z,finite=False,source_relations=None):
  log=[]
  class Alg(GradedAlgebra):
   def echelon(self,rows):
@@ -20,7 +20,7 @@ def analyze(K,o,l,Z,finite=False):
       cc=row[j];log.append(cc);piv[j]={k:c/cc for k,c in row.items()};break
      self.addto(row,piv[j],-row[j])
    return piv
- B=Alg(K,4,relations(K,o,l,Z),[1,1,0,2]);M,ids=B.normal_matrix(3,[o**2,o**2,K.one,o],fixed=True)
+ B=Alg(K,4,relations(K,o,l,Z) if source_relations is None else source_relations,[1,1,0,2]);M,ids=B.normal_matrix(3,[o**2,o**2,K.one,o],fixed=True)
  rows=list(M.to_dod().values());np=[]
  def complexity(c):
   if finite:return (0,len(c.to_list()))
@@ -33,3 +33,11 @@ def analyze(K,o,l,Z,finite=False):
   rows=[rr for rr in rows if rr]
  assert len(np)==len(ids)
  return {'source_pivots':log,'normal_pivots':np,'normal_shape':list(M.shape),'dimensions':[len(B.basis[j]) for j in range(5)]}
+
+def isolated_relations(K,o,d):
+ one=K.one
+ return [{(0,3):one,(3,0):-o**2},{(2,2):one,(1,3):one,(3,1):o**2},
+ {(0,2):-o**2,(2,0):-one,(3,3):-one},
+ {(0,2):o**2,(1,2):o**2*(d-2),(2,0):-one,(2,1):2-d},
+ {(0,0):-one,(0,1):one-d,(1,0):one-d,(1,1):-(2-d)*(one-d)},
+ {(0,1):one,(1,0):-one,(2,3):o**2,(3,2):-one}]

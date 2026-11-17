@@ -1,0 +1,95 @@
+\subsection{非退化selfの最後の非零corner相}
+\label{subsec:cubic-third-root-nonunit-isolated}
+\begin{theorem}[比例非退化selfの完成した排除]
+\label{thm:cubic-third-root-nonunit-proportional-nondegenerate-empty}
+残る $v=1,n=0,T\ne0,\alpha=m=-\omega^2$ も全てH3を与えない。
+従って両非零比例の $b^2$ 結合で、selfの二方向が独立となる全領域 $v\ne0$ は排除される。
+残る必要候補は $v=0,u=1$、$\alpha\ne0,\alpha^2+\omega\ne0$ と、両 $b^2$ 結合零の領域だけである。
+\end{theorem}
+\begin{proof}
+$T=1$ としてよい。
+元middleの $bc,cb$ 射影はrank1である。
+その核に入る四つの純 $U^2$ 行を、$c^2$ 行を使って取り出す：
+\[
+ R=\begin{pmatrix}
+ M_{bx}-M_{c^2}\\ M_{xb}-\omega^2M_{c^2}\\M_{yb}\\M_{by}
+ \end{pmatrix}_{U^2}.
+\]
+$\operatorname{rank}M=2$ から $\operatorname{rank}R\le1$ が必要である。
+この $4\times4$ 行列の全36個の二次minorを元22tensorから構成し、
+$\mathbb Q(\omega)$ 上のGroebner基底11個を計算する。
+その線型部分は
+\[
+ a_1=(1+\omega)a_2,\quad a_5=\omega a_8,\quad a_6=(1+\omega)a_8.
+\]
+$A=a_0,B_0=a_2,D=a_4,C=a_8,E=a_{15}$、$W=B_0+\omega D-2\omega$ とすると、
+残る必要式には
+\begin{gather*}
+ AW=EW=0,\quad C^2+\omega E(1-D)=0,\\
+ B_0^2-\omega B_0=AC,\quad B_0(D-1)+\omega^2AC=0,\\
+ D^2-2D+\omega^2B_0-\omega AC=0,\quad AE+B_0C=0
+\end{gather*}
+がある。公開再現器はこれらを元minor idealのGroebner基底で零へ還元する。
+
+$W\ne0$ なら $A=E=0$、従って $C=0$。
+残る三式と $W\ne0$ は $B_0=D=0$ を強制する。
+全cube係数が零となり、元middleに純 $c^2$ 関係が現れるので、整域性に反する。
+従って $W=0$、$B_0=\omega(2-D)$ である。
+必要式は
+\[
+ AC=\omega^2(2-D)(1-D),\quad
+ AE=-\omega(2-D)C,\quad C^2=\omega E(D-1)
+\]
+となる。
+
+第一の純 $U$ 行を $2\times2$ に並べた行列は
+\[
+ Q=\begin{pmatrix}-A&\omega^2B_0-1\\1-D&-\omega C\end{pmatrix},
+ \qquad \det Q=1-D.
+\]
+ここで $Q=0$ を捨ててはならない。
+$D=1$ では $C=0,AE=0$ であり、$A\ne0$ なら非零rank1の $Q$ により整域性に反する。
+$A=0$ なら $Q=0$ で、別の純 $U$ 行が $-x^2+Ey^2$ を与える。
+$E=0$ は純 $x^2$ で不可能なので、残余scalarで $E=1$ とできる。
+この追加固定点は元22tensorから再構成すると三次商次元22となり、AS4でない。
+
+以下 $D\ne1$ とする。残余scalar作用は $D$ を固定し、$(A,C,E)$ に重み $(-1,1,2)$ で作用する。
+これは $p,v,T$ の正規化を保つ対角generator/top変更から直接得られる。
+$A\ne0$ では $A=1$ とでき、全係数は
+\[
+ C=\omega^2(2-D)(1-D),\qquad
+ E=-(2-D)^2(1-D),\qquad B_0=\omega(2-D)
+\]
+という一変数族に入る。
+$A=0$ では $D=2,E=\omega^2C^2$ に限り、$C=1$ 又は0の二固定点で覆われる。
+
+一変数族の元関係の像は、全 $D$ について正確に
+\begin{gather*}
+ xc=\omega^2cx,\quad b^2+yc+\omega^2cy=0,\quad
+ \omega^2xb+bx+c^2=0,\\
+ \omega^2xb+\omega^2(D-2)yb-bx+(2-D)by=0,\\
+ -x^2+(1-D)(xy+yx)-(2-D)(1-D)y^2=0,\\
+ xy-yx+\omega^2bc-cb=0
+\end{gather*}
+となる。
+元最高tensorの画像を表示関係で掛け戻し、unit $6\times6$ minorと
+係数体以外の分母がないことを確認する。
+全次数3,4商から作る正常行列は一般点で $38\times7$、正常消去は7個の係数体定数pivotとなる。
+全関係・正常pivotと分母の例外多項式は、平方因子を除いて
+\[
+ (D-1)(D-2)
+\]
+だけである。$D=1$ はこの $A=1$ 族では純 $x^2$ 関係で既に除外済み。
+$D=2$ を新しく構成すると次数4商次元36となり、AS4値35に反する。
+従って一変数族の全値がH3から除外される。
+
+$A=0,D=2,C=1$ の固定点は正常行列rankが全列rankとなり、正常三次は零である。
+$C=0$ の固定点は次数4商次元36で非AS4。
+先に分離した $Q=0,D=1,E=1$ の点も含めて、全境界の判定が完了した。
+
+公開再現器は \texttt{verify\_cubic\_third\_root\_nonunit\_isolated.py}。
+36minor、11個のGroebner基底、必要式の零還元、元画像恒等式、
+一変数全pivotと四つのfresh点を標数0で再生する。
+前二節の排除と合わせて $v\ne0$ の全領域を除外する。
+$v=0$ と両結合零を完成したという意味ではない。
+\end{proof}

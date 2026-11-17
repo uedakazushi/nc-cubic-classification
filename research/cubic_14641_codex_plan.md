@@ -72,34 +72,22 @@ Coordinate with the current as4, asz4 and poisson-p4 repositories for ambient an
 For each result record assumptions, dependencies, proof location, whether freshly verified, exact computation input and certificate, unresolved points and novelty status. Keep a current self-contained research plan, research notes and Japanese LuaLaTeX paper, not chronological logs. Update source, code and small reproducibility certificates on GitHub main via ordinary fast-forward; do not track PDFs, ZIPs, caches, TeX outputs, or use GitHub Actions, PRs or force push. Verify remote HEAD. For this repository, do not save to Library if the GitHub push succeeds; Library is an emergency fallback only.
 
 
-## 現在の全H3 frontierと次の実行（v269）
-三固有値H3の中山は半単純位数3で、必要スペクトルは(ω,ω,1,ω²)と(ω²,ω²,1,ω)の二つのみ（一つのGaloisラベル軌道）。幾何学的同型商とは区別する。重複1の(1,1,ω,ω²)は全22tensor atlasを排除した。全H3分類が完成したという意味ではない。
-重複1の証明経路：独立結合を全排除、比例S非零をdomain外、両非零比例を六係数正常一次chartへ被覆し全w値を排除、片方零結合T0を強制mixed射影/Oreで排除。最後のT非零も以下で全排除。元atlasからの必要被覆にAS4先行完全分類を仮定していない。
-T非零,a16非零：rank1表示のλ4=ω。λωはgeneric7因子/7曲線/11fresh点のexact全値判定。λ−ωはκ0でb正常、normalizerはUにω,cにω²なのでμ固定三次上固有値1だけ、要求固有値ωに矛盾。λ±iωはSchurからh=r±iκs,r=−(1±i)κs/2,A=∓iωκ²s/2。T=s1,κ0/1へ正規化した二点はQ(ω,i)=Q[t]/Phi12でどちらもdimB3=23、AS4値20に反する。
-a16=0：Schurからa15=0,middle minorからa17=0。Ub/bU両射影rank2でa6=λr,a7=r,a11=a12=λh,a9=r,a13=h、(r,h)非零。正しい残余式はr(B−Z)+h(Z−(ω+1)A)=0（前節の未検証scratchのZ符号を訂正）。Schurからλ=σω,A=εωB。符号一致又はB0ならcrossR=λS、b正常normalizerのU固有値ω,−σω,c固有値−σω²。μ固定三次上固有値±1のみなので要求ωに矛盾。符号逆B非零ならh=r非零、残余式はB=(ω+1)Aを強制し、σ1,ε−1だけ。元22tensorは量子Weyl AS3(x,b,c)上の実y-Ore表示でq−ω²、bc+ω²cb=(2ωB/T)x²、δ(x)=−B/r*x²+T/(ωr)*bc非零。既存F非零最高y次数障害は一方曲率でも有効で、Gにx因子を強制。全T非零を排除。b,c交換で逆片方零も覆う。
-公開証明はonezero_completion節。verify_cubic_third_root_unit_onezero_completion.pyのdefault Sympy再生PASS：正常bの固定三次固有値、minus元列恒等式、i-Schur二式/Phi12二fresh点、a16zero正しいminor/Schur、最後のOre元画像をdisplayed6関係で再挿入。最後はunit6minorでoriginalH=displayedR*coordinates、全分母支持rTのみを検証し、generic rankだけを全特殊化へ外挿していない。v269主原稿LuaLaTeX clean PASS。既存36 unified+16後続個別=52validators across runs、単一52一括未実行。新規as4/外部輸入なし。
-次の最小課題：非単位重複rootの半単純22tensor atlasを実際に読み、mu=(ω,ω,1,ω²)の重み[1,1,0,2]で元quartic middle/正常三次を構成する。既存semisimple atlasとCY untwist定理はcubic_third_root_*及び分類ノートで確認し、unit-repeatの「固定平面U/正常x」議論を無条件に移植しない。U純quarticがなく、quartic型U³b,U²c²,U b²c,b⁴,b c³が許されるのでmiddle block分割が異なる。まず実関係パターンと正常三次7係数の必要条件を再構成する。
-四単純の残る共鳴、全CY被覆、全成分・境界・相対降下も未完。移管済み独立E6/ambient/unmark/Fermat論文をここで再開しない。次は非単位root atlasから研究を続ける。
+## 三固有値の現行必要被覆と再開課題（v273）
+三固有値H3の中山は半単純位数3、必要スペクトルは(ω,ω,1,ω²)と(ω²,ω²,1,ω)のみ（一つのGaloisラベル軌道、幾何学的同型商ではない）。重複1の(1,1,ω,ω²)は元22tensor atlas全体を排除済み。全CY・四単純・成分/境界/相対降下と全H3分類は未完成。
 
-## 非単位重複rootの独立b²結合も全排除（v270）
-mu weights[1,1,0,2]の元22tensorを構成。自己対称H0の語順(xc,yc,bb,cx,cy)はrank2、bbdiag0。b²列p(U)c+c r(U)のp=(a13,a20),r=(−ωa9,−ωa17)。一方のみ非零はfactorでdomain外。p,r独立ならGLUでp=x,r=y、rank2対称isotropic分解H0=PVt+VPt、P=(1,0,0,0,1),V=(0,t,1,−ωt,0)。従ってself関係xc+cy,b²+t yc−ωt cx。t0は純b²なのでdomain外。
-残るM5×6のbc/cb射影minorはJ=mn−ω−1及びmnで差ω²、従って全m,nで射影rank2。c²行のt項からT=a21も非零。commonU/c/top diagonal actionでt=T1へ正規化可能（m,n不変）。bc/cbのJminorをpivotにした12linear式の最初8homogeneous determinantはω*J4*(m³+ωmn−n³)*(m+(ω+1)(n+1))。J非零なら二曲線F0又はL0に必要制限。F0非節点はm=−ωq²/(q³−1),n=−ωq/(q³−1)。L0はm=ω²(q+1),n=q。全値polySmith U A V=DとdetU/V constantsを掛け戻し、inhom最後4成分gcdはF:q(q6−q3+1)、L:q²+q+1。各Jの分子なのでJ非零で不可能、Fのq0節点のみ別扱い。J0はm=q非零,n=−ω²/q、別minorでpolySmithgcd qとなり全値不可能。
-最後のnode m=n0はP8coeff唯一(0,−1,0,0,ω,0,0,0)。元22Bをfresh構成しdims3/4=20/35、正常36×7行列rank7、非零7minorで全核零。従って独立p,r全域をH3排除。通常証明はcubic_third_root_nonunit_independent.tex。公開verify_cubic_third_root_nonunit_independent.py default Sympy全PASS（3Smith/detunit/gcd/clear-denom support/node含む）、主原稿LuaLaTeX clean PASS。original22 utilityにweights引数を追加、旧completion validatorも再生確認。既存52+新1=53validators across runs、単一53全再生未実行。新規外部/as4輸入なし。
-現行の非単位重複root残余はp=r0又はp,r両非零比例のみ。重複1は全排除済み、ここへ戻らない。二つの非単位スペクトルは共役で同じ証明入力を共有するがintrinsic同型としない。
-次の最小課題：p=x,r=αx (α≠0)のrank2selfを整理する。H0=PVt+VPtとbottom=−ωtopからV=(u,v,1,−ωu/α,−ωv/α)、self関係xc+αcx、b²+u xc+v yc−(ω/α)(u cx+v cy)。v非零はUのy変更でu0,v1、v0はdomainからu非零及びα²+ω非零を必要とする見込み（純b²因子を避ける）。この分類と全境界を元画像で監査してから使用する。
-v1候補coはa13=1,a20=a17=0,a9=−αω²,a11=a19=a3=a160,a12=1,a14=−ω/α,a7=−ω²α,a10=m,a18=n,a21=T。Mのbc/cb射影はn非零又はm²+αω²非零ならrank2。v1のc²行U²成分非零なのでこの開集合でT非零。残余torusでn,T両非零をn=T1へ正規化できる可能性があり、まず二係数α,mのrank2/正常7核を調べる。n0、射影退化、v0、p=r0を捨てない。四単純、全CY、成分/相対降下も未完。
+### 完成した証明と再現入口
+重複1：独立cube結合/S非零/両非零比例の六係数正常一次chart/片方零T0及び全T非零を排除。最後はonezero_completion節・checkerの正常b固有値、Phi12二点nonAS4、a16zeroの最後の実Ore表示δx非零。source originalH=displayedR*coords、unit6minor、分母rTだけを確認。古いL/ΩやE2中心へ戻らない。
+非単位重複根：自己対称H0のb²列はp(U)c+c r(U)、p=(a13,a20),r=(−ωa9,−ωa17)。一方零のみは因子でdomain外。独立p/rはp=x,r=y、self xc+cy,b²+t yc−ωt cxへ。t/T非零、対角変更でt=T1、Mのbc/cb射影minor J=mn−ω−1とmnで全値rank2。8homdet ωJ4*(m³+ωmn−n³)*(m+(ω+1)(n+1))。F/L/J三曲線のpolySmith inhomgcdで全値不可能、最後node m=n0の正常36×7rank7で排除。証明nonunit_independent節/checker。
+両非零比例：p=x,r=αx (α非零)、self rank2からP=(1,0,0,α,0),V=(u,v,1,−ωu/α,−ωv/α)。v非零はu0,v1。v0ならdomainからu非零,α²+ω非零でu1へ。v1の全値は以下で完成：
+- n=a18非零：T非零、n=T1正規化、α−1/−ω/−ω²の三相。前二相はB3dim22。主相はY=y+(m+ω²)xの二変数(l,Z)モデル、正常41×7の7constantpivotsと4境界曲線/2fresh点で全排除。nonunit_proportional_open節/checker。
+- n0は射影rank2なら商k<y,b>/(b²)指数増大。残りnT0,α−ωm²は13m値へ有限化し、正常x固有値/因子/実skew-cone頂点で全排除。nonunit_proportional_Tzero節/checker。
+- n0,T非零はT1,α=m−ω²。4×4pureU行列の36minor GB11個、線型a1=(1+ω)a2,a5=ωa8,a6=(1+ω)a8。A=a0,B=a2,D=a4,C=a8,E=a15,W=B+ωD−2ωでW非零はpurec²/domain外。W0はB=ω(2−D),AC=ω²(2−D)(1−D),AE=−ω(2−D)C,C²=ωE(D−1)。純Uの選択行Qdet=1−DだがQ=0を捨てず、D1,A0,C0,E1を別fresh点へ（B3dim22）。A非零はweights(A,C,E)=(-1,1,2)でA1のD一変数へ、D1はこのA1族では純x²、正常38×7の7constantpivots、bad=(D−1)(D−2)、D2はB4dim36。A0,D2はC1/0二点、前者正常7核零、後者B4dim36。これでv1全体完成。nonunit_isolated節/checker。
+最新主原稿v273 LuaLaTeX clean PASS。新checkersは全てdefault Sympy PASS、共有model変更後にprevious proportional_openも再PASS。累計56validators across runs（既存36統合再生と20後続個別）、単一56全再生未実行。新規as4/外部入力なし。
 
-## 非単位比例結合のv1,n非零の全排除（v271）
-p=x,r=αxのself rank2はP=(1,0,0,α,0),V=(u,v,1,−ωu/α,−ωv/α)。v非零はy=ux+vyでu0,v1。v0はdomainからu非零,α²+ω非零、u1へ正規化。v1でn=a18非零ならbc/cb射影rank2、c²行からT非零。generator/top diagonalでn=T1を保つ正規化を明示。8homogeneous determinantはω(α+1)(α+ω)(α+ω²)²、αは−1,−ω,−ω²。polyQ(ω)[m] constant-unit消去で前三相rank8,8,7、残余m−ω,m−1,0。前二相は唯一二点ともB3dim22で非AS4。
-α−ω²相はa15=Z自由、l=m+ω²,Y=y+lxで六関係の二変数表示を得る（本文）。originalH=displayedR*coordinates、unit6minor、全分母は係数体のみでall-specialisationの必要同定を検証。正常41×7は7constant pivots、source pivot支持4因子Z,Zl+ω/2,Z−ω²,Z−2ω²。4曲線の全関係/正常pivotのbad polyはそれぞれ1,l+ω²/2,l+ω²/4,Z(Z−ω²)(Z−2ω²)。全有限例外は二点、B3dim22で非AS4。よって全v1,n非零はH3なし。
-v1,n0でもbc/cb射影rank2ならyb/by行が零、全y²成分も零、商(x,c)がk<y,b>/(b²)で指数増大し非AS4。従って残余はn0,T0,α=−ωm²,m非零、又はn0,T非零,α=m=−ω²のみ。T非零はT1へ正規化可能。u1,v0及びp=r0も未解決。
-public verify_cubic_third_root_nonunit_proportional_open.py+model helper default Sympy全PASS（source incidence、7/8 constant polynomial pivots、source画像全掛け戻し、4曲線/2fresh点、n0projection minor/指数商支持）。v271主原稿LuaLaTeX clean PASS。累計54validators across runs、単一54全再生未実行。外部/as4新規輸入なし。
-次の有力なT0証明（未統合・未検証）：v1,nT0,α=−ωm²ではrowcc pureQ=yx−ωm4xy、bc/cb射影rank1。domainQ非退化よりpureU rows比例。これからa1=a2=a150,a6=(ω²/α²)a5,a8=m a5、(m−ω²)a0=0,(m5−ω)a4=0,(m9−1)a5=0を得る見込み。全a0,a4,a50はpurec²でdomain外なのでm5=ω又はm9=1の13点へ必要制限。xは正常、normalizerφ=(1,ω²m^-4,m^-1,ωm²)。μ固定三次上要求固有値はω。m5=ωのorder15点は全φ固有値5乗根でW1零、mω²は全φ固有値1でW1零。m1/ωはGにx因子、m9primitiveでm³ωはW1零、m³ω²はG∈k<y,b,c>3。最後は実skew-cone B=A[x;φ]（purebaseA3関係）で既存lem:cubic-skew-cone-vertex排除が使える。各式・全根・実skew被覆を元22画像で監査してから正式化する。
-T非零隔離相α=m−ω²,n0,T1では8cube係数のrank1pureU matrixが残り、domainのQdet非零を用いて必要被覆を調べる。v0,p=r0、四単純/CY/成分/降下も未完。
-
-## 比例v1,n=T0の完成した全排除（v272）
-前節のT0着想を原稿・公開再現器へ統合。v1,n=T0,α=−ωm²のrank2MはpureU関係Q=yx−ωm4xyを持つ。三pureU行の比例条件からa1=a2=a150,a6=ω²/α²*a5,a8=m*a5,(m−ω²)a0=0,(m5−ω)a4=0,(m9−1)a5=0。全a0,a4,a50はpurec²でdomain外。よってm5=ω又はm9=1、gcd m−ω²で13点。全域でx正常φ=(1,ω²m^-4,m^-1,ωm²)、正常GにはφG=ωG。
-order15及びmω²、primitive9 m³ωは固有値なし。m1/ωは全固有語x因子。primitive9 m³ω²のみGがpurebaseA=<y,b,c>3に残るが、全元関係が実際のskew cone A[x;scalar m^-1]。source画像unit6minor/全掛け戻し/係数体以外の分母なしを検証し、既存skew-cone頂点lemmaの全仮定を照合してH3排除。Φ9/Φ15を固定ω全埋込みで使用し、Galois同型商ではない。
-public verify_cubic_third_root_nonunit_proportional_Tzero.py default Sympy全PASS（必要minor/13root gcd/全語固有値/source実skew image）、v272主原稿LuaLaTeX clean PASS。累計55validators across runs、単一55全再生未実行。新規外部/as4入力なし。
-次の未解決最小相v1,n0,T非零はT1,α=m=−ω²。private isolated_rankoneの4×4pureU matrix minors36個のGBは11個。a1=(1+ω)a2,a5=ωa8,a6=(1+ω)a8。A=a0,B=a2,D=a4,C=a8,E=a15としW=B+ωD−2ω。GBからAW=EW=0、W非零はP全零でpurec²/domain外。W0でB=ω(2−D)、AC=ω²(2−D)(1−D),AE=−ω(2−D)C,C²=ωE(D−1)、pureQdet=1−DなのでD≠1。残余torus(A,C,E) weights(−1,1,2),D invariantによりA非零はA1、C=ω²(2−D)(1−D),E=−(2−D)²(1−D)の一変数Dへ。A0はD2,Eω²C²、C1/0二点。これらの全被覆/GBを公開証明として監査すること。
-private正しい元係数にはa7=ω（a7=1にしない）。一変数Dモデルの全正常行列38×7は7constant pivots、全source/normal bad poly=(D−1)(D−2)とexact確認。D1domain外、D2をfresh判定すれば全値完了の見込み。A0C1 fixedpointはdims3/4 20/35で正常核零、A0C0は20/36で非AS4。ここはまだ公開統合未了。v0 self及びp=r0、四単純/CY/成分/降下は依然未完。
+### 現在の未解決：比例v0と零b²結合
+最優先はv0,u1のself xc+αcx,b²+xc−(ω/α)cx、α非零,α²+ω非零。元coはa13=1,a9=−αω²,a11=2,a3=1/α−ω²α、a12=a14=a7=a16=a17=a19=a200,a10=m,a18=n,a21=T。Mはprivate nonunit_prop_v0_unitlinear.py等に再構成済み。まだこの層を全排除していない。
+private確認済みの次の小課題：nT両非零はn=T1へ正規化。最初8homdetはv1と同じα三相を強制。α−1/−ωのpolynomial unit消去は残余が非零定数なので不可能。α−ω²相は7unitpivots/freea15、rhs零でhomogeneous kernel。Y=y+(m+ω²)x後の候補モデルはxc=ω²cx,b²+2xc=0,bY=ω²Yb,Yb−ω²xb−bx−c²=0,bc+ZY²=0,cb+ω²ZY²=0のはず。これを元画像で監査する。domainならxc=-b²/2とcb=ω²bcの結合則から(xb−ωbx)c=0、従ってxb=ωbx。この二次式が表示I2にないことをunit matrixで確認すれば全モデル非整域となる。未統合。
+n非零,T0はrowcc purex²からα²=ω。α正ω²はhomdet非零/P0でdomain外、主相α−ω²ではfirst8homogeneous rank6（T1のrank7と混同しない）、二つのfree cube係数が残る。private nonunit_prop_v0_T0_unitlinear.pyで確認。T0相をT1の1parameter modelへ勝手に代入しない。
+n0でbc/cb射影rank2なら前と同じ指数商で非AS4。rank1残余はα=−ωm²,n0かつT(m+ω²)=0。T0ならrowcc purex²のdomain条件からα²=ω、従ってm4=ω²の4点。rowcc0なのでI1は純Ub+bU、domainからb正常onU、かつbx=mxb。b²=(α+ω/α)cxとxc=-αcxからbb²=b²bを使えばbc=m^-1cbでbが全Bに正常となる。正常正則bの商S=B/bはHS(1−t)^-3だが、xc=cx0を含み、二つの独立なcubic overlaps xcx/cxcによりdimS3≥11（HSは10）となる見込み。一次正規商AS3domain定理を新規輸入せず、このHilbert矛盾を検証・証明する。
+T非零のn0,α=m−ω²ではbase cb=ω²bc,b²+2xcとxcω²cxから再びxb=ωbxをdomainが強制。I1 pureUb部分は1次元なのでその式が入るならyb/by成分が全零となり指数商、入らなければ非整域。全source像で監査して正式化する。
+両結合零p=r0は別領域：H0はUc+cUの二関係だけ、domainなら両射影が同型でcがU上の正常元になる。Mとbc/cbの連結、正常三次7核と全H3条件は未判定。次は上のv0の小さい三境界から継続する。
