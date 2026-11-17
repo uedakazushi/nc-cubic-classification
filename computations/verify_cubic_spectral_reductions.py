@@ -49,6 +49,9 @@ CHECKS=[
  'verify_cubic_third_root_unit_boundary_L_two_fibers.py',
  'verify_cubic_third_root_unit_boundary_L_orbit.py',
  'verify_cubic_third_root_unit_boundary_elliptic_reduction.py',
+ 'verify_cubic_third_root_unit_boundary_axes.py',
+ 'verify_cubic_third_root_unit_boundary_axis_incidence.py',
+ 'verify_cubic_third_root_unit_boundary_99.py',
 ]
 results=[]
 for name in CHECKS:

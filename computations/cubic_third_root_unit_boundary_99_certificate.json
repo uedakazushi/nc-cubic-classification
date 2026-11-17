@@ -1,0 +1,1011 @@
+{
+  "status": "PASS",
+  "records": [
+    {
+      "case": "linear1",
+      "a": 0,
+      "b": 0,
+      "covered_roots_at_fixed_omega": 1,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "determinant": [
+        "-4",
+        "-8"
+      ]
+    },
+    {
+      "case": "linear1",
+      "a": 0,
+      "b": 1,
+      "covered_roots_at_fixed_omega": 1,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "determinant": [
+        "-4",
+        "4"
+      ]
+    },
+    {
+      "case": "linear1",
+      "a": 0,
+      "b": 2,
+      "covered_roots_at_fixed_omega": 1,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "determinant": [
+        "8",
+        "4"
+      ]
+    },
+    {
+      "case": "linear1",
+      "a": 1,
+      "b": 0,
+      "covered_roots_at_fixed_omega": 1,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "determinant": [
+        "-4",
+        "4"
+      ]
+    },
+    {
+      "case": "linear1",
+      "a": 1,
+      "b": 1,
+      "covered_roots_at_fixed_omega": 1,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "determinant": [
+        "8",
+        "4"
+      ]
+    },
+    {
+      "case": "linear1",
+      "a": 1,
+      "b": 2,
+      "covered_roots_at_fixed_omega": 1,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "determinant": [
+        "-4",
+        "-8"
+      ]
+    },
+    {
+      "case": "linear1",
+      "a": 2,
+      "b": 0,
+      "covered_roots_at_fixed_omega": 1,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "determinant": [
+        "8",
+        "4"
+      ]
+    },
+    {
+      "case": "linear1",
+      "a": 2,
+      "b": 1,
+      "covered_roots_at_fixed_omega": 1,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "determinant": [
+        "-4",
+        "-8"
+      ]
+    },
+    {
+      "case": "linear1",
+      "a": 2,
+      "b": 2,
+      "covered_roots_at_fixed_omega": 1,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "determinant": [
+        "-4",
+        "4"
+      ]
+    },
+    {
+      "case": "linearhalf",
+      "a": 0,
+      "b": 0,
+      "covered_roots_at_fixed_omega": 1,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        8
+      ],
+      "determinant": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "case": "linearhalf",
+      "a": 0,
+      "b": 1,
+      "covered_roots_at_fixed_omega": 1,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        8
+      ],
+      "determinant": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "case": "linearhalf",
+      "a": 0,
+      "b": 2,
+      "covered_roots_at_fixed_omega": 1,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        8
+      ],
+      "determinant": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "case": "linearhalf",
+      "a": 1,
+      "b": 0,
+      "covered_roots_at_fixed_omega": 1,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        8
+      ],
+      "determinant": [
+        "1",
+        "-1"
+      ]
+    },
+    {
+      "case": "linearhalf",
+      "a": 1,
+      "b": 1,
+      "covered_roots_at_fixed_omega": 1,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        8
+      ],
+      "determinant": [
+        "1",
+        "-1"
+      ]
+    },
+    {
+      "case": "linearhalf",
+      "a": 1,
+      "b": 2,
+      "covered_roots_at_fixed_omega": 1,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        8
+      ],
+      "determinant": [
+        "1",
+        "-1"
+      ]
+    },
+    {
+      "case": "linearhalf",
+      "a": 2,
+      "b": 0,
+      "covered_roots_at_fixed_omega": 1,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        8
+      ],
+      "determinant": [
+        "-2",
+        "-1"
+      ]
+    },
+    {
+      "case": "linearhalf",
+      "a": 2,
+      "b": 1,
+      "covered_roots_at_fixed_omega": 1,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        8
+      ],
+      "determinant": [
+        "-2",
+        "-1"
+      ]
+    },
+    {
+      "case": "linearhalf",
+      "a": 2,
+      "b": 2,
+      "covered_roots_at_fixed_omega": 1,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        8
+      ],
+      "determinant": [
+        "-2",
+        "-1"
+      ]
+    },
+    {
+      "case": "cubicA",
+      "a": 0,
+      "b": 0,
+      "covered_roots_at_fixed_omega": 3,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "determinant": [
+        "-9873/703",
+        "4527/703",
+        "1206/703",
+        "-15363/703",
+        "15165/703",
+        "-12375/703"
+      ]
+    },
+    {
+      "case": "cubicA",
+      "a": 0,
+      "b": 1,
+      "covered_roots_at_fixed_omega": 3,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "determinant": [
+        "15363/703",
+        "-15165/703",
+        "12375/703",
+        "5490/703",
+        "-10638/703",
+        "13581/703"
+      ]
+    },
+    {
+      "case": "cubicA",
+      "a": 0,
+      "b": 2,
+      "covered_roots_at_fixed_omega": 3,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "determinant": [
+        "-5490/703",
+        "10638/703",
+        "-13581/703",
+        "9873/703",
+        "-4527/703",
+        "-1206/703"
+      ]
+    },
+    {
+      "case": "cubicA",
+      "a": 1,
+      "b": 0,
+      "covered_roots_at_fixed_omega": 3,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "determinant": [
+        "15363/703",
+        "-15165/703",
+        "12375/703",
+        "5490/703",
+        "-10638/703",
+        "13581/703"
+      ]
+    },
+    {
+      "case": "cubicA",
+      "a": 1,
+      "b": 1,
+      "covered_roots_at_fixed_omega": 3,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "determinant": [
+        "-5490/703",
+        "10638/703",
+        "-13581/703",
+        "9873/703",
+        "-4527/703",
+        "-1206/703"
+      ]
+    },
+    {
+      "case": "cubicA",
+      "a": 1,
+      "b": 2,
+      "covered_roots_at_fixed_omega": 3,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "determinant": [
+        "-9873/703",
+        "4527/703",
+        "1206/703",
+        "-15363/703",
+        "15165/703",
+        "-12375/703"
+      ]
+    },
+    {
+      "case": "cubicA",
+      "a": 2,
+      "b": 0,
+      "covered_roots_at_fixed_omega": 3,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "determinant": [
+        "-5490/703",
+        "10638/703",
+        "-13581/703",
+        "9873/703",
+        "-4527/703",
+        "-1206/703"
+      ]
+    },
+    {
+      "case": "cubicA",
+      "a": 2,
+      "b": 1,
+      "covered_roots_at_fixed_omega": 3,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "determinant": [
+        "-9873/703",
+        "4527/703",
+        "1206/703",
+        "-15363/703",
+        "15165/703",
+        "-12375/703"
+      ]
+    },
+    {
+      "case": "cubicA",
+      "a": 2,
+      "b": 2,
+      "covered_roots_at_fixed_omega": 3,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "determinant": [
+        "15363/703",
+        "-15165/703",
+        "12375/703",
+        "5490/703",
+        "-10638/703",
+        "13581/703"
+      ]
+    },
+    {
+      "case": "cubicB",
+      "a": 0,
+      "b": 0,
+      "covered_roots_at_fixed_omega": 3,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "determinant": [
+        "-15363/703",
+        "15165/703",
+        "-12375/703",
+        "-5490/703",
+        "10638/703",
+        "-13581/703"
+      ]
+    },
+    {
+      "case": "cubicB",
+      "a": 0,
+      "b": 1,
+      "covered_roots_at_fixed_omega": 3,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "determinant": [
+        "9873/703",
+        "-4527/703",
+        "-1206/703",
+        "15363/703",
+        "-15165/703",
+        "12375/703"
+      ]
+    },
+    {
+      "case": "cubicB",
+      "a": 0,
+      "b": 2,
+      "covered_roots_at_fixed_omega": 3,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "determinant": [
+        "5490/703",
+        "-10638/703",
+        "13581/703",
+        "-9873/703",
+        "4527/703",
+        "1206/703"
+      ]
+    },
+    {
+      "case": "cubicB",
+      "a": 1,
+      "b": 0,
+      "covered_roots_at_fixed_omega": 3,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "determinant": [
+        "9873/703",
+        "-4527/703",
+        "-1206/703",
+        "15363/703",
+        "-15165/703",
+        "12375/703"
+      ]
+    },
+    {
+      "case": "cubicB",
+      "a": 1,
+      "b": 1,
+      "covered_roots_at_fixed_omega": 3,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "determinant": [
+        "5490/703",
+        "-10638/703",
+        "13581/703",
+        "-9873/703",
+        "4527/703",
+        "1206/703"
+      ]
+    },
+    {
+      "case": "cubicB",
+      "a": 1,
+      "b": 2,
+      "covered_roots_at_fixed_omega": 3,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "determinant": [
+        "-15363/703",
+        "15165/703",
+        "-12375/703",
+        "-5490/703",
+        "10638/703",
+        "-13581/703"
+      ]
+    },
+    {
+      "case": "cubicB",
+      "a": 2,
+      "b": 0,
+      "covered_roots_at_fixed_omega": 3,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "determinant": [
+        "5490/703",
+        "-10638/703",
+        "13581/703",
+        "-9873/703",
+        "4527/703",
+        "1206/703"
+      ]
+    },
+    {
+      "case": "cubicB",
+      "a": 2,
+      "b": 1,
+      "covered_roots_at_fixed_omega": 3,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "determinant": [
+        "-15363/703",
+        "15165/703",
+        "-12375/703",
+        "-5490/703",
+        "10638/703",
+        "-13581/703"
+      ]
+    },
+    {
+      "case": "cubicB",
+      "a": 2,
+      "b": 2,
+      "covered_roots_at_fixed_omega": 3,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "determinant": [
+        "9873/703",
+        "-4527/703",
+        "-1206/703",
+        "15363/703",
+        "-15165/703",
+        "12375/703"
+      ]
+    },
+    {
+      "case": "cubicC",
+      "a": 0,
+      "b": 0,
+      "covered_roots_at_fixed_omega": 3,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "determinant": [
+        "27",
+        "18",
+        "-27",
+        "0",
+        "36"
+      ]
+    },
+    {
+      "case": "cubicC",
+      "a": 0,
+      "b": 1,
+      "covered_roots_at_fixed_omega": 3,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "determinant": [
+        "-27",
+        "-27",
+        "18",
+        "0",
+        "-27",
+        "-18"
+      ]
+    },
+    {
+      "case": "cubicC",
+      "a": 0,
+      "b": 2,
+      "covered_roots_at_fixed_omega": 3,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "determinant": [
+        "27",
+        "0",
+        "-36",
+        "27",
+        "27",
+        "-18"
+      ]
+    },
+    {
+      "case": "cubicC",
+      "a": 1,
+      "b": 0,
+      "covered_roots_at_fixed_omega": 3,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "determinant": [
+        "27",
+        "18",
+        "-27",
+        "0",
+        "36"
+      ]
+    },
+    {
+      "case": "cubicC",
+      "a": 1,
+      "b": 1,
+      "covered_roots_at_fixed_omega": 3,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "determinant": [
+        "-27",
+        "-27",
+        "18",
+        "0",
+        "-27",
+        "-18"
+      ]
+    },
+    {
+      "case": "cubicC",
+      "a": 1,
+      "b": 2,
+      "covered_roots_at_fixed_omega": 3,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "determinant": [
+        "27",
+        "0",
+        "-36",
+        "27",
+        "27",
+        "-18"
+      ]
+    },
+    {
+      "case": "cubicC",
+      "a": 2,
+      "b": 0,
+      "covered_roots_at_fixed_omega": 3,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "determinant": [
+        "27",
+        "18",
+        "-27",
+        "0",
+        "36"
+      ]
+    },
+    {
+      "case": "cubicC",
+      "a": 2,
+      "b": 1,
+      "covered_roots_at_fixed_omega": 3,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "determinant": [
+        "-27",
+        "-27",
+        "18",
+        "0",
+        "-27",
+        "-18"
+      ]
+    },
+    {
+      "case": "cubicC",
+      "a": 2,
+      "b": 2,
+      "covered_roots_at_fixed_omega": 3,
+      "matrix_shape": [
+        15,
+        4
+      ],
+      "positive_minor_rows": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "determinant": [
+        "27",
+        "0",
+        "-36",
+        "27",
+        "27",
+        "-18"
+      ]
+    }
+  ],
+  "all99_normal_boundary_kernels_zero": true
+}

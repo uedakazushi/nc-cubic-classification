@@ -1,0 +1,112 @@
+\subsection{二軸の全値判定と105点への必要被覆}
+\label{subsec:cubic-third-root-unit-boundary-axes}
+\begin{theorem}[軸上の全境界正常核]
+\label{thm:cubic-third-root-unit-boundary-axes}
+$E=0,D\ne0$ のH3候補は $D^3+\omega^2=0$ に限り、
+$D=0,E\ne0$ のH3候補は $E^3+\omega=0$ に限る。
+それぞれの例外点で、境界の中山固定正常三次空間は一次元であり、
+原 $B/(x)$ 座標で次の元が生成する：
+\[
+ \Gamma_E=ycb-D^3byc+cby,\qquad
+ \Gamma_D=ybc+bcy-E^3cyb.
+\]
+従って $w\ne0$ を正規化した全正常一次境界のH3必要候補は、
+前節の99点と、この6軸点を合わせた105個の $(D,E)$ に限る。
+\end{theorem}
+\begin{proof}
+原点はPHS条件で除外済みなので、一方の軸変数は非零としてよい。
+各軸の三次元Sklyanin商の次数3,4を、元の全二次関係から構成する。
+商次元は10,15で、全relation pivotは非零軸変数のmonomial単元である。
+従ってこの計算は軸の全非零点に有効である。
+中山固定三次基底4個に対する三正常式の行列は $11\times4$ となる。
+行ごとに軸変数の冪を掛けて多項式行列に直すと、Smith因子はそれぞれ
+\[
+ (1,1,1,D^3+\omega^2),\qquad
+ (1,1,1,E^3+\omega).
+\]
+左右変換の行列式は非零定数であり、変換恒等式も元行列へ掛け戻して確認する。
+従って記載した例外以外では境界正常核は零で、全正常三次は $x$ 因子を持ちH3でない。
+例外ではrank3、核は一本である。
+
+六次体 $k_0=\mathbb Q[t]/(t^6-t^3+1)$ で新しく元関係を再構成し、
+$E=0$ では $D=t,\omega=t^3-1$、$D=0$ では $E=t,\omega=-t^3$ とする。
+全六埋込みで元正常式を再代入して、表示した生成元と核一次元を確認する。
+再現器は \texttt{verify\_cubic\_third\_root\_unit\_boundary\_axes.py}。
+\end{proof}
+
+\begin{proposition}[六軸点の全変形正常三次]
+\label{prop:cubic-third-root-unit-boundary-axis-incidence}
+六軸点では $D+\omega E\ne0$ なので、既知のshearで $Z=0$ とできる。
+CY untwist $C$ の座標で、H3の候補正常三次は全 $u,v$ について次の一本に限る：
+\begin{align*}
+ E=0:\quad G_E={}&ycb+\omega^2byc+cby
+           +v(\omega^2bc+cb)x-uD^2yx^2,\\
+ D=0:\quad G_D={}&ybc+bcy+\omega cyb
+           +v(bc+\omega cb)x-uE^2yx^2.
+\end{align*}
+ここで正常化は $\delta=(1,1,\omega^2,\omega)$ である。
+この正常核の認識だけから、商の整域性やH3許容性は結論しない。
+\end{proposition}
+\begin{proof}
+上の六次体を係数体とし、$u,v$ を両方残す。
+元の二次関係をuntwistし、その次数3,4の全商を多項式係数で構成する。
+全relation pivotはパラメータ定数であり、全特殊化で同じ語基底を使える。
+中山固定三次8係数の正常行列は各 $26\times8$。
+パラメータ定数単元だけによる7回の消去で全残余が零となり、核は自由階数1となる。
+表示元の自由座標は非零定数なので、全特殊化後もその元が核全体を生成する。
+さらに元の四生成元の正常式へ再代入して、多項式として零を確認する。
+再現器は \texttt{verify\_cubic\_third\_root\_unit\_boundary\_}\\
+\texttt{axis\_incidence.py}。
+\end{proof}
+
+\begin{corollary}[軸切断の残る最小パラメータ]
+$Z=0,u=v=0$ の六軸切断はH3でない。
+残る軸切断は $v=1,u=a$ の一変数族と、$v=0,u=1$ の固定切断を調べればよい。
+\end{corollary}
+\begin{proof}
+$u=v=0$ では唯一の正常三次は純baseにあり、包絡はその三次元基底上の正常一次Ore拡大である。
+従って補題\ref{lem:cubic-skew-cone-vertex}の頂点障害でH3でない。
+$x$ のscalar変換は $(u,v)$ に重み $(2,1)$ で作用する。
+$v\ne0$ なら $v=1,u=a$ へ、$v=0,u\ne0$ なら $u=1$ へ移せる。
+この操作は表示した正常三次も同時に移す。
+\end{proof}
+
+\begin{theorem}[非軸99点の排除と六点への必要被覆]
+\label{thm:cubic-third-root-unit-boundary-six-points}
+前節の非軸99点では、中山固定境界正常三次の核は全て零である。
+従って $w\ne0$ の正常一次chartのH3候補は、固定した $\omega$ ごとに
+\[
+ (E=0,\ D^3=-\omega^2),\qquad (D=0,\ E^3=-\omega)
+\]
+の六点に限る。これは $(D,E)$ の必要被覆であり、各点の全 $u,v$ 切断が
+H3を与えるという主張ではない。
+\end{theorem}
+\begin{proof}
+99点を与える11次式は、二つの一次因子と三つの三次因子の積である。
+一次因子は $\mathbb Q(\omega)$ 上で扱う。
+三次因子は $K=\mathbb Q[q]/(q^6+q^3+1)$ 上の次の三表示で扱う：
+\[
+\begin{array}{c|c|c}
+ \omega&t&\text{消滅する三次因子}\\\hline
+ q^6&(q-1)^{-1}&t^3+(1-\omega)(t^2+t+1/3)\\
+ q^3&(q-1)^{-1}&t^3+(2+\omega)(t^2+t+1/3)\\
+ q^3&q+q^{-1}-1&t^3+3t^2-1.
+\end{array}
+\]
+$q^6+q^3+1$ は既約である。最初の二表示では $q=1+t^{-1}$、
+最後の表示では $t$ の最小多項式は記載した有理既約三次式である。
+従って固定した $\omega$ を保つ三埋込みは、それぞれの三次因子の全根を覆う。
+これは体の埋込みによる全点の検算であり、幾何学的同型による同一視ではない。
+
+各表示と $a,b=0,1,2$ に対し
+$D=-\omega^b(t+1), E=\omega^{b-a}t$ を代入する。
+元の三つの二次関係から次数3,4商を作ると、次元はそれぞれ10,15となる。
+中山固定三次基底は4個で、その三正常式の行列の4列は全て独立である。
+公開再現器は45ケース全てで非零 $4\times4$ minorを再計算し、
+その行番号と行列式の体基底係数を証明書に記録する。
+各一次ケースは1点、三次ケースは3点を覆い、点数は $9(1+1+3+3+3)=99$。
+従って全点で境界正常核が零である。
+H3正常三次の境界像が零なら $x$ 因子を持ち、整域条件に反する。
+再現器は \texttt{verify\_cubic\_third\_root\_unit\_boundary\_99.py}。
+軸の定理と合わせて結論を得る。
+\end{proof}

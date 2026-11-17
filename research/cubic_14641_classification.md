@@ -1523,3 +1523,8 @@ EG primary arxiv0709.3593v4、PDF SHA256 bb1730c492553a7e233a82e54b712f20b20a1e6
 proper criterion DE*((D³+E³+1)³−27D³E³)≠0の補集合はaxesと9直線D+ω^aE+ω^b。既知Δ0必要条件を各直線へ代入しradical、axesとnonPHS D³=E³1を除くと、全て共通11次h(t)（本文の二linear+三cubic因子）。正規化D=−ω^b(t+1),E=ω^(b−a)tで99distinct points。全line degree11、共通E polynomial degree33、複数lineの残存重複なし。原点はPHS必要条件で除外。公開elliptic_reduction validatorは全potential derivative、Hesse factor、10 Δfactorsの代入/gcd/squarefree、normalized h一致、重複をexactPASS。
 次は二軸と99点の正常核・cut判定。99点は45個のQ(ω)既約factor表示（9lines×[linear,linear,cubic,cubic,cubic]）で計算できるが、field conjugacyをgeometric isomorphism quotientと混同しない。w0と一方零coupling、非単位rootの22tensor atlasは依然別課題。
 独立診断：E3の全u,v・weight0 centre9をchar0で46cols/41constant pivots/free5、全核の元交換子zeroまで85.35秒で確認。小JSONをboundary_E3_center_diagnosticとして保存し、一般証明の依存とはしない。
+
+## 現在の正常一次境界：六軸点のみ（v263）
+二軸のSmith標準形は(1,1,1,D³+ω²)、(1,1,1,E³+ω)。関係pivotは非零軸変数のmonomial、Smith変換はconstant determinantで全非零軸値に有効。軸は各3点へ必要制限。六軸点の全u,v正常三次は各一本、原稿axis-incidence命題のG_E/G_D。元四正常式の多項式再代入までPASS。ZはD+ωE≠0によりshear除去可能。u=v0は頂点障害で排除。残りはv1,u=aとv0,u1。
+非軸99点は45算術ケース（9 Hesse線×2 linear+3 cubic）を厳密計算して全て境界正常核零。Q(ω)とQ[q]/(q6+q3+1)で次数3/4商を全元関係から再構成し、正常行列4列の非零4×4 minorを各ケースで確認。三つのcubicには(ω,t)=(q6,1/(q−1)), (q3,1/(q−1)), (q3,q+q^-1−1)を用い、対応する既約因子恒等式も検証。固定ωでの全99幾何点を覆う算術埋込みであり、moduli同型商ではない。従ってw1正常一次chartのH3候補は六軸点だけ（全Z,u,vの許容性は未完）。公開verify_cubic_third_root_unit_boundary_99.pyとcertificateが証明を再現する。
+次の最小課題は六軸切断の整域性/有限gl判定。private exact診断でE0,u1,v0のC/Gはcentre次数1,2,3,6,9が1,1,2,3,5、ambient中心9は7。候補canonical中央三次Psi=y³+vxy²+ux²y。全u,v中心9持上げ、free81、正のcentral fiberの構成を検討するが、現段階でこれらを定理にしていない。proper ellipticの被約9点orbit証明をfat triangle境界へ無条件には適用しない。w0、一方零coupling、非単位重複root atlas、全CY/成分/相対降下は引き続き未完。as4の新規輸入なし。

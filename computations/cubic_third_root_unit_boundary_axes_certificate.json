@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "scope": "all nonzero axis parameters: necessary normalizer-fixed boundary cubics only",
+  "axes": {
+    "Ezero": {
+      "matrix_shape": [
+        11,
+        4
+      ],
+      "Smith_factors": [
+        "1",
+        "1",
+        "1",
+        "T**3 - 1 - CRootOf(z**2 + z + 1, 1)"
+      ],
+      "relation_pivots_units_on_nonzero_axis": true,
+      "Smith_transformation_identity": "PASS",
+      "Smith_transformation_determinants_constant": true,
+      "exceptional_field": "t^6-t^3+1",
+      "parameter": "D=t",
+      "omega": "t^3-1",
+      "Gamma3_in_original_ybc_words": {
+        "ycb": [
+          "1"
+        ],
+        "byc": [
+          "-1",
+          "0",
+          "0",
+          "0"
+        ],
+        "cby": [
+          "1"
+        ]
+      },
+      "fresh_exceptional_normal_dimension": 1
+    },
+    "Dzero": {
+      "matrix_shape": [
+        11,
+        4
+      ],
+      "Smith_factors": [
+        "1",
+        "1",
+        "1",
+        "T**3 + CRootOf(z**2 + z + 1, 1)"
+      ],
+      "relation_pivots_units_on_nonzero_axis": true,
+      "Smith_transformation_identity": "PASS",
+      "Smith_transformation_determinants_constant": true,
+      "exceptional_field": "t^6-t^3+1",
+      "parameter": "E=t",
+      "omega": "-t^3",
+      "Gamma3_in_original_ybc_words": {
+        "ybc": [
+          "1"
+        ],
+        "bcy": [
+          "1"
+        ],
+        "cyb": [
+          "-1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "fresh_exceptional_normal_dimension": 1
+    }
+  }
+}

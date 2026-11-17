@@ -3442,5 +3442,30 @@
       "all36 prior unified replay plus5 additional individual validators PASS (41 total across runs)",
       "git diff --check PASS"
     ]
+  },
+  "third_root_unit_boundary_axes_and_99_v263": {
+    "status": "exact characteristic-zero necessary cover by six axis points",
+    "proof": "papers/sections/cubic_third_root_unit_boundary_axes.tex",
+    "validators": [
+      "verify_cubic_third_root_unit_boundary_axes.py",
+      "verify_cubic_third_root_unit_boundary_axis_incidence.py",
+      "verify_cubic_third_root_unit_boundary_99.py"
+    ],
+    "results": [
+      "all-value axis Smith forms restrict axes to6 points",
+      "alluv normal cubic kernel free rank1 at six points",
+      "all99 nonaxis residual points have boundary normal kernel zero"
+    ],
+    "checks": [
+      "axis Smith and alluv incidence default Sympy PASS",
+      "99 point public replay default Sympy PASS;45 nonzero exact minors",
+      "v262 main build clean PASS",
+      "36 prior unified validators plus8 later individual validators PASS (44 total across runs; no single44 replay claimed)"
+    ],
+    "not_claimed": [
+      "six axis admissibility",
+      "w0 chart covered",
+      "whole H3 complete"
+    ]
   }
 }

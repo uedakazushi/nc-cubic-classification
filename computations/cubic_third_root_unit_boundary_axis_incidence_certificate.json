@@ -1,0 +1,115 @@
+{
+  "status": "PASS",
+  "field": "t^6-t^3+1",
+  "axes": {
+    "Ezero": {
+      "normal_matrix_shape": [
+        26,
+        8
+      ],
+      "parameter_constant_pivots": 7,
+      "zero_residuals": true,
+      "normal_free_rank": 1,
+      "all_original_generator_normal_equations": "PASS",
+      "G3_C_coordinates": {
+        "ycb": {
+          "0,0": [
+            "1"
+          ]
+        },
+        "byc": {
+          "0,0": [
+            "-1",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "cby": {
+          "0,0": [
+            "1"
+          ]
+        },
+        "bcx": {
+          "0,1": [
+            "-1",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "cbx": {
+          "0,1": [
+            "1"
+          ]
+        },
+        "yxx": {
+          "1,0": [
+            "-1",
+            "0",
+            "0"
+          ]
+        }
+      },
+      "omega": "t^3-1"
+    },
+    "Dzero": {
+      "normal_matrix_shape": [
+        26,
+        8
+      ],
+      "parameter_constant_pivots": 7,
+      "zero_residuals": true,
+      "normal_free_rank": 1,
+      "all_original_generator_normal_equations": "PASS",
+      "G3_C_coordinates": {
+        "ybc": {
+          "0,0": [
+            "1"
+          ]
+        },
+        "bcy": {
+          "0,0": [
+            "1"
+          ]
+        },
+        "cyb": {
+          "0,0": [
+            "-1",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "bcx": {
+          "0,1": [
+            "1"
+          ]
+        },
+        "cbx": {
+          "0,1": [
+            "-1",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "yxx": {
+          "1,0": [
+            "-1",
+            "0",
+            "0"
+          ]
+        }
+      },
+      "omega": "-t^3"
+    }
+  },
+  "scope": "all six field embeddings and all u,v after allowed axis Z-shear; normal incidence only",
+  "not_claimed": [
+    "axis cut domain",
+    "axis cut finite global dimension",
+    "axis H3 admissibility",
+    "complete H3 classification"
+  ]
+}
