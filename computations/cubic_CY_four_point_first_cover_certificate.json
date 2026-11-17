@@ -1,0 +1,132 @@
+{
+  "status": "PASS",
+  "source_commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+  "scope": "necessary complete x1 nonzero, x0=x3=x4 zero chart; entire H3 stratum empty by old FN2 full exclusions",
+  "unit_elimination": "all four original21-variable branches replayed step by step, every equation and unit pivot independently checked",
+  "saturated_consequences": "all four main localized ideals recomputed over QQ",
+  "bad_original_quotients": [
+    {
+      "name": "bad00_-1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        22
+      ],
+      "parameters": [
+        "lambda",
+        "x6",
+        "x7",
+        "x8"
+      ]
+    },
+    {
+      "name": "bad01_-1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        21
+      ],
+      "parameters": [
+        "lambda"
+      ]
+    },
+    {
+      "name": "bad10a_-1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        21
+      ],
+      "parameters": [
+        "lambda",
+        "x6",
+        "x7"
+      ]
+    },
+    {
+      "name": "bad10b_-1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        22
+      ],
+      "parameters": [
+        "lambda",
+        "x7"
+      ]
+    },
+    {
+      "name": "bad00_1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        22
+      ],
+      "parameters": [
+        "lambda",
+        "x6",
+        "x7",
+        "x8"
+      ]
+    },
+    {
+      "name": "bad01_1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        21
+      ],
+      "parameters": [
+        "lambda"
+      ]
+    },
+    {
+      "name": "bad10a_1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        21
+      ],
+      "parameters": [
+        "lambda",
+        "x6",
+        "x7"
+      ]
+    },
+    {
+      "name": "bad10b_1",
+      "dimensions": [
+        1,
+        4,
+        10,
+        22
+      ],
+      "parameters": [
+        "lambda",
+        "x7"
+      ]
+    }
+  ],
+  "retained_transport": "literal constrained universal FN2 old presentation",
+  "ordinary_dependencies": [
+    "diagonal normalization x1=1 and independent x2,x5 to0/1 by algebraic closedness",
+    "full FN1-FN6 branch proof and isolated upstream controller replay",
+    "generic original relation rank gives lower bounds at every permitted closed value",
+    "existing all-parameter L/M/F/G/K H3 exclusions"
+  ],
+  "not_claimed": [
+    "degree1 x0 nonzero chart covered",
+    "degree2 or full shared supports classified",
+    "AS sufficiency/full automorphisms imported",
+    "relative scheme coverage",
+    "full H3 classification",
+    "novelty confirmed"
+  ]
+}

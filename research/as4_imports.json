@@ -767,5 +767,33 @@
       "full CY/H3 classification",
       "novelty"
     ]
+  },
+  "CY_four_point_first_necessary_cover_v302": {
+    "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+    "files": [
+      {
+        "path": "research/proofs/CY_ZERO_COMMUTATORS_FOUR_SIMPLE_FIRST_SHARED_COMPLETE.tex",
+        "sha256": "fede79f0b5363fdc65dc89d5ca0bdbea34157d9762917933f916ee2eae2b2b2f"
+      },
+      {
+        "path": "code/verify_cy_zero_commutators_four_simple_first_shared_complete.py",
+        "sha256": "959dc83e1b9dfba789860dce6e79d1dbb64ac0b3c7fca3f9bbda7a3028e197ef"
+      }
+    ],
+    "used_part": "FN1-FN6 full necessary x1 nonzero x0=x3=x4 zero chart only; no positive AS sufficiency or automorphism theorem",
+    "upstream_status": "proof_written; independent_audit_pending; novelty_unsearched",
+    "upstream_replay": "full pinned controller PASS with python-flint in isolated output workspace",
+    "downstream_independent": "all four original21-variable unit elimination traces replayed equation by equation; four main saturated ideals recomputed; all eight original degree3 quotient families exact; constrained universal original presentation literally old FN2",
+    "validator": "computations/verify_cubic_CY_four_point_first_cover.py",
+    "input": "computations/cubic_CY_four_point_first_input.json",
+    "proof": "papers/sections/cubic_CY_four_point_first_cover.tex",
+    "not_imported": [
+      "degree1 x0 nonzero charts",
+      "other nonzero shared supports",
+      "AS sufficiency/full automorphisms",
+      "relative scheme cover",
+      "complete CY/H3 classification",
+      "novelty"
+    ]
   }
 }
