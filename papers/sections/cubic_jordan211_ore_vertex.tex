@@ -1,0 +1,138 @@
+\subsection{導分付きOre頂点と単冪Jordan型\texorpdfstring{$(2,1,1)$}{(2,1,1)}}
+\label{subsec:cubic-jordan211-ore-vertex}
+\begin{lemma}[導分付きOre拡大の三次base切断の頂点]
+\label{lem:cubic-derivation-Ore-vertex}
+$S$ は左右noetherian quadratic Koszul AS3、$B=S[z;\sigma,\delta]$ は
+$\deg z=1$、$\deg\delta=1$ の左右noetherian Koszul AS4型14641とする。
+$0\ne G\in S_3$ は $B$ で正規正則とし、$Gb=\theta(b)G$ と書く。
+$\theta(S)=S$、$\theta(z)=\lambda z+h$、$\lambda\ne0$, $h\in S_1$ なら、
+$R=B/(G)$ のpoint対象 $P=\pi k[z]$ は無限高次の自己Extを持つ。従ってH3でない。
+\end{lemma}
+\begin{proof}
+Ore基底で $Gz=(\lambda z+h)G$ を比較すると
+$\sigma(G)=\lambda^{-1}G$、$\delta(G)=-\lambda^{-1}hG$ である。
+従って $A=S/(G)$ と置けば $R=A[z;\bar\sigma,\bar\delta]$ となる。
+$S_{\ge1}$ と $A_{\ge1}$ は正次数の導分で保たれ、
+$M=k\otimes_SB=k\otimes_AR=k[z]$ が右加群として定義される。
+
+$B$ は左右 $S$ 自由である。$S$ 上の $k$ の有限線型解消を誘導し、
+$\underline{\operatorname{Hom}}$ の随伴性と右 $S$ 自由基底を用いると
+\[
+ \underline{\operatorname{Ext}}_B^j(M,B)=0\ (j\ne3),\qquad
+ \underline{\operatorname{Ext}}_B^3(M,B)\simeq k[z](3)
+\]
+をgradedベクトル空間として得る。
+正規正則三次 $G$ のRees lemmaは $R$ 上のExtを次数2に集中させる。
+normalizerによるmodule twistは入るが、$\theta(S_{\ge1})=S_{\ge1}$ と
+$\theta(z)\equiv\lambda z\pmod{S_{\ge1}}$ により、$z^n\mapsto\lambda^{-n}z^n$ が
+$M^\theta\simeq M$ を与える。内部shiftを含めると
+$\underline{\operatorname{Ext}}_R^2(M,R)$ のgradedベクトル空間は $k[z]$ である。
+$R$ はAS Gorenstein次元3・parameter 1なので、局所双対とsection比較から
+\[
+ \operatorname{Ext}_{\qgr R}^j(\pi R(a),P)=0\ (j>0),\qquad
+ \operatorname{Hom}_{\qgr R}(\pi R(a),P)=k
+\]
+が全 $a$ で成り立つ。具体的には $H^i_{\mathfrak m}(M)$ は $i=1$ に集中し、
+$H^1_{\mathfrak m}(M)$ は各負次数で一次元となる。
+従って $M$ のsectionの補完は全shiftで一次元、正次数の層コホモロジーは零となる。
+この議論では $z$ の正常性や $z$ によるOre局所化を仮定しない。
+
+$A$ 上の $k$ の最小graded自由解消を、左 $A$ 自由な $R$ によって誘導する。
+各微分の係数は $A_{\ge1}$ に属し、$P$ に零作用する。
+各項の上のHom-acyclicityによりExt spectral sequenceはこのHom複体を計算し、
+$\dim\Ext^n(P,P)=\beta_n^A(k)$ となる。
+一方
+\[
+ H_A(t)=\frac{1-t^3}{(1-t)^3},\qquad
+ \frac1{H_A(t)}=\frac{(1-t)^2}{1+t+t^2}
+\]
+は後者が多項式でないので、最小解消は有限でない。従って任意に高次の自己Extが非零である。
+H3のhomological dimension 2に反する。
+\end{proof}
+
+\begin{lemma}[三次tensorの小さい両端収縮]
+\label{lem:cubic-small-end-contractions}
+$0\ne f\in U^{\otimes3}$ とし、第一・第三因子の収縮が張る二次空間を $Q$ とする。
+$\dim Q\le2$ なら、$Q$ は非零decomposable tensorを含む。
+\end{lemma}
+\begin{proof}
+片端の収縮rankが1なら $f=a\otimes q$ または $q\otimes c$ であり、反対端の収縮から
+非零decomposable tensorを得る。残る場合は両端rankが2で、両収縮像は同じ $Q$ である。
+両端の最小支持を $A,C\subset U$ とすると $\dim A=\dim C=2$、
+$Q\subset A\otimes C$、$f\in A\otimes(A\cap C)\otimes C$ となる。
+$A\ne C$ なら中間支持は一次元で、端収縮はdecomposableとなる。
+$A=C$ なら二次元空間 $Q\subset A\otimes A$ の射影直線は
+$2\times2$ 行列式の零点を持つので、やはり非零rank1 tensorを含む。
+ここで体の代数閉性を用いる。
+\end{proof}
+
+\begin{theorem}\label{thm:cubic-jordan211-unipotent-empty}
+強い内在的H3の二次包絡の中山作用は、単一固有値1のJordan型 $(2,1,1)$ を持たない。
+\end{theorem}
+\begin{proof}
+$B=C^H$、$C$ CY、$H=\exp N$、$Nx_1=x_0$、$N$ は他の三生成元を殺す、とする。
+$U=\langle x_0,x_2,x_3\rangle$, $z=x_1$ と書く。
+元反巡回topの $N_{\rm tot}$ 核は32次元。
+$z$ の個数をweightとすると、weight2方向は一つだけであり、middleの列 $zz$ は純 $x_0^2$ となる。
+整域性からその係数が零なので、topのweightは高々1である。
+weight1部分を $f\in U^{\otimes3}$ により
+$w_1(z,u,v,w)=f(u,v,w)$ と表示する。
+$f=0$ では $z$ に関するtop収縮が零になり、AS4の完全対合に反する。
+
+middle行列は $U^2$ と $zU+Uz$ に関して
+\[
+ \begin{pmatrix}P&M\\M^t&0\end{pmatrix}
+\]
+となり、$M$ の列空間は $f$ の両端収縮が張る二次空間 $Q$ である。
+rank6から $r=\operatorname{rank}M\le3$。
+$r\le2$ は補題\ref{lem:cubic-small-end-contractions}により整域性に反するので $r=3$。
+従って全関係空間の $U^2$ との交叉はちょうど $Q$、混合射影は三次元である。
+この混合射影の片側への射影に核があれば、関係は $uz+q$ 又は $zu+q$、
+$0\ne u\in U$, $q\in U^2$ となる。
+$N$ を作用させると $ux_0$ 又は $x_0u$ が関係となり、整域性に反する。
+よって両側の射影は同型であり、三混合関係を
+\[
+ zu=\sigma(u)z+\delta(u),\qquad u\in U
+\]
+と書ける。$\sigma$ は $U$ 上可逆、$\delta(U)\subset U^2$ である。
+
+$S\subset C$ を $U$ の実際の部分代数とする。
+並べ替えにより $C$ は $\sum S z^n$ で張られる。
+もし非自明な $\sum_{i=0}^d s_i z^i=0$ があれば、$N^d$ を作用させて
+$d!s_dx_0^d=0$ となり、整域性に反する。
+従って全Ore冪は独立である。この独立性によって $\sigma,\delta$ は $S$ の関係を保ち、
+逆向きの並べ替えから $\sigma^{-1}$ も定義される。
+よって $C=S[z;\sigma,\delta]$、$H_S=(1-t)^{-3}$ である。
+
+ここで基礎のAS3性を追加仮定にしない。
+$S_0=T(U)/(Q)$ と置く。topの一次収縮は四次元の三次Koszul syzygy空間を与える。
+$z$ の収縮は純 $U^3$ の $f$、他の三収縮のweight1成分は独立である：
+これは混合両射影が同型であることに対応する。
+従って $(U\otimes Q)\cap(Q\otimes U)=kf$、$\dim(S_0)_3=27-18+1=10$。
+実際の $S_3$ も10次元なので、$S_0\to S$ は次数3まで単射である。
+$\sigma(Q)$ は次数2、$\delta(Q)$ は次数3で $S$ に零となるから、
+これらは既に $S_0$ の関係で零となる。
+従って $S_0$ 上にも同じOre拡大が定義され、それは元の六二次関係と同じ表示を持つ。
+よって $S_0=S$ である。
+
+この二次基礎のKoszul候補複体は階数 $(1,3,3,1)$ である。
+最初の二段の完全性は二次表示から、最後の写像の単射性は整域性から従い、
+$H_S=(1-t)^{-3}$ によるEuler比較が残るhomologyを零にする。
+両端収縮のrank3は双対の相補次数対合の非退化性を与える。
+従って $S$ はKoszul AS3である。
+左右noetherian性も $C$ のOre自由基底により、イデアルの延長・縮約から降下する。
+
+輸送三次 $F$ は $N(F)=0$ である。
+Ore展開の最大 $z$ 次数が $d>0$ なら、再び $N^d(F)=d!s_dx_0^d\ne0$ となるので、$F\in S_3$。
+$H$ は $S$ を固定し $z\mapsto z+x_0$ なので、twist後の $B$ も同じAS3基礎上の
+次数1導分付きOre拡大である。
+$B$ 上の正常三次のnormalizerは $\mu_B^{-1}=H^4$ であり、
+$S$ を固定し $z\mapsto z+4x_0$ となる。
+補題\ref{lem:cubic-derivation-Ore-vertex}が全候補を排除する。
+\end{proof}
+公開再現器は\\
+\texttt{verify\_cubic\_jordan211\_ore\_reduction.py}。
+元32方向、純平方列、全blockと両端収縮、三次に必要な自由語微分を厳密検証する。
+rank/domain、AS3降下、Rees・局所双対・無限自己Extは上の通常証明であり、
+計算器がそれらを形式化したとは主張しない。
+単一固有値に残る非自明Jordan型は $(2,2)$ である。

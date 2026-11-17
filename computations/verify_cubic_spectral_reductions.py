@@ -83,6 +83,7 @@ CHECKS=[
  'verify_cubic_principal_unipotent_cover.py',
  'verify_cubic_principal_unipotent_vertex.py',
  'verify_cubic_jordan31_unipotent_vertex.py',
+ 'verify_cubic_jordan211_ore_reduction.py',
 ]
 results=[]
 for name in CHECKS:
