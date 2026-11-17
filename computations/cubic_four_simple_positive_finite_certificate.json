@@ -1,0 +1,345 @@
+{
+  "status": "PASS",
+  "scope": "all12 finite parameter representatives from positive toric pieces excluded by exact normal kernel",
+  "all12_points": [
+    {
+      "branch": 1,
+      "root_order": 20,
+      "parameter_value": [
+        "-2",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "dims": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        21,
+        4
+      ],
+      "normal_rank": 4,
+      "nullity": 0
+    },
+    {
+      "branch": 2,
+      "root_order": 20,
+      "parameter_value": [
+        "-2",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "dims": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        21,
+        4
+      ],
+      "normal_rank": 4,
+      "nullity": 0
+    },
+    {
+      "branch": 4,
+      "root_order": 20,
+      "parameter_value": [
+        "-2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "dims": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        23,
+        4
+      ],
+      "normal_rank": 4,
+      "nullity": 0
+    },
+    {
+      "branch": 5,
+      "root_order": 20,
+      "parameter_value": [
+        "2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "dims": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        23,
+        4
+      ],
+      "normal_rank": 4,
+      "nullity": 0
+    },
+    {
+      "branch": 8,
+      "root_order": 24,
+      "parameter_value": [
+        "1",
+        "0",
+        "1",
+        "0",
+        "-1",
+        "0",
+        "0",
+        "0"
+      ],
+      "dims": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        26,
+        4
+      ],
+      "normal_rank": 4,
+      "nullity": 0
+    },
+    {
+      "branch": 8,
+      "root_order": 24,
+      "parameter_value": [
+        "-1",
+        "0",
+        "-1",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      "dims": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        26,
+        4
+      ],
+      "normal_rank": 4,
+      "nullity": 0
+    },
+    {
+      "branch": 9,
+      "root_order": 24,
+      "parameter_value": [
+        "1",
+        "0",
+        "1",
+        "0",
+        "-1",
+        "0",
+        "0",
+        "0"
+      ],
+      "dims": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        26,
+        4
+      ],
+      "normal_rank": 4,
+      "nullity": 0
+    },
+    {
+      "branch": 9,
+      "root_order": 24,
+      "parameter_value": [
+        "-1",
+        "0",
+        "-1",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      "dims": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        26,
+        4
+      ],
+      "normal_rank": 4,
+      "nullity": 0
+    },
+    {
+      "branch": 11,
+      "root_order": 28,
+      "parameter_value": [
+        "2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "dims": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        14,
+        2
+      ],
+      "normal_rank": 2,
+      "nullity": 0
+    },
+    {
+      "branch": 12,
+      "root_order": 28,
+      "parameter_value": [
+        "-2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "dims": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        14,
+        2
+      ],
+      "normal_rank": 2,
+      "nullity": 0
+    },
+    {
+      "branch": 14,
+      "root_order": 36,
+      "parameter_value": [
+        "-2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "dims": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        12,
+        2
+      ],
+      "normal_rank": 2,
+      "nullity": 0
+    },
+    {
+      "branch": 15,
+      "root_order": 36,
+      "parameter_value": [
+        "2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "dims": [
+        1,
+        4,
+        10,
+        20,
+        35
+      ],
+      "normal_shape": [
+        12,
+        2
+      ],
+      "normal_rank": 2,
+      "nullity": 0
+    }
+  ],
+  "remaining_curve_branch_ids": [
+    0,
+    3,
+    7,
+    10,
+    13
+  ],
+  "remaining_Galois_labels": 4,
+  "remaining_root_sets": 9
+}
