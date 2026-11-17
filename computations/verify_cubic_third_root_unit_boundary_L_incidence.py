@@ -158,3 +158,89 @@ out={'status':'PASS','scope':'exact cubic function field plus complete polynomia
  'not_claimed':['all closed points of L covered','AS4 existence proved just from degrees3/4','normal quotient domain or H3 admissible','all other Delta-zero curves covered','complete H3 classification']}
 Path(__file__).with_name('cubic_third_root_unit_boundary_L_incidence_certificate.json').write_text(json.dumps(out,indent=2)+'\n')
 print(json.dumps({'status':'PASS','L_open_normal_kernel_dimension':1,'all_polynomial_u_v':True,'Omega_degree':Omega.degree()}))
+# The regular AS4 recognition uses the actual W3 lift, not degree counts alone.
+ws2=sorted(itertools.product(range(4),repeat=2),key=lambda w:(w.count(0),w));is2={w:j for j,w in enumerate(ws2)}
+rows2=[{is2[w]:c for w,c in rel.items()} for rel in R]
+q2=echelon(rows2);assert len(q2)==6
+assert len(echelon(rows2+[{is2[(j,0)]:one} for j in range(4)]))==10
+
+def tensor_sum(parts):
+ out={}
+ for scalar,pre,rel,post in parts:
+  for w,c in rel.items():
+   key=pre+w+post;out[key]=out.get(key,zero)+scalar*c
+ return {w:c for w,c in out.items() if c}
+w3left=tensor_sum([(one,(1,),R[5],()),(one,(2,),R[4],()),
+                  (one,(3,),R[3],()),(u,(0,),R[0],())])
+w3right=tensor_sum([(one,(),R[5],(1,)),(one,(),R[4],(2,)),
+                   (one,(),R[3],(3,)),(-u,(),R[0],(0,)),(-v,(),R[0],(1,))])
+assert w3left==w3right and w3left[(2,2,2)]==one
+# Full original quartic top and its inverse-Nakayama cyclic convention.
+seen=set();tops=[];weights=[0,0,1,2]
+for word in itertools.product(range(4),repeat=4):
+ if word in seen:continue
+ ww=word;co=F.one;top={}
+ while ww not in top:
+  top[ww]=co;seen.add(ww);ww=(ww[-1],)+ww[:-1];co=-co/F.unit**weights[ww[0]]
+ if co==F.one:tops.append(top)
+aa=[zero]*22
+for i,c in {0:u,4:v,5:one,6:d,7:e,9:e,10:one,11:d,12:d,13:e,14:one}.items():aa[i]=c
+w4={}
+for a,top in zip(aa,tops):
+ for ww,c in top.items():w4[ww]=w4.get(ww,zero)+a*P.convert(base.convert(F.to_sympy(c)))
+w4={w:c for w,c in w4.items() if c}
+assert w4[(0,2,2,2)]==one
+for ww,c in w4.items():
+ vv=(ww[-1],)+ww[:-1]
+ assert w4[vv]==-c/(o**weights[vv[0]])
+for j in range(16):
+ col={is2[w[:2]]:c for w,c in w4.items() if 4*w[2]+w[3]==j}
+ assert not reduce(col,q2)
+# Central cubic obtained from Gamma and the polynomial algebra k[x,y].
+Glift=dict(Gamma)
+for j,ww in enumerate([(1,1,0),(2,3,0),(1,0,0),(0,0,0)]):Glift[ww]=Glift.get(ww,zero)+cc[j]
+def central_residual(G):
+ result={}
+ for j in range(4):
+  row={}
+  for ww,c in G.items():
+   for vv,co in [(ww+(j,),c),((j,)+ww,-c)]:row[ix[vv]]=row.get(ix[vv],zero)+co
+  for k,c in reduce({k:c for k,c in row.items() if c},QP).items():result[j,k]=c
+ return result
+Cgs=[{(1,1,1):one},{(1,1,0):one},{(1,0,0):one},Glift]
+Ccols=[central_residual(g) for g in Cgs];cks=sorted(set().union(*(set(c) for c in Ccols)))
+CP={};center_obstructions=[]
+for key in cks:
+ row={j:c[key] for j,c in enumerate(Ccols) if key in c and c[key]}
+ rr=reduce(row,CP)
+ if not rr:continue
+ j=min(rr)
+ if j<3:
+  co=rr[j];CP[j]={k:c/co for k,c in rr.items()};continue
+ center_obstructions.append(rr)
+assert set(CP)=={0,1,2} and not center_obstructions
+cs={3:one}
+for j in sorted(CP,reverse=True):cs[j]=-sum((c*cs.get(k,zero) for k,c in CP[j].items() if k!=j),zero)
+for key in cks:assert not sum((Ccols[j].get(key,zero)*cs[j] for j in range(4)),zero)
+# Every additional inverse remains supported on the same Omega-open.
+def supported_by_Omega(poly):
+ while poly.degree()>0:
+  gg=poly.gcd(Omega);assert gg.degree()>0
+  poly=poly.exquo(gg)
+for nn in base.norm_log:
+ supported_by_Omega(nn.numer);supported_by_Omega(nn.denom)
+assert set(cs[0].d)=={(0,0)} and set(cs[1].d)<={(0,1)} and set(cs[2].d)<={(1,0),(0,2)}
+recognition={'status':'PASS','scope':'all-polynomial-u-v 1-regular normal x, explicit W3 lift and quartic Nakayama tensor; ordinary LBS AS4 recognition; central cubic relation exact',
+ 'same_L_and_Omega_open':True,'B2_relation_rank':6,'B2_relations_plus_xB1_rank':10,
+ 'W3_lift_left':'y*r_even+b*r_b+c*r_c+u*x*r_xy',
+ 'W3_lift_right':'r_even*y+r_b*b+r_c*c-u*r_xy*x-v*r_xy*y',
+ 'W3_projection_nonzero':'coefficient of b^3 equals1',
+ 'top_inverse_Nakayama':'(x,y,omega*b,omega^2*c)',
+ 'ordinary_AS4_inputs':{'Sklyanin_Koszul_CY':'Iyudu-Shkarin arXiv1601.00564 Theorem1.1, Corollary6.1; E nonzero, E^3!=1',
+ 'normal_extension':'Le Bruyn-Smith-Van den Bergh MathZ222(1996)171-212, Theorem2.6(5), Corollary2.7; 1-regularity and W3 surjectivity checked'},
+ 'conclusion':'every u,v in the recorded open is an actual noetherian quadratic Koszul AS4 domain with prescribed Nakayama',
+ 'central_cubic':'Psi=Gamma_tilde+q0*y^3+q1*y^2*x+q2*y*x^2',
+ 'central_correction_coefficients':[poly_record(cs[j]) for j in range(3)],
+ 'not_claimed':['full center or PI degree','normal quotient domain or H3 admissibility','all closed L points covered','complete H3 classification']}
+Path(__file__).with_name('cubic_third_root_unit_boundary_L_recognition_certificate.json').write_text(json.dumps(recognition,indent=2)+'\n')
+print(json.dumps({'status':'PASS','actual_AS4_recognition_inputs':True,'central_Psi_identity':True}))

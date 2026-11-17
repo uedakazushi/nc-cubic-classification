@@ -1,0 +1,96 @@
+\subsection{例外曲線の実AS4認識と中心三次}
+\label{subsec:cubic-third-root-unit-boundary-L-recognition}
+\begin{theorem}[指定 $L$ 開集合の包絡は全て実AS4整域]
+\label{thm:cubic-third-root-unit-boundary-L-recognition}
+前命題の $L=0,\Omega\ne0,Z=0$ の表示は、全 $u,v$ について
+noetherian quadratic Koszul AS4整域であり、中山は
+$\theta=(1,1,\omega,\omega^2)$。
+従って $\widetilde\Gamma$ は正則正規で、
+$R=B/(\widetilde\Gamma)$ はnoetherian AS-Gorenstein、次元3、index1、$\mu_R=1$、
+\[
+ H_R(t)=\frac{1-t^3}{(1-t)^4}
+\]
+を持つ。$R$ 上でも $x$ は左右正則正常である。
+$R$ の整域性とH3許容性は、この認識だけからは結論しない。
+\end{theorem}
+\begin{proof}
+境界商 $S=B/(x)$ はパラメータ $(d,E,1)$ の三次元Sklyanin代数である。
+$E\ne0,E^3\ne1$ なので、\cite[Theorem~1.1, Corollary~6.1]{ISSklyanin}から
+Koszul AS3である。実際、点三次曲線の滑らかさを測る式は
+\[
+ (d^3+E^3+1)^3-27d^3E^3
+ =3(\omega^2-\omega)(E^3-1)^3\ne0.
+\]
+従って通常の楕円Sklyaninの場合であり、$S$ はnoetherian整域でもある
+（\cite[Introduction]{SmithTateCenters}の標準Sklyaninの性質）。
+
+$\dim B_2=10,\dim S_2=6$ と正常性から、$xB_1$ は4次元であり、
+$x$ は1-regularである。この単射は元の六二次関係と四つの $x$ 倍を合わせた
+rank10の検算でも確認する。
+ここで低次数の次元だけをAS4性の根拠にしない。
+$r_{xy}=xy-yx$、
+\[
+ r_c=dyb+Eby+c^2,\quad r_b=Eyc+dcy+b^2,\quad
+ r_y=dbc+Ecb+ux^2+vxy+y^2
+\]
+とすると、自由tensor代数の中で厳密に
+\begin{align*}
+ w_3&=yr_y+br_b+cr_c+u x r_{xy}\\
+    &=r_y y+r_b b+r_c c-u r_{xy}x-v r_{xy}y.
+\end{align*}
+従って $w_3\in(V\otimes I)\cap(I\otimes V)$。
+$x=0$ への射影は $b^3$ 係数1の非零Sklyanin最高三次であり、
+一次元の $W_3(S)$ を生成する。
+これで \cite[Theorem~2.6(5), Corollary~2.7]{LBS}の全条件を満たし、
+全次数のKoszul AS4性、noetherian性、整域性を得る。
+
+元の22軌道atlasで
+$a_0=u,a_4=v,a_5=1,a_6=a_{11}=a_{12}=d,
+ a_7=a_9=a_{13}=E,a_{10}=a_{14}=1$、他を零とした四次tensorは、
+元六関係の像に入り、$xb^3$ 係数1で非零。
+逆中山巡回が $\theta^{-1}$ であることを全語で確認できるので、
+AS4の一次元最高Koszul tensorから中山が正確に $\theta$ と分かる。
+単冪加法項を未決定のままにしていない。
+$G=\widetilde\Gamma$ は中山逆指標の正常元なので、正規商公式から
+表示したAS-Gorenstein性、indexと中山を得る。
+
+$S$ は整域で $\overline G\ne0$ だから、$\overline G$ は正則である。
+$x,G$ は可換な正規元なので正則列を交換でき、$x$ は $R$ 上でも正則。
+直接には $xr=Gb$ を $x$ で商にして $b\in xB$ を得、$x$ を消去すればよい。
+\end{proof}
+
+\begin{proposition}[中心三次とアフィン切断]
+\label{prop:cubic-third-root-unit-boundary-L-central-Psi}
+$Y=E^3$ とし
+\begin{align*}
+ Q_*&=(\omega+2)(1-Y),\\
+ H_*&=\frac{3(\omega+1)Y+(2\omega+1)(E^2d+Ed^2)-\omega-2}{Y-1},\\
+ J_*&=\frac{(1-\omega)E^2d-(2\omega+1)Ed^2}{(Y-1)^2}
+\end{align*}
+と置く。中心三次
+\[
+ \Psi=\widetilde\Gamma+Q_*y^3+vH_*y^2x+(uH_*+v^2J_*)yx^2
+\]
+が存在する。$C=B^\theta$ では $x$ が中心となり、$\mu_C=1$。
+$x$ を可逆化した次数零環で $T=yx^{-1}$ と書けば、切断のアフィン環
+$U=(R[x^{-1}])_0$ は中心元
+\[
+ \psi=\Psi x^{-3}=Q_*T^3+vH_*T^2+(uH_*+v^2J_*)T
+\]
+を持つ。
+また $R$ が整域であることと $U$ が整域であることは同値。
+全中心・PI次数・$U$ の大域次元はまだ判定していない。
+\end{proposition}
+\begin{proof}
+前節の元次数4関係行加群を用い、$\widetilde\Gamma$ と
+$y^3,y^2x,yx^2$ の線型結合の全交換子を比較する。
+三つの単元pivotで正確に表示した $Q_*,vH_*,uH_*+v^2J_*$ を得、残差は全て零。
+追加の逆元のノルム支持も同じ $\Omega$ の因子に限る。
+従って全 $u,v$、全 $\Omega$ 開集合で有効である。
+$\theta(\Psi)=\Psi$、$\deg\Psi=3$ なので、この中心三次はCY untwistでも同じvectorとして中心。
+右twistの積で $x*_C b=\omega xb=bx=b*_C x$、$c,y$ も同様で、$x$ は $C$ の中心。
+$\operatorname{hdet}\theta=1,\theta^3=1$ から $\mu_C=\theta\theta^{-4}=1$。
+次数零の局所化におけるtwist積は元の積と同一であり、表示の中心恒等式を得る。
+最後に $x$ は $R$ 上正則なので $R\hookrightarrow R[x^{-1}]$。
+後者は $U[x^{\pm1};\rho]$ というskew Laurent拡大であり、整域性の同値が従う。
+\end{proof}

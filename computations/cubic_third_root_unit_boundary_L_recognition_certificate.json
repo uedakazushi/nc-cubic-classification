@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "scope": "all-polynomial-u-v 1-regular normal x, explicit W3 lift and quartic Nakayama tensor; ordinary LBS AS4 recognition; central cubic relation exact",
+  "same_L_and_Omega_open": true,
+  "B2_relation_rank": 6,
+  "B2_relations_plus_xB1_rank": 10,
+  "W3_lift_left": "y*r_even+b*r_b+c*r_c+u*x*r_xy",
+  "W3_lift_right": "r_even*y+r_b*b+r_c*c-u*r_xy*x-v*r_xy*y",
+  "W3_projection_nonzero": "coefficient of b^3 equals1",
+  "top_inverse_Nakayama": "(x,y,omega*b,omega^2*c)",
+  "ordinary_AS4_inputs": {
+    "Sklyanin_Koszul_CY": "Iyudu-Shkarin arXiv1601.00564 Theorem1.1, Corollary6.1; E nonzero, E^3!=1",
+    "normal_extension": "Le Bruyn-Smith-Van den Bergh MathZ222(1996)171-212, Theorem2.6(5), Corollary2.7; 1-regularity and W3 surjectivity checked"
+  },
+  "conclusion": "every u,v in the recorded open is an actual noetherian quadratic Koszul AS4 domain with prescribed Nakayama",
+  "central_cubic": "Psi=Gamma_tilde+q0*y^3+q1*y^2*x+q2*y*x^2",
+  "central_correction_coefficients": [
+    {
+      "(0, 0)": "E**3*(-omega - 2) + omega + 2"
+    },
+    {
+      "(0, 1)": "(E**3*(3*omega + 3) + E**2*d*(2*omega + 1) + E*d**2*(2*omega + 1) - omega - 2)/(E**3 - 1)"
+    },
+    {
+      "(1, 0)": "(E**3*(3*omega + 3) + E**2*d*(2*omega + 1) + E*d**2*(2*omega + 1) - omega - 2)/(E**3 - 1)",
+      "(0, 2)": "(E**2*d*(1 - omega) + E*d**2*(-2*omega - 1))/(E**6 - 2*E**3 + 1)"
+    }
+  ],
+  "not_claimed": [
+    "full center or PI degree",
+    "normal quotient domain or H3 admissibility",
+    "all closed L points covered",
+    "complete H3 classification"
+  ]
+}

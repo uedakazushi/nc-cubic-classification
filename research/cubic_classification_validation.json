@@ -3024,9 +3024,36 @@
       "complete H3 classification"
     ],
     "executed_checks": [
-      "individual exact validator PASS over full polynomial u,v",
+      "all31 spectral validators PASS before recognition extension",
       "main LuaLaTeX PASS; no overfull/undefined references/citations",
-      "full31 spectral replay running, not yet recorded PASS",
+      "git diff --check PASS"
+    ]
+  },
+  "third_root_unit_boundary_L_recognition_v248": {
+    "status": "ordinary AS4 recognition via verified LBS hypotheses and normal-sequence localization; exact W3/quartic/central-Psi identities PASS",
+    "proof": "papers/sections/cubic_third_root_unit_boundary_L_recognition.tex",
+    "validator": "computations/verify_cubic_third_root_unit_boundary_L_incidence.py",
+    "certificate": "computations/cubic_third_root_unit_boundary_L_recognition_certificate.json",
+    "results": [
+      "all u,v in same L/Omega-open are actual noetherian quadratic Koszul AS4 domains",
+      "normal cut AS-Gorenstein3 index1 muR1; x remains regular",
+      "explicit central cubic Psi and affine cubic polynomial psi(T)"
+    ],
+    "external_input_audit": [
+      "IS arXiv1601.00564 Theorem1.1 and Corollary6.1 statements freshly reread",
+      "LBS author PDF text Theorem2.6(5), Corollary2.7 freshly reread; 1-regular and W3 projection checked",
+      "Smith-Tate author PDF Introduction standard elliptic Sklyanin noetherian/domain input read; center theorems not yet imported"
+    ],
+    "not_claimed": [
+      "normal quotient domain or H3 admissibility",
+      "full center or PI degree",
+      "all boundary points covered",
+      "complete H3 classification"
+    ],
+    "executed_checks": [
+      "expanded individual exact validator PASS including W3/quartic/Psi",
+      "main LuaLaTeX PASS; no overfull/undefined references/citations",
+      "full31 replay running after recognition extension, not yet recorded PASS",
       "git diff --check PASS"
     ]
   }
