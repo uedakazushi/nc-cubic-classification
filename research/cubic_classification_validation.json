@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "version": "classification-v275",
+  "version": "classification-v276",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -3721,6 +3721,47 @@
     "not_claimed": [
       "complete H3 classification",
       "new external theorem imports",
+      "novelty confirmed"
+    ]
+  },
+  "four_simple_order4_rankC_v276": {
+    "status": "whole weight0-relations-zero rank(0,2,2,2) excluded",
+    "proof": "papers/sections/cubic_four_simple_order4_rankC.tex",
+    "validator": "computations/verify_cubic_four_simple_order4_rankC.py",
+    "helper": "computations/cubic_four_simple_order4_model.py",
+    "checks": [
+      "default Sympy original16 top/rank arithmetic/GB13 PASS",
+      "all-t source unit6minor with Laurent denominators PASS",
+      "all10 residual orbit normal kernels and full left-factor inclusions PASS",
+      "unique exceptional G and full dehom relation images PASS",
+      "character selfExt1 tangent and induced Serre identity PASS",
+      "v276 main LuaLaTeX clean PASS"
+    ],
+    "ordinary_proof_inputs": [
+      "domain rank normalization",
+      "PBW iterated Ore and x/y eigenvalue factor cover",
+      "twisted Serre trace cyclicity, explicit identity action on sole Y tangent"
+    ],
+    "remaining_order4_ranks": [
+      [
+        2,
+        2,
+        1,
+        1
+      ],
+      [
+        2,
+        0,
+        2,
+        2
+      ]
+    ],
+    "validation_scope": "59 validators across runs; no single59 replay claimed",
+    "not_claimed": [
+      "whole order4 spectrum excluded",
+      "complete four-simple or CY coverage",
+      "complete H3 classification",
+      "new as4/external theorem import",
       "novelty confirmed"
     ]
   }

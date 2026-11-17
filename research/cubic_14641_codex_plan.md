@@ -80,6 +80,12 @@ For each result record assumptions, dependencies, proof location, whether freshl
 最後のp=r0ではcがU上で正常、c u=F(u)c、FJF^t=−ω²J。元二列はLb=T c²,bL=ω²T c²（L=mx+ny）。domainからL,T非零。F²L=ω²Lで、Lが固有vectorならc全正常、B/cにLb=bL0が生じHilbert矛盾。L,F(L)独立ならCHからFdiag(ω,−ω)、self offdiagのみ。generator/top変更でs=m=n=T1。元rank2条件の12linear式はrank7で一変数Dへ。全値source画像はcx=ωxc,cy=−ωyc,(x+y)b=c²,b(x+y)=ω²c²,bc=−((D+ω)x+Dy)(x+y),cb=−ω²(x+y)((D+ω)x+Dy)。unit6minor/係数体分母で全値同定。正常33×7は定数7pivot、全source/normal例外はD(D+ω/2)(D+ω)。fresh D0,−ωは正常核零、D−ω/2はB3dim22。これで最後の列も全排除。
 最新v275主原稿LuaLaTeX clean PASS、新checker default Sympy PASS。累計58validators across runs、単一58全再生は未実行。統合replayソースの現行候補は0、古いキャッシュ出力を新実行と扱わない。新規as4/外部定理輸入なし。新規性未確認。
 
-### 次の最小課題：四単純位数4の残余
-既存detminus1 chart μ=(a,−a,i/a,−i/a)ではa⁴≠±1は排除、a⁴=−1も二固有値既結果で排除。a⁴=1、スペクトル(1,−1,i,−i)が未判定。これは全四単純スペクトルの被覆ではない。四単純非skewは一般に21個の二次共鳴超曲面上にあり、その残りと全CYも継続する。
-この位数4点のtwisted-cyclic quartic topは16次元。二次weight groupsは0:(xx,yy,bc,cb)、2:(xy,yx,bb,cc)、1:(xb,yc,bx,cy)、3:(xc,yb,by,cx)。0block対称、2block交代、1/3paired。次は全Hilbert trace必要rank型を厳密に絞り、元16tensorから正常三次incidenceを作る。private probeは /workspace/work/spectral_remaining/four_simple_order4_probe.py（公開前の探索、未分類）。三固有値の解決済み計算や移管済み独立論文を再開しない。
+### 四単純位数4の必要atlasと第一rank型（v276）
+スペクトル(1,−1,i,−i)の元twisted-cyclic四次topは16次元。二次weight groupsは0:(xx,yy,bc,cb)、2:(xy,yx,bb,cc)、1:(xb,yc,bx,cy)、3:(xc,yb,by,cx)。0block対称、2block交代、1/3paired。trace成長の分母1+(r0−r2)t²+t⁴と1+(6−4r1)t²+t⁴から必要rank型は(2,2,1,1),(2,0,2,2),(0,2,2,2)のみ（重み0,2,1,3順）。各B3重み次元5。
+最後の(0,2,2,2)は全H3排除済み。H0zeroから八係数零、domainでa3,a4,a7,a9全非零、対角でa3=a4=1,a7=a9=q。残りA=a5,h=a6,k=a8,E=a13、rank2Mの全minors GB13で必要被覆。A=E0はq=t²,k=t,h=±tの全t非零Oreモデル、x/y正常固有値により全Gがx又はyの因子を持つ。残余は対角十軌道へ。二軌道正常核2は全x因子、七軌道正常核零。唯一残るq−1,A1,E0,h=i,k−iの正常核1はG=c²y−bcx/2+i cbx/2。
+この最後の包絡はb²+c²,xy−yx,xb+bx,xc+cx,yb+i by−i xc,yc−i cy−xb。normalx開集合の次数零環はYB−i BY=iC,YC+i CY=B,B²+C²0,2C²Y−BC+i CB0。原点characterの自己Ext1はY方向1。H3 Serre=(-1)[2]をnormalxで同定するとH(Y,B,C)=(Y,−B,−C)、Ext1に恒等作用。twisted Serre traceの符号から非退化交代対が必要となり矛盾。S(L)=L[2]だけで作用自明を仮定せず、唯一のY方向に実際に作用が自明と確認した。
+通常証明はcubic_four_simple_order4_rankC節。公開checker default Sympy PASS（16top/rank/GB13/全値sourceunitminor/十軌道/因子/例外G/dehom/character接空間）。v276 main LuaLaTeX clean PASS。累計59validators across runs、単一59全再生未実行。全四単純又は全H3完成とは呼ばない。新規外部/as4輸入なし、新規性未確認。
+
+### 次の最小課題
+四単純位数4の残る(2,2,1,1)又は(2,0,2,2)を元16tensor上で判定する。前者はpaired4×4M rank1なので外積P Q^tの四つの巡回binomial式へ移せる。domainはP,Qそれぞれ少なくとも二非零成分を強制する（supportはpermutation行列状）。この小support atlasとH0/H2 rank2、正常三次5列を組み合わせる。
+既存detminus1 chart μ=(a,−a,i/a,−i/a)はa⁴≠1全排除済みだが、全四単純スペクトルの被覆ではない。一般の四単純非skewは21二次共鳴超曲面上にあり、残りと全CY、全成分・境界、intrinsic群oidと相対降下は未完。三固有値の解決済み計算や移管済み独立論文を再開しない。

@@ -1,0 +1,159 @@
+{
+  "status": "PASS",
+  "scope": "complete order4 simple16 top necessary rank atlas; whole rank(0,2,2,2) excluded by paper domain/PBW/twisted-Serre proof",
+  "top_dimension": 16,
+  "necessary_relation_ranks_weight_0_2_1_3": [
+    [
+      0,
+      2,
+      2,
+      2
+    ],
+    [
+      2,
+      0,
+      2,
+      2
+    ],
+    [
+      2,
+      2,
+      1,
+      1
+    ]
+  ],
+  "B3_character": [
+    5,
+    5,
+    5,
+    5
+  ],
+  "rankC_normalization": "a3=a4=1,a7=a9=q nonzero; a5=A,a6=h,a8=k,a13=E",
+  "rankC_groebner": [
+    "a5*a6 - a5*a8*q",
+    "a5*a8**2 - a5*(q**3 + q)/2",
+    "a5*a8*(q**2 - 1)",
+    "a13*a5 + a8**2*q - q**2",
+    "a5*(q**4 - 1)",
+    "a6**2 - a8**2",
+    "a6*a8**2 - a6*q",
+    "a13*a6 + a13*a8*q",
+    "a8**3 - a8*q",
+    "a13*a8**2 - a13*(q**3 + q)/2",
+    "a8**2*(q**2 + 1) - q**3 - q",
+    "a13*a8*(q**2 - 1)",
+    "a13*(q**4 - 1)"
+  ],
+  "generic_branch": "A=E=0,k=t,h=eps*t,q=t\u00b2; all t nonzero, eps=+-1",
+  "generic_source_identity": "unit6minor and Laurent-t coordinates, all values",
+  "generic_factor_cover": "normal x/y forces common x if q\u00b3=1, common y if q=-1; otherwise zero",
+  "fresh_residual_orbits": [
+    {
+      "q": "1",
+      "a5": "1",
+      "a13": "0",
+      "a6": "1",
+      "a8": "1",
+      "normal_kernel": 2,
+      "status": "all normal cubics have left factor x"
+    },
+    {
+      "q": "1",
+      "a5": "0",
+      "a13": "1",
+      "a6": "-1",
+      "a8": "1",
+      "normal_kernel": 0,
+      "status": "normal kernel zero"
+    },
+    {
+      "q": "1",
+      "a5": "1",
+      "a13": "0",
+      "a6": "-1",
+      "a8": "-1",
+      "normal_kernel": 2,
+      "status": "all normal cubics have left factor x"
+    },
+    {
+      "q": "1",
+      "a5": "0",
+      "a13": "1",
+      "a6": "1",
+      "a8": "-1",
+      "normal_kernel": 0,
+      "status": "normal kernel zero"
+    },
+    {
+      "q": "-1",
+      "a5": "0",
+      "a13": "1",
+      "a6": "I",
+      "a8": "I",
+      "normal_kernel": 0,
+      "status": "normal kernel zero"
+    },
+    {
+      "q": "-1",
+      "a5": "1",
+      "a13": "0",
+      "a6": "-I",
+      "a8": "I",
+      "normal_kernel": 0,
+      "status": "normal kernel zero"
+    },
+    {
+      "q": "-1",
+      "a5": "0",
+      "a13": "1",
+      "a6": "-I",
+      "a8": "-I",
+      "normal_kernel": 0,
+      "status": "normal kernel zero"
+    },
+    {
+      "q": "-1",
+      "a5": "1",
+      "a13": "0",
+      "a6": "I",
+      "a8": "-I",
+      "normal_kernel": 1,
+      "status": "unique cubic excluded by ordinary twisted-Serre character proof"
+    },
+    {
+      "q": "I",
+      "a5": "1",
+      "a13": "-1",
+      "a6": "0",
+      "a8": "0",
+      "normal_kernel": 0,
+      "status": "normal kernel zero"
+    },
+    {
+      "q": "-I",
+      "a5": "1",
+      "a13": "-1",
+      "a6": "0",
+      "a8": "0",
+      "normal_kernel": 0,
+      "status": "normal kernel zero"
+    }
+  ],
+  "Serre_character": {
+    "point": [
+      0,
+      0,
+      0
+    ],
+    "self_Ext1": 1,
+    "Serre_action_on_Ext1": "identity",
+    "ordinary_proof": "twisted trace cyclicity forces alternating pairing; contradiction"
+  },
+  "not_claimed": [
+    "rank(2,0,2,2) or (2,2,1,1) classified",
+    "whole order4 spectrum excluded",
+    "all four-simple or CY coverage",
+    "complete H3 classification",
+    "ordinary proofs fully mechanically checked"
+  ]
+}

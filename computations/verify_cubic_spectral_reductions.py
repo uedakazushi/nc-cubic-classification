@@ -66,6 +66,7 @@ CHECKS=[
  'verify_cubic_third_root_nonunit_isolated.py',
  'verify_cubic_third_root_nonunit_degenerate_self.py',
  'verify_cubic_third_root_nonunit_zero_column.py',
+ 'verify_cubic_four_simple_order4_rankC.py',
 ]
 results=[]
 for name in CHECKS:
@@ -82,6 +83,6 @@ out={'status':'PASS','checks':results,'current_three_eigenvalue_necessary_spectr
      'three_eigenvalue_Nakayama':'entire sector excluded, including all Jordan layers',
      'unit_repeat_order3_sector':'excluded by complete original22 necessary cover and onezero completion',
      'nonunit_repeat_sector':'independent, proportional-nondegenerate, proportional-degenerate and zero b2 columns all excluded',
-     'additional_four_simple_sector':'(a,-a,i/a,-i/a) excluded outside a^4=1; finite boundary unclassified',
+     'additional_four_simple_sector':'(a,-a,i/a,-i/a) excluded outside a^4=1; order4 finite boundary rank(0,2,2,2) excluded; two rank types remain',
      'not_claimed':['ordinary proofs independently checked by program','four-eigenvalue or CY completeness','complete H3 classification']}
 (ROOT/'cubic_spectral_reductions_validation.json').write_text(json.dumps(out,indent=2)+'\n')

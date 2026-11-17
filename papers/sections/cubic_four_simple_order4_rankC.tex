@@ -1,0 +1,188 @@
+\subsection{四単純位数4の16次元atlasと第一rank型の完成}
+\label{subsec:cubic-four-simple-order4-rankC}
+以下では中山スペクトルを $(1,-1,i,-i)$、固有基底を $(x,y,b,c)$ とする。
+これは系\ref{cor:cubic-detminus1-spectral-boundary}の有限残余を含むが、
+全四単純スペクトルをこの一点へ制限する主張ではない。
+重みは $\mathbb Z/4$ で $(0,2,1,3)$ とする。
+
+\begin{proposition}[元16tensorと三つの必要rank型]
+\label{prop:cubic-four-simple-order4-atlas}
+このスペクトルの実際の中山巡回式を満たす四次最高tensor空間は16次元である。
+二次の重み $0,2,1,3$ の順に関係数を書けば、H3に必要なrank型は
+\[
+ (2,2,1,1),\qquad (2,0,2,2),\qquad (0,2,2,2)
+\]
+のみである。どの型でも $B_3$ の各重みの次元は5となる。
+これらは必要条件であり、AS4又はH3十分性ではない。
+\end{proposition}
+\begin{proof}
+全四次語を右巡回軌道に分け、回転時に末字の中山固有値の逆数の負を掛ける。
+一周した係数が1となる軌道の代表は、順に
+\[
+\begin{gathered}
+xxyy,xxbc,xxcb,xybb,xycc,xbxc,xbyb,xbby,\\
+xcyc,xccy,yyyy,yybc,yycb,ybyc,bbcc,bcbc.
+\end{gathered}
+\]
+その係数を $a_0,\ldots,a_{15}$ とする。
+二次の基底を
+\[
+\begin{array}{c|l}
+0&xx,yy,bc,cb\\2&xy,yx,bb,cc\\1&xb,yc,bx,cy\\3&xc,yb,by,cx
+\end{array}
+\]
+と取る。middleの自己blockとpaired blockは正確に
+\[
+ H_0=\begin{pmatrix}
+0&a_0&a_1&a_2\\a_0&a_{10}&a_{11}&a_{12}\\
+a_1&a_{11}&a_{15}&-ia_{14}\\a_2&a_{12}&-ia_{14}&-ia_{15}
+\end{pmatrix},\quad
+ H_2=\begin{pmatrix}
+0&-a_0&a_3&a_4\\a_0&0&a_7&a_9\\
+-a_3&-a_7&0&a_{14}\\-a_4&-a_9&-a_{14}&0
+\end{pmatrix},
+\]
+\[
+ M=\begin{pmatrix}
+a_5&a_6&a_7&-a_1\\-ia_8&-ia_{13}&a_{12}&-a_4\\
+ia_2&ia_3&ia_6&-a_5\\-ia_9&-ia_{11}&-ia_{13}&-a_8
+\end{pmatrix}.
+\]
+従って $r_2$ は偶数、$r_1=r_3$、$r_0+r_2+2r_1=6$。
+同変Koszul解消とtopのhdetが1であることから、
+$\mu$ と $\mu^2$ のtrace級数の分母はそれぞれ
+\[
+ 1+(r_0-r_2)t^2+t^4,\qquad 1+(6-4r_1)t^2+t^4.
+\]
+有限位数なのでtrace係数はHilbert値で絶対値を抑えられる。
+分母は単位円内部に零を持たず、相反性から全根は単位円上にある。
+$1+dt^2+t^4$ がこの条件を満たすには $|d|\le2$ が必要である。
+従って $|r_0-r_2|\le2,\ |6-4r_1|\le2$。
+関係数6と偶数性を合わせると表示した三型だけとなる。
+最後に $V=(1,1,1,1)$ を使い、character恒等式
+$[B_3]=V^3-2VI+V^*$ にいずれの型を代入しても $(5,5,5,5)$ を得る。
+\end{proof}
+
+\begin{lemma}[自己拡大上で自明なtwisted Serre作用の障害]
+\label{lem:cubic-twisted-character-Serre}
+Hom有限な三角圏で $L$ は単純対象、$S$ はSerre関手とする。
+$S(L)\simeq L[2]$ を固定し、これによる $S[-2]$ の
+$\Ext^1(L,L)$ 上の作用が恒等であるとする。
+この自己拡大空間が一次元なら矛盾する。
+\end{lemma}
+\begin{proof}
+Serre traceとshiftの符号から、任意の自己一次拡大 $a,b$ について
+\[
+ \operatorname{tr}(b[1]a)=-\operatorname{tr}((S[-2]a)[1]b)
+\]
+となる。作用が恒等ならこの対は交代である。
+Serre双対性から非退化でなければならないが、標数0の一次元空間には
+非退化交代形式は存在しない。
+ここでは $S(L)\simeq L[2]$ だけから作用の自明性を推論していない。
+\end{proof}
+
+\begin{theorem}[重み0関係が零の全rank型の排除]
+\label{thm:cubic-four-simple-order4-rankC-empty}
+上の $(0,2,2,2)$ 型は全てH3を与えない。
+\end{theorem}
+\begin{proof}
+$H_0=0$ なので $a_0,a_1,a_2,a_{10},a_{11},a_{12},a_{14},a_{15}=0$。
+$H_2$ のrank2は
+\[
+ \operatorname{rank}\begin{pmatrix}a_3&a_4\\a_7&a_9\end{pmatrix}=1
+\]
+と同値である。その像には純 $xy,yx$ 関係と純 $b^2,c^2$ 関係が一本ずつある。
+整域性から $a_3,a_4,a_7,a_9$ は全て非零。
+対角generator/top変更で $a_3=a_4=1,a_7=a_9=q\ne0$ とできる。
+残る係数を $A=a_5,h=a_6,k=a_8,E=a_{13}$ とする。
+$M$ の $3\times3$ minorsのGroebner基底には
+\[
+\begin{gathered}
+ A(q^4-1),\ E(q^4-1),\ h^2-k^2,\ k^3-qk,\\
+ k^2(q^2+1)-q(q^2+1),\ AE+qk^2-q^2,\\
+ A(h-qk),\ E(h+qk),\
+ A\bigl(k^2-(q^3+q)/2\bigr),\
+ E\bigl(k^2-(q^3+q)/2\bigr)
+\end{gathered}
+\]
+が含まれる。全13本と逆向きのideal同定は公開再現器に保持する。
+このpaired blockにはminor $-q$ があるので、rankは全値で正確に2である。
+
+まず $A=E=0$ の枝では $k^2=q,h=\epsilon k$、$\epsilon=\pm1$ となる。
+$k=t\ne0$ と書くと、全値の元関係画像は
+\begin{gather*}
+ b^2+c^2=0,\quad xy+t^2yx=0,\\
+ xb=-i\epsilon t^{-1}bx,\quad xc=it^{-1}cx,\quad
+ yb=-\epsilon tby,\quad yc=-tcy.
+\end{gather*}
+これは二元AS2平面 $T(b,c)/(b^2+c^2)$ 上の逐次skew Ore拡大である。
+対角自己同型は関係を保ち互いに可換であるから、全 $t\ne0$ でこの表示とPBWが成立する。
+元middle画像との同定はunit六次minorとLaurent-$t$ 座標によっても検算する。
+固定三次の基底は
+\[
+ x^3,\quad xy^2,\quad xbc,\quad xcb,\quad yb^2.
+\]
+$x,y$ の正常化自己同型のこの基底上の固有値は、$q=t^2$ としてそれぞれ
+\[
+ (1,q^2,\epsilon/q,\epsilon/q,1),\qquad
+ (-q^{-3},-q^{-1},-\epsilon,-\epsilon,q).
+\]
+$Gx=xG,Gy=-yG$ が必要なので、$q^3=1$ なら全候補は左因子 $x$ を持ち、
+$q=-1$ なら $kyb^2$ に含まれ、それ以外では零となる。
+特に $xbc,xcb$ が残るのは $q=1,\epsilon=1$ だけであり、やはり因子 $x$ を持つ。
+いずれも三次商は整域でない。
+
+$A,E$ のいずれかが非零なら $q^4=1$。
+上の全式を使うと、残余は次の十個の対角軌道で覆われる。
+$x\mapsto ux,y\mapsto u^{-1}y$ は $A,E$ を $u^2A,u^{-2}E$ 倍するので、
+一方だけ非零ならそれを1へ、両方非零なら $A=1$ へできる。
+\[
+\begin{array}{c|c|c|c|c|c}
+ q&A&E&k&h&\text{正常核又は障害}\\\hline
+ 1&1&0&\pm1&k&\dim2,\ \text{全て左因子 }x\\
+ 1&0&1&\pm1&-k&0\\
+ -1&1&0&i&-i&0\\
+ -1&1&0&-i&i&\dim1\\
+ -1&0&1&\pm i&k&0\\
+ \pm i&1&-1&0&0&0
+\end{array}
+\]
+各軌道で元の全次数3,4商を構成し、固定三次5列の正常核をfreshに計算した。
+表の左因子も $xB_2$ への全核の包含として厳密検算した。
+
+最後の一次元正常核の包絡関係は
+\begin{gather*}
+ b^2+c^2=0,\quad xy=yx,\quad xb=-bx,\quad xc=-cx,\\
+ yb=-iby+ixc,\qquad yc=icy+xb,
+\end{gather*}
+であり、その核は
+\[
+ G=c^2y-\tfrac12bcx+\tfrac i2cbx
+\]
+で張られる。$x$ は正常で、その共役は $y$ を固定し $b,c$ を負にする。
+$R=B/(G)$ がH3だと仮定する。
+$x$ のOre開集合の次数零環は、$Y=yx^{-1},B_0=bx^{-1},C_0=cx^{-1}$ により
+\begin{gather*}
+ B_0^2+C_0^2=0,\\
+ YB_0-iB_0Y=iC_0,\qquad YC_0+iC_0Y=B_0,\\
+ 2C_0^2Y-B_0C_0+iC_0B_0=0
+\end{gather*}
+と表示される。
+正常 $x$ のskew Laurent表示を両方向に構成すれば、このdehomogenizationは全関係を与える。
+原点characterの自己一次拡大は表示関係の線型化の核であり、
+第一、第四式の一次項は零、第二、第三式はそれぞれ $C_0,B_0$ を殺す。
+従って $\Ext^1$ は $Y$ 方向の一次元である。
+
+H3の $S=(-1)[2]$ をこの開集合へ制限し、$x$ で次数shiftを同定すると、
+$S[-2]$ は $Y\mapsto Y,B_0\mapsto-B_0,C_0\mapsto-C_0$ で与えられる。
+原点characterを固定し、自己拡大の唯一の $Y$ 方向にも恒等に作用する。
+この点支持対象のExtとSerre traceはOre開集合で計算できる。
+補題\ref{lem:cubic-twisted-character-Serre}に反し、最後の軌道もH3でない。
+これでこのrank型の全必要被覆が空となる。
+\end{proof}
+
+公開再現器は \texttt{verify\_cubic\_four\_simple\_order4\_rankC.py}。
+元16tensor、全rank算術、Groebner基底、全値source画像、十軌道の全商・正常核と因子、
+例外の唯一の三次とcharacter線型化をexactに検算する。
+PBW、因子による非整域性、twisted Serre traceの通常証明を計算成功だけで代替してはいない。
+残る $(2,0,2,2),(2,2,1,1)$ と全四単純・全CY被覆は未完成である。
