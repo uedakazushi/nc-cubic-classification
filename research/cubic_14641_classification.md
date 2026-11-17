@@ -1561,7 +1561,7 @@ public cubic_third_root_onezero_plus.py + verify_cubic_third_root_unit_onezero_p
 次の有力な通常証明（まだ未統合・未完成）：λ−ω,sT非零ならκ0,h自由でeven crossR=−ωS。bは全U上scalarω、c上ω²の正常元となり、中山固定三次上そのnormalizerは恒等。Gの正常b式はω²なのでG零。元関係像の同定を監査して正式化する。λ=±iωはh=r±iκs、他Schurからr=−(1±i)κs/2,A=∓iωκ²s/2のはず（private i_branch exact factor式）。T=s1後κ1/0の二点にscalar正規化し、Q(ω,i)でfresh核を判定できる。
 a16=0,T非零の着想：Schurとmixed minorからa15=a17=0。domainのUb/bU射影を使うとa12=a11,a7=a9、a6=λa9,a11=λa13（λ≠0）。Schurからλ=±ω、a2=εωa3。符号が同じならcrossR=λSでb正常、μ固定三次上normalizer固有値は±1しかなく、要求固有値ωに矛盾する可能性がある（bのJordan補正も固有値議論なら許す）。符号が逆かつa3≠0ならa13=a9≠0を強制。x,b,cの量子Weyl AS3基底、yをOre変数とする表示に戻り、δ(x)にbc非零係数T/(λa9)が出る。既存normalx_Ore_coverのF≠0証明は曲率二方向仮定を使わないので、一方曲率にも適用して排除できる見込み。実際Ore被覆と全符号/零境界は未監査のため、まだ全unit-repeat完成とはしない。この最小課題から継続する。
 
-## 多固有値領域の現行到達点（v282）
+## 多固有値領域の現行到達点（v283）
 強いintrinsic H3のAS4包絡は相異なる中山固有値をちょうど三つ持たない。全Jordan型の必要還元、重複1の全22tensor atlas、非単位重複rootの独立・非零比例・零b²列を全て排除した。全H3分類の完成ではない。全CY、四単純共鳴、全成分・境界、相対降下は未完成。
 
 ### 完成した証明の入口
@@ -1607,6 +1607,12 @@ M非符号2型はtop6のpureAS2因子、S非符号minus2型は唯一purecube。S
 M符号(1,−1,t,t^-1)はxy/yx交代blockをdomainで消しI0⊂x²,y²,bc,cb。bc/cb射影rank1は純AS2 U、cb変形Pの正常izerfg=diag(−1,1)がU中心xy+yxを負にするのでP0、Ore正常固有値でλb1。射影rank2はbc=P(x²,y²),cb=Q。P/Q独立ならx²,y²中心、G=Ax³+Bxy²+Cyxyのx交換子C(xy+yx)(yx−xy)からC0⇒因子x。P/Q比例ならpaired rank1の全成分非零でP両平方係数非零。正常b scalars(A,±A,1,A²)によりtop固有値A4、G固有値A3、上hdet補題でA1,λb1。全rank3完成。
 公開checker default Sympy PASS（全phaseと平方追加分枝、元10/9/10/6/7tensor、rank/Pfaff/中心freeword/normalizer ideals）。v282主原稿LuaLaTeX clean PASS。累計65validators across runs、単一65全再生未実行。新規性未確認、通常homological証明の全機械検証とは呼ばない。
 
-### 次の最小課題：有限N≤96の全四単純
-private C++ exact整数列挙で、最小共通位数N≤96の四相異なる根集合62,290,587個から二次衝突/三次共鳴/有効quartic全変数被覆で134,703集合。raw全共鳴support rank4で5,338、Frobenius r_s=r_-s、sumr6、自己−1偶数、domain cap_s=dimtensor_s−1の整数DPで604集合（115Galoisラベル軌道）へ減った。残る位数は4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,22,28。位数4集合は既排除。Galoisラベル軌道はintrinsic同型商ではない。これはまだprivate探索で公開証明書へ未統合。
-private資産 /workspace/work/spectral_remaining/four_simple_finite_enum.cpp とfour_simple_finite_filter.cpp、tsv/logに全入力/結果がある。次は元巡回topの単一monomial列をdomainで強制零にする線型pruning、rank上界/三次characterを加え、必要被覆を公開する。原始根位数の全共役を落とさず、有限体標本や数値rankだけで排除しない。全CY、成分・境界、intrinsic群oidと相対降下は引き続き未完。
+### 全有限四単純の39必要ラベル軌道（v283）
+共通位数N≤96の最小位数四根集合62,290,587個を全exact走査。二次衝突13,359,699、三次共鳴2,223,885、有効quartic全変数被覆134,703、raw全support rank4は5,338。Frobenius r_s=r_-s,sumr6,自己−1偶数,domain cap_s=dimtensor_s−1のDPで604集合/115 Galoisラベル軌道。
+元巡回topの一monomial列をdomainから強制零にし安定化、9軌道top非退化性喪失、2軌道multilinear-only skew。全I2 character解のKoszul群環recurrenceで次数≤12に負multiplicityの出る解を全排除（各degree/component/負整数をcertificateに保存）⇒69軌道。強制pairskewによる共通一次因子と純AS2二元因子で40軌道、既排除位数4を除き39軌道/145根集合。残る位数5,6,7,8,9,10,11,12,13,14,15,18、各軌道数1,4,2,6,5,3,1,10,1,2,2,2。全指数代表と各必要relation characterはfour_simple_finite_atlas節/certificateに保持。Galoisラベル軌道はintrinsic同型商ではない。
+公開verify_cubic_four_simple_finite_atlas.pyがC++17 sourceをtmpdirへcompileして全走査、Python標準整数で全115軌道を再検算。浮動根/有限体なし。C++rankは元行minorのみで各項|入力|≤4、det絶対上界4!4^4=6144、64bit overflowなし。公開full replay PASS、v283主原稿LuaLaTeX clean PASS。累計66validators across runs、単一66全再生未実行。原稿の有限表は必要被覆で、AS4存在・正常核・H3十分性を含まない。
+
+### 次の最小課題：39軌道の正常三次incidence
+private追加因子計算で、全三変数とforced skewを持つnormalgen iの純i³をμ_i≠1ならG liftから除ける（φ_i eigen1と必要μ_iの不一致、共通固有liftが取れる）。さらにG指数がu²zとv z²だけで、u/z pair forcedskew、v/z relation support⊂{vz,zv,u²}かつrank1なら、向き別書換えで共通z因子。この追加で32軌道/95ラベルまで縮む見込み。private four_simple_finite_factor_advanced.py（入力は既存factor.jsonを明示load、古いchar.jsonの69軌道に戻らない）とlogにある。未公開なので39が現行正本frontier。
+有力な全support sieveを進める：各候補でquarticの文字数support S（orbit全係数ではなくcount型）とG count support Tを列挙。全変数被覆・nonmultilinear・各I2 rank上界/domain prunerとfactor必要条件を課す。forcednormal zがあればnormalizer scalars u_i(u_z1)について全w∈S,v∈Tでu^w=u^v=μ_zが必要（正常一次hdet補題）。小整数Smith/左核でこのmonomial方程式の不整合を全supportについて判定する。特に残位数15二型はmultilinear+単一非multilinear top、二G型が必要で、normalizerからμ_z²1又はμ_z5=1となり実際の根位数に反するはず。通常証明と全support被覆を監査する。
+新候補はW1非零だけでH3としない。全CY、全成分・境界、intrinsic群oidと相対降下は引き続き未完。新規性未確認。

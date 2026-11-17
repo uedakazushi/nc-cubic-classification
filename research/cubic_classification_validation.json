@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "version": "classification-v282",
+  "version": "classification-v283",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -3930,6 +3930,48 @@
       "all finite spectra classified",
       "complete H3 classification",
       "ordinary homological proofs mechanically verified in full",
+      "novelty confirmed"
+    ]
+  },
+  "four_simple_finite_atlas_v283": {
+    "status": "complete necessary finite39 Galois label orbits /145 root sets",
+    "proof": "papers/sections/cubic_four_simple_finite_atlas.tex",
+    "validator": "computations/verify_cubic_four_simple_finite_atlas.py",
+    "sources": [
+      "computations/cubic_four_simple_finite_scan.cpp",
+      "computations/cubic_four_simple_finite_model.py"
+    ],
+    "checks": [
+      "C++17 exact full62,290,587 minimal-order sets scan PASS",
+      "all integer support rank4 and Frobenius DP604 sets/115 Galois orbits PASS",
+      "all source monomial-column pruners PASS",
+      "all relation-character multiplicities through12 and negative witnesses PASS",
+      "all necessary common-letter/pure-AS2 factors and prior order4 PASS",
+      "v283 main LuaLaTeX clean PASS"
+    ],
+    "integer_safety": "rank uses original-row minors, absolute determinant bound6144; no numerical roots, no finite-field samples",
+    "remaining_Galois_label_orbits": 39,
+    "remaining_root_sets": 145,
+    "remaining_orders": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      18
+    ],
+    "validation_scope": "66 validators across runs; no single66 replay claimed",
+    "not_claimed": [
+      "Galois labels geometric quotient",
+      "all finite candidates have AS4 or H3",
+      "character nonnegativity through12 sufficient",
+      "complete H3 classification",
       "novelty confirmed"
     ]
   }

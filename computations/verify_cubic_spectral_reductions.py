@@ -73,6 +73,7 @@ CHECKS=[
  'verify_cubic_four_simple_curve_phase_reduction.py',
  'verify_cubic_four_simple_last_rank3_curve.py',
  'verify_cubic_four_simple_zero_pair_rank3.py',
+ 'verify_cubic_four_simple_finite_atlas.py',
 ]
 results=[]
 for name in CHECKS:
@@ -90,6 +91,6 @@ out={'status':'PASS','checks':results,'current_three_eigenvalue_necessary_spectr
      'unit_repeat_order3_sector':'excluded by complete original22 necessary cover and onezero completion',
      'nonunit_repeat_sector':'independent, proportional-nondegenerate, proportional-degenerate and zero b2 columns all excluded',
      'additional_four_simple_sector':'whole (a,-a,i/a,-i/a) chart excluded, including all three rank types at order4 finite boundary',
-     'four_simple_necessary_spectral_cover':{'phase_order_bound':24,'finite_point_order_bound':96,'remaining_rank3_charts':[],'all_four_simple_common_order_bound':96},
+     'four_simple_necessary_spectral_cover':{'phase_order_bound':24,'finite_point_order_bound':96,'remaining_rank3_charts':[],'all_four_simple_common_order_bound':18,'necessary_finite_Galois_labels':39,'necessary_root_sets':145},
      'not_claimed':['ordinary proofs independently checked by program','four-eigenvalue or CY completeness','complete H3 classification']}
 (ROOT/'cubic_spectral_reductions_validation.json').write_text(json.dumps(out,indent=2)+'\n')
