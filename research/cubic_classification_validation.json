@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "version": "classification-v283",
+  "version": "classification-v284",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -3971,6 +3971,45 @@
       "Galois labels geometric quotient",
       "all finite candidates have AS4 or H3",
       "character nonnegativity through12 sufficient",
+      "complete H3 classification",
+      "novelty confirmed"
+    ]
+  },
+  "four_simple_support_sieve_v284": {
+    "status": "complete all-support necessary sieve:20 Galois labels /45 root sets /1306 support pieces",
+    "proof": "papers/sections/cubic_four_simple_support_sieve.tex",
+    "validator": "computations/verify_cubic_four_simple_support_sieve.py",
+    "helper": "computations/cubic_four_simple_support_sieve.py",
+    "checks": [
+      "default Sympy all39 labels/allcharacters/allS/allT exact replay PASS",
+      "rank0/orbit/domain/matching upper bounds and all factor covers PASS",
+      "all Smith identities and unimodular transforms PASS",
+      "all111 integer leftkernel/root-residue obstructions independently rechecked PASS",
+      "all1306 surviving masks retained PASS",
+      "v284 main LuaLaTeX clean PASS"
+    ],
+    "ordinary_proofs": [
+      "common semisimple eigenlift for mu and all normalizers",
+      "normal-linear hdet and reciprocal pair scalar monomial equations",
+      "linked two-cubic common factor",
+      "integer leftkernel obstruction"
+    ],
+    "remaining_Galois_labels": 20,
+    "remaining_root_sets": 45,
+    "remaining_orders": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      12
+    ],
+    "necessary_support_pieces": 1306,
+    "validation_scope": "67 validators across runs; no single67 replay claimed",
+    "not_claimed": [
+      "compatible patterns actual rank6 or normal G exists",
+      "all20 labels have H3",
+      "Galois quotient geometric",
       "complete H3 classification",
       "novelty confirmed"
     ]

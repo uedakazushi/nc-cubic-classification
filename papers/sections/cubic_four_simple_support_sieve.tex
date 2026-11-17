@@ -1,0 +1,123 @@
+\subsection{全supportと正常一次hdetによる20有限ラベルへの削減}
+\label{subsec:cubic-four-simple-support-sieve}
+\begin{lemma}[連結二三次型の共通因子]
+\label{lem:cubic-linked-binary-factor}
+相異なる一次元 $u,v,z$ について、$uz$ が $zu$ の非零scalar倍であり、
+二次関係が一本
+\[
+ a\,vz+b\,zv+c\,u^2=0
+\]
+存在するとする。整域性から $(a,b)\ne(0,0)$ である。
+三次 $G$ の全語の指数が $u^2z,vz^2$ のいずれかなら、$G$ は共通一次因子 $z$ を持つ。
+\end{lemma}
+\begin{proof}
+$b\ne0$ なら $z^2v=z(zv)$ を $zvz,zu^2$ に書き換える。
+$u,z$ のskew可換性により、二型の全語は右因子 $z$ を持つ。
+$b=0$ なら $a\ne0$、$vz$ を $u^2$ に書き換えれば全語は左因子 $z$ を持つ。
+$c=0$ の場合も同じ議論である。
+\end{proof}
+
+\begin{proposition}[正常化scalarの整数左核障害]
+\label{prop:cubic-support-normalizer-leftkernel}
+全二次元pair関係から、いくつかの生成元 $x_z$ が全生成元と個別にskew可換であることが強制されているとする。
+$x_ix_j=q_{ij}x_jx_i$ の向きを $i<j$ に固定し、正常元に接する強制pairの $q_{ij}$ を未知非零scalarとする。
+実際のtopの非零文字数supportを $S$、正常三次 $G$ の共通固有liftの文字数supportを $T$ とする。
+各正常生成元 $x_z$ と $w\in S\cup T$ に対して
+\[
+ \prod_{i>z}q_{zi}^{w_i}\prod_{i<z}q_{iz}^{-w_i}=\lambda_z
+\]
+が必要である。
+固有値を $\lambda_z=\zeta_N^{a_z}$ と書き、左辺の指数行列を $A$、右辺の整数指数列を $b$ とする。
+整数行 $\ell$ が $\ell A=0$ かつ $\ell b\not\equiv0\pmod N$ を満たせば、この全support chartは空である。
+\end{proposition}
+\begin{proof}
+強制pairの各両係数が非零なので、正常化自己同型 $\phi_z$ は対角で、
+$\phi_z(x_z)=x_z$、他文字のscalarは表示した $q_{ij}$ 又は逆数である。
+補題\ref{lem:cubic-normal-linear-hdet}より、そのhdetは $\lambda_z$。
+全非零top語は同じhdetで変換されるから $w\in S$ の式を得る。
+また $Gx_z=\lambda_z^{-1}x_zG$ と整域性から $\phi_z(G)=\lambda_zG$。
+全 $\phi_z$ と中山は対角なので互いに可換であり、tensorの各次数部分とその商で同時半単純である。
+従って $G$ は全 $\phi_z$ と中山の共通固有空間からliftでき、$w\in T$ の各語も同じ式を満たす。
+恣意的なliftの各単項式に固有値条件を課した議論ではない。
+
+表示したmonomial方程式を整数 $\ell$ で掛け合わせると、左辺は1、右辺は $\zeta_N^{\ell b}$。
+これが1でないことが矛盾である。
+根の数値近似も、未知 $q_{ij}$ の有限位数性も仮定していない。
+\end{proof}
+
+\begin{theorem}[20有限ラベルと全1306必要support片]
+\label{thm:cubic-four-simple-twenty-support-atlas}
+全四単純H3スペクトルの必要被覆は次の20 Galoisラベル軌道、45根集合へ縮む。
+従って中山の位数は $5,6,7,8,9,12$ のいずれかである。
+各根集合上の全候補は、公開証明書の1306個の必要support片で覆われる。
+各片は二次関係character、top文字数support、三次文字数supportで指定される。
+この片の非空性、AS4性又はH3許容性は主張しない。
+\end{theorem}
+\begin{proof}
+前定理の39ラベルそれぞれで、残る全関係characterを固定する。
+元topの可能な文字数の有限集合から、非空な全部分集合 $S$ を取る。
+全変数を被覆しないもの、multilinearだけのものは除く。
+関係rank零のblockに非零成分を持つ巡回軌道は、その係数が零となるので除く。
+次に一monomial列のdomain pruningを安定まで反復する。
+$S$ 中の文字数型が全て消えた場合、その $S$ は実際のsupportでないので除く。
+
+残る各blockの非零位置を二部graphとする。
+行列rankはこのgraphの最大matching以下なので、指定 $r_s$ がこの上界を超えるchartは空である。
+ここでmatchingをrank十分性と取り違えてはいない。
+像の可能な行supportが一つのpair $ij,ji$ だけで、$r_s=1$ なら、
+整域性によりそのpairは非零skew関係として強制される。
+この全強制pairから、全正常生成元とそれらに接する未知scalarを決める。
+六pair全部が強制skewなら既分類に帰着して除く。
+
+次に固定三次の全可能文字数から全非空部分集合 $T$ を取る。
+前節の共通skew正常一次因子、純二元AS2因子、及び補題\ref{lem:cubic-linked-binary-factor}の必要因子があれば除く。
+残りについて前命題の整数行列を作り、Smith標準形を計算する。
+左・右の変換行列が整数単元であることと $UAV=D$ の全恒等式を確認し、
+零対角行に対応する $U$ の各行を整数左核として使う。
+剰余が非零なら、その行 $\ell$ と $\ell b\pmod N$ を証明書へ保存する。
+公開checkerはさらに全保存行について、Smith実装に依存せず
+$\ell A=0$ と剰余非零を直接再検算する。
+
+この操作は全 $S,T$ を走査するので、各実際のH3対象は必ず一つの残る片に入る。
+残るcharacterごとの走査も全て行い、一般点から特殊supportを消してはいない。
+39ラベル中19ラベルでは一つの片も残らず、20ラベルに全1306片が残る。
+下表は $N$、指数代表、残る必要support片の数である。
+Galois共役を展開すると45根集合となる。
+\end{proof}
+
+\begin{center}
+\begin{longtable}{r l r}
+\toprule
+$N$&指数代表&必要support片数\\\midrule
+\endfirsthead
+\toprule $N$&指数代表&必要support片数\\\midrule
+\endhead
+5&$(1,2,3,4)$&633\\
+6&$(0,1,2,3)$&50\\
+6&$(0,1,3,5)$&64\\
+6&$(0,2,3,4)$&424\\
+6&$(1,2,4,5)$&36\\
+7&$(0,1,2,4)$&1\\
+7&$(1,2,5,6)$&15\\
+8&$(0,1,5,6)$&3\\
+8&$(1,2,3,6)$&1\\
+8&$(1,2,4,5)$&2\\
+8&$(1,2,6,7)$&3\\
+9&$(0,1,4,7)$&14\\
+9&$(1,3,4,7)$&7\\
+9&$(1,3,6,8)$&15\\
+9&$(1,4,6,7)$&19\\
+12&$(0,1,4,10)$&8\\
+12&$(1,3,4,7)$&2\\
+12&$(1,3,7,10)$&2\\
+12&$(1,4,6,10)$&4\\
+12&$(3,4,8,9)$&3\\
+\bottomrule
+\end{longtable}
+\end{center}
+
+公開再現器は \texttt{verify\_cubic\_four\_simple\_support\_sieve.py}。
+全support走査と整数Smithは \texttt{cubic\_four\_simple\_support\_sieve.py} にある。
+各片は、証明書に記した文字数型配列に対するbitmaskと関係character番号で保持する。
+適合した片を実際の正常incidenceと呼ばず、次に元middle rank式と三次正常式を判定する。
+全CY・成分・境界・intrinsic群oidと相対降下も未完成である。
