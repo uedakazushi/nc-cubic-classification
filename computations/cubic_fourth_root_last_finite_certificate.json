@@ -1,0 +1,283 @@
+{
+  "status": "PASS",
+  "scope": "exact original tensor blocks/minors and all8 finite normal kernels; ordinary all-chart, unipotent rigidity and cone Ext proofs separate",
+  "orbit_representatives": [
+    "xxxy",
+    "xxyy",
+    "xxcc",
+    "xyyy",
+    "xycc",
+    "xbbc",
+    "xbcb",
+    "xcxc",
+    "xcyc",
+    "xcbb",
+    "xccy",
+    "yycc",
+    "ybbc",
+    "ybcb",
+    "ycyc",
+    "ycbb"
+  ],
+  "atlas_checks": [
+    {
+      "rho": "I",
+      "epsilon": 1,
+      "top_dimension": 16,
+      "minor_atlas_and_unipotent_coefficient": true
+    },
+    {
+      "rho": "-I",
+      "epsilon": 1,
+      "top_dimension": 16,
+      "minor_atlas_and_unipotent_coefficient": true
+    }
+  ],
+  "finite_kernel_cases": [
+    {
+      "rho": "I",
+      "epsilon": 1,
+      "q": "1",
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "normal_rank": 4,
+      "invariant_cubic_dimension": 4,
+      "W1_basis": [],
+      "exclusion": "W1 zero"
+    },
+    {
+      "rho": "I",
+      "epsilon": 1,
+      "q": "-1",
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "normal_rank": 4,
+      "invariant_cubic_dimension": 4,
+      "W1_basis": [],
+      "exclusion": "W1 zero"
+    },
+    {
+      "rho": "I",
+      "epsilon": 1,
+      "q": "I",
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "normal_rank": 4,
+      "invariant_cubic_dimension": 4,
+      "W1_basis": [],
+      "exclusion": "W1 zero"
+    },
+    {
+      "rho": "I",
+      "epsilon": 1,
+      "q": "-I",
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "normal_rank": 3,
+      "invariant_cubic_dimension": 4,
+      "W1_basis": [
+        {
+          "bbb": "I",
+          "cyb": "-I",
+          "cby": "1"
+        }
+      ],
+      "exclusion": "Ore cone vertex"
+    },
+    {
+      "rho": "-I",
+      "epsilon": 1,
+      "q": "1",
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "normal_rank": 4,
+      "invariant_cubic_dimension": 4,
+      "W1_basis": [],
+      "exclusion": "W1 zero"
+    },
+    {
+      "rho": "-I",
+      "epsilon": 1,
+      "q": "-1",
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "normal_rank": 4,
+      "invariant_cubic_dimension": 4,
+      "W1_basis": [],
+      "exclusion": "W1 zero"
+    },
+    {
+      "rho": "-I",
+      "epsilon": 1,
+      "q": "I",
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "normal_rank": 3,
+      "invariant_cubic_dimension": 4,
+      "W1_basis": [
+        {
+          "bbb": "-I",
+          "cyb": "I",
+          "cby": "1"
+        }
+      ],
+      "exclusion": "Ore cone vertex"
+    },
+    {
+      "rho": "-I",
+      "epsilon": 1,
+      "q": "-I",
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "normal_rank": 4,
+      "invariant_cubic_dimension": 4,
+      "W1_basis": [],
+      "exclusion": "W1 zero"
+    }
+  ],
+  "excluded_spectra": [
+    {
+      "N": 4,
+      "spectrum": [
+        1,
+        0,
+        3
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "N": 4,
+      "spectrum": [
+        3,
+        0,
+        1
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ]
+    }
+  ],
+  "final_survivors": [
+    {
+      "N": 3,
+      "spectrum": [
+        0,
+        1,
+        2
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "N": 3,
+      "spectrum": [
+        1,
+        0,
+        2
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "N": 3,
+      "spectrum": [
+        2,
+        0,
+        1
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "N": 4,
+      "spectrum": [
+        1,
+        2,
+        3
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "N": 4,
+      "spectrum": [
+        3,
+        1,
+        2
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ]
+    }
+  ],
+  "final_spectrum_count": 5,
+  "remaining_orders": [
+    3,
+    4
+  ],
+  "remaining_counts": {
+    "3": 3,
+    "4": 2
+  },
+  "Galois_label_orbit_count": 3,
+  "not_claimed": [
+    "all candidate presentations AS4 sufficient",
+    "five remaining H3 existence/admissibility",
+    "four-eigenvalue/CY coverage",
+    "complete H3 classification"
+  ]
+}

@@ -1,0 +1,109 @@
+\subsection{重複第四根・単純固有値1の有限表示とOre頂点}
+\label{subsec:cubic-fourth-root-last-finite}
+\begin{theorem}[単純固有値1を持つ残る位数4枝の排除]
+\label{thm:cubic-fourth-root-last-finite-empty}
+残る半単純スペクトル $(\rho,\rho,1,-\rho)$、
+$\rho=\pm i$ のH3候補は全て空である。単冪部分を許しても同様である。
+\end{theorem}
+\begin{proof}
+まず $\rho=i$、中山は半単純とする。
+最高tensorの軌道代表は
+\[
+ xxxy,xxyy,xxcc,xyyy,xycc,xbbc,xbcb,xcxc,
+ xcyc,xcbb,xccy,yycc,ybbc,ybcb,ycyc,ycbb
+\]
+の16個、係数を $a_0,\ldots,a_{15}$ とする。
+必要重複度は $(2,1,2,1)$。
+重み1の語順 $(xc,yc,bb,cx,cy)$ と重み $-1$ の $(xx,xy,yx,yy,cc)$ におけるmiddleは
+\[
+ H_0=\begin{pmatrix}
+ a_7&a_8&a_9&-ia_2&a_{10}\\
+ a_8&a_{14}&a_{15}&-ia_4&-ia_{11}\\
+ a_9&a_{15}&0&-ia_5&-ia_{12}\\
+ -ia_2&-ia_4&-ia_5&-ia_7&-ia_8\\
+ a_{10}&-ia_{11}&-ia_{12}&-ia_8&-ia_{14}
+ \end{pmatrix},\quad
+ H_2=\begin{pmatrix}
+ 0&a_0&-ia_0&a_1&a_2\\
+ -a_0&0&-ia_1&a_3&a_4\\
+ ia_0&ia_1&0&ia_3&ia_{10}\\
+ -a_1&-a_3&-ia_3&0&a_{11}\\
+ -a_2&-a_4&-ia_{10}&-a_{11}&0
+ \end{pmatrix}.
+\]
+$Ub+bU$ 対 $(bc,cb)$ のblockは
+\[
+ M=\begin{pmatrix}a_5&a_6\\a_{12}&a_{13}\\
+ -a_6&-a_9\\-a_{13}&-a_{15}\end{pmatrix}.
+\]
+rank1と整域性から第二列は第一列の $q\ne0$ 倍。
+$U$ の基底を適合させれば
+\[
+ a_9=1,a_{15}=a_{12}=a_{13}=0,\quad a_5=q^{-2},a_6=q^{-1}.
+\]
+$H_0$ の三次minorには、非零scalarと $q$ の冪を除いて
+\[
+ a_{11},a_{14},a_{10}-a_8q^2,a_4-a_8q^{-2},
+ 2ia_2q^2+a_7q^4-ia_7
+\]
+が含まれる。従って
+\[
+ a_{11}=a_{14}=0,\quad a_{10}=a_8q^2,\quad a_4=a_8q^{-2},\quad
+ a_2=\frac{a_7(1+iq^4)}{2q^2}.
+\tag{\dagger}
+\]
+これらを代入すると $H_0$ の全三次minorは零となる。
+特に $bb$ 列は関係 $xc-iq^{-2}cx$ を与える。
+$H_2$ の $cc$ 列は純 $U^2$ 関係
+$r=a_2x^2+a_8q^{-2}xy+ia_8q^2yx$ を与え、整域性から $a_8\ne0$。
+実際、$a_8=0$ なら純 $x^2$ 関係又は $I_2\subset U^2$ が生じる。
+また純関係は $kr$ だけである。
+$yy$ 列 $(a_1,a_3,ia_3,0,0)^t$ もこの直線に入るから
+\[
+ a_3(1-q^4)=0,\qquad a_1=a_3q^2a_2/a_8.
+\]
+$a_3=0$ なら $a_1=0$。$H_2$ のPfaffianから
+$a_0a_8(1+q^4)=0$ を得る。
+$a_0=0$ なら純 $U^2$ 主blockが零となり純 $c^2$ 関係を生じるため、
+$a_0\ne0,q^4=-1$。
+しかしこの場合は $c^2=(a_0q^2/a_8)x^2$ と $cx=-iq^2xc$ の二本の関係を
+二元空間 $\langle x,c\rangle$ 内に持ち、その二次関係pencilがrank1 tensorを含むため整域性に反する。
+
+従って $a_3\ne0,q^4=1$。
+$y$ に $x$ の倍数を加えて $a_2=0$ とでき、$(\dagger)$ と $a_1$ の式から $a_7=a_1=0$。
+Pfaffian $i(2a_0a_3-a_1^2)=0$ から $a_0=0$。
+全六関係は、ある $C,d\ne0$ に対して
+\[
+ yx=ixy,\quad c^2+C y^2=0,\quad cx=-iq^2xc,\quad
+ yc+q^2cy+d b^2=0,\quad bx=q^{-1}xb,\quad cb=-q^{-1}bc.
+\]
+$y,c,b$ のscalar変更で $C=d=1$ とできる。
+従って半単純の必要atlasは $q^4=1$ の四表示である。
+元の全二次関係のexact消去により全表示で $\dim B_3=20,\dim B_4=35$、
+\[
+ W_1(B)=\begin{cases}
+ k(ib^3-icyb+cby)&q=-i,\\
+ 0&\text{その他}
+ \end{cases}
+\]
+を得る。
+非零核がある場合は $S=\langle y,b,c\rangle$、
+$B=S[x;\sigma]$、$\sigma|_{S_1}=-iI$ という実際のOre提示があり、$G\in S_3$。
+その正常化 $\mu_B^{-1}$ は $S$ を保ち、$x$ を $-ix$ に送る。
+従って補題\ref{lem:cubic-skew-cone-vertex}の全仮定が満たされ、頂点対象の無限高次自己ExtによりH3でない。
+核の非消滅を許容性と取り違えていない。
+
+一般の単冪部分をuntwistした後も、可換する単冪自己同型は $b,c$ を固定し、
+唯一の $Uc+cU$ 関係の $U$ 直線から $Hx=x,Hy=y+t x$ に限られる。
+純 $U$ 関係 $xy+iyx$ の保存は $(1+i)t x^2=0$ を強制するため $H=1$。
+従って中山は半単純であり、正常三次のtwist輸送は不要である。
+$i\mapsto-i$ により共役スペクトルも同じ証明で排除される。
+\end{proof}
+
+\begin{corollary}[三固有値の五個の必要スペクトル]
+\label{cor:cubic-three-eigenvalue-5-list}
+三固有値H3の必要スペクトルは、位数3の三個と位数4の二個、合計五個、Galoisラベル三軌道である。
+代表は $(3;0,1,2),(3;1,0,2),(4;1,2,3)$。
+後者の単純固有値 $-1$ の枝では最高tensorに $b^4$ が加わるため、上の16軌道atlasでは覆われない。
+残存候補の存在・許容性、四単純及びCYの被覆、全H3の分類は未完成である。
+\end{corollary}

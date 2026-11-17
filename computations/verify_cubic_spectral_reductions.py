@@ -23,6 +23,7 @@ CHECKS=[
  'verify_cubic_fourth_root_unit_simple_rank2.py',
  'verify_cubic_fourth_root_unit_repeat_resonance.py',
  'verify_cubic_fourth_root_negative_repeat_finite.py',
+ 'verify_cubic_fourth_root_last_finite.py',
 ]
 results=[]
 for name in CHECKS:
@@ -32,10 +33,10 @@ for name in CHECKS:
         raise SystemExit(result.returncode)
     results.append({'validator':name,'status':'PASS'})
     print('PASS',name)
-final=json.loads((ROOT/'cubic_fourth_root_negative_repeat_finite_certificate.json').read_text())
-assert final['status']=='PASS' and final['final_spectrum_count']==7 and final['remaining_orders']==[3,4]
-out={'status':'PASS','checks':results,'current_three_eigenvalue_necessary_spectra':7,
+final=json.loads((ROOT/'cubic_fourth_root_last_finite_certificate.json').read_text())
+assert final['status']=='PASS' and final['final_spectrum_count']==5 and final['remaining_orders']==[3,4]
+out={'status':'PASS','checks':results,'current_three_eigenvalue_necessary_spectra':5,
      'current_minimal_common_semisimple_orders':[3,4],
      'additional_four_simple_sector':'(a,-a,i/a,-i/a) excluded outside a^4=1; finite boundary unclassified',
-     'not_claimed':['H3 existence or admissibility of7 spectra','ordinary proofs independently checked by program','four-eigenvalue or CY completeness','complete H3 classification']}
+     'not_claimed':['H3 existence or admissibility of5 spectra','ordinary proofs independently checked by program','four-eigenvalue or CY completeness','complete H3 classification']}
 (ROOT/'cubic_spectral_reductions_validation.json').write_text(json.dumps(out,indent=2)+'\n')
