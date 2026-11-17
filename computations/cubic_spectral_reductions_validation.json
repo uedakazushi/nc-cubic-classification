@@ -84,6 +84,10 @@
     {
       "validator": "verify_cubic_third_root_unit_closed_strata.py",
       "status": "PASS"
+    },
+    {
+      "validator": "verify_cubic_third_root_unit_independent_Szero.py",
+      "status": "PASS"
     }
   ],
   "current_three_eigenvalue_necessary_spectra": 3,

@@ -1,0 +1,154 @@
+{
+  "status": "PASS",
+  "scope": "original Schur atlas and scalar normalization, exact plane and curve presentations, every relation/normal pivot factor, polynomial-rank whole-curve exclusion and fresh exceptions",
+  "field": "QQ(omega), omega^2+omega+1=0",
+  "normalized_plane_parameters": [
+    "d=ADT^2",
+    "e=ET"
+  ],
+  "plane_open": {
+    "B3_B4_dimensions": [
+      20,
+      35
+    ],
+    "relation_pivot_factors": [
+      "d",
+      "d - e",
+      "d - e**2",
+      "e"
+    ],
+    "normal_rank": 8,
+    "normal_pivot_factors": [
+      "d",
+      "d - e**2",
+      "e"
+    ],
+    "normal_matrix_shape": [
+      44,
+      8
+    ]
+  },
+  "boundary_curves": {
+    "d=0": {
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "relation_pivot_factors": [
+        "t"
+      ],
+      "normal_rank": 8,
+      "normal_pivot_factors": [
+        "t"
+      ],
+      "normal_matrix_shape": [
+        40,
+        8
+      ]
+    },
+    "e=0": {
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "relation_pivot_factors": [
+        "t"
+      ],
+      "normal_rank": 8,
+      "normal_pivot_factors": [
+        "t"
+      ],
+      "normal_matrix_shape": [
+        45,
+        8
+      ]
+    },
+    "d=e^2": {
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "relation_pivot_factors": [
+        "t",
+        "t - 1"
+      ],
+      "normal_rank": 8,
+      "normal_pivot_factors": [
+        "t"
+      ],
+      "normal_matrix_shape": [
+        43,
+        8
+      ]
+    },
+    "d=e": {
+      "B3_B4_dimensions": [
+        22,
+        46
+      ],
+      "relation_pivot_factors": [
+        "t",
+        "t - 1"
+      ],
+      "all_fiber_conclusion": "B3 dimension >=22 by polynomial generic-rank upper bound; includes t=0,1"
+    }
+  },
+  "A=D=0_open": {
+    "B3_B4_dimensions": [
+      20,
+      35
+    ],
+    "relation_pivot_factors": [
+      "t",
+      "t + 1",
+      "t - 1"
+    ],
+    "normal_rank": 8,
+    "normal_pivot_factors": [
+      "t"
+    ],
+    "normal_matrix_shape": [
+      32,
+      8
+    ]
+  },
+  "A=D=0_exceptions": [
+    {
+      "lambda": 0,
+      "B3_B4_dimensions": [
+        26,
+        68
+      ],
+      "relation_pivot_factors": [],
+      "exclusion": "not AS4 Hilbert series"
+    },
+    {
+      "lambda": 1,
+      "B3_B4_dimensions": [
+        20,
+        37
+      ],
+      "relation_pivot_factors": [],
+      "exclusion": "not AS4 Hilbert series"
+    },
+    {
+      "lambda": -1,
+      "B3_B4_dimensions": [
+        20,
+        37
+      ],
+      "relation_pivot_factors": [],
+      "exclusion": "not AS4 Hilbert series"
+    }
+  ],
+  "conclusion": "unit-repeat independent P,Q and S=0 has no H3 candidate for any T",
+  "remaining_unit_repeat_sectors": [
+    "rank(P,Q)=1",
+    "rank(P,Q)=2 and S!=0"
+  ],
+  "not_claimed": [
+    "remaining unit-repeat sectors excluded",
+    "nonunit semisimple spectrum classified",
+    "complete H3 classification"
+  ]
+}

@@ -2554,7 +2554,7 @@
   "spectral_reductions_replay": {
     "runner": "computations/verify_cubic_spectral_reductions.py",
     "manifest": "computations/cubic_spectral_reductions_validation.json",
-    "scope": "twenty-one finite certificate replays; ordinary mathematical proofs remain separate"
+    "scope": "twenty-two finite certificate replays; ordinary mathematical proofs remain separate"
   },
   "fourth_root_negative_repeat_exclusion_v226": {
     "status": "ordinary all-chart free-tensor and AS2 proof; exact original coefficient obstructions PASS",
@@ -2792,6 +2792,28 @@
     "executed_checks": [
       "all21 spectral validators PASS",
       "main LuaLaTeX build PASS after display line break; no overfull/undefined-reference diagnostics",
+      "git diff --check PASS"
+    ]
+  },
+  "third_root_unit_independent_Szero_v238": {
+    "status": "ordinary exhaustive Schur/normalization coverage; exact two-parameter open, all four boundary curves, remaining one-parameter and fresh exceptions PASS",
+    "proof": "papers/sections/cubic_third_root_unit_independent_Szero.tex",
+    "validator": "computations/verify_cubic_third_root_unit_independent_Szero.py",
+    "certificate": "computations/cubic_third_root_unit_independent_Szero_certificate.json",
+    "results": [
+      "independent P,Q and S0 excluded for all T",
+      "A nonzero chart covered by plane d=ADT^2,e=ET; all pivot-open and boundary cases exact",
+      "A=D0 residual one-parameter normal kernel zero; lambda±1 B4dim37, lambda0 B3dim26"
+    ],
+    "not_claimed": [
+      "rank1 P,Q excluded",
+      "independent P,Q with S nonzero excluded",
+      "all semisimple third-root spectra classified",
+      "complete H3 classification"
+    ],
+    "executed_checks": [
+      "all22 spectral validators PASS",
+      "main LuaLaTeX build PASS; no overfull/undefined-reference diagnostics",
       "git diff --check PASS"
     ]
   }

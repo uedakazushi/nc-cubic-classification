@@ -1,0 +1,75 @@
+\subsection{独立cube結合における $bbcc$ 零の全領域}
+\label{subsec:cubic-third-root-unit-independent-Szero}
+\begin{theorem}[独立結合かつ $S=0$ の全排除]
+\label{thm:cubic-third-root-unit-independent-Szero-empty}
+前節の $P,Q$ が独立で $S=0$ のH3候補は、$T$ の値に関わらず存在しない。
+\end{theorem}
+\begin{proof}
+$T=0$ は前定理で扱ったので $T\ne0$ とする。
+$P=(1,0),Q=(0,1)$ のmixed rank2計算は同じである。
+重み1の $bc,cb$ 主blockは $\operatorname{diag}(T,-\omega T)$ となり可逆。
+そのSchur補を零と置くと
+\[
+ a_1=0,\quad a_0=a_2a_{11}/T,\quad
+ a_4=-a_{11}^2/T,\quad a_5=a_{15}a_{11}/T.
+\]
+$A=a_2,E=a_{11},D=a_{15}$ とおけば、全六関係は
+\begin{gather*}
+ bx=\omega xb,\qquad cy=\omega^2yc,\\
+ b^2=A(\omega^2xc+cx)-Ecy,\qquad
+ c^2=Exb-D(yb+\omega^2by),\\
+ bc=T^{-1}(-Ax^2+Eyx-Dy^2),\qquad
+ cb=\omega T^{-1}(-Ax^2+Exy-Dy^2).
+\end{gather*}
+ここで各パラメータ零の境界も保持する。
+
+$x'=rx,y'=sy,b'=ub,c'=vc$ とし、$u^3r=v^3s$ を満たすscalar変更では
+\[
+ A'=Au^2/(rv),\quad D'=Dv^2/(su),\quad
+ E'=Eu^2/(vs),\quad T'=Tur/v^2.
+\]
+$A\ne0$ なら $v=1,u=t,r=(Tt)^{-1},s=rt^3,t^3=(AT)^{-1}$ と選び
+\[
+ A'=T'=1,\qquad D'=ADT^2=d,\qquad E'=ET=e
+\]
+とできる。
+$A=0,D\ne0$ は $x,y$ と $b,c$ を同時交換して $\omega'=\omega^2$ とすれば同じ場合である。
+実際、交換後のパラメータは
+$(A',D',E',T')=(-\omega^2D,-\omega^2A,-\omega^2E,-\omega T)$ となり $A'\ne0$。
+この交換は単なるGaloisラベルの同一視ではなく、明示的な生成元交換である。
+
+従って第一の場合は二変数 $(d,e)\in\mathbb A^2$ の具体的六関係を扱えばよい。
+元の全R3/R4を $\mathbb Q(\omega)(d,e)$ 上で消去すると次元は20,35、
+全関係pivotの既約因子は
+\[
+ d,\quad e,\quad d-e,\quad d-e^2
+\]
+だけである。
+八係数の正常行列もrank8で、その消去pivotの因子は $d,e,d-e^2$ だけ。
+従って $de(d-e)(d-e^2)\ne0$ 全域で $W_1=0$。
+ここでは全分母及びpivotの因子を記録し、generic rankを例外曲線へ外挿していない。
+四つの境界をそれぞれ元関係でfresh処理する：
+\begin{itemize}
+\item $d=e=t$：$\dim B_3=22$ がgeneric値である。
+次数3の元関係行列は $t$ の多項式なので、そのgeneric rank42は全fiberのrank上界である。
+従って全 $t$ で $\dim B_3\ge22$、この曲線全体は非AS4。
+\item $d=0,e=t$ 及び $e=0,d=t$：関係及び正常の全pivot因子は $t$ だけで、$t\ne0$ 全域で次元20,35と正常rank8。
+$t=0$ は既述 $d=e$ 曲線に属する。
+\item $d=t^2,e=t$：関係pivot因子は $t,t-1$、正常pivot因子は $t$ だけで、$t(t-1)\ne0$ 全域で正常rank8。
+残る $t=0,1$ はいずれも $d=e$ 曲線に属する。
+\end{itemize}
+これで第一の場合の全二変数平面が覆われる。
+
+残る $A=D=0$ では整域性から $E\ne0$。
+同じscalar変更で $T=1,E=\lambda\ne0$ とできる。
+$\mathbb Q(\omega)(\lambda)$ 上で元関係の次元は20,35、全関係pivot因子は
+$\lambda,\lambda-1,\lambda+1$、正常pivot因子は $\lambda$ のみでrank8である。
+従って $\lambda(\lambda-1)(\lambda+1)\ne0$ 全域で $W_1=0$。
+$\lambda=\pm1$ は元関係をfresh消去して $\dim B_4=37$、AS4でない。
+$\lambda=0$ は既に純 $b^2,c^2$ 関係で非整域（fresh値は $\dim B_3=26$）。
+全パラメータ、全境界、原始三乗根の両選択を含めて候補は存在しない。
+\end{proof}
+
+現在unit-repeatで残るのは $\operatorname{rank}(P,Q)=1$ と、
+rank2かつ $S\ne0$ の二領域のみである。
+非単位重複根の半単純atlas及び全H3の分類は未完成である。
