@@ -2516,5 +2516,22 @@
       "remaining17 H3 existence",
       "full classification"
     ]
+  },
+  "fourth_root_parity_and_unit_pencil_v224": {
+    "status": "ordinary nonsemisimple determinant-parity and charge0 exclusion proof; exact finite and original cyclic checks PASS",
+    "proof": "papers/sections/cubic_fourth_root_spectrum_reductions.tex",
+    "validator": "computations/verify_cubic_fourth_root_spectrum_reductions.py",
+    "certificate": "computations/cubic_fourth_root_spectrum_reductions_certificate.json",
+    "results": [
+      "minus-one relation multiplicity even for all Jordan types",
+      "four odd relation patterns excluded",
+      "spectrum(1,1,i,-i) empty by verified charge0 rank1/rank2 proofs",
+      "16 necessary spectra,16 relation patterns,9 Galois label orbits"
+    ],
+    "not_claimed": [
+      "remaining16 existence",
+      "N6 AS3 normalform already proved",
+      "complete classification"
+    ]
   }
 }

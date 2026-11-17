@@ -1,0 +1,45 @@
+\subsection{位数4の関係偶数性と相反pencilの排除}
+\label{subsec:cubic-fourth-root-spectrum}
+\begin{lemma}[二次関係の重み $-1$ の偶数性]
+\label{lem:cubic-minus-one-relation-even}
+中山半単純作用の二次関係空間における重み $-1$ の重複度は偶数である。
+中山自体が非半単純でも成立する。
+\end{lemma}
+\begin{proof}
+最高tensorの式 $w=-(\nu\otimes1^{\otimes3})\tau(w)$、$\nu=\mu_B^{-1}$ を二回反復する。
+middle行列 $H$ について $H=(\nu\otimes\nu)H^t$ を得る。
+重み $-1$ は自分自身の逆であり、このblockの像は関係空間 $I_{-1}$。
+その基底行列を $P$ とすると、$H=PMP^t$、$M$ は非退化であり、
+$\nu\otimes\nu$ の制限を $D$ と書けば $M=DM^t$。
+従って $\det D=1$。
+一方、$D$ の半単純部分は $-I$、単冪部分の行列式は1なので、
+$1=\det D=(-1)^{\dim I_{-1}}$。標数0より偶数性を得る。
+\end{proof}
+
+\begin{theorem}[位数4の重複固有値1の相反pencilは空]
+\label{thm:cubic-fourth-root-unit-pencil-empty}
+指数組 $(4;0,1,3)$、すなわち半単純スペクトル $(1,1,i,-i)$ の候補はH3を持たない。
+\end{theorem}
+\begin{proof}
+有限リストの二次関係の候補パターンは
+$(r_0,r_1,r_2,r_3)=(2,2,0,2)$ 又は $(3,1,1,1)$。
+前補題が後者を排除する。
+従って $b^2,c^2$ を含む重み $-1$ の関係はなく、
+$Ub+bU$、$Uc+cU$ に各二本、$U^2+kbc+kcb$ に二本となる。
+全二次関係は $\deg U=0,\deg b=1,\deg c=-1$ の補助次数を保つ。
+また三次の中山重み1はcharge0だけである。
+
+従って、既証の相反pencilの偶射影rank1及びrank2の排除証明をそのまま適用できる。
+rank1では可逆graph・AS2係数・$z\ne1$ だけを使っており、$z$ の位数が4であることは障害にならない。
+rank2でもcharge0の $G\in S_3$ と $H_S=1/((1-t)^2(1-t^2))$ が同じであり、
+$S/(G)$ のGK2傾き $3/2$ とArtin--Staffordの整数性が矛盾する。
+高位数の仮定を無条件に省略したのでなく、ここで必要な関係分布とcharge0性を別途確認した。
+\end{proof}
+
+\begin{corollary}[現在の三固有値残余16スペクトル]
+\label{cor:cubic-three-eigenvalue-16-list}
+上の偶数性で有限リストの四つの奇重複度パターンを除き、
+$(4;0,1,3)$ を排除すると、三固有値の必要スペクトルは16個となる。
+内訳は位数3の3個、位数4の11個、位数6の2個で、各スペクトルの必要関係重みパターンは一つ。
+Galoisラベルは9軌道である。候補の存在・許容性は未完成である。
+\end{corollary}

@@ -1413,3 +1413,8 @@ G=C b³+cF2(T)、整域候補はC≠0。d0は既存のAS2二変数Ore認識でsk
 (6;3,2,4)は補助Z次数(U0,b1,c−1)によりG=Cb³+Dc³の正常式の最高chargeがC=D=0を強制。二AS2型(6;2,1,4),(6;4,2,5)はG=H3(U)+K3(V)、両非零が必要。Hの正常式がU量子平面p³1へ制限、V反交換平面上のnormalx作用F²=alpha^-2よりK正常式はalpha^-6=omega²、Ore中山はalpha6=(p/omega)^3=1となり矛盾。全Jordan型を含む。
 公開検証器が四coneの全support/所有重み、二曲率型、補助grading、二AS2 blockの純性をexact PASS。残余はN3:3,N4:12,N6:2の17スペクトル、Galoisラベル10軌道。N6残余は(6;2,0,5)と(6;4,0,1)のみ。
 次の最小課題：N4の重み−1関係の偶数性をFrobenius middle determinantから証明し、(4;0,1,3)を高位数相反pencilの既証のrank1/rank2排除へ拡張する（未証明の次手）。N6残余は正常bによるB=A[b;sigma]、Aの三次不変空間は5次元でcUc語が一本残るので、Gを純T3+b³と誤って仮定しない。Gのb³係数0ならconeで排除、非零ならsigma³=mu_B^-1|A、mu_A=sigma^-2、hdet sigma1となる見込み。AS3 Type E/有限sigma固有値の監査が有力だが、まだ証明・輸入していない。
+
+## 重み−1の偶数性と位数4相反枝排除（v224）
+`cubic_fourth_root_spectrum_reductions.tex`：中山巡回二回からH=(nu⊗nu)Ht。重み−1の非退化関係pairing Mに対してM=D Mt、detD1だがD半単純−Iなので関係次元は偶数。単冪中山も含む。有限リストの四奇数重複度パターンを除去。
+(4;0,1,3)の残る関係パターンは(2,2,0,2)のみ。b²/c²関係なしで補助Z次数が存在、全Gcharge0。高位数相反pencilのrank1因子証明とrank2GK2傾き3/2証明に必要な仮定が揃い、このroot4枝も全排除。公開検証器は四奇数パターン、全cubiccharge0、元のbinarytwisted循環bbccのmiddle[[0,1],[-1,0]]をexact PASS。残余16スペクトル（N3:3,N4:11,N6:2）、全て必要関係パターン一つ、Galois9軌道。
+次はN6残余(omega,omega,1,-omega)の正常bによるAS3 Ore基底。coneでGのb³係数非零が必要ならsigma³=muB^-1|A、muA=sigma^-2,hdet sigma1。sigmaUの固有値が一致するとsigma固定最高cubicがUc²だけになりFrobenius退化、相異なれば(a,a*omega), a³omega²、sigma c=-a*omega^kへ。最高AS3cubicの固定orbitはx²yと指定Uc²で有限normalformへ還元できる見込み（未証明・次に原稿化検証する）。
