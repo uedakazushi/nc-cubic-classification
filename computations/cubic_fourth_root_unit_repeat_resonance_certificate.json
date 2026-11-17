@@ -1,0 +1,266 @@
+{
+  "status": "PASS",
+  "scope": "all original twisted tensor orbits and block identities, exact Pfaffians/minors, monomial Hilbert obstruction, finite list; ordinary coverage/untwist proof separate",
+  "orbit_representatives": [
+    "xxxy",
+    "xxyy",
+    "xxcc",
+    "xyxy",
+    "xyyy",
+    "xycc",
+    "xbbc",
+    "xbcb",
+    "xcyc",
+    "xcbb",
+    "xccy",
+    "yycc",
+    "ybbc",
+    "ybcb",
+    "ycbb",
+    "cccc"
+  ],
+  "checks": [
+    {
+      "imaginary_root": "I",
+      "twisted_tensor_dimension": 16,
+      "normalized_Pfaffians_solved": true,
+      "quotient_relation_support": [
+        "bb"
+      ]
+    },
+    {
+      "imaginary_root": "-I",
+      "twisted_tensor_dimension": 16,
+      "normalized_Pfaffians_solved": true,
+      "quotient_relation_support": [
+        "bb"
+      ]
+    }
+  ],
+  "quotient_degree15": 1597,
+  "AS4_degree15": 816,
+  "excluded_spectra": [
+    {
+      "N": 4,
+      "spectrum": [
+        0,
+        1,
+        2
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "N": 4,
+      "spectrum": [
+        0,
+        2,
+        3
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ]
+    }
+  ],
+  "final_survivors": [
+    {
+      "N": 3,
+      "spectrum": [
+        0,
+        1,
+        2
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "N": 3,
+      "spectrum": [
+        1,
+        0,
+        2
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "N": 3,
+      "spectrum": [
+        2,
+        0,
+        1
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "N": 4,
+      "spectrum": [
+        1,
+        0,
+        3
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "N": 4,
+      "spectrum": [
+        1,
+        2,
+        3
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "N": 4,
+      "spectrum": [
+        2,
+        0,
+        1
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "N": 4,
+      "spectrum": [
+        2,
+        0,
+        3
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "N": 4,
+      "spectrum": [
+        3,
+        0,
+        1
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "N": 4,
+      "spectrum": [
+        3,
+        1,
+        2
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ]
+    }
+  ],
+  "final_spectrum_count": 9,
+  "remaining_orders": [
+    3,
+    4
+  ],
+  "remaining_counts": {
+    "3": 3,
+    "4": 6
+  },
+  "Galois_label_orbit_count": 5,
+  "Galois_label_representatives": [
+    [
+      3,
+      0,
+      1,
+      2
+    ],
+    [
+      3,
+      1,
+      0,
+      2
+    ],
+    [
+      4,
+      1,
+      0,
+      3
+    ],
+    [
+      4,
+      1,
+      2,
+      3
+    ],
+    [
+      4,
+      2,
+      0,
+      1
+    ]
+  ],
+  "not_claimed": [
+    "remaining9 H3 existence or admissibility",
+    "complete four-eigenvalue/CY coverage",
+    "complete H3 classification"
+  ]
+}
