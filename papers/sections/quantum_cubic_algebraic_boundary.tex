@@ -1,0 +1,94 @@
+\section{有限型の表示族と三捩れ因子を越える楕円境界}
+\label{sec:algebraic-boundary}
+形式的な圏の認識と、代数的な表示族の存在は区別する。
+明示中心式のおかげで、後者については有限個の開条件へ進める。
+
+\begin{proposition}[有限型底上の全次数平坦な表示]\label{prop:algebraic-presentation-flat}
+定理\ref{thm:eight-formal-central-lift}の八変数有理係数表示は、
+選んだ点を含む有限型smoothな八次元底のZariski開部分 $U$ 上に定義できる。
+底はまず
+\[
+ \eta\zeta p(p^3+1)\ne0,\qquad p=1+\kappa\lambda
+\]
+に制限し、中心式の有限個の分母と、$N_{x^3}/\lambda^2$ をさらに可逆化する。
+この $U$ 上で包絡と中央三次商は次数別有限局所自由で、任意の底変更に適合する。
+各幾何学的fiberの包絡はnoetherian Koszul CY AS4の整域で、三次元は正則中央である。
+この命題は全fiberのH3 admissibilityを結論しない。
+\end{proposition}
+\begin{proof}
+中心式は有限個の有理係数を持ち、共通 $\lambda^2$ の消去は局所環の厳密な所属から得た。
+従って形式冪級数の無限個の係数を代数化する必要はなく、有限個の分母を除く開部分で定義される。
+残る $N_{x^3}/\lambda^2$ の $\lambda=0$ 値は
+$9\eta^2\zeta^2(1+q_0)$ なので、必要な開部分は選んだ点を含む。
+
+斉次先頭potentialを $X=x,Y=\eta y,Z=\zeta z$ で書くと、
+三次元Sklyaninの三係数は
+\[
+ (p,-q_0,3\lambda\eta\zeta)
+\]
+となる。最初の二係数は非零で、その立方は $p^3$ と $-1$ で異なる。
+\cite[Theorem1.1, Corollary6.1]{IS}により、全fiberでKoszul・polynomial Hilbert・CY3である。
+同一次本文の仮定を今回確認した。
+標準の三次元AS正則代数のnoetherian・domain定理も、従来と同じ既知入力として使う。
+これらの性質をISのHilbert計算だけから推論してはいない。
+\cite[Theorem3.3.2(i)]{EG}で任意の二次・一次potential項を加えたfiltered PBW変形を取り、
+そのRees環と正則中央一次拡大の認識 \cite{LBS} により、fiberの包絡は主張したAS4となる。
+
+全次数での\emph{底上の}flat性も説明する。
+次数 $n$ の表示行列は有限行列で、全fiberの商次元は $\binom{n+3}{3}$ で一定である。
+底 $U$ はreduced Jacobson環上の開部分なので、rankより一つ大きい小行列式は恒等的に零であり、
+rankを与える小行列式は $U$ を覆う。
+従って各次数の商は有限局所自由である。この議論に次数ごと異なる開部分を追加していない。
+
+中心恒等式は稠密開上で成立し、包絡の各次数は $U$ 上torsion-freeなので $U$ 全体へ延長する。
+既存の正規形の分母を除いたため、$x^3$ 係数1の三次元は各fiberで非零である。
+fiberの包絡は整域なので正則である。
+各次数の中央三次乗法は有限局所自由加群間でfiberごとに単射となり、
+その余核も有限局所自由である。これが商のflat性と任意底変更を与える。
+\end{proof}
+
+\begin{proposition}[正規化した楕円曲線の明示式]\label{prop:algebraic-boundary-cubic}
+\[
+ C=\kappa+\kappa^2\lambda+
+       \left(\frac{\kappa^3}{3}+9\eta^3\zeta^3\right)\lambda^2,
+ \qquad
+ F=q_0p(x^3+\eta^3y^3+\zeta^3z^3)+Cxyz
+\]
+と置く。
+斉次先頭環のmultilinear関係行列
+\[
+ M=\begin{pmatrix}
+ 3\lambda x&-q_0z&py\\
+ pz&3\lambda\eta^3y&-q_0x\\
+ -q_0y&px&3\lambda\zeta^3z
+ \end{pmatrix}
+\]
+は
+\[
+ \det M=3\lambda F
+\]
+を満たす。
+従って $\lambda\ne0$ の点曲線の、$\lambda=0$ を越える正規化した三次族は $F=0$ である。
+\[
+ \Delta_E=C^3+27p^3\eta^3\zeta^3\ne0
+\]
+をさらに課せばこれはsmoothな相対楕円曲線となる。
+選んだ点で $\Delta_E=170$ であり、この開条件は形式近傍を失わない。
+$\lambda=0$ では関係行列は射影平面全体でrank2で、対応する写像は
+\[
+ (x:y:z)\longmapsto(x:q_0y:q_0^2z)
+\]
+である。選択した三次元の多重線型化は、$F|_{\lambda=0}$ の非零定数倍となる。
+\end{proposition}
+\begin{proof}
+行列式と $3\lambda C=p^3-1+27\lambda^3\eta^3\zeta^3$ は直接展開である。
+三つの立方項の係数が非零のHesse三次式について、三偏微分の積を使えば
+特異点が存在する条件は $C^3+27p^3\eta^3\zeta^3=0$ と分かる。
+$\lambda=0$ でこの式は $\kappa^3+27\eta^3\zeta^3$、指定点では $8+27\cdot2\cdot3=170$ となる。
+\texttt{verify\_algebraic\_boundary.py}はこれらを全係数で検証する。
+同検証器は $\lambda=0$ の各射影patchで全二次小行列式の零点がないこともGroebner基底 $(1)$ により確認する。
+表示した対角写像を $M$ に代入すれば零となる。
+三次元の多重線型評価では $xyz$ は $q_0^2xyz$、各三乗はそのままなので、
+$\kappa q_0^2xyz+x^3+\eta^3y^3+\zeta^3z^3=q_0^{-1}F|_{\lambda=0}$ である。
+この点曲線の明示化だけを、全相対THCR認識や全H3開性と同一視しない。
+\end{proof}

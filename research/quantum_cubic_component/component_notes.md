@@ -1,6 +1,6 @@
 # 成分研究ノート
 
-2026-11-17 / triangle-component-v3。方針はこのディレクトリの `00_research_plan.md`、証明は `papers/quantum_cubic_component.tex`（rootからのパス）。
+2026-11-17 / triangle-component-v9。方針はこのディレクトリの `00_research_plan.md`、証明は `papers/quantum_cubic_component.tex`（rootからのパス）。
 このノートは履歴ではなく、現在の入力・障害・再開のための知識を記す。
 
 ## 1. 記法と既存入力
@@ -87,7 +87,7 @@ witness B: Phi_u=(1+2u)xyz-qxzy+u(x³+8y³+27z³)-(x²+y²+z²)/2。
   次数3の全パラメータ被覆は論文の証明済み結論として使わない。
 - De Deken--Lowen: J. Noncommut. Geom. 5 (2011), 477–505, DOI 10.4171/JNCG/83。
   Theorem4.5とProposition4.6、pp.495–496をEMSの一次本文で確認。Z-generating列のExt1,2消滅を照合。
-  第5節のgeometric helix/有限例外列の定理は使用しない。
+  一般のGrothendieck変形に関するProp5.5/5.8/5.9は使用し、geometric helix/有限例外列に限定した定理は使用しない。
 - Stacks Project Tag0BDK: perfect複体のfiberが一つの次数の自由加群である条件。
   Artin局所版は最小自由複体を使い本文で直接証明。
 - Lowen--Van den Bergh: arXiv:math/0405227、Lowen: arXiv:0707.2602。
@@ -180,3 +180,13 @@ HH1=0により恒等自己同値の可逆bimodule持上げは対角と同型で�
 この点の表示形式8変数族→Abel→dgの写像は全Artin底で同型類上単射。HH2dim8,HH3zeroの無障害miniversal底への接写像は次元から同型。形式逆写像定理で8変数族自体がversalとなり、全dg/pointed Abel変形を実現する。単射性からパラメータも一意。**選んだH3点の全Artin形式近傍の分類**はこれで得る（`thm:intrinsic-formal-eight`）。前提の局所order同定・HH計算・対象持上げ・DDLを明記する。全H3の大域分類、相対stack代数性、成分閉包、全境界と有限慣性の分類ではない。
 
 次は形式近傍の結果を代数的H3開族へ移す。明示8変数有理係数族はあるが、形式smooth性からH3性のZariski開性を無条件に推論しない。相対有限generatorのdg模型と対角perfect性の代数化、または非可換Projの有限表示smoothness criterionを検証する。Artin代数化を適用するなら変形functorの有限提示・効果性の仮定を個別に確認する。大域境界はその後の別課題。
+
+
+## 14. 有限型の平坦表示族と正規化した楕円境界
+
+`papers/sections/quantum_cubic_algebraic_boundary.tex`。p=1+kappa*lambdaとしてeta*zeta*p*(p³+1)を可逆化すれば、斉次Sklyanin三係数(p,−q0,3lambda*eta*zeta)は二係数非零かつ立方非全一致となる。IS arXiv1601.00564v2 Theorem1.1/Cor6.1を一次本文で再確認した。CY3先頭環へのEG3.3.2(i)PBWと正則中央一次拡大LBSにより全fiberの包絡は同じAS4 Hilbert値。noetherian/domainについては標準AS3の既存入力を使用し、ISのHilbert計算だけから導かない。smooth reduced Jacobson底で各次数の表示行列rankが全fiber一定なので、同一の有限開部分上で全次数locally free。中心式の有限個の分母とN_x³/lambda²も可逆化すれば、中央三次商も次数別flat・任意底変更に適合する。これはH3全fiber認識ではない。
+
+C=kappa+kappa²lambda+(kappa³/3+9eta³zeta³)lambda²、F=q0*p*(x³+eta³y³+zeta³z³)+Cxyz。点関係行列Mのdetは厳密に3lambda*F。DeltaE=C³+27p³eta³zeta³が非零ならF0はsmooth相対楕円曲線。lambda0ではDeltaE=kappa³+27eta³zeta³、指定点値170。lambda0のMはP2全体でrank2、graphはdiag(1,q0,q0²)、G0の多重線型化がq0^-1*F0に一致。`verify_algebraic_boundary.py`で全恒等式と三射影patchのrank条件を確認。
+
+EG arXivv4のb2印刷係数は、著者サイトMAGMA（https://math.mit.edu/~etingof/delpezzocenter）で正しい形となっている。今回原本を取得確認し、既存 `verify_cubic_clifford_integration.py` も同じ正しい式を用いていることを確認した。今回の全係数再生は三捩れchartに正則な別の正常形での検証であり、新しい中心式の発見ではない。
+次はこのF曲線とMのgraphから相対THCR境界を認識し、一般中心値のH3性を明示8変数族へ適用する。全パラメータのH3 admissibility、H3 locusのZariski開性、成分の大域閉包はなお未解決。

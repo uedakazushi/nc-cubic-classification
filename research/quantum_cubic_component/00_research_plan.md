@@ -1,6 +1,6 @@
 # 研究方針：量子三次曲面を含む既約成分の完全決定
 
-2026-11-17 / triangle-component-v8。**再開時は本書を最初に読む。**
+2026-11-17 / triangle-component-v9。**再開時は本書を最初に読む。**
 この一式は `nc-cubic-moduli` の成分研究に必要な現行成果を集約したもので、旧bundleを必要としない。
 パスはリポジトリrootからの相対パスで記す。本体は `papers/quantum_cubic_component.tex`、補足は `research/quantum_cubic_component/component_notes.md`。
 
@@ -74,7 +74,10 @@ python3 computations/quantum_cubic_component/verify_all.py
 latexmk -lualatex papers/quantum_cubic_component.tex
 ```
 コードと小証明書は同じ専用ディレクトリに置き、統合結果はその `validation.json` に再生成する。
-通常の証明であるArtin再構成を計算PASSと同一視しない。既存11検証器は厳密演算で再実行した。
+通常の証明であるArtin再構成を計算PASSと同一視しない。既存12検証器は厳密演算で再実行した。
 今回の独立原稿をLuaLaTeXで組版する。巨大な既存H3原稿全体の再組版・網羅再検証・独立査読は対象外。
 Git追跡対象は現行TeX・Markdown・Python・小JSONのみ。PDF・ZIP・中間物・cacheは含めない。
 生成・検証結果はコードと文書に、GitHub refの到達確認は保存時の応答に分けて記載する。
+
+
+明示8変数族の表示自体は有限型smooth底上に代数化でき、eta*zeta*p*(p³+1)と中心式の有限分母を除けば全次数flatな包絡・中央商となる。境界候補F=q0*p*(x³+eta³y³+zeta³z³)+Cxyz、C=kappa+kappa²lambda+(kappa³/3+9eta³zeta³)lambda²、detM=3lambda F、判別式DeltaE=C³+27p³eta³zeta³を厳密検証した。指定点でDeltaE170。次は相対THCR境界と一般中心値H3をこの有限表示族で認識する。全fiberのH3性・H3のZariski開性はまだ結論しない。

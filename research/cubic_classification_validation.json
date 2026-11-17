@@ -2207,5 +2207,29 @@
       "algebraic stack construction",
       "all finite inertia and global component boundaries"
     ]
+  },
+  "quantum_component_algebraic_boundary_v207": {
+    "status": "exact boundary identities PASS; ordinary algebraic flat-presentation proof typeset",
+    "proof": "papers/sections/quantum_cubic_algebraic_boundary.tex",
+    "validator": "computations/quantum_cubic_component/verify_algebraic_boundary.py",
+    "certificate": "computations/quantum_cubic_component/algebraic_boundary_certificate.json",
+    "fresh_primary_audit": "IS arXiv1601.00564v2 Theorem1.1 and Cor6.1; EG author-hosted MAGMA expression matches existing Clifford verifier",
+    "separate_standard_inputs": [
+      "AS3 noetherian/domain theorem used previously; not deduced from IS Hilbert calculation",
+      "EG3.3.2(i)",
+      "regular central extension LBS"
+    ],
+    "results": [
+      "finite-type smooth eight-dimensional presentation base",
+      "degreewise flat envelope and central quotient on one finite open",
+      "det M=3lambda F; smooth cubic discriminant DeltaE",
+      "three base projective rank-two patches"
+    ],
+    "not_claimed": [
+      "all-fiber H3 admissibility",
+      "uniform H3 open locus",
+      "relative THCR identification yet",
+      "global component classification"
+    ]
   }
 }

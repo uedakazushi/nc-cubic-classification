@@ -1,6 +1,6 @@
 # 研究方針：H3分類と量子三次曲面を含む既約成分
 
-2026-11-17 / research-plan-v33 / triangle-component-v8。
+2026-11-17 / research-plan-v33 / triangle-component-v9。
 **再開時は本書を最初に読む。GitHub mainが唯一の正本。**
 実行規則は `AGENTS.md`。既存の全H3分類の詳細と必要な式は
 `research/cubic_14641_classification.md`、`research/cubic_14641_codex_plan.md`、
@@ -85,9 +85,12 @@ python3 -m pip install -r computations/quantum_cubic_component/requirements.txt
 python3 computations/quantum_cubic_component/verify_all.py
 latexmk -lualatex papers/quantum_cubic_component.tex
 ```
-検証証明書は `computations/quantum_cubic_component/validation.json`。11検証器は厳密演算で再実行済み。
+検証証明書は `computations/quantum_cubic_component/validation.json`。12検証器は厳密演算で再実行済み。
 Artin再構成は通常の数学的証明であり、計算PASSと区別する。独立原稿をLuaLaTeXで組版し、既存H3主原稿全体は再組版していない。
 全H3分類の再現手順は `research/cubic_classification_validation.json`、例は `python3 computations/verify_cubic_skew_jets.py`。
 
 heart比較・Rains共鳴・cubic cornerは `uedakazushi/nc-dp-surface-hearts`、次数1は `uedakazushi/nc-dp1-moduli`、三次三様体は `uedakazushi/nc-cubic-threefold-moduli` が正本。
 量子FermatのOU障害は `papers/quantum_fermat_not_as_surface.tex`、ambient比較は `papers/cubic_surface_ambient_moduli.tex` に保持する。
+
+
+明示8変数族の表示自体は有限型smooth底上に代数化でき、eta*zeta*p*(p³+1)と中心式の有限分母を除けば全次数flatな包絡・中央商となる。境界候補F=q0*p*(x³+eta³y³+zeta³z³)+Cxyz、C=kappa+kappa²lambda+(kappa³/3+9eta³zeta³)lambda²、detM=3lambda F、判別式DeltaE=C³+27p³eta³zeta³を厳密検証した。指定点でDeltaE170。次は相対THCR境界と一般中心値H3をこの有限表示族で認識する。全fiberのH3性・H3のZariski開性はまだ結論しない。
