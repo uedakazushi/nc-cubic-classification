@@ -1,0 +1,137 @@
+\subsection{両比例結合が非零の残余：六係数の正常一次境界へ}
+\label{subsec:cubic-third-root-unit-proportional-Szero-cover}
+\begin{theorem}[両非零比例結合の必要被覆]
+\label{thm:cubic-third-root-unit-proportional-Szero-cover}
+重複1の三乗根中山atlasで、両結合 $P,Q$ が非零比例し、H3切断を持つとする。
+$P=Q=(1,0)$ と正規化する。既証の $S=0$ に加え、
+\[
+ T=a_{21}=0,\qquad a_2=0
+\]
+が必要である。残る全候補は、六係数 $D,E,Z,u,v,w$、$(D,E)\ne(0,0)$ を用い
+\begin{gather*}
+ xy=yx,\qquad xb=\omega^2bx,\qquad xc=\omega cx,\\
+ Dyb+Eby+c^2+\omega Zxb=0,\\
+ Eyc+Dcy+b^2+Zxc=0,\\
+ Dbc+Ecb+u x^2+vxy+w y^2=0
+\end{gather*}
+という表示へ入る。特に $x$ は正常一次元で、正常化は $\mu_B^{-1}$。
+この表示のAS4十分性、H3許容性、全同型群oidはまだ主張しない。
+片方の結合が零の場合と非単位重複根atlasも、この定理では扱わない。
+\end{theorem}
+\begin{proof}
+元の22軌道のmiddleから重み $\omega$ のblockを、行 $xb,yb,bx,by,c^2$、
+列 $xc,yc,b^2,cx,cy$ の順に取る。
+$P=Q=(1,0),S=0$ のとき最後の行は
+$(\omega^2,0,0,-1,0)$、第一行の $b^2$ 成分は1。
+これら二つの単元pivotでrank2条件を解くと、正確に
+\[
+\begin{gathered}
+ a_3=-\omega^2a_2,\quad
+ a_{11}=a_{12}=a_6,\quad a_9=a_{13}=a_7,\\
+ a_{15}=a_{16}=a_{17}=0
+\end{gathered}
+\]
+となる。新しい記号 $A=a_2,D=a_6,E=a_7,Z=a_8,T=a_{21}$ を置く。
+両mixed blockの像は
+\begin{gather*}
+ xb-\omega^2bx,\quad xc-\omega cx,\\
+ Dyb+Eby+c^2+(A+\omega Z)xb,\\
+ Eyc+Dcy+b^2+(Z-\omega^2A)xc
+\end{gather*}
+である。これは元のmiddleの像から回収した関係で、仮定したOre表示ではない。
+
+重み1のeven blockは、順序 $x^2,xy,yx,y^2,bc,cb$ で
+\[
+ H_0=\begin{pmatrix}
+0&a_0&-a_0&a_1&A&-\omega^2 A\\
+a_0&a_4&-a_1&a_5&D&E\\
+-a_0&-a_1&-a_4&-a_5&-D&-E\\
+a_1&a_5&-a_5&0&0&0\\
+A&D&-D&0&T&0\\
+-\omega^2 A&E&-E&0&0&-\omega T
+\end{pmatrix}.
+\tag{*}
+\]
+各blockのrankは2でなければならない。
+
+\paragraph{$T\ne0$ の全排除.}
+右下 $\operatorname{diag}(T,-\omega T)$ は可逆なので、Schur補は零。
+$y^2$ 行から $a_1=a_5=0$、$xy,yx$ 成分から
+\[
+ D^2=\omega^2E^2,\quad a_4=0,\quad
+ a_0=\frac{A(D+\omega E)}T
+\]
+を得る。
+$E=0$ なら $D=0$、従って純 $U$ 係数は全て零。
+元の六関係を $(x,c)$ で商にすると、残る関係は $b^2$ のみ。
+商 $k\langle y,b\rangle/(b^2)$ の次数15は1597で、
+AS4の次数15の816を超える。よってこの場合は非AS4。
+
+$E\ne0$ なら $D=\varepsilon\omega E$、$\varepsilon=\pm1$。
+$(*)$ の $bc,cb$ 列から得るeven関係は
+\[
+ Tbc+A x^2+D(xy-yx)=0,\qquad
+ -\omega Tcb-\omega^2A x^2+E(xy-yx)=0.
+\]
+これらを解くと、$A'=\langle x,b,c\rangle$ の関係は
+\[
+ bc-qcb=h x^2,\qquad
+ q=-\varepsilon\omega^2,\quad h=-\frac{(1+\varepsilon)A}{T},
+\]
+そして残る関係は
+\[
+ yx=xy+\frac ADx^2+\frac TD bc.
+\]
+mixed式は $yb=qby+\delta(b)$、$yc=q^{-1}cy+\delta(c)$ となり、
+$\delta(b)$ の $c^2$ 係数は $-1/D$、$\delta(c)$ の $b^2$ 係数は $-1/E$。
+
+これが実際のOre表示であることも確認する。
+順序 $x<b<c<y$ で重みを $(1,2,2,3)$ とし、重み付き辞書式順序を使えば、
+六関係の左辺を $bx,cx,cb,yx,yb,yc$ とした書換えは全て減少する。
+従って標準単項式 $x^rb^sc^ny^m$ が張り、その個数はAS4 Hilbert値に一致する。
+仮定したAS4のHilbert値よりこれらは独立でもあり、
+全重なりは零、$A'$ の埋込みと自己同型型Ore作用が成立する。
+従って定理\ref{thm:cubic-third-root-unit-normalx-Ore-cover-empty}が適用される。
+特に $\delta(x)$ の $bc$ 係数 $T/D$ が非零なので、同定理の因子障害だけでもH3を排除する。
+これで $T\ne0$ の全てが消える。
+
+\paragraph{$T=0,A\ne0$ の全排除.}
+$(*)$ の右下blockは零なので、cross blockのrankは高々1。
+$A\ne0$ より $E=-\omega^2D$。
+crossは $R=(A,D,-D,0)^t$ と $(1,-\omega^2)$ の外積である。
+$D=0$ ならeven関係に純 $x^2$ が入り、整域でない。
+$D\ne0$ とする。
+一般に、右下零でcross rank1の対称blockが全体rank2なら、
+左上blockは $RV^t+VR^t$ と書ける。
+これはcrossの非零成分と対応する二行二列の単元pivotを取れば分かる。
+ここでは左上の $x^2,x^2$ 成分から $V_0=0$。
+$xy,xy$ と $yx,yx$ の符号及び $x^2,xy$ と $x^2,yx$ の符号から
+$V_1=V_2=0$、さらに $xy,yx$ と $x^2,y^2$ から $V_3=0$。
+従って $a_0=a_1=a_4=a_5=0$。
+全even像は
+\[
+ A x^2+D(xy-yx),\qquad bc-\omega^2cb
+\]
+である。mixed式と合わせ、同じ標準単項式/Hilbert議論により
+$A'=\langle x,b,c\rangle$、$q=\omega^2,h=0$ の実Ore表示となる。
+$\delta(x)=A x^2/D\ne0$ なので、再び前定理の因子障害によりH3なし。
+よって $A=0$ も必要。
+
+\paragraph{$T=A=0$ の必要表示.}
+$D=E=0$ ならeven関係二本が全て純 $U^2$ に入る。
+代数閉体上の二次元二元二次形式pencilはrank1 tensorを含む
+（$2\times2$ 行列式の斉次二次式に射影零点が存在する）。
+従って非零一次元二つの積が零となり、整域性に反する。
+よって $(D,E)\ne(0,0)$。
+cross rank1は $R=(0,1,-1,0)^t$ と $(D,E)$ の外積であり、
+同じrank2 block補題から左上は $RV^t+VR^t$。
+これは正確に $a_1=0$、
+$V=(a_0,a_4/2,a_4/2,a_5)$ を与える。
+従ってeven像は $xy-yx$ と
+\[
+ Dbc+Ecb+a_0x^2+\tfrac{a_4}2(xy+yx)+a_5y^2
+\]
+に一致する。$u=a_0,v=a_4,w=a_5$ と書けば主張の六関係となる。
+$D=0$ 又は $E=0$ の境界を捨てていない。
+公開検証器はgenericな像の一致に加え、その両境界も元の22tensorから再生する。
+\end{proof}

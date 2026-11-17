@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "scope": "all original22 mixed pivot constants, even Schur/factorization, exact generic and both boundary top-image equalities; ordinary exhaustive rank/Ore/domain proof separate",
+  "mixed_pivot_residual_rank": 8,
+  "T_nonzero_branches": [
+    {
+      "T_nonzero_branch_sign": 1,
+      "q": "1 + CRootOf(z**2 + z + 1, 1)"
+    },
+    {
+      "T_nonzero_branch_sign": -1,
+      "q": "-1 - CRootOf(z**2 + z + 1, 1)"
+    }
+  ],
+  "T0_A_nonzero_Ore_branch_q": "omega^2",
+  "remaining_both_nonzero_proportional_sector": "S=T=a2=0, a1=0, (a6,a7)!=(0,0); normal x and xy=yx",
+  "remaining_six_relation_parameters": [
+    "D",
+    "E",
+    "Z",
+    "u",
+    "v",
+    "w"
+  ],
+  "exponential_quotient_degree15": 1597,
+  "AS4_degree15": 816,
+  "not_claimed": [
+    "remaining six-parameter normal-linear chart admissible",
+    "one-zero cube coupling covered",
+    "nonunit semisimple atlas classified",
+    "complete H3 classification"
+  ]
+}

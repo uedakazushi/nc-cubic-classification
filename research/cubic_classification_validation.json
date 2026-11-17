@@ -2961,5 +2961,27 @@
       "main LuaLaTeX PASS; no overfull/undefined references/citations",
       "git diff --check PASS"
     ]
+  },
+  "third_root_unit_proportional_Szero_cover_v245": {
+    "status": "ordinary exhaustive original mixed/even rank2 proof and actual Ore recognition; all original top-image and boundary identities PASS",
+    "proof": "papers/sections/cubic_third_root_unit_proportional_Szero_cover.tex",
+    "validator": "computations/verify_cubic_third_root_unit_proportional_Szero_cover.py",
+    "certificate": "computations/cubic_third_root_unit_proportional_Szero_cover_certificate.json",
+    "results": [
+      "both nonzero proportional cube couplings require T=a2=0",
+      "all such H3 candidates in explicit six-parameter normal-linear boundary chart",
+      "D0 and E0 boundary kept; all T-nonzero and a2-nonzero branches excluded"
+    ],
+    "not_claimed": [
+      "remaining six-parameter chart H3 admissibility",
+      "one-zero cube coupling covered",
+      "nonunit semisimple spectrum classified",
+      "complete H3 classification"
+    ],
+    "executed_checks": [
+      "all29 spectral validators PASS",
+      "main LuaLaTeX PASS; no overfull/undefined references/citations",
+      "git diff --check PASS"
+    ]
   }
 }

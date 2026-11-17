@@ -36,6 +36,7 @@ CHECKS=[
  'verify_cubic_third_root_unit_split_double_Ore.py',
  'verify_cubic_third_root_unit_deformed_double_Ore.py',
  'verify_cubic_third_root_unit_normalx_Ore_cover.py',
+ 'verify_cubic_third_root_unit_proportional_Szero_cover.py',
 ]
 results=[]
 for name in CHECKS:
