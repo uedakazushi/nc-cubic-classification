@@ -45,12 +45,25 @@ for kind,muinv in [('quantum',S.diag(1/p,p)),('Jordan',S.Matrix([[1,-2*kappa],[0
     det=S.factor(C[list(rows),:].det())
     assert S.simplify(det-(-(p-1)**2/p if kind=='quantum' else -kappa**2))==0
     intertwiner_minors[kind]=str(det)
-result = {'status':'PASS','scope':'exact character counts, integer constraints, graph block determinant identities and original AS2 normal-form intertwiners; ordinary proofs separate',
+t=S.symbols('t')
+HS=1/((1-t)**2*(1-t**2))
+assert S.cancel(HS*(1+t)/(1-t)-1/(1-t)**4)==0
+HS_coeff=[S.expand(S.series(HS,t,0,8).removeO()).coeff(t,n) for n in range(8)]
+assert HS_coeff==[1,2,4,6,9,12,16,20]
+HA=S.cancel((1-t**3)*HS)
+assert S.limit((1-t)**2*HA,t,1)==S.Rational(3,2)
+HA_coeff=[int(S.expand(S.series(HA,t,0,14).removeO()).coeff(t,n)) for n in range(14)]
+assert all(HA_coeff[2*m]==3*m+1 and HA_coeff[2*m+1]==3*m+2 for m in range(7))
+result = {'status':'PASS','scope':'exact characters, graph determinants, original AS2 relations and rank2 Hilbert identities; ordinary proofs separate',
           'quadratic_weight_dimensions':weights,'unit_repeated_relation_dimensions_s_r':unit_solutions,
           'nonunit_repeated_maximum_number_of_relations':nonunit_max,
           'possible_weight_collision_orders':collision_orders,
           'four_graph_block_determinant_identities':'PASS',
           'AS2_Ore_standard_cubic_word_count':20,
-          'linear_inverse_Nakayama_intertwiner_minors':intertwiner_minors}
+          'linear_inverse_Nakayama_intertwiner_minors':intertwiner_minors,
+          'rank2_base_Hilbert_coefficients_0_to_7':[int(x) for x in HS_coeff],
+          'rank2_normal_cubic_quotient_coefficients_0_to_13':HA_coeff,
+          'quotient_asymptotic_slope':'3/2',
+          'ordinary_literature_input':'Stafford-Van den Bergh math/9910082v2 Theorem5.2 p14, explicitly Artin-Stafford Theorem0.2'}
 Path(__file__).with_name('cubic_inverse_spectral_pencils_certificate.json').write_text(json.dumps(result,indent=2)+'\n')
-print(json.dumps({'status':'PASS','nonunit_max_relations':nonunit_max,'unit_relation_dimensions':unit_solutions,'AS2_intertwiner_minors':intertwiner_minors}))
+print(json.dumps({'status':'PASS','nonunit_max_relations':nonunit_max,'AS2_intertwiner_minors':intertwiner_minors,'rank2_cut_slope':'3/2'}))

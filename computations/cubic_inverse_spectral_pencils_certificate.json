@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "scope": "exact character counts, integer constraints, graph block determinant identities and original AS2 normal-form intertwiners; ordinary proofs separate",
+  "scope": "exact characters, graph determinants, original AS2 relations and rank2 Hilbert identities; ordinary proofs separate",
   "quadratic_weight_dimensions": {
     "unit_repeated": {
       "-2": 1,
@@ -35,5 +35,33 @@
   "linear_inverse_Nakayama_intertwiner_minors": {
     "quantum": "-(p - 1)**2/p",
     "Jordan": "-kappa**2"
-  }
+  },
+  "rank2_base_Hilbert_coefficients_0_to_7": [
+    1,
+    2,
+    4,
+    6,
+    9,
+    12,
+    16,
+    20
+  ],
+  "rank2_normal_cubic_quotient_coefficients_0_to_13": [
+    1,
+    2,
+    4,
+    5,
+    7,
+    8,
+    10,
+    11,
+    13,
+    14,
+    16,
+    17,
+    19,
+    20
+  ],
+  "quotient_asymptotic_slope": "3/2",
+  "ordinary_literature_input": "Stafford-Van den Bergh math/9910082v2 Theorem5.2 p14, explicitly Artin-Stafford Theorem0.2"
 }

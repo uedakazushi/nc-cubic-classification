@@ -1388,3 +1388,9 @@ AS4四次top wの中山巡回式を四回反復してmu^tensor4(w)=w、Frobenius
 
 ## 単一相反pencilの偶射影rank1の排除（v217）
 `cubic_inverse_spectral_pencils.tex`：rank1では純U関係rがAS2平面Tを定める。Frobenius middleの二つの可逆graphから四小blockが可逆となり、残る偶関係のbc,cb係数はともに非零。三次標準語20個と実dim20から全overlapを比較し、fg=gf及びh u=fg(u)hを得てambiskew Ore表示を復元。正常三次G=H3(T)+F1(T)bcに対しL=(fg)^-1FはL u=mu_T^-1(u)Lを満たす。非可換AS2では量子/ Jordan両正規形の2×2minorが-(p-1)²/p,-kappa²でF=0、H3(T)は一次因子を持つ。可換基底ではf(F)=detf*F,g(F)=detg*FからT/(F)上f,g恒等、正常b式をmodFに移してz≠1よりH∈(F)、G全体が一次因子を持つ。従ってrank1全域にH3なし。単冪中山も含む。公開検証器は四graph小block行列式、標準三次語数20、元AS2関係のintertwinerをexact PASS。次はrank2でbc,cbを二元二次式へ消去したcubic-AS3候補基底と正常三次を調べる。基底AS3性は未証明であり仮定しない。
+
+## 三固有値の全非有限スペクトル排除（v219）
+`cubic_inverse_spectral_pencils.tex`：残るeven rank2でbc=h(U),cb=k(U)としS=<U>。charge分解B=S⊕ΣSb^n⊕ΣSc^n、domainによる各成分の単射からHS=1/((1-t)²(1-t²))。bのOre局所化はS[b±1;f]、従ってSは左右noetherianかつgldim≤4。局所化で全関係を消去するとSは二元二本の三次関係で提示される。AS3 Gorenstein性は証明に不要で仮定しない。候補正常三次はS3内の30×6線型核へ帰着するが、以下の整域障害で全排除。
+Gはcharge0正則正規なのでS/(G)↪B/(G)。右辺がH3整域なら左辺も一次生成GK2整域となるが、Hilbert級数は(1+t+t²)/((1-t)(1-t²))で傾き3/2。Artin–Staffordの一次生成GK2整域定理から曲線THCRに有限余次元で埋め込み、Riemann–Rochで傾きは整数となり矛盾。従ってrank2も空、単一相反pencilは位数1〜4外で全排除。結論：三固有値の全H3は共通N乗根(N≤24)の有限半単純スペクトルに限られる。単冪部分込みの必要被覆であり、有限候補の存在/許容性/群oidは未完。
+文献入力はStafford本人を含むStafford–Van den Bergh arXiv:math/9910082v2 Theorem5.2 p14（原論文Artin–Stafford Theorem0.2の明示的再掲）。本文・全体の代数閉体仮定・次数1生成・GK2・有限余次元THCRの結論を実際に読んだ。原論文DOI10.1007/BF01231444のabstractと書誌も照合したが、原論文全文は今回取得できず、その証明の独立再監査とは称さない。公開検証器はcharge Hilbert恒等式、S3=6/S4=9、商の傾き3/2と偶奇係数をexact PASS。
+次はN≤24の有限三固有値を相異性・三次/四次共鳴・関係重みの相反性・整域性で厳密列挙する。四単純固有値と全CY、成分・相対降下は依然未完。

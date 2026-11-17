@@ -8,21 +8,11 @@
 
 **as4具体表示の独立排除（classification-v89）**：固定commit a45f834f51a00c47443b51caf66abaf4629546b9からは具体表示のみを参照し、全CY/全AS4被覆・存在十分性・全同型を新規輸入しない。二重被覆DCC1二族、非被約のCF2/CF3/CT2、TT22六表示、DS3/DT1全列挙表示は排除済み。四単純基点ではFS4のSと標準cocycleを全値排除し、FZ2のQも零交換子CY skewの中心三次は純三乗一本以下という一般補題で全排除し、FZ4/FZ5のO/Hおよび標準Klein cocycleも全値排除した。さらにFN3七表示L/M/F0/F1/G0/G1/K、第五係数零のM_p二族とN/C、FO2の全二パラメータH_(lambda,p)、FG2の全R_lambda両符号を排除済み。Rはtwist後の非零中央二次の逆指標から全奇数中心が零となる。FI2のJ_h両符号も全h非零で中心3消滅により排除し、h0は五次次元58の独立計算でAS4から除外した。FT3のPも全二パラメータ・両符号を排除した。詳細な式・全値rank cover・Ore/normalizer証明は `papers/sections/cubic_as4_*exclusions.tex`、輸入範囲と実行済み検証は `research/as4_imports.json` と `research/cubic_classification_validation.json` を読む。隣接AZ2の二固定Lも、Ore normalizerの三乗がomega/omega²倍になることと純base切断の頂点無限Extにより排除した。一般にCYのB=S[z;sigma]でsigma³が非自明scalarならH3にならない。隣接AB3の全S_zetaも四次次元>=37で排除し、T_-2両符号がその特殊値に一致することを独立確認した。T両符号も全lambdaで排除した。全64三次語のprimitive交換子moduleについて独立なC_0 X=N恒等式と20三角pivotを検証し、追加因子ABC_*とその対合像が互いに素なので二枚で全残余を覆う。三次/四次商射影も元の全関係で再生確認し、全値AS4存在・平坦性は仮定しない。Pは全二変数の商射影と40次元realified rank恒等式を独立検証し、次数30の垂直例外をlambda反射と三特殊直線の全r計算で全て排除した。次は列挙表示から全H3へ至る必要被覆定理を監査し、残る未被覆領域と許容条件を縮小する。
 
-**現在のスペクトルfrontier（classification-v202）**：(1,3)は全幾何学的分類済み、(3,1)と(2,2) mixed rank2は空。(2,2) mixed rank4では最後のL非鏡開集合も正常行加群の全単元消去で排除済み。P,Qとも非零のH3はなく、全Jordan型を含め曲がったClifford族へ認識する。証明は `cubic_order2_22_secant_L_complete.tex`、公開builder・座標恒等式・飽和検証器にある。解決済みのL飽和へ戻らない。未解決の核心は三固有値以上、全CY被覆、全成分・intrinsic族降下である。
-
-**多固有値の必要被覆（v211）**：三次固有値共鳴が必要、単純固有直線の唯一の純三乗共鳴は非整域で排除。複数共鳴交叉は残す。`cubic_spectral_resonance.tex`。四単純固有値の二次積が全て相異なる領域はskewと証明済み。非skew残余の21二次共鳴因子と三次共鳴の交叉上で、twisted四次tensorのmiddle rank6を調べる。
-
-**多固有値の現在の核心（v213）**：二次非共鳴(2,1,1)はJordan基底込みでskewに還元、既分類skew H3は三固有値以上を持たない。従って全三固有値以上のH3候補には二次共鳴が必須。(2,1,1)の六因子、四単純の21因子に三次共鳴を同時に課した有限被覆から、必要tensor atlasとW1を調べる。Jordan正常三次の六binomial指数det±1と中山符号を公開検証器でPASS。一般共鳴領域の十分性・CY全被覆・相対降下は未完。
-
-**具体的四chart（v214）**：A=(a,-a,c), B=(a,b,-b), C=(a,at,a/t), D=(a,at,at²)。各七三次共鳴と純枝の有限捩れ必要条件を検証済み。次は四次topの不変性と一次方向非退化性を課す。
-
-**最新の三固有値frontier（v215）**：四次topの中山不変性と全固有方向非退化性から、三固有値は共通N乗根(N≤24)の有限部分又は(1,z,z^-1),(z,1,z^-1)の二pencilのみ。単冪部分込み。次はpencilの二次関係の相反重みと整域性を課す。
-
-**現在の最小未解決chart（v216）**：(z,z,1,z^-1)はzの位数1〜4外でAS4不可能。三固有値の非有限部分は(1,1,z,z^-1)一pencilのみ。その必要atlas bU=f(U)b,cU=g(U)c + 二even関係のbc/cb射影rank1/2で正常三次を調べる。f,g可換を未確認で仮定しない。
-
-**最小未解決chart更新（v217）**：単一pencilのeven射影rank1を、AS2逆中山一次intertwinerとmodF正常式で全排除。rank2のみ残る。bc,cbをU二次式に消去した二元cubic候補の必要関係・正常三次を調べる。基底AS3を未確認で仮定しない。
-
-**一般正規切断の有限frame（v210）**：`cubic_hypersurface_frame.tex` は四line compact generator、proper dg type(55,21)、normalizer付きhypersurface作用の二乗によるH3判定を与える。rank-one torsion-freeは別仮定であり、全coherent対象に対する判定を有限検査へ還元したとは主張しない。
+**現在のスペクトルfrontier（v219）**：(1,3)は全幾何学的分類済み、(3,1)及び(2,2) mixed rank2は空、(2,2) mixed rank4は全Jordan型込みで曲がったClifford族へ認識（最後のL飽和はv202で完了）。解決済みLへ戻らない。
+三固有値以上では二次・三次共鳴が必要、四単純の二次非共鳴領域はskewへ還元して排除。三固有値は四次top非退化性から有限共通N乗根(N≤24)又は二pencilへ縮小、一方は関係数不足、残る(1,1,z,z^-1)はeven rank1の一次因子とrank2のGK2傾き3/2障害で位数1〜4外を全排除した。従って三固有値の全半単純スペクトルはN≤24の有限集合。単冪部分込み。
+**次の最小未解決問題**：有限N≤24の三固有値を共鳴・Frobenius相反重み・整域性で厳密列挙し、残る正常三次/許容切断を調べる。四単純、全CY被覆、全成分・intrinsic族降下も未完。
+証明は `cubic_spectral_resonance.tex` と `cubic_inverse_spectral_pencils.tex`。Artin–Stafford入力はStafford–Van den Bergh arXiv:math/9910082v2 Theorem5.2 p14の著者による正確な再掲を実読、原論文証明の独立再監査とは称さない。基底SのAS3性を未確認で仮定せず、Hilbert傾きと整域性だけで排除した。
+一般正規三次の四line compact frame（v210）は `cubic_hypersurface_frame.tex`。rank-one torsion-freeは別仮定、有限検査・相対開性は未解決。
 
 classification-v12 では、積分した族の全次数平坦性・noetherian quadratic Koszul CY AS4 認識を、明示的な開集合 V={h∈H, (1-gamma²)≠0, Delta≠0} 上で証明した。入力は Iyudu–Shkarin Theorem1.1/Corollary6.1、EG形式変形定理、および64個の三次持上げ恒等式・256個の四次巡回恒等式・単元小行列式 -p^6 を確認した LBS 中心拡大定理である。中心三次の関係類の非消滅も巡回商の二係数で全パラメータについて確認した。gamma≠0 では低次数中心が0,0,1、滑らかな楕円THCR境界となり、全中心値の H3 判定は正確に一つの affine 中心切断の有限大域次元へ帰着する。定義体上超越的な全 D は H3。位数4の枝 gamma^4=1+h^3 では固定包絡の悪い D は有限であり、h=1,gamma=2^(1/4),A=1,B=C=0,beta=(-1,0,0),D=pi は明示的な非Clifford H3 対象となる。悪い値の全一覧・全内在的群oid・H3相対開性・降下・全包絡被覆は未解決。
 

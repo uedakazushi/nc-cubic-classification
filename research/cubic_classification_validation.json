@@ -2406,5 +2406,41 @@
       "AS3 recognition for rank2 base",
       "finite torsion or full H3 classification"
     ]
+  },
+  "unit_inverse_pencil_rank2_base_v218": {
+    "status": "ordinary charge decomposition, Ore localization and cubic presentation proof; exact Hilbert replay PASS",
+    "proof": "papers/sections/cubic_inverse_spectral_pencils.tex",
+    "validator": "computations/verify_cubic_inverse_spectral_pencils.py",
+    "results": [
+      "rank2 base S two generators, two cubic relations, Hilbert series1/((1-t)^2(1-t^2))",
+      "S left/right noetherian domain, gldim<=4",
+      "normal cubic candidates reduce to30x6 kernel"
+    ],
+    "not_claimed": [
+      "AS3 Gorenstein recognition needed or established"
+    ]
+  },
+  "three_eigenvalue_finite_spectrum_v219": {
+    "status": "ordinary rank2 domain contradiction using Artin-Stafford; exact Hilbert slope3/2 PASS",
+    "proof": "papers/sections/cubic_inverse_spectral_pencils.tex",
+    "validator": "computations/verify_cubic_inverse_spectral_pencils.py",
+    "certificate": "computations/cubic_inverse_spectral_pencils_certificate.json",
+    "literature_input": {
+      "source": "https://arxiv.org/pdf/math/9910082v2",
+      "sha256": "44b621829df1824b9f0377cc807f29bce0d6b2a62665696763a8b810a3c6481d",
+      "read": "Theorem5.2 p14 and standing algebraically closed field assumption",
+      "statement": "degree-one generated connected GK2 domain embeds with finite-dimensional cokernel in curve THCR",
+      "original": "Artin-Stafford DOI10.1007/BF01231444 Theorem0.2",
+      "original_full_proof_independently_read": false
+    },
+    "results": [
+      "S/(G) injects into B/(G); if domain its GK2 slope3/2 contradicts integer THCR degree",
+      "all three-distinct-eigenvalue H3 spectra have a common torsion order N<=24, including nonsemisimple Nakayama"
+    ],
+    "not_claimed": [
+      "finite spectrum admissibility",
+      "complete four-eigenvalue or CY coverage",
+      "global components or family descent"
+    ]
   }
 }
