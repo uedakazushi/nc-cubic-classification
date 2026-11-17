@@ -1,0 +1,102 @@
+\subsection{追加の四乗項を含む最後の位数4枝}
+\label{subsec:cubic-fourth-root-last-negative-simple}
+\begin{lemma}[重複第四根と対称な純二次関係の障害]
+\label{lem:cubic-fourth-root-symmetric-pure-obstruction}
+$\mu_U=iI$、$\mu_c=-ic$ とし、重み $-1$ の関係空間 $I_2\subset U^2+kc^2$ が二次元で、
+最高middleの対応blockのrankも2とする。
+$I_2\cap U^2$ が非退化対称tensorを含む場合、包絡は整域でない。
+\end{lemma}
+\begin{proof}
+整域と仮定して矛盾を導く。二元の純関係が二本あれば既にrank1 tensorが生じるため、
+$I_2\cap U^2$ は一次元である。対称二次を $r=\alpha x^2+\beta y^2$、$\alpha\beta\ne0$ と対角化する。
+$cc$ 列は非零の $r$ の倍数であるから、全体scalarを選び同列を $r$ とする。
+純binary四次の巡回式より、このskew middleは
+\[
+ K=\begin{pmatrix}
+ 0&A&-iA&B&\alpha\\
+ -A&0&-iB&D&0\\
+ iA&iB&0&iD&0\\
+ -B&-D&-iD&0&\beta\\
+ -\alpha&0&0&-\beta&0
+ \end{pmatrix}.
+\]
+rank2のPfaffianには $-i\alpha B,\beta A+\alpha D,
+ i(-\beta A+\alpha D)$ が含まれる。
+従って $A=B=D=0$。
+このとき像は $\langle r,c^2\rangle$ であり、純 $c^2$ 関係を持つため整域性に反する。
+\end{proof}
+
+\begin{theorem}[単純固有値 $-1$ の残る位数4枝も空]
+\label{thm:cubic-fourth-root-last-negative-simple-empty}
+半単純スペクトル $(\rho,\rho,-1,-\rho)$、$\rho=\pm i$ の全H3候補は空である。
+単冪部分を許しても同様である。
+\end{theorem}
+\begin{proof}
+まず $\rho=i$、中山は半単純とする。
+前節の16軌道に $bbbb$ が加わり、その係数を $z$ とする。
+$H_0$ は前節の行列の $bb,bb$ 成分だけが $z$ へ変わり、$H_2$ は同じである。
+mixed blockの後二行の符号は正に変わるが、列比 $q$ と正規化
+$a_9=1,a_{15}=a_{12}=a_{13}=0,a_5=q^{-2},a_6=q^{-1}$ は同じである。
+
+$z=0$ では前節と同じrank・Pfaffian・整域の議論で $q^4=1$、
+scalar正規化後の四必要表示は
+\[
+ yx=ixy,\quad c^2+y^2=0,\quad cx=-iq^2xc,\quad
+ yc+q^2cy+b^2=0,\quad bx=-q^{-1}xb,\quad cb=-q^{-1}bc.
+\]
+元の全二次関係からのexact線型消去により、正常核は
+$q=1$ で $k(yb+by)x$、他の三つの $q$ で零である。
+従って全三次切断は非整域又は存在しない。
+
+$z\ne0$ を扱う。最高tensorのscalarと $U$ 基底を選べば $z=1$ としつつ上のmixed正規化を保てる。
+$H_0$ の $bb$ 行列成分をpivotに取ると、そのSchur補行列は
+語順 $(xc,yc,cx,cy)$ において
+\[
+ T=\begin{pmatrix}
+ a_7-1&a_8&-ia_2+iq^{-2}&a_{10}\\
+ a_8&a_{14}&-ia_4&-ia_{11}\\
+ -ia_2+iq^{-2}&-ia_4&-ia_7+q^{-4}&-ia_8\\
+ a_{10}&-ia_{11}&-ia_8&-ia_{14}
+ \end{pmatrix}.
+\]
+rank $H_0=2$ より $T$ はrank1。
+代数閉体上で $T=v v^t$、$v=(p,r,s,t)^t$ と書ける。
+従って
+\[
+ t^2=-ir^2,\qquad st=-ipr,\qquad
+ s^2=-ip^2+q^{-4}-i.
+\]
+$r=0$ なら $t=0$、$a_4=a_{10}=a_{11}=0$ となり、
+$H_2$ の $cc$ 列は純 $x^2$ 又は零となる。
+前者は整域性、後者は $I_2$ が二本の純 $U^2$ 関係を持つことに反する。
+従って $r\ne0$、$\eta=t/r$ とおけば
+\[
+ \eta^2=-i,\quad s=\eta p,\quad q^4=-i.
+\]
+さらに成分を比較すると
+\[
+ a_2=q^{-2}+i\eta p^2,\quad a_4=i\eta pr,\quad
+ a_{10}=\eta pr,\quad a_{11}=i\eta r^2.
+\]
+従って $H_2$ の純 $U^2$ 関係は
+\[
+ a_2x^2+a_4xy+ia_{10}yx+a_{11}y^2
+ =q^{-2}x^2+i\eta(px+ry)^2.
+\]
+$x,px+ry$ は独立であり、両係数が非零なので非退化対称tensorである。
+前補題がこの全開chartを整域性から排除する。
+$z=0$ の有限表示だけを全atlasとした議論ではない。
+
+単冪untwist後の半単純AS4整域には $z\ne0$ が存在せず、$z=0$ の四表示しか残らない。
+そこでは前節と同じ二直線・純 $xy+iyx$ 関係の保存が
+可換する単冪自己同型を恒等に限る。
+従って元の中山も半単純であり、既述の因子/正常核零で排除される。
+$i\mapsto-i$ の場合も全恒等式が共役して同じ結論となる。
+\end{proof}
+
+\begin{corollary}[三固有値中山の残余は位数3の三候補のみ]
+\label{cor:cubic-three-eigenvalue-order3-only}
+三固有値H3の中山半単純部分の最小共通位数は3に限られる。
+必要スペクトルは $(3;0,1,2),(3;1,0,2),(3;2,0,1)$、Galoisラベル二軌道だけである。
+残存三候補の存在・H3許容性、四単純及びCYの全被覆、全H3分類は未完成である。
+\end{corollary}

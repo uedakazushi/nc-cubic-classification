@@ -1,0 +1,225 @@
+{
+  "status": "PASS",
+  "scope": "all17 original tensor orbits, Schur identity, binary symmetric-quadric Pfaffians and eight finite kernels; ordinary coverage/unipotent arguments separate",
+  "orbit_representatives": [
+    "xxxy",
+    "xxyy",
+    "xxcc",
+    "xyyy",
+    "xycc",
+    "xbbc",
+    "xbcb",
+    "xcxc",
+    "xcyc",
+    "xcbb",
+    "xccy",
+    "yycc",
+    "ybbc",
+    "ybcb",
+    "ycyc",
+    "ycbb",
+    "bbbb"
+  ],
+  "atlas_checks": [
+    {
+      "rho": "I",
+      "top_dimension": 17,
+      "extra_orbit": "bbbb",
+      "Schur_and_symmetric_quadric_obstruction": true
+    },
+    {
+      "rho": "-I",
+      "top_dimension": 17,
+      "extra_orbit": "bbbb",
+      "Schur_and_symmetric_quadric_obstruction": true
+    }
+  ],
+  "finite_kernel_cases": [
+    {
+      "rho": "I",
+      "q": "1",
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "normal_rank": 4,
+      "W1_basis": [
+        "(yb+by)x"
+      ],
+      "exclusion": "right x factor"
+    },
+    {
+      "rho": "I",
+      "q": "-1",
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "normal_rank": 5,
+      "W1_basis": [],
+      "exclusion": "W1 zero"
+    },
+    {
+      "rho": "I",
+      "q": "I",
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "normal_rank": 5,
+      "W1_basis": [],
+      "exclusion": "W1 zero"
+    },
+    {
+      "rho": "I",
+      "q": "-I",
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "normal_rank": 5,
+      "W1_basis": [],
+      "exclusion": "W1 zero"
+    },
+    {
+      "rho": "-I",
+      "q": "1",
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "normal_rank": 4,
+      "W1_basis": [
+        "(yb+by)x"
+      ],
+      "exclusion": "right x factor"
+    },
+    {
+      "rho": "-I",
+      "q": "-1",
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "normal_rank": 5,
+      "W1_basis": [],
+      "exclusion": "W1 zero"
+    },
+    {
+      "rho": "-I",
+      "q": "I",
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "normal_rank": 5,
+      "W1_basis": [],
+      "exclusion": "W1 zero"
+    },
+    {
+      "rho": "-I",
+      "q": "-I",
+      "B3_B4_dimensions": [
+        20,
+        35
+      ],
+      "normal_rank": 5,
+      "W1_basis": [],
+      "exclusion": "W1 zero"
+    }
+  ],
+  "excluded_spectra": [
+    {
+      "N": 4,
+      "spectrum": [
+        1,
+        2,
+        3
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "N": 4,
+      "spectrum": [
+        3,
+        1,
+        2
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ]
+    }
+  ],
+  "final_survivors": [
+    {
+      "N": 3,
+      "spectrum": [
+        0,
+        1,
+        2
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "N": 3,
+      "spectrum": [
+        1,
+        0,
+        2
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "N": 3,
+      "spectrum": [
+        2,
+        0,
+        1
+      ],
+      "relation_weight_multiplicities": [
+        [
+          2,
+          2,
+          2
+        ]
+      ]
+    }
+  ],
+  "final_spectrum_count": 3,
+  "remaining_orders": [
+    3
+  ],
+  "remaining_counts": {
+    "3": 3
+  },
+  "Galois_label_orbit_count": 2,
+  "not_claimed": [
+    "remaining3 H3 existence/admissibility",
+    "four-eigenvalue or CY completeness",
+    "complete H3 classification"
+  ]
+}

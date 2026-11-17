@@ -64,16 +64,19 @@
     {
       "validator": "verify_cubic_fourth_root_last_finite.py",
       "status": "PASS"
+    },
+    {
+      "validator": "verify_cubic_fourth_root_last_negative_simple.py",
+      "status": "PASS"
     }
   ],
-  "current_three_eigenvalue_necessary_spectra": 5,
+  "current_three_eigenvalue_necessary_spectra": 3,
   "current_minimal_common_semisimple_orders": [
-    3,
-    4
+    3
   ],
   "additional_four_simple_sector": "(a,-a,i/a,-i/a) excluded outside a^4=1; finite boundary unclassified",
   "not_claimed": [
-    "H3 existence or admissibility of5 spectra",
+    "H3 existence or admissibility of3 spectra",
     "ordinary proofs independently checked by program",
     "four-eigenvalue or CY completeness",
     "complete H3 classification"
