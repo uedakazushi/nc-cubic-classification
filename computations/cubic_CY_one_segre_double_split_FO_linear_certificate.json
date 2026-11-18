@@ -1,0 +1,167 @@
+[
+  {
+    "chart": "L0",
+    "factor_support": [
+      "2*h + p + 1",
+      "h",
+      "h + 1",
+      "h + p + 1",
+      "h**2*p - h**2 + h*p - h + p**2 + p",
+      "h**2*p/2 - h**2/2 + h*p**2 + h*p/2 - h/2 + p**2/2 + p/2",
+      "h*p - h - p - 1",
+      "p",
+      "p + 1",
+      "p - 1"
+    ],
+    "graphs": [
+      {
+        "chart": "2*h + p + 1",
+        "pivot_factor_support": [
+          "h + 1",
+          "h - 1"
+        ],
+        "recomputed_values": [],
+        "curve_recomputations": []
+      },
+      {
+        "chart": "h + p + 1",
+        "pivot_factor_support": [
+          "h",
+          "h + 1",
+          "h - 1"
+        ],
+        "recomputed_values": [],
+        "curve_recomputations": []
+      },
+      {
+        "chart": "h*p - h - p - 1",
+        "pivot_factor_support": [
+          "h",
+          "h + 1",
+          "h + 1/3",
+          "h - 1",
+          "h**2 - 4*h - 1"
+        ],
+        "recomputed_values": [
+          "-1/3",
+          "2 - sqrt(5)",
+          "2 + sqrt(5)"
+        ],
+        "curve_recomputations": []
+      }
+    ],
+    "quadratic_curve_norm_factors": [
+      [
+        "p",
+        "p + 1",
+        "p - 1"
+      ],
+      [
+        "3*p + 1",
+        "p",
+        "p + 1",
+        "p - 1"
+      ]
+    ]
+  },
+  {
+    "chart": "L3",
+    "factor_support": [
+      "h + 1",
+      "p",
+      "p + 1",
+      "p - 1"
+    ],
+    "graphs": [],
+    "quadratic_curve_norm_factors": []
+  },
+  {
+    "chart": "L4",
+    "factor_support": [
+      "-2*h + p - 1",
+      "h",
+      "h + 1",
+      "h + 1/2",
+      "h*p - h - p - 1",
+      "p",
+      "p + 1",
+      "p - 1"
+    ],
+    "graphs": [
+      {
+        "chart": "-2*h + p - 1",
+        "pivot_factor_support": [
+          "h",
+          "h + 1",
+          "h - 1"
+        ],
+        "recomputed_values": [],
+        "curve_recomputations": []
+      },
+      {
+        "chart": "h + 1/2",
+        "pivot_factor_support": [
+          "h",
+          "h + 1",
+          "h + 1/3",
+          "h - 1"
+        ],
+        "recomputed_values": [
+          "-1/3"
+        ],
+        "curve_recomputations": []
+      },
+      {
+        "chart": "h*p - h - p - 1",
+        "pivot_factor_support": [
+          "h",
+          "h + 1",
+          "h + 1/3",
+          "h - 1",
+          "h**2 - 4*h - 1"
+        ],
+        "recomputed_values": [
+          "-1/3",
+          "2 - sqrt(5)",
+          "2 + sqrt(5)"
+        ],
+        "curve_recomputations": []
+      }
+    ],
+    "quadratic_curve_norm_factors": []
+  },
+  {
+    "chart": "L5",
+    "factor_support": [
+      "-2*h + p - 1",
+      "2*h + p + 1",
+      "h",
+      "h + 1",
+      "h + 1/2",
+      "p",
+      "p + 1",
+      "p - 1"
+    ],
+    "graphs": [
+      {
+        "chart": "2*h + p + 1",
+        "pivot_factor_support": [
+          "h + 1",
+          "h - 1"
+        ],
+        "recomputed_values": [],
+        "curve_recomputations": []
+      },
+      {
+        "chart": "-2*h + p - 1",
+        "pivot_factor_support": [
+          "h + 1",
+          "h - 1"
+        ],
+        "recomputed_values": [],
+        "curve_recomputations": []
+      }
+    ],
+    "quadratic_curve_norm_factors": []
+  }
+]

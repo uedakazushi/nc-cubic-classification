@@ -34,7 +34,7 @@ def three_cross():
 
 
 @cache
-def four_cross_one_outer():
+def four_cross_one_outer(linear_columns=False):
     h = Q(1, 64)-p*p/4
     x2 = 1/p+32*w+256*p*p*u*w*w
     delta = 16*p*u*w
@@ -44,7 +44,7 @@ def four_cross_one_outer():
         x0, x1, x2, value+p-h*(x0-x2), h*h*x0, value-h*(x1-x2),
         value, h*h*x1, h*h*x2,
     ]))
-    relations = marked({**coefficients, 10: 1, 11: 1, 12: h, 13: h, 14: p}, Q(1, 8))
+    relations = marked({**coefficients, 10: 1, 11: 1, 12: h, 13: h, 14: p}, Q(1, 8), linear_columns)
     line1, line2 = (1, h, p/2, -p/2), (0, 0, 1, 1)
     eta = p*w+Q(1, 32)
     quadratic = (p, 2*eta, 16*p*(eta*eta+(1-16*p*p)/1024))
@@ -95,7 +95,8 @@ def fraction_factors(values):
 
 def cubic_exclusion(name, chart):
     source = chart()[0]
-    algebra, rank = centre_calculation(source, (0, 1, 2, 3), FIELD, FIELD.from_sympy)
+    permutation = (0, 1, 3, 2) if name == "FO1_linear_columns" else (0, 1, 2, 3)
+    algebra, rank = centre_calculation(source, permutation, FIELD, FIELD.from_sympy)
     assert rank == 20
     projection_denominators = {
         str(value.d): value.d
@@ -119,10 +120,11 @@ def cubic_exclusion(name, chart):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--cubic", choices=("TD1", "FO1"))
+    parser.add_argument("--cubic", choices=("TD1", "FO1", "FO1_linear_columns"))
     args = parser.parse_args()
     charts = {"TD1": three_cross, "FO1": four_cross_one_outer}
     if args.cubic:
+        charts["FO1_linear_columns"] = lambda: four_cross_one_outer(linear_columns=True)
         cubic_exclusion(args.cubic, charts[args.cubic])
     else:
         for name, chart in charts.items():

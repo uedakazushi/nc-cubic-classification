@@ -38,26 +38,31 @@ def polynomial_expression(value):
     return sum(Q(str(c))*p**i*I**j*h**k for (i, j, k), c in value.to_dict().items())
 
 
-def check(name, source, variables, units, curves=()):
+def factors(expressions, variables):
+    return {s.Poly(factor, *variables, extension=I).monic().as_expr()
+            for expression in expressions if expression != 1
+            for factor, _ in s.factor_list(expression, *variables, extension=I)[1]}
+
+
+def rank_factors(source, variables):
     algebra, rank = centre_calculation(source, (0, 1, 2, 3), GaussianFunctions,
                                        GaussianFunctions.from_sympy)
-    assert rank == 20, name
-
-    def factors(expressions):
-        return {s.Poly(factor, *variables, extension=I).monic().as_expr()
-                for expression in expressions if expression != 1
-                for factor, _ in s.factor_list(expression, *variables, extension=I)[1]}
-
+    assert rank == 20
     polynomials = [algebra.pivot_product.n, algebra.pivot_product.d]
     polynomials.extend(entry.d for n in (2, 3, 4) for row in algebra.right[n].values()
                        for entry in row.values())
     expressions = {polynomial_expression(value) for value in polynomials}
     expressions.update(s.cancel(value, extension=I).as_numer_denom()[1] for value in source)
-    exceptional = factors(expressions) - factors(units)
+    return factors(expressions, variables)
+
+
+def check(name, source, variables, units, curves=()):
+    support = rank_factors(source, variables)
+    exceptional = support - factors(units, variables)
     substitutions = []
     subcharts = []
     if curves:
-        assert exceptional == factors([equation for equation, _, _ in curves]), (name, exceptional)
+        assert exceptional == factors([equation for equation, _, _ in curves], variables), (name, exceptional)
         for equation, substitutions_on_curve, allowed in curves:
             assert s.cancel(equation.subs(substitutions_on_curve, simultaneous=True)) == 0
             target = source.subs(substitutions_on_curve, simultaneous=True).applyfunc(s.cancel)
@@ -65,16 +70,18 @@ def check(name, source, variables, units, curves=()):
     elif exceptional:
         assert variables == (h,), (name, exceptional)
         for factor in sorted(exceptional, key=str):
-            assert s.Poly(factor, h).degree() == 1, factor
-            root = s.solve(factor, h)[0]
-            _, special_rank = centre_calculation(source.subs(h, root), (0, 1, 2, 3),
-                                                 GAUSSIAN, GAUSSIAN.from_sympy)
-            assert special_rank == 20, (name, root)
-            substitutions.append(str(root))
+            polynomial = s.Poly(factor, h, extension=I)
+            assert polynomial.degree() <= 2, factor
+            for root in s.solve(polynomial.as_expr(), h):
+                field = s.QQ.algebraic_field(I, root)
+                _, special_rank = centre_calculation(source.subs(h, root), (0, 1, 2, 3),
+                                                     field, field.from_sympy)
+                assert special_rank == 20, (name, root)
+                substitutions.append(str(root))
     print("PASS", name, "rank 20, all specializations", substitutions)
     return {
         "chart": name,
-        "pivot_factor_support": sorted(map(str, factors(expressions))),
+        "pivot_factor_support": sorted(map(str, support)),
         "recomputed_values": substitutions,
         "curve_recomputations": subcharts,
     }

@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "version": "classification-v331",
+  "version": "classification-v332",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -4654,10 +4654,21 @@
     "scope": "Exact regular central quadratics on the whole of TD1 and FO1–FO2, with an injective map of central cubics into the regular quadratic quotient.",
     "exact_control": "PASS all quadratic centrality identities in the three-parameter rational field. Constant Hilbert dimensions and polynomial quadratic coefficients cover all specialization points.",
     "additional_exact_control": "PASS full generic TD1 and FO1 degree-four projections and centre rank 20, with explicit factor support. Regenerate using --cubic TD1 or --cubic FO1.",
-    "main_build": "LuaLaTeX PASS, 488 pages, no overfull boxes or undefined cross-references/citations",
+    "main_build": "LuaLaTeX PASS, 487 pages, no overfull boxes or undefined cross-references/citations",
     "certificates": [
       "computations/cubic_CY_one_segre_double_split_TD1_open_certificate.json",
       "computations/cubic_CY_one_segre_double_split_FO1_open_certificate.json"
     ]
+  },
+  "CY_one_segre_double_split_FO_linear_v332": {
+    "proof": "papers/sections/cubic_CY_one_segre_double_split.tex",
+    "validator": "computations/verify_cubic_CY_one_segre_double_split_FO_linear.py",
+    "certificates": [
+      "computations/cubic_CY_one_segre_double_split_FO_linear_certificate.json",
+      "computations/cubic_CY_one_segre_double_split_FO1_linear_columns_open_certificate.json"
+    ],
+    "scope": "All four orbits of r-linear exceptional surfaces of the two exact FO centre-rank witnesses are excluded. Possible nonzero central cubics satisfy the remaining nonlinear equations for both witnesses and all four involution translates.",
+    "exact_control": "PASS over each rational surface, eight rational curves, two quadratic curves and their listed special fibers. PASS second original degree-four rank witness with changed source basis and generator order.",
+    "main_build": "LuaLaTeX PASS, 488 pages, no overfull boxes or undefined cross-references/citations"
   }
 }

@@ -9,7 +9,7 @@ a, b, c, d = range(4)
 Q = s.Rational
 
 
-def marked(coefficients, volume):
+def marked(coefficients, volume, linear_columns=False):
     """Use the six independent relation columns of (DE1) and (DA2)."""
     x = [s.sympify(coefficients.get(i, 0)) for i in range(15)]
     mixed = s.Matrix([
@@ -19,10 +19,14 @@ def marked(coefficients, volume):
         [-x[13], x[5], x[6], x[7], x[8], x[13]],
     ])
     skew = s.Matrix(x[9:])
-    difference = C+volume*J-mixed.T*A.inv()*mixed
     index = next(i for i, coefficient in enumerate(skew) if coefficient == 1)
+    binary = sym(a, b)+sym(c, d)
+    if linear_columns:
+        return s.Matrix.hstack(U*A+K*mixed.T, K*skew,
+                               binary+U*mixed[:, index]+K*(C+volume*J)[:, index])
+    difference = C+volume*J-mixed.T*A.inv()*mixed
     return s.Matrix.hstack(U+K*mixed.T*A.inv(), K*skew,
-                           sym(a, b)+sym(c, d)+K*difference[:, index])
+                           binary+K*difference[:, index])
 
 
 def exceptional_cubes(algebra, field):
