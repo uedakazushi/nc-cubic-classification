@@ -227,3 +227,88 @@ $\omega-\lambda$ は可逆であるから、高々八つの値のみが残る。
 固有値上で左大域次元も無限となるかは、
 この双加群判定とは別に証明を要する。
 \end{remark}
+
+\begin{theorem}\label{thm:cubic-CY-three-alpha-elliptic-two-dimensional-traces}
+無限位数の滑らかな楕円境界を持つアフィン包絡の三関係を
+\[
+ p x_jx_\ell+q x_\ell x_j+r x_i^2-\sum_m A_{im}x_m-b_i=0
+ \qquad ((i,j,\ell)\text{は巡回})
+\]
+と書く。$A$ は対称である。$F_i(u)$ を三関係の可換化、$M(u)$ をそのJacobianとし、
+$s=p+q$、$d=p-q$ と置く。
+二次元単純表現の共役類は、$\det M(u)\ne0$ かつ
+\[
+ d^2 F_i(u)-s(\operatorname{adj}M)_{j\ell}
+             -r(\operatorname{adj}M)_{ii}=0 \qquad(i=1,2,3)
+\]
+となる半trace $u$ によって一意に決まる。三二次式の零スキームは長さ8である。
+各切断では、この開零スキームに、中央三次の半traceが切断値に等しい方程式を加える。
+切断上の自己 $\operatorname{Ext}^1$ の次元は、この四式のJacobianの核次元である。
+\end{theorem}
+\begin{proof}
+表現行列を $x_i=u_iI+Y_i$ と書く。$Y_i$ はtrace零であり、
+二つのtrace零行列の反交換子はスカラーである。
+関係のtrace零部分は
+\[
+ [Y_j,Y_\ell]=\sum_m P_{im}Y_m,\qquad P=-2M/d
+\]
+となる。従って $Y_i$ の線型包はLie部分代数である。
+もし次元が2以下なら可解で、Lieの定理で同時上三角化できる。
+従って単純性と $Y_i$ が $\mathfrak{sl}_2$ の基底であることが同値である。
+基底なら $P$ は可逆で、Killing対合から
+\[
+ \tfrac12\operatorname{tr}(Y_iY_m)
+ =-\tfrac14(\operatorname{adj}P)_{im}
+ =-\frac{(\operatorname{adj}M)_{im}}{d^2}.
+\]
+従ってスカラー関係は主張の三式である。
+逆に任意の可逆対称 $P$ は、構造行列 $I$ の $\mathfrak{sl}_2$ 基底に
+変換 $L$ を施し、$\det(L)L^{-{\rm t}}L^{-1}=P$ として実現する。
+二つの実現を結ぶ写像は $\mathfrak{sl}_2$ の自己同型なので内的である。
+同じ構成は、可逆対称行列を合同対角化して単元の平方根を取る
+エタール局所で可能である。従って単純な表現schemeはtraceの指定開零スキーム上の
+$\PGL_2$ torsorであり、一次変形では共役軌道を割った接空間が自己Extとなる。
+中央三次は各単純表現でスカラーになる。半trace計算の三次の項には
+\[
+ \tfrac12\operatorname{tr}(Y_iY_jY_\ell)
+       =-\tfrac18\det(P)\,\varepsilon_{ij\ell}
+\]
+を使える。これは反交換子のスカラー性と直前の対合式から従う。
+
+三式の先頭を4で割ると
+$a x_i^2+c x_jx_\ell$ で、
+$a=r(p^2+pq+q^2)$、$c=-pq(p+q)-r^3$ である。
+無限位数では $p^3,q^3,r^3$ は互いに異なる。
+実際、二成分の三乗が一致する点は、Hesse曲線で座標交換に三乗根の倍率を組み合わせた
+射影対合の固定点である。この対合は自明でなく、原点からの移動は変曲点なので
+三捩れである。原点を固定する部分は非自明対合 $[-1]$ であり、
+固定点は六捩れとなる。Sklyanin平行移動の点は $(p:q:r)$ なので矛盾する。
+従って $a\ne0$ であり、
+\[
+ a^3+c^3=-(p^3-r^3)(q^3-r^3)((p+q)^3+r^3)\ne0.
+\]
+最後の因子は先頭ポテンシャルの滑らかさから非零である。
+三つの先頭二次式は共同の射影零点を持たないので、
+全アフィン零スキームは三二次の完全交叉で長さ8となる。
+\end{proof}
+
+\begin{example}\label{ex:cubic-CY-three-alpha-elliptic-eight-diagonal-roots}
+$(p,q,r)=(1,2,3)$、$A=\operatorname{diag}(1,2,4)$、$b=0$ とする。
+中央元の規格は定理\ref{thm:cubic-CY-three-alpha-elliptic-character-boundary}の持ち上げとし、
+定数項を零に取る。
+この包絡の八次判別式は相異なる八根を持ち、どの根での切断にも
+一次元表現と二次元単純表現は存在しない。
+この具体例では二つのサイズの表現による障害判定を越える必要がある。
+\end{example}
+\begin{proof}
+無限位数は前節の $5,17$ での良い還元と同じ計算である。
+再現器 \texttt{verify\_cubic\_CY\_three\_alpha\_elliptic\_diagonal.py}
+は中心差のホモトピーを元の左右テンソル関係から厳密に解き、
+次数3,4,5の相対対角cochainと八次元の作用を有理数上で作る。
+特性多項式は有理数上既約な八次式である。
+一次元表現の三関係にその特性多項式を中央元の値で評価した式を加えると、
+Gröbner基底は $[1]$ となる。
+二次元についても、定理\ref{thm:cubic-CY-three-alpha-elliptic-two-dimensional-traces}
+の三二次式と可逆条件に同じ評価式を加えて $[1]$ を得る。
+これで八根全てに対する同時排除となる。
+\end{proof}
