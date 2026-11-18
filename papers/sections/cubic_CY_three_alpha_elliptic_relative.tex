@@ -161,3 +161,191 @@ section積を保つ次数付き同型が得られる。
 従って主張の矢が得られる。二次包絡と切断直線はそれぞれ二次関係と
 三次核から関手的に回復される。
 \end{proof}
+
+\subsection{楕円境界の位数を固定しない全H3開}
+\begin{theorem}\label{thm:h3-elliptic-mixed-order-projective-open}
+滑らかな楕円境界を持つ前掲Hesse表示の係数空間を取る。
+全ての幾何学的H3切断からなる部分はZariski開である。
+境界平行移動の位数を固定する必要はない。
+具体的には斉次商 $R$ の二重次数対角 $\Delta$ のtailsにおいて
+\[
+ \operatorname{Ext}^6(\pi\Delta,\pi\Delta)=0
+\]
+となる開集合である。この自己Extは、係数空間上で
+底変更と両立する完全複体の第六コホモロジーで計算できる。
+H3開上では相対アフィン対角に長さ2以下の有限生成射影解消があり、
+任意底変更で保たれる。
+\end{theorem}
+
+\begin{proof}
+係数空間のnoetherian affine開 $\operatorname{Spec}A$ 上で書く。
+$H=R/(t)$ は相対楕円THCR、$t$ は中央一次正則元である。
+二重次数代数と右加群を
+\[
+ P=R^{\mathrm{op}}\otimes_A R,qquad
+ \Delta_{i,j}=R_{i+j}\quad(i,j\ge0)
+\]
+とし、$\Delta$ の作用は左と右の積とする。
+$\Delta$ は $(0,0)$ 次の単位元で生成される。
+$\operatorname{QGr}^{(2)}P$ は、各元を十分大きい両次数の積が殺す
+次数付き加群を零とした商圏とし、$\pi$ を商関手とする。
+
+\paragraph{二重次数環のnoetherian性}
+$H^{\mathrm{op}}\otimes_A H$ は、曲線の直積における二つの
+独立な捩れに対応する二重斉次座標環である。
+各線束の零次を含むsectionは底変更と可換し、正次数では高次cohomologyが零で、
+零次でも $H^0= A$ は自由である。従って外積のsectionは二つのsectionのtensorである。
+直積の線束列は両次数が大きい方向に ample filter である。
+実際、任意の固定線束を掛けても、充分大きい固定の外積ample冪を先に掛け、
+残る二因子が正のfiber次数であるようにできる。
+\cite[定理1.3]{KeelerAmpleFilters}で主張のample filter性を得る。
+
+ここで用いる二重次数noetherian性は、\cite[定理3.4, 系5.8]{ChanTwistedMulti}
+のtensorの場合である。相対版に必要な有限生成性を確認する。
+多重Serre同値の証明では、随伴するsheaf化とsectionの単位・余単位が
+十分大きい両次数で同型になることだけを使う。
+これは上の相対ample filterと、affine底上の有限生成加群からの全射により同じく成立する。
+従って二重次数右イデアル $I$ の飽和は、
+直積上の $\mathcal O$ のcoherent部分層の二重section加群である。
+任意のcoherent層の二重sectionは、任意の固定下限からの切り詰めも含め、有限生成である。
+実際、一つの十分大きな二重shiftの有限個のsectionで層を生成し、
+その核の $H^1$ を相対ample filterで消すと、
+さらに大きい両次数ではそのsectionから全sectionを得る。
+残る有限本の帯では、一方の次数を固定し、
+対応する射影でのcoherent直像に対して一重のSerre有限生成性を使う。
+各一重環はnoetherianであるため、有限本の帯に支えられたこれらの加群はnoetherianである。
+飽和を $I$ で割った商は有限生成torsionなので、十分大きい両次数で零である。
+そこで飽和のこの切り詰めは $I$ に入り、その上の商は帯のnoetherian加群の
+部分加群である。よって $I$ は有限生成である。
+左側も同じである。
+二つの中央斉次正則元 $t_L,t_R$ を順に持ち上げて、$P$ は左右noetherianとなる。
+引き戻した全てのnoetherian底についてもこの証明が成り立つ。
+
+\paragraph{有限な相対対角Ext}
+$\Delta$ と $P$ は各成分が有限局所自由である。
+従って $\Delta$ の有限生成二重次数自由加群による解消を取ると、
+各核も次数別に底上平坦となり、解消は任意底変更に両立する。
+この解消の各自由shiftからの導来Homを計算するため、
+$D_R=\mathbf R\omega\pi R$ を一重次数の局所化複体とする。
+$\omega$ はtorsion商の右随伴である。
+正規三次の相対局所双対計算
+（命題\ref{prop:h3-artin-relative-dualizing-line}の各項の計算）により、
+$D_R$ の内部次数ごとのコホモロジーは次数0と2で有限局所自由である。
+この計算は、各次数が有限局所自由、相対Koszul対合が完全であることを用いる。
+局所torsion複体は、包絡の $B/B_{\ge n}$ の各次数の長さ4の解消による
+直極限で計算できる（定理\ref{thm:h3-artin-relative-serre-exists}の変換の議論）。
+従って比較は導来底変更と可換し、ここでArtin性は不要である。
+また $D_R\otimes_R^{\mathbf L}D_R\simeq D_R$ である。
+
+二重次数の飽和sectionは左右で一重の導来飽和を順次取って計算できる。
+一つの検証は、両次数のtailイデアル
+$R^{\mathrm{op}}_{\ge a}\otimes_A R_{\ge b}$ からの
+導来Homの直極限を取ることである。
+二つの一重自由解消をtensorした解消から二重の導来Homを得る。
+各方向の局所コホモロジー次元が有限なので二つの直極限で逐次に計算できる。
+従って一方向の飽和は対応する $D_R$ を導来tensorする作用となる。
+$\Delta$ は、全ての整数 $i,j$ に同じ式 $R_{i+j}$ を置く加群と
+二重torsionを法として同じである。
+この加群は各一方向では $R$ のshiftだから、一方向の局所化で
+$(D_R)_{i+j}$ となり、他方向では上の冪等性により同じ複体となる。
+ゆえに
+\[
+ \mathbf R\operatorname{Hom}(\pi P(-i,-j),\pi\Delta)
+ \simeq (D_R)_{i+j}.
+\]
+特にこの複体は底上完全で、底変更と可換する。
+
+$\Delta$ の解消を第七項の後で切り詰めて $\pi$ を適用する。
+その $\pi\Delta$ への錐はcoherent加群の8次shiftなので、
+$\pi\Delta$ を第二引数とする第六Extはこの有限切り詰めで計算できる。
+これは負のExtの消滅を使うだけなので、底変更の後も同じである。
+切り詰めの項は有限個の自由shiftであり、
+上述の導来Homの完全複体の有限extensionを取れば所要の完全複体となる。
+その第六コホモロジーの消滅は隣接する二微分のrankで与える開条件である。
+
+\paragraph{幾何fiberでのアフィン対角との比較}
+ここからは幾何fiberを取り、$k$ 上で計算する。
+二重次数の圏で $\Delta/t_L\Delta$ と $\Delta/t_R\Delta$ は、
+torsionを法としてともに $\Delta_H$、すなわち $H_{i+j}$ で与えられる。
+これは境界直積に押し出したcoherent対象である。
+$P\to H^{\mathrm{op}}\otimes_k H$ の導来制限には
+$(t_L,t_R)$ のKoszul解消を使う。
+対角上で二つの作用はいずれも $t$ の積であるから、
+その制限のコホモロジーは $-1,0$ の二次数にしかない。
+境界直積の二重torsion商は、\cite[定理3.4]{ChanTwistedMulti}によって
+滑らかな曲面 $E\times E$ の準coherent圏に等しい。
+従って境界のcoherent対象間のExtは2より上で零である。
+導来制限と押し出しの随伴を使うと、任意の二重shift $(a,b)$ について
+\[
+ \operatorname{Ext}^j(\pi\Delta,\pi\Delta_H(a,b))=0\qquad(j>3).
+\]
+随伴は、中央二元のKoszul制限も押し出しも
+当該二重torsionを保つことから商圏上に降りる。
+片方の $t$ を掛けた短完全列から、$j\ge5$ では
+$\operatorname{Ext}^j(\pi\Delta,\pi\Delta(a,b))$ 上の
+左右それぞれの $t$ による遷移写像が全て同型となる。
+
+$U=R[t^{-1}]_0$ とする。
+両方の $t$ を逆にする商関手は $U^{\mathrm{op}}\otimes_k U$ の加群圏への局所化である。
+その右随伴は次数付き局所化環からの制限を商圏に入れるexactな関手であり、
+局所化後に右随伴を取った加群は二重shiftに沿う直極限である。
+自由shiftによる解消と有限局所コホモロジー次元から、
+$\operatorname{Ext}^j(\pi\Delta,-)$ はこの直極限と可換する。
+対角の局所化は $U$ 自身なので、$j\ge5$ では自然な写像
+\[
+ \operatorname{Ext}^j(\pi\Delta,\pi\Delta)
+ \longrightarrow \operatorname{Ext}^j_{U^{\mathrm{op}}\otimes_k U}(U,U)
+\]
+が同型となる。
+
+\paragraph{全位数での許容性}
+この最後の右辺が $j=6$ で零なら、中央切断の周期変換射の三乗が零になる。
+元の絶対対角の小解消と中央差の変換三角を用いると、
+変換射は完全複体を法として同型なので、切断対角は完全である。
+よって $U$ は有限大域次元で、定理\ref{thm:cubic-CY-three-alpha-smooth-boundary}
+により切断はH3である。
+
+逆に無限位数のH3切断は
+定理\ref{thm:cubic-CY-three-alpha-elliptic-diagonal-all-nontorsion}で
+対角の射影次元が2以下なので、この第六Extは零である。
+有限位数のH3切断では $U$ は中心 $Z$ 上有限であり、
+定理\ref{thm:finite-order-elliptic-admissibility}の完備局所McKay記述を持つ。
+中心の滑らかな点では自明群の行列環を用いる。
+$U^{\mathrm{op}}\otimes_k U$ は $Z\otimes_k Z$ 上有限で、
+任意の閉点での完備化は両因子の完備tensorである。
+よって各完備化は、四変数の正則形式冪級数環と二つの有限群の積による
+skew群環にMorita同値である。
+群の位数が可逆なので平均化により、この完備環の大域次元は高々4である。
+対角の第六Extは有限中心加群であり、
+有限生成自由解消を使ってこれらの平坦な完備化と可換する。
+全極大点で消えるので自身も零となる。
+これで混合位数の全H3条件が同一の有限な開条件で判定される。
+
+\paragraph{H3開上の相対対角}
+この最後のExt比較を相対底に戻す。$H$ の捩れ線束を $L_n$ と書くと、
+反対環の線束は $(\rho^{-i})^*L_i$ である。
+境界直積の対角への外積線束の制限は
+\[
+ (\rho^{-i})^*L_i\otimes L_j\simeq (\rho^{-i})^*L_{i+j}
+\]
+で、sectionの同定は左右の捩れ積と可換する。
+従って $\pi\Delta_H$ は相対対角の構造層に対応し、
+二重shiftしたものは平行移動のグラフ上の線束に対応する。
+上記の導来制限のコホモロジーはこの対角と一重shiftである。
+実際、各成分で最初のKoszul核は二つの $t$ の差の関係で生成され、
+その生成元をさらに $t$ で割ったものが第一次Torを与える。
+相対対角も平行移動のグラフも滑らかな相対曲面直積上のCartier因子である。
+これらの構造層・線束は局所射影次元1で、
+その層Extは相対曲線上に支えを持つ。
+affine底上では相対射影曲線のcoherent cohomologyは1より上で零である。
+従って境界を標的とする次数3より上のExt消滅、
+および両方の $t$ の局所化比較は相対的にも成り立つ。
+
+よってH3開上では相対第六対角Extが零となり、
+相対中央差の変換射の三乗は零である。
+この変換の中項は相対絶対対角の小解消から得た完全複体であるから、
+相対アフィン対角も完全となる。
+定理\ref{thm:cubic-CY-three-alpha-elliptic-relative-smooth-open}と同じ
+相対CY双対により解消を長さ2以下に短縮する。
+各項と対角が底上平坦なので、完全性と射影性は任意底変更で保たれる。
+\end{proof}

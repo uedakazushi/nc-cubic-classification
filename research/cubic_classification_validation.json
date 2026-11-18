@@ -5121,5 +5121,12 @@
     "verification": "Elementary proof by lifting the residual kernel from the linear syzygy map at each inductive degree. The finite presentation conditions and their equivalence with the prior formal locus are proved in the text.",
     "scope": "In any local base with Koszul residual quadratic envelope, flatness is controlled by the cubic piece. Exact finite-degree formal incidence and all-degree flatness for maps with only geometric H3 fibers. No claim that this set of geometric fibers is open.",
     "main_build": "LuaLaTeX PASS, 548 pages, no overfull boxes or undefined references/citations"
+  },
+  "H3_elliptic_mixed_order_projective_open_v368": {
+    "proof": "papers/sections/cubic_CY_three_alpha_elliptic_relative.tex",
+    "theorem": "thm:h3-elliptic-mixed-order-projective-open",
+    "verification": "Structural proof with the bigraded projective diagonal and the boundary Koszul restriction. Chan, Twisted Multi-Homogeneous Coordinate Rings (2000), Theorem 3.4 and Corollary 5.8, checked in author copy. Relative noetherianity argument spelled out.",
+    "scope": "Every smooth elliptic Hesse presentation, with translation order varying, including arbitrary nonreduced pullbacks of the admissible open. Relative affine diagonal perfect of projective dimension at most two. Other boundary loci and full intrinsic family recognition remain.",
+    "main_build": "LuaLaTeX PASS, 550 pages, no overfull boxes or undefined references/citations"
   }
 }
