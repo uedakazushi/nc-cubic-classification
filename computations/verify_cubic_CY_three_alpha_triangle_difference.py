@@ -101,7 +101,22 @@ def main():
     assert s.cancel(pair-(1+parameter**2/q-parameter*xi/rho)) == 0
     denominator = (1-u**-2)*(1-q*u**-2)*(1-u*u/(q*q))*(1-u*u/q)
     assert s.cancel(denominator-first_denominator*(u*u-q)**2/(q**3*u**4)) == 0
-    print("PASS Askey–Wilson orbit factors of the quartic")
+    print("PASS folded orbit factors for the quartic and quintic")
+
+    a, b, c1, c2, c3 = s.symbols("a b c1 c2 c3")
+    omega = (1-a*u)*(1-b*u)/((1-a*b)*(1-u*u))
+    alpha = s.prod(1-r*u for r in (a,b,c1,c2,c3))/((1-u*u)*(1-q*u*u))
+    f = s.cancel(alpha/omega)
+    assert s.cancel(omega+omega.subs(u, 1/u)-1) == 0
+    assert s.cancel(omega*(u-u**-1)+(1-a*u)*(1-b*u)/((1-a*b)*u)) == 0
+    reflected = f.subs(u, 1/(q*u))
+    total = s.cancel(f+reflected)
+    assert len(s.Poly(s.denom(total), u).terms()) == 1
+    for power in (1, 2, 3):
+        summand = s.cancel(f*((q*u)**(-power)-u**power))
+        # The cross relation has only powers of u as denominators in u.
+        assert len(s.Poly(s.denom(summand),u).terms()) == 1
+    print("PASS the two reflection-order cross relations and the branch cancellation")
 
 
 if __name__ == "__main__":
