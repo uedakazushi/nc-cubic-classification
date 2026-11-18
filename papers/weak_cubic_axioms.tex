@@ -67,6 +67,8 @@ as4の指定半単純化定理を用い，量子基底の非自明単冪持上�
 全H3の幾何学的表示は，許容表示の中で交わらない一般次元$3,4,5,8$の四既約成分を持つ．
 滑らかな楕円切断では一次元加群の射影次元を余因子行列の三次式で判定し，
 一次元表現が空でも二次元単純加群から非H3となる例を得る．
+無限位数の滑らかな楕円境界では双加群滑らかさを八次特性多項式で判定し，
+固定包絡で非H3となりうる中心値を高々八つに絞る．
 全モジュライの代数性は証明済みとはせず，有限提示による候補，その形式局所模型，
 超曲面認識部分での射，中心三次incidenceの一般ファイバーを正確に定式化する．
 \end{abstract}
@@ -371,6 +373,7 @@ split monoである．一方の$4\times4$ minorを単元にしたchartで
 \input{papers/sections/cubic_CY_three_alpha_nonsmooth.tex}
 \input{papers/sections/cubic_CY_three_alpha_additive.tex}
 \input{papers/sections/cubic_CY_three_alpha_smooth_boundary.tex}
+\input{papers/sections/cubic_CY_three_alpha_elliptic_diagonal.tex}
 \input{papers/sections/cubic_CY_three_alpha_quantum_triangle.tex}
 \input{papers/sections/cubic_CY_three_alpha_nodal_E6.tex}
 \input{papers/sections/cubic_CY_three_alpha_primitive_triangle.tex}
@@ -1335,7 +1338,8 @@ Skew包絡の幾何学的H3対象は定理\ref{thm:all-skew-H3-geometric}で尽�
 定理\ref{thm:cubic-CY-one-segre-double-split-FDC-empty}で最後の残余を排除した．
 三交換子の節点領域は
 定理\ref{thm:cubic-CY-three-alpha-nodal-E6-root-discriminant}で全切断を判定した．
-滑らかな境界で無限位数の非分裂アフィン環の有限大域次元が主要な未解決課題である．
+無限位数の滑らかな楕円境界では，定理\ref{thm:cubic-CY-three-alpha-elliptic-diagonal-test}により
+双加群滑らかさの八次判別式を得た．その根での左大域次元の判定が残る．
 定理\ref{thm:h3-presentation-four-components}により，幾何学的表示では四成分が互いに交わらない．
 一般の内在圏の相対再構成・降下と，その位相への成分判定の移行が残る．
 
@@ -1475,6 +1479,9 @@ J. Noncommut. Geom. 8 (2014), 587--609,
 \href{https://arxiv.org/abs/2508.04986}{arXiv:2508.04986}, Definition 1.1 and \S3.
 \bibitem{FermatOU} \emph{Quantum Fermat cubic surfaces are not OU Artin--Schelter surfaces},
 separate current paper, \href{https://github.com/uedakazushi/nc-cubic-non-as/blob/main/papers/quantum_fermat_not_as_surface.tex}{nc-cubic-non-as}, Theorem 3.1.
+\bibitem{GoodwillieCartan} T.~G.~Goodwillie,
+\emph{Cyclic homology, derivations, and the free loopspace},
+Topology 24 (1985), 187--215.
 \bibitem{EGdelpezzo} P.~Etingof and V.~Ginzburg,
 \emph{Noncommutative del Pezzo surfaces and Calabi--Yau algebras},
 J. Eur. Math. Soc. 12 (2010), 1371--1416,

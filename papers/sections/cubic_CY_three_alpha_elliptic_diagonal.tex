@@ -1,0 +1,229 @@
+\subsection{楕円アフィン切断の八次双加群判定}
+\label{subsec:cubic-CY-three-alpha-elliptic-diagonal}
+
+\begin{lemma}\label{lem:cubic-CY-three-alpha-elliptic-absolute-HH}
+$S$ を前節の滑らかな楕円先頭環とし、境界の平行移動 $\sigma$ は無限位数とする。
+$S$ の絶対Hochschildコホモロジーを $Q^j$ と書く。
+$Q^0=k[g]$、$Q^1=k[g]\operatorname{eu}$ であり、$\operatorname{eu}$ の重みは0である。
+$Q^3$ は $k[g]$ 上自由で、最小重み $-3$ の成分は一次元である。
+$Q^2$ は重み $-2,-1,0$ の成分で $k[g]$ 上生成され、
+これらの成分の次元はそれぞれ $3,3,2$ である。
+\end{lemma}
+\begin{proof}
+$C=S/(g)$ は $B(E,\mathcal L,\sigma)$ で、次数付き商環は
+$k(E)[u,u^{-1};\sigma]$ である。
+$\sigma$ が無限位数のため、商環の正次数中心は零であり、
+$C$ の中心は $k$ である。$S$ の斉次中心を順に $g$ で割ると $Z(S)=k[g]$。
+CY3の体積双対により $Q^3$ は $\operatorname{HH}_0(S)$ の重みを3下げたものである。
+
+斉次導分 $\delta$ は $g$ を中心に移す。
+その重みが非負なら、必要に応じて中央係数倍のEuler導分を引いて
+$\delta(g)=0$ にできる。負重み $-1$ でも $Z(S)_2=0$ から同じ消滅を得る。
+これで $C$ への誘導導分が定まる。
+非零重み $j$ の場合、商環へ延長した導分の $k(E)$ 上の制限は
+$\sigma^j$-導分であり、$f-\sigma^j(f)\ne0$ となる $f\in k(E)$ を一つ取ると、
+可換積の導分式から $b u^j$ による内部導分となる。
+それを引いた導分は $k(E)$ を消し、$u f=\sigma(f)u$ の導分式から
+$u$ も消す。従って商環では内部導分である。
+実装元を $\mathcal L_j$ の有理切断として見る。
+$\mathcal L_j$ は $\mathcal L_{i+j}=\mathcal L_i\otimes\sigma^{i*}\mathcal L_j$
+を満たす全整数への拡張である。
+その極の支持が $\sigma$-不変でなければ、基本生成元との交換子の二項で
+一方だけに極がある点が存在する。$\mathcal L$ の基点自由性により、
+極を持つ項で相手の切断を非零とでき、交換子の正則性に反する。
+有限な $\sigma$-不変集合は空なので、実装元は正則切断である。
+従って $j>0$ では実装元を $S_j$ に持ち上げられ、$j=-1$ では実装元は零である。
+
+重み0では、$C$ の次数付き自己同型の代数群は点曲線の偏極
+$(E,\mathcal L)$ を保ち、作用の核は次数スカラーである。
+偏極を保つ自己同型は有限で、標数零なのでLie代数は零である。
+従って $C$ の重み0の導分はEuler導分の倍数である。
+$S_1\to C_1$ が同型なので、重み0の $\delta(g)=0$ を満たす導分は零。
+重み $-1$ の場合も $S_0=C_0$ により零である。
+正重みの場合、$C$ で内部となった導分から実装元の持ち上げを引く。
+像が $gS$ に含まれるので、中央正則元 $g$ で割って導分の重みを3下げられる。
+帰納して $Q^1=k[g]\operatorname{eu}$ を得る。
+
+次に $C$ の次数 $n=a+b$、$a,b\ge2$ の可換子商を調べる。
+$C_a\otimes C_b$ は $E\times E$ 上の
+$\mathcal L_a\boxtimes\sigma^{a*}\mathcal L_b$ の全切断である。
+順積と逆順積は、それぞれ対角と
+$x\mapsto(\sigma^b x,\sigma^{-a}x)$ の像への制限に等しい。
+二つの曲線は $\sigma^n\ne1$ から交わらない。
+$H_1,H_2$ を二つの因子から引いた原点の類とする。
+二曲線を引いた線束の数値類は $3aH_1+3bH_2-2\Delta$ である。
+楕円曲線の対称線束の加法・減法公式
+$\Delta+\Delta_-\equiv2(H_1+H_2)$ を使うと、
+これは $(3a-4)H_1+(3b-4)H_2+2\Delta_-$ である。
+反対角 $\Delta_-$ は加法写像で引いた点なのでnefであり、
+前二項はampleである。従ってKodaira消滅により二曲線への同時制限は全射。
+積の差も全射だから、$n\ge4$ で $\operatorname{HH}_0(C)_n=0$ となる。
+$S\to C$ の可換子商の核は $g\operatorname{HH}_0(S)$ の像であり、
+従って $\operatorname{HH}_0(S)$ の正重み部分は $1,2,3$ で $k[g]$ 上生成される。
+
+Hochschildホモロジー上のConnes作用 $B_{\mathrm{Connes}}$ と
+Euler導分による縮約はCartan恒等式
+$B_{\mathrm{Connes}}\iota_{\operatorname{eu}}
++\iota_{\operatorname{eu}}B_{\mathrm{Connes}}=\mathrm{Lie}_{\operatorname{eu}}$
+を満たす（\cite{GoodwillieCartan}）。従って正重みのConnes複体は完全である。
+CY双対の下で $Q^1$ のEuler導分は体積類への縮約に対応する。
+次数3のホモロジーからEuler縮約した類にConnes作用を施すと、
+その正重みを掛けた元に戻る。従って
+$B_{\mathrm{Connes}}\colon\operatorname{HH}_2(S)\to\operatorname{HH}_3(S)$ は同型であり、
+完全性から $B_{\mathrm{Connes}}\colon\operatorname{HH}_{0,>0}(S)\to\operatorname{HH}_1(S)$
+も同型である。後者の逆を重み倍した写像はEuler縮約なので、
+$\operatorname{HH}_1(S)\simeq\operatorname{HH}_{0,>0}(S)$ は $k[g]$ 線型でも得られる。
+CY双対で重みを3下げると $Q^2$ の生成範囲が従う。
+
+低次数の可換子商を巡回語で数える。
+次数1は3、次数2は6語から純平方を含む独立三関係を引いて3である。
+次数3は巡回語11個に対し、$x_i$ と対応する二次関係の積の像が
+三つの独立な純立方項を持つ。残る六積は重複文字を持つ六巡回語上で
+二つの三巡回ブロックになり、両行列式は符号を除き $(p+q)^3+r^3$ である。
+先頭ポテンシャルの滑らかさにより非零なので、次数3の可換子商は2次元である。
+$p=1$ と規格化し、$U=[yzx],V=[zyx]$ を三次の可換子商の基底に取る。
+関係により全純立方は $-(U+qV)/r$ に等しい。
+前節の式による中央三次の像は
+$(r^3-2q^3+1)U+q(2-r^3-q^3)V$ である。
+これは $q\ne0$ と $1,q^3,r^3$ が全て等しくないことから非零である。
+従って $\operatorname{HH}_0(S)$ は重み $0,1,2,3$ にそれぞれ
+$1,3,3,1$ 個の元で $k[g]$ 上生成される。
+
+各重みの可換子商は $q,r$ の有限係数行列の余核であり、
+次元は幾何学的一般点の次元以上である。
+\cite[定理3.5.2(ii)]{EGdelpezzo}の $E_6$ の一般公式とCY双対によれば、
+一般点では $\operatorname{HH}_0(S)$ のHilbert級数は
+$(1+u)^3/(1-u^3)$ である。
+一方、上の八生成元に対応する自由加群のHilbert級数も同じなので、
+全重みでこの自由加群からの全射は同型である。
+ここでは一般公式を有限行列の下界として用い、上界は無限位数の幾何から得た。
+\end{proof}
+
+\begin{theorem}\label{thm:cubic-CY-three-alpha-elliptic-diagonal-test}
+滑らかな楕円境界を持つアフィン包絡を $D$、中央三次の持ち上げを
+$\omega$、その先頭を $g\in S=\operatorname{gr}D$ とし、
+境界の平行移動は無限位数とする。
+$A=k[\omega]$、$T=D\otimes_A D^{\mathrm{op}}$ と置く。
+すると
+\[
+ V=\operatorname{Ext}^4_T(D,D)
+\]
+は8次元であり、有限個の次数の線型計算で、$\omega$ 倍作用
+$M_\omega\colon V\to V$ とともに求められる。各 $\lambda\in k$ に対し、
+$U_\lambda=D/(\omega-\lambda)$ が双加群として滑らかであることは
+\[
+ \det(\lambda I-M_\omega)\ne0
+\]
+と同値である。
+従って固定した $D$ でH3の可能な例外は高々八つの中心値に限られる。
+\end{theorem}
+
+\begin{proof}
+まず $S$ について、$P_0=S\otimes_k S^{\mathrm{op}}$ と
+$T_0=S\otimes_{k[g]}S^{\mathrm{op}}$ を置く。
+$S$ は先頭次数ごとに $gS$ の補空間を取れば $k[g]$ 上自由なので、
+$P_0$ の中央差 $g_L-g_R$ は正則である。
+以下 $H^j$ は $T_0$ 上の対角自己Ext、$Q^j$ は $P_0$ 上のものとする。
+変換完全列は、内部重みを明記すれば
+\[
+ \cdots\longrightarrow H^{j-2}\xrightarrow{\,h\,}H^j
+ \longrightarrow Q^j\longrightarrow H^{j-1}
+ \xrightarrow{\,h\,}H^{j+1}\longrightarrow\cdots
+\]
+となる。$h$ は重み $-3$、$Q^j\to H^{j-1}$ は重み $3$ である。
+この列を構成するには、絶対Koszul双加群解消 $K$ に対する
+$g_L-g_R$ の高次ホモトピーから、中央商のShamash解消を取ればよい。
+各次数 $i$ の項は $K_{i-2a}\otimes_{P_0}T_0$ の重み $3a$
+だけ上げたものの和である。
+添字 $a$ を下げる射で $a=0$ の絶対複体を切り離し、対角へ
+$\operatorname{Hom}$ を取ると上の列を得る。
+次数0のホモトピーを $g$ の語ごとの左右分割で選べば、
+$Q^1\to H^0$ は導分 $\delta$ に対して $\delta(g)$ となる。
+
+補題\ref{lem:cubic-CY-three-alpha-elliptic-absolute-HH}により
+$H^0=Q^0=k[g]$、$Q^1=k[g]\operatorname{eu}$ である。
+Euler導分 $\operatorname{eu}$ は $g$ を $3g$ に移すから、
+$H^1=0$ かつ $gh=0$ を得る。添字を下げる連鎖射は合成で
+コホモロジーに作用するので、$gh$ は全次数で零作用を持つ。
+従って $H^2$ は、
+重み $-3$ の $kh$ と $Q^2$ の拡大である。
+補題によれば、追加生成元の重みは $-2,-1,0$ にそれぞれ $3,3,2$ 個である。
+$Q^4=0$ なので $H^4$ は $hH^2$ であり、$g$ はこれを殺す。
+従って重み $-6,-5,-4,-3$ にそれぞれ高々 $1,3,3,2$ 個である。
+
+ここで $g^{-1}$ を加え、さらに有限忠実平坦な三乗根 $u^3=g$ を加えると、
+相対対角は $S/(g-1)$ の絶対対角からの底変更になる。
+この対角は定理\ref{thm:r13-split-all-cuts}で完全かつCY2である。
+有限射影解消の最後の双対Extを用いれば、その射影次元は2である。
+実際、最後の次数が2より大きければ最後の双対微分は全射で分裂し、
+元の解消を短縮できる。
+従って $H^3[g^{-1}]=0$ である。
+$H^1=0$ より $H^3\hookrightarrow Q^3$ であり、後者は $k[g]$ 上自由なので
+$H^3=0$。従って $Q^3\to H^2$ は単射である。
+$Q^3$ の最小重みは $-3$ で、その成分は一次元なので、
+$h$ の核は重み0に一次元、負重みでは零である。
+結局 $H^4$ は重み $-6,-5,-4,-3$ に次元 $1,3,3,1$ を持つ。
+同じ完全列の $H^3\to H^5\to Q^5$ から $H^5=0$ も得る。
+
+次に $D$ の次数フィルターへ移る。
+$P=D\otimes_k D^{\mathrm{op}}$ の随伴環は $P_0$ で、
+中央差 $z=\omega_L-\omega_R$ の先頭 $g_L-g_R$ が正則なので
+$\operatorname{gr}T=T_0$ である。
+また先頭ごとの補空間を持ち上げれば $D$ は $A$ 上自由である。
+$T_0$ 上の上記解消を、全自由基底の重みを保って $T$ 上へ持ち上げる。
+具体的には対角への掛け算がstrictであり、各段で
+随伴核の斉次生成元を元の核へ持ち上げて次の自由項を作る。
+直前の矢のstrict性からこの持ち上げが可能で、
+随伴で生成することから最高重みを下げる有限帰納法で次の矢もstrictになる。
+従って得られる $\operatorname{Hom}_T(-,D)$ の随伴複体は
+$\operatorname{Hom}_{T_0}(-,S)$ である。
+各コホモロジー次数でフィルターは下に有界である。
+$H^3=0$ により、四次の境界に対する原始元は最高重みを下げて
+境界自身と同じ重み以下に取れる。$H^5=0$ により、
+随伴の四次閉元は、任意の持ち上げの微分を低い重みから補正して実際の閉元にできる。
+従って $\operatorname{gr}V=H^4$、$\dim V=8$ であり、
+同じ最高重みの降下から $\operatorname{Ext}^5_T(D,D)=0$ も得られる。
+重み $-3$ 以下の3,4,5次コチェインの有限線型計算で $V$ を得る。
+$\omega$ 倍の代表を重み0まで作り、同じ商に戻せばその作用も得られる。
+
+$L=T\otimes_P^{\mathbf L} D$ は完全である。
+これは先頭の絶対Koszul双加群解消を $P$ 上へ同様に持ち上げれば分かる。
+中央差の長さ1の解消から、$L$ のコホモロジーは次数 $-1,0$ に
+それぞれ $D$ であり、切断三角は
+\[
+ D[1]\longrightarrow L\longrightarrow D\xrightarrow{\epsilon}D[2]
+\]
+を与える。
+
+有限自由項からなる $T$ 上の解消を $A/(\omega-\lambda)$ へ底変更すると、
+$D$ の $A$ 上の平坦性から $U_\lambda$ の対角解消を得る。
+$\operatorname{Hom}_T(-,D)$ の項は $A$ 上自由であり、各項の底変更は
+対応する $\operatorname{Hom}_{U_\lambda^e}(-,U_\lambda)$ と一致する。
+よってコチェインへの $\omega-\lambda$ 倍の短完全列から
+\[
+ V/(\omega-\lambda)V
+ \ \simeq\ \operatorname{Ext}^4_{U_\lambda^e}(U_\lambda,U_\lambda)
+\]
+を得る。右側の全射には $\operatorname{Ext}^5_T(D,D)=0$ を用いた。
+$\epsilon$ の特殊化は $D\otimes_k U_\lambda^{\mathrm{op}}$ から
+$U_\lambda^e$ への中央正則商の切断射である。
+これは上の三角を $\omega_R=\lambda$ で底変更して従い、
+二つの端の $D$ はともに $A$ 上平坦である。
+
+特殊化した $\epsilon$ は完全複体によるVerdier商で同型である。
+従って上の四次Extが零なら、$\epsilon^2$ が零となり対角は完全である。
+逆に対角が完全なら $U_\lambda$ はCY2であり、
+対角の射影次元は2なので四次Extは零である。
+ここでCYの双対は、CY3の $D$ の絶対対角から
+$\omega_L-\lambda,\omega_R-\lambda$ の中央正則列による
+変換を使って得られる。従って $V/(\omega-\lambda)V=0$ と双加群滑らかさが同値である。
+双加群滑らかさは有限大域次元を与え、
+定理\ref{thm:cubic-CY-three-alpha-smooth-boundary}によりH3を与える。
+$\lambda$ が $V$ 上の $\omega$ の固有値でなければ
+$\omega-\lambda$ は可逆であるから、高々八つの値のみが残る。
+\end{proof}
+
+\begin{remark}
+固有値上で左大域次元も無限となるかは、
+この双加群判定とは別に証明を要する。
+\end{remark}
