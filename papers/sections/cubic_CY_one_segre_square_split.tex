@@ -370,3 +370,67 @@ $x=b_0h/s$ と置く。元の許容単元を除く同じ因子計算から得る
 \texttt{verify\_cubic\_CY\_one\_segre\_square\_split\_lower.py} と
 対応する証明書はこの全因子と再計算を保持する。
 \end{proof}
+
+\begin{proposition}\label{prop:cubic-CY-one-segre-square-split-open-Wminus}
+残る $M_{s,w,z}$ のうち
+$(4s-1)^2w+64=0$ または $(4s+1)^2w+64=0$ の切断はH3でない。
+\end{proposition}
+\begin{proof}
+固定出典\cite{AS4CYpinned}の $M_{s,w,z}$ の必要表示と、
+反対代数が $s\mapsto-s$ に対応する式 (LO11) を使う。
+反対代数で中心は変わらないので $w=-64/(4s-1)^2$ だけを調べる。
+元の六関係にこの値を代入し、生成元順を $(b,a,c,d)$ とした逐次商で
+次数2から4の射影と中心20次小行列式を取る。
+分母と小行列式の分子・分母の既約因子のうち、
+元のパラメータ域で単元でないものは次の三式だけである。
+\begin{align*}
+ &sz+\tfrac3{32}s^5-\tfrac5{128}s^4-\tfrac1{256}s^3
+     +\tfrac3{1024}s^2-\tfrac1{8192}s-\tfrac1{32768},\\
+ &sz+\tfrac1{16}s^5-\tfrac1{64}s^4-\tfrac1{128}s^3
+     +\tfrac1{512}s^2+\tfrac1{4096}s-\tfrac1{16384},\\
+ &sz+\tfrac18s^5-\tfrac5{64}s^4+\tfrac1{64}s^3
+     -\tfrac1{512}s^2+\tfrac1{2048}s-\tfrac1{16384}.
+\end{align*}
+各式で $s\ne0$ なので $z$ を解き、元六関係から次数2から4の全射影を取り直す。
+各曲線では再計算した小行列式と全射影の分母の因子は許容単元だけであり、
+中心行列の階数は20である。
+この計算は \texttt{verify\_cubic\_CY\_one\_segre\_square\_split\_lower.py}
+の最後のチャートで再現できる。
+従ってこの二境界では全中心三次が零である。
+\end{proof}
+
+\begin{proposition}\label{prop:cubic-CY-one-segre-square-split-open-Mzero}
+$M_{s,w,z}$ の $(16s^2+1)w+64=0$ の範囲では、
+中心三次が零である。従ってこの族に残るH3候補には
+$(16s^2+1)w+64$ と $(4s\pm1)^2w+64$ の三因子の非消失が必要である。
+\end{proposition}
+\begin{proof}
+この境界では $16s^2+1\ne0$ であり、$w=-64/(16s^2+1)$ と置ける。
+生成元順 $(a,c,b,d)$ で逐次商を取り、次数2から4の全射影と中心20次小行列式の
+非単元因子を計算すると、次の三直線型の式と一二次式が得られる。
+\begin{align*}
+ &z-\tfrac1{64}s^2-\tfrac1{1024},\\
+ &sz+\tfrac1{16}s^5-\tfrac1{64}s^4-\tfrac1{128}s^3
+      -\tfrac1{512}s^2-\tfrac3{4096}s-\tfrac1{16384},\\
+ &s^2z+\tfrac1{16}s^6-\tfrac1{256}s^4-\tfrac1{4096}s^2+\tfrac1{65536}.
+\end{align*}
+二次式は $s^2z^2+B(s)z+C(s)$ であり、
+\[
+ B(s)=s^6/8-s^4/64-3s^2/2048,\qquad
+ B(s)^2-4s^2C(s)=-s^2(16s^2+1)^4/2^{26}.
+\]
+従って二次式の零点は $\mathbb Q(i)(s)$ 上で二つの有理グラフに分かれ、
+その一方は
+\[
+ z=\frac{-B(s)+i\,s(16s^2+1)^2/8192}{2s^2}
+\]
+である。他方は $\mathbb Q(i)$ の共役である。
+
+三つの一次式ではそれぞれ $z$ を解いて元関係から再計算すると、
+中心行列の階数20が全許容値へ特殊化する。
+二次式の指定グラフでも射影と小行列式の非単元を
+$\mathbb Q(i)[s]$ で因数分解すると、許容な残余は高々 $s=1/2-i/4$ の一点となる。
+この点も $\mathbb Q(i)$ で階数20である。
+係数の共役を取れば他方のグラフも全域で階数20となる。
+以上は同じ公開検証器と証明書で再現できる。
+\end{proof}
