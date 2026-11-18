@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-17",
-  "version": "classification-v340",
+  "date": "2026-11-18",
+  "version": "classification-v341",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -4788,6 +4788,30 @@
     "scope": "Non-torsion triangular volume cuts with squarefree GWA quartic are H3. All constant-free triangular volume cuts now have exact admissibility at every q.",
     "exact_control": "PASS polynomial identity relating the GWA quartic to the four paired Askey–Wilson roots.",
     "ordinary_proof": "The separated rank-one DAHA is an amalgamated free product over the Laurent polynomial subalgebra of two hereditary free products. Fullness of the spherical idempotent follows from the two-generator quotient and distinct spectral orbits. The repeated-root cases in exceptional weight orbits for nonzero constants remain open.",
+    "main_build": "LuaLaTeX PASS, 501 pages, no overfull boxes or undefined cross-references/citations"
+  },
+  "CY_one_segre_square_split_M_final_v341": {
+    "theorem": "thm:cubic-CY-one-segre-square-split-M-empty",
+    "witness_validator": "computations/verify_cubic_CY_one_segre_square_split_M_witness.py --alternate",
+    "witness_certificate": "computations/cubic_CY_one_segre_square_split_M_alternate_certificate.json",
+    "validator": "computations/verify_cubic_CY_one_segre_square_split_M_final.py",
+    "certificate": "computations/cubic_CY_one_segre_square_split_M_final_certificate.json",
+    "verification": "Exact characteristic-zero resultant elimination, residue-field lifting and original rank-20 computations reproduced",
+    "projected_X_irreducible_factors": [
+      3,
+      14,
+      2,
+      4,
+      2
+    ],
+    "admissible_residue_fields_by_branch": [
+      2,
+      6,
+      0,
+      3,
+      0
+    ],
+    "scope": "All LO4 M charts have zero cubic centre. Counts allow overlaps between the five branches. FDC3 remains open.",
     "main_build": "LuaLaTeX PASS, 501 pages, no overfull boxes or undefined cross-references/citations"
   }
 }

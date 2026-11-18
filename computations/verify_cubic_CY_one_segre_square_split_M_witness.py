@@ -1,4 +1,5 @@
-"""Exact centre-rank witness using the stable relations in the M quadric quotient."""
+"""Two exact centre-rank witnesses for the M quadric quotient."""
+import argparse
 import json
 from itertools import product
 from pathlib import Path
@@ -11,6 +12,7 @@ from cubic_sparse_hilbert import SparseGradedAlgebra
 from verify_cubic_CY_one_segre_cross import PivotAlgebra
 from verify_cubic_CY_one_segre_double_split_quadratics import fraction_factors, quadratic_quotient
 from verify_cubic_CY_one_segre_square_split_M import lower_m
+from verify_cubic_CY_one_segre_square_split_lower import h, lower_open, p as lower_parameter
 
 p, u, w = VARIABLES
 
@@ -76,8 +78,21 @@ def normalized_support(witness):
             "common_factors": sorted(common)}
 
 
-def main():
-    source = quadratic_quotient(lower_m()).applyfunc(s.cancel)
+def alternate_source():
+    original, _, coefficient = lower_open()
+    original = original.subs({h: p, lower_parameter: w, coefficient: u},
+                             simultaneous=True).applyfunc(s.cancel)
+    source = quadratic_quotient((original, *lower_m()[1:]))
+    permutation = (3, 2, 0, 1)
+    source = source[[4*i+j for i in permutation for j in permutation], :]
+    k = (p*p-1)/64
+    old_w = (1+w)/(k*(1-w))
+    # The alternate computation uses (p,u,w) as the normalized (X,Z,T).
+    return source.subs({p: p/4, u: k*(u+1)/old_w, w: old_w},
+                       simultaneous=True).applyfunc(s.cancel)
+
+
+def rank_witness(source):
     independent = source.subs(u, 0)
     derivative = source.diff(u).applyfunc(s.cancel)
     assert (source-independent-u*derivative).applyfunc(s.cancel) == s.zeros(16, 7)
@@ -148,6 +163,24 @@ def main():
         quotient[n] = (pivots, free)
         print("degree", n, "moving relation rows", len(rows), "quotient dimension", len(free), flush=True)
 
+    # The specialized coordinate maps need only annihilate each original
+    # relation insertion. Their values on the free basis words give a right
+    # inverse, so the full quotient's known Hilbert values imply bijectivity.
+    original_columns = convert_columns([source[:, i] for i in range(source.cols)], field)
+    for n in (3, 4):
+        pivots, free = quotient[n]
+        for index in free:
+            image = engine.reduce(word(algebra.basis[n][index]), pivots)
+            assert set(image) == {index} and not (image[index]-field.one)
+        for relation in original_columns:
+            for words in product(range(4), repeat=n-2):
+                for left in range(n-1):
+                    row = {}
+                    for monomial, coefficient in relation.items():
+                        for key, value in word(words[:left]+monomial+words[left:]).items():
+                            add(row, key, coefficient*value)
+                    assert not engine.reduce(row, pivots)
+
     projection_product = engine.pivot_product
     pivots, free = quotient[4]
     positions = {index: j for j, index in enumerate(free)}
@@ -172,15 +205,27 @@ def main():
         for row in pivots.values():
             denominators.update({str(co.d): co.d for co in row.values()})
     minor = engine.pivot_product
-    result = {
+    return {
         "centre_rank": 16,
         "minor_numerator_factors": fraction_factors([minor.n]),
         "minor_denominator_factors": fraction_factors([minor.d]),
         "projection_denominator_factors": fraction_factors(denominators.values()),
         "projection_pivot_factors": fraction_factors([projection_product.n, projection_product.d]),
     }
-    result["normalized_support"] = normalized_support(result)
-    output = Path(__file__).with_name("cubic_CY_one_segre_square_split_M_open_certificate.json")
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--alternate", action="store_true")
+    arguments = parser.parse_args()
+    if arguments.alternate:
+        result = rank_witness(alternate_source())
+        stem = "alternate"
+    else:
+        result = rank_witness(quadratic_quotient(lower_m()).applyfunc(s.cancel))
+        result["normalized_support"] = normalized_support(result)
+        stem = "open"
+    output = Path(__file__).with_name(f"cubic_CY_one_segre_square_split_M_{stem}_certificate.json")
     output.write_text(json.dumps(result, indent=2)+"\n")
     print("PASS M stable relation witness and exact cubic-centre rank 16", flush=True)
 
