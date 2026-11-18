@@ -1,0 +1,109 @@
+\subsection{一交換子の対称階数五と九つの共有Segre射影}
+\label{subsec:cubic-CY-one-segre-shared}
+
+\begin{proposition}\label{prop:cubic-CY-one-segre-shared-reduction}
+一交換子のCY型で $U=\pi_S(R_B)$、$U_0=\operatorname{im}SS$ とする。
+このとき対称階数は4である。共有Segre型
+$U_0=\langle a^2,ab,ac,bc\rangle$ の場合、H3包絡であれば
+$U/U_0$ は、固定出典の代表で $d^2+b^2$ または $d^2+b^2+c^2$ が張る直線である。
+\end{proposition}
+\begin{proof}
+対称階数が4または5であることは固定出典\cite{AS4CYpinned}の
+命題 \texttt{cy-commutator-symmetric-rank-bound} による。
+階数5の全除外は同出典の
+系 \texttt{cy-one-commutator-rankfive-excluded} を用いる。
+階数4の共有Segre型には十一の必要射影があり、
+そのうち $d^2$ と $(b+c)d$ の二射影は同出典の共有平方排除定理と
+共有和積排除定理で排除されている。固定した証明箇所は研究ノートの
+\texttt{as4\_imports.json} に記録する。
+
+次の七射影では同出典の必要表示を使い、
+元の六関係から中心三次を独立に求める。
+表示名は同出典の表記に従い、チルダ付きは第六関係に $2c^2$ を加えた表示である。
+\[
+\begin{array}{c|l|l}
+ U/U_0\text{ の生成元}&\text{必要表示}&\text{非零となる中心三次}\\ \hline
+ ad &(\mathrm{SC})_{\epsilon=0,1}&\text{なし}\\
+ b^2 &(\mathrm{SOS1})&ka^2c\\
+ b^2+c^2 &(\mathrm{TWS1})&ka^2b\\
+ bd &P_\lambda&\text{なし}\\
+ ad+b^2&A_j,T_t,V_v,I&T_{-1/3}\text{ で }kac^2\\
+ ad+b^2+c^2 &\widetilde T_t,\widetilde U_u,\widetilde V_v&
+     \widetilde T_{-1/3}\text{ で }kac^2\\
+ bd+c^2 &(\mathrm{STS1})_{h,\lambda}&h=-1/4\text{ で }k b(b+3a/8)^2
+\end{array}
+\]
+\texttt{CY\_ONE\_COMMUTATOR\_SPLIT\_CONIC.tex} の $(\mathrm{SC})$ は
+$dV+kab$ を対称射影とするので、共有因子を $a$ とした表では追加式 $ad$ に対応する。
+
+表の計算は \texttt{verify\_cubic\_CY\_one\_segre\_shared.py} と
+対応するJSON証明書で再現できる。
+$(\mathrm{SC})$ の二点では全関係挿入を用いて商を直接取り、中心行列の階数20を確認する。
+他の十一表示では元の六列の逆順語小行列式を使い、
+$a<b<c<d$ の辞書順に減少する書換え則を得る。
+順序語は張り、AS4のHilbert値から各許容値で基底である。
+次数三・四でこの基底への射影を構成し、中心行列の20次小行列式を取る。
+一般に分母と小行列式の分子の既約因子の外で、その階数が特殊化で保たれる。
+小行列式は消去pivotの積であり、書換え則の係数分母が単元なら元行列の小行列式として特殊化できる。
+$t$ の二族では許容域内の残余は $t=-1/3$ のみである。
+$(\mathrm{STS1})$ では $h=-1/2$ と $h=-1/4$ を再計算し、
+後者の小行列式に残る $\lambda=1/64$ も再計算する。
+この三つの再計算と $t=-1/3$ の両点を含め、表の非零欄は
+中心行列の階数19と表示した一つの核生成元で確定する。
+他の表示では元の許容域全体で階数20、または上の固定二点の階数19である。
+
+表に現れる三次は全て一次と二次の非零積である。
+最後の表示では $a,b$ が可換であるため、順序語での三次
+$b^3+\frac34 ab^2+\frac9{64}a^2b$ は表示のように分解する。
+非零積の各因子は中心三次商の次数1,2で非零だから、その商は整域でない。
+従って七射影の全てでH3切断が存在しない。
+\end{proof}
+
+\begin{theorem}\label{thm:cubic-CY-one-segre-all-shared-empty}
+共有Segre対称射影を持つ一交換子CY型に、H3包絡は存在しない。
+従って一交換子CYの未判定の非skew包絡は、
+非共有Segreの $a^2+cd$ および $ab+cd$ の追加射影に限られる。
+\end{theorem}
+\begin{proof}
+前命題により $d^2+b^2$ と $d^2+b^2+c^2$ の追加射影を調べる。
+固定出典\cite{AS4CYpinned}の共有階数二・階数三の平方追加定理の必要表示を使う。
+係数 $(\ell,m,h_0)$ は $h_0\ell=h_0m=0$、
+$\ell m+h_0^2=-1/16$ を満たす。
+従って非対角の場合は $h_0=0,m=-1/(16\ell)$、
+対角の場合は $h_0=\pm i/4,\ell=m=0$ である。
+残る係数を交換子比 $\kappa$ と下位係数 $z$ と書く。
+
+三平方型では $\kappa\ne\pm1$ である。
+非対角の場合、
+$(\kappa=0,\kappa\ne0)$、
+$(z=0,z\ne0)$ の各二分と、
+$\ell=1/4,-1/4,i/4,-i/4$ の四点およびその補集合への分割を取る。
+補集合では $\ell\ne0$ も必要である。
+対角の場合は $h_0$ の両符号について、同じ $\kappa,z$ の二分だけを取る。
+二平方型では交換子比は $0,1$ で、固定出典の必要表示により、
+$\kappa=0$ の非対角型は $\ell=1$、
+$\kappa=0$ の対角型は $z=0,1$ とできる。
+$\kappa=1$ の非対角型は $\ell\ne0$ の全域であり、
+$\kappa=1$ の対角型と合わせて $z=0,z\ne0$ に分ける。
+この被覆では同型判定は使わない。
+
+各域で元の六二次関係から逐次商を計算する。
+次数 $n$ の元関係挿入を殺す右乗法座標写像を
+次数2から4まで構成し、各写像の分母が許容単元だけであることを確認する。
+これは開域の全ての特殊化において、Hilbert次元 $10,20,35$ のAS4商に対する
+基底つき座標を与える。実際、各写像は選択した自由語上で恒等となり、
+商次元はAS4仮定で一定だからである。
+その上で中心三次行列の20次小行列式を選び、
+分子・分母の全因子が各域の単元であることを確認した。
+係数体に $i$ が入る場合は分母と分子のノルムを因数分解して、
+全共役での非消滅を確認している。
+この全40域の計算は
+\texttt{verify\_cubic\_CY\_one\_segre\_shared\_squares.py} に付した。
+従って残る二射影でも中心三次は存在しない。
+
+非共有Segreの五必要射影には、上の二射影のほか、
+命題\ref{prop:cubic-CY-one-segre-square-empty}、
+\ref{prop:cubic-CY-one-segre-split}、
+\ref{prop:cubic-CY-one-segre-two-squares-empty}で判定した三射影がある。
+これらの排除と既分類skewへの帰着を合わせて後半を得る。
+\end{proof}

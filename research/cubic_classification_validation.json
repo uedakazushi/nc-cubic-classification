@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "version": "classification-v312",
+  "version": "classification-v314",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -4472,5 +4472,19 @@
     "scope": "all triple and double lines excluded, four of five concurrent-line families excluded",
     "exact_control": "PASS all four triple-line lifts and recurrences; double line with seven undetermined lower coefficients and two charts; concurrent-line proof by d degree",
     "main_build": "LuaLaTeX PASS; 456 pages"
+  },
+  "CY_one_segre_shared_v314": {
+    "proof": "papers/sections/cubic_CY_one_segre_shared.tex",
+    "validators": [
+      "computations/verify_cubic_CY_one_segre_shared.py",
+      "computations/verify_cubic_CY_one_segre_shared_squares.py"
+    ],
+    "certificates": [
+      "computations/cubic_CY_one_segre_shared_certificate.json",
+      "computations/cubic_CY_one_segre_shared_squares_certificate.json"
+    ],
+    "scope": "All eleven shared Segre projections and symmetric rank five excluded. The two remaining disjoint Segre projections are square-split and double-split.",
+    "exact_control": "PASS 13 representations for seven projections and every stated exceptional parameter value. PASS all 40 charts of the last two shared projections, dimensions (10,20,35) and rank 20 with all factors confined to units.",
+    "main_build": "LuaLaTeX PASS, 457 pages, no overfull boxes or undefined references/citations"
   }
 }

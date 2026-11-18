@@ -1185,5 +1185,76 @@
     ],
     "used_part": "symmetric derivative presentation, triple-line four-model necessary cover, double-line leading normalization, and five concurrent-line representatives",
     "verification": "Independent H3 proofs. Original central lifts and tails equations verified in the repeated-line cases. Upstream classification proof not independently audited in full."
+  },
+  "CY_one_segre_shared_necessary_v314": {
+    "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+    "files": [
+      {
+        "path": "research/proofs/CY_COMMUTATOR_SYMMETRIC_RANK_BOUND.tex",
+        "sha256": "26d9dc3300d92607ca50e85f19317b8069abb7effbc7e88c04646bedbd30212b"
+      },
+      {
+        "path": "research/proofs/FIVE_QUADRICS_RANKFIVE_UNIQUE.tex",
+        "sha256": "7ff30857e53017e79092355b5dc0bfe915370c19ce5b9954bd26f629a84b3e0c"
+      },
+      {
+        "path": "research/proofs/FIVE_QUADRICS_RANKFIVE_CONIC_CLASSIFICATION.tex",
+        "sha256": "3f14ce77a83ec277b1cc9912735fb0d0133b261c593b5f9b08e798d4fbca7f73"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_CONIC_BASE_EXCLUSION.tex",
+        "sha256": "5c239df812de20b12b53f557f76996f4c6e84cc3162ae05e35015dd095cf29af"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_RANKFOUR_PROJECTIONS.tex",
+        "sha256": "726362cc61b689b5374873300c68f798eb51219bf1ee12074972faecc9ea5555"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_SHARED_SQUARE_EXCLUSION.tex",
+        "sha256": "3bfd240388f7406ac76803279b8fb1ca6e7375b9eea8a3a172476e1a73998ac5"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_SHARED_SUM_PRODUCT_EXCLUSION.tex",
+        "sha256": "cf26338611fdf431953f8b789ef74787703f07740617633fd1d04091b428bf36"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_SPLIT_CONIC.tex",
+        "sha256": "2376c5455af81d99340611e3231700937a8542af350e0024e4d5c6525796b248"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_SHARED_ONE_SQUARE_COMPLETE.tex",
+        "sha256": "12d15ae753dc5ef5ebc55684a39da1c4e23b10e3df99b20f02f5a52c50da1823"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_SHARED_TWO_SQUARES_COMPLETE.tex",
+        "sha256": "afcc2830131e5acb132c7284df75e064e1b02a069674082ab37fb0a654644375"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_SHARED_TANGENT_PRODUCT_COMPLETE.tex",
+        "sha256": "b066eeddc54789fe14620a531a153636957dc0c940679c16b9ef9332a1c27e97"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_SHARED_TANGENT_SQUARE_COMPLETE.tex",
+        "sha256": "257d063edfda343fee67202dd605da1607d2718d5364dc2b4c85f40b277a1478"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_SHARED_PARABOLIC_SQUARE_COMPLETE.tex",
+        "sha256": "fb891d77edac9925ca8471a8f18db094f1ed0ff6cc66d16fe1973a81ea846e62"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_SHARED_PARABOLIC_TWO_SQUARES_COMPLETE.tex",
+        "sha256": "8d8b0c6a1806bb550906b0a7259d3b667a8059d4eadc6623db0a76cb493b2fc2"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_SHARED_RANKTWO_SQUARE_COMPLETE.tex",
+        "sha256": "eba25749215755f4f466b01da391bdb6e24f881577b8497e710898773921a577"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_SHARED_RANKTHREE_SQUARE_COMPLETE.tex",
+        "sha256": "3d8a7c1bab5585fb5e1b8b649626e6c70328d7237e9eece3ba62dd0327ad5561"
+      }
+    ],
+    "used_part": "necessary symmetric ranks and sixteen marked projections, rank-five and two shared exclusions, and the original six-relation forms for nine shared projections",
+    "verification": "Central cubic calculations independently rerun for all nine occupied shared projections. Upstream orbit classification and all its exclusions not independently reimplemented."
   }
 }

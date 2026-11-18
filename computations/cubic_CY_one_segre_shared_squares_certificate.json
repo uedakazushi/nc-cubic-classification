@@ -1,0 +1,337 @@
+[
+  {
+    "chart": "SRQ off-diagonal k=p, ell=ell, z=h",
+    "center_rank": 20,
+    "minor": "(-1048576*ell**6*h**2 - 65536*ell**4*h**2 + 4096*ell**2*h**2 + 256*h**2)/p",
+    "all_required_units": [
+      "ell",
+      "ell + 1/4",
+      "ell - 1/4",
+      "ell**2 + 1/16",
+      "h",
+      "p"
+    ]
+  },
+  {
+    "chart": "SRQ off-diagonal k=p, ell=ell, z=0",
+    "center_rank": 20,
+    "minor": "(-65536*ell**6*p**2 + 65536*ell**6 - 4096*ell**4*p**2 + 4096*ell**4 + 256*ell**2*p**2 - 256*ell**2 + 16*p**2 - 16)/(ell*p)",
+    "all_required_units": [
+      "ell",
+      "ell + 1/4",
+      "ell - 1/4",
+      "ell**2 + 1/16",
+      "p",
+      "p + 1",
+      "p - 1"
+    ]
+  },
+  {
+    "chart": "SRQ off-diagonal k=p, ell=1/4, z=h",
+    "center_rank": 20,
+    "minor": "-2048*h**3/p",
+    "all_required_units": [
+      "h",
+      "p"
+    ]
+  },
+  {
+    "chart": "SRQ off-diagonal k=p, ell=1/4, z=0",
+    "center_rank": 20,
+    "minor": "(128*p**2 - 128)/p",
+    "all_required_units": [
+      "p",
+      "p + 1",
+      "p - 1"
+    ]
+  },
+  {
+    "chart": "SRQ off-diagonal k=p, ell=-1/4, z=h",
+    "center_rank": 20,
+    "minor": "-2048*h**3/p",
+    "all_required_units": [
+      "h",
+      "p"
+    ]
+  },
+  {
+    "chart": "SRQ off-diagonal k=p, ell=-1/4, z=0",
+    "center_rank": 20,
+    "minor": "(128*p**2 - 128)/p",
+    "all_required_units": [
+      "p",
+      "p + 1",
+      "p - 1"
+    ]
+  },
+  {
+    "chart": "SRQ off-diagonal k=p, ell=I/4, z=h",
+    "center_rank": 20,
+    "minor": "-256*I*h**2",
+    "all_required_units": [
+      "h",
+      "p"
+    ]
+  },
+  {
+    "chart": "SRQ off-diagonal k=p, ell=I/4, z=0",
+    "center_rank": 20,
+    "minor": "(64*p**2 - 64)/p",
+    "all_required_units": [
+      "p",
+      "p + 1",
+      "p - 1"
+    ]
+  },
+  {
+    "chart": "SRQ off-diagonal k=p, ell=-I/4, z=h",
+    "center_rank": 20,
+    "minor": "256*I*h**2",
+    "all_required_units": [
+      "h",
+      "p"
+    ]
+  },
+  {
+    "chart": "SRQ off-diagonal k=p, ell=-I/4, z=0",
+    "center_rank": 20,
+    "minor": "(64*p**2 - 64)/p",
+    "all_required_units": [
+      "p",
+      "p + 1",
+      "p - 1"
+    ]
+  },
+  {
+    "chart": "SRQ off-diagonal k=0, ell=ell, z=h",
+    "center_rank": 20,
+    "minor": "(1048576*ell**10*h + 65536*ell**8*h - 8192*ell**6*h - 512*ell**4*h + 16*ell**2*h + h)/ell**5",
+    "all_required_units": [
+      "ell",
+      "ell + 1/4",
+      "ell - 1/4",
+      "ell**2 + 1/16",
+      "h"
+    ]
+  },
+  {
+    "chart": "SRQ off-diagonal k=0, ell=ell, z=0",
+    "center_rank": 20,
+    "minor": "(-1048576*ell**10 - 65536*ell**8 + 8192*ell**6 + 512*ell**4 - 16*ell**2 - 1)/(4*ell**5)",
+    "all_required_units": [
+      "ell",
+      "ell + 1/4",
+      "ell - 1/4",
+      "ell**2 + 1/16"
+    ]
+  },
+  {
+    "chart": "SRQ off-diagonal k=0, ell=1/4, z=h",
+    "center_rank": 20,
+    "minor": "8192*h**3",
+    "all_required_units": [
+      "h"
+    ]
+  },
+  {
+    "chart": "SRQ off-diagonal k=0, ell=1/4, z=0",
+    "center_rank": 20,
+    "minor": "512",
+    "all_required_units": []
+  },
+  {
+    "chart": "SRQ off-diagonal k=0, ell=-1/4, z=h",
+    "center_rank": 20,
+    "minor": "8192*h**3",
+    "all_required_units": [
+      "h"
+    ]
+  },
+  {
+    "chart": "SRQ off-diagonal k=0, ell=-1/4, z=0",
+    "center_rank": 20,
+    "minor": "512",
+    "all_required_units": []
+  },
+  {
+    "chart": "SRQ off-diagonal k=0, ell=I/4, z=h",
+    "center_rank": 20,
+    "minor": "4096*h**2",
+    "all_required_units": [
+      "h"
+    ]
+  },
+  {
+    "chart": "SRQ off-diagonal k=0, ell=I/4, z=0",
+    "center_rank": 20,
+    "minor": "-256",
+    "all_required_units": []
+  },
+  {
+    "chart": "SRQ off-diagonal k=0, ell=-I/4, z=h",
+    "center_rank": 20,
+    "minor": "4096*h**2",
+    "all_required_units": [
+      "h"
+    ]
+  },
+  {
+    "chart": "SRQ off-diagonal k=0, ell=-I/4, z=0",
+    "center_rank": 20,
+    "minor": "-256",
+    "all_required_units": []
+  },
+  {
+    "chart": "SRQ diagonal sign=1, k=p, z=h",
+    "center_rank": 20,
+    "minor": "65536*I*h**5*p/(p**2 - 1)",
+    "all_required_units": [
+      "h",
+      "p",
+      "p + 1",
+      "p - 1"
+    ]
+  },
+  {
+    "chart": "SRQ diagonal sign=1, k=p, z=0",
+    "center_rank": 20,
+    "minor": "(p**6*(-16384 - 16384*I) + p**4*(49152 + 49152*I) + p**2*(-49152 - 49152*I) + 16384 + 16384*I)/p**3",
+    "all_required_units": [
+      "p",
+      "p + 1",
+      "p - 1"
+    ]
+  },
+  {
+    "chart": "SRQ diagonal sign=1, k=0, z=h",
+    "center_rank": 20,
+    "minor": "65536*h**4",
+    "all_required_units": [
+      "h"
+    ]
+  },
+  {
+    "chart": "SRQ diagonal sign=1, k=0, z=0",
+    "center_rank": 20,
+    "minor": "-16384 - 16384*I",
+    "all_required_units": []
+  },
+  {
+    "chart": "SRQ diagonal sign=-1, k=p, z=h",
+    "center_rank": 20,
+    "minor": "-65536*I*h**5*p/(p**2 - 1)",
+    "all_required_units": [
+      "h",
+      "p",
+      "p + 1",
+      "p - 1"
+    ]
+  },
+  {
+    "chart": "SRQ diagonal sign=-1, k=p, z=0",
+    "center_rank": 20,
+    "minor": "(p**6*(-16384 + 16384*I) + p**4*(49152 - 49152*I) + p**2*(-49152 + 49152*I) + 16384 - 16384*I)/p**3",
+    "all_required_units": [
+      "p",
+      "p + 1",
+      "p - 1"
+    ]
+  },
+  {
+    "chart": "SRQ diagonal sign=-1, k=0, z=h",
+    "center_rank": 20,
+    "minor": "65536*h**4",
+    "all_required_units": [
+      "h"
+    ]
+  },
+  {
+    "chart": "SRQ diagonal sign=-1, k=0, z=0",
+    "center_rank": 20,
+    "minor": "-16384 + 16384*I",
+    "all_required_units": []
+  },
+  {
+    "chart": "SRT off-diagonal k=0, z=h",
+    "center_rank": 20,
+    "minor": "-h/64",
+    "all_required_units": [
+      "h"
+    ]
+  },
+  {
+    "chart": "SRT off-diagonal k=0, z=0",
+    "center_rank": 20,
+    "minor": "-1/4096",
+    "all_required_units": []
+  },
+  {
+    "chart": "SRT off-diagonal k=1, z=h",
+    "center_rank": 20,
+    "minor": "-h**2/(4096*ell**10)",
+    "all_required_units": [
+      "ell",
+      "h"
+    ]
+  },
+  {
+    "chart": "SRT off-diagonal k=1, z=0",
+    "center_rank": 20,
+    "minor": "-1/(16384*ell**10)",
+    "all_required_units": [
+      "ell"
+    ]
+  },
+  {
+    "chart": "SRT diagonal sign=1, k=1, z=h",
+    "center_rank": 20,
+    "minor": "65536*h**3",
+    "all_required_units": [
+      "h"
+    ]
+  },
+  {
+    "chart": "SRT diagonal sign=1, k=1, z=0",
+    "center_rank": 20,
+    "minor": "16384 + 16384*I",
+    "all_required_units": []
+  },
+  {
+    "chart": "SRT diagonal sign=1, k=0, z=0",
+    "center_rank": 20,
+    "minor": "-16384 - 16384*I",
+    "all_required_units": []
+  },
+  {
+    "chart": "SRT diagonal sign=1, k=0, z=1",
+    "center_rank": 20,
+    "minor": "65536",
+    "all_required_units": []
+  },
+  {
+    "chart": "SRT diagonal sign=-1, k=1, z=h",
+    "center_rank": 20,
+    "minor": "65536*h**3",
+    "all_required_units": [
+      "h"
+    ]
+  },
+  {
+    "chart": "SRT diagonal sign=-1, k=1, z=0",
+    "center_rank": 20,
+    "minor": "16384 - 16384*I",
+    "all_required_units": []
+  },
+  {
+    "chart": "SRT diagonal sign=-1, k=0, z=0",
+    "center_rank": 20,
+    "minor": "-16384 + 16384*I",
+    "all_required_units": []
+  },
+  {
+    "chart": "SRT diagonal sign=-1, k=0, z=1",
+    "center_rank": 20,
+    "minor": "65536",
+    "all_required_units": []
+  }
+]
