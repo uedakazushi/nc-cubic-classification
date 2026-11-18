@@ -1,0 +1,197 @@
+\section{Artin底上の反標準section再構成}
+\label{sec:cubic-formal-intrinsic-reconstruction}
+
+\begin{theorem}\label{thm:h3-artin-intrinsic-section-reconstruction}
+$(\mathcal A,\mathcal O)$ を幾何学的H3対象とし、$s=S^{-1}[2]$ とする。
+剰余体 $k$ の可換局所Artin環 $A$ 上で $\mathcal A$ の
+Lowen--Van den Berghの意味での平坦なAbel圏変形 $\mathcal A_A$ を取り、
+$s$ がexact自己同値 $s_A$ に持ち上がると仮定する。
+このとき $\mathcal O$ には平坦な持ち上げ $\mathcal O_A$ が同型を除き一意に存在し、
+\[
+ R_A=\bigoplus_{n\ge0}
+ \operatorname{Hom}_{\mathcal A_A}(\mathcal O_A,s_A^n\mathcal O_A)
+\]
+は次数ごとに有限自由で、Artin底変更と可換する。
+三つ組 $(\mathcal A_A,\mathcal O_A,s_A)$ は
+$(\qgr R_A,\pi R_A,(1))$ と同値である。
+$R_A$ は一次生成で、その関係は次数2と3で生成される。
+逆に、反標準環の全次数平坦な次数付きArtin変形は、
+この形の構造対象とliftしたshiftを持つ平坦なAbel圏変形を与える。
+特に、相対Serre作用の逆から $s_A$ が得られる場合、
+section環の全次数平坦性と豊富性を別に仮定する必要はない。
+\end{theorem}
+\begin{proof}
+幾何学的H3では $\mathcal O$ がexceptionalなので、
+\cite[命題5.1]{VdBFormalAbelian}の持ち上げ判定が成立する。
+$s_A^n\mathcal O_A$ も平坦である。
+幾何学的fiberで $\operatorname{Ext}^1(\mathcal O,s^n\mathcal O)=0$
+は正規三次商のAS Cohen--Macaulay性による。
+従って \cite[命題5.3]{VdBFormalAbelian}を
+各二つの平坦対象に適用して、sectionの自由性・底変更を得る。
+負の次数のsectionは同じ議論により零、次数0は単位写像で $A$ と同定される。
+
+幾何学的fiberの $\mathcal O(n)$ は同文献の意味でstrongly ampleである。
+生成はH3の豊富性から従う。
+任意の $F$ への $\mathcal O(-m_i)$ の有限直和からの全射を取り、
+Serre双対を使うと
+$\operatorname{Ext}^2(\mathcal O(-n),F)^*=\operatorname{Hom}(F,\mathcal O(-n-1))=0$
+が大きい $n$ で成り立つ。実際、右辺は全射から負次数のsectionの直和に入る。
+全射の核に同じ二次消滅を適用すると、長完全列から
+十分大きい $n$ で $\operatorname{Ext}^1(\mathcal O(-n),F)=0$ も従う。
+三次以上は幾何学的fiberの大域次元2で消える。
+従って \cite[定理4.2]{VdBFormalAbelian}で
+$\mathcal O_A(n)$ のstrong amplenessと圏のExt有限性が従い、
+Artin--Zhang再構成を適用できる。$s_A$ があるため、
+得られる周期的な$\mathbb Z$代数は上の次数付き環から来る。
+
+一次生成は各次数の乗法写像を分裂する自由加群上で比較し、
+剰余体上の全射からNakayama補題で従う。
+$J_n$ を、$R_{A,1}^{\otimes n}\to R_{A,n}$ の核とする。
+右辺が自由なので核の形成も剰余体化と可換する。
+剰余体上の全関係は次数2,3で生成されるから、
+$J_n$ を $J_2,J_3$ の張る二側イデアルの次数 $n$ 部分で割った有限加群は
+剰余体上で零、従って零である。
+こうして任意のArtin平坦圏変形でsection環の低次数提示が得られる。
+
+逆に、全次数自由な次数付き変形 $R_A$ を与える。
+$A$ の極大イデアルの冪による随伴環は $R\otimes_k\operatorname{gr} A$ であり、
+有限長のフィルターから $R_A$ はnoetherianである。
+次数付き加群圏は、次数付き自由shiftの小線型圏の加群圏である。
+そのHomは全て $A$ 上自由なので、
+\cite[定理8.16]{LowenVdBFlatAbelian}の平坦な加群圏変形となる。
+torsion商はその局所化であり、
+$A$ の極大イデアルに消される加群上では元のtorsion商に一致する。
+実際、$R_{A,\ge n}$ からそのような加群への射は
+剰余体にした $R_{\ge n}$ からの射に等しいので、飽和の式が一致する。
+局所化の右随伴は入射対象を入射対象へ送る。
+有限 $A$ 加群からの内部 $\operatorname{Hom}_A$ は有限表示の核で計算でき、
+exactな商関手と可換するので、商圏の入射対象もcoflatである。
+従って商圏は平坦であり、noetherian部分を取ることは
+\cite[定理7.1, 8.8]{LowenVdBFlatAbelian}と両立する。
+自由加群の像 $\pi R_A$ は底上平坦で、次数移動がliftである。
+上のsection再構成を適用すると、sectionへの自然写像は自由加群間の写像で
+剰余体上同型だから全次数で同型である。
+\end{proof}
+
+\begin{corollary}\label{cor:h3-artin-finite-presentation-ring-hull}
+全次数平坦な二次包絡も持つものに限ると、
+上のsection変形の三次超曲面表示は各幾何学的H3点で
+有限型incidenceの形式完備化によって表される。
+ここで一次基底を固定する。基底を除くと表示の群oidは基底変更商であり、
+shiftに可換する構造対象付き矢だけを取る場合は共通次数スカラーを除く。
+\end{corollary}
+\begin{proof}
+$V=A^4$ とし、二次の全関係 $J_2$、三次の全関係 $J_3$ を持つ
+前掲の有限型Grassmann incidenceを取る。
+$B=T(V)/(J_2)$、$R=T(V)/(J_2,J_3)$ について、
+各次数の関係挿入行列にそれぞれ所望階数の上界を課す。
+全次数の小行列式を使っても、noetherian性から閉条件のイデアルは有限生成である。
+幾何学的H3点を固定したArtin局所変形では、各次数の階数下界は
+剰余体で非零のminorが単元になることから自動である。
+従って両環の全次数平坦性とこの閉条件は形式近傍で同値となる。
+
+$B_3\to R_3$ の核は階数1の束で、剰余体の切断へ写る。
+その生成元 $G$ の左右乗法は各次数で剰余体上単射だから、
+自由加群の分裂単射である。
+剰余体で全核を生成するので、Nakayama補題と両辺の平坦性から
+全次数で左右とも全核を生成する。
+従って形式表示も正則正規三次商である。
+相対Koszul性は、有限の内部次数ごとに、augmentationのbar複体を調べれば従う。
+その各項は自由で、剰余体上でホモロジーがKoszul対角の一箇所に集中する。
+単元minorで分裂することにより、同じ集中と自由性がArtin底上で成立する。
+
+構造対象の全整数shift間の射はsection環から復元され、
+これらは有限表示で全対象を生成する。
+従って前定理の同値はshiftに可換する矢にも適用できる。
+比較同型の変更は $\operatorname{End}(\mathcal O_A)=A$ と、
+隣接するshift間の $R_{A,1}$ の忠実性から共通次数スカラーとなる。
+同型方程式は一次の基底変更が $J_2,J_3$ を保つ条件であり、有限である。
+\end{proof}
+
+全次数平坦な二次包絡を持つことが、任意の平坦な圏変形から
+自動的に従うとはここでは主張しない。
+また相対Serre作用の存在とそのheartへの制限は、一般の底上では別の認識問題である。
+
+\subsection{相対局所双対のorientationと中山作用}
+\begin{proposition}\label{prop:h3-artin-relative-dualizing-line}
+系\ref{cor:h3-artin-finite-presentation-ring-hull}の相対表示を取る。
+$W_4$ を包絡のKoszul top直線、$\mathcal G$ を三次切断直線とし、
+$\mathcal L_{\rm AS}=W_4\otimes\mathcal G^\vee$ と置く。
+$Gx=\sigma(x)G$ で正常化を定め、
+$\mu=(\mu_B\sigma)|_R$ とする。
+正次数イデアルに関する右局所コホモロジーは次数3に集中し、その相対次数付き双対は
+\[
+ \bigl(H^3_{R_{\ge1}}(R)\bigr)^\vee
+ \ \simeq\ {}^\mu R^1(-1)\otimes_A\mathcal L_{\rm AS}
+\]
+である。ここで $\vee$ は各内部次数の $A$ 双対である。
+自然な積対合とこの同型はArtin底変更と可換する。
+\end{proposition}
+\begin{proof}
+相対Koszul双対のtopへの積は完全対合であり、
+そのFrobenius中山作用は相対的に定義される。
+これを用いたKoszul双加群解消の双対は、長さを反転した同じ解消の
+内部次数4のshiftと中山twistである。
+この計算は、$W_i$ と $W_{4-i}$ の対合
+$W_i\otimes_A W_{4-i}\leftarrow W_4$ の双対
+（Koszul双対側では積）で二つの端の微分を比較するもので、
+有限自由の各項で体上のKoszul双対計算と同じ式になる。
+従って右加群 $M$ が内部次数を合わせて $A$ 上有限自由なら、
+相対双加群解消を $M$ とテンソルしてから双対を取ると
+\[
+ \mathbf R\underline{\operatorname{Hom}}_B(M,B)
+ \simeq M^\vee(4)_{\mu_B}\otimes_A W_4^\vee[-4]
+\]
+を得る。項ごとの同定は
+$\operatorname{Hom}_A(M\otimes_A W_i,B)
+ \simeq B\otimes_A W_i^\vee\otimes_A M^\vee$ である。
+$M$ に左作用もある場合、式の右作用はその前合成から来る。
+
+$M=R/R_{\ge n}$ とする。右 $B$ 加群としての正則三次解消は
+$\mathcal G\otimes_A{}^{\sigma^{-1}}\!B(-3)\xrightarrow{G\cdot}B$ であり、
+$\mathbf R\operatorname{Hom}_B(R,B)$ は
+$R(3)_{\sigma^{-1}}\otimes_A\mathcal G^\vee[-1]$ となる。
+変換の随伴と、$M$ 自身の $\sigma$ による半線型同型を使うと、
+\[
+ \mathbf R\underline{\operatorname{Hom}}_R(M,R)
+ \simeq M^\vee(1)_{\mu_B\sigma}\otimes_A\mathcal L_{\rm AS}^{\vee}[-3]
+\]
+を得る。右作用を確かめるには、$\sigma^{-1}$ 付き標的への射 $f$ を
+$f\circ\sigma$ に移すと、その前合成の右作用が $\sigma^{-1}$ に捩れることを見ればよい。
+従って変換後の元の右作用には $\sigma$ が掛かる。
+この式は $R/R_{\ge n}$ の間のすべての標準射に対し自然である。
+局所torsionの標準直極限を取ると、各内部次数で有限自由成分が安定し、
+$R^\vee(1)_{\mu}\otimes_A\mathcal L_{\rm AS}^\vee$ を得る。
+その双対は主張の式である。
+\end{proof}
+
+このorientation直線は、共通次数スカラーに関して重み $4-3=1$ を持つ。
+従って命題\ref{prop:h3-presentation-canonical-degree-descent}の
+中立化では、$\det V\otimes\mathcal G^\vee$ の代わりに
+$\mathcal L_{\rm AS}$ を使うこともできる。
+
+\begin{corollary}\label{cor:h3-artin-relative-nakayama-scalar}
+このArtin表示が内在圏の相対Serre作用により
+$(1)=S_A^{-1}[2]$ と再構成されるとする。
+すると $\mu=(\mu_B\sigma)|_R$ は共通次数スカラーである。
+\end{corollary}
+\begin{proof}
+命題の局所双対から、$\mathcal O_i=\pi R(i)$ 間の第二Extは
+$H^3_{R_{\ge1}}(R)$ の対応する内部次数であり、
+次数零Homはsection環の対応次数である。
+特に $\operatorname{Ext}^2(\mathcal O_i,\mathcal O_{i-1})$
+は $\mathcal L_{\rm AS}^\vee$ に正則に同定される。
+この直線を自明化する。相対Serreのtraceは、各 $\mathcal O_i$ 上で
+この直線を $A$ に移す単元倍の写像である。
+実際、$\operatorname{End}(\mathcal O_i)=A$ と完全対合をなす。
+
+$b\in\operatorname{Hom}(\mathcal O_i,\mathcal O_{i+1})=R_1$ と、
+$R_1^\vee$ に対応する
+$\varphi\in\operatorname{Ext}^2(\mathcal O_{i+1},\mathcal O_{i-1})$ を取る。
+二つのYoneda積の値をtraceで比較する。
+局所双対の双加群作用により、一方は $\varphi(b)$、
+もう一方は $\varphi(\mu(b))$ となり、Serreの自然性により
+それぞれのtraceの単元倍を取ると一致する。
+従って $\mu|_{R_1}$ はその二単元の比によるスカラー倍である。
+一次生成性により全次数の作用は共通次数スカラーである。
+\end{proof}
