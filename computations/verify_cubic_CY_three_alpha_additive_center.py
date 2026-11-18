@@ -38,6 +38,24 @@ def check(name, rules, lift, leading, order, weights, leading_weight, leading_sy
     print("PASS", name, "central pencil, boundary centre, and weight filtration")
 
 
+def check_boundary_curve(order, leading, point_matrix, equation, charts):
+    b, c, d, t = s.symbols("b c d t")
+    variables = (b, c, d)
+    assert s.expand(point_matrix.det()-equation) == 0
+    degree_two = list(combinations_with_replacement(order[1:], 2))
+    pair_coordinates = []
+    for point_at in charts:
+        p, q, r = [point_at(t+shift) for shift in range(3)]
+        assert point_matrix.subs(dict(zip(variables, p)), simultaneous=True).multiply(s.Matrix(q)).applyfunc(s.expand) == s.zeros(3, 1)
+        triples = [dict(zip("bcd", coords)) for coords in (p, q, r)]
+        assert s.expand(sum(coeff*s.prod(coordinates[letter] for coordinates, letter in zip(triples, word))
+                            for word, coeff in leading)) == 0
+        products = [s.Poly(triples[0][x]*triples[1][y], t) for x, y in degree_two]
+        pair_coordinates.extend([poly.nth(i) for poly in products]
+                                for i in range(1+max(poly.degree() for poly in products if poly)))
+    assert s.Matrix(pair_coordinates).rank() == 6
+
+
 def check_axis_symbols(rules, lift, a_weight, brackets, initial_cut):
     weights = {"a": a_weight, "b": 1, "c": 1, "d": 0}
     weight = lambda word: sum(weights[letter] for letter in word)
@@ -76,6 +94,10 @@ def cusp():
     check("cusp", rules, lift, leading, "acbd", (0, 4, 3, 6), 12,
           [("add", C), ("ccd", 1), ("bbb", 1)])
     check_singular_axis(rules, lift, s.Matrix([[1, 0, 0], [-B, 1, 2], [-B, 0, 1]]))
+    b, c, d = s.symbols("b c d")
+    point_matrix = s.Matrix([[-c, b-c, 0], [-3*b, -d, c], [d, -d, -b-c]])
+    check_boundary_curve("acbd", leading, point_matrix, -3*(b**3-b*c**2+c**2*d),
+                         [lambda t: (-t, 1, -t+t**3)])
     check_axis_symbols(rules, lift, 2, {"bc": [("cc", 1), ("ad", 2*C)], "db": [("cd", 2)]},
                        [("add", C), ("ccd", 1)])
 
@@ -99,6 +121,10 @@ def tangent():
     check("tangent", rules, lift, leading, "abcd", (0, 2, 3, 4), 8,
           [("add", C), ("bbd", 1), ("bcc", 1)])
     check_singular_axis(rules, lift, s.Matrix([[1, 0, 0], [B, 1, 0], [-A-B, -2, 1]]))
+    b, c, d = s.symbols("b c d")
+    point_matrix = s.Matrix([[-b-c, b, 0], [d-c, -b, -b], [-d, -d-c, c-b]])
+    check_boundary_curve("abcd", leading, point_matrix, -b*(b**2-3*b*d-3*c**2),
+                         [lambda t: (0, 1, t), lambda t: (1, t, Q(1, 3)-t**2)])
     check_axis_symbols(rules, lift, 2, {"cb": [("bb", -1), ("ad", -2*C)], "dc": [("bd", -2)]},
                        [("add", C), ("bbd", 1)])
 
@@ -116,6 +142,10 @@ def concurrent():
         *leading,
     ]
     check("concurrent", rules, lift, leading, "abcd", (0, 2, 2, 3), 6, [("add", 1), *leading])
+    b, c, d = s.symbols("b c d")
+    point_matrix = s.Matrix([[-c, b, 0], [d-b+c, b, -b], [-c, -d-b+c, c]])
+    check_boundary_curve("abcd", leading, point_matrix, 3*b*c*(b-c),
+                         [lambda t: (0, 1, -t), lambda t: (1, 0, -t), lambda t: (1, 1, t)])
     check_axis_symbols(rules, lift, 3, {}, [("add", 1), *leading])
 
 

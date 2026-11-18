@@ -177,7 +177,7 @@ Crawley--Boevey--Hollandの判定はその体に適用できる。
 同じ三型の $d$ 軸に対応する完備局所化を、
 減少濾過 $F^n$ で作る。重みは尖点・接線型で
 $w_0(a,b,c,d)=(2,1,1,0)$、共点型で $(3,1,1,0)$ とする。
-すなわち有限商 $R/F^nR$ で $d$ を左右Ore局所化し、
+すなわち各段の商 $R/F^nR$ で $d$ を左右Ore局所化し、
 元の斉次次数零を取って逆極限を取る。
 得られる完備環は左右有限大域次元を持つ。
 \end{proposition}
@@ -203,7 +203,7 @@ $c$ による導分拡大である。三番目は可換多項式環である。
 この随伴環では $d$ は正規元であり、尖点では $b\mapsto b+2c$、
 接線では $c\mapsto c-2b$、共点では恒等によって積を交換する。
 従って $\operatorname{ad}(d)$ は随伴環の各元に局所冪零である。
-有限商 $R/F^nR$ でも有限濾過の段ごとに適用すれば局所冪零となる。
+各段の商 $R/F^nR$ でも有限濾過の段ごとに適用すれば局所冪零となる。
 交換子の二項展開により $d$ の冪は左右Ore条件と分母条件を満たす。
 例えば $r d^s=0$ なら $(\operatorname{ad}d)^j(r)d^s=0$ が全 $j$ で成り立ち、
 $m$ を十分大きく取ると二項展開から $d^m r=0$ を得る。
@@ -232,6 +232,162 @@ $B_0C_0-C_0(B_0+2C_0)$ であり、
 完備環の左右大域次元も高々2である。
 \end{proof}
 
-命題\ref{prop:cubic-CY-three-alpha-additive-axis}は減少濾過による完備局所環を扱う。
-H3の全判定には、この完備局所化から元の $\qgr R$ の境界上の
-有限大域次元を導く貼合せが残る。
+以下では増大濾過で点の自己拡大を比較し、射影圏での境界を判定する。
+
+\begin{theorem}\label{thm:cubic-CY-three-alpha-additive-H3}
+尖点・接線・共点型のH3対象は、命題
+\ref{prop:cubic-CY-three-alpha-additive}の残る包絡と切断で、
+アフィン環 $U$ が命題\ref{prop:cubic-CY-three-alpha-additive-affine-test}
+の有限大域次元判定を満たすものに尽くされる。
+二つの許容切断の幾何学的な内在的矢は、固定出典\cite{AS4CYpinned}の
+包絡同型のうち切断直線を移すものを、共通次数スカラーで割って得られる。
+\end{theorem}
+\begin{proof}
+$S=\mathcal B/(a)$、$H=R/(a)=S/(L_0)$ とする。
+$a=0$ の三関係を二重線型化した点行列の行列式は、
+尖点、接線、共点の順で非零スカラーを除き
+\[
+ b^3-bc^2+c^2d,\qquad b(b^2-3bd-3c^2),\qquad bc(b-c)
+\]
+である。これらは被約三次曲線 $E$ を定め、
+いずれも唯一の特異点 $p=[0:0:1]$ を持つ。
+点行列の階数は $E$ 上で2であり、
+これは $b,c$ のいずれかが非零の場合と $p$ に分け、二独立行を選べば従う。
+逆側の点行列も、潜在式の巡回性で行列が転置されることから同様である。
+従って二重線型化は $E$ の自己同型 $\sigma$ のグラフである。
+$p$ の補集合の各成分に次のアフィン座標 $u$ を取れば
+$\sigma$ は $u\mapsto u+1$ である。
+\[
+\begin{array}{c|l}
+\text{尖点}&(-u,1,-u+u^3)\\
+\text{接線}&(0,1,u),\ (1,u,1/3-u^2)\\
+\text{共点}&(0,1,-u),\ (1,0,-u),\ (1,1,u)
+\end{array}
+\]
+元の $L_0$ を連続三点で評価すると零となる。
+次数二の六つの順序語を連続二点で評価した係数行列は階数6である。
+公開検証器はこの行列式と評価の恒等式を厳密に確認する。
+
+$\mathcal L=\mathcal O_E(1)$ と置けば、これにより
+$H\to B(E,\mathcal L,\sigma)$ が定義され、次数2まで全射である。
+実際、$E$ は平面三次曲線なので $\omega_E=\mathcal O_E$、
+全成分で正次数を持つ $\mathcal L_n$ の $H^1$ は零で、
+$h^0(E,\mathcal L_n)=3n$ である。
+$\mathcal L_n$ はねじれた $n$ 個のテンソル積であり、
+$\sigma$ が成分を保つため、各成分の次数は $n$ 倍となる。
+$n\ge2$ で最後の $\sigma^{n*}\mathcal L$ に基点のない二次元部分線型系を選ぶ。
+その評価完全列を $\mathcal L_n$ でテンソルすると、核の
+$H^1$ が全成分での正次数とSerre双対から零になる。
+よって $n$ 次と1次の積が全射である。
+全次数で $H$ とHilbert値が一致するので
+$H=B(E,\mathcal L,\sigma)$ である。
+$\mathcal L$ は $\sigma$-ampleである。各成分の正規化は
+$\mathbb P^1$ で、引戻し次数が一様に増大するため、
+導手での有限ジェットも含めて任意の連接層の高次コホモロジーが消える。
+従って \cite{AVdBTwistedHomogeneous} により $\qgr H\simeq\operatorname{coh}E$。
+$P=\pi(k[d])$ はこの対応で $k(p)$ になる。
+
+次に $P$ の射影圏内での自己拡大を比較する。
+命題\ref{prop:cubic-CY-three-alpha-additive}の増大重みから
+$w(d)$ と元次数の積を引き、$d$ の重みを零にする。
+各元次数内の濾過は有限で、随伴環は同じ可換三次環である。
+元の次数付き点加群 $M=k[d]$ の重みを全て零に取ると、
+$M_{\ge n}\simeq M(-n)$ は重みのshiftを伴わない。
+$M$ に重み付き有限階数自由加群によるstrict解消を取る。
+随伴環がnoetherianなので随伴核の有限斉次生成元を各段で持ち上げられ、
+元次数内の重みの下界によって補正は停止する。
+従って随伴解消も正確である。
+包含 $M_{\ge n+1}\to M_{\ge n}$ は
+$d$ の乗法から誘導され、重みを保つ解消間写像に持ち上がる。
+
+noetherianな次数付き環では、ここで
+\[
+ \operatorname{Ext}^i_{\qgr R}(P,P)
+    =\varinjlim_n\operatorname{Ext}^i_{\operatorname{Gr}R}(M_{\ge n},M)
+\]
+を用いることができる。
+次数付き入射加群のtorsion部分は入射である。
+実際、torsion加群のsocleは本質的で、次数付き単純加群の入射包は
+$R$ の次数付き双対のshiftであり、torsionである。
+局所noetherian性によりその直和も入射なのでtorsion入射包はtorsionのままである。
+従って入射解消をtailsへ送っても入射解消となり、
+有限生成な始域のtruncation上のHomの直極限から式を得る。
+noetherian対象間の拡大はcoherentなYoneda列で計算できる。
+
+各解消段の重みは $n$ に依存せず、
+$\operatorname{Hom}_{\operatorname{Gr}R}(F_j(-n),M)$ の
+重みの範囲は各 $j$ で一様有界である。
+従ってHom複体の直極限に、重み濾過の収束するスペクトル系列を適用できる。
+随伴複体のコホモロジーは可換随伴環上の同じtails Extである。
+$d$ 軸は可換三次面の滑らかな点であるから、
+随伴側の $\operatorname{Ext}^4(k(p),k(p))$ は零である。
+よって $\operatorname{Ext}^4_{\qgr R}(P,P)=0$。
+
+$\mathcal P=\operatorname{thick}\{\pi R(n):n\in\mathbb Z\}$ と置く。
+$M\otimes^\mathbf L_{\mathcal B} R$ は元のAS4包絡上の有限自由解消から
+$\mathcal P$ の対象を与える。
+そのTorは次数0で $M$、次数1で $M(-3)$、その他で零なので、
+tailsでの切断三角から
+$P\to P(-3)[2]$ は $\mathrm D^b(\qgr R)/\mathcal P$ で同型になる。
+しかし $P(-3)\simeq P$ なので二回の合成は直前のExt消滅により零である。
+従って $P\in\mathcal P$。
+
+$\mathrm D^b(\operatorname{coh}E)$ は点 $k(p)$ と
+$\qgr H$ での構造対象のshiftで厚く生成される。
+各線束はample sequenceの全射を二回用い、線束からのExtの上界1で
+二段階の拡大を分裂して、shiftの厚い部分圏に入る。
+$E$ 上で $p$ のみに零を持つ切断は、尖点で $c$、
+接線で $b^2+(b^2-3bd-3c^2)$、共点で $b+2c$ と取れる。
+その補集合は滑らかなアフィン曲線である。
+任意の層を線束の直和から覆った核 $K$ は、この開集合でベクトル束で、
+そこでは自由束の直和因子となる。
+切断の分母を払ってその二つの分裂射を全体に延ばせば、
+合成は $p$ 上の層を法として切断の冪倍の $\mathrm{id}_K$ となる。
+切断の冪による射の核と余核は $p$ に支持されるので
+$k(p)$ の厚い部分圏に入る。
+合成が線束の直和を経由することから、$K$ と元の層も生成される。
+
+従って $a$ に殺される対象は、$\pi H(n)$ の二項解消と
+$P\in\mathcal P$ により $\mathcal P$ に属する。
+$a$ の冪に殺される対象も有限濾過で同様である。
+補題\ref{lem:r13-one-chart-smoothness}の行列因子化の議論は、
+この $a$-torsionの生成を得た後は境界曲線の滑らかさを用いない。
+従って $\gldim U<\infty$ なら $\mathrm D^b(\qgr R)=\mathcal P$ となり、
+AS Gorenstein双対で $\gldim\qgr R=2$、$S=(-1)[2]$ となる。
+逆向きは同補題の中央局所化のExtの議論で従う。
+残るH3公理は、命題\ref{prop:cubic-CY-three-alpha-additive}の整域とrank、
+正則中心商の深さ3とGorenstein parameter 1、
+および定理\ref{thm:r13-exact-cut-reduction}の標識付き再構成を適用する。
+
+包絡同型 $\phi$ に対して $\phi(a)=r a'$、
+$\phi(L)=sL'+u(a')^3$ と書く。ここで $r,s\ne0$。
+中心直線を移す条件は
+$\lambda'=(u+r^3\lambda)/s$ であり、係数は次数三商で直接求まる。
+固定出典の尖点型の倍率、接線型の $(u,t)$ 作用、
+共点型の $S_3$ 作用は全包絡同型を与えるので、
+この判定と共通スカラーによる商が幾何学的矢と慣性を完全に指定する。
+\end{proof}
+
+\begin{corollary}\label{cor:cubic-CY-three-alpha-additive-finite-exception}
+尖点・接線型の $C\ne0$ の各固定包絡と、残る共点型の各固定包絡で、
+$L+\lambda a^3$ の許容値は $\mathbb A^1$ から有限集合を除いたものである。
+特に各包絡にH3切断が存在する。
+\end{corollary}
+\begin{proof}
+$D=(\mathcal B[a^{-1}])_0$、$\omega=L/a^3$ とする。
+中央局所化した $\mathcal B[a^{-1}]=D[a^{\pm1}]$ は有限大域次元を持つ。
+任意の $D$ 加群をLaurent拡大してから制限すれば元の加群は直和因子なので、
+$D$ も有限大域次元を持つ。$\omega$ の正重みの記号は非定数多項式なので
+$k[\omega]$ は多項式環である。
+中央局所化 $D\otimes_{k[\omega]}k(\omega)$ は有限大域次元を持ち、
+$\omega=-\lambda$ による一般切断と同定される。
+
+有限分離な体拡大では、拡大した環の加群は自身の制限から誘導した加群の
+直和因子となるので、この射影次元上界を保つ。
+代数閉包への拡大でも、有限表示と関係の有限係数を中間有限体拡大へ降ろして
+同じ上界を得る。従って幾何学的一般切断は有限大域次元である。
+命題\ref{prop:cubic-CY-three-alpha-additive-affine-test}の有限系と
+Chevalleyの定理により許容域は構成可能であり、
+幾何学的一般点を含むので補集合は有限である。
+定理\ref{thm:cubic-CY-three-alpha-additive-H3}を適用する。
+\end{proof}
