@@ -1,18 +1,23 @@
-"""Central cubics in all six lower directions of the quantum triangle."""
+"""Central-cubic identities for triangular, nodal, and secant leading forms."""
 from collections import defaultdict
 from functools import cache
 
 import sympy as s
 
 
-def main():
+def verify(with_cubes):
     q = s.Symbol("q", nonzero=True)
     ax, ay, az, bx, by, bz = s.symbols("ax ay az bx by bz")
+    px, py = s.symbols("px py") if with_cubes else (0, 0)
     rules = {
         ("y", "x"): [("xy", 1/q), ("z", -az/q), ("", -bz/q)],
         ("z", "y"): [("yz", 1/q), ("x", -ax/q), ("", -bx/q)],
         ("z", "x"): [("xz", q), ("y", ay), ("", by)],
     }
+
+    if with_cubes:
+        rules["z", "y"].append(("xx", -px/q))
+        rules["z", "x"].append(("yy", py))
 
     @cache
     def reduce(word):
@@ -39,8 +44,17 @@ def main():
         "xyz": 1, "xx": ax/(q*q-1), "yy": q*q*ay/(q*q-1), "zz": az/(q*q-1),
         "x": bx/(q-1), "y": q*by/(q-1), "z": bz/(q-1),
     }
+    if with_cubes:
+        omega = {word: (q**3-1)*coefficient for word, coefficient in omega.items()}
+        omega.update({"xxx": px, "yyy": q**3*py, "xy": -az*px*py})
+        omega["x"] -= q*ay*az*px/(q+1)
+        omega["y"] -= q*ax*az*py/(q+1)
+        omega["z"] += az**2*px*py/(q+1)
     for generator in "xyz":
         assert all(coefficient == 0 for coefficient in commutator(generator, omega))
+    if with_cubes:
+        print("PASS scaled volume, including both specializations at a primitive cube root")
+        return
 
     root_polynomial = q*q+q+1
     for element in ({"xxx": 1, "x": q*q*ay*az},
@@ -55,4 +69,5 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    verify(False)
+    verify(True)

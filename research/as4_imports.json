@@ -1368,5 +1368,20 @@
     ],
     "used_part": "gamma nonzero triangular leading potential, and the six lower directions in diagonal quadratic and linear normal form",
     "verification": "Centre lifts, geometry of normalized triangle pencil, and difference identities proved in nc-cubic-moduli."
+  },
+  "CY_three_alpha_nodal_secant_necessary_v319": {
+    "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+    "files": [
+      {
+        "path": "research/proofs/CY_ALPHA_NODAL_CUBIC.tex",
+        "sha256": "10727e96ccbc572777163f09679716c35d0027222345e94b132b62f796cab4f8"
+      },
+      {
+        "path": "research/proofs/CY_ALPHA_SECANT_CONIC.tex",
+        "sha256": "af3b817d6ac88c8bda4ca3c38a1c4fc9f2f2aa5d0985105ab81c76ff9aa8bd3d"
+      }
+    ],
+    "used_part": "necessary leading nodal and secant forms and the diagonal quadratic lower directions",
+    "verification": "The all-coefficient central lifts, affine difference representation for secants, and resonance exclusion are proved and checked here."
   }
 }
