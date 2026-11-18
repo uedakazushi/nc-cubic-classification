@@ -122,6 +122,83 @@ $\phi(t)=a t'$、$\phi(L)=bL'+c(t')^3$ と書けば、
 滑らかな楕円境界の無限位数でのアフィン判定、
 およびその幾何学的成分の全判定は残る。
 
+\begin{proposition}\label{prop:cubic-CY-three-alpha-elliptic-character-parity}
+滑らかな楕円境界の切断がH3なら、
+そのアフィン環 $U$ の任意の有限次元加群 $M$ に対して
+$\dim_k\operatorname{Ext}^1_U(M,M)$ は偶数である。
+特に一次元表現の点で、三アフィン関係と切断式を可換化した
+四式のJacobian行列が偶数階なら、その切断はH3から除外される。
+\end{proposition}
+\begin{proof}
+アフィン包絡 $D=\mathcal B[t^{-1}]_0$ はCY3であり、
+$U=D/(\omega+\lambda)$ は中心正則商である。
+実際、$\mathcal B$ はCY4で、中央局所化
+$\mathcal B[t^{-1}]=D[t,t^{-1}]$ は双加群滑らかさとCY双対を保つ。
+定理\ref{thm:r13-split-all-cuts}のLaurent対角の基底変更で
+$D$ は双加群滑らかであり、中心正則式 $t-1$ による双対移行でCY3となる。
+有限次元右 $D$ 加群 $M$ に対し、CY双加群解消を $M$ とテンソルして双対化すると
+$\mathbf R\operatorname{Hom}_D(M,D)\simeq M^*[-3]$ である。
+中心正則商の変換で、有限次元 $U$ 加群には
+$\mathbf R\operatorname{Hom}_U(M,U)\simeq M^*[-2]$ を得る。
+
+H3なら $U$ は有限大域次元を持つため、有限次元加群は完全である。
+従って上の自然双対と完全加群の評価から、
+有限次元コホモロジーの複体に対してSerre双対 $[2]$ を得る。
+この双対での積の跡は、コチェインの評価で次数 $i,j$ の射を
+循環させるとき $(-1)^{ij}$ を生じる。
+よって $\operatorname{Ext}^1_U(M,M)$ 上のYoneda積と跡の対合は
+非退化な交代形式である。
+
+一次元表現での自己拡大は、上三角行列の非対角成分、
+すなわち双対数への表現で記述できる。
+その線型方程式は可換化した四式のJacobianであり、
+一次元表現では内的微分は零である。
+従って自己 $\operatorname{Ext}^1$ の次元は $3$ からその階数を引いた値となる。
+\end{proof}
+
+\begin{example}\label{ex:cubic-CY-three-alpha-elliptic-character-obstruction}
+三次の先頭関係を $(p,q,r)=(1,2,3)$ とし、$a,b\ne0$ とする。
+次の非分裂包絡では、下の中央三次切断は無限位数の滑らかな楕円境界を持ち、
+H3から除外される。
+\[
+\begin{aligned}
+ yz+2zy+3x^2&=at(x+y),\\
+ zx+2xz+3y^2&=at(x+y),\\
+ xy+2yx+3z^2&=btz .
+\end{aligned}
+\]
+$t$ は中心であり、切断は $G=0$ とする。ただし
+\[
+\begin{aligned}
+ G={}&13y^3+\tfrac{19}{6}yzx-\tfrac{26}{3}zyx-\tfrac{19}{2}z^3\\
+ &+t\bigl((3b-\tfrac{25}{6}a)yx-\tfrac12ay^2-\tfrac{25}{9}ayz
+        -\tfrac32azx-\tfrac{23}{9}azy+\tfrac{23b-27a}{2}z^2\bigr)\\
+ &+t^2\bigl((ab-\tfrac{31}{18}a^2)(x+y)
+              +(\tfrac{11}{2}ab-3b^2)z\bigr).
+\end{aligned}
+\]
+係数行列が対称なので、この包絡は
+補題\ref{lem:sklyanin-central-PBW-CY}により正則CYである。
+線型項が先頭式の平行移動から来るなら、$x^2$ から生じる
+$x$ の係数 $a$ に対し、$yz+2zy$ から生じる $y,z$ 方向の
+相互係数は $a/2$ でなければならない。ここでは零なので非分裂である。
+$G$ の四交換子は次数四の元関係の像で零であり、
+その最高記号は次数三の商で非零である。
+\path{verify_cubic_CY_three_alpha_elliptic_character.py}
+がこれらを二変数有理関数体で確認する。
+次数三、四のHilbert値は全包絡で一定なので、階数小行列式により中央性は全係数へ特殊化する。
+
+境界は $x^3+y^3+z^3-6xyz=0$、平行移動の点は $(1:2:3)$ である。
+$5,17$ で良い還元を持ち、点数はそれぞれ $9,21$。
+両還元での素数外torsionの単射により、有理torsionの位数は3を割る。
+この点は三座標が非零で変曲点ではなく、従って無限位数である。
+
+$t=1$ の原点は一次元表現である。
+三二次関係のJacobianの行空間は $(1,1,0)$、$(0,0,1)$ で張られ、
+$G$ の線型項も同じ空間にある。
+従って命題\ref{prop:cubic-CY-three-alpha-elliptic-character-parity}により排除される。
+\end{example}
+
 \begin{corollary}\label{cor:cubic-CY-three-alpha-cyclic-triangle-excluded}
 定理\ref{thm:cubic-CY-three-alpha-smooth-boundary}のうち
 境界が成分巡回三角形になる包絡では、全中央三次切断が非整域である。
