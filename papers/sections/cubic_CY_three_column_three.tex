@@ -145,3 +145,35 @@ $A_3\to A_4^{\oplus4}$ の核である。
 一般点で核次元が1なので対象点でも1以上であり、
 補題\ref{lem:cubic-CY-three-column-three-center-injection}が上界1を与える。
 \end{proof}
+
+\begin{theorem}\label{thm:cubic-CY-three-column-three-empty}
+三交換子の外積階数三・列係数階数三に属するH3対象は存在しない。
+\end{theorem}
+\begin{proof}
+残る三範囲で、命題\ref{prop:cubic-CY-three-column-three-lifts}の一次補正を求めると、
+逆転対称な中央三次は $G=\ell(da-cb)$ と因数分解する。
+半単純二重型で $\ell=b-c$、長さ二・異固有値型で
+$\ell=(3a+2b+4c)/8$ と取れる。
+四基点型の $\ell$ は非零スカラーを除いて
+\begin{align*}
+ L_\eta={}&3(\eta-1)^2(\eta+1)a+(\eta-1)^2(2\eta+1)b\\
+          &+(\eta-1)(2\eta+1)^2c-3(2\eta+1)^2d
+\end{align*}
+である。
+公開検証器は補正の線型系を後退代入して解き、
+関係 $[a,b]=[c,d]=[a,d]-[b,c]=0$ だけを課した
+次数三商でこの積の恒等式を確認する。
+従って元の三対称関係の係数には依存しない。
+四基点型の有理計算で除いた点でも、命題の証明と同じ
+$\Delta_{\lambda,\mu}\ne0$ の近傍で、
+$[v,L_\eta(da-cb)]$ は一定次元の次数四商の切断として恒等的に零となる。
+全許容値で $2\eta+1\ne0$ なので $L_\eta$ は非零である。
+$da-cb$ の像も非零である。これは対称二次式の行列式方向であり、
+元の三対称関係はその補空間
+$\operatorname{Sym}^2(k^2_{\mathrm{row}})\otimes
+ \operatorname{Sym}^2(k^2_{\mathrm{col}})$ に属する。
+
+この積は $A$ の整域性により非零であり、命題により唯一の中央三次切断を与える。
+次数1と2の両因子は三次切断後も非零で、その積は零である。
+従って $A/(G)$ は整域でなく、H3から排除される。
+\end{proof}
