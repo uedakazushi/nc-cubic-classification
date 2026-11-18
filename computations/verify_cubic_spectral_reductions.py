@@ -114,6 +114,7 @@ CHECKS=[
  'verify_cubic_CY_three_rankthree_quotient.py',
  'verify_cubic_CY_three_rankthree_lifts.py',
  'verify_cubic_CY_three_alpha_additive_center.py',
+ 'verify_cubic_CY_three_alpha_quantum_boundary.py',
 ]
 results=[]
 for name in CHECKS:
