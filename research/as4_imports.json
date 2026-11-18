@@ -1549,5 +1549,24 @@
     ],
     "used_part": "Necessary six continuous crossed representations DA1, DD1, EN2, EB2, TN1 and FZ1, and the two isotropic outer matrices Ha,Hn covering nine families.",
     "verification": "Independent centre rank and all exceptional value calculations, and exact all-parameter change of the isotropic relation basis, in nc-cubic-moduli."
+  },
+  "CY_one_segre_double_split_quadratics_necessary_v331": {
+    "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+    "files": [
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_DOUBLE_SPLIT_TRIPLE_DECOMPOSABLE.tex",
+        "sha256": "da3d2d596419b9e78bb31073a1df97935a8b9cd0469ea34aeb0f964a0a253801"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_DOUBLE_SPLIT_FULL_ONE_EXTERNAL_REDUCTION.tex",
+        "sha256": "5de7d0a1d47f688abe6fccbd64af4bb28d680e25e0b8658cda3c4c961b8badba"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_DOUBLE_SPLIT_FULL_ONE_EXTERNAL.tex",
+        "sha256": "6401bd65d3587b7ef417847b22b2e58faec5450555c54df22ac9b7d46847a906"
+      }
+    ],
+    "used_part": "Source relations and full permitted parameter loci for TD1 and FO1–FO2.",
+    "verification": "The two commuting-plane central quadratics are independently checked in the original degree-two and degree-three quotients."
   }
 }

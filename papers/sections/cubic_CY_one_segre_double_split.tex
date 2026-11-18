@@ -255,3 +255,55 @@ $P$ の交換子は $c,d$ の合計次数が1以下なのでこの係数に寄�
 \par\noindent\texttt{verify\_cubic\_CY\_one\_segre\_double\_split\_remaining\_small.py}
 \par
 \end{proof}
+
+\begin{proposition}\label{prop:cubic-CY-one-segre-double-split-quadratic-reduction}
+残る分解三交差 (TD1) と片外側四交差 (FO1)--(FO2) において、
+実交換子平面から非零中央二次 $Q_0$ が得られる。
+次の記法では $U,V$ は可換で、$Q_0$ の係数は三つの表示座標の一つに依存しない。
+\begin{enumerate}
+\item (TD1) の $(s,u,w)=(p,u,w)$、$t=p-1/4$ では
+\[
+ U=a+tc,\qquad V=pb+c+d,\qquad
+ Q_0=p^2U^2+pw(16p+64w-2)UV+w^2V^2.
+\]
+\item (FO1)--(FO2) の $(t,\sigma,q)=(p,u,w)$、
+$h=1/64-p^2/4$、$\eta=pw+1/32$ では
+\begin{align*}
+ U&=a+hb+p(c-d)/2,\qquad V=c+d,\\
+ Q_0&=pU^2+2\eta UV+16p\left(\eta^2+(1-16p^2)/1024\right)V^2.
+\end{align*}
+\end{enumerate}
+いずれも $Z(\mathcal B)_3\to Z(\mathcal B/(Q_0))_3$ は単射である。
+二次商の次数2,3,4の次元は $(9,16,25)$ である。
+\end{proposition}
+\begin{proof}
+$[U,V]$ は元の実交換子そのものである。
+公開検証器は元の六関係から次数2,3の商を構成し、
+全一般係数で $[Q_0,a]=[Q_0,b]=[Q_0,c]=[Q_0,d]=0$
+を関数体上で再生する。
+元の関係の係数は固定出典の許容開集合上で正則であり、
+次数三商はAS4のHilbert値によりその全域で一定次元である。
+したがって上の交換子は全許容値で零である。
+$U,V$ は独立なので、整域である元の包絡内でその可換二元二次式の
+各一次因子は非零、従って $Q_0\ne0$ である。
+
+一次中心があれば、非零一次元 $\ell$ に対し
+$\ell\wedge \mathcal B_1$ の三次元が二次関係の交代部分に入るが、
+交代部分は一次元なので矛盾する。
+中央三次が二次商で消えれば $G=Q_0\ell$ であり、
+$Q_0$ の正則性から $\ell$ も中央となるため $G=0$ である。
+二次商のHilbert級数は $(1-z^2)/(1-z)^4$ である。
+\end{proof}
+
+公開検証器は次である。
+\par\noindent\texttt{verify\_cubic\_CY\_one\_segre\_double\_split\_quadratics.py}
+\par
+この還元は全パラメータで使える。二次商の中心三次と元の包絡への
+持ち上げの全判定は引き続き必要である。
+
+(TD1) と (FO1)--(FO2) の関数体上では、元の六関係から作った次数4商で
+中心行列の階数20を確認した。
+用いた小行列式の分子・分母および商の射影分母の全既約因子を
+検証器の \texttt{--cubic TD1} または \texttt{--cubic FO1} で再生する。
+従ってこの係数域で未判定の中央三次は、証明書にある因子の零集合に限られる。
+この計算はそれらの零集合を判定するものではない。
