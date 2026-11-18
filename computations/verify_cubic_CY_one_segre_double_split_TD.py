@@ -75,6 +75,10 @@ def rank_on_curve(name, A, B, E):
     restrictions.extend(fraction(value)[1] for value in (A, B, E, *parameters.values()))
     assert all(restrictions)
 
+    return rank_univariate(name, source, z, restrictions)
+
+
+def rank_univariate(name, source, z, restrictions):
     field = RationalFunctionField((z,))
     algebra, rank = centre_calculation(source, (0, 1, 2, 3), field, field.from_sympy)
     assert rank == 20, name

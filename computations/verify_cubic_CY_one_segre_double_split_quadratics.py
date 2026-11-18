@@ -100,8 +100,8 @@ def quadratic_quotient(data):
     return source.row_join(coefficients)
 
 
-def cubic_exclusion(name, source, permutation, dimensions):
-    algebra, rank = centre_calculation(source, permutation, FIELD, FIELD.from_sympy, dimensions)
+def centre_witness(source, permutation, dimensions, field=FIELD):
+    algebra, rank = centre_calculation(source, permutation, field, field.from_sympy, dimensions)
     assert rank == dimensions[1]
     projection_denominators = {
         str(value.d): value.d
@@ -109,18 +109,21 @@ def cubic_exclusion(name, source, permutation, dimensions):
         for value in coordinates.values()
     }
     projection_denominators.update({
-        str(value.d): value.d for value in (FIELD.from_sympy(coefficient) for coefficient in source)
+        str(value.d): value.d for value in (field.from_sympy(coefficient) for coefficient in source)
     })
-    result = {
-        "chart": name,
+    return {
         "centre_rank": rank,
         "minor_numerator_factors": fraction_factors([algebra.pivot_product.n]),
         "minor_denominator_factors": fraction_factors([algebra.pivot_product.d]),
         "projection_denominator_factors": fraction_factors(projection_denominators.values()),
     }
+
+
+def cubic_exclusion(name, source, permutation, dimensions):
+    result = {"chart": name, **centre_witness(source, permutation, dimensions)}
     path = Path(__file__).with_name(f"cubic_CY_one_segre_double_split_{name}_open_certificate.json")
     path.write_text(json.dumps(result, indent=2)+"\n")
-    print("PASS", name, f"generic rank {rank} with explicit factor support")
+    print("PASS", name, f"generic rank {result['centre_rank']} with explicit factor support")
 
 
 def main():

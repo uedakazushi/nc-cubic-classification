@@ -124,6 +124,8 @@ CHECKS=[
  'verify_cubic_CY_one_segre_double_split_FO_nonlinear.py',
  'verify_cubic_CY_one_segre_double_split_TD.py',
  'verify_cubic_CY_one_segre_square_split_M.py',
+ 'verify_cubic_CY_one_segre_square_split_M_witness.py',
+ 'verify_cubic_CY_one_segre_square_split_M_surfaces.py',
  'verify_cubic_CY_one_segre_double_split_FDC.py',
  'verify_cubic_CY_one_segre_last_generics.py',
  'verify_cubic_CY_three_alpha_primitive_triangle_centre.py',

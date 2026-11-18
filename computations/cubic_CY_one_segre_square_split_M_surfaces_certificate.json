@@ -1,0 +1,134 @@
+{
+  "witnesses": {
+    "T=0": {
+      "centre_rank": 20,
+      "minor_numerator_factors": [
+        "3*p^2*u^2 - 3*p^2 - 8*p*u + 7",
+        "p + 1",
+        "p - 1",
+        "p^2*u^2 - p^2 - 3",
+        "u - 2"
+      ],
+      "minor_denominator_factors": [
+        "p",
+        "p*u + 2",
+        "p*u - 2",
+        "p*u - p - 1",
+        "p^2*u^2 - 4*p^2*u + 3*p^2 + 1"
+      ],
+      "projection_denominator_factors": [
+        "p",
+        "p + 1",
+        "p - 1",
+        "p*u + 2",
+        "p*u - 2",
+        "p*u - p - 1",
+        "p^2*u - p^2 - 1",
+        "p^2*u^2 - 4*p^2*u + 3*p^2 + 1",
+        "u - 2"
+      ]
+    },
+    "ZT=1": {
+      "centre_rank": 20,
+      "minor_numerator_factors": [
+        "p + 1",
+        "p - 1",
+        "w - 1"
+      ],
+      "minor_denominator_factors": [
+        "p",
+        "p + w",
+        "p^2 + w"
+      ],
+      "projection_denominator_factors": [
+        "p",
+        "p + 1",
+        "p + w",
+        "p - 1",
+        "p^2 + w",
+        "w",
+        "w + 1",
+        "w - 1"
+      ]
+    }
+  },
+  "rational_curves": [
+    {
+      "chart": "u - 2",
+      "factor_support": [
+        "v",
+        "v + 1",
+        "v - 1",
+        "v - 7/9"
+      ],
+      "recomputed_irreducible_factors": [
+        "v - 7/9"
+      ]
+    },
+    {
+      "chart": "p*u - p - 1",
+      "factor_support": [
+        "v",
+        "v + 1",
+        "v + 3",
+        "v - 1"
+      ],
+      "recomputed_irreducible_factors": []
+    },
+    {
+      "chart": "p*(p*u - p) - 1",
+      "factor_support": [
+        "v",
+        "v + 1",
+        "v - 1"
+      ],
+      "recomputed_irreducible_factors": []
+    },
+    {
+      "chart": "3*p**2*u**2 - 3*p**2 - 8*p*u + 7",
+      "factor_support": [
+        "v",
+        "v + 1",
+        "v + 5",
+        "v + 5/3",
+        "v - 1",
+        "v - 5",
+        "v**2 + 20*v - 5",
+        "v**2 + 3*v + 20",
+        "v**2 + 5",
+        "v**2 + 5*v + 10"
+      ],
+      "recomputed_irreducible_factors": [
+        "v + 5/3",
+        "v**2 + 3*v + 20",
+        "v**2 + 5*v + 10"
+      ]
+    },
+    {
+      "chart": "p**2*u**2 - p**2 - 3",
+      "factor_support": [
+        "v",
+        "v + 1",
+        "v + 3",
+        "v - 1",
+        "v - 3",
+        "v**2 - 3"
+      ],
+      "recomputed_irreducible_factors": []
+    },
+    {
+      "chart": "-p**2 + (p*u - 2*p)**2 + 1",
+      "factor_support": [
+        "v",
+        "v + 1",
+        "v + 1/3",
+        "v - 1",
+        "v**2 + 1",
+        "v**2 - v + 2/3"
+      ],
+      "recomputed_irreducible_factors": [
+        "v**2 - v + 2/3"
+      ]
+    }
+  ]
+}
