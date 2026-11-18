@@ -1,6 +1,6 @@
 {
   "date": "2026-11-18",
-  "version": "classification-v356",
+  "version": "classification-v357",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -4992,5 +4992,18 @@
     "verification": "PASS exact centrality, rank-eight matrix tangent, and unit Groebner basis for the scalar representation ideal.",
     "scope": "An excluded non-torsion elliptic cut with a two-dimensional simple, odd self-Ext, and no scalar representations. Uses the original Walton thesis, Definition IV.6 and Conjecture V.9.",
     "main_build": "LuaLaTeX PASS, 523 pages, no overfull boxes or undefined references/citations"
+  },
+  "CY_three_alpha_elliptic_presentation_closure_v357": {
+    "theorems": [
+      "thm:cubic-CY-three-alpha-elliptic-boundary-closure",
+      "thm:cubic-CY-three-alpha-root-three-closure",
+      "thm:cubic-CY-three-alpha-clifford-commutative-closure"
+    ],
+    "corollary": "cor:cubic-CY-three-presentation-closure",
+    "validator": "computations/verify_cubic_CY_three_alpha_triangle_smoothing.py",
+    "certificate": "computations/cubic_CY_three_alpha_triangle_smoothing_certificate.json",
+    "verification": "PASS ten-variable central cubic, all four first directions at primitive cube roots, the full Clifford limit, and the commutative first jet. Flatness, generic admissibility and the dimension count are proved in the text.",
+    "scope": "All three-commutator CY H3 presentations and all smooth commutative cubics lie in the common irreducible presentation closure of the generic smooth elliptic branch. General geometric quotient dimension eight, nodal boundary codimension one.",
+    "main_build": "LuaLaTeX PASS, 525 pages, no overfull boxes or undefined references/citations"
   }
 }

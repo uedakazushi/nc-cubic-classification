@@ -1,0 +1,43 @@
+{
+  "regular_centre": {
+    "zyx": "q*(-2*P_x*P_y*P_z + q**3 - 1)",
+    "xxx": "P_x*(-P_x*P_y*P_z + q**3)",
+    "yyy": "P_y*(P_x*P_y*P_z + 1)",
+    "zzz": "P_z*(-P_x*P_y*P_z + q**3)",
+    "txx": "A_x*(-P_x*P_y*P_z*q - P_x*P_y*P_z + q**4 + q**3 + q**2)/(q + 1)",
+    "tyy": "A_y*(P_x*P_y*P_z*q + 2*P_x*P_y*P_z + q**2 + q + 1)/(q + 1)",
+    "tzz": "A_z*(-2*P_x*P_y*P_z*q - P_x*P_y*P_z + q**4 + q**3 + q**2)/(q + 1)",
+    "tyx": "-A_z*P_x*P_y*q",
+    "tzx": "-A_y*P_x*P_z",
+    "tyz": "-A_x*P_y*P_z*q/(q + 1)",
+    "tzy": "-A_x*P_y*P_z*q/(q + 1)",
+    "ttx": "(-A_y*A_z*P_x*q - B_x*P_x*P_y*P_z*q - B_x*P_x*P_y*P_z + B_x*q**4 + 2*B_x*q**3 + 2*B_x*q**2 + B_x*q)/(q + 1)",
+    "tty": "(-A_x*A_z*P_y*q + A_y**2*P_x*P_z + B_y*P_x*P_y*P_z*q + B_y*P_x*P_y*P_z + B_y*q**3 + 2*B_y*q**2 + 2*B_y*q + B_y)/(q + 1)",
+    "ttz": "(-A_x*A_y*P_z*q - A_z**2*P_x*P_y*q - B_z*P_x*P_y*P_z*q - B_z*P_x*P_y*P_z + B_z*q**4 + 2*B_z*q**3 + 2*B_z*q**2 + B_z*q)/(q + 1)"
+  },
+  "volume_parameter": "q^3-1",
+  "pure_square_parameters": [
+    "P_x",
+    "P_y",
+    "P_z"
+  ],
+  "commutative_first_jet": [
+    "3",
+    "1",
+    "3/2",
+    "3"
+  ],
+  "clifford_limit": {
+    "zyx": "2*P_x*P_y*P_z + 2",
+    "xxx": "-P_x*(P_x*P_y*P_z + 1)",
+    "yyy": "P_y*(P_x*P_y*P_z + 1)",
+    "zzz": "-P_z*(P_x*P_y*P_z + 1)",
+    "ttx": "-B_x*(P_x*P_y*P_z + 1)",
+    "tty": "B_y*(P_x*P_y*P_z + 1)",
+    "ttz": "-B_z*(P_x*P_y*P_z + 1)",
+    "txx": "U_x*(P_x*P_y*P_z + 1)",
+    "tyy": "U_y*(P_x*P_y*P_z + 1)",
+    "tzz": "U_z*(P_x*P_y*P_z + 1)",
+    "ttt": "B_x*P_y*P_z*U_x"
+  }
+}
