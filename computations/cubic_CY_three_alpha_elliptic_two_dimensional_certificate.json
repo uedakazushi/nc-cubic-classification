@@ -1,0 +1,23 @@
+{
+  "s_polynomial": "5*s^2-9",
+  "central_cut": {
+    "yyy": "1",
+    "yzx": "19/78",
+    "zyx": "-2/3",
+    "zzz": "-19/26",
+    "tyx": "-3/(13*s)",
+    "tyy": "-s/26",
+    "tyz": "-25*s/117",
+    "tzx": "-3*s/26",
+    "tzy": "-23*s/117",
+    "tzz": "-23/(26*s)",
+    "ttx": "-2*s**2/117",
+    "tty": "-3*s**2/26 - 1",
+    "ttz": "(-19*s**4 - 6)/(26*s**2)",
+    "ttt": "5*s/78"
+  },
+  "matrix_tangent_rank": 8,
+  "scalar_ideal_groebner_basis": [
+    1
+  ]
+}

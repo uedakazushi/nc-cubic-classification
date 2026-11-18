@@ -225,6 +225,158 @@ $A=0$ なら $\ell=0$ を得る。
 三関係に切断の一行を加えたJacobianの階数から表の値を得る。
 \end{proof}
 
+\begin{theorem}[一次元表現の射影次元の完全判定]
+\label{thm:cubic-CY-three-alpha-elliptic-character-projective-dimension}
+前定理の一次元表現を原点に取り、$p=1$、対称線型係数行列を $A$ とする。
+$g=qr$、$h=1+q^3+r^3$、$j=q((q^2-q+1)^2+(q+1)r^3)$ と置く。
+対称行列
+\[
+ B_0=\begin{pmatrix}a_0&b_0&d_0\\b_0&c_0&e_0\\d_0&e_0&f_0\end{pmatrix}
+\]
+の三次式を
+\[
+\begin{aligned}
+ \Psi(B_0)={}&g^2\bigl(a_0^3+c_0^3+f_0^3-b_0^3-d_0^3-e_0^3
+        +3(a_0b_0c_0+a_0d_0f_0+c_0e_0f_0)\bigr)\\
+ &-gh\bigl(a_0^2e_0+c_0^2d_0+f_0^2b_0+a_0b_0d_0+b_0c_0e_0+d_0e_0f_0\bigr)\\
+ &+h^2 b_0d_0e_0-j\det B_0
+\end{aligned}
+\]
+と定める。一次元加群の射影次元は
+$\Psi(\operatorname{adj} A)\ne0$ なら2、零なら無限である。
+従って階数1の $A$ は全てH3を排除し、
+階数2では核点が $E$ に入る場合に正確に無限射影次元となる。
+\end{theorem}
+\begin{proof}
+アフィン包絡 $D$ 上で、原点の右加群 $k$ の自由解消を取る。
+階数は順に $1,3,3,1$ であり、$d_1$ は $(x,y,z)$ の行、
+$d_3$ はその列である。
+$d_2$ の第 $i$ 列は、関係を $\sum_j x_j(d_2)_{ji}$ と書いた係数である。
+ポテンシャルの巡回恒等式 $\sum_j [x_j,r_j]=0$ から複体となり、
+随伴次数付きは先頭CY3環のKoszul解消なので完全である。
+この複体を $P_\bullet$ と書く。
+切断は前定理の中心元 $G$ を $t=1$ にした $w$ で割る。
+
+次数1のホモトピー $s_1$ と次数3のホモトピー $s_2$ を取り、
+\[
+ ds_1+s_1d=w,\qquad ds_2+s_2d=-s_1^2
+\]
+とする。正則中心商 $U$ 上の複体を
+$F_n=\bigoplus_{j\ge0}P_{n-2j}\otimes_D U$ とし、
+微分を $d+s_1+s_2$ とする。$s_i$ は和の添字を $i$ だけ下げる。
+元の解消が長さ3なので、これらの式で微分平方零となる。
+和の添字で濾過すると、各随伴項のコホモロジーは
+$P_\bullet\otimes_D U$ の次数0と1の $k$ である。
+$s_1$ の誘導する写像は、一つ前の添字の次数1への同型である。
+実際、$0\to P_\bullet\xrightarrow{w}P_\bullet\to
+P_\bullet\otimes_D U\to0$ の接続準同型がその逆となる。
+従って添字0の次数0だけが残り、$F_\bullet$ は $k$ の自由解消となる。
+
+ホモトピーは $t$ で斉次化し、$s_1$ の係数を二次、
+$s_2$ の係数を三次として上の二式を線型に解ける。
+全係数の分母には $r,q-1$ の因子だけが現れ、
+両ホモトピー式は全許容包絡へ特殊化する。
+実際、元の関係で割った次数四以下の空間の次元は一定である。
+ホモトピーを原点で評価すると、$s_1:P_1\to P_2$ は零となる。
+従って $F_5\to F_4$ は原点で零、$F_4\to F_3$ は $4$ 次正方行列で、
+その行列式は
+\[
+ (q-1)^{-2}\Psi(\operatorname{adj} A)
+\]
+である。検証器
+\path{verify_cubic_CY_three_alpha_elliptic_character_pd.py}
+は二つのホモトピー式、分母、評価行列と行列式を有理関数体上で再現する。
+従って $\operatorname{Ext}^4_U(k,k)$ の消滅はこの三次式の非零性と同値である。
+
+$k\otimes_D^{\mathbf L}U$ は完全な $U$ 複体で、
+コホモロジーは次数 $-1,0$ にともに $k$ を持つ。
+従って切断三角は $k\to k[2]$ を与え、
+この射は完全複体によるVerdier商で同型となる。
+もし $k$ が完全でなければ、この射の二乗は同商で非零であるから、
+$\operatorname{Ext}^4_U(k,k)$ も非零である。
+逆に有限射影次元なら、前命題の双対で
+$\operatorname{Ext}_U^i(k,U)$ は次数2にのみ集中するので、
+射影次元は2である。
+実際、有限生成射影解消の最後の次数で双対Extが零なら、
+双対複体の最後の全射が分裂し、元の解消も一段短縮できる。
+
+$A$ が階数1以下なら $\operatorname{adj} A=0$。
+階数2なら $\operatorname{adj} A$ は $\xi\xi^{\mathrm t}$ の非零倍で、
+$\Psi(\xi\xi^{\mathrm t})=
+\bigl(h\xi_1\xi_2\xi_3-g(\xi_1^3+\xi_2^3+\xi_3^3)\bigr)^2$ である。
+この平方の消滅が核点の境界条件を与える。
+\end{proof}
+
+\begin{corollary}\label{cor:cubic-CY-three-alpha-elliptic-character-critical-values}
+固定した滑らかな楕円アフィン包絡の中心ペンシルで、
+無限射影次元の一次元加群が存在する切断値は有限計算で全て得られ、
+高々八個である。
+\end{corollary}
+\begin{proof}
+包絡の一次元表現は三つの可換化したアフィン二次式の同時零点である。
+最高次式は滑らかな先頭三次ポテンシャルの偏微分なので、
+射影平面に共通零点を持たない。
+三式を斉次化した多項式環で、それらと $t$ の列は長さ4の正則列になる。
+従って $t$ は最初の三式の商で正則で、
+アフィンの一次元表現スキームの長さは三二次完全交叉の長さ8となる。
+各閉点で中央元の値と対称Jacobianを評価し、
+$\Psi(\operatorname{adj} A)=0$ となる点の中央値を取ればよい。
+前定理によりこの値集合が求める障害域である。
+\end{proof}
+
+階数3でも無限射影次元は起こる。
+例えば下の例と同じ先頭係数 $(1,2,3)$ を取り、
+中心切断を原点で零とし、$A=\operatorname{diag}(1,1,1/2)$ とする。
+このとき $\Psi(\operatorname{adj} A)
+=36(2(1/2)^3-5(1/2)^2+1)=0$ である。
+原点の自己 $\operatorname{Ext}^1$ は零だが、
+射影次元は無限なのでこの切断はH3から除外される。
+
+\begin{proposition}\label{prop:cubic-CY-three-alpha-elliptic-two-dimensional-simple}
+滑らかな無限位数の楕円境界を持つ、非PIの中央拡大には
+一次元表現が空で、二次元単純加群の無限射影次元によって
+H3から外れる中央三次切断がある。
+\end{proposition}
+\begin{proof}
+下の例と同じ先頭係数 $(1,2,3)$ とし、アフィン関係の右辺を
+$s x+3,\ s y+3,\ -z/s-3s^2$ とする。ここで $5s^2=9$ とする。
+\[
+ X=\begin{pmatrix}0&1\\1&0\end{pmatrix},\qquad
+ Y=\begin{pmatrix}1&0\\0&-1\end{pmatrix},\qquad Z=sXY
+\]
+とする。$YZ=-sX$、$ZX=-sY$、$XY=Z/s$ で、逆順の積は全て符号が変わる。
+$X^2=Y^2=1$、$Z^2=-s^2$ なので、三関係を満たす。
+$X,Y$ は全行列環を生成するため、この表現は単純である。
+
+中央切断は、この単純加群上で零になるように定数を取った次の式である。
+\[
+\begin{aligned}
+ G={}&y^3+\tfrac{19}{78}yzx-\tfrac23zyx-\tfrac{19}{26}z^3\\
+ &-t\bigl(\tfrac{3}{13s}yx+\tfrac{s}{26}y^2+\tfrac{25s}{117}yz
+     +\tfrac{3s}{26}zx+\tfrac{23s}{117}zy+\tfrac{23}{26s}z^2\bigr)\\
+ &-t^2\bigl(\tfrac{2s^2}{117}x+\tfrac{3s^2+26}{26}y
+           +\tfrac{19s^4+6}{26s^2}z\bigr)+\tfrac{5s}{78}t^3 .
+\end{aligned}
+\]
+その四交換子は元の次数四関係空間に入り、
+$G(X,Y,Z,1)=0$ である。
+三アフィン関係と $G$ の行列Jacobianは16行12列で、
+$5s^2=9$ では階数8となる。
+同時共役の微分は階数3なので、
+この単純加群の自己 $\operatorname{Ext}^1$ は次元1となる。
+命題\ref{prop:cubic-CY-three-alpha-elliptic-character-parity}の対合は
+有限射影次元の加群に成立するため、射影次元は無限である。
+一方、三アフィン関係と $G$ を可換化し $5s^2-9$ を加えたイデアルは
+Gr\"obner基底 $1$ を持ち、一次元表現は空である。
+\path{verify_cubic_CY_three_alpha_elliptic_two_dimensional.py}
+はこれらの中央性、行列Jacobianと可換イデアルを厳密検算する。
+
+同次包絡は $t=0$ の非PIなSklyanin環を商に持つため非PIである。
+この包絡はWaltonの定義IV.6の対角係数族に属し、
+二次元単純は同論文の予想V.9に対する反例となる
+\cite[定理I.4、定義IV.6、予想V.9]{WaltonSklyaninThesis}。
+\end{proof}
+
 \begin{example}\label{ex:cubic-CY-three-alpha-elliptic-character-obstruction}
 三次の先頭関係を $(p,q,r)=(1,2,3)$ とし、$a,b\ne0$ とする。
 次の非分裂包絡では、下の中央三次切断は無限位数の滑らかな楕円境界を持ち、
