@@ -1590,5 +1590,43 @@
     ],
     "used_part": "The LO1–LO5 relation data and open conditions. The LO6 isomorphism and LO11 opposite-algebra correspondence.",
     "verification": "The coordinate transform, regularity factors and central quadric are computed independently in nc-cubic-moduli. The underlying isomorphisms and AS regularity are taken from the pinned source."
+  },
+  "CY_one_segre_double_split_FDC_quadratic_v336": {
+    "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+    "files": [
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_DOUBLE_SPLIT_FULL_DECOMPOSABLE_COMPLETE.tex",
+        "sha256": "94f7d73678c5943465d57f37bb1ee3fe799cc5cb6487189a2b2958074279056e"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_DOUBLE_SPLIT_FULL_DECOMPOSABLE_REDUCTION.tex",
+        "sha256": "af8da096414384a83e660c4d51d7f363bffbf8596cbb01413bce4376d81daad3"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_DOUBLE_SPLIT_FULL_DECOMPOSABLE_ED_ATLAS.tex",
+        "sha256": "e04975026baaf3bc106bcd23cc2c8677f06f78af69929259922609b2d40bf623"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_DOUBLE_SPLIT_FULL_DECOMPOSABLE_REGULAR_EXTENSION.tex",
+        "sha256": "2315cf9245a2322ba43b2003d644bd5737f6885770458f763c123197a4e7e1a3"
+      }
+    ],
+    "used_part": "The complete FDC3 admissible ambient chart and its FD2–FD3, FEA1–FEA2, FRE1–FRE3 coefficient definitions.",
+    "verification": "The degree-three centrality calculation is independent. The upstream all-parameter regularity atlas and orbit proof were not rerun."
+  },
+  "CY_three_alpha_primitive_triangle_full_ambient_v336": {
+    "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+    "files": [
+      {
+        "path": "research/proofs/CY_ALPHA_TRIANGLE_CUBIC.tex",
+        "sha256": "9f5f850b99b81690a2b3982d38172840a39fc1aeec96b2764bb84dbcf32e207d"
+      },
+      {
+        "path": "research/proofs/CY_THREE_COMMUTATORS_REDUCTION.tex",
+        "sha256": "02a7afd9e62f11acffa7191d584e818c21243158b546a12440812afb9fa1560a"
+      }
+    ],
+    "used_part": "Sufficiency of the triangle ambient normal form for all six lower coefficients in the primitive-third-root range and the relevant CY-top convention.",
+    "verification": "The centre and its specialization, admissibility and geometric arrows are obtained in nc-cubic-moduli. The relevant upstream theorem proof was read; the upstream complete validation was not rerun."
   }
 }

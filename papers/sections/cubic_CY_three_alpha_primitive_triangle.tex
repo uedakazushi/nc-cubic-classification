@@ -1,0 +1,196 @@
+\subsection{原始三乗根の量子三角形の全中央切断}
+\label{subsec:cubic-CY-three-alpha-primitive-triangle}
+
+$q$ を原始三乗根とする。以下では
+命題\ref{prop:cubic-CY-three-alpha-quantum-triangle-incidence}の
+$A_i,B_i,X,Y,Z,\Omega,t$ を用いる。
+固定出典の三角形の定理により、六係数の全値でこの包絡はKoszul AS4かつCYである
+\cite{AS4CYpinned}。
+活動次数濾過の随伴環は $t$ を加えた量子多項式環なので、
+包絡はnoetherian整域である。
+
+\begin{proposition}\label{prop:cubic-CY-three-alpha-primitive-triangle-centre}
+$T=t^3$ とし、巡回三組 $(i,j,k)$ を $(x,y,z),(y,z,x),(z,x,y)$ とする。
+$X_i$ をそれぞれ $X,Y,Z$ と書き、$d=(2q+1)/9$、
+\[
+\begin{aligned}
+ L_i={}&-\frac{2(q-1)}9A_i^2A_jA_k B_i
+         -\frac q3 A_i^2B_jB_k-dB_i^3,\\
+ L_\Omega={}&-\frac{q+1}3\sum_i A_jA_kB_i^2-\frac{q+2}3B_xB_yB_z,\\
+ C_0={}&-\frac{q+2}9\sum_i A_iA_j^2A_k^2B_i^2
+         +\frac{q-1}9\sum_i A_iB_j^2B_k^2
+\end{aligned}
+\]
+と置く。全中心は $t,X,Y,Z,\Omega$ の生成する可換環で、
+唯一の関係は次の式である。
+\begin{equation}\label{eq:cubic-CY-three-alpha-primitive-triangle-F}
+\begin{aligned}
+ \Omega^3&=XYZ+
+ T\left(\frac{q-1}3 A_xA_yA_z\Omega^2+
+          \Omega\sum_i A_iB_iX_i+d\sum_i A_i^3X_i^2\right)\\
+ &\quad+T^2\left(L_\Omega\Omega+\sum_i L_iX_i\right)+T^3 C_0 .
+\end{aligned}
+\end{equation}
+包絡は $k[t,X,Y,Z]$ 上で自由階数27である。
+$t=1$ の包絡の中心も同じ式の $T=1$ で与えられ、
+正規整域である。中心の分数体上で包絡は次数3の中心斜体となる。
+\end{proposition}
+\begin{proof}
+活動次数の先頭で中央になる語の指数は全て同じ剰余を持つ。
+従って最高項を $X,Y,Z,\Omega$ の積で引く帰納法により中心を生成できる。
+この議論は $t=1$ でも同じである。
+余り指数が各々 $0,1,2$ に入る順序語を選ぶと、
+$k[t,X,Y,Z]$ 上で張り、最高語の指数の剰余により独立である。
+中心では $1,\Omega,\Omega^2$ だけが同じ剰余の三類に対応し、
+これらは $k[t,X,Y,Z]$ 上で独立である。
+$\Omega^3$ を順序語へ還元して得る関係を $t$ で斉次化すると
+\eqref{eq:cubic-CY-three-alpha-primitive-triangle-F} となる。
+\path{verify_cubic_CY_three_alpha_primitive_triangle_centre.py}
+は全六係数でこの恒等式を再計算する。
+
+$t=1$ の中心は整域であり、上式を左辺へ集めた多項式を $F$ と書く。
+その次数三の成分は $\Omega^3-XYZ$。
+四偏導関数の最高成分は $3\Omega^2,-YZ,-XZ,-XY$ である。
+この四元の零集合は三つの軸の和で次元1なので、特異集合の次元も高々1。
+三次元の超曲面はCohen--Macaulayであり、Serreの判定から正規である。
+包絡の中心上の階数は $27/3=9$。
+中心の分数体への局所化は有限次元整域であり、従って中心斜体である。
+\end{proof}
+
+\begin{theorem}\label{thm:cubic-CY-three-alpha-primitive-triangle-test}
+$G$ を $X,Y,Z,\Omega,t^3$ の非零線型結合とし、
+少なくとも一つの活動係数を非零とする。
+$R=\mathcal B/(G)$、$V=(\mathcal B[t^{-1}])_0$、$U=V/(G|_{t=1})$ と置く。
+$C=Z(V)/(G|_{t=1})$ を上の三次式と切断の一次式から構成する。
+次の条件がH3の必要十分条件である。
+\begin{enumerate}
+\item $C$ は整域で、有限 $C$ 加群 $U$ はtorsion-freeである。
+\item $K=\operatorname{Frac}C$ 上の九次元代数 $U_K$ の根基は零であり、
+中心の次元は1である。滑らかな射影モデル上で、
+この次数3の中心単純代数のBrauer類に非零の剰余を持つ素因子がある。
+\item $P=k[T,X,Y,Z]$ の四つの標準アフィンチャートで
+\[
+ A_f=\bigl(R^{(3)}[f^{-1}]\bigr)_0,
+ \qquad f\in\{T,X,Y,Z\},
+\]
+と置く。それぞれの任意の二つの単純加群 $S_1,S_2$ に対し
+$\operatorname{Ext}^3_{A_f}(S_1,S_2)=0$。
+空のチャートではこの条件は自動的に成立する。
+\end{enumerate}
+第三条件の単純加群の次元は高々27である。
+三条件はいずれも有限の厳密な代数手順で調べられる。
+この判定は切断の $t=0$ の曲線の既約性や滑らかさを仮定しない。
+\end{theorem}
+\begin{proof}
+\medskip\noindent\textbf{整域性}\par
+$t=0$ で $G$ の像は零ではないので、$t$ は $R$ 上で正則である。
+実際、$th=Gr$ なら $\mathcal B/(t)$ の整域性から $r=tr'$ となり、
+$t$ を消して $h=Gr'$ を得る。
+従って $R$ の整域性は $U$ の整域性と同値。
+定数だけの切断は $t^3$ の倍数で整域にはならない。
+
+$\overline G=G|_{t=1}$ とする。
+$Z(V)\cap\overline G V=\overline G Z(V)$ である。
+右辺への包含は、もし $\overline G a$ が中央であれば整域 $V$ で
+$\overline G$ を消して $a$ の中央性を得ることによる。
+従って $C\to U$ は単射であり、第一条件は整域性に必要である。
+$C$ が整域なら $(\overline G)$ は $Z(V)$ の高さ1の素イデアル。
+命題\ref{prop:cubic-CY-three-alpha-primitive-triangle-centre}の正規性から、
+その局所環は離散付値環となる。$V$ はこの局所環上で有限torsion-free、
+従って自由階数9である。剰余を取ると $\dim_K U_K=9$ となる。
+第一条件の下では $U\to U_K$ は単射なので、
+整域性は $U_K$ が斜体であることに同値である。
+
+$U_K$ の元は全て $K$ 上のモニック三次式を満たす。
+実際、離散付値環上の自由orderの元はその分数体でのreduced characteristic polynomialを満たす。
+その係数は分数体に属し、通常の左乗法の特性多項式の根の対称式として整なので、
+離散付値環に属する。これを剰余体に特殊化する。
+九次元の斜体が中心拡大を持つなら、次元公式より九次の可換体拡大である。
+標数零の原始元定理によりモニック三次条件に反する。
+従って必要な斜体は中心が正確に $K$ であり、その次数は3。
+逆に根基零と中心次元1は次数3の中心単純性を与える。
+この素次数では斜体性はBrauer類の非零性と同値である。
+
+$K$ は可換三次曲面の関数体である。
+実際、$\overline G$ で一つの中心座標を消去し、得られる式の射影閉包を取る。
+最高次数の $\Omega^3-XYZ$ は一次因子を持たず、その次数は消去後も3である。
+整な三次曲面で二重点があれば、その点からの射影で有理となる。
+三重点があれば平面三次曲線上の錐なので、その曲線の正規化上にruledとなる。
+滑らかな三次曲面は代数閉体上で有理である。
+従って $K$ の滑らかな射影モデルは有理曲面または滑らかな曲線上のruled曲面と
+双有理であり、Brauer群は零となる。最後は曲面のBrauer群の双有理不変性、
+射影束の公式およびTsenの定理による\cite{StacksTsenBrauer}。
+滑らかな曲面上のpurityから、$\operatorname{Br}(K)$ の類が零である
+必要十分条件は全素因子で剰余が零であること。
+よって第二条件を得る。
+
+\medskip\noindent\textbf{射影側の有限大域次元}\par
+$\mathcal B^{(3)}$ は次数1の四中心元を持つ多項式環 $P$ 上で
+自由階数27である。これは上の順序基底に $t$ の指数を $0,1,2$ の
+剰余で一意に足して得られる。
+$R^{(3)}$ はこれの有限商なので、$\qgr R$ は
+$\mathbb P^3=\operatorname{Proj}P$ 上の対応する有限な代数層の
+coherent加群圏と同値である。
+標準四開集合での代数は $A_f$ であり、
+各代数は三変数多項式環の上で高々27元で生成される。
+各単純はこの中央多項式環の閉点ファイバーに属すので、次元は高々27。
+系\ref{cor:cubic-CY-three-alpha-triangle-finite-effective}と同じ
+半完全な完備化とTorの議論から、単純間の第三Extの消滅は
+各 $A_f$ の大域次元が高々2であることと同値である。
+
+第三条件が成り立てば局所Extと局所大域スペクトル系列から
+$\qgr R$ の大域次元は有限である。
+逆にH3であればSerre双対性から $\qgr R$ の第三Extは消える。
+標準アフィンにセンターを局所化したExtは
+中央式の冪に沿うtwist付きExtの直極限で計算できる。
+coherent加群は標準アフィンから延長できるので、
+各 $A_f$ で第三Extが消える。
+
+整域切断では、$t=0$ の商は正次数でHilbert値 $3n$ を持つ。
+この商は有限な射影代数層の加群であり、その構造対象は有限長ではない。
+従って $t$ の降鎖とHilbert多項式から
+Gabriel--Krull rank-one torsion-free性が従う。
+残るH3公理は正則中央三次商の認識定理を適用して得る。
+
+\medskip\noindent\textbf{有限判定}\par
+$C$ の整域性は三次式の因数分解で判定する。
+$U$ のtorsionは、一般点で選んだ基底の分母を払って得る
+有限 $C$ 加群写像の核として、加群のGr\"obner基底で計算できる。
+$U_K$ の根基と中心は、正標数を用いず、正則表現のtrace対形式と交換子の
+線型方程式で判定できる。
+次数3の中心単純代数はWedderburnの巡回性定理によりsymbol表示を持つ。
+その表示の探索は、有理関数係数の次数上界を順に増やし、
+三乗が非零スカラー、$q$ 交換関係、九基底語の独立性を
+有限多項式条件として解くことで停止する。
+symbol表示 $(f_0,g_0)_q$ を得れば、素因子の剰余は
+$f_0^{v(g_0)}/g_0^{v(f_0)}$ の単元剰余の三乗類である。
+調べる素因子は滑らかな射影モデル上の $f_0,g_0$ の零と極に限られる。
+第三条件は各 $A_f$ の対角双加群の有限自由解消の最初の五項と、
+次元27以下の単純表示の行列を用いる。
+有限な多項式系の空性へ帰着する手順は
+系\ref{cor:cubic-CY-three-alpha-triangle-finite-effective}と同じである。
+\end{proof}
+
+\begin{proposition}\label{prop:cubic-CY-three-alpha-primitive-triangle-arrows}
+上の許容切断間の全点付き幾何学的矢は、共通スカラーを除き、
+$t\mapsto d_0t'$、$x_i\mapsto\lambda_i x'_{\pi(i)}$ により与えられる。
+ここで $d_0,\lambda_i\ne0$、$\pi\in S_3$ であり、
+偶置換では $q'=q$, $\eta=1$、奇置換では $q'=q^{-1}$, $\eta=-q$ とする。
+条件は
+\[
+ \eta\lambda_j\lambda_k A'_{\pi(i)}=d_0\lambda_i A_i,\qquad
+ \eta\lambda_j\lambda_k B'_{\pi(i)}=d_0^2 B_i
+\]
+と、代入により切断直線 $kG$ が $kG'$ に移ることである。
+特に慣性はこの明示作用での安定化群である。
+\end{proposition}
+\begin{proof}
+中央一次の直線は $kt$ である。$t=0$ の三量子関係に各純平方が
+現れないので、変換行列の各列で異なる二行の積が零になる。
+従って変換行列は単項。$t$ に比例した平行移動は、
+各関係で $t x'_j,t x'_k$ の係数を比較すると $q\ne1$ により消える。
+元関係に代入すると表示した式となる。偶・奇の違いは
+$q$ 交換子の語順の反転だけから生じる。
+これらの式と切断直線の条件は逆に次数付き同型を与えるので、
+反Serre環による内在的再構成から全矢となる。
+\end{proof}

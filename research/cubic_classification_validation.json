@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "version": "classification-v335",
+  "version": "classification-v336",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -4700,5 +4700,26 @@
     "scope": "All LO4 parameters admit the regular central quadric of M. Central cubics inject into its quadratic quotient, with dimensions 9, 16, 25 in degrees 2 through 4.",
     "exact_control": "PASS exact commuting-plane and centrality identities in the unmarked original degrees 2 and 3 with a linear relation basis. PASS normalization of the two regularity factors and quadric discriminant.",
     "main_build": "LuaLaTeX PASS, 490 pages, no overfull boxes or undefined cross-references/citations"
+  },
+  "CY_one_segre_double_split_FDC_quadratic_v336": {
+    "proof": "papers/sections/cubic_CY_one_segre_double_split.tex",
+    "validator": "computations/verify_cubic_CY_one_segre_double_split_FDC.py",
+    "scope": "Regular central quadric throughout FDC3, with an injection of degree-three centres into the quadratic quotient.",
+    "exact_control": "PASS direct four-variable fraction-field computation: the 48 by 64 degree-three relation span has rank 44 and contains all four commutators. The reproducer uses the same sparse pivot algorithm.",
+    "main_build": "LuaLaTeX PASS, 494 pages, no overfull boxes or undefined cross-references/citations"
+  },
+  "CY_three_alpha_primitive_triangle_v336": {
+    "proof": "papers/sections/cubic_CY_three_alpha_primitive_triangle.tex",
+    "validator": "computations/verify_cubic_CY_three_alpha_primitive_triangle_centre.py",
+    "scope": "Full primitive-third-root triangular centre in all six coefficients. Exact geometric H3 admissibility and arrows for every central cutting line, including non-volume cuts and every boundary type.",
+    "exact_control": "PASS symbolic PBW check of the 13-term primitive-root centre equation in the six independent coefficients.",
+    "ordinary_proof": "Regularity of the ambient normal form from pinned as4. Normality and DVR specialization of the centre, degree-three cyclic Brauer residue test for the domain, and Ext^3 of pairs of simples of dimensions at most 27 on the four standard charts. The variable-input residue and Ext decision procedures are proved but are not implemented end to end.",
+    "main_build": "LuaLaTeX PASS, 494 pages, no overfull boxes or undefined cross-references/citations"
+  },
+  "CY_three_alpha_finite_secant_open_v336": {
+    "proof": "papers/sections/cubic_CY_three_alpha_quantum_triangle.tex",
+    "scope": "For finite order N at least 4, the secant affine chart away from two Chebyshev central values has finite global dimension exactly when the indicated GWA zeros outside the removed orbits are simple.",
+    "ordinary_proof": "Chebyshev shift invariance, the existing faithful difference presentation and the fixed-ring proof extend to finite order. Bavula's theorem applies to the resulting Dedekind base with finite orbits. The two removed affine fibres remain open.",
+    "main_build": "LuaLaTeX PASS, 494 pages, no overfull boxes or undefined cross-references/citations"
   }
 }

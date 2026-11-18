@@ -347,6 +347,52 @@ $E(u)/(qu^2)$ を新しい $b$ に掛けると表示した定義元を得る。
 非捩れのDedekind基底の判定は前節と同様に適用できる。
 \end{proof}
 
+\begin{proposition}\label{prop:cubic-CY-three-alpha-secant-finite-affine-open}
+命題\ref{prop:cubic-CY-three-alpha-secant-difference}の割線型で
+$q$ は位数 $N\ge4$ の根とする。
+$\kappa_0=-\rho/(q^2-1)$ とし、同じChebyshev多項式を用いて
+\[
+ C_x=\chi_N(x),\qquad H=C_x^2-4\kappa_0^{2N}
+\]
+と置く。$C_x$ はアフィン切断 $U$ の中央元である。
+$U[H^{-1}]$ が有限大域次元を持つ必要十分条件は、
+命題\ref{prop:cubic-CY-three-alpha-secant-difference}の有理式の
+$u^2\notin q^{\mathbb Z}$ における零点が全て単純であること。
+この場合、大域次元は2である。
+\end{proposition}
+\begin{proof}
+$x$ を含む二関係は量子三角形の場合と一致する。
+右 $k[x]$ 上で $1,y,z$ を生成元とした左 $x$ の行列は、
+分数体拡大 $k(u)$ 上で三固有値 $x(u),x(qu),x(q^{-1}u)$ を持つ。
+$q^2\ne1$ よりこれらは相異なる。
+それぞれに $\chi_N$ を適用した値は $\kappa_0^N(u^N+u^{-N})$ で等しいので、
+行列恒等式から $C_x$ は中央となる。
+$H$ の $k[u^{\pm1}]$ における像は
+$\kappa_0^{2N}(u^N-u^{-N})^2$。
+その零集合は $u^{2N}=1$、すなわち $u^2\in q^{\mathbb Z}$ である。
+従って $k[x]$ 上で $H$ を可逆にすると、同じ閉点を除く全 $f_j(x)$ が可逆になり、
+逆も成り立つ。
+
+$A_0=k[u^{\pm1},(u^2-q^j)^{-1}:j\in\mathbb Z]$、
+$P=(u-u^{-1})\mathcal T$、$Q=(u-u^{-1})b(u)\mathcal T^{-1}$
+による一般化Weyl環を考える。
+命題\ref{prop:cubic-CY-three-alpha-quantum-triangle-constants-gwa}の
+固定環の証明は、$q^2\ne1$ とこの分母の可逆性だけを用いる。
+割線の補正を施した $b$ は同じ $b(u^{-1})=b(qu)$ を満たすので、
+$U[H^{-1}]$ はこのGWAの反転固定環であり、
+反不変単元 $u-u^{-1}$ により半直積とMorita同値となる。
+標数零の平均化で大域次元はGWAと同じである。
+その定義元 $a(u)=QP$ は割線の表示式であり、
+$P_x\ne0$ から恒等的に零ではない。
+基底 $A_0$ はDedekind環で、その全極大イデアルは $q$ の有限軌道に入る。
+Bavulaの定理\cite[Theorem 3.1]{BavulaGWAOverview}は、定義元の重根があれば
+無限大域次元、全て単純なら有限軌道により大域次元2を与える。
+\end{proof}
+
+従って有限位数量子割線では、この零点判定に加えて
+$C_x=2\kappa_0^N$ と $C_x=-2\kappa_0^N$ に支えを持つアフィン局所の判定が残る。
+これは射影境界 $t=0$ の判定とは別である。
+
 \begin{theorem}\label{thm:cubic-CY-three-alpha-triangle-finite-boundary}
 $q$ が正確に有限位数 $N\ge3$ であるとする。
 $A_x=A_y=A_z=1$ の量子三角形で、任意の三定数項と任意の $D$ に対し、

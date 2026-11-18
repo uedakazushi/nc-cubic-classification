@@ -467,3 +467,38 @@ $\Psi_+=\Phi_+=0$ または $\Phi_+=\Phi_-=0$ となる。
 \path{verify_cubic_CY_one_segre_double_split_quadratics.py}
 の \texttt{--cubic TD1\_quotient} で再生成する。
 \end{proof}
+
+\begin{proposition}\label{prop:cubic-CY-one-segre-double-split-FDC-quadratic}
+両外側四交差の分解族(FDC3)を考える。
+固定出典(FD2)、(FRE1)、(FRE3)の係数を用いて
+$U=a-(hc+kd)/s$、$V=sb+c+d$、
+$r_0=\mathcal A/e$ と置くと、
+\[
+ Q_0=r_0^2U^2+
+       \left(64hk r_0^2/s+32pm r_0+64s\right)UV+V^2
+\]
+は全許容域で正則中央二次である。
+従って $Z(\mathcal B)_3\to Z(\mathcal B/(Q_0))_3$ は単射で、
+二次商の次数二、三、四の次元は $9,16,25$ である。
+\end{proposition}
+\begin{proof}
+$st+h-k=0$ により $[U,V]$ は規格化した実交換子そのものである。
+$(p,m,d/e,e)$ を座標とすると、固定出典(FEA1)--(FEA2)の
+\[
+ \frac{\mathcal A}{e}=\frac{s(d/e+m)}{pk},
+ \qquad
+ \frac{\mathcal C}{d}=\frac{2(st-16mh(d/e))}{pk(d/e)}
+\]
+により、元の六関係の係数は $e$ に関して一次式になる
+\cite{AS4CYpinned}。
+次数三の関係は、六関係の左右それぞれに一次語を掛けることで張られる。
+四変数有理関数体上のこの48行、64列の行列は階数44で、
+$[Q_0,a],[Q_0,b],[Q_0,c],[Q_0,d]$ は全てその行空間に属す。
+公開検証器 \path{verify_cubic_CY_one_segre_double_split_FDC.py} は
+この行空間の包含をGCD約分付きの疎な行消去で再計算する。
+元の係数は(FDC3)で正則、次数三商の次元は全域で一定なので、
+中央性は全許容値へ特殊化する。
+可換な独立二元の非零二次式であり、整域では因子が全て非零なので正則である。
+一次中心が零であることと単射・Hilbert値は
+命題\ref{prop:cubic-CY-one-segre-double-split-quadratic-reduction}の証明と同じ。
+\end{proof}
