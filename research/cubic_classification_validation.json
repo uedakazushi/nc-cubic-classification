@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "version": "classification-v317",
+  "version": "classification-v318",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -4516,6 +4516,17 @@
     "exact_control": "PASS fixed rational insertion projections in degrees 3 and 4. Each rank-six first-order obstruction has zero projection of the solution kernel onto all three lower coefficients.",
     "scope": "All gamma-zero alpha H3 cuts and geometric pointed arrows. Singular labels are triangle, nodal cubic, and secant line plus conic; smooth leading forms use existing full Hesse Clifford criteria.",
     "admissibility_proof": "Axis coefficients and affine centre singularities of rank one and nondegenerate Hessian. Projective boundary completion, quaternion residue division, finite-centre gl dimension, and AS Gorenstein recognition.",
+    "main_build": "LuaLaTeX PASS, no overfull boxes or undefined cross-references/citations"
+  },
+  "CY_three_alpha_quantum_triangle_v318": {
+    "proof": "papers/sections/cubic_CY_three_alpha_quantum_triangle.tex",
+    "validators": [
+      "computations/verify_cubic_CY_three_alpha_triangle_center.py",
+      "computations/verify_cubic_CY_three_alpha_triangle_difference.py"
+    ],
+    "exact_control": "PASS generic six-direction central cubic identities, all three pure-cube lifts at primitive cube roots, full three difference relations, scalar cut, reflection, and quartic identity.",
+    "scope": "All triangular central-cubic incidence, axis necessary conditions, all normalized volume-pencil domains and their geometric arrows, and exact non-torsion Ore-chart finite global dimension. Full H3 admissibility outside this Ore chart is not inferred.",
+    "finite_order_center": "For every N>=3 and all three constants, the augmented 3 by 3 left multiplication has the same three Chebyshev values, giving all central generators and rank N^3.",
     "main_build": "LuaLaTeX PASS, no overfull boxes or undefined cross-references/citations"
   }
 }

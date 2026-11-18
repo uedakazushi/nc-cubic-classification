@@ -1,0 +1,244 @@
+\subsection{三交換子の量子三角形における中央切断}
+\label{subsec:cubic-CY-three-alpha-quantum-triangle}
+
+\begin{proposition}\label{prop:cubic-CY-three-alpha-quantum-triangle-incidence}
+三交換子の $\alpha$ 型で $\gamma\ne0$、先頭式が三角形の場合を考える。
+中央一次元を $t$ とし、三関係を
+\[
+ yz-qzy=tA_x x+t^2B_x,\qquad zx-qxz=tA_y y+t^2B_y,\qquad
+ xy-qyx=tA_z z+t^2B_z
+\]
+と規格化する。ただし $q\in k^*\setminus\{1,-1\}$ である。
+\begin{align*}
+ \Omega={}&xyz+\frac{t(A_x x^2+q^2 A_y y^2+A_z z^2)}{q^2-1}
+                  +\frac{t^2(B_x x+q B_y y+B_z z)}{q-1}.
+\end{align*}
+$q^3\ne1$ では全中心三次は $k\Omega\oplus kt^3$ である。
+H3であれば $A_x A_y A_z\ne0$ であり、このとき対角変換で
+$A_x=A_y=A_z=1$ にできる。
+$q$ が原始三乗根なら、更に
+\[
+ X=x^3+q^2A_yA_z t^2x,\qquad
+ Y=y^3+q^2A_zA_x t^2y,\qquad
+ Z=z^3+q^2A_xA_y t^2z
+\]
+を加えた五元が全中心三次の基底である。
+切断における各 $X,Y,Z$ 係数を $c_x,c_y,c_z$ と書けば、
+H3に対しては各 $(c_i,A_i)$ が同時に零でないことが必要である。
+\end{proposition}
+\begin{proof}
+固定出典\cite{AS4CYpinned}の三角形の $\gamma\ne0$ 必要表示で、
+先頭係数 $\rho$ は $\rho\notin\{0,2,-2\}$、$q=(2+\rho)/(2-\rho)$ である。
+元の低次二次項は対角なので表示の六係数を得る。
+$t=1$ の順序 $x<y<z$ への還元により、
+$\Omega$ と、原始三乗根での $X,Y,Z$ が中央となることを直接確認できる。
+この全係数恒等式は
+\texttt{verify\_cubic\_CY\_three\_alpha\_triangle\_center.py} に与える。
+
+活動次数の随伴環は $t$ を中央とする三変数量子多項式環である。
+上の関係の最高活動部分から順序語が張り、
+AS4のHilbert値により随伴環の同定が従う。
+そこで斉次語 $x^iy^jz^k$ が中央になるのは
+$q^{i-j}=q^{j-k}=q^{k-i}=1$ の場合に限る。
+次数2以下には非定数中心がなく、次数3では $xyz$、
+さらに $q^3=1$ の場合にのみ三純三乗が加わる。
+これらは全て上で中央に持ち上がっているので、最高活動次数を順に引くと主張の基底を得る。
+
+$x$ 軸で $A_x=0$ とし、原始三乗根の場合は $c_x=0$ とする。
+$x$ 軸は点対象を与え、その点イデアルの二乗に全切断が入る。
+実際、$\Omega$ の $t x^2$ 係数は $A_x/(q^2-1)$ であり、
+$Y,Z,t^3$ の一次化も零である。
+$x$ を恒等に規格化したtails自己拡大では $t$ の作用成分が一定であり、
+$y,z$ の成分は次次数へ $q,q^{-1}$ 倍される。
+残る $yz$ 関係は $A_x=0$ のため一次化で零となる。
+従って全三成分が自由で、shiftの行列式は1となり、
+奇数Serre障害に反する。巡回的に残る軸も同様である。
+
+$q^3\ne1$ では従って全 $A_i$ が非零である。
+活動生成元の倍率 $u,v,w$ を
+$u^2=(A_yA_z)^{-1}$、$v^2=(A_zA_x)^{-1}$、$w^2=(A_xA_y)^{-1}$、
+$uvw=(A_xA_yA_z)^{-1}$ と選ぶ。
+この変換が全 $A_i$ を1へ移すので、
+非三乗根の場合に未判定の許容性は、
+三つの定数項と中心ペンシルを持つ量子三角形族に限られる。
+\end{proof}
+
+\begin{theorem}\label{thm:cubic-CY-three-alpha-quantum-triangle-constants-domain}
+前命題で $A_x=A_y=A_z=1$ とし、$B_x,B_y,B_z,D$ は任意とする。
+切断 $\Omega+Dt^3$ は全 $q\ne0,\pm1$ で整域と
+Gabriel--Krull rank-one torsion-free条件を与える。
+$q^3\ne1$ では、これらが量子三角形の全H3候補である。
+\end{theorem}
+\begin{proof}
+$t=1$ の環を $V$、切断を $U=V/(\Omega+D)$ と書く。
+$\rho^2=q$、$h_0=q^2-1$ とし、
+$\mathcal T f(u)=f(qu)\mathcal T$ を満たす差分作用素環を使う。
+\[
+ x(u)=-\frac{\rho(u+u^{-1})}{h_0},\qquad j=(1-q)x(u),\qquad
+ y_0=\frac{B_y+jB_z}{j^2-1},\qquad
+ z_0=\frac{jB_y+B_z}{j^2-1}.
+\]
+$E(u)=(u^2-q^2)(u^2-1)$ と置き、差分係数を
+\begin{align*}
+ b(u)={}&\frac{q(u^2+1)(u^2+q^2)+u^2h_0^3D}{h_0^2E(u)}
+ -\frac{\rho B_xu(u^2+q)}{(q-1)E(u)}\\
+ &+\frac{(q+1)^2\bigl(q u^4(B_y^2+B_z^2)+\rho u^3(u^2+q)B_yB_z\bigr)}
+ {(u^2-q)^2E(u)}
+\end{align*}
+とする。代入
+\[
+ x\longmapsto x(u),\quad
+ y\longmapsto\mathcal T+y_0+b(u)\mathcal T^{-1},\quad
+ z\longmapsto\rho\bigl(u\mathcal T+u^{-1}b(u)\mathcal T^{-1}\bigr)+z_0
+\]
+は三関係と $\Omega+D$ を消す。
+例えば $y_0,z_0$ は $jz_0-y_0=B_y$、$jy_0-z_0=B_z$ から決まり、
+$b(u),b(qu)$ は $yz-qzy=x+B_x$ と $\Omega=-D$ の $\mathcal T^0$ 係数の連立一次式から得られる。
+全係数の検証器は
+\texttt{verify\_cubic\_CY\_three\_alpha\_triangle\_difference.py} である。
+表示式の分母は許容域で零多項式にならないので、全閉値に特殊化する。
+
+先頭環では切断の先頭項が正則中心元 $xyz$ なので、
+$U$ は $x^iy^jz^k$ ($ijk=0$) を濾過基底とする。
+$j+k=n$ が一定の項の最高 $\mathcal T$ 係数を取ると、
+定理\ref{thm:quantum-triangle-faithful-difference} の証明と同じく
+$F(x(u))+u^n G(x(u))+\sum_{k=1}^{n-1}c_k u^k$ の形であり、これらは独立である。
+$y_0,z_0$ は指数0なので、この最高係数の計算に影響しない。
+従って差分模型は忠実で、$U$ は整域である。
+$t$ は正則中心元で、斉次切断を $t$ で局所化すると $U[t,t^{-1}]$ になるので元の斉次環も整域である。
+
+階数の条件については、
+$R/(t)$ が量子平面への全射を持つので、
+$\qgr$ におけるその構造対象は有限長でない。
+中心 $t$ の冪による無限降鎖とHilbert多項式の次数を使えば、
+補題\ref{lem:r13-one-chart-smoothness}に先立つrank-oneの議論と同様に
+構造対象のGabriel--Krull rank-one torsion-free性を得る。
+具体的には $t$ の各冪の連続商が $\pi(R/(t))$ のshiftであり、
+有限長部分圏で割った後も鎖は真に減少する。
+一方、整域の任意の非零右イデアルの商はHilbert多項式の次数が1以下となるので、
+第二Serre商で構造対象の像は単純であり、低次元部分対象を持たない。
+中心三次と軸での排除から、非三乗根ではこれが全H3候補である。
+\end{proof}
+
+\begin{proposition}\label{prop:cubic-CY-three-alpha-quantum-triangle-constants-gwa}
+前定理の $q$ が非捩れであるとする。
+$x$ の元
+\[
+ f_j(x)=x^2-\frac{q}{(q^2-1)^2}(q^j+q^{-j}+2),\qquad j\in\mathbb Z
+\]
+の積からなる集合で $U$ を左右Ore局所化できる。
+$\xi=u/\rho+\rho/u$ とし、
+\[
+ a(u)=\frac{q\xi^2+(q-1)^2}{(q^2-1)^2}
+       +\frac{(q^2-1)D}{q}-\frac{B_x\xi}{q-1}
+       +\frac{(q+1)^2(B_y^2+B_z^2+\xi B_yB_z)}{q(\xi^2-4)}
+\]
+と置く。この局所化が有限大域次元を持つ必要十分条件は、
+$a(u)$ の $u\ne0$、$u^2\notin q^{\mathbb Z}$ における全零点が単純であることである。
+従ってその域に重根を持つ係数ではH3切断は存在しない。
+\end{proposition}
+\begin{proof}
+左右 $x$ 乗法の行列を $1,y,z$ 上で比較する。
+$1$ の行を除けば、定理\ref{thm:quantum-triangle-gwa}の二次ブロックと同じであり、
+定数項は $1$ 方向への係数だけを変える。
+$x=x(u)$ での二つの固有値は $x(qu),x(q^{-1}u)$ である。
+従って $f_j$ の行列の行列式は
+$f_j(x)f_{j+2}(x)f_{j-2}(x)$ となる。
+随伴行列による分母払いと語長の帰納から左右Ore条件を得る。
+正則性は前定理の整域性による。
+
+$A_0=k[u^{\pm1},(u^2-q^j)^{-1}:j\in\mathbb Z]$、
+$r(u)=u-u^{-1}$ とする。
+差分環内で $P=r(u)\mathcal T$、$Q=r(u)b(u)\mathcal T^{-1}$ と置くと、
+$QP=a(u)$、$PQ=a(qu)$ である。
+これは $r(u)r(q^{-1}u)=E(u)/(q u^2)$ を代入して得られる。
+従って $P,Q$ と $A_0$ から一般化Weyl環 $\mathcal G$ が得られる。
+$a$ は $u\mapsto q/u$ で不変なので、
+$u\mapsto u^{-1}$、$P\mapsto-Q$、$Q\mapsto-P$ による反転 $\iota$ が定義できる。
+また $b(u^{-1})=b(qu)$ であり、$x,y,z$ は固定される。
+$y_0,z_0$ の分母 $j^2-1$ は $A_0$ 上可逆である。
+
+$A_0^\iota$ は $k[x]$ に $f_j(x)$ の逆元を加えた環である。
+$P,Q$ は $y-y_0,z-z_0$ の $A_0$ 線型結合であり、
+両交換作用は $A_0$ を保つ。
+従って $\mathcal G$ は左 $A_0$ と局所化した $U$ の積で張られ、
+平均化から固定環は正確に局所化した $U$ である。
+$r(u)$ は反不変単元なので、冪等元 $(1+\iota)/2$ はfullとなる。
+従って固定環は半直積 $\mathcal G\rtimes\langle\iota\rangle$ とMorita同値であり、
+標数零の平均化によりその大域次元は $\mathcal G$ と等しい。
+
+$A_0$ はLaurent多項式PIDの局所化である。
+非捩れ $q$ では残る極大イデアルの $q$ 軌道が無限なので、
+既出のBavulaのDedekind基底の定理\cite[Theorem 3.1]{BavulaGWAOverview}を適用できる。
+従って有限大域次元である条件は、残る零点が全て単純であることであり、
+有限なら大域次元は2以下である。
+この条件は、表示の $a(u)$ に $\xi^2-4$ を掛けた四次式の重根から判定できる。
+実際、局所化した域では $\xi^2-4$ と $d\xi/du$ はともに非零である。
+H3なら中央 $t$ のアフィン局所化も有限大域次元であり、
+更なるOre局所化もこれを保つので、重根を持つと非H3となる。
+\end{proof}
+
+\begin{proposition}\label{prop:cubic-CY-three-alpha-quantum-triangle-constants-arrows}
+$q^3\ne1$ における前定理の候補の全幾何学的矢は、
+次の変換による $\mathfrak S_4$ の作用で与えられる。
+偶三置換と積1の三符号変更は $B_x,B_y,B_z$ へ同じように作用し、$q,D$ を固定する。
+奇置換の代表は
+\[
+ (q;B_x,B_y,B_z;D)\longmapsto
+ (q^{-1};-qB_y,-qB_x,-qB_z;-q^2D)
+\]
+である。この作用群oidを許容切断に制限すると全点付きH3同値を得る。
+\end{proposition}
+\begin{proof}
+$Z(B)_1=kt$ は随伴環の中心から従う。
+向き先も規格化表示で、活動生成元に対する平行移動を許して同型を考える。
+$t=0$ の量子関係に各純平方が現れないため、
+変換行列の異なる二行の同じ列の係数の積は零である。
+従って行列は対角と置換の積である。
+次いで各関係の $t$ を含む非対応活動変数の係数を比較すれば、
+$q\ne1$ から平行移動は消える。
+偶置換の後に $t$ の倍率を共通スカラーで1にすると、
+$x,y,z$ の倍率は積1の三符号だけである。
+これらの符号変更と巡回置換は $\Omega$ を保つ。
+巡回置換では $yzx$ を $xyz$ に戻す際の補正項が
+$\Omega$ の二次・一次補正項の差と打ち消し合う。
+
+奇置換は $x,y$ を交換し、$t\mapsto-qt'$ とする代表に帰着される。
+元三関係で $B_i$ の表示式を得る。
+$yxz$ を順序語 $xyz$ へ還元すると $\Omega$ は $q\Omega'$ へ写るので、
+$Dt^3$ の倍率 $-q^3$ と合わせて $D'=-q^2D$ である。
+これらは二符号変更と三置換の積で $\mathfrak S_4$ をなし、
+共通スカラー以外に消える生成元変換はない。
+許容切断では反Serre環から二次包絡と切断直線が復元されるので、
+全幾何学的矢を与える。
+\end{proof}
+
+\begin{proposition}\label{prop:cubic-CY-three-alpha-quantum-triangle-constants-finite-centre}
+前定理の $q$ が正確に有限位数 $N\ge3$ とする。
+$\chi_0=2$、$\chi_1(X)=X$、
+$\chi_n(X)=X\chi_{n-1}(X)-\kappa_0^2\chi_{n-2}(X)$、
+$\kappa_0=-\rho/(q^2-1)$ と置く。
+$t=1$ の包絡 $V$ の全中心は
+$\Omega,\chi_N(x),\chi_N(y),\chi_N(z)$ で生成される。
+斉次包絡の全中心はこれらを斉次化した元と $t$ で生成され、
+包絡は $t$ と三つの次数 $N$ の中心元の多項式環上で階数 $N^3$ の自由加群である。
+\end{proposition}
+\begin{proof}
+証明の差分変数 $x=\kappa_0(u+u^{-1})$ を用いる。
+$1,y,z$ を右 $k[x]$ 上の生成元とみた左 $x$ 作用行列は、
+右下に既出の二次ブロックを持ち、定数項 $B_i$ は
+$1$ 方向にだけ現れる。
+$k(u)$ に移すと固有値は $x(u),x(qu),x(q^{-1}u)$ であり、分数体上で相異なる。
+各固有値に対する $\chi_N$ の値は
+$\kappa_0^N(u^N+u^{-N})$ で等しい。
+従って $\chi_N$ をこの行列に適用した値は $\chi_N(x)$ のスカラー行列である。
+有理恒等式が元の多項式行列で成立するから、$\chi_N(x)$ は $y,z$ と可換する。
+巡回的に残る二元も中央となる。
+
+先頭環の中心は $xyz,x^N,y^N,z^N$ で生成される。
+全て中央に持ち上がったので、最高項から順に引いて全中心生成を得る。
+斉次化でも $t$ は中央なので同じ証明を使える。
+最後に三つの $N$ 乗の先頭語を使って活動指数が全て $N$ 未満の順序語で張り、
+最高語の指数の剰余を見ればそれらは独立である。
+従って三定数項付きの有限位数切断も、明示した有限中心の上で調べられる。
+\end{proof}
