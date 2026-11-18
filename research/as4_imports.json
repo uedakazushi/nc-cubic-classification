@@ -1279,5 +1279,32 @@
     ],
     "used_part": "necessary seven transverse, four nonisotropic, eight isotropic and upper-cross models in disjoint square-split projection; existence and AS4 of resonance Z only",
     "verification": "Original relations independently used in exact central-cubic calculations; AS4 normal-form coverage is taken from pinned proofs, not independently reimplemented."
+  },
+  "CY_one_segre_square_split_lower_necessary_v316": {
+    "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+    "files": [
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_SQUARE_SPLIT_LOWER_SINGLE.tex",
+        "sha256": "f564408c5ccfc47ce2b8fc5eaef013ff584004da06f925daf02fd0345b09b798"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_SQUARE_SPLIT_LOWER_ZERO.tex",
+        "sha256": "8478f157e94bdeaa0cfd9bbae0244417a30df2551de0393b4c35ef045c30278a"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_SQUARE_SPLIT_LOWER_OPEN.tex",
+        "sha256": "c98b45d1183e51f323e9f60ff85895c7d6cdcfe8f98501d19a8c5db3452a08a4"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_SQUARE_SPLIT_LOWER_OPEN_ZERO.tex",
+        "sha256": "69e7fe4916b9dd7937fe36bf9d60bf14115716460685bbe46a7111eb51b64951"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_SQUARE_SPLIT_CROSS_ZERO.tex",
+        "sha256": "5dccb577e0d3d3610ddc3a6cd1a3d86e9a6de6dbbb04e416eb994523eefd8ca5"
+      }
+    ],
+    "used_part": "necessary lower single and zero-cd charts, opposite equivalence, and scope of the remaining open chart of square-split",
+    "verification": "Original relation calculations for H3 are independent of the pinned normal-form proof; the remaining open chart still needs a central-cut test."
   }
 }

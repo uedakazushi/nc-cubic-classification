@@ -19,23 +19,23 @@ CUBICS = list(combinations_with_replacement(range(4), 3))
 QUARTICS = {w: i for i, w in enumerate(combinations_with_replacement(range(4), 4))}
 
 
-def add(result, vector, scalar):
-    for key, coefficient in vector.items():
-        value = result.get(key, COEFF.zero) + coefficient*scalar
-        if value:
-            result[key] = value
-        else:
-            result.pop(key, None)
+def pbw_rows(relations, field, convert):
+    """Construct the cubic commutator matrix in the ordered-word basis."""
 
+    def add(result, vector, scalar):
+        for key, coefficient in vector.items():
+            value = result.get(key, field.zero) + coefficient*scalar
+            if value:
+                result[key] = value
+            else:
+                result.pop(key, None)
 
-def pbw_check(relations, centre):
-    """Check a maximal minor and all stated central candidates in the PBW basis."""
     relations = relations.applyfunc(s.cancel)
     pivot = relations.extract(INVERTED, range(6))
     rewriting = (-relations.extract(ORDERED, range(6))*pivot.inv()).applyfunc(s.cancel)
     rules = {}
     for j, i in enumerate(INVERTED):
-        terms = {PAIRS[k]: COEFF.from_sympy(rewriting[n, j])
+        terms = {PAIRS[k]: convert(rewriting[n, j])
                  for n, k in enumerate(ORDERED) if rewriting[n, j]}
         assert all(w < PAIRS[i] for w in terms)
         rules[PAIRS[i]] = terms
@@ -48,15 +48,22 @@ def pbw_check(relations, centre):
                 for replacement, scalar in rules[x, y].items():
                     add(result, reduce(word[:i]+replacement+word[i+2:]), scalar)
                 return result
-        return {word: COEFF.one}
+        return {word: field.one}
 
     rows = [{} for _ in range(140)]
     for column, cubic in enumerate(CUBICS):
         for gen in range(4):
             result = reduce(cubic+(gen,)).copy()
-            add(result, reduce((gen,)+cubic), -COEFF.one)
+            add(result, reduce((gen,)+cubic), -field.one)
             for w, value in result.items():
                 rows[35*gen+QUARTICS[w]][column] = value
+    coefficients = [value for terms in rules.values() for value in terms.values()]
+    return rows, convert(pivot.det()), coefficients
+
+
+def pbw_check(relations, centre):
+    """Check a maximal minor and all stated central candidates in the PBW basis."""
+    rows, det, coefficients = pbw_rows(relations, COEFF, COEFF.from_sympy)
     calculator = PivotAlgebra(COEFF, 4, [], [0]*4)
     calculator.pivot_product = COEFF.one
     rank = len(calculator.echelon(rows))
@@ -66,11 +73,12 @@ def pbw_check(relations, centre):
     assert all(not sum((row.get(i, COEFF.zero)*q for i, q in centre_vector.items()), COEFF.zero)
                for row in rows)
     minor = calculator.pivot_product
-    det = COEFF.from_sympy(pivot.det())
     exceptions = set(factor_set([minor.n, minor.d, det.n, det.d,
-                                 *[v.d for terms in rules.values() for v in terms.values()]]))
-    return {"rank": rank, "minor": str(minor),
-            "exception_factors": sorted(map(str, exceptions)), "centre": {word: str(coefficient) for word, coefficient in centre.items()}}, exceptions
+                                 *[v.d for v in coefficients]]))
+    return {
+        "rank": rank, "minor": str(minor), "exception_factors": sorted(map(str, exceptions)),
+        "centre": {word: str(coefficient) for word, coefficient in centre.items()},
+    }, exceptions
 
 
 def presentations():

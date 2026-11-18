@@ -550,6 +550,25 @@
     ]
   },
   {
+    "name": "b5",
+    "restricted_rank": 16,
+    "minor": "-17179869184*h**4*(48*h**2 + 1)**2/((4*h - 1)**14*(4*h + 1)**9)",
+    "required_factors": [
+      "h",
+      "h + 1/4",
+      "h - 1/4",
+      "h**2 + 1/48"
+    ],
+    "resonance": "h**2 + 1/48",
+    "resonance_minor": "13436928 - 4478976*sqrt(3)*I",
+    "centre_contained_in": [
+      "aaa",
+      "aab",
+      "abb",
+      "bbb"
+    ]
+  },
+  {
     "name": "CT",
     "minor": "-4/h**2",
     "rank": 20,

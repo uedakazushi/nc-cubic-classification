@@ -1,6 +1,7 @@
 """Central cubics in the external and upper-cross square-split charts."""
 import sympy as s
-from verify_cubic_CY_one_segre_cross import centre_calculation, p, h
+from verify_cubic_CY_one_segre_cross import PivotAlgebra, centre_calculation, p, h
+from verify_cubic_CY_one_segre_shared import CUBICS, pbw_rows
 from verify_cubic_CY_one_segre_square import Q, comm, word
 from verify_cubic_CY_one_segre_shared_squares import factors
 from verify_cubic_as4_four_simple_second import central_data
@@ -64,8 +65,6 @@ def charts():
     for x,name,H in [(0,'a',(0,0,0)),(1,'a',(1,0,0)),(2,'a',(1,0,1)),
                      (0,'b',(0,0,0)),(1,'b',(1,0,0)),(2,'b',(1,0,1)),
                      (3,'b',(0,1,0)),(4,'b',(1,1,0)),(5,'b',(1,1,p))]:
-        if x == 5:
-            continue
         aa,bb,cc=H
         Ha=s.Matrix([[aa,bb,0,-h],[bb,cc,-h,0],[0,0,0,0],[0,0,0,0]])
         Hb=s.Matrix([[0,0,0,0],[0,0,0,0],[0,h,aa,bb],[h,0,bb,cc]])
@@ -124,10 +123,47 @@ def line(name, relations, units, parameter):
     return {**record, "specializations": specialized}
 
 
+def binary_containment(relations, units):
+    """Force the sixteen nonbinary coordinates of any central cubic to vanish."""
+    binary_columns = {i for i, cubic in enumerate(CUBICS) if max(cubic) < 2}
+
+    def check(source, field):
+        rows, determinant, coefficients = pbw_rows(source, field, field.from_sympy)
+        rows = [row for row in rows if binary_columns.isdisjoint(row)]
+        elimination = PivotAlgebra(field, 4, [], [0]*4)
+        elimination.pivot_product = field.one
+        assert len(elimination.echelon(rows)) == 16
+        return elimination.pivot_product, determinant, coefficients
+
+    field = s.QQ.frac_field(*PARAMETERS)
+    minor, determinant, coefficients = check(relations, field)
+    required = factors([minor.numer.as_expr(), minor.denom.as_expr(),
+                        determinant.numer.as_expr(), determinant.denom.as_expr(),
+                        *[value.denom.as_expr() for value in coefficients]])
+    resonance = h*h+Q(1, 48)
+    remaining = required - factors(units)
+    assert remaining == {resonance}
+    root = s.I*s.sqrt(3)/12
+    assert s.Poly(s.minpoly(root, h), h).monic().as_expr() == resonance
+    special_field = s.QQ.algebraic_field(s.I, s.sqrt(3)).frac_field(p)
+    special_minor, special_determinant, special_coefficients = check(relations.subs(h, root), special_field)
+    assert special_minor.numer.is_ground and special_minor.denom.is_ground
+    assert special_determinant.numer.is_ground and special_determinant.denom.is_ground
+    assert all(value.denom.is_ground for value in special_coefficients)
+    return {
+        "restricted_rank": 16, "minor": str(s.factor(field.to_sympy(minor))),
+        "required_factors": sorted(map(str, required)),
+        "resonance": str(resonance), "resonance_minor": str(special_field.to_sympy(special_minor)),
+        "centre_contained_in": ["aaa", "aab", "abb", "bbb"],
+    }
+
+
 def main():
     records = []
     for name, relations, units in charts():
-        if name == "A2":
+        if name == "b5":
+            result = binary_containment(relations, units)
+        elif name == "A2":
             result, exceptions = generic(relations, units)
             assert not exceptions
         elif name == "Bn2":
