@@ -170,3 +170,32 @@ Ore trace、原始三乗根条件、巡回ノルムおよび軸での三極小�
 \par\noindent\texttt{verify\_cubic\_CY\_one\_segre\_double\_split\_outer.py}
 \par
 で検証する。
+
+\begin{proposition}\label{prop:cubic-CY-one-segre-double-split-isolated-empty}
+固定出典\cite{AS4CYpinned}の二積追加射影にある五つの孤立包絡には、
+H3切断がない。
+\end{proposition}
+\begin{proof}
+孤立五表示は両外側 (DE2)、一交差 (DC1)、
+対角二交差の例外体積 (DX1) と八分の一体積の二表示 (EN3) である。
+元の六関係から次数2,3,4の商次元 $(10,20,35)$ を確認し、
+中心条件 $\mathcal B_3\to\mathcal B_4^{\oplus4}$ の階数を厳密に求めると、
+(DX1) は18、他の四表示は20である。
+
+(DX1) で $\gamma_0=i\sqrt3$、$\zeta=(-1+\gamma_0)/2$ とおき、
+\[
+ \ell=a+\gamma_0d/18,\qquad m=b-6\gamma_0 c
+\]
+を取る。元の二次商で $m\ell=\zeta^2\ell m$ が成立する。
+二つの立方 $\ell^3,m^3$ は独立かつ中央であることを
+次数3と4の商で確認する。
+中心次元は2なので、この二元が全中央三次を張る。
+$\zeta^2$ は原始三乗根であるから
+$(u\ell+v m)^3=u^3\ell^3+v^3m^3$。
+代数閉性により任意の中央三次はこの形となり、
+非零な一次因子は三次切断で消えないため整域切断とならない。
+全計算を公開検証器
+\par\noindent\texttt{verify\_cubic\_CY\_one\_segre\_double\_split\_isolated.py}
+\par\noindent
+で、ガウス体と $\mathbb Q(i\sqrt3)$ 上で再現できる。
+\end{proof}

@@ -117,6 +117,7 @@ CHECKS=[
  'verify_cubic_CY_three_alpha_quantum_boundary.py',
  'verify_cubic_CY_three_alpha_smooth_boundary.py',
  'verify_cubic_CY_one_segre_double_split_outer.py',
+ 'verify_cubic_CY_one_segre_double_split_isolated.py',
 ]
 results=[]
 for name in CHECKS:
