@@ -1,0 +1,116 @@
+{
+  "support_counts": [
+    7,
+    8,
+    10,
+    9,
+    10,
+    10,
+    10,
+    10,
+    10,
+    8,
+    8,
+    6,
+    8,
+    6,
+    8
+  ],
+  "curves": {
+    "M - P + 2": {
+      "local_counts": [
+        0
+      ],
+      "base_factors": [],
+      "residue_fields": []
+    },
+    "M - P - 2": {
+      "local_counts": [
+        0
+      ],
+      "base_factors": [],
+      "residue_fields": []
+    },
+    "M^2 + M*P + P^2 - 1": {
+      "local_counts": [
+        7,
+        0
+      ],
+      "base_factors": [],
+      "residue_fields": []
+    },
+    "M^2 + P^2 - 2": {
+      "local_counts": [
+        6,
+        0
+      ],
+      "base_factors": [],
+      "residue_fields": []
+    }
+  },
+  "finite": [
+    {
+      "E_equation_terms": 4,
+      "P_factors": [
+        "P^3 + 2*P^2 + 2*P + 2",
+        "P^3 + 2*P^2 - 2",
+        "P^3 - 2*P^2 + 2",
+        "P^3 - 2*P^2 + 2*P - 2"
+      ],
+      "residue_fields": [
+        [
+          "P^3 + 2*P^2 + 2*P + 2",
+          "t - CRootOf(x**3 + 2*x**2 + 2*x + 2, 0)**2 - CRootOf(x**3 + 2*x**2 + 2*x + 2, 0)",
+          "z + 2"
+        ],
+        [
+          "P^3 + 2*P^2 - 2",
+          "t + CRootOf(x**3 + 2*x**2 - 2, 0)**2 + CRootOf(x**3 + 2*x**2 - 2, 0)",
+          "z - 8*CRootOf(x**3 + 2*x**2 - 2, 0)**2/7 - 4*CRootOf(x**3 + 2*x**2 - 2, 0)/7 + 6/7"
+        ],
+        [
+          "P^3 - 2*P^2 + 2",
+          "t + CRootOf(x**3 - 2*x**2 + 2, 0) - CRootOf(x**3 - 2*x**2 + 2, 0)**2",
+          "z - 8*CRootOf(x**3 - 2*x**2 + 2, 0)**2/7 + 4*CRootOf(x**3 - 2*x**2 + 2, 0)/7 + 6/7"
+        ],
+        [
+          "P^3 - 2*P^2 + 2*P - 2",
+          "t - CRootOf(x**3 - 2*x**2 + 2*x - 2, 0) + CRootOf(x**3 - 2*x**2 + 2*x - 2, 0)**2",
+          "z + 2"
+        ]
+      ]
+    },
+    {
+      "E_equation_terms": 129,
+      "P_factors": [
+        "P^2 + 1",
+        "P^3 + 2*P^2 + 2*P + 2",
+        "P^3 + 2*P^2 - 2",
+        "P^3 - 2*P^2 + 2",
+        "P^3 - 2*P^2 + 2*P - 2"
+      ],
+      "residue_fields": [
+        [
+          "P^3 + 2*P^2 + 2*P + 2",
+          "t - CRootOf(x**3 + 2*x**2 + 2*x + 2, 0)**2 - CRootOf(x**3 + 2*x**2 + 2*x + 2, 0)",
+          "z + 512*CRootOf(x**3 + 2*x**2 + 2*x + 2, 0)/209 + 290/209 + 447*CRootOf(x**3 + 2*x**2 + 2*x + 2, 0)**2/209"
+        ],
+        [
+          "P^3 + 2*P^2 - 2",
+          "t + CRootOf(x**3 + 2*x**2 - 2, 0)**2 + CRootOf(x**3 + 2*x**2 - 2, 0)",
+          "z - 41*CRootOf(x**3 + 2*x**2 - 2, 0)**2/49 + 46*CRootOf(x**3 + 2*x**2 - 2, 0)/49 + 50/49"
+        ],
+        [
+          "P^3 - 2*P^2 + 2",
+          "t + CRootOf(x**3 - 2*x**2 + 2, 0) - CRootOf(x**3 - 2*x**2 + 2, 0)**2",
+          "z + 18758*CRootOf(x**3 - 2*x**2 + 2, 0)/10241 - 13793*CRootOf(x**3 - 2*x**2 + 2, 0)**2/10241 + 21410/10241"
+        ],
+        [
+          "P^3 - 2*P^2 + 2*P - 2",
+          "t - CRootOf(x**3 - 2*x**2 + 2*x - 2, 0) + CRootOf(x**3 - 2*x**2 + 2*x - 2, 0)**2",
+          "z - 4*CRootOf(x**3 - 2*x**2 + 2*x - 2, 0) + 18 + 11*CRootOf(x**3 - 2*x**2 + 2*x - 2, 0)**2"
+        ]
+      ]
+    }
+  ]
+}

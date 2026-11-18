@@ -1,0 +1,34 @@
+{
+  "support_counts": [
+    2,
+    5,
+    8,
+    6,
+    8,
+    8,
+    8,
+    8,
+    8,
+    5,
+    5,
+    5,
+    5
+  ],
+  "curves": {
+    "M*P + M - P - 2": {
+      "local_counts": [
+        0
+      ],
+      "base_factors": [],
+      "residue_fields": []
+    },
+    "M*P - M + P - 2": {
+      "local_counts": [
+        0
+      ],
+      "base_factors": [],
+      "residue_fields": []
+    }
+  },
+  "finite": []
+}

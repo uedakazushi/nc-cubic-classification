@@ -1,6 +1,6 @@
 {
   "date": "2026-11-18",
-  "version": "classification-v350",
+  "version": "classification-v351",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -4909,5 +4909,18 @@
     "verification": "PASS exact successive E and L resultants and common irreducible factors across the two witnesses and their transports.",
     "scope": "Outside the four L-linear branches, the L-quadratic and E-affine branches project respectively to four and two plane curves plus finite sets. The assertion bounds the supports and does not exclude their points.",
     "main_build": "LuaLaTeX PASS, 515 pages, no overfull boxes or undefined references/citations"
+  },
+  "CY_one_segre_double_split_FDC_linear_v351": {
+    "proposition": "prop:cubic-CY-one-segre-double-split-FDC-linear",
+    "validator": "computations/verify_cubic_CY_one_segre_double_split_FDC_linear.py",
+    "certificates": [
+      "computations/cubic_CY_one_segre_double_split_FDC_linear_product_certificate.json",
+      "computations/cubic_CY_one_segre_double_split_FDC_linear_product_plus_one_certificate.json",
+      "computations/cubic_CY_one_segre_double_split_FDC_linear_product_minus_one_certificate.json",
+      "computations/cubic_CY_one_segre_double_split_FDC_linear_K_certificate.json"
+    ],
+    "verification": "PASS exact linear-chart cubic-centre ranks and E projection on 14 plane curves, and original centre rank 20 in all 14 residue fields away from the corresponding curves.",
+    "scope": "All four L-linear hypersurfaces have zero cubic centre on the full regular FDC3 domain.",
+    "main_build": "LuaLaTeX PASS, 516 pages, no overfull boxes or undefined references/citations"
   }
 }

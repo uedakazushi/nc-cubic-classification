@@ -1,0 +1,55 @@
+{
+  "support_counts": [
+    4,
+    7,
+    7,
+    8,
+    7,
+    6,
+    7,
+    6,
+    7,
+    5,
+    5,
+    5,
+    5
+  ],
+  "curves": {
+    "M*P + M - P - 2": {
+      "local_counts": [
+        0
+      ],
+      "base_factors": [],
+      "residue_fields": []
+    },
+    "M*P - 1/2*M + 1/2*P - 1": {
+      "local_counts": [
+        3,
+        2
+      ],
+      "base_factors": [
+        "x^2 - 1/2*x - 3/4",
+        "x^2 - x - 1/2"
+      ],
+      "residue_fields": []
+    },
+    "M*P - M + P - 2": {
+      "local_counts": [
+        2,
+        2
+      ],
+      "base_factors": [
+        "x^4 - 2*x^3 + 2",
+        "x^4 - x^3 - 2*x^2 + 3"
+      ],
+      "residue_fields": []
+    }
+  },
+  "finite": [
+    {
+      "E_equation_terms": 6,
+      "P_factors": [],
+      "residue_fields": []
+    }
+  ]
+}
