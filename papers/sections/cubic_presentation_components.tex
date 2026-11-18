@@ -1,5 +1,57 @@
-\section{H3の幾何学的表示の四成分}
+\section{全幾何学的H3の判定と表示の四成分}
 \label{sec:cubic-presentation-components}
+
+\begin{theorem}\label{thm:h3-complete-geometric-admissibility}
+標数零の代数閉体上で、強い内在的H3の全対象は以下の表示から得られる。
+各行の判定は、表示された中央又は正規三次直線がH3切断を与えるための
+必要十分条件である。
+\begin{enumerate}
+\item 符号重複度 $(1,3)$ は定理\ref{thm:h3-order2-full-arrows}の全係数族、
+$(2,2)$ は定理\ref{thm:h3-order2-22-L-complete}で認識した
+曲がったClifford族の許容開である。
+\item 一交換子CYは定理\ref{thm:cubic-CY-one-commutator-presentation-closure}の
+三乗根Ore表示に限られる。二元二次補正の階数 $0,1,2$ にはそれぞれ
+定理\ref{thm:all-skew-H3-geometric}、
+\ref{thm:cubic-CY-one-segre-square-split-resonance-exact}、
+\ref{thm:cubic-CY-one-segre-double-split-outer-H3}を適用する。
+\item 可換包絡は滑らかな可換三次曲面を与える。
+三交換子CYの対称 $\alpha$ は系
+\ref{cor:cubic-CY-three-alpha-symmetric-complete}の許容表示に限られる。
+\item 三交換子CYの非対称 $\alpha$ では、
+尖点・接線・共点型は定理\ref{thm:cubic-CY-three-alpha-additive-H3}のKleinian条件、
+節点型は定理\ref{thm:cubic-CY-three-alpha-nodal-E6-root-discriminant}の
+$E_6$ 根判別式で判定する。
+三角形と割線は、有限位数では定理
+\ref{thm:cubic-CY-three-alpha-finite-secant-full}、
+\ref{thm:cubic-CY-three-alpha-triangle-finite-boundary}の有限中心判定、
+無限位数では定理\ref{thm:cubic-CY-three-alpha-nontorsion-full-folded}の平方自由条件に従う。
+原始三乗根での三角形の全追加中心方向は
+定理\ref{thm:cubic-CY-three-alpha-primitive-triangle-test}で判定する。
+滑らかな楕円境界は、有限位数では定理\ref{thm:finite-order-elliptic-admissibility}の
+中心と単純表現の判定、無限位数では定理
+\ref{thm:cubic-CY-three-alpha-elliptic-diagonal-all-nontorsion}の八次判別式に従う。
+\end{enumerate}
+全矢は、生成空間の線型同型で二次関係部分空間と三次切断直線を移すものを
+共通次数スカラーで割って得る。
+従って同一表示に対するこの安定化群が内在的慣性を与える。
+\end{theorem}
+\begin{proof}
+三次関係の必要性と二次包絡の関手的復元は
+命題\ref{prop:intrinsic-ring-isomorphisms}と正規三次incidenceによる。
+非CY包絡の全スペクトルと全Jordan型は次定理の被覆の通りである。
+CYの場合、零と二交換子は既に空で、
+四交換子以上は可換多項式包絡に限られる。
+一交換子の包絡は前掲の三乗根Ore表示で尽くされる。
+三交換子CYの非 $\alpha$ 部分の排除は系
+\ref{cor:cubic-CY-three-presentation-closure}の証明に列挙した。
+残る $\alpha$ では、対称の場合は前掲の全許容判定、
+非対称の場合は滑らかな三次、節点、割線、三角形、尖点、接線、共点の被覆を使う。
+零先頭および重複直線、成分を巡回する非許容三角形は
+各々の排除命題で消えている。
+各行で挙げた定理が必要性と十分性を与えるので、
+包絡と切断係数の全幾何学的点を判定できる。
+矢の記述は同命題により二次包絡・切断の同型と一致する。
+\end{proof}
 
 \begin{theorem}\label{thm:h3-presentation-four-components}
 四次元生成空間上の六二次関係と切断直線によるincidenceに、H3の点の部分位相を入れる。
