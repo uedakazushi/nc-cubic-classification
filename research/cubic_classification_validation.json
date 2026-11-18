@@ -5111,5 +5111,15 @@
     "verification": "Structural argument using the split graded identity of a torsion perfect complex and the finite graded trace comparison in RRZtri, and duality of the torsion and localization triangles. No independent audit of the full classification suite.",
     "scope": "Relative Serre duality and the finite-type formal presentation of intrinsic Artin deformations with degreewise flat quadratic envelope. Ordinary openness and general-base algebraicity remain.",
     "main_build": "LuaLaTeX PASS, 547 pages, no overfull boxes or undefined references/citations"
+  },
+  "H3_finite_degree_normal_incidence_v367": {
+    "proof": "papers/sections/cubic_formal_intrinsic_reconstruction.tex",
+    "theorems": [
+      "lem:h3-degree-three-flat-koszul",
+      "thm:h3-finite-degree-normal-incidence"
+    ],
+    "verification": "Elementary proof by lifting the residual kernel from the linear syzygy map at each inductive degree. The finite presentation conditions and their equivalence with the prior formal locus are proved in the text.",
+    "scope": "In any local base with Koszul residual quadratic envelope, flatness is controlled by the cubic piece. Exact finite-degree formal incidence and all-degree flatness for maps with only geometric H3 fibers. No claim that this set of geometric fibers is open.",
+    "main_build": "LuaLaTeX PASS, 548 pages, no overfull boxes or undefined references/citations"
   }
 }

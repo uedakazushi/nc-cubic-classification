@@ -388,3 +388,102 @@ Artin局所底ではこの直線は自明であり、自明化の変更は共通
 相対Serre自然性により反標準作用との可換性が従う。
 共通次数スカラーを除いて $\mathrm{PGL}_4$ 商を得る。
 \end{proof}
+
+\subsection{二次包絡の三次平坦性判定}
+\begin{lemma}\label{lem:h3-degree-three-flat-koszul}
+$A$ を可換局所環、$k$ を剰余体とする。
+有限自由加群 $V$ と直和因子 $Q\subset V^{\otimes2}$ から
+$B=T_A(V)/(Q)$ を作り、$B_k$ がKoszulであると仮定する。
+このとき $B_3$ が $A$ 上自由であることと、
+$B_n$ が全ての $n$ で $A$ 上自由であることは同値である。
+$A$ のnoetherian性や完備性は仮定しない。
+\end{lemma}
+\begin{proof}
+$B_3$ が自由とする。挿入写像
+\[
+ Q\otimes_A V\oplus V\otimes_A Q\longrightarrow V^{\otimes3},
+ \qquad (a,b)\longmapsto a-b
+\]
+の余核は $B_3$ である。
+従って像は有限自由の直和因子であり、
+核 $W_3=(Q\otimes_A V)\cap(V\otimes_A Q)$ も有限自由で、
+その形成は底変更と可換する。
+
+関係の生成次数から、任意の $n\ge3$ について次の列がある。
+\[
+ W_3\otimes_A B_{n-3}
+ \xrightarrow{d_3} Q\otimes_A B_{n-2}
+ \xrightarrow{d_2} V\otimes_A B_{n-1}
+ \longrightarrow B_n\longrightarrow0.
+\]
+各微分は左因子の最後の一次元を右側の積へ移す。
+$W_3\subset V\otimes_A Q$ から $d_2d_3=0$ が従う。
+末尾の右完全性は、次数 $n$ の関係を
+$Q\otimes_A V^{\otimes(n-2)}$ と
+$V$ に次数 $n-1$ の全関係を掛けた部分との和で書くことによる。
+剰余体上ではこの列は右Koszul解消の一部であり、
+$Q_k\otimes_k B_{k,n-2}$ で完全である。
+
+$n$ 未満の各次数で自由性を仮定する。
+$\ker(d_2\otimes_A k)$ の基底を
+$d_3\otimes_A k$ の像から選び、$d_3$ の像へ持ち上げる。
+これらを $Q\otimes_A B_{n-2}$ の基底へ補うと、
+$d_2$ は前半で恒等的に零であり、
+後半の像は剰余体上で線型独立だから
+$V\otimes_A B_{n-1}$ の基底へ補える。
+従って余核 $B_n$ は自由である。
+$n\le3$ の仮定から帰納法が成立する。
+逆向きは $n=3$ を取ればよい。
+\end{proof}
+
+\begin{theorem}\label{thm:h3-finite-degree-normal-incidence}
+四変数の幾何学的H3表示を含む正規三次incidenceの形式近傍は、
+次の有限次数条件だけで構成できる。
+\begin{enumerate}
+ \item $Q\subset V^{\otimes2}$ を階数6の部分束とし、
+ $B_3,B_4$ の階数を $20,35$ に固定する。
+ \item 二次双対の次数3,4の階数を $4,1$ に固定し、
+ 次数5を零とする。topへの積対合を完全とする。
+ \item $B_3$ の切断直線 $\mathcal G$ に対し、$B_4$ において
+ $Gx=\mu_B^{-1}(x)G$ を全ての $x\in V$ について課す。
+\end{enumerate}
+ここで階数条件は余核の局所自由性を表す階数stratumで課す。
+幾何学的H3点でのこのincidenceの形式完備化を
+$\mathrm{PGL}_4$ で割ると、
+系\ref{cor:h3-artin-intrinsic-formal-atlas}の内在変形群oidを得る。
+
+さらに任意の底からこのincidenceへの射で、
+各幾何学的fiberがH3表示であるものを取る。
+このとき $B$ と $R=B/(\mathcal G)$ は、いずれも各次数で有限局所自由である。
+正則正規三次の列と全次数の形成は任意底変更と可換する。
+\end{theorem}
+\begin{proof}
+有限階数stratumは各関係挿入行列で所定の階数より大きい
+小行列式を零にし、所定階数の小行列式の非消滅開を取って構成する。
+$B_3$ の場合は $64\times48$ 行列の階数44である。
+二次双対の次数1,2は最初から階数4,6であり、
+指定した残りの階数と積対合で相対Frobenius中山作用が定義される。
+切断直線は $\mathbb P(B_3)$ の普遍直線に対応する。
+第三条件は $\mathcal G\otimes_A V\to B_4$ の二写像の差が零という
+有限個の閉方程式である。
+
+任意の底の点の局所環において、幾何学的Koszul性は剰余体へ忠実平坦降下する。
+補題\ref{lem:h3-degree-three-flat-koszul}により各 $B_n$ は局所環上自由となる。
+第三条件で $\mathcal G$ は正規である。
+左右の倍写像は幾何学的fiber上で単射であり、
+各次数で有限自由加群間の分裂単射となる。
+よってその余核 $R_n$ も自由である。
+$B_n,R_n$ は有限提示なので、これらの局所環での自由性から有限局所自由性を得る。
+倍写像の列は局所分裂し、商の形成は任意底変更と可換する。
+
+Artin局所底では剰余体の一点がH3であれば前の議論が適用できる。
+逆に全次数平坦な内在Artin変形は既に示したNakayama条件を満たし、
+相対Koszul双対の必要な各次数は自由である。
+従ってこの有限次数incidenceが、従来の全次数上界による
+形式完備化と同じ群oidを表す。
+\end{proof}
+
+従って内在的Artin変形で二次包絡の全次数平坦性を調べるには、
+反標準環の二次関係を挿入する一つの三次行列を調べれば十分である。
+幾何学的H3点の集合がこの有限次数incidence上で通常の開になるかは、
+別の相対許容性の問題として残る。
