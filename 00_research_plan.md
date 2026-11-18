@@ -1,6 +1,6 @@
 # 研究方針：H3型内在的非可換三次曲面の完全分類
 
-2026-11-19 / research-plan-v67 / H3分類専用。
+2026-11-19 / research-plan-v68 / H3分類専用。
 **再開時は本書を最初に読む。GitHub mainが唯一の正本。**
 実行規則は `AGENTS.md`。既存の全H3分類の詳細と必要な式は
 `research/cubic_14641_classification.md`、`research/cubic_14641_codex_plan.md`、
@@ -35,13 +35,12 @@ Library既存ファイルは明示指示なしに削除しない。GitではPDF�
 外部ambient・四周期表示・例外列を追加標識にしない。
 全対象の被覆、全許容切断、pointed exact同値の全群oidと慣性、成分・交叉・境界、相対再構成・降下を達成基準とする。
 
-**このリポジトリの最優先課題は強いintrinsic H3の完全分類である。**
-(2,2) mixed rank4の全Jordan型の判定に続き、未被覆のCY・多固有値部分、全成分・相対降下に取り組む。具体的な最新frontierは下記第IV節と `research/cubic_14641_codex_plan.md` を読む。
+**最新の全分類（v373）**は、全幾何学的H3対象・切断・矢と、noetherian底上の相対内在的H3族を与える。相対定義には二次包絡の三次平坦性を含める。この条件の自動性と、より弱い概念のAbel圏変形への拡張を引き続き調べる。証明と検証範囲は下記と分類ノートを読む。
 楕円E6量子化成分の完全決定は [nc-cubic-e6](https://github.com/uedakazushi/nc-cubic-e6) に分離済みであり、E6論文の改訂はその正本で行う。
 
 ## III. 現在の分類研究の最優先課題
 
-本リポジトリの最優先は強い内在的14641型H3の**完全分類**であり、全対象の漏れない被覆、正規三次incidence、全幾何学的群oid、成分・境界、相対認識を完成させる。詳細な現行分類frontierと未解決の最小補題は `research/cubic_14641_codex_plan.md` と `research/cubic_14641_classification.md` を読む。
+本リポジトリの最優先は強い内在的14641型H3の分類の検証・深化である。現行の全被覆、有限型incidence、成分および相対再構成の仮定と、拡張に向けた最小補題は `research/cubic_14641_codex_plan.md` と `research/cubic_14641_classification.md` を読む。
 
 楕円E6量子化成分の8次元変形・全Artin形式分類とFricke–Askey–Wilson locusは、独立正本 [nc-cubic-e6](https://github.com/uedakazushi/nc-cubic-e6) へ移管した。本分類には必要な認識定理と有効な具体例・証明を保持するが、E6成分そのものの相対H3開性・全境界・DAHA比較の研究は同リポジトリの研究方針に従う。ambient射の論文は [nc-cubic-ambient](https://github.com/uedakazushi/nc-cubic-ambient)、標識忘却の論文は [nc-cubic-unmark](https://github.com/uedakazushi/nc-cubic-unmark)、量子Fermat非AS短報は [nc-cubic-non-as](https://github.com/uedakazushi/nc-cubic-non-as) を新しい正本とする。
 
@@ -440,3 +439,6 @@ Sklyaninのアフィン包絡で自由解消1,3,3,1に中央三次のホモト�
 
 ### 全表示の強noetherian性と一般底のcoherent tails（v372）
 全幾何模型のOre・有限中心・重みPBW・曲線THCRで普遍モデルの強noetherian性を確認。任意noetherian底の一般点で有限忠実平坦拡大上の模型を広げ、閉補集合を帰納して補集合の完備化と主開へ忠実平坦降下する。全表示から準coherent・coherent tailsが有効降下し、底代数対象で任意noetherian底変更できる。包絡の四対象のdirected bar解消により底上平坦なcoherent対象は商のshift生成厚い圏に入り、一般底の相対Serreを得た。次はこれらを相対内在族の定義と双方向同値に統合する。
+
+### 相対内在的H3群oidと有限型代数stackの同値（v373）
+相対定義は、底平坦な構造対象とH3幾何fiber、平坦対象の厚い圏の相対Serreと正確な反標準作用・豊富性、orbit導来Homの底変更、内在二次包絡の三次平坦性。これらを持つ任意noetherian底上の内在Abel圏を有限次数表示に認識する。相対traceで任意局所底の中山次数スカラーを消し、orientation重み一でPGL₄降下。逆向きも任意底変更・全矢・有効降下を保つ。全四成分と一般次元3,4,5,8。任意の平坦なAbel圏Artin変形で三次平坦性が自動かは別の変形問題である。これを調べるなら、小拡大で二次syzygyの残差が三次切断線へ落ちる四係数を、Hochschild変換列と有限式で解析する。

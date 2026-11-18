@@ -725,3 +725,110 @@ shift間のHomとそのトレースは、相対Koszul解消と局所torsionの
 底上平坦なheart対象は底tensorの導来像がheartにあるので、
 上の基底変更の同定の下でもこの双対に適合する。
 \end{proof}
+
+\subsection{相対内在的H3群oid}
+以下ではnoetherianな標数零底上で、幾何学的公理と相対平坦性を
+同時に課した族を考える。底変更は、準coherent圏で底代数作用を持つ対象を
+取ってからcoherent部分へ制限する意味で用いる。
+
+\begin{definition}\label{def:h3-intrinsic-family}
+可換noetherian環 $A$ 上の相対内在的H3族は、
+構造対象 $\mathcal O$ を持つ平坦な $A$ 線型noetherian Abel圏とし、
+次を要求する。
+\begin{enumerate}
+\item $\mathcal O$ は底上平坦で、全幾何学的fiberは強い内在的H3である。
+底変更は準coherent圏の底代数対象によって与えられ、
+$\mathcal O$ は底tensorで引き戻される。
+\item 底上平坦なcoherent対象で生成される厚い導来圏に相対Serre双対があり、
+$S_A^{-1}[2]$ はheartのexact自己同値 $s$ を与える。
+$(\mathcal O,s)$ は底上Artin--Zhang ampleとする。
+orbit間の導来Homの形成はnoetherian底変更と可換する。
+\item 反標準section環から形成した二次包絡の三次成分は
+底上有限局所自由である。
+\end{enumerate}
+矢は、底線型exact同値で構造対象の同型類を保つものを自然同型で割る。
+Serre作用とその比較は圏から誘導される。
+包絡、三次切断、一次枠は族の追加標識に含めない。
+\end{definition}
+
+\begin{theorem}\label{thm:h3-intrinsic-algebraic-stack}
+定義\ref{def:h3-intrinsic-family}の相対内在的H3群oidは
+有限型代数stack $[X^{\mathrm{H3}}/\mathrm{PGL}_4]$ と同値である。
+この同値は任意のnoetherian底変更に両立し、fpqc降下を与える。
+四既約成分はそれぞれ一般次元 $3,4,5,8$ を持ち、
+H3 stack内で互いに交わらない。
+\end{theorem}
+\begin{proof}
+内在族から出発する。$\mathcal O$ の各反標準移動は底上平坦である。
+$\mathbf R\operatorname{Hom}(\mathcal O,s^n\mathcal O)$ は底上完全であり、
+$n\ge0$ での幾何学的fiberは次数0に集中する。
+実際、幾何学的環のAS双対では $\operatorname{Ext}^2$ は
+負の内部次数 $-1-n$ のsectionの双対となり、$\operatorname{Ext}^1=0$ である。
+完全複体の局所分裂によりこのHomは $A$ 有限局所自由で、
+底変更に両立する。従って反標準環 $R$ は次数別平坦であり、
+$R_0=A$ は単位写像で同定される。
+一次生成性は各次数の乗法の剰余体上の全射性とNakayama補題から従う。
+$R_1$ を $V$、二次関係核を $Q$ と書くと、$Q$ は階数6の部分束。
+二次包絡 $B=T_A(V)/(Q)$ は三次成分の局所自由性と
+補題\ref{lem:h3-degree-three-flat-koszul}により全次数が有限局所自由となる。
+
+$B_3\to R_3$ の核は線束 $\mathcal G$ になる。
+その局所生成元の左右乗法は幾何fiberで単射なので、
+各次数で分裂単射である。
+$B_n\to R_n$ の核も底変更するため、
+各fiberでの主イデアル性からその全体が左右いずれの像にも等しい。
+よって正則正規三次による表示 $R=B/(\mathcal G)$ が得られる。
+豊富性と有限なsectionにより、Artin--Zhang再構成から
+$\mathcal A\simeq\qgr R$ で、$s$ は $(1)$ に移る。
+特にこの表示での全coherent対象は負shiftの有限表示を持つ。
+これらの計算は底変更に両立する。
+
+次に相対中山式を確認する。局所底では、正規三次と両環の
+次数別平坦性から、局所双対とその局所化計算に必要な仮定が成り立つ。
+この計算そのものは中山作用の自明性を使わない。
+従ってshiftで生成される厚い圏上での相対Serre標的は
+$T_{\mu^{-1}}(-1)\otimes\mathcal L_{\rm AS}[2]$、
+$\mu=(\mu_B\sigma)|_R$ である。
+実際の反標準移動が $(1)$ であることから、構造対象の隣接二shift上の
+自然性を比較すると $\mu$ は次数スカラーである。
+定理\ref{thm:h3-artin-relative-nakayama-trivial}の
+torsion完全複体のtrace比較は、局所底でもそのまま適用できる。
+必要なのは有限自由な相対Koszul項、局所双対、
+および内部次数0における恒等射の分裂であり、Artin性は使わない。
+従ってスカラーは1となり $Gv=\mu_B^{-1}(v)G$。
+よって一次枠を局所的に選べば $X$ への射を得る。
+全幾何fiberがH3なのでこれは開 $X^{\mathrm{H3}}$ を経由する。
+
+逆に $[X^{\mathrm{H3}}/\mathrm{PGL}_4]$ から出発する。
+重み一の $\mathcal L_{\rm AS}$ で各次数を規格化すると、
+相対orientationは自明化され、商環は有効に降下する。
+各成分を同じ次数の線束冪で捩る操作は、
+次数付き加群とそのtorsion商を同値にし、構造対象を保つ。
+強noetherian性とcoherent tailsの有効降下は
+定理\ref{thm:h3-presentation-strong-noetherian}による。
+定理\ref{thm:h3-relative-flat-coherent-serre-global}により、
+この圏は平坦で、相対Serreの反標準移動は正確なshiftである。
+豊富性、orbitの底変更、三次成分の局所自由性もそこで確認される。
+このとき得られる内在section環は、orientationで規格化された
+元の次数付き環に等しい。
+
+最後に、構造対象付きexact同値は相対Serre双対の自然性を保つので
+$s$ に可換する比較を持つ。
+比較と構造対象同型を一つ選べば、orbitの全射と積により
+次数付きsection環の同型が得られる。
+同値は負shiftの有限表示からこの作用により再現される。
+比較の変更は共通次数スカラーだけであり、
+隣接shift間の有限局所自由な非零Homと
+各shiftの自己準同型が底環であることから従う。
+逆に次数付き同型はcoherent tailsのexact同値を与え、
+このスカラー倍は恒等と自然同型になる。
+従って全矢と慣性が $\mathrm{PGL}_4$ 商へ移る。
+これらの構成は底tensorに両立するので、affine底の同定と
+fpqc降下からnoetherian scheme上の同値を得る。
+成分と一般次元は定理\ref{thm:h3-presentation-four-components}による。
+\end{proof}
+
+この相対分類では二次包絡の三次平坦性は有限次数の族条件である。
+もとの幾何学的クラスと全ての幾何学的矢はそのまま含まれる。
+既知の反標準作用を持つ全ての平坦なAbel圏Artin変形に対して、
+三次平坦性が自動であるかは別の変形問題である。

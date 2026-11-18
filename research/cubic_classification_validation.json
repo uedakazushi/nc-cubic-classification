@@ -5171,5 +5171,13 @@
     "verification": "Structural proof through generic spread of the explicit strongly noetherian coefficient charts and faithfully flat open/completion descent. Relative Beilinson calculation and Lowen–Van den Bergh Propositions 3.4, 3.6, 3.7 checked in the primary source.",
     "scope": "All presented H3 families over arbitrary noetherian bases, with effective descent, all A-flat coherent objects in the relative perfect category, and relative Serre and base change.",
     "main_build": "LuaLaTeX PASS, 558 pages, no overfull boxes or undefined references/citations"
+  },
+  "H3_intrinsic_relative_algebraic_stack_v373": {
+    "proof": "papers/sections/cubic_formal_intrinsic_reconstruction.tex",
+    "definition": "def:h3-intrinsic-family",
+    "theorem": "thm:h3-intrinsic-algebraic-stack",
+    "verification": "Structural relative recognition and descent proof. Four-line frame and exact elliptic diagonal verifier replayed with PASS. The full classification computation suite and independent referee review were not rerun.",
+    "scope": "All geometric H3 objects and all relative intrinsic H3 families under the stated noetherian-base, relative Serre/ampleness, coherent base-change and cubic-flatness conditions. The cubic-flatness automaticity for arbitrary flat abelian Artin deformations remains.",
+    "main_build": "LuaLaTeX PASS, 558 pages, no overfull boxes or undefined references/citations"
   }
 }
