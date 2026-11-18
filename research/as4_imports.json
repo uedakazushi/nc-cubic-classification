@@ -1306,5 +1306,56 @@
     ],
     "used_part": "necessary lower single and zero-cd charts, opposite equivalence, and scope of the remaining open chart of square-split",
     "verification": "Original relation calculations for H3 are independent of the pinned normal-form proof; the remaining open chart still needs a central-cut test."
+  },
+  "CY_three_alpha_symmetric_necessary_v317": {
+    "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+    "files": [
+      {
+        "path": "research/proofs/CY_THREE_COMMUTATORS_REDUCTION.tex",
+        "sha256": "02a7afd9e62f11acffa7191d584e818c21243158b546a12440812afb9fa1560a"
+      },
+      {
+        "path": "research/proofs/CY_ALPHA_ZERO_LEADING.tex",
+        "sha256": "07b9f81bfec77ad9fd279f498987774ae2ecd638de0b89ed53b03f2281bad44f"
+      },
+      {
+        "path": "research/proofs/CY_ALPHA_SMOOTH_CUBIC.tex",
+        "sha256": "47d28a64acf7b0cbc7feb96cca82cd6c36dd22b8ac5a1e505e9fdd43da48ad55"
+      },
+      {
+        "path": "research/proofs/CY_ALPHA_TRIANGLE_CUBIC.tex",
+        "sha256": "9f5f850b99b81690a2b3982d38172840a39fc1aeec96b2764bb84dbcf32e207d"
+      },
+      {
+        "path": "research/proofs/CY_ALPHA_NODAL_CUBIC.tex",
+        "sha256": "10727e96ccbc572777163f09679716c35d0027222345e94b132b62f796cab4f8"
+      },
+      {
+        "path": "research/proofs/CY_ALPHA_SECANT_CONIC.tex",
+        "sha256": "af3b817d6ac88c8bda4ca3c38a1c4fc9f2f2aa5d0985105ab81c76ff9aa8bd3d"
+      },
+      {
+        "path": "research/proofs/CY_ALPHA_CUSPIDAL_CUBIC.tex",
+        "sha256": "f6b2c79a593ddf2d67ae06ace83781e76ae5061872436bf460bba488585b7a23"
+      },
+      {
+        "path": "research/proofs/CY_ALPHA_TANGENT_CONIC.tex",
+        "sha256": "9b150f80335de6eaef309c85c5fe5d0062c6ce5495f747e760cba887eed99180"
+      },
+      {
+        "path": "research/proofs/CY_ALPHA_CONCURRENT_LINES.tex",
+        "sha256": "4e238e182f1629fae05586be9f2583f924dc0062c664ba4acb5330a55cc9d4ad"
+      },
+      {
+        "path": "research/proofs/CY_ALPHA_DOUBLE_LINE.tex",
+        "sha256": "6a83832b0a1ed95be5b76000979bdf94790c1c17f94f8c21eca61c8429c46071"
+      },
+      {
+        "path": "research/proofs/CY_ALPHA_TRIPLE_LINE.tex",
+        "sha256": "5147a5e9974cac71fabca71653c737d4957bb18bfc8061651deeca0fe21dca39"
+      }
+    ],
+    "used_part": "alpha necessary cover when gamma is zero, the singular leading forms and normalized diagonal low quadratics, and transformation of the potential",
+    "verification": "First-order central lifts independently checked in the original insertion spaces; admissibility and pointed arrows proved here. The upstream all-orbit normal-form proof was not independently reimplemented."
   }
 }
