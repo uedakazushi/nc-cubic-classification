@@ -1568,5 +1568,16 @@
     ],
     "used_part": "Source relations and full permitted parameter loci for TD1 and FO1–FO2.",
     "verification": "The two commuting-plane central quadratics are independently checked in the original degree-two and degree-three quotients."
+  },
+  "CY_one_segre_double_split_TD_opposite_v334": {
+    "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+    "files": [
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_DOUBLE_SPLIT_TRIPLE_DECOMPOSABLE.tex",
+        "sha256": "da3d2d596419b9e78bb31073a1df97935a8b9cd0469ea34aeb0f964a0a253801"
+      }
+    ],
+    "used_part": "TD1, TD2 and the opposite-algebra coordinate transformation TD12. This transformation is used only for the dimension of the centre.",
+    "verification": "The transformation of TD12 to a sign change of A in the new coordinates is checked directly. The theorem and the top-tensor change underlying TD12 are taken from the pinned source. The cubic-centre calculations are independent."
   }
 }

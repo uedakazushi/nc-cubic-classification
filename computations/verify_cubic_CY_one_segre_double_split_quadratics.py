@@ -125,13 +125,16 @@ def cubic_exclusion(name, source, permutation, dimensions):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--cubic", choices=("TD1", "FO1", "FO1_linear_columns",
+    parser.add_argument("--cubic", choices=("TD1", "TD1_quotient", "FO1", "FO1_linear_columns",
                                            "FO1_quotient", "FO1_quotient_alternate"))
     args = parser.parse_args()
     charts = {"TD1": three_cross, "FO1": four_cross_one_outer}
     if args.cubic:
         name = args.cubic
-        if name.startswith("FO1_quotient"):
+        if name == "TD1_quotient":
+            source = quadratic_quotient(three_cross())
+            permutation, dimensions = (0, 1, 3, 2), (9, 16, 25)
+        elif name.startswith("FO1_quotient"):
             alternate = name.endswith("alternate")
             source = quadratic_quotient(four_cross_one_outer(linear_columns=not alternate))
             permutation = (0, 1, 3, 2) if alternate else (0, 1, 2, 3)

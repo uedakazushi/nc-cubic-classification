@@ -1,0 +1,26 @@
+{
+  "chart": "TD1_quotient",
+  "centre_rank": 16,
+  "minor_numerator_factors": [
+    "4*p - 1",
+    "4*p^2 + 32*p*w - p - 4*w",
+    "4*p^2 - p + 4*w",
+    "u",
+    "w"
+  ],
+  "minor_denominator_factors": [
+    "16*p^3*u + 128*p^2*u*w - 8*p^2*u + 256*p*u*w^2 - 32*p*u*w + p*u - 4*p + 1",
+    "4*p + 16*w - 1",
+    "4*p^2*u + 16*p*u*w - p*u - 1",
+    "p"
+  ],
+  "projection_denominator_factors": [
+    "16*p^3*u + 128*p^2*u*w - 8*p^2*u + 256*p*u*w^2 - 32*p*u*w + p*u - 4*p + 1",
+    "4*p + 16*w - 1",
+    "4*p - 1",
+    "4*p^2*u + 16*p*u*w - p*u - 1",
+    "p",
+    "u",
+    "w"
+  ]
+}

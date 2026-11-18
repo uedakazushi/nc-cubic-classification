@@ -1,0 +1,63 @@
+[
+  {
+    "chart": "b=1/2, varying e",
+    "factor_support": [
+      "z",
+      "z + 1",
+      "z - 1",
+      "z**3 + z**2 + 7*z - 1"
+    ],
+    "recomputed_irreducible_factors": [
+      "z",
+      "z**3 + z**2 + 7*z - 1"
+    ]
+  },
+  {
+    "chart": "b=1/2, constant e",
+    "factor_support": [
+      "z + 1",
+      "z - 1"
+    ],
+    "recomputed_irreducible_factors": []
+  },
+  {
+    "chart": "B=B'=0",
+    "factor_support": [
+      "z",
+      "z + 1/128",
+      "z + 1/64",
+      "z + 3/256",
+      "z**2 + 3*z/256 + 3/65536",
+      "z**2 + 5*z/256 + 5/65536"
+    ],
+    "recomputed_irreducible_factors": [
+      "z + 1/128",
+      "z + 3/256",
+      "z**2 + 3*z/256 + 3/65536",
+      "z**2 + 5*z/256 + 5/65536"
+    ]
+  },
+  {
+    "chart": "B=C=0",
+    "factor_support": [
+      "z",
+      "z + 1",
+      "z - 1",
+      "z - 3",
+      "z**2 + 1"
+    ],
+    "recomputed_irreducible_factors": [
+      "z",
+      "z - 3",
+      "z**2 + 1"
+    ]
+  },
+  {
+    "chart": "C=C'=0",
+    "factor_support": [
+      "z",
+      "z - 1/2"
+    ],
+    "recomputed_irreducible_factors": []
+  }
+]

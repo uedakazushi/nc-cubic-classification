@@ -419,3 +419,51 @@ $D=C-4$ では許容値がない。
 \path{verify_cubic_CY_one_segre_double_split_quadratics.py} の
 \texttt{--cubic FO1\_quotient} と \texttt{--cubic FO1\_quotient\_alternate} で再生成する。
 \end{proof}
+
+\begin{proposition}\label{prop:cubic-CY-one-segre-double-split-TD-excluded}
+分解三交差族(TD1)では、全許容係数で中央三次は零である。
+\end{proposition}
+\begin{proof}
+$h=-p(p-1/4)$ とし $A=8p-1$, $B=h/w-A/2$, $E=uw^2$ と置く。
+正則条件(TD2)は、次の積の非零性に移る。
+\[
+ (A^2-1)(A^2-4B^2)E\bigl(A^2-1-64E(2B-1)^2\bigr).
+\]
+(TD12)は反対代数を $(A,B,E)\mapsto(-A,B,E)$ へ移す
+\cite{AS4CYpinned}。中心の次元はこの変換で保たれる。
+(TD1)の中央二次商における次数三の中心行列は、関数体上で階数16である。
+一つの小行列式と商写像の分母を合わせると、上記の正則条件を除いた例外因子は
+\[
+ 2B-1,\qquad \Psi_+=A+2B-2,\qquad
+ \Phi_-=A^2-1+64E(2B-1)(-A-2B)
+\]
+だけである。$A\mapsto-A$ による像を $\Psi_-,\Phi_+$ と書く。
+元包絡の中央三次は中央二次商へ単射なので、非零中心があれば
+$(2B-1)\Psi_+\Phi_-=(2B-1)\Psi_-\Phi_+=0$。
+
+$B=1/2$ に制限すると、元包絡の階数20の小行列式と商写像から残る因子は
+$64(A+1)E+A-1$、その反対代数での像、$64E+1$。
+$B\ne1/2$ のとき、二式から $\Psi_+=\Psi_-=0$、
+$\Psi_+=\Phi_+=0$ または $\Phi_+=\Phi_-=0$ となる。
+混合のもう一方は反対代数へ移す。従って次の五曲線が残る。
+\[
+\begin{array}{c|c|c}
+ A & B & E\\ \hline
+ A & 1/2 & (1-A)/(64(A+1))\\
+ A & 1/2 & -1/64\\
+ 0 & 1 & E\\
+ A & (2-A)/2 & (A+1)/(128(A-1))\\
+ 0 & B & 1/(128B(1-2B)).
+\end{array}
+\]
+各曲線の一変数関数体で、元六関係の次数四商を構成すると中心行列は階数20。
+商写像の分母と小行列式の許容例外因子は五曲線でそれぞれ $2,0,4,3,0$ 個である。
+各既約因子の数体で同じ元六関係から再計算し、全て階数20となる。
+従って全正則域で中央三次は零となる。
+
+\path{verify_cubic_CY_one_segre_double_split_TD.py} と対応するJSONで
+座標変換、因子の被覆、全曲線と全数体を再現する。
+中央二次商の計算は
+\path{verify_cubic_CY_one_segre_double_split_quadratics.py}
+の \texttt{--cubic TD1\_quotient} で再生成する。
+\end{proof}

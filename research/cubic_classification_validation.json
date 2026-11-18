@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "version": "classification-v333",
+  "version": "classification-v334",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -4682,5 +4682,16 @@
     "scope": "All allowed FO1–FO2 coefficients have zero cubic centre. This leaves TD1 and FDC3 in the two-product projection.",
     "exact_control": "PASS two generic quadratic-quotient centre matrices of rank 16, and original centre matrices of rank 20 over both quadratic function fields. Resultants exclude the third curve, and exact GCDs exclude both remaining mixed fibres over number fields of degrees 8 and 18.",
     "main_build": "LuaLaTeX PASS, 489 pages, no overfull boxes or undefined cross-references/citations"
+  },
+  "CY_one_segre_double_split_TD_excluded_v334": {
+    "proof": "papers/sections/cubic_CY_one_segre_double_split.tex",
+    "validator": "computations/verify_cubic_CY_one_segre_double_split_TD.py",
+    "certificates": [
+      "computations/cubic_CY_one_segre_double_split_TD1_quotient_open_certificate.json",
+      "computations/cubic_CY_one_segre_double_split_TD_certificate.json"
+    ],
+    "scope": "All allowed TD1 coefficients have zero cubic centre. The two-product projection has only FDC3 left to decide.",
+    "exact_control": "PASS generic quadratic-quotient rank 16 with three residual factors. Opposite-algebra symmetry and the original cubic rank witness cover the residual locus by five rational curves. PASS original rank 20 on all five curves and nine exceptional irreducible factors over their residue fields.",
+    "main_build": "LuaLaTeX PASS, 490 pages, no overfull boxes or undefined cross-references/citations"
   }
 }
