@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "version": "classification-v309",
+  "version": "classification-v311",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -4440,5 +4440,30 @@
     "certificate": "computations/cubic_CY_one_segre_square_certificate.json",
     "independent_exact_control": "PASS all 13 presentations; irreducible numerator/quotient denominator exceptions evaluated in exact fields and centre bases checked",
     "ordinary_proof": "binary factorization, and cyclic norm splitting of every potentially integral cut in the primitive cubic S_a case"
+  },
+  "CY_one_segre_extensions_v310": {
+    "proof": "papers/sections/cubic_CY_one_segre_extensions.tex",
+    "validator": "computations/verify_cubic_CY_one_segre_extensions.py",
+    "certificate": "computations/cubic_CY_one_segre_extensions_certificate.json",
+    "exact_control": "PASS 23 fixed or one-parameter presentations including all irreducible exceptions",
+    "scope": "split-added disjoint Segre reduces to classified skew, and two-square external branch excluded",
+    "ordinary_proof": "rank-one cubic obstructions in exceptional binary subspaces, filtered center, and conic Faddeev residues at pure-square cubic resonance"
+  },
+  "CY_three_mixed_rankone_v310": {
+    "proof": "papers/sections/cubic_CY_three_mixed_rank_one.tex",
+    "scope": "seven-coefficient zero-volume, wedge rank one mixed case excluded",
+    "ordinary_proof": "d filtration and commutator with a force central cubics into a*k[a,b,c]_2"
+  },
+  "CY_one_segre_cross_v311": {
+    "proof": "papers/sections/cubic_CY_one_segre_extensions.tex",
+    "validator": "computations/verify_cubic_CY_one_segre_cross.py",
+    "certificate": "computations/cubic_CY_one_segre_cross_certificate.json",
+    "exact_control": "PASS finite two-parameter original frame, five exact exceptional curves and infinity with e=0; literal comparison with pinned source matrices PASS",
+    "scope": "full two-square-added disjoint Segre H3 exclusion"
+  },
+  "CY_three_mixed_v311": {
+    "proof": "papers/sections/cubic_CY_three_mixed_rank_one.tex",
+    "scope": "zero-volume wedge ranks one and two, wedge rank three with column rank two, and zero-leading alpha excluded",
+    "ordinary_proofs": "leading commutator, reflection alternating-word basis, a sign-reversed nonzero Clifford central quadric, and the two dehomogenized zero-leading centers"
   }
 }

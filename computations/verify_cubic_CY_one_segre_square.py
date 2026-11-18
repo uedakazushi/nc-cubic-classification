@@ -73,15 +73,16 @@ def factors(value):
             for factor, _ in s.factor_list(value, h)[1]}
 
 
-def all_values(name, relations, units):
+def all_values(name, relations, units, exception_check=None):
     """Use generic quotient identities and recompute at every nonunit factor."""
-    field = s.QQ.frac_field(h) if h in relations.free_symbols else s.QQ
+    base = s.QQ_I if relations.has(s.I) else s.QQ
+    field = base.frac_field(h) if h in relations.free_symbols else base
     matrix, rows, projections = central_data(relations, field)
     assert len(rows) == 20, name
     minor = field.to_sympy(matrix.extract(rows, list(range(20))).det())
     assert minor
     record = {"name": name, "minor": str(s.factor(minor)), "rows": rows}
-    if field == s.QQ:
+    if field == base:
         return record
     denominators = set()
     for projection in projections:
@@ -112,6 +113,8 @@ def all_values(name, relations, units):
             assert cubes.rank() == count and (target*cubes).is_zero_matrix
             assert len(special_rows) == 20-count
             witness["centre_basis"] = ["abcd"[i]*3 for i in range(count)]
+        elif len(special_rows) != 20 and exception_check is not None:
+            witness.update(exception_check(name, factor, target, projection))
         else:
             assert len(special_rows) == 20, (name, factor)
             det = coeff.to_sympy(target.extract(special_rows, list(range(20))).det())

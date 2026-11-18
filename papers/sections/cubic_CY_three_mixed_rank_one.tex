@@ -1,0 +1,133 @@
+\subsection{三交換子の外積階数一の混合型}
+\begin{proposition}\label{prop:cubic-CY-three-mixed-rank-one-empty}
+三交換子の零体積・外積階数一の混合CY型は、H3包絡にならない。
+\end{proposition}
+\begin{proof}
+固定出典\cite{AS4CYpinned}の外積階数一の必要被覆を用いる。
+その七係数表示では $a,b,c$ の部分環 $S$ は
+\[
+ [a,b]=[a,c]=0,\qquad cb=-bc-2\mu a^2
+\]
+を満たし、他の三関係は
+\[
+ da=ad+2w,\qquad db=-bd-2Q,\qquad dc=-cd-2P,
+ \qquad w=bc+\mu a^2,quad P,Q\in S_2 .
+\]
+順序語 $a^i b^j c^k d^\ell$ はこれらの書換えで張る。
+実際 $d$ を動かす補正項には $d$ がなく、$cb$ の補正項は $b,c$ の個数を下げる。
+AS4 Hilbert級数との比較で順序語は基底である。
+
+$d$ の個数で濾過した環では、$d$ は $a,b,c$ に対して
+それぞれ符号 $+,-,-$ で動く。特に $w$ はこの符号作用で不変である。
+$[d^n,a]$ の最高 $d$ 次数項は $2n w d^{n-1}$ である。
+これは $[d,a]=2w$ に交換子の積法則を反復適用して得られる。
+任意の元を $\sum s_n d^n$ と書くと $a$ は各 $s_n\in S$ と可換である。
+最高指数が $n>0$ なら、$a$ との交換子の最高項は
+$2n s_n w d^{n-1}$ で零でない。標数は零で、$S$ は整域かつ $w\ne0$ だからである。
+よって中心は $S$ に含まれる。
+
+$S$ は中央部分環 $k[a,b^2,c^2]$ 上で $1,b,c,bc$ を基底とする。
+$[b,c]=2bc+2\mu a^2$ と $[b,bc]=2b^2c+2\mu a^2b$ を使うと、
+$b$ と可換な元の $c,bc$ 係数は共に零である。
+更に $c$ と可換であるためには $b$ 係数も零でなければならない。
+従って $Z(S)=k[a,b^2,c^2]$。
+特にその次数三成分は $a^3,ab^2,ac^2$ で張られ、全要素が $a$ で割れる。
+よって中心三次切断は整域にならない。
+\end{proof}
+
+\begin{proposition}\label{prop:cubic-CY-three-mixed-rank-two-empty}
+三交換子の零体積・外積階数二の混合CY型は、H3包絡にならない。
+\end{proposition}
+\begin{proof}
+固定出典\cite{AS4CYpinned}の外積階数二の必要被覆と、
+その各表示の融合積基底を用いる。
+すなわち $R_0=k[a,b,Z]$、$\deg(a,b,Z)=(1,1,2)$ とすると、
+代数は左 $R_0$ 上で $c,d$ の交代語（空語を含む）を基底とし、
+$c^2,d^2$ は $R_0$ に属する。$c,d$ が $R_0$ を横切る関係は
+\[
+ cf=\sigma(f)c+\delta_c(f),\qquad
+ df=\tau(f)d+\delta_d(f)\qquad(f\in R_0)
+\]
+である。ここで $\sigma,\tau$ は次数付き対合であり、一次成分上で
+\[
+ \sigma(a)=a,\quad\sigma(b)=-b-ra,qquad
+ \tau(a)=-a-sb,\quad\tau(b)=b .
+\]
+二重零・片側非零・両側非零の各表示でこの形は共通である。
+また $\sigma(Z)=Z$、$\tau(Z+H)=Z+H$ であり、$H\in k[a,b]_2$ である。
+これらの基底と三場合の作用は、固定出典
+\texttt{CY\_RANKTWO\_REGULARITY.tex}\quad の反射型融合積の表による。
+
+交代語長で濾過する。基底の独立性により、中心三次の最高濾過項が
+$a,b$ と可換なら、各語の係数ごとに、その語の $k[a,b]_1$ への作用は
+恒等でなければならない。奇数長の作用は行列式 $-1$ なので恒等でなく、
+長さ2の二語は $\sigma\tau,\tau\sigma$ で作用するが、
+$\sigma,\tau$ は異なる対合なのでこれも恒等でない。
+中心三次の語長は高々3だから、全て $R_0$ に入る。
+
+従って中心三次は $f(a,b)+\ell(a,b)Z$ と書ける。
+$c,d$ との可換性から $\sigma,\tau$ の双方に不変でなければならない。
+$Z$ の係数を比較すると、$\ell$ は両者の一次固定空間 $ka,kb$ の交わりに属する。
+従って $\ell=0$ であり、中心三次は可換二元三次に限られる。
+その全要素は積に分解するため、整域切断を与えない。
+\end{proof}
+
+\begin{proposition}\label{prop:cubic-CY-three-wedge-three-column-two-empty}
+三交換子の外積階数三・列係数階数二のCY型は、H3包絡にならない。
+\end{proposition}
+\begin{proof}
+固定出典\cite{AS4CYpinned}の外積階数三の列係数階数二の必要表示を用いる。
+列の平方基底を取ると、$A$ の関係は
+$[a,b],[c,d],[a,d]-[b,c]$ と、
+$\langle a,c\rangle$ の対称積と $\langle b,d\rangle$ の対称積だけからなる三関係である。
+$\sigma=\operatorname{diag}(1,-1,1,-1)$ はこれらを保つ。
+右Zhangねじり $B=A^\sigma$ の関係はすべて対称であり、混合符号の関係は
+$\{a,b\},\{c,d\},\{a,d\}+\{b,c\}$ の三本で尽くされる。
+$\{u,v\}=uv+vu$ とした。
+AS4性はねじりで保たれるので、固定出典の対称関係AS4のClifford表示を適用できる。
+従って $\{a,d\}$ は $B$ で中央である。
+混合符号の三関係から明らかな通りこれは非零で、$\sigma$ はその符号を反転する。
+
+もし $Z(A)_3\ne0$ なら、$\sigma$ 固有の非零中心三次 $G$ を選び、
+$\sigma(G)=\epsilon G$ とする。$B$ の積を $*$ と書けば、$v\in B_1$ について
+\[
+ G*v=G\sigma(v)=\sigma(v)G=(\epsilon\sigma(v))*G .
+\]
+従って二次中央元 $\{a,d\}$ に対して
+$G*\{a,d\}=-\{a,d\}*G$ である。$B$ は整域なのでこれは矛盾する。
+ここでねじりによる整域性の保存は、非零斉次元の積の定義と最高次数項から従う。
+\end{proof}
+
+\begin{proposition}\label{prop:cubic-CY-three-alpha-zero-empty}
+三交換子の $\alpha$ 型で先頭三次式 $H|_{a=0}$ が零である場合、
+H3包絡は存在しない。
+\end{proposition}
+\begin{proof}
+固定出典\cite{AS4CYpinned}の零先頭式の必要被覆により、
+中央元 $a$ を持つ二表示
+$H=a(b^2+c^2+d^2)$ と $H=abc+a^2d$ を調べればよい。
+いずれも $b,c,d$ の交換子は $a$ 倍の一次式と $a^2$ の線型結合である。
+従って $a^i b^j c^k d^\ell$ が張り、AS4 Hilbert級数との比較から基底となる。
+$a$ を逆元化した次数零部分は $a=1$ とした三生成元表示であり、
+以下ではその生成元も $b,c,d$ と書く。
+総次数三元が $a$ で割れることは、対応する次数零元の $b,c,d$ の
+個数濾過次数が高々2であることと同値である。
+
+第一表示では $[b,c]=2d,[c,d]=2b,[d,b]=2c$。
+次数3の中心元の先頭多項式は、三つの回転導分の核に入る。
+もしその多項式 $f$ が三次なら、各 $i,j$ について
+$x_i\partial_jf=x_j\partial_if$、ただし $(x_1,x_2,x_3)=(b,c,d)$。
+$x_i,x_j$ の互いに素性から $\partial_i f=x_i L$ を満たす一次式 $L$ がある。
+混合偏導関数が等しいので $x_i\partial_j L=x_j\partial_i L$、
+従って全偏導関数 $\partial_i L$ が零である。
+$L=0$、従って $f=0$ となり矛盾する。
+よって中心元の濾過次数は高々2である。
+
+第二表示では $[b,c]=1,[c,d]=c,[d,b]=b$。
+$z=d+bc$ は中央で、代数は二元Weyl代数の中央多項式拡大である。
+これは $d=z-bc$ による表示の逆変換で分かる。
+Weylの順序語基底で $b,c$ との交換を比較すれば、中心は $k[z]$ である。
+$z^n$ の先頭は $(bc)^n$ なので、濾過次数3以下の中心元は $k+kz$ に属し、
+やはり濾過次数は高々2である。
+従って両表示で全ての中心三次は $a$ を因子に持ち、その切断は整域でない。
+\end{proof}

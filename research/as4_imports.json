@@ -1054,5 +1054,113 @@
       }
     ],
     "used_part": "necessary full square-added disjoint Segre cover and the I1/transverse presentations; no stabilizer or AS4 sufficiency imported"
+  },
+  "CY_one_segre_extensions_necessary_v310": {
+    "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+    "files": [
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_SEGRE_SPLIT_INTERNAL.tex",
+        "sha256": "5b683839b01f42eae5a40f9699ca7666d35c59d487df47a0ef53eaf855e5d50c"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_SEGRE_SPLIT_ISOTROPIC.tex",
+        "sha256": "a5d9e0703a2728ee12224d5c2954be02316bf1debc486a90f2577751d23c76a9"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_SEGRE_SPLIT_NONISOTROPIC.tex",
+        "sha256": "fa2a5007148184eaf8146f56d31b68b0b93c521388ad9c823ec04845032081dc"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_SEGRE_TWO_SQUARES_EXTERNAL.tex",
+        "sha256": "1441b7315a8d978265ac263ac60cc2d7c74d0463f9603fa890c6acd0d17d8bb3"
+      }
+    ],
+    "used_part": "necessary split disjoint Segre cover, and two-square external representations only"
+  },
+  "CY_three_mixed_rankone_necessary_v310": {
+    "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+    "files": [
+      {
+        "path": "research/proofs/CY_RANKONE_MIXED_ORBITS.tex",
+        "sha256": "13db3e053d7f1ba1a538859b3827ed9d886c3a3b83cdaeaafcacaf05bc55d909"
+      }
+    ],
+    "used_part": "necessary seven-coefficient rank-one mixed normal form only"
+  },
+  "CY_one_segre_cross_necessary_v311": {
+    "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+    "files": [
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_TWO_SQUARES_FINITE_REGULAR.tex",
+        "sha256": "7e20cdb6dd9f92689bf9c56310e915d255215c7a5f459933e7623a74fbb95cfd"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_TWO_SQUARES_INFINITY_REGULAR.tex",
+        "sha256": "c571d48f3999e8cbaa664387afae7c32fe3ff288f1e85f3f9ac16ec29dabf327"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_TWO_SQUARES_BOUNDARY_EXCLUSION.tex",
+        "sha256": "895e5bc896f21f8405c43327fec8ca63e8e6735afaee71aacc178a5c304a8256"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_TWO_SQUARES_ZERO_CORNER.tex",
+        "sha256": "4596d5b4ecf97261735eed6b235048e95fd8e9fb2117dd86d7a14a784cf208f4"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_TWO_SQUARES_CROSS_OPEN.tex",
+        "sha256": "dc0c6264762b493b982960e8de15dc5adb5e0e8b7ba992a5af604b2e82be8aca"
+      }
+    ],
+    "used_part": "necessary crossed two-square cover and finite/infinity parameter domains"
+  },
+  "CY_three_mixed_ranktwo_necessary_v311": {
+    "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+    "files": [
+      {
+        "path": "research/proofs/CY_RANKTWO_REGULARITY.tex",
+        "sha256": "b56abec588398d0390ee5c6c70a02535487c594e090de76df723af87686bf2b5"
+      },
+      {
+        "path": "research/proofs/CY_RANKTWO_DOUBLE_ZERO.tex",
+        "sha256": "67cb49f10efcb923c7fe984c8c426b4d0152079ee513a0fbf1ea58ab188b5e72"
+      },
+      {
+        "path": "research/proofs/CY_RANKTWO_ALL_ORBITS.tex",
+        "sha256": "39e80c9133817c5fb8260334377c481a4ef0eeb4e94db85e7a1d0d69afde577a"
+      }
+    ],
+    "used_part": "necessary three presentations and their reflection amalgam alternating basis"
+  },
+  "CY_three_column_two_necessary_v311": {
+    "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+    "files": [
+      {
+        "path": "research/proofs/CY_RANKTHREE_COLUMN_TWO.tex",
+        "sha256": "65a898231ea6af5028cb83e0671c46c1f1be9849022b5ea9fa7917ef5b287cba"
+      },
+      {
+        "path": "research/proofs/CY_RANKTHREE_BIFORM.tex",
+        "sha256": "934c3b454cb1778c360eb3b7543671bf4681245dfe8fedfd6022c6e57e4e516a"
+      },
+      {
+        "path": "research/proofs/SCALAR_CLIFFORD.tex",
+        "sha256": "9150a2d65fe89daf5e4955715c77070dc3ac07ede9a5d5b8051103df167a8a55"
+      }
+    ],
+    "used_part": "necessary column-rank-two form and symmetric Clifford description after twist"
+  },
+  "CY_three_alpha_zero_necessary_v311": {
+    "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+    "files": [
+      {
+        "path": "research/proofs/CY_ALPHA_ZERO_LEADING.tex",
+        "sha256": "07b9f81bfec77ad9fd279f498987774ae2ecd638de0b89ed53b03f2281bad44f"
+      },
+      {
+        "path": "research/proofs/CY_THREE_COMMUTATORS_REDUCTION.tex",
+        "sha256": "02a7afd9e62f11acffa7191d584e818c21243158b546a12440812afb9fa1560a"
+      }
+    ],
+    "used_part": "necessary zero-leading alpha presentations only"
   }
 }

@@ -101,6 +101,8 @@ CHECKS=[
  'verify_cubic_CY_adjacent_open.py',
  'verify_cubic_CY_two_commutator_I.py',
  'verify_cubic_CY_one_segre_square.py',
+ 'verify_cubic_CY_one_segre_extensions.py',
+ 'verify_cubic_CY_one_segre_cross.py',
 ]
 results=[]
 for name in CHECKS:
