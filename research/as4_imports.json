@@ -1256,5 +1256,28 @@
     ],
     "used_part": "necessary symmetric ranks and sixteen marked projections, rank-five and two shared exclusions, and the original six-relation forms for nine shared projections",
     "verification": "Central cubic calculations independently rerun for all nine occupied shared projections. Upstream orbit classification and all its exclusions not independently reimplemented."
+  },
+  "CY_one_segre_square_split_necessary_v315": {
+    "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+    "files": [
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_SQUARE_SPLIT_TRANSVERSE.tex",
+        "sha256": "d35522b31b47ee3611334cb5c0684ddf5a885679966ef6557d549f1ae37b9023"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_SQUARE_SPLIT_NONISOTROPIC.tex",
+        "sha256": "5927e53b7c3bfa4b00fe10802558fd5bc6086486a80265fe4b437e38a8dfb4b0"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_SQUARE_SPLIT_ISOTROPIC.tex",
+        "sha256": "5d05c2890ad12366d8ec013d30970737c942bdeea24ad3596e1476fd4db57ea6"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_SQUARE_SPLIT_CROSS_TOP.tex",
+        "sha256": "fb30a046955b4547fe8bd2fc37e22f1c2a0fb44ee8101dd8710972adb78f7d10"
+      }
+    ],
+    "used_part": "necessary seven transverse, four nonisotropic, eight isotropic and upper-cross models in disjoint square-split projection; existence and AS4 of resonance Z only",
+    "verification": "Original relations independently used in exact central-cubic calculations; AS4 normal-form coverage is taken from pinned proofs, not independently reimplemented."
   }
 }

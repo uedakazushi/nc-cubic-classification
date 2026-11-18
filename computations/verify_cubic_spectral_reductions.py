@@ -106,6 +106,7 @@ CHECKS=[
  'verify_cubic_CY_three_alpha_repeated_lines.py',
  'verify_cubic_CY_one_segre_shared.py',
  'verify_cubic_CY_one_segre_shared_squares.py',
+ 'verify_cubic_CY_one_segre_square_split.py',
 ]
 results=[]
 for name in CHECKS:
