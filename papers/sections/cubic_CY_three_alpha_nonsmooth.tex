@@ -1,0 +1,143 @@
+\subsection{三交換子の中央拡大における直線重複境界}
+\label{subsec:cubic-CY-three-alpha-nonsmooth}
+
+\begin{proposition}\label{prop:cubic-CY-three-alpha-triple-empty}
+三交換子の $\alpha$ 型で先頭三次式 $H|_{a=0}$ が三重直線を定める場合、
+H3包絡は存在しない。
+\end{proposition}
+\begin{proof}
+固定出典\cite{AS4CYpinned}の \texttt{CY\_ALPHA\_TRIPLE\_LINE.tex}
+の必要被覆を用いる。中央一次元を $ka$ とし、
+$[c,d]=H_b,[d,b]=H_c,[b,c]=H_d$ とする。全四表示と、それぞれの中心三次 $L$
+は次の通りである。
+\[
+\begin{array}{c|l|l}
+ &H&L\\ \hline
+ \mathrm{I}&b^3+acd+Ea^2b&
+ b^3+acd-\tfrac32ab^2+(E+\tfrac12)a^2b\\
+ \mathrm{II}&b^3+a(c^2+bd)&b^3+a(bd+c^2)+a^2c\\
+ \mathrm{III}&b^3+ac^2+a^2d&b^3+ac^2+a^2d\\
+ \mathrm{IV}&b^3+abc+a^2d&b^3+abc+a^2d
+\end{array}
+\]
+$E$ は任意である。全六関係で順序 $a,b,c,d$ へ並べ替えれば、
+各 $L$ と四生成元の交換子が零になる。
+この計算は重み $(0,2,3,3)$ で行い、逆順対を交換した補正項の重みは
+厳密に下がる。順序単項式はAS4のHilbert値から基底である。
+
+$S=B/(a)$ は $b$ を中央とし $[c,d]=3b^2$ を持つ。
+$b$ で局所化したWeyl表示の中心は $k[b,b^{-1}]$ である。
+順序単項式を比較すると $Z(S)=k[b]$ となる。
+整域切断を与える中心三次 $G$ は $a$ で割れないから、
+尺度を選んで $G\equiv b^3\pmod a$ とできる。
+従って $G-L=aT$、$T\in Z(B)_2$ である。
+$T$ の像は $Z(S)_2=kb^2$ に入るので、
+$J=(a,b,c)$ に対して $aT\in J^2$。
+表の全 $L$ も $J^2$ に属し、任意の整域切断が $G\in J^2$ を満たす。
+
+$R=B/(G)$ とし、$P=\pi(R/J)$ を取る。
+$R/J=k[d]$ であり $P\simeq P(-1)$ である。
+H3を仮定し、$P$ のtails自己拡大を十分高次数で取り、$d$ の作用を恒等に規格化する。
+$a,b,c$ の非対角成分を順に $(u_n,v_n,w_n)$ と書く。
+$G$ は一次化で零で、全六関係は $u_{n+1}=u_n$ と次の二式だけを課す。
+\[
+\begin{array}{c|cc}
+ & v_{n+1}&w_{n+1}\\ \hline
+ \mathrm{I}&v_n+u_n&w_n\\
+ \mathrm{II}&v_n&w_n-u_n\\
+ \mathrm{III},\mathrm{IV}&v_n&w_n
+\end{array}
+\]
+補題\ref{lem:cubic-odd-Serre-determinant}を最大単冪型に適用したときと同様、
+tails拡大は高次数のsectionで全てこの形になり、逆に任意の初期値から拡大が得られる。
+従って $\dim\operatorname{Ext}^1(P,P)=3$ で、次数shiftは行列式1の作用を持つ。
+これは $S_{\qgr R}=(-1)[2]$ と同補題に反する。
+\end{proof}
+表の中心性と全自己拡大漸化式は
+\texttt{verify\_cubic\_CY\_three\_alpha\_repeated\_lines.py} で厳密再現できる。
+
+\begin{proposition}\label{prop:cubic-CY-three-alpha-double-empty}
+三交換子の $\alpha$ 型で先頭三次式 $H|_{a=0}$ が二重直線とそれと異なる直線の和を定める場合、
+H3包絡は存在しない。
+\end{proposition}
+\begin{proof}
+固定出典\cite{AS4CYpinned}の \texttt{CY\_ALPHA\_DOUBLE\_LINE.tex}
+により $\gamma=1$、$H|_{a=0}=b^2c$ とできる。
+上流の低次係数の軌道分解の前に取り、
+\[
+ H=b^2c+a(Ac^2+\beta bd+Ccd+Dd^2)+a^2(Eb+Fc+Kd)
+\]
+とする。三つの交換子関係には、対称化を行う。
+実関係から直接、次の順序語表示の元が中心に入る。
+\begin{align*}
+ L={}&b^2c+a\bigl(Ac^2+(\beta-2D)bd+Ccd+Dd^2-2Cbc-\tfrac12\beta b^2\bigr)\\
+    &+a^2\bigl((E+\tfrac12\beta C-K)b+(F+A\beta-2AD+C^2)c+(K+CD)d\bigr).
+\end{align*}
+確認には重み $(0,2,2,3)$ と逆順語還元を使う。
+三つの書換え $cb,db,dc$ の補正項は、$dc$ の対称積を $cb$ で消去した後、
+全て厳密に低い重みを持つ。従って順序語が張り、AS4のHilbert値から基底になる。
+$L$ の交換子の全係数の消滅は上と同じ再現器で七係数の多項式恒等式として検証できる。
+
+$a=0$ の商は $S=k[b,c][d;\delta]$、$\delta(b)=b^2$、$\delta(c)=-2bc$ である。
+中心に正の $d$ 次数を持つ元があれば $b$ との交換子の最高項は
+$n b^2$ と先頭係数の積になり、非零となる。
+$k[b,c]$ 上では $\delta(b^i c^j)=(i-2j)b^{i+1}c^j$ なので
+$Z(S)=k[b^2c]$。従って整域切断を与え得る全ての中心三次は、
+尺度を除き $G=L+\lambda a^3$（$\lambda\in k$）となる。
+実際、$G-L=aT$ の中心二次 $T$ は $Z(S)_2=0$ より $a^2$ のスカラー倍である。
+
+重複直線 $a=b=0$ 上で $Ac^2+Ccd+Dd^2$ が消える点を選ぶ。
+$k$ は代数閉なので二次式が恒等的に零の場合も含め、必ずこのような点がある。
+この点の一次イデアルを $J$ とすると、$L+\lambda a^3\in J^2$ である。
+実際、$b^2c$ と全ての $a^2$ 項は $J^2$ に入り、
+$a$ の係数の二次式はこの点で $Ac^2+Ccd+Dd^2$ と同じ値を持つ。
+二次関係はいずれもこの点で消えるから、$P=\pi(R/J)$ はshiftで固定される点対象となる。
+
+$d=1,c=r$ の場合、$d$ を恒等、$a,b,c-rd$ の非対角成分を $u,v,w$ に規格化する。
+同じ方法で得られる全自己拡大の条件は $u'=u$ と
+\[
+ v'=v+(2Ar+C)u,\qquad
+ w'=w-r(v+v')-\beta u,
+\]
+ただしプライムは次の次数を表す。残りの線型化関係は
+$(Ar^2+Cr+D)u=0$ であり、点の選び方により恒等式である。
+$c=1,d=0$ の場合は $A=0$ で、$c$ を恒等にし、$a,b,d$ の成分を $u,v,w$ とすれば
+\[
+ u'=u,\qquad v'=v-Cu,\qquad w'=w+v+v' .
+\]
+どちらでも任意の初期値が許される。従って自己一次拡大空間は三次元、
+shiftは行列式1であり、補題\ref{lem:cubic-odd-Serre-determinant}に矛盾する。
+\end{proof}
+
+\begin{proposition}\label{prop:cubic-CY-three-alpha-concurrent-reduction}
+三交換子の $\alpha$ 型で先頭三次式が相異なる共点三直線を定めるとする。
+共点で $a$ の係数の二次式が消える場合、H3包絡は存在しない。
+従って固定出典\cite{AS4CYpinned}の
+\texttt{CY\_ALPHA\_CONCURRENT\_LINES.tex} の五族のうち、第一族だけが残る。
+\end{proposition}
+\begin{proof}
+同出典の必要表示で $\gamma=1$、$F=H|_{a=0}=bc(b-c)$ とできる。
+$H=F+aQ+a^2V$ と書けば、仮定は $Q(0,0,1)=0$ である。
+従って $Q_d$ は $b,c$ の一次式である。
+$S=B/(a)$ は $k[b,c][d;\delta]$、$\delta(b)=F_c$、$\delta(c)=-F_b$。
+$d$ 個数での最高項を $b$ と交換すると、$F_c\ne0$ のため
+中心は $k[b,c]$ に含まれる。
+
+任意の中心三次 $G$ を $G=G_0(b,c)+aT$ と書く。
+$G_0$ は $S$ への像を順序三次語で持ち上げた元である。
+$[b,G_0]$ は $a^2$ を法として $a$ 倍の $b,c$ の式だけを持つ。
+これは $[b,c]\equiv aQ_d\pmod {a^2}$ から従う。
+他方、$[b,aT]$ の $a^2$ を法とした $a$ 係数は $[b,\bar T]$ であり、
+$\bar T$ は $S$ における $T$ の像である。
+その $d$ 個数1の項は、$\bar T$ における $d^2$ の係数を $m$ とすると
+$-2mF_c d$ となる。他の二次語はこの $d$ 個数を生じない。
+従って $[b,G]=0$ から $m=0$ であり、$G\in J^2$、ただし $J=(a,b,c)$ である。
+
+$P=\pi(R/J)$ において $d$ を恒等とした全tails自己拡大を求める。
+$F$ の導関数は $b,c$ の二次式であるため一次化で零となる。
+$Q_d(0,0,1)=0$ なので $[b,c]$ の関係も一次化で零となる。
+残る関係は $u'=u$、$v'=v+Q_c(0,0,1)u$、
+$w'=w-Q_b(0,0,1)u$ である。
+従って三次元の自己一次拡大に行列式1のshiftが作用し、
+補題\ref{lem:cubic-odd-Serre-determinant}に矛盾する。
+\end{proof}

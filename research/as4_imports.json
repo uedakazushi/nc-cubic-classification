@@ -1162,5 +1162,28 @@
       }
     ],
     "used_part": "necessary zero-leading alpha presentations only"
+  },
+  "CY_three_alpha_nonsmooth_necessary_v312": {
+    "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+    "files": [
+      {
+        "path": "research/proofs/CY_THREE_COMMUTATORS_REDUCTION.tex",
+        "sha256": "02a7afd9e62f11acffa7191d584e818c21243158b546a12440812afb9fa1560a"
+      },
+      {
+        "path": "research/proofs/CY_ALPHA_TRIPLE_LINE.tex",
+        "sha256": "5147a5e9974cac71fabca71653c737d4957bb18bfc8061651deeca0fe21dca39"
+      },
+      {
+        "path": "research/proofs/CY_ALPHA_DOUBLE_LINE.tex",
+        "sha256": "6a83832b0a1ed95be5b76000979bdf94790c1c17f94f8c21eca61c8429c46071"
+      },
+      {
+        "path": "research/proofs/CY_ALPHA_CONCURRENT_LINES.tex",
+        "sha256": "4e238e182f1629fae05586be9f2583f924dc0062c664ba4acb5330a55cc9d4ad"
+      }
+    ],
+    "used_part": "symmetric derivative presentation, triple-line four-model necessary cover, double-line leading normalization, and five concurrent-line representatives",
+    "verification": "Independent H3 proofs. Original central lifts and tails equations verified in the repeated-line cases. Upstream classification proof not independently audited in full."
   }
 }

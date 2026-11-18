@@ -103,6 +103,7 @@ CHECKS=[
  'verify_cubic_CY_one_segre_square.py',
  'verify_cubic_CY_one_segre_extensions.py',
  'verify_cubic_CY_one_segre_cross.py',
+ 'verify_cubic_CY_three_alpha_repeated_lines.py',
 ]
 results=[]
 for name in CHECKS:
