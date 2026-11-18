@@ -27,7 +27,7 @@
 - [全位数に共通する楕円境界の H3 開](papers/sections/cubic_CY_three_alpha_elliptic_relative.tex)
 - [研究方針](00_research_plan.md)・[現行分類ノート](research/cubic_14641_classification.md)・[主原稿](papers/weak_cubic_axioms.tex)・[検証範囲](research/cubic_classification_validation.json)・[as4 の輸入記録](research/as4_imports.json)
 
-相対分類は、noetherian 底上の相対 Serre・反標準豊富性・二次包絡の三次平坦性を満たす族を扱う。任意の平坦な Abel 圏 Artin 変形における三次平坦性の自動性は未証明である。
+相対分類は、noetherian 底上の相対 Serre・反標準豊富性・二次包絡の三次平坦性を満たす族を扱う。滑らかな可換三次点では、全次数平坦な任意の Artin 次数変形で三次平坦性が自動になる。非可換点での自動性の範囲は未決定である。
 
 ## heart比較とcornerの参照先
 

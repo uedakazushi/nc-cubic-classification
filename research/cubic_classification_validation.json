@@ -5179,5 +5179,15 @@
     "verification": "Structural relative recognition and descent proof. Four-line frame and exact elliptic diagonal verifier replayed with PASS. The full classification computation suite and independent referee review were not rerun.",
     "scope": "All geometric H3 objects and all relative intrinsic H3 families under the stated noetherian-base, relative Serre/ampleness, coherent base-change and cubic-flatness conditions. The cubic-flatness automaticity for arbitrary flat abelian Artin deformations remains.",
     "main_build": "LuaLaTeX PASS, 558 pages, no overfull boxes or undefined references/citations"
+  },
+  "H3_commutative_all_artin_flatness_v374": {
+    "proof": "papers/sections/cubic_formal_intrinsic_reconstruction.tex",
+    "theorems": [
+      "prop:h3-cubic-flatness-small-extension",
+      "thm:h3-commutative-artin-envelope-automatic"
+    ],
+    "verification": "Structural proof by the cubic Schur block, Koszul differential and duality, the 4+4 Hochschild tangent calculation at a smooth commutative cubic, and lifting through arbitrary Artin small extensions. No independent full classification audit.",
+    "scope": "A necessary finite first-order obstruction for every geometric H3 presentation. Automatic envelope flatness and smooth local H3 stack for every smooth commutative cubic, over all Artin degreewise flat graded deformations. The general noncommutative automaticity remains.",
+    "main_build": "LuaLaTeX PASS, 559 pages, no overfull boxes or undefined references/citations"
   }
 }
