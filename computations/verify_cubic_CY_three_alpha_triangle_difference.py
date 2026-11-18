@@ -132,5 +132,74 @@ def main():
     print("PASS complementary difference coefficient and cancellation of all finite poles")
 
 
+def check_formal_corner_at_order_four():
+    """Keep the abstract dihedral basis when its action on u has a kernel."""
+    field = s.QQ_I.frac_field("u")
+    u, = field.gens
+    q = field.from_sympy(s.I)
+
+    @cache
+    def act(value, power, reflected):
+        image = (q**power*u)**(-1 if reflected else 1)
+
+        def evaluate(polynomial):
+            return sum((field.convert(coefficient)*image**degree
+                        for (degree,), coefficient in polynomial.items()), field.zero)
+
+        return evaluate(value.numer)/evaluate(value.denom)
+
+    def multiply(first, second):
+        result = defaultdict(lambda: field.zero)
+        for (power, reflected), coefficient in first.items():
+            for (other_power, other_reflected), other_coefficient in second.items():
+                new_power = power - other_power if reflected else power + other_power
+                new_reflected = reflected ^ other_reflected
+                result[new_power, new_reflected] += (
+                    coefficient*act(other_coefficient, power, reflected)
+                )
+        return {word: value for word, value in result.items() if value}
+
+    def subtract(first, second):
+        words = first.keys() | second.keys()
+        return {word: first.get(word, field.zero) - second.get(word, field.zero)
+                for word in words if first.get(word, field.zero) != second.get(word, field.zero)}
+
+    projection = {(0, False): field.one/2, (0, True): field.one/2}
+    x = u + 1/u
+    for roots in ((2, 3, 5, 7), (2, 3, 5, 7, 11)):
+        a, b = roots[:2]
+        omega = (1-a*u)*(1-b*u)/((1-a*b)*(1-u*u))
+        alpha = s.prod(1-root*u for root in roots)/((1-u*u)*(1-q*u*u))
+        reflected_alpha = act(alpha, 0, True)
+        e = {(0, False): omega, (0, True): act(omega, 0, True)}
+        f = alpha/omega
+        reflection_generator = {(1, True): f, (0, False): -f}
+        difference = {(1, False): alpha, (-1, False): reflected_alpha,
+                      (0, False): -alpha-reflected_alpha}
+        assert multiply(e, projection) == projection
+        assert multiply(projection, e) == e
+        assert multiply(multiply(e, reflection_generator), projection) == multiply(difference, projection)
+
+        left = {(0, False): field.one}
+        corner = e
+        corner_with_u = multiply(e, {(0, False): u})
+        next_word = multiply(reflection_generator, e)
+        commutator = subtract(multiply(difference, {(0, False): x}),
+                              multiply({(0, False): x}, difference))
+        product = field.one
+        for n in range(1, 5):
+            product *= act(alpha, n-1, False)
+            corner = multiply(corner, next_word)
+            corner_with_u = multiply(corner_with_u, next_word)
+            assert multiply(corner, projection)[n, False] == product/2
+            assert multiply(corner_with_u, projection)[n, False] == u*product/2
+            assert multiply(commutator, left)[n, False] == (act(x, 1, False)-x)*product
+            left = multiply(difference, left)
+            assert left[n, False] == product
+        assert act(x, 4, False) == x and act(x, 1, False) != x
+    print("PASS quartic and quintic formal dihedral corners through the order-four resonance")
+
+
 if __name__ == "__main__":
     main()
+    check_formal_corner_at_order_four()

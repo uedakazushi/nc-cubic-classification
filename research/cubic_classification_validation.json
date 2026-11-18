@@ -5128,5 +5128,13 @@
     "verification": "Structural proof with the bigraded projective diagonal and the boundary Koszul restriction. Chan, Twisted Multi-Homogeneous Coordinate Rings (2000), Theorem 3.4 and Corollary 5.8, checked in author copy. Relative noetherianity argument spelled out.",
     "scope": "Every smooth elliptic Hesse presentation, with translation order varying, including arbitrary nonreduced pullbacks of the admissible open. Relative affine diagonal perfect of projective dimension at most two. Other boundary loci and full intrinsic family recognition remain.",
     "main_build": "LuaLaTeX PASS, 550 pages, no overfull boxes or undefined references/citations"
+  },
+  "H3_folded_mixed_order_discriminant_v369": {
+    "proof": "papers/sections/cubic_CY_three_alpha_quantum_triangle.tex",
+    "theorem": "thm:cubic-CY-three-alpha-nontorsion-full-folded",
+    "validator": "computations/verify_cubic_CY_three_alpha_triangle_difference.py",
+    "verification": "PASS defining formulas, residues, reflection-order identities, complementary corner, and exact Gaussian rational formal corner calculations for quartic and quintic through the order-four resonance. The general criterion is proved structurally.",
+    "scope": "One squarefreeness condition at all translation orders for the normalized triangular volume pencil and the normalized quantum secant, subject to their stated small-order exclusions. No relative intrinsic recognition yet.",
+    "main_build": "LuaLaTeX PASS, 550 pages, no overfull boxes or undefined references/citations"
   }
 }
