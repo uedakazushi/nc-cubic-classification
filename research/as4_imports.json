@@ -1040,5 +1040,19 @@
       }
     ],
     "used_part": "necessary direction of cor:cy-two-commutators-complete and explicit presentations; independent H3 obstructions downstream"
+  },
+  "CY_one_segre_square_necessary_v309": {
+    "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+    "files": [
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_SEGRE_SQUARE_INTERNAL.tex",
+        "sha256": "d5ce10153446e38b3e191ca4bbfd588550c94ed2c141b35a99ba3df9a0067e2e"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_SEGRE_SQUARE_TRANSVERSE.tex",
+        "sha256": "a461a45d4b1628c60923503997af8a4be06ff8a8433a80a1ea1833c8ee55660d"
+      }
+    ],
+    "used_part": "necessary full square-added disjoint Segre cover and the I1/transverse presentations; no stabilizer or AS4 sufficiency imported"
   }
 }
