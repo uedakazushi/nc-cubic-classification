@@ -1628,5 +1628,16 @@
     ],
     "used_part": "Sufficiency of the triangle ambient normal form for all six lower coefficients in the primitive-third-root range and the relevant CY-top convention.",
     "verification": "The centre and its specialization, admissibility and geometric arrows are obtained in nc-cubic-moduli. The relevant upstream theorem proof was read; the upstream complete validation was not rerun."
+  },
+  "CY_three_alpha_finite_secant_full_v338": {
+    "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+    "files": [
+      {
+        "path": "research/proofs/CY_ALPHA_SECANT_CONIC.tex",
+        "sha256": "af3b817d6ac88c8bda4ca3c38a1c4fc9f2f2aa5d0985105ab81c76ff9aa8bd3d"
+      }
+    ],
+    "used_part": "The all-parameter secant AS-regular cover and the full envelope arrow formula S1.",
+    "verification": "The cut parameter transformation and all admissibility are independent. The upstream regularity and geometric cover proof were consulted, not rerun."
   }
 }

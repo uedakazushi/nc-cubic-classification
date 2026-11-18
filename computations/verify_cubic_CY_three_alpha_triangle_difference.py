@@ -85,6 +85,17 @@ def main():
     assert Y[-1]*polynomial(first_denominator/(q*u*u)) == polynomial(defining)
     print("PASS three relations, scalar cut, reflection, and defining function for both leading forms")
 
+    pole_numerator = (q+1)**2*(q*u**4*(by*by+bz*bz)+rho*u**3*(u*u+q)*by*bz)
+    for sign in (-1, 1):
+        fixed_point = sign/rho
+        diagonal_residue = (by+j.subs(u, fixed_point)*bz)/(
+            2*j.subs(u, fixed_point)*s.diff(j, u).subs(u, fixed_point)
+        )
+        norm_double_pole = (pole_numerator/first_denominator).subs(u, q*fixed_point)
+        norm_double_pole /= (2*q*q*fixed_point)**2
+        assert s.cancel(norm_double_pole+diagonal_residue**2) == 0
+    print("PASS polynomial-lattice residue identity at both reflection fixed points")
+
 
 if __name__ == "__main__":
     main()
