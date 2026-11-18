@@ -643,3 +643,85 @@ $W_4$ は重み4、$\mathcal G$ は重み3なので同じ降下が働く。
 相対Serreから計算した反標準sectionそのものに対応する。
 従ってこの標準化では相対orientationの自明化を別の標識にする必要がない。
 \end{remark}
+
+\begin{theorem}\label{thm:h3-relative-flat-coherent-serre-global}
+$X^{\mathrm{H3}}$ から任意の可換noetherian環 $A$ 上へ引き戻した表示を取る。
+$\operatorname{QGr}R$ と $\qgr R$ はLowen--Van den Berghの意味で底上平坦である。
+任意のnoetherian底変更における圏は、準coherent圏の底代数対象を取って
+coherent部分に制限したものに等しい。
+全ての底上平坦なcoherent対象は $\pi R(i)$ の厚い部分圏に入り、
+この圏の相対Serre関手は
+$(-1)\otimes_A\mathcal L_{\rm AS}[2]$ であり、ペアリングは任意底変更と可換する。
+\end{theorem}
+\begin{proof}
+定理\ref{thm:h3-presentation-strong-noetherian}により
+各底変更の次数付き環はnoetherianである。
+$\operatorname{Gr}R$ は自由shiftの小線型圏の加群圏であり、
+全てのHomが底上平坦だから
+\cite[命題3.7]{LowenVdBFlatAbelian}により平坦である。
+torsion商の右随伴は入射を入射へ送る。
+有限提示の底加群からの内部Homは有限自由提示の核で計算できるから、
+exactな商関手と可換する。
+従って商の入射対象もcoflatであり、同文献の命題3.4で商圏は平坦となる。
+命題3.6によりnoetherian対象の圏も平坦である。
+
+底変更 $A\to A'$ に対し、$\operatorname{QGr}R$ の $A'$ 作用付き対象へ
+飽和の右随伴を適用すると、$\operatorname{Gr}(R\otimes_A A')$ の対象になる。
+この持ち上げの単位と余単位は元のtorsion商から来る。
+$A'$ の作用は $R$ と可換するため、$R$ の高次で殺される条件と
+$R\otimes_A A'$ の高次で殺される条件は一致する。
+従って単位の核・余核は底変更後もtorsionであり、
+余単位は同型である。これにより準coherent圏の底変更同値を得る。
+左随伴の底tensorもこの対応に一致する。
+noetherian対象を取ればcoherent版が従う。
+
+平坦対象について、先に各環の飽和sectionを調べる。
+$B$ 上の任意の有限生成次数付き加群 $N$ を、各段有限生成の自由shiftで解消する。
+局所コホモロジー次元は高々4なので、飽和sectionの各固定次数の各コホモロジーは
+有限切り詰めから計算できる。
+自由shiftの飽和は相対AS双対から次数別有限で、十分高い内部次数では
+もとの自由加群の成分に一致し、高次コホモロジーは零となる。
+従ってこの有限切り詰めから、$\pi N$ の各sectionは有限で、
+高い内部次数で $N$ の成分への比較が同型かつ高次Extが零と分かる。
+$R$ 上の対象でも、包絡とのcofinalな局所torsion比較を使えば同じである。
+この計算は平坦底変更と可換する。
+任意のcoherent第一引数についても、自由shiftの解消を使って
+固定次数のExtが有限であり、平坦底変更と可換する。
+このように $B,R$ の構造対象のshift列は相対Artin--Zhang ampleである。
+
+包絡の四つのshiftの和を $T_B$ とする。
+相対Koszul解消とAS双対性により $T_B$ はcompact generatorで、
+自己導来Homは次数0の代数 $\Lambda$ に集中する。
+実際、四つの連続shiftが相対Koszul複体で全shiftを生成し、
+局所コホモロジー次元の有限性からこれらはcompactである。
+全shiftの生成性は、自由加群の像による次数付き加群の解消と
+torsion商の導来随伴から従う。
+$\Lambda$ は四つの底の冪等元の代数 $E=A^4$ とstrictly directedな
+off-diagonal部分 $J$ の和で、$J^{\otimes_E n}=0$ ($n\ge4$) となる。
+各成分は $A$ 有限射影である。
+$E$ に関する相対normalised bar解消を使うと、
+$\Lambda$ の対角は長さ3以下の有限射影双加群解消を持つ。
+従って底上完全な $\Lambda$ 加群複体は $\Lambda$ 上完全である。
+
+底上平坦なcoherent対象 $\mathcal F$ を $B$ へ押し出す。
+$\mathbf R\operatorname{Hom}(T_B,i_*\mathcal F)$ は底上有界でcohomology有限。
+各局所環上で定理\ref{thm:h3-relative-flat-coherent-serre-local}の
+次数別自由格子と包絡の解消を使うと、底上完全であることが分かる。
+有限Tor振幅はnoetherian底上で局所的に検査できるため、この複体は $A$ 上完全。
+上の相対bar解消と $T_B$ の導来Morita同値により、
+$i_*\mathcal F$ は $T_B$ の厚い圏に入る。
+一方、$\mathcal F$ とその正規twist・内部shiftの第四Extは、
+全局所環上で前定理により零であり、平坦局所化との可換性から全体で零。
+従って自己交叉変換射の二乗は零となり、
+二つの錐の議論で $\mathcal F$ は $\pi R(i)$ の厚い圏に入る。
+
+この厚い圏の相対Serre双対は
+定理\ref{thm:h3-artin-relative-serre-exists}の
+局所化双加群の双対計算をそのまま適用する。
+必要な各次数の有限射影性と有限cohomology次元は一般底でも確認済みである。
+shift間のHomとそのトレースは、相対Koszul解消と局所torsionの
+底変更する完全複体で定義される。
+従ってペアリングと反標準作用は有限coneと直和因子を経て任意底変更する。
+底上平坦なheart対象は底tensorの導来像がheartにあるので、
+上の基底変更の同定の下でもこの双対に適合する。
+\end{proof}

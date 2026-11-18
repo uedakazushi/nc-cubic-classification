@@ -5158,5 +5158,18 @@
     "verification": "Structural proof using finite coefficient charts, generic spread of the Brauer splitting or a single tame residue, and the geometric DVR result. Scoped PBW sufficiency imported at the pinned as4 revision. No independent replay of the whole classification.",
     "scope": "Open of the finite-degree presentation incidence and finite-type quotient stack with all four components and all intrinsic Artin formal neighborhoods in the degree-flat class. General-base equivalence with intrinsic abelian families is separate.",
     "main_build": "LuaLaTeX PASS, 555 pages, no overfull boxes or undefined references/citations"
+  },
+  "H3_strong_noetherian_and_global_relative_serre_v372": {
+    "proofs": [
+      "papers/sections/cubic_presentation_components.tex",
+      "papers/sections/cubic_formal_intrinsic_reconstruction.tex"
+    ],
+    "theorems": [
+      "thm:h3-presentation-strong-noetherian",
+      "thm:h3-relative-flat-coherent-serre-global"
+    ],
+    "verification": "Structural proof through generic spread of the explicit strongly noetherian coefficient charts and faithfully flat open/completion descent. Relative Beilinson calculation and Lowen–Van den Bergh Propositions 3.4, 3.6, 3.7 checked in the primary source.",
+    "scope": "All presented H3 families over arbitrary noetherian bases, with effective descent, all A-flat coherent objects in the relative perfect category, and relative Serre and base change.",
+    "main_build": "LuaLaTeX PASS, 558 pages, no overfull boxes or undefined references/citations"
   }
 }

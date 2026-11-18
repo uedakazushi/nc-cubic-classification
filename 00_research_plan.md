@@ -1,6 +1,6 @@
 # 研究方針：H3型内在的非可換三次曲面の完全分類
 
-2026-11-19 / research-plan-v66 / H3分類専用。
+2026-11-19 / research-plan-v67 / H3分類専用。
 **再開時は本書を最初に読む。GitHub mainが唯一の正本。**
 実行規則は `AGENTS.md`。既存の全H3分類の詳細と必要な式は
 `research/cubic_14641_classification.md`、`research/cubic_14641_codex_plan.md`、
@@ -437,3 +437,6 @@ Sklyaninのアフィン包絡で自由解消1,3,3,1に中央三次のホモト�
 
 ### 全H3表示の有限型代数stack（v371）
 整域正規三次の滑らかなtailsに対し、既存分類の必要条件は整域性とSerre双対だけで適用でき、得られた全模型にはGabriel–Krull rankがある。従ってtraitの一般化は全H3条件を保つ。全係数模型から有限次数incidenceへ写し、H3集合の構成可能性を証明。難しい原始三乗根の追加中心切断では、幾何一般点の分裂matrix表示または非零Brauer剰余一つを広げ、後者は三乗根被覆の幾何整域性で広がる。よってH3集合は通常の開でありPGL₄商が有限型代数stack。各幾何点の内在Artin変形と四成分の位相が一致。一般の内在Abel圏族については係数族の強noetherian性・相対反標準再構成と全矢の降下へ進む。
+
+### 全表示の強noetherian性と一般底のcoherent tails（v372）
+全幾何模型のOre・有限中心・重みPBW・曲線THCRで普遍モデルの強noetherian性を確認。任意noetherian底の一般点で有限忠実平坦拡大上の模型を広げ、閉補集合を帰納して補集合の完備化と主開へ忠実平坦降下する。全表示から準coherent・coherent tailsが有効降下し、底代数対象で任意noetherian底変更できる。包絡の四対象のdirected bar解消により底上平坦なcoherent対象は商のshift生成厚い圏に入り、一般底の相対Serreを得た。次はこれらを相対内在族の定義と双方向同値に統合する。
