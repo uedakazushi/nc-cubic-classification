@@ -1464,5 +1464,32 @@
     ],
     "used_part": "Necessary smooth leading alpha potential cover and actual envelope arrows by the flex frame.",
     "verification": "Independently checked Hesse point determinant, singular Fourier reduction and cyclic triangle graph; main low-centre and lift argument uses Iyudu–Shkarin and Etingof–Ginzburg."
+  },
+  "CY_one_segre_double_split_outer_necessary_v328": {
+    "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+    "files": [
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_DOUBLE_SPLIT_NONISOTROPIC.tex",
+        "sha256": "a2055a8501c02a27bf0473567dbd5e97120741c4f4895ea14642a37af4abe9fe"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_DOUBLE_SPLIT_FULL_SYMMETRIC_CANDIDATES.tex",
+        "sha256": "37137b19d244c34e59bf8c3b5009297dd04f862d0f5b03639941730575621d14"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_DOUBLE_SPLIT_FULL_VOLUME_REDUCTION.tex",
+        "sha256": "7dbd19f0202c7101d950bf229842719036493311dd20dde8f41788c3f149da09"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_DOUBLE_SPLIT_FULL_NONDECOMPOSABLE_REGULAR.tex",
+        "sha256": "b7744fe3a979f091d3ed8eff5c7710c2061ff31471c1130a4a5f9be797e75c78"
+      },
+      {
+        "path": "code/verify_cy_one_commutator_double_split_full_symmetric_candidates.py",
+        "sha256": "3043beeb684c74da7fdd5bef404cde90acb1442adbaba73bc732ce263df63738"
+      }
+    ],
+    "used_part": "The three nonisotropic one-outer Ore families, their full degree-one arrows, and the symmetric representative of the nondecomposable both-outer four-cross family.",
+    "verification": "Reran the upstream exact anticommutation component from its source relations without modifying the checked-out upstream repository. Independently checked Ore trace, scalar resonance, cyclic norms and exact H3 cut criteria here."
   }
 }
