@@ -54,6 +54,24 @@ def verify(with_cubes):
         assert all(coefficient == 0 for coefficient in commutator(generator, omega))
     if with_cubes:
         print("PASS scaled volume, including both specializations at a primitive cube root")
+
+        # The reflection of the normalized nodal upper-level pencil includes
+        # a scalar correction from reordering the xy term in the cubic.
+        nodal = {word: s.cancel(value.subs({px: 1, py: 1, az: 1})/(q**3-1))
+                 for word, value in omega.items()}
+        reflected = {q: 1/q, ax: q*q*ay, ay: q*q*ax, az: 1,
+                     bx: q**4*by, by: q**4*bx, bz: -q**3*bz, px: 1, py: 1}
+        scale_letter = {"x": q**-2, "y": q**-2, "z": -q**-3}
+        transformed = defaultdict(lambda: 0)
+        for word, value in nodal.items():
+            for term, coefficient in reduce(word.translate(str.maketrans("xy", "yx"))).items():
+                transformed[term] += (value*s.prod(scale_letter[letter] for letter in word)
+                                      *s.sympify(coefficient).subs(reflected, simultaneous=True))
+        for word in transformed.keys() | nodal.keys():
+            target = s.sympify(nodal.get(word, 0)).subs(reflected, simultaneous=True)
+            correction = -bz/(q**3-1) if not word else 0
+            assert s.cancel(transformed[word]+q**-6*target-correction) == 0
+        print("PASS nodal reflection action on the full scalar cutting parameter")
         root = q*q+q+1
         scale = s.Symbol("ell")
 

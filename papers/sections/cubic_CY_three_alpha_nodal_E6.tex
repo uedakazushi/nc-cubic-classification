@@ -392,3 +392,51 @@ $(H^{-n}(C))^*\otimes_H Q_0$ であり、
 $\mathbf R\operatorname{Hom}_H(C,C)\simeq C$。
 正次数の非零は矛盾する。従って $B$ は無限大域次元でありH3ではない。
 \end{proof}
+
+\begin{proposition}\label{prop:cubic-CY-three-alpha-nodal-arrows}
+節点型の $P_xP_yA_z\ne0$ は $P_x=P_y=A_z=1$ に規格化できる。
+切断を $J/(q^3-1)+Dt^3$ と書く。
+共通スカラーを除いた全幾何学的矢は、次の対角変換と交換変換で生成される。
+\[
+\begin{array}{c|c|c}
+ & (x,y,z)\text{ の像} & q'\\ \hline
+ \text{対角} & (\zeta x',\zeta^2y',z'),\quad \zeta^3=1 & q\\
+ \text{交換} & (q^{-2}y',q^{-2}x',-q^{-3}z') & q^{-1}
+\end{array}
+\]
+ここで $t\mapsto t'$ とできる。対角変換の係数作用は
+\[
+ (A_x,A_y,B_x,B_y,B_z,D)
+ \longmapsto(\zeta^2 A_x,\zeta A_y,\zeta B_x,\zeta^2 B_y,B_z,D)
+\]
+であり、交換変換では
+\[
+ (A_x,A_y,B_x,B_y,B_z,D)
+ \longmapsto
+ \left(q^2 A_y,q^2 A_x,q^4 B_y,q^4 B_x,-q^3 B_z,
+       -q^6\left(D-\frac{B_z}{q^3-1}\right)\right).
+\]
+許容切断へ制限すれば全点付き群oidとなる。
+共通スカラーを除いた慣性は、$A_x=A_y=B_x=B_y=0$ で $\mu_3$、
+その他では自明である。
+\end{proposition}
+\begin{proof}
+$(x,y,z)$ の対角倍率による $P_x,P_y,A_z$ の三つの変換式は独立で、
+代数閉体上で三つを1にできる。
+固定出典の節点同型式(N1)--(N2) \cite{AS4CYpinned}により、
+全生成元変換は平行移動を持たない対角変換か接線交換であり、
+共通スカラーで $t\mapsto t'$ とできる。
+純平方の係数と $xy-qyx$ の $z$ 係数を比較すると上の倍率だけが残る。
+他の係数は三関係への代入で得られる。
+
+交換で $J/(q^3-1)$ の順序語 $xyz$ の係数は $-q^{-6}$ 倍になる。
+$-(q^3-1)^{-1}txy$ の交換を順序化すると
+$-(q^3-1)^{-1}B_z t'^3$ が生じる。
+他に純 $t'^3$ 項は生じないので、切断の同じ直線を送る条件が
+$D$ の上記変換である。
+この全係数恒等式は \path{verify_cubic_CY_three_alpha_triangle_center.py} で再現する。
+それぞれの表示は逆に包絡と切断線を移す。
+反Serre環から包絡と切断線を復元できるので点付き矢は尽くされる。
+$q\ne q^{-1}$ から交換は一つの点を固定せず、
+三乗根の対角作用の固定条件から慣性が従う。
+\end{proof}

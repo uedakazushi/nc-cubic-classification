@@ -13,28 +13,43 @@ Q = sym.Rational
 p, m, ratio, e = sym.symbols("p m ratio e")
 
 
-def four_cross_both_outer():
-    s, t = (p+m)/2, (p-m)/2
-    h, k = Q(1, 64)-p*p/4, Q(1, 64)-m*m/4
+def fdc_coefficients(p, m, ratio, e, scalar=Q):
+    one = scalar(1)
+    s, t = (p+m)/scalar(2), (p-m)/scalar(2)
+    h, k = scalar(1, 64)-p*p/scalar(4), scalar(1, 64)-m*m/scalar(4)
     slope = m/(k*p)
     # FEA1–FEA2 with ratio=d/e. The relations are affine in e.
     A_over_e = s*(ratio+m)/(p*k)
-    C_over_d = 2*(s*t-16*m*h*ratio)/(p*k*ratio)
+    C_over_d = scalar(2)*(s*t-scalar(16)*m*h*ratio)/(p*k*ratio)
     z = (A_over_e*e+k)/s
     v = e-k*k/s
     f = v-k*k/t
-    x2 = 1/s+A_over_e*(A_over_e*e+2*k)/(s*s)
-    x4 = -h*h/t-h*k*C_over_d/(16*t)+f*C_over_d*C_over_d/1024
-    x6, x7, x8 = z, -h*k/t+f*C_over_d/32, v
+    x2 = one/s+A_over_e*(A_over_e*e+scalar(2)*k)/(s*s)
+    x4 = -h*h/t-h*k*C_over_d/(scalar(16)*t)+f*C_over_d*C_over_d/scalar(1024)
+    x6, x7, x8 = z, -h*k/t+f*C_over_d/scalar(32), v
     x5 = slope*(x7-h*x6)+x8/k
     x1 = slope*(x5-h*x2-s)+x6/k
     x3 = slope*(x4-h*x5-h*t)+x7/k
     x0 = slope*(x3-h*x1)+(x5-m)/k
-    coordinates = (x0, x1, x2, x3, x4, x5, x6, x7, x8, s, 1, 1, h, k, t)
-    source = marked(dict(enumerate(coordinates)), Q(1, 8), linear_columns=True)
-    U, V = (1, 0, -h/s, -k/s), (0, s, 1, 1)
-    mixed = 64*h*k*A_over_e*A_over_e/s+32*p*m*A_over_e+64*s
-    return source, U, V, (A_over_e*A_over_e, mixed, 1)
+    coordinates = (x0, x1, x2, x3, x4, x5, x6, x7, x8, s, one, one, h, k, t)
+    U, V = (one, scalar(0), -h/s, -k/s), (scalar(0), s, one, one)
+    mixed = scalar(64)*h*k*A_over_e*A_over_e/s+scalar(32)*p*m*A_over_e+scalar(64)*s
+    return coordinates, U, V, (A_over_e*A_over_e, mixed, one)
+
+
+def four_cross_both_outer():
+    coefficients, U, V, quadratic = fdc_coefficients(p, m, ratio, e)
+    source = marked(dict(enumerate(coefficients)), Q(1, 8), linear_columns=True)
+    return source, U, V, quadratic
+
+
+def product_plane_change(p, m):
+    s = (p+m)/2
+    h, k = Q(1, 64)-p*p/4, Q(1, 64)-m*m/4
+    moving = sym.Matrix([[4*p+1, 1-4*p], [1-4*m, 4*m+1]]).inv()
+    block = sym.Matrix([[1, 0, 0, 0], [0, 1/s, 0, 0],
+                        [h/s, -1/s, 1, 0], [k/s, -1/s, 0, 1]])
+    return sym.diag(1/(64*s), 1, moving)*block
 
 
 def check():
@@ -115,13 +130,8 @@ def check():
 
 def check_product_plane():
     source, _, _, _ = four_cross_both_outer()
-    s = (p+m)/2
-    h, k = Q(1, 64)-p*p/4, Q(1, 64)-m*m/4
     P, M, L = sym.symbols("P M L")
-    moving = sym.Matrix([[4*p+1, 1-4*p], [1-4*m, 4*m+1]]).inv()
-    block = sym.Matrix([[1, 0, 0, 0], [0, 1/s, 0, 0],
-                        [h/s, -1/s, 1, 0], [k/s, -1/s, 0, 1]])
-    change = sym.diag(1/(64*s), 1, moving)*block
+    change = product_plane_change(p, m)
     field = RationalFunctionField((p, m, ratio, e))
     tensor = sym.kronecker_product(change, change)
     rows = [{j: field.from_sympy(tensor[i, j]) for j in range(16) if tensor[i, j]}
