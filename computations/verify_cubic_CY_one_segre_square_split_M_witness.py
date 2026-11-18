@@ -20,7 +20,7 @@ def convert_columns(columns, field):
             for column in columns]
 
 
-def normalized_support(witness):
+def normalized_factors(witness):
     context = fmpq_mpoly_ctx.get(("z", "t", "x"))
     z, t, x = context.gens()
     k = (x*x-1)/64
@@ -48,15 +48,29 @@ def normalized_support(witness):
     normalized = {str(poly): poly for value in all_factors
                   if not (poly := transform(value)).is_constant()}
     assert len(normalized) == 13
+    return tuple(normalized.values())
+
+
+def symmetry_translates(normalized):
+    context = fmpq_mpoly_ctx.get(("z", "t", "x"))
     translates = []
     for sign_x, sign_tz in ((1, 1), (-1, 1), (1, -1), (-1, -1)):
-        support = set()
-        for f in normalized.values():
+        support = {}
+        for f in normalized:
             moved = context.from_dict({(i, j, h): co*sign_x**h*sign_tz**(i+j)
                                        for (i, j, h), co in f.to_dict().items()})
-            support.add(str(moved/moved.leading_coefficient()))
+            monic = moved/moved.leading_coefficient()
+            support[str(monic)] = monic
         translates.append(support)
-    common = set.intersection(*translates)
+    return translates
+
+
+def normalized_support(witness):
+    normalized = normalized_factors(witness)
+    translates = symmetry_translates(normalized)
+    common = set.intersection(*(set(support) for support in translates))
+    context = fmpq_mpoly_ctx.get(("z", "t", "x"))
+    z, t, _ = context.gens()
     assert common == {str(t), str(z*t-1)}
     return {"normalized_irreducible_factors": len(normalized),
             "common_factors": sorted(common)}

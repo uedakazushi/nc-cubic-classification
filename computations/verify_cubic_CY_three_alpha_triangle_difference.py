@@ -96,6 +96,13 @@ def main():
         assert s.cancel(norm_double_pole+diagonal_residue**2) == 0
     print("PASS polynomial-lattice residue identity at both reflection fixed points")
 
+    parameter = s.Symbol("a")
+    pair = (1-parameter/u)*(1-parameter*u/q)
+    assert s.cancel(pair-(1+parameter**2/q-parameter*xi/rho)) == 0
+    denominator = (1-u**-2)*(1-q*u**-2)*(1-u*u/(q*q))*(1-u*u/q)
+    assert s.cancel(denominator-first_denominator*(u*u-q)**2/(q**3*u**4)) == 0
+    print("PASS Askey–Wilson orbit factors of the quartic")
+
 
 if __name__ == "__main__":
     main()

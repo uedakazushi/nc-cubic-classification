@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "version": "classification-v339",
+  "version": "classification-v340",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -4762,7 +4762,7 @@
       "computations/cubic_CY_one_segre_square_split_M_surfaces_certificate.json"
     ],
     "scope": "The exceptional closed cubic-centre locus in M has dimension at most one, with an explicit rank witness and symmetry-translated necessary equations.",
-    "exact_control": "PASS degree-three and degree-four projections using five stable and two moving relations, and generic centre rank 16 in the quadratic quotient. The normalized witness has thirteen factor supports and only T and ZT-1 are common to the four translates. PASS original centre rank 20 on both common surfaces, all six rational curves, and the five exceptional irreducible factors over their residue fields.",
+    "exact_control": "PASS degree-three and degree-four projections using five stable and two moving relations, and generic centre rank 16 in the quadratic quotient. The normalized witness has thirteen factor supports and only T and ZT-1 are common to the four translates. PASS original centre rank 20 on both common surfaces, all six rational curves, and the five exceptional irreducible factors over their residue fields. The public witness also ran and reproduced the coefficient factors.",
     "main_build": "LuaLaTeX PASS, 498 pages, no overfull boxes or undefined cross-references/citations"
   },
   "CY_three_alpha_non_torsion_aw_v339": {
@@ -4770,5 +4770,24 @@
     "scope": "Faithful polynomial difference models for the full non-torsion triangle volume and secant pencils. Comparison of the triangle volume pencil with rank-one spherical DAHA over the full coefficient locus.",
     "ordinary_proof": "Control the finite poles and both reflection residues by the norm factor of the existing difference operator. The numerator degrees are four and five respectively. Moving all four triangular zeros to their reflections ensures the exact parameter hypotheses of Koornwinder's Theorems 2.2 and 3.2. This is a recognition theorem; the remaining affine global-dimension criterion is open.",
     "main_build": "LuaLaTeX PASS, 498 pages, no overfull boxes or undefined cross-references/citations"
+  },
+  "CY_one_segre_square_split_M_simple_v340": {
+    "proof": "papers/sections/cubic_CY_one_segre_square_split.tex",
+    "validator": "computations/verify_cubic_CY_one_segre_square_split_M_simple.py",
+    "certificate": "computations/cubic_CY_one_segre_square_split_M_simple_certificate.json",
+    "scope": "All six low-degree surfaces are excluded. Only one base quadratic and four Z polynomials of degrees 2, 2, 3 and 4 remain in the exact support.",
+    "exact_control": "PASS all five rational charts modulo the opposite-algebra symmetry. Direct original centre rank 20, then all 78 residue fields for the three nontrivial charts via exact resultants, number-field polynomial GCDs and rank.",
+    "main_build": "LuaLaTeX PASS, 501 pages, no overfull boxes or undefined cross-references/citations"
+  },
+  "CY_three_alpha_aw_squarefree_v340": {
+    "proof": [
+      "papers/sections/cubic_CY_three_alpha_quantum_triangle.tex",
+      "papers/sections/cubic_quantum_triangle_incidence.tex"
+    ],
+    "validator": "computations/verify_cubic_CY_three_alpha_triangle_difference.py",
+    "scope": "Non-torsion triangular volume cuts with squarefree GWA quartic are H3. All constant-free triangular volume cuts now have exact admissibility at every q.",
+    "exact_control": "PASS polynomial identity relating the GWA quartic to the four paired Askey–Wilson roots.",
+    "ordinary_proof": "The separated rank-one DAHA is an amalgamated free product over the Laurent polynomial subalgebra of two hereditary free products. Fullness of the spherical idempotent follows from the two-generator quotient and distinct spectral orbits. The repeated-root cases in exceptional weight orbits for nonzero constants remain open.",
+    "main_build": "LuaLaTeX PASS, 501 pages, no overfull boxes or undefined cross-references/citations"
   }
 }
