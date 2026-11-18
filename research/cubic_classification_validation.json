@@ -1,6 +1,6 @@
 {
   "date": "2026-11-18",
-  "version": "classification-v357",
+  "version": "classification-v358",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -21,6 +21,7 @@
     "papers/sections/cubic_character_serre.tex",
     "papers/sections/cubic_order4_center.tex",
     "papers/sections/cubic_order4_ext_bound.tex",
+    "papers/sections/cubic_presentation_components.tex",
     "papers/sections/cubic_order4_small_reps.tex",
     "papers/sections/cubic_order4_local_orders.tex",
     "papers/sections/cubic_order4_general_criterion.tex",
@@ -5005,5 +5006,16 @@
     "verification": "PASS ten-variable central cubic, all four first directions at primitive cube roots, the full Clifford limit, and the commutative first jet. Flatness, generic admissibility and the dimension count are proved in the text.",
     "scope": "All three-commutator CY H3 presentations and all smooth commutative cubics lie in the common irreducible presentation closure of the generic smooth elliptic branch. General geometric quotient dimension eight, nodal boundary codimension one.",
     "main_build": "LuaLaTeX PASS, 525 pages, no overfull boxes or undefined references/citations"
+  },
+  "H3_presentation_four_components_v358": {
+    "proof": "papers/sections/cubic_presentation_components.tex",
+    "theorems": [
+      "thm:cubic-CY-one-commutator-presentation-closure",
+      "cor:cubic-CY-presentation-two-components",
+      "thm:h3-presentation-four-components"
+    ],
+    "verification": "Structural proof. Irreducibility and closedness of the one-commutator Ore family are proved from its coefficient pencil and domain limits. The Frobenius pairings give a regular trace on the fixed rank stratum.",
+    "scope": "Exactly four pairwise disjoint irreducible components in the geometric H3 presentation topology, with generic quotient dimensions 3, 8, 4 and 5. The topology and descent of general relative intrinsic Abel-category families are separate.",
+    "main_build": "LuaLaTeX PASS, 527 pages, no overfull boxes or undefined references/citations"
   }
 }

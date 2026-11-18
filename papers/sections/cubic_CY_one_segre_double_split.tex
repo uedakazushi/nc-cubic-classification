@@ -852,3 +852,101 @@ $E$ 一次枝の曲線外では五枝の $P$ 候補因子は $8,5,15,5,17$、
 
 これで一交換子CYの包絡に残っていた最後の必要支持が消え、
 先に得た原始三乗根の切断と幾何学的矢でこの領域の判定を完了する。
+
+\begin{theorem}[一交換子CYの共通閉包と閉性]
+\label{thm:cubic-CY-one-commutator-presentation-closure}
+一交換子のCY包絡を持つ全H3は、原始三乗根 $q$ を一つ固定し、
+二元二次式 $f\in k[a,b]_2$ を用いた表示
+\[
+ [a,b]=0,\quad ca=qac,\quad cb=qbc,\quad
+ da=q^{-1}ad,\quad db=q^{-1}bd,\quad dc=q^2cd+f(a,b)
+\]
+に含まれる。許容切断は $P(a,b)+Cc^3+Dd^3$ の形で、
+$P\ne0$、$CD\ne0$ である。
+非退化な $f$ の許容表示の既約閉包は、一交換子の全H3表示を含む。
+その一般幾何学的商の次元は3であり、
+整域AS4包絡の表示空間における許容な特殊化も同じ型に留まる。
+\end{theorem}
+\begin{proof}
+非skew包絡では、命題
+\ref{prop:cubic-CY-one-segre-square-split-resonance}、
+\ref{prop:cubic-CY-one-segre-double-split-outer-center}と
+定理\ref{thm:cubic-CY-one-segre-double-split-FDC-empty}により、
+$f$ が階数1の平方と階数2の積の二型に限られる。
+二つの三乗根は $c,d$ の交換で移し合える。
+
+skew包絡では、唯一の可換対を $a,b$ とする。
+CY条件により、$c$ が $a,b$ に掛ける係数を $\alpha,\beta$ とすると
+$d$ は逆の係数を掛け、$dc=\alpha\beta cd$ となる。
+$\alpha,\beta,\alpha\beta$ は全て1と異なる。
+$c^2a,c^2b,c^2d$ は中心にならない。
+実際、前二語は $c$ との交換指標がそれぞれ $\alpha,\beta$、
+第三語は $a$ との交換指標が $\alpha$ に等しい。
+従って $c^3$ の係数が零なら、切断は $c$ 軸の点イデアルの平方に入り、
+三つの自由な自己一次拡大に対するshiftの行列式はCY条件により1である。
+補題\ref{lem:cubic-odd-Serre-determinant}で除外される。
+$d$ 軸でも同様である。従って $\alpha^3=\beta^3=1$ で、
+$\alpha\beta\ne1$ から $\alpha=\beta=q$ となり、$f=0$ で表示を得る。
+中心三次を順序語で比較すると $P+Cc^3+Dd^3$。
+$f=0$ で $P=0$ なら、量子二項式で
+$Cc^3+Dd^3=(C^{1/3}c+D^{1/3}d)^3$ となり、整域性に反する。
+$f\ne0$ の二型の既存許容条件も $P\ne0$ を含む。
+
+表示した包絡と切断は、$f$ を動かしても次数ごとに平坦である。
+実際、前二変数から $c,d$ を順に加えるOre表示で、
+$d$ の作用は $(a,b,c)$ を $(q^{-1}a,q^{-1}b,q^2c)$ に移し、
+導分は $(0,0,f)$ である。
+導分が $ca-qac,cb-qbc$ を消すので、全 $f$ で同じ順序基底となる。
+中心三次は全ファイバーで正則なので、三次商も次数ごとに平坦である。
+$f$ を一般の非退化二元式へ動かすと、その二根は $P$ の零点と離れる。
+さらに一つの共通倍率を動かすと、
+\[
+ P^2-4CD\left(\frac{q}{1-q}f\right)^3
+\]
+は一般値で平方自由になる。
+これは基点のない二項ペンシルの一般ファイバーが、
+標数零で分離的なことによる。
+従ってこの一般値は定理
+\ref{thm:cubic-CY-one-segre-double-split-outer-H3}の全条件を満たす。
+任意の許容する特殊 $f$ にこの一般族を特殊化できる。
+非退化 $f$ の全係数空間は既約で、H3を満たす稠密開集合の像を持つ。
+その一般幾何学的商の次元3は同定理で計算済みである。
+
+最後に、包絡表示の任意の整域極限を取る。
+$U=\langle a,b\rangle$ と $c,d$ の直線をGrassmann多様体と射影空間で極限へ延長する。
+五つの交差関係は極限にも成り立つ。
+$c$ または $d$ の非零ベクトルが $U$ に入れば、
+同じベクトルを相手に取る交差関係がその平方を零にする。
+さらに $c,d$ が $U$ を法として比例するなら、
+$d=\lambda c+u_0$、$\lambda\ne0$、$u_0\in U$ と書ける。
+任意の非零 $u\in U$ との交差関係から
+\[
+ u\bigl(\lambda(q-q^{-1})c+(1-q^{-1})u_0\bigr)=0
+\]
+となり整域性に反する。従って極限でも四変数は独立である。
+
+五関係で割った二次テンソル空間で、残る関係直線は
+$dc-q^2cd$ と二元二次式の張る部分空間に入る。
+これは独立な極限の枠で閉条件である。
+もし $dc-q^2cd$ の係数が零なら、
+非零二元二次式が関係になり、その可換一次因子が零因子を作る。
+従ってその係数は非零で、極限も同じ $f$ 表示を持つ。
+\end{proof}
+
+\begin{corollary}\label{cor:cubic-CY-presentation-two-components}
+CY包絡を持つH3の幾何学的表示の位相は、二つの既約部分に分かれる。
+一つは一交換子の一般次元3の部分で、
+もう一つは三交換子と可換三次を含む一般次元8の部分である。
+整域包絡を保つ表示の特殊化では二部分の交叉はない。
+\end{corollary}
+\begin{proof}
+零と二交換子は定理\ref{thm:cubic-CY-zero-commutator-empty}と
+\ref{thm:cubic-CY-two-commutators-empty}により空で、
+四交換子以上は系\ref{cor:h3-cy-commutator-reduction}により
+可換多項式包絡に限られる。
+三交換子と可換三次は系\ref{cor:cubic-CY-three-presentation-closure}の
+同じ既約閉包に入る。
+交換子関係空間の次元が3以上であることは閉条件なので、
+この部分は一交換子へ特殊化しない。
+逆向きの特殊化は前定理の整域極限の判定により存在しない。
+\end{proof}

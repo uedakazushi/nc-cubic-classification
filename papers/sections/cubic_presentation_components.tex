@@ -1,0 +1,63 @@
+\section{H3の幾何学的表示の四成分}
+\label{sec:cubic-presentation-components}
+
+\begin{theorem}\label{thm:h3-presentation-four-components}
+四次元生成空間上の六二次関係と切断直線によるincidenceに、H3の点の部分位相を入れる。
+基底変更を法とした幾何学的表示の位相には、開かつ閉な既約成分がちょうど四つある。
+一般幾何商の次元と成分を特徴づける条件は次の通りである。
+\[
+\begin{array}{c|l|c}
+\operatorname{tr}(\mu_B|_{B_1})&\text{条件}&\text{次元}\\\hline
+4&\text{一交換子CY}&3\\
+4&\text{三交換子CYおよび可換三次曲面}&8\\
+-2&\text{符号の重複度 }(1,3)&4\\
+0&\text{符号の重複度 }(2,2)&5
+\end{array}
+\]
+ここで交換子の数は、二次関係空間と $\bigwedge^2 B_1$ の交叉次元である。
+四成分の間にH3表示を保つ特殊化や交叉はない。
+\end{theorem}
+\begin{proof}
+固定四次元空間 $V$ と関係部分空間 $I_2\subset V^{\otimes 2}$ に対し、
+二次双対 $E=T(V^*)/(I_2^\perp)$ を取る。
+次数3と4の関係挿入行列のrankを固定する局所閉stratumでは、
+$E_3,E_4$ は有限局所自由で、その形成は底変更に両立する。
+全H3表示が属するrank stratumでは、それぞれの階数は4と1である。
+Frobenius対合の開条件の下で、二つの積
+\[
+ V^*\otimes E_3\longrightarrow E_4,\qquad
+ E_3\otimes V^*\longrightarrow E_4
+\]
+はともに完全である。従って $xy$ と $y\nu(x)$ の $E_4$ での同一視で
+定まる一次作用 $\nu$ は、両対合の行列の積と逆行列で正則に与えられる。
+$E_4$ の自明化の変更は二つの行列に同じ倍率をかけるため、作用は貼り合わさる。
+全H3表示はKoszul AS4なのでFrobenius条件を満たし、
+$\mu_B|_V=-\nu^*$ である（\cite[Theorem 6.3の証明]{RRZ}）。従って中山traceは
+この有限次数stratumから制限した正則関数で、基底変更で不変である。
+
+定理\ref{thm:cubic-three-eigenvalue-sector-empty}、
+\ref{thm:cubic-four-simple-sector-empty}、
+\ref{thm:cubic-jordan22-unipotent-empty}、
+\ref{thm:h3-order3-two-eigenvalues-excluded}により、
+残るのはCYおよび符号スペクトルである。
+符号重複度$(3,1)$の全候補は
+定理\ref{thm:h3-positive3-gamma-zero-exclusion}、
+\ref{thm:h3-positive3-canonical-base-coverage}、
+\ref{thm:h3-positive3-cone-base-exclusion}、
+\ref{thm:h3-positive3-Jordan-base-exclusion}、
+\ref{thm:h3-positive3-diagonal-base-exclusion}で排除される。
+従ってtraceの値は $4,-2,0$ に限られ、各逆像は相対的に開かつ閉である。
+
+trace $4$ の二成分は系\ref{cor:cubic-CY-presentation-two-components}である。
+trace $-2$ は定理\ref{thm:h3-order2-full-arrows}の既約四次元表示商で尽くされる。
+trace $0$ では系\ref{cor:h3-order2-22-rank2-all-Jordan-coverage}が
+混合二次関係数2を排除し、定理\ref{thm:h3-order2-22-L-complete}が残る全表示を
+曲がったClifford族へ認識する。
+定理\ref{thm:h3-order2-22-clifford-arrows}の既約開係数空間とその基底変更の像は
+この全部分を覆い、商は一般次元5となる。
+いずれも既出の族の表示をincidenceに代入する写像であり、その像は連続である。
+よって四部分は全H3幾何表示の既約成分である。
+\end{proof}
+
+この位相は二次包絡と三次直線を持つ表示から定めたものである。
+一般の底上の内在Abel圏の族からこのincidenceへの再構成・降下は別の問題として残る。
