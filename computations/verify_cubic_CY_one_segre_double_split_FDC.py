@@ -1,10 +1,12 @@
 """Verify a regular central quadric on the full FDC3 four-cross chart."""
+import argparse
 from collections import defaultdict
 from itertools import product
 
 import sympy as sym
 
 from cubic_flint_rational_function import RationalFunctionField
+from verify_cubic_CY_one_segre_cross import PivotAlgebra
 from verify_cubic_CY_one_segre_double_split_isolated import marked
 
 Q = sym.Rational
@@ -111,5 +113,46 @@ def check():
     print("PASS FDC3 degree-three relation span, rank 44, all four commutators zero")
 
 
+def check_product_plane():
+    source, _, _, _ = four_cross_both_outer()
+    s = (p+m)/2
+    h, k = Q(1, 64)-p*p/4, Q(1, 64)-m*m/4
+    P, M, L = sym.symbols("P M L")
+    moving = sym.Matrix([[4*p+1, 1-4*p], [1-4*m, 4*m+1]]).inv()
+    block = sym.Matrix([[1, 0, 0, 0], [0, 1/s, 0, 0],
+                        [h/s, -1/s, 1, 0], [k/s, -1/s, 0, 1]])
+    change = sym.diag(1/(64*s), 1, moving)*block
+    field = RationalFunctionField((p, m, ratio, e))
+    tensor = sym.kronecker_product(change, change)
+    rows = [{j: field.from_sympy(tensor[i, j]) for j in range(16) if tensor[i, j]}
+            for i in range(16)]
+    relations = []
+    for column in range(source.cols):
+        vector = {j: field.from_sympy(source[j, column])
+                  for j in range(source.rows) if source[j, column]}
+        transformed = {}
+        for i, row in enumerate(rows):
+            value = sum((co*vector[j] for j, co in row.items() if j in vector), field.zero)
+            if value:
+                transformed[i] = value
+        relations.append(transformed)
+    engine = PivotAlgebra(field, 4, [], [0]*4)
+    engine.pivot_product = field.one
+    pivots = engine.echelon(relations)
+    assert len(pivots) == 6
+    assert not engine.reduce({1: field.one, 11: field.one}, pivots)
+    assert not engine.reduce({4: field.one, 11: field.one}, pivots)
+
+    mixed = (P*P-1)*(M*M-1)*L*L+2*P*M*L+1
+    factors = sym.prod(1+(P+i)*(M+j)*L for i, j in product((-1, 1), repeat=2))
+    assert sym.expand(mixed*mixed-4*L*L-factors) == 0
+    print("PASS FDC3 product relations and split quadric discriminant")
+
+
 if __name__ == "__main__":
-    check()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--product-plane", action="store_true")
+    if parser.parse_args().product_plane:
+        check_product_plane()
+    else:
+        check()

@@ -503,6 +503,34 @@ $[Q_0,a],[Q_0,b],[Q_0,c],[Q_0,d]$ は全てその行空間に属す。
 命題\ref{prop:cubic-CY-one-segre-double-split-quadratic-reduction}の証明と同じ。
 \end{proof}
 
+\begin{proposition}\label{prop:cubic-CY-one-segre-double-split-FDC-product-plane}
+全(FDC3)域で生成元を変えて、$ab=ba=-cd$ と書ける。
+$P=4p$、$M=4m$、$L=r_0/(64s)$ とすると、
+同じ基底で中央二次は
+\[
+ L^2a^2+\bigl((P^2-1)(M^2-1)L^2+2PML+1\bigr)ab+b^2
+\]
+となる。判別式は $\prod_{i,j=\pm1}(1+(P+i)(M+j)L)$ である。
+\end{proposition}
+\begin{proof}
+固定出典(FDC5)の可逆変換を用いる。具体的には関係係数に
+$N\otimes N$ を作用させ、
+\[
+ N=\operatorname{diag}(1/(64s),1,D)
+ \begin{pmatrix}
+ 1&0&0&0\\0&1/s&0&0\\h/s&-1/s&1&0\\k/s&-1/s&0&1
+ \end{pmatrix},\qquad
+ D=\begin{pmatrix}4p+1&1-4p\\1-4m&4m+1\end{pmatrix}^{-1}
+\]
+とする。$N$ は $U,V$ の係数列をそれぞれ
+$a/(64s),b$ の係数列へ移す。従って中央二次の式と判別式は展開で従う。
+元六関係を変換して $ab+cd,ba+cd$ の包含を四変数関数体上で厳密に検算する。
+変換と元の係数は許容域で正則であり、元の関係空間の次元は全域で6である。
+従って包含は全閉値へ特殊化する。
+検算は \path{verify_cubic_CY_one_segre_double_split_FDC.py}
+の \texttt{--product-plane} で再現する。
+\end{proof}
+
 \begin{corollary}\label{cor:cubic-CY-one-segre-double-split-FDC-generic-zero}
 (FDC3)のパラメータ空間の稠密開集合では中央三次は零である。
 \end{corollary}

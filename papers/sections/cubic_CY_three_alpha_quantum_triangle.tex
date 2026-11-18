@@ -1121,9 +1121,11 @@ GWA判定により排除される。
 
 \begin{lemma}\label{lem:cubic-CY-three-alpha-defective-idempotent}
 $H$ は大域次元高々2の環、$e$ は冪等元、$B=eHe$ とする。
-$Q=H/HeH$ は非零半単純Artin環で、
-全単純左 $Q$ 加群 $S$ について $\operatorname{Ext}^2_H(S,S)\ne0$ とする。
+$Q=H/HeH$ は非零で、全非零左 $Q$ 加群 $M$ について
+$\operatorname{Ext}^2_H(M,Q)\ne0$ とする。
 このとき $B$ の左大域次元は無限である。
+特に $Q$ が半単純Artin環で、全単純左 $Q$ 加群 $S$ が
+$\operatorname{Ext}^2_H(S,S)\ne0$ を満たせばこの条件が成り立つ。
 \end{lemma}
 \begin{proof}
 $B$ の大域次元を有限と仮定し、三角
@@ -1145,9 +1147,9 @@ $H$ の高次Ext消滅と標準切断から
 \]
 実際、右側の $C$ は最高次数の $H^0(C)$、左側の $C$ は最低次数の
 $H^{-n}(C)[n]$ に置き換えられ、それぞれの残余では
-次数差が3以上となる。$H^{-n}(C)$ は $Q$ 加群なので単純直和であり、
-各単純は $Q$ 自身の直和因子に含まれる。
-仮定により右辺は非零となり、矛盾する。
+次数差が3以上となる。$H^{-n}(C)$ は非零 $Q$ 加群なので右辺は非零となり、
+矛盾する。最後の十分条件は、半単純環上の全加群が単純直和であり、
+各単純が $Q$ 自身の直和因子にも現れることから従う。
 \end{proof}
 
 \begin{theorem}\label{thm:cubic-CY-three-alpha-double-folded-roots}
@@ -1220,4 +1222,64 @@ $\operatorname{Ext}^1_A(S,S)$ への写像の余核である。
 いずれの場合も次元差により非零である。
 補題\ref{lem:cubic-CY-three-alpha-defective-idempotent}により
 アフィン環の大域次元は無限となり、H3は排除される。
+\end{proof}
+
+\begin{proposition}\label{prop:cubic-CY-three-alpha-triple-unramified-root}
+非捩れ量子三角形の四次式または非捩れ量子割線の五次式について、
+重根がただ一つで、その重複度が3とする。
+その根が $\xi=\pm2$ 以外なら切断はH3でない。
+ここでは、その根が例外weight軌道にある場合も含む。
+\end{proposition}
+\begin{proof}
+三重根に対応する $s_1$ 軌道は相異なる二点 $r,r'$ からなる。
+差分分子の三根が一方に集まっていれば、
+その二つにノルム一の因子を掛けて反転させる。
+二度の反転で留数を保ち、$r,r'$ の双方を $\omega$ の分子へ取れる。
+積は $rr'=q^{-1}\ne1$ なので、$D_0$ は遺伝的である。
+$f$ の分子では全 $s_1$ 軌道上の根は単純なので $D_1$ も遺伝的。
+定理\ref{thm:cubic-CY-three-alpha-secant-squarefree}の証明により
+$H=D_0*_A D_1$ の大域次元は高々2で、アフィン環は $B=eHe$ となる。
+
+$Q=H/HeH$ では $(u-r)(u-r')=0$ であり、この多項式は
+$s_1$ 不変な $u+q^{-1}u^{-1}-(r+r')$ と単元倍の関係にある。
+従って $Q$ は $D_1$ の一つの中心ファイバーである。
+このファイバーの完備局所環を $C$、一様化元を $\pi$ と書くと、
+$f$ は二点の一方だけで単純零点を持つので局所orderは、
+向きを選んで
+\[
+ R=\begin{pmatrix}C&\pi C\\ C&C\end{pmatrix},\qquad Q=R/\pi R
+\]
+となる。$Q$ は二頂点を結ぶ双方向の矢を持ち、全長二経路が零である。
+特に $Q$ はFrobenius環で、各頂点の冪等元の像 $p_iQ$ は二次元である。
+
+まず有限次元左 $Q$ 加群 $M\ne0$ を考える。
+$D_0$ への制限では、$M,Q$ は $r,r'$ に対応する半単純加群となる。
+二つの $s_0$ 軌道が異なり、各頂点の単純の自己一次Extは零なので
+$\operatorname{Ext}^1_{D_0}(M,Q)=0$ である。
+$A$ への制限では二点の各固有空間で一次Extを取り、
+\[
+ \dim_k\operatorname{Ext}^1_A(M,Q)=2\dim_k M .
+\]
+$D_1$ の一次Extは、中央完備化した $R$ で計算できる。
+$\pi$ が $M$ を消し $R$ 上では正則なので、
+$0\to R\xrightarrow{\pi}R\to Q\to0$ に伴う長完全列から
+\[
+ \operatorname{Ext}^1_R(M,Q)\simeq\operatorname{Ext}^1_R(M,R)
+ \simeq\operatorname{Hom}_Q(M,Q)
+\]
+を得る。ここで $\operatorname{Hom}_R(M,R)=0$、
+$\pi$ の $\operatorname{Ext}^1_R(M,R)$ への作用は零、
+$R$ の大域次元は高々1である。
+Frobenius性から右辺の次元は $\dim_k M$。
+交代自由積のExt長完全列により、
+$\operatorname{Ext}^2_H(M,Q)$ の次元は少なくとも $\dim_k M$ である。
+
+任意の非零 $Q$ 加群も有限次元の非零直和因子を持つ。
+実際、二方向の写像の像は相手の核に含まれる。
+各頂点空間で像から核への補空間と核の補空間を選び、
+後者を相手の像と対にすれば、
+一次元単純と長さ二の列射影加群の直和を得る。
+従って全非零 $M$ で $\operatorname{Ext}^2_H(M,Q)\ne0$ となる。
+補題\ref{lem:cubic-CY-three-alpha-defective-idempotent}が適用され、
+アフィン環の大域次元は無限である。
 \end{proof}
