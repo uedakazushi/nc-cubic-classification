@@ -118,6 +118,19 @@ def main():
         assert len(s.Poly(s.denom(summand),u).terms()) == 1
     print("PASS the two reflection-order cross relations and the branch cancellation")
 
+    delta = u-u**-1
+    omega_star = omega.subs(u, 1/u)
+    multiplier = s.cancel(omega_star*delta)
+    reflected_multiplier = multiplier.subs(u, 1/(q*u))
+    assert s.cancel(multiplier-(u-a)*(u-b)/((1-a*b)*u)) == 0
+    assert s.cancel(omega_star*multiplier.subs(u, 1/u)+omega*multiplier) == 0
+    complementary = s.cancel(f*reflected_multiplier/delta)
+    expected = -s.prod(1-r*u for r in (q*a,q*b,c1,c2,c3))/(q*(1-u*u)*(1-q*u*u))
+    assert s.cancel(complementary-expected) == 0
+    psi = s.cancel(f*(reflected_multiplier-multiplier)/delta)
+    assert len(s.Poly(s.denom(s.cancel(psi+psi.subs(u,1/u))),u).terms()) == 1
+    print("PASS complementary difference coefficient and cancellation of all finite poles")
+
 
 if __name__ == "__main__":
     main()

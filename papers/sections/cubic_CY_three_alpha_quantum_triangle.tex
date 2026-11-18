@@ -1283,3 +1283,143 @@ $\operatorname{Ext}^2_H(M,Q)$ の次元は少なくとも $\dim_k M$ である�
 補題\ref{lem:cubic-CY-three-alpha-defective-idempotent}が適用され、
 アフィン環の大域次元は無限である。
 \end{proof}
+
+\begin{theorem}\label{thm:cubic-CY-three-alpha-nontorsion-full-folded}
+非捩れ量子三角形の規格化体積切断、および非捩れ量子割線の規格化切断では、
+H3であるための必要十分条件は対応する四次または五次多項式 $F(\xi)$ の
+平方自由性である。例外weight軌道上の任意の高重根もこの判定に含まれる。
+\end{theorem}
+\begin{proof}
+十分性は系\ref{cor:cubic-CY-three-alpha-aw-squarefree}と
+定理\ref{thm:cubic-CY-three-alpha-secant-squarefree}である。
+必要性のため、後者の反転環 $D_0,D_1$ と
+$H=D_0*_A D_1$ を分離条件なしで用いる。
+$ab\ne1$ であれば、同じ交代語の証明で $eHe$ は差分生成環である。
+以下では $H$ の大域次元への仮定を置かず、非fullの冪等元を排除する。
+
+まずこの反転環 $H$ は左noetherianである。
+$e'=1-e$ とし、
+\[
+ \delta=u-u^{-1},\qquad r=\omega^{s_0}\delta
+       =\frac{(u-a)(u-b)}{(1-ab)u}
+\]
+と置く。$r^{-1}e'r=\omega^{s_0}+\omega s_0$ は反転不変関数への射影である。
+$r^{-1}Tr$ の反転係数は $f r^{s_1}/r$ であり、
+従って補角 $e'He'$ の正の差分係数は
+\[
+ \alpha'(u)=\frac{f r^{s_1}}{\delta}
+ =-\frac{K}{q}\,
+ \frac{(1-qau)(1-qbu)\prod_{i\ge3}(1-a_i u)}
+      {(1-u^2)(1-qu^2)} .
+\]
+定数移動項と $D_{\alpha'}$ の差は
+$\psi(u)+\psi(u^{-1})$ で、
+$\psi=f(r^{s_1}-r)/\delta$。
+分子の差は $s_1$ の固定点で消え、$f$ の単純極を除く。
+残る $s_0$ の固定点の単純極は反転和で消える。
+従ってこの差は $k[u+u^{-1}]$ に属する。
+最高移動項の帰納は $e'$ を使う場合も同じで、
+補角は $x=u+u^{-1}$ と $D_{\alpha'}$ で生成される。
+
+この形の分子を持つ四次・五次差分環は、いずれも既出の三角形・割線アフィン環として
+逆に実現できる。実際、ノルム
+$\alpha'(u^{-1})\alpha'(u/q)$ から $F(\xi)$ を作り、
+$F/(\xi^2-4)$ の多項式部分を比較する。
+四次では作用素の非零尺度で二次の最高係数を規格化する。
+五次では最高係数から $P_x\ne0$、次の係数から $A_x$ を求める。
+残る一次の二係数から $B_x,D$ を求める。
+極の二係数は $B_y+B_z,B_y-B_z$ の各平方であり、
+その符号は元の差分係数の二留数に合わせて独立に選べる。
+二重極と留数の平方の一致は
+定理\ref{thm:cubic-CY-three-alpha-finite-secant-full}のノルム恒等式と同じである。
+この選択で差分による $y-D_{\alpha'}$ は $k[x]$ に属するので、
+代数は $x,D_{\alpha'}$ で生成される。
+これらのアフィン環はPBW包絡の切断でありnoetherian。
+従って $eHe,e'He'$ はともに左noetherianである。
+
+交代語において、$eH$ は左 $eHe$ 上
+$e,eu,eT,euT$ で生成される。
+実際、$A=k[x]\oplus u k[x]$ であり、
+$T$ で終わる交代語は、最後の $T$ の前で角の語として切れる。
+$T$ が一つしかない語は $eA T$ で扱う。
+同じ証明は $e'$ にも適用できる。
+従って $H$ は単位を共有する対角部分環 $eHe\oplus e'He'$ 上有限左加群で、
+左noetherianとなる。
+
+次に有限次元左 $H$ 加群 $M$ に対し、
+$j>2$ における $\operatorname{Ext}^{j}_H(M,H)$ の消滅と
+$\operatorname{Ext}^2_H(M,H)\simeq M^*$ を示す。
+各反転環を $D=A\oplus AY$、$Y=g(s-1)$ と書く。
+$g$ は反転の固定点以外に極を持たず、固定点では高々単純極である。
+左係数の $Y$ 成分を $\varepsilon:D\to A$ とすると
+\[
+ D\longrightarrow \operatorname{Hom}_A({}_A D,{}_A A),
+ \qquad d\longmapsto (w\mapsto\varepsilon(wd))
+\]
+は左 $D$ 加群同型である。
+実際、$d=a+bY$ の $1,Y$ での値は
+$b,,s(a)-g b-s(g b)$ であり、
+$N(b)=g b+s(g b)$ は $A$ へ入る。
+この二式は $(a,b)$ について可逆である。
+
+$K_0=k(u)$ とし、$0\to A\to K_0\to K_0/A\to0$ を
+$D$ へ余誘導すれば $D$ の左入射解消になる。
+制限しても左 $A$ の入射解消であり、
+$K_0/A$ の二係数の表示は上と同じ逆公式である。
+$M$ は $A$ 上捩れなので、$\operatorname{Ext}^1_D(M,D)$ の元は
+$A$ 線型写像 $\beta:M\to K_0/A$ によって表示される。
+その $A$ への制限の二係数は
+\[
+ s(\beta(Ym))+N(\beta(m)),\qquad \beta(m).
+\]
+$N$ は $A$ を保つので商上でも定義される。
+有限非零点における $du/u$ の留数和を $\ell:K_0/A\to k$ とする。
+$\ell\circ s=-\ell$、$\ell\circ N=0$ である。
+標準同型 $\operatorname{Hom}_A(M,K_0/A)\simeq M^*$ は
+$\beta\mapsto\ell\circ\beta$ で与えられる。
+これは巡回捩れ加群の主部と留数の非退化対合から従う。
+従って制限写像の像は
+$\operatorname{Ext}^1_A(M,D)=M^*\otimes_A D$ 内の
+$v\otimes Y-vY\otimes1$ で張られる。
+
+$H$ は各 $D$ と $A$ 上自由であり、$D$ と $A$ はnoetherianである。
+有限生成射影解消で係数を $H$ へ延長すると、
+これらのExtと制限写像に右から $H$ をテンソルしたものが得られる。
+交代自由積の完全列から、高次Extは消え、
+\[
+ \operatorname{Ext}^2_H(M,H)
+ \simeq
+ (M^*\otimes_A H)/(v\otimes Y_i h-vY_i\otimes h)
+ \simeq M^*
+\]
+となる。最後の商は二つの反転生成元にも両側の作用を釣り合わせたもので、
+同型は右 $H$ 加群として成り立つ。
+
+$Q_0=H/HeH$ は常に有限次元である。
+$e=0$ により $(1-au)(1-bu)=0$ となり、$T$ の交差関係と二次式により
+$A+AT$ の像で張られるので次元は高々4。
+$Q_0\ne0$ なら、今示したnoetherian性、$eH$ の有限生成性、
+有限次元加群への最高Extの双対を用いて、
+定理\ref{thm:cubic-CY-three-alpha-nodal-E6-complete-corner}の最後の
+完全な導来corner三角の議論が適用できる。
+従って $eHe$ の大域次元は無限である。
+
+最後に $F$ が重根を持つ場合、$Q_0\ne0$ となる二根の選択ができる。
+二つ以上の $s_1$ 軌道があるときは、重複軌道から一根 $r_1$、
+他軌道から一根 $r_2$ を取る。
+積が1なら、重複軌道が非固定の場合はその二つのコピーを反転させて
+$r_1$ を相手側に取れる。
+重複軌道が固定点の場合は、逆数の他軌道の根を反転し、
+固定点の零留数と全体符号で調整する。
+この選択で $ab\ne1$ である。
+$r_1$ の軌道に $f$ の分子根が残り、非固定なら
+$u=r_1,T=-f(r_1)$ は $Q_0$ の一次元表示になる。
+固定なら $f$ は正則で、$u=r_1,T=0$ が一次元表示になる。
+
+全根が一つの非固定軌道にある場合、
+必要なら二根を反転して異なる二点を $\omega$ 側に取る。
+その積は $q^{-1}\ne1$ であり、$Q_0$ は $D_1$ の非零の中心ファイバーとなる。
+全根が一つの固定点にある場合は二コピーを $\omega$ 側に取り、
+やはり積は $q^{-1}$、$f$ は正則で $T=0$ の一次元表示を得る。
+従って全ての重根は非fullの場合に帰着し、H3ではない。
+\end{proof}
