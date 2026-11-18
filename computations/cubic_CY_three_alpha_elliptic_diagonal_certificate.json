@@ -10,7 +10,11 @@
       "0",
       "0",
       "1"
-    ]
+    ],
+    "specialized_weight_zero_HH4_dimensions": {
+      "0": 8,
+      "1": 0
+    }
   },
   "1,1,1/2": {
     "monic_coefficients_ascending": [
@@ -23,7 +27,11 @@
       "45325/1296",
       "-205/18",
       "1"
-    ]
+    ],
+    "specialized_weight_zero_HH4_dimensions": {
+      "0": 1,
+      "1": 0
+    }
   },
   "1,2,4": {
     "monic_coefficients_ascending": [
@@ -37,6 +45,10 @@
       "-2420/9",
       "1"
     ],
+    "specialized_weight_zero_HH4_dimensions": {
+      "0": 0,
+      "1": 0
+    },
     "character_ideal": [
       1
     ],

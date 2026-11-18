@@ -1,0 +1,163 @@
+\subsection{滑らかな楕円表示での有限次数開条件}
+\label{subsec:cubic-CY-three-alpha-elliptic-relative}
+
+\begin{theorem}\label{thm:cubic-CY-three-alpha-elliptic-relative-smooth-open}
+滑らかな先頭ポテンシャルと滑らかな楕円境界を持つHesse表示の
+全低次係数および有限中心値の係数空間を取る。
+この空間には、有限行列のrankで定まる開集合 $\mathcal W$ があり、
+次の条件を満たす。
+\begin{enumerate}
+\item $\mathcal W$ 上のアフィン切断は相対的に双加群滑らかであり、
+対角は長さ2以下の有限生成射影解消を持つ。
+これは任意底変更で保たれ、幾何学的fiberは全てH3である。
+\item 境界の平行移動が無限位数の幾何学的点では、
+$\mathcal W$ に入ることと双加群滑らかさは同値である。
+従ってこの範囲の双加群滑らかな点には、
+有限位数の方向も許す代数的なH3表示近傍が存在する。
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+$p=1$ に規格化し、滑らかさを満たす先頭二係数の開集合に、
+対称な六つの一次係数、三つの定数係数、切断値を加える。
+全包絡は補題\ref{lem:sklyanin-central-PBW-CY}のPBW表示であり、
+各次数の関係挿入行列はこの被約係数空間で一定階数を持つ。
+従って斉次成分は有限局所自由で、任意底変更と可換する。
+定理\ref{thm:cubic-CY-three-alpha-smooth-boundary}により中央三次の
+核も一定階数2を持つので、底を局所化して先頭 $g$ の持ち上げ $\omega$ を選ぶ。
+商の各次数も、全幾何fiberで三次正則元を割るため有限局所自由である。
+従ってアフィン包絡 $D$ と切断 $U_\lambda$ の次数フィルターも
+有限局所自由な各項と各随伴成分を持つ。
+
+基礎係数環を $R$ と書く。$D\otimes_R D^{\mathrm{op}}$ 上では、
+絶対対角の小解消を生成元の差、三関係の非可換微分、
+生成元の差から作る。最後の合成が零であることは巡回微分恒等式であり、
+随伴複体は斉次Koszul双加群解消である。
+固定したフィルター次数の複体は有限局所自由で、幾何学的fiber上で完全である。
+従って局所的に分裂完全で、差
+$\omega_L-\omega_R$ の高次ホモトピーを重み $3a$ の範囲内で解ける。
+必要な未知数は、長さ3の解消で添字 $a$ が1または2のものに限られる。
+中央差によるShamash解消を取って $R[\omega]$ 上の相対対角解消を作り、
+さらに $\omega=\lambda$ で底変更した解消を $K_\lambda$ と書く。
+$D$ の $R[\omega]$ 上の平坦性は、先頭の $R[g]$ 上で
+次数別に $gS$ の補空間を取って持ち上げることから従う。
+従って $K_\lambda$ は $U_\lambda$ の対角を解消し、
+この構成の完全性は任意底変更で保たれる。
+
+相対対角のコチェインを $C$、切断対角のコチェインを
+$C_\lambda=\operatorname{Hom}_{U_\lambda^e}(K_\lambda,U_\lambda)$ と書く。
+内部重み高々0の部分複体 $F_0C_\lambda$ の各項は有限局所自由である。
+この複体のコホモロジーは解消の局所選択に依存しない。
+重み付き自由基底を用い、strictな完全性で重みを保つ比較写像を帰納的に持ち上げると、
+逆比較と二つのホモトピーも重みを保って取れる。
+従って同じフィルター部分で連鎖ホモトピー同値が成り立つ。
+四次コホモロジーが幾何学的fiberで零であることは
+\[
+ \operatorname{rank} d^3+\operatorname{rank}d^4=\operatorname{rank}(F_0 C_\lambda^4)
+\]
+であり、二つの階数の下界で与える開条件である。
+これを $\mathcal W$ とする。$\mathcal W$ 上では
+行列の単元minorを取って、まず $d^3$ の像を部分束として分離し、
+残る直和因子を $d^4$ で分裂単射にする。
+従って四次の完全性は任意の底変更で保たれる。
+
+変換射の二乗は、Shamash添字を二つ下げる鎖射と増大写像の合成で
+表されるため、内部重み高々 $-6$ である。
+従って $\mathcal W$ 上でこの類は境界となる。
+中央差による二段三角を用いると、対角は完全複体の直和因子となり、
+相対双加群滑らかさを得る。
+相対絶対小解消の自己双対性は巡回ポテンシャルの左・右微分から従う。
+二つの中心正則式 $\omega_L-\lambda,\omega_R-\lambda$ で双対移行すると、
+切断の対角の双対は次数2に集中する。
+有限射影解消の最後の双対微分を分裂させる議論で、解消は長さ2以下に短縮できる。
+加群と各射影項は底上平坦なので、任意底変更で完全性と射影性を保つ。
+幾何学的fiberのH3性は
+定理\ref{thm:cubic-CY-three-alpha-smooth-boundary}のアフィン認識による。
+
+最後に無限位数の幾何学的点で検査する。中央切断の先頭は次数3なので
+コチェインには短完全列
+\[
+ 0\longrightarrow F_{-3}C
+   \xrightarrow{\omega-\lambda} F_0C
+   \longrightarrow F_0 C_\lambda\longrightarrow0
+\]
+がある。定理\ref{thm:cubic-CY-three-alpha-elliptic-diagonal-test}の
+最高重みの降下により、
+$H^4(F_{-3}C)=H^4(F_0C)=V$ かつ $H^5(F_{-3}C)=0$ である。
+よって $H^4(F_0C_\lambda)=V/(\omega-\lambda)V$ となり、
+同定理の必要十分条件と一致する。
+\end{proof}
+
+\begin{remark}
+有限位数の全H3点や、無限位数で判別式の根となる点に対する
+開性はこの有限次数判定の結論に含めない。
+\end{remark}
+
+\begin{corollary}\label{cor:cubic-CY-three-alpha-elliptic-strong-noetherian}
+このHesse表示の斉次切断環は、任意のnoetherian底変更上で左右noetherianである。
+特に $\mathcal W$ の表示から得る構造対象付きtails圏には、
+命題\ref{prop:h3-presentation-canonical-degree-descent}と
+\ref{prop:h3-presented-qgr-fpqc}の有効降下が適用できる。
+\end{corollary}
+\begin{proof}
+斉次切断環を $R_{\rm gr}$ とし、中央一次元 $t$ による商を取る。
+これは相対楕円曲線上の捩れ斉次座標環である。
+実際、滑らかな楕円上で点関係行列の階数は2であり、
+左右の核から相互逆の点対応を得る。
+この構成は有限ランクの核であり、普遍係数底上で形成した後の任意底変更に両立する。
+したがって平行移動と次数3の線型束から相対捩れ環を作る。
+正次数の線型束の $H^1$ は各fiberで零であり、切断形成が底変更に両立する。
+標準生成元による元の商環からの写像は各幾何学的fiberで同型で、
+両辺は各次数局所自由なので、相対的にも同型である。
+
+任意のnoetherian底変更上で、捩れ積の線型束 $\mathcal L_n$ のfiber次数は $3n$ である。
+任意の固定線型束 $\mathcal H$ を掛けても $n$ を大きくすれば
+全fiberで次数が正になり、相対的にampleである。
+よって \cite[定理1.3, 7.14]{KeelerAmpleFilters} により、捩れ環は左右noetherian。
+$t$ は次数正の中央正則元なので、$t$ に関する随伴環は
+$(R_{\rm gr}/(t))[T]$ であり、次数別に $t$ 進分離的である。
+斉次イデアルの最高 $t$ 可除次数を順に上げる標準的な帰納法で有限生成性を持ち上げ、
+次に通常の次数フィルターで任意のイデアルにも有限生成性を得る。
+この議論は全て底変更後にも成り立つ。
+\end{proof}
+
+\begin{proposition}\label{prop:cubic-CY-three-alpha-relative-section-arrows}
+このHesse表示の任意のnoetherian底変更上で、
+斉次切断環は $(\qgr R_{\rm gr},\pi R_{\rm gr},(1))$ のsection環として回復される。
+shiftに可換する構造対象付きexact同値の全矢は、
+切断環の次数付き同型を共通次数スカラーで割ることで得られる。
+ここでshiftとの可換同型は存在を要求し、矢の追加標識にはしない。
+\end{proposition}
+\begin{proof}
+普遍係数底では、二次包絡の双対関係行列の次数別rankが各点で一定である。
+係数底が被約なので、Koszul双対の次数別成分とその双対 $W_i$ は
+有限局所自由であり、任意底変更と両立する。
+底のaugmentation加群には、$W_i$ を使った相対Koszul解消がある。
+各内部次数で幾何学的fiber上完全な有限局所自由複体なので、
+解消と、包絡を係数としたその双対のGorenstein消滅は
+非被約底上も含めた任意底変更で成立する。
+正則三次を割る次数1の変換により、
+$\underline{\operatorname{Ext}}^j_{R_{\rm gr}}(\mathcal O_T,R_{\rm gr})=0$
+が $j=0,1,2$ で成り立つ。
+$R_{\rm gr}/(R_{\rm gr})_{\ge n}$ は次数別の有限局所自由augmentation加群を
+商に持つ有限濾過を持つ。
+従ってこれを第一引数とした同じ低次Extも零となる。
+$0\to (R_{\rm gr})_{\ge n}\to R_{\rm gr}\to R_{\rm gr}/(R_{\rm gr})_{\ge n}\to0$
+で $\operatorname{Hom}(-,R_{\rm gr}(\ell))$ を計算し、飽和sectionの直極限を取ると、
+全整数 $\ell$ でsectionの自然写像は同型である。
+
+exact同値 $F$ とshiftとの可換同型を一つ取れば、
+section積を保つ次数付き同型が得られる。
+これは全ての $\pi R_{\rm gr}(i)$ 間の射を再現し、
+これらの有限直和による表示を取ると元のexact同値を自然同型の範囲で再現する。
+逆に次数付き同型からtails同値が得られる。
+恒等関手の自然自己同型は各 $\pi R_{\rm gr}(i)$ 上で底の単元である。
+隣接する対象間の射は有限局所自由で正の階数を持つので、
+自然性から隣接する単元は等しい。有限表示によって全成分で同じ単元となる。
+従ってshift比較の選択は共通の次数スカラーを変える。
+次数付き同型がtails上で恒等と自然同型になる場合も、
+隣接する対象の乗法を比較すれば一次上でただ一つのスカラー倍となり、
+一次生成性で全次数のスカラー倍に限られる。
+逆に次数スカラーは各次数への同じ倍率の累乗で恒等と自然同型になる。
+従って主張の矢が得られる。二次包絡と切断直線はそれぞれ二次関係と
+三次核から関手的に回復される。
+\end{proof}

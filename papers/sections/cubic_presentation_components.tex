@@ -61,3 +61,62 @@ trace $0$ では系\ref{cor:h3-order2-22-rank2-all-Jordan-coverage}が
 
 この位相は二次包絡と三次直線を持つ表示から定めたものである。
 一般の底上の内在Abel圏の族からこのincidenceへの再構成・降下は別の問題として残る。
+
+\subsection{次数スカラー除去と表示の有効降下}
+\begin{proposition}\label{prop:h3-presentation-canonical-degree-descent}
+全次数平坦な包絡と切断を持つ任意の基底変更不変な表示部分を取る。
+この表示を $\mathrm{PGL}_4$ で割ったとき、次数付き環を降下させるための
+$\mathbb G_m$-gerbeは中立である。
+具体的に、一次束 $V$ と切断直線 $\mathcal G$ に対して
+\[
+ \mathcal L=\det(V)\otimes\mathcal G^\vee,\qquad
+ B^{\rm can}_n=B_n\otimes\mathcal L^{-n},\qquad
+ R^{\rm can}_n=R_n\otimes\mathcal L^{-n}
+\]
+と置けば、包絡・切断・商は $\mathrm{PGL}_4$ 商へ有効に降下する。
+この標準化は非被約底を含む任意の基底変更に両立する。
+\end{proposition}
+\begin{proof}
+枠付き表示の空間では、$cI$ は $B_n,R_n$ に $c^n$、
+切断直線に $c^3$、$\det(V)$ に $c^4$ で作用する。
+従って $\mathcal L$ 上の作用は $c$ であり、
+$B^{\rm can}_n,R^{\rm can}_n$ の線型化は中心スカラーを通じて自明となる。
+積は $\mathcal L^{-m}\otimes\mathcal L^{-n}=\mathcal L^{-(m+n)}$ により
+同じように降下する。二次関係部分束、三次切断直線、商写像も次数に従って
+同じ線型化を持つので、全表示を降下できる。
+別の言い方では、元の $\mathrm{GL}_4$ 商のgerbeに重み一の可逆層
+$\mathcal L$ があり、ここで与えた捩りはその重みを打ち消す中立化である。
+降下した一次束と切断直線には
+$\det(V^{\rm can})\otimes(\mathcal G^{\rm can})^\vee\simeq\mathcal O$
+が備わる。構成には線型化と可逆層のテンソルだけを使うため、
+基底変換の平坦性や被約性を仮定しない。
+\end{proof}
+
+\begin{proposition}\label{prop:h3-presented-qgr-fpqc}
+$R$ を可換noetherian環 $A$ 上の次数付き代数とし、
+調べる全noetherian基底変更上で右noetherianとする。
+このとき $\qgr R$ の対象と射には、affineな忠実平坦基底変更に関して
+有効降下が成り立つ。特に上の標準化で降下した表示の
+構造対象 $\pi R$ とshiftを含むtails圏は、表示のfpqc降下と両立する。
+\end{proposition}
+\begin{proof}
+全次数付き加群の商 $\operatorname{QGr}R$ と、その飽和section関手 $\omega$ を使う。
+加群 $M$ のtorsion部分 $\tau M$ は各次数で
+$\varinjlim_n\operatorname{Hom}_{\mathrm{Gr}R}(R/R_{\ge n},M(\ell))$ で計算できる。
+$\omega\pi M$ は同じ次数で
+$\varinjlim_n\operatorname{Hom}_{\mathrm{Gr}R}(R_{\ge n},(M/\tau M)(\ell))$
+で計算できる。
+第一引数はいずれも有限表示なので、平坦底変更は両式と可換する。
+次数付き加群のfpqc降下により、飽和section加群の降下は有効である。
+降下した次数付き加群が飽和していることは、飽和への単位射が
+忠実平坦化後に同型であることから従う。
+よって飽和加群の充満部分圏である $\operatorname{QGr}R$ の対象・射も降下する。
+
+降下した飽和加群を $M$ とする。忠実平坦化後の対象がcoherentなら、
+そこで有限個の斉次元が生成する部分加群から $M$ への射が
+tails商で全射になる。それら有限個の元に現れる元の $M$ の斉次成分で
+有限生成部分加群 $N$ を作れば、$M/N$ は忠実平坦化後にtorsionとなる。
+各元に対する十分高次の消滅は忠実平坦性で反映されるので、$M/N$ 自体がtorsionである。
+従って $\pi M=\pi N$ はcoherentである。
+構造対象とshiftは自由次数付き加群と次数移動から得られ、同じ降下に両立する。
+\end{proof}

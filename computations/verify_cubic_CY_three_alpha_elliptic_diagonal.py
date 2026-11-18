@@ -227,6 +227,45 @@ def nullspace(matrix):
     return result
 
 
+def concatenate(left, right):
+    assert left.nrows() == right.nrows()
+    rows = [
+        [left[i, j] for j in range(left.ncols())]
+        + [right[i, j] for j in range(right.ncols())]
+        for i in range(left.nrows())
+    ]
+    return fmpq_mat(rows)
+
+
+def central_image(ops, cubic, basis, value):
+    lookup = {(a, j, word): index for index, (a, j, word, _) in enumerate(basis)}
+    source = [(a, j, word) for a, j, word, weight in basis if weight <= -3]
+    operator = {(word, ()): coefficient for word, coefficient in cubic.items()}
+    add(operator, {((), ()): -value})
+    image = fmpq_mat(len(basis), len(source))
+    for column, (a, j, word) in enumerate(source):
+        for reduced, coefficient in ops.act(operator, word).items():
+            image[lookup[a, j, reduced], column] = coefficient
+    assert image.rank() == len(source)
+    return image
+
+
+def check_specialized_window(ops, cubic, bases, differentials, multiplication):
+    dimensions = {}
+    for value in (0, 1):
+        images = [central_image(ops, cubic, basis, value) for basis in bases]
+        ranks = []
+        for differential, image in zip(differentials, images[1:]):
+            ranks.append(concatenate(differential, image).rank() - image.ncols())
+        dimension = len(bases[1]) - images[1].ncols() - sum(ranks)
+        specialized = fmpq_mat(multiplication)
+        for i in range(specialized.nrows()):
+            specialized[i, i] -= value
+        assert dimension == 8 - specialized.rank()
+        dimensions[str(value)] = dimension
+    return dimensions
+
+
 def cohomology(ops, cubic, homotopy_data):
     bases=[hom_basis(ops,n) for n in (3,4,5)]
     d3,d4=[coboundary(ops,homotopy_data,bases[n-3],bases[n-2],n) for n in (3,4)]
@@ -264,7 +303,8 @@ def cohomology(ops, cubic, homotopy_data):
                    [*[d3[i,j] for j in range(d3.ncols())], *[low_in_high[i,j] for j in range(8)]]])
     solution=solve_many(cols, translated)
     multiplication=submatrix(solution,list(range(d3.ncols(),d3.ncols()+8)), list(range(8)))
-    return multiplication.charpoly()
+    dimensions = check_specialized_window(ops, cubic, bases, (d3, d4), multiplication)
+    return multiplication.charpoly(), dimensions
 
 
 def sample(scales):
@@ -337,7 +377,7 @@ def main():
             left = ops.act({(word, (i,)): c for word, c in cubic.items()}, ())
             right = ops.act({((i,), word): c for word, c in cubic.items()}, ())
             assert left == right
-        polynomial = cohomology(ops, cubic, homotopies(ops, relations, cubic))
+        polynomial, dimensions = cohomology(ops, cubic, homotopies(ops, relations, cubic))
         if scales == (0, 0, 0):
             assert polynomial == fmpq_poly([0]*8+[1])
         elif scales == (1, 1, fmpq(1,2)):
@@ -347,7 +387,11 @@ def main():
             assert len(factors) == 1 and factors[0][0].degree() == 8 and factors[0][1] == 1
             check_small_representations(relations, cubic, polynomial)
         key = ",".join(map(str, scales))
-        certificate[key] = {"monic_coefficients_ascending": [str(c) for c in polynomial.coeffs()]}
+        certificate[key] = {
+            "monic_coefficients_ascending": [str(c) for c in polynomial.coeffs()],
+            "specialized_weight_zero_HH4_dimensions": dimensions,
+        }
+        print("PASS finite window specialization at zero and one", scales, dimensions, flush=True)
         print("PASS eight-dimensional discriminant", scales, polynomial.factor(), flush=True)
     certificate["1,2,4"]["character_ideal"] = [1]
     certificate["1,2,4"]["two_dimensional_simple_ideal"] = [1]
