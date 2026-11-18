@@ -1,0 +1,78 @@
+{
+  "arithmetic_cycle_types": {
+    "5": [
+      1,
+      7
+    ],
+    "17": [
+      2,
+      3,
+      3
+    ]
+  },
+  "slice_a11_a22_fixed_at_1_2": {
+    "prime": 37,
+    "odd_factor_ascending": [
+      21,
+      9,
+      22,
+      2,
+      1
+    ],
+    "odd_factor_multiplicity": 3,
+    "reduced_factor_degrees_and_multiplicities": [
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        9,
+        2
+      ],
+      [
+        10,
+        3
+      ],
+      [
+        10,
+        3
+      ],
+      [
+        13,
+        2
+      ]
+    ]
+  }
+}
