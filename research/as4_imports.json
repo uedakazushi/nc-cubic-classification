@@ -1650,5 +1650,25 @@
     ],
     "used_part": "(N1)–(N2) for gamma nonzero, characteristic zero and independent nodal cubic data. Necessity of the tangent-preserving diagonal or tangent-exchange form with no translations.",
     "verification": "Pinned proof read. The normalized relation substitutions, central-cut scalar and geometric inertia are checked in nc-cubic-moduli."
+  },
+  "CY_three_alpha_additive_parameter_AS4_sufficiency_v371": {
+    "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+    "supersedes_for_sufficiency_only": "CY_three_alpha_additive_necessary_v323",
+    "files": [
+      {
+        "path": "research/proofs/CY_ALPHA_CUSPIDAL_CUBIC.tex",
+        "locator": "thm:cy-alpha-cuspidal-cubic, gamma=1 PBW and regularity"
+      },
+      {
+        "path": "research/proofs/CY_ALPHA_TANGENT_CONIC.tex",
+        "locator": "thm:cy-alpha-tangent-conic, gamma=1 PBW and regularity"
+      },
+      {
+        "path": "research/proofs/CY_ALPHA_CONCURRENT_LINES.tex",
+        "locator": "thm:cy-alpha-concurrent-lines, the independent-derivative first family"
+      }
+    ],
+    "used_part": "Sufficiency of regularity for the additive normal-form parameter models. Only the C nonzero cusp/tangent loci and the first concurrent-lines family occur here.",
+    "verification": "Read the pinned theorem statements and their PBW regularity proofs and compared the three normal forms with the main text. No new independent replay or use of the upstream full classification."
   }
 }

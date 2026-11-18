@@ -5147,5 +5147,16 @@
     "verification": "Structural proof through degreewise complete and valued lattices, lifted AS4 resolutions, the torsion base-change comparison, and finite-amplitude Ext.",
     "scope": "Relative Serre on flat coherent objects of presented families over noetherian local bases with geometric H3 closed fiber. Preservation of all listed algebraic and homological conditions under geometric DVR generization. The categorical rank condition and full openness remain.",
     "main_build": "LuaLaTeX PASS, 552 pages, no overfull boxes or undefined references/citations"
+  },
+  "H3_all_presentation_open_stack_v371": {
+    "proof": "papers/sections/cubic_presentation_components.tex",
+    "theorems": [
+      "cor:h3-rank-from-classified-smooth-domain",
+      "prop:h3-primitive-triangle-constructible",
+      "thm:h3-presentation-algebraic-open"
+    ],
+    "verification": "Structural proof using finite coefficient charts, generic spread of the Brauer splitting or a single tame residue, and the geometric DVR result. Scoped PBW sufficiency imported at the pinned as4 revision. No independent replay of the whole classification.",
+    "scope": "Open of the finite-degree presentation incidence and finite-type quotient stack with all four components and all intrinsic Artin formal neighborhoods in the degree-flat class. General-base equivalence with intrinsic abelian families is separate.",
+    "main_build": "LuaLaTeX PASS, 555 pages, no overfull boxes or undefined references/citations"
   }
 }
