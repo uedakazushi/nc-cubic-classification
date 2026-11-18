@@ -303,3 +303,92 @@ $M$ が直和因子になる。また $H$ 射影加群は制限しても射影�
 $e$ がfullなので $eHe$ も同じである。
 平方自由の場合は定理\ref{thm:cubic-CY-three-alpha-nodal-E6-separable}による。
 \end{proof}
+
+\begin{theorem}\label{thm:cubic-CY-three-alpha-nodal-E6-complete-corner}
+定理\ref{thm:cubic-CY-three-alpha-nodal-E6}の全単純根チャートにおいて、
+切断がH3であるための必要十分条件は、三つの定義三次多項式が平方自由で、
+かつ17語で判定する商 $H/HeH$ が零であることである。
+有限位数・非捩れの双方に適用できる。
+\end{theorem}
+\begin{proof}
+既出の判定から、残るのは三次多項式に重根があり
+$Q_0=H/HeH\ne0$ の場合の排除である。
+ここでは相対双加群列と有限次元加群の双対を用いる。
+
+最初に $H$ は左noetherianであり、$eH$ は $B=eHe$ 上有限生成である。
+$F_{123}$ 随伴環において、前者の行列値切断と後者の左から $e$ を掛けた切断は、
+いずれも規格化上で自明なベクトル束の固定貼合せから得られる。
+次数 $n$ の極の因子を $D_n=\sum_{i=0}^{n-1}[q^i]$ とする。
+スカラー行列の次数2の部分は、定数 $1$ と
+$\eta/((\eta-1)(\eta-q))$ による基点のないpencilを持つ。
+その引き戻しを使い、次数 $n$ の切断に左から掛ける写像は
+$n\ge3$ で次数 $n+2$ へ全射である。
+実際、pencilの完全列をベクトル束と $D_n$ で捩ると、
+核の直線束部分の次数は $n-2$ である。
+規格化の $0,\infty$ で値を独立に取れるので、
+貼合せ完全列によりこの核の第一コホモロジーは零となる。
+従って行列値随伴環とその左からの $e$ の像はスカラー座標環上有限生成。
+スカラー座標環は次数1の直線束による節点曲線の捩れ斉次座標環であり、
+曲線上の振幅条件によりnoetherianである
+\cite{AVdBTwistedHomogeneous}。
+従って随伴環と $H$ は左noetherianとなり、
+球面随伴環の生成元を持ち上げると $eH$ は左 $B$ 上有限生成となる。
+
+三つの部分代数 $A_i$ は、根の分離を仮定しなくてもFrobenius環である。
+命題\ref{prop:cubic-CY-three-alpha-nodal-E6-full-repeat}により
+$H$ は各 $A_i$ 上左右自由である。
+従って定理\ref{thm:cubic-CY-three-alpha-nodal-E6-separable}の
+相対双加群列の各微分成分は $H\otimes_k H$ に単射で入る。
+有限次元右イデアルを排除した同じ証明で $d_2$ は単射である。
+中間完全性は微分の普遍性から従うので、この相対列は重根がある場合も完全である。
+さらに $\Omega^1 A_i$ は片側 $A_i$ 加群として自由加群の直和因子である。
+従ってこの列は右 $H$ 加群として項ごとに射影的で、終項 $H$ も射影的。
+任意の左 $H$ 加群 $M$ でテンソルしても完全性を保つ。
+
+$M$ を有限次元とする。右辺の係数を $H$ としたとき、
+この相対列の各項は高次Extを持たない。
+自由誘導項では明らかであり、各 $A_i$ からの誘導項では
+$H$ が $A_i$ 上自由従って入射的だからである。
+ここで有限次元Frobenius環上では自由加群は入射的であり、
+無限直和の場合もBaerの判定で同じ結論を得る。
+従って $j>2$ で $\operatorname{Ext}^j_H(M,H)=0$ である。
+また最高微分への像は
+\[
+ f\longmapsto f-g f(g^{-1}{-}),\qquad g=a,ab
+\]
+の像の和である。
+実際、各微分成分から $H$ への写像は、
+$A_i$ 上の入射性により誘導前の零化微分加群の包含を通して
+$A_i\otimes_k M$ 全体への写像に延長できる。
+よって $d_2$ の三つの差の式をそのまま使える。
+$\operatorname{Hom}_k(M,H)=M^*\otimes_k H$ で、
+これらの差は $vg\otimes h=v\otimes gh$ を課す。
+$a,ab$ と逆元は $a,b,c$ を生成するから
+\[
+ \operatorname{Ext}^2_H(M,H)\simeq M^*\otimes_H H=M^*
+\]
+となる。これは右 $H$ 加群としての同型である。
+
+$B$ の大域次元が有限と仮定すると、
+$eH$ は有限生成射影 $B$ 加群による有界解消を持つ。
+従って三角
+\[
+ He\otimes_B^{\mathbf L}eH\longrightarrow H\longrightarrow C
+ \longrightarrow (He\otimes_B^{\mathbf L}eH)[1]
+\]
+の $C$ は左 $H$ 上完全複体となる。
+$C$ のコホモロジーは有限生成で、$e$ で零になる。
+$Q_0$ は有限次元なので、これらは有限次元加群である。
+$H^0(C)=Q_0\ne0$、正次数は零であり、最低の非零次数を $-n$ とする。
+上の高次Ext消滅から、標準切断により
+$C^\vee=\mathbf R\operatorname{Hom}_H(C,H)$ の最高コホモロジーは
+次数 $n+2$ の $(H^{-n}(C))^*$ である。
+$C$ は完全なので $\mathbf R\operatorname{Hom}_H(C,C)\simeq
+C^\vee\otimes_H^{\mathbf L}C$。
+その次数 $n+2$ のコホモロジーは
+$(H^{-n}(C))^*\otimes_H Q_0$ であり、
+双対も $Q_0$ 加群なので非零である。
+一方、$eC=0$ と三角の導来随伴から
+$\mathbf R\operatorname{Hom}_H(C,C)\simeq C$。
+正次数の非零は矛盾する。従って $B$ は無限大域次元でありH3ではない。
+\end{proof}
