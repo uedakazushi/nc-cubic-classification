@@ -490,3 +490,14 @@ $U,V$ は独立で、二次式の $V^2$ 係数は1である。
 反対代数(LO11)は $(X,T,Z)\mapsto(-X,T,Z)$ となる。
 中央二次の $UV$ 係数は $-4(X^2+T)/(X^2-1)$、
 二元二次式としての判別式は $16(X^2-T^2)/(X^2-1)$ である。
+
+\begin{corollary}\label{cor:cubic-CY-one-segre-square-split-M-generic-zero}
+$M_{s,w,z}$ とその中央二次商では、稠密開集合で中央三次は零である。
+\end{corollary}
+\begin{proof}
+$(s,w,z)=(1,1,1)$ は(LO4)を満たす。
+この点で元六関係の中心行列は階数20、中央二次商は階数16である。
+\path{verify_cubic_CY_one_segre_last_generics.py} で両方を厳密に再計算する。
+次数三、四の商の次元は全許容値で一定なので、
+階数の下半連続性からそれぞれ一般点でも同じ階数となる。
+\end{proof}

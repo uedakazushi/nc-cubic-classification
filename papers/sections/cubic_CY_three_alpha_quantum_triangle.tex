@@ -262,7 +262,7 @@ $\alpha$ 型の $\gamma\ne0$ で、先頭式が節点三次、または二点で
          \bigl(-q A_yA_zP_xx-q A_xA_zP_yy+A_z^2P_xP_y z\bigr).
 \end{align*}
 H3では $A_z\ne0$ が必要であり、割線ではさらに $A_y\ne0$ が必要である。
-割線の原始三乗根値ではH3切断は存在しない。
+節点・割線の原始三乗根値ではH3切断は存在しない。
 \end{proposition}
 \begin{proof}
 固定出典\cite{AS4CYpinned}の節点と割線の必要表示を用いる。
@@ -306,6 +306,23 @@ $1,q,q^{-1}$ を適当な順序で固有値に持つ。
 最後に割線で $q^3=1$ なら $P_y=0$ により
 $J=P_x(x^3-q A_yA_z t^2x/(q+1))$。
 $t^3$ を加えた全中心三次は可換二元式で分解するから、整域切断がない。
+
+節点も原始三乗根では同じ型の因数分解を持つ。
+$\lambda^3=P_y/P_x$ とし $\ell=x+\lambda y$ と置く。
+$q^2+q+1=0$ で混合項を元関係へ戻すと
+\[
+ \frac{J}{P_x}\equiv
+ \ell^3+q^2 A_z\lambda^2 P_x t\ell^2+
+ \bigl(q^2 A_z(A_y+\lambda^2A_x)-\lambda(1-q^2)B_z\bigr)t^2\ell
+ \pmod {kt^3}.
+\]
+例えば $L_0=tA_z z+t^2B_z$ と置くと、
+$x^2y+xyx+yx^2=xL_0-q^2L_0x$、
+$xy^2+yxy+y^2x=L_0y-q^2yL_0$ である。
+残り二関係で右辺を戻し、$t\ell^2$ を加えると表示式を得る。
+恒等式は同じ公開検証器で $q^2+q+1$ を法として厳密に検証する。
+$t,\ell$ は独立で可換なので、全切断は可換二元三次として分解し、
+整域切断は存在しない。
 \end{proof}
 
 \begin{proposition}\label{prop:cubic-CY-three-alpha-secant-difference}

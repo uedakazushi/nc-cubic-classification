@@ -54,6 +54,30 @@ def verify(with_cubes):
         assert all(coefficient == 0 for coefficient in commutator(generator, omega))
     if with_cubes:
         print("PASS scaled volume, including both specializations at a primitive cube root")
+        root = q*q+q+1
+        scale = s.Symbol("ell")
+
+        def product(left, right):
+            terms = defaultdict(lambda: 0)
+            for a, ca in left.items():
+                for b, cb in right.items():
+                    for word, coefficient in reduce(a+b).items():
+                        terms[word] += ca*cb*coefficient
+            return terms
+
+        ell = {"x": 1, "y": scale}
+        square = product(ell, ell)
+        cube = product(square, ell)
+        correction2 = q*q*az*scale*scale*px
+        correction1 = q*q*az*(ay+scale*scale*ax)-scale*(1-q*q)*bz
+        words = set(cube) | set(square) | set(ell) | set(omega)
+        for word in sorted(words-{""}):
+            difference = (omega.get(word, 0)-px*(cube.get(word, 0)
+                          +correction2*square.get(word, 0)+correction1*ell.get(word, 0)))
+            numerator, denominator = s.cancel(difference.subs(py, scale**3*px)).as_numer_denom()
+            assert s.rem(numerator, root, q) == 0
+            assert s.gcd(denominator, root) == 1
+        print("PASS primitive-root nodal factorization in the commuting plane")
         return
 
     root_polynomial = q*q+q+1

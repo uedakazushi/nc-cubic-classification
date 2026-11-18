@@ -502,3 +502,19 @@ $[Q_0,a],[Q_0,b],[Q_0,c],[Q_0,d]$ は全てその行空間に属す。
 一次中心が零であることと単射・Hilbert値は
 命題\ref{prop:cubic-CY-one-segre-double-split-quadratic-reduction}の証明と同じ。
 \end{proof}
+
+\begin{corollary}\label{cor:cubic-CY-one-segre-double-split-FDC-generic-zero}
+(FDC3)のパラメータ空間の稠密開集合では中央三次は零である。
+\end{corollary}
+\begin{proof}
+(FD2),(FD3),(FRE1)--(FRE2)において $t=z=v=1$ とし、
+$s$ を動かす。$p=s+1,m=s-1$ である。
+$x_2=(s z^2+v)/(sv+k^2)$ と書けば、六関係の係数は $s=0$ まで延びる。
+$s=1/2$ で(FDC3)の全単元は非零なので、この族の一般値は許容値である。
+$s=0$ の六関係は(FO1)の
+$(p,u,w)=(1,1216/22831,-1343/480)$ に一致する。これは許容値である。
+従って次数三、四の次元はこの点と一般点の双方で $20,35$。
+中心行列の階数は $s=0$ で20なので、全四変数空間の一般点でも20である。
+係数の一致、単元と階数は
+\path{verify_cubic_CY_one_segre_last_generics.py} が厳密に検算する。
+\end{proof}

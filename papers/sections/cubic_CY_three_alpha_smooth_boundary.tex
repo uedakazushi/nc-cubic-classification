@@ -120,4 +120,33 @@ $\phi(t)=a t'$、$\phi(L)=bL'+c(t')^3$ と書けば、
 \par\noindent\texttt{verify\_cubic\_CY\_three\_alpha\_smooth\_boundary.py}
 \par
 滑らかな楕円境界の無限位数でのアフィン判定、
-および成分を巡回する三角境界での整域性と全許容性は残る。
+およびその幾何学的成分の全判定は残る。
+
+\begin{corollary}\label{cor:cubic-CY-three-alpha-cyclic-triangle-excluded}
+定理\ref{thm:cubic-CY-three-alpha-smooth-boundary}のうち
+境界が成分巡回三角形になる包絡では、全中央三次切断が非整域である。
+\end{corollary}
+\begin{proof}
+定理の最後の座標を用いる。
+低次ポテンシャルの二次項は対称二次形式なので、元の三関係は、巡回順で
+\[
+ yz=h x^2+t(a_{xx}x+a_{xy}y+a_{xz}z)+b_x t^2,qquad
+ a_{ij}=a_{ji}
+\]
+と書ける。$X=x-a_{yz}t$、$Y=y-a_{xz}t$、$Z=z-a_{xy}t$ と置き、
+各関係の左辺の混合一次項を移項すると、
+\[
+ YZ=f_x(X,t),\qquad ZX=f_y(Y,t),\qquad XY=f_z(Z,t)
+\]
+となる。例えば
+$f_x(X,t)=h(X+a_{yz}t)^2+a_{xx}t(X+a_{yz}t)
+ +(b_x+a_{xy}a_{xz})t^2$ である。
+結合則を $XYZ,YZX$ に適用すると
+$Xf_x(X,t)=Yf_y(Y,t)=Zf_z(Z,t)$。
+この元は各生成元と可換で、$t=0$ で $h x^3\ne0$ に移る。
+従って全中央三次はこれと $t^3$ で張られる。
+$X,t$ は独立な可換元なので、全切断は可換二元三次として因数分解する。
+一次因子と残る二次因子は整域の包絡で非零であり、
+次数三のイデアルで割ってもそれぞれ非零である。
+従って全中央三次商に零因子がある。
+\end{proof}
