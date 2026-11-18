@@ -1960,3 +1960,6 @@ filtered点加群schemeの接空間はExt¹_D(M,M)：次数≤1の関係の変�
 ### Artin上の内在section再構成・形式圏変形と相対双対（v365）
 Lowen–Van den Berghの平坦Abel圏Artin変形に既知のexact反標準作用のliftがある場合、VdB命題5.1,5.3で例外構造対象の一意flat liftと全次数section自由・底変更を得る。幾何fiberのstrong amplenessは、任意のFへの負shift直和の全射、Serre双対によるExt²消滅、その核の同じ消滅からExt¹消滅で示す。VdB定理4.2とAZからsection環で圏を再構成。関係核の底変更とNakayamaにより任意のArtin変形で一次生成、全関係次数2,3。逆に平坦な次数変形のGrはLowen–VdB定理8.16の平坦加群圏、torsion局所化は入射のcoflat性と定理7.1で変形、8.8でnoetherian対象に戻る。これでliftしたexact偏極付き圏と次数環を往復する。
 二次包絡も平坦な場合はB,Rの全次数Hilbert上界の小行列式を有限型Grassmann上で閉条件にし、各幾何点のArtin局所では下界が単元minorから自動。正規三次と相対Koszul複体を得る。相対Koszul双加群解消と正規商の二項変換でH³(R)のgraded双対は{}^μR(-1)⊗W₄⊗G^∨、μ=(μ_B σ)|R。orientationは共通次数重み1で、表示のcanonical降下にも使える。相対Serreが構造対象orbitで反標準と整合するなら、H³の左・右積のtrace比較からμは次数スカラー。Artinスカラーの自明性、任意の平坦な内在変形の二次包絡平坦性、相対Serreの存在と一般底の開性・代数性はまだ別途必要。
+
+### Artin相対Serre、中山スカラーの消滅、有限型形式atlas（v366）
+包絡のaugmentation Koszul複体を商へ移したtorsion完全複体Xの内部次数0は底環一項。恒等射の分裂から相対traceは値1を取る。標的を[3](−1)と次数c^{-1}捩りに分け、traceの自然性とコホモロジー符号(+1)を比較するとc=1。従って非被約底でもμ_R=1およびGx=μ_B⁻¹(x)G。底上平坦なcoherent対象は、包絡への押出しの有限自由解消と三次変換射の二乗零により、商の全shiftで生成される厚い圏に入る。左右局所torsion複体をL、局所化をDとすると、D_A L=ω_R[3]とtorsion随伴よりD_A D=ω_R⊗D[2]。局所化されたshiftのdg Homの双対から相対Serreは逆中山twist・次数−1・orientation・コホモロジー2で与えられる。両環のHilbert上界と四本の中山線型式による有限型incidenceの形式完備化が内在Artin群oidを表す。全次数平坦な二次包絡を持つ場合の結果。通常の開性、二次包絡平坦性の有限判定と一般底での代数性は残る。

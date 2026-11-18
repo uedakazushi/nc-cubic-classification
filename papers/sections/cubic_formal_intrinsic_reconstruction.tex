@@ -195,3 +195,196 @@ $\varphi\in\operatorname{Ext}^2(\mathcal O_{i+1},\mathcal O_{i-1})$ を取る。
 従って $\mu|_{R_1}$ はその二単元の比によるスカラー倍である。
 一次生成性により全次数の作用は共通次数スカラーである。
 \end{proof}
+
+\begin{theorem}\label{thm:h3-artin-relative-nakayama-trivial}
+前系の仮定の下で、非被約Artin底上でも
+\[
+ \mu=1,\qquad \sigma=\mu_B^{-1}
+\]
+である。従って反標準性が課す正規三次条件は
+Artin底上でも単一のNakayama線型核で与えられる。
+\end{theorem}
+\begin{proof}
+$X=K_B\otimes_B R$ とする。ここで $K_B$ は右augmentation加群 $A$ の
+有限自由Koszul解消である。
+$X$ は有限自由な右 $R$ 複体で、コホモロジーは
+$A$ とその三次shiftの二項のみなので、次数torsionである。
+特に $X$ の内部次数0の複体は $A$ 一項である。
+次数0の導来自己準同型に対し、その内部次数0への制限は
+恒等射で与えられる $A\to\mathbf R\operatorname{Hom}_{\mathrm{Gr}R}(X,X)$ を分裂させる。
+この分裂は有限自由複体上で直接定義される。
+
+局所双対をこのtorsion完全複体に適用する。
+$D_A$ を $A$ 上の導来双対とすると、任意の次数付き完全複体 $Y$ に対し
+\[
+ D_A\,\mathbf R\operatorname{Hom}_{\mathrm{Gr}R}(X,Y)
+ \simeq
+ \mathbf R\operatorname{Hom}_{\mathrm{Gr}R}
+   \bigl(Y,X\otimes_R({}^{\mu}R^1(-1)\otimes_A\mathcal L_{\rm AS})[3]\bigr).
+\]
+実際、有限自由な $X$ を用いたtensor--Homの公式で、
+左辺は $D_A\,\mathbf R\underline{\operatorname{Hom}}_R(X,R)$ を標的とする
+右Homに移る。$X$ はtorsionなので、
+$\mathbf R\underline{\operatorname{Hom}}_R(X,R)$ では
+標的を局所torsion複体に置き換えられる。
+これはtorsion商への導来随伴で、商における $X$ が零であることから従う。
+有限自由項で双対化し、命題\ref{prop:h3-artin-relative-dualizing-line}を使うと
+右辺の標的となる。以上の同定には内部次数付きの複体を使うので、
+内部shiftとの比較は自明である。
+
+$\mathcal L_{\rm AS}$ を自明化し、$\mu=\xi_c$ と書く。
+上の双対式のSerre標的は $F=[3](-1)\Phi$、$\Phi=T_{\xi_{c^{-1}}}$ である。
+トレースを恒等射の双対として取ると、上記の分裂により
+$\operatorname{Hom}_{\mathrm{Gr}R}(X,FX)\to A$ は全射である。
+通常の graded trace の計算
+（\cite[Lemma 2.6, Theorem 4.1の証明]{RRZtri}）をここで使う。
+この計算に必要なのはトレースの自然性と、複体のshiftでのKoszul符号だけである。
+本件では有限自由複体の $A$ 双対で同じ恒等式を得るので、
+全Ext加群が自由であることを仮定しない。
+具体的には、$\Phi$ を恒等と比較する写像は
+内部次数 $n$ の元に $c^{-n}$ を掛ける。
+従って整数 $j$ の内部shift後の比較は、shift前の比較に比べ $c^j$ 倍である。
+具体的に $U=[3](-1)$、$u_X:UX\to FX$ をこの比較とし、
+$a:X\to UX$ を取る。
+トレースの自然性と比較の自然性により
+\[
+ \operatorname{Tr}_X(u_Xa)
+ =\operatorname{Tr}_{UX}(F(a)u_X)
+ =\operatorname{Tr}_{UX}(u_{UX}U(a)).
+\]
+内部shiftは $-1$ なので $u_{UX}=c^{-1}U(u_X)$ であり、
+コホモロジーshift3の符号は $(-1)^{3(3+1)}=1$ である。
+従って最後の項は $c^{-1}\operatorname{Tr}_X(u_Xa)$ となる。
+トレースが $1\in A$ を取るので $c=1$ である。
+
+$R_1=B_1$ であるから $\mu=(\mu_B\sigma)|_R=1$ は
+$\mu_B\sigma$ が包絡の一次空間上恒等であることを意味する。
+一次生成性で包絡全体でも恒等となり、線型条件を得る。
+\end{proof}
+
+\begin{theorem}\label{thm:h3-artin-relative-serre-exists}
+系\ref{cor:h3-artin-finite-presentation-ring-hull}のArtin表示について、
+$\mathcal P_A$ を $D(\operatorname{QGr}R)$ のうち
+$\pi R(i)$ 全体で生成される厚い部分圏とする。
+全ての $A$-平坦なcoherent対象は $\mathcal P_A$ に入る。
+この圏の $A$ 相対Serre関手は
+\[
+ S_A=T_{\mu^{-1}}(-1)\otimes_A\mathcal L_{\rm AS}[2]
+\]
+である。従ってその逆の二次shiftは $A$-平坦なheart対象を保つ。
+正規三次がNakayama線型条件を満たすなら、
+orientation直線を除いた反標準作用は表示のshiftになる。
+\end{theorem}
+\begin{proof}
+まず $A$-平坦なcoherent対象 $F$ を取る。
+$R$ の商から二次包絡へのexact忘却を $i_*$ とする。
+$i_*F$ も底上平坦である。
+幾何学的AS4包絡のshift列はstrongly ampleで、
+Artin底上も \cite[定理4.2]{VdBFormalAbelian} により同じである。
+従って十分高い次数のsectionで $i_*F$ を表す有限生成次数付き加群 $N$ を作れ、
+その各成分は同文献の命題5.3により $A$ 上自由である。
+剰余体にした $N_k$ の最小次数付き自由解消を持ち上げる。
+各段の核は底上自由で、次の自由生成元は剰余体から持ち上がる。
+幾何学的包絡の大域次元は4なので有限段で核が自由となり、
+剰余体の基底を持ち上げて元の核との同型を得る。
+従って $i_*F$ は有限自由shiftの像で解消される。
+
+一方、$F$ の底上平坦性と極大イデアルの有限濾過により、
+任意のcoherent $H$ と $j>2$ に対し $\operatorname{Ext}^{j}_{\qgr R}(F,H)=0$ である。
+各濾過商が剰余体で消される場合のExtは
+平坦な第一引数による底変更で剰余体上のExtに等しく、
+残りは有限個の長完全列による。
+従って正規三次の導来自己交叉の変換射の二乗は零である。
+定理\ref{thm:eta-square-H3}と同じ二つの錐を取ると、$F$ は
+二次包絡の完全複体を制限して得る複体のextensionの直和因子である。
+従って $F\in\mathcal P_A$ である。
+
+次に右局所torsion複体を $L=\mathbf R\Gamma_{R_{\ge1}}R$ と書く。
+局所コホモロジーの次元は有限であることを確認する。
+包絡の $B/B_{\ge n}$ は $A$ 上有限自由なので、
+包絡の双加群Koszul解消から射影次元は高々4である。
+商 $R$ への変換で $\operatorname{Tor}_1^B(B/B_{\ge n},R)$ が現れるが、
+正則三次の二項解消により、内部次数は $n-3$ 以上にしかない。
+従って $n$ を三つより多く上げた標準射ではこのTorへの写像は零となる。
+変換の三角に $\mathbf R\operatorname{Hom}_R(-,M)$ を適用し直極限を取れば、
+$R$ 加群 $M$ の局所コホモロジーは包絡側で計算でき、次元は高々4である。
+左でも同じである。
+
+各 $B/B_{\ge n}$、$R/R_{\ge n}$ は有限提示で、各次数での射影解消も
+有限生成項に取れるため、導来局所torsionは直和と可換する。
+したがって右加群の導来局所torsionは $-\otimes_R^{\mathbf L}L$ で与えられる。
+この比較は次数付き自由加群で同型で、一般の加群については自由解消を取り、
+固定コホモロジー次数で有限コホモロジー次元の範囲まで比較すればよい。
+左にも同じ比較がある。
+次数torsion加群の次数付き入射包もtorsionである。
+非torsion斉次元が入射包にあれば、その巡回部分と元のtorsion加群との交叉は
+noetherian性から次数の上に有界となり、高次部分が交叉しないので本質拡大性に反する。
+従って導来局所torsionはtorsion加群上で恒等である。
+左右の局所torsion複体は、順に左右torsionを取った
+二重tensorで比較できる。両者のコホモロジーは
+命題\ref{prop:h3-artin-relative-dualizing-line}とその左版により両側torsionなので、
+この比較から左右は一致する。
+
+$D$ を三角 $L\to R\to D\to L[1]$ の局所化複体とし、
+$J=D_A L={}^{\mu}R^1(-1)\otimes_A\mathcal L_{\rm AS}[3]$ と書く。
+局所化は $-\otimes_R^{\mathbf L}D$ であり、$D\otimes_R^{\mathbf L}D\simeq D$。
+双対した三角の射 $R^\vee\to J$ は、$R^\vee$ がtorsionであるため
+$\mathbf R\Gamma_{R_{\ge1}}J$ を経由する。
+この後者は $J$ の可逆双加群部分を局所torsionに掛けて $R^\vee$ に同定される。
+経由する自己準同型は同型である。
+実際、右augmentation加群 $A$ からのHomを取ると、この射は
+局所torsion等式 $A\otimes_R^{\mathbf L}L\simeq A$ の双対である。
+従ってsocleの $A$ 上で単元である。
+次数付き $R^\vee$ の次数0自己準同型は、
+各次数の有限自由双対で左正則加群 $R$ の次数0自己準同型に対応するため、
+この単元判定で全体の同型が従う。
+よって双対三角は $J$ の局所化三角と同定され、
+\[
+ D_A D\simeq ({}^\mu R^1(-1)\otimes_A\mathcal L_{\rm AS})[2]
+                     \otimes_R^{\mathbf L}D
+\]
+が得られる。
+
+最後の式は局所化されたshift対象のdg Homにも適用できる。
+実際、自由shiftの次数付きdg範疇からそのtails像への射は、
+左右に $D$ を掛けると冪等となる。
+従ってtailsの双加群の制限は完全忠実であり、
+上の両側局所な双加群同型はtailsのdg双加群同型を与える。
+各内部次数のHom複体は $H^0,H^2$ が有限自由なので $A$ 上完全である。
+このdg双加群の $A$ 双対を用いたtensor--Hom対合は、
+有限coneと直和因子で生成される $\mathcal P_A$ 上の相対Serre対合となる。
+左中山twistを右加群へのtensorに移すと逆twist、内部shiftは $-1$、
+コホモロジーshiftは2となり、主張の式を得る。
+\end{proof}
+
+\begin{corollary}\label{cor:h3-artin-intrinsic-formal-atlas}
+全次数平坦な二次包絡を持つArtin変形について、
+相対Serre作用から定まる反標準section表示の関手は、
+有限型の正規三次incidenceの形式完備化によって表される。
+一次基底を忘れた構造対象付き同値の群oidでは $\mathrm{PGL}_4$ で割る。
+\end{corollary}
+\begin{proof}
+系\ref{cor:h3-artin-finite-presentation-ring-hull}の両Hilbert上界の
+有限型incidenceを取る。Koszul双対の次数3,4の有限階数stratum上で、
+Frobenius対合の行列から $\mu_B|_{B_1}$ が底変更と両立して定まる。
+三次の核直線に対し、$B_1$ に関する四つの式
+\[
+ Gx=\mu_B^{-1}(x)G
+\]
+を課す。これは $B_4$ の有限自由部分上の有限個の閉方程式である。
+任意のArtin変形の形式近傍では両方のHilbert下界および
+必要なKoszul双対の階数下界は単元minorで保証される。
+従ってこの有限型incidenceの形式完備化で、全次数平坦な表示とこの方程式が表される。
+
+相対Serre付き内在側からは、定理
+\ref{thm:h3-artin-intrinsic-section-reconstruction}で圏とsectionを復元し、
+定理\ref{thm:h3-artin-relative-nakayama-trivial}で閉方程式を得る。
+逆にこの方程式を満たす表示では、定理
+\ref{thm:h3-artin-relative-serre-exists}で相対Serre双対が存在し、
+反標準作用は、底のorientation直線を除けば次数移動である。
+Artin局所底ではこの直線は自明であり、自明化の変更は共通次数スカラーに当たる。
+従って元の表示はたしかに相対反標準sectionから得られる。
+矢は既述のsection再構成で全て基底変更に対応し、
+相対Serre自然性により反標準作用との可換性が従う。
+共通次数スカラーを除いて $\mathrm{PGL}_4$ 商を得る。
+\end{proof}

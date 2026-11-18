@@ -5100,5 +5100,16 @@
     "verification": "Structural proof. VdB arXiv:1002.0259v2 Theorem 4.2 and Propositions 5.1, 5.3 and Lowen–VdB arXiv:math/0405226 Theorems 7.1, 8.8, 8.16 checked in the source papers.",
     "scope": "Artin reconstruction for flat intrinsic abelian deformations equipped with an exact lift of the anticanonical shift. Finite formal presentation when the quadratic envelope is also flat. Relative Nakayama is scalar when relative Serre gives that lift.",
     "main_build": "LuaLaTeX PASS, 544 pages, no overfull boxes or undefined references/citations"
+  },
+  "H3_artin_intrinsic_formal_atlas_v366": {
+    "proof": "papers/sections/cubic_formal_intrinsic_reconstruction.tex",
+    "theorems": [
+      "thm:h3-artin-relative-nakayama-trivial",
+      "thm:h3-artin-relative-serre-exists",
+      "cor:h3-artin-intrinsic-formal-atlas"
+    ],
+    "verification": "Structural argument using the split graded identity of a torsion perfect complex and the finite graded trace comparison in RRZtri, and duality of the torsion and localization triangles. No independent audit of the full classification suite.",
+    "scope": "Relative Serre duality and the finite-type formal presentation of intrinsic Artin deformations with degreewise flat quadratic envelope. Ordinary openness and general-base algebraicity remain.",
+    "main_build": "LuaLaTeX PASS, 547 pages, no overfull boxes or undefined references/citations"
   }
 }

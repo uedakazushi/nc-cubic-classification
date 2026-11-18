@@ -1,6 +1,6 @@
 # 研究方針：H3型内在的非可換三次曲面の完全分類
 
-2026-11-19 / research-plan-v60 / H3分類専用。
+2026-11-19 / research-plan-v61 / H3分類専用。
 **再開時は本書を最初に読む。GitHub mainが唯一の正本。**
 実行規則は `AGENTS.md`。既存の全H3分類の詳細と必要な式は
 `research/cubic_14641_classification.md`、`research/cubic_14641_codex_plan.md`、
@@ -58,7 +58,7 @@ Library既存ファイルは明示指示なしに削除しない。GitではPDF�
 
 (2,2)完成部分のfrontierは **classification-v202**。最後のL0非鏡開集合の正常行加群を自由rank10の核へ移し、全多項式恒等式と10回の局所化単元pivotを公開コードから厳密再生した。両top非零の全候補が消滅し、(2,2)/mixed rank4の全H3は全Jordan型込みで既分類の曲がったClifford族に一致する。詳細な被覆・AS4点での底変更の証明は `papers/sections/cubic_order2_22_secant_L_complete.tex`。この領域の完成を全H3分類と同一視しない。
 独立の[楕円E6量子化成分](https://github.com/uedakazushi/nc-cubic-e6)の研究では、三次の二次関係挿入45×48行列を44×44単元minorで整理し、包絡の三次平坦性を四つの係数の消滅へ帰着した。全次数平坦性を別途仮定すれば三次核は自動的に左右正則正規な主イデアル。20巡回potential方向の80個の斉次一次overlapは全て零と検証済み。指定potential chart内の高次flat性は上記定理で解決した。全intrinsic被覆は未完成。
-三・四固有値領域は排除済み。全単一固有値のCY性も完成した。全CY切断被覆、全成分とintrinsic族降下は未完成である。
+三・四固有値領域は排除済み。全単一固有値のCY性も完成した。幾何的中央切断の全被覆はv364、表示の四既約成分はv358。内在的な族の一般底での認識と代数性を調べる。
 
 ## V. 再現・関連研究
 
@@ -419,3 +419,6 @@ Sklyaninのアフィン包絡で自由解消1,3,3,1に中央三次のホモト�
 
 ### 全幾何点のArtin圏変形からのsection再構成（v365）
 反標準exact作用が持ち上がる任意の平坦Abel圏Artin変形で、構造対象の一意な平坦持ち上げ、全次数自由なsection、生成・関係次数2,3、AZ再構成を得た。逆も平坦加群圏の局所化から成立。二次包絡も平坦な範囲では両Hilbert上界を用いた有限型incidenceの形式完備化を得る。相対局所双対はW₄⊗G^∨のorientationとμ_Bσの捩りを持ち、相対反標準性は商の中山作用を共通次数スカラーにする。次はそのArtinスカラーの自明性、相対Serre作用の認識、通常の開性・代数性。
+
+### Artin内在表示の相対Serreと有限型形式atlas（v366）
+全次数平坦な二次包絡のあるArtin変形で、局所torsionの双対から相対Serreを構成し、底上平坦な対象がshiftで生成される厚い部分圏に入ることを示した。augmentationの包絡Koszul複体から作るtorsion完全複体の恒等射は底の自由直和因子をなし、graded traceで中山次数スカラーが非被約底でも自明になる。四本の中山線型式を加えた有限型incidenceの形式完備化とPGL₄商を得る。次は二次包絡の全次数平坦性の有限次数判定、および混合位数を含むH3開性と一般底での認識。
