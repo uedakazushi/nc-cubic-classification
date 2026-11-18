@@ -51,29 +51,29 @@ def four_cross_one_outer(linear_columns=False):
     return relations, line1, line2, quadratic
 
 
-def check(name, data):
+def check(name, data, field=FIELD):
     source, line1, line2, coefficients = data
     relations = [
-        {divmod(i, 4): FIELD.from_sympy(s.cancel(source[i, j]))
+        {divmod(i, 4): field.from_sympy(s.cancel(source[i, j]))
          for i in range(16) if s.cancel(source[i, j])}
         for j in range(6)
     ]
-    algebra = PivotAlgebra(FIELD, 4, relations, [0]*4)
-    algebra.pivot_product = FIELD.one
+    algebra = PivotAlgebra(field, 4, relations, [0]*4)
+    algebra.pivot_product = field.one
     algebra.build(3)
     assert [len(algebra.basis[n]) for n in (2, 3)] == [10, 20]
     support = list(range(4))
     commute = {}
     for i in support:
         for j in support:
-            coeff = FIELD.from_sympy(s.sympify(line1[i]*line2[j]))
+            coeff = field.from_sympy(s.sympify(line1[i]*line2[j]))
             if coeff:
                 algebra.addto(commute, algebra.word((i, j)), coeff)
                 algebra.addto(commute, algebra.word((j, i)), -coeff)
     assert not commute
 
     coefficients_free = [
-        FIELD.from_sympy(s.cancel(coefficients[0]*line1[i]*line1[j]
+        field.from_sympy(s.cancel(coefficients[0]*line1[i]*line1[j]
                                   +coefficients[1]*line1[i]*line2[j]
                                   +coefficients[2]*line2[i]*line2[j]))
         for i in support for j in support
@@ -93,11 +93,16 @@ def fraction_factors(values):
     return sorted({str(factor) for value in values for factor, _ in value.factor()[1]})
 
 
-def cubic_exclusion(name, chart):
-    source = chart()[0]
-    permutation = (0, 1, 3, 2) if name == "FO1_linear_columns" else (0, 1, 2, 3)
-    algebra, rank = centre_calculation(source, permutation, FIELD, FIELD.from_sympy)
-    assert rank == 20
+def quadratic_quotient(data):
+    source, U, V, (a, b, c) = data
+    coefficients = s.Matrix([a*U[i]*U[j]+b*U[i]*V[j]+c*V[i]*V[j]
+                             for i in range(4) for j in range(4)])
+    return source.row_join(coefficients)
+
+
+def cubic_exclusion(name, source, permutation, dimensions):
+    algebra, rank = centre_calculation(source, permutation, FIELD, FIELD.from_sympy, dimensions)
+    assert rank == dimensions[1]
     projection_denominators = {
         str(value.d): value.d
         for degree in (2, 3, 4) for coordinates in algebra.right[degree].values()
@@ -115,17 +120,28 @@ def cubic_exclusion(name, chart):
     }
     path = Path(__file__).with_name(f"cubic_CY_one_segre_double_split_{name}_open_certificate.json")
     path.write_text(json.dumps(result, indent=2)+"\n")
-    print("PASS", name, "generic rank 20 with explicit factor support")
+    print("PASS", name, f"generic rank {rank} with explicit factor support")
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--cubic", choices=("TD1", "FO1", "FO1_linear_columns"))
+    parser.add_argument("--cubic", choices=("TD1", "FO1", "FO1_linear_columns",
+                                           "FO1_quotient", "FO1_quotient_alternate"))
     args = parser.parse_args()
     charts = {"TD1": three_cross, "FO1": four_cross_one_outer}
     if args.cubic:
-        charts["FO1_linear_columns"] = lambda: four_cross_one_outer(linear_columns=True)
-        cubic_exclusion(args.cubic, charts[args.cubic])
+        name = args.cubic
+        if name.startswith("FO1_quotient"):
+            alternate = name.endswith("alternate")
+            source = quadratic_quotient(four_cross_one_outer(linear_columns=not alternate))
+            permutation = (0, 1, 3, 2) if alternate else (0, 1, 2, 3)
+            dimensions = (9, 16, 25)
+        else:
+            source = (four_cross_one_outer(linear_columns=True)[0]
+                      if name == "FO1_linear_columns" else charts[name]()[0])
+            permutation = (0, 1, 3, 2) if name == "FO1_linear_columns" else (0, 1, 2, 3)
+            dimensions = (10, 20, 35)
+        cubic_exclusion(name, source, permutation, dimensions)
     else:
         for name, chart in charts.items():
             check(name, chart())

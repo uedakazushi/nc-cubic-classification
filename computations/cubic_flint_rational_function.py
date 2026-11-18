@@ -1,24 +1,19 @@
-"""Rational functions in three variables using FLINT multivariate polynomials."""
+"""Rational functions using FLINT multivariate polynomials."""
 from flint import fmpq, fmpq_mpoly_ctx
 import sympy as s
 
 VARIABLES = s.symbols("p u w")
-CONTEXT = fmpq_mpoly_ctx.get(tuple(map(str, VARIABLES)))
 
 
 class RationalFunction:
     __slots__ = ("n", "d")
 
-    def __init__(self, numerator=0, denominator=1):
-        if not hasattr(numerator, "gcd"):
-            numerator = CONTEXT.constant(numerator)
-        if not hasattr(denominator, "gcd"):
-            denominator = CONTEXT.constant(denominator)
+    def __init__(self, numerator, denominator):
         if not denominator:
             raise ZeroDivisionError("zero rational-function denominator")
         if not numerator:
-            self.n = CONTEXT.constant(0)
-            self.d = CONTEXT.constant(1)
+            self.n = numerator
+            self.d = numerator.context().constant(1)
             return
         common = numerator.gcd(denominator)
         leading = denominator.leading_coefficient()/common.leading_coefficient()
@@ -32,8 +27,6 @@ class RationalFunction:
         return RationalFunction(-self.n, self.d)
 
     def __add__(self, other):
-        if not isinstance(other, RationalFunction):
-            other = RationalFunction(other)
         if not self:
             return other
         if not other:
@@ -48,10 +41,10 @@ class RationalFunction:
         return self + -other
 
     def __mul__(self, other):
-        if not isinstance(other, RationalFunction):
-            other = RationalFunction(other)
-        if not self or not other:
-            return RationalFunction()
+        if not self:
+            return self
+        if not other:
+            return other
         cross_left = self.n.gcd(other.d)
         cross_right = other.n.gcd(self.d)
         return RationalFunction((self.n//cross_left)*(other.n//cross_right),
@@ -61,16 +54,24 @@ class RationalFunction:
         return RationalFunction(self.n*other.d, self.d*other.n)
 
 
-class RationalFunctions:
-    zero = RationalFunction()
-    one = RationalFunction(1)
+class RationalFunctionField:
+    def __init__(self, variables):
+        self.variables = variables
+        self.context = fmpq_mpoly_ctx.get(tuple(map(str, variables)))
+        one = self.context.constant(1)
+        self.zero = RationalFunction(self.context.constant(0), one)
+        self.one = RationalFunction(one, one)
 
-    @staticmethod
-    def from_sympy(expression):
+    def from_sympy(self, expression):
         def polynomial(value):
-            terms = s.Poly(value, *VARIABLES, domain=s.QQ).terms()
-            return CONTEXT.from_dict({exponents: fmpq(int(coefficient.p), int(coefficient.q))
-                                      for exponents, coefficient in terms})
+            terms = s.Poly(value, *self.variables, domain=s.QQ).terms()
+            return self.context.from_dict({
+                exponents: fmpq(int(coefficient.p), int(coefficient.q))
+                for exponents, coefficient in terms
+            })
 
         numerator, denominator = s.cancel(expression).as_numer_denom()
         return RationalFunction(polynomial(numerator), polynomial(denominator))
+
+
+RationalFunctions = RationalFunctionField(VARIABLES)

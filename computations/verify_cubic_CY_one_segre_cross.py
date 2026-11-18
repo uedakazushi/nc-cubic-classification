@@ -98,10 +98,10 @@ def factor_set(polynomials):
             yield s.Poly.from_dict(terms, (p, h), domain=s.QQ).monic().as_expr()
 
 
-def centre_calculation(relations, permutation, field, convert):
+def centre_calculation(relations, permutation, field, convert, dimensions=(10, 20, 35)):
     relations = relations.applyfunc(s.cancel)
     ordered = []
-    for j in range(6):
+    for j in range(relations.cols):
         column = {}
         for i in range(16):
             if relations[i, j]:
@@ -113,15 +113,16 @@ def centre_calculation(relations, permutation, field, convert):
     algebra = PivotAlgebra(field, 4, ordered, [0]*4)
     algebra.pivot_product = field.one
     algebra.build(4)
-    assert [len(algebra.basis[n]) for n in (2, 3, 4)] == [10, 20, 35]
+    assert tuple(len(algebra.basis[n]) for n in (2, 3, 4)) == dimensions
     algebra.pivot_product = field.one
-    source_rows = [{} for _ in range(140)]
+    degree_four = dimensions[-1]
+    source_rows = [{} for _ in range(4*degree_four)]
     for column, cubic in enumerate(algebra.basis[3]):
         for gen in range(4):
             commutator = algebra.word(cubic+(gen,))
             algebra.addto(commutator, algebra.word((gen,)+cubic), -field.one)
             for row, coefficient in commutator.items():
-                source_rows[35*gen+row][column] = coefficient
+                source_rows[degree_four*gen+row][column] = coefficient
     rank = len(algebra.echelon(source_rows))
     return algebra, rank
 

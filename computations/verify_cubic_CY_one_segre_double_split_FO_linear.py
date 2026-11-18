@@ -18,8 +18,7 @@ CURVES = [
 ]
 
 
-def quadratic_curve(source, equation, number):
-    polynomial = s.Poly(equation, V)
+def quadratic_field(variable, polynomial):
     discriminant = s.discriminant(polynomial)
     assert any(power % 2 for _, power in s.factor_list(discriminant, X)[1])
     trace = BASE.from_sympy(-polynomial.nth(1)/polynomial.nth(2))
@@ -64,25 +63,35 @@ def quadratic_curve(source, equation, number):
         def from_sympy(expression):
             def reduce(value):
                 output = Field.zero
-                variable = Element(BASE.zero, BASE.one)
-                for coefficient in s.Poly(value, V).all_coeffs():
-                    output = output*variable+Element(BASE.from_sympy(coefficient), BASE.zero)
+                root = Element(BASE.zero, BASE.one)
+                for coefficient in s.Poly(value, variable).all_coeffs():
+                    output = output*root+Element(BASE.from_sympy(coefficient), BASE.zero)
                 return output
 
             numerator, denominator = s.cancel(expression).as_numer_denom()
             return reduce(numerator)/reduce(denominator)
 
-    algebra, rank = centre_calculation(source, (0, 1, 2, 3), Field, Field.from_sympy)
-    assert rank == 20
-    denominators = [
-        part.d for n in (2, 3, 4) for row in algebra.right[n].values()
-        for coefficient in row.values() for part in (coefficient.a, coefficient.b)
-    ]
-    denominators.extend(part.d for value in source for part in
-                        (Field.from_sympy(value).a, Field.from_sympy(value).b))
+    return Field
+
+
+def quadratic_rank_support(source, field, dimensions=(10, 20, 35), permutation=(0, 1, 2, 3)):
+    algebra, rank = centre_calculation(source, permutation, field, field.from_sympy, dimensions)
+    assert rank == dimensions[1]
+    denominators = {str(part.d): part.d
+                    for n in (2, 3, 4) for row in algebra.right[n].values()
+                    for coefficient in row.values() for part in (coefficient.a, coefficient.b)}
+    for value in source:
+        coefficient = field.from_sympy(value)
+        for part in (coefficient.a, coefficient.b):
+            denominators[str(part.d)] = part.d
     minor = algebra.pivot_product.norm()
-    support = {str(factor) for value in [minor.n, minor.d, *denominators]
-               for factor, _ in value.factor()[1]}
+    return {str(factor) for value in [minor.n, minor.d, *denominators.values()]
+            for factor, _ in value.factor()[1]}
+
+
+def quadratic_curve(source, equation, number):
+    field = quadratic_field(V, s.Poly(equation, V))
+    support = quadratic_rank_support(source, field)
     expected = {"p", "p - 1", "p + 1"} | ({"3*p + 1"} if number == 1 else set())
     assert support <= expected, support
     if number == 1:

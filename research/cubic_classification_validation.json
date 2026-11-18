@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "version": "classification-v332",
+  "version": "classification-v333",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -4670,5 +4670,17 @@
     "scope": "All four orbits of r-linear exceptional surfaces of the two exact FO centre-rank witnesses are excluded. Possible nonzero central cubics satisfy the remaining nonlinear equations for both witnesses and all four involution translates.",
     "exact_control": "PASS over each rational surface, eight rational curves, two quadratic curves and their listed special fibers. PASS second original degree-four rank witness with changed source basis and generator order.",
     "main_build": "LuaLaTeX PASS, 488 pages, no overfull boxes or undefined cross-references/citations"
+  },
+  "CY_one_segre_double_split_FO_excluded_v333": {
+    "proof": "papers/sections/cubic_CY_one_segre_double_split.tex",
+    "validator": "computations/verify_cubic_CY_one_segre_double_split_FO_nonlinear.py",
+    "certificates": [
+      "computations/cubic_CY_one_segre_double_split_FO1_quotient_open_certificate.json",
+      "computations/cubic_CY_one_segre_double_split_FO1_quotient_alternate_open_certificate.json",
+      "computations/cubic_CY_one_segre_double_split_FO_nonlinear_certificate.json"
+    ],
+    "scope": "All allowed FO1–FO2 coefficients have zero cubic centre. This leaves TD1 and FDC3 in the two-product projection.",
+    "exact_control": "PASS two generic quadratic-quotient centre matrices of rank 16, and original centre matrices of rank 20 over both quadratic function fields. Resultants exclude the third curve, and exact GCDs exclude both remaining mixed fibres over number fields of degrees 8 and 18.",
+    "main_build": "LuaLaTeX PASS, 489 pages, no overfull boxes or undefined cross-references/citations"
   }
 }

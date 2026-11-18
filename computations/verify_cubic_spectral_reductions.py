@@ -121,6 +121,7 @@ CHECKS=[
  'verify_cubic_CY_one_segre_double_split_remaining_small.py',
  'verify_cubic_CY_one_segre_double_split_quadratics.py',
  'verify_cubic_CY_one_segre_double_split_FO_linear.py',
+ 'verify_cubic_CY_one_segre_double_split_FO_nonlinear.py',
 ]
 results=[]
 for name in CHECKS:
