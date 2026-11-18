@@ -1383,5 +1383,56 @@
     ],
     "used_part": "necessary leading nodal and secant forms and the diagonal quadratic lower directions",
     "verification": "The all-coefficient central lifts, affine difference representation for secants, and resonance exclusion are proved and checked here."
+  },
+  "CY_three_rankthree_necessary_v321": {
+    "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+    "files": [
+      {
+        "path": "research/proofs/CY_RANKTHREE_QUADRATIC_CENTER.tex",
+        "sha256": "a2354a9708a14c4d7cc100d18532dd0622db4a87cffabd8a3b37a6c6be77eec1"
+      },
+      {
+        "path": "research/proofs/CY_RANKTHREE_CENTRAL_PENCIL.tex",
+        "sha256": "8264d59070474ffd329d4e73ec8a65cc3f2905266a647ab365a12e42b4987134"
+      },
+      {
+        "path": "research/proofs/CY_RANKTHREE_CONSTANT_PENCILS.tex",
+        "sha256": "0c01dbae052582e81446972a0204c0f49639325212a618c67ed1ff7bcf5ecb64"
+      },
+      {
+        "path": "research/proofs/CY_RANKTHREE_BINARY_SEXTIC.tex",
+        "sha256": "5d2e097fcd05785efe295b136dbc59168b1c34860ad93a4b769fab5475d127e6"
+      },
+      {
+        "path": "research/proofs/CY_RANKTHREE_DOUBLE_CONIC_ORBITS.tex",
+        "sha256": "0a0ba5316d40d2147b6bf98b291b7832635cb25f342e4df11f16fdf464e21428"
+      },
+      {
+        "path": "research/proofs/CY_RANKTHREE_JORDAN_PENCILS.tex",
+        "sha256": "cc985ffa76d731c05b7e2fe2708bab076620969913c189f66515d5badd14186c"
+      },
+      {
+        "path": "research/proofs/CY_RANKTHREE_FOURPOINT_ORIGINAL_ORBITS.tex",
+        "sha256": "4d1ea42b1293f445ecb6ee62c2b1c1944ec1f58a3156864077e514ae21ed9608"
+      },
+      {
+        "path": "research/proofs/CY_RANKTHREE_PENCIL_FOURPOINTS.tex",
+        "sha256": "87b6d9c85812ce9b6f8db461f5e9293e3799f603de8213cdf14cc2e33ad6dea5"
+      },
+      {
+        "path": "research/proofs/CY_RANKTHREE_LINEAR_FIBER_FINITE_CLASSIFICATION.tex",
+        "sha256": "b9a82bc70109dbef104188823db0cfa34c81eaa840ede48239ea3e1629ef57e6"
+      },
+      {
+        "path": "research/proofs/CY_RANKTHREE_LINEAR_RANKDROP_KOSZUL.tex",
+        "sha256": "46e3b301d9044c00810f2ed7741316265c4940cdff674304b173e1cabdf212f3"
+      },
+      {
+        "path": "research/proofs/CY_RANKTHREE_CONSTANT_KERNEL.tex",
+        "sha256": "d620bc281d4f3360d13b6768ebeb4bc3bd2e874d0041de8dcaaad909fe4ffcc3"
+      }
+    ],
+    "used_part": "Symmetric quadratic centre and central quotient pencil construction; necessary degree-zero, degree-one and degree-two pencil lists and the original four-point fibre. The sign change on the double-conic chart is used for the lifts.",
+    "verification": "The central quotient in degrees 2, 3 and 4, all centre ranks and first-order lifts are independently checked here. The upstream necessary pencil classification and original parametrizations are used at the pinned revision."
   }
 }

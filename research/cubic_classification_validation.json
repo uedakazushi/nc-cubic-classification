@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "version": "classification-v320",
+  "version": "classification-v321",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -4551,5 +4551,19 @@
     "certificate": "computations/cubic_CY_one_segre_square_split_lower_certificate.json",
     "exact_control": "PASS all three W-minus exceptional curves with no allowed factors, and Mzero three linear curves plus Gaussian conjugate quadratic graphs and exact isolated check.",
     "scope": "All three W-plus/W-minus/Mzero divisors of M(s,w,z) excluded. The three-parameter open intersection remains."
+  },
+  "CY_three_rankthree_quotient_v321": {
+    "proof": "papers/sections/cubic_CY_three_column_three.tex",
+    "validators": [
+      "computations/verify_cubic_CY_three_rankthree_quotient.py",
+      "computations/verify_cubic_CY_three_rankthree_lifts.py"
+    ],
+    "certificates": [
+      "computations/cubic_CY_three_rankthree_quotient_certificate.json",
+      "computations/cubic_CY_three_rankthree_lifts_certificate.json"
+    ],
+    "exact_control": "PASS 28 exact central quotient records, including all allowed exceptional values. PASS insertion degree-four lifts of all five symmetric directions in each of the three residual loci.",
+    "scope": "Centre cubic incidence for all exterior-rank-three, column-rank-three CY envelopes. Exactly one central cubic line on three pencil loci, and zero elsewhere. Geometric H3 admissibility on the three loci remains open.",
+    "main_build": "LuaLaTeX PASS, 475 pages, no overfull boxes or undefined cross-references/citations"
   }
 }

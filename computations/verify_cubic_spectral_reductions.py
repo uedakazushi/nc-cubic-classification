@@ -111,6 +111,8 @@ CHECKS=[
  'verify_cubic_CY_three_alpha_symmetric_first_order.py',
  'verify_cubic_CY_three_alpha_triangle_center.py',
  'verify_cubic_CY_three_alpha_triangle_difference.py',
+ 'verify_cubic_CY_three_rankthree_quotient.py',
+ 'verify_cubic_CY_three_rankthree_lifts.py',
 ]
 results=[]
 for name in CHECKS:

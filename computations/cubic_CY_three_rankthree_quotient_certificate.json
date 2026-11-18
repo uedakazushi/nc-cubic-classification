@@ -1,0 +1,381 @@
+[
+  {
+    "chart": "scalar",
+    "quotient_minors": [
+      "1",
+      "-2",
+      "-6"
+    ],
+    "center_rank": 12,
+    "centre_minor": "3",
+    "extra_factors": [],
+    "centre_kernel": []
+  },
+  {
+    "chart": "double",
+    "quotient_minors": [
+      "1",
+      "2/eta",
+      "-2*(eta - 2)*(eta + 2)/eta**3"
+    ],
+    "center_rank": 12,
+    "centre_minor": "-(eta - 2)*(eta + 2)*(eta**2 - 2)**2/eta**4",
+    "extra_factors": [
+      "eta + 2",
+      "eta - 2",
+      "eta**2 - 2"
+    ],
+    "centre_kernel": []
+  },
+  {
+    "chart": "double at eta - 2",
+    "quotient_minors": [
+      "1",
+      "-1",
+      "1"
+    ],
+    "center_rank": 11,
+    "centre_minor": "3",
+    "extra_factors": [],
+    "centre_kernel": [
+      {
+        "ccc": "1"
+      }
+    ]
+  },
+  {
+    "chart": "double at eta + 2",
+    "quotient_minors": [
+      "1",
+      "1",
+      "-1"
+    ],
+    "center_rank": 11,
+    "centre_minor": "-3",
+    "extra_factors": [],
+    "centre_kernel": [
+      {
+        "ccc": "1"
+      }
+    ]
+  },
+  {
+    "chart": "double at eta**2 - 2",
+    "quotient_minors": [
+      "1",
+      "-sqrt(2)",
+      "1"
+    ],
+    "center_rank": 12,
+    "centre_minor": "-sqrt(2)/2",
+    "extra_factors": [],
+    "centre_kernel": []
+  },
+  {
+    "chart": "J3",
+    "quotient_minors": [
+      "2",
+      "-3",
+      "-1/2"
+    ],
+    "center_rank": 12,
+    "centre_minor": "-1/48",
+    "extra_factors": [],
+    "centre_kernel": []
+  },
+  {
+    "chart": "J21",
+    "quotient_minors": [
+      "-2",
+      "-3",
+      "-1/16"
+    ],
+    "center_rank": 12,
+    "centre_minor": "1/27",
+    "extra_factors": [],
+    "centre_kernel": []
+  },
+  {
+    "chart": "J21param",
+    "quotient_minors": [
+      "2*eta*(eta - 1)",
+      "-eta**3*(4*eta - 1)/(eta - 1)",
+      "-eta**2*(2*eta - 1)/(2*(eta - 1)**4)"
+    ],
+    "center_rank": 12,
+    "centre_minor": "-(4*eta - 3)/(16*eta**3*(eta - 1)**2*(2*eta - 1)*(4*eta - 1))",
+    "extra_factors": [
+      "eta - 1/2",
+      "eta - 1/4",
+      "eta - 3/4"
+    ],
+    "centre_kernel": []
+  },
+  {
+    "chart": "J21param at eta - 1/4",
+    "quotient_minors": [
+      "-3/8",
+      "-1/18",
+      "128/27"
+    ],
+    "center_rank": 11,
+    "centre_minor": "-144",
+    "extra_factors": [],
+    "centre_kernel": [
+      {
+        "ccc": "1"
+      }
+    ]
+  },
+  {
+    "chart": "J21param at eta - 1/2",
+    "quotient_minors": [
+      "-1/2",
+      "1/4",
+      "4"
+    ],
+    "center_rank": 12,
+    "centre_minor": "-4",
+    "extra_factors": [],
+    "centre_kernel": []
+  },
+  {
+    "chart": "J21param at eta - 3/4",
+    "quotient_minors": [
+      "-3/8",
+      "27/8",
+      "-36"
+    ],
+    "center_rank": 12,
+    "centre_minor": "-16/3",
+    "extra_factors": [],
+    "centre_kernel": []
+  },
+  {
+    "chart": "two_drop_meet",
+    "quotient_minors": [
+      "1/2",
+      "-1/4",
+      "1/8"
+    ],
+    "center_rank": 12,
+    "centre_minor": "8",
+    "extra_factors": [],
+    "centre_kernel": []
+  },
+  {
+    "chart": "two_drop_disjoint",
+    "quotient_minors": [
+      "1",
+      "(eta - 2)**2*(eta + 2)**2/16",
+      "-(eta - 2)*(eta + 2)/4"
+    ],
+    "center_rank": 12,
+    "centre_minor": "2*eta**3*(eta**2 + 4)/((eta - 2)**3*(eta + 2)**3)",
+    "extra_factors": [
+      "eta",
+      "eta**2 + 4"
+    ],
+    "centre_kernel": []
+  },
+  {
+    "chart": "two_drop_disjoint at eta",
+    "quotient_minors": [
+      "1",
+      "1",
+      "1"
+    ],
+    "center_rank": 12,
+    "centre_minor": "-2",
+    "extra_factors": [],
+    "centre_kernel": []
+  },
+  {
+    "chart": "two_drop_disjoint at eta**2 + 4",
+    "quotient_minors": [
+      "1",
+      "4",
+      "2"
+    ],
+    "center_rank": 12,
+    "centre_minor": "I/2",
+    "extra_factors": [],
+    "centre_kernel": []
+  },
+  {
+    "chart": "two_drop_secant",
+    "quotient_minors": [
+      "1",
+      "-1",
+      "-1"
+    ],
+    "center_rank": 12,
+    "centre_minor": "-4",
+    "extra_factors": [],
+    "centre_kernel": []
+  },
+  {
+    "chart": "two_drop_tangent",
+    "quotient_minors": [
+      "1/2",
+      "1/8",
+      "-1/16"
+    ],
+    "center_rank": 12,
+    "centre_minor": "-128",
+    "extra_factors": [],
+    "centre_kernel": []
+  },
+  {
+    "chart": "one_drop_meet",
+    "quotient_minors": [
+      "1",
+      "1/4",
+      "-1/256"
+    ],
+    "center_rank": 12,
+    "centre_minor": "-1/4",
+    "extra_factors": [],
+    "centre_kernel": []
+  },
+  {
+    "chart": "one_drop_disjoint",
+    "quotient_minors": [
+      "1",
+      "(eta - 2)*(eta + 2)/4",
+      "-eta**4*(eta - 2)**2*(eta + 2)**2/128"
+    ],
+    "center_rank": 12,
+    "centre_minor": "-(eta - 2)*(eta + 2)/(4*eta)",
+    "extra_factors": [
+      "eta"
+    ],
+    "centre_kernel": []
+  },
+  {
+    "chart": "one_drop_disjoint at eta",
+    "quotient_minors": [
+      "1",
+      "1",
+      "1"
+    ],
+    "center_rank": 12,
+    "centre_minor": "8",
+    "extra_factors": [],
+    "centre_kernel": []
+  },
+  {
+    "chart": "fourpoint",
+    "quotient_minors": [
+      "-1/p",
+      "(-h**2 + p)*(h**4 - 4*h**3*p + 6*h**2*p - 4*h*p + p**2)/(8*p**3*(-h + p)**3)",
+      "-(h - 1)**2*(-h**2 + p)**3*(-h**2 + 2*h*p - p)*(h**2 - 2*h + p)*(-h**4 + 4*h**3 - 6*h**2*p + 4*h*p**2 - p**2)/(64*h*p**2*(-h + p)**9)"
+    ],
+    "center_rank": 12,
+    "centre_minor": "-p*(-h**2 + p)**3*(-h**4 + 4*h**3 - 6*h**2*p + 4*h*p**2 - p**2)/(8*h**3*(-h + p)*(h - 1)**2*(h**4 - 4*h**3*p + 6*h**2*p - 4*h*p + p**2))",
+    "extra_factors": [
+      "h**2 - 2*h + p",
+      "h**2 - 2*h*p + p",
+      "h**2 - p",
+      "h**4 - 4*h**3 + 6*h**2*p - 4*h*p**2 + p**2",
+      "h**4 - 4*h**3*p + 6*h**2*p - 4*h*p + p**2"
+    ],
+    "centre_kernel": []
+  },
+  {
+    "chart": "fourpoint_lambda_square",
+    "quotient_minors": [
+      "h**(-2)",
+      "-1/h**2",
+      "-h**6"
+    ],
+    "center_rank": 12,
+    "centre_minor": "h**3",
+    "extra_factors": [],
+    "centre_kernel": []
+  },
+  {
+    "chart": "fourpoint_first_linear",
+    "quotient_minors": [
+      "-(2*h - 1)/h**2",
+      "-(h - 1)*(2*h - 1)**3/h**4",
+      "(h - 1)**3*(2*h - 1)**4/h**3"
+    ],
+    "center_rank": 12,
+    "centre_minor": "-h**2/(2*h - 1)**4",
+    "extra_factors": [],
+    "centre_kernel": []
+  },
+  {
+    "chart": "fourpoint_second_linear",
+    "quotient_minors": [
+      "1/(h*(h - 2))",
+      "-(h - 1)/(h**3*(h - 2)**3)",
+      "-(h - 1)**3/(h**6*(h - 2)**4)"
+    ],
+    "center_rank": 12,
+    "centre_minor": "-(h - 2)**2",
+    "extra_factors": [],
+    "centre_kernel": []
+  },
+  {
+    "chart": "fourpoint_A",
+    "quotient_minors": [
+      "-(2*eta + 1)/(eta**3*(eta + 2))",
+      "2*(eta + 1)**2*(2*eta + 1)**3/(eta**7*(eta + 2)**3)",
+      "-4*(eta + 1)**4*(2*eta + 1)**3/(eta**6*(eta + 2)**3)"
+    ],
+    "center_rank": 12,
+    "centre_minor": "-eta**7*(eta + 2)/(2*eta + 1)**4",
+    "extra_factors": [],
+    "centre_kernel": []
+  },
+  {
+    "chart": "fourpoint_B_quadratic",
+    "quotient_minors": [
+      "-(-3 + sqrt(5))/2",
+      "123 - 55*sqrt(5)",
+      "-4*(-9 + 4*sqrt(5))"
+    ],
+    "center_rank": 11,
+    "centre_minor": "-(55*sqrt(5) + 123)/2",
+    "extra_factors": [],
+    "centre_kernel": [
+      {
+        "dcc": "1",
+        "ccc": "-sqrt(5)/2 - 1/2"
+      }
+    ]
+  },
+  {
+    "chart": "fourpoint_B",
+    "quotient_minors": [
+      "(eta - 1)**3*(eta + 1)/(2*eta + 1)**3",
+      "2*(eta - 1)**8*(eta + 2)**2/(81*(eta + 1)*(2*eta + 1)**6)",
+      "4*(eta - 1)**5*(eta + 2)**4/(6561*(eta + 1)**4*(2*eta + 1))"
+    ],
+    "center_rank": 11,
+    "centre_minor": "-162*(eta + 1)**2*(2*eta + 1)**2*(eta**2 - 5*eta - 5)/(eta - 1)**8",
+    "extra_factors": [
+      "eta**2 - 5*eta - 5"
+    ],
+    "centre_kernel": [
+      {
+        "dcc": "1",
+        "ccc": "1/3 - eta/3"
+      }
+    ]
+  },
+  {
+    "chart": "fourpoint_A_linear_point",
+    "quotient_minors": [
+      "-32/5",
+      "36864/125",
+      "-82944/125"
+    ],
+    "center_rank": 12,
+    "centre_minor": "-5/4096",
+    "extra_factors": [],
+    "centre_kernel": []
+  }
+]
