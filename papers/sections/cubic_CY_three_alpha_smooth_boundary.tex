@@ -156,6 +156,75 @@ H3なら $U$ は有限大域次元を持つため、有限次元加群は完全�
 従って自己 $\operatorname{Ext}^1$ の次元は $3$ からその階数を引いた値となる。
 \end{proof}
 
+\begin{theorem}[一次元表現の自己拡大と境界楕円曲線]
+\label{thm:cubic-CY-three-alpha-elliptic-character-boundary}
+滑らかな楕円境界を持つ切断のアフィン環 $U$ の一次元表現を取る。
+その点における三二次関係のJacobianを $A$ とし、
+関係の符号を揃えて対称行列とする。
+一次元加群の自己 $\operatorname{Ext}^1$ の次元は
+\[
+\begin{array}{c|c}
+\text{条件}&\dim\operatorname{Ext}^1\\ \hline
+\operatorname{rank} A=0&3\\
+\operatorname{rank} A=1&2\\
+\operatorname{rank} A=2,\ \mathbb P(\ker A)\in E&1\\
+\operatorname{rank} A=2,\ \mathbb P(\ker A)\notin E&0\\
+\operatorname{rank} A=3&0
+\end{array}
+\]
+である。従って階数零、または階数2で核点が境界 $E$ 上にある一次元表現は
+H3を排除する。
+\end{theorem}
+\begin{proof}
+一次元表現を原点へ移すと、元の三関係の定数項は零となる。
+中央切断の定数項も零である。
+先頭のHesse係数は $pqr\ne0$、$p\ne q$ なので $p=1$ と規格化する。
+先頭の三二次関係の右辺の線型係数を
+\[
+ A=\begin{pmatrix}a&b&d\\b&c&e\\d&e&f\end{pmatrix}
+\]
+とする。中央三次を $G$ として、$t^2$ 係数の線型形式を $\ell$ と書く。
+次の正規化を使う。
+\[
+ G\bmod t
+ =r(r^3-1)y^3+(r^3-q^3)yzx-q(r^3-1)zyx+r(q^3-r^3)z^3 .
+\]
+この元は全許容係数で非零である。実際、重み $(0,1,2)$ の
+対角三乗根作用の不変次数三には、三つの純三乗と六つの順列語がある。
+二次関係の左・右一次倍はその不変関係の全てを与える。
+$r\ne0$ で純三乗を消し、さらに二つの独立な差の式で
+$xyz,zxy$ を消すと $xzy,yzx,zyx,yxz$ が基底となる。
+上の元の $zyx,yxz$ の係数はともに $-q(q^3-1)$、
+$xzy$ の係数は $q(q^3-r^3)$ である。
+これらが全て零なら $q^3=r^3=1$ となり正則性に反する。
+
+この規格化で中央性の線型方程式を解くと、
+持上げの全係数の分母は $r(q-1)$ の因子に限られる。
+例えば階数2で核点を $(u:v:1)$ とすると、
+$d=-au-bv,\ e=-bu-cv,\ f=au^2+2buv+cv^2$ となり、
+厳密な係数比較により
+\[
+ \ell(u,v,1)=-\frac{ac-b^2}{q-1}
+ \bigl((1+q^3+r^3)uv-qr(u^3+v^3+1)\bigr).
+\]
+同じ計算で、$A$ が階数1なら $\ell$ は $A$ の行空間に入り、
+$A=0$ なら $\ell=0$ を得る。
+\path{verify_cubic_CY_three_alpha_elliptic_character_boundary.py}
+は八変数の有理関数体で中央性の核を計算し、
+規格化した全係数、分母、階数2の収縮式、階数1の外積の消滅を確認する。
+商の次数三、四の次元は全許容包絡で一定である。
+従って中央性は、表示された分母が非零なら特殊化で保たれる。
+切断の線型項はこの持上げの $\ell$ の非零倍であり、
+定数切断値はJacobianに寄与しない。
+
+階数2で $\ker A$ の第三座標が非零なら $ac-b^2\ne0$ である。
+これは余因子行列が、核を表す列と行の積の非零倍だからである。
+第三座標が零なら巡回置換で別の座標を第三座標に取れる。
+従って階数2で $\ell$ が核を消す条件は正確に核点が $E$ 上にあることとなる。
+他の階数では上の行空間条件を使い、
+三関係に切断の一行を加えたJacobianの階数から表の値を得る。
+\end{proof}
+
 \begin{example}\label{ex:cubic-CY-three-alpha-elliptic-character-obstruction}
 三次の先頭関係を $(p,q,r)=(1,2,3)$ とし、$a,b\ne0$ とする。
 次の非分裂包絡では、下の中央三次切断は無限位数の滑らかな楕円境界を持ち、

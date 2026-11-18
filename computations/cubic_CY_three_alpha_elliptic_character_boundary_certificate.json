@@ -1,0 +1,18 @@
+{
+  "central_lift": {
+    "ttx": "(-a**2*q**2 + a*e*q**2*r + a*e*q*r - b*c*r**3 + b*d*r**4 + c*f*q*r**2 - d*f*q*r**3 - e**2*q*r**2)/(q*r - r)",
+    "tty": "(-a*b*q**2 + a*f*q*r**2 + 2*b*e*q*r - b*e*r - c**2*r**3 + c*d*q**2*r - c*d*q*r + c*d*r**4 + c*d*r - d**2*q*r**2 - e*f*q*r**3)/(q*r - r)",
+    "ttz": "(a*c*q*r**2 - a*d*q**2 - b**2*q*r**2 + b*f*q**3*r - b*f*q**2*r + b*f*q*r + b*f*r**4 - c*e*r**3 - d*e*q**3*r + 2*d*e*q**2*r - f**2*q*r**3)/(q*r - r)",
+    "tyx": "b*q**2 - b*q - b*r**3 + f*q*r**2",
+    "tyy": "(-c*q**2 - c*q*r**3 + c*q + 2*c*r**3 - c + 2*d*q*r - d*r**4 - d*r)/(q - 1)",
+    "tyz": "(a*q**2 - a*q*r**3 + e*q**3*r - 2*e*q**2*r + e*r**4)/(q*r - r)",
+    "tzx": "-c*r**2 + d*q**2 - d*q + d*r**3",
+    "tzy": "(a*q**3 - a*q*r**3 - 2*e*q**2*r + e*q*r**4 + e*q*r)/(q*r - r)",
+    "tzz": "(-b*q**3*r + 2*b*q**2*r - b*r**4 - f*q**4 + f*q**3 - f*q**2 + 2*f*q*r**3 - f*r**3)/(q - 1)",
+    "yyy": "r**4 - r",
+    "yzx": "-q**3 + r**3",
+    "zyx": "-q*r**3 + q",
+    "zzz": "q**3*r - r**4"
+  },
+  "rank_two_contraction": "-(a*c - b**2)*(q**3*u*v - q*r*u**3 - q*r*v**3 - q*r + r**3*u*v + u*v)/(q - 1)"
+}

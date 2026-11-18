@@ -66,13 +66,22 @@ def describe(groups):
     return {"factor_counts": list(map(len, groups)), "common": sorted(intersection(groups))}
 
 
-def affine_projection(equation, witnesses, base_units, plane_units):
+def affine_base_groups(equation, witnesses, base_units):
     first = projection_groups(equation, witnesses, 0, base_units)
     assert not intersection(first)
-    reports = []
+    return first
+
+
+def affine_branches(first, plane_units):
     for fixed in min(first, key=group_cost).values():
         assert fixed.degrees()[1] > 0
-        second = projection_groups(fixed, first, 1, plane_units)
+        yield fixed, projection_groups(fixed, first, 1, plane_units)
+
+
+def affine_projection(equation, witnesses, base_units, plane_units):
+    reports = []
+    first = affine_base_groups(equation, witnesses, base_units)
+    for fixed, second in affine_branches(first, plane_units):
         proof = describe(second)
         proof["degrees_L_M_P"] = list(map(int, fixed.degrees()[1:]))
         reports.append(proof)
@@ -80,15 +89,20 @@ def affine_projection(equation, witnesses, base_units, plane_units):
     return reports
 
 
-def quadratic_projection(equation, witnesses, base_units, plane_units):
+def quadratic_branches(equation, witnesses, base_units, plane_units):
     active = [group for group in witnesses if str(equation) not in group]
-    reports = []
     for fixed in min(active, key=group_cost).values():
         first = projection_groups(fixed, active, 0, base_units) if fixed.degrees()[0] else [{str(fixed): fixed}]
         second = [
             factor_support([project(equation, other, 1) for other in group.values()], plane_units)
             for group in first if str(equation) not in group
         ]
+        yield fixed, second
+
+
+def quadratic_projection(equation, witnesses, base_units, plane_units):
+    reports = []
+    for fixed, second in quadratic_branches(equation, witnesses, base_units, plane_units):
         proof = describe(second)
         proof["degrees_E_L_M_P"] = list(map(int, fixed.degrees()))
         reports.append(proof)
