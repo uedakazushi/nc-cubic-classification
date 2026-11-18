@@ -3,6 +3,7 @@
 \usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,longtable}
 \usepackage[haranoaji]{luatexja-preset}
 \usepackage[unicode,hidelinks]{hyperref}
+\hypersetup{pdftitle={強い内在的非可換三次曲面の分類},pdfauthor={研究原稿},pdflang={ja-JP}}
 \newtheorem{theorem}{定理}[section]
 \newtheorem{proposition}[theorem]{命題}
 \newtheorem{lemma}[theorem]{補題}
@@ -22,7 +23,7 @@
 \newcommand{\cP}{\mathfrak P}\newcommand{\Sym}{\operatorname{Sym}}
 \title{強い内在的非可換三次曲面の分類}
 \author{研究原稿}
-\date{2026年11月19日\quad classification-v374}
+\date{2026年11月19日\quad classification-v375}
 \begin{document}\maketitle
 \begin{abstract}
 標数零において、構造対象付きAbel圏として定義した強い内在的非可換三次曲面
@@ -45,7 +46,8 @@ CY包絡は一交換子の三乗根Ore型、三交換子の中心拡大型、
 
 相対版では二次包絡の三次平坦性だけで全次数の平坦性が従う。
 有限次数の正規三次incidence $X$ におけるH3点の集合はZariski開である。
-ここで定義する相対内在的H3族は、noetherian底上で有限型代数stack
+導来Homの底上完全性、相対Serreと豊富性、底変更、および三次平坦性を
+定義に含めた相対内在的H3族は、noetherian底上で有限型代数stack
 $[X^{\mathrm{H3}}/\mathrm{PGL}_4]$ と同値である。
 相対Serre双対、反標準sectionの復元およびcoherent tailsの有効降下を証明する。
 四既約成分は互いに交わらず、一般次元は $3,4,5,8$ である。
@@ -55,7 +57,23 @@ $[X^{\mathrm{H3}}/\mathrm{PGL}_4]$ と同値である。
 \end{abstract}
 \tableofcontents
 
-\section{公理と四つの問いの状態}
+\section{対象の範囲と主結果への案内}
+本稿の分類対象は、反標準環が一次生成で、その二次包絡が
+Koszul AS正則型$(1,4,6,4,1)$となる強い内在的クラス$\mathcal H_3$である。
+以下ではまずそれより広いweak公理を記し、次節で強いクラスを定義する。
+全weak対象の包絡認識と、強いクラス内の分類は異なる問題である。
+主定理の入口は次の通りである。
+\begin{itemize}
+\item 全幾何学的対象・切断・矢は定理\ref{thm:h3-complete-geometric-admissibility}、
+四成分と一般次元は定理\ref{thm:h3-presentation-four-components}にまとめる。
+\item 相対族の仮定は定義\ref{def:h3-intrinsic-family}、有限型商stackとの同値は
+定理\ref{thm:h3-intrinsic-algebraic-stack}である。
+一般の平坦Abel圏変形を無条件にこの族と同一視しない。
+\item 二次包絡の平坦性は補題\ref{lem:h3-degree-three-flat-koszul}で三次へ帰着し、
+滑らかな可換三次点での全Artin自動性は
+定理\ref{thm:h3-commutative-artin-envelope-automatic}で証明する。
+\end{itemize}
+
 以下，$k$は標数0の代数閉体とする．
 $\cA$は$k$線形noetherian Abel圏で，
 $D^b(\cA)$はHom有限でSerre関手$S$を持つとする．
@@ -93,7 +111,7 @@ $Q=\cA/\cA_1$への商関手を$q$と書く．構造対象$\OO$について
 両次数で共通する反標準Hilbert関数は
 $h_{d}(m)=1+\frac d2m(m+1)$ ($m\ge0$) であり，
 $d=3$の式\eqref{eq:h}を用いる．元の全整数の切断数条件は保持する．
-本稿ではquadricなambientや次数二・三の提示は\emph{公理に入れず}，
+この広いweakクラスではquadricなambientや次数二・三の提示は\emph{公理に入れず}，
 次数3の認識定理の結論ないし部分モジュライの条件として扱う．
 元の仮定2付きでの反例や形式局所計算にも，この規約を使う．
 
@@ -106,18 +124,44 @@ $M(m)=s^mM$，$\Gamma(M)=\Hom(\OO,M)$，$R_m=\Gamma(\OO(m))$とし，
 $a\in R_m,b\in R_n$の積は$s^m(b)\circ a$である．
 負次数まで足しても環は変わらない．
 
-本稿の論理的状態は次の通りである．
+\paragraph{低次数提示条件．}
+以下で「条件2」と呼ぶ補助条件は、$R$が一次生成で、
+$T_k(R_1)\to R$の関係イデアルが次数2と3で生成されることである。
+Hilbert値から$\dim R_1=4$、二次関係空間の次元は6、
+三次の全関係空間の次元は45となる。
+最小三次関係の本数や二次包絡のAS正則性は、この条件だけには含めない。
+
+広いweakクラスと強い$\mathcal H_3$の結論を区別すると、次のようになる．
 \begin{center}\small
 \begin{tabular}{p{.15\linewidth}p{.76\linewidth}}\toprule
-問い&今回の結論\\\midrule
-低次数提示&$R_0=k$は自動．大域次元2は命題\ref{prop:serre-heart-global-dimension}から自動．条件2の全域での冗長性は未証明．Artin平坦変形での保持と，標準正規境界からの低次数提示・AS4包絡の認識を証明する．\\
-ambient認識&存在すれば二次包絡で一意．$R(1,3)$への全域帰属は量子Fermat例により否定される．標準正規境界があればAS4包絡は存在する．全対象での存在は未証明．\\
-代数性&族を指定したfpqcモジュライ候補と有限提示空間を作る．候補の全体を通常の代数的stackと同定する証明は完成していない．\\
-像とfiber&中心拡大型のincidenceは7次元ambientを支配し，中心fiberは$\PP^1$．量子Fermatの良い中心切断は一軌道で，rigidifyした商は分類stack $BH_{54}$．全対象への拡張とは区別する．\\\bottomrule
+問い&結論と適用範囲\\\midrule
+低次数提示&$R_0=k$と大域次元2はweak公理から自動．一次生成・AS4包絡の全weak対象での自動性は未証明．強い$\mathcal H_3$ではこれらを仮定する．\\
+ambient認識&存在すれば二次包絡で一意．標準正規境界からの存在認識も得る．全weak対象の存在問題は残る．$R(1,3)$への全域帰属は量子Fermat例により否定される．\\
+代数性&定義\ref{def:h3-intrinsic-family}の相対H3族は有限型代数stackである．この定義の三次平坦性等を省略した全weak族の代数性は未証明．\\
+成分とfiber&強いH3の四成分の一般次元は$3,4,5,8$．中心拡大型の一般incidence fiberは$\PP^1$だが、H3許容域とは区別する．量子Fermatの固定包絡上の許容商は$BH_{54}$．\\\bottomrule
 \end{tabular}
 \end{center}
 既知入力は\cite{AZ,Kanazawa,YZ,Pym,AOU,BN}に区別して示す．
 以下の組合せの新規性・初出は未確認である．
+
+\paragraph{先行結果との関係．}
+Artin--Zhangの再構成\cite{AZ}を用いて圏からsection環へ移り、
+正規商の中山公式とKoszul双対の規約には\cite{RRZ,RRZtri}を用いる。
+これらの一般定理だけでは、正規三次を持つ全包絡の被覆や
+各三次商のH3許容性は決まらない。本稿はその被覆と切断判定を個別に証明する。
+Etingof--Ginzburg\cite[Theorem 3.3.2]{EGdelpezzo}は
+CY斉次先頭potentialの低次変形と中央元を与えるが、
+同論文のHochschild級数公式\cite[Theorem 3.5.2(ii)]{EGdelpezzo}には
+斉次potentialのgeneric性がある。本稿の全無限位数楕円判定では、
+このgeneric入力に加え、全対象での上界、有限重み窓、線加群の無限射影次元を使う。
+双加群非滑らかさと左大域次元無限は別の段階である。
+
+相対論ではVan den Bergh\cite[Theorem 4.2, Propositions 5.1, 5.3]{VdBFormalAbelian}
+の豊富列と変形の結果を用いる一方、二次包絡の三次平坦性は別に課す。
+捩れ座標環のnoetherian性には、訂正を含むKeeler\cite{KeelerAmpleFilters}を用いる。
+Chan\cite[Theorem 3.4, Corollary 5.8]{ChanTwistedMulti}の多重次数Serre同値と
+体上のtensor積noetherian性から任意noetherian底への延長は、
+本稿の相対ample性・有限生成性の議論を必要とする。
 
 
 \begin{proposition}[反Serre作用からの大域次元の自動性]
@@ -260,6 +304,47 @@ split monoである．一方の$4\times4$ minorを単元にしたchartで
 
 \input{papers/sections/cubic_nakayama_incidence.tex}
 \input{papers/sections/cubic_hypersurface_frame.tex}
+\section{量子多項式包絡と共通の除外原理}
+\subsection{対角中心Fermatの27点の座標置換分類}
+CY量子多項式ambientを
+\[
+ q_{01}=a,\ q_{02}=b,\ q_{03}=(ab)^{-1},\
+ q_{12}=c,\ q_{13}=a/c,\ q_{23}=bc
+\]
+とし，$(a,b,c)\in(\mu_3)^3$とする．
+$a=\zeta^A,b=\zeta^B,c=\zeta^C$と書く．
+\begin{proposition}[27点の四軌道]\label{prop:fermat-27-orbits}
+4座標の置換による27点の軌道は次の4個で尽くされる．
+\[
+\begin{array}{c|r|r|r}
+(A,B,C)&\text{軌道の点数}&\text{置換安定化群の位数}&\dim Z(B)_3\\\hline
+(0,0,0)&1&24&20\\
+(0,0,1)&8&3&5\\
+(0,1,1)&12&2&6\\
+(0,1,2)&6&4&4
+\end{array}
+\]
+本稿の量子Fermat例$(1,1,0)$は12点の軌道に属する．
+\end{proposition}
+\begin{proof}
+$E_{01}=A,E_{02}=B,E_{03}=-A-B,E_{12}=C,
+E_{13}=A-C,E_{23}=B+C$とした交代行列$E$へ
+$S_4$の24元を作用させる．四つの軌道は相互に交わらず，
+点数の和が27である．中心三次の次元は
+20個の次数3指数ベクトル$v$について$Ev=0$を
+$\mathbb F_3$上で解いて得る．
+付属の標準Pythonコードが全列挙と検算を行う．
+\end{proof}
+これは座標置換による有限分類であり，graded Morita同値や
+Abel圏同値による分類，また全27点の曲面条件の認識ではない．
+
+\input{papers/sections/cubic_skew_normal_incidence.tex}
+\input{papers/sections/cubic_noncy_sign_example.tex}
+\input{papers/sections/cubic_skew_finite_reduction.tex}
+\input{papers/sections/cubic_skew_admissible_classification.tex}
+\input{papers/sections/cubic_pym_generic_exclusions.tex}
+\input{papers/sections/cubic_as4_reductions.tex}
+\section{中山スペクトルとJordan型の必要被覆}
 \input{papers/sections/cubic_spectral_resonance.tex}
 \input{papers/sections/cubic_spectral_ore_reduction.tex}
 \input{papers/sections/cubic_inverse_spectral_pencils.tex}
@@ -330,77 +415,7 @@ split monoである．一方の$4\times4$ minorを単元にしたchartで
 \input{papers/sections/cubic_jordan31_unipotent_vertex.tex}
 \input{papers/sections/cubic_jordan211_ore_vertex.tex}
 \input{papers/sections/cubic_jordan22_unipotent_vertex.tex}
-\input{papers/sections/cubic_CY_second_quadric.tex}
-\input{papers/sections/cubic_CY_Veronese.tex}
-\input{papers/sections/cubic_CY_CI22_projection_atlas.tex}
-\input{papers/sections/cubic_CY_DL_cover.tex}
-\input{papers/sections/cubic_CY_finite43_cover.tex}
-\input{papers/sections/cubic_CY_finite22_cover.tex}
-\input{papers/sections/cubic_CY_finite211_cover.tex}
-\input{papers/sections/cubic_CY_four_point_support.tex}
-\input{papers/sections/cubic_CY_four_point_first_cover.tex}
-\input{papers/sections/cubic_CY_four_point_two_open.tex}
-\input{papers/sections/cubic_CY_four_point_determinant.tex}
-\input{papers/sections/cubic_CY_four_point_zero_determinant.tex}
-\input{papers/sections/cubic_CY_four_point_degree_two.tex}
-\input{papers/sections/cubic_CY_two_commutators_Segre.tex}
-\input{papers/sections/cubic_CY_one_segre_square.tex}
-\input{papers/sections/cubic_CY_one_segre_extensions.tex}
-\input{papers/sections/cubic_CY_one_segre_shared.tex}
-\input{papers/sections/cubic_CY_one_segre_square_split.tex}
-\input{papers/sections/cubic_CY_one_segre_double_split.tex}
-\input{papers/sections/cubic_CY_three_mixed_rank_one.tex}
-\input{papers/sections/cubic_CY_three_column_three.tex}
-\input{papers/sections/cubic_CY_three_alpha_nonsmooth.tex}
-\input{papers/sections/cubic_CY_three_alpha_additive.tex}
-\input{papers/sections/cubic_CY_three_alpha_smooth_boundary.tex}
-\input{papers/sections/cubic_CY_three_alpha_elliptic_diagonal.tex}
-\input{papers/sections/cubic_CY_three_alpha_elliptic_relative.tex}
-\input{papers/sections/cubic_CY_three_alpha_elliptic_fixed_boundary.tex}
-\input{papers/sections/cubic_CY_three_alpha_elliptic_line_modules.tex}
-\input{papers/sections/cubic_CY_three_alpha_quantum_triangle.tex}
-\input{papers/sections/cubic_CY_three_alpha_nodal_E6.tex}
-\input{papers/sections/cubic_CY_three_alpha_primitive_triangle.tex}
-
-\subsection{対角中心Fermatの27点の座標置換分類}
-CY量子多項式ambientを
-\[
- q_{01}=a,\ q_{02}=b,\ q_{03}=(ab)^{-1},\
- q_{12}=c,\ q_{13}=a/c,\ q_{23}=bc
-\]
-とし，$(a,b,c)\in(\mu_3)^3$とする．
-$a=\zeta^A,b=\zeta^B,c=\zeta^C$と書く．
-\begin{proposition}[27点の四軌道]\label{prop:fermat-27-orbits}
-4座標の置換による27点の軌道は次の4個で尽くされる．
-\[
-\begin{array}{c|r|r|r}
-(A,B,C)&\text{軌道の点数}&\text{置換安定化群の位数}&\dim Z(B)_3\\\hline
-(0,0,0)&1&24&20\\
-(0,0,1)&8&3&5\\
-(0,1,1)&12&2&6\\
-(0,1,2)&6&4&4
-\end{array}
-\]
-本稿の量子Fermat例$(1,1,0)$は12点の軌道に属する．
-\end{proposition}
-\begin{proof}
-$E_{01}=A,E_{02}=B,E_{03}=-A-B,E_{12}=C,
-E_{13}=A-C,E_{23}=B+C$とした交代行列$E$へ
-$S_4$の24元を作用させる．四つの軌道は相互に交わらず，
-点数の和が27である．中心三次の次元は
-20個の次数3指数ベクトル$v$について$Ev=0$を
-$\mathbb F_3$上で解いて得る．
-付属の標準Pythonコードが全列挙と検算を行う．
-\end{proof}
-これは座標置換による有限分類であり，graded Morita同値や
-Abel圏同値による分類，また全27点の曲面条件の認識ではない．
-
-\input{papers/sections/cubic_skew_normal_incidence.tex}
-\input{papers/sections/cubic_noncy_sign_example.tex}
-\input{papers/sections/cubic_skew_finite_reduction.tex}
-\input{papers/sections/cubic_skew_admissible_classification.tex}
-\input{papers/sections/cubic_pym_generic_exclusions.tex}
-\input{papers/sections/cubic_as4_reductions.tex}
+\section{非CY符号型の全表示と許容切断}
 \input{papers/sections/cubic_order2_full_moduli.tex}
 \input{papers/sections/cubic_positive3_binormal.tex}
 \input{papers/sections/cubic_order2_dual_hyperplane.tex}
@@ -466,6 +481,7 @@ Abel圏同値による分類，また全27点の曲面条件の認識ではな�
 \input{papers/sections/cubic_order2_22_secant_open.tex}
 \input{papers/sections/cubic_order2_22_rank2_unipotent.tex}
 \input{papers/sections/cubic_order2_22_rank4_Jordan.tex}
+\section{中央・正規境界の認識と具体的な切断}
 \input{papers/sections/cubic_r13_cut_reduction.tex}
 \input{papers/sections/cubic_clifford_full_cuts.tex}
 \input{papers/sections/cubic_clifford_beta_classification.tex}
@@ -515,9 +531,43 @@ Abel圏同値による分類，また全27点の曲面条件の認識ではな�
 \input{papers/sections/cubic_quantum_triangle_full_cuts.tex}
 \input{papers/sections/cubic_quantum_triangle_incidence.tex}
 \input{papers/sections/cubic_order4_ext_bound.tex}
+\section{CY包絡の交換子別被覆と全境界判定}
+\input{papers/sections/cubic_CY_second_quadric.tex}
+\input{papers/sections/cubic_CY_Veronese.tex}
+\input{papers/sections/cubic_CY_CI22_projection_atlas.tex}
+\input{papers/sections/cubic_CY_DL_cover.tex}
+\input{papers/sections/cubic_CY_finite43_cover.tex}
+\input{papers/sections/cubic_CY_finite22_cover.tex}
+\input{papers/sections/cubic_CY_finite211_cover.tex}
+\input{papers/sections/cubic_CY_four_point_support.tex}
+\input{papers/sections/cubic_CY_four_point_first_cover.tex}
+\input{papers/sections/cubic_CY_four_point_two_open.tex}
+\input{papers/sections/cubic_CY_four_point_determinant.tex}
+\input{papers/sections/cubic_CY_four_point_zero_determinant.tex}
+\input{papers/sections/cubic_CY_four_point_degree_two.tex}
+\input{papers/sections/cubic_CY_two_commutators_Segre.tex}
+\input{papers/sections/cubic_CY_one_segre_square.tex}
+\input{papers/sections/cubic_CY_one_segre_extensions.tex}
+\input{papers/sections/cubic_CY_one_segre_shared.tex}
+\input{papers/sections/cubic_CY_one_segre_square_split.tex}
+\input{papers/sections/cubic_CY_one_segre_double_split.tex}
+\input{papers/sections/cubic_CY_three_mixed_rank_one.tex}
+\input{papers/sections/cubic_CY_three_column_three.tex}
+\input{papers/sections/cubic_CY_three_alpha_nonsmooth.tex}
+\input{papers/sections/cubic_CY_three_alpha_additive.tex}
+\input{papers/sections/cubic_CY_three_alpha_smooth_boundary.tex}
+\input{papers/sections/cubic_CY_three_alpha_elliptic_diagonal.tex}
+\input{papers/sections/cubic_CY_three_alpha_elliptic_relative.tex}
+\input{papers/sections/cubic_CY_three_alpha_elliptic_fixed_boundary.tex}
+\input{papers/sections/cubic_CY_three_alpha_elliptic_line_modules.tex}
+\input{papers/sections/cubic_CY_three_alpha_quantum_triangle.tex}
+\input{papers/sections/cubic_CY_three_alpha_nodal_E6.tex}
+\input{papers/sections/cubic_CY_three_alpha_primitive_triangle.tex}
+
 \input{papers/sections/cubic_presentation_components.tex}
 \input{papers/sections/cubic_formal_intrinsic_reconstruction.tex}
 
+\appendix
 \section{冗長性と低次数認識}
 \begin{lemma}[共通公理からの負次数消滅]
 \label{lem:negative-auto}
@@ -1285,8 +1335,10 @@ ambientへの射を得る．これは$\gldim\qgr=2$をまだ要求しない環�
 $B/(\Omega+\lambda t^3)$は定義体上超越的な全$\lambda$でH3となる．
 整域性と内在的rankは全$\lambda$で成立し，滑らかさは一つのアフィン中心商へ帰着する．
 分裂包絡の全切断は定理\ref{thm:r13-split-all-cuts}で決定した．
-有限位数楕円境界の固定包絡では定理\ref{thm:r13-torsion-finite-exceptions}により例外は有限個だが，
-非分裂の例外値の明示と全境界の被覆はなお残る．
+有限位数楕円境界では定理\ref{thm:finite-order-elliptic-admissibility}の中心・単純表現の判定を使う。
+無限位数の全例外値は
+定理\ref{thm:cubic-CY-three-alpha-elliptic-diagonal-all-nontorsion}の八次式で決まる。
+これらの必要十分条件と、全係数に対する消去式の実装完了とは区別する。
 任意の代数閉$k$に対しては，幾何学的一般fiberの係数体の超越的な$\lambda$として読む．
 $k=\overline{\mathbb Q}$の各固定ambientに超越数を選べると主張してはいけない．
 
@@ -1298,36 +1350,30 @@ $R(1,3)$を支配する枝の像の閉包の余次元が0であることが得�
 正しい既得の記述は，中心incidenceのfiberが$\PP^1$，
 その一般点がweak，その関数体が$K(\lambda)$，というものである．
 
-\section{残る認識問題と検証範囲}
-正規境界認識定理\ref{thm:normal-boundary-recognition}により，
-条件2とAS4包絡の存在は，標準的な正規一次境界を持つ範囲で解決した．
-一方，その境界の全対象における存在は未証明である．
-量子Fermatの中心切断については定理\ref{thm:fermat-gerbe}で良い開部分の軌道stackを決定したが，
-全変形のrigidityとは区別する．
-優先すべき問題は，次の三つの系統へ分かれる．
-第一は全weak対象の認識であり，条件2の公理からの導出，二次包絡のAS正則性，
-族での全次数平坦性とSerre条件の認識，全stackの代数性を含む．
-第二は可換三次曲面を含む中心拡大型の成分であり，
-AOU型の有限例外列模型との比較，Weyl群によるマーキングの忘却，
-weak条件の開性，正確なfiberの除外点の決定を含む．
-量子Fermat反例により，前者の全対象を後者の一成分に押し込める方針は採れない．
-第三はskewでない包絡上のNakayama正規incidenceの分類である．
-Skew包絡の幾何学的H3対象は定理\ref{thm:all-skew-H3-geometric}で尽くされ，
-量子Fermatの$AC\Delta(f)=0$の境界もH3から除外された．
-全Hochschild変形，skew型間と他ambientとの交叉，族の降下は残る．
+\section{適用範囲、残る認識問題と検証}
+強いH3の全幾何学的判定は定理\ref{thm:h3-complete-geometric-admissibility}、
+四成分は定理\ref{thm:h3-presentation-four-components}にまとめた。
+定義\ref{def:h3-intrinsic-family}の相対内在族については、
+定理\ref{thm:h3-intrinsic-algebraic-stack}が再構成・底変更・降下を与える。
+この定義の底上完全性、相対Serre、豊富性、orbitの底変更、三次平坦性を省略した
+全ての平坦Abel圏変形の分類とは区別する。
 
-位数二の指定対称ポテンシャル中心拡大については，
-定理\ref{thm:beta-all-cut-classification}と\ref{thm:beta-global-geometric-classification}で
-非分裂も含む全切断・全矢・慣性を判定した．
-交換子空間が一次元のCY領域は
-定理\ref{thm:cubic-CY-one-segre-double-split-FDC-empty}で最後の残余を排除した．
-三交換子の節点領域は
-定理\ref{thm:cubic-CY-three-alpha-nodal-E6-root-discriminant}で全切断を判定した．
-無限位数の滑らかな楕円境界では，定理\ref{thm:cubic-CY-three-alpha-elliptic-diagonal-all-nontorsion}で
-八次判別式の根の有限大域次元性を全て排除した．
-定理\ref{thm:h3-complete-geometric-admissibility}に全幾何学的判定をまとめた．
-定理\ref{thm:h3-presentation-four-components}により，幾何学的表示では四成分が互いに交わらない．
-一般の内在圏の相対再構成・降下と，その位相への成分判定の移行が残る．
+残る認識問題は二つある。第一に、一般の非可換H3点で
+二次包絡の三次平坦性が任意の内在Artin変形に自動的に従う範囲は未決定である。
+命題\ref{prop:h3-cubic-flatness-small-extension}の有限残差を出発点とし、
+一次障害の消滅と全Artinへの持ち上げを分けて扱う必要がある。
+滑らかな可換三次点での自動性は
+定理\ref{thm:h3-commutative-artin-envelope-automatic}で得られる。
+第二に、AS4条件を課さない全weakクラスでは、条件2、AS正則包絡の存在、
+一般の族の開性・代数性は未解決である。
+正規境界認識定理\ref{thm:normal-boundary-recognition}はその一つの十分条件であり、
+全weak対象で正規一次境界が存在するという主張ではない。
+
+係数判定については、有限手順を証明したことと、全入力に対する消去式・実装を
+完成したことを区別する。原始三乗根三角形の全中心方向と加法型の比較では、
+この実装上の課題を保持する。
+また固定包絡の量子Fermat切断が一軌道であることは、
+全内在変形のrigidityを意味しない。
 
 本稿では量子Fermat例の整域性，局所正則性，Serre性，周期的正規直線による
 成分排除を通常の証明で検討した．付属コードは$\mathbb Z/3$上の指数演算により，
@@ -1344,6 +1390,8 @@ Nakayama条件，非CY符号型，256座標jetの整数Smith証明書，
 有限rankから高次正則性を外挿してはいない．
 計算は一般の認識定理や全AS4の分類を証明したものではない．
 外部査読，Lean形式化，新規性の網羅的調査は未実施である．
+有限重み窓、線加群、成分閉包、相対平坦性についての重点点検と、
+各検証器の実際の再実行範囲は付属の現行検証記録で区別する。
 
 \begin{thebibliography}{99}
 \bibitem{AZ} M. Artin, J. J. Zhang,
@@ -1353,7 +1401,7 @@ Nakayama条件，非CY符号型，256座標jetの整数Smith証明書，
 \bibitem{VdBFormalAbelian} M. Van den Bergh,
 \emph{Notes on formal deformations of abelian categories},
 Derived categories in algebraic geometry, EMS Ser. Congr. Rep. (2012), 319--344,
-\href{https://arxiv.org/abs/1002.0259}{arXiv:1002.0259}.
+\href{https://arxiv.org/abs/1002.0259v2}{arXiv:1002.0259v2}.
 \bibitem{LowenVdBFlatAbelian} W.~Lowen and M.~Van den Bergh,
 \emph{Deformation theory of abelian categories}, Trans. Amer. Math. Soc. 358 (2006),
 5441--5483, \href{https://arxiv.org/abs/math/0405226}{arXiv:math/0405226}.
@@ -1366,7 +1414,8 @@ J. Algebra 223 (2000), 438--456,
 \href{https://doi.org/10.1006/jabr.1999.7938}{doi}.
 \bibitem{KeelerAmpleFilters} D.~S.~Keeler,
 \emph{Ample filters of invertible sheaves}, J. Algebra 259 (2003), 243--283,
-\href{https://arxiv.org/abs/math/0108068}{arXiv:math/0108068}.
+\href{https://arxiv.org/abs/math/0108068v5}{arXiv:math/0108068v5}.
+2018年の訂正を含む版を用いる。参照はTheorems 1.3, 7.14。
 \bibitem{Kanazawa} A. Kanazawa,
 \emph{Non-commutative projective Calabi--Yau schemes},
 \href{https://arxiv.org/abs/1409.4101}{arXiv:1409.4101v2},

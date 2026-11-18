@@ -77,7 +77,8 @@ def check_odd_multiplicity(prime, coefficients):
     factors = reduced.factor()[1]
     witness = nmod_poly([21, 9, 22, 2, 1], prime)
     assert (witness, 3) in factors
-    # Evaluate the multivariate discriminant independently at unused interpolation points.
+    # Check discriminant specialization at points unused by the interpolation.
+    # These checks use the reconstructed polynomial, not new diagonal computations.
     for value in range(25, prime):
         polynomial = nmod_poly([int(coefficient(value)) for coefficient in coefficients], prime)
         expected = int(sp.Poly.from_list(list(reversed([int(c) for c in polynomial.coeffs()])),

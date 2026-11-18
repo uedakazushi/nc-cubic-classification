@@ -1,94 +1,220 @@
-# 現行研究ノート：weak cubicの四問
+# 研究ノート：広いweak公理・包絡認識・比較の限界
 
-2026-11-15 / recognition-v6。最初に00_research_plan.mdを読む。完全な新証明はpapers/weak_cubic_axioms.tex。証明の重複は避け、再開に必要な補足をここに残す。
+2026-11-19 / recognition-v7。
 
-## 構造的な整理
+再開時は `00_research_plan.md` を最初に読む。本書は、強い14641型H3の分類と、
+それより広いweak公理からの認識問題を区別するための現行ノートである。
+本リポジトリで必要な証明は `papers/weak_cubic_axioms.tex` とその読込節、
+全H3分類の詳細は `research/cubic_14641_classification.md` にある。
 
-定義に全整数のh0が入るので仮定1は自動。Rの負次数は零。sがheartを保つという条件は、負twistも使うため両方向のexact autoequivalenceとして読む。rankは裸のAbel圏には未定義なので、s不変のtorsion Serre部分圏とrank関数を固定するか、整域section環の商斜体から定義する。反例では後者が使える。
+## 1. 対象の区別と現在残る問い
 
-全weak対象、条件2付き、AS4二次包絡＋正則三次核という超曲面認識部分、R13中心拡大型部分は別々。含意を逆にしない。smooth proper enhancementを要求する定義と、今回のgd2＋Serreの定義も同一視しない。
+| 対象 | 定義または位置付け | 本ノートで保持する区別 |
+|---|---|---|
+| pre-weak | rank-one torsion-free、反Serre作用、豊富性、Hilbert切断数を要求する広い公理 | 構造対象のExt¹消滅が自動とは証明されていない |
+| 統一weakly marked | Gabriel–Krull rank-one torsion-freeかつexceptionalな構造対象を要求する | 一次生成・低次数提示・AS4二次包絡を全対象で自動とはしない |
+| 条件2付きweak | section環が一次生成で、関係イデアルが次数2,3で生成される | 二次包絡のAS正則性や最小三次関係一本を含意するとはしない |
+| 強いH3 | 一次生成とnoetherian quadratic Koszul AS4型14641二次包絡を課す内在的部分クラス | 現行原稿の全幾何学的分類・四成分の対象 |
+| 相対内在的H3族 | 相対Serre・豊富性、導来Homの底上完全性と底変更、包絡の三次平坦性等を明記した族 | 任意の平坦Abel圏変形を無条件にこの族と同定しない |
 
-## 金沢型量子FermatはOUのAS surfaceでない（確定）
+H3の分類定理を、広いweakクラスの包絡認識の完成と読み替えない。
+相対定義からpropernessや三次平坦性を省略できる範囲も別問題である。
+滑らかな可換三次点のArtin自動性と、一般の非可換点または任意のAbel圏変形での自動性は区別する。
+正確な相対仮定は `def:h3-intrinsic-family`、相対分類は `thm:h3-intrinsic-algebraic-stack` を参照する。
 
-厳密な証明は `papers/quantum_fermat_not_as_surface.tex` の定理3.1。本稿では証明を重複しない。S=k[t,x,y,z]/(t³+x³+y³+z³)、L=(Z/3)^2、重み(t,x,y,z)=((1,0),(0,1),(0,1),(-1,1))、cocycle μ(g,h)=ζ^{g1 h2} とすると quantum R=S^μ。T=k_μ L=M3、H=L^∨、(S⊗T)^H=R、averaging idempotentは(S⊗T)#Hでfull（T#H=M9）。従ってgraded MoritaでqgrR≃coh^α[X/H]。Hの作用は(a,b):(t,x,y,z)↦(ζ^a t,ζ^b x,ζ^b y,ζ^{−a+b}z)。捩れ付きorbifold HKRで固定楕円E_t（g=(0,1),(0,2)）とE_z（g=(1,1),(2,2)）が各HH_{±1}に1寄与。その他は有限点集合で奇数次寄与なし。HH_−1=2,HH_0=5,HH_1=2。OU AS surfaceは有限完全強例外列を持つためHH_±1=0。結論としてASではない。
+## 2. 共通公理から自動となる事項
 
-有限計算の範囲：9元の固定点型・character・Picard invariant rankとHHの次元だけ。Morita同値とorbifold HKRは通常の数学的証明・既知理論であり計算だけでは証明できない。OU Definition1.1と§3は一次資料で確認。独立査読/Lean/新規性調査なし。
+Gabriel–Krull商によるrankの定義を使う。有限長対象のSerre部分圏をA₀、
+A/A₀で有限長となる対象の逆像をA₁とし、q:A→A/A₁について
+qOが非零単純、かつ `Hom(T,O)=0`（T∈A₁）をrank-one torsion-freeの意味とする。
+裸のAbel圏に説明なく通常のベクトル束のrankを持ち込まない。
+具体的な整域section環では、次数零商斜体によるrankも照合できる。
 
-## 自動的な大域次元2
+`s=S^{-1}[2]` がheartを保つと、Serre双対から
 
-Serre関手Sが存在してs=S^{-1}[2]がheartを保つだけで、Ext^i_A(M,N)≅Hom(sN,M[2−i])^*によりExt^{>2}=0となる。非零NについてExt²_A(sN,N)=End_A(sN)^*≠0なのでhdim A=2。これを独立公理から外す。sのheart上での本質的全射性は不要。証明はpapers/weak_cubic_axioms.texの命題prop:serre-heart-global-dimension。構成した圏でsがheartを保つことを示す必要は残る。
+\[
+\operatorname{Ext}^i(M,N)
+\simeq\operatorname{Hom}(sN,M[2-i])^*
+\]
 
-## 統合後のweak定義とPymの交点
+を得る。従ってi>2では零で、非零Nについて
+`Ext²(sN,N)=End(sN)^*≠0` なので大域次元は正確に2である。
+この命題単独ではsのheart上の本質的全射性を要しない。
+ただし正負のtwistを共通の偏極として使う場合は、heart上のexact自己同値という定義を用いる。
+証明は `prop:serre-heart-global-dimension`。
 
-次数1・3の共通weakly marked条件は、Gabriel–Krull商圏でrank-one torsion-freeかつexceptionalなO、Serre逆作用s、AZ ample、h_d(n)=1+d n(n+1)/2（n≥0）。従来のexceptionalityなしの広いcubic公理はpre-weakと呼ぶ。Ext^1(O,O)=0が冗長とは未証明である。負次数の切断消滅はrank-one、正次数Hilbert増大により自動。quadric/weighted提示は共通公理に入れない。
+正次数Hilbert値 `h_d(n)=1+d n(n+1)/2`、rank-one torsion-freeとexactなsから、
+負次数の切断消滅、`End(O)=k`、`Ext²(O,O)=0` が従う
+（`lem:negative-auto`）。Ext¹(O,O)=0の冗長性はこれでは得られない。
+負次数をsection環に加えても環は変わらない。
+体上の大域次元2・Serre存在と、任意底上のsmooth proper enhancementを同一条件と扱わない。
 
-量子Fermat BはPym §3.1のCY skew torus T=(Gm)^3、q01=a,q02=b,q03=(ab)^-1,q12=c,q13=a/c,q23=bc、(a,b,c)=(ζ,ζ,1) に属するためL(1,1,1,1)型。Pym §3.2のL(1,1,2)型でp0=ζ²,p1=ζ,λ=0とし、Q=(1−ζ²)X0²+(ζ−1)X1² を u² Q とする族はu≠0でL112型、u=0で量子Fermat B（X0,X1,X2,X3)=(x,y,t,z)を与える。PBWにより平坦なのでBはL1111とL112の交点。既存の四頂点正常直線return不変量によりR13の閉包外である。
+## 3. 標準正規境界による包絡認識
 
-中心対角Fermat三次 F=Σλ_i x_i³（全係数非零）の中心性はa³=b³=c³=1と同値。T[3]は27点であり、一般L1111で同じ中心切断があるわけではない。一般のnormal cubicは単項式として存在する。一方、H3に限ると全skew包絡は31パラメータ・五型へ分類され、一般skew点でのH3不在も証明した。27点の軌道長6はgeneric rank3で除外される。証明と範囲はresearch/cubic_14641_classification.md。残りR22/S23/E3との交叉、全四頂点AS stackの局所成分の重複度は未決定。Pymの一次資料 arXiv:1403.6444 Theorem 1.1, §§3.1–3.2を参照。
+`R/(t)=S_0/(g)`、tが正則正規一次、S₀がnoetherian Koszul AS3、
+gが正則正規d次（d≥3）のとき、二次包絡B=Q(R)はAS4で、RはBの一本の正則正規d次商となる。
+低次数提示条件やAS包絡の存在を先に仮定しない。
+証明は `thm:normal-boundary-recognition`。
 
-## 標準正規境界が認識問題を解く範囲
+要点は `B_i=R_i`（i≤2）がtの低次数正則性を与え、
+Cassidy–Shelton Theorem 1.5のcomplexity 2の判定で全次数の正則性へ進むことである。
+ambientがPBWであることを結論の代わりに仮定しない。
 
-R/(t)=S0/(g)、t正則正規一次、S0がnoetherian Koszul AS3、g正則正規d次(d≥3)なら、Q(R)はAS4、Rはその一本の正規d次商（現行定理3.1）。条件2とAS包絡の存在を仮定しない。低次数一致B_i=R_i (i≤2)がtの低次数正則性を保証し、Cassidy–Shelton Theorem1.5のcomplexity2から全正則性を得る。この低次数regularityの導出が、単にambientをPBWと仮定する議論との違い。
+中央化の規約は `ta=σ(a)t`、`R'=R^{σ^{-1}}`、
+`a⋆b=aσ^{-deg a}(b)` とする。σ(t)=tなのでtは中心化する。
+境界自己同型はS₀へ持ち上がり、gの直線と `I_d=kG` が不変なので、
+untwist後も該当する元のnormal/regular性を保持する。
+任意のnormal元が任意のtwistでnormalなままとは主張しない。
 
-中央化はta=σ(a)t、R'=R^{σ^-1}、a⋆b=aσ^{-deg a}(b)。σ(t)=tでtは中心化する。境界自己同型は二次包絡S0へ持ち上がる。gの直線とI_d=kGが不変なので、normal/regularを保ってuntwistできる。任意のnormal元が任意のtwistでnormalのまま、という一般命題ではない。
+左右両側で `I∩tB=tI`、`I/tI=(g)` を使って `I=BG=GB` を得る。
+Gの正則性はt進最高記号gから従う。S₀が整域ならBは整域だが、
+中心元による商Rが整域になるとは一般には言えない。
+d=3では条件2、overlap次元4、中間コホモロジー消滅を得る。
+この定理は標準正規境界の存在を全weak公理から証明したものではない。
 
-I∩tB=tI、I/tI=(g)の二つを両側で使うとI=BG=GB。regularity of Gはt-adic leading termのgから従う。S0 domainならB domainだが、R domainは一般には言えない。d=3では条件2、overlap rank4、中間コホモロジー消滅が従う。境界の存在を全weak公理から示したものではない。
+固定 `S_0=T(W)/(U)`、`L=(U⊗W)∩(W⊗U)` で用いるBG条件は
+`δα(L)⊂U`、`αδα+δβ=0`、`βδα=0`。
+可換S₀についての12独立係数の検算はLie Jacobiと中心2-cocycleに一致する。
+一般の非可換境界のPBW性は、文献定理を使う通常証明として区別する。
 
-固定S0=T(W)/(U)とL=(U⊗W)∩(W⊗U)上のBG条件はδα(L)⊂U、αδα+δβ=0、βδα=0。新スクリプトはcommutative S0で12独立係数を使い、これがLie Jacobi＋中心2-cocycleとなることを恒等式で確認する。一般の非可換境界のPBW性は文献定理を入力にした通常証明であり、この検算で置き換えない。
+## 4. 量子Fermat例が区別する三つの概念
 
-## 反例の代数
+### 4.1 H3であることとOUのAS surfaceであること
 
-Bの変数を(t,x,y,z)と書けば、tx=ζxt、ty=ζyt、tz=ζzt、xy=yx、xz=ζzx、yz=ζzy。F=t³+x³+y³+z³。q行積1、q³1なのでBはCY4、Fは中心正則。R=B/(F)は標準cubic Hilbert値を持つ。三次中心は一般R13より大きく、x³,x²y,xy²,y³,t³,z³の6次元。中心一次・二次は零。
+OUのAS surfaceでないことを示す独立論文の正本は
+https://github.com/uedakazushi/nc-cubic-non-as にある。
+移管前のローカルパスへ独立論文を再作成しない。
+本分類で必要な結論と適用範囲は主原稿の `thm:strict-AS-inclusion` に保持する。
 
-t局所化のdegree0ではu1,u2が可換、ui u3=ζu3 ui、Σui³+1=0。r=u1/u2、v=u2³、w=-1-(r³+1)v。中心体k(r,v)上のsymbol algebra(v,w)_ζはw付値でvの残余が非cubeなのでdivision。この理由でRのrank1/torsion-freeの意味が保証される。単に中心元でdomainを割ったからdomain、と推論していない。
+比較の有限データを記す。
+可換Fermat環 `S=k[t,x,y,z]/(t³+x³+y³+z³)`、`L=(Z/3)²` に対し、
+重み `(t,x,y,z)=((1,0),(0,1),(0,1),(-1,1))`、
+cocycle `μ(g,h)=ζ^{g₁h₂}` を使うと量子環は `R=S^μ`。
+`T=k_μL≃Mat₃(k)`、`H=L^∨` とすると `(S⊗T)^H=R`、
+`T#H≃Mat₉(k)` によりaveraging idempotentはfullとなる。
+X=Proj Sと書けば `qgr R≃coh^α[X/H]` となる。
+このMorita記述を捩れ付きorbifold HKRと合わせると
 
-tailsのgd2はKanazawaの指数=変数数の定理をそのまま引用せず、指数3・変数4へ局所証明を適用。中心完備化でnormal yiの三乗がradicalに入るので(yi)がnilpotent ideal mod radicalとなりyi自体radical。正規正則元によるgldim降下と、all-nonzero fibreのtwisted finite group algebraの半単純性からchart gldim2。全局所perfect性を貼り合わせた後にSerre双対を使う。
+\[
+\dim HH_{-1}=2,\qquad \dim HH_0=5,\qquad \dim HH_1=2.
+\]
 
-## R13閉包を排除する不変量
+Hの作用は `(a,b):(t,x,y,z)↦(ζ^at,ζ^bx,ζ^by,ζ^{-a+b}z)`。
+固定楕円はE_tの二要素 `(0,1),(0,2)` とE_zの二要素 `(1,1),(2,2)` で、
+それぞれ奇数次Hochschild成分へ寄与し、その他の固定点集合は有限である。
+OUのAS surfaceは有限完全強例外列を持ち、HH_{±1}=0なのでこの例はOU型ではない。
+固定点型・character・Picard不変部分・次元の有限計算と、Morita同値・HKRによる通常証明を区別する。
 
-Z(B)1だけでは周期表示の差を排除できない。四頂点の非零線型元が二次零因子にならない開集合で、四つのnormal line Liとreturn φ0φ1φ2φ3が射影恒等であるというprojective incidenceを取る。proper射影なので像は閉、四つの独立基底変更で不変。中心tを持つR13一般点はこれを満たす。
+### 4.2 整域性と局所大域次元の証明を省略しない
 
-量子Bのnormal line pairのsupportはqの同一行のclass。4と3が互いに素なことを使って行の比例は一致になる。classは{0},{1,2},{3}、returnの指数は(0,1,1,1)、(2,0,0,1)、(2,2,2,0)。どれも射影恒等でない。従ってcomponent exclusionはpointed/rolled-up表示においても成立する。
+包絡の変数を(t,x,y,z)とすると
+`tx=ζxt, ty=ζyt, tz=ζzt, xy=yx, xz=ζzx, yz=ζzy`。
+q行積1とq³=1からBはCY4で、`F=t³+x³+y³+z³` は正則中心元である。
+三次中心は `t³,z³,x³,x²y,xy²,y³` の六次元、中心一次・二次は零。
 
-## 固定量子Fermat ambientの中心開部分
+t局所化の次数零環ではu₁,u₂が可換、`u_i u₃=ζu₃u_i`、`Σu_i³+1=0`。
+`r=u₁/u₂, v=u₂³, w=-1-(r³+1)v` と置くと、中心体k(r,v)上のsymbol algebra
+`(v,w)_ζ` はw付値でのvの残余が非cubeなのでdivisionとなる。
+この議論がrank-one/torsion-freeの具体的根拠であり、中心元で整域を割るだけでは代替できない。
 
-中心三次はAt³+f(x,y)+Cz³、6係数。正規一次直線schemeは二孤立点[t],[z]とP(span(x,y))であり、t,zを交換するとζとζ^-1が逆になるのでgraded自己同型にはならない。従ってAut_gr B=Gm×GL2×Gm。
+tailsの大域次元2にはKanazawaの「指数=変数数」の主定理を直接適用せず、
+指数3・変数4の局所証明を使う。中心完備化でnormal y_iの三乗がradicalに入ること、
+それが生成するイデアルのnilpotence、正規正則元の大域次元降下を用いる。
+全座標非零のfiberではtwisted finite-group algebraの半単純性を使い、
+chart上の局所perfect性を貼り合わせた後にSerre双対へ進む。
 
-AC disc(f)≠0のP5開部分は一つの軌道。binary cubicの三根をPGL2で移し、代数閉体の三乗根で係数を規格化する。F0のexact stabilizerはμ3^4⋊S2（162元）、次数スカラーとの共通μ3を除いてH54。G/H54→U_Fはétaleかつ幾何的に単射全射なのでscheme同型、商stackはBH54。慣性はstackの内容であり粗い点だけではない。
+### 4.3 全域R(1,3)帰属と、全ambient変形の問題
 
-strict fibre（ambientとの同定付き）はU_F⊂P5、ambient自己同型で割ったsectorはBH54、全weak moduliの変形は未計算。H54を全Abel自己同値群と呼ばない。AC disc(f)=0の点がすべて非weakだという主張も未証明。既存R13の一般中心P1と異なる現象だが、比較しているlevelは区別する。
+量子Fermat包絡はPymのCY skew torus
+`q01=a,q02=b,q03=(ab)^(-1),q12=c,q13=a/c,q23=bc`
+における `(a,b,c)=(ζ,ζ,1)` で、L(1,1,1,1)型である。
+L(1,1,2)の `p0=ζ²,p1=ζ,lambda=0` において
+`Q=(1-ζ²)X0²+(ζ-1)X1²` をu²QとするPBW族は、
+u≠0でL(1,1,2)、u=0で量子Fermatを与える。
+座標の同定は `(X0,X1,X2,X3)=(x,y,t,z)`。
+従って両型の閉包はこの包絡で交わる。
 
-## 提示と代数性
+対角三次 `Σλ_i x_i³`（全λ_i≠0）の中心性は `a³=b³=c³=1` と同値で、
+torusの三捩れは27点である。一般のL(1,1,1,1)点で同じ中心切断が存在するわけではない。
+一般normal cubicの単項式的存在とも区別する。
+強いH3に限る全skew包絡の五型・31パラメータ分類は分類ノートと
+`thm:all-skew-H3-geometric` を参照する。27点の軌道長6の枝はgeneric rank 3で除外される。
+H3へ制限しない全四頂点AS stackの他型（R22/S23/E3）との交叉や局所成分重複度は、このノートの確定結果には含めない。
 
-Artin平坦変形で低次数生成・関係上界が保持される証明は有限次元Nakayamaを各次数に適用する。全次数の平坦性を先に仮定しており、categoryの任意変形へ無条件に適用しない。
+R(1,3)閉包を排除する不変量では、Z(B)₁だけでは足りない。
+四頂点の非零一次元が二次零因子を持たない開集合で、四本のnormal lineと
+return `φ0φ1φ2φ3` が射影恒等となるprojective incidenceを取る。
+proper射影の像は閉で、四つの独立基底変更に不変であり、中央tを持つR(1,3)一般点はこの条件を満たす。
 
-P=incidence(J2⊂V² rank6,J3⊂V³ rank45,VJ2+J2V⊂J3)は有限型projective。J3はminimal cubic generatorsではなく全次数3のkernel。B=Q(R)のoverlap次元kなら新三次関係はk−3本。AS4ではk=4。
+量子Bのnormal line pairのsupportはq行が一致するclassである。
+4と3が互いに素なので行の比例は一致に帰着し、classは `{0},{1,2},{3}`。
+return指数はそれぞれ `(0,1,1,1),(2,0,0,1),(2,2,2,0)` で、いずれも射影恒等ではない。
+この排除はpointed/rolled-up表示でも成立する。
+ambient射の独立研究は https://github.com/uedakazushi/nc-cubic-ambient 、
+標識忘却は https://github.com/uedakazushi/nc-cubic-unmark を正本とする。
 
-全upper-rank minor idealはNoetherian性で有限生成だが、全部のlower-rank opensの交わりが一つの通常開集合とは限らない。Artin近傍では各非零minorが単元に持ち上がるので有限型formal hullが得られる。全stack代数性へ飛躍しない。通常の族にはnoetherian/saturation/relative Serre/Hom basechangeを指定する必要がある。
+## 5. 固定量子Fermat包絡上の切断と慣性
 
-## Generic fibreの意味
+全中心三次は `At³+f(x,y)+Cz³` の六係数で、
+normal一次直線schemeは二孤立点[t],[z]と `P(span(x,y))` からなる。
+t,zの交換はζをζ^{-1}へ逆転するためgraded自己同型ではない。
+従って `Aut_gr B=G_m×GL₂×G_m`。
 
-R13 central incidenceはP(E3)、rankE3=2。kt³の内在的sectionはBrauer-conicの捩れを分裂する。一般の有限自己同型で割ってもcoarse birational fibreはrational。K(λ)が正確な関数体。weak条件の成立は保持稿のgeometric generic central valueで確認するが、全P1の点で成立するわけではない。特にt³商は除外される。一般k=Qbarの固定ambientに超越λを選ぶことはできず、幾何学的一般体へ進むものとして述べる。
+`AC disc(f)≠0` のP⁵開部分U_Fは一つの軌道である。
+binary cubicの三根をPGL₂で移し、係数を三乗根で規格化できる。
+F₀を元として固定する群は `μ₃⁴⋊S₂`（162元）、
+次数スカラーとの共通μ₃を除くと
+`H54=(μ₃⁴/μ₃^diag)⋊S₂` を得る。
+`G=Aut_gr B/G_m^deg` に対して `G/H54→U_F` はエタールかつ幾何学的に単射・全射なので同型、
+`[U_F/G]≃BH54` となる（`thm:fermat-gerbe`）。
 
-## 一次資料と参照箇所
+ambientとの同定付きのfiberはU_F、ambient自己同型で割ったsectorはBH54である。
+全weak moduliでambientも動かす形式近傍をこのBH54と同定しない。
+境界 `AC disc(f)=0` は現行の全skew分類により強いH3から除外される。
+任意の構造対象・偏極を取り直した裸の圏についての主張とは区別する。
+またH54を、自然自己同型・次数スカラーの規約を指定しない全Abel圏自己同値群とは呼ばない。
 
-- Artin–Zhang, Noncommutative projective schemes, Adv.Math.109(1994),228–287, DOI10.1006/aima.1994.1087。Theorem4.5、χとSerre消滅の区別。DOI書誌確認。元PDFの全再監査ではない。
-- Kanazawa, arXiv:1409.4101v2, Proposition2.4、§2.3/Lemmas2.8–2.9。既存の反例証明で確認した適用箇所。本文の主定理は指数=変数個数。今回のFano cubicはlocal proofの適用で別に証明する。
-- Yekutieli–Zhang, Serre duality for noncommutative projective schemes, Proc.AMS125(1997),697–707。著者公開ページ https://www.math.bgu.ac.il/~amyekut/publications/nc-serre/nc-serre.html 。balanced dualizing input。著者ページ確認、PDF取得失敗もあり全原文再監査としない。
-- Pym, arXiv:1403.6444, §3.1および§3.4。quantum polynomialとcentral Sklyanin拡大を区別。全6成分の成分交叉の分類を本稿の前提にはしない。
-- Behrend–Noohi, arXiv:1507.07054 / https://webspace.maths.qmul.ac.uk/b.noohi/papers/NCStable.pdf 、§1,§3.5。graded algebraモジュライと有限切断。内在的weak substackの代数性をこの論文だけで宣言しない。
-- AOU, arXiv:2404.00175v1, Introduction,§5,§9。複数のnc cubic定義と9頂点marking。全weak分類との一致は既知入力ではない。
-- Rennemo–Segal–Van den Bergh, arXiv:1705.01366v2, Lemmas3.2,3.3を既存の中心分枝証明で使用。任意の超越体拡大がglobal dimensionを保つとはしていない。centre localisation後に代数的分離拡大を用いる。
+## 6. 有限提示・形式局所性・一般fiber
 
-## 確実性
+Artin上の全次数平坦な次数変形では、有限次元Nakayamaを各次数に使って低次数の生成・関係上界を保つ。
+これは全次数平坦性を仮定した環の変形の議論であり、任意のcategory変形への無条件な適用ではない。
 
-量子Fermat反例の通常証明を保持し、今回その有限検算を再実行した。新しく検討した証明は正規境界による認識と中心三次軌道の同定である。外部独立査読、proof assistant、新規性の網羅確認はなし。保持したsurface/R13稿は今回全再監査しておらず、そこでのWeyl商・有限Hessian商の主張を新たに検証したと報告しない。新稿の最重要な否定結果はそれらの一般商の詳細に依存しない。
+条件2の候補は
+`P=incidence(J2⊂V² rank6,J3⊂V³ rank45,VJ2+J2V⊂J3)`
+という有限型projective incidenceである。
+J₃は最小三次関係でなく全三次核。
+B=Q(R)のoverlap次元をkとすると新しい三次関係はk−3本で、AS4ではk=4である。
 
-## 今回確認した追加の一次資料
+全upper-rank minor idealはnoetherian性により有限生成だが、
+無限個のlower-rank openの交わりが通常の開になるとは限らない。
+所望Hilbert値の点におけるArtin近傍では各非零minorが単元へ持ち上がり、
+有限型の形式局所模型が得られる（`prop:hull`）。
+この一般論だけから全weak stackの代数性を宣言しない。
+強いH3の開性・代数性は、現行原稿の有限次数平坦性・許容性・相対再構成の追加証明による。
+通常の族にはnoetherian性、saturation、相対Serre、導来Homの完全性と底変更等を指定する。
 
-- Cassidy–Shelton, PBW-deformation theory and regular central extensions, arXiv:math/0603375v2。Definition1.2、Theorems1.3/1.5を原文で確認。complexity c(S0)=2、低次数での正則性の意味はAnn(t^n)_≤2=0。
-- Le Bruyn–Smith–Van den Bergh, Math.Z.222(1996),171–212、著者PDF https://sites.math.washington.edu/~smith/Research/Central-extns.pdf 。Theorem2.6、Corollary2.7、Remark2.8と§3.1（normal linear elementのtwist中央化）を原文画像で確認。
-- Braverman–Gaitsgory, arXiv:hep-th/9411113、Theorem0.5、Lemma3.3、Theorem4.1。αδα=−δβの符号も原文と照合。
-- Zhang, Twisted graded algebras and equivalences of graded categories, Proc.LMS(3)72(1996),281–311。本文では中央化の具体的積を示し、必要なnormal直線の不変性を別途確認する。
+R(1,3)中央incidenceの一般fiberはrank 2のE₃によるP(E₃)である。
+kt³の内在的sectionがBrauer-conicの捩れを分裂させ、
+一般の有限自己同型で割ったcoarse birational fiberも有理となる。
+正確な一般関数体はK(λ)であり、H3条件は全P¹でなく許容開で課す。特にt³商は除外する。
+k=Qbarの固定包絡の中に超越λが存在するとせず、幾何学的一般体へ移る主張として述べる。
+中心局所化後の代数的分離拡大と、任意の超越体拡大の大域次元保存も区別する。
 
-新規性未確認。今回、新しい認識とFermat軌道の通常証明を検討し、新旧二つの計算を再実行した。前回のKanazawa依存を保持するが、同論文全文を今回再取得・再監査したとは報告しない。
+## 7. 文献と検証状態
+
+以下は原稿の入力に関する参照情報であり、今回すべての原文・証明を再監査したという記録ではない。
+実行した検算と今回の限定的点検は `research/cubic_classification_validation.json` を参照する。
+外部独立査読、proof assistantによる形式化、新規性の網羅的確認は実施済みとしない。
+
+- Artin–Zhang, *Noncommutative projective schemes*, Adv. Math. 109 (1994), 228–287, DOI 10.1006/aima.1994.1087。Theorem 4.5。χ条件とSerre消滅を区別する。
+- Kanazawa, https://arxiv.org/abs/1409.4101v2 、Proposition 2.4、§2.3 / Lemmas 2.8–2.9。指数=変数数の主定理と、本例で使う局所証明を区別する。
+- Yekutieli–Zhang, *Serre duality for noncommutative projective schemes*, Proc. AMS 125 (1997), 697–707。balanced dualizingの入力。著者ページ https://www.math.bgu.ac.il/~amyekut/publications/nc-serre/nc-serre.html 。
+- Pym, https://arxiv.org/abs/1403.6444 、Theorem 1.1、§§3.1–3.2、§3.4。量子多項式環と中央Sklyanin拡大を区別し、全成分交叉の分類を入力にしない。
+- Behrend–Noohi, https://arxiv.org/abs/1507.07054 、§1、§3.5。graded algebra moduliと有限切断。これだけでintrinsic weak substackの代数性を得ない。
+- AOU, https://arxiv.org/abs/2404.00175v1 、Introduction、§5、§9。非可換三次曲面の複数の定義と9頂点marking。全weak分類との一致を既知入力としない。
+- Rennemo–Segal–Van den Bergh, https://arxiv.org/abs/1705.01366v2 、Lemmas 3.2–3.3。中心局所化後の代数的分離拡大に用いる。
+- Cassidy–Shelton, https://arxiv.org/abs/math/0603375v2 、Definition 1.2、Theorems 1.3, 1.5。complexity c(S₀)=2、低次数正則性 `Ann(t^n)_{≤2}=0`。
+- Le Bruyn–Smith–Van den Bergh, Math. Z. 222 (1996), 171–212、Theorem 2.6、Corollary 2.7、Remark 2.8、§3.1。著者PDF https://sites.math.washington.edu/~smith/Research/Central-extns.pdf 。
+- Braverman–Gaitsgory, https://arxiv.org/abs/hep-th/9411113 、Theorem 0.5、Lemma 3.3、Theorem 4.1。`αδα=-δβ` の符号を含む。
+- Zhang, *Twisted graded algebras and equivalences of graded categories*, Proc. LMS (3) 72 (1996), 281–311。中央化では具体的な積と必要なnormal直線の不変性を併記する。
+- OU, https://arxiv.org/abs/2508.04986 、Definition 1.1、§3。有限完全強例外列を持つAS surfaceという比較対象。

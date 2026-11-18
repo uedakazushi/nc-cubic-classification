@@ -154,7 +154,10 @@ trace $0$ では系\ref{cor:h3-order2-22-rank2-all-Jordan-coverage}が
 \end{proof}
 
 この位相は二次包絡と三次直線を持つ表示から定めたものである。
-一般の底上の内在Abel圏の族からこのincidenceへの再構成・降下は別の問題として残る。
+定義\ref{def:h3-intrinsic-family}の相対内在族との同値および有効降下は
+定理\ref{thm:h3-intrinsic-algebraic-stack}で扱う。
+この相対定義には二次包絡の三次平坦性が含まれる。
+より弱い平坦Abel圏変形からこの条件が自動的に従う範囲は、別の問題である。
 
 \subsection{次数スカラー除去と表示の有効降下}
 \begin{proposition}\label{prop:h3-presentation-canonical-degree-descent}
@@ -284,7 +287,8 @@ $X^{\mathrm{H3}}\subset X$ である。
  [X^{\mathrm{H3}}/\mathrm{PGL}_4]
 \]
 をなす。これは任意底上の次数付き表示とその基底変更の商であり、
-各幾何点で内在Artin変形の群oidを与える。
+各幾何点で、系\ref{cor:h3-artin-intrinsic-formal-atlas}の仮定を満たし、
+二次包絡の三次成分が平坦である内在Artin変形の群oidを与える。
 その位相は定理\ref{thm:h3-presentation-four-components}の四成分を持つ。
 \end{theorem}
 \begin{proof}
@@ -377,9 +381,18 @@ $S$ の中央正則な三次元 $g$ の商 $H$ を順に使う。
 正則中央元の倍写像から $S,H$ は次数別有限局所自由である。
 従って生成元から捩れsection環への各次数の写像は
 fiber上の同型から相対的にも同型で、任意底変更する。
-$H$ の線束列は相対ample filterである。
-任意の固定線束を掛けたとき、十分高い次数では
-各幾何fiberの全成分で次数が正となるからである。
+$H$ の線束列は相対ample filterである。底をaffineとして、
+任意の固定線束$\mathcal F$に対し、
+$\mathcal F\otimes\mathcal O_E(m)$が相対的に大域生成される$m$を選ぶ。
+幾何fiberの既約成分$C$は平面三次の成分だから
+\[
+ \deg(\mathcal F|_C)\ge -m\deg(\mathcal O_E(1)|_C)\ge-3m.
+\]
+各捩れ$\sigma^{j*}\mathcal O_E(1)$の成分次数は少なくとも1なので、
+長さ$n$の捩れ積$\mathcal L_n$に対し
+$\deg((\mathcal F\otimes\mathcal L_n)|_C)\ge n-3m$となる。
+従って$n>3m$で全幾何fiberの全成分の次数が一様に正となり、
+相対的にampleである。affine底上ではampleとなる。
 従って \cite[定理1.3, 7.14]{KeelerAmpleFilters}により
 任意noetherian底上の $H$ は左右noetherian。
 正次数の中央正則元 $g,t$ の順の持ち上げで、

@@ -1,5 +1,5 @@
 # Codex 研究指示 — nc-cubic-moduli
-更新日: 2026-11-15。対象: **一つのCloud Codexタスクによる逐次研究**。GitHub `main` が唯一の正本。
+更新日: 2026-11-19。対象: **一つのCloud Codexタスクによる逐次研究**。GitHub `main` が唯一の正本。
 
 > **研究正本の分離（2026-11-17）**：このリポジトリはH3認識・完全分類専用。楕円E6量子化成分の独立論文・研究・検算の正本は [nc-cubic-e6](https://github.com/uedakazushi/nc-cubic-e6)、ambient射とR(1,3)成分は [nc-cubic-ambient](https://github.com/uedakazushi/nc-cubic-ambient)、標識忘却とPicard作用は [nc-cubic-unmark](https://github.com/uedakazushi/nc-cubic-unmark)、量子Fermat非AS短報は [nc-cubic-non-as](https://github.com/uedakazushi/nc-cubic-non-as)。同じ数学的結果を分類で引用・利用するのはよいが、これらの**独立論文を本リポジトリの旧パスへ再作成・更新しない**。各自の新しいmainに保存する。全H3認識に必要な有効な証明を削除せず保持する。移管済みファイルを旧版正本として再開しない。
 
@@ -58,7 +58,7 @@
 
 正確な定理と証明は `research/cubic_14641_classification.md` と `papers/weak_cubic_axioms.tex` を正本とする。主な既存成果として、skew包絡全体の五型・31座標パラメータの幾何学的分類、非CY符号分枝、Pymの一般chartの除外、量子基底unipotent持上げ・指定Ore/CY層の除外、良い楕円中心拡大、分裂Clifford型と非分裂β型の切断・幾何学的矢の分類を保持する。
 
-**最新の進展（classification-v374）：** 標数0の全H3幾何学的対象・許容切断・構造対象付き同値を判定した。有限次数の正規三次入射のH3開をPGL₄で割ると、二次包絡の三次平坦性を含む相対内在的H3族の有限型代数stackになる。相対Serre、任意noetherian底変更、coherent tailsの有効降下、全矢を証明した。四既約成分は互いに交わらず、一般次元は3,4,5,8。正確な定義は原稿の `def:h3-intrinsic-family`。滑らかな可換三次点では全次数平坦なArtin次数変形で三次平坦性は自動。非可換点での自動性の範囲は別問題として残る。
+**現行の主張（classification-v375）：** 標数0の全H3幾何学的対象・許容切断・構造対象付き同値を判定した。有限次数の正規三次入射のH3開をPGL₄で割ると、導来Homの底上完全性・相対Serre・豊富性・orbit底変更・二次包絡の三次平坦性を明記した相対内在的H3族の有限型代数stackになる。相対Serre、任意noetherian底変更、coherent tailsの有効降下、全矢を証明した。四既約成分は互いに交わらず、一般次元は3,4,5,8。正確な定義は原稿の `def:h3-intrinsic-family`。滑らかな可換三次点では全次数平坦なArtin次数変形で三次平坦性は自動。非可換点での自動性の範囲は別問題として残る。原稿に証明があることと、全文の独立監査の完了は区別する。重点点検と再実行の範囲は現行検証記録を読む。
 
 **当面の優先順位（成果に応じて柔軟に変更する）：**
 
