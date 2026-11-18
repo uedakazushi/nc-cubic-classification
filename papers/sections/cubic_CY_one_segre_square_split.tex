@@ -434,3 +434,59 @@ $\mathbb Q(i)[s]$ で因数分解すると、許容な残余は高々 $s=1/2-i/4
 係数の共役を取れば他方のグラフも全域で階数20となる。
 以上は同じ公開検証器と証明書で再現できる。
 \end{proof}
+
+\begin{proposition}\label{prop:cubic-CY-one-segre-square-split-M-quadratic}
+$M_{s,w,z}$ の許容域(LO4)全体で
+\[
+ U=a-(c+kd)/s,\qquad V=s(b-d)
+\]
+は可換であり、次の二次式は正則かつ中央である。
+\[
+ Q_0=\left(\frac{sw}{4(kw+1)}\right)^2 U^2-2sm\,UV+V^2,qquad
+ m=\frac{(32k+1)w+32}{16s(kw+1)} .
+\]
+従って $Z(M_{s,w,z})_3$ は $Z(M_{s,w,z}/(Q_0))_3$ に単射し、
+二次商の次数二、三、四の次元は $9,16,25$ である。
+\end{proposition}
+\begin{proof}
+$[U,V]$ は(LO1)--(LO2)の実交換子である。
+(LO5)の関係を、混合四列を二次係数の一次式のまま保つ基底に変更する。
+$(N,b,D)$ を(LS4)の元係数とし、$D=C+\gamma J-N^{\mathsf T}A^{-1}N$ とする。
+四列 $(U_{\rm sym}+KN^{\mathsf T}A^{-1})$ に右から $A$ を掛け、
+追加列の $D$ を含む項をこれらの列の線形結合で置き換える。
+従って新たな六列は
+\[
+ U_{\rm sym}A+KN^{\mathsf T},\quad Kb,\quad
+ a^2+c\circ d+
+ \frac{U_{\rm sym}N_{*,3}+K(C+\gamma J)_{*,3}}{b_3} .
+\]
+ここで $b_3=1$、$c\circ d=(cd+dc)/2$ である。
+これらの六列から次数三商を構成すると、三変数有理関数体上で
+$Q_0$ の全四交換子が厳密に零となる。
+係数の分母は(LO4)の単元で、次数三商の次元は(LO4)全域で一定なので、
+中央性は全許容値へ特殊化する。
+計算は \path{verify_cubic_CY_one_segre_square_split_M.py} で再現する。
+
+$U,V$ は独立で、二次式の $V^2$ 係数は1である。
+可換二元二次としての一次因子は整域でいずれも非零なので $Q_0$ は正則である。
+実交換子空間の次元は一だから一次中心は零であり、
+命題\ref{prop:cubic-CY-one-segre-double-split-quadratic-reduction} と同じ
+正則列の議論で単射とHilbert値が従う。
+\end{proof}
+
+残る三因子非零域では、次の座標が中央二次商を扱いやすくする。
+\[
+ X=4s,\quad T=\frac{kw-1}{kw+1},\quad Z=\frac{wz-k}{k},\qquad
+ w=\frac{1+T}{k(1-T)},\quad z=\frac{k(Z+1)}{w}.
+\]
+(LO4)の非消失条件は、この座標で
+\[
+ X(X^2-1)(T^2-1)
+ \prod_{\epsilon=\pm1}
+ \bigl(Z(X+\epsilon T)^2-T(X^2+1)-2\epsilon X\bigr)\ne0 .
+\]
+既に排除した三境界は $X+T=0$, $X-T=0$, $X^2+T=0$ である。
+(LO6)は $(X,T,Z)\mapsto(-X,-T,-Z)$、
+反対代数(LO11)は $(X,T,Z)\mapsto(-X,T,Z)$ となる。
+中央二次の $UV$ 係数は $-4(X^2+T)/(X^2-1)$、
+二元二次式としての判別式は $16(X^2-T^2)/(X^2-1)$ である。

@@ -1579,5 +1579,16 @@
     ],
     "used_part": "TD1, TD2 and the opposite-algebra coordinate transformation TD12. This transformation is used only for the dimension of the centre.",
     "verification": "The transformation of TD12 to a sign change of A in the new coordinates is checked directly. The theorem and the top-tensor change underlying TD12 are taken from the pinned source. The cubic-centre calculations are independent."
+  },
+  "CY_one_segre_square_split_M_quadratic_v335": {
+    "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+    "files": [
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_SQUARE_SPLIT_LOWER_OPEN.tex",
+        "sha256": "c98b45d1183e51f323e9f60ff85895c7d6cdcfe8f98501d19a8c5db3452a08a4"
+      }
+    ],
+    "used_part": "The LO1–LO5 relation data and open conditions. The LO6 isomorphism and LO11 opposite-algebra correspondence.",
+    "verification": "The coordinate transform, regularity factors and central quadric are computed independently in nc-cubic-moduli. The underlying isomorphisms and AS regularity are taken from the pinned source."
   }
 }

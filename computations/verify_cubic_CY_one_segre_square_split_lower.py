@@ -60,7 +60,7 @@ def lower_zero():
     return source, units, curves
 
 
-def lower_open():
+def lower_open(linear_columns=False):
     z = s.Symbol("z")
     k = h*h/4-Q(1, 64)
     w = p
@@ -78,7 +78,7 @@ def lower_open():
         32*z*((4*h+sign)**2*w+64)**2-(4*h+sign)**4*d0+128*(4*h+sign)**2
         for sign in (1, -1)
     ]
-    return cross(coefficients, Q(1, 8), 3), [h, 4*h-1, 4*h+1, d0, w, *branch_units], z
+    return cross(coefficients, Q(1, 8), 3, linear_columns), [h, 4*h-1, 4*h+1, d0, w, *branch_units], z
 
 
 def lower_open_wminus():

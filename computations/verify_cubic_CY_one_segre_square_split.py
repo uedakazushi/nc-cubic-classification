@@ -30,12 +30,15 @@ def outer(H,b1,v):
     B=s.zeros(4,1).row_join(H).row_join(s.zeros(4,1))
     return s.Matrix.hstack(U+K*B.T*A.inv(),K[:,b1],q+v*K[:,5-b1])
 
-def cross(x,gamma,index):
+def cross(x,gamma,index,linear_columns=False):
     N=s.Matrix([[-2*x[12],x[0],x[1]+2*x[14],x[3],x[5]-x[9],-x[10]],
                 [-2*x[13],x[1],x[2],x[5]-x[9],x[6],x[11]],
                 [0,x[3],x[5],x[4],x[7],-x[12]],
                 [0,x[5],x[6],x[7],x[8],x[13]]])
     b=s.Matrix(x[9:15])
+    if linear_columns:
+        return s.Matrix.hstack(U*A+K*N.T, K*b,
+                               q+(U*N[:,index]+K*(C+gamma*J)[:,index])/b[index])
     D=C+gamma*J-N.T*A.inv()*N
     return s.Matrix.hstack(U+K*N.T*A.inv(), K*b,q+K*D[:,index]/b[index])
 
