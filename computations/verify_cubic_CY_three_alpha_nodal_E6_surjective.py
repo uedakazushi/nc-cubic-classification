@@ -130,6 +130,48 @@ def check_roots():
     assert orbit == internal | mixed and len(orbit) == 72
 
 
+def check_geometric_action(values_by_name, specifications):
+    c = Q**3-1
+    scales = {"A_x": (1, 4, c**2), "A_y": (1, 2, c**2), "B_x": (-1, 5, c**3),
+              "B_y": (-1, 4, c**3), "B_z": (1, 3, c**2), "D": (1, 6, c**4)}
+    generators = s.symbols("m1:7")
+    m1, m2, m3, m4, m5, m6 = generators
+    orbit_labels = {unit_coefficient(i): value for i, value in enumerate(generators)}
+    orbit_labels[ZERO_WEIGHT] = 1
+    orbit_labels[(0,0,1,0,1,0)] = m3*m5-6*m6-27
+    coordinates = {}
+    for name, values in values_by_name.items():
+        sign, shift, normalizing_denominator = scales[name]
+        previous_denominator = specifications[name][2]
+        terms = []
+        for weight, coefficient in dominant_terms(values).items():
+            polynomial = 0
+            for index, value in enumerate(coefficient.coeffs()):
+                if value:
+                    assert (index+shift) % 3 == 0
+                    polynomial += s.Rational(int(value.p), int(value.q))*Q**((index+shift)//3)
+            terms.append(polynomial*orbit_labels[weight])
+        coordinates[name] = sign*sum(terms)/(normalizing_denominator*previous_denominator)
+    ax, ay, bx, by, bz, cut = coordinates.values()
+    reciprocal = {Q: 1/Q, m2: m4, m4: m2, m3: m5, m5: m3}
+    targets = [Q**2*ay, Q**2*ax, Q**4*by, Q**4*bx, -Q**3*bz, -Q**6*(cut-bz/c)]
+    assert all(s.cancel(value.subs(reciprocal, simultaneous=True)-target) == 0
+               for value, target in zip(coordinates.values(), targets, strict=True))
+    for left, right in (("A_x", "A_y"), ("B_x", "B_y"), ("B_z", "B_z"), ("D", "D")):
+        left_weights = {tuple(-v for v in weight) for weight in values_by_name[left]
+                        if weight != ZERO_WEIGHT}
+        assert left_weights == set(values_by_name[right])-{ZERO_WEIGHT}
+    found = {}
+    for name, weights in values_by_name.items():
+        exponents = {sum(weight[2:4])-sum(weight[4:6]) for weight in weights}
+        exponents = {value % 3 for value in exponents}
+        assert len(exponents) == 1
+        found[name], = exponents
+    assert tuple(found.values()) == (2, 1, 1, 2, 0, 0)
+    print("PASS central multiplication and inversion in every q fibre", flush=True)
+    return {name: str(s.factor(value)) for name, value in coordinates.items()}
+
+
 def main():
     cartan = s.Matrix([[pairing_times_three(a, b)//3 for a in SIMPLE_ROOTS] for b in SIMPLE_ROOTS])
     assert cartan.det() == 3
@@ -162,9 +204,11 @@ def main():
     product = dominant_terms(multiply(values_by_name["A_x"], values_by_name["A_y"]))
     assert product == {ZERO_WEIGHT: 27*T**6, unit_coefficient(5): 6*T**6,
                        (0, 0, 1, 0, 1, 0): T**6}
+    coordinates = check_geometric_action(values_by_name, specs)
     (DIRECTORY / "cubic_CY_three_alpha_nodal_E6_surjective_certificate.json").write_text(
         json.dumps({"cartan": [list(map(int, row)) for row in cartan.tolist()],
-                    "root_counts": {"internal": 18, "mixed": 54}, "orbit_coefficients": table},
+                    "root_counts": {"internal": 18, "mixed": 54}, "orbit_coefficients": table,
+                    "normalized_q_coordinates": coordinates},
                    indent=2)+"\n")
     print("PASS triangular generators of the E6 torus invariant ring", flush=True)
 

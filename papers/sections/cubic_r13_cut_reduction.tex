@@ -215,15 +215,16 @@ $k_0$は可算なのでその代数閉包も可算であり，最後の結論を
 全$R(1,3)$境界の被覆，$\Lambda_B$の有効な方程式，低位数楕円境界の追加中心，
 他ambientとの交叉および相対降下は未解決として残す．
 
-\begin{theorem}[分裂中心拡大の全切断：複素数体上の厳密な例外値]
+\begin{theorem}[分裂中心拡大の全切断と双加群滑らかさ]
 \label{thm:r13-split-all-cuts}
-$k=\mathbb C$とし，良い楕円中心拡大のうち$B=S[t]$，$\Omega=g$となるものを取る．
+標数零代数閉体 $k$ 上で，良い楕円中心拡大のうち$B=S[t]$，$\Omega=g$となるものを取る．
 このとき
 \[
- \Lambda_B=\mathbb C^*.
+ \Lambda_B=k^*.
 \]
 従って$g+\lambda t^3$の商は，$\lambda\ne0$なら全てH3で互いに同型であり，
-$\lambda=0$だけが非admissibleである．$t^3$切断も既に除外されている．
+$\lambda=0$だけが非admissibleである．非零切断のアフィン環は双加群として滑らかな2-Calabi--Yau環である．
+$t^3$切断も既に除外されている．
 さらに$S$のpoint schemeが滑らかな$E$で，shiftが非零translationであると仮定する．
 $\psi(g)=c(\psi)g$ ($\psi\in\operatorname{Aut}_{\mathrm{gr}}S$)と書けば，
 この固定ambientのH3幾何学的群oidは$BH_S$であり
@@ -237,11 +238,36 @@ $\psi(g)=c(\psi)g$ ($\psi\in\operatorname{Aut}_{\mathrm{gr}}S$)と書けば，
 これは指定分裂ambientの分類であり，非分裂変形に対するrigidityではない．
 \end{theorem}
 \begin{proof}
-$S$全体をスカラー倍する自己同型は$g$を三乗倍するので，
-$\lambda\ne0$の全パラメータは一つの軌道をなす．
-前命題で定義体上超越的な$\lambda$は全てadmissibleであるから，
-非零軌道全体がadmissibleとなる．この議論では可算例外集合から
-Zariski開性を一般に推論せず，この分裂族の実際の推移的自己同型作用を用いている．
+$S$全体をスカラー倍すると$g$は三乗倍されるので，
+非零切断は $U=S/(g-1)$ に規格化できる．
+$S$ はKoszul AS正則であり，Koszul双加群解消により滑らかである．
+中心局所化 $D=S[g^{-1}]$ も，同じ解消を両側で局所化すれば滑らかである．
+ここで中心に三乗根を加えた
+\[
+ C=D[u,u^{-1}]/(u^3-g)
+\]
+を取る．$C$ は両側で $D$ 上自由であり，
+$C\otimes_D C\to C$ は $u_L/u_R$ の位数3に対する冪等元
+$\tfrac13(1+u_L/u_R+(u_L/u_R)^2)$ で双加群として分裂する．
+$D$ の完全双加群解消を両側で $C$ へ拡大すると $C\otimes_D C$ が完全で，
+その直和因子 $C$ も完全となる．
+
+斉次元 $s\in S_n$ に対して $s\mapsto \overline s\,u^n$ と送ると
+$C\simeq U[u,u^{-1}]$ である．逆写像は $\overline s\mapsto s u^{-n}$ で与えられる．
+$C$ の対角双加群を $u_L=u_R=1$ に導来基底変更する．
+二つの中心方程式のKoszul複体では，対角上で両者が $u-1$ となる．
+$u-1$ は正則なので，この複体は導来圏で $U\oplus U[1]$ と同型である．
+完全性は導来基底変更と直和因子で保たれるから，$U$ は $U^e$ 上完全であり，
+有限大域次元を持つ．定理\ref{thm:r13-exact-cut-reduction}からH3が従う．
+
+さらに $S$ は $B=S[t]$ の中心正則商のNakayama公式によりCY3である．
+$S^e$ 内の $g_L-1,g_R-1$ は中心正則列で，
+$U^e$ はその商である．$0\to S\xrightarrow{g-1}S\to U\to0$
+を $S^e$ 上で双対化すると，
+$\mathbf R\operatorname{Hom}_{S^e}(U,S^e)\simeq U[-4]$ を得る．
+正則列の変換で
+$\mathbf R\operatorname{Hom}_{U^e}(U,U^e)\simeq U[-2]$ となり，
+2-Calabi--Yau性が従う．
 
 $\lambda=0$では$R_0=H[t]$と置き，$M=k[t]$，$P=\pi M$を取る．
 $S$のAS Gorenstein条件と$B=S[t]$への誘導から

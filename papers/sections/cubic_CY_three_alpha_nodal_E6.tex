@@ -585,3 +585,50 @@ $D$ の上記変換である。
 $q\ne q^{-1}$ から交換は一つの点を固定せず、
 三乗根の対角作用の固定条件から慣性が従う。
 \end{proof}
+
+\begin{corollary}\label{cor:cubic-CY-three-alpha-nodal-E6-relative-coordinates}
+$Q_{\mathrm{nod}}=\{q\in\mathbb G_m:q^2\ne1,\ q^3\ne1\}$ とし、
+$T_{\mathrm{reg}}\subset T_{E_6}$ を全根指標が1と異なる開集合とする。
+全許容の規格化係数空間は $Q_{\mathrm{nod}}\times (T_{\mathrm{reg}}/W(E_6))$
+と代数的に同型である。
+ここで三乗根の対角変換は $T_{E_6}$ の中心 $\mu_3$ の乗法、
+接線交換は $(q,t)\mapsto(q^{-1},t^{-1})$ に対応する。
+従ってこの係数表示と矢の商は
+\[
+ \left[
+   \bigl(Q_{\mathrm{nod}}\times (T_{\mathrm{reg}}/W(E_6))\bigr)
+   /(\mu_3\rtimes C_2)
+ \right]
+\]
+という代数的表示スタックを持つ。
+\end{corollary}
+\begin{proof}
+定理\ref{thm:cubic-CY-three-alpha-nodal-E6-surjective}の規格化から
+$P_x=P_y=A_z=1$ へ移す倍率は、
+$C=q^3-1$ として $(-\theta/C,-\theta^2/C,q/C^2)$ である。
+この倍率を軌道和展開に適用すると、各 $\theta$ 指数は3の倍数となる。
+例えば $m_{\omega_i}$ を $m_i$ と書けば、
+\[
+\begin{aligned}
+ A_x&=q^2m_3/C^2,\qquad A_y=q^2m_5/C^2,\\
+ B_x&=\frac{q^4m_2+(-q^5+6q^4-q^3)m_5}{C^3(q-1)(q+1)^2},\\
+ B_y&=\frac{q^4m_4+(-q^5+6q^4-q^3)m_3}{C^3(q-1)(q+1)^2}.
+\end{aligned}
+\]
+全六式とその三角的な逆写像は $Q_{\mathrm{nod}}$ 上正則である。
+$\omega_3+\omega_5$ の軌道和は前定理の積恒等式で消去できる。
+従って根判別式を除いた後も全 $q$ で積の表示を得る。
+
+三組の固有値における中心元の代表を
+$(1,\zeta,\zeta^{-1})$ と取ると、その全根指標は1で、
+六係数に順に $(\zeta^2,\zeta,\zeta,\zeta^2,1,1)$ が掛かる。
+反転 $t\mapsto t^{-1}$ は基本軌道和の順序を
+$m_2\leftrightarrow m_4$、$m_3\leftrightarrow m_5$ と交換し、
+$m_1,m_6$ を固定する。
+$q\mapsto q^{-1}$ と合わせた係数変換を六式で計算すると、
+前命題の接線交換と一致する。特に切断定数の $B_z$ 補正も一致する。
+\path{verify_cubic_CY_three_alpha_nodal_E6_surjective.py}
+は指数条件、中心の作用と反転後の全六式を検算する。
+両作用の間の関係は中心の逆元作用なので、半直積による商を得る。
+一般の内在的Abel圏の族の相対再構成には、さらに相対認識定理を要する。
+\end{proof}
