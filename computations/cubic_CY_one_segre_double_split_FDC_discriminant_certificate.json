@@ -1,0 +1,13 @@
+{
+  "first_discriminant_factors": [],
+  "second_witness_factors": [
+    [
+      "P^2*M - P*M^2 - P*M + 1"
+    ],
+    [
+      "P - M + 1"
+    ]
+  ],
+  "exceptional_base_polynomial": "2*P**2 + 2*P - 1",
+  "exceptional_centre_rank": 20
+}

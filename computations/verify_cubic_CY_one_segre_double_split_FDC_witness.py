@@ -1,4 +1,5 @@
 """Exact FDC3 cubic-centre witness, regularity factors and eight chart translates."""
+import argparse
 from collections import Counter
 from functools import cache
 from itertools import product
@@ -15,6 +16,7 @@ from verify_cubic_CY_one_segre_double_split_FDC import (
     e, fdc_coefficients, four_cross_both_outer, m, p, product_plane_change, ratio,
 )
 from verify_cubic_CY_one_segre_double_split_isolated import marked
+from verify_cubic_CY_one_segre_double_split_TD import fraction
 
 SYMBOLS = s.symbols("P M L E")
 DIRECTORY = Path(__file__).parent
@@ -82,10 +84,11 @@ class MarkowitzAlgebra(SparseGradedAlgebra):
         return row
 
 
-def affine_columns(base):
-    P, M, L = map(base.from_sympy, SYMBOLS[:3])
+def affine_columns(base, permutation, specialization):
+    P, M, L = [base.from_sympy(value.subs(specialization, simultaneous=True))
+               for value in SYMBOLS[:3]]
     transform = product_plane_change(SYMBOLS[0]/4, SYMBOLS[1]/4)
-    tensor = s.kronecker_product(transform, transform)
+    tensor = s.kronecker_product(transform, transform).subs(specialization, simultaneous=True)
     transform = [[base.from_sympy(tensor[i, j]) for j in range(16)] for i in range(16)]
     coordinates = s.symbols("F0:15")
     relation = marked({**dict(enumerate(coordinates)), 10: 1, 11: 1},
@@ -111,15 +114,21 @@ def affine_columns(base):
         columns.append([L*L, mixed, base.zero, base.zero, base.zero, one]+[base.zero]*10)
         return columns
 
-    fixed = source_at(base.zero)
+    rows = [4*i+j for i in permutation for j in permutation]
+
+    def permuted_source(value):
+        return [[column[i] for i in rows] for column in source_at(value)]
+
+    fixed = permuted_source(base.zero)
     slopes = [[a-b for a, b in zip(at_one, at_zero, strict=True)]
-              for at_one, at_zero in zip(source_at(base.one), fixed, strict=True)]
+              for at_one, at_zero in zip(permuted_source(base.one), fixed, strict=True)]
     return fixed, slopes
 
 
-def rank_witness():
-    base = RationalFunctionField(SYMBOLS[:3])
-    fixed, slopes = affine_columns(base)
+def rank_witness(permutation=(0, 1, 2, 3), parameters=SYMBOLS, specialization=None):
+    base = RationalFunctionField(parameters[:-1])
+    field = RationalFunctionField(parameters)
+    fixed, slopes = affine_columns(base, permutation, specialization or {})
     helper = SparseGradedAlgebra(base, 4, [], [0]*4)
     derivative_rows = [{j: column[i] for j, column in enumerate(slopes) if column[i]}
                        for i in range(16)]
@@ -138,10 +147,12 @@ def rank_witness():
         stable.append({divmod(i, 4): co for i, co in enumerate(column) if co})
     algebra = SparseGradedAlgebra(base, 4, stable, [0]*4)
     algebra.build(4)
-    assert [len(algebra.basis[n]) for n in (2, 3, 4)] == [11, 26, 57]
+    if not specialization:
+        assert [len(algebra.basis[n]) for n in (2, 3, 4)] == [11, 26, 57]
+    assert len(algebra.basis[2]) == 11
 
     def lift_poly(poly):
-        return CONTEXT.from_dict({(*exponents, 0): c for exponents, c in poly.to_dict().items()})
+        return field.context.from_dict({(*exponents, 0): c for exponents, c in poly.to_dict().items()})
 
     def lift(value):
         return RationalFunction(lift_poly(value.n), lift_poly(value.d))
@@ -160,8 +171,8 @@ def rank_witness():
     def full_word(letters):
         return {index: lift(value) for index, value in word(letters).items()}
 
-    variation = FIELD.from_sympy(SYMBOLS[-1])
-    engine = MarkowitzAlgebra(FIELD, 4, [], [0]*4)
+    variation = field.from_sympy(parameters[-1])
+    engine = MarkowitzAlgebra(field, 4, [], [0]*4)
     quotient = {}
     for degree in (3, 4):
         rows = []
@@ -195,7 +206,7 @@ def rank_witness():
         for generator in range(4):
             row = full_word(cubic+(generator,)).copy()
             for key, value in full_word((generator,)+cubic).items():
-                add(row, key, -value, FIELD)
+                add(row, key, -value, field)
             for key, value in engine.reduce(row, pivots).items():
                 commutators[25*generator+positions[key]][column] = value
     assert len(engine.echelon(commutators)) == 16
@@ -251,14 +262,14 @@ def coefficient_symmetry(state, generator):
     return t0, s0, h, k, (-x0, -x3/h, -x4/(h*h), -h*x1, -h*h*x2, -x5, -x7/h, -h*x6, -x8)
 
 
-def pull(polynomial, values):
-    powers = [[FIELD.one] for _ in values]
+def pull(polynomial, values, field=FIELD):
+    powers = [[field.one] for _ in values]
     for i, highest in enumerate(polynomial.degrees()):
         for _ in range(int(highest)):
             powers[i].append(powers[i][-1]*values[i])
-    result = FIELD.zero
+    result = field.zero
     for exponents, coefficient in polynomial.to_dict().items():
-        term = scalar(FIELD, int(coefficient.p), int(coefficient.q))
+        term = scalar(field, int(coefficient.p), int(coefficient.q))
         for i, exponent in enumerate(exponents):
             term *= powers[i][int(exponent)]
         result += term
@@ -314,23 +325,93 @@ def check_shared_hypersurfaces(common, units):
     return checked
 
 
+def check_discriminants():
+    P, M, L, E = SYMBOLS
+    field = RationalFunctionField((P, M, E))
+    roots = [-1/((P-1)*(M+1)), -1/((P+1)*(M-1))]
+    units = regularity_factors()
+
+    def local_factors(root, order):
+        denominators, pivots = rank_witness(order, field.variables, {L: root})
+        parameters = tuple(field.from_sympy(value) for value in (P, M, root, E))
+        regular = [pull(unit, parameters, field).n for unit in units]
+        regular.append(field.from_sympy(s.denom(root)).n)
+        return sorted(factor_support(denominators+pivots, regular))
+
+    direct = local_factors(roots[0], (0, 1, 2, 3))
+    assert not direct
+    standard = local_factors(roots[1], (0, 1, 2, 3))
+    alternate = local_factors(roots[1], (3, 2, 0, 1))
+    expected = (M*M*P-M*P*P+M*P-1, M-P-1)
+    names = [str(associate(field.from_sympy(value).n)) for value in expected]
+    assert standard == names[:1] and alternate == names[1:]
+
+    R1, R2 = P*(1-M*M)*L-M, P-M*(1-P*P)*L
+    swap_L = R2/((1-P*P)*R1)
+    assert s.cancel(swap_L.subs(L, roots[1])-roots[0].subs(M, -M)) == 0
+    minimal = s.Poly(2*P*P+2*P-1, P, domain=s.QQ)
+    assert minimal.is_irreducible
+    number = s.QQ.algebraic_field((minimal, s.CRootOf(minimal, 0)))
+
+    def convert(value):
+        numerator, denominator = fraction(value)
+        components = [number.new(s.Poly(part, P, domain=s.QQ).rem(minimal).rep.to_list())
+                      for part in (numerator, denominator)]
+        return components[0]/components[1]
+
+    assert s.rem(expected[0].subs(M,P+1), minimal.as_expr(), P) == 0
+    coordinates = (P, P+1, -2, -2*P)
+    values = tuple(FIELD.from_sympy(value) for value in coordinates)
+    for unit in units:
+        value = pull(unit, values)
+        assert convert(s.sympify(str(value.n).replace("^","**"), locals={"P":P}))
+    p0, m0 = P/4, (P+1)/4
+    s0, k0 = (p0+m0)/2, (1-(P+1)**2)/64
+    source = four_cross_both_outer()[0]
+    image = source.subs({p: p0, m: m0, ratio: -128*p0*k0-m0, e: -2*P*k0*k0/s0},
+                        simultaneous=True)
+    _, rank = centre_calculation(image, (0, 1, 2, 3), number, convert)
+    assert rank == 20
+    data = {"first_discriminant_factors": direct, "second_witness_factors": [standard, alternate],
+            "exceptional_base_polynomial": str(minimal.as_expr()),
+            "exceptional_centre_rank": rank}
+    (DIRECTORY / "cubic_CY_one_segre_double_split_FDC_discriminant_certificate.json").write_text(
+        json.dumps(data, indent=2)+"\n"
+    )
+    print("PASS both FDC3 discriminant hypersurfaces", flush=True)
+
+
 def main():
-    denominators, pivots = rank_witness()
+    parser = argparse.ArgumentParser(description=__doc__)
+    flag = parser.add_mutually_exclusive_group()
+    flag.add_argument("--alternate", action="store_true")
+    flag.add_argument("--discriminants", action="store_true")
+    arguments = parser.parse_args()
+    if arguments.discriminants:
+        return check_discriminants()
+    alternate = arguments.alternate
+    order = (3, 2, 0, 1) if alternate else (0, 1, 2, 3)
+    denominators, pivots = rank_witness(order)
     units = regularity_factors()
     first = factor_support(denominators+pivots, units)
-    assert len(first) == 10
+    assert len(first) == (8 if alternate else 10)
     moves = symmetry_supports(first.values(), units)
     common = set.intersection(*(set(group) for group in moves.values()))
-    assert len(common) == 5
+    assert len(common) == (2 if alternate else 5)
     data = {
         "centre_rank": 16,
         "regularity_units": sorted(map(str, units)),
         "factors": sorted(first),
         "symmetry_supports": {name: sorted(support) for name, support in moves.items()},
         "common_factors": sorted(common),
-        "shared_hypersurface_samples": check_shared_hypersurfaces([first[key] for key in common], units),
     }
-    (DIRECTORY / "cubic_CY_one_segre_double_split_FDC_witness_certificate.json").write_text(
+    if alternate:
+        primary = json.loads((DIRECTORY / "cubic_CY_one_segre_double_split_FDC_witness_certificate.json").read_text())
+        assert common <= set(primary["common_factors"])
+    else:
+        data["shared_hypersurface_samples"] = check_shared_hypersurfaces([first[key] for key in common], units)
+    tag = "alternate" if alternate else "witness"
+    (DIRECTORY / f"cubic_CY_one_segre_double_split_FDC_{tag}_certificate.json").write_text(
         json.dumps(data, indent=2)+"\n"
     )
     print("PASS FDC3 witness", len(first), "factors and", len(common), "shared factors", flush=True)
