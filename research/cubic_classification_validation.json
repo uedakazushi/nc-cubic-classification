@@ -5136,5 +5136,16 @@
     "verification": "PASS defining formulas, residues, reflection-order identities, complementary corner, and exact Gaussian rational formal corner calculations for quartic and quintic through the order-four resonance. The general criterion is proved structurally.",
     "scope": "One squarefreeness condition at all translation orders for the normalized triangular volume pencil and the normalized quantum secant, subject to their stated small-order exclusions. No relative intrinsic recognition yet.",
     "main_build": "LuaLaTeX PASS, 550 pages, no overfull boxes or undefined references/citations"
+  },
+  "H3_trait_homological_generization_v370": {
+    "proof": "papers/sections/cubic_formal_intrinsic_reconstruction.tex",
+    "theorems": [
+      "prop:h3-noetherian-local-lift",
+      "thm:h3-relative-flat-coherent-serre-local",
+      "cor:h3-trait-homological-generization"
+    ],
+    "verification": "Structural proof through degreewise complete and valued lattices, lifted AS4 resolutions, the torsion base-change comparison, and finite-amplitude Ext.",
+    "scope": "Relative Serre on flat coherent objects of presented families over noetherian local bases with geometric H3 closed fiber. Preservation of all listed algebraic and homological conditions under geometric DVR generization. The categorical rank condition and full openness remain.",
+    "main_build": "LuaLaTeX PASS, 552 pages, no overfull boxes or undefined references/citations"
   }
 }
