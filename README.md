@@ -20,7 +20,7 @@ GitHub main が現行ソースの正本。研究・保存の規則は [AGENTS.md
 | 目標・未解決の核心・再開 | [研究方針](00_research_plan.md) |
 | 証明の依存関係・次の検証 | [実行方針](research/cubic_14641_codex_plan.md) |
 | 数式・反例・計算上の障害 | [分類ノート](research/cubic_14641_classification.md) |
-| 公表原稿と全証明 | [weak_cubic_axioms.tex](papers/weak_cubic_axioms.tex) |
+| 公表原稿と全証明 | [nc-cubic-classification.tex](papers/nc-cubic-classification.tex) |
 | 全幾何学的判定と四成分 | [cubic_presentation_components.tex](papers/sections/cubic_presentation_components.tex) |
 | 相対内在族とArtin変形 | [cubic_formal_intrinsic_reconstruction.tex](papers/sections/cubic_formal_intrinsic_reconstruction.tex) |
 | 計算・組版・点検の範囲 | [検証記録](research/cubic_classification_validation.json) |
@@ -37,10 +37,10 @@ python3 computations/verify_cubic_CY_three_alpha_elliptic_line.py
 python3 computations/verify_cubic_skew_jets.py
 python3 computations/verify_cubic_CY_three_alpha_elliptic_diagonal.py
 python3 computations/verify_cubic_CY_three_alpha_elliptic_monodromy.py
-latexmk papers/weak_cubic_axioms.tex
+latexmk papers/nc-cubic-classification.tex
 ```
 
-LuaLaTeXにはLuaTeX-ja・原ノ味フォント・latexmkが必要。出力PDFは `build/weak_cubic_axioms.pdf`。検算はそれぞれの入力に対する主張を確認するもので、上の少数コマンドだけで全分類を再検証するものではない。JSONを書き直す検証器もあるため、出力diffを確認する。
+LuaLaTeXにはLuaTeX-ja・原ノ味フォント・latexmkが必要。出力PDFは `build/nc-cubic-classification.pdf`。検算はそれぞれの入力に対する主張を確認するもので、上の少数コマンドだけで全分類を再検証するものではない。JSONを書き直す検証器もあるため、出力diffを確認する。
 
 現行ソース・必要なコード・入力・証明書だけを保持し、PDF・ZIP・組版中間物・実行ログはGit追跡しない。通常のmain保存が成功した場合はLibraryに重複保存しない。
 

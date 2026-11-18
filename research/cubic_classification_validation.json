@@ -2,7 +2,7 @@
   "schema_version": "proof-evidence-catalog-v1",
   "date": "2026-11-19",
   "scope": "現行H3分類原稿を支える証明資産・計算入力・検証範囲のカタログ。数学的主張の現行状態は研究方針と主原稿による。本カタログの保持済み検証記録は今回の再実行を意味しない。",
-  "proof_root": "papers/weak_cubic_axioms.tex",
+  "proof_root": "papers/nc-cubic-classification.tex",
   "evidence_semantics": {
     "retained_evidence": "Existing reports of proof checks and computations, normalized by mathematical topic. Not an independently rerun status.",
     "recorded_result": "Exact result or local proof argument recorded with the indicated assets; no inferred theorem beyond its stated assumptions.",

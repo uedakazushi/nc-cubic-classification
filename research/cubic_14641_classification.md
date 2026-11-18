@@ -3,7 +3,7 @@
 2026-11-19 / classification-notes-v375。
 
 再開時には [研究方針](../00_research_plan.md) を最初に読む。本書は主原稿の詳細証明を複製するものではなく、認識、必要被覆、具体模型、反例・障害、計算規約を主題別に参照するためのノートである。
-主張の所在は `papers/weak_cubic_axioms.tex` と入力される各節、実際の検証状態は `research/cubic_classification_validation.json`、外部入力は `research/as4_imports.json` を正本とする。
+主張の所在は `papers/nc-cubic-classification.tex` と入力される各節、実際の検証状態は `research/cubic_classification_validation.json`、外部入力は `research/as4_imports.json` を正本とする。
 原稿に証明があること、限定した監査で論証を確認したこと、検証器を実行したこと、独立査読が済んだことを同一視しない。
 
 **対象の範囲。** 強い内在的H3は、反標準環が一次生成で、その二次包絡が左右noetherian quadratic Koszul AS4型14641であることを含む。相対族は本文 `def:h3-intrinsic-family` の仮定を持つものを指す。相対Serre作用、AZ ampleな反標準orbitとその導来Homの任意noetherian底変更、二次包絡B₃の平坦性を課し、底上平坦なcoherent対象から生成する厚い圏の二対象間のRHomがA-perfectであることも含む。AS4包絡を仮定しないweakクラス、任意の平坦Abel圏変形、全AS4代数の分類とは区別する。
@@ -1754,7 +1754,7 @@ Etingof–Ginzburg の付録と著者サイトにある Rains の E6 中心元�
 
 この族から外れる指定四方向の一次中心 incidence も全係数で判定した。双対数上で最高次を `(1+epsilon*gamma)yz+(1-epsilon*gamma)zy` に変え、対角項を `epsilon*alpha_x*tx`（巡回）だけ動かすと、三次中心切断の持ち上げは正確に `alpha=-4*gamma*(A,B,C)` のとき存在する。持ち上げを明示し、全ての h,beta,A,B,C,D に通用する次数4の階数86、三次交換子階数15、単元障害行列式 `-9/(4*(1+h^3)^2)` を検算した。これは指定方向の一次 incidence であり、積分可能性・全変形空間・新しい H3 成分を主張しない。 また、この明示的持ち上げの二次障害も全係数で消え、対角係数の二次補正 kappa と中心切断 G2 を計算した（epsilon^3=0）。
 
-**Skew包絡部分の幾何学的対象は分類したが，全AS4包絡を覆ったわけではない。** 主証明は papers/weak_cubic_axioms.tex の sec:14641-classification とそこでinputされるcubic分類節。
+**Skew包絡部分の幾何学的対象は分類したが，全AS4包絡を覆ったわけではない。** 主証明は papers/nc-cubic-classification.tex の sec:14641-classification とそこでinputされるcubic分類節。
 
 ### 位数二Clifford–Sklyaninの分裂包絡族：全切断・有限比較を解決
 
@@ -2107,7 +2107,7 @@ R^op⊗Rは楕円THCR二つの外積と中央二元の持ち上げで強noetheri
 - python3 computations/verify_cubic_clifford_lift.py
 - python3 computations/verify_cubic_clifford_beta.py
 - python3 computations/verify_cubic_clifford_beta_action.py
-- latexmk papers/weak_cubic_axioms.tex
+- latexmk papers/nc-cubic-classification.tex
 
 最初の三検証器は標準ライブラリ。整数証明書の再生成だけ--regenerateとSymPy 1.14を使う。admissible検証器はSymPy 1.14で特性零の恒等式・Jacobian unit idealを、Pym検証器はQQ上の商空間・非零小行列式を検査する。詳細な検証状態はresearch/cubic_classification_validation.json、as4の採用範囲はresearch/as4_imports.json。独立査読・形式化・網羅的新規性調査は未実施。
 

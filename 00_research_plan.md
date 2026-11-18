@@ -23,7 +23,7 @@
 
 ## 3. 現行原稿の到達点と確実性
 
-主原稿は [papers/weak_cubic_axioms.tex](papers/weak_cubic_axioms.tex)。以下は**原稿に証明を備える主張**であり、全文の独立監査完了を意味しない。今回の重点点検・再実行の範囲は [検証記録](research/cubic_classification_validation.json) と [実行方針](research/cubic_14641_codex_plan.md) を読む。
+主原稿は [papers/nc-cubic-classification.tex](papers/nc-cubic-classification.tex)。以下は**原稿に証明を備える主張**であり、全文の独立監査完了を意味しない。今回の重点点検・再実行の範囲は [検証記録](research/cubic_classification_validation.json) と [実行方針](research/cubic_14641_codex_plan.md) を読む。
 
 | 主張 | 仮定・範囲 | 主な証明箇所 |
 |---|---|---|
@@ -52,7 +52,7 @@ AS4条件を課さない広いweakクラスの低次数提示・全包絡存在�
 1. 本書、[実行方針](research/cubic_14641_codex_plan.md)、[現行分類ノート](research/cubic_14641_classification.md)を読む。
 2. 主原稿の該当ラベルと検証記録から、必要な計算・一次資料だけを選ぶ。
 3. `python3 -m pip install -r requirements.txt`。Python依存はSymPy、python-flint、NumPy、NetworkX。LuaLaTeXはLuaTeX-ja・原ノ味フォント・latexmkを必要とする。
-4. `python3 computations/verify_research_bundle.py` で入力・参照・依存宣言の整合性を確認し、リポジトリrootで `latexmk papers/weak_cubic_axioms.tex`。PDFは `build/weak_cubic_axioms.pdf`。構造検査は数学的証明の検証ではない。
+4. `python3 computations/verify_research_bundle.py` で入力・参照・依存宣言の整合性を確認し、リポジトリrootで `latexmk papers/nc-cubic-classification.tex`。PDFは `build/weak_cubic_axioms.pdf`。構造検査は数学的証明の検証ではない。
 5. 再実行時は検証器のJSON書出し先を確認する。旧証明書の存在を新たな実行成功と扱わず、実行した入力・終了状態・比較結果を検証記録へ置く。
 
 ## 6. 関連研究の正本

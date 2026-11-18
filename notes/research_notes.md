@@ -3,7 +3,7 @@
 2026-11-19 / research-notes-v9。
 
 再開時は `00_research_plan.md` を最初に読む。全H3分類の現在の主張と依存関係は
-`research/cubic_14641_classification.md`、証明は `papers/weak_cubic_axioms.tex` とその読込節、
+`research/cubic_14641_classification.md`、証明は `papers/nc-cubic-classification.tex` とその読込節、
 実際の検証状態は `research/cubic_classification_validation.json` を参照する。
 本書は具体的な計算で再利用する情報を保持する。広いweak公理との比較は
 `research/weak_cubic_axioms.md` に分ける。

@@ -4,7 +4,7 @@
 
 再開時は `00_research_plan.md` を最初に読む。本書は、強い14641型H3の分類と、
 それより広いweak公理からの認識問題を区別するための現行ノートである。
-本リポジトリで必要な証明は `papers/weak_cubic_axioms.tex` とその読込節、
+本リポジトリで必要な証明は `papers/nc-cubic-classification.tex` とその読込節、
 全H3分類の詳細は `research/cubic_14641_classification.md` にある。
 
 ## 1. 対象の区別と現在残る問い

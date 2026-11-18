@@ -42,7 +42,7 @@ H3反標準環の二次包絡は内在的に復元されるため、幾何学的
 使用した既存入力（確認時 main 944ad1631f893c1d644052211e32eb12d23dc881）：
 - `cubic_quantum_triangle_full_cuts.tex`: 元のUの非空性、H3認識、幾何学的矢。
 - `cubic_finite_order_relative.tex`: 固定有限位数楕円境界族のH3開性、表示族の底変更。
-- `weak_cubic_axioms.tex`: intrinsic反標準環と二次包絡の復元。
+- `nc-cubic-classification.tex`: intrinsic反標準環と二次包絡の復元。
 
 ## 確実性と検証
 

@@ -46,7 +46,7 @@ def main():
             visit(child)
         active.remove(path)
 
-    visit(ROOT / "papers/weak_cubic_axioms.tex")
+    visit(ROOT / "papers/nc-cubic-classification.tex")
     problems.extend(f"Duplicate label: {k}" for k, n in Counter(labels).items() if n > 1)
     problems.extend(f"Undefined reference: {k}" for k in sorted(set(refs) - set(labels)))
     problems.extend(f"Undefined citation: {k}" for k in sorted(set(citations) - set(bibliography)))

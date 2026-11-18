@@ -1,4 +1,4 @@
-# Codex 研究指示 — nc-cubic-moduli
+# Codex 研究指示 — nc-cubic-classification
 更新日: 2026-11-19。対象: **一つのCloud Codexタスクによる逐次研究**。GitHub `main` が唯一の正本。
 
 > **研究正本の分離（2026-11-17）**：このリポジトリはH3認識・完全分類専用。楕円E6量子化成分の独立論文・研究・検算の正本は [nc-cubic-e6](https://github.com/uedakazushi/nc-cubic-e6)、ambient射とR(1,3)成分は [nc-cubic-ambient](https://github.com/uedakazushi/nc-cubic-ambient)、標識忘却とPicard作用は [nc-cubic-unmark](https://github.com/uedakazushi/nc-cubic-unmark)、量子Fermat非AS短報は [nc-cubic-non-as](https://github.com/uedakazushi/nc-cubic-non-as)。同じ数学的結果を分類で引用・利用するのはよいが、これらの**独立論文を本リポジトリの旧パスへ再作成・更新しない**。各自の新しいmainに保存する。全H3認識に必要な有効な証明を削除せず保持する。移管済みファイルを旧版正本として再開しない。
@@ -33,7 +33,7 @@
 
 1. `00_research_plan.md`（最初に読む）、本`AGENTS.md`、`research/cubic_14641_codex_plan.md`。
 2. `research/cubic_14641_classification.md`、`research/cubic_classification_validation.json` と各現行研究ノートの該当部分。
-3. 中心論文 `papers/weak_cubic_axioms.tex` と、取り組む問題に必要な `papers/sections/*.tex`・計算コード。
+3. 中心論文 `papers/nc-cubic-classification.tex` と、取り組む問題に必要な `papers/sections/*.tex`・計算コード。
 4. 必要に応じ他の現行論文・ノートを読む。再開に必要な新しい証明、文献情報、再現手順は**現行原稿とノートへ統合**し、会話のみに残さない。
 
 最新の `main` と現行の未解決問題を確認し、以前のタスク一覧にある「NEXT」を無批判に採用しない。**解決済みの問題に戻らず、まだ有効な未解決の核心から研究を開始する。** 毎回長い計画を再執筆する代わりに、原稿やコードに実際の進展を作る。
@@ -56,7 +56,7 @@
 
 ## 4. 現在の到達点と優先順位
 
-正確な定理と証明は `research/cubic_14641_classification.md` と `papers/weak_cubic_axioms.tex` を正本とする。主な既存成果として、skew包絡全体の五型・31座標パラメータの幾何学的分類、非CY符号分枝、Pymの一般chartの除外、量子基底unipotent持上げ・指定Ore/CY層の除外、良い楕円中心拡大、分裂Clifford型と非分裂β型の切断・幾何学的矢の分類を保持する。
+正確な定理と証明は `research/cubic_14641_classification.md` と `papers/nc-cubic-classification.tex` を正本とする。主な既存成果として、skew包絡全体の五型・31座標パラメータの幾何学的分類、非CY符号分枝、Pymの一般chartの除外、量子基底unipotent持上げ・指定Ore/CY層の除外、良い楕円中心拡大、分裂Clifford型と非分裂β型の切断・幾何学的矢の分類を保持する。
 
 **現行の主張（classification-v375）：** 標数0の全H3幾何学的対象・許容切断・構造対象付き同値を判定した。有限次数の正規三次入射のH3開をPGL₄で割ると、導来Homの底上完全性・相対Serre・豊富性・orbit底変更・二次包絡の三次平坦性を明記した相対内在的H3族の有限型代数stackになる。相対Serre、任意noetherian底変更、coherent tailsの有効降下、全矢を証明した。四既約成分は互いに交わらず、一般次元は3,4,5,8。正確な定義は原稿の `def:h3-intrinsic-family`。滑らかな可換三次点では全次数平坦なArtin次数変形で三次平坦性は自動。非可換点での自動性の範囲は別問題として残る。原稿に証明があることと、全文の独立監査の完了は区別する。重点点検と再実行の範囲は現行検証記録を読む。
 
