@@ -1,0 +1,124 @@
+[
+  {
+    "chart": "DD1",
+    "pivot_factor_support": [
+      "h",
+      "h - I/4"
+    ],
+    "recomputed_values": [],
+    "curve_recomputations": []
+  },
+  {
+    "chart": "EN2",
+    "pivot_factor_support": [
+      "h",
+      "h + I/256",
+      "h + I/512",
+      "h - 1/512 + I/512",
+      "h - 1/512 - I/512",
+      "h - I/256",
+      "h - I/512"
+    ],
+    "recomputed_values": [
+      "0",
+      "-I/256",
+      "-I/512",
+      "1/512 - I/512",
+      "1/512 + I/512",
+      "I/256",
+      "I/512"
+    ],
+    "curve_recomputations": []
+  },
+  {
+    "chart": "DA1",
+    "pivot_factor_support": [
+      "h",
+      "p"
+    ],
+    "recomputed_values": [],
+    "curve_recomputations": []
+  },
+  {
+    "chart": "EB2",
+    "pivot_factor_support": [
+      "h",
+      "h*p**2 - h*p/4 - 1/4",
+      "p",
+      "p - 1/4"
+    ],
+    "recomputed_values": [],
+    "curve_recomputations": []
+  },
+  {
+    "chart": "TN1",
+    "pivot_factor_support": [
+      "h + 8*I",
+      "h - 8*I"
+    ],
+    "recomputed_values": [
+      "-8*I",
+      "8*I"
+    ],
+    "curve_recomputations": []
+  },
+  {
+    "chart": "FZ1",
+    "pivot_factor_support": [
+      "-3*h**2 + 2*h*p + p**2 - 1/262144",
+      "-h + p",
+      "-h + p + 1/512",
+      "-h + p - 1/512",
+      "-h**2 + p**2 - 1/262144"
+    ],
+    "recomputed_values": [],
+    "curve_recomputations": [
+      {
+        "chart": "-h + p + 1/512",
+        "pivot_factor_support": [
+          "h"
+        ],
+        "recomputed_values": [
+          "0"
+        ],
+        "curve_recomputations": []
+      },
+      {
+        "chart": "-h + p - 1/512",
+        "pivot_factor_support": [
+          "h"
+        ],
+        "recomputed_values": [
+          "0"
+        ],
+        "curve_recomputations": []
+      },
+      {
+        "chart": "(-h + p)*(3*h + p) - 1/262144",
+        "pivot_factor_support": [
+          "h",
+          "h + 1/512",
+          "h - 1/512"
+        ],
+        "recomputed_values": [
+          "-1/512",
+          "1/512"
+        ],
+        "curve_recomputations": []
+      },
+      {
+        "chart": "(-h + p)*(h + p) - 1/262144",
+        "pivot_factor_support": [
+          "h",
+          "h + 1/512",
+          "h - 1/512"
+        ],
+        "recomputed_values": [
+          "-1/512",
+          "1/512"
+        ],
+        "curve_recomputations": []
+      }
+    ]
+  }
+]

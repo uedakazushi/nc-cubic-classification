@@ -1514,5 +1514,40 @@
     ],
     "used_part": "The five isolated representations DE2, DC1, DX1, and the two EN3 cases in the complete two-product cover.",
     "verification": "Independently reconstructed the six original relations and checked full central cubic dimensions, skew commutation of two linear forms and their independent central cubes."
+  },
+  "CY_one_segre_double_split_small_necessary_v330": {
+    "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+    "files": [
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_DOUBLE_SPLIT_CROSS_ADJACENT.tex",
+        "sha256": "e9b153b0342afedfa6c1ba850d6dccf89bf362c9005e57a0a24da7de9ec3e7ba"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_DOUBLE_SPLIT_DIAGONAL_NONISOTROPIC.tex",
+        "sha256": "7b2caaba8a1e2f05bca7d3d4287a78cac56477eca3b7d355b339734e0ca50cec"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_DOUBLE_SPLIT_EIGHTH_NONISOTROPIC.tex",
+        "sha256": "d35cf5428902e1ecb8e53cf59ca91f0741ea90aba41f8b610ba56bc05844692e"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_DOUBLE_SPLIT_EIGHTH_DECOMPOSABLE.tex",
+        "sha256": "dcfa9d1fbcee1b818b2961d8b72de8cb49177fa3b71eb87629ecf5b228d27aa3"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_DOUBLE_SPLIT_TRIPLE_EIGHTH_NONISOTROPIC.tex",
+        "sha256": "b2069ebb3371a53b1709c0e94169085312b5b71dae8ea1f693661cdd12e9198c"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_DOUBLE_SPLIT_FULL_ZERO_EXTERNAL.tex",
+        "sha256": "fd24cedbd5a1417664a1b2398b50239471229d43b29d0e231091b143a107495e"
+      },
+      {
+        "path": "research/proofs/CY_ONE_COMMUTATOR_DOUBLE_SPLIT_ISOTROPIC.tex",
+        "sha256": "b2eee645c3122087e3f485ab55e7e2917cd7e1d26fbaa96065d905202db1ba3d"
+      }
+    ],
+    "used_part": "Necessary six continuous crossed representations DA1, DD1, EN2, EB2, TN1 and FZ1, and the two isotropic outer matrices Ha,Hn covering nine families.",
+    "verification": "Independent centre rank and all exceptional value calculations, and exact all-parameter change of the isotropic relation basis, in nc-cubic-moduli."
   }
 }

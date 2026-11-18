@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "version": "classification-v329",
+  "version": "classification-v330",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -4638,5 +4638,14 @@
     "scope": "All five isolated envelopes of the two-product projection excluded.",
     "exact_control": "PASS dimensions (10,20,35) and central ranks (20,20,20,20,18). In the rank-18 case two independent central cubes of primitive-cubic-skew commuting linear forms span the kernel.",
     "main_build": "LuaLaTeX PASS, 486 pages, no overfull boxes or undefined cross-references/citations"
+  },
+  "CY_one_segre_double_split_small_v330": {
+    "proof": "papers/sections/cubic_CY_one_segre_double_split.tex",
+    "validator": "computations/verify_cubic_CY_one_segre_double_split_remaining_small.py",
+    "certificate": "computations/cubic_CY_one_segre_double_split_small_certificate.json",
+    "scope": "Fifteen more continuous families of the two-product projection excluded. Exactly the three decomposable crossed representations TD1, FO1–FO2 and FDC3 remain for this projection.",
+    "exact_control": "PASS centre rank 20 over all six crossed families, four residual rational curves, and all their isolated specializations. PASS exact source relation bases for both general isotropic outer matrices, certified by the same unit determinant.",
+    "ordinary_proof": "In all nine isotropic outer families the anticommuting linear element e and the e-adic edge force every central cubic into the commuting plane k[e,b], so no cubic cut is a domain.",
+    "main_build": "LuaLaTeX PASS, 487 pages, no overfull boxes or undefined cross-references/citations"
   }
 }
