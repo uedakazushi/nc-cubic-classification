@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "version": "classification-v323",
+  "version": "classification-v324",
   "scope": "Strong intrinsic 14641 H3: universal single Nakayama-normal linear condition; geometric classification of the entire skew-envelope sector; generic exclusions in four specified non-skew Pym CY charts. NOT all H3 classification. All quantum canonical-untwist lifts; whole nonzero commutative-base differential Ore sector and specified CY structural strata excluded. Good elliptic fixed-envelope cuts uniformly recognized; over C split B=S[t] cuts and groupoids classified; finite-order-boundary fixed ambients have finitely many bad values. Complete geometric classification within the explicit order-two Clifford-Sklyanin Hesse split-envelope family, including all cuts, all geometric arrows, and inertia; no global AS4 coverage claim. Nonsplit order-two symmetric-potential extensions have their entire quadratic potential term removed by a universal first-order central-cubic obstruction. Complete all-parameter geometric classification of the specified order-two symmetric-potential central-extension sector, including the nonsplit beta family and its non-Azumaya cuts; generic dimension7. Not all H3 coverage. Integrated smooth Hesse central-extension chart now has full-degree flat CY AS4 envelopes, exact affine H3 reduction, explicit order4 transcendental-center H3 witness, and all geometric arrows with generic dimension8 presentation quotient.",
   "proof_root": "papers/weak_cubic_axioms.tex",
   "proof_inputs": [
@@ -4580,5 +4580,23 @@
     "scope": "All central cubic pencils for cuspidal, tangent-conic and the residual concurrent-lines alpha envelopes. Axis obstruction at C=0 for cuspidal and tangent-conic. Remaining cuts are domains, have intrinsic Gabriel–Krull rank one, and dehomogenize to filtered Kleinian quantizations of types E6, D5 and D4.",
     "exact_control": "PASS three lifts, boundary centre ranks in degrees 1 through 3, all relevant recurrences, and weight symbols. The affine and noncommutative projective global dimension tests are open.",
     "main_build": "LuaLaTeX PASS, 477 pages, no overfull boxes or undefined cross-references/citations"
+  },
+  "CY_three_alpha_additive_local_v324": {
+    "proof": "papers/sections/cubic_CY_three_alpha_additive.tex",
+    "validator": "computations/verify_cubic_CY_three_alpha_additive_center.py",
+    "scope": "Exact finite test for affine global dimension on every residual cuspidal, tangent-conic and concurrent-lines cut. The three formal degree-zero localizations at the singular axis have left and right global dimension at most two.",
+    "external_theorems": [
+      {
+        "source": "https://arxiv.org/abs/1605.00592",
+        "used": "Losev Proposition 3.17 over C, with algebraically closed characteristic-zero transfer for the finite isomorphism equations"
+      },
+      {
+        "source": "https://doi.org/10.1215/S0012-7094-98-09218-3",
+        "used": "Crawley–Boevey–Holland Lemma 1.4 and Theorem 0.4(4); the scope of the finite root criterion also checked in Crawford Lemma 2.20 (arXiv:1610.08430)"
+      }
+    ],
+    "exact_control": "PASS the three decreasing weight multiplication bounds and initial relations and cuts; the affine PBW polynomial elimination is not implemented.",
+    "open": "Descent from these completions to the coherent tails category and the complete projective boundary test.",
+    "main_build": "LuaLaTeX PASS, 478 pages, no overfull boxes or undefined cross-references/citations"
   }
 }

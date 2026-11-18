@@ -38,6 +38,18 @@ def check(name, rules, lift, leading, order, weights, leading_weight, leading_sy
     print("PASS", name, "central pencil, boundary centre, and weight filtration")
 
 
+def check_axis_symbols(rules, lift, a_weight, brackets, initial_cut):
+    weights = {"a": a_weight, "b": 1, "c": 1, "d": 0}
+    weight = lambda word: sum(weights[letter] for letter in word)
+    for (x, y), terms in rules.items():
+        least = weights[x]+weights[y]
+        assert all(weight(word) >= least for word, _ in terms)
+        assert [(word, value) for word, value in terms if weight(word) == least] == brackets.get(x+y, [])
+    least = min(weight(word) for word, _ in initial_cut)
+    assert all(weight(word) >= least for word, _ in lift)
+    assert [(word, value) for word, value in lift if weight(word) == least] == initial_cut
+
+
 def check_singular_axis(rules, lift, shift):
     def specialize(terms):
         return [(word, s.sympify(coefficient).subs(C, 0)) for word, coefficient in terms]
@@ -64,6 +76,8 @@ def cusp():
     check("cusp", rules, lift, leading, "acbd", (0, 4, 3, 6), 12,
           [("add", C), ("ccd", 1), ("bbb", 1)])
     check_singular_axis(rules, lift, s.Matrix([[1, 0, 0], [-B, 1, 2], [-B, 0, 1]]))
+    check_axis_symbols(rules, lift, 2, {"bc": [("cc", 1), ("ad", 2*C)], "db": [("cd", 2)]},
+                       [("add", C), ("ccd", 1)])
 
 
 def tangent():
@@ -85,6 +99,8 @@ def tangent():
     check("tangent", rules, lift, leading, "abcd", (0, 2, 3, 4), 8,
           [("add", C), ("bbd", 1), ("bcc", 1)])
     check_singular_axis(rules, lift, s.Matrix([[1, 0, 0], [B, 1, 0], [-A-B, -2, 1]]))
+    check_axis_symbols(rules, lift, 2, {"cb": [("bb", -1), ("ad", -2*C)], "dc": [("bd", -2)]},
+                       [("add", C), ("bbd", 1)])
 
 
 def concurrent():
@@ -100,6 +116,7 @@ def concurrent():
         *leading,
     ]
     check("concurrent", rules, lift, leading, "abcd", (0, 2, 2, 3), 6, [("add", 1), *leading])
+    check_axis_symbols(rules, lift, 3, {}, [("add", 1), *leading])
 
 
 if __name__ == "__main__":
