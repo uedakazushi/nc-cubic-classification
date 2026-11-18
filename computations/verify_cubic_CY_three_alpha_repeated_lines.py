@@ -6,13 +6,13 @@ from itertools import combinations
 import sympy as s
 
 
-def check_lift(rules, lift, leading):
-    """Reduce the four commutators in the ordered-word basis."""
+def ordered_reducer(rules, order):
+    """Return the recursive reduction in the specified generator order."""
 
     @cache
     def reduce(word):
         for i, (x, y) in enumerate(zip(word, word[1:])):
-            if x <= y:
+            if order.index(x) <= order.index(y):
                 continue
             branches = [(y + x, 1), *rules.get((x, y), [])]
             terms = defaultdict(lambda: 0)
@@ -22,8 +22,15 @@ def check_lift(rules, lift, leading):
             return {w: s.expand(c) for w, c in terms.items() if s.expand(c) != 0}
         return {word: 1}
 
+    return reduce
+
+
+def check_lift(rules, lift, leading, order="abcd"):
+    """Reduce the four commutators in the ordered-word basis."""
+    reduce = ordered_reducer(rules, order)
     assert all(reduce(word) == {word: 1} for word, _ in lift)
-    assert [(word, coefficient) for word, coefficient in lift if "a" not in word] == [(leading, 1)]
+    expected = [(leading, 1)] if isinstance(leading, str) else leading
+    assert [(word, coefficient) for word, coefficient in lift if "a" not in word] == expected
     for x in "abcd":
         coefficients = defaultdict(lambda: 0)
         for word, scalar in lift:

@@ -1,0 +1,119 @@
+\subsection{尖点・接線・共点型の中央切断とKleinian量子化}
+\label{subsec:cubic-CY-three-alpha-additive}
+
+\begin{proposition}\label{prop:cubic-CY-three-alpha-additive}
+三交換子の $\gamma\ne0$ の $\alpha$ 型で、先頭式が尖点三次曲線、
+二次曲線と接線の和、または相異なる共点三直線を定めるとする。
+固定出典\cite{AS4CYpinned}の表示で $\gamma=1$ とし、
+$H=F_0+aQ+a^2V$ を次の表から取る。
+共点型には先行する共点での排除条件を適用している。
+\[
+\begin{array}{c|l|l|l}
+ &F_0&Q&V\\ \hline
+\text{尖点}&b^3+c^2d&Abc+Bbd+Cd^2&Db+Ec+Fd\\
+\text{接線}&b^2d+bc^2&Abd+Bcd+Cd^2&Db+Ec+Fd\\
+\text{共点}&bc(b-c)&A(b^2-bc+c^2)+d^2&Eb+Fc
+\end{array}
+\]
+各包絡 $\mathcal B$ の中心三次は $kL+ka^3$ である。
+$L$ の全係数は証明および公開検証器に示す。
+H3の必要条件として尖点型と接線型では $C\ne0$ である。
+この条件の下で、また共点型では全係数について、
+各 $R=\mathcal B/(L+\lambda a^3)$ は整域であり、
+$\pi R$ はGabriel--Krull rank-one torsion-freeである。
+$U=(R[a^{-1}])_0$ は順に $E_6,D_5,D_4$ 型の
+Kleinian特異点のフィルター付きPoisson量子化となる。
+\end{proposition}
+\begin{proof}
+$a$ は中央であり、三つの残る関係は
+$[c,d]=H_b$、$[d,b]=H_c$、$[b,c]=H_d$ である。
+二次の右辺は対称化する。尖点型では $a<c<b<d$、
+他の二型では $a<b<c<d$ で順序単項式へ還元する。
+後述の重みで全交換補正の重みが厳密に下がるためこれらは張り、
+AS4のHilbert値から基底になる。$a=0$ の商は同じ順序単項式の基底を持つ。
+
+$L$ を、$a$ の指数で分けて $L=L_0+aL_1+a^2L_2$ とする。
+尖点型では
+\begin{align*}
+ L_0={}&b^3-3cb^2+c^2d,\\
+ L_1={}&-Ac^2/2+Acb-6Ccd+(-5B/2+12C)b^2+(B-6C)bd+Cd^2,\\
+ L_2={}&(-AB/2+3AC-D+E)c+(AB-3AC-B^2/2+D-2F)b\\
+       &+(AC+3BC+F)d.
+\end{align*}
+接線型では
+\begin{align*}
+ L_0={}&-b^3/3+b^2c+b^2d+bc^2,\\
+ L_1={}&(-A/2+B/2-2C/3)b^2+(-2B+2C)bc+Abd\\
+       &+(-3B/2+2C)c^2+(B-2C)cd+Cd^2,\\
+ L_2={}&(AB/2-AC-B^2/6+D-F)b+(-AB/2+B^2/2-BC+E-F)c\\
+       &+(AC+2BC-2C^2+F)d.
+\end{align*}
+共点型では
+\begin{align*}
+ L_0={}&b^2c-bc^2,\\
+ L_1={}&Ab^2-(A+2)bc-2bd+(A+2)c^2+2cd+d^2,\\
+ L_2={}&(E-2A)b+Fc+(A+2)d.
+\end{align*}
+三つの交換子を順序語基底へ還元すれば $L$ は中央となる。
+公開検証器はこの多項式恒等式に加え、$a=0$ の商の
+次数 $1,2,3$ の中心次元がそれぞれ $0,0,1$ であることを
+全順序語の交換子行列で確認する。
+$a=0$ での中央三次を $L_0$ で生成するので、
+任意の中央三次から $L$ の適切な倍を引くと $a$ の倍となる。
+$a$ の正則性で残る因子も中央であり、次数2と1の中心の像が
+零なので反復して $a^3$ の倍を得る。
+
+尖点型・接線型で $C=0$ とする。
+$d$ 軸は $R=\mathcal B/(L+\lambda a^3)$ の点対象を定め、shiftに固定される。
+$d$ の作用を恒等として $a,b,c$ の非対角成分を $u,v,w$ とおく。
+中央三次は点の一次イデアルの平方に含まれるので、
+拡大に対する条件は二次関係の一次化だけである。
+尖点型では $u'=u,\ w'=w-Bu,\ v'=v+w+w'$、
+接線型では $u'=u,\ v'=v+Bu,\ w'=w-v-v'-Au$ である。
+全初期値は自己拡大を与え、すべてのtails自己拡大をこの形で尽くす。
+従って $\operatorname{Ext}^1$ は次元3、shiftの行列式は1で、
+補題\ref{lem:cubic-odd-Serre-determinant}に反する。
+純粋な $a^3$ 切断は整域でないため、残る切断は全て $L+\lambda a^3$ と書ける。
+
+重み $(w(a),w(b),w(c),w(d))$ をそれぞれ
+$(0,4,3,6),(0,2,3,4),(0,2,2,3)$ とする。
+三つの補正項は全て対応する交換子の重みより小さい。
+順序基底により $\operatorname{gr}_w\mathcal B=k[a,b,c,d]$ である。
+三型の最高重み $12,8,6$ の切断記号は順に
+\[
+ b^3+c^2d+Ca d^2,\qquad b^2d+bc^2+Ca d^2,\qquad bc(b-c)+ad^2.
+\]
+これらを $f$ と書く。$L+\lambda a^3$ は中央で、$f$ は正則だから、
+$\operatorname{gr}_w R=k[a,b,c,d]/(f)$ となる。
+$f$ は $a$ について原始な一次式である。
+実際、$a$ の係数は $d^2$ の非零倍、定数係数は $d$ で割れない。
+従って $f$ は既約であり、$R$ は整域となる。
+さらに $R/(a)$ の随伴環は $k[b,c,d]/(F_0)$ であり、
+$d$ は $F_0$ を割らないので $R/(a)$ 上で正則である。
+$d$ の冪が生成する右イデアルの連続商は
+$R/(a)$ のHilbert級数に $(1-z)$ を掛けた級数をshiftしたもので、
+いずれもtailsで非零である。
+ゆえに $\pi(R/(a))$ は有限長でない。
+これと中央 $a$ の冪による降鎖を使えば、
+命題\ref{prop:r13-all-cut-domain-rank}の二段階Serre商の議論により
+$\pi R$ はGabriel--Krull rank-one torsion-freeとなる。
+
+$a=1$ とした順序基底にも同じ計算が適用される。
+まず $\mathcal B/(a-1)$ の随伴環が $k[b,c,d]$ であり、切断の最高記号は $f(1,b,c,d)$。
+よって $\operatorname{gr}_w U=k[b,c,d]/(f(1,b,c,d))$ を得る。
+三型で差1の交換子記号はこの式のJacobian Poisson括弧である。
+尖点型は $d\mapsto d-c^2/(2C)$ で $Cd^2+b^3-c^4/(4C)$、
+接線型は $d\mapsto d-b^2/(2C)$ で $Cd^2+bc^2-b^4/(4C)$ となる。
+共点型は $d^2$ と相異なる三方向を持つ二元三次式の和である。
+これは順にKleinianの $E_6,D_5,D_4$ の形である。
+\end{proof}
+
+この三型で用いた全計算は
+\texttt{verify\_cubic\_CY\_three\_alpha\_additive\_center.py} にある。
+元の斉次次数による可換曲面 $\operatorname{Proj}(\operatorname{gr}_w R)$ の
+境界 $a=0$ は、先頭曲線の滑らかな点では曲線方向の偏微分、
+唯一の特異点である $d$ 軸では $f_a$ が非零なので、
+全て可換曲面の滑らかな点に含まれる。
+この計算は可換随伴環での記述である。
+H3の許容性には、量子化アフィン環の有限大域次元と
+射影境界での非可換な正則性を引き続き判定する。
