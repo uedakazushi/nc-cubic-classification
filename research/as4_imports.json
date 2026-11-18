@@ -1453,5 +1453,16 @@
     ],
     "used_part": "Necessary normal forms for the cuspidal, tangent-conic and concurrent-lines alpha envelopes (first family for concurrent lines).",
     "verification": "Low-degree centre, lifts, tail recurrences and weighted associated graded symbols verified from the six relations; the upstream orbit classifications are not independently replayed."
+  },
+  "CY_three_alpha_smooth_necessary_v327": {
+    "commit": "6f798e0cd3ea36a17685f8d76f1d6d6fe8296ec0",
+    "files": [
+      {
+        "path": "research/proofs/CY_ALPHA_SMOOTH_CUBIC.tex",
+        "sha256": "47d28a64acf7b0cbc7feb96cca82cd6c36dd22b8ac5a1e505e9fdd43da48ad55"
+      }
+    ],
+    "used_part": "Necessary smooth leading alpha potential cover and actual envelope arrows by the flex frame.",
+    "verification": "Independently checked Hesse point determinant, singular Fourier reduction and cyclic triangle graph; main low-centre and lift argument uses Iyudu–Shkarin and Etingof–Ginzburg."
   }
 }
