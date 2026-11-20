@@ -30,7 +30,7 @@
 | 反標準認識 | 強いH3では `R=B/(G)`、`mu_R=1`、`Gv=mu_B^{-1}(v)G` | 主原稿の認識定理、`cubic_nakayama_incidence.tex` |
 | 全幾何学的判定 | 非CY二符号型、CY一交換子Ore型・三交換子中心拡大型・可換型 | `cubic_presentation_components.tex`, `thm:h3-complete-geometric-admissibility` |
 | 四成分 | 互いに開かつ閉、一般次元3,4,5,8 | 同節 `thm:h3-presentation-four-components` |
-| 相対分類 | 明示した相対H3族に対する `[X^H3/PGL4]` | `cubic_formal_intrinsic_reconstruction.tex`, `def:h3-intrinsic-family`, `thm:h3-intrinsic-algebraic-stack` |
+| 相対分類 | 明示した相対H3族の `\mathfrak H_3=[X^H3/PGL4]` | `cubic_formal_intrinsic_reconstruction.tex`, `def:h3-intrinsic-family`, `thm:h3-intrinsic-algebraic-stack` |
 | 三次平坦性判定 | 二次関係が部分束、剰余環KoszulならB3平坦から全次数平坦 | 同節 `lem:h3-degree-three-flat-koszul` |
 | 可換点の全Artin変形 | 特殊fiberが滑らかな可換三次、次数別平坦な次数変形 | 同節 `thm:h3-commutative-artin-envelope-automatic` |
 
