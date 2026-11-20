@@ -9,7 +9,7 @@ GitHub main が現行ソースの正本。研究・保存の規則は [AGENTS.md
 
 現行原稿は、強いH3の全幾何学的対象・許容切断・構造対象付き同値と慣性を記述する。四つの開かつ閉な既約成分の一般次元は **3、4、5、8**。全幾何学的判定は `thm:h3-complete-geometric-admissibility`、四成分は `thm:h3-presentation-four-components` を参照する。
 
-相対分類は、**導来HomのA完全性、相対Serre、exact反標準作用、AZ豊富性、orbitの底変更、二次包絡の三次平坦性**を明記した相対族について、有限型代数stack `[X^H3/PGL4]` を与える。定義は `def:h3-intrinsic-family`。滑らかな可換三次点では、次数別平坦な全Artin次数変形の包絡平坦性は自動となる。一般の非可換点での自動性は未決定である。
+相対分類は、**導来HomのA完全性、相対Serre、exact反標準作用、AZ豊富性、orbitの底変更、二次包絡の三次平坦性**を明記した相対族について、モジュライスタック `𝔥₃ = [X^H3/PGL4]`（ここで `𝔥₃` は LaTeX で `\mathfrak H_3`）を有限型代数stackとして与える。定義は `def:h3-intrinsic-family`。滑らかな可換三次点では、次数別平坦な全Artin次数変形の包絡平坦性は自動となる。一般の非可換点での自動性は未決定である。
 
 **証明が原稿にあることと、全文の独立監査が完了したことは区別する。** 今回の重点点検、実際に再実行した検算、未実行の証明書、組版の状態は [検証記録](research/cubic_classification_validation.json) に分けて記す。
 
