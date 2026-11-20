@@ -137,7 +137,7 @@ translation点 `(3:-1:1)` の良い還元位数はmod 5で9、mod 13で6であ�
 有限生成元や有限次元cohomologyだけで、高次A∞積または全局所大域次元を省略しない。
 大きい自由単語全列挙より、次数ごとの商基底・乗法・事前次数上界を用いる。
 
-三次三様体・非可換P⁴の独立研究は https://github.com/uedakazushi/nc-cubic-threefold-moduli を正本とする。
+三次三様体・非可換P⁴の独立研究は https://github.com/uedakazushi/nc-cubic-threefold を正本とする。
 関連する移管済み論文の所在と研究間の境界は `00_research_plan.md` を参照する。
 
 ## 5. 検証状態

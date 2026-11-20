@@ -64,6 +64,6 @@ AS4条件を課さない広いweakクラスの低次数提示・全包絡存在�
 | 標識忘却・Picard作用 | [nc-cubic-unmark](https://github.com/uedakazushi/nc-cubic-unmark) |
 | 量子Fermat非AS短報 | [nc-cubic-non-as](https://github.com/uedakazushi/nc-cubic-non-as) |
 | heart・Rains共鳴・corner | [nc-dp-surface-hearts](https://github.com/uedakazushi/nc-dp-surface-hearts) |
-| 次数1・三次三様体 | [nc-dp1-moduli](https://github.com/uedakazushi/nc-dp1-moduli)、[nc-cubic-threefold-moduli](https://github.com/uedakazushi/nc-cubic-threefold-moduli) |
+| 次数1・三次三様体 | [nc-dp1-moduli](https://github.com/uedakazushi/nc-dp1-moduli)、[nc-cubic-threefold](https://github.com/uedakazushi/nc-cubic-threefold) |
 
 分類に必要な有効な定理・証明・コードは保持する。移管済みの独立論文を旧パスへ再作成しない。別リポジトリの再現コマンドは、その現行READMEを確認して用いる。

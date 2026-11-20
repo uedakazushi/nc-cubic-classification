@@ -48,4 +48,4 @@ LuaLaTeXにはLuaTeX-ja・原ノ味フォント・latexmkが必要。出力PDF�
 
 E6量子化成分・Fricke・DAHAは [nc-cubic-e6](https://github.com/uedakazushi/nc-cubic-e6)、ambient射は [nc-cubic-ambient](https://github.com/uedakazushi/nc-cubic-ambient)、標識忘却は [nc-cubic-unmark](https://github.com/uedakazushi/nc-cubic-unmark)、量子Fermat非AS短報は [nc-cubic-non-as](https://github.com/uedakazushi/nc-cubic-non-as) が正本。分類に必要な定理・証明・コードは本リポジトリにも保持するが、移管済みの独立論文を旧パスへ再作成しない。
 
-heart・共鳴・cornerは [nc-dp-surface-hearts](https://github.com/uedakazushi/nc-dp-surface-hearts)、次数1は [nc-dp1-moduli](https://github.com/uedakazushi/nc-dp1-moduli)、三次三様体は [nc-cubic-threefold-moduli](https://github.com/uedakazushi/nc-cubic-threefold-moduli)。
+heart・共鳴・cornerは [nc-dp-surface-hearts](https://github.com/uedakazushi/nc-dp-surface-hearts)、次数1は [nc-dp1-moduli](https://github.com/uedakazushi/nc-dp1-moduli)、三次三様体は [nc-cubic-threefold](https://github.com/uedakazushi/nc-cubic-threefold)。
